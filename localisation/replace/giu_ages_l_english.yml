@@ -7,11 +7,7 @@
  age_of_discovery_desc:1 "The Gods were forced to leave Gielinor centuries ago. Now, the mortal races fight among themselves to carve out a new position in the world."
  obj_trusting_allies:0 "Trusting Allies"
  obj_trusting_allies_desc:0 "Have at least two allies with at least 75 trust."
-<<<<<<< HEAD
  obj_grow_by_50_development:0 "Expansionism"
-=======
- obj_grow_by_50_development:0 "Expansionism."
->>>>>>> 8215323 (Fixed broken trigger in age objective 'obj_victory_over_the_salve'. Added localisation for age objective 'obj_victory_over_the_salve'. Fixed localisation for age objective 'obj_chaotic_age'.)
  obj_grow_by_50_development_desc:0 "Grow your nation by at least 50 development."
  obj_stable_nation:0 "Stable Nation"
  obj_stable_nation_desc:0 "Have maximum stability and no unrest."
@@ -90,13 +86,8 @@
  obj_own_emperor_desc:0 "Create your own empire!"
  obj_chaotic_age:0 "Chaotic Age"
  obj_chaotic_age_desc:0 "Have at least 90 Chaos."
-<<<<<<< HEAD
  obj_victory_over_the_salve:0 "Victory Over the Salve"
  obj_victory_over_the_salve_desc:0 "Own 10 provinces in Misthalin of Vampyric culture"
-=======
- obj_victory_over_the_salve:0 "Victory over the Salve"
- obj_victory_over_the_salve_desc:0 "As a Vampyric nation, own 10 provinces in the Misthalin region that are following the Vampyric faith and are part of the Vampyre culture group."
->>>>>>> 8215323 (Fixed broken trigger in age objective 'obj_victory_over_the_salve'. Added localisation for age objective 'obj_victory_over_the_salve'. Fixed localisation for age objective 'obj_chaotic_age'.)
  obj_strength_of_saradomin:0 "Strength of Saradomin"
  obj_strength_of_saradomin_desc:0 "Help Entrana become a Great Power, or be the Apostocratic Controller."
  obj_return_of_armadyl:0 "Return of Armadyl"
