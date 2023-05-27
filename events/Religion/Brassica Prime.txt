@@ -250,29 +250,40 @@ country_event = {
 	title = brassicaprime_events.13.t #Grow the Holy Vegetable
 	desc = brassicaprime_events.13.d #Brassican farmers of our realm have demanded to be allowed to grow the most sacred of vegetables, and our most exalted Cabbagemancers agree. Nonetheless, the decision falls to you.
 	picture = BRASSICAPRIME_CABBAGE_eventPicture
-	
-	is_triggered_only = yes
+	goto = cabbage_potential
 
 	trigger = {
 		religion = brassicaprime
 		any_owned_province = {
-			trade_goods = grain
-			religion = brassicaprime
+			trade_goods = grains
+			owner = { has_harmonized_with = PREV }
 			NOT = { has_province_modifier = brassica_destroyed_cabbages }
 			NOT = { has_province_modifier = brassica_refused_cabbages }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					trade_goods = grains
+					owner = { has_harmonized_with = PREV }
+					NOT = { has_province_modifier = brassica_destroyed_cabbages }
+					NOT = { has_province_modifier = brassica_refused_cabbages }
+				}
+				save_event_target_as = cabbage_potential
+			}
 		}
 	}
 	
 	option = {
 		name = brassicaprime_events.13.a #Let them grow cabbages!
 		
-		random_owned_province = {
-			limit = {
-				trade_goods = grain
-				religion = brassicaprime
-				NOT = { has_province_modifier = brassica_destroyed_cabbages }
-				NOT = { has_province_modifier = brassica_refused_cabbages }
-			}
+		event_target:cabbage_potential = {
 		 	change_trade_goods = cabbage
 		 	add_province_modifier = {
 				name = brassica_sacred_cabbages
@@ -286,13 +297,7 @@ country_event = {
 	}
 	option = {
 		name = brassicaprime_events.13.b #Absence makes the heart grow fonder - for all things.
-		random_owned_province = {
-			limit = {
-				trade_goods = grain
-				religion = brassicaprime
-				NOT = { has_province_modifier = brassica_destroyed_cabbages }
-				NOT = { has_province_modifier = brassica_refused_cabbages }
-			}
+		event_target:cabbage_potential = {
 		 	add_province_modifier = {
 				name = brassica_refused_cabbages
 				duration = 7300
