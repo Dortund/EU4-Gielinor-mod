@@ -188,13 +188,22 @@ country_event = {
 			}
 			TYS = {
 				add_truce_with = ROOT
-				build_to_forcelimit = {
-					heavy_ship = 0.3
-					light_ship = 0.2
-					transport = 0.5
-					infantry = 0.5
-					cavalry = 0.2
-					artillery = 0.3
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					build_to_forcelimit = {
+						heavy_ship = 0.3
+						light_ship = 0.2
+						transport = 0.5
+					}
+				}
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
 				}
 				define_ruler = {
 					name = "Tyras"
@@ -301,10 +310,8 @@ country_event = {
 		has_country_flag = KDR_lathas_and_tyras
 		NOT = {
 			any_province = {
-				limit = {
-					country_or_subject_holds = ROOT
-					area = west_ardougne_area
-				}
+				country_or_subject_holds = ROOT
+				area = west_ardougne_area
 			}
 		}
 	}
@@ -365,16 +372,12 @@ country_event = {
 
 # Success at Clan Iorwerth
 country_event = {
-	id = flavor_ior.8
-	title = flavor_ior.8.t
-	desc = flavor_ior.8.d #Clan Iorwerth accepts our plans for an alliance! They have a plan for West Ardougne which they request in exchange for their aid against Tyras; a fair enough exchange.
+	id = flavor_kdr.8
+	title = flavor_kdr.8.t
+	desc = flavor_kdr.8.d #Clan Iorwerth accepts our plans for an alliance! They have a plan for West Ardougne which they request in exchange for their aid against Tyras; a fair enough exchange.
 	picture = CAMELOT_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		days = 5
-	}
 	
 	option = {
 		name = flavor_kdr.8.a #Excellent!
@@ -388,16 +391,12 @@ country_event = {
 
 # Failure at Clan Iorwerth
 country_event = {
-	id = flavor_ior.9
-	title = flavor_ior.9.t
-	desc = flavor_ior.9.d #Clan Iorwerth has rejected our plans for an alliance! The fools.
+	id = flavor_kdr.9
+	title = flavor_kdr.9.t
+	desc = flavor_kdr.9.d #Clan Iorwerth has rejected our plans for an alliance! The fools.
 	picture = CAMELOT_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		days = 5
-	}
 	
 	option = {
 		name = flavor_kdr.9.a #Booo!
