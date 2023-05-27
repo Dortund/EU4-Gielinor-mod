@@ -18,11 +18,9 @@ iorwerth_missions_2 = {
 		icon = mission_spread_the_dark_lords_message
 		required_missions = {  }
 		provinces_to_highlight = {
-			all_owned_province = {
-				type = all
-				NOT = {
-					religion = dark_lord
-				}
+			owned_by = ROOT
+			NOT = {
+				religion = dark_lord
 			}
 		}
 		trigger = {
@@ -45,11 +43,9 @@ iorwerth_missions_2 = {
 		icon = mission_fate_of_iorwerth
 		required_missions = { IOR_spread_the_dark_lords_message }
 		provinces_to_highlight = {
-			all_owned_province = {
-				type = all
-				NOT = {
-					has_building = temple
-				}
+			owned_by = ROOT
+			NOT = {
+				has_building = temple
 			}
 		}
 		trigger = {
@@ -137,11 +133,9 @@ iorwerth_missions_3 = {
 		required_missions = { IOR_spread_the_dark_lords_message }
 		position = 2
 		provinces_to_highlight = {
-			all_owned_province = {
-				type = all
-				NOT = {
-					culture = iorwerth
-				}
+			owned_by = ROOT
+			NOT = {
+				culture = iorwerth
 			}
 		}
 		trigger = {
