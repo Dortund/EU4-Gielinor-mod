@@ -49,8 +49,7 @@ age_of_mortals = {
 	
 	abilities = {
 		
-		ab_chain_of_claims = 
-		{
+		ab_chain_of_claims = {
 			modifier = {
 				can_chain_claim = yes
 			}
@@ -561,7 +560,7 @@ age_of_divination = {
 				religion = vampyric
 				}
 			calc_true_if = {
-				every_owned_province = {
+				all_owned_province = {
 					region = misthalin_region
 					culture_group = vampyre_group
 				}
