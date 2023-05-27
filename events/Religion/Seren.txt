@@ -588,7 +588,7 @@ country_event = {
 	option = {
 		name = seren_events.200.b #Tradition serves us best.
 		
-		custom_tooltip = seren_incident_decline_of_clan_elders
+		custom_tooltip = seren_incident_decline_of_clan_elders.tt
 		custom_tooltip = seren_events.isolation.tt
 		add_country_modifier = {
 			name = "seren_traditional_leadership"
@@ -844,7 +844,8 @@ country_event = {
 			}
 		}
 		add_stability = -2
-		change_government = political_dynasties
+		change_government = republic
+		add_government_reform = political_dynasties
 		
 		custom_tooltip = seren_events.open.tt
 		
@@ -1874,7 +1875,7 @@ country_event = {
 	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_runecrafter
+		is_incident_active = incident_runecrafters
 		has_country_flag = end_of_runecrafters_chain
 		NOT = {
 			incident_variable_value = {
@@ -2428,7 +2429,7 @@ country_event = {
 			duration = 3650
 		}
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 1
 		}
 		hidden_effect = {
@@ -2447,7 +2448,7 @@ country_event = {
 			duration = 3650
 		}
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 3
 		}
 		hidden_effect = {
@@ -2481,7 +2482,7 @@ country_event = {
 			duration = 7300
 		}
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 1
 		}
 		hidden_effect = {
@@ -2504,7 +2505,7 @@ country_event = {
 		custom_tooltip = seren_events.middle_way.tt
 		add_prestige = -5
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 2
 		}
 		hidden_effect = {
@@ -2526,7 +2527,7 @@ country_event = {
 		add_prestige = 25
 		
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 3
 		}
 		hidden_effect = {
@@ -2582,7 +2583,7 @@ country_event = {
 		custom_tooltip = seren_events.open.tt
 
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 1
 		}
 		VAR = {
@@ -2617,7 +2618,7 @@ country_event = {
 		custom_tooltip = seren_events.open.tt
 
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 1
 		}
 		hidden_effect = {
@@ -2636,7 +2637,7 @@ country_event = {
 		name = seren_events.502.c #Come now! The desert sun god Tumeken isn't Seren, neither is whatever Ralos is!
 		custom_tooltip = seren_events.isolation.tt
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 3
 		}
 		hidden_effect = {
@@ -2781,7 +2782,7 @@ country_event = {
 		name = seren_events.505.a #This is the terrible work of Zaros! We must intervene!
 		custom_tooltip = seren_events.open.tt
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 1
 		}
 		409 = {
@@ -2794,7 +2795,7 @@ country_event = {
 		name = seren_events.505.b #This is not our concern.
 		custom_tooltip = seren_events.middle_way.tt
 		add_incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 2
 		}
 		set_country_flag = end_of_zean_diplomacy_chain
@@ -2813,7 +2814,7 @@ country_event = {
 		has_country_flag = end_of_zean_diplomacy_chain
 		NOT = {
 			incident_variable_value = {
-				incident = incident_zean_diplomacy
+				incident = incident_zeah_diplomacy
 				value = 6
 			}
 		}
@@ -2829,11 +2830,11 @@ country_event = {
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
-			end_incident = incident_zean_diplomacy
+			end_incident = incident_zeah_diplomacy
 		}
 		else = {
 			add_isolationism = -1
-			end_incident = incident_zean_diplomacy
+			end_incident = incident_zeah_diplomacy
 		}
 		clr_country_flag = active_incident_flag
 		set_country_flag = seren_incident_recent
@@ -2853,12 +2854,12 @@ country_event = {
 		has_country_flag = end_of_zean_diplomacy_chain
 		NOT = {
 			incident_variable_value = {
-				incident = incident_zean_diplomacy
+				incident = incident_zeah_diplomacy
 				value = 8
 			}
 		}
 		incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 6
 		}
 	}
@@ -2875,7 +2876,7 @@ country_event = {
 				end_incident = incident_zean_diplomacy
 			}
 			else = {
-				end_incident = incident_zean_diplomacy
+				end_incident = incident_zeah_diplomacy
 			}
 		}
 		clr_country_flag = active_incident_flag
@@ -2895,7 +2896,7 @@ country_event = {
 		is_incident_active = incident_zeah_diplomacy
 		has_country_flag = end_of_zean_diplomacy_chain
 		incident_variable_value = {
-			incident = incident_zean_diplomacy
+			incident = incident_zeah_diplomacy
 			value = 8
 		}
 	}
@@ -2915,7 +2916,7 @@ country_event = {
 			}
 			else = {
 				add_isolationism = 1
-				end_incident = incident_zean_diplomacy
+				end_incident = incident_zeah_diplomacy
 			}
 		}
 		clr_country_flag = active_incident_flag
@@ -4705,10 +4706,10 @@ country_event = {
 		
 	option = {
 		name = seren_events.800.a #This is all Seren's fault.
-		custom_tooltip = seren_incident_rebirth_of_seren.tt
+		custom_tooltip = seren_incident_serens_new_path.tt
 		custom_tooltip = seren_events.open.tt
 		add_incident_variable_value = {
-			incident = incident_rebirth_of_seren
+			incident = incident_serens_new_path
 			value = 1
 		}
 		add_country_modifier = {
@@ -4955,11 +4956,11 @@ country_event = {
 	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_serens_new_direction
-		has_country_flag = end_of_serens_new_direction_chain
+		is_incident_active = incident_serens_new_path
+		has_country_flag = end_of_serens_new_path_chain
 		NOT = {
 			incident_variable_value = {
-				incident = incident_serens_new_direction
+				incident = incident_serens_new_path
 				value = 4
 			}
 		}
@@ -4975,11 +4976,11 @@ country_event = {
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
-			end_incident = incident_serens_new_direction
+			end_incident = incident_serens_new_path
 		}
 		else = {
 			add_isolationism = -1
-			end_incident = incident_serens_new_direction
+			end_incident = incident_serens_new_path
 		}
 		clr_country_flag = active_incident_flag
 		set_country_flag = seren_incident_recent
@@ -4995,16 +4996,16 @@ country_event = {
 	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_serens_new_direction
-		has_country_flag = end_of_serens_new_direction_chain
+		is_incident_active = incident_serens_new_path
+		has_country_flag = end_of_serens_new_path_chain
 		NOT = {
 			incident_variable_value = {
-				incident = incident_serens_new_direction
+				incident = incident_serens_new_path
 				value = 5
 			}
 		}
 		incident_variable_value = {
-			incident = incident_serens_new_direction
+			incident = incident_serens_new_path
 			value = 4
 		}
 	}
@@ -5018,10 +5019,10 @@ country_event = {
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
-				end_incident = incident_serens_new_direction
+				end_incident = incident_serens_new_path
 			}
 			else = {
-				end_incident = incident_serens_new_direction
+				end_incident = incident_serens_new_path
 			}
 		}
 		clr_country_flag = active_incident_flag
@@ -5038,10 +5039,10 @@ country_event = {
 	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_serens_new_direction
-		has_country_flag = end_of_serens_new_direction_chain
+		is_incident_active = incident_serens_new_path
+		has_country_flag = end_of_serens_new_path_chain
 		incident_variable_value = {
-			incident = incident_serens_new_direction
+			incident = incident_serens_new_path
 			value = 5
 		}
 	}
@@ -5057,11 +5058,11 @@ country_event = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
 				add_isolationism = 1
-				end_incident = incident_serens_new_direction
+				end_incident = incident_serens_new_path
 			}
 			else = {
 				add_isolationism = 1
-				end_incident = incident_serens_new_direction
+				end_incident = incident_serens_new_path
 			}
 		}
 		clr_country_flag = active_incident_flag
