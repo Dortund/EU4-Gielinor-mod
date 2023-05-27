@@ -884,6 +884,7 @@
  # Brassican
 
  brassica_sacred_cabbages:0 "Sacred Cabbages"
+<<<<<<< HEAD
  desc_brassica_sacred_cabbages:0 "The expansion of cabbage farming in this province inspires the local populous."
  brassica_refused_cabbages:0 "Refused Cabbages"
  desc_brassica_refused_cabbages:0 "Yuck! I don't like cabbage."
@@ -891,6 +892,15 @@
  desc_brassica_destroyed_cabbages:0 "The scorched-earth approach to handling the province's cabbages has left a lasting impact on its general productivity."
  brassica_protected_cabbages:0 "Protected Cabbages"
  desc_brassica_protected_cabbages:0 "Local cabbages have been preserved for a while longer. The cabbages themselves seem to be happier somehow?"
+=======
+ desc_brassica_sacred_cabbages:0 "Glorious cabbages!"
+ brassica_refused_cabbages:0 "Refused Cabbages"
+ desc_brassica_refused_cabbages:0 "Yuck, I don't like cabbage."
+ brassica_destroyed_cabbages:0 "Destroyed Cabbages"
+ desc_brassica_destroyed_cabbages:0 "Cleanse these abonimations with fire!"
+ brassica_protected_cabbages:0 "Protected Cabbages"
+ desc_brassica_protected_cabbages:0 "A scarecrow a day keeps the evil away."
+>>>>>>> 1e0946b (Added a lot of English localisation for Brassica Prime related content.)
 
  # Godless
  
