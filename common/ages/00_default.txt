@@ -617,11 +617,7 @@ age_of_divination = {
 		obj_dark_lord_triumphant = {
 			allow = {
 				religion = dark_lord
-<<<<<<< HEAD
 			}
-=======
-				}
->>>>>>> af6f877 (Fixed broken trigger in 'obj_victory_over_the_salve'.)
 			num_of_active_blessings = 5
 		}
 		obj_take_on_the_world = {
@@ -639,14 +635,6 @@ age_of_divination = {
 		obj_crystal_cleansing = {
 			allow = {
 				religion = seren
-<<<<<<< HEAD
-=======
-				}
-			NOT = {
-				any_province = {
-					religion = dark_lord
-				}
->>>>>>> af6f877 (Fixed broken trigger in 'obj_victory_over_the_salve'.)
 			}
 			has_global_modifier_value = {
 				which = tolerance_own
@@ -662,12 +650,7 @@ age_of_divination = {
 				all_owned_province = {
 					development = 25
 				}
-<<<<<<< HEAD
 				amount = 10
-=======
-			all_owned_province = {
-				development = 15
->>>>>>> af6f877 (Fixed broken trigger in 'obj_victory_over_the_salve'.)
 			}
 		}
 		obj_control_the_stone = {
@@ -790,11 +773,7 @@ age_of_divination = {
 						religion = ranul
 						religion = seiryu
 						religion = genbu
-<<<<<<< HEAD
 						religion = suzaku
-=======
-						religion = suzako
->>>>>>> af6f877 (Fixed broken trigger in 'obj_victory_over_the_salve'.)
 						religion = byakko
 						religion_group = nonintervention_group
 					}
