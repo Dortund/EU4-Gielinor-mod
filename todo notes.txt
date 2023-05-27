@@ -1,0 +1,2 @@
+- The global flag 'GUN_end_of_crusades_flag' is never set, yet it is used by a lot of events.
+- The country modifier 'CDA_gnomish_assistance' gets (incorrectly) set at some places, but it a defined modifer.
