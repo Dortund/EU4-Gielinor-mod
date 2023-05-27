@@ -1177,7 +1177,7 @@ quests = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = tooltip_any_neighbor_has_embraced_runecrafting
+				tooltip = tooltip_any_neighbor_has_embraced_quests
 				any_neighbor_province = {
 					NOT = { owned_by = ROOT }
 					quests = 100
