@@ -53,11 +53,11 @@ country_decisions = {
 			has_any_disaster = no
 			OR = {
 				AND = {
-					is_tag = KZD
+					tag = KZD
 					NOT = { exists = HZL }
 				}
 				AND = {
-					is_tag = HZL
+					tag = HZL
 					NOT = { exists = KZD }
 				}
 				AND = {
