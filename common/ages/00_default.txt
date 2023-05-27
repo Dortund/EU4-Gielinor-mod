@@ -67,7 +67,7 @@ age_of_mortals = {
 		}
 		ab_attack_bonus_in_capital_terrain = {
 			modifier = {
-				attack_bonus_in_capital_terrain = yes
+				attack_bonus_in_capital_terrain = 1
 			}
 			ai_will_do = {
 				factor = 10
