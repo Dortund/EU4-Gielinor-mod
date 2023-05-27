@@ -719,6 +719,10 @@ karamja_missions_4 = {
 				type = all
 			}
 		}
+		provinces_to_highlight = {
+			area = musa_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		effect = {
 			country_event = { 
 				id = flavor_kja.1
