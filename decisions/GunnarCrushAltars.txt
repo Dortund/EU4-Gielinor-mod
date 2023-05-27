@@ -46,9 +46,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			any_province = {
-				has_province_modifier = GUN_ruined_runecrafting_altar
-			}
+			has_province_modifier = GUN_ruined_runecrafting_altar
 		}
 		allow = {
 			absolutism = 25
