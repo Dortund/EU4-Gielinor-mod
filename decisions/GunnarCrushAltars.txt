@@ -8,18 +8,16 @@ country_decisions = {
 			AND = {
 			 	trade_goods = runes
 				NOT = { has_province_modifier = GUN_ruined_runecrafting_altar }
-				controller = ROOT
+				controlled_by = ROOT
 			}
 		}
 		allow = {
 			has_reform = runecrafting_crusader
 			current_age = age_of_humans
 		 	any_province = {
-				limit = {
-					trade_goods = runes
-					NOT = { has_province_modifier = GUN_ruined_runecrafting_altar }
-					controller = ROOT
-				}
+				trade_goods = runes
+				NOT = { has_province_modifier = GUN_ruined_runecrafting_altar }
+				controlled_by = ROOT
 			}
 		}
 		effect = {
@@ -39,9 +37,7 @@ country_decisions = {
 		}
 		ai_importance = 50
 	}
-}
 
-country_decisions = {
 	gunnar_restore_altars = {
 		potential = {
 			NOT = { has_reform = runecrafting_crusader }
@@ -50,7 +46,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			any_owned_province = {
+			any_province = {
 				has_province_modifier = GUN_ruined_runecrafting_altar
 			}
 		}
