@@ -106,7 +106,6 @@ country_event = {
 				mil = 1
 				adm = 4
 				dip = 1
-				fixed = yes
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -114,8 +113,7 @@ country_event = {
 			define_ruler = {
 				mil = 1
 				adm = 4
-				dip = 1					
-				fixed = yes
+				dip = 1	
 			}
 		}
 		if = {
@@ -137,8 +135,7 @@ country_event = {
 			define_ruler = {
 				dip = 4
 				adm = 1
-				mil = 1					
-				fixed = yes
+				mil = 1
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -146,8 +143,7 @@ country_event = {
 			define_ruler = {
 				dip = 4
 				adm = 1
-				mil = 1					
-				fixed = yes
+				mil = 1
 			}
 		}
 		if = {
@@ -169,8 +165,7 @@ country_event = {
 			define_ruler = {
 				mil = 4
 				adm = 1
-				dip = 1					
-				fixed = yes
+				dip = 1	
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -178,8 +173,7 @@ country_event = {
 			define_ruler = {
 				mil = 4
 				adm = 1
-				dip = 1					
-				fixed = yes
+				dip = 1
 			}
 		}
 		if = {

@@ -2616,12 +2616,11 @@ country_event = {
 		name = "personality_events.40.a"
 		custom_tooltip = "personality_events.40.a.tt"
 		highlight = yes
-		remove_heir = yes
+		remove_heir = {}
 		add_stability = -2
 		trigger = {
 			ruler_has_personality = cruel_personality
 		}
-		required_personality = cruel_personality
 	}
 	option = {
 		name = "personality_events.40.b"
