@@ -190,7 +190,7 @@ misthalin_missions_2 = {
 		position = 4
 		provinces_to_highlight = {
 			area = draynor_area
-			NOT = { owns = ROOT }
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			is_at_war = no
@@ -883,7 +883,7 @@ misthalin_missions_5 = {
 					add_base_manpower = 2
 				}
 				else = {
-					remove_province_modifier = MST_paterdomus
+					remove_province_triggered_modifier = MST_paterdomus
 					add_province_triggered_modifier = MST_reinforced_paterdomus
 				}
 			}
