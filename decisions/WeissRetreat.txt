@@ -18,7 +18,7 @@ country_decisions = {
 			OR = {
 				NOT = { manpower_percentage = 0.1 }
 				capital_scope = {
-					NOT = { controller = ROOT }
+					NOT = { controlled_by = ROOT }
 				}
 			}
 		}
