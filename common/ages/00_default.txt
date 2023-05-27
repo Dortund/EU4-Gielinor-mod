@@ -572,7 +572,10 @@ age_of_divination = {
 				religion = saradomin
 				}
 			OR = {
-				ENT = { is_great_power = yes }
+				any_country = {
+					tag = ENT
+					is_great_power = yes
+				}
 				is_papal_controller = yes
 			}
 		}
