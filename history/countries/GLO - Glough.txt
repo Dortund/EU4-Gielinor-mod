@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = military_dictatorship_reform
+government_rank = 1
+primary_culture = treegnome
+religion = godless
+religious_school = monstrous_school
+technology_group = gnometechgroup
+capital = 227 #Kalumin
+national_focus = MIL
+
+2135.11.12 = {
+	monarch = {
+		name = "Glough"
+		dynasty = "Imblewyn"
+		birth_date = 2085.4.1
+		adm = 4
+		dip = 5
+		mil = 5
+	}
+}

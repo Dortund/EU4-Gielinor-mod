@@ -1,0 +1,50 @@
+#20 - Enville #Later Ghost Town and Edgeville
+owner = ENV
+controller = ENV
+add_core = ENV
+tribal_owner = ---
+culture = avarrockan
+religion = zamorak
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 6
+base_production = 5
+base_manpower = 5
+
+trade_goods = advanced_logs
+
+is_city = yes
+
+center_of_trade = 1
+
+add_province_triggered_modifier = wildy_border_level_one
+add_province_triggered_modifier = wildy_border_level_two
+add_province_triggered_modifier = wildy_border_level_three
+add_province_triggered_modifier = wildy_border_level_four
+add_province_triggered_modifier = wildy_border_level_five
+add_province_triggered_modifier = wildy_border_level_six
+add_province_triggered_modifier = wildy_border_level_seven
+add_province_triggered_modifier = wildy_border_level_eight
+add_province_triggered_modifier = wildy_border_level_nine
+
+1971.9.23 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+}
+
+2079.9.23 = {
+ 	change_province_name = "Ghost Town"
+}
+
+2169.1.2 = {
+	change_province_name = "Edgeville"
+}

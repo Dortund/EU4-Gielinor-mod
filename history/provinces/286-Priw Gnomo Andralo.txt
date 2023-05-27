@@ -1,0 +1,33 @@
+#286-Priw Gnomo Andralo
+owner = GNE
+controller = GNE
+add_core = GNE
+tribal_owner = ---
+culture = treegnome
+religion = guthix
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 5
+base_manpower = 4
+
+fort_15th = yes 
+
+trade_goods = fruit
+
+is_city = yes
+
+center_of_trade = 1
+
+1958.7.23 = {
+	owner = TGV
+	controller = TGV
+	add_core = TGV
+	remove_core = GNE
+}

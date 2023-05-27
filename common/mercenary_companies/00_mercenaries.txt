@@ -1,0 +1,222 @@
+##################################
+# Asgarnia
+##################################
+
+merc_crandorian_adventurer_clan = {
+    regiments_per_development = 0.07
+    home_province = 60 #South Crandor
+	cavalry_weight = 0.1
+	cavalry_cap = 2
+	artillery_weight = 0.2
+	artillery_cap = 4
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		60 = {
+			owned_by = CDR
+		}
+		religion = saradomin
+		capital_scope = {
+			region = asgarnia_region
+		}
+	}
+	modifier = { 
+		infantry_power = 0.05
+	}
+}
+
+merc_elite_dryming_mercenaries = {
+    regiments_per_development = 0.04
+    home_province = 43 #Drýming
+    cost_modifier = 1.2
+	cavalry_weight = 0.2
+	cavalry_cap = 3
+	artillery_weight = 0.3
+	artillery_cap = 5
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		capital_scope = {
+			region = asgarnia_region
+		}
+	}
+	modifier = { 
+		discipline = 0.05
+	}
+}
+
+##################################
+# Kharid
+##################################
+
+merc_menaphite_thugs = {
+    regiments_per_development = 0.1
+	cavalry_weight = 0.3
+	cavalry_cap = 6
+    home_province = 83
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		capital_scope = {
+			region = kharidian_desert_region
+		}
+	}
+	modifier = { 
+	 	loot_amount = 0.25
+	}
+}
+
+merc_pollnivnian_bandits = {
+    regiments_per_development = 0.1
+	cavalry_weight = 0.3
+	cavalry_cap = 6
+    home_province = 75 #Pollnivneach
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		capital_scope = {
+			region = kharidian_desert_region
+		}
+	}
+	modifier = { 
+	 	loot_amount = 0.25
+	}
+}
+
+
+##################################
+# Forinthry
+##################################
+
+merc_wilderness_rogues = {
+    regiments_per_development = 0.1
+    home_province = 191 #Rogues' Castle
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		capital_scope = {
+			region = forinthry_region
+		}
+	}
+	modifier = { 
+	 	loot_amount = 0.5
+	}
+}
+
+merc_pkers = {
+    regiments_per_development = 0.05
+    home_province = 159 #Ferox
+	artillery_weight = 0.3
+	artillery_cap = 4
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		capital_scope = {
+			OR = {
+				region = asgarnia_region
+				region = forinthry_region
+				region = misthalin_region
+			}
+		}
+	}
+	modifier = { 
+		fire_damage = 0.10
+		land_morale = -0.1
+	}
+}
+
+##################################
+# Kourend
+##################################
+
+merc_kourend_necromancers = {
+    regiments_per_development = 0.05
+    home_province = 932 #Rugged Woods
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		NOT = { exists = HRS }
+		capital_scope = {
+			region = kourend_region
+		}
+	}
+	modifier = { 
+	 	manpower_recovery_speed = 0.1
+	}
+}
+
+##################################
+# Wushanko
+##################################
+
+merc_death_lotus_mercenaries = {
+    regiments_per_development = 0.04
+    home_province = 1193 #Death Lotus headquarters
+	sprites = { chinesegfx_sprite_pack }
+    cost_modifier = 1.2
+    trigger = {
+		exists = DLO
+		NOT = { war_with = DLO }
+		capital_scope = {
+			superregion =  wushanko_isles_superregion
+		}
+	}
+	modifier = { 
+	 	discipline = 0.05
+	}
+}
+
+merc_lost_men = {
+    regiments_per_development = 0.1
+    home_province = 1174 #Memori
+	sprites = { chinesegfx_sprite_pack }
+    cost_modifier = 1.5
+    trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		capital_scope = {
+			superregion =  wushanko_isles_superregion
+		}
+	}
+	modifier = {
+		infantry_power = 0.1
+		land_morale = 0.1
+	}
+}
+
+merc_the_skulls = {
+    regiments_per_development = 0.1
+    home_province = 1126 #Sanyangkkun
+	sprites = { chinesegfx_sprite_pack }
+    trigger = {
+		NOT = { exists = SKU }
+		OR = {
+			current_age = age_of_humans
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		capital_scope = {
+			superregion =  wushanko_isles_superregion
+		}
+	}
+	modifier = { 
+	 	loot_amount = 0.25
+	}
+}
+
+

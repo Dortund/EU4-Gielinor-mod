@@ -1,0 +1,23 @@
+#13 - County Arrav
+owner = MST
+controller = MST
+add_core = MST
+tribal_owner = ---
+culture = avarrockan
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 3
+
+trade_goods = livestock_farm
+
+is_city = yes

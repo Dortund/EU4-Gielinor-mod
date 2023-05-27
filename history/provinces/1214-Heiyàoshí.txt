@@ -1,0 +1,22 @@
+#1214 - Heiyàoshí
+owner = OBP
+controller = OBP
+add_core = OBP
+add_core = TGU
+tribal_owner = ---
+culture = sea_orphan
+religion = byakko
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 4
+
+fort_15th = yes
+
+trade_goods = gemstones
+
+is_city = yes

@@ -1,0 +1,50 @@
+﻿l_english:
+ marimbo_piety_event.1.t:0 "Ninja Trainers in [spread_of_extreme_practices_province.GetAreaName]"
+ marimbo_piety_event.1.d:0 "Ninja monkeys have become an increasingly common sight around [spread_of_extreme_practices_province.GetAreaName], inspiring the general populace to follow in their example. But is not such rigorous training and disciplined practice against Marimbo's values of hedonism?"
+ marimbo_piety_event.1.a:0 "Curtail the ninjas!"
+ marimbo_piety_event.1.b:0 "Leave them be."
+ 
+ marimbo_piety_event.2.t:0 "Travelling Scholars"
+ marimbo_piety_event.2.d:0 "Travelling scholars have brought back books of good governing practices. Sounds like a lot of hard work..."
+ marimbo_piety_event.2.a:0 "Surely a bit of organisation can make our parties all the better!"
+ marimbo_piety_event.2.b:0 "Reading? Books?! I don't have time for that!"
+ 
+ marimbo_piety_event.3.t:0 "Monkey Archers Rally Support"
+ marimbo_piety_event.3.d:0 "To assist in the defence of [Root.GetName], our monkey archers have started pushing for wider recruitment. This would be an excellent opportunity to replenish our manpower pool, but will we have anyone left to do anything else?"
+ marimbo_piety_event.3.a:0 "We don't need any more archers!"
+ marimbo_piety_event.3.b:0 "Let them recruit."
+ 
+ marimbo_piety_event.4.t:0 "Religious Compromise"
+ marimbo_piety_event.4.d:0 "Our state has neither pushed far into the ways of hedonism nor the ways of disciplined. This spirit of compromise has reduced the risk of religious and other revolts."
+ marimbo_piety_event.4.a:0 "Great!"
+ 
+ marimbo_piety_event.5.t:0 "Debate Over the Legacy of Marimbo"
+ marimbo_piety_event.5.d:0 "Our priests tell us Marimbo once lived among us, but had to leave us alongside all the other major gods of Gielinor. As a consequence, living according to Marimbo's will requires a great deal of assumption and interpretation."
+ marimbo_piety_event.5.a:0 "I'm sure the priests know what they're doing."
+ marimbo_piety_event.5.b:0 "Forget the priests! I'll rule my way until Marimbo tells me otherwise!"
+ 
+ marimbo_piety_event.6.t:0 "The Case of the Shy"
+ marimbo_piety_event.6.d:0 "Not everyone partakes in parties equally. While some are out upon the dance floor, others escape the noise into the kitchen."
+ marimbo_piety_event.6.a:0 "The kitchen is still part of the party."
+ marimbo_piety_event.6.b:0 "We shall fight your right to disobey our parties!"
+ 
+ marimbo_piety_event.7.t:0 "Utilitarianism"
+ marimbo_piety_event.7.d:0 "There has been some public debate over the issue of national happiness, and how to best-achieve it. One view known as utilitarianism advocates for the greatest happiness for the greatest number, while an opposing view argues we should raise the happiness of the most unhappy first, even if it means the overall net gain to happiness is smaller."
+ marimbo_piety_event.7.a:0 "Utilitarianism is right."
+ marimbo_piety_event.7.b:0 "Let us tend to those most unhappy first."
+ marimbo_piety_event.7.c:0 "Who cares about this philosophical nonsense?"
+ 
+ marimbo_piety_event.8.t:0 "Relieving the Tax Burden"
+ marimbo_piety_event.8.d:0 "There is some concern among the priests of [Root.GetName] that an excessive tax burden is a barrier to happiness for much of our population. On the other hand, we could use this tax money ourselves to improve their lives."
+ marimbo_piety_event.8.a:0 "We will lessen the tax burden."
+ marimbo_piety_event.8.b:0 "The state needs the money."
+ 
+ marimbo_piety_event.9.t:0 "The Graveyards"
+ marimbo_piety_event.9.d:0 "Not many come to the graveyards of [Root.GetName]. They fear being haunted; they fear the sombre atmosphere - but most of all, they do not wish to talk about death."
+ marimbo_piety_event.9.a:0 "They should not fear the dead, but let their life stories inspire them to create a better world for all."
+ marimbo_piety_event.9.b:0 "Then they had better shape up and face facts!"
+ 
+ marimbo_piety_event.10.t:0 "Trader Privileges and the Faith"
+ marimbo_piety_event.10.d:0 "Not everything [Root.GetName] needs can be made within it - and with this international trade comes the spread of new ideas - many of which can undermine faith in Marimbo. One moment we're importing goods - the next we're importing strict ideas of how to live!"
+ marimbo_piety_event.10.a:0 "Make it clear to our traders that they must keep the faith."
+ marimbo_piety_event.10.b:0 "Some leeway could enable more efficient trade."

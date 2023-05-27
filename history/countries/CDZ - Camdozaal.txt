@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudal_reform
+government_rank = 2
+primary_culture = imcando
+religion = saradomin
+technology_group = dwarventechgroup
+capital = 46 #Camdozaal
+national_focus = ADM
+
+1923.5.16 = {
+	monarch = {
+		name = "Sergo"
+		dynasty = "Runeminer"
+		birth_date = 1851.8.17
+		adm = 2
+		dip = 5
+		mil = 2
+	}
+}

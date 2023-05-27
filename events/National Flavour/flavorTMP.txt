@@ -1,0 +1,88 @@
+########################################
+# Events for Tempoross
+########################################
+
+namespace = flavor_tmp
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_tmp.1
+	title = flavor_tmp.1.t #Tempoross Awakens!
+	desc = flavor_tmp.1.d #Growing amounts of ships in the Unquiet Ocean has awakened an ancient terror from the deep. A beast made of water, with the power to command storms and cannot be bested by conventional combat - Tempoross is here.
+	picture = TEMPOROSS_RISES_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		1000 = {
+			has_most_province_trade_power = ROOT
+		}
+		has_institution = exploration
+		NOT = { exists = TMP }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		hidden_effect = {
+			1000 = {
+				cede_province = TMP
+				add_core = TMP
+				change_culture = waterbeast
+				change_religion = godless
+				add_base_tax = 1
+				add_base_production = 3
+				add_base_manpower = 2
+			}
+			TMP = {
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Tempoross"
+					dynasty = "the Spirit of the Sea"
+					adm = 2
+					dip = 6
+					mil = 2
+					age = 1000
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+		}
+	}
+	option = {
+		name = flavor_tmp.1.a #Hey! Let's join up with this beast.
+		switch_tag = TMP
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_tmp.1.b #Let us bring down this beast with harpoons in hand!
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+
+
+
+
+
+
+

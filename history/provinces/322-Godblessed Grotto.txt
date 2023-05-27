@@ -1,0 +1,24 @@
+#322 - Godblessed Grotto
+owner = BAO
+controller = BAO
+add_core = BAO
+tribal_owner = ---
+culture = barbarian
+religion = v
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = fishing_spot
+
+is_city = yes

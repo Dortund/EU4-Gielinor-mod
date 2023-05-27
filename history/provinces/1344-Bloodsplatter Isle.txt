@@ -1,0 +1,22 @@
+#1344 - Bloodsplatter Isle
+tribal_owner = ---
+culture = mwanu
+religion = xautak
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = logs
+
+native_size = 50
+native_ferocity = 20
+native_hostileness = 15

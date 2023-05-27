@@ -1,0 +1,29 @@
+#308-Central Feldip
+owner = GUT
+controller = GUT
+add_core = GUT
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+2159.3.12 = {
+	owner = FEL
+	controller = FEL
+	add_core = FEL
+	remove_core = GUT
+}

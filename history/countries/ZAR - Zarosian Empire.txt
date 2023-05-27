@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 3
+primary_culture = silvarean
+religion = zaros
+technology_group = centraltechgroup
+capital = 23 #Saranthium

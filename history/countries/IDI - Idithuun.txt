@@ -1,0 +1,24 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = idithuun
+religion = bandos
+technology_group = bandostechgroup
+capital = 852 #Pret
+national_focus = MIL
+historical_friend = EKE
+historical_friend = HUZ
+historical_friend = RKS
+historical_friend = SGK
+historical_friend = THO
+
+1925.5.24 = {
+	monarch = {
+		name = "Smallears"
+		dynasty = "Idithuun"
+		birth_date = 1905.2.3
+		adm = 5
+		dip = 5
+		mil = 6
+	}
+}

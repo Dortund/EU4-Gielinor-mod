@@ -1,0 +1,393 @@
+namespace = brink_of_extinction
+
+########################################
+# The Brink of Extinction
+########################################
+
+# Start
+country_event = {
+	id = brink_of_extinction.1
+	title = brink_of_extinction.1.t #The Brink of Extinction
+	desc = brink_of_extinction.1.d #Occasionally, a TzHaar is born without a caste nor the memories of their ancestors. These are known as the Ga'al. While historically rare, more and more Ga'al have been born causing the TzHaar-Mej to worry about the TzHaar's future.
+	picture = TZHAAR_GAAL_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = TZH_brink_extinction_start
+	}
+	
+	option = {
+		name = brink_of_extinction.1.a #This could have dire consequences.
+	 	add_stability = -2		
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = brink_of_extinction.2
+	title = brink_of_extinction.2.t # Large Number of Ga'al Births
+	desc =  brink_of_extinction.2.d # Our birthing pools have reported few Mej, Hur, Ket or Xil births in the last few weeks, and large numbers of Ga'al instead. Many Mej argue that such weaklings do not deserve to be named TzHaar, and their very presence will alarm the wider populace.
+	picture = TZHAAR_GAAL_eventPicture
+	
+	trigger = {
+		has_disaster = brink_of_extinction
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = brink_of_extinction.2.a # Send the Ga'al to the Fight Pits!
+		if = {
+			limit = {
+				capital_scope = {
+					base_manpower = 2
+				}
+			}
+			capital_scope = {
+				add_base_manpower = -1
+			}
+		}
+		else = {
+			add_mil_power = -100
+		}
+		add_yearly_manpower = -0.2
+		set_country_flag = TZH_gaal_fight_pits
+		clr_country_flag = TZH_gaal_freedom
+	}
+	
+	option = {
+		name = brink_of_extinction.2.b # Let the Ga'al live freely.
+		add_stability = -1
+		add_estate_loyalty = {
+			estate = estate_tzh_mej
+			loyalty = -10
+		}
+		clr_country_flag = TZH_gaal_fight_pits
+		set_country_flag = TZH_gaal_freedom
+	}
+}
+
+country_event = {
+	id = brink_of_extinction.3
+	title = brink_of_extinction.3.t # JalYt Adventurers Aid the Ga'al
+	desc =  brink_of_extinction.3.d # In a strange development, JalYt adventurers have taken to rescuing Ga'al from the Fight Pits.
+	picture = TZHAAR_GAAL_eventPicture
+	
+	trigger = {
+		has_disaster = brink_of_extinction
+		absolutism = 60
+		NOT = { has_country_flag = TZH_attack_of_the_tokhaar }
+		has_country_flag = TZH_gaal_fight_pits
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	immediate = {
+		set_country_flag = TZH_gaal_quest
+	}
+	
+	option = {
+		name = brink_of_extinction.3.a # Stop them!
+	 	add_absolutism = -5
+		add_estate_loyalty = {
+			estate = estate_tzh_mej
+			loyalty = 5
+		}
+	}
+	option = {
+		name = brink_of_extinction.3.b # There is nothing we can do.
+	 	add_absolutism = 5
+		add_estate_loyalty = {
+			estate = estate_tzh_mej
+			loyalty = -5
+		}
+	}
+}
+
+country_event = {
+	id = brink_of_extinction.4
+	title = brink_of_extinction.4.t # JalYt Adventurers Meet the Ga'al
+	desc =  brink_of_extinction.4.d # Curious JalYt have encountered Ga'al wandering Mor Ul Rek. With help from a TzHaar-Mej, they think they might be able to find answers in the Elder Kiln.
+	picture = TZHAAR_GAAL_eventPicture
+	
+	trigger = {
+		has_disaster = brink_of_extinction
+		absolutism = 50
+		NOT = { has_country_flag = TZH_attack_of_the_tokhaar }
+		has_country_flag = TZH_gaal_freedom
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = brink_of_extinction.4.a # Let's see what comes of this.
+		add_absolutism = 5
+		set_country_flag = TZH_gaal_quest_2
+	}
+	option = {
+		name = brink_of_extinction.4.b # We don't need the JalYt's help!
+	 	add_absolutism = -15
+		add_stability = 1
+	}
+}
+
+country_event = {
+	id = brink_of_extinction.5
+	title = brink_of_extinction.5.t # A JalYt Communicates With the Ga'al
+	desc =  brink_of_extinction.5.d # A Ga'al, freed from the Fight Pits, has been championed by a JalYt adventurer who has embarked on a quest to the Elder Kiln in the hopes of forming them into a complete TzHaar.
+	picture = TZHAAR_GAAL_eventPicture
+	
+	trigger = {
+		has_disaster = brink_of_extinction
+		absolutism = 60
+		NOT = { has_country_flag = TZH_attack_of_the_tokhaar }
+		has_country_flag = TZH_gaal_quest
+		NOT = { has_country_flag = TZH_gaal_quest_2 }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = brink_of_extinction.5.a # Assist them; this could yield fruitful results.
+	 	add_absolutism = 5
+		set_country_flag = TZH_gaal_quest_2		
+	}
+	option = {
+		name = brink_of_extinction.5.b # We require no help from the JalYt!
+	 	add_absolutism = -5
+		add_stability = 1
+	}
+}
+
+country_event = {
+	id = brink_of_extinction.6
+	title = brink_of_extinction.6.t # The Ga'al and the Elder Kiln
+	desc =  brink_of_extinction.6.d # The JalYt adventurer who embarked to the Elder Kiln has returned with word of the TokHaar, a race similar to, but older than the TzHaar. They control the Elder Kiln and demand we join them, away from Mor Ul Rek.
+	picture = ELDER_KILN_eventPicture
+	
+	trigger = {
+		has_disaster = brink_of_extinction
+		NOT = { has_country_flag = TZH_attack_of_the_tokhaar }
+		has_country_flag = TZH_gaal_quest_2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = brink_of_extinction.6.a # Evidently they're hostile!
+		random_owned_province = {
+			ful_rebels = 2
+		}
+	 	set_country_flag = TZH_brink_reaching_out
+	}
+	option = {
+		name = brink_of_extinction.6.b # Attempt to negotiate.
+		add_dip_power = -100
+		set_country_flag = TZH_brink_reaching_out
+	}
+}
+
+country_event = {
+	id = brink_of_extinction.10
+	title = brink_of_extinction.10.t # Attack of the TokHaar
+	desc =  brink_of_extinction.10.d # From deeper inside the Karamja Volcano, the TokHaar attack with great force! Their control of the Elder Kiln was the cause of the volcano's cooling - defeat them, and we can end this threat to us once and for all!
+	picture = ELDER_KILN_eventPicture
+	
+	trigger = {
+		has_disaster = brink_of_extinction
+		had_country_flag = { flag = TZH_brink_extinction_start days = 3500 }
+		NOT = { has_country_flag = TZH_brink_reaching_out }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = TZH_attack_of_the_tokhaar
+	}
+	
+	option = {
+		name = brink_of_extinction.10.a # Let us face these so-called TokHaar.
+		random_owned_province = {
+			ful_rebels = 3
+		}
+	}
+}
+
+######################################
+
+country_event = {
+	id = brink_of_extinction.100
+	title = brink_of_extinction.100.t #Beyond the Brink
+	
+	desc = {
+		trigger = {
+			212 = {
+				has_great_project = {
+					type = great_project_elder_kiln
+					tier = 3
+				} 
+			}
+		}
+		desc = brink_of_extinction.100.da #The TzHaar are saved! With diligent work, the Elder Kiln has been restored to its full capabilities, under our full control. The heat of the Karamja Volcano is back to normal, and no more Ga'al are born.
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				212 = {
+					has_great_project = {
+						type = great_project_elder_kiln
+						tier = 3
+					} 
+				}
+			}
+			NOT = { manpower_percentage = 0.1 }
+			NOT = { army_size = 1 }
+			NOT = { army_professionalism = 0.05 }
+		}
+		desc = brink_of_extinction.100.db #With the fall of the TzHaar's guardians, the TzHaar have finally been driven past the point of extinction. Emerging in their place is the TokHaar; stronger adherents to the way of Ful and far more isolationist.
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				212 = {
+					has_great_project = {
+						type = great_project_elder_kiln
+						tier = 3
+					} 
+				}
+			}
+			OR = {
+				manpower_percentage = 0.1
+				army_size = 1
+				army_professionalism = 0.05
+			}
+		}
+		desc = brink_of_extinction.100.dc #The threat of the TokHaar has been handled, and the risk of extinction for the TzHaar has ended. But the question remains of what to do with the Ga'al who still inhabit our city.
+	}
+	
+	picture = TZHAAR_ENTRANCE_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		end_disaster = brink_of_extinction
+		set_country_flag = TZH_brink_extinction_end
+		clr_country_flag = TZH_brink_extinction_start
+	}
+
+	option = {
+		name = brink_of_extinction.100.a #Extinction was never an option.
+		trigger = {
+				212 = {
+					has_great_project = {
+						type = great_project_elder_kiln
+						tier = 3
+					} 
+				}
+			OR = {
+				manpower_percentage = 0.1
+				army_size = 1
+				army_professionalism = 0.05
+			}
+		}
+		add_stability = 2
+		add_yearly_manpower = 1
+	}
+	option = {
+		name = brink_of_extinction.100.b #At least I'm not extinct.
+		trigger = {
+			NOT = {
+				212 = {
+					has_great_project = {
+						type = great_project_elder_kiln
+						tier = 3
+					} 
+				}
+			}
+			NOT = { manpower_percentage = 0.1 }
+			NOT = { army_size = 1 }
+			NOT = { army_professionalism = 0.05 }
+		}
+		every_province = {
+			limit = {
+				culture = tzhaar
+			}
+			change_culture = tokhaar
+		}
+		change_culture = tokhaar
+	 	kill_ruler = yes
+		add_country_modifier = {
+			name = "TZH_extinction_of_the_tzhaar"
+			duration = -1
+		}
+	}
+	option = {
+		name = brink_of_extinction.100.c #The Ga'al shall form a fifth caste!
+		trigger = {
+			NOT = {
+				212 = {
+					has_great_project = {
+						type = great_project_elder_kiln
+						tier = 3
+					} 
+				}
+			}
+			OR = {
+				manpower_percentage = 0.1
+				army_size = 1
+				army_professionalism = 0.05
+			}
+			
+		}
+		add_government_reform = integration_of_the_gaal_reform
+	}
+	option = {
+		name = brink_of_extinction.100.e #The Ga'al are not welcome!
+		trigger = {
+			NOT = {
+				212 = {
+					has_great_project = {
+						type = great_project_elder_kiln
+						tier = 3
+					} 
+				}
+			}
+			OR = {
+				manpower_percentage = 0.1
+				army_size = 1
+				army_professionalism = 0.05
+			}
+			
+		}
+		add_stability = 1
+		add_country_modifier = {
+			name = "TZH_rejection_of_the_gaal"
+			duration = -1
+		}
+	}
+}

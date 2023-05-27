@@ -1,0 +1,68 @@
+#Country Name: Please seefilename.
+
+graphical_culture = asiangfx
+
+color = { 41 43 44 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Ahoeitu #0" = 1
+	"Bak #0" = 1
+	"Benkei #0" = 1
+	"Boushoku #0" = 1
+	"Buru #0" = 1
+	"Finia #0" = 1
+	"Genjiro #0" = 1
+	"Goku #0" = 1
+	"Grahf #0" = 1
+	"Hubbub #0" = 1
+	"Huqin #0" = 1
+	"Kirau #0" = 1
+	"Kouman #0" = 1
+	"Lanjahn #0" = 1
+	"Mai Pei #0" = 1
+	"Masuta #0" = 1
+	"Oroshu #0" = 1
+	"Oyu #0" = 1
+	"Sarkhan #0" = 1
+	"Shanao #0" = 1
+	"Shanomi #0" = 1
+	"Sozume #0" = 1
+	"Taida #0" = 1
+	"Tama #0" = 1
+	"Tang #0" = 1
+	"Tombi #0" = 1
+	"Tubjub #0" = 1
+	"Wu #0" = 1
+	"Xiang #0" = 1
+	"Yukimura #0" = 1
+	"Yulong #0" = 1
+	
+	"Donyoku #0" = -1
+	"Gekido #0" = -1
+	"Halia #0" = -1
+	"Haruko #0" = -1
+	"Himiko #0" = -1
+	"Hatsumomo #0" = -1
+	"Lidylla #0" = -1
+	"Ling #0" = -1
+	"Nikuyoku #0" = -1
+	"Sakura #0" = -1
+	"San #0" = -1
+	"Shih #0" = -1
+	"Surula #0" = -1
+	"Tavia #0" = -1
+	"Yuehanxun #0" = -1
+	"Zhuka #0" = -1
+	"Zu Zu #0" = -1
+}

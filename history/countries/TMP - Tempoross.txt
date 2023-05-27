@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = island_boss_nation
+government_rank = 1
+primary_culture = waterbeast
+religion = godless
+religious_school = monstrous_school
+technology_group = kharidtechgroup
+capital = 415 #Wintertodt
+national_focus = DIP
+
+2167.3.24 = {
+	monarch = {
+		name = "Tempoross"
+		dynasty = "the Spirit of the Sea"
+		birth_date = 1.1.1
+		adm = 2
+		dip = 6
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

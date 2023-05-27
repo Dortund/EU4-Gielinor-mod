@@ -1,0 +1,34 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = garagorshuun
+religion = bandos
+technology_group = bandostechgroup
+capital = 792 #Cðcorrnete
+national_focus = DIP
+historical_friend = DGK
+historical_friend = HOR
+historical_friend = NGU
+historical_friend = YUR
+
+1923.9.30 = {
+	monarch = {
+		name = "Woodears"
+		dynasty = "Garagorshuun"
+		birth_date = 1890.10.21
+		adm = 1
+		dip = 6
+		mil = 4
+	}
+}
+
+2160.5.8 = {
+	monarch = {
+		name = "Wartface"
+		dynasty = "Garagorshuun"
+		birth_date = 2134.7.9
+		adm = 0
+		dip = 4
+		mil = 2
+	}
+}

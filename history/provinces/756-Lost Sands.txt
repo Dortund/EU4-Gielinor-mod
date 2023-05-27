@@ -1,0 +1,20 @@
+#756-Lost Sands
+
+tribal_owner = ---
+culture = ghost
+religion = bandos
+
+trade_goods = logs
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 10
+native_ferocity = 10
+native_hostileness = 3

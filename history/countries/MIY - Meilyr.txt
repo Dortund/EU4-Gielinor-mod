@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = meilyr
+religion = seren
+technology_group = elventechgroup
+capital = 335 #Meilyr Province
+national_focus = DIP
+
+1900.10.12 = {
+	monarch = {
+		name = "Ffion"
+		dynasty = "Meilyr"
+		birth_date = 875.10.20
+		adm = 4
+		dip = 4
+		mil = 3
+		female = yes
+	}
+}

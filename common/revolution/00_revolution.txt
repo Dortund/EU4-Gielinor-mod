@@ -1,0 +1,19 @@
+#The Revolution is to be implemented at a later date as Adventurer Dictatorship. Only appears in the Sixth Age (Age of Divination)
+
+revolution = {
+	# FROM = center of revolution
+	target_province_weights = {
+		factor = 0
+	}
+
+	# Values at 100 Absolutism
+	revolution_province_modifiers = {
+		min_local_autonomy = 0.5
+	}
+
+	# Values at 100 Revolutionary Zeal
+	zeal_modifiers = {
+		administrative_efficiency = 0.3
+		special_unit_forcelimit = 0.2
+	}
+}

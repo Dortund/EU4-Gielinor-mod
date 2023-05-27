@@ -1,0 +1,206 @@
+namespace = zamorak_flavor
+
+#The Question of Debts
+country_event = {
+	id = zamorak_flavor.1
+	title = zamorak_flavor.1.t
+	desc = zamorak_flavor.1.d
+	picture = ZAMORAK_ICON_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zamorak
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			NOT = { inflation = 1 }
+		}
+	}
+	
+	option = {
+		name = zamorak_flavor.1.a
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = zamorak_flavor.1.b
+		add_patriarch_authority = -0.05
+		add_inflation = -0.5
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Easing from Chaos?
+country_event = {
+	id = zamorak_flavor.2
+	title = zamorak_flavor.2.t
+	desc = zamorak_flavor.2.d
+	picture = ZAMORAK_ICON_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zamorak
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			NOT = { patriarch_authority = 0.05 }
+		}
+	}
+	
+	option = {
+		name = zamorak_flavor.2.a
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { stability = 0 }
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = zamorak_flavor.2.b
+		add_patriarch_authority = -0.05
+		add_stability_or_adm_power = yes
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				stability = 0
+				factor = 0
+			}
+		}
+	}
+}
+
+# The State and the Clergy
+country_event = {
+	id = zamorak_flavor.3
+	title = zamorak_flavor.3.t
+	desc = zamorak_flavor.3.d
+	picture = ZAMORAK_ICON_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zamorak
+		is_lesser_in_union = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = zamorak_flavor.3.a
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = zamorak_flavor.3.b
+		add_patriarch_authority = -0.05
+		add_republican_tradition = 5
+		add_legitimacy = 10
+		add_horde_unity = 10
+		add_meritocracy = 10
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Monastic Wealth
+country_event = {
+	id = zamorak_flavor.4
+	title = zamorak_flavor.4.t
+	desc = zamorak_flavor.4.d
+	picture = ZAMORAK_ICON_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zamorak
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = zamorak_flavor.4.a
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = zamorak_flavor.4.b
+		add_patriarch_authority = -0.05
+		add_years_of_income = 0.25
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Church Administrators
+country_event = {
+	id = zamorak_flavor.5
+	title = zamorak_flavor.5.t
+	desc = zamorak_flavor.5.d
+	picture = ZAMORAK_ICON_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zamorak
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = zamorak_flavor.5.a
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = zamorak_flavor.5.b
+		add_patriarch_authority = -0.05
+		add_adm_power = 50
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

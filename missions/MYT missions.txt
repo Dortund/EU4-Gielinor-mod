@@ -1,0 +1,288 @@
+morytania_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MYT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MYT_reinforce_the_coast = {
+		icon = mission_conquer_50_development
+		required_missions = { }
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_port = yes
+					OR = {
+						has_building = coastal_defence
+						has_building = naval_battery
+						}
+					}
+				amount = 4
+			}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+	MYT_pirate_accommodation = {
+		icon = mission_conquer_50_development
+		required_missions = { MYT_reinforce_the_coast MYT_strengthen_vassal_ties }
+		trigger = {
+			OR = {
+				AND = {
+					reverse_has_opinion = {
+						who = MSH
+						value = 100
+					}
+					treasury = 250
+					}
+				AND = {
+					owns_core_province = 142
+					treasury = 100
+					}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "MYT_pirate_mercenaries"
+				duration = 3650
+			}
+			if = {
+				limit = { owns_core_province = 142 }
+				add_treasury = -100
+			}
+			else = {
+				add_treasury = -250
+					MSH = {
+						country_event = {
+						id = flavor_msh.1
+						days = 1
+						}
+					}
+			}
+		}
+	}
+}
+
+morytania_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MYT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MYT_strengthen_vassal_ties = {
+		icon = mission_conquer_50_development
+		required_missions = { }
+		trigger = {
+			AND = {
+				OR = {
+					AND = {
+						overlord_of = CFS
+						reverse_has_opinion = {
+							who = CFS
+							value = 150
+						}
+					}
+					NOT = { exists = CFS }
+				}
+				OR = {
+					AND = {
+						overlord_of = DES
+						reverse_has_opinion = {
+							who = DES
+							value = 150
+						}
+					}
+					NOT = { exists = DES }
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+		
+	MYT_take_back_mort_myre = {
+		icon = mission_conquer_50_development
+		required_missions = { MYT_strengthen_vassal_ties MYT_drill_the_army }
+		provinces_to_highlight = {
+			area = mort_myre_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_or_non_sovereign_subject_of = mort_myre_area
+		}
+		effect = {
+			add_country_modifier = {
+				name = "MYT_assert_supremacy"
+				duration = 3650
+			}
+		}
+	}
+
+	MYT_grow_the_vassals = {
+		icon = mission_conquer_50_development
+		required_missions = { MYT_take_back_mort_myre }
+		trigger = {
+			calc_true_if = {
+				all_subject_country = {
+					development = 35
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			lordship_of_the_north_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+morytania_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = MYT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MYT_drill_the_army = {
+		icon = mission_conquer_50_development
+		required_missions = { }
+		trigger = {
+			army_professionalism = 0.10
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+
+	MYT_conquest_of_the_north_coast = {
+		icon = mission_conquer_50_development
+		position = 4
+		required_missions = { MYT_grow_the_vassals }
+		provinces_to_highlight = {
+			area = lordship_of_the_north_coast_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_or_non_sovereign_subject_of = 114
+			owns_or_non_sovereign_subject_of = 116
+			owns_or_non_sovereign_subject_of = 117
+			owns_or_non_sovereign_subject_of = 949
+		}
+		effect = {
+			silvarea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	MYT_break_into_misthalin = {
+		icon = mission_conquer_50_development
+		position = 5
+		required_missions = { MYT_conquest_of_the_north_coast }
+		provinces_to_highlight = {
+			area = silvarea_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			silvarea_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			varrock_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			saranthium_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+morytania_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = MYT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MYT_renew_the_vyrewatch_corps = {
+		icon = mission_assemble_an_army
+		position = 2
+		required_missions = { MYT_drill_the_army }
+		trigger = {
+			has_idea = MYT_vyrewatch
+			calc_true_if = {
+				all_owned_province = {
+					culture = vampyre
+					has_building = training_fields
+					}
+				amount = 3
+				}
+			}
+		effect = {
+			add_country_modifier = {
+				name = "MYT_vyrewatch_innovation"
+				duration = 3650
+			}
+		}
+	}
+
+	MYT_theatre_of_blood = {
+		icon = mission_conquer_50_development
+		position = 3
+		required_missions = { MYT_renew_the_vyrewatch_corps }
+		provinces_to_highlight = {
+				province_id = 135
+		}
+		trigger = {
+			135 = {
+				fort_level = 6
+				development = 15
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			135 = {
+				add_province_modifier = {
+					name = "MYT_theatre_of_blood"
+					duration = -1
+				}
+			}
+		}
+	}
+}

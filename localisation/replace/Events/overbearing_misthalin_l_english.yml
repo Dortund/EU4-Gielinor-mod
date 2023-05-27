@@ -1,0 +1,19 @@
+﻿l_english:
+ overbearing_misthalin.1.t:0 "Overbearing Misthalin"
+ overbearing_misthalin.1.d:0 "Misthalin's unchecked expansion is about to face a rude awakening. The Asgarnian clans, alarmed at the prospect of being subsumed into the rule of [MST.Capital.GetName]'s rule, and Misthalin's refusal to back down, are preparing a grand coalition to keep away such an existential threat."
+ overbearing_misthalin.1.a:0 "Let us try to negotiate."
+ mst_overbearing_negotiate_tooltip:0 "Signalling you will prevent further expansion shall lessen the potential coalition against you - but will backfire horribly if you go back on your word."
+ overbearing_misthalin.1.b:0 "What could these measly Asgarnians possibly do to us?!"
+ mst_overbearing_extreme_tooltip:0 "Signalling your contempt for Asgarnia will strengthen their resolve against you, but your people will be better-prepared for upcoming conflict."
+ 
+ overbearing_misthalin.2.t:0 "Misthalin goes too far!"
+ overbearing_misthalin.2.d:0 "The Kingdom of Misthalin, apparently not seeing itself as powerful enough already, has decided to invade Asgarnia. This is a threat to the continued existence to all Asgarnian realms! What approach should we take?"
+ overbearing_misthalin.2.a:0 "We must band together to face this menace!"
+ overbearing_misthalin.2.b:0 "We must unite Asgarnia before Misthalin can!"
+ overbearing_misthalin.2.c:0 "We're siding with Misthalin!"
+ 
+ overbearing_misthalin.100.t:0 "Misthalin Borders Settled!"
+ overbearing_misthalin.100.da:0 "It is a day of great triumph for Misthalin. In the face of seemingly overwhelming opposition, Misthalin has stood firm and held onto its Asgarnian territories. Never again will such a coalition be able to challenge Misthalin's might."
+ overbearing_misthalin.100.db:0 "Misthalin has failed in its attempts to take land in Asgarnia. But not all hope is lost. With Misthalin appearing weak to the Asgarnians, they will have much more trouble forming a coalition against us in future."
+ overbearing_misthalin.100.a:0 "For the glory of [Root.Monarch.GetTitle] [Root.Monarch.GetName]!"
+ overbearing_misthalin.100.b:0 "Misthalin shall rebuild!"

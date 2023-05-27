@@ -1,0 +1,34 @@
+#448-Lizardman Canyon
+owner = SWM
+controller = SWM
+add_core = SWM
+add_core = MOC
+tribal_owner = ---
+culture = molch
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+1969.11.5 = {
+	owner = KTW
+	controller = KTW
+	add_core = KTW
+	remove_core = KOU
+}
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+	remove_core = KTW
+}

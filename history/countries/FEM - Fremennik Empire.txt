@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 3
+primary_culture = rellekkan
+religion = v
+secondary_religion = godless
+technology_group = fremenniktechgroup
+capital = 368 #Rellekka
+national_focus = MIL
+
+2217.7.12 = {
+	monarch = {
+		name = "Ragnar"
+		dynasty = "Friedirson"
+		birth_date = 2195.7.13
+		adm = 6
+		dip = 3
+		mil = 6
+	}
+}

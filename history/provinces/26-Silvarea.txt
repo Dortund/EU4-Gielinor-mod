@@ -1,0 +1,20 @@
+#26 - Silvarea
+owner = MST
+controller = MST
+add_core = MST
+tribal_owner = ---
+culture = silvarean
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 1
+
+trade_goods = bones
+
+is_city = yes

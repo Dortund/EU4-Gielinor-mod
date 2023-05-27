@@ -1,0 +1,1065 @@
+genape_missions_1 = {
+	slot = 1
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = BNZ
+			tag = BOI
+			tag = MRM
+			tag = RDN
+			tag = APE
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genape_marimbos_legacy = {
+		icon = mission_marimbos_legacy
+		required_missions = {  }
+		position = 1
+		trigger = {
+			religion = marimbo
+			OR = {
+				piety = 0.8
+				NOT = { piety = -0.8 }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 237
+				}
+				237 = {
+					add_base_tax = 1
+				}
+			}
+			else = {
+				237 = {
+					add_permanent_claim = ROOT
+				}
+				806 = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	genape_rise_of_marim = {
+		icon = mission_rise_of_marim
+		required_missions = { genape_marimbos_legacy }
+		position = 2
+		provinces_to_highlight = {
+			province_id = 237
+		}
+		trigger = {
+			237 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+			owns_core_province = 806
+		}
+		effect = {
+			if = {
+				limit = {
+					piety = 0
+				}
+				add_piety = 0.25
+			}
+			else = {
+				add_piety = -0.25
+			}
+		}
+	}
+}
+
+genape_missions_2 = {
+	slot = 2
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = BNZ
+			tag = BOI
+			tag = MRM
+			tag = RDN
+			tag = APE
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genape_expansionism = {
+		icon = mission_unite_home_region
+		required_missions = {  }
+		position = 1
+		trigger = {
+			total_development = 20
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 235
+				}
+				235 = {
+					add_base_production = 1
+				}
+			}
+			else = {
+				235 = {
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = {
+					NOT = { owns_core_province = 805 }
+				}
+				805 = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	genape_jungle_life = {
+		icon = mission_jungle_life
+		required_missions = { genape_expansionism }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 235
+				province_id = 805
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					development = 6
+				}
+			}
+		}
+		trigger = {
+			235 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 6
+			}
+			805 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 6
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = genape_skele_monkeys_flag }
+				}
+				country_event = { 
+					id = flavor_genape.1
+					days = 1
+				}
+			}
+			add_adm_power = 25
+		}
+	}
+}
+
+genape_missions_3 = {
+	slot = 3
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = BNZ
+			tag = BOI
+			tag = MRM
+			tag = RDN
+			tag = APE
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genape_primate_sailors = {
+		icon = mission_galleys_in_port
+		required_missions = {  }
+		position = 1
+		trigger = {
+			navy_size_percentage = 0.9
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 239
+				}
+				add_country_modifier = { 
+					name = genape_bo_isles_sailors
+					duration = 7300
+				}
+			}
+			bo_isles_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	genape_bo_isle_expedition = {
+		icon = mission_bo_isle_expedition
+		required_missions = { genape_primate_sailors }
+		position = 2
+		provinces_to_highlight = {
+			area = bo_isles_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			bo_isles_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				dock = 1
+				drydock = 1
+			}
+			OR = {
+				shipyard = 2
+				grand_shipyard = 2
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	
+	genape_ape_atoll_united = {
+		icon = mission_ape_atoll_united
+		required_missions = { genape_rise_of_marim genape_jungle_life genape_bo_isle_expedition genape_monkey_business }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 237
+				province_id = 236
+				province_id = 806
+				province_id = 235
+				province_id = 805
+				province_id = 1409
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 805
+			owns_core_province = 235
+			owns_core_province = 236
+			owns_core_province = 237
+			owns_core_province = 806
+			owns_core_province = 1409
+		}
+		effect = {
+			add_country_modifier = {
+				name = genape_unify_ape_atoll
+				duration = 3650
+			}
+		}
+	}
+}
+
+genape_missions_4 = {
+	slot = 4
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = BNZ
+			tag = BOI
+			tag = MRM
+			tag = RDN
+			tag = APE
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genape_round_up_the_rabble = {
+		icon = mission_round_up_the_rabble
+		required_missions = {  }
+		position = 1
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 236
+				}
+				236 = {
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				add_permanent_claim = 236
+			}
+			if = {
+				limit = {
+					owns_core_province = 1409
+				}
+				1409 = {
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				add_permanent_claim = 1409
+			}
+		}
+	}
+	
+	genape_monkey_business = {
+		icon = mission_monkey_business
+		required_missions = { genape_round_up_the_rabble }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 236
+				province_id = 1409
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 236
+			owns_core_province = 1409
+			OR = {
+				barracks = 1
+				training_fields = 1
+			}
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+	
+	genape_agility_training = {
+		icon = mission_agility_training
+		required_missions = { genape_monkey_business }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 1409
+		}
+		trigger = {
+			1409 = {
+				owned_by = ROOT
+				is_core = ROOT
+			 	base_manpower = 8
+				has_building = training_fields
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = genape_agility_training_modifier
+				duration = 9125
+			}
+		}
+	}
+}
+
+genape_missions_5 = {
+	slot = 5
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = BNZ
+			tag = BOI
+			tag = MRM
+			tag = RDN
+			tag = APE
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genape_knowledge_of_the_ninjas = {
+		icon = mission_knowledge_of_the_ninjas
+		required_missions = {  }
+		position = 1
+		trigger = {
+			army_professionalism = 0.05
+		}
+		effect = {
+			country_event = {
+				id = flavor_genape.2
+				days = 1
+			}
+		}
+	}
+	
+	genape_monkey_magic = {
+		icon = mission_air_rune
+		required_missions = { genape_round_up_the_rabble genape_knowledge_of_the_ninjas }
+		position = 2
+		trigger = {
+			has_institution = runecrafting
+			owns_core_province = 237
+		}
+		effect = {
+			237 = {
+				change_trade_goods = magic_supplies
+			}
+			add_country_modifier = {
+				name = genape_influx_of_runes
+				duration = 3650
+			}
+		}
+	}
+}
+
+
+
+ape_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = APE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ape_way_of_hedonism = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { genape_ape_atoll_united }
+		position = 4
+		trigger = {
+			religion = marimbo
+			stability = 3
+			piety = 0.25
+			NOT = { overextension_percentage = 0.01 }
+			NOT = { average_unrest = 1 }
+		}
+		effect = {
+			add_piety = 1
+			add_adm_power = 50
+		}
+	}
+	ape_expand_the_temple = {
+		icon = mission_expand_the_temple
+		required_missions = { ape_way_of_hedonism }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 237
+		}
+		trigger = {
+			owns_core_province = 237
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				237 = {
+					has_great_project = {
+						type = great_project_marim_temple
+						tier = 2
+					}
+				}
+			}
+			else = {
+				237 = {
+					has_building = cathedral
+					development = 30
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = APE_inspiration_of_marimbo
+				duration = 7300
+			}
+		}
+	}
+}
+
+ape_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = APE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ape_monkey_madness = {
+		icon = mission_monkey_madness
+		required_missions = { genape_ape_atoll_united }
+		position = 4
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					culture_group = monkey_group
+				}
+				amount = 12
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 100
+		}
+	}
+	
+	ape_primate_union = {
+		icon = mission_primate_union
+		required_missions = { ape_monkey_madness }
+		position = 6
+		trigger = {
+			any_owned_province = {
+				culture = atoll_monkey
+				has_owner_accepted_culture = yes
+			}
+			any_owned_province = {
+				culture = gorilla
+				has_owner_accepted_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = ape_primate_union_tooltip
+				OR = {
+					AND = {
+						any_owned_province = {
+							culture = mos_le_harmless_monkey
+							has_owner_accepted_culture = yes
+						}
+						any_owned_province = {
+							culture = karamjan_monkey
+							has_owner_accepted_culture = yes
+						}
+					}
+					AND = {
+						any_owned_province = {
+							culture = mos_le_harmless_monkey
+							has_owner_accepted_culture = yes
+						}
+						any_owned_province = {
+							culture = desert_monkey
+							has_owner_accepted_culture = yes
+						}
+					}
+					AND = {
+						any_owned_province = {
+							culture = karamjan_monkey
+							has_owner_accepted_culture = yes
+						}
+						any_owned_province = {
+							culture = desert_monkey
+							has_owner_accepted_culture = yes
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = APE_monkey_expansionism
+				duration = 9125
+			}
+		}
+	}
+	ape_drive_out_the_humans = {
+		icon = mission_clear_the_delta
+		required_missions = { ape_invasion_of_karamja }
+		position = 7
+		provinces_to_highlight = {
+			region = karamja_region
+			NOT = { culture = karamjan_monkey }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = karamja_region
+					culture = karamjan_monkey
+				}
+				amount = 5
+			}			
+		}
+		effect = {
+			tai_bwo_wannai_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { owned_by = GLO }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_karamja_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { owned_by = GLO }
+				}
+				add_permanent_claim = ROOT
+			}
+			shilo_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { owned_by = GLO }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ape_karamjan_dominance = {
+		icon = mission_island_dominance
+		required_missions = { ape_drive_out_the_humans }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = tai_bwo_wannai_area
+				area = central_karamja_area
+				area = shilo_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			tai_bwo_wannai_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			central_karamja_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			shilo_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			feldip_jungle_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { owned_by = GLO }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+ape_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = APE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ape_pirate_monkeys = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { genape_ape_atoll_united }
+		position = 4
+		trigger = {
+			num_of_heavy_ship = 5
+			num_ships_privateering = 20
+		}
+		effect = {
+			create_explorer = { tradition = 50 }
+		}
+	}
+	ape_anti_human_coalition = {
+		icon = mission_outmatch_the_trolls
+		required_missions = { ape_pirate_monkeys }
+		position = 5
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					OR = {
+						religion = bandos
+						culture_group = gnome_group
+					}
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			eastern_karamja_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { owned_by = GLO }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ape_invasion_of_karamja = {
+		icon = mission_arabian_sea_trade
+		required_missions = { ape_anti_human_coalition }
+		position = 6
+		provinces_to_highlight = {
+			region = karamja_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = karamja_region
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					region = karamja_region
+					NOT = { area = kharazi_jungle_area }
+				}
+				change_culture = karamjan_monkey
+				change_religion = marimbo
+			}
+			west_mos_le_harmless_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { owned_by = GLO }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ape_isle_of_the_mwanu = {
+		icon = mission_isle_of_the_mwanu
+		required_missions = { ape_invasion_of_karamja }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = west_mos_le_harmless_area
+				area = east_mos_le_harmless_area
+			}
+		}
+		trigger = {
+			any_owned_province = {
+				OR = {
+					area = west_mos_le_harmless_area
+					area = east_mos_le_harmless_area
+				}
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = west_mos_le_harmless_area
+						area = east_mos_le_harmless_area
+					}
+					NOT = { culture = mos_le_harmless_monkey }
+				}
+				change_culture = mos_le_harmless_monkey
+				change_religion = marimbo
+			}
+			east_mos_le_harmless_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { province_id = 148 }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ape_curse_of_the_sea = {
+		icon = mission_curse_of_the_sea
+		required_missions = { ape_isle_of_the_mwanu }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = west_mos_le_harmless_area
+				area = east_mos_le_harmless_area
+			}
+			NOT = { culture = mos_le_harmless_monkey }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						area = west_mos_le_harmless_area
+						area = east_mos_le_harmless_area
+					}
+					culture = mos_le_harmless_monkey
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			add_dip_power = 100
+			add_country_modifier = {
+				name = APE_sailors_of_mos_le_harmless
+				duration = 8125
+			}
+		}
+	}
+	
+	ape_leave_them_in_shambles = {
+		icon = mission_leave_them_in_shambles
+		required_missions = { ape_journey_to_the_east }
+		position = 9
+		provinces_to_highlight = {
+			province_id = 1194
+		}
+		trigger = {
+			owns_core_province = 1194
+			NOT = { exists = SBL }
+		}
+		effect = {
+			add_country_modifier = {
+				name = APE_off_the_soul_list
+				duration = -1
+			}
+		}
+	}
+}
+
+ape_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = APE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ape_fate_of_the_desert_monkeys = {
+		icon = mission_the_desert_monkeys
+		required_missions = { genape_ape_atoll_united }
+		position = 4
+		provinces_to_highlight = {
+			region = kharidian_desert_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				has_country_flag = APE_desert_monkeys_arrive
+				calc_true_if = {
+					all_owned_province = {
+						region = kharidian_desert_region
+					}
+					amount = 5
+				}
+			}
+			absolutism = 30
+		}
+		effect = {
+			country_event = {
+				id = flavor_ape.3
+				days = 1
+			}
+		}
+	}
+	
+	ape_kharidian_colony = {
+		icon = mission_kharidian_colony
+		required_missions = { ape_fate_of_the_desert_monkeys }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 72
+		}
+		trigger = {
+			adm_power = 150
+			absolutism = 60
+			OR = {
+				72 = { is_empty = yes  }
+				owns_core_province = 72
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { owns_core_province = 72 }
+				}
+				add_adm_power = -150
+			}
+			custom_tooltip = ape_kharidian_colony_tooltip
+			country_event = {
+				id = flavor_ape.4
+				days = 1
+			}
+		}
+	}
+	
+	ape_do_no_evil = {
+		icon = mission_do_no_evil
+		required_missions = { ape_kharidian_colony }
+		position = 6
+		trigger = {
+			OR = {
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+						capital_scope = {
+							region = kharidian_desert_region
+						}
+					}
+					amount = 2
+				}
+				calc_true_if = {
+					all_province = {
+					 	country_or_non_sovereign_subject_holds = ROOT
+						region = kharidian_desert_region
+					}
+					amount = 15
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					calc_true_if = {
+						all_province = {
+							country_or_non_sovereign_subject_holds = ROOT
+							region = kharidian_desert_region
+						}
+						amount = 15
+					}
+				}
+				add_country_modifier = {
+					name = APE_desert_conquest
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = APE_friend_of_apmeken
+					duration = -1
+				}
+			}
+		}
+	}
+	ape_journey_to_the_east = {
+		icon = mission_asian_city
+		required_missions = { ape_isle_of_the_mwanu ape_ninja_discipline_mission }
+		position = 8
+		provinces_to_highlight = {
+			continent = wushanko_isles_continent
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			has_discovered = 1193
+			calc_true_if = {
+				all_province = {
+					country_or_non_sovereign_subject_holds = ROOT
+					continent = wushanko_isles_continent
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			add_prestige = 25
+			1193 = { add_permanent_claim = ROOT }
+			1194 = { add_permanent_claim = ROOT }
+		}
+	}
+	ape_the_most_ninja = {
+		icon = mission_the_most_ninja
+		required_missions = { ape_journey_to_the_east }
+		position = 9
+		provinces_to_highlight = {
+			region = pincers_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1193
+			NOT = { exists = DLO }
+			calc_true_if = {
+				all_province = {
+					country_or_non_sovereign_subject_holds = ROOT
+					region = pincers_region
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = APE_students_to_masters
+				duration = -1
+			}
+		}
+	}
+}
+
+ape_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = APE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ape_homeward_teleport = {
+		icon = mission_se_medicine_wheel
+		required_missions = { genape_monkey_business genape_monkey_magic }
+		position = 3
+		trigger = {
+			trading_bonus = {
+				trade_goods = runes
+				value = yes
+			}
+			trading_bonus = {
+				trade_goods = fruit
+				value = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = APE_atoll_teleport
+				duration = -1
+			}
+		}
+	}
+	
+	ape_assemble_the_ninjas = {
+		icon = mission_assemble_the_ninjas
+		required_missions = { genape_ape_atoll_united genape_agility_training }
+		position = 4
+		trigger = {
+			religion = marimbo
+			NOT = { piety = -0.1 }
+			army_professionalism = 0.75
+			army_size = 25
+		}
+		effect = {
+			add_piety = -1
+			add_mil_power = 50
+		}
+	}
+	
+	ape_ninja_discipline_mission = {
+		icon = mission_ninja_discipline
+		required_missions = { ape_assemble_the_ninjas }
+		position = 7
+		trigger = {
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.25
+			}
+		}
+		effect = {
+			create_general = { tradition = 80 }
+		}
+	}
+	
+}

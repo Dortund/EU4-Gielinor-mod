@@ -1,0 +1,22 @@
+#1236 - Byrlltide
+culture = infernal
+religion = zamorak
+tribal_owner = ---
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fishing_spot
+
+center_of_trade = 1
+
+native_size = 10
+native_ferocity = 10
+native_hostileness = 10

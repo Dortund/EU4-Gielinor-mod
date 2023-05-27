@@ -1,0 +1,35 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = thorobshuun
+religion = bandos
+technology_group = bandostechgroup
+capital = 768 #Montagne-Elfe
+national_focus = MIL
+historical_friend = EKE
+historical_friend = HUZ
+historical_friend = IDI
+historical_friend = RKS
+historical_friend = SGK
+
+1929.4.17 = {
+	monarch = {
+		name = "Dirtfist"
+		dynasty = "Thorobshuun"
+		birth_date = 1909.5.13
+		adm = 2
+		dip = 3
+		mil = 6
+	}
+}
+
+2160.5.8 = {
+	monarch = {
+		name = "Bentnoze"
+		dynasty = "Thorobshuun"
+		birth_date = 2134.7.9
+		adm = 0
+		dip = 4
+		mil = 2
+	}
+}

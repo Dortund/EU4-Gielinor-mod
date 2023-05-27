@@ -1,0 +1,41 @@
+########################################
+# Events for Port Lina/Sarim
+########################################
+
+namespace = flavor_pli
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_pli.1
+	title = flavor_pli.1.t #The Fall of Lina
+	desc = flavor_pli.1.d #Despite being the premier port of the Asgarnian region, Port Lina has recently struggled with pirate blockades and raids to the extent where most merchants are beginning to seek alternative routes of entry. However, a wealthy merchant family by the name of Sarim has elected to fund the movement of the port to a new, more defensible location.
+	picture = PORT_SARIM_SHIP_eventPicture
+	
+	trigger = {
+		dip_tech = 8
+		OR = {
+			tag = PLI
+			AND = {
+				NOT = { exists = PLI }
+				owns_core_province = 33
+			}
+		}		
+	}
+	
+	fire_only_once = yes
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_pli.1.a #Arise, Port Sarim!
+		PLI = { 
+			override_country_name = PORT_SARIM
+		}
+		33 = {
+			change_province_name = "Port Sarim"
+		}
+	}
+}

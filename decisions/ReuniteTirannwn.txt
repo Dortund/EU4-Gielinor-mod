@@ -1,0 +1,96 @@
+country_decisions = {
+
+	evr_reunite_tirannwn_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_tirannwn_flag }
+			was_never_end_game_tag_trigger = yes
+			culture_group = elven_group
+			religion = seren
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			tag = EVR
+			NOT = { exists = TNN }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 325 # Prifddinas
+				province_id = 327 # Gwenith
+				province_id = 337 # Lletya
+				province_id = 538 # Temple of Light
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			OR = {
+				NOT = { exists = IOR }
+				IOR = { religion = seren }
+			}
+			religion = seren
+			owns_core_province = 325
+			owns_core_province = 327
+			owns_core_province = 337
+			owns_core_province = 538
+		}
+		effect = {
+			325 = {
+				move_capital_effect = yes
+			}
+			change_tag = TNN
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_prestige = 50
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_tirannwn_flag
+			add_government_reform = tirannwn_republic
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			hidden_effect = {
+				complete_mission = EVR_save_the_clan_elders
+				complete_mission = EVR_revert_prifddinas_to_crystal
+				complete_mission = EVR_population_advantage
+				complete_mission = EVR_push_the_line_north
+				complete_mission = EVR_underground_pass_exploration
+				complete_mission = EVR_the_temple_of_light
+				complete_mission = EVR_fate_of_cadarn
+				complete_mission = EVR_cadarnite_training
+				complete_mission = EVR_develop_our_base
+				complete_mission = EVR_resistance_fleet
+				complete_mission = EVR_coastal_warfare
+				complete_mission = EVR_fog_of_war
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 600
+	}
+
+}

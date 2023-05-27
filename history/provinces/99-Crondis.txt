@@ -1,0 +1,25 @@
+#99 - Crondis
+owner = MPS
+controller = MPS
+add_core = MPS
+tribal_owner = ---
+culture = menaphiteculture
+religion = menaphite
+
+discovered_by = kharidtechgroup
+discovered_by = karamjantechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = fishing_spot
+latent_trade_goods = { rare_loot }
+
+is_city = yes

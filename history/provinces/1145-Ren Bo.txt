@@ -1,0 +1,22 @@
+#1145-Ren Bo
+owner = SSH
+controller = SSH
+add_core = SSH
+tribal_owner = ---
+culture = siren
+religion = seiryu
+
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fishing_spot
+
+is_city = yes

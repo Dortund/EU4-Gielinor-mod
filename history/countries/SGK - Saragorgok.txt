@@ -1,0 +1,24 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = saragorgok
+religion = bandos
+technology_group = bandostechgroup
+capital = 275 #Hararpos
+national_focus = DIP
+historical_friend = EKE
+historical_friend = HUZ
+historical_friend = IDI
+historical_friend = RKS
+historical_friend = THO
+
+1929.1.3 = {
+	monarch = {
+		name = "Boneknees"
+		dynasty = "Saragorgok"
+		birth_date = 1889.12.27
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+}

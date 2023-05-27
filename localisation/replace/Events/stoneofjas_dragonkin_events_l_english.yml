@@ -1,0 +1,19 @@
+﻿l_english:
+ stoneofjas_dragonkin.1.t:0 "Whispers of the Dragonkin"
+ stoneofjas_dragonkin.1.d:0 "There are tales of what happens when the Stone of Jas is used. They say, do not fear the dragons - fear their kin."
+ stoneofjas_dragonkin.1.a:0 "Is that supposed to be a threat?"
+ stoneofjas_dragonkin_warning_tooltip:0 "As long as you hold the Stone of Jas, §YDragonkin Raids§! can attack your nation. These powerful rebels will kill your leader and take the Stone of Jas if successful."
+ 
+ stoneofjas_dragonkin.2.t:0 "Dragonkin Raid!"
+ stoneofjas_dragonkin.2.d:0 "Enraged by our use of the Stone of Jas, powerful Dragonkin are decending upon [Root.Capital.GetName]!"
+ stoneofjas_dragonkin.2.a:0 "How much harm could a dragon really do?"
+ stoneofjas_dragonkin.2.b:0 "They're just dragons, right? Right?!"
+ 
+ stoneofjas_dragonkin.3.t:0 "The Dragonkin take the Stone of Jas!"
+ stoneofjas_dragonkin.3.d:0 "Devastating the [Root.GetAdjective] nation, the Dragonkin have killed [Root.Monarch.GetTitle] [Root.Monarch.GetName] and have taken the Stone of Jas from us."
+ stoneofjas_dragonkin.3.a:0 "We're not false users! You're false users!"
+ stoneofjas_dragonkin_stone_taken:0 "The §YStone of Jas§! is now §Rpermanently inaccessible§! to all nations. Who knows what the Dragonkin will do with it?"
+ 
+ stoneofjas_dragonkin.4.t:0 "Destruction of the Stone of Jas!"
+ stoneofjas_dragonkin.4.d:0 "Somehow it happened! The world's most powerful artefact was blasted to pieces by the Dragonkin! This apparently freed them of a curse that bound them to it - and will end any future fighting over it. But might this upset whoever created such a stone?"
+ stoneofjas_dragonkin.4.a:0 "This surely can't have any negative consequences."

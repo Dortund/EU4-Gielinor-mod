@@ -1,0 +1,55 @@
+#780 - Retraite
+owner = CDA
+controller = CDA
+add_core = CDA
+tribal_owner = ---
+culture = meilyr
+religion = seren
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+1930.8.24 = {
+	owner = IKO
+	controller = IKO
+	add_core = IKO
+	culture = catherbian
+	religion = armadyl
+	remove_core = CDA
+}
+
+2062.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	remove_core = IKO
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}
+
+2132.7.13 = {
+	owner = CML
+	controller = CML
+	add_core = CML
+	remove_core = KDR
+	religion = saradomin
+}

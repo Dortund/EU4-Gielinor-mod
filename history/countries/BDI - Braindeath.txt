@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pirate_republic_reform
+government_rank = 1
+primary_culture = harmlean
+religion = godless
+religious_school = ambivalence_school
+technology_group = centraltechgroup
+capital = 764 #Fever Cove
+national_focus = DIP
+
+2151.7.2 = {
+	monarch = {
+		name = "Richard"
+		dynasty = "Braindeath"
+		birth_date = 2125.3.17
+		adm = 4
+		dip = 6
+		mil = 4
+	}
+}

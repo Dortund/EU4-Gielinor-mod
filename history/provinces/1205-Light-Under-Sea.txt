@@ -1,0 +1,14 @@
+#1205-Light-Under-Sea
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fishing_spot
+latent_trade_goods = { divine_energy }
+
+is_city = yes

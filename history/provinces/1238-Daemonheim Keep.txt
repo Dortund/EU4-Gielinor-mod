@@ -1,0 +1,24 @@
+#1238 - Daemonheim Keep
+owner = DMH
+controller = DMH
+add_core = DMH
+culture = forgotten_warrior
+religion = zamorak
+tribal_owner = ---
+
+discovered_by = DMH
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = lesser_loot
+latent_trade_goods = { rare_loot }
+
+center_of_trade = 1
+
+native_size = 30
+native_ferocity = 20
+native_hostileness = 20

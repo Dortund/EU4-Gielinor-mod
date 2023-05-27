@@ -1,0 +1,58 @@
+﻿l_english:
+ arceuus_faction: "Arceuus"
+ arceuus_faction_influence: "Arceuus Influence"
+ arceuus_faction_FACTION_DESC: "The House of Arceuus is skilled at the arts of magic, firemaking and runecrafting. Most residents are immortal, having shed their bodies for incorporeal forms.\nIf Arceuus is a subject nation, having their faction in power will reduce their liberty desire by 10%."
+
+ hosidius_faction: "Hosidius"
+ hosidius_faction_influence: "Hosidius Influence"
+ hosidius_faction_FACTION_DESC: "The House of Hosidius grows the crops for Kourend, and controls the most land. It was this House which first successfully rebelled against the tyranny of Xeric.\nIf Hosidius is a subject nation, having their faction in power will reduce their liberty desire by 10%."
+ 
+ lovakengj_faction: "Lovakengj"
+ lovakengj_faction_influence: "Lovakengj Influence"
+ lovakengj_faction_FACTION_DESC: "The House of Lovakengj consists of most of Kourend's dwarven population. They are skilled at mining, smithing, fortress construction and the use of explosives.\nIf Lovakengj is a subject nation, having their faction in power will reduce their liberty desire by 10%."
+ 
+ piscarilius_faction: "Piscarilius"
+ piscarilius_faction_influence: "Piscarilius Influence"
+ piscarilius_faction_FACTION_DESC: "The House of Piscarilius incorporates Kourend's navy and fishers - as well as the more covert operations of the nation.\nIf Piscarilius is a subject nation, having their faction in power will reduce their liberty desire by 10%."
+ 
+ shayzien_faction: "Shayzien"
+ shayzien_faction_influence: "Shayzien Influence"
+ shayzien_faction_FACTION_DESC: "The House of Shayzien is Kourend's army and police force, and the front line against the Lizardmen.\nIf Shayzien is a subject nation, having their faction in power will reduce their liberty desire by 10%."
+ 
+ 
+ 
+ amlodd_faction: "Amlodd"
+ amlodd_faction_influence: "Amlodd Influence"
+ amlodd_faction_FACTION_DESC: "Clan Amlodd has Tirannwn's best summoners and mystics."
+
+ cadarn_faction: "Cadarn"
+ cadarn_faction_influence: "Cadarn Influence"
+ cadarn_faction_FACTION_DESC: "Clan Cadarn has Tirannwn's best archers and hunters."
+
+ crwys_faction: "Crwys"
+ crwys_faction_influence: "Crwys Influence"
+ crwys_faction_FACTION_DESC: "Clan Crwys has Tirannwn's best farmers and woodcutters."
+
+ cywir_faction: "Cywir"
+ cywir_faction_influence: "Cywir Influence"
+ cywir_faction_FACTION_DESC: "This lost clan of lorekeepers stayed behind on the elven homeworld of Tarddiad when the others entered Gielinor with Seren."
+
+ hefin_faction: "Hefin"
+ hefin_faction_influence: "Hefin Influence"
+ hefin_faction_FACTION_DESC: "Clan Hefin emphasises piety and agility."
+ 
+ iorwerth_faction: "Iorwerth"
+ iorwerth_faction_influence: "Iorwerth Influence"
+ iorwerth_faction_FACTION_DESC: "Historically the bulk of Tirannwn's army, Clan Iorwerth infamously betrayed the other clans in the late Fourth Age."
+ 
+ ithell_faction: "Ithell"
+ ithell_faction_influence: "Ithell Influence"
+ ithell_faction_FACTION_DESC: "Clan Ithell has Tirannwn's best crafters, builders and crystal-singers."
+
+ meilyr_faction: "Meilyr"
+ meilyr_faction_influence: "Meilyr Influence"
+ meilyr_faction_FACTION_DESC: "Clan Meilyr has Tirannwn's best explorers, cooks and herbalists."
+
+ trahaearn_faction: "Trahaearn"
+ trahaearn_faction_influence: "Trahaearn Influence"
+ trahaearn_faction_FACTION_DESC: "Clan Trahaearn has Tirannwn's best miners and smiths."

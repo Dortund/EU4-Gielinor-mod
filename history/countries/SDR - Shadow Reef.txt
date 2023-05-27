@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 3
+primary_culture = crassian
+religion = xautak
+technology_group = wushankotechgroup
+capital = 1118 #Hanto

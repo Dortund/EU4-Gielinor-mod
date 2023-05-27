@@ -1,0 +1,30 @@
+government = theocracy
+add_government_reform = apostocracy
+government_rank = 2
+primary_culture = entranan
+religion = saradomin
+technology_group = centraltechgroup
+capital = 57 # South Entrana
+national_focus = DIP
+
+1898.12.25 = {
+	monarch = {
+		name = "Luke II"
+		dynasty = "Casper"
+		birth_date = 1871.12.12
+		adm = 5
+		dip = 4
+		mil = 2
+	}
+}
+
+2157.12.25 = {
+	monarch = {
+		name = "Mark IV"
+		dynasty = "Brerdas"
+		birth_date = 2111.7.27
+		adm = 4
+		dip = 3
+		mil = 0
+	}
+}

@@ -1,0 +1,144 @@
+########################################
+# Great Kourend flavour
+########################################
+
+namespace = flavor_kou
+normal_or_historical_nations = yes
+
+# 
+country_event = {
+	id = flavor_kou.1
+	title = flavor_kou.1.t #Control Reasserted
+	desc = flavor_kou.1.d #A House of Kourend thought they could escape our grasp, but they have returned to our control.
+	picture = KOUREND_HOUSES_eventPicture
+	
+	trigger = {
+		tag = KOU
+		has_reform = kourend_monarchy
+		OR = {
+			AUU = {
+				is_subject_of = KOU
+				has_reform = kourend_independent_house
+				}
+			HOS = {
+				is_subject_of = KOU
+				has_reform = kourend_independent_house
+				}
+			LOV = {
+				is_subject_of = KOU
+				has_reform = kourend_independent_house
+				}
+			PCL = {
+				is_subject_of = KOU
+				has_reform = kourend_independent_house
+				}
+			SYZ = {
+				is_subject_of = KOU
+				has_reform = kourend_independent_house
+				}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		every_subject_country = {
+			limit = {
+				has_reform = kourend_independent_house
+			}
+			KOU = {
+				create_subject = {
+					subject_type = subject_house
+					subject = PREV
+				}
+			}
+			add_government_reform = kourend_house
+		}
+	}
+	
+	option = {
+		name = flavor_kou.1.a #And don't break free again!
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = flavor_kou.2
+	title = flavor_kou.2.t #Rebel Rift
+	desc = flavor_kou.2.d #Our enemy Varlamore has little history of external conflict, so their army and guards have tended to look inwards. Some, escaping this pressure, have lived remotely in the savannah. But at a time of war, we need any support we can get in Varlamore. For that reason, our spies have succeeded in getting a few defectors to Varlamore to establish an outpost at Rebel Rift.
+	picture = WARBANDS_eventPicture
+	
+	trigger = {
+		tag = KOU
+		war_with = VAR
+		503 = { is_empty = yes }
+		NOT = { exists = RRF }
+		has_spy_network_in = {
+			who = VAR
+			value = 25
+		}
+	}
+	
+	major = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			503 = {
+				change_culture = fortis
+				change_religion = ranul
+				cede_province = RRF
+				add_core = RRF
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			
+			}
+			RRF = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_years_of_income = 1
+			}
+			VAR = {
+				country_event = {
+					id = flavor_var.2
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_kou.2.a #I want to take personal command of this new outpost.
+		create_alliance = RRF
+		switch_tag = RRF
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_kou.2.b #Secure an alliance with this new outpost.
+		create_alliance = RRF
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_kou.2.c #That wasn't the plan; just leave the rebels be.
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

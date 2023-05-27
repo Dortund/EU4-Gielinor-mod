@@ -1,0 +1,25 @@
+bookmark =
+{
+	name = "AGE_OF_ADVENTURERS_NAME"
+	desc = "AGE_OF_ADVENTURERS_DESC"
+	date = 2169.1.4
+	
+	center = 41
+	
+	country = MST
+	country = MYT
+	country = VAR
+	country = ASG
+	country = ALK
+	country = MPS
+	country = REL
+	country = KDR
+	country = GNO
+	country = IOR
+	country = EVR
+	country = KOU
+	
+	easy_country = MST
+	easy_country = MYT
+	easy_country = VAR
+}

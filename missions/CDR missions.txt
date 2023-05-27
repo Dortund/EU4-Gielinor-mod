@@ -1,0 +1,439 @@
+crandorian_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = CDR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDR_architecture_of_crandor = {
+		icon = mission_early_game_buildings
+		required_missions = {  }
+		position = 1
+		trigger = {
+			58 = {
+				owned_by = ROOT
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = workshop
+					has_building = counting_house
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+			59 = {
+				owned_by = ROOT
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = workshop
+					has_building = counting_house
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+			60 = {
+				owned_by = ROOT
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = workshop
+					has_building = counting_house
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 50
+		}
+	}
+
+	CDR_republican_navy = {
+		icon = mission_aragonese_navy
+		required_missions = { CDR_architecture_of_crandor CDR_grand_port }
+		position = 2
+		trigger = {
+			num_of_galley = 10
+		 	num_of_light_ship = 10
+		}
+		effect = {
+			create_explorer = { tradition = 50 }
+		}
+	}
+	
+	CDR_explore_beyond = {
+		icon = mission_look_west
+		required_missions = { CDR_republican_navy }
+		position = 3
+		trigger = {
+			outer_isles_region = { has_discovered = ROOT }
+			tirannwn_region = { has_discovered = ROOT }
+			lunar_sea_region = { has_discovered = ROOT }
+			sea_of_kebos_region = { has_discovered = ROOT }
+			shining_ocean_region = { has_discovered = ROOT }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "CDR_international_trade"
+				duration = 7300
+			}
+		}
+	}
+
+	CDR_zeah_trade = {
+		icon = the_shape_of_trades_to_come
+		required_missions = { CDR_explore_beyond }
+		position = 4
+		trigger = {
+			has_institution = exploration
+			OR = {
+				399 = { has_merchant = PREV }
+				402 = { has_merchant = PREV }
+				419 = { has_merchant = PREV }
+				424 = { has_merchant = PREV }
+				461 = { has_merchant = PREV }
+				488 = { has_merchant = PREV }
+				507 = { has_merchant = PREV }
+				512 = { has_merchant = PREV }
+				525 = { has_merchant = PREV }
+			}
+		}
+		effect = {
+			399 = { add_permanent_claim = ROOT }
+			442 = { add_permanent_claim = ROOT }
+			add_dip_power = 50
+		}
+	}
+	
+	CDR_new_world_colony = {
+		icon = mission_expel_the_moriscos
+		required_missions = { CDR_zeah_trade }
+		position = 5
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_kourend
+					is_city = yes
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_kebos
+					is_city = yes
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_varlamore
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "CDR_colonial_drive"
+				duration = 7300
+				}
+		}
+	}
+}
+
+crandorian_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = CDR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+
+	CDR_grand_port = {
+		icon = mission_sea_battles
+		required_missions = {  }
+		position = 1
+		trigger = {
+			58 = {
+				owned_by = ROOT
+				OR = {
+					has_building = dock
+					has_building = drydock
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			60 = {
+				owned_by = ROOT
+				OR = {
+					has_building = dock
+					has_building = drydock
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "CDR_republican_navy_modifier"
+				duration = 3650
+				}
+		}
+	}
+
+	CDR_unquiet_trade = {
+		icon = sources_of_trade
+		required_missions = { CDR_grand_port }
+		position = 2
+		trigger = {
+			60 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	CDR_catherby_to_musa = {
+		icon = mission_retake_ceuta
+		required_missions = { CDR_unquiet_trade }
+		position = 3
+		trigger = {
+			209 = {
+				is_strongest_trade_power = ROOT
+			}
+			247 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			33 = { add_permanent_claim = ROOT }
+			209 = { add_permanent_claim = ROOT }
+			247 = { add_permanent_claim = ROOT }
+		}
+	}
+	CDR_defeat_sarim = {
+		icon = mission_disrupt_portuguese_trade
+		required_missions = { CDR_catherby_to_musa }
+		position = 4
+		trigger = {
+			33 = { owned_by = ROOT }
+		}
+		effect = {
+			tutorial_island_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	CDR_lum_trade = {
+		icon = mission_advance_to_the_dnieper
+		required_missions = { CDR_defeat_sarim CDR_adventurers_of_crandor }
+		position = 5
+		trigger = {
+			tutorial_island_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			menaphos_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	CDR_overwhelm_menaphos = {
+		icon = mission_rb_seize_alexandria
+		required_missions = { CDR_lum_trade }
+		position = 6
+		trigger = {
+			menaphos_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			100 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "CDR_crandor_triumphant"
+				duration = -1
+				}
+		}
+	}
+}
+
+crandorian_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = CDR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDR_crandorian_runecrafting = {
+		icon = mission_establish_mint_towns
+		required_missions = {  }
+		position = 1
+		trigger = {
+			grown_by_development = 15
+			has_institution = runecrafting
+		}
+		effect = {
+			add_country_modifier = {
+				name = "CDR_magical_expansion"
+				duration = 3650
+			}
+		}
+	}
+	CDR_adventurers_of_crandor = {
+		icon = the_italian_league
+		required_missions = { CDR_catherby_to_musa }
+		position = 4
+		trigger = {
+			absolutism = 75
+		}
+		effect = {
+			add_years_of_income = 0.5
+		}
+	}
+}
+
+crandorian_bonus_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = CDR
+		has_country_flag = cdr_dragon_dragon
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDR_route_to_karamja = {
+		icon = mission_clear_the_delta
+		required_missions = { CDR_dragon_slayer }
+		position = 6
+		trigger = {
+			owns_core_province = 975
+		}
+		effect = {
+			212 = { add_permanent_claim = ROOT }
+		}
+	}
+	CDR_halls_of_the_tzhaar = {
+		icon = mission_zambezi_gold
+		required_missions = { CDR_route_to_karamja CDR_dragon_lore }
+		position = 7
+		trigger = {
+			owns_core_province = 212
+			innovativeness = 10
+		}
+		effect = {
+			country_event = {
+				id = flavor_cdr.9 #Libraries of the TzHaar
+				days = 1
+			}
+		}
+	}
+	CDR_runecrafting_and_the_catalyst = {
+		icon = mission_rb_scottish_north_sea_trade
+		required_missions = { CDR_halls_of_the_tzhaar }
+		position = 8
+		trigger = {
+			innovativeness = 15
+			OR = {
+				AND = {
+					NOT = { exists = MOO }
+					lunar_isle_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				reverse_has_opinion = {
+					who = MOO
+					value = 100
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_cdr.10 #Runecrafting and the Catalyst
+				days = 1
+			}
+		}
+	}
+}
+
+crandorian_bonus_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = CDR
+		has_country_flag = cdr_dragon_dragon
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDR_dragon_slayer = {
+		icon = mission_burn_wooden_wall
+		required_missions = { CDR_adventurers_of_crandor }
+		position = 5
+		trigger = {
+			crandor_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			crandor_area = {
+				remove_core = ELV
+				change_culture = crandorian
+				change_religion = ROOT
+			}
+			975 = { add_permanent_claim = ROOT }
+		}
+	}
+	
+	CDR_dragon_lore = {
+		icon = mission_consulate_of_the_sea
+		required_missions = { CDR_dragon_slayer }
+		position = 6
+		trigger = {
+			innovativeness = 5
+			calc_true_if = {
+				any_owned_province = {
+					trade_goods = magic_supplies
+					}
+				amount = 5
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_cdr.8 #Tale of Dragons
+				days = 1
+			}
+		}
+	}
+}

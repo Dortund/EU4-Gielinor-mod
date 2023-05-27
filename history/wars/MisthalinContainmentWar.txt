@@ -1,0 +1,38 @@
+#name = "Misthalin-Asgarnian Containment War"
+#war_goal = {
+#	type = superiority_punitive
+#	casus_belli = cb_super_badboy
+#}
+#
+#1927.3.12 = {
+#	add_attacker = CDZ
+#	add_attacker = ANM
+#	add_attacker = CLY
+#	add_attacker = CYN
+#	add_attacker = DBS
+#	add_attacker = FRW
+#	add_attacker = PLI
+#	add_attacker = RIM
+#	add_attacker = VRZ
+#	add_attacker = SDE
+#	add_attacker = BRD
+#	add_defender = MST
+#}
+#
+# War end
+#1930.5.30 = {
+#	rem_attacker = CDZ
+#	rem_attacker = ANM
+#	rem_attacker = CYN
+#	rem_attacker = CLY
+#	rem_attacker = DBS
+#	rem_attacker = FRW
+#	rem_attacker = PLI
+#	rem_attacker = RIM
+#	rem_attacker = VRZ
+#	rem_attacker = SDE
+#	rem_attacker = BRD
+#	rem_defender = MST
+#}
+
+# Removed for the time being

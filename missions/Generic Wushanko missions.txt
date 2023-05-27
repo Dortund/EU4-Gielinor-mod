@@ -1,0 +1,626 @@
+genwhk_missions_2 = {
+	slot = 2
+	generic = yes
+	ai = yes
+	potential = {
+		capital_scope = {
+			OR = {
+				region = arc_region
+				region = skull_region
+				region = hook_region
+				region = scythe_region
+				region = bowl_region
+				region = pincers_region
+				region = loop_region
+				region = shield_region
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genwhk_develop_home_isle = {
+		icon = mission_japanese_fort
+		required_missions = {  }
+		position = 1
+		trigger = {
+			capital_scope = {
+				OR = {
+					has_building = marketplace
+					has_building = temple
+					has_building = workshop
+					has_building = trade_depot
+					has_building = cathedral
+					has_building = counting_house
+					has_building = trade_depot
+				}
+				development = 12
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 9125
+			}
+		}
+	}
+	
+	genwhk_construction_boom = {
+		icon = mission_asian_city
+		required_missions = { genwhk_develop_home_isle }
+		position = 2
+		trigger = {
+			marketplace = 3
+			temple = 3
+			workshop = 3
+		}
+		effect = {
+			add_adm_power = 50
+		}
+	}
+
+	genwhk_strong_advisors = {
+		icon = mission_scholar_officials
+		required_missions = { genwhk_construction_boom }
+		position = 3
+		trigger = {
+			NOT = { is_in_deficit = yes }
+			custom_trigger_tooltip = {
+				tooltip = genwhk_three_level_two_advisors
+				OR = {
+					artist = 2
+					inquisitor = 2
+					master_of_mint = 2
+					natural_scientist = 2
+					philosopher = 2
+					theologian = 2
+					treasurer = 2
+				}
+				OR = {
+					colonial_governor = 2
+					diplomat = 2
+					naval_reformer = 2
+					navigator = 2
+					spymaster = 2
+					statesman = 2
+					trader = 2
+				}
+				OR = {
+					army_organiser = 2
+					army_reformer = 2
+					commandant = 2
+					fortification_expert = 2
+					grand_captain = 2
+					quartermaster = 2
+					recruitmaster = 2
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_excellent_advice"
+				duration = 9125
+			}
+		}
+	}
+	
+	genwhk_religious_expansion = {
+		icon = mission_buddhist_monk_praying
+		required_missions = { genwhk_strong_advisors }
+		position = 4
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = obj_convert_10_provinces_tooltip
+				check_variable = { which = num_converted_religion value = 10 }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						religion = byakko
+						religion = genbu
+						religion = seiryu
+						religion = suzako
+						religion = birman
+						religion = hanalan
+					}
+				}
+				add_church_power = 50
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = bandos
+						religion = zaros
+					}
+				}
+				add_country_modifier = {
+					name = "genwhk_challenge_the_guardians"
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = {
+					religion = xautak
+				}
+				add_country_modifier = {
+					name = "genwhk_power_of_corruption"
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "genwhk_new_wushanko_faith"
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	genwhk_prosperous_stable_realm = {
+		icon = mission_rice_field
+		required_missions = { genwhk_religious_expansion }
+		position = 5
+		trigger = {
+			stability = 3
+			#every_owned_province = {
+			#	NOT = { unrest = 0 }
+			#	NOT = { local_autonomy = 5 }
+			#}
+			#custom_trigger_tooltip = {
+			#	tooltip = genwhk_capital_has_prosperity
+			#	capital_scope = {
+			#		is_prosperous = yes
+			#	}
+			#}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+	
+	genwhk_capital_of_the_world = {
+		icon = mission_great_wall
+		required_missions = { genwhk_prosperous_stable_realm }
+		position = 6
+		trigger = {
+			capital_scope = {
+				development = 50
+				current_institution = 100
+				OR = {
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			add_prestige = 100
+			capital_scope = {
+				add_province_modifier = { 
+					name = genwhk_grand_city_of_wushanko
+					duration = -1  
+				}
+			}
+		}
+	}
+}
+
+genwhk_missions_3_khan = {
+	slot = 3
+	generic = yes
+	ai = yes
+	potential = {
+		is_part_of_hre = yes
+		capital_scope = {
+			OR = {
+				region = arc_region
+				region = skull_region
+				region = hook_region
+				region = scythe_region
+				region = bowl_region
+				region = pincers_region
+				region = loop_region
+				region = shield_region
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genwhk_council_allies = {
+		icon = mission_market_place_with_asian_traders
+		required_missions = {  }
+		position = 1
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					is_part_of_hre = yes
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	
+	genwhk_build_a_trade_fleet = {
+		icon = mission_junk_boat
+		required_missions = { genwhk_council_allies }
+		position = 2
+		trigger = {
+			num_of_light_ship = 15
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_growing_trade_influence"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	
+	genwhk_dominate_trade_node = {
+		icon = mission_asian_trader
+		required_missions = { genwhk_build_a_trade_fleet }
+		position = 3
+		trigger = {
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 2
+			}
+			capital_scope = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_trading_diplomacy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	genwhk_support_from_electors = {
+		icon = mission_suppress_the_saophasa
+		required_missions = { genwhk_dominate_trade_node }
+		position = 4
+		
+		trigger = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				calc_true_if = {
+					desc = gen_hre_electors.tooltip
+					all_elector = {
+						preferred_emperor = ROOT
+					}
+					amount = 2
+				}
+			}
+			else = {
+				num_of_allies = 3
+			}
+		}
+		
+		effect = {
+			add_prestige = 10
+			add_dip_power = 50
+		}
+	}
+	genwhk_ascendant_khagan = {
+		icon = mission_seize_the_dragon_throne
+		required_missions = { genwhk_support_from_electors }
+		position = 5
+		
+		trigger = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				is_emperor = yes
+			}
+			else = {
+				government_rank = 3
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_power_of_the_new_khagan"
+				duration = 5475
+			}
+		}
+	}
+	genwhk_reformed_council = {
+		icon = mission_restore_faith_in_the_throne
+		required_missions = { genwhk_ascendant_khagan }
+		position = 6
+		
+		trigger = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				is_emperor = yes
+				hre_reform_passed = khanreform_united_front
+			}
+			else = {
+				government_rank = 3
+				vassal = 5
+			}
+		}
+		
+		effect = {
+			add_dip_power = 200
+			add_prestige = 100
+		}
+	}
+}
+
+genwhk_missions_3_nokhan = {
+	slot = 3
+	generic = yes
+	ai = yes
+	potential = {
+		NOT = { is_part_of_hre = yes }
+		capital_scope = {
+			OR = {
+				region = arc_region
+				region = skull_region
+				region = hook_region
+				region = scythe_region
+				region = bowl_region
+				region = pincers_region
+				region = loop_region
+				region = shield_region
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genwhk_outsider_allies = {
+		icon = mission_market_place_with_asian_traders
+		required_missions = {  }
+		position = 1
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					NOT = { is_part_of_hre = yes }
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	
+	genwhk_combat_fleet = {
+		icon = mission_open_up_china
+		required_missions = { genwhk_outsider_allies }
+		position = 2
+		trigger = {
+			num_of_galley = 15
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_naval_influence"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	
+	genwhk_privateering = {
+		icon = mission_junk_boat
+		required_missions = { genwhk_combat_fleet }
+		position = 3
+		trigger = {
+			num_ships_privateering = 30
+			capital_scope = {
+				privateer_power = {
+					country = ROOT
+					share = 25
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+		}
+	}
+	
+	genwhk_embargo_the_khagan = {
+		icon = mission_to_the_south_china_sea
+		required_missions = { genwhk_privateering }
+		position = 4
+		trigger = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+			 	emperor = {
+					is_rival = ROOT
+					trade_embargo_by = ROOT
+				}
+			}
+			else = {
+				num_of_galley = 50
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_naval_siege_support"
+				duration = 3650
+			}
+		}
+	}
+	
+	genwhk_dismantle_the_council = {
+		icon = mission_seize_the_dragon_throne
+		required_missions = { genwhk_embargo_the_khagan }
+		position = 5
+		trigger = {
+			development = 150
+			NOT = { hre_size = 1 }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_agent_of_change"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	
+	genwhk_control_wushanko_trade = {
+		icon = mission_asian_trader
+		required_missions = { genwhk_dismantle_the_council }
+		position = 6
+		trigger = {
+			589 = {
+				is_strongest_trade_power = ROOT
+			}
+			1051 = {
+				is_strongest_trade_power = ROOT
+			}
+			1088 = {
+				is_strongest_trade_power = ROOT
+			}
+			1081 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 100
+			add_mercantilism = 5
+		}
+	}
+}
+
+genwhk_missions_4 = {
+	slot = 4
+	generic = yes
+	ai = yes
+	potential = {
+		capital_scope = {
+			OR = {
+				region = arc_region
+				region = skull_region
+				region = hook_region
+				region = scythe_region
+				region = bowl_region
+				region = pincers_region
+				region = loop_region
+				region = shield_region
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genwhk_basic_professionalism = {
+		icon = mission_chinese_general_riding
+		required_missions = {  }
+		position = 1
+		trigger = {
+			army_professionalism = 0.1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_war_readiness"
+				duration = 3650
+			}
+		}
+	}
+	
+	genwhk_humilate_a_rival = {
+		icon = mission_kowtow
+		required_missions = { genwhk_basic_professionalism }
+		position = 2
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = obj_humiliate_rival_tooltip
+				has_country_flag = humiliated_rival
+			}
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+	
+	genwhk_gunpowder_artillery = {
+		icon = mission_asian_cannon
+		required_missions = { genwhk_humilate_a_rival }
+		position = 3
+		trigger = {
+			army_size = 20
+			artillery_fraction = 0.3
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_gunpowder_pioneers"
+				duration = 7300
+			}
+		}
+	}
+	
+	genwhk_grand_campaigns = {
+		icon = mission_japanese_samurai
+		required_missions = { genwhk_gunpowder_artillery }
+		position = 4
+		trigger = { grown_by_development = 100 }
+		effect = {
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_prestige = 25
+		}
+	}
+	
+	genwhk_great_wushanko_power = {
+		icon = mission_manchu_warrior
+		required_missions = { genwhk_grand_campaigns }
+		position = 5
+		trigger = {
+			is_great_power = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genwhk_journey_to_the_west"
+				duration = 7300
+			}
+		}
+	}
+	
+	genwhk_westward_expansion = {
+		icon = Burn_Wooden_Wall
+		required_missions = { genwhk_great_wushanko_power }
+		position = 6
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = genwhk_conquest_outside_wushanko
+				calc_true_if = {
+					all_owned_province = {
+						NOT = { continent = wushanko_isles_continent }
+					}
+					amount = 15
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			add_country_modifier = {
+				name = "genwhk_victory_over_the_west"
+				duration = 7300
+			}
+		}
+	}
+}

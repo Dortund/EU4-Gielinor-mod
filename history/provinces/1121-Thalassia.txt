@@ -1,0 +1,28 @@
+#1121 - Thalassia
+owner = TSS
+controller = TSS
+add_core = TSS
+tribal_owner = ---
+culture = skull_culture
+religion = seiryu
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = monkeytechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 5
+base_production = 5
+base_manpower = 4
+
+fort_15th = yes
+
+trade_goods = gunpowder
+
+is_city = yes
+
+center_of_trade = 1

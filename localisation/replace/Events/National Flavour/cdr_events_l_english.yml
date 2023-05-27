@@ -1,0 +1,47 @@
+﻿l_english:
+ 
+ flavor_cdr.1.t:0 "The Pirate Port of Brimhaven"
+ flavor_cdr.1.d:0 "Ever since the fall of the Garagorshuun, the seas of the Unquiet Ocean have been, well, quiet. However, with the world beginning to settle and trade routes becoming more lucrative, the potential profit from piracy has only grown. This has escalated to the point where pirates have banded together to create the port of Brimhaven on the island of Karamja."
+ flavor_cdr.1.a:0 "Yar har fiddle di dee! Being a pirate is alright with me!"
+ flavor_cdr.1.b:0 "Another minor power in the region; what's new?"
+ 
+ flavor_cdr.2.t:0 "Caverns of Crandor"
+ flavor_cdr.2.d:0 "As the number of adventurers on Crandor has grown, competition has become fiercer and new adventurers are taking ever-greater risks. Some think there's opportunity to be had in the volcano of central Crandor, and have begun excavating the crater."
+ flavor_cdr.2.a:0 "Interesting, let's see how it goes!"
+ flavor_cdr.2.b:0 "Stop them!"
+ 
+ flavor_cdr.3.t:0 "Dragon! Dragon!"
+ flavor_cdr.3.d:0 "The caves! It was the caves! I think one of the adventurers awoke the thing! It's taken the middle of the island! It's going to burn the island down!"
+ flavor_cdr.3.a:0 "We can't beat the dragon! I'm joining them!"
+ flavor_cdr.3.b:0 "We make our stand."
+ flavor_cdr.3.c:0 "Retreat! Take us to the Asgarnian mainland!"
+ 
+ flavor_cdr.4.t:0 "Dragon! Dragon!"
+ flavor_cdr.4.d:0 "Those damn adventurer fools only went and woke up a bleeding great dragon! It's going to tear up the whole island!"
+ flavor_cdr.4.a:0 "We can't beat the dragon! I'm joining them!"
+ flavor_cdr.4.b:0 "We make our stand."
+ flavor_cdr.4.c:0 "Retreat! Take us to the Asgarnian mainland!"
+ 
+ flavor_cdr.5.t:0 "Asgarnia accepts our refugees!"
+ flavor_cdr.5.d:0 "We've been afforded a part of the Asgarnian mainland to retreat into so we can prepare our counter-attack against the dragon."
+ flavor_cdr.5.a:0 "At least something's going right for us."
+ 
+ flavor_cdr.6.t:0 "Asgarnia fails to help!"
+ flavor_cdr.6.d:0 "Our refugees in Asgarnia have been ignored!"
+ flavor_cdr.6.a:0 "Seems we're stuck on our own."
+ 
+ flavor_cdr.7.t:0 "Asgarnia takes advantage!"
+ flavor_cdr.7.d:0 "Asgarnia has decided to use our moment of weakness to lay claim to Crandor Isle."
+ flavor_cdr.7.a:0 "Are they aware of the dragon?"
+ 
+ flavor_cdr.8.t:0 "Tale of Dragons"
+ flavor_cdr.8.d:0 "We've searched the magic libraries of the world to find any information we can on dragons, and why Elvarg was so powerful. All we could find was a mysterious text, connected with creatures known as Dragonkin:\nOrigins lie in ruined Kethsi, but now they return from the stone prison to lay waste. The strong remembers, the weak falls.\nBut what is Kethsi?"
+ flavor_cdr.8.a:0 "We need to find out more..."
+ 
+ flavor_cdr.9.t:0 "Libraries of the TzHaar"
+ flavor_cdr.9.d:0 "The ancient halls of Mor Ul Rek have an incredible library full of valuable ancient texts. While they do not appear to have much on the mysterious Kethsi, they do mention something known as The Catalyst - a very powerful object capable of reshaping the world and is fiercely guarded by the Dragonkin. Perhaps the anger of Elvarg is connected to the Catalyst?"
+ flavor_cdr.9.a:0 "There's a connection with Kethsi somewhere. We need to find it!"
+ 
+ flavor_cdr.10.t:0 "Tale of the Moonclan"
+ flavor_cdr.10.d:0 "Finally, up in the frozen north of Lunar Isle, we have answers. The Catalyst - or Stone of Jas - was once on Lunar Isle, and during the Second Age was moved to another plane by those who 'walked a higher Astral Path' - we believe it was the realm of Kethsi. The stone returned to Gielinor later in the Age, and given the people of Kethsi were never seen again, we assume the Dragonkin destroyed them. The Moonclan tell us that the Kethsians left us with one thing - banite weaponry, which can be attuned against dragons and their kin."
+ flavor_cdr.10.a:0 "So if the likes of Elvarg return, we shall be ready."

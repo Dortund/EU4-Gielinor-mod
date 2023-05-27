@@ -1,0 +1,817 @@
+########################################
+# Events for Gunnar
+########################################
+
+namespace = flavor_gun
+normal_or_historical_nations = yes
+
+# The Runecrafting Crusades Begin!
+country_event = {
+	id = flavor_gun.1
+	title = flavor_gun.1.t
+	desc = flavor_gun.1.d #Thousands have flocked to the banner of Gunnar to join a mighty crusade against all those who would steal the power of the Gods themselves. More are joining each day.
+	picture = RUNECRAFTING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GUN
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						capital_scope = {
+							OR = {
+								region = asgarnia_region
+								region = misthalin_region
+								region = kandarin_region
+								region = kharidian_desert_region
+							}
+						}
+						AND = {
+							region = tirannwn_region
+							religion = seren
+							NOT = { isolationism = 2 }
+						}
+					}
+					OR = {
+						culture_group = asgarnia_group
+						culture_group = misthalin_group
+						culture_group = kandarin_group
+						culture_group = elven_group
+						primary_culture = alkharidian
+						any_owned_province = { has_latent_trade_goods = runes }
+					}
+				}
+				country_event = { 
+					id = flavor_gun.4
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavor_gun.1.a #Excellent!
+		add_years_of_income = 1
+		add_manpower = 10
+		add_country_modifier = {
+			name = "GUN_crusader_recruitment"
+			duration = 3650
+		}
+	}
+}
+
+# Gunnar's Ground
+country_event = {
+	id = flavor_gun.2
+	title = flavor_gun.2.t #Gunnar's Ground
+	desc = flavor_gun.2.d #We have reached a critical piece of land on the River Lum. The river is wide enough at this point to act as a natural barrier to would-be invaders. We have declared this land Gunnar's Ground in celebration of our victories!
+	picture = RUNECRAFTING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GUN
+		owns_core_province = 19
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.2.a #This is to be our new capital!
+		19 = {
+			change_province_name = "Gunnarsgrunn"
+			change_culture = barbarian
+			change_religion = v
+		}
+		set_capital = 14
+	}
+	option = {
+		name = flavor_gun.2.b #A useful part of a wider plan.
+		19 = {
+			change_province_name = "Gunnarsgrunn"
+			change_culture = barbarian
+			change_religion = v
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gun.3
+	title = flavor_gun.3.t #The Wrath of the Gunnites
+	desc = flavor_gun.3.d #Our triumphs thus far have inspired competition. A strange new runecrafting altar has emerged far to the south and an order calling themselves the Myths' Guild have sworn to protect it. Scum mages claim our wrath created it - like we would have any part in granting the power of the Gods onto an unworthy world!
+	picture = RUNECRAFTING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GUN
+		current_age = age_of_humans
+		num_of_provinces_in_states = 15
+		985 = { is_empty = yes }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			985 = {
+				cede_province = MYG
+				add_core = MYG
+				change_religion = godless
+				change_culture = yanillian
+				add_building = fort_15th
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				change_province_name = "Myths' Guild"
+			}
+			MYG = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Uhld"
+					dynasty = "Andreson"
+					adm = 5
+					dip = 3
+					mil = 5
+					age = 31
+					claim = 100
+				}
+				add_truce_with = ROOT
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.3.a #Leave Gunnar's crusade and join the Myths' Guild.
+		add_historical_rival = MYG
+		switch_tag = MYG
+	}
+	option = {
+		name = flavor_gun.3.b #One more Runecrafting altar to smash!
+		add_historical_rival = MYG
+	}
+}
+
+# The Great Invasion
+country_event = {
+	id = flavor_gun.4
+	title = flavor_gun.4.t
+	desc = {
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = 6
+			}
+		}
+		desc = flavor_gun.4.da #The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. They have named [Root.GetName] as an enemy to their Crusade, and their supporters within our realm are rising up with their blessing!
+	}
+	desc = {
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = 3
+			}
+			NOT = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 6
+				}
+			}
+		}
+		desc = flavor_gun.4.db #The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. They have warned [Root.GetName] to stay out the way of their Crusade, and their supporters within our realm are actively trying to sabotage our military efforts.
+	}
+	desc = {
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -3
+			}
+			NOT = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 3
+				}
+			}
+		}
+		desc = flavor_gun.4.dc #The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. Thankfully, they do not seem to have a particularly strong opinion about our actions regarding the craft.
+	}
+	desc = {
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -6
+			}
+			NOT = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = -3
+				}
+			}
+		}
+		desc = flavor_gun.4.de #The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. They speak positively of our nation as a potential friend in their cause.
+	}
+	desc = {
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -100
+			}
+			NOT = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = -6
+				}
+			}
+		}
+		desc = flavor_gun.4.df #The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. They have named [Root.GetName] as a righteous nation and a potential ally in their cause.
+	}
+	picture = RUNECRAFTING_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden_effect = {
+		
+	}
+	
+	option = {
+		name = flavor_gun.4.a #Runecrafting is our future - we shall not be dragged back!
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = 6
+			}
+		}
+		add_opinion = {
+			who = GUN
+			modifier = gun_runecrafting_nemesis
+		}
+		add_country_modifier = {
+			name = GUN_major_sabotage_by_the_gunnites
+			duration = 7300
+		}
+	}
+	option = {
+		name = flavor_gun.4.b #So this guy doesn't like us. Who cares?
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = 3
+			}
+			NOT = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 6
+				}
+			}
+		}
+		add_opinion = {
+			who = GUN
+			modifier = gun_runecrafting_enemy
+		}
+		add_country_modifier = {
+			name = GUN_modest_sabotage_by_the_gunnites
+			duration = 7300
+		}
+	}
+	option = {
+		name = flavor_gun.4.c #I have no strong feelings one way or the other.
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -3
+			}
+			NOT = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 3
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = flavor_gun.4.e #Being in a warmongering army's good books can't be a bad thing.
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -6
+			}
+			NOT = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = -3
+				}
+			}
+		}
+		add_opinion = {
+			who = GUN
+			modifier = gun_runecrafting_aligned
+		}
+		
+	}
+	option = {
+		name = flavor_gun.4.f #Glory to Gunnar, and to us!
+		trigger = {
+			check_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -100
+			}
+			NOT = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = -6
+				}
+			}
+		}
+		add_opinion = {
+			who = GUN
+			modifier = gun_runecrafting_friend
+		}
+	}
+}
+
+#A Strange Request
+country_event = {
+	id = flavor_gun.5
+	title = flavor_gun.5.t
+	desc = flavor_gun.5.d #A strange hooded man entered Gunnar's realm with a request of us - they are willing to tell us the location of the Death Runecrafting Altar so that we can destroy it! Apparently it lies deep in an abandoned underground passageway, so even getting to it shall be a challenge.
+	picture = TIRANNWN_MALE_ELVES_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = seren_bounty_for_death_altar_flag
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = gun_death_altar_opportunity
+	}
+	
+	option = {
+		name = flavor_gun.5.a #We go through.
+		custom_tooltip = gunnar_into_the_pass_tooltip
+		underground_pass_area = {
+			discover_country = ROOT
+		}
+		add_prestige = 10
+		add_yearly_manpower = -0.1
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = seren_request_gunnars_help_flag
+				}
+				country_event = { 
+					id = seren_events.304
+					days = 1
+				}
+			}
+			country_event = { 
+				id = flavor_gun.6
+				days = 90
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_gun.5.b #I'm not trusting this stranger.
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = seren_request_gunnars_help_flag
+				}
+				country_event = { 
+					id = seren_events.305
+					days = 1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+#The Underground Pass
+country_event = {
+	id = flavor_gun.6
+	title = flavor_gun.6.t
+	desc = flavor_gun.6.d #Destroy the Death Altar. Follow the map. That was all our expedition was told about the Underground Pass. But the pass is unnerving... Something about it eats away at the hearts of warriors. And somehow, the expedition is lost...
+	picture = IBAN_LAIR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.6.a #The map shows the way.
+		custom_tooltip = gunnar_stay_the_course_tooltip
+		hidden_effect = {
+			country_event = { 
+				id = flavor_gun.7
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = flavor_gun.6.b #I hear voices... Why don't we follow them?
+		custom_tooltip = gunnar_risky_course_tooltip
+		hidden_effect = {
+			country_event = { 
+				id = flavor_gun.8
+				days = 30
+			}
+		}
+	}
+}
+
+#Stone of Death
+country_event = {
+	id = flavor_gun.7
+	title = flavor_gun.7.t
+	desc = flavor_gun.7.d #The Death Altar expedition continued to search to little avail - until they came across a curious discovery. A stone object with the shape of a skull upon it, pulling towards a wall in the caverns of the Underground Pass.
+	picture = IBAN_LAIR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.7.a #Dig through the wall.
+		custom_tooltip = gunnar_stay_the_course_tooltip
+		hidden_effect = {
+			country_event = { 
+				id = flavor_gun.9
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = flavor_gun.7.b #But I hear an alternative in my heart... the voices grow stronger...
+		custom_tooltip = gunnar_risky_course_tooltip
+		hidden_effect = {
+			country_event = { 
+				id = flavor_gun.8
+				days = 30
+			}
+		}
+	}
+}
+
+#The Voice of V
+country_event = {
+	id = flavor_gun.8
+	title = flavor_gun.8.t
+	desc = flavor_gun.8.d #The Death Altar expedition followed the voices through the Underground Pass. It was as if the walls began to melt, and the floor sink, until there was the figure of V, the champion of the Fremennik! He says he is proud of our crusade, and he intends to lead it as Lord of the Fremennik!
+	picture = IBAN_LAIR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.8.a #Wow! Fancy meeting V in this dungeon!
+		country_event = { 
+			id = flavor_gun.10
+			days = 30
+		}
+	}
+	option = {
+		name = flavor_gun.8.b #That's not V...
+		custom_tooltip = gunnar_fake_v_tooltip
+		hidden_effect = {
+			country_event = { 
+				id = flavor_gun.11
+				days = 30
+			}
+		}
+	}
+}
+
+#Mysterious Ruins of the Death Altar
+country_event = {
+	id = flavor_gun.9
+	title = flavor_gun.9.t
+	desc = flavor_gun.9.d #The Death Altar Expedition followed the pull of the Death Talisman through rock, mining until they broke through into what appeared to be a Runecrafting altar - but already in ruins. Close by is a strange red crystal which seems to have been the source of the voices we'd been hearing...
+	picture = IBAN_LAIR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.9.a #Investigate the ruins.
+		
+		country_event = { 
+			id = flavor_gun.12
+			days = 30
+		}
+	}
+	option = {
+		name = flavor_gun.9.b #Investigate the crystal.
+		country_event = { 
+			id = flavor_gun.13
+			days = 30
+		}
+	}
+}
+
+#The Command of Lord V
+country_event = {
+	id = flavor_gun.10
+	title = flavor_gun.10.t
+	desc = flavor_gun.10.d #Lord V speaks of a higher path for our crusade. To stop runecrafting is a petty pursuit compared to the higher path of freeing him from his prison in the Temple of Light, and worshipping him as the remaining form of the crystal Goddess Seren.
+	picture = IBAN_LAIR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.10.a #Wow! So V is a Dark Lord and actually part of Seren?! This all makes perfect sense!
+		custom_tooltip = gunnar_darklord_tooltip
+		random_owned_province = {
+			change_religion = dark_lord
+			spawn_rebels = {
+				type = dark_lord_rebels
+				size = 3
+			}
+		}
+		
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						religion = seren
+						religion = dark_lord
+					}
+				}
+				country_event = { 
+					id = seren_events.306
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+#Fury of the Fake V
+country_event = {
+	id = flavor_gun.11
+	title = flavor_gun.11.t
+	desc = flavor_gun.11.d #We have lost contact with the Death Altar expedition. It appears whoever they met in the Underground Pass was not V.
+	picture = IBAN_LAIR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						religion = seren
+						religion = dark_lord
+					}
+				}
+				country_event = { 
+					id = seren_events.307
+					days = 1
+				}
+			}
+			if = {
+				limit = {
+					388 = {
+						is_empty = yes
+					}
+				}
+				388 = {
+					cede_province = TPS
+					add_core = TPS
+					change_religion = dark_lord
+					change_culture = soulless
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					982 = {
+						is_empty = yes
+					}
+				}
+				982 = {
+					cede_province = TPS
+					add_core = TPS
+					change_religion = dark_lord
+					change_culture = soulless
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					339 = {
+						is_empty = yes
+					}
+				}
+				339 = {
+					cede_province = TPS
+					add_core = TPS
+					change_religion = dark_lord
+					change_culture = soulless
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = TPS
+				}
+				TPS = {
+					build_to_forcelimit = {
+						infantry = 0.7
+						cavalry = 0.1
+						artillery = 0.2
+					}
+					add_truce_with = ROOT
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_gun.11.a #The expedition isn't lost! They've found a higher purpose!
+		trigger = {
+			exists = TPS
+		}
+		add_prestige = -25
+		switch_tag = TPS
+	}
+	option = {
+		name = flavor_gun.11.b #Last time we trust a stranger's word.
+		add_prestige = -25
+	}
+}
+
+#The True Death Altar
+country_event = {
+	id = flavor_gun.12
+	title = flavor_gun.12.t
+	desc = flavor_gun.12.d #Using the Death Talisman on the Death Altar ruins, we have discovered the true altar lies inside. Let us take it out for good!
+	picture = IBAN_LAIR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.12.a #For the honour of Gunnar!
+		add_prestige = 50
+		538 = {
+			add_province_modifier = {
+				name = GUN_ruined_runecrafting_altar
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						religion = seren
+						religion = dark_lord
+					}
+				}
+				country_event = { 
+					id = seren_events.307
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+#The Orphan of a Goddess
+country_event = {
+	id = flavor_gun.13
+	title = flavor_gun.13.t
+	desc = flavor_gun.13.d #The Temple of Light hides an inpenetrable crystal, and within it is a being, trapped inside. It speaks of abandonment by a Goddess named Seren. It is at both wrathful and innocent - powerful yet powerless.
+	picture = IBAN_LAIR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.13.a #Stop and listen before turning back to the Death Altar.
+		tirannwn_region = {
+			discover_country = ROOT
+		}
+		random_owned_province = {
+			change_religion = dark_lord
+		}
+		country_event = { 
+			id = flavor_gun.12
+			days = 5
+		}
+	}
+	option = {
+		name = flavor_gun.13.b #Ignore the being and turn back to the Death Altar.
+		country_event = { 
+			id = flavor_gun.12
+			days = 5
+		}
+	}
+}
+

@@ -1,0 +1,99 @@
+country_decisions = {
+
+	marwolaeth_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_marwolaeth_flag }
+			was_never_end_game_tag_trigger = yes
+			culture_group = elven_group
+			religion = dark_lord
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = MWL }
+			NOT = { tag = EVR }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 325 # Prifddinas
+				province_id = 327 # Gwenith
+				province_id = 337 # Lletya
+				province_id = 538 # Temple of Light
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			religion = dark_lord
+			NOT = { exists = EVR }
+			owns_core_province = 325
+			owns_core_province = 327
+			owns_core_province = 337
+			owns_core_province = 538
+			num_of_owned_provinces_with = {
+				value = 15
+				region = tirannwn_region
+				is_core = root
+			}
+		}
+		effect = {
+			538 = {
+				move_capital_effect = yes
+			}
+			change_tag = MWL
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_prestige = 50
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_marwolaeth_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			hidden_effect = {
+				complete_mission = IOR_clan_of_war
+				complete_mission = IOR_form_the_death_guard
+				complete_mission = IOR_naval_preparations
+				complete_mission = IOR_spread_the_dark_lords_message
+				complete_mission = IOR_new_faith_temples
+				complete_mission = IOR_suppress_the_lesser_clans
+				complete_mission = IOR_rebuild_the_economy
+				complete_mission = IOR_push_the_line_south
+				complete_mission = IOR_legitimise_our_rule
+				complete_mission = IOR_rebuild_arandar
+				complete_mission = IOR_take_west_ardougne
+				complete_mission = IOR_final_war_preparations
+				complete_mission = IOR_rise_of_the_mourners
+				complete_mission = IOR_the_temple_of_shadow
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 600
+	}
+
+}

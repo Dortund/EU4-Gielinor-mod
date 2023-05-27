@@ -1,0 +1,19 @@
+#1228-Kami-Shima Nexus
+tribal_owner = ---
+culture = shi
+religion = godless
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 4
+
+trade_goods = tropical_logs
+latent_trade_goods = { divine_energy }
+
+is_city = yes
+
+native_size = 75
+native_ferocity = 75
+native_hostileness = 75

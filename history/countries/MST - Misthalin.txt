@@ -1,0 +1,149 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = avarrockan
+add_accepted_culture = lummer
+add_accepted_culture = silvarean
+religion = saradomin
+technology_group = centraltechgroup
+capital = 14 #Varrock
+national_focus = DIP
+historical_rival = MYT
+historical_rival = HOR
+historical_rival = NGU
+historical_rival = YUR
+historical_rival = ZMG
+historical_friend = KDS
+
+1900.1.1 = {
+	set_estate_privilege = estate_nobles_MST_cautious_diplomacy
+}
+
+1921.3.17 = {
+	monarch = {
+		name = "Claudius"
+		dynasty = "Remanis"
+		birth_date = 1896.11.4
+		death_date = 1967.3.12
+		adm = 5
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = MST
+		name = "Grace"
+		dynasty = "Skye"
+		birth_date = 1891.1.25
+		death_date = 1968.6.8
+		female = yes
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	heir = {
+		name = "Lowell"
+		dynasty = "Remanis"
+		birth_date = 1943.6.27
+		death_date = 1979.11.2
+		claim = 100
+		adm = 4
+		dip = 1
+		mil = 2
+	}
+}
+
+1967.3.12 = {
+	monarch = {
+		name = "Lowell"
+		dynasty = "Remanis"
+		birth_date = 1943.6.27
+		death_date = 1979.11.2
+		adm = 4
+		dip = 1
+		mil = 2
+	}
+}
+
+1979.11.2 = {
+	monarch = {
+		name = "Botolph"
+		dynasty = "Remanis"
+		birth_date = 1951.12.3
+		death_date = 2031.5.20
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+2000.1.1 = {
+	remove_estate_privilege = estate_nobles_MST_cautious_diplomacy
+}
+
+2031.11.2 = {
+	monarch = {
+		name = "Roald I"
+		dynasty = "Remanis"
+		birth_date = 1991.5.21
+		death_date = 2083.7.6
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+2083.7.6 = {
+	monarch = {
+		name = "Hywell II"
+		dynasty = "Remanis"
+		birth_date = 2019.6.12
+		death_date = 2105.4.16
+		adm = 5
+		dip = 2
+		mil = 4
+	}
+}
+
+
+2105.4.16 = {
+	monarch = {
+		name = "Roald II"
+		dynasty = "Remanis"
+		birth_date = 2094.12.4
+		death_date = 2151.3.25
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+
+2150.1.1 = {
+	add_absolutism = 50
+}
+
+2151.1.4 = {
+	monarch = {
+		name = "Roald III"
+		dynasty = "Remanis"
+		birth_date = 2132.4.1
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = well_connected_personality
+}
+
+2162.3.18 = {
+	queen = {
+		country_of_origin = MST
+		name = "Ellamaria"
+		dynasty = "Barkeeper"
+		birth_date = 2134.8.30
+		female = yes
+		adm = 3
+		dip = 2
+		mil = 6
+	}
+}

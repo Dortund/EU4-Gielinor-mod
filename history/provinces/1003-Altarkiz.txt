@@ -1,0 +1,27 @@
+#1003-Altarkiz
+owner = KDS
+controller = KDS
+add_core = KDS
+tribal_owner = ---
+culture = alkharidian
+religion = menaphite
+trade_goods = herblore_supplies
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+is_city = yes
+
+1937.1.4 = {
+	owner = ALK
+	controller = ALK
+	add_core = ALK
+}

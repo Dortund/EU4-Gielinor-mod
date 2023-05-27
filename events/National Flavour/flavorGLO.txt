@@ -1,0 +1,111 @@
+########################################
+# Events for Glough
+########################################
+
+namespace = flavor_glo
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_glo.1
+	title = flavor_glo.1.t #The Offer of a Gnome
+	desc = flavor_glo.1.d #A Gnome has arrived to the shores of Karamja, and has an interesting proposition: He will pay vast amounts of money to secure the province of Kalumin - what he wants with it we are unsure.
+	picture = GLOUGH_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		owns_core_province = 227
+		current_age = age_of_adventurers
+		has_institution = exploration
+		NOT = { culture_group = gnome_group }
+		OR = {
+			exists = GNE
+			exists = GNO
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_glo.1.a #Let's join him and find out why!
+		hidden_effect = {
+			227 = {
+				cede_province = GLO
+				add_core = GLO
+				remove_core = ROOT
+			}
+			GLO = {
+				add_historical_friend = GNO
+				add_historical_friend = GNE
+				add_truce_with = ROOT
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Glough"
+					dynasty = "Imblewyn"
+					adm = 4
+					dip = 5
+					mil = 5
+					age = 40
+					claim = 100
+				}
+			}
+		}
+		switch_tag = GLO
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_glo.1.b #It's just one province, and the money is amazing...
+		227 = {
+			cede_province = GLO
+			add_core = GLO
+			remove_core = ROOT
+		}
+		hidden_effect = {
+
+			GLO = {
+				add_historical_friend = GNO
+				add_historical_friend = GNE
+				add_truce_with = ROOT
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Glough"
+					dynasty = "Imblewyn"
+					adm = 4
+					dip = 5
+					mil = 5
+					age = 40
+					claim = 100
+				}
+			}
+		}
+		add_years_of_income = 2.5
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_glo.1.c #Are we sure this is a good idea?
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

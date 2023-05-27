@@ -1,0 +1,1507 @@
+#
+# remember to add graphics for relevant ones when you add to this
+#
+# if a modifier is scaled, its multiplied with development in the province.
+
+
+# any_friendly_coast_border_province is a special scope made for institution spread.
+# It checks for adjacent provinces or provinces one seazone away.
+# Friendly is defined as at positive relations or owned by the same country that owns the province.
+
+#######################################
+# Reconstruction
+# 
+# All except Bandosian/Karamjan tech and Cronch start with it
+#######################################
+
+reconstruction = {
+	bonus = {
+		production_efficiency = 0.05
+	}
+
+	trade_company_efficiency = 0.2
+
+
+	history = {
+		is_year = 1500
+		OR = {
+			owner = {
+				NOT = {
+					technology_group = bandostechgroup
+					technology_group = karamjantechgroup
+					culture_group = troll_group
+				}
+			}
+			culture_group = tzhaar_group
+			tag = DSK
+			is_year = 2000
+		}
+	}
+	
+	# no need for events, as its there from the start.
+	#can_start = {	is_year = 1500	}
+	#start_chance = 100
+	#on_start = institution_events.1
+
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+		modifier = {
+			factor = 0.6
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = FRIENDLY_NEIGHBOR_OR_COAST_PROVINCE_HAS_EMBRACED
+				any_friendly_coast_border_province = {
+					reconstruction = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			potential = {
+				is_prosperous = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = PROSPERITY_IS_RECONSTRUCTION
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						reconstruction = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = NEIGHBOR_NOT_OWNED_IS_RECONSTRUCTION
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					reconstruction = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PORT_OR_CAPITAL_IN_COLONY_RECONSTRUCTION
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = reconstruction }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = reconstruction
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_reconstruction_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = reconstruction
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Architecture
+# 
+# Starts in strong, well-developed provinces
+#######################################
+
+architecture = {
+	bonus = {
+		development_cost = -0.05
+		build_cost = -0.05
+	}
+
+	trade_company_efficiency = 0.4
+
+
+	historical_start_date = 1950.1.1
+	historical_start_province = 374 #Keldagrim
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1960
+				OR = {
+					region = kharidian_desert_region
+					region = tirannwn_region
+					region = varlamore_region
+					region = scythe_region
+					region = bowl_region
+					region = pincers_region
+				}
+			}
+			
+			AND = {
+				is_year = 1980
+				OR = {
+					region = fremennik_region
+					region = kandarin_region
+					region = misthalin_region
+					region = asgarnia_region
+					region = kourend_region
+					region = arc_region
+					region = skull_region
+					region = hook_region
+				}
+			}
+			AND = {
+				is_year = 1990
+				OR = {
+					region = kebos_region
+					region = morytania_region
+					region = loop_region
+					region = shield_region
+				}
+			}
+			AND = {
+				is_year = 2000
+				OR = {
+					superregion = east_old_world_superregion
+					superregion = west_old_world_superregion
+					superregion = zeah_superregion
+					superregion = wushanko_isles_superregion
+				}
+			}
+			is_year = 2100
+		}
+	}
+	
+	can_start = {
+		is_year = 1950
+		development = 20
+		is_state = yes
+		OR = {
+			has_building = workshop
+			has_building = counting_house
+		}
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	on_start = institution_events.2
+	
+	can_embrace = {
+		owner = { has_institution = reconstruction }
+	}
+
+	embracement_speed = {
+		modifier = {
+			scale = yes
+			factor = 0.3
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_architecture
+				any_friendly_coast_border_province = {
+					architecture = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						architecture = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_architecture
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					architecture = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_development_15
+				development = 15
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_development_20
+				development = 20
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_development_25
+				development = 25
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_development_30
+				development = 30
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_workshop
+				has_building = workshop
+			}
+		}
+		modifier = {
+			factor = 0.4
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_counting_house
+				has_building = counting_house
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_architecture
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = architecture }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = architecture
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_architecture_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = architecture
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Runecrafting
+# 
+# Starts where there are runes, and at Wizards' Tower
+#######################################
+
+runecrafting = {
+	bonus = {
+		fire_damage = 0.05
+		fire_damage_received = -0.05
+	}
+
+	trade_company_efficiency = 0.6
+
+
+	historical_start_date = 2000.1.1
+	historical_start_province = 1300 #Rune Essence Mine
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 2000
+				OR = {
+					culture = moonclan
+					culture = arceuus
+					area = draynor_area
+					area = lumbridge_swamp_area
+					area = aurore_area
+				}
+			}
+			
+			AND = {
+				is_year = 2010
+				OR = {
+					region = misthalin_region
+					region = asgarnia_region
+					region = fremennik_region
+					region = kourend_region
+					region = acheron_region
+				}
+			}
+			AND = {
+				is_year = 2020
+				OR = {
+					region = kandarin_region
+					region = forinthry_region
+					region = karamja_region
+					region = kharidian_desert_region
+				}
+			}
+			AND = {
+				is_year = 2030
+				OR = {
+					region = tirannwn_region
+					region = morytania_region
+					region = kebos_region
+				}
+			}
+			AND = {
+				is_year = 2040
+				region = feldip_hills_region
+			}
+			AND = {
+				is_year = 2075
+				OR = {
+					superregion = east_old_world_superregion
+					superregion = west_old_world_superregion
+					superregion = zeah_superregion
+					superregion = wushanko_isles_superregion
+				}
+
+			}
+			is_year = 2100
+		}
+	}
+	
+	can_start = {
+		is_year = 2000
+		
+		is_state = yes
+		OR = {
+			trade_goods = runes
+			AND = {
+				has_latent_trade_goods = runes
+				development = 25
+			}
+		}
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	on_start = institution_events.3
+	
+	can_embrace = {
+		owner = { has_institution = reconstruction }
+	}
+
+	embracement_speed = {
+		modifier = {
+			scale = yes
+			factor = 0.6
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_runecrafting
+				any_friendly_coast_border_province = {
+					runecrafting = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						runecrafting = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_runecrafting
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					runecrafting = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_runes
+				trade_goods = runes
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_magic_supplies
+				trade_goods = magic_supplies
+				development = 20
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_latent_runes
+				has_latent_trade_goods = runes
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_runecrafting
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = runecrafting }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = runecrafting
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_runecrafting_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = runecrafting
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Statehood
+# 
+# Starts in a province of a nation with good control over their home region or culture
+#######################################
+
+statehood = {
+	bonus = {
+		reform_progress_growth = 0.1
+	}
+
+	trade_company_efficiency = 0.8
+
+	historical_start_date = 2050.1.1
+	historical_start_province = 41 #Falador
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 2050
+				OR = {
+					region = misthalin_region
+					region = asgarnia_region
+					area = east_ardougne_area
+				}
+			}
+			
+			AND = {
+				is_year = 2060
+				OR = {
+					region = morytania_region
+					region = feldip_hills_region
+					region = kandarin_region
+					region = kourend_region
+					region = varlamore_region
+					region = scythe_region
+					region = bowl_region
+					region = pincers_region
+				}
+			}
+			AND = {
+				is_year = 2070
+				OR = {
+					region = kharidian_desert_region
+					region = fremennik_region
+					region = tirannwn_region
+				}
+			}
+			AND = {
+				is_year = 2080
+				OR = {
+					region = karamja_region
+					region = kebos_region
+					region = arc_region
+					region = skull_region
+					region = hook_region
+				}
+			}
+			AND = {
+				is_year = 2090
+				OR = {
+					region = forinthry_region
+					region = troll_country_region
+					region = loop_region
+					region = shield_region
+				}
+			}
+			AND = {
+				is_year = 2095
+				OR = {
+					superregion = east_old_world_superregion
+					superregion = west_old_world_superregion
+					superregion = zeah_superregion
+					superregion = wushanko_isles_superregion
+				}
+			}
+			is_year = 2099
+		}
+	}
+	
+	can_start = {
+		is_year = 2050
+		is_in_capital_area = yes
+		is_island = no
+		is_state = yes
+		architecture = 100
+		OR = {
+			owner = {
+				AND = {
+					ADM = 5
+					MIL = 5
+					DIP = 5
+				}
+			}
+			AND = {
+				has_building = courthouse
+				owner = {
+					AND = {
+						ADM = 4
+						MIL = 4
+						DIP = 4
+					}
+				}
+			}
+			AND = {
+				has_building = courthouse
+				owner = {
+					AND = {
+						government_rank = 3
+						ADM = 3
+						MIL = 3
+						DIP = 3
+					}
+				}
+			}
+			AND = {
+				has_building = courthouse
+				owner = {
+					AND = {
+						has_unified_culture_group = yes
+						ADM = 2
+						MIL = 2
+						DIP = 2
+					}
+				}
+			}
+		}
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	on_start = institution_events.4
+	
+	can_embrace = {
+		owner = { has_institution = architecture }
+	}
+
+	embracement_speed = {
+		modifier = {
+			scale = yes
+			factor = 0.6
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_statehood
+				any_friendly_coast_border_province = {
+					statehood = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						statehood = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_statehood
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					statehood = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_unified_primary_culture_group
+				owner = {
+					has_unified_culture_group = yes
+				}
+				has_owner_culture = yes
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_unified_home_region_capital
+				owner = {
+					capital_scope = {
+						region_for_scope_province = {
+							type = all
+							owned_by = ROOT #Subjects won't count, empty provinces will need to be colonized.
+						}
+					}
+				}
+				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_good_empire
+				owner = {
+					AND = {
+						government_rank = 3
+						ADM = 5
+						MIL = 5
+						DIP = 5
+					}
+				}
+				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_statehood
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = statehood }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = statehood
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_statehood_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = statehood
+				}
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Exploration
+# 
+# Starts in a coastal province of the most powerful naval nation
+#######################################
+
+exploration = {
+	bonus = {
+		global_colonial_growth = 10
+		range = 0.25
+	}
+
+	trade_company_efficiency = 1
+
+
+	historical_start_date = 2100.1.1
+	historical_start_province = 33 #Port Sarim
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 2100
+				OR = {
+					region = asgarnia_region
+					region = fremennik_region
+				}
+			}
+			AND = {
+				is_year = 2105
+				superregion = wushanko_isles_superregion
+			}
+			AND = {
+				is_year = 2110
+				OR = {
+					region = kharidian_desert_region
+					region = kandarin_region
+				}
+			}
+			AND = {
+				is_year = 2120
+				OR = {
+					region = misthalin_region
+					region = morytania_region
+					region = feldip_hills_region
+				}
+			}
+			AND = {
+				is_year = 2140
+				OR = {
+					region = karamja_region
+					region = forinthry_region
+					region = tirannwn_region
+					region = troll_country_region
+				}
+			}
+			AND = {
+				is_year = 2160
+				OR = {
+					region = varlamore_region
+					region = kebos_region
+					region = kourend_region
+				}
+			}
+			AND = {
+				is_year = 2170
+				OR = {
+					superregion = east_old_world_superregion
+					superregion = west_old_world_superregion
+					superregion = zeah_superregion
+				}
+			}
+			is_year = 2200
+		}
+	}
+	
+	can_start = {
+		is_year = 2100
+		has_port = yes
+		is_state = yes
+		owner = {
+			navy_size = 50
+		}
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.5
+	
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+		modifier = {
+			factor = 1.2
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_exploration
+				any_friendly_coast_border_province = {
+					exploration = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			potential = {
+				has_port = yes
+				NOT = {
+					any_friendly_coast_border_province = {
+						exploration = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_neighbor_port_province_exploration
+				has_port = yes
+				any_neighbor_province = {
+					exploration = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_fifty_ships
+				owner = {
+					navy_size = 50
+				}
+				has_port = yes
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_exploration
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = exploration }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = exploration
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_exploration_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = exploration
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Quests
+# 
+# Good for nations full of adventurers!
+#######################################
+
+quests = {
+	bonus = {
+		max_absolutism = 10
+	}
+
+	trade_company_efficiency = 1.25
+
+	historical_start_date = 2150.1.1
+	historical_start_province = 260 #Legends' Guild
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 2150
+				OR = {
+					region = kandarin_region
+					region = asgarnia_region
+					region = misthalin_region
+				}
+			}
+			AND = {
+				is_year = 2160
+				OR = {
+					region = troll_country_region
+					region = kharidian_desert_region
+					region = fremennik_region
+					region = karamja_region
+					region = tirannwn_region
+				}
+			}
+			AND = {
+				is_year = 2170
+				OR = {
+					region = forinthry_region
+					region = kebos_region
+					region = kourend_region
+					region = morytania_region
+					region = feldip_hills_region
+				}
+			}
+			AND = {
+				is_year = 2180
+				OR = {
+					region = varlamore_region
+					region = acheron_region
+				}
+			}
+			AND = {
+				is_year = 2185
+				superregion = wushanko_isles_superregion
+			}
+			AND = {
+				is_year = 2200
+				OR = {
+					superregion = east_old_world_superregion
+					superregion = west_old_world_superregion
+					superregion = zeah_superregion
+				}
+			}
+			is_year = 2250
+		}
+	}
+	
+	can_start = {
+		is_year = 2150
+		is_state = yes
+		owner = {
+			absolutism = 50
+		}
+		development = 30
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.6
+	
+	can_embrace = {
+		owner = { has_institution = exploration }
+	}
+
+	embracement_speed = {
+		modifier = {
+			scale = yes
+			factor = 0.6
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_quests
+				any_friendly_coast_border_province = {
+					quests = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						quests = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_quests
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					quests = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_fifty_adventurers
+				owner = { 
+					absolutism = 50
+				}
+				development = 10
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_seventyfive_adventurers
+				owner = { 
+					absolutism = 75
+				}
+				development = 10
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_hundred_adventurers
+				owner = { 
+					absolutism = 100
+				}
+				development = 10
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_quests
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = quests }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = quests
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_quests_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = quests
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Invention
+# 
+# ONLY if the sixth age appears
+#######################################
+
+invention = {
+	bonus = {
+		innovativeness_gain = 1
+	}
+
+	trade_company_efficiency = 1.5
+
+	historical_start_date = 2200.1.1
+	historical_start_province = 43 #Invention Guild
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 2200
+				culture_group = dwarven_group
+			}
+			AND = {
+				is_year = 2205
+				OR = {
+					region = asgarnia_region
+					region = misthalin_region
+					region = scythe_region
+					region = bowl_region
+					region = pincers_region
+				}
+			}
+			AND = {
+				is_year = 2210
+				OR = {
+					region = kandarin_region
+					region = kharidian_desert_region
+					region = tirannwn_region
+				}
+			}
+			AND = {
+				is_year = 2215
+				superregion = wushanko_isles_superregion
+			}
+			AND = {
+				is_year = 2220
+				OR = {
+					region = forinthry_region
+					region = morytania_region
+					region = karamja_region
+					region = fremennik_region
+				}
+			}
+			AND = {
+				is_year = 2230
+				OR = {
+					region = kebos_region
+					region = kourend_region
+					region = varlamore_region
+					region = feldip_hills_region
+					region = troll_country_region
+				}
+			}
+			AND = {
+				is_year = 2260
+				OR = {
+					superregion = east_old_world_superregion
+					superregion = west_old_world_superregion
+					superregion = zeah_superregion
+				}
+			}
+			is_year = 2275
+		}
+	}
+	
+	can_start = {
+		is_year = 2200
+		is_state = yes
+		current_age = age_of_divination
+		owner = { 
+			innovativeness = 20
+		}
+		has_building = counting_house
+		base_production = 12
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.7
+	
+	can_embrace = {
+		owner = { has_institution = quests }
+	}
+
+	embracement_speed = {
+		modifier = {
+			scale = yes
+			factor = 0.6
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_invention
+				any_friendly_coast_border_province = {
+					invention = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						invention = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_invention
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					invention = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_twenty_innovativeness
+				owner = { 
+					innovativeness = 20
+				}
+				base_production = 7
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_thirty_innovativeness
+				owner = { 
+					innovativeness = 30
+				}
+				base_production = 7
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_forty_innovativeness
+				owner = { 
+					innovativeness = 40
+				}
+				base_production = 7
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_is_godless
+				owner = { 
+					religion = godless
+				}
+				religion = godless
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_invention
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = invention }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = invention
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_invention_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = invention
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}

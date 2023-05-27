@@ -1,0 +1,23 @@
+#1193 - Pearl Fortress
+owner = DLO
+controller = DLO
+add_core = DLO
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 4
+base_manpower = 5
+
+fort_15th = yes
+
+trade_goods = advanced_logs
+
+is_city = yes
+
+add_province_triggered_modifier = religious_center

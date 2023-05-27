@@ -1,0 +1,24 @@
+#458 - Karuulm
+owner = KUU
+controller = KUU
+add_core = KUU
+tribal_owner = ---
+culture = kahlith
+religion = ful
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 6
+
+fort_15th = yes 
+
+trade_goods = bones
+latent_trade_goods = { rare_loot }
+
+is_city = yes
+
+center_of_trade = 1

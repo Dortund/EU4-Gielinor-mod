@@ -1,0 +1,20 @@
+#76 - Siad
+
+culture = midkharidian
+religion = menaphite
+tribal_owner = ---
+trade_goods = hunter_creatures
+
+discovered_by = centraltechgroup
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2

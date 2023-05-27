@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = great_khanate
+government_rank = 2
+primary_culture = pincers_culture
+add_accepted_culture = bowl_culture
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1193 #Pearl Fortress

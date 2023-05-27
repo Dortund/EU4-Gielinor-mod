@@ -1,0 +1,47 @@
+﻿l_english:
+ tirannwn_civil_war.1.t:0 "The Tirannwn Civil War"
+ tirannwn_civil_war.1.d:0 "The flow of elves from Tirannwn to Baxtorian's kingdom east of the Galarpos mountains has resulted in something of a power vacuum back in Prifddinas. The Cadarn clan, formally the most powerful clan in Tirannwn, has all but left the realm allowing the Iorwerth Clan to sieze power and hold six of the other Clan Elders hostage. A resistance movement has rapidly sprung up to oppose them, but without outside assistance, they will be outmatched."
+ tirannwn_civil_war.1.a:0 "For the resistance! Tirannwn must be ruled by the eight clans, not by one!"
+ tirannwn_civil_war.1.b:0 "For Iorwerth! Tirannwn is rightfully theirs!"
+
+ tirannwn_civil_war.2.t:0 "Tirannwn Disintergrates"
+ tirannwn_civil_war.2.d:0 "The Iorwerth coup has quickly sent shockwaves throughout Tirannwn territories. All elves have been forced to take a side. Tirannwn as we knew it is no more."
+ tirannwn_civil_war.2.a:0 "Ouch."
+
+ tirannwn_civil_war.3.t:0 "Tirannwn at war!"
+ tirannwn_civil_war.3.d:0 "We have received word that the Iorwerth Clan has betrayed the rest of Tirannwn and taken Prifddinas! They clearly have dangerous ambitions which we should help put a stop to, though doing so would stretch our resources thin and leave ourselves vulnerable."
+ tirannwn_civil_war.3.a:0 "Bring everything we can and let us lead this rebellion!"
+ tirannwn_civil_war.3.b:0 "Send all the support we can!"
+ tirannwn_civil_war.3.c:0 "Offer some support."
+ tirannwn_civil_war.3.e:0 "The future is on this side of the Galarpos."
+ 
+ tirannwn_civil_war.4.t:0 "Cadarn reaches out!"
+ tirannwn_civil_war.4.d:0 "The Cadarn clan has kindly decided to send us personnel to aid the resistance, at great risk to themselves. They will be ideal for fighting and developing our marginal lands."
+ tirannwn_civil_war.4.a:0 "Excellent."
+
+ tirannwn_civil_war.5.t:0 "Cadarn somewhat reaches out!"
+ tirannwn_civil_war.5.d:0 "The Cadarn clan has kindly decided to join in our struggle."
+ tirannwn_civil_war.5.a:0 "Excellent."
+ 
+ tirannwn_civil_war.6.t:0 "Cadarn refuses to help!"
+ tirannwn_civil_war.6.d:0 "The Cadarn clan has heard of our plight, and has decided it's not in their best interests to intervene."
+ tirannwn_civil_war.6.a:0 "Any other clans want to betray us?"
+ 
+ tirannwn_civil_war.7.t:0 "Vulernability of Cadarn"
+ tirannwn_civil_war.7.d:0 "Our allies, the Cadarn clan, have sent a significant portion of their forces westward to Tirannwn. Many in our empire view this development as a sign the elves intend to withdraw from Kandarin, or at the very least will be unable to assist us when we need it. In the courts, there are calls for us to break our alliance so we can shift resources elsewhere. What should we do?"
+ tirannwn_civil_war.7.a:0 "The people have spoken. We cannot hold onto this alliance much longer."
+ tirannwn_civil_war.7.b:0 "Keep the relations as they are."
+ tirannwn_civil_war.7.c:0 "Let us shoulder Cadarn's burden!"
+ 
+ tirannwn_civil_war.8.t:0 "The Gnome Empire Turns Their Back"
+ tirannwn_civil_war.8.d:0 "Terrible news, $MONARCHTITLE$. The Gnome Empire sees our valiant effort to assist our Tirannwnaidd allies as a waste of resources, and are seriously questioning our continued alliance. We should prepare for a difficult few years ahead."
+ tirannwn_civil_war.8.a:0 "Trifling gnomes!"
+ 
+ tirannwn_civil_war.9.t:0 "The Gnome Empire Has Our Back"
+ tirannwn_civil_war.9.d:0 "Despite our presently precarious situation, [GNE.Monarch.GetName] of the Gnome Empire has insisted on keeping our alliance. This should help secure our position in Kandarin while we help our friends in Tirannwn."
+ tirannwn_civil_war.9.a:0 "At least things didn't get any worse."
+ 
+ tirannwn_civil_war.10.t:0 "Friends Indeed"
+ tirannwn_civil_war.10.d:0 "Wonderous news, my $MONARCHTITLE$! The Gnome Empire has decided to provide extra support to our nation while we send elves into Tirannwn! This leaves our kingdom considerably less exposed to outside threats, though it may leave the Gnome Empire somewhat vulnerable."
+ tirannwn_civil_war.10.a:0 "I knew allying gnomes was a good idea!"
+ 

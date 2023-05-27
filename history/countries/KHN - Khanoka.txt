@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 2
+primary_culture = pincers_culture
+add_accepted_culture = siren
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1184 #Khanoka
+historical_rival = NHE
+
+elector = yes
+
+1928.8.17 = {
+	monarch = {
+		name = "Doquez-khatum"
+		dynasty = "Khatagin"
+		birth_date = 1901.12.11
+		death_date = 1973.5.6
+		adm = 5
+		dip = 6
+		mil = 5
+		female = yes
+	}
+}
+
+2157.12.2 = {
+	monarch = {
+		name = "Ögödei"
+		dynasty = "Khatagin"
+		birth_date = 2130.12.12
+		adm = 2
+		dip = 4
+		mil = 4
+	}
+}

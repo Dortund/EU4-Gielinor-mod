@@ -1,0 +1,42 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = lummer
+religion = saradomin
+technology_group = centraltechgroup
+capital = 9 #Millane
+
+1912.6.3 = {
+	monarch = {
+		name = "Terrova"
+		dynasty = "Lea"
+		birth_date = 1887.3.5
+		death_date = 1943.5.3
+		female = yes
+		adm = 5
+		dip = 5
+		mil = 1
+	}
+	queen = {
+		country_of_origin = DYN
+		name = "Olivia"
+		dynasty = "Enroy"
+		birth_date = 1887.5.12
+		death_date = 1943.5.4
+		female = yes
+		adm = 3
+		dip = 2
+		mil = 5
+	}
+	heir = {
+		name = "Lara"
+		dynasty = "Lea"
+		birth_date = 1912.5.19
+		death_date = 1987.6.27
+		female = yes
+		claim = 100
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+}

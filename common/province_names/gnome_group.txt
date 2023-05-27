@@ -1,0 +1,11 @@
+#Gnome Glider names
+52 = "Sindarpos" #Unterwulf
+62 = "Kar-Hewo" #Al Kharid
+228 = "Gandius" #Gandius
+236 = "Ookookolly Undri" #Rednana
+272 = "Ta Quir Priw" #The Grand Tree
+286 = "Priw Gnomo Andralo" #Tree Gnome Village
+306 = "Lemantolly Undri" #Feldip Mangroves
+325 = "Dylandra" #Prifddinas
+941 = "Lemanto Andra" #Cinan
+1099 = "Kai-Undri" #Berry Shores

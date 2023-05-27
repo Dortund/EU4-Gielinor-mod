@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = pirate_republic_reform
+government_rank = 1
+primary_culture = brimhaven
+religion = godless
+religious_school = ambivalence_school
+technology_group = centraltechgroup
+capital = 213 #Brimhaven
+national_focus = DIP
+
+2043.8.31 = {
+	monarch = {
+		name = "Alfonse"
+		dynasty = "Monti"
+		birth_date = 2017.2.12
+		adm = 5
+		dip = 6
+		mil = 2
+	}
+}
+
+2145.7.27 = {
+	monarch = {
+		name = "Izzy"
+		dynasty = "No-Beard"
+		birth_date = 2129.4.14
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+}

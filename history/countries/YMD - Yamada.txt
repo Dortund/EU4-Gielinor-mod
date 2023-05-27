@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 2
+primary_culture = pincers_culture
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1195 #Yamada
+
+1925.6.15 = {
+	monarch = {
+		name = "Iemochi"
+		dynasty = "Yamada"
+		birth_date = 1905.7.15
+		death_date = 1954.8.19
+		adm = 5
+		dip = 5
+		mil = 2
+	}
+}
+
+2145.3.17 = {
+	monarch = {
+		name = "Okiko"
+		dynasty = "Yamada"
+		birth_date = 2121.2.13
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}

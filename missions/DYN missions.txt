@@ -1,0 +1,273 @@
+draynor_missions_2_general = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = DYN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DYN_religious_consideration = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			is_subject = no
+			owns_core_province = 8
+			stability = 3
+			any_owned_province = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_dyn.1
+				days = 1
+			}
+		 	custom_tooltip = dyn_religious_consideration_tooltip
+		}
+	}
+}
+
+draynor_missions_2_saradomin = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = DYN
+		religion = saradomin
+		NOT = { has_country_flag = DYN_religious_peace_flag }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DYN_SARA_clean_up_the_manor = {
+		icon = mission_alliances
+		required_missions = { DYN_religious_consideration }
+		trigger = {
+			8 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = saradomin
+				development = 15
+				num_of_buildings_in_province = 4
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = DYN_light_of_saradomin
+				duration = 7300
+			}
+		}
+	}
+	
+	DYN_SARA_spread_the_light = {
+		icon = mission_alliances
+		required_missions = { DYN_SARA_clean_up_the_manor }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = obj_convert_10_provinces_tooltip
+				check_variable = { which = num_converted_religion value = 10 }
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_cardinal = yes
+			}
+			add_papal_influence = 10
+		}
+	}
+}
+
+draynor_missions_2_neutral = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = DYN
+		has_country_flag = DYN_religious_peace_flag
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DYN_NEUTRAL_friends_in_strange_places = {
+		icon = mission_alliances
+		required_missions = { DYN_religious_consideration }
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					NOT = { has_matching_religion = ROOT }
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = DYN_age_of_tolerance
+				duration = 9125
+			}
+		}
+	}
+	
+	DYN_NEUTRAL_land_of_tolerance = {
+		icon = mission_alliances
+		required_missions = { DYN_NEUTRAL_friends_in_strange_places  }
+		trigger = {
+			zamorak = 1
+			saradomin = 1
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+		}
+	}
+}
+
+draynor_missions_2_chaos = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = DYN
+		religion_group = chaos_group
+		NOT = { has_country_flag = DYN_religious_peace_flag }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DYN_CHAOS_rise_of_chaos = {
+		icon = mission_alliances
+		required_missions = { DYN_religious_consideration }
+		trigger = {
+			draynor_area = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+			}
+		}
+		effect = {
+			add_patriarch_authority = 0.05
+		}
+	}	
+	DYN_CHAOS_army_of_darkness = {
+		icon = mission_alliances
+		required_missions = { DYN_CHAOS_rise_of_chaos }
+		trigger = {
+			army_size = 15
+			OR = {
+				barracks = 3
+				training_fields = 3
+			}
+		 	army_professionalism = 0.1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "DYN_heralds_of_draynor_drakan"
+				duration = 7300
+			}
+		}
+	}
+	DYN_CHAOS_stand_and_be_counted = {
+		icon = mission_alliances
+		required_missions = { DYN_CHAOS_army_of_darkness }
+		trigger = {
+			is_subject = no
+			is_at_war = no
+			total_development = 100
+		 	patriarch_authority = 0.2
+			owns_core_province = 8
+		}
+		effect = {
+			country_event = {
+				id = flavor_dyn.2
+				days = 1
+			}
+		}
+	}
+}
+
+draynor_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = DYN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DYN_retake_dry_isle = {
+		icon = mission_alliances
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 6
+		}
+		trigger = {
+			6 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			6 = {
+				set_local_autonomy = 0
+				add_unit_construction = {
+					amount = 3
+					type = heavy_ship
+					speed = 0.5
+					cost = 0
+				}
+			}
+			
+		}
+	}
+	DYN_naval_expansion = {
+		icon = mission_alliances
+		required_missions = { DYN_retake_dry_isle }
+		trigger = {
+		 	navy_size_percentage = 0.8
+			calc_true_if = {
+				all_province = {
+					owned_by = ROOT
+					has_port = yes
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "DYN_growth_of_naval_trade"
+				duration = 9125
+			}		
+		}
+	}
+	DYN_maritime_trade = {
+		icon = mission_alliances
+		required_missions = { DYN_naval_expansion }
+		trigger = {
+		 	2 = {
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
+			}
+			33 = {
+				trade_share = {
+					country = ROOT
+					share = 15
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_years_of_income = 0.25
+		}
+	}
+}

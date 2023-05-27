@@ -1,0 +1,19 @@
+government = theocracy
+add_government_reform = druidic_state
+government_rank = 2
+primary_culture = taverlian
+religion = guthix
+technology_group = centraltechgroup
+capital = 49 #Taverley
+national_focus = ADM
+
+1916.5.21 = {
+	monarch = {
+		name = "Crenthmix"
+		dynasty = "Greenlead"
+		birth_date = 1879.4.3
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}

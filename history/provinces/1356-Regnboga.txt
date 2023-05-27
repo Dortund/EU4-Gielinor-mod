@@ -1,0 +1,29 @@
+#1356 - Regnboga
+owner = CPT
+controller = CPT
+add_core = CPT
+tribal_owner = ---
+culture = avarrockan
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = dwarventechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+1943.5.12 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+}

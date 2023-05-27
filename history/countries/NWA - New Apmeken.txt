@@ -1,0 +1,9 @@
+government = republic
+add_government_reform = political_dynasties
+government_rank = 1
+primary_culture = desert_monkey
+religion = menaphite
+technology_group = monkeytechgroup
+capital = 70 #Camel's Humps
+historical_friend = APE
+historical_friend = PVC

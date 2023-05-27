@@ -1,0 +1,858 @@
+tzhaar_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = TZH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TZH_tzhaar_mej_loyalty = {
+		icon = mission_tzh_mej
+		required_missions = {  }
+		provinces_to_highlight = { }
+		trigger = {
+			estate_influence = {
+				estate = estate_tzh_mej
+				influence = 50
+			}
+			estate_loyalty = {
+				estate = estate_tzh_mej
+				loyalty = 60
+			}
+		}
+		effect = {
+			add_adm_power = 25
+			212 = {
+				add_base_tax = 1
+			}
+		}
+	}
+	
+	TZH_tzhaar_mej_mission = {
+		icon = mission_kon_repel_the_missionaries
+		required_missions = { TZH_tzhaar_mej_loyalty }
+		trigger = {
+			has_leader_with = {
+				fire = 4
+			}
+		}
+		effect = {
+			add_army_professionalism = 0.05
+		}
+	}
+	
+	TZH_spread_of_runes = {
+		icon = mission_air_rune
+		required_missions = { TZH_tzhaar_mej_mission }
+		trigger = {
+			has_institution = runecrafting
+			OR = {
+				any_owned_province = {
+					trade_goods = runes
+				}
+				any_ally = {
+					any_owned_province = {
+						trade_goods = runes
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "TZH_influx_of_runes"
+				duration = 7300
+			}
+		}
+	}
+
+	TZH_reform_the_faith = {
+		icon = mission_vedic_education
+		position = 4
+		required_missions = {  }
+		provinces_to_highlight = { }
+		trigger = {
+			is_religion_reformed = yes
+		}
+		effect = {
+			change_government_reform_progress = 200
+			add_adm_power = 100
+		}
+	}
+	TZH_fate_of_the_kiln = {
+		icon = mission_fate_of_the_kiln
+		position = 5
+		required_missions = { TZH_reform_the_faith }
+		provinces_to_highlight = { }
+		trigger = {
+			OR = {
+				212 = {
+					has_great_project = {
+						type = great_project_elder_kiln
+						tier = 3
+					} 
+				}
+				custom_trigger_tooltip = {
+					tooltip = TZH_fate_of_the_kiln_disaster_tooltip
+					has_any_disaster = no
+					has_country_flag = TZH_brink_extinction_end
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+				 	has_estate = estate_tzh_gaal
+				}
+				add_estate_loyalty = {
+					estate = estate_gaal
+					loyalty = 20
+				}
+			}
+			else = {
+				212 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			add_country_modifier = { 
+				name = TZH_faith_of_the_earth_modifier
+				duration = 7300
+			}
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+tzhaar_missions_1_gaal = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = TZH
+		mission_completed = TZH_reform_the_faith
+		has_estate = estate_tzh_gaal
+		NOT = { primary_culture = tokhaar }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TZH_tzhaar_gaal_loyalty = {
+		icon = mission_tzh_gaal
+		position = 6
+		required_missions = { TZH_fate_of_the_kiln }
+		provinces_to_highlight = { }
+		trigger = {
+			estate_influence = {
+				estate = estate_tzh_gaal
+				influence = 50
+			}
+			estate_loyalty = {
+				estate = estate_tzh_gaal
+				loyalty = 60
+			}
+		}
+		effect = {
+			define_explorer = {
+				shock = 1
+				fire = 1
+				manuever = 6
+				siege = 1
+				name = "TzHaar-Ga'al-Kot"
+			}
+		}
+	}
+	TZH_tzhaar_journey_to_wushanko = {
+		icon = mission_journey_to_wushanko
+		position = 7
+		required_missions = { TZH_tzhaar_gaal_loyalty }
+		provinces_to_highlight = { }
+		trigger = {
+			any_owned_province = {
+				continent = wushanko_isles_continent
+				OR = {
+					trade_goods = bamboo
+					trade_goods = gunpowder
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TZH_colonies_of_the_gaal
+				duration = 7300
+			}
+		}
+	}
+}
+tzhaar_missions_1_kiln = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = TZH
+	 	mission_completed = TZH_reform_the_faith
+		NOT = { has_estate = estate_tzh_gaal }
+		NOT = { primary_culture = tokhaar }
+		212 = {
+			owned_by = ROOT
+			has_great_project = {
+				type = great_project_elder_kiln
+				tier = 3
+			} 
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TZH_unmatched_city = {
+		icon = mission_unmatched_city
+		position = 6
+		required_missions = { TZH_fate_of_the_kiln }
+		provinces_to_highlight = { }
+		trigger = {
+			212 = {
+				development = 60
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TZH_builders_of_the_world
+				duration = -1
+			}
+		}
+	}
+	TZH_monuments_of_gielinor = {
+		icon = mission_golden_century
+		position = 7
+		required_missions = { TZH_unmatched_city }
+		provinces_to_highlight = { }
+		trigger = {
+			calc_true_if = {
+				amount = 3
+				all_owned_province_cumulative = {
+					has_great_project = {
+						type = monument
+						tier = 3
+					}
+				}
+			}
+		}
+		effect = {
+			add_prestige = 200
+			add_adm_power = 200
+		}
+	}
+}
+tzhaar_missions_1_tokhaar = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = TZH
+		NOT = { has_estate = estate_tzh_gaal }
+		mission_completed = TZH_reform_the_faith
+		primary_culture = tokhaar
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TZH_the_glory_of_combat = {
+		icon = mission_glory_of_combat
+		position = 6
+		required_missions = { TZH_fate_of_the_kiln }
+		provinces_to_highlight = { }
+		trigger = {
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.25
+			}
+			army_professionalism = 0.9
+		}
+		effect = {
+			add_mil_power = 100
+			add_army_tradition = 25
+			define_general = {
+				shock = 6
+				fire = 6
+				manuever = 3
+				siege = 4
+				name = "TzKal-Zuk"
+			}
+		}
+	}
+	TZH_the_will_of_ful = {
+		icon = mission_will_of_ful
+		position = 7
+		required_missions = { TZH_the_glory_of_combat }
+		provinces_to_highlight = { }
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					religion = ful
+				}
+				amount = 25
+			}
+		}
+		effect = {
+			remove_country_modifier = TZH_extinction_of_the_tzhaar
+			add_country_modifier = {
+				name = TZH_glory_of_the_tokhaar
+				duration = -1
+			}
+		}
+	}
+}
+tzhaar_missions_1_noneoftheabove = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = TZH
+		mission_completed = TZH_reform_the_faith
+		NOT = { has_estate = estate_tzh_gaal }
+		NOT = { primary_culture = tokhaar }
+		NOT = {
+			212 = {
+				owned_by = ROOT
+				has_great_project = {
+					type = great_project_elder_kiln
+					tier = 3
+				} 
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TZH_entrench_the_caste_powers = {
+		icon = reform_the_nomocanon
+		position = 6
+		required_missions = { TZH_fate_of_the_kiln }
+		provinces_to_highlight = { }
+		trigger = {
+			num_of_estate_privileges = {
+				estate = estate_tzh_hur
+				value = 2
+			}
+			num_of_estate_privileges = {
+				estate = estate_tzh_ket
+				value = 2
+			}
+			num_of_estate_privileges = {
+				estate = estate_tzh_mej
+				value = 2
+			}
+			num_of_estate_privileges = {
+				estate = estate_tzh_xil
+				value = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TZH_entrenched_caste_power
+				duration = 7300
+			}
+		}
+	}
+	TZH_restoring_order = {
+		icon = balance_the_estates
+		position = 7
+		required_missions = { TZH_entrench_the_caste_powers }
+		provinces_to_highlight = { }
+		trigger = {
+			stability = 3
+			#every_owned_province = {
+			#	NOT = { unrest = 0 }
+			#	NOT = { local_autonomy = 5 }
+			#}
+			#custom_trigger_tooltip = {
+			#	tooltip = genwhk_capital_has_prosperity
+			#	capital_scope = {
+			#		is_prosperous = yes
+			#	}
+			#}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TZH_eternal_stability
+				duration = -1  
+			}
+		}
+	}
+}
+
+tzhaar_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = TZH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TZH_tzhaar_hur_loyalty = {
+		icon = mission_tzh_hur
+		required_missions = {  }
+		provinces_to_highlight = { }
+		trigger = {
+			estate_influence = {
+				estate = estate_tzh_hur
+				influence = 50
+			}
+			estate_loyalty = {
+				estate = estate_tzh_hur
+				loyalty = 60
+			}
+		}
+		effect = {
+			add_years_of_income = 0.2
+			212 = {
+				add_base_production = 1
+			}
+		}
+	}
+
+	TZH_tzhaar_hur_mission = {
+		icon = mission_kon_conquer_lub
+		required_missions = { TZH_tzhaar_hur_loyalty }
+		provinces_to_highlight = {
+			province_id = 212
+		}
+		trigger = {
+			212 = {
+				development = 30
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			212 = {
+				add_province_modifier = {
+					name = "TZH_tzhaar_hur_architecture"
+					duration = -1
+				}
+			}
+
+		}
+	}
+
+	TZH_architects_worth = {
+		icon = mission_architects_worth
+		required_missions = { TZH_tzhaar_hur_mission }
+		provinces_to_highlight = {
+			province_id = 212
+		}
+		trigger = {
+			212 = {
+				AND = {
+					owned_by = ROOT
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+					OR = {
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 50
+		}
+	}
+	TZH_volcanic_expansion = {
+		icon = mission_portuguese_interference
+		position = 5
+		required_missions = { TZH_cliffs_of_the_volcano }
+		provinces_to_highlight = { }
+		trigger = {
+			211 = {
+				owned_by = ROOT
+				is_core = ROOT
+				culture = ROOT
+				religion = ROOT
+				development = 12
+			}
+			975 = {
+				owned_by = ROOT
+				is_core = ROOT
+				culture = ROOT
+				religion = ROOT
+				development = 12
+			}
+		}
+		effect = {
+			211 = {
+				add_province_modifier = {
+					name = TZH_volcanic_frontier
+					duration = 7300
+				}
+			}
+			975 = {
+				add_province_modifier = {
+					name = TZH_volcanic_frontier
+					duration = 7300
+				}
+			}
+		}
+	}
+	TZH_faith_of_the_earth = {
+		icon = mission_rb_take_gibraltar
+		position = 6
+		required_missions = { TZH_fate_of_the_kiln TZH_volcanic_expansion }
+		provinces_to_highlight = { }
+		trigger = {
+			any_subject_country = {
+				AND = {
+					religion = ful
+					NOT = { tag = KUU }
+				}
+			}
+		}
+		effect = {
+			change_government_reform_progress = 150
+		}
+	}
+}
+
+tzhaar_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = TZH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TZH_musan_diplomacy = {
+		icon = mission_steer_trade_to_bengal
+		required_missions = {  }
+		
+		trigger = {
+			if = {
+				limit = {
+					exists = MUS
+				}
+				OR = {
+					AND = {
+						alliance_with = MUS
+						reverse_has_opinion = {
+							who = MUS
+							value = 100
+						}
+					}
+					is_rival = MUS
+					NOT = { exists = MUS }
+				}
+			}
+			else = {
+				owns_core_province = 209
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = MUS
+				}
+				add_dip_power = 50
+			}
+			else = {
+				add_mil_power = 25
+			}
+		}
+	}
+	
+	TZH_cliffs_of_the_volcano = {
+		icon = mission_cliffs_of_volcano
+		position = 4
+		required_missions = { TZH_spread_of_runes TZH_architects_worth TZH_reinforce_the_home_trade TZH_reorganise_the_guard }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 211
+				province_id = 212
+				province_id = 975
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			estate_loyalty = {
+				estate = estate_tzh_hur
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_tzh_ket
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_tzh_mej
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_tzh_xil
+				loyalty = 60
+			}
+			is_at_war = no
+			owns_core_province = 212
+			AND = {
+				211 = {
+					OR = {
+						owned_by = ROOT
+						is_empty = yes 
+					}
+				}
+				975 = {
+					OR = {
+						owned_by = ROOT
+						is_empty = yes 
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					211 = {
+						is_empty = yes 
+					}
+				}
+				211 = {
+					add_siberian_construction = 50
+				}
+			}
+			else = {
+				211 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			if = {
+				limit = {
+					975 = {
+						is_empty = yes 
+					}
+				}
+				975 = {
+					add_siberian_construction = 50
+				}
+			}
+			else = {
+				975 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+		}
+	}
+		
+	TZH_lava_ships = {
+		icon = Burn_Wooden_Wall
+		position = 5
+		required_missions = { TZH_cliffs_of_the_volcano }
+		trigger = {
+			navy_size = 20
+			navy_size_percentage = 0.8
+		}
+		effect = {
+			crandor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	TZH_crandor_volcano = {
+		icon = mission_tzh_crandor_volcano
+		position = 6
+		required_missions = { TZH_lava_ships }
+		provinces_to_highlight = {
+			area = crandor_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			crandor_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}		
+		}
+		effect = {
+			create_explorer = { tradition = 75 }
+		}
+	}
+	
+	TZH_find_the_tasakaal = {
+		icon = mission_look_west
+		position = 7
+		required_missions = { TZH_crandor_volcano }
+		trigger = {
+			karuulm_area = { has_discovered = ROOT }	
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = KUU
+				}
+				add_dip_power = 200
+			}
+			else = {
+				karuulm_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+}
+
+tzhaar_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = TZH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TZH_tzhaar_xil_loyalty = {
+		icon = mission_tzh_xil
+		required_missions = {  }
+		provinces_to_highlight = { }
+		trigger = {
+			estate_influence = {
+				estate = estate_tzh_xil
+				influence = 50
+			}
+			estate_loyalty = {
+				estate = estate_tzh_xil
+				loyalty = 60
+			}
+		}
+		effect = {
+			add_mil_power = 25
+			212 = {
+				add_base_production = 1
+			}
+		}
+	}
+	
+	TZH_tzhaar_xil_mission = {
+		icon = mission_clear_the_delta
+		required_missions = { TZH_musan_diplomacy TZH_tzhaar_xil_loyalty }
+		provinces_to_highlight = {
+			province_id = 212
+		}
+		trigger = {
+			212 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+		}
+	}
+
+	TZH_reinforce_the_home_trade = {
+		icon = mission_reinforce_the_home_trade
+		required_missions = { TZH_tzhaar_xil_mission }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			mercantilism = 20
+			NOT = { num_of_loans = 1 }
+			NOT = {	corruption = 1 }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "TZH_defended_home_trade"
+				duration = 7300
+			}
+		}
+	}
+}
+
+tzhaar_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = TZH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TZH_tzhaar_ket_loyalty = {
+		icon = mission_tzh_ket
+		required_missions = {  }
+		provinces_to_highlight = { }
+		trigger = {
+			estate_influence = {
+				estate = estate_tzh_ket
+				influence = 50
+			}
+			estate_loyalty = {
+				estate = estate_tzh_ket
+				loyalty = 60
+			}
+		}
+		effect = {
+			add_yearly_manpower = 0.2
+			212 = {
+				add_base_manpower = 1
+			}
+		}
+	}
+	
+	TZH_tzhaar_ket_mission = {
+		icon = mission_tzh_ket_duties
+		required_missions = { TZH_tzhaar_ket_loyalty }
+		provinces_to_highlight = {
+			province_id = 212
+		}
+		trigger = {
+			212 = {
+				fort_level = 5
+			}
+		}
+		effect = {
+			212 = {
+				add_province_modifier = {
+					name = "TZH_tzhaar_ket_reinforcement"
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	TZH_reorganise_the_guard = {
+		icon = mission_reorganise_the_guard
+		required_missions = { TZH_tzhaar_ket_mission }
+		trigger = {
+			army_professionalism = 0.5
+		 	army_tradition = 50
+		}
+		effect = {
+			add_country_modifier = {
+				name = "TZH_strength_of_the_tzhaar_ket"
+				duration = 7300
+			}
+		}
+	}
+}

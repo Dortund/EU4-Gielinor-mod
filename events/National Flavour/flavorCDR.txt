@@ -1,0 +1,485 @@
+########################################
+# Events for Crandor
+########################################
+
+namespace = flavor_cdr
+normal_or_historical_nations = yes
+
+# The Pirate Port of Brimhaven
+country_event = {
+	id = flavor_cdr.1
+	title = flavor_cdr.1.t
+	desc = flavor_cdr.1.d #Ever since the fall of the Garagorshuun, the seas of the Unquiet Ocean have been, well, quiet. However, with the world beginning to settle and trade routes becoming more lucrative, the potential profit from piracy has only grown. This has escalated to the point where pirates have banded together to create the port of Brimhaven on the island of Karamja.
+	picture = PIRATE_BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		NOT = { exists = GGS }
+		OR = {
+			tag = CDR
+			AND = {
+				NOT = { exists = CDR }
+				owns_core_province = 60
+			}
+		}
+		dip_tech = 12
+		OR = {
+			213 = { is_empty = yes }
+			872 = { is_empty = yes }
+		}
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { 213 = { is_empty = yes } }
+				213 = {
+					add_core = BHV
+					cede_province = BHV
+					change_culture = brimhaven
+					change_religion = godless
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					change_trade_goods = fruit
+				}
+			}
+			if = {
+				limit = { 872 = { is_empty = yes } }
+				872 = {
+					add_core = BHV
+					cede_province = BHV
+					change_culture = brimhaven
+					change_religion = godless
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					change_trade_goods = fishing_spot
+				}
+			}
+			BHV = {
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+			MSH = {
+				country_event = {
+					id = flavor_msh.2
+					days = 1
+				}
+			}
+			karamja_region = {
+				discover_country = BHV
+			}
+		}
+	}
+
+	option = {
+		name = flavor_cdr.1.a #Yar har fiddle di dee! Being a pirate is alright with me!
+		
+		switch_tag = BHV
+	}
+	option = {
+		name = flavor_cdr.1.b #Another minor power in the region; what's new?
+		
+	}
+}
+
+#Caverns of Crandor
+country_event = {
+	id = flavor_cdr.2
+	title = flavor_cdr.2.t
+	desc = flavor_cdr.2.d #As the number of adventurers on Crandor has grown, competition has become fiercer and new adventurers are taking ever-greater risks. Some think there's opportunity to be had in the volcano of Central Crandor, and have begun excavating the crater.
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = CDR
+		absolutism = 50
+		owns_core_province = 59
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = flavor_cdr.2.a #Interesting, let's see how it goes!
+		
+		add_absolutism = 10
+		59 = {
+			add_province_modifier = {
+				name = "CDR_time_to_mine"
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavor_cdr.3
+				days = 1825
+			}
+		}
+	}
+	option = {
+		name = flavor_cdr.2.b #Stop them!
+		
+		add_absolutism = -10
+		add_country_modifier = {
+			name = "CDR_wary_of_adventurers"
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavor_cdr.4
+				days = 7300
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_cdr.3
+	title = flavor_cdr.3.t #Dragon! Dragon!
+	desc = flavor_cdr.3.d #The caves! It was the caves! I think one of the adventurers awoke the thing!
+	picture = ELVARG_ATTACKS_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = cdr_dragon_dragon
+		swap_non_generic_missions = yes
+		58 = {
+			add_core = ELV
+		}
+		59 = {
+			remove_province_modifier = CDR_time_to_mine
+			add_core = ELV
+			cede_province = ELV
+			change_culture = avernic
+			change_religion = zamorak
+		}
+		60 = {
+			add_core = ELV
+		}
+		ELV = {
+			59 = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+			declare_war_with_cb = {
+				who = CDA
+				casus_belli = cb_conquest
+			}
+		}
+	}
+
+	option = {
+		name = flavor_cdr.3.a #We can't beat the dragon! I'm joining them!
+		switch_tag = ELV
+	}
+	option = {
+		name = flavor_cdr.3.b #We make our stand!
+		add_prestige = 25
+	}
+	option = {
+		name = flavor_cdr.3.c #Retreat! Take us to the Asgarnian mainland!
+		trigger = {
+			owns_core_province = 60
+			OR = {
+				ASG = {
+					owns_core_province = 864
+				}
+				CDR = {
+					owns_core_province = 864
+				}
+			}
+		}
+		if = {
+			limit = {
+				ASG = {
+					owns_core_province = 864
+				}
+			}
+			ASG = {
+				country_event = {
+					id = flavor_asg.1
+					days = 1
+				}
+			}
+			60 = {
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+			}
+			864 = {
+				change_culture = crandorian
+				change_religion = ROOT
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+		else = {
+			60 = {
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+			}
+			864 = {
+				change_culture = crandorian
+				change_religion = ROOT
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			set_capital = 864
+		}		
+	}
+}
+
+country_event = {
+	id = flavor_cdr.4
+	title = flavor_cdr.4.t #Dragon! Dragon!
+	desc = flavor_cdr.4.d #Those damn adventurer fools only went and woke up a bleeding great dragon! It's going to tear up the whole island!
+	picture = ELVARG_ATTACKS_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = cdr_dragon_dragon
+		swap_non_generic_missions = yes
+		58 = {
+			add_core = ELV
+		}
+		59 = {
+			add_core = ELV
+			cede_province = ELV
+			change_culture = avernic
+			change_religion = zamorak
+		}
+		60 = {
+			add_core = ELV
+		}
+		ELV = {
+			59 = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+			declare_war_with_cb = {
+				who = CDA
+				casus_belli = cb_conquest
+			}
+		}
+	}
+
+	option = {
+		name = flavor_cdr.4.a #We can't beat the dragon! I'm joining them!
+		switch_tag = ELV
+	}
+	option = {
+		name = flavor_cdr.4.b #We make our stand!
+		add_prestige = 25
+	}
+	option = {
+		name = flavor_cdr.4.c #Retreat! Take us to the Asgarnian mainland!
+		trigger = {
+			owns_core_province = 60
+			OR = {
+				ASG = {
+					owns_core_province = 864
+				}
+				CDR = {
+					owns_core_province = 864
+				}
+			}
+		}
+		if = {
+			limit = {
+				ASG = {
+					owns_core_province = 864
+				}
+			}
+			ASG = {
+				country_event = {
+					id = flavor_asg.1
+					days = 1
+				}
+			}
+			60 = {
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+			}
+			864 = {
+				change_culture = crandorian
+				change_religion = ROOT
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+		else = {
+			60 = {
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+			}
+			864 = {
+				change_culture = crandorian
+				change_religion = ROOT
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			set_capital = 864
+		}		
+	}
+}
+
+country_event = {
+	id = flavor_cdr.5
+	title = flavor_cdr.5.t # Asgarnia accepts our refugees!
+	desc = flavor_cdr.5.d # We've been afforded a part of the Asgarnian mainland to retreat into so we can prepare our counter-attack against the dragon.
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cdr.5.a #At least something's going right for us.
+		set_capital = 864
+	}
+}
+
+country_event = {
+	id = flavor_cdr.6
+	title = flavor_cdr.6.t # Asgarnia fails to help!
+	desc = flavor_cdr.6.d # Our refugees in Asgarnia have been ignored!
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cdr.6.a #Seems we're stuck on our own.
+	}
+}
+
+country_event = {
+	id = flavor_cdr.7
+	title = flavor_cdr.7.t # Asgarnia takes advantage!
+	desc = flavor_cdr.7.d # Asgarnia has decided to use our moment of weakness to lay claim to Crandor Isle.
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cdr.7.a #Are they aware of the dragon?
+	}
+}
+
+country_event = {
+	id = flavor_cdr.8
+	title = flavor_cdr.8.t # Tale of Dragons
+	desc = flavor_cdr.8.d # We've searched the magic libraries of the world to find any information we can on dragons, and why Elvarg was so powerful. All we could find was a mysterious text, connected with creatures known as Dragonkin:\nOrigins lie in ruined Kethsi, but now they return from the stone prison to lay waste. The strong remembers, the weak falls.\nBut what is Kethsi?
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cdr.8.a #We need to find out more...
+		add_prestige = 25
+	}
+}
+
+country_event = {
+	id = flavor_cdr.9
+	title = flavor_cdr.9.t # Libraries of the TzHaar
+	desc = flavor_cdr.9.d # The ancient halls of Mor Ul Rek have an incredible library full of valuable ancient texts. While they do not appear to have much on the mysterious Kethsi, they do mention something known as The Catalyst - a very powerful object capable of reshaping the world and is fiercely guarded by the Dragonkin. Perhaps the anger of Elvarg is connected to the Catalyst?
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cdr.9.a #There's a connection with Kethsi somewhere. We need to find it!
+		add_adm_power = 50
+	}
+}
+
+country_event = {
+	id = flavor_cdr.10
+	title = flavor_cdr.10.t # Tale of the Moonclan
+	desc = flavor_cdr.10.d # Finally, up in the frozen north of Lunar Isle, we have answers. The Catalyst - or Stone of Jas - was once on Lunar Isle, and during the Second Age was moved to another plane by those who 'walked a higher Astral Path' - we believe it was the realm of Kethsi. The stone returned to Gielinor later in the Age, and given the people of Kethsi were never seen again, we assume the Dragonkin destroyed them. The Moonclan tell us that the Kethsians left us with one thing - banite weaponry, which can be attuned against dragons and their kin.
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cdr.10.a #So if the likes of Elvarg return, we shall be ready.
+		add_country_modifier = {
+			name = "CDR_secrets_of_kethsi"
+			duration = -1
+		}
+	}
+}

@@ -1,0 +1,98 @@
+########################################
+# Events for Wilderness Bandit Camp
+########################################
+
+namespace = flavor_wbc
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_wbc.1
+	title = flavor_wbc.1.t #Wilderness Bandits!
+	desc = flavor_wbc.1.d #A band of bandits have found ruins in the Wilderness to be an appropriate staging ground for their raids - and their black market dealings.
+	picture = WARBANDS_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		capital_scope = {
+			OR = {
+				region = asgarnia_region
+				region = misthalin_region
+				region = forithry_region
+			}
+		}
+		OR = {
+			164 = { is_empty = yes }
+			958 = { is_empty = yes }
+		}
+		absolutism = 50
+		NOT = { exists = WBC }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					164 = { is_empty = yes }
+				}
+				164 = {
+					cede_province = WBC
+					add_core = WBC
+					change_culture = rogue
+					change_religion = zamorak
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			if = {
+				limit = {
+					958 = { is_empty = yes }
+				}
+				958 = {
+					cede_province = WBC
+					add_core = WBC
+					change_culture = rogue
+					change_religion = zamorak
+				}
+			}
+			WBC = {
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			 	add_historical_friend = BTH
+			}
+			BTH = {
+				add_historical_friend = WBC
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_wbc.1.a #Bandits? Black market dealings? I'm in!
+		switch_tag = WBC
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_wbc.1.b #Urgh, yet more threats in the Wilderness.
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

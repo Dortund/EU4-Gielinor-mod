@@ -1,0 +1,7 @@
+#Palingrad-Pescaling
+march = {
+	first = PLG
+	second = PES
+	start_date = 2156.12.15
+	end_date = 2300.1.1
+}

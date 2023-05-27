@@ -1,0 +1,46 @@
+#317-Oo'glog
+owner = OOG
+controller = OOG
+add_core = OOG
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 4
+base_manpower = 5
+
+trade_goods = hunter_creatures
+
+is_city = yes
+
+fort_15th = yes
+
+center_of_trade = 1
+
+add_province_triggered_modifier = religious_center
+
+2159.3.12 = {
+	owner = FEL
+	controller = FEL
+	add_core = FEL
+	remove_core = OOG
+}
+
+2167.1.2 = {
+	owner = CCO
+	controller = CCO
+	add_core = CCO
+	culture = corsair
+	religion = godless
+	change_province_name = "Corsair Cove"
+}

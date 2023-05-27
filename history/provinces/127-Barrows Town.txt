@@ -1,0 +1,28 @@
+#127 - Barrows Town
+owner = BWS
+controller = BWS
+add_core = BWS
+tribal_owner = ---
+culture = wight
+religion = zaros
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = lesser_loot
+latent_trade_goods = { rare_loot }
+
+is_city = yes

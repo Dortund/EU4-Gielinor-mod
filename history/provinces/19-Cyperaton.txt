@@ -1,0 +1,47 @@
+#19 - Cyperaton
+owner = CPT
+controller = CPT
+add_core = CPT
+tribal_owner = ---
+culture = lummer
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 5
+base_manpower = 4
+
+fort_15th = yes
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 1
+
+1971.9.23 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+}
+
+2058.9.21 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	culture = barbarian
+	religion = v
+ 	change_province_name = "Gunnarsgrunn"
+}
+
+2063.9.21 = {
+	owner = MST
+	controller = MST
+}

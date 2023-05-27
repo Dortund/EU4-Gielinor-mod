@@ -1,0 +1,94 @@
+########################################
+# Events for Pescaling
+########################################
+
+namespace = flavor_pes
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_pes.1
+	title = flavor_pes.1.t #The Penguin Outpost
+	desc = flavor_pes.1.d #The founding of the Killer Gentoo Penguins allowed Palingrad to have a greater reach than ever before - and to use it, this spy organisation needed an outpost. An iceberg to Acheron's south-east will be an ideal location for the penguins to get close to those pesky humans without making them suspicious.
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					378 = {
+						OR = {
+							owned_by = ROOT
+							is_empty = yes
+						}
+					}
+				}
+				378 = {
+					cede_province = PES
+					add_core = PES
+					change_culture = penguin
+					change_religion = godless
+				}
+			}
+			if = {
+				limit = {
+					973 = {
+						OR = {
+							owned_by = ROOT
+							is_empty = yes
+						}
+					}
+				}
+				973 = {
+					cede_province = PES
+					add_core = PES
+					change_culture = penguin
+					change_religion = godless
+				}
+			}
+			PES = {
+				add_historical_friend = PLG
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Pescaling"
+					dynasty = "Pax"
+					adm = 4
+					dip = 4
+					mil = 2
+					age = 34
+					claim = 100
+				}
+			}
+			add_historical_friend = PES
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_pes.1.a #Let us lead this outpost as an independent realm!
+		switch_tag = PES
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_pes.1.b #This outpost will be valuable for the Motherland.
+		create_march = PES
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

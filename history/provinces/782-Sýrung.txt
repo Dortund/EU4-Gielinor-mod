@@ -1,0 +1,29 @@
+#782 - Sýrung
+owner = CWS
+controller = CWS
+add_core = CWS
+tribal_owner = ---
+culture = lummer
+religion = zamorak
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = grains
+
+is_city = yes
+
+1943.5.12 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+}

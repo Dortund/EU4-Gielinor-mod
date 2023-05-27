@@ -1,0 +1,35 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 125 186 185 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Drazil #0" = 1
+	"Ek'ans #0" = 1
+	"Kaht #0" = 1
+	"Ket'sal #0" = 1
+	"Catan #0" = 1
+	"Tziquin #0" = 1
+	"Aluxa #0" = -1
+	"Ixazaluoh #0" = -1
+	"Kamali #0" = -1
+	"Nictae #0" = -1
+	"Nicté #0" = -1
+	"Tziquin #0" = -1
+	"Unen #0" = -1
+	"Xoxo #0" = -1
+	"Yohl #0" = -1
+	"Zazil #0" = -1
+}

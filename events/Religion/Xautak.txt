@@ -1,0 +1,46 @@
+########################################
+# Xau-tak Religion Events
+########################################
+
+namespace = xautak_events
+
+#Buy Reform
+country_event = {
+	id = xautak_events.1 
+	title = xautak_events.1.t #Developments of the Deep
+	desc = xautak_events.1.d #Our expansion is sure to appease Xau-Tak, and we are in a position to sacrifice in exchange for greater power.
+	picture = XAUTAK_CLAW_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = xautak
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = { 
+			add_stability = -1
+			release_all_subjects = yes
+			collapse_nation = yes
+		}
+	}
+	
+	option = {
+		name = xautak_events.1.a #It must be done.
+		tooltip = {
+			add_stability = -1
+			release_all_subjects = yes
+			collapse_nation = yes
+		}
+	}
+}
+
+
+
+
+
+

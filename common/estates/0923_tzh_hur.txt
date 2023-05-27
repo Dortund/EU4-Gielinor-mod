@@ -1,0 +1,127 @@
+estate_tzh_hur =
+{
+	icon = 23
+
+	# If true, country will get estate
+	trigger = {
+		has_reform = obsidian_caste
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		production_efficiency = 0.2
+		development_cost = -0.1
+	}
+	country_modifier_neutral = {
+	 	production_efficiency = 0.2
+	}	
+	country_modifier_angry = {
+	 	production_efficiency = -0.2
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		tzh_hur_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {	
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {	
+		desc = EST_VAL_COT
+		trigger = {
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_TRADE_INCOME
+		trigger = {
+			NOT = { trade_income_percentage = 0.25 }
+		}	
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.5
+			NOT = { trade_income_percentage = 0.75 }
+		}	
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.75
+		}	
+		influence = 10
+	}
+	
+	custom_name = {
+		desc = estate_kuu_keran
+		trigger = {
+			tag = KUU
+		}
+	}	
+
+	color = { 143 120 113 }
+
+	privileges = {
+		estate_tzh_hur_crafter_representation
+		estate_tzh_hur_builder_contracts
+	}
+
+	agendas = {
+		estate_tzh_hur_hire_advisor
+		estate_tzh_hur_fire_advisor
+		estate_tzh_hur_pay_off_loans
+		estate_tzh_hur_restore_republican_tradition
+		estate_tzh_hur_restore_currency
+		estate_tzh_hur_recovery_from_hyperinflation
+		estate_tzh_hur_improve_dip_rep
+		estate_tzh_hur_get_cash
+		estate_tzh_hur_reduce_corruption
+	}
+
+	influence_from_dev_modifier = 1.0
+}

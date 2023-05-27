@@ -1,0 +1,25 @@
+#377 - Waterbirth Dungeon
+owner = WAT
+controller = WAT
+add_core = WAT
+tribal_owner = ---
+culture = dagannoth
+religion = godless
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 8
+
+fort_15th = yes 
+
+trade_goods = fishing_spot
+latent_trade_goods = { rare_loot }
+
+is_city = yes

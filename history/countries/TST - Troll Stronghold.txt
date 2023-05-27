@@ -1,0 +1,31 @@
+government = tribal
+add_government_reform = troll_tribe
+government_rank = 2
+primary_culture = mountaintroll
+religion = bandos
+technology_group = bandostechgroup
+capital = 350 #Troll Stronghold
+national_focus = MIL
+historical_friend = DPL
+
+1901.12.11 = {
+	monarch = {
+		name = "Brother"
+		dynasty = "Meatburner"
+		birth_date = 1883.6.4
+		adm = 4
+		dip = 0
+		mil = 4
+	}
+}
+
+2149.5.6 = {
+	monarch = {
+		name = "Kob"
+		dynasty = "Shieldslicer"
+		birth_date = 2131.4.5
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}

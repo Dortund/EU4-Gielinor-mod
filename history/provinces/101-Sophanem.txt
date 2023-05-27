@@ -1,0 +1,27 @@
+#101 - Sophanem
+owner = SOP
+controller = SOP
+add_core = SOP
+tribal_owner = ---
+culture = menaphiteculture
+religion = menaphite
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 10
+base_production = 8
+base_manpower = 6
+
+fort_15th = yes
+
+trade_goods = lesser_loot
+
+is_city = yes
+
+center_of_trade = 2
+
+add_province_triggered_modifier = religious_center

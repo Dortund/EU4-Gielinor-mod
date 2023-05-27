@@ -1,0 +1,244 @@
+########################################
+# Events for Void Pests
+########################################
+
+namespace = flavor_vpe
+normal_or_historical_nations = yes
+
+#Emergence of Void Pests (backup in case someone owns the island)
+country_event = {
+	id = flavor_vpe.1
+	title = flavor_vpe.1.t #Pest Control
+	desc = flavor_vpe.1.d #A strange assortment of beasts have flooded out of portals in the south end of the Bo Isles. These Void Pests have already taken over half the island - and without careful effort they could take more!
+	picture = VOID_PEST_CONTROL_eventPicture
+	
+	trigger = {
+		owns_core_province = 239
+		is_year = 2145
+		NOT = { has_global_flag = vpe_void_pests_emerge }
+	}
+	major = yes
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = vpe_void_pests_emerge
+			bo_isles_area = {
+				discover_country = ROOT
+				discover_country = VPE
+			}
+			sea_of_pests_area = {
+				discover_country = ROOT
+				discover_country = VPE
+			}
+			239 = {
+				cede_province = VPE
+				add_core = VPE
+				change_religion = godless
+				change_culture = pest_culture
+				add_building = fort_16th
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+			VPE = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Queen"
+					dynasty = "Pest"
+					adm = 2
+					dip = 1
+					mil = 4
+					age = 40
+					claim = 100
+					female = yes
+				}
+				add_truce_with = ROOT
+			}
+
+		}
+	}
+	
+	option = {
+		name = flavor_vpe.1.a #Forget my country, I'm joining the Pests!
+		switch_tag = VPE
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_vpe.1.b #This is most troubling.
+		239 = {
+			add_permanent_claim = ROOT
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = flavor_vpe.1.c #We should reach out for help.
+		trigger = {
+			NOT = { owns_core_province = 238 }
+			ASG = { has_country_flag = asg_birth_of_void_knights }
+		}
+		ASG = {
+			country_event = {
+				id = flavor_vpe.2
+				days = 1
+			}
+		}
+		239 = {
+			add_permanent_claim = ROOT
+		}
+		ai_chance = { factor = 10 }
+	}
+	option = {
+		name = flavor_vpe.1.e #We should reach out for help, even if that means sacrificing more land.
+		custom_tooltip = flavor_vpe.1.e_tooltip #§YChoosing this option will surrender the Windswept Isle to the Void Knights.§!
+		trigger = {
+			owns_core_province = 238
+			ASG = { has_country_flag = asg_birth_of_void_knights }
+		}
+		ASG = {
+			country_event = {
+				id = flavor_vpe.2
+				days = 1
+			}
+		}
+		239 = {
+			add_permanent_claim = ROOT
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = flavor_vpe.2 
+	title = flavor_vpe.2.t #The Void Knights' Time Has Come
+	desc = flavor_vpe.2.d #A distress call rings out in the Unquiet Ocean. An island has become overran by strange creatures from another world - just as prophecised by the Void Knights. With little notice, they already set sail to establish their outpost.
+	picture = VOID_PEST_CONTROL_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = asg_void_pests_emerge
+			bo_isles_area = {
+				discover_country = ROOT
+				discover_country = VKO
+			}
+			sea_of_pests_area = {
+				discover_country = ROOT
+				discover_country = VKO
+			}
+			238 = {
+				cede_province = VKO
+				add_core = VKO
+				change_religion = guthix
+				change_culture = taverlian
+				add_building = fort_16th
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+			VKO = {
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Matthias"
+					dynasty = "Goanfix"
+					adm = 5
+					dip = 5
+					mil = 3
+					age = 40
+					claim = 100
+				}
+				add_truce_with = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_vpe.2.a #Forget my country, I'm joining the Void Knights!
+		add_historical_friend = VKO
+		VKO = {
+			add_historical_friend = ROOT
+		}
+		switch_tag = VKO
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_vpe.2.b #The Void Knights deserve our support.
+		add_historical_friend = VKO
+		add_treasury = -250
+		add_prestige = 25
+		VKO = {
+			add_historical_friend = ROOT
+			add_treasury = 250
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_vpe.2.c #Let the Void Knights do their thing; I don't care.
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+

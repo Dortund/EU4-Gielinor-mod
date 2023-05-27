@@ -1,0 +1,115 @@
+bth_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BTH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	BTH_alternative_route = {
+		icon = the_alpine_wall
+		position = 1
+		required_missions = {  }
+		trigger = {
+			absolutism = 75
+			OR = {
+				owns_core_province = 346
+				346 = {
+					is_empty = yes
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 346
+				}
+				346 = {
+					add_base_tax = 1
+				}
+			}
+			else = {
+				346 = {
+					cede_province = ROOT
+					add_core = ROOT
+				}
+			}
+		}
+	}
+	BTH_outmatch_the_trolls = {
+		icon = mission_outmatch_the_trolls
+		position = 2
+		required_missions = { BTH_alternative_route }
+		trigger = {
+			army_size = 25
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.15
+			}
+		}
+		effect = {
+			345 = { add_permanent_claim = ROOT }
+			347 = { add_permanent_claim = ROOT }
+			348 = { add_permanent_claim = ROOT }
+		}
+	}
+}
+
+bth_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BTH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	BTH_the_imperial_guard_mission = {
+		icon = moravian_arms
+		position = 1
+		required_missions = {  }
+		trigger = {
+		 	army_professionalism = 0.25
+			OR = {
+				barracks = 1
+				training_fields = 1
+			}
+		}
+		effect = {
+			add_mil_power = 25
+			burthorpe_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	BTH_expand_the_warriors_guild = {
+		icon = mission_expand_the_warriors_guild
+		position = 4
+		required_missions = { BTH_the_imperial_guard_mission }
+		trigger = {
+			has_idea = BTH_warriors_guild
+			absolutism = 50
+			794 = {
+				base_manpower = 5
+			}
+			1109 = {
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			794 = {
+				add_province_modifier = {
+					name = BTH_warriors_guild_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}

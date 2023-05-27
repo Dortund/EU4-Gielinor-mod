@@ -1,0 +1,20 @@
+﻿l_english:
+ flavor_alk.1.t:0 "Depopulation of the Plateau"
+ flavor_alk.1.d:0 "With the settlement and growth of Al Kharid, many of the residents of the Kharidian highlands have moved to the lowlands to seek their fortune. While this movement will make Al Kharid even more powerful, it will leave the highlands distinctly unpopulated."
+ flavor_alk.1.a:0 "Shame. I was growing rather attached to the plateau."
+ 
+ flavor_alk.2.t:0 "The Mage Training Arena"
+ flavor_alk.2.d:0 "Runecrafting has brought the magical arts across the world, but new wizards frequently mishandle spells and die in the process. With the recent discovery of the Fire Altar in Al Kharid, and plenty of unused land, wizards are proposing we host an arena for magic training. However, there are many competing groups of wizards all asking that the arena teaches according to their own views..."
+ flavor_alk.2.a:0 "Implement the Blue Wizards' proposal."
+ flavor_alk.2.b:0 "Implement the Red Wizards' proposal."
+ flavor_alk.2.c:0 "Implement the Green Wizards' proposal."
+ flavor_alk.2.e:0 "We'll make this arena ourselves!"
+ 
+ flavor_alk.3.t:0 "Soldiers to Smiths"
+ flavor_alk.3.d:0 "As our people have settled in the city of Al Kharid, their priorities have shifted. More permanent buildings allow the pass to the southern desert to be more easily guarded, and consequentially many soldiers have shifted to new professions - particularly in the field of smithing."
+ flavor_alk.3.a:0 "They can still fight if we need them to, right?"
+ 
+ flavor_alk.4.t:0 "The Spirit Anglers"
+ flavor_alk.4.d:0 "The fishers and sailors of the eastern Unquiet Ocean speak of a terrible ancient creature known as Tempoross, made out of the sea itself and capable of conjuring storms. To defeat it, some of our own sailors have established the Spirit Anglers, and request we fund their expedition to a staging ground closer to Tempoross - the Ruins of Unkah should do nicely."
+ flavor_alk.4.a:0 "The Spirit Anglers shall have their funding!"
+ flavor_alk.4.b:0 "We cannot afford this."

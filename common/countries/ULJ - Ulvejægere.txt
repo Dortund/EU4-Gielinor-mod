@@ -1,0 +1,58 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 136 126 115 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Acelin #0" = 1
+	"Adelino #0" = 1
+	"Adolpho #0" = 1
+	"Aitan #0" = 1
+	"Alberich #0" = 1
+	"Alfred #0" = 1
+	"Brunnhilde #0" = 1
+	"Chad #0" = 1
+	"Edelschwarz #0" = 1
+	"Einarr #0" = 1
+	"Fafner #0" = 1
+	"Fasolt #0" = 1
+	"Gunnar #0" = 1
+	"Gunthor #0" = 1
+	"Gutrune #0" = 1
+	"Haakon #0" = 1
+	"Hagen #0" = 1
+	"Holdbodi #0" = 1
+	"Hunding #0" = 1
+	"Hydig #0" = 1
+	"Ivor #0" = 1
+	"Jossik #0" = 1
+	"Kjell #0" = 1
+	"Lydspor #0" = 1
+	"Minarch #0" = 1
+	"Peska #0" = 1
+	"Siegfried #0" = 1
+	"Sieglinde #0" = 1
+	"Diegmund #0" = 1
+	"Sigurd #0" = 1
+	"Silas #0" = 1
+	"Wotan #0" = 1
+	"Yadech #0" = 1
+	
+	"Aesa #0" = -1
+	"Gudrun #0" = -1
+	"Haba #0" = -1
+	"Larrissa #0" = -1
+	"Litara #0" = -1
+}

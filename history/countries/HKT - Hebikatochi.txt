@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = great_khanate
+government_rank = 2
+primary_culture = hook_culture
+add_accepted_culture = scythe_culture
+religion = genbu
+technology_group = wushankotechgroup
+capital = 1148 #Genbu

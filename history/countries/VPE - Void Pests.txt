@@ -1,0 +1,20 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = pest_culture
+religion = godless
+religious_school = monstrous_school
+technology_group = centraltechgroup
+capital = 239 #Bo
+national_focus = MIL
+
+2125.10.6 = {
+	monarch = {
+		name = "Queen"
+		dynasty = "Pest"
+		birth_date = 2106.6.9
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}

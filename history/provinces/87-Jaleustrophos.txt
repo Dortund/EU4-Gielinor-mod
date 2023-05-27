@@ -1,0 +1,19 @@
+#87-Jaleustrophos
+
+tribal_owner = ---
+culture = menaphiteculture
+religion = menaphite
+trade_goods = lesser_loot
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2

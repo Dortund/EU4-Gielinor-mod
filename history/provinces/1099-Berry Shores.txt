@@ -1,0 +1,24 @@
+#1099 - Berry Shores
+owner = TUL
+controller = TUL
+add_core = TUL
+tribal_owner = ---
+culture = siren
+religion = seiryu
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = monkeytechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fruit
+
+is_city = yes

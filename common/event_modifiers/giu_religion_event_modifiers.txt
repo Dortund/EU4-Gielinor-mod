@@ -1,0 +1,531 @@
+##################################################################################################
+# For religions.
+##################################################################################################
+
+#############
+# Armadyl
+#############
+
+
+# Seren conversion events
+
+armadyl_loyal_converts = {
+	global_missionary_strength = 0.1
+	church_power_modifier = 0.5
+}
+armadyl_wings_of_armadyl_modifier = {
+	tolerance_own = 1
+	tolerance_heathen = 1
+	tolerance_of_heathens_capacity = 2
+}
+
+#############
+# Birman
+#############
+
+birman_bringer_of_the_sweet_modifier = {
+ 	global_unrest = -1
+}
+
+birman_celestial_navigation_modifier = {
+ 	naval_morale = 0.1
+}
+
+birman_contemplation_modifier = {
+ 	global_institution_spread = 0.2
+}
+
+birman_tropical_cocktails_modifier = {
+ 	global_prov_trade_power_modifier = 0.15
+}
+
+#############
+#Brassica Prime
+#############
+
+# Harmonised Modifiers
+
+harmonized_chaos = { #Zamorak; Vampyric
+	idea_cost = -0.1
+	religion = yes
+}
+
+harmonized_karamjan = {
+	land_attrition = -0.10
+	religion = yes
+}
+
+harmonized_menaphite = {
+	trade_efficiency = 0.1
+	religion = yes
+}
+
+harmonized_nonintervention = { #Godless; Guthix; V
+	diplomatic_reputation = 1
+	religion = yes
+}
+
+harmonized_order = { #Armadyl; Saradomin
+	stability_cost_modifier = -0.1
+	religion = yes
+}
+
+harmonized_transcendent = { #Dark Lord; Seren; Zaros
+	prestige_decay = -0.01
+	religion = yes
+}
+
+harmonized_elder = { #Bik; Ful; Jas; Wen
+	monarch_lifespan = 0.1
+	religion = yes
+}
+
+harmonized_autocratic = { #Bandos; Tuska; Xeric; Zulrah
+	global_autonomy = -0.05
+	religion = yes
+}
+
+harmonized_marimbo = {
+	global_unrest = -1
+	religion = yes
+}
+
+harmonized_horror = {
+	naval_morale = 0.1
+	religion = yes
+}
+
+harmonized_celestial = { #Birman; Hanalan; Ralos; Ranul
+	global_foreign_trade_power = 0.15
+	religion = yes
+}
+
+harmonized_wushanko = { #Byakko; Genbu; Seiryu; Suzako
+	global_ship_trade_power = 0.2
+	religion = yes
+}
+
+#Local modifiers
+
+brassica_sacred_cabbages = {
+	local_unrest = -1
+	local_missionary_strength = -0.02
+}
+
+brassica_refused_cabbages = {
+	local_unrest = 1
+	trade_goods_size_modifier = -0.1
+}
+
+brassica_destroyed_cabbages = {
+	trade_goods_size_modifier = -0.05
+}
+
+brassica_protected_cabbages = {
+	trade_goods_size_modifier = 0.05
+}
+
+#############
+# Godless
+#############
+
+godless_forget_the_faith = {
+	tolerance_own = 2
+	global_missionary_strength = 0.1
+}
+
+#############
+# Hanalan
+#############
+
+hanalan_bringer_of_salt_modifier = {
+	production_efficiency = 0.1
+}
+
+hanalan_metaphorical_thought_modifier = {
+	adm_tech_cost_modifier = -0.1
+}
+
+hanalan_sunny_disposition_modifier = {
+	diplomatic_reputation = 1
+}
+
+hanalan_wind_breath_modifier = {
+ 	movement_speed = 0.10
+}
+
+#############
+#Lucien
+#############
+
+#National
+lucien_ascent_of_lucien = {
+	global_heretic_missionary_strength = 0.1
+	prestige = 1
+}
+lucien_working_alone = {
+	tolerance_heretic = -2
+	tolerance_heathen = -2
+	diplomatic_reputation = -1
+}
+lucien_pragmatic_diplomacy = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+	diplomatic_reputation = 1
+}
+
+#############
+#Marimbo
+#############
+
+#Local
+marimbo_utilitarianism = {
+	local_unrest = -5
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+}
+marimbo_free_trader_faith = {
+	trade_goods_size_modifier = 0.25
+	local_autonomy = 0.03
+}
+
+#National
+marimbo_equity = {
+	global_unrest = -1
+}
+marimbo_reduced_taxation = {
+	global_unrest = -1
+	global_tax_modifier = -0.15
+}
+
+
+#############
+#Seren
+#############
+
+#Local
+
+seren_syncretic_runecrafting_expertise = {
+	trade_goods_size = 1
+}
+seren_double_reinforcement = {
+	local_defensiveness = 1
+ 	local_hostile_attrition = 1
+ 	max_attrition = 1
+}
+seren_ralos_cultivation = {
+	local_missionary_strength = -0.25
+	local_unrest = -5
+}
+seren_inclusion_of_iorwerth = {
+	local_development_cost = -0.1
+}
+seren_restrictions_on_iorwerth = {
+	local_unrest = 2
+}
+seren_exile_of_iorwerth = {
+	local_unrest = 5
+	local_culture_conversion_cost = -0.15
+}
+
+seren_celebrating_the_new_elder_gods = {
+	local_unrest = -5
+	local_missionary_strength = -0.05
+}
+
+
+
+#National
+
+seren_outside_assistance = {
+	diplomatic_reputation = 1
+	tolerance_heathen = 1
+	global_unrest = 1
+}
+seren_insular_assistance = {
+	tolerance_own = 1
+}
+seren_free_elf_movement = {
+	development_cost = -0.1
+	global_unrest = 1
+}
+seren_closed_elf_movement = {
+	development_cost = 0.1
+	global_unrest = -1
+}
+seren_open_trade = {
+	global_trade_power = 0.1
+	global_spy_defence = -0.25
+}
+seren_closed_trade = {
+	global_trade_power = -0.1
+	global_spy_defence = 0.25
+}
+seren_contemplating_the_dark_lord = {
+	tolerance_own = -1
+	tolerance_heretic = 2
+}
+seren_anything_but_the_dark_lord = {
+	tolerance_heretic = -2
+	tolerance_heathen = 1
+}
+seren_only_seren_guides_us = {
+	tolerance_own = 1
+	tolerance_heretic = -1
+	tolerance_heathen = -1
+}
+
+seren_new_leadership = {
+	idea_cost = -0.1
+}
+seren_traditional_leadership = {
+	stability_cost_modifier = -0.2
+}
+seren_guidance_of_the_world = {
+	global_institution_spread = 0.2
+	advisor_pool = 1
+}
+seren_faith_and_stability = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.1
+	tolerance_heretic = -2
+	tolerance_heathen = -2
+}
+seren_clan_nepotism = {
+	same_culture_advisor_cost = -0.25
+	yearly_corruption = 0.1
+}
+seren_harsher_leadership = {
+	harsh_treatment_cost = -0.25
+	republican_tradition = -0.03
+}
+
+seren_expansion_of_runecrafting = {
+	institution_spread_from_true_faith = 0.25
+}
+seren_traditional_magics = {
+	army_tradition_decay = -0.005
+}
+
+seren_age_of_collaboration = {
+	tolerance_heathen = 1
+	diplomatic_reputation = 1
+	promote_culture_cost = -0.25
+}
+seren_age_of_competition = {
+	global_heathen_missionary_strength = 0.01
+	culture_conversion_cost = -0.15
+}
+seren_age_of_isolation = {
+	manpower_in_true_faith_provinces = 0.15
+	defensiveness = 0.1
+}
+seren_open_border_policy = {
+	development_cost = -0.1
+	global_missionary_strength = -0.02
+}
+seren_closed_border_policy = {
+	tolerance_own = 2
+	development_cost = 0.1
+}
+
+seren_zean_traders = {
+	global_foreign_trade_power = 0.25
+	trade_range_modifier = 0.25
+	global_spy_defence = -0.25
+}
+seren_zean_caution = {
+	heavy_ship_cost = -0.1
+	global_ship_recruit_speed = -0.15
+	global_spy_defence = 0.1
+}
+seren_zean_shipbuilding_methods = {
+	ship_durability = 0.05
+	naval_attrition = -0.1
+	global_spy_defence = -0.25
+}
+seren_ralos_tolerance = {
+	tolerance_heathen = 2
+}
+seren_ralos_minor_tolerance = {
+	tolerance_heathen = 1
+}
+seren_ralos_possible_link = {
+	tolerance_heathen = 1
+}
+
+seren_opening_of_prifddinas = {
+	global_spy_defence = -0.25
+	global_trade_power = 0.15
+}
+seren_restrictions_in_prifddinas = {
+	global_missionary_strength = 0.02
+	tolerance_heretic = -1
+	tolerance_heathen = -1
+}
+seren_strict_prifddinas_closure = {
+	same_culture_advisor_cost = -0.5
+	tolerance_heretic = -3
+	tolerance_heathen = -2
+}
+seren_prifddinas_pilgrims = {
+	tolerance_own = 1
+	prestige_decay = 0.01
+}
+seren_restricted_prifddinas_pilgrims = {
+	tolerance_own = -1
+	stability_cost_modifier = -0.1
+}
+seren_domestic_trade_push = {
+	global_own_trade_power = 0.2
+}
+
+seren_rejoice_in_rebirth = {
+	tolerance_own = 1
+}
+seren_stealth_seren_mission = {
+	global_spy_defence = 0.25
+}
+seren_skepticism_for_rebirth = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+seren_glory_to_the_reborn_goddess = {
+	tolerance_own = 2
+}
+seren_not_our_seren = {
+	tolerance_heretic = 2
+	tolerance_heathen = 2
+}
+seren_dark_lord_returns = {
+	tolerance_own = -2
+	tolerance_heretic = 2
+}
+seren_lore_of_zaros = {
+	tolerance_heretic = 2
+	idea_cost = -0.1
+}
+seren_defiance_of_zaros = {
+	tolerance_own = 1
+	tolerance_heretic = -2
+}
+seren_godless_inclinations = {
+	tolerance_own = -1
+	tolerance_heretic = -2
+	tolerance_heathen = 3
+}
+seren_new_age_of_openness = {
+	technology_cost = -0.1
+	global_spy_defence = -0.25
+}
+seren_age_of_continuity = {
+	stability_cost_modifier = -0.25
+}
+seren_new_age_of_isolationism = {
+	defensiveness = 0.2
+}
+seren_a_goddess_restored = {
+	tolerance_own = 2
+	global_missionary_strength = 0.02
+}
+seren_false_restoration = {
+	tolerance_own = -2
+	reform_progress_growth = 0.25
+	tolerance_heathen = 3
+}
+
+seren_turning_from_seren = {
+	tolerance_own = -2
+	tolerance_of_heathens_capacity = 2
+	tolerance_heathen = 4
+}
+seren_excusing_seren = {
+	tolerance_own = 2
+	diplomatic_reputation = -1
+}
+seren_denying_the_false_goddess = {
+	tolerance_own = 1
+}
+seren_steadfast_faith = {
+	tolerance_own = 4
+	global_unrest = 2
+	diplomatic_reputation = -1
+}
+
+
+
+
+
+#############
+#Tuska
+#############
+
+tuska_doomsday_preachers = {
+	global_missionary_strength = 0.02
+	manpower_in_true_faith_provinces = 0.25
+}
+tuska_children_of_tuska = {
+	manpower_in_true_faith_provinces = 0.25
+	raze_power_gain = 0.5
+ 	land_morale = 0.10
+}
+
+#############
+# Vampyric
+#############
+
+#Local
+estate_clergy_zamorakian_coexistence_modifier = {
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+}
+vampyric_enforced_vampyric_faith = {
+	local_unrest = 2
+ 	local_missionary_strength = 0.02
+	local_missionary_maintenance_cost = -0.5
+}
+
+#############
+#Zamorak
+#############
+
+#Local 
+zamorak_desecrated_forinthry = {
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+	local_manpower_modifier = 0.1
+}
+
+#############
+#Zemouregal
+#############
+
+zemouregal_control_the_altars = {
+	global_missionary_strength = 0.05
+}
+
+zemouregal_expanded_altar_siphoning = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+	global_missionary_strength = -0.02
+}
+
+zemouregal_forceful_conversions = {
+	tolerance_heretic = -1
+	tolerance_heathen = -1
+	global_missionary_strength = 0.02
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

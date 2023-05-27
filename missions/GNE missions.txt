@@ -1,0 +1,305 @@
+gnome_empire_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = GNE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	GNE_the_grand_tree_mission = {
+		icon = mission_the_grand_tree
+		required_missions = {  }
+		trigger = {
+			272 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+				development = 20
+			}
+		}
+		effect = {
+			add_adm_power = 25
+			atarisundri_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	GNE_atarisundri = {
+		icon = mission_atarisundri
+		required_missions = { GNE_the_grand_tree_mission }
+		provinces_to_highlight = {
+			OR = {
+				area = atarisundri_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			atarisundri_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				NOT = { exists = THO }
+				AND = {
+					army_size = THO
+					land_morale = THO
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+		}
+	}
+}
+
+gnome_empire_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = GNE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	GNE_develop_tree_gnome_village = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			286 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 15
+				fort_level = 2
+			}
+		}
+		effect = {
+			add_adm_power = 25
+			tree_gnome_village_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	GNE_protect_yanille = {
+		icon = mission_alliances
+		required_missions = { GNE_develop_tree_gnome_village }
+		provinces_to_highlight = {
+			OR = {
+				area = yanille_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { owned_by = YLE }
+		}
+		trigger = {
+			OR = {
+				yanille_area = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				AND = {
+					yanille_area = {
+						owned_by = YLE
+						is_core = YLE
+					}
+					alliance_with = YLE
+				}
+
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					yanille_area = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_country_modifier = {
+					name = "GNE_protector_of_yanille"
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "GNE_guardian_of_yanille"
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+gnome_empire_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = GNE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	GNE_royal_exploratory_fleet = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			num_of_light_ship = 10
+		}
+		effect = {
+			define_explorer = {
+				name = "Bake"
+				shock = 4
+				fire = 5
+				manuever = 6
+				siege = 2
+			}
+		}
+	}
+	GNE_explore_the_seas = {
+		icon = mission_alliances
+		required_missions = { GNE_royal_exploratory_fleet }
+		trigger = {
+			617 = {
+				has_discovered = GNE
+			}
+			628 = {
+				has_discovered = GNE
+			}
+			541 = {
+				has_discovered = GNE
+			}
+			539 = {
+				has_discovered = GNE
+			}
+		}
+		effect = {
+			add_navy_tradition = 25
+			add_dip_power = 50
+		}
+	}
+	GNE_reformed_empire = {
+		icon = mission_alliances
+		required_missions = { GNE_atarisundri GNE_protect_yanille GNE_explore_the_seas GNE_fight_hazeel GNE_ouranian_goblins }
+		trigger = {
+			power_projection = 100
+			adm_tech = 10
+			dip_tech = 10
+			mil_tech = 10
+		}
+		effect = {
+			change_government_reform_progress = 100
+		}
+	}
+}
+
+gnome_empire_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = GNE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	GNE_cadarn_relations = {
+		icon = mission_glory_to_glarial
+		required_missions = {  }
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = CDA
+					reverse_has_opinion = {
+						who = CDA
+						value = 150
+					}
+				}
+				is_rival = CDA
+				NOT = { exists = CDA }
+			}
+		}
+		effect = {
+			add_dip_power = 25
+		}
+	}
+	GNE_fight_hazeel = {
+		icon = mission_challenge_hazeel
+		required_missions = { GNE_cadarn_relations GNE_prepare_for_war }
+		trigger = {
+			OR = {
+				NOT = { exists = HZL }
+				has_won_war_against = {
+					who = HZL
+					max_years_since = 20
+				}
+			}
+		}
+		effect = {
+			add_army_tradition = 25
+		}
+	}
+}
+
+gnome_empire_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = GNE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	GNE_prepare_for_war = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			army_professionalism = 0.05
+		 	army_size = HZL
+		}
+		effect = {
+			ourania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	GNE_ouranian_goblins = {
+		icon = mission_alliances
+		required_missions = { GNE_prepare_for_war }
+		provinces_to_highlight = {
+			OR = {
+				area = ourania_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ourania_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+}

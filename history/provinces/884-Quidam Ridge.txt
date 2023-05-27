@@ -1,0 +1,19 @@
+#884-Quidam Ridge
+owner = CNC
+controller = CNC
+add_core = CNC
+tribal_owner = ---
+culture = mountaintroll
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = magic_supplies
+
+is_city = yes

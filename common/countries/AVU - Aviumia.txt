@@ -1,0 +1,29 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 149 60 53 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Aimeri #0" = 1
+	"Astra #0" = 1
+	"Hameln #0" = 1
+	"Hanchen #0" = 1
+	"Imafore #0" = 1
+	"Reshi #0" = 1
+	"Thomdril #0" = 1
+	
+	"Kendall #0" = -1
+	"Zyanyi #0" = -1
+}

@@ -1,0 +1,55 @@
+spriteTypes = {
+	#### All of these is related to "game/common/government_mechanics"
+	
+	### ELVEN DESPERATION ###
+
+	spriteType = {
+		name = "GFX_elven_desperation_frame"
+		texturefile = "gfx/interface/government_mechanics/elven_desperation/elven_desperation_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_elven_desperation_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/elven_desperation/elven_desperation_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/elven_desperation/elven_desperation_progress_bar_empty.dds"
+		size = { x = 260 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_elven_desperation_last_stand_button"
+		texturefile = "gfx/interface/government_mechanics/elven_desperation/elven_desperation_last_stand_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	### HOUSE DISUNITY ###
+
+	spriteType = {
+		name = "GFX_house_disunity_frame"
+		texturefile = "gfx/interface/government_mechanics/house_disunity/house_disunity_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_house_disunity_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/house_disunity/house_disunity_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/house_disunity/house_disunity_progress_bar_empty.dds"
+		size = { x = 260 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_house_disunity_decrease_button"
+		texturefile = "gfx/interface/government_mechanics/house_disunity/house_disunity_decrease_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

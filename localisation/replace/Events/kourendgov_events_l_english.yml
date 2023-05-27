@@ -1,0 +1,56 @@
+﻿l_english:
+ kourendgov.1.t:0 "Resurrect the Harvest?"
+ kourendgov.1.d:0 "A farmer of Hosidius has lost their harvest to disease. They are petitioning the mages of Arceuus to resurrect their crops, but the cost of doing so is expensive and may be more than the value of the crops."
+ kourendgov.1.a:0 "Arceuus should lend their aid."
+ kourendgov.1.b:0 "The Hosidian farmer ought to be better at farming."
+ kourendgov.1.c:0 "How about the government covers the resurrection cost?"
+
+ kourendgov.2.t:0 "Magical Pollution"
+ kourendgov.2.d:0 "Dwarves of Lovakengj have issued a complaint about the outpouring of magical energies from mages of House Arceuus. Dwarves are largely unable to use magic, and hence find it difficult to clean up magical pollution."
+ kourendgov.2.a:0 "Arceuus should take responsibility."
+ kourendgov.2.b:0 "Arceuus has no such responsibilities."
+ kourendgov.2.c:0 "Let's pay someone to clean it up."
+
+ kourendgov.3.t:0 "Sailors' Superstitions"
+ kourendgov.3.d:0 "Sailors of Piscarilius have been suspicious of House Arceuus' tampering with the dead. They say that it's bad luck and Arceuus needs to rein in their resurrections."
+ kourendgov.3.a:0 "House Arceuus needs to remember to respect the dead."
+ kourendgov.3.b:0 "The operations of Arceuus respect life! Piscarilius needs to learn that."
+
+ kourendgov.4.t:0 "Melee or Magic?"
+ kourendgov.4.d:0 "A debate is taking place between a scholar of Arceuus and a senior member of the Shayzien army. Is melee combat or magic better?"
+ kourendgov.4.a:0 "Melee!"
+ kourendgov.4.b:0 "Magic!"
+ kourendgov.4.c:0 "Range!"
+ 
+ kourendgov.5.t:0 "Hop Shortage!"
+ kourendgov.5.d:0 "House Lovakengj is in panic after their supplies of hops run dry! We could divert some beer from Hosidius in the meantime, but the Hosidians are unlikely to appreciate that."
+ kourendgov.5.a:0 "Divert the beer to the Lovakengj dwarves."
+ kourendgov.5.b:0 "The dwarves will just have to do with less beer for now."
+ 
+ kourendgov.6.t:0 "Naval Food Standards"
+ kourendgov.6.d:0 "A representative of House Hosidius has voiced concern about House Piscarilius' increasing use of foreign food imports at the expense of their Hosidian farmers. A representative of House Piscarilius has replied that the terrible quality of Hosidian food is the reason for this."
+ kourendgov.6.a:0 "House Hosidius needs to improve their food quality."
+ kourendgov.6.b:0 "Piscarilius needs to buy local."
+ kourendgov.6.c:0 "Who cares?"
+ 
+ kourendgov.7.t:0 "Poachers!"
+ kourendgov.7.d:0 "Poachers have been spotted killing livestock on Hosidian fields. House Hosidius demands action from Shayzien, but House Shayzien protests that their resources are stretched thin as it is."
+ kourendgov.7.a:0 "House Shayzien is right."
+ kourendgov.7.b:0 "Hosidius needs that support."
+ kourendgov.7.c:0 "We can cover the costs."
+ 
+ kourendgov.8.t:0 "Navigational Equipment"
+ kourendgov.8.d:0 "House Piscarilius requires more compasses, timepieces and the like for their navigations. House Lovakengj would be well-equipped to create these, but there is distrust between the houses following an earlier botched deal, and Lovakengj wants the payment upfront."
+ kourendgov.8.a:0 "We're all part of Great Kourend! Piscarilius can be trusted."
+ kourendgov.8.b:0 "House Piscarilius needs to pay up-front."
+ kourendgov.8.c:0 "Why doesn't Piscarilius pay Lovakengj in rats?"
+ 
+ kourendgov.9.t:0 "Shayzien demands faster weapon deliveries!"
+ kourendgov.9.d:0 "A furious representative of House Shayzien tells us that if Lovakengj can't supply weapons faster, lives in the Shayzien army will be lost. A Lovakengj representative shouts in response that there's no use supplying the human-biased peacekeeping of Shayzien."
+ kourendgov.9.a:0 "Lives are on the line. Lovakengj must comply."
+ kourendgov.9.b:0 "House Shayzien must not ignore their duties to House Lovakengj."
+ 
+ kourendgov.10.t:0 "The Crimes of Piscarilius"
+ kourendgov.10.d:0 "It's an open secret that House Piscarilius has a shady history, and their port is often plagued with crime. However, their underhanded methods have sometimes been crucial to Great Kourend's future. House Shayzien is demanding we give them more rights to break into Piscarilian houses and break up criminal activities - how should we respond?"
+ kourendgov.10.a:0 "Crime must be held in check."
+ kourendgov.10.b:0 "Shayzien cannot impose themselves onto Piscarilius."

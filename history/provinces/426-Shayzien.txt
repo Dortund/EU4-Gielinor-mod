@@ -1,0 +1,29 @@
+#426-Shayzien
+owner = SYZ
+controller = SYZ
+add_core = SYZ
+tribal_owner = ---
+culture = shayzien
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 5
+base_manpower = 5
+
+fort_15th = yes 
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 1
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

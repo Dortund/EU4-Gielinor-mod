@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = silvarean
+religion = saradomin
+technology_group = centraltechgroup
+capital = 23 #Saranthium
+national_focus = ADM

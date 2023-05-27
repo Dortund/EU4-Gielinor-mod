@@ -1,0 +1,84 @@
+########################################
+# Xeric Religion Events
+########################################
+
+namespace = xeric_events
+
+# Xeric reform
+country_event = {
+	id = xeric_events.1
+	title = xeric_events.1.t #The Xerician Religion Reforms!
+	desc = xeric_events.1.d #We have successfully elevated our following of Xeric, and have built a great nation in his name. Some among us question the direction of faith and have risen up in defence of the old ways, but we can see this through.
+	picture = XERIC_XAMPHUR_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = xeric
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {		
+			add_authority = -100 
+			add_stability = -2
+			
+			random_owned_province = {
+				limit = { 
+					is_in_capital_area = yes 
+					is_capital = no
+				}
+				set_province_flag = civil_war_prov_1
+			}		
+			random_owned_province = {
+				limit = { 
+					is_in_capital_area = yes
+					is_capital = no
+					NOT = { has_province_flag = civil_war_prov_1 }
+				}
+				set_province_flag = civil_war_prov_2
+			}
+			random_owned_province = {
+				limit = { 
+					is_in_capital_area = yes 
+					is_capital = no
+					NOT = { has_province_flag = civil_war_prov_1 }
+					NOT = { has_province_flag = civil_war_prov_2 }
+				}
+				set_province_flag = civil_war_prov_3
+			}			
+			
+			random_owned_province = {
+				limit = { has_province_flag = civil_war_prov_1 }
+				pretender_rebels = 4
+				clr_province_flag = civil_war_prov_1
+			}
+			random_owned_province = {
+				limit = { has_province_flag = civil_war_prov_2 }
+				pretender_rebels = 3
+				clr_province_flag = civil_war_prov_2
+			}
+			random_owned_province = {
+				limit = { has_province_flag = civil_war_prov_3 }
+				pretender_rebels = 3
+				clr_province_flag = civil_war_prov_3
+			}			
+		}
+		
+	}	
+	
+	option = {
+		name = xeric_events.1.a #It is time for the Xerician faith to evolve!
+		tooltip = {
+			add_stability = -2
+			add_authority = -100			
+		}		
+	}
+}
+
+
+
+

@@ -1,0 +1,21 @@
+#120 - Dragontooth Isle
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+tribal_owner = ---
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = logs
+latent_trade_goods = { divine_energy }
+
+is_city = yes

@@ -1,0 +1,9 @@
+government = theocracy
+add_government_reform = shamanic_theocracy
+government_rank = 3
+primary_culture = molch
+religion = xeric
+technology_group = zeantechgroup
+capital = 402 #Kingstown
+national_focus = MIL
+historical_rival = KOU

@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = feldip_tribe
+government_rank = 1
+primary_culture = ogre
+religion = bandos
+technology_group = bandostechgroup
+capital = 851 #Pays d'Ogre
+
+1927.3.11 = {
+	monarch = {
+		name = "Dalgroth"
+		dynasty = "Og"
+		birth_date = 1901.2.17
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}
+
+2146.12.17 = {
+	monarch = {
+		name = "Og"
+		dynasty = "Og"
+		birth_date = 2116.9.11
+		adm = 6
+		dip = 4
+		mil = 3
+	}
+}

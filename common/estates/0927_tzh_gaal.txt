@@ -1,0 +1,125 @@
+estate_tzh_gaal =
+{
+	icon = 27
+
+	# If true, country will get estate
+	trigger = {	
+		has_reform = integration_of_the_gaal_reform
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		range = 0.5
+		spy_offence = 0.2
+	}
+	country_modifier_neutral = {
+		range = 0.5
+	}	
+	country_modifier_angry = {
+		diplomatic_reputation = -2
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		tzh_gaal_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {	
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {	
+		desc = EST_VAL_COT
+		trigger = {
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_TRADE_INCOME
+		trigger = {
+			NOT = { trade_income_percentage = 0.25 }
+		}	
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.5
+			NOT = { trade_income_percentage = 0.75 }
+		}	
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.75
+		}	
+		influence = 10
+	}
+
+	color = { 66 60 61 }
+
+	privileges = {
+		estate_tzh_gaal_gaal_representation
+		estate_tzh_gaal_tzhaar_explorers
+	}
+
+	agendas = {
+		estate_tzh_gaal_hire_advisor
+		estate_tzh_gaal_fire_advisor
+		estate_tzh_gaal_restore_republican_tradition
+		estate_tzh_gaal_access_sea
+		estate_tzh_gaal_build_a_fleet
+		estate_tzh_gaal_bigger_fleet_than_rival
+		estate_tzh_gaal_improve_dip_rep
+		estate_tzh_gaal_discover_X_in_zeah
+		estate_tzh_gaal_colonise_X
+		estate_tzh_gaal_colonise_more_X
+		estate_tzh_gaal_colonial_nation
+		estate_tzh_gaal_expand_trade_company
+		estate_tzh_gaal_trade_post_in_wushanko
+		estate_tzh_gaal_protect_against_piracy
+	}
+
+	influence_from_dev_modifier = 1.0
+}

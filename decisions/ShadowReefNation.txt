@@ -1,0 +1,95 @@
+country_decisions = {
+
+	shadow_reef_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_shadow_reef_flag }
+			was_never_end_game_tag_trigger = yes
+			religion = xautak
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = SDR }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1103		# Aminishi Shore
+				province_id = 1104		# Temple of Seiryu
+				province_id = 1118		# West Hanto
+				province_id = 1119		# Rivuaiasan
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			religion = xautak
+			is_religion_reformed = yes
+			owns_core_province = 1103		# Aminishi Shore
+			owns_core_province = 1104		# Temple of Seiryu
+			owns_core_province = 1118		# West Hanto
+			owns_core_province = 1119		# Rivuaiasan
+			naval_forcelimit = 100
+		}
+		effect = {
+			change_tag = SDR
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_prestige = 50
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_shadow_reef_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			west_mos_le_harmless_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_mos_le_harmless_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			braindeath_island_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+
+}

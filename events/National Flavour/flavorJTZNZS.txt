@@ -1,0 +1,117 @@
+########################################
+# Events for Jatizso and Neitiznot
+########################################
+
+namespace = flavor_jtznzs
+normal_or_historical_nations = yes
+
+# The Trolls Organise!
+country_event = {
+	id = flavor_jtznzs.1
+	title = flavor_jtznzs.1.t
+	desc = flavor_jtznzs.1.d #Ice trolls have been resident in the Fremennik Isles since before we arrived, but as they are increasingly pushed out of the southern isles, they have begun to organise. The trolls of Uboafshudup won't be so easily set aside.
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		385 = { is_empty = no }
+		386 = { is_empty = no }
+		387 = { is_empty = no }
+		388 = { is_empty = no }
+		389 = { is_empty = yes }
+		390 = { is_empty = yes }
+		random_country = {
+			limit = {
+				OR = {
+					owns_core_province = 385
+					owns_core_province = 386
+					owns_core_province = 387
+					owns_core_province = 388
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = flavor_jtznzs.1.a #You know what? I'm joining the trolls.
+		switch_tag = UBS
+		389 = {
+			add_core = UBS
+			cede_province = UBS
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 4
+		}
+		390 = {
+			add_core = UBS
+			cede_province = UBS
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 4
+		}
+		UBS = {
+			discover_country = JTZ
+			discover_country = NZS
+		}
+	}
+
+	option = {
+		name = flavor_flavor_jtznzs.1.b #We will have to deal with this.
+		389 = {
+			add_core = UBS
+			cede_province = UBS
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 4
+		}
+		390 = {
+			add_core = UBS
+			cede_province = UBS
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 4
+		}
+		UBS = {
+			discover_country = JTZ
+			discover_country = NZS
+		}
+	}
+}

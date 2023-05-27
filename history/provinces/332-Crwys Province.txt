@@ -1,0 +1,20 @@
+#332 - Crwys Province
+owner = EVR
+controller = EVR
+add_core = EVR
+add_core = CRW
+tribal_owner = ---
+culture = crwys
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = hunter_creatures
+
+is_city = yes

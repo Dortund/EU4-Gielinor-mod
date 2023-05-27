@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = warband
+government_rank = 1
+primary_culture = rogue
+religion = zamorak
+technology_group = northerntechgroup
+capital = 160 #Chaos Point
+national_focus = MIL
+
+2182.4.25 = {
+	monarch = {
+		name = "Whitezag"
+		dynasty = "Graves"
+		birth_date = 2115.8.12
+		adm = 6
+		dip = 2
+		mil = 4
+	}
+}

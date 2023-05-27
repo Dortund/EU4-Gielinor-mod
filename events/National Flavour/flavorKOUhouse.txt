@@ -1,0 +1,58 @@
+########################################
+# General, non-tag specific events for Kourend's houses
+########################################
+
+namespace = flavor_kouhouse
+normal_or_historical_nations = yes
+
+# 
+country_event = {
+	id = flavor_kouhouse.1
+	title = flavor_kouhouse.1.t #[KOU.Monarch.GetTitle] [KOU.Monarch.GetName] buys our favour!
+	desc = flavor_kouhouse.1.d #[KOU.Monarch.GetTitle] [KOU.Monarch.GetName] has seen it fit to invest in our House. Our people will appreciate it, though it will make it harder to make a break for independence.
+	picture = KOUREND_HOUSES_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_kouhouse.1.a #It's a mixed blessing.
+			add_country_modifier = {
+				name = "KOU_placated_house"
+				duration = 7300
+			}
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+	}
+}
+
+country_event = {
+	id = flavor_kouhouse.2
+	title = flavor_kouhouse.2.t #Independence for [Root.GetName]
+	desc = flavor_kouhouse.2.d #We have successfully broken free of the vile [KOU.Monarch.GetTitle] [KOU.Monarch.GetName]'s grasp and no longer must be saddled with the burden of being a house of Kourend.
+	picture = KOUREND_HOUSES_eventPicture
+	
+	trigger = {
+		NOT = { is_subject_of = KOU }
+		has_reform = kourend_house
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		add_government_reform = kourend_independent_house
+	}
+	
+	option = {
+		name = flavor_kouhouse.2.a #Freedom!
+		add_government_reform = kourend_independent_house
+	}
+}

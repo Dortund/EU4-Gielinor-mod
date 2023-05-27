@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = kourend_house
+government_rank = 1
+primary_culture = piscarilius
+religion = saradomin
+technology_group = zeantechgroup
+capital = 399 #Port Piscarilius
+national_focus = DIP
+
+1929.2.5 = {
+	monarch = {
+		name = "Sheila"
+		dynasty = "Piscarilius"
+		birth_date = 1883.5.11
+		adm = 4
+		dip = 2
+		mil = 3
+		female = yes
+	}
+}

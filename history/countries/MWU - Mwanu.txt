@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = migratory_tribe
+government_rank = 1
+primary_culture = mwanu
+religion = xautak
+technology_group = wushankotechgroup
+capital = 144 #La Grotte
+
+1921.12.1 = {
+	monarch = {
+		name = "Quetzathog"
+		dynasty = "the Sea Horror"
+		birth_date = 1894.5.11
+		adm = 0
+		dip = 4
+		mil = 5
+	}
+}
+
+2163.8.3 = {
+	monarch = {
+		name = "Quetzathog"
+		dynasty = "the Sea Horror"
+		birth_date = 2125.5.16
+		adm = 0
+		dip = 2
+		mil = 3
+	}
+}

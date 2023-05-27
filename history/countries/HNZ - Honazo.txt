@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = hook_culture
+religion = genbu
+technology_group = wushankotechgroup
+capital = 1128 #Honazo
+
+1926.7.13 = {
+	monarch = {
+		name = "Kon"
+		dynasty = "Honazo"
+		birth_date = 1904.10.3
+		death_date = 1986.5.12
+		adm = 3
+		dip = 4
+		mil = 3
+		female = yes
+	}
+}
+
+2135.11.12 = {
+	monarch = {
+		name = "Zhanyong"
+		dynasty = "Honazo"
+		birth_date = 2111.3.10
+		adm = 0
+		dip = 5
+		mil = 0
+	}
+}

@@ -1,0 +1,756 @@
+# For specific combinations of culture, religion and other such triggers
+# Will pick the first valid one it finds in list
+
+#Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+
+boss_nation_name = {
+	rank = {
+		1 = LAIR
+		2 = REALM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = BOSS
+		2 = BOSS
+		3 = SUPERBOSS
+	}
+
+	ruler_female = {
+		1 = BOSS
+		2 = BOSS
+		3 = SUPERBOSS
+	}
+	trigger = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+		NOT = { tag = BWS }
+		NOT = { tag = ZUA }
+	}
+}
+
+kharidian_generic_name = {
+	rank = {
+		1 = PRINCIPALITY
+		2 = EMIRATE
+		3 = SULTANATE
+	}
+
+	ruler_male = {
+		1 = PRINCE
+		2 = EMIR
+		3 = SULTAN
+	}
+
+	ruler_female = {
+		1 = PRINCESS
+		2 = EMIRA
+		3 = SULTANA
+	}
+	
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = EMIR_CONSORT
+		3 = SULTAN_CONSORT
+	}
+	
+	consort_female = {
+		1 = CONSORT
+		2 = EMIRA
+		3 = SULTANA
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = SHAHZADE
+	}
+	
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = kharidian_group
+	}
+}
+
+zul_andra_name = {
+	rank = {
+		1 = VILLAGE
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = HIGH_PRIEST
+		2 = HIGH_PRIEST
+		3 = HIGH_PRIEST
+	}
+
+	ruler_female = {
+		1 = HIGH_PRIESTESS
+		2 = HIGH_PRIESTESS
+		3 = HIGH_PRIESTESS
+	}
+	trigger = {
+		tag = ZUA
+	}
+}
+
+mahjarrat_realm = {
+	rank = {
+		1 = LORDSHIP
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+	trigger = {
+		ruler_culture = mahjarrat
+	}
+}
+
+
+
+BTH_principality = {
+	rank = {
+		1 = PRINCIPALITY
+		2 = GREAT_PRINCIPALITY
+		3 = GRAND_PRINCIPALITY
+	}
+
+	ruler_male = {
+		1 = PRINCE
+		2 = PRINCE
+		3 = PRINCE
+	}
+
+	ruler_female = {
+		1 = PRINCESS
+		2 = PRINCESS
+		3 = PRINCESS
+	}
+
+	trigger = {
+		has_reform = principality_burthorpe
+		tag = BTH
+	}
+}
+
+DYN_kingdom = {
+	rank = {
+		1 = COUNTY
+		2 = GREAT_COUNTY
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = COUNT
+		2 = COUNT
+		3 = LORD
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = COUNTESS
+		3 = LADY
+	}
+
+	trigger = {
+		government = monarchy
+		tag = DYN
+	}
+}
+
+goblin_kingdom = {
+	rank = {
+		1 = VILLAGE
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = MARSHAL
+	}
+
+	ruler_female = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = MARSHAL
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = goblin_group
+	}
+}
+
+goblin_tribe = {
+	rank = {
+		1 = TRIBE
+		2 = TRIBAL_KINGDOM
+		3 = TRIBAL_EMPIRE
+	}
+
+	ruler_male = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	ruler_female = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	trigger = {
+		government = tribal
+		culture_group = goblin_group
+	}
+}
+
+KEL_republic = {
+	rank = {
+		1 = TOWN
+		2 = CITY
+		3 = METROPOLIS
+	}
+
+	ruler_male = {
+		1 = DIRECTOR
+		2 = DIRECTOR
+		3 = CHAIRMAN
+	}
+
+	ruler_female = {
+		1 = DIRECTOR
+		2 = DIRECTOR
+		3 = CHAIRWOMAN
+	}
+
+	trigger = {
+		tag = KEL
+		government = republic
+	}
+}
+
+KOUhouse_realms = {
+	rank = {
+		1 = HOUSE
+		2 = HOUSE
+		3 = GREAT_HOUSE
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+
+	trigger = {
+		OR = {
+			tag = AUU
+			tag = HOS
+			tag = KTW
+			tag = LOV
+			tag = PCL
+			tag = SYZ
+		}
+	}
+}
+
+CDA_kingdom_of_baxtorian = {
+	rank = {
+		1 = LESSER_KINGDOM
+		2 = KINGDOM
+		3 = GREATER_KINGDOM
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = KING
+		3 = KING
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = QUEEN
+		3 = QUEEN
+	}
+
+	trigger = {
+		has_reform = elven_aristocracy
+	}
+}
+
+elven_clans = {
+	rank = {
+		1 = MINOR_CLAN
+		2 = CLAN
+		3 = MAJOR_CLAN
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+
+	trigger = {
+		OR = {
+			tag = AML
+			tag = CDA
+			tag = CRW
+			tag = CYW
+			tag = HEF
+			tag = IOR
+			tag = ITH
+			tag = MIY
+			tag = THN
+		}
+	}
+}
+
+EVR_government_name = {
+	rank = {
+		1 = UNITED_CLANS
+		2 = UNITED_CLANS
+		3 = UNITED_CLANS
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+
+	trigger = {
+		tag = EVR
+	}
+}
+
+LNC_kingdom = {
+	rank = {
+		1 = LORDSHIP
+		2 = GRAND_LORDSHIP
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+
+	trigger = {
+		government = monarchy
+		tag = LNC
+	}
+}
+
+MPS_government_name = {
+	rank = {
+		1 = CITY
+		2 = GOLDEN_CITY
+		3 = GOLDEN_CITY
+	}
+
+	ruler_male = {
+		1 = PHARAOH
+		2 = PHARAOH
+		3 = PHARAOH
+	}
+
+	ruler_female = {
+		1 = PHARAOH_fem
+		2 = PHARAOH_fem
+		3 = PHARAOH_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = MPS
+	}
+}
+
+SOP_government_name = {
+	rank = {
+		1 = CITY
+		2 = CITY
+		3 = CITY
+	}
+
+	ruler_male = {
+		1 = HIGH_PRIEST
+		2 = HIGH_PRIEST
+		3 = HIGH_PRIEST
+	}
+
+	ruler_female = {
+		1 = HIGH_PRIESTESS
+		2 = HIGH_PRIESTESS
+		3 = HIGH_PRIESTESS
+	}
+
+	trigger = {
+		government = theocracy
+		tag = SOP
+	}
+}
+
+SBI_government_name = {
+	rank = {
+		1 = REALM
+		2 = REALM
+		3 = REALM
+	}
+
+	ruler_male = {
+		1 = HIGH_PRIEST
+		2 = HIGH_PRIEST
+		3 = HIGH_PRIEST
+	}
+
+	ruler_female = {
+		1 = HIGH_PRIESTESS
+		2 = HIGH_PRIESTESS
+		3 = HIGH_PRIESTESS
+	}
+
+	trigger = {
+		government = theocracy
+		tag = SBI
+	}
+}
+
+HMY_government_name = {
+	rank = {
+		1 = MONASTIC_ORDER
+		2 = MONASTIC_ORDER
+		3 = MONASTIC_ORDER
+	}
+
+	ruler_male = {
+		1 = FATHER
+		2 = FATHER
+		3 = FATHER
+	}
+
+	ruler_female = {
+		1 = MOTHER
+		2 = MOTHER
+		3 = MOTHER
+	}
+
+	trigger = {
+		tag = HMY
+		has_reform = cloistered_order
+	}
+}
+
+NTZ_burghers = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = BURGHER
+		2 = BURGHER
+		3 = GRAND_BURGHER
+	}
+
+	ruler_female = {
+		1 = BURGHERESS
+		2 = BURGHERESS
+		3 = GRAND_BURGHERESS
+	}
+
+	trigger = {
+		government = monarchy
+		tag = NTZ
+	}
+}
+
+fremennik_monarchy = {
+	rank = {
+		1 = CHIEFDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = CHIEF
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = fremennik_group
+	}
+}
+
+vampyre_monarchy_name = {
+	rank = {
+		1 = LORDSHIP
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = vampyre_group
+	}
+}
+
+town_council_village = {
+	rank = {
+		1 = VILLAGE
+	}
+
+	ruler_male = {
+		1 = MAYOR
+	}
+
+	ruler_female = {
+		1 = MAYOR
+	}
+
+	trigger = {
+		has_reform = town_council_reform
+		OR = {
+			tag = SHI
+			tag = SEE
+		}
+	}
+}
+
+town_council = {
+	rank = {
+		1 = TOWN
+	}
+
+	ruler_male = {
+		1 = MAYOR
+	}
+
+	ruler_female = {
+		1 = MAYOR
+	}
+
+	trigger = {
+		has_reform = town_council_reform
+	}
+}
+
+clan_monarchy = {
+	rank = {
+		1 = TRIBE
+	}
+
+	ruler_male = {
+		1 = CHIEF
+	}
+
+	ruler_female = {
+		1 = CHIEFTESS
+	}
+
+	trigger = {
+		has_reform = clan_monarchy
+	}
+}
+
+entranan_high_priesthood = {
+	rank = {
+		1 = HOLY_ISLAND
+		2 = HOLY_ISLAND
+		3 = HOLY_ISLAND
+	}
+
+	ruler_male = {
+		1 = HIGH_PRIEST
+		2 = HIGH_PRIEST
+		3 = HIGH_PRIEST
+	}
+
+	ruler_female = {
+		1 = HIGH_PRIESTESS
+		2 = HIGH_PRIESTESS
+		3 = HIGH_PRIESTESS
+	}
+
+	trigger = {
+		has_reform = apostocracy
+	}
+}
+
+general_khazard = {
+	rank = {
+		1 = REGIME
+		2 = REGIME
+		3 = REGIME
+	}
+
+	ruler_male = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	ruler_female = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	trigger = {
+		tag = KZD
+	}
+}
+
+shamanic_theocracy = {
+	rank = {
+		1 = SHAMANIC_STATE
+		2 = SHAMANIC_REALM
+		3 = SHAMANIC_EMPIRE
+	}
+
+	ruler_male = {
+		1 = SHAMAN
+		2 = SHAMAN
+		3 = SHAMAN
+	}
+
+	ruler_female = {
+		1 = SHAMANESS
+		2 = SHAMANESS
+		3 = SHAMANESS
+	}
+
+	trigger = {
+		has_reform = shamanic_theocracy
+	}
+}
+
+moon_clan_magocracy = {
+	rank = {
+		1 = REALM
+		2 = REALM
+		3 = REALM
+	}
+
+	ruler_male = {
+		1 = ONEIROMANCER
+		2 = ONEIROMANCER
+		3 = ONEIROMANCER
+	}
+
+	ruler_female = {
+		1 = ONEIROMANCER
+		2 = ONEIROMANCER
+		3 = ONEIROMANCER
+	}
+
+	trigger = {
+		tag = MOO
+		has_reform = magiocracy
+	}
+}
+
+wushanko_khanate = {
+	rank = {
+		1 = KHANATE
+		2 = KHANATE
+		3 = KHAGANATE
+	}
+
+	ruler_male = {
+		1 = KHAN
+		2 = KHAN
+		3 = KHAGAN
+	}
+
+	ruler_female = {
+		1 = KHAN
+		2 = KHAN
+		3 = KHAGANATE
+	}
+
+	trigger = {
+		OR = {
+			has_reform = khanate
+			has_reform = great_khanate
+		}
+	}
+}
+
+
+
+
+
+

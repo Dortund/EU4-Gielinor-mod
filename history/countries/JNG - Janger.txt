@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = feldip_tribe
+government_rank = 1
+primary_culture = ogre
+religion = bandos
+technology_group = bandostechgroup
+capital = 294 #Janger
+
+1892.3.11 = {
+	monarch = {
+		name = "Grunther"
+		dynasty = "Janger"
+		birth_date = 1878.8.15
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}
+
+2159.3.12 = {
+	monarch = {
+		name = "Toban"
+		dynasty = "Janger"
+		birth_date = 2127.8.13
+		adm = 0
+		dip = 2
+		mil = 2
+	}
+}

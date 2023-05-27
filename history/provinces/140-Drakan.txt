@@ -1,0 +1,22 @@
+#140 - Drakan
+owner = MYT
+controller = MYT
+add_core = MYT
+tribal_owner = ---
+culture = trueborn_vampyre
+religion = vampyric
+
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 3
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = magic_supplies
+latent_trade_goods = { runes }
+
+is_city = yes

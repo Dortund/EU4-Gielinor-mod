@@ -1,0 +1,81 @@
+#Dreaded Years of Tragedy
+
+dreaded_years_of_tragedy = {
+	potential = {
+		OR = {
+			tag = ADO
+			tag = KDR
+		}
+	 	has_institution = statehood
+		NOT = { religion = zamorak }
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = kdr_dreaded_years_start }
+		NOT = { has_country_flag = kdr_dreaded_years_end }
+		NOT = { has_institution = exploration }
+	}
+
+	can_start = {
+		development_in_provinces = {
+			value = 20
+			religion = zamorak
+		}
+	}
+	
+	
+	can_stop = {
+		OR = {
+			AND = {
+				NOT = {
+					development_in_provinces = {
+						value = 20
+						religion = zamorak
+					}
+				}
+				stability = 3
+			}
+			religion = zamorak
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2
+			development_in_provinces = {
+				value = 40
+				religion = zamorak
+			}
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 2
+		}
+		modifier = {
+			factor = -1
+			stability = 3
+		}
+	}
+
+	can_end = {
+		AND = {
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			stability = 1
+			had_country_flag = {
+				flag = kdr_dreaded_years_start
+				days = 1825
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 10
+		development_cost = 1
+	}
+	
+	on_start = dreaded_years_of_tragedy.1
+	on_end = dreaded_years_of_tragedy.100
+}
+

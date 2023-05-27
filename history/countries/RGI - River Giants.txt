@@ -1,0 +1,31 @@
+government = tribal
+add_government_reform = cloud_giant_tribe
+government_rank = 1
+primary_culture = river_giant
+religion = bandos
+technology_group = wushankotechgroup
+capital = 1149 #Onsen
+
+1927.2.20 = {
+	monarch = {
+		name = "Hydros"
+		dynasty = "the River Giant"
+		birth_date = 1912.3.7
+		death_date = 1946.4.5
+		adm = 2
+		dip = 6
+		mil = 2
+	}
+}
+
+2156.6.7 = {
+	monarch = {
+		name = "Ripa"
+		dynasty = "the River Giant"
+		birth_date = 2126.9.8
+		adm = 4
+		dip = 4
+		mil = 5
+		female = yes
+	}
+}

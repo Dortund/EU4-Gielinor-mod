@@ -1,0 +1,299 @@
+protect_against_the_gods_aspect = { #all four
+	cost = 100
+	modifier = {
+		global_missionary_strength = 0.01
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					has_owner_religion = no
+				}
+			}
+		}
+	}
+}
+
+mansions_of_the_stars_aspect = { #all four
+	cost = 100
+	modifier = {
+		build_time = -0.15
+	}
+	ai_will_do = {
+		factor = 3
+	}
+}
+
+way_of_the_water_aspect = { #Seiryu and Byakko
+	cost = 100
+	modifier = {
+		ship_durability = 0.025
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+safe_lairs_aspect = { #Byakko and Suzaku
+	cost = 100
+	modifier = {
+		defensiveness = 0.15
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+way_of_warriors_aspect = { #Suzaku and Genbu
+	cost = 100
+	modifier = {
+		infantry_power = 0.075
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 4
+			is_at_war = yes
+		}
+	}
+}
+
+longevity_of_the_snake_aspect = { #Genbu and Seiryu
+	cost = 100
+	modifier = {
+		monarch_lifespan = 0.1
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 2
+			adm = 5
+		}
+		modifier = {
+			factor = 2
+			dip = 5
+		}
+		modifier = {
+			factor = 2
+			mil = 5
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm = 2 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { dip = 2 }
+		}
+		modifier = {
+			factor = 0.5
+			mil = 5
+			NOT = { mil = 2 }
+		}
+	}
+}
+
+flying_combat_aspect = { #Seiryu and Suzaku
+	cost = 100
+	modifier = {
+		leader_naval_manuever = 1
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+ground_warfare_aspect = { #Byakko and Genbu
+	cost = 100
+	modifier = {
+		shock_damage = 0.075
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+springtime_beauty_aspect = { #Seiryu only
+	cost = 100
+	modifier = {
+		global_unrest = -1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			unrest = 2
+		}
+		modifier = {
+			factor = 2
+			num_of_rebel_controlled_provinces = 1
+		}
+	}
+}
+
+moai_integration_aspect = { #Seiryu only
+	cost = 100
+	modifier = {
+		production_efficiency = 0.075
+	}
+	ai_will_do = {
+		factor = 12
+	}
+}
+
+acolyte_training_aspect = { #Seiryu only
+	cost = 100
+	modifier = {
+	 	drill_gain_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+flames_of_the_phoenix_aspect = { #Suzaku only
+	cost = 100
+	modifier = {
+		manpower_recovery_speed = 0.1
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+light_of_summer_aspect = { #Suzaku only
+	cost = 100
+	modifier = {
+		diplomatic_upkeep = 1
+	}
+	ai_will_do = {
+		factor = 12
+	}
+}
+
+strength_of_fire_aspect = { #Suzaku only
+	cost = 100
+	modifier = {
+		galley_power = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+leaders_of_virtue_aspect = { #Byakko only
+	cost = 100
+	modifier = {
+		legitimacy = 0.5
+		meritocracy = 0.5
+		horde_unity = 0.5
+		devotion = 0.5
+	 	republican_tradition = 0.15
+	}
+	ai_will_do = {
+		factor = 8
+	}
+}
+
+
+flag_of_the_tiger_aspect = { #Byakko only
+	cost = 100
+	modifier = {
+		prestige_from_land = 0.5
+	}
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+autumn_harvest_aspect = { #Byakko only
+	cost = 100
+	modifier = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	ai_will_do = {
+		factor = 12
+	}
+}
+
+symbiosis_aspect = { #Genbu only
+	cost = 100
+	modifier = {
+		diplomatic_reputation = 1
+	}
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 6
+			any_subject_country = {
+				is_vassal = yes
+			}
+		}
+	}
+}
+
+extreme_of_winter_aspect = { #Genbu only
+	cost = 100
+	modifier = {
+		land_attrition = -0.075
+	}
+	ai_will_do = {
+		factor = 8
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+turtleback_tombs_aspect = { #Genbu only
+	cost = 100
+	modifier = {
+		sunk_ship_morale_hit_recieved = -0.1
+	}
+	ai_will_do = {
+		factor = 8
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}

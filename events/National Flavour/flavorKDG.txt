@@ -1,0 +1,74 @@
+########################################
+# Events for Keldagrim
+########################################
+
+namespace = flavor_kdg
+normal_or_historical_nations = yes
+
+# Unterwulf Colony
+country_event = {
+	id = flavor_kdg.1
+	title = flavor_kdg.1.t #The Colony of Unterwulf
+	desc = flavor_kdg.1.d #White Wolf Mountain has historically stood as a major barrier between the regions of Asgarnia and Misthalin. The harsh climate coupled with the native population of white wolves have made crossing unfeasible for many armies. Furthermore, the mountain is relatively scarce in minerals, resulting in only a minor dwarven presence. However, a tunnel has now been completed connecting Taverley and Catherby, and a dwarven colony established within.
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = KDG
+		is_year = 1980
+		52 = { is_empty = yes }
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = flavor_kdg.1.a #It is not the mountain we conquer, but ourselves.
+		52 = {
+			add_core = UWF
+			cede_province = UWF
+			change_culture = kdgda
+			change_religion = guthix
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			change_trade_goods = iron
+		}
+		UWF = {
+			discover_country = KDG
+			}
+		discover_country = UWF
+	}
+	
+	option = {
+		name = flavor_kdg.1.b #I'm joining the colony!
+		switch_tag = UWF
+		52 = {
+			add_core = UWF
+			cede_province = UWF
+			change_culture = kdgda
+			change_religion = guthix
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			change_trade_goods = iron
+		}
+		UWF = {
+			discover_country = KDG
+			}
+		discover_country = UWF
+	}
+}

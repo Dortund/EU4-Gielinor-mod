@@ -1,0 +1,23 @@
+#11 - Haerfest
+owner = MST
+controller = MST
+add_core = MST
+tribal_owner = ---
+culture = lummer
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+trade_goods = livestock_farm
+
+is_city = yes

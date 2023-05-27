@@ -1,0 +1,24 @@
+#1098 - Bamboo Forest
+owner = TUL
+controller = TUL
+add_core = TUL
+tribal_owner = ---
+culture = siren
+religion = seiryu
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = monkeytechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = bamboo
+
+is_city = yes

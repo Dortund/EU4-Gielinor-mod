@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = merchants_reform
+government_rank = 2
+primary_culture = crandorian
+religion = saradomin
+technology_group = centraltechgroup
+capital = 59 #Central Crandor
+national_focus = DIP
+
+1898.7.4 = {
+	monarch = {
+		name = "Helaza"
+		dynasty = "Adventura"
+		birth_date = 1888.3.7
+		adm = 4
+		dip = 5
+		mil = 3
+		female = yes
+	}
+}

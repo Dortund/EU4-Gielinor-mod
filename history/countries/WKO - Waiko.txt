@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = arc_culture
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1101 #Waiko Port
+
+elector = yes
+
+1895.5.16 = {
+	monarch = {
+		name = "Yourong"
+		dynasty = "Waiko"
+		birth_date = 1879.7.14
+		death_date = 2054.8.18
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+2146.7.12 = {
+	monarch = {
+		name = "Chunmei"
+		dynasty = "Waiko"
+		birth_date = 2119.4.17
+		adm = 5
+		dip = 6
+		mil = 3
+		female = yes
+	}
+}

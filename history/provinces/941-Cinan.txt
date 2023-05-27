@@ -1,0 +1,23 @@
+#941-Cinan
+owner = MST
+controller = MST
+add_core = MST
+add_core = SRT
+tribal_owner = ---
+culture = silvarean
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes

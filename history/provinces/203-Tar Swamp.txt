@@ -1,0 +1,16 @@
+#203-Tar Swamp
+culture = zygomite
+religion = godless
+tribal_owner = ---
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = herblore_supplies
+
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2

@@ -1,0 +1,133 @@
+
+
+namespace = council_reforms
+
+# Privilegia triggers for Emperor...
+country_event = {
+	id = council_reforms.1
+	title = council_reforms.1.t
+	desc = council_reforms.1.d
+	picture = WUSHANKO_SUNRISE_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = council_reforms.1.a
+	}
+}
+
+# ...and for member states
+country_event = {
+	id = council_reforms.2
+	title = council_reforms.2.t
+	desc = council_reforms.2.d
+	picture = WUSHANKO_SUNRISE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = council_reforms.2.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				will_back_next_reform = no
+			}			
+			
+		}
+		emperor = {
+			vassalize = ROOT
+		}
+	}
+	
+	option = {
+		name = council_reforms.2.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				will_back_next_reform = yes
+			}			
+			
+		}
+		every_owned_province = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_claim = emperor
+		}
+		every_owned_province = {
+			set_in_empire = no
+		}
+		emperor = {
+			add_opinion = { who = ROOT modifier = opinion_left_empire }
+		}
+		add_opinion = { who = emperor modifier = opinion_united_empire }
+		elector = no
+	
+	}
+}
+
+# Renovatio triggers for Emperor...
+country_event = {
+	id = council_reforms.3
+	title = council_reforms.3.t
+	desc = council_reforms.3.d
+	picture = WUSHANKO_SUNRISE_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = council_reforms.3.a
+		change_tag = WHK
+		restore_country_name_effect = yes
+		every_province = {
+			limit = {
+				is_part_of_hre = yes
+				OR = {
+					owned_by = ROOT
+					owner = { is_neighbor_of = ROOT }
+				}
+				NOT = { is_core = ROOT }
+			}
+			add_core = emperor
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+				num_of_cities = 1
+			}
+			country_event = { id = council_reforms.4 }
+		}
+		dismantle_hre = yes
+		set_government_rank = 3
+		add_adm_power = 250
+		if = {
+			limit = {
+				has_custom_ideas = no
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+	}
+}
+
+# ...and for member states
+country_event = {
+	id = council_reforms.4
+	title = council_reforms.4.t
+	desc = council_reforms.4.d
+	picture = WUSHANKO_SUNRISE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = council_reforms.4.a
+		WHK = {
+			inherit = ROOT
+		}
+	}
+}

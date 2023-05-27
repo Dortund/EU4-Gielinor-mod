@@ -1,0 +1,23 @@
+#1202-Bubble of Mists
+owner = BBM
+controller = BBM
+add_core = BBM
+tribal_owner = ---
+culture = loop_culture
+religion = zaros
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = gemstones
+
+is_city = yes
+
+center_of_trade = 2

@@ -1,0 +1,344 @@
+########################################
+# Brassica Prime Events
+########################################
+
+namespace = brassicaprime_events
+
+#Chaos Harmonization
+country_event = {
+	id = brassicaprime_events.1
+	title = "brassicaprime_events.1.t"
+	desc = "brassicaprime_events.1.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.1.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_chaos"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Karamjan Harmonization
+country_event = {
+	id = brassicaprime_events.2
+	title = "brassicaprime_events.2.t"
+	desc = "brassicaprime_events.2.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.2.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_karamjan"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Menaphite Harmonization
+country_event = {
+	id = brassicaprime_events.3
+	title = "brassicaprime_events.3.t"
+	desc = "brassicaprime_events.3.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.3.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_menaphite"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Nonintervention Harmonization
+country_event = {
+	id = brassicaprime_events.4
+	title = "brassicaprime_events.4.t"
+	desc = "brassicaprime_events.4.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.4.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_nonintervention"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Order Harmonization
+country_event = {
+	id = brassicaprime_events.5
+	title = "brassicaprime_events.5.t"
+	desc = "brassicaprime_events.5.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.5.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_order"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Transcendent Harmonization
+country_event = {
+	id = brassicaprime_events.6
+	title = "brassicaprime_events.6.t"
+	desc = "brassicaprime_events.6.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.6.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_transcendent"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Elder Harmonization
+country_event = {
+	id = brassicaprime_events.7
+	title = "brassicaprime_events.7.t"
+	desc = "brassicaprime_events.7.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.7.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_elder"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Autocratic Harmonization
+country_event = {
+	id = brassicaprime_events.8
+	title = "brassicaprime_events.8.t"
+	desc = "brassicaprime_events.8.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.8.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_autocratic"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Marimbo Harmonization
+country_event = {
+	id = brassicaprime_events.9
+	title = "brassicaprime_events.9.t"
+	desc = "brassicaprime_events.9.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.9.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_marimbo"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Horror Harmonization
+country_event = {
+	id = brassicaprime_events.10
+	title = "brassicaprime_events.10.t"
+	desc = "brassicaprime_events.10.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.10.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_horror"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Celestial Harmonization
+country_event = {
+	id = brassicaprime_events.11
+	title = "brassicaprime_events.11.t"
+	desc = "brassicaprime_events.11.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.11.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_celestial"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Wushanko Guardian Harmonization
+country_event = {
+	id = brassicaprime_events.12
+	title = "brassicaprime_events.12.t"
+	desc = "brassicaprime_events.12.d"
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brassicaprime_events.12.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_wushanko"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Grow new cabbages
+country_event = {
+	id = brassicaprime_events.13
+	title = brassicaprime_events.13.t #Grow the Holy Vegetable
+	desc = brassicaprime_events.13.d #Brassican farmers of our realm have demanded to be allowed to grow the most sacred of vegetables, and our most exalted Cabbagemancers agree. Nonetheless, the decision falls to you.
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = brassicaprime
+		any_owned_province = {
+			trade_goods = grain
+			religion = brassicaprime
+			NOT = { has_province_modifier = brassica_destroyed_cabbages }
+			NOT = { has_province_modifier = brassica_refused_cabbages }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 1.5
+			cabbage = 1
+		}
+		modifier = {
+			factor = 1.5
+			cabbage = 2
+		}
+		modifier = {
+			factor = 1.5
+			cabbage = 3
+		}
+		modifier = {
+			factor = 1.5
+			cabbage = 4
+		}
+	}
+	
+	option = {
+		name = brassicaprime_events.13.a #Let them grow cabbages!
+		
+		random_owned_province = {
+			limit = {
+				trade_goods = grain
+				religion = brassicaprime
+				NOT = { has_province_modifier = brassica_destroyed_cabbages }
+				NOT = { has_province_modifier = brassica_refused_cabbages }
+			}
+		 	change_trade_goods = cabbage
+		 	add_province_modifier = {
+				name = brassica_sacred_cabbages
+				duration = 7300
+			}
+		}
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = brassicaprime_events.13.b #Absence makes the heart grow fonder - for all things.
+		random_owned_province = {
+			limit = {
+				trade_goods = grain
+				religion = brassicaprime
+				NOT = { has_province_modifier = brassica_destroyed_cabbages }
+				NOT = { has_province_modifier = brassica_refused_cabbages }
+			}
+		 	add_province_modifier = {
+				name = brassica_refused_cabbages
+				duration = 7300
+			}
+		}
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

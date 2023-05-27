@@ -1,0 +1,28 @@
+#858-Tumeken
+owner = MPS
+controller = MPS
+add_core = MPS
+tribal_owner = ---
+culture = menaphiteculture
+religion = menaphite
+
+discovered_by = kharidtechgroup
+discovered_by = karamjantechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = magic_supplies
+
+is_city = yes
+
+1958.4.26 = {
+	owner = MPS
+	controller = MPS
+	add_core = MPS
+}

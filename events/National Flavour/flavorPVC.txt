@@ -1,0 +1,75 @@
+########################################
+# Events for Pollnivneach
+########################################
+
+namespace = flavor_pvc
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_pvc.1
+	title = flavor_pvc.1.t #The Desert Mining Camp
+	desc = flavor_pvc.1.d #As more people travel across Gielinor, more people are vulnerable to the traps of bandits and unsavoury individuals. One such man by the name of Siad has set up a mining camp where captured slaves are forced to mine rocks for his profit.
+	picture = KHARID_MINING_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		owns_core_province = 75
+		71 = { is_empty = yes }
+		has_institution = quests
+		NOT = { exists = DMC }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			71 = {
+				cede_province = DMC
+				add_core = DMC
+				add_base_production = 1
+				add_base_manpower = 1
+				change_province_name = "Desert Mining Camp"
+			}
+			DMC = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Siad"
+					dynasty = "Said"
+					adm = 2
+					dip = 3
+					mil = 3
+					age = 42
+					claim = 100
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_pvc.1.a #Let's see what this mining camp is all about.
+
+		switch_tag = DMC
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_pvc.1.b #Hopefully our own people don't get enslaved.
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

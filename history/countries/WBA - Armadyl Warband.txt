@@ -1,0 +1,20 @@
+government = tribal
+add_government_reform = warband
+government_rank = 1
+primary_culture = rogue
+religion = armadyl
+technology_group = northerntechgroup
+capital = 869 #Picaya
+national_focus = MIL
+
+2182.4.25 = {
+	monarch = {
+		name = "Marion"
+		dynasty = "Gronigen"
+		birth_date = 2130.11.6
+		adm = 5
+		dip = 4
+		mil = 5
+		female = yes
+	}
+}

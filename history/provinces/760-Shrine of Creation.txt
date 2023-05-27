@@ -1,0 +1,25 @@
+#760-Shrine of Creation
+
+tribal_owner = ---
+culture = ghost
+religion = armadyl
+
+trade_goods = lesser_loot
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 3
+
+native_size = 10
+native_ferocity = 10
+native_hostileness = 3
+
+2161.2.10 = {
+	owner = NMD
+	controller = NMD
+	add_core = NMD
+}

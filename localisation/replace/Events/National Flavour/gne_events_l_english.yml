@@ -1,0 +1,77 @@
+﻿l_english:
+ flavor_gne.1.t:0 "Hazelmere, the Ethereal"
+ flavor_gne.1.d:0 "Hazelmere was one of the original gnomes who grew The Grand Tree, and remains an important figure in our kingdom as our finest tree-whisperer. We should be sure to recruit him by $MONARCH$'s side."
+ flavor_gne.1.a:0 "Let us consider it."
+ 
+ flavor_gne.2.t:0 "Oaknock, the Engineer"
+ flavor_gne.2.d:0 "An excellent engineer by the name of Oaknock has caught the interest of $MONARCH$. He has a particular knack for working with elven technology and could make an excellent advisor."
+ flavor_gne.2.a:0 "Can he fix it? Yes he can!"
+
+ flavor_gne.3.t:0 "Giant Tortoises"
+ flavor_gne.3.d:0 "We have discovered a population of giant tortoises which would make excellent mounts! One has already been presented to $MONARCH$ to serve as their personal steed, which they have named Mibbiwocket."
+ flavor_gne.3.a:0 "All enemies of the Gnome Empire will learn to fear the name Mibbiwocket!"
+ 
+ flavor_gne.4.t:0 "Glouphrie, the Untrusted"
+ flavor_gne.4.d:0 "A powerful mage has caught our attention. His name is Glouphrie and his expertise lies in illusion spells. Some in the court are concerned about his intentions, but his abilities could turn the tide of battle even if we had a numbers disadvantage."
+ flavor_gne.4.a:0 "We can probably trust him."
+ 
+ flavor_gne.5.t:0 "The Death of Argento"
+ flavor_gne.5.d:0 "There is sad news to report. The eldest Spirit Tree, Argento, is dead. Thanks to the efforts of Oaknock's machines, we have discovered that he was killed some time ago and an illusion was placed upon him to cover this up. The culprit appears to be none other than Glouphrie."
+ flavor_gne.5.a:0 "I knew we shouldn't have trusted him!"
+ 
+ flavor_gne.6.t:0 "The City of Arposandra"
+ flavor_gne.6.d:0 "It turns out Glouphrie has more allies than we thought. A large number of Gnomish families seem to be heading south, to the southernmost part of the Galarpos Mountains. We hear of only one word: Arposandra."
+ flavor_gne.6.a:0 "Let's join this so-called Arposandra!"
+ flavor_gne.6.b:0 "Well, at least Glouphrie's keeping himself busy."
+ 
+ flavor_gne.7.t:0 "Overstretched Empire?"
+ flavor_gne.7.d:0 "The Gnome Empire has expanded considerably in recent years, but the relatively tight-knit administration has struggled to assert authority over all of it. Representatives of the Tree Gnome Village in particular have been voicing their disapproval with their tendency to be left out of decision-making processes. This may eventually lead to the Gnome Empire splitting in two."
+ flavor_gne.7.a:0 "We can delay a push for independence with greater autonomy for our southern provinces."
+ flavor_gne.7.b:0 "We are the Gnome Empire, not the Gnome Democracy!"
+ 
+ flavor_gne.8.t:0 "Succession of Healthorg"
+ flavor_gne.8.d:0 "With the passing of our greatest King, succession has fallen to $MONARCH$. But another candidate named Bolrie from the Tree Gnome Village has stepped forward. He accuses $MONARCH$ of being too friendly with humans and blind to the threats around our empire. Putting Bolrie on the throne would help strengthen the internal relations between the Gnome Stronghold and Tree Gnome Village, but his seeming xenophobic tendencies could cause us other trouble down the line."
+ flavor_gne.8.a:0 "Nonsense! $MONARCH$ is clearly the best leader!"
+ flavor_gne.8.b:0 "Bolrie makes some good points..."
+ 
+ flavor_gne.9.t:0 "Succession of Healthorg"
+ flavor_gne.9.d:0 "With the passing of our greatest King, succession has fallen to $MONARCH$. This succession was uncontested."
+ flavor_gne.9.a:0 "Long live $MONARCH$!"
+ 
+ flavor_gne10.t:0 "Secessionist Pressures"
+ flavor_gne10.d:0 "The population of our southern provinces have decided that the time for greater autonomy has come. Soon this crisis will reach boiling point, and we will have to either be heavy-handed or split the empire. Neither is desirable."
+ flavor_gne10.a:0 "We'll deal with these secessionists in due time."
+ 
+ flavor_gne.11.t:0 "Bolrie's Advisor"
+ flavor_gne.11.d:0 "When Bolrie rose to power, he also took a personal advisor with him. This advisor recommends that in the face of dangerous humans, gnomes would do well to band together. He suggests seeking stronger ties with the estranged city of Arposandra."
+ flavor_gne.11.a:0 "By Guthix, he's right!"
+ flavor_gne.11.b:0 "This isn't a priority right now."
+ 
+ flavor_gne.12.t:0 "Yewnock's Suspicions"
+ flavor_gne.12.d:0 "Yewnock, son of Oaknock, is every bit as gifted an engineer as his father, and is equally effective at dispelling illusions. After becoming suspicious of Bolrie's personal advisor, he's made a startling discovery - this gnome is none other than Glouphrie! Long thought dead among most of the Gnome Empire, this relevation has come as a great surprise."
+ flavor_gne.12.a:0 "Just as planned."
+ flavor_gne.12.b:0 "Bolrie's in league with Glouphrie! Death to the betrayer king!"
+ flavor_gne.12.c:0 "Wow, that was a close one."
+ 
+ flavor_gne.13.t:0 "Succession of Bolrie"
+ flavor_gne.13.d:0 "With the passing of Bolrie, succession has fallen to $MONARCH$, though his faithful advisor has also thrown his hat into the ring. Should we take the safe bet with $MONARCH$ or risk it?"
+ flavor_gne.13.a:0 "We'll be safe with $MONARCH$!"
+ flavor_gne.13.b:0 "Let's take a chance on this advisor."
+ 
+ flavor_gne.14.t:0 "Results of the Election"
+ flavor_gne.14.d:0 "$MONARCH$'s position has been secured. The late Bolrie's advisor has left, muttering to himself."
+ flavor_gne.14.a:0 "Good riddance."
+ 
+ flavor_gne.15.t:0 "Results of the Election"
+ flavor_gne.15.d:0 "As the results of the election was about to be revealed, Yewknock, son of Oaknock and one of our finest engineers, burst into the room. He shouted across the room, exhausted but determined, to stop - for Bolrie's former advisor is none other than Glouphrie in disguise!"
+ flavor_gne.15.a:0 "Just as planned."
+ 
+ flavor_gne.16.t:0 "The Death of Glouphrie"
+ flavor_gne.16.d:0 "Glouphrie's reign of terror has ended."
+ flavor_gne.16.a:0 "Phew."
+ 
+ flavor_gne.17.t:0 "Vulernability of Cadarn"
+ flavor_gne.17.d:0 "Our allies, the Cadarn clan, have sent a significant portion of their forces westward to Tirannwn. Many in our empire view this development as a sign the elves intend to withdraw from Kandarin, or at the very least will be unable to assist us when we need it. In the courts, there are calls for us to break our alliance so we can shift resources elsewhere. What should we do?"
+ flavor_gne.17.a:0 "The people have spoken. We cannot hold onto this alliance much longer."
+ flavor_gne.17.b:0 "Keep the relations as they are."
+ flavor_gne.17.c:0 "Let us shoulder Cadarn's burden!"

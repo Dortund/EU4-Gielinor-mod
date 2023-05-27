@@ -1,0 +1,642 @@
+monarchy = {
+	basic_reform = monarchy_mechanic
+	reform_levels = {
+		feudalism_vs_autocracy = {
+			reforms = {
+				autocracy_reform
+				clan_monarchy
+				consortium_monarchy
+				elven_aristocracy
+				exile_clan
+				fateful_kingdom
+				feldip_government
+				great_khanate
+				horde_kingdom
+				kandarin_monarchy
+				khanate
+				kourend_monarchy
+				kourend_reformed_monarchy
+				kourend_house
+				kourend_independent_house
+				mahjarrat_autocracy
+				miscellanean_monarchy
+				new_world_kingdom
+				noble_kingdom
+				principality_burthorpe
+				shining_kingdom
+				unstable_monarchy
+				vampyre_kingdom
+			}
+		}
+		hereditary_vs_nobility = {
+			reforms = {
+				grant_balanced_privileges_reform
+				grant_noble_privileges_reform
+				grant_theocratic_privileges_reform
+				grant_trader_privileges_reform
+				ior_civil_war_focus_reform
+				kou_house_privileges_reform
+				vampyric_tiers_reform
+				grant_noble_castle_rights_reform
+				grant_nobles_electorate_reform
+				blackmail_nobility_reform
+				grant_military_command_reform
+			}
+		}
+		bureaucracy = {
+			reforms = {
+				centralize_reform
+				decentralize_reform
+				expand_imperial_court_reform
+				limit_imperial_court_reform
+				regional_council_reform
+				representation_of_the_crown_reform
+			}
+		}
+		state_and_religion = {
+			reforms = {
+				curtail_clergy_power_reform
+				secure_clergy_power_reform
+				maintain_clergy_balance_of_power_reform
+				separate_clergy_from_state_affairs_reform
+				corporealists_reform
+				incorporealists_reform
+				peaceful_contemplation_reform
+				reinstatement_of_the_pantheon_reform
+			}
+		}
+		military_doctrines = {
+			reforms = {
+				organized_military_staff_reform
+				military_engineering_reform
+				defensive_stance_reform
+				sustained_discipline_reform
+				cavalry_warfare_reform
+				mercenary_leadership_reform
+				amphibious_specialization_reform
+				maritime_military_reform
+			}
+		}
+		growth_of_administration = {
+			reforms = {
+				clergy_in_administration_reform
+				of_noble_bearing_reform
+				meritocratic_focus_reform
+				shamanic_administration_reform
+				dyanstic_administration_reform
+			}
+		}
+		deliberative_assembly = {
+			reforms = {
+				royal_decree_reform
+				aristocratic_court_reform
+				expand_the_kourend_council_reform
+				restrain_the_kourend_council_reform
+				become_a_republic_reform
+				install_theocratic_government_reform
+				kou_council_leadership_reform
+				aristocratic_court_reform
+			}
+		}
+
+		economical_matters = {
+			reforms = {
+				empower_the_burghers_reform
+				curtail_the_burghers_reform
+				mercantilistic_approach_reform
+				free_trade_reform
+				absurd_taxation_reform
+				armour_trimming_reform
+				expand_title_reform
+				grand_exchange_reform
+			}
+		}
+		legitimation_of_power = {
+			reforms = {
+				machiavellianistic_rule_reform
+				six_livres_reform
+				two_treatises_reform
+				the_leviathan_reform
+				the_social_contract_reform
+				right_of_might_reform
+				god_among_mortals_reform
+			}
+		}
+		
+		absolute_rule_vs_constitutional = {
+			reforms = {
+				absolutist_governance_reform
+				regional_representation_reform
+				constitutional_law_reform
+				peoples_kingdom_reform
+			}
+		}
+		separation_of_power = {
+			reforms = {
+				adventurer_delegation_reform
+				legislative_houses_reform
+				constitutional_monarchy_reform
+			}
+		}
+	}
+
+	basic_reform = monarchy_mechanic
+
+	legacy_government = {
+		despotic_monarchy
+		clan_monarchy_legacy
+		consortium_monarchy_legacy
+		exile_clan_legacy
+		great_khanate_legacy
+		fateful_kingdom_legacy
+		feldip_government_legacy
+		horde_kingdom_legacy
+		kandarin_monarchy_legacy
+		khanate_legacy
+		kourend_monarchy_legacy
+		kourend_reformed_monarchy_legacy
+		kourend_house_legacy
+		kourend_independent_house_legacy
+		mahjarrat_autocracy_legacy
+		miscellanean_monarchy_legacy
+		new_world_kingdom_legacy
+		noble_kingdom_legacy
+		principality_burthorpe_legacy
+		shining_kingdom_legacy
+		unstable_monarchy_legacy
+		elven_aristocracy_legacy
+		vampyre_kingdom_legacy
+	}
+
+	# Each group of exclusive reforms are mutually exclusive to each other
+
+	#Flavor
+	exclusive_reforms = {
+		consortium_monarchy
+		feldip_government
+		great_khanate
+		horde_kingdom
+		kandarin_monarchy
+		khanate
+		kourend_monarchy
+		kourend_house
+		mahjarrat_autocracy
+		miscellanean_monarchy
+		new_world_kingdom
+		principality_burthorpe
+		shining_kingdom
+		unstable_monarchy
+		elven_aristocracy
+	}
+
+}
+
+republic = {
+	basic_reform = republic_mechanic
+
+	color = { 65 155 220 }
+	legacy_government = {
+		chalkeocracy_legacy
+		consortium_republic_legacy
+		dwarven_outpost_legacy
+		federal_republic_legacy
+		imperial_city
+		kourend_council_legacy
+		magiocracy_legacy
+		merchant_republic
+		military_dictatorship
+		obsidian_caste_legacy
+		pirate_republic
+		political_dynasties_legacy
+		rogue_republic_legacy
+		sirenic_republic_legacy
+		tirannwn_republic_legacy
+		tirannwn_resistance_legacy
+		town_council_reform_legacy
+		trading_city_legacy
+	}
+	reform_levels = {
+		oligarchy_merchant_class_noble_elite = {
+			reforms = {
+				chalkeocracy
+				consortium_republic
+				dwarven_outpost
+				federal_republic
+				free_city
+				kourend_council
+				magiocracy
+				merchants_reform
+				military_dictatorship_reform
+				obsidian_caste
+				pirate_republic_reform
+				political_dynasties
+				rogue_republic
+				sirenic_republic
+				tirannwn_republic
+				tirannwn_resistance
+				town_council_reform
+				trading_city_reform
+			}
+		}
+		republican_virtues = {
+			reforms = {
+				evr_civil_war_governance_reform
+				council_of_captains_reform
+				religious_values_reform
+				republican_authoritarianism_reform
+				republicanism_reform
+				articles_of_agreement_reform
+				smugglers_haven_reform
+				none_above_seren_reform
+				apprenticeship_education_reform
+			}
+		}
+		frequent_elections_vs_consolidation_of_power = {
+			reforms = {
+				frequent_elections_reform
+				consolidation_of_power_reform
+				force_reelection_reform
+			}
+		}
+		republic_and_religion = {
+			reforms = {
+				curtail_clergy_power_reform
+				secure_clergy_power_reform
+				maintain_clergy_balance_of_power_reform
+				separate_clergy_from_state_affairs_reform
+				crew_before_faith_reform
+				relgious_freedom_reform
+				respect_for_the_sea_reform
+				corporealists_reform
+				incorporealists_reform
+				peaceful_contemplation_reform
+				reinstatement_of_the_pantheon_reform
+			}
+		}
+		military_doctrines = {
+			reforms = {
+				organized_military_staff_reform
+				military_engineering_reform
+				defensive_stance_reform
+				sustained_discipline_reform
+				cavalry_warfare_reform
+				mercenary_leadership_reform
+				amphibious_specialization_reform
+				maritime_military_reform
+			}
+		}
+		federalism_vs_unitarism_vs_confederacy = {
+			reforms = {
+				provincial_governments_reform
+				administrative_divisions_reform
+				house_autonomy_reform
+				cultural_administration_reform
+			}
+		}
+		parliamentary_vs_presidential = {
+			reforms = {
+				parliamentary_republic_reform
+				republican_court_reform
+				deregulate_consortium_reform
+				regulate_consortium_reform
+				entrench_mystic_rule_reform
+				constitutional_law_reform
+				seize_executive_power_reform
+				proclaim_divine_guidance_reform
+				kou_reinstate_monarchy_reform
+				war_against_the_world_doctrine_reform
+				black_market_consortium_reform
+				pirate_king_reform
+			}
+		}
+		economical_matters_republic = {
+			reforms = {
+				empower_the_burghers_reform
+				curtail_the_burghers_reform
+				mercantilistic_approach_reform
+				free_trade_reform
+				open_naval_services_reform
+				master_smugglers_reform
+				cutthroat_approach_reform
+				empowered_quartermasters_reform
+				absurd_taxation_reform
+				armour_trimming_reform
+				expand_title_reform
+				grand_exchange_reform
+				no_internal_market_reform
+			}
+		}
+		consolidation_of_power_category = {
+			reforms = {
+				broaden_executive_powers_reform
+				devolution_of_powers_reform
+				emergency_powers_reform
+				power_to_the_raiders_reform
+				power_to_the_smugglers_reform
+				power_to_the_captains_reform
+			}
+		}
+		guiding_principle_of_administration = {
+			reforms = {
+				political_principle_reform
+				moral_principle_reform
+				chaos_principle_reform
+				stability_principle_reform
+				military_principle_reform
+			}
+		}
+		electorate = {
+			reforms = {
+				landholders_reform
+				citizenry_reform
+				admiralty_reform
+				house_delegation_reform
+				meeting_of_the_clans_reform
+				integration_of_the_gaal_reform
+				return_of_cywir_reform
+				rule_through_plunder_reform
+			}
+		}
+		office_selection = {
+			reforms = {
+				appointment_by_committee_reform
+				bureaucratic_aparatus_reform
+				universal_suffrage_reform
+				smithing_contest_reform
+				pirate_representation_reform
+			}
+		}
+		question_of_dictatorship = {
+			reforms = {
+				strengthen_executive_powers_reform
+				reinforce_republican_values_reform
+				pirates_become_republic_reform
+				federal_senate_reform
+				unified_piratical_confederacy_reform
+				neutral_ground_reform
+				scourge_of_the_seven_sea_reform
+			}
+		}
+	}
+}
+
+tribal = {
+	color = { 220 165 95 }
+	basic_reform = tribe_mechanic
+
+	reform_levels = {
+		tribal_administration = {
+			reforms = {
+				bandosian_horde
+				boss_nation
+				cloud_giant_tribe
+				feldip_tribe
+				goblin_empire
+				island_boss_nation
+				kharidian_tribe
+				migratory_tribe
+				mogre_horde
+				quidamortem_boss_nation
+				runecrafting_crusader
+				settled_tribe
+				troll_tribe
+				unleashed_horde
+				warband
+			}
+		}
+		tribal_cultural_values = {
+			reforms = {
+				isolationist_culture_reform
+				maritime_culture_reform
+				razer_culture_reform #Hordes only
+				trader_culture_reform
+				resilience_reform #Boss nations only
+				terror_of_seas_reform #Boss nations only
+			}
+		}
+		tribal_religion = {
+			reforms = {
+				strict_obedience_reform #Bandosians only
+				inward_pressure_reform
+				outward_pressure_reform
+				open_to_challenge_reform #Boss nations only
+				xenophobe_reform #Boss nations only
+			}
+		}
+		tribal_military_doctrines = {
+			reforms = {
+				organized_military_staff_reform
+				military_engineering_reform
+				defensive_stance_reform
+				sustained_discipline_reform
+				cavalry_warfare_reform
+				mercenary_leadership_reform
+				amphibious_specialization_reform
+				maritime_military_reform
+			}
+		}
+		tribal_modernization = {
+			reforms = {
+				internal_development_reform
+				organised_army_reform
+				organised_navy_reform
+				expansionist_boss_reform #Boss nations only
+				raider_boss_reform #Boss nations only
+			}
+		}
+		tribal_reformation = {
+			reforms = {
+				tribe_to_kingdom_reform
+				tribe_to_republic_reform
+				tribe_to_theocracy_reform
+				reformed_horde_reform
+				eternal_tribe_reform
+				boss_to_horde_reform #Boss nations only
+				boss_to_kingdom_reform #Boss nations only
+				boss_to_pirate_reform #Boss nations only
+				greater_boss_nation_reform #Boss nations only
+			}
+		}
+	}
+	legacy_government = {
+		bandosian_horde_legacy
+		boss_nation_legacy
+		cloud_giant_tribe_legacy
+		feldip_tribe_legacy
+		goblin_empire_legacy
+		kharidian_tribe_legacy
+		migratory_tribe_legacy
+		mogre_horde_legacy
+		quidamortem_boss_nation_legacy
+		runecrafting_crusader_legacy
+		settled_tribe_legacy
+		troll_tribe_legacy
+		unleashed_horde_legacy
+		warband_legacy
+	}
+	
+	#Flavor
+	exclusive_reforms = {
+		boss_nation
+		unleashed_horde
+	}
+}
+
+theocracy = {
+	color = { 75 170 75 }
+	basic_reform = theocracy_mechanic
+
+	legacy_government = {
+		apostocracy_legacy
+		bardic_order_legacy
+		cloistered_order_legacy
+		cult_of_reason_legacy
+		druidic_order_legacy
+		druidic_state_legacy
+		frontier_theocracy_legacy
+		guthixian_cave_legacy
+		monastic_order_government
+		shamanic_theocracy_legacy
+		theocratic_government_reform_legacy
+	}
+	reform_levels = {
+		theocratic_leadership = {
+			reforms = {
+				apostocracy
+				bardic_order
+				cloistered_order
+				cult_of_reason
+				druidic_order
+				druidic_state
+				frontier_theocracy
+				guthixian_cave
+				monastic_order_reform
+				shamanic_theocracy
+				theocratic_government_reform
+			}
+		}
+		internal_vs_external_mission = {
+			reforms = {
+				internal_mission_reform
+				external_mission_reform
+				mission_of_balance_reform
+				commercial_mission_reform
+				mission_to_protect_reform
+			}
+		}
+		education_of_the_state = {
+			reforms = {
+				education_of_the_advisors_reform
+				education_of_the_missionaries_reform
+				combat_training_reform
+				experimental_haven_reform
+				oral_tradition_reform
+				tutorials_reform
+			}
+		}
+		religoius_doctrine = {
+			reforms = {
+				curtail_clergy_power_reform
+				secure_clergy_power_reform
+				maintain_clergy_balance_of_power_reform
+				corporealists_reform
+				incorporealists_reform
+				peaceful_contemplation_reform
+				reinstatement_of_the_pantheon_reform
+			}
+		}
+		military_doctrines = {
+			reforms = {
+				organized_military_staff_reform
+				military_engineering_reform
+				defensive_stance_reform
+				sustained_discipline_reform
+				cavalry_warfare_reform
+				mercenary_leadership_reform
+				amphibious_specialization_reform
+				maritime_military_reform
+			}
+		}
+		clergy_in_administration = {
+			reforms = {
+				entranan_priests_reform
+				loyal_nobility_reform
+				pious_merchants_reform
+				religious_administrators_reform
+				subservient_administrators_reform
+			}
+		}
+		secularization = {
+			reforms = {
+				antitheist_state
+				crown_leader_reform
+				open_to_adventurers_reform
+				partial_secularisation_reform
+				proclaim_republic_reform
+			}
+		}
+		economical_matters = {
+			reforms = {
+				empower_the_burghers_reform
+				curtail_the_burghers_reform
+				mercantilistic_approach_reform
+				free_trade_reform
+				absurd_taxation_reform
+				armour_trimming_reform
+				expand_title_reform
+				subsidised_pilgrimage_reform
+			}
+		}
+		divine_cause = {
+			reforms = {
+				combat_heresy_reform
+				expel_heathens_reform
+				play_the_villain
+				prevent_god_war_reform
+				safeguard_holy_sites_reform
+				pursuit_of_knowledge_reform
+			}
+		}
+		separation_of_power_theocracy = {
+			reforms = {
+				centralise_theocratic_power
+				regionally_elected_commanders
+				theocratic_democracy_reform
+				constitional_theocracy_reform
+			}
+		}
+		nature_of_faith = {
+			reforms = {
+				church_and_state_reform
+				manipulate_the_gods
+				gods_are_our_protectors
+				gods_are_our_servants
+				philosophy_over_faith
+				v_the_guardian
+			}
+		}
+		culture_within_the_state = {
+			reforms = {
+				religious_culture_reform
+				harmonization_of_cultures_reform
+				cultural_safe_haven_reform
+				taxation_of_the_foreigners_reform
+				non_elven_proselytising_reform
+				undead_faithful_reform
+				vampyres_first_reform
+			}
+		}
+		faith_and_the_world = {
+			reforms = {
+				cabbages_for_all
+				intervene_for_nonintervention
+				religion_in_one_country_reform
+				religious_permanent_revolution_reform
+				secret_church_reform
+				priestly_autonomy_reform
+				state_of_theologians_reform
+				divinity_through_craftsmanship_reform
+			}
+		}
+	}
+}

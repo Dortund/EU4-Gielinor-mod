@@ -1,0 +1,46 @@
+# Institution event modifiers
+
+##################################################################################################
+# For birthplaces of institutions.
+##################################################################################################
+
+birthplace_of_architecture = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+}
+
+birthplace_of_runecrafting = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+}
+
+birthplace_of_statehood = {
+	statewide_governing_cost = -0.5
+}
+
+birthplace_of_exploration = {
+	local_sailors_modifier = 0.5
+	local_ship_repair = 0.25
+}
+
+birthplace_of_quests = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+}
+
+birthplace_of_invention = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+}
+
+##################################################################################################
+# Runecrafting institution events
+##################################################################################################
+
+# National
+
+runecrafting_curtail_spread = {
+	global_institution_spread = -0.5
+}
+
+# Local

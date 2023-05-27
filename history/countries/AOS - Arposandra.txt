@@ -1,0 +1,34 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = cavegnome
+religion = guthix
+technology_group = gnometechgroup
+capital = 341 #Arposandra
+national_focus = MIL
+
+1975.11.12 = {
+	monarch = {
+		name = "Glouphrie"
+		dynasty = "Imblewyn"
+		birth_date = 1901.10.11
+		adm = 2
+		dip = 5
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = intricate_web_weaver_personality
+}
+
+2147.2.11 = {
+	monarch = {
+		name = "Glouck"
+		dynasty = "Imblewyn"
+		birth_date = 2093.7.16
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = intricate_web_weaver_personality
+}

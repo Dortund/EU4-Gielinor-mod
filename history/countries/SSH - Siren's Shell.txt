@@ -1,0 +1,33 @@
+government = republic
+add_government_reform = sirenic_republic
+government_rank = 1
+primary_culture = siren
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1123 #Siren's Shell
+historical_friend = TUL
+
+1912.11.16 = {
+	monarch = {
+		name = "Kiyoko"
+		dynasty = "Seaworth"
+		birth_date = 1896.4.12
+		death_date = 1948.1.15
+		adm = 4
+		dip = 4
+		mil = 1
+		female = yes
+	}
+}
+
+2155.7.13 = {
+	monarch = {
+		name = "Shura"
+		dynasty = "Kaya"
+		birth_date = 2116.5.14
+		adm = 4
+		dip = 5
+		mil = 3
+		female = yes
+	}
+}

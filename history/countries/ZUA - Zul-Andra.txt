@@ -1,0 +1,38 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = cavegnome
+religion = zulrah
+technology_group = gnometechgroup
+capital = 334 #Zul-Andra
+national_focus = MIL
+
+2103.11.13 = {
+	monarch = {
+		country_of_origin = AOS
+		name = "Harcinqa"
+		dynasty = "Zul"
+		birth_date = 2079.3.5
+		adm = 3
+		dip = 6
+		mil = 3
+	}
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}
+
+2145.11.13 = {
+	monarch = {
+		name = "Harcinqa II"
+		dynasty = "Zul"
+		birth_date = 2103.3.5
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}

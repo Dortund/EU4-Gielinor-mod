@@ -1,0 +1,40 @@
+﻿l_english:
+ giu_prices.1.t:0 "Expansion of Runecrafting"
+ giu_prices.1.d:0 "The art of Runecrafting has begun to spread throughout the world. Runes are no longer as limited a commodity, and as a consequence their value has fallen."
+ giu_prices.1.a:0 "At least there's more mages to buy our wares!"
+ RUNES_CRAFTEXPAND:0 "Expansion of Runecrafting"
+
+ giu_prices.2.t:0 "Invention Components"
+ giu_prices.2.d:0 "Budding inventors across Gielinor are actively dismantling anything they can find for parts they can use in new devices. Basic logs are a reliable source of simple parts, while manufactured goods break down into all kinds of useful pieces. This newfound demand is raising prices."
+ giu_prices.2.a:0 "More money for us!"
+ INV_COMPS:0 "Invention Components"
+ 
+ giu_prices.3.t:0 "Barbarian Fishing"
+ giu_prices.3.d:0 "Ancient Barbarian fishing methods involving heavy fishing rods have spread through Gielinor like wildfire after many adventurers have realised it to be an excellent training opportunity, even if the fish produced are not worth keeping. This shift has reduced the number of fish on the market and hence increased their value."
+ giu_prices.3.a:0 "These fish are good for nothing but worthless caviar!"
+ BARB_FISHING:0 "Barbarian Fishing"
+ 
+ giu_prices.4.t:0 "The Call of the Sea"
+ giu_prices.4.d:0 "Growing interest in exploration has fuelled a desire for naval goods affecting their prices throughout Gielinor."
+ giu_prices.4.a:0 "All I hear is the call of money."
+ NAVAL_GOODS_CALL:0 "Call of the Sea"
+ 
+ giu_prices.5.t:0 "The Charge Pack"
+ giu_prices.5.d:0 "In order to power the myriad of new devices invented every day, the charge pack has been developed. This acts as a battery for divine energy, aiding portability - and making divine energy's value surge to ever-greater heights."
+ giu_prices.5.a:0 "They better invent a bigger coin pouch to hold all this cash!"
+ INV_CHARGEPACK:0 "The Charge Pack"
+ 
+ giu_prices.6.t:0 "Adventurers Gear Up"
+ giu_prices.6.d:0 "The toughest adventurers in Gielinor have been taking on ever-more dangerous dungeons with the hope of ever-greater loot and fame. As they grow in experience and find better gear, their ability to retrieve loot has grown, and dungeons once-slow to explore are in danger of becoming overexploited."
+ giu_prices.6.a:0 "Good thing we have the most valuable loot then!"
+ OVERGEARED_ADVENTURERS:0 "Overgeared Adventurers"
+ 
+ giu_prices.7.t:0 "Growing Use of Gunpowder"
+ giu_prices.7.d:0 "As cannons grow in popularity throughout Gielinor, the need for gunpowder similarly is growing. This will mean great wealth shall come to the Skulls region of the Wushanko Isles, where most of the world's gunpowder is produced."
+ giu_prices.7.a:0 "Our economy is booming!"
+ CANNON_GUNPOWDER:0 "Growing Use of Gunpowder"
+ 
+ giu_prices.8.t:0 "Triumph of Brassica Prime!"
+ giu_prices.8.d:0 "The God of the Cabbages has spread his leafy goodness throughout this world with ourselves as his humble servants. The world is beginning to see the true value of cabbages!"
+ giu_prices.8.a:0 "Deliciousness is power."
+ CABBAGE_TRIUMPH:0 "Triumph of Brassica Prime"

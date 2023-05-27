@@ -1,0 +1,23 @@
+##################################################################################################
+# Also used for events.
+##################################################################################################
+
+example_modifier = {
+	local_unrest = -1
+}
+
+#############
+#TzHaar-Ket
+#############
+
+#Local
+
+tzh_ket_capital_reinforcement_modifier = {
+	local_defensiveness = 0.5
+	garrison_growth = 0.25
+	max_attrition = 2
+	local_hostile_attrition = 2
+}
+tzh_gaal_trade_post_in_wushanko = {
+	trade_goods_size = 1
+}

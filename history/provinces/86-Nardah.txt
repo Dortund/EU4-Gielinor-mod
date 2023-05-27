@@ -1,0 +1,25 @@
+#86 - Nardah
+owner = NDH
+controller = NDH
+add_core = NDH
+tribal_owner = ---
+culture = midkharidian
+religion = menaphite
+
+discovered_by = centraltechgroup
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 5
+base_manpower = 4
+
+fort_15th = yes
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+center_of_trade = 1

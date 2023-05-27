@@ -1,0 +1,75 @@
+﻿l_english:
+ flavor_gun.1.t:0 "The Runecrafting Crusades Begin!"
+ flavor_gun.1.d:0 "Thousands have flocked to the banner of Gunnar to join a mighty crusade against all those who would steal the power of the Gods themselves. More are joining each day."
+ flavor_gun.1.a:0 "Excellent!"
+ 
+ flavor_gun.2.t:0 "Gunnar's Ground"
+ flavor_gun.2.d:0 "We have reached a critical piece of land on the River Lum. The river is wide enough at this point to act as a natural barrier to would-be invaders. We have declared this land Gunnar's Ground in celebration of our victories!"
+ flavor_gun.2.a:0 "This is to be our new capital!"
+ flavor_gun.2.b:0 "A useful part of a wider plan."
+
+ flavor_gun.3.t:0 "The Wrath of the Gunnites"
+ flavor_gun.3.d:0 "Our triumphs thus far have inspired competition. A strange new runecrafting altar has emerged far to the south and an order calling themselves the Myths' Guild have sworn to protect it. Scum mages claim our wrath created it - like we would have any part in granting the power of the Gods onto an unworthy world!"
+ flavor_gun.3.a:0 "Leave Gunnar's crusade and join the Myths' Guild."
+ flavor_gun.3.b:0 "One more Runecrafting altar to smash!"
+
+ flavor_gun.4.t:0 "The Great Invasion"
+ flavor_gun.4.da:0 "The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. They have named [Root.GetName] as an enemy to their Crusade, and their supporters within our realm are rising up with their blessing!"
+ flavor_gun.4.db:0 "The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. They have warned [Root.GetName] to stay out the way of their Crusade, and their supporters within our realm are actively trying to sabotage our military efforts."
+ flavor_gun.4.dc:0 "The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. Thankfully, they do not seem to have a particularly strong opinion about our actions regarding the craft."
+ flavor_gun.4.de:0 "The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. They speak positively of our nation as a potential friend in their cause."
+ flavor_gun.4.df:0 "The opposing forces to Runecrafting have coalesced into a vast army under the command of the Fremennik Chieftain Gunnar. They have named [Root.GetName] as a righteous nation and a potential ally in their cause."
+ flavor_gun.4.a:0 "Runecrafting is our future - we shall not be dragged back!"
+ flavor_gun.4.b:0 "So this guy doesn't like us. Who cares?"
+ flavor_gun.4.c:0 "I have no strong feelings one way or the other."
+ flavor_gun.4.e:0 "Being in a warmongering army's good books can't be a bad thing."
+ flavor_gun.4.f:0 "Glory to Gunnar, and to us!"
+ 
+ flavor_gun.5.t:0 "A Strange Request"
+ flavor_gun.5.d:0 "A strange hooded man entered Gunnar's realm with a request of us - they are willing to tell us the location of the Death Runecrafting Altar so that we can destroy it! Apparently it lies deep in an abandoned underground passageway, so even getting to it shall be a challenge."
+ flavor_gun.5.a:0 "We go through."
+ flavor_gun.5.b:0 "I'm not trusting this stranger."
+ gunnar_into_the_pass_tooltip:0 "An expedition will enter the Underground Pass for the glory of destroying the Death Altar! This might take some time..."
+ 
+ flavor_gun.6.t:0 "The Underground Pass"
+ flavor_gun.6.d:0 "Destroy the Death Altar. Follow the map. That was all our expedition was told about the Underground Pass. But the pass is unnerving... Something about it eats away at the hearts of warriors. And somehow, the expedition is lost..."
+ flavor_gun.6.a:0 "The map shows the way."
+ flavor_gun.6.b:0 "I hear voices... Why don't we follow them?"
+ gunnar_stay_the_course_tooltip:0 "Stick to the original plan and try to find the Death Altar."
+ gunnar_risky_course_tooltip:0 "There's something so... convincing about these voices..."
+ 
+ flavor_gun.7.t:0 "Stone of Death"
+ flavor_gun.7.d:0 "The Death Altar expedition continued to search to little avail - until they came across a curious discovery. A stone object with the shape of a skull upon it, pulling towards a wall in the caverns of the Underground Pass."
+ flavor_gun.7.a:0 "Dig through the wall."
+ flavor_gun.7.b:0 "But I hear an alternative in my heart... the voices grow stronger..."
+ 
+ flavor_gun.8.t:0 "The Voice of V"
+ flavor_gun.8.d:0 "The Death Altar expedition followed the voices through the Underground Pass. It was as if the walls began to melt, and the floor sink, until there was the figure of V, the champion of the Fremennik! He says he is proud of our crusade, and he intends to lead it as Lord of the Fremennik!"
+ flavor_gun.8.a:0 "Wow! Fancy meeting V in this dungeon!"
+ flavor_gun.8.b:0 "That's not V..."
+ gunnar_fake_v_tooltip:0 "V does not like being defied."
+ 
+ flavor_gun.9.t:0 "Mysterious Ruins of the Death Altar"
+ flavor_gun.9.d:0 "The Death Altar Expedition followed the pull of the Death Talisman through rock, mining until they broke through into what appeared to be a Runecrafting altar - but already in ruins. Close by is a strange red crystal which seems to have been the source of the voices we'd been hearing..."
+ flavor_gun.9.a:0 "Investigate the ruins."
+ flavor_gun.9.b:0 "Investigate the crystal."
+ 
+ flavor_gun.10.t:0 "The Command of Lord V"
+ flavor_gun.10.d:0 "Lord V speaks of a higher path for our crusade. To stop runecrafting is a petty pursuit compared to the higher path of freeing him from his prison in the Temple of Light, and worshipping him as the remaining form of the crystal Goddess Seren."
+ flavor_gun.10.a:0 "Wow! So V is a Dark Lord and actually part of Seren?! This all makes perfect sense!"
+ gunnar_darklord_tooltip:0 "The Death Altar expedition has been fully corrupted and will no longer be of any help in destroying Runecrafting altars."
+ 
+ flavor_gun.11.t:0 "Fury of the Fake V"
+ flavor_gun.11.d:0 "We have lost contact with the Death Altar expedition. It appears whoever they met in the Underground Pass was not V."
+ flavor_gun.11.a:0 "The expedition isn't lost! They've found a higher purpose!"
+ flavor_gun.11.b:0 "Last time we trust a stranger's word."
+ 
+ flavor_gun.12.t:0 "The True Death Altar"
+ flavor_gun.12.d:0 "Using the Death Talisman on the Death Altar ruins, we have discovered the true altar lies inside. Let us take it out for good!"
+ flavor_gun.12.a:0 "For the honour of Gunnar!"
+ 
+ flavor_gun.13.t:0 "The Orphan of a Goddess"
+ flavor_gun.13.d:0 "The Temple of Light hides an inpenetrable crystal, and within it is a being, trapped inside. It speaks of abandonment by a Goddess named Seren. It is at both wrathful and innocent - powerful yet powerless."
+ flavor_gun.13.a:0 "Stop and listen before turning back to the Death Altar."
+ flavor_gun.13.b:0 "Ignore the being and turn back to the Death Altar."
+ 

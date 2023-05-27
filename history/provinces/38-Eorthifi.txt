@@ -1,0 +1,29 @@
+#38 - Eorthifi
+owner = DBS
+controller = DBS
+add_core = DBS
+add_core = CLY
+tribal_owner = ---
+culture = north_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+trade_goods = livestock_farm
+
+is_city = yes
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+	remove_core = DBS
+}

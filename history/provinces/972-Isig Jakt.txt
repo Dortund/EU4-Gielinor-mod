@@ -1,0 +1,31 @@
+#972-Isig Jakt
+owner = KTR
+controller = KTR
+add_core = KTR
+tribal_owner = ---
+culture = rellekkan
+religion = northern_pantheon
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = hunter_creatures
+
+is_city = yes
+
+1957.3.28 = {
+	owner = REL
+	controller = REL
+	add_core = REL
+	religion = v
+}

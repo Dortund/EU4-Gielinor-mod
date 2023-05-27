@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = rellekkan
+religion = v
+secondary_religion = guthix
+technology_group = fremenniktechgroup
+capital = 386 #Jatizso
+national_focus = ADM
+historical_friend = REL
+historical_rival = NTZ
+
+1980.4.15 = {
+	monarch = {
+		name = "Jatizso"
+		dynasty = "Sorvott"
+		birth_date = 1961.7.23
+		adm = 4
+		dip = 0
+		mil = 2
+	}
+}
+
+2152.2.6 = {
+	monarch = {
+		name = "Gjuki IV"
+		dynasty = "Sorvott"
+		birth_date = 2007.2.6
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}

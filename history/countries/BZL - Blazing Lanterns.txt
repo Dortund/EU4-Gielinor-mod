@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = exile_clan
+government_rank = 1
+primary_culture = eastern_exile
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1136 #Rapa Causeway
+historical_rival = GLK
+historical_rival = SRI
+
+1929.7.3 = {
+	monarch = {
+		name = "Yuehanxun"
+		dynasty = "Wu"
+		birth_date = 1910.3.6
+		death_date = 1944.4.4
+		adm = 6
+		dip = 2
+		mil = 2
+		female = yes
+	}
+}
+
+2151.12.11 = {
+	monarch = {
+		name = "Shao'en"
+		dynasty = "Ouyang"
+		birth_date = 2129.12.11
+		adm = 6
+		dip = 2
+		mil = 2
+	}
+}

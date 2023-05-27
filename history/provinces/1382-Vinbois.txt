@@ -1,0 +1,39 @@
+#1382-
+owner = HZL
+controller = HZL
+add_core = HZL
+tribal_owner = ---
+culture = ardignan
+religion = zamorak
+
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+discovered_by = karamjantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+2007.2.27 = {
+	owner = KZD
+	controller = KZD
+	add_core = KZD
+	remove_core = HZL
+}
+
+2105.2.27 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = KZD
+	religion = saradomin
+}

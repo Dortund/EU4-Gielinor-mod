@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = bowl_culture
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1169 #Tattanogi
+
+
+1903.12.3 = {
+	monarch = {
+		name = "Yousi"
+		dynasty = "Tattanogi"
+		birth_date = 1885.3.24
+		death_date = 1964.1.31
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}
+
+2165.2.12 = {
+	monarch = {
+		name = "Haruko"
+		dynasty = "Tattanogi"
+		birth_date = 2134.1.30
+		death_date = 2178.11.5
+		adm = 4
+		dip = 5
+		mil = 3
+		female = yes
+	}
+}

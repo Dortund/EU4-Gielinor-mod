@@ -1,0 +1,24 @@
+#294-Janger
+owner = JNG
+controller = JNG
+add_core = JNG
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = fruit
+
+is_city = yes

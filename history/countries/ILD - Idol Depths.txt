@@ -1,0 +1,38 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = crassian
+add_accepted_culture = chaos_dwarf
+religion = xautak
+technology_group = northerntechgroup
+capital = 1290 #Imcandoria City
+historical_rival = FRG
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}
+
+1899.3.12 = {
+	monarch = {
+		name = "Zarraoth"
+		dynasty = "Delver"
+		birth_date = 1881.12.13
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}
+
+2151.9.11 = {
+	monarch = {
+		name = "Tharavoth"
+		dynasty = "Delver"
+		birth_date = 2123.10.7
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}

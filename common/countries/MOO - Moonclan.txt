@@ -1,0 +1,54 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 233 207 235 }
+
+revolutionary_colors = { 3 4 3 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Berty #0" = 10
+	"Dominic #0" = 10
+	"Knut #0" = 10
+	"Vasador #0" = 1
+	"Valator #0" = 1
+	"Vaasdor #0" = 1
+	"Varosad #0" = 1
+	"Verisad #0" = 1
+	"Vudisor #0" = 1
+	"Vlatoad #0" = 1
+	"Vedolas #0" = 1
+	"Vundiar #0" = 1
+	"Versita #0" = 1
+	"Vislota #0" = 1
+	"Vanjuta #0" = 1
+	"Ventura #0" = 1
+	"Velothi #0" = 1
+	"Verogo #0" = 1
+	"Pietari #0" = 10
+	
+	"Baba #0" = -10
+	"Bouquet #0" = -10
+	"Freya #0" = -10
+	"Melana #0" = -10
+	"Meteora #0" = -10
+	"Pauline #0" = -10
+	"Rimae #0" = -10
+	"Selene #0" = -10
+	"Bérylune #0" = -10
+	"Lunette #0" = -10
+	"Mánadís #0" = -10
+	"Mona #0" = -10
+	"Pieta #0" = -10
+}

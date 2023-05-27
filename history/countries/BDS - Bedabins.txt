@@ -1,0 +1,30 @@
+government = tribal
+add_government_reform = migratory_tribe
+government_rank = 1
+primary_culture = bedabin
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 70 #Bedabin
+national_focus = DIP
+
+1928.4.12 = {
+	monarch = {
+		name = "Temi"
+		dynasty = "Alshemi"
+		birth_date = 1901.12.10
+		adm = 2
+		dip = 4
+		mil = 5
+	}
+}
+
+2156.5.11 = {
+	monarch = {
+		name = "Al Shabim"
+		dynasty = "Alshemi"
+		birth_date = 2134.4.14
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}

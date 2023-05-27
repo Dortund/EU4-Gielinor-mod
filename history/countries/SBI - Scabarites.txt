@@ -1,0 +1,29 @@
+government = theocracy
+add_government_reform = cloistered_order
+government_rank = 1
+primary_culture = scabarite
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 93 #Scabaras
+
+1926.7.7 = {
+	monarch = {
+		name = "Sicare"
+		dynasty = "of Scabaras"
+		birth_date = 1893.7.7
+		adm = 6
+		dip = 0
+		mil = 5
+	}
+}
+
+2143.11.3 = {
+	monarch = {
+		name = "Hakeem"
+		dynasty = "of Scabaras"
+		birth_date = 2093.2.19
+		adm = 2
+		dip = 0
+		mil = 5
+	}
+}

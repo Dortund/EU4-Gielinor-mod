@@ -1,0 +1,30 @@
+government = tribal
+add_government_reform = troll_tribe
+government_rank = 1
+primary_culture = mountaintroll
+religion = bandos
+technology_group = zeantechgroup
+capital = 468 #Cronch
+national_focus = MIL
+
+1925.9.17 = {
+	monarch = {
+		name = "Thesaurus"
+		dynasty = "Cronch"
+		birth_date = 1888.9.3
+		adm = 2
+		dip = 6
+		mil = 4
+	}
+}
+
+2148.6.29 = {
+	monarch = {
+		name = "Dictionary"
+		dynasty = "Cronch"
+		birth_date = 2119.4.12
+		adm = 0
+		dip = 4
+		mil = 1
+	}
+}

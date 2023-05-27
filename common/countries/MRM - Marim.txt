@@ -1,0 +1,50 @@
+#Country Name: Please seefilename.
+
+graphical_culture = asiangfx
+
+color = { 148 138 17 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Aberab #0" = 1
+	"Awowogei #0" = 1
+	"Bobawu #0" = 1
+	"Bonzara #0" = 1
+	"Daga #0" = 1
+	"Dendadu #0" = 1
+	"Duke #0" = 1
+	"Dugopul #0" = 1
+	"Hafuba #0" = 1
+	"Ifaba #0" = 1
+	# "Iwazaru #0" = 1
+	"Jumaane #0" = 1
+	# "Kikazaru #0" = 1
+	"Kruk #0" = 1
+	"Lofu #0" = 1
+	"Loris #0" = 1
+	# "Mizaru #0" = 1
+	"Muruwoi #0" = 1
+	"Oipuis #0" = 1
+	"Oobapohk #0" = 1
+	"Ouhai #0" = 1
+	"Padulah #0" = 1
+	"Solihib #0" = 1
+	"Trefaji #0" = 1
+	"Tutab #0" = 1
+	"Unuki #0" = 1
+	"Uodai #0" = 1
+	"Uwogo #0" = 1
+	"Uyoro #0" = 1
+	
+	"Hamab #0" = -1
+}

@@ -1,0 +1,20 @@
+government = tribal
+add_government_reform = island_boss_nation
+government_rank = 1
+primary_culture = beast_headed
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1191 #Shambling Lair
+
+1752.3.12 = {
+	monarch = {
+		name = "Oxhead"
+		dynasty = "the Necromancer"
+		birth_date = 1389.7.10
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

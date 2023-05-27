@@ -1,0 +1,315 @@
+msh_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MSH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MSH_trained_monkeys = {
+		icon = mission_monkey_business
+		position = 2
+		required_missions = { MSH_onto_new_shores }
+		trigger = {
+			owns_core_province = 144
+			237 = { has_discovered = ROOT }
+			OR = {
+				owns_core_province = 900
+				AND = {
+					treasury = 100
+					adm_power = 50
+					dip_power = 50
+					adm_tech = 11
+					900 = {
+						is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 900
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 900
+					}
+				add_adm_power = 50
+			}
+			else = {
+				add_treasury = -100
+				add_adm_power = -50
+				add_dip_power = -50
+				900 = {
+					add_core = ROOT
+					cede_province = ROOT
+					change_trade_goods = fruit
+				}
+			}
+		}
+	}
+	
+	MSH_bitternuts = {
+		icon = mission_jungle_life
+		position = 3
+		required_missions = { MSH_trained_monkeys }
+		trigger = {
+			owns_core_province = 900
+			any_owned_province = {
+				has_building = plantations
+			}
+			OR = {
+				owns_core_province = 147
+				AND = {
+					treasury = 200
+					adm_power = 50
+					147 = {
+						is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 147
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 147
+					}
+				add_adm_power = 50
+			}
+			else = {
+				add_treasury = -200
+				add_adm_power = -50
+				147 = {
+					add_core = ROOT
+					cede_province = ROOT
+					change_trade_goods = fruit
+				}
+			}
+		}
+	}
+	
+	MSH_trouble_brewing = {
+		icon = mission_galleys_in_port
+		position = 4
+		required_missions = { MSH_bitternuts }
+		trigger = {
+			owns_core_province = 147
+			has_idea = MSH_rival_breweries
+			absolutism = 50
+			OR = {
+				NOT = {
+					764 = { is_empty = yes }
+				}
+				absolutism = 75
+			}
+			OR = {
+				owns_core_province = 146
+				AND = {
+					treasury = 200
+					adm_power = 100
+					146 = {
+						is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 146
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 146
+					}
+				add_adm_power = 50
+			}
+			else = {
+				add_treasury = -200
+				add_adm_power = -100
+				146 = {
+					add_core = ROOT
+					cede_province = ROOT
+					change_trade_goods = tropical_logs
+				}
+			}
+		}
+	}
+}
+
+msh_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MSH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MSH_onto_new_shores = {
+		icon = mission_galleys_in_port
+		required_missions = { }
+		trigger = {
+			owns_core_province = 142
+			OR = {
+				owns_core_province = 144
+				AND = {
+				treasury = 100
+				adm_power = 50
+				adm_tech = 8
+				144 = {
+					is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 144
+			}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 144
+					}
+				add_adm_power = 50
+			}
+			else = {
+				add_treasury = -100
+				add_adm_power = -50
+				144 = {
+					add_core = ROOT
+					cede_province = ROOT
+					change_trade_goods = tropical_logs
+				}
+			}
+		}
+	}
+	
+	MSH_mind_the_gap = {
+		icon = mission_galleys_in_port
+		required_missions = { MSH_onto_new_shores MSH_feed_the_people }
+		trigger = {
+			142 = {
+				owned_by = ROOT
+				is_core = ROOT
+				culture = harmlean
+			}
+			144 = {
+				owned_by = ROOT
+				is_core = ROOT
+				culture = harmlean
+			}
+			OR = {
+				owns_core_province = 145
+				AND = {
+				treasury = 100
+				adm_power = 50
+				145 = {
+					is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 145
+			}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 145
+					}
+				add_adm_power = 50
+			}
+			else = {
+				add_treasury = -100
+				add_adm_power = -50
+				145 = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+		}
+	}
+}
+
+msh_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MSH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MSH_feed_the_people = {
+		icon = mission_galleys_in_port
+		required_missions = { }
+		trigger = {
+			owns_core_province = 142
+			has_institution = statehood
+			142 = {
+				num_of_times_improved_by_owner = 5
+			}
+			OR = {
+				owns_core_province = 144
+				AND = {
+				treasury = 100
+				mil_power = 50
+				144 = {
+					is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 144
+			}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 144
+					}
+				add_adm_power = 25
+			}
+			else = {
+				add_treasury = -100
+				add_adm_power = -50
+				144 = {
+					add_core = ROOT
+					cede_province = ROOT
+					change_trade_goods = grains
+				}
+			}
+		}
+	}
+}
+
+msh_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = MSH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MSH_raise_the_black_flags = {
+		icon = mission_establish_high_seas_navy
+		required_missions = {  }
+		trigger = {
+			navy_size_percentage = 0.9
+			has_privateers = yes
+		}
+		effect = {
+			add_treasury = 100
+			add_dip_power = 50
+		}
+	}
+}

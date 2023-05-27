@@ -1,0 +1,2 @@
+discovered_by = dwarventechgroup
+discovered_by = northerntechgroup

@@ -1,0 +1,38 @@
+#291-Gandiushewo
+owner = YLE
+controller = YLE
+add_core = YLE
+tribal_owner = ---
+culture = yanillian
+religion = guthix
+
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+1954.12.3 = {
+	owner = KZD
+	controller = KZD
+	add_core = KZD
+}
+
+1961.5.17 = {
+	owner = TGV
+	controller = TGV
+	add_core = TGV
+	culture = treegnome
+}

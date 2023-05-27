@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = giant_spider
+religion = zamorak
+technology_group = northerntechgroup
+capital = 171 #Venenatis
+national_focus = MIL
+
+15.11.25 = {
+	monarch = {
+		name = "Venenatis"
+		dynasty = "the Giant Spider"
+		birth_date = 11.12.27
+		adm = 1
+		dip = 1
+		mil = 6
+		female = yes
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

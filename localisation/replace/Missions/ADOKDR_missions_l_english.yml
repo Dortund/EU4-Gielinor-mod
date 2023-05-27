@@ -1,0 +1,41 @@
+﻿l_english:
+ ADO_withstand_the_tragedy_title:0 "Withstand the Tragedy"
+ ADO_withstand_the_tragedy_desc:0 "A great time of troubles lays ahead of us - but if we can hold strong and weather the storm, [Root.GetName] will emerge stronger for it."
+
+ ADO_divine_cause_title:0 "Divine Cause"
+ ADO_divine_cause_desc:0 "The [Root.Religion.GetName] cause demands that we ensure our faith has a decent presence in the region."
+ ADO_holy_forces_title:0 "Holy Forces"
+ ADO_holy_forces_desc:0 "Religious tensions within [Root.GetName] threaten to spill into outright war. We must be prepared both temporarily and spiritually."
+ ADO_take_the_ancient_guild_title:0 "Take the Ancient Guild"
+ ADO_take_the_ancient_guild_desc:0 "The Wizards' Guild dates as far back as the First Age. What valuable secrets could it hold for us?"
+
+ ADO_growth_of_ardougne_title:0 "Growth of Ardougne"
+ ADO_growth_of_ardougne_desc:0 "Our new town has remarkable potential if we are willing to invest sufficient resources."
+ ADO_unquiet_navy_title:0 "Unquiet Navy"
+ ADO_unquiet_navy_desc:0 "A strong navy would allow us to circumvent many land-based powers and target key coastal regions for conquest."
+
+ ADO_greater_ardougne_title:0 "Greater Ardougne"
+ ADO_greater_ardougne_desc:0 "Our new town of Ardougne requires a sufficient buffer to protect it from would-be invaders."
+ ADO_fishing_guild_mission_title:0 "Fishing Guild"
+ ADO_fishing_guild_mission_desc:0 "The bay around Hemenster would be an ideal place to practice the art of fishing."
+ 
+ ADO_catherby_coast_title:0 "Catherby Coast"
+ ADO_catherby_coast_desc:0 "Catherby is home to great fishers and farmers which is an ideal source of food for our growing realm. White Wolf Mountain to its east also acts as a strong natural boundary against would-be invaders."
+ ADO_hinterland_expansion_title:0 "Hinterland Expansion"
+ ADO_hinterland_expansion_desc:0 "Now that we have secured a good source of food, we should be able to withstand campaigns further inland."
+ ADO_elemental_workshop_mission_title:0 "Elemental Workshop"
+ ADO_elemental_workshop_mission_desc:0 "A mysterious purple ore found under Seers' Village holds great promise - but first, we need to make an investment into the area."
+
+ KDR_castle_wars_title:0 "Castle Wars"
+ KDR_castle_wars_desc:0 "Evidently we cannot rely on endless bloodshed to resolve our religious tensions, so instead we can establish an arena to move towards a more friendly rivalry."
+
+ KDR_market_for_a_nation_title:0 "Market for a Nation"
+ KDR_market_for_a_nation_desc:0 "Now that Ardougne is no longer a mere town, but a capital of a great nation, it is only fair we develop its market to match our ambition."
+ KDR_stop_thieves_title:0 "Stop, Thieves!"
+ KDR_stop_thieves_desc:0 "Our cakes. Gone. Our silk. Gone. And don't ask about our knights' pay. Even the [Root.Monarch.GetTitle] has reported missing supplies. It's about time we got to work stamping out these thieves once and for all."
+ 
+ 
+ KDR_bays_of_kandarin_mission_title:0 "Bays of Kandarin"
+ KDR_bays_of_kandarin_mission_desc:0 "More waters teeming with fish can be found to the north of Kandarin. If we can secure the coast - and our trade in the area - we can exert our power further than ever before."
+ KDR_piscatoris_fishing_colony_title:0 "Piscatoris Fishing Colony"
+ KDR_piscatoris_fishing_colony_desc:0 "Valuable monkfish have been spotted on the north coast of Piscatoris, though unfortunately these fish are guarded by sea trolls. Get the trolls out of the way, and we can claim those fish for ourselves!"

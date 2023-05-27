@@ -1,0 +1,147 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 55 155 136 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Adwr #0" = 5
+	"Arianwyn #0" = 5
+	"Baxtorian #0" = 5
+	"Cerridwyn #0" = 5
+	"Dai #0" = 5
+	"Dalldav #0" = 5
+	"Goreu #0" = 5
+	"Islwyn #0" = 5
+	
+	"Eirlys #0" = -5
+	"Elen #0" = -5
+	"Endwyr #0" = -5
+	"Haf #0" = -5
+	"Heriau #0" = -5
+	"Lunet #0" = -5
+	"Rhiannon #0" = -5
+	
+	"Alwyn #0" = 1
+	"Aneirin #0" = 1
+	"Aranwe #0" = 1
+	"Bryn #0" = 1
+	"Caerwyn #0" = 1
+	"Celegorm #0" = 1
+	"Celyn #0" = 1
+	"Cirdan #0" = 1
+	"Cleffyf #0" = 1
+	"Crefydd #0" = 1
+	"Curufin #0" = 1
+	"Daiglolas #0" = 1
+	"Derwen #0" = 1
+	"Edrahil #0" = 1
+	"Elgan #0" = 1
+	"Elladan #0" = 1
+	"Enel #0" = 1
+	"Erestor #0" = 1
+	"Enerdhil #0" = 1
+	"Eudav #0" = 1
+	"Feanor #0" = 1
+	"Finarfin #0" = 1
+	"Fingolfin #0" = 1
+	"Fingon #0" = 1
+	"Galathil #0" = 1
+	"Gelmir #0" = 1
+	"Glorfindel #0" = 1
+	"Guilin #0" = 1
+	"Gwallter #0" = 1
+	"Gwerin #0" = 1
+	"Gwindor #0" = 1
+	"Gwyl #0" = 1
+	"Gwyn #0" = 1
+	"Hendor #0" = 1
+	"Imin #0" = 1
+	"Ingwe #0" = 1
+	"Ingwion #0" = 1
+	"Iwan #0" = 1
+	"Lenwe #0" = 1
+	"Lindir #0" = 1
+	"Lleidr #0" = 1
+	"Maedhros #0" = 1
+	"Maeglin #0" = 1
+	"Mahtan #0" = 1
+	"Oluien #0" = 1
+	"Oropher #0" = 1
+	"Orophin #0" = 1
+	"Osian #0" = 1
+	"Oswallt #0" = 1
+	"Pennant #0" = 1
+	"Rhyfel #0" = 1
+	"Roddwr #0" = 1
+	"Sadwrn #0" = 1
+	"Saeros #0" = 1
+	"Salgant #0" = 1
+	"Thingol #0" = 1
+	"Turgon #0" = 1
+	"Valis #0" = 1
+	"Ymladd #0" = 1
+	
+	"Adyna #0" = -1
+	"Anaire #0" = -1
+	"Anwen #0" = -1
+	"Aredhel #0" = -1
+	"Arvel #0" = -1
+	"Branwen #0" = -1
+	"Celebrian #0" = -1
+	"Conwenna #0" = -1
+	"Diol #0" = -1
+	"Earwen #0" = -1
+	"Efa #0" = -1
+	"Eira #0" = -1
+	"Eldalote #0" = -1
+	"Elenwe #0" = -1
+	"Faerdhinen #0" = -1
+	"Findis #0" = -1
+	"Finduilas #0" = -1
+	"Ffoni #0" = -1
+	"Glarial #0" = -1
+	"Glenda #0" = -1
+	"Guinevere #0" = -1
+	"Idril #0" = -1
+	"Iminye #0" = -1
+	"Indis #0" = -1
+	"Jen #0" = -1
+	"Lil #0" = -1
+	"Lilifang #0" = -1
+	"Liliwen #0" = -1
+	"Lliann #0" = -1
+	"Llio #0" = -1
+	"Marwolaeth #0" = -1
+	"Meddwl #0" = -1
+	"Merethiel #0" = -1
+	"Mina #0" = -1
+	"Miriel #0" = -1
+	"Mithrellas #0" = -1
+	"Myfi #0" = -1
+	"Nellas #0" = -1
+	"Nerdanel #0" = -1
+	"Nia #0" = -1
+	"Nimloth #0" = -1
+	"Nimrodel #0" = -1
+	"Preswylwyr #0" = -1
+	"Reese #0" = -1
+	"Saeth #0" = -1
+	"Sian #0" = -1
+	"Tatoe #0" = -1
+	"Vaire #0" = -1
+	"Ymlaen #0" = -1
+	"Ysbeid #0" = -1
+	"Ystwyth #0" = -1
+}

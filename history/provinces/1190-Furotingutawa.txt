@@ -1,0 +1,19 @@
+#1190-Furotingutawa
+owner = NHE
+controller = NHE
+add_core = NHE
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = bones
+
+is_city = yes

@@ -1,0 +1,19 @@
+#1180-Zhenzhu City
+owner = FTS
+controller = FTS
+add_core = FTS
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 4
+base_production = 3
+base_manpower = 3
+
+trade_goods = fishing_spot
+
+is_city = yes

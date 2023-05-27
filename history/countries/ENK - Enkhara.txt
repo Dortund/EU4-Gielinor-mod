@@ -1,0 +1,24 @@
+government = monarchy
+add_government_reform = mahjarrat_autocracy
+government_rank = 1
+primary_culture = skeleton
+religion = zamorak
+technology_group = kharidtechgroup
+capital = 85 #Enkhara's Temple
+national_focus = MIL
+historical_rival = AKO
+
+2170.12.6 = {
+	monarch = {
+		name = "Enkhara"
+		dynasty = "of the Mahjarrat"
+		female = yes
+		culture = mahjarrat
+		birth_date = 1.10.26
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

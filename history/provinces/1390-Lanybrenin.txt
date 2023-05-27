@@ -1,0 +1,33 @@
+#1390 - 
+owner = EVR
+controller = EVR
+add_core = EVR
+add_core = AML
+tribal_owner = ---
+culture = amlodd
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 1
+
+2168.9.20 = {
+	owner = TYS
+	controller = TYS
+	add_core = TYS
+	culture = ardignan
+	religion = saradomin
+	remove_core = EVR
+	remove_core = AML
+	change_province_name = "Port Tyras"
+}

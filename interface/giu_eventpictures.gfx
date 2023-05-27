@@ -1,0 +1,691 @@
+spriteTypes = {
+
+##########################
+	#Disasters
+##########################
+
+	spriteType = {
+		name = "ADVENTURER_CLAN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/ADVENTURER_CLAN_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ADVENTURER_COMBAT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/ADVENTURER_COMBAT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ARCHITECTURE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/ARCHITECTURE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "DREADED_YEARS_OF_TRAGEDY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/DREADED_YEARS_OF_TRAGEDY_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "KINSHRA_WHITE_KNIGHT_WAR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/KINSHRA_WHITE_KNIGHT_WAR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TERROR_OF_THE_LEVIATHAN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/TERROR_OF_THE_LEVIATHAN_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+##########################
+	#Elder Artefacts
+##########################
+
+	spriteType = {
+		name = "ELDER_KILN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_elder_artefacts/ELDER_KILN_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "STAFF_OF_ARMADYL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_elder_artefacts/STAFF_OF_ARMADYL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "STONE_OF_JAS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_elder_artefacts/STONE_OF_JAS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+##########################
+	#National Flavour
+##########################
+	
+	spriteType = {
+		name = "ALKHARID_CITY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/ALKHARID_CITY_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "APE_ATOLL_MONKEYS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/APE_ATOLL_MONKEYS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ASGARNIA_FALADOR_CASTLE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/ASGARNIA_FALADOR_CASTLE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "CADARN_GLARIAL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/CADARN_GLARIAL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "CAMELOT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/CAMELOT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "DARK_WARRIORS_FORTRESS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/DARK_WARRIORS_FORTRESS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "DEATH_LOTUS_NINJA_STAR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/DEATH_LOTUS_NINJA_STAR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ELVARG_ATTACKS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/ELVARG_ATTACKS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ELVEN_RESISTANCE_LLETYA_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/ELVEN_RESISTANCE_LLETYA_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ENAKHRA_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/ENAKHRA_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "FREMENNIK_LANDING_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/FREMENNIK_LANDING_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GLOUGH_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/GLOUGH_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GLOUPHRIE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/GLOUPHRIE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GNOME_GIANT_TORTOISE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/GNOME_GIANT_TORTOISE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GNOME_GRAND_TREE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/GNOME_GRAND_TREE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GNOME_TREEHOUSE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/GNOME_TREEHOUSE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "IBAN_LAIR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/IBAN_LAIR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "IORWERTH_PLAGUE_CITY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/IORWERTH_PLAGUE_CITY_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "IORWERTH_WARRIOR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/IORWERTH_WARRIOR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "JALDRAOCHT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/JALDRAOCHT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "KEBOS_LOWLANDS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/KEBOS_LOWLANDS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "KHARID_MINING_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/KHARID_MINING_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "KOUREND_HOUSES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/KOUREND_HOUSES_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "KOUREND_OVERVIEW_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/KOUREND_OVERVIEW_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "LUCIEN_ATTACKS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/LUCIEN_ATTACKS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MENAPHOS_CITY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MENAPHOS_CITY_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MISTHALIN_LUMBRIDGE_CASTLE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MISTHALIN_LUMBRIDGE_CASTLE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MISTHALIN_RUINS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MISTHALIN_RUINS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MISTHALIN_VARROCK_HERALD_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MISTHALIN_VARROCK_HERALD_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MISTHALIN_WIZARDS_TOWER_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MISTHALIN_WIZARDS_TOWER_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MORYTANIA_SWAMP_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MORYTANIA_SWAMP_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "NEW_APEMEKEN_DESERT_MONKEYS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/NEW_APEMEKEN_DESERT_MONKEYS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "NOMAD_ATTACKS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/NOMAD_ATTACKS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "NOMAD_ISLE_OF_SOULS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/NOMAD_ISLE_OF_SOULS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "PIRATE_BATTLE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/PIRATE_BATTLE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "PORT_SARIM_SHIP_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/PORT_SARIM_SHIP_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TEMPOROSS_RISES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TEMPOROSS_RISES_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_CRYSTAL_HALLWAYS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_CRYSTAL_HALLWAYS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_ELVEN_STATUE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_ELVEN_STATUE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_LIBRARY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_LIBRARY_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_LOST_GROVE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_LOST_GROVE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_LORD_AMLODD_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_LORD_AMLODD_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_MALE_ELVES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_MALE_ELVES_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_MEIYLR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_MEIYLR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_PRIFDDINAS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_PRIFDDINAS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_PRIFDDINAS_WATERFALL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_PRIFDDINAS_WATERFALL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_PRIFDDINAS_WATERFALL_POOL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_PRIFDDINAS_WATERFALL_POOL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TIRANNWN_TEMPLE_LIGHT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TIRANNWN_TEMPLE_LIGHT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TZHAAR_ENTRANCE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TZHAAR_ENTRANCE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TZHAAR_GAAL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TZHAAR_GAAL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "VARLAMORE_MAP_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/VARLAMORE_MAP_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "VOID_KNIGHTS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/VOID_KNIGHTS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "VOID_PEST_CONTROL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/VOID_PEST_CONTROL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "WARBANDS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/WARBANDS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "WUSHANKO_SUNRISE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/WUSHANKO_SUNRISE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ZAMORAK_ICON_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/ZAMORAK_ICON_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ZAMORAK_RECRUITER_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/ZAMORAK_RECRUITER_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ZEMOUREGAL_THRONE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/ZEMOUREGAL_THRONE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+##########################
+	#Prices/Institutions
+##########################
+
+	spriteType = {
+		name = "CANNON_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/CANNON_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "DEEP_SEA_FISHING_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/DEEP_SEA_FISHING_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "DIVINE_WISPS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/DIVINE_WISPS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "EXPLORATION_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/EXPLORATION_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "INVENTION_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/INVENTION_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "RUNECRAFTING_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/RUNECRAFTING_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TREASURE_CHESTS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/TREASURE_CHESTS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+##########################
+	#Religion
+##########################
+
+	spriteType = {
+		name = "BANDOS_CHOSEN_COMMANDER_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/BANDOS_CHOSEN_COMMANDER_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "BANDOS_GIANTS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/BANDOS_GIANTS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BANDOS_GOBLINS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/BANDOS_GOBLINS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BANDOS_HOBGOBLIN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/BANDOS_HOBGOBLIN_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "BANDOS_JOGRE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/BANDOS_JOGRE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BANDOS_OGRE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/BANDOS_OGRE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BANDOS_ORKS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/BANDOS_ORKS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "BANDOS_TROLLS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/BANDOS_TROLLS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BRASSICAPRIME_CABBAGE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/BRASSICAPRIME_CABBAGE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "DARK_LORD_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/DARK_LORD_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GOD_EMISSARIES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/GOD_EMISSARIES_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_CATHEDRAL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_CATHEDRAL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_INCIDENT_CIVIL_WAR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_INCIDENT_CIVIL_WAR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_INCIDENT_DECLINE_OF_ELDERS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_INCIDENT_DECLINE_OF_ELDERS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_INCIDENT_HUMAN_NATIONHOOD_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_INCIDENT_HUMAN_NATIONHOOD_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_INCIDENT_KANDARIN_RELATIONS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_INCIDENT_KANDARIN_RELATIONS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_INCIDENT_PRIF_RESTORATION_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_INCIDENT_PRIF_RESTORATION_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_INCIDENT_RUNECRAFTERS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_INCIDENT_RUNECRAFTERS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_INCIDENT_SEREN_RESTORATION_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_INCIDENT_SEREN_RESTORATION_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_PEWS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_PEWS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "SEREN_RECONSTRUCTED_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_RECONSTRUCTED_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TUSKA_AIRUT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/TUSKA_AIRUT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TUSKA_BEAST_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/TUSKA_BEAST_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "VAMPYRIC_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/VAMPYRIC_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "XAUTAK_CLAW_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/XAUTAK_CLAW_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "XERIC_XAMPHUR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/XERIC_XAMPHUR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ZEMOUREGAL_BORED_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/ZEMOUREGAL_BORED_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ZULRAH_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/ZULRAH_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+##########################
+	#Sixth Age
+##########################
+
+	spriteType = {
+		name = "CAVE_OF_GUTHIX_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_sixth_age/CAVE_OF_GUTHIX_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ELDER_EGGS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_sixth_age/ELDER_EGGS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ELDER_GOD_WARS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_sixth_age/ELDER_GOD_WARS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "WORLD_GATE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_sixth_age/WORLD_GATE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+##########################
+	#Wilderness Border
+##########################
+	
+	spriteType = {
+		name = "ZOMBIES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_wilderness/ZOMBIES_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+}

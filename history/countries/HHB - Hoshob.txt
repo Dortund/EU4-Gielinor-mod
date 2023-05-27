@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = hobgoblin
+religion = bandos
+technology_group = zeantechgroup
+capital = 432 #Hoblin
+national_focus = MIL
+
+1928.5.13 = {
+	monarch = {
+		name = "Kor'gra"
+		dynasty = "Hobgoblin"
+		birth_date = 1904.1.2
+		adm = 1
+		dip = 5
+		mil = 5
+	}
+}

@@ -1,0 +1,25 @@
+#423-Graveyard of Heroes
+owner = SYZ
+controller = SYZ
+add_core = SYZ
+tribal_owner = ---
+culture = shayzien
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 2
+
+trade_goods = hunter_creatures
+
+is_city = yes
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

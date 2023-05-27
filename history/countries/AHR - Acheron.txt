@@ -1,0 +1,8 @@
+government = tribal
+add_government_reform = migratory_tribe
+government_rank = 2
+primary_culture = tasuaq
+add_accepted_culture = achuliasip
+religion = northern_pantheon
+technology_group = northerntechgroup
+capital = 1295 #Tasuaq

@@ -1,0 +1,43 @@
+#778-Salarin
+owner = KZD
+controller = KZD
+add_core = KZD
+tribal_owner = ---
+culture = yanillian
+religion = zamorak
+
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+1961.5.17 = {
+	owner = TGV
+	controller = TGV
+	add_core = TGV
+}
+
+1983.2.19 = {
+	owner = KZD
+	controller = KZD
+	remove_core = TGV
+}
+
+2110.10.23 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = KZD
+}

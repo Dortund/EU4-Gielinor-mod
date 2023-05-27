@@ -1,0 +1,19 @@
+#1178-Ukabu Yosai
+owner = AHH
+controller = AHH
+add_core = AHH
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 4
+base_manpower = 3
+
+trade_goods = bamboo
+
+is_city = yes

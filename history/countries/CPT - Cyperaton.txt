@@ -1,0 +1,41 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = lummer
+add_accepted_culture = avarrockan
+religion = saradomin
+technology_group = centraltechgroup
+capital = 19 #Cyperaton
+
+1917.3.17 = {
+	monarch = {
+		name = "Terrova"
+		dynasty = "Hackett"
+		birth_date = 1885.11.3
+		death_date = 1936.5.3
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+	queen = {
+		country_of_origin = MST
+		name = "Ethel"
+		dynasty = "Fairweather"
+		birth_date = 1891.5.12
+		death_date = 1955.8.11
+		female = yes
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Marius"
+		dynasty = "Hackett"
+		birth_date = 1908.7.29
+		death_date = 1973.3.4
+		claim = 65
+		adm = 0
+		dip = 3
+		mil = 5
+	}
+}

@@ -1,0 +1,41 @@
+########################################
+# Events for Baxtoria
+########################################
+
+namespace = flavor_bxt
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_bxt.1
+	title = flavor_bxt.1.t #Blessing of Seren
+	desc = flavor_bxt.1.d #Our efforts to build great cathedrals has inspired and motivated our priests. If we wish to change course on religious doctrine at this time, they are unlikely to object.
+	picture = SEREN_CATHEDRAL_eventPicture
+	
+	is_triggered_only = yes	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_bxt.1.a #Let us isolate ourselves in our utopia!
+		trigger = {
+			NOT = {
+			 	isolationism = 4
+			}
+		}
+		add_isolationism = 1
+	}
+	option = {
+		name = flavor_bxt.1.b #Let us stay the course; it has brought us glory thus far.
+	 	add_prestige = 10
+	}
+	option = {
+		name = flavor_bxt.1.c #The world must know of our faith!
+		trigger = {
+			isolationism = 1
+		}
+		add_isolationism = -1
+	}
+}

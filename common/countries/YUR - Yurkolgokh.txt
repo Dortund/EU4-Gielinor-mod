@@ -1,0 +1,48 @@
+#Country Name: Please seefilename.
+
+graphical_culture = easterngfx
+
+color = { 116 101 23 }
+
+revolutionary_colors = { 2 10 6 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Bighead #0" = 1
+	"Brokeface #0" = 1
+	"Clothears #0" = 1
+	"Creakyknees #0" = 1
+	"Greasycheeks #0" = 1
+	"Grimeface #0" = 1
+	"Grubfoot #0" = 1
+	"Goutbones #0" = 1
+	"Hollowtooth #0" = 1
+	"Hopespear #0" = 1
+	"Kringle #0" = 1
+	"Lumpnose #0" = 1
+	"Mosschin #0" = 1
+	"Mudfoot #0" = 1
+	"Murknose #0" = 1
+	"Redeyes #0" = 1
+	"Rumbleguts #0" = 1
+	"Slimepits #0" = 1
+	"Smellytoes #0" = 1
+	"Snailfeet #0" = 1
+	"Snothead #0" = 1
+	"Snotgut #0" = 1
+	"Stubthumb #0" = 1
+	"Grimechin #0" = -1
+	"Naghead #0" = -1
+	"Nostrillia #0" = -1
+	"Wagchin #0" = -1
+}

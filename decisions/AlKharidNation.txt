@@ -1,0 +1,79 @@
+country_decisions = {
+
+	al_kharid_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_al_kharid_flag }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = ALK }
+			tag = KDS
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 61		# Rusum
+				province_id = 62		# Al Kharid
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			total_development = 25
+			owns_core_province = 61		# Rusum
+			owns_core_province = 62		# Al Kharid
+		}
+		effect = {
+			62 = {
+				move_capital_effect = yes
+			}
+			change_tag = ALK
+			swap_non_generic_missions = yes
+			ALK = {
+				if = {
+					limit = {
+						NOT = { government = monarchy }
+						is_revolutionary = no
+					}
+					change_government_to_monarchy = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_al_kharid_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+}

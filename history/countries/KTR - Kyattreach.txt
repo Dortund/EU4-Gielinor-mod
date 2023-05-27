@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = rellekkan
+religion = v
+secondary_religion = northern_pantheon
+technology_group = fremenniktechgroup
+capital = 373 #
+
+1925.3.14 = {
+	monarch = {
+		name = "Larrak"
+		dynasty = "Olafson"
+		birth_date = 1889.10.23
+		adm = 1
+		dip = 2
+		mil = 5
+	}
+}

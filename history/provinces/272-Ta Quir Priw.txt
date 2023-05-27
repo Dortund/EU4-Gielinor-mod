@@ -1,0 +1,37 @@
+#272-Ta Quir Priw
+owner = GNE
+controller = GNE
+add_core = GNE
+tribal_owner = ---
+culture = treegnome
+religion = guthix
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 6
+base_production = 6
+base_manpower = 4
+
+fort_15th = yes 
+
+trade_goods = fruit
+
+is_city = yes
+
+center_of_trade = 2
+
+add_province_triggered_modifier = religious_center
+
+1958.7.23 = {
+	owner = GNO
+	controller = GNO
+	add_core = GNO
+	remove_core = GNE
+}

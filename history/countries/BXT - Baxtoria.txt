@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = kandarin_monarchy
+government_rank = 2
+primary_culture = cadarn
+religion = seren
+technology_group = elventechgroup
+capital = 265 #Eirlys City
+national_focus = DIP
+
+

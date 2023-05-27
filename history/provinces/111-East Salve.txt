@@ -1,0 +1,28 @@
+#111 - East Salve
+#owner = LNC
+#controller = LNC
+#add_core = LNC
+tribal_owner = ---
+culture = ghoul
+religion = zamorak
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+fort_15th = yes
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+2023.6.29 = {
+	owner = CFS
+	controller = CFS
+	add_core = CFS
+}

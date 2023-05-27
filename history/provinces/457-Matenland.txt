@@ -1,0 +1,19 @@
+#457-Matenland
+owner = KUU
+controller = KUU
+add_core = KUU
+tribal_owner = ---
+culture = kahlith
+religion = ful
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes

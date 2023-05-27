@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = bowl_culture
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1160 #Crescent Isle
+
+elector = yes
+
+1901.11.17 = {
+	monarch = {
+		name = "Chunyao"
+		dynasty = "Fei"
+		birth_date = 1874.10.4
+		death_date = 1946.3.17
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+}
+
+2157.8.6 = {
+	monarch = {
+		name = "Bian"
+		dynasty = "Hu"
+		birth_date = 2127.12.9
+		adm = 5
+		dip = 2
+		mil = 4
+	}
+}

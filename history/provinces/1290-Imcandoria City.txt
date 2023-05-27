@@ -1,0 +1,25 @@
+#1290 - Imcandoria City
+owner = ILD
+controller = ILD
+add_core = ILD
+culture = chaos_dwarf
+religion = xautak
+tribal_owner = ---
+
+hre = no
+
+discovered_by = northerntechgroup
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+native_size = 0
+native_ferocity = 2
+native_hostileness = 2
+
+center_of_trade = 1
+
+fort_15th = yes
+
+trade_goods = manufactured_goods

@@ -1,0 +1,224 @@
+########################################
+# Stone of Jas and Dragonkin chain
+########################################
+
+namespace = stoneofjas_dragonkin
+normal_or_historical_nations = yes
+
+country_event = {
+	id = stoneofjas_dragonkin.1
+	title = stoneofjas_dragonkin.1.t #Whispers of the Dragonkin
+	desc = stoneofjas_dragonkin.1.d #There are tales of what happens when the Stone of Jas is used. They say, do not fear the dragons - fear their kin.
+	picture = STONE_OF_JAS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_province_modifier = artefact_stone_of_jas
+		}
+		had_global_flag = {
+			flag = jas_stone_taken
+			days = 3650
+		}
+		NOT = { has_country_flag = stoneofjas_dragonkin_warning_flag }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = stoneofjas_dragonkin_warning_flag
+	}
+	
+	option = {
+		name = stoneofjas_dragonkin.1.a #Is that supposed to be a threat?
+		custom_tooltip = stoneofjas_dragonkin_warning_tooltip
+	}
+}
+
+country_event = {
+	id = stoneofjas_dragonkin.2
+	title = stoneofjas_dragonkin.2.t #Dragonkin Raid!
+	desc = stoneofjas_dragonkin.2.d #Enraged by our use of the Stone of Jas, powerful Dragonkin are decending upon [Root.Capital.GetName]!
+	picture = STONE_OF_JAS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_province_modifier = artefact_stone_of_jas
+		}
+		has_country_flag = stoneofjas_dragonkin_warning_flag
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = stoneofjas_dragonkin.2.a #How much harm could a dragon really do?
+		trigger = {
+			NOT = {
+				had_global_flag = {
+					flag = jas_stone_taken
+					days = 9125
+				}
+			}
+		}
+		capital_scope = {
+			spawn_rebels = {
+				type = dragonkin_raid_rebels
+				size = 2
+			}
+		}
+	}
+	option = {
+		name = stoneofjas_dragonkin.2.b #They're just dragons, right? Right?!
+		trigger = {
+			had_global_flag = {
+				flag = jas_stone_taken
+				days = 9125
+			}
+		}
+		capital_scope = {
+			spawn_rebels = {
+				type = dragonkin_raid_rebels
+				size = 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = stoneofjas_dragonkin.3
+	title = stoneofjas_dragonkin.3.t #The Dragonkin take the Stone of Jas!
+	desc = stoneofjas_dragonkin.3.d #Devastating the [Root.GetAdjective] nation, the Dragonkin have killed [Root.Monarch.GetTitle] [Root.Monarch.GetName] and have taken the Stone of Jas from us.
+	picture = STONE_OF_JAS_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = stoneofjas_dragonkin.3.a #We're not false users! You're false users!
+		custom_tooltip = stoneofjas_dragonkin_stone_taken
+		set_global_flag = dragonkin_have_the_stone_flag
+		add_stability = -2
+		add_prestige = -100
+		hidden_effect = {
+			every_province = {
+				remove_province_modifier = artefact_stone_of_jas
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = AKO
+						was_tag = AKO
+					}
+					has_ruler = "Akthanakos"
+				}
+				set_global_flag = flag_death_of_akthanakos
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = BWS
+						was_tag = BWS
+					}
+					has_ruler = "Sliske"
+				}
+				set_global_flag = flag_death_of_sliske
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = DMH
+						was_tag = DMH
+					}
+					has_ruler = "Bilrach"
+				}
+				set_global_flag = flag_death_of_bilrach
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = ENK
+						was_tag = ENK
+					}
+					has_ruler = "Enkhara"
+				}
+				set_global_flag = flag_death_of_enkhara
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = HZL
+						was_tag = HZL
+					}
+					has_ruler = "Hazeel"
+				}
+				set_global_flag = flag_death_of_hazeel
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = KZD
+						was_tag = KZD
+					}
+					has_ruler = "Khazard"
+				}
+				set_global_flag = flag_death_of_khazard
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = LCI
+						was_tag = LCI
+					}
+					has_ruler = "Lucien"
+				}
+				set_global_flag = flag_death_of_lucien
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = ZMG
+						was_tag = ZMG
+					}
+					has_ruler = "Zemouregal"
+				}
+				set_global_flag = flag_death_of_zemouregal
+			}
+		}
+		kill_ruler = yes
+	}
+}
+
+country_event = {
+	id = stoneofjas_dragonkin.4
+	title = stoneofjas_dragonkin.4.t #Destruction of the Stone of Jas!
+	desc = stoneofjas_dragonkin.4.d #Somehow it happened! The world's most powerful artefact was blasted to pieces by the Dragonkin! This apparently freed them of a curse that bound them to it - and will end any future fighting over it. But might this upset whoever created such a stone?
+	picture = STONE_OF_JAS_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		absolutism = 100
+		current_age = age_of_divination
+		had_global_flag = {
+			flag = dragonkin_have_the_stone_flag
+			days = 1825
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = stoneofjas_dragonkin.4.a #This surely can't have any negative consequences.
+		set_global_flag = stone_of_jas_destroyed_flag
+	}
+}

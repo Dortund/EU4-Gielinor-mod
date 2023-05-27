@@ -1,0 +1,21 @@
+﻿l_english:
+ flavor_aos.1.t:0 "Good Tidings From the Gnome Empire"
+ flavor_aos.1.d:0 "It appears the Gnome Empire have finally decided that we aren't so bad after all, and have decided to seek better relations."
+ flavor_aos.1.a:0 "Seems we must have successfully infiltrated them."
+ 
+ flavor_aos.2.t:0 "Glouphrie Takes the Gnome Empire!"
+ flavor_aos.2.d:0 "Our founder has taken over the Gnome Empire as supreme leader. Though many gnomes considered him dead, we should never count out his ability to create illusions. His first order of business was to secure an alliance with us!"
+ flavor_aos.2.a:0 "Excellent."
+ 
+ flavor_aos.3.t:0 "The Poison Waste"
+ flavor_aos.3.d:0 "All our magical experiments in Arposandra create waste, and it needs to go somewhere. The deep swamps of southern Tirannwn seem as good a place as any, but lately our waste is having a very strange effect on the ecosystem..."
+ flavor_aos.3.a:0 "It's surely nothing to worry about."
+ 
+ flavor_aos.4.t:0 "The Poison Waste"
+ flavor_aos.4.d:0 "A horrific stench rises from Deepest Isfadar. Plantlife has begun dying around the swamp, and the swamp has begun eating into the land..."
+ flavor_aos.4.a:0 "What could have caused this?"
+ 
+ flavor_aos.5.t:0 "Zul-Andra"
+ flavor_aos.5.d:0 "Refugees from [Root.GetName] along with those from other realms have found their way to southern Tirannwn, where they encountered a monstrous snake! In exchange for letting them live, they now provide live sacrifices to the snake and consider it their god."
+ flavor_aos.5.a:0 "Let's join them!"
+ flavor_aos.5.b:0 "A snake as a god? Whatever next?"

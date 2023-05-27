@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 3
+primary_culture = pincers_culture
+add_accepted_culture = siren
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1179 #Flou Tar-Shei

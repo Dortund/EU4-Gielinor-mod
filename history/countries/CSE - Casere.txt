@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = south_asgarn
+religion = saradomin
+technology_group = centraltechgroup
+capital = 864
+
+1907.21.7 = {
+	monarch = {
+		name = "Taria"
+		dynasty = "Brerdas"
+		birth_date = 1892.3.27
+		adm = 5
+		dip = 3
+		mil = 0
+		female = yes
+	}
+}

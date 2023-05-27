@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = noble_kingdom
+add_government_reform = ior_civil_war_focus_reform
+government_rank = 1
+primary_culture = iorwerth
+religion = dark_lord
+technology_group = elventechgroup
+capital = 325 #Prifddinas
+national_focus = MIL
+
+1482.7.15 = {
+	monarch = {
+		name = "Faiyen"
+		dynasty = "Iorwerth"
+		birth_date = 370.7.29
+		adm = 4
+		dip = 2
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

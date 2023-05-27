@@ -1,0 +1,44 @@
+#264-Rive-Moyenne
+owner = HZL
+controller = HZL
+add_core = HZL
+tribal_owner = ---
+culture = ardignan
+religion = zamorak
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = gemstones
+
+is_city = yes
+
+center_of_trade = 1
+
+2007.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	remove_core = HZL
+	religion = saradomin
+	change_province_name = "Port of Ardougne"
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}

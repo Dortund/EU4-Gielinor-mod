@@ -1,0 +1,23 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = narogoshuun
+religion = bandos
+technology_group = bandostechgroup
+capital = 2 #South Lum
+national_focus = MIL
+historical_friend = DGK
+historical_friend = GGS
+historical_friend = HOR
+historical_friend = YUR
+
+1907.1.3 = {
+	monarch = {
+		name = "Snailbrains"
+		dynasty = "Narogoshuun"
+		birth_date = 1899.11.3
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}

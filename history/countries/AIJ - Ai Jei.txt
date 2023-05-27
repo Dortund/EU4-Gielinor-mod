@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = skull_culture
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1113 #Ai Jei City
+
+elector = yes
+
+1923.2.27 = {
+	monarch = {
+		name = "Wenshi"
+		dynasty = "Ai Jei"
+		birth_date = 1901.11.13
+		death_date = 1945.7.8
+		adm = 5
+		dip = 3
+		mil = 6
+	}
+}
+
+2154.11.16 = {
+	monarch = {
+		name = "Zhijun"
+		dynasty = "Ai Jei"
+		birth_date = 2120.5.21
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}

@@ -1,0 +1,22 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 207 126 42 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Si'morgh #1" = 1
+
+	"Si'morgh #1" = -1
+}

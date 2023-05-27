@@ -1,0 +1,7 @@
+#Miscellania_Etcetria
+union = {
+	first = MCE
+	second = ETC
+	start_date = 2179.12.15
+	end_date = 2240.12.31
+}

@@ -1,0 +1,65 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 129 165 251 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Andiess #0" = 1
+	"Aurel #0" = 1
+	"Calin #0" = 1
+	"Charos #0" = 1
+	"Cornelius #0" = 1
+	"Curpile #0" = 1
+	"Cyreg	#0" = 1
+	"Flaygian #0" = 1
+	"Florin #0" = 1
+	"Garth #0" = 1
+	"Grigore #0" = 1
+	"Harold #0" = 1
+	"Harpert #0" = 1
+	"Ivan #0" = 1
+	"Kael #0" = 1
+	"Karnac #0" = 1
+	"Kendrick #0" = 1
+	"Luscion #0" = 1
+	"Marius #0" = 1
+	"Mauritys #0" = 1
+	"Mekritus #0" = 1
+	"Mihail #0" = 1
+	"Polmafi #0" = 1
+	"Radu #0" = 1
+	"Ral #0" = 1
+	"Razvam #0" = 1
+	"Sergiu #0" = 1
+	"Sorin #0" = 1
+	"Sven #0" = 1
+	"Teodor #0" = 1
+	"Vasile #0" = 1
+	"Veliaf #0" = 1
+	"Vertida #0" = 1
+	"Victor #0" = 1
+	"Wiskit #0" = 1
+	"Catalina #0" = -1
+	"Elisabeta #0" = -1
+	"Emilia #0" = -1
+	"Gabriela #0" = -1
+	"Helena #0" = -1
+	"Ileana #0" = -1
+	"Luminata #0" = -1
+	"Nicoleta #0" = -1
+	"Sarius #0" = -1
+	"Simona #0" = -1
+	"Valeria #0" = -1
+}

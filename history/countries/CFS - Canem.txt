@@ -1,0 +1,47 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = canifian
+religion = zamorak
+technology_group = morytaniantechgroup
+capital = 115 #Cave Canem
+national_focus = MIL
+
+1929.4.15 = {
+	monarch = {
+		name = "Yuri"
+		dynasty = "Gudbuy"
+		birth_date = 1898.3.7
+		adm = 6
+		dip = 3
+		mil = 4
+	}
+}
+
+2023.6.29 = {
+	set_capital = 118
+	monarch = {
+		name = "Malak"
+		dynasty = "Vitur"
+		culture = trueborn_vampyre
+		birth_date = 1.1.1
+		adm = 3
+		dip = 6
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+
+2184.4.25 = {
+	monarch = {
+		name = "Nikolai"
+		dynasty = "Volkoth"
+		birth_date = 2135.4.12
+		adm = 0
+		dip = 4
+		mil = 3
+	}
+}
+
+

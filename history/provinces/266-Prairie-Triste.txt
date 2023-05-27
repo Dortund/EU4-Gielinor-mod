@@ -1,0 +1,53 @@
+#266-Prairie-Triste
+owner = HZL
+controller = HZL
+add_core = HZL
+tribal_owner = ---
+culture = ardignan
+religion = zamorak
+
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 4
+base_manpower = 4
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 1
+
+2007.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	remove_core = HZL
+	religion = saradomin
+	change_province_name = "West Ardougne"
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}
+
+2136.2.8 = {
+	owner = TYS
+	controller = TYS
+	add_core = TYS
+}
+
+2168.9.20 = {
+	owner = IOR
+	controller = IOR
+	add_core = IOR
+}

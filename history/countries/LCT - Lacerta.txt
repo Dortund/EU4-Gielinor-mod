@@ -1,0 +1,35 @@
+government = theocracy
+add_government_reform = shamanic_theocracy
+government_rank = 2
+primary_culture = molch
+religion = xeric
+technology_group = zeantechgroup
+capital = 466 #Lacerta
+national_focus = MIL
+historical_friend = MOH
+historical_friend = QMT
+historical_rival = KOU
+
+1906.7.12 = {
+	monarch = {
+		name = "Tziquin"
+		dynasty = "Ik'nal"
+		birth_date = 1901.3.23
+		adm = 4
+		dip = 3
+		mil = 6
+		female = yes
+	}
+}
+
+2162.11.4 = {
+	monarch = {
+		name = "Tziquin II"
+		dynasty = "Ik'nal"
+		birth_date = 2121.12.5
+		adm = 3
+		dip = 2
+		mil = 5
+		female = yes
+	}
+}

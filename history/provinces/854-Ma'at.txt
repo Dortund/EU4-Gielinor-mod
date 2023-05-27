@@ -1,0 +1,22 @@
+#854 - Ma'at
+owner = SOP
+controller = SOP
+add_core = SOP
+tribal_owner = ---
+culture = menaphiteculture
+religion = menaphite
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 4
+
+trade_goods = bones
+latent_trade_goods = { rare_loot }
+
+is_city = yes

@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = loop_culture
+religion = zaros
+technology_group = wushankotechgroup
+capital = 1202 #Bubble of Mists
+
+1896.2.27 = {
+	monarch = {
+		name = "Shouqian"
+		dynasty = "Yang"
+		birth_date = 1878.8.26
+		death_date = 1955.1.5
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+2099.12.30 = {
+	monarch = {
+		name = "Sanfeng"
+		dynasty = "Liao"
+		birth_date = 2080.12.31
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}

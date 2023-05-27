@@ -1,0 +1,1197 @@
+##################################################
+# Institutions 
+#
+##################################################
+
+
+namespace = institution_events
+
+
+
+########################################
+# Reconstruction
+########################################
+# Available from the start
+
+#######################################
+# Architecture
+#######################################
+country_event = {
+	id = institution_events.2
+	title = institution_events.2.t
+	
+	desc = {
+		trigger = {
+			capital_scope = { continent = zeah }
+		}
+		desc = institution_events.2.da
+	}
+	desc = {
+		trigger = {
+			NOT = { capital_scope = { continent = zeah } }
+		}
+		desc = institution_events.2.d
+	}
+	
+	picture = ARCHITECTURE_eventPicture
+	
+	is_triggered_only = yes
+
+	goto = institution_origin
+	
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			from = { save_event_target_as = institution_origin }
+		}
+	}
+
+	option = {
+		name = institution_events.2.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		custom_tooltip = institution_events.2.a.tt
+		FROM = {
+			add_permanent_province_modifier = {
+				name = "birthplace_of_architecture"
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+					knows_country = ROOT
+				}
+				country_event = { id = institution_events.200 }
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+					NOT = { knows_country = ROOT }
+				}
+				country_event = { id = institution_events.201 }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = institution_events.200
+	title = institution_events.2.t
+
+	desc = {
+		trigger = {
+			capital_scope = { continent = zeah }
+		}
+		desc = institution_events.200.da
+	}
+	desc = {
+		trigger = {
+			NOT = { capital_scope = { continent = zeah } }
+		}
+		desc = institution_events.200.d
+	}
+	
+	picture = ARCHITECTURE_eventPicture
+
+	goto = institution_origin
+	
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.2.a
+		custom_tooltip = institution_events.2.a.tt
+	}
+}
+
+#Far away travellers...
+country_event = {
+	id = institution_events.201
+	title = institution_events.2.t
+	desc = institution_events.201.d
+	picture = ARCHITECTURE_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.2.a
+		custom_tooltip = institution_events.2.a.tt
+	}
+}
+
+#######################################
+# Runecrafting
+#######################################
+country_event = {
+	id = institution_events.3
+	title = institution_events.3.t
+	picture = RUNECRAFTING_eventPicture
+	
+	desc = {
+		trigger = {
+			capital_scope = { continent = zeah }
+		}
+		desc = institution_events.3.da
+	}
+	
+	desc = {
+		trigger = {
+			tag = MOO
+		}
+		desc = institution_events.3.db
+	}
+
+	desc = {
+		trigger = {
+			NOT = { tag = MOO }
+			culture_group = fremennik_group
+		}
+		desc = institution_events.3.dc
+	}
+	
+	desc = {
+		trigger = {
+			capital_scope = { NOT = { continent = zeah } }
+			NOT = { tag = MOO }
+			NOT = { culture_group = fremennik_group }
+		}
+		desc = institution_events.3.d
+	}
+	
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			from = { save_event_target_as = institution_origin }
+		}
+	}
+
+	option = {
+		name = institution_events.3.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		custom_tooltip = institution_events.3.a.tt
+		FROM = {
+			add_permanent_province_modifier = {
+				name = "birthplace_of_runecrafting"
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+					knows_country = ROOT
+				}
+				country_event = { id = institution_events.300 }
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+					NOT = { knows_country = ROOT }
+				}
+				country_event = { id = institution_events.301 }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = institution_events.300
+	title = institution_events.3.t
+	
+	desc = institution_events.300.d
+	
+	picture = RUNECRAFTING_eventPicture
+
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.3.a
+		custom_tooltip = institution_events.3.a.tt
+	}
+}
+
+#Far away travellers...
+country_event = {
+	id = institution_events.301
+	title = institution_events.3.t
+	desc = institution_events.301.d
+	picture = RUNECRAFTING_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.3.a
+		custom_tooltip = institution_events.3.a.tt
+	}
+}
+
+
+
+#######################################
+# Statehood
+#######################################
+country_event = {
+	id = institution_events.4
+	title = institution_events.4.t
+	desc = institution_events.4.d
+	
+	picture = {
+		trigger = { NOT = { has_dlc = "Rights of Man" } }
+		picture = BIG_BOOK_eventPicture
+	}
+	picture = {
+		trigger = { has_dlc = "Rights of Man" }
+		picture = PRINTING_PRESS_eventPicture
+	}
+
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes			#
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			from = { save_event_target_as = institution_origin }
+		}
+	}
+
+	option = {
+		name = institution_events.4.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		custom_tooltip = institution_events.4.a.tt
+		FROM = {
+			add_permanent_province_modifier = {
+				name = "birthplace_of_statehood"
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							ai = no
+							knows_country = ROOT
+						}
+					}
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = institution_events.400 }
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+					NOT = { knows_country = ROOT }
+				}
+				country_event = { id = institution_events.401 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = institution_events.400
+	title = institution_events.4.t
+	desc = institution_events.400.d
+	picture = {
+		trigger = { NOT = { has_dlc = "Rights of Man" } }
+		picture = BIG_BOOK_eventPicture
+	}
+	picture = {
+		trigger = { has_dlc = "Rights of Man" }
+		picture = PRINTING_PRESS_eventPicture
+	}
+
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.4.a
+		custom_tooltip = institution_events.4.a.tt
+	}
+}
+
+#Far away travellers...
+country_event = {
+	id = institution_events.401
+	title = institution_events.4.t
+	desc = institution_events.401.d
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.4.a
+		custom_tooltip = institution_events.4.a.tt
+	}
+}
+
+#######################################
+# Exploration
+#######################################
+country_event = {
+	id = institution_events.5
+	title = institution_events.5.t
+	desc = institution_events.5.d
+	picture = EXPLORATION_eventPicture
+
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			from = { save_event_target_as = institution_origin }
+		}
+	}
+
+	option = {
+		name = institution_events.5.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		custom_tooltip = institution_events.5.a.tt
+		FROM = {
+			add_permanent_province_modifier = {
+				name = "birthplace_of_exploration"
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					knows_country = ROOT
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = institution_events.500 }
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+					NOT = { knows_country = ROOT }
+				}
+				country_event = { id = institution_events.501 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = institution_events.500
+	title = institution_events.5.t
+	desc = institution_events.500.d
+	picture = EXPLORATION_eventPicture
+
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.5.a
+		custom_tooltip = institution_events.5.a.tt
+	}
+}
+
+#Far away travellers...
+country_event = {
+	id = institution_events.501
+	title = institution_events.5.t
+	desc = institution_events.501.d
+	picture = EXPLORATION_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.5.a
+		custom_tooltip = institution_events.5.a.tt
+	}
+}
+
+
+#######################################
+# Quests
+#######################################
+country_event = {
+	id = institution_events.6
+	title = institution_events.6.t
+	desc = institution_events.6.d
+	picture = {
+		trigger = { NOT = { has_dlc = "Rights of Man" } }
+		picture = TRADEGOODS_eventPicture
+	}
+	picture = {
+		trigger = { has_dlc = "Rights of Man" }
+		picture = GLOBAL_TRADE_eventPicture
+	}
+
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			from = { save_event_target_as = institution_origin }
+		}
+	}
+
+	option = {
+		name = institution_events.6.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		custom_tooltip = institution_events.6.a.tt
+		FROM = {
+			add_permanent_province_modifier = {
+				name = "birthplace_of_quests"
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					knows_country = ROOT
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = institution_events.600 }
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { knows_country = ROOT }
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = institution_events.601 }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = institution_events.600
+	title = institution_events.6.t
+	desc = institution_events.600.d
+	picture = {
+		trigger = { NOT = { has_dlc = "Rights of Man" } }
+		picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+	}
+	picture = {
+		trigger = { has_dlc = "Rights of Man" }
+		picture = GLOBAL_TRADE_eventPicture
+	}
+
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.6.a
+		custom_tooltip = institution_events.6.a.tt
+	}
+}
+
+#Far away travellers...
+country_event = {
+	id = institution_events.601
+	title = institution_events.6.t
+	desc = institution_events.601.d
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.6.a
+		custom_tooltip = institution_events.6.a.tt
+	}
+}
+
+
+#######################################
+# Invention
+#######################################
+
+country_event = {
+	id = institution_events.7
+	title = institution_events.7.t
+	desc = institution_events.7.d
+	picture = INVENTION_eventPicture
+
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			from = { save_event_target_as = institution_origin }
+		}
+	}
+
+	option = {
+		name = institution_events.7.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		custom_tooltip = institution_events.7.a.tt
+		FROM = {
+			add_permanent_province_modifier = {
+				name = "birthplace_of_invention"
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					knows_country = ROOT
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = institution_events.700 }
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { knows_country = ROOT }
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = institution_events.701 }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = institution_events.700
+	title = institution_events.7.t
+	desc = institution_events.700.d
+	picture = INVENTION_eventPicture
+
+	is_triggered_only = yes
+
+	goto = institution_origin
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.7.a
+		custom_tooltip = institution_events.7.a.tt
+	}
+}
+
+#Far away travellers...
+country_event = {
+	id = institution_events.701
+	title = institution_events.7.t
+	desc = institution_events.701.d
+	picture = INVENTION_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			#
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = institution_events.7.a
+		custom_tooltip = institution_events.7.a.tt
+	}
+}
+
+###############################################################################################
+###############################################################################################
+###############################################################################################
+
+# Institution spread events
+
+######################################
+
+# Reconstruction (102 - 199)
+
+# Architecture (202 - 299)
+
+# Runecrafting (302 - 399)
+
+#Travelling Runecrafters
+country_event = {
+	id = flavor_gun.1
+	title = institution_events.302.t
+	desc = institution_events.302.d #For centuries, it was assumed that crafting new runes was impossible for mortals, but new travelling runecrafters inform us they know the secret and are willing to spread it. However, they also inform us that they have enemies - others who view Runecrafting as an affront to the Gods. To accept this help could mark as a future target, though the potential benefits are enormous...
+	picture = RUNECRAFTING_eventPicture
+
+	trigger = {
+		is_institution_enabled = runecrafting
+		NOT = { is_institution_enabled = statehood }
+		NOT = { exists = GUN }
+		NOT = { has_global_flag = GUN_end_of_crusades_flag }
+		NOT = { has_institution = runecrafting }
+		OR = {
+			capital_scope = {
+				OR = {
+					region = asgarnia_region
+					region = misthalin_region
+					region = kandarin_region
+					region = kharidian_desert_region
+				}
+			}
+			AND = {
+				region = tirannwn_region
+				religion = seren
+				NOT = { isolationism = 2 }
+			}
+		}
+		OR = {
+			culture_group = asgarnia_group
+			culture_group = misthalin_group
+			culture_group = kandarin_group
+			culture_group = elven_group
+			primary_culture = alkharidian
+			any_owned_province = { has_latent_trade_goods = runes }
+		}
+		NOT = { culture_group = fremennik_group }
+		NOT = {
+			capital_scope = {
+				runecrafting = 100
+			}
+		}
+		NOT = { has_country_flag = runecrafting_travelling_instructors }
+		calc_true_if = {
+			all_owned_province = {
+				current_institution = 25
+			}
+			amount = 3
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		set_country_flag = runecrafting_travelling_instructors
+	}
+	
+	option = {
+		name = institution_events.302.a #Accept the help.
+		add_adm_power = 25
+		capital_scope = {
+			add_institution_embracement = {
+				which = runecrafting
+				value = 75
+			}
+		}
+		custom_tooltip = crusader_vulnerability_plus2_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = 2
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				any_owned_province = {
+					OR = {
+						has_latent_trade_goods = runes
+						trade_goods = runes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = institution_events.302.b #Reject the help.
+		custom_tooltip = crusader_vulnerability_minus2_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -2
+			}
+		}
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				any_owned_province = {
+					OR = {
+						has_latent_trade_goods = runes
+						trade_goods = runes
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				any_ally = {
+					primary_culture = barbarian
+				}
+			}
+		}
+	}
+}
+
+#New Wizards
+country_event = {
+	id = institution_events.303
+	title = institution_events.303.t
+	desc = institution_events.303.d #With the spread of runecrafting, there has been a huge expansion in the number of people taking up the path of the mage. This has driven quite a culture clash between the small number of established elite wizards, and the newcomers to the art. 
+	picture = RUNECRAFTING_eventPicture
+
+	trigger = {
+		NOT = { is_institution_enabled = statehood }
+		NOT = { exists = GUN }
+		NOT = { has_global_flag = GUN_end_of_crusades_flag }
+		has_institution = runecrafting
+		OR = {
+			capital_scope = {
+				OR = {
+					region = asgarnia_region
+					region = misthalin_region
+					region = kandarin_region
+					region = kharidian_desert_region
+				}
+			}
+			AND = {
+				region = tirannwn_region
+				religion = seren
+				NOT = { isolationism = 2 }
+			}
+		}
+		OR = {
+			culture_group = asgarnia_group
+			culture_group = misthalin_group
+			culture_group = kandarin_group
+			culture_group = elven_group
+			primary_culture = alkharidian
+			any_owned_province = { has_latent_trade_goods = runes }
+		}
+		NOT = { culture_group = fremennik_group }
+		NOT = { has_country_flag = runecrafting_new_mages }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	immediate = {
+		set_country_flag = runecrafting_new_mages
+	}
+	
+	option = {
+		name = institution_events.303.a #We need the new ideas of the new mages.
+		add_mil_power = 50
+		custom_tooltip = crusader_vulnerability_plus2_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = 2
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				any_owned_province = {
+					OR = {
+						has_latent_trade_goods = runes
+						trade_goods = runes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = institution_events.303.b #Traditional magic has served us well; we don't need to shake things up.
+		custom_tooltip = crusader_vulnerability_minus1_tooltip
+		add_army_tradition = 10
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -1
+			}
+		}
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				any_owned_province = {
+					OR = {
+						has_latent_trade_goods = runes
+						trade_goods = runes
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				any_ally = {
+					primary_culture = barbarian
+				}
+			}
+		}
+	}
+	option = {
+		name = institution_events.303.c #Magic is overrated.
+		custom_tooltip = crusader_vulnerability_minus3_tooltip
+		add_mil_power = -10
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -3
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_owned_province = {
+					OR = {
+						has_latent_trade_goods = runes
+						trade_goods = runes
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				any_ally = {
+					primary_culture = barbarian
+				}
+			}
+		}
+	}
+}
+
+#Opponents of Runecrafting
+country_event = {
+	id = institution_events.304
+	title = institution_events.304.t
+	desc = institution_events.304.d #A group of warriors naming themselves Fremennik claim that the spread of Runecrafting must be stopped as the crafting of runes is heretical. 
+	picture = RUNECRAFTING_eventPicture
+
+	trigger = {
+		is_institution_enabled = runecrafting
+		NOT = { is_institution_enabled = statehood }
+		NOT = { exists = GUN }
+		NOT = { has_global_flag = GUN_end_of_crusades_flag }
+		NOT = { has_institution = runecrafting }
+		OR = {
+			capital_scope = {
+				OR = {
+					region = asgarnia_region
+					region = misthalin_region
+					region = kandarin_region
+					region = kharidian_desert_region
+				}
+			}
+			AND = {
+				region = tirannwn_region
+				religion = seren
+				NOT = { isolationism = 2 }
+			}
+		}
+		OR = {
+			culture_group = asgarnia_group
+			culture_group = misthalin_group
+			culture_group = kandarin_group
+			culture_group = elven_group
+			primary_culture = alkharidian
+			any_owned_province = { has_latent_trade_goods = runes }
+		}
+		NOT = { culture_group = fremennik_group }
+		NOT = { has_country_flag = runecrafting_enemies_of_the_art }
+		calc_true_if = {
+			all_owned_province = {
+				current_institution = 25
+			}
+			amount = 3
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.5
+			capital_scope = {
+				region = kandarin_region
+			}
+		}
+		modifier = {
+			factor = 0.9
+			capital_scope = {
+				region = asgarnia_region
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = {
+				region = kharidian_desert_region
+			}
+		}
+	}
+	
+	immediate = {
+		set_country_flag = runecrafting_enemies_of_the_art
+	}
+	
+	option = {
+		name = institution_events.304.a #We're not going to take the advice of some smelly barbarians!
+		custom_tooltip = crusader_vulnerability_plus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = 3
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				any_owned_province = {
+					OR = {
+						has_latent_trade_goods = runes
+						trade_goods = runes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = institution_events.304.b #It's for the best that we hold back the spread of runecrafting.
+		custom_tooltip = crusader_vulnerability_minus2_tooltip
+		add_country_modifier = {
+			name = runecrafting_curtail_spread
+			duration = 3650
+		}
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -2
+			}
+		}
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				any_owned_province = {
+					OR = {
+						has_latent_trade_goods = runes
+						trade_goods = runes
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				any_ally = {
+					primary_culture = barbarian
+				}
+			}
+		}
+	}
+}
+
+

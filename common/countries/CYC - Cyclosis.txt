@@ -1,0 +1,31 @@
+#Country Name: Please seefilename.
+
+graphical_culture = asiangfx
+
+color = { 155 233 255 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Daya #0" = 1
+	"Ekahi #0" = 1
+	"Ichi #0" = 1
+	"Mono #0" = 1
+	"Pian #0" = 1
+	"Polyphemus #0" = 1
+	"Yan #0" = 1
+	
+	"Ember #0" = -1
+	"Harley #0" = -1
+	"See #0" = -1
+	"Sinuman #0" = -1
+}

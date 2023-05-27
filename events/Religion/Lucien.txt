@@ -1,0 +1,226 @@
+namespace = lucien_flavor
+
+#Yet Another Adventurer Horde
+country_event = {
+	id = lucien_flavor.1
+	title = lucien_flavor.1.t
+	desc = lucien_flavor.1.d #Such a nuisance adventurers are! They don't know when to leave Lord Lucien alone. Another group has entered the lands of [Root.GetName] lately and while they pledge not to harm our master, can we really trust them?
+	picture = LUCIEN_ATTACKS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = lucien
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		absolutism = 10
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = lucien_flavor.1.a #Keep an eye on them, but let them stay.
+		add_patriarch_authority = -0.05
+		add_absolutism = 5
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = lucien_flavor.1.b #Exile them!
+		add_patriarch_authority = 0.05
+		add_absolutism = -5
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+	
+	option = {
+		name = lucien_flavor.1.c #Destroy them and raise their corpses!
+		add_patriarch_authority = 0.05
+	 	add_yearly_manpower = 0.25
+		add_absolutism = -10
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+}
+
+#The Doubters
+country_event = {
+	id = lucien_flavor.2
+	title = lucien_flavor.2.t
+	desc = lucien_flavor.2.d #Murmurs in our realm abound that Lucien is not truly a god yet. Such blasphemy should be dealt with, but making a show of force could come across as a sign of weakness rather than strength.
+	picture = LUCIEN_ATTACKS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = lucien
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = lucien_flavor.2.a #The rumours will fizzle out with time.
+		add_patriarch_authority = -0.05
+		reduce_estate_church_loyalty_effect = yes
+		add_stability = 1
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = lucien_flavor.2.b #Crush those dissenters!
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		random_owned_province = {
+			limit = {
+				OR = {
+					religion = zamorak
+					religion = lucien
+				}
+			}
+			spawn_rebels = {
+				type = zamorak_rebels
+				size = 1
+			}
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#The Monks of Lucien and the Ambitious Mages
+country_event = {
+	id = lucien_flavor.3
+	title = lucien_flavor.3.t
+	desc = lucien_flavor.3.d #The following of Lucien is divided between those who worship him as a god, and those who see him as an example to strive towards. The first of these factions is spearheaded by the Monks of Lucien, who see the ambition of the latter faction to be dangerous for our common faith. However, the ambitious mages who wish to learn from Lucien's example could be powerful allies to our cause.
+	picture = LUCIEN_ATTACKS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = lucien
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = lucien_flavor.3.a #Lucien is unique; no others can ever possess even a fraction of his power.
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = lucien_flavor.3.b #Scholars of the lost and powerful magicks shall find a home in the nation of [Root.GetName].
+		add_patriarch_authority = -0.05
+		reduce_estate_church_loyalty_effect = yes
+		add_army_tradition = 10
+		add_mil_power = 25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Ancient Knowledge
+country_event = {
+	id = lucien_flavor.4
+	title = lucien_flavor.4.t
+	desc = lucien_flavor.4.d #Immense power rests in the ancient artefacts and magicks of times gone by - before even Lucien himself emerged. Yet the pursuit of ancient knowledge is rife with risk - discovery can take decades of research and costs resources which could be dedicated to studies of more contemporary technology.
+	picture = LUCIEN_ATTACKS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = lucien
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = lucien_flavor.4.a #To control the future, we must explore the past.
+		add_patriarch_authority = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = lucien_flavor.4.b #The past is in the past; we must turn to the advancements of the current age.
+		add_patriarch_authority = -0.05
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Our Own Path
+country_event = {
+	id = lucien_flavor.5
+	title = lucien_flavor.5.t
+	desc = lucien_flavor.5.d #None are above Lucien, Master of a Thousand Curses. The lesser beings shall perish! Unfortunately, statements such as these are not held by the rest of the world, and may make diplomacy difficult. We shall have to decide if it is worth alienating the rest of Gielinor in the name of the faith.
+	picture = LUCIEN_ATTACKS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = lucien
+		NOT = { has_country_modifier = lucien_working_alone }
+		NOT = { has_country_modifier = lucien_pragmatic_diplomacy }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = lucien_flavor.5.a #Let the world be against us! We know we are right.
+		add_patriarch_authority = 0.1
+		add_country_modifier = {
+			name = lucien_working_alone
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = lucien_flavor.5.b #We need allies right now. We can betray them later.
+		add_patriarch_authority = -0.1
+		add_country_modifier = {
+			name = lucien_pragmatic_diplomacy
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

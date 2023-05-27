@@ -1,0 +1,18 @@
+#1286 - Glidgrottor
+
+culture = achuliasip
+religion = northern_pantheon
+tribal_owner = ---
+
+hre = no
+
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 0
+native_ferocity = 2
+native_hostileness = 2

@@ -1,0 +1,23 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = yurkolgokh
+religion = bandos
+technology_group = bandostechgroup
+capital = 791 #Newbie Hill
+national_focus = DIP
+historical_friend = DGK
+historical_friend = GGS
+historical_friend = HOR
+historical_friend = NGU
+
+1928.5.17 = {
+	monarch = {
+		name = "Warttoes"
+		dynasty = "Yurkolgokh"
+		birth_date = 1909.11.2
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

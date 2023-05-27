@@ -1,0 +1,24 @@
+#764-Fever Cove
+
+trade_goods = grains
+
+hre = no
+
+base_tax = 1
+base_production = 3
+base_manpower = 1
+
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2
+
+center_of_trade = 1
+
+2151.7.2 = {
+	owner = BDI
+	controller = BDI
+	add_core = BDI
+	culture = harmlean
+	religion = godless
+	fort_16th = yes
+}

@@ -1,0 +1,280 @@
+namespace = zemouregal_flavor
+
+#Bored!
+country_event = {
+	id = zemouregal_flavor.1
+	title = zemouregal_flavor.1.t
+	desc = zemouregal_flavor.1.d #Lord Zemouregal declares himself to be, and I quote, booorrrreeeed. Is there something we could do to rectify this situation?
+	picture = ZEMOUREGAL_BORED_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zemouregal
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = zemouregal_flavor.1.a #Make some of our subjects fight each other? That's always a laugh.
+		trigger = {
+			any_owned_province = {
+				NOT = { is_capital = yes }
+				base_tax = 2
+				base_production = 2
+				base_manpower = 2
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+				base_tax = 2
+				base_production = 2
+				base_manpower = 2
+			}
+		 	add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		add_patriarch_authority = 0.1
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 3
+		}
+	}
+	option = {
+		name = zemouregal_flavor.1.b #Let's let an adventurer in to $CAPITAL_CITY$ and see what happens!
+		trigger = {
+			OR = {
+				current_age = age_of_adventurers
+				current_age = age_of_divination
+			}
+		}
+		add_patriarch_authority = -0.05
+		reduce_estate_church_loyalty_effect = yes
+		add_absolutism = 10
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = {
+		name = zemouregal_flavor.1.c #How about a treasure trail?
+		add_years_of_income = 0.25
+		add_patriarch_authority = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = zemouregal_flavor.1.e #We have no ideas at this time.
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Replacing Zamorak's Teachings?
+country_event = {
+	id = zemouregal_flavor.2
+	title = zemouregal_flavor.2.t
+	desc = zemouregal_flavor.2.d #As the successor to the Zamorakians, the followers of Zemouregal do not necessarily have to define themselves by chaos. Which direction should we take?
+	picture = ZEMOUREGAL_THRONE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zemouregal
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			NOT = { patriarch_authority = 0.05 }
+		}
+	}
+	
+	option = {
+		name = zemouregal_flavor.2.a #Chaos is still fine by me!
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { stability = 0 }
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = zemouregal_flavor.2.b #We should seriously consider a change in direction.
+		add_patriarch_authority = -0.05
+		add_stability_or_adm_power = yes
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				stability = 0
+				factor = 0
+			}
+		}
+	}
+}
+
+# Prayer Siphoning
+country_event = {
+	id = zemouregal_flavor.3
+	title = zemouregal_flavor.3.t
+	desc = zemouregal_flavor.3.d #Lord Zemouregal has an ingenious method of rewiring altars to direct prayers directly to him, allowing us to exploit heretics and heathens to our own ends. Should we expand this?
+	picture = ZEMOUREGAL_THRONE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zemouregal
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = zemouregal_flavor.3.a #That sounds like an excellent idea!
+		add_patriarch_authority = 0.05
+		reduce_estate_church_loyalty_effect = yes
+		add_country_modifier = {
+			name = zemouregal_expanded_altar_siphoning
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = zemouregal_flavor.3.b #Why exploit heretics when we can just convert them?
+		add_patriarch_authority = -0.05
+		add_estate_church_loyalty_effect = yes
+		add_country_modifier = {
+			name = zemouregal_forceful_conversions
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Population Concentration
+country_event = {
+	id = zemouregal_flavor.4
+	title = zemouregal_flavor.4.t
+	desc = zemouregal_flavor.4.d #Lord Zemouregal is of the view that $CAPITAL_CITY$ would be a lot more fun with more people in it, so that his various whims could be better-achieved.
+	picture = ZEMOUREGAL_THRONE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zemouregal
+		any_owned_province = {
+			NOT = { is_capital = yes }
+			base_tax = 2
+			base_production = 2
+			base_manpower = 2
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = zemouregal_flavor.4.a #Yes, this sounds like a good idea.
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+				base_tax = 2
+				base_production = 2
+				base_manpower = 2
+			}
+		 	add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		capital_scope = {
+			random_list = {
+				33 = {
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				33 = {
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				33 = {
+					add_base_tax = 1
+					add_base_manpower = 1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = zemouregal_flavor.4.b #Our realm can't accommodate this change.
+		add_patriarch_authority = -0.05
+		reduce_estate_church_loyalty_effect = yes
+		add_adm_power = 100
+		change_government_reform_progress = 50
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Necromancer Relations
+country_event = {
+	id = zemouregal_flavor.5
+	title = zemouregal_flavor.5.t
+	desc = zemouregal_flavor.5.d # Ah, necromancers! They bring the dead back to close-enough-to life! Zemouregal is the best one, of course, but there's plenty of others around that could be useful to us. Expanding their role would provide us with an extra supply of reanimated bodies, but our clergy might be upset. What's our response?
+	picture = ZEMOUREGAL_THRONE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = zemouregal
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = zemouregal_flavor.5.a # Keep the necromancers as they are.
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = zemouregal_flavor.5.b # Expand the role of the necromancers.
+		add_patriarch_authority = -0.05
+		add_yearly_manpower = 0.5
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

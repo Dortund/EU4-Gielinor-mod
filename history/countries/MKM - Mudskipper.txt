@@ -1,0 +1,20 @@
+government = tribal
+add_government_reform = mogre_horde
+government_rank = 1
+primary_culture = mogre
+religion = bandos
+technology_group = bandostechgroup
+capital = 34 #Mudskipper Point
+national_focus = MIL
+historical_rival = PLI
+
+1906.2.12 = {
+	monarch = {
+		name = "Plash"
+		dynasty = "Seastepper"
+		birth_date = 1885.11.4
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}

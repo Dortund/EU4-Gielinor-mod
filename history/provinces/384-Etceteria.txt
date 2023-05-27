@@ -1,0 +1,25 @@
+#384-Etceteria
+owner = ETC
+controller = ETC
+add_core = ETC
+tribal_owner = ---
+culture = miscellanean
+religion = v
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = grains
+
+is_city = yes
+
+center_of_trade = 1

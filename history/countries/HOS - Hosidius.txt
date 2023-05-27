@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = kourend_house
+government_rank = 1
+primary_culture = hosidius
+religion = saradomin
+technology_group = zeantechgroup
+capital = 438 #Forthos (until war of the Five Houses)
+national_focus = ADM
+
+1927.3.18 = {
+	monarch = {
+		name = "Adrian"
+		dynasty = "Hosidius"
+		birth_date = 1885.12.31
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}

@@ -1,0 +1,23 @@
+#1184-Khanoka
+owner = KHN
+controller = KHN
+add_core = KHN
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 8
+base_production = 8
+base_manpower = 7
+
+fort_15th = yes
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 2

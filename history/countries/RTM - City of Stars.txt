@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = scythe_culture
+religion = genbu
+technology_group = wushankotechgroup
+capital = 1150 #City of Stars
+
+1911.5.24 = {
+	monarch = {
+		name = "Kon"
+		dynasty = "Changbao"
+		birth_date = 1889.7.10
+		death_date = 1958.4.14
+		adm = 5
+		dip = 5
+		mil = 2
+		female = yes
+	}
+}
+
+2160.6.15 = {
+	monarch = {
+		name = "Houcong"
+		dynasty = "Changbao"
+		birth_date = 2114.7.21
+		adm = 5
+		dip = 4
+		mil = 0
+	}
+}

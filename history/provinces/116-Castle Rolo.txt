@@ -1,0 +1,36 @@
+#116 - Castle Rolo
+owner = LNC
+controller = LNC
+add_core = LNC
+tribal_owner = ---
+culture = north_coaster
+religion = saradomin
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 2
+
+fort_15th = yes 
+
+trade_goods = bones
+
+is_city = yes
+
+2139.1.31 = {
+	owner = CFS
+	controller = CFS
+	add_core = CFS
+ 	change_province_name = "Castle Fenkenstrain"
+	religion = zamorak
+}

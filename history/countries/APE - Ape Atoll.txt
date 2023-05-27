@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 2
+primary_culture = atoll_monkey
+add_accepted_culture = gorilla
+religion = marimbo
+technology_group = monkeytechgroup
+capital = 237 #Marim
+
+2158.2.12 = {
+	monarch = {
+		name = "Awowogei"
+		dynasty = "of Marim"
+		culture = atoll_monkey
+		birth_date = 2140.3.7
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}

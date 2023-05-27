@@ -1,0 +1,1436 @@
+province;red;green;blue;x;x
+1;128;34;64;Tutors' Depart;x
+2;0;36;128;Lumbridge;x
+3;128;38;192;East Lumbridge Swamp;x
+4;0;40;255;West Lumbridge Swamp;x
+5;128;42;0;Morgenshire;x
+6;0;44;64;Drý Isle;x
+7;129;46;128;Draynor Coast;x
+8;1;48;192;North Draynor;x
+9;129;50;255;Milllane;x
+10;1;52;0;Whitebred;x
+11;129;54;64;Haerfest;x
+12;1;56;128;Gower;x
+13;129;58;192;County Arrav;x
+14;2;60;255;Varrock;x
+15;130;62;0;Arodnes;x
+16;2;64;64;Bursen;x
+17;130;66;128;Ingang;x
+18;2;68;192;Dymnen;x
+19;130;70;255;Cyperaton;x
+20;2;72;0;Enville;x
+21;131;74;64;Nethan;x
+22;3;76;128;Tíwesniht;x
+23;131;78;192;Saranthium;x
+24;3;80;255;Efar;x
+25;131;82;0;Windumaer;x
+26;3;84;64;Silvarea;x
+27;131;86;128;Paterdomus;x
+28;4;88;192;Lake Morgen;x
+29;132;90;255;Toll Ridge;x
+30;4;92;0;Kharid's Edge;x
+31;132;94;64;River Salve;x
+32;4;96;128;Silvarea Mountains;x
+33;132;98;192;Port Lina;x
+34;4;100;255;Mudskipper Point;x
+35;133;102;0;Rimmington;x
+36;5;104;64;Feorweg;x
+37;133;106;128;Cawlshire;x
+38;5;108;192;Eorthifi;x
+39;133;110;255;Cynling;x
+40;5;112;0;County Braed;x
+41;133;114;64;Falador;x
+42;6;116;128;Deófolwítga;x
+43;134;118;192;Drýming;x
+44;6;120;255;Anmitta;x
+45;134;122;0;Brehangrim;x
+46;6;124;64;Camdozaal;x
+47;134;126;128;Lassar;x
+48;6;128;192;Astram's Ridge;x
+49;135;130;255;Taverley;x
+50;7;132;0;Ewean's Grove;x
+51;135;134;64;Burthorpe;x
+52;7;136;128;Unterwulf;x
+53;135;138;192;Lake Crystalmere;x
+54;7;140;255;Ice Mountain Headland;x
+55;135;142;0;White Wolf Mountain;x
+56;8;144;64;Saradomin's Landing;x
+57;136;146;128;South Entrana;x
+58;8;148;192;North Crandor;x
+59;136;150;255;Central Crandor;x
+60;8;152;0;South Crandor;x
+61;136;154;64;Rusum;x
+62;8;156;128;Al Kharid;x
+63;137;158;192;Elspeth;x
+64;9;32;255;Arina;x
+65;137;34;0;Alhua;x
+66;9;36;64;Ylamae;x
+67;137;38;128;Marahum;x
+68;9;40;192;Bawwaba;x
+69;137;42;255;Kalphite;x
+70;10;44;0;Apmeken;x
+71;138;46;64;Wahid;x
+72;10;48;128;Bedabin;x
+73;138;50;192;Elid;x
+74;10;52;255;Rihla;x
+75;138;54;0;Pollnivneach;x
+76;10;56;64;Siad;x
+77;139;58;128;Dominion;x
+78;11;60;192;Dhahab;x
+79;139;62;255;Uzer;x
+80;11;64;0;Mastaba;x
+81;139;66;64;Qatie Tariq;x
+82;11;68;128;Dukhan;x
+83;139;70;192;Easaba;x
+84;12;72;255;Jaldraocht;x
+85;140;74;0;Enakhra;x
+86;12;76;64;Nardah;x
+87;140;78;128;Jaleustrophos;x
+88;12;80;192;Wahah;x
+89;140;82;255;Tamsah;x
+90;12;84;0;Akthanakos Isle;x
+91;141;86;64;Ahwar;x
+92;13;88;128;Ullek;x
+93;141;90;192;Scabaras;x
+94;13;92;255;Manafaa;x
+95;141;94;0;Unkah;x
+96;13;96;64;Alruwh;x
+97;141;98;128;'iimbraturia;x
+98;14;100;192;Amiral;x
+99;142;102;255;Crondis;x
+100;14;104;0;Menaphos;x
+101;142;106;64;Sophanem;x
+102;14;108;128;Alraml;x
+103;85;80;32;Salve Bank;x
+104;14;112;255;Elspeth Cliffs;x
+105;143;114;0;Pass Cliffs;x
+106;15;116;64;Pollnivneach Overlook;x
+107;143;118;128;Camel's Humps;x
+108;15;120;192;Empty Range;x
+109;143;122;255;Crocodile Oasis;x
+110;15;124;0;Cliffs of Ullek;x
+111;143;126;64;East Salve;x
+112;16;128;128;Viggora's Folly;x
+113;144;130;192;Canifis;x
+114;16;132;255;Lords' Rest;x
+115;144;134;0;Cave Canem;x
+116;16;136;64;Castle Rolo;x
+117;144;138;128;Inmortuae;x
+118;16;140;192;Haunted Woods;x
+119;145;142;255;Port Phasmatys;x
+120;17;144;0;Dragontooth Isle;x
+121;145;146;64;Mort Myre;x
+122;17;148;128;Speluncae;x
+123;145;150;192;The Hollows;x
+124;17;152;255;Stagnans;x
+125;145;154;0;Mort'ton;x
+126;18;156;64;Mort Ridge;x
+127;146;158;128;Barrows Town;x
+128;18;32;192;Burgh de Rott;x
+129;146;34;255;Shadowglade;x
+130;18;36;0;Sopârla;x
+131;78;142;78;Austium;x
+132;18;40;128;Strages;x
+133;147;42;192;Slepe;x
+134;19;44;255;Obol;x
+135;147;46;0;Ver Sinhaza;x
+136;19;48;64;Everlight;x
+137;147;50;128;Dézsma;x
+138;19;52;192;Meiyerditch;x
+139;147;54;255;Darkmeyer;x
+140;20;56;0;Drakan;x
+141;148;58;64;Swampy Lakes;x
+142;20;60;128;Mos Ayes Le';x
+143;148;62;192;Blé;x
+144;20;54;255;La Grotte;x
+145;148;66;0;Horreur;x
+146;20;68;64;Tanière;x
+147;173;97;34;Brassage;x
+148;21;72;192;Harmony;x
+149;149;74;255;Mindful Valley;x
+150;21;76;0;Burnt Coal Basin;x
+151;149;78;64;Duellists' Hills;x
+152;21;80;128;Outlaws' Escape;x
+153;149;82;192;Groupfall;x
+154;22;84;255;Grieving Vale;x
+155;150;86;0;Season's End;x
+156;22;88;64;Lever Woods;x
+157;150;90;128;Faithless Forest;x
+158;22;92;192;Mammoth Grounds;x
+159;150;94;255;Ferox;x
+160;22;96;0;Chaos Point;x
+161;151;98;64;Dark Warriors' Fortress;x
+162;23;100;128;Dragons' Bowl;x
+163;151;102;192;Dareeyak;x
+164;23;104;255;Fort Troubled;x
+165;151;106;0;Edict;x
+166;23;108;64;Carrallanger;x
+167;151;110;128;Lava Ridge Wilds;x
+168;24;112;192;Scorched Entmoot;x
+169;152;114;255;Salamander Pass;x
+170;24;116;0;Daemonbank;x
+171;152;118;64;Venenatis;x
+172;24;120;128;Bone Yard;x
+173;152;122;192;Bonde;x
+174;24;124;255;Hobgoblin Rocks;x
+175;153;126;0;Deep Wilderness;x
+176;25;128;64;Forgotten Cemetery;x
+177;153;130;128;Chaos' Seclusion;x
+178;25;132;192;Runite Ridge;x
+179;153;134;255;Lava Maze;x
+180;25;136;0;Forinthry's Remnant;x
+181;153;138;64;Dangerous Approach;x
+182;26;140;128;Lost Crossroads;x
+183;154;142;192;Lava Dragon Isle;x
+184;26;144;255;Vet'ion;x
+185;147;222;218;Death's Confluence;x
+186;26;148;64;Charmed Shore;x
+187;154;150;128;Callisto;x
+188;26;152;192;Annakarl;x
+189;155;154;255;Fountain of Rune;x
+190;27;156;0;Mount Firefate;x
+191;155;158;64;Rogues' Castle;x
+192;27;32;128;Scorpia;x
+193;155;34;192;Deserted Keep;x
+194;27;36;255;Triumvirate Hill;x
+195;155;38;0;Peril Shore;x
+196;28;40;64;Ice Plateau;x
+197;156;42;128;Frozen Waste Plateau;x
+198;28;44;192;Lithkren;x
+199;156;46;255;Spiral Hill;x
+200;28;248;0;House on the Hill;x
+201;156;50;64;Fossil's Core;x
+202;28;52;128;Mushroom Forest;x
+203;157;54;192;Tar Swamp;x
+204;29;56;255;Verdant Valley;x
+205;157;58;0;Ash Volcano;x
+206;29;60;64;Chaos Temple;x
+207;157;62;128;Chaos Chasm;x
+208;29;64;192;Dragon's Breath Chasm;x
+209;157;66;255;Musa Point;x
+210;30;68;0;Lobster Shores;x
+211;158;70;64;Gublinch;x
+212;30;72;128;TzHaar;x
+213;158;74;192;Brimhaven;x
+214;30;76;255;Hook of Karamja;x
+215;158;78;0;Flytrap Isthmus;x
+216;30;80;64;Tai Bwo Wannai;x
+217;159;82;128;Pothole;x
+218;31;84;192;Stone Fields;x
+219;159;86;255;Nature Altar;x
+220;31;88;0;Graakh Grounds;x
+221;159;90;64;Wave Rise;x
+222;31;92;128;Raharni;x
+223;159;94;192;Shilo;x
+224;32;96;255;Jade Vine;x
+225;160;98;0;Karabwan Coast;x
+226;32;100;64;Idol Forest;x
+227;160;102;128;Kalumin;x
+228;32;104;192;Gandius;x
+229;160;106;255;Herblore Habitat;x
+230;32;108;0;Mid-Khazari;x
+231;161;110;64;Yomni;x
+232;33;112;128;Viyeldi;x
+233;166;203;93;Cairn Isle;x
+234;165;211;124;Snakepit Isle;x
+235;161;118;0;Ninja Gates;x
+236;33;120;64;Rednana;x
+237;161;122;128;Marim;x
+238;34;124;192;Windswept Isle;x
+239;162;126;255;Bo;x
+240;34;128;0;Musa Lakes;x
+241;162;130;64;Graakhwater;x
+242;34;132;128;Wall of Khazari;x
+243;162;134;192;Lake Shaikahan;x
+244;34;136;255;Lifesource Lake;x
+245;163;138;0;Marim Mountains;x
+246;35;140;64;Lake Tchiki;x
+247;163;142;128;Catherby;x
+248;35;144;192;Sinclair;x
+249;163;146;255;Seers' Village;x
+250;35;148;0;Autumn Path;x
+251;163;150;64;Sudwulf;x
+252;36;152;128;Redvin;x
+253;164;154;192;Hemenster;x
+254;36;156;255;Plain of Mud;x
+255;164;158;0;Glarial;x
+256;36;32;64;Kohlenfeld;x
+257;164;34;128;North Baxtoria;x
+258;36;36;192;South Baxtoria;x
+259;165;38;255;Trajet;x
+260;37;40;0;Trinity;x
+261;165;42;64;Manor;x
+262;37;44;128;Tour-Druide;x
+263;165;46;192;Witchaven;x
+264;37;48;255;Rive-Moyenne;x
+265;165;50;0;Hazeel;x
+266;38;52;64;Prairie-Triste;x
+267;166;54;128;Marche;x
+268;38;56;192;Atarisundri;x
+269;166;58;255;Andoundri;x
+270;38;60;0;Argento;x
+271;166;62;64;Rentospriw;x
+272;38;64;128;Ta Quir Priw;x
+273;167;66;192;Tacretor;x
+274;39;68;255;Tuzoundri;x
+275;167;70;0;Hararpos;x
+276;39;72;64;Eagles' Peak;x
+277;167;74;128;Seniorem;x
+278;39;76;192;Avenandi;x
+279;167;78;255;Falconwood;x
+280;40;80;0;Renovamen;x
+281;168;82;64;Piscatoris;x
+282;40;84;128;Nouvie;x
+283;168;86;192;Horloge;x
+284;40;88;255;Dougneundri;x
+285;168;90;0;Gentisundri;x
+286;40;92;64;Priw Gnomo Andralo;x
+287;169;94;128;Ourania;x
+288;41;96;192;Scorpius;x
+289;169;98;255;Fight Arena;x
+290;41;100;0;Port Khazard;x
+291;169;102;64;Gandiushewo;x
+292;41;104;128;Exilherrenhaus;x
+293;169;106;192;Yanille;x
+294;42;108;255;Janger;x
+295;170;110;0;Sarabank;x
+296;42;112;64;Zamobank;x
+297;74;227;77;Lake Wolfsschatten;x
+298;42;116;192;Seers' Mirror;x
+299;170;118;255;Maple Lake;x
+300;42;120;0;Baxtorian Falls;x
+301;171;122;64;Baxtorian Ridge;x
+302;43;124;128;Cherayataris Lake;x
+303;171;126;192;Galarpos Mountains;x
+304;43;128;255;Astronomers' Lens;x
+305;171;130;0;Gu'Tanoth;x
+306;43;132;64;Feldip Mangroves;x
+307;171;134;128;Chompy;x
+308;44;136;192;Central Feldip;x
+309;172;138;255;Jiggig;x
+310;44;140;0;Nar;x
+311;172;142;64;Romper;x
+312;44;144;128;Flappersand;x
+313;72;0;240;Ocellus;x
+314;44;148;255;Strykewyrm;x
+315;173;150;0;Warforge;x
+316;45;152;64;Eucalyptus Forest;x
+317;173;154;128;Oo'glog;x
+318;45;156;192;Jiggig Mountains;x
+319;173;158;255;Lake Chinchompa;x
+320;45;32;0;Lake Janger;x
+321;173;34;64;Lake Warmsnooze;x
+322;46;36;128;Godblessed Grotto;x
+323;174;38;192;Robust Cliffs;x
+324;46;40;255;Arandar;x
+325;174;42;0;Prifddinas;x
+326;46;44;64;Gorlah;x
+327;174;46;128;Gwenith;x
+328;46;48;192;Mynydd;x
+329;175;50;255;Crystal Coast;x
+330;47;52;0;Iorwerth Province;x
+331;175;54;64;South Arandar;x
+332;47;56;128;Crwys Province;x
+333;175;58;192;Amlodd Province;x
+334;47;60;255;Diwedd Tir;x
+335;175;62;0;Meilyr Province;x
+336;48;244;64;Ithell Province;x
+337;176;66;128;Lletya;x
+338;48;68;192;Well of Voyage;x
+339;176;70;255;Underground Pass;x
+340;48;72;0;Galarpos Pass;x
+341;176;74;64;Arposundri;x
+342;48;76;128;Incomitatus;x
+343;177;78;192;Isafdar Lakes;x
+344;49;80;255;Deepest Isafdar;x
+345;177;82;0;Death Plateau;x
+346;49;84;64;Sherpa;x
+347;177;86;128;Roughclimb Pass;x
+348;49;88;192;Competition Pit;x
+349;177;90;255;Trollheim;x
+350;50;92;0;Troll Stronghold;x
+351;178;94;64;Ice Path;x
+352;50;96;128;Trollweiss Peak;x
+353;178;98;192;Trollweiss Slopes;x
+354;50;100;255;Ruined Temple;x
+355;178;102;0;Ice Canyon;x
+356;50;104;64;Ritual Plateau;x
+357;179;106;128;Fort Zemouregal;x
+358;51;108;192;Ghorrock;x
+359;179;110;255;Weiss;x
+360;51;112;0;South Troll Mountains;x
+361;179;114;64;West Troll Mountains;x
+362;51;116;128;North Troll Mountains;x
+363;179;118;192;Weiss Wastes;x
+364;52;120;255;Cliffs of Trollweiss;x
+365;180;122;0;Barbarian Outpost;x
+366;52;124;64;Barren Shore;x
+367;180;126;128;Fossegrimen;x
+368;52;128;192;Rellekka;x
+369;180;130;255;Ljétré;x
+370;52;132;0;Gullna Eplatré;x
+371;181;134;64;Fjellcamp;x
+372;112;66;91;Inngangur;x
+373;181;138;192;Jaktområdet;x
+374;53;140;255;Keldagrim;x
+375;181;142;0;Shining Pool;x
+376;53;144;64;Coast of Waterbirth;x
+377;181;146;128;Waterbirth Dungeon;x
+378;54;148;192;Here Be Penguins;x
+379;182;150;255;Isle of Stone;x
+380;54;152;0;Ungael;x
+381;182;154;64;Brödkorg;x
+382;54;156;128;Miscellania;x
+383;182;158;192;Sogthorpe;x
+384;54;32;255;Etceteria;x
+385;183;34;0;Neitiznot;x
+386;55;36;64;Jatizso;x
+387;183;38;128;Kobberøy;x
+388;55;40;192;Arktiskfuru;x
+389;183;42;255;Trollkast;x
+390;55;44;0;Uboafshudup;x
+391;183;46;64;Pirates' Cove;x
+392;56;48;128;Astral Inlet;x
+393;184;50;192;Moonclan Town;x
+394;56;52;255;Polaris;x
+395;184;54;0;Enchanter's Way;x
+396;56;56;64;Astral Altar;x
+397;184;58;128;Suqah Lakes;x
+398;56;60;192;Road's End;x
+399;185;62;255;Port Piscarilius;x
+400;57;64;0;East Anglerfish Isle;x
+401;185;66;64;Prince's Road;x
+402;57;68;128;Kingstown;x
+403;185;70;192;Broken Woods;x
+404;57;72;255;Bats' Rise;x
+405;185;74;0;Foreboding Shore;x
+406;58;76;64;South Arceuus;x
+407;186;78;128;North Arceuus;x
+408;58;80;192;Eldrich Pass;x
+409;186;82;255;Dark Altar;x
+410;58;84;0;River of Souls;x
+411;186;86;64;Denssence;x
+412;58;88;128;Ganok;x
+413;187;90;192;Dinh's Door;x
+414;59;92;255;Kaniq;x
+415;187;94;0;Wintertodt;x
+416;59;96;64;Steigend;x
+417;187;98;128;Felsig;x
+418;59;100;192;Lovakite;x
+419;187;102;255;Lovakengj;x
+420;60;140;0;Lizardman Pass;x
+421;188;106;64;Camorra County;x
+422;60;108;128;Giants' Den;x
+423;188;110;192;Graveyard of Heroes;x
+424;60;112;255;Morra;x
+425;188;114;0;Broken Valley;x
+426;60;116;64;Shayzien;x
+427;189;118;128;Boulder Forest;x
+428;61;120;192;Hosbridge;x
+429;189;122;255;Sheffbank;x
+430;61;124;0;Flaxfair;x
+431;189;126;64;Hosidius;x
+432;61;128;128;Hoblin;x
+433;189;130;192;Vinidius;x
+434;62;132;255;Forlorn;x
+435;190;134;0;The Tithelands;x
+436;62;136;64;Crabclaw Isle;x
+437;190;138;128;Crab Raises;x
+438;62;140;192;Forthos;x
+439;190;142;255;Xeric's Look-out;x
+440;62;144;0;Redwood;x
+441;191;146;64;Kourend Woodland;x
+442;63;148;128;Land's End;x
+443;191;150;192;County Rada;x
+444;63;152;255;Soulbound Mountains;x
+445;191;154;0;Cyrodra;x
+446;63;156;64;Lovakengj Mountains;x
+447;191;158;128;Midnight's Chill;x
+448;64;32;192;Lizardman Canyon;x
+449;192;34;255;Grapespring;x
+450;64;36;0;Lake Shayzien;x
+451;192;38;64;Cliffs of Morra;x
+452;64;40;128;The Funnel;x
+453;192;42;192;Dinh's Redoubt;x
+454;64;44;255;Kebos Road;x
+455;193;46;0;Battlefront;x
+456;65;48;64;Chasm of Fire;x
+457;193;50;128;Matenland;x
+458;65;52;192;Mount Karuulm;x
+459;193;54;255;Attas;x
+460;65;56;0;Iasor;x
+461;193;58;64;Molch;x
+462;66;60;128;Olm;x
+463;194;62;192;Xeric's Shrine;x
+464;66;64;255;Kebos Swamp;x
+465;194;66;0;Shayzien's Wall;x
+466;66;68;64;Lacerta;x
+467;194;70;128;Crossroads of Zeah;x
+468;66;72;192;Cronch;x
+469;195;74;255;Xeric's Claw;x
+470;67;76;0;Quidfoot;x
+471;195;78;64;Mount Quidamortem;x
+472;67;80;128;Lake Molch;x
+473;195;82;192;Lake Keruulm;x
+474;67;84;255;Lake Nuby;x
+475;195;86;0;Quidam Lake;x
+476;68;88;64;Shaman's Stage;x
+477;196;90;128;Chasm Caverns;x
+478;68;92;192;North Attritio Mountains;x
+479;196;94;255;South Attritio Mountains;x
+480;68;96;0;Decimation Point;x
+481;196;98;64;Mount Miser;x
+482;68;100;128;Outlaw Overlook;x
+483;197;102;192;Mount Desperation;x
+484;69;104;255;Custodia's End;x
+485;197;106;0;Baalal Valley;x
+486;69;108;64;Viridis;x
+487;197;110;128;Quiesalda;x
+488;69;112;192;Aldarin;x
+489;197;114;255;Vinolitus;x
+490;70;116;0;Arida's Edge;x
+491;198;118;64;Tempestus;x
+492;70;120;128;Singing Isle;x
+493;198;122;192;Giant Hills;x
+494;70;124;255;Transitus;x
+495;198;126;0;Refuge's Hope;x
+496;70;128;64;Pride Hills;x
+497;199;130;128;Quaesitum;x
+498;71;132;192;Parched Shore;x
+499;199;134;255;Varla's Edge;x
+500;71;136;0;Arcanum Oasis;x
+501;199;138;64;Road of Hope;x
+502;71;140;128;Proudhail Pass;x
+503;199;142;192;Rebel Rift;x
+504;72;144;255;Kourendwatch;x
+505;200;146;0;Proudspire Town;x
+506;72;148;64;Magnitudinem Futurorum;x
+507;200;150;128;Villa Meridiem;x
+508;72;152;192;Arida Anguli;x
+509;200;154;255;North Ranul Forest;x
+510;72;156;0;South Ranul Forest;x
+511;201;158;64;Auceps;x
+512;73;32;128;Avizaal;x
+513;201;34;192;Venari Bestias;x
+514;73;36;255;Litushamo;x
+515;201;38;0;Astra;x
+516;73;40;64;Locus Oasis;x
+517;201;42;128;Ripam Provisus;x
+518;74;44;192;Pulchra Aurora;x
+519;202;46;255;Wyrmden;x
+520;74;48;0;Centralis;x
+521;202;50;64;Principium;x
+522;74;52;128;Saepemcoici;x
+523;202;54;192;Oudh;x
+524;74;56;255;Custodem Capitis;x
+525;203;58;0;Civitas illa Fortis;x
+526;75;60;64;Outlaw's Haha;x
+527;203;62;128;Custodia Mountains;x
+528;75;64;192;Lake Brimhaven;x
+529;203;66;255;Entry Lake;x
+530;75;68;0;Fletchers' View;x
+531;203;70;64;Wilderness Ridge;x
+532;76;72;128;Quaesitum's Shield;x
+533;204;74;192;Hailstorm Mountains;x
+534;76;76;255;Proudspire;x
+535;204;78;0;Slopes of Quidamortem;x
+536;76;80;64;Honeyflax;x
+537;204;82;128;Meiyerwall;x
+538;76;84;192;Temple of Light;x
+539;1;200;200;Mouth of the Lum;x
+540;2;200;250;Bay of Lina;x
+541;3;220;250;Mogre Corals;x
+542;4;250;250;Undisturbed Sea;x
+543;5;200;200;Herbwash;x
+544;6;200;250;Kharidian Coast;x
+545;7;220;250;Khazari Shore;x
+546;8;250;250;Lost Waters;x
+547;9;200;200;Apmeken's Way;x
+548;10;200;250;Apmeken's Meander;x
+549;11;220;250;Abda Approach;x
+550;12;250;250;Sea of Crashes;x
+551;13;200;200;Marim Channel;x
+552;14;200;250;South Ape Reef;x
+553;15;220;250;Spinning Sea;x
+554;16;250;250;Marimbo's Odyssey;x
+555;17;200;200;Shifting Sea;x
+556;18;200;250;Balance Channel;x
+557;19;220;250;Brawlers' Straits;x
+558;20;250;250;Poisoned Shore;x
+559;21;200;200;Raharni Cape;x
+560;22;200;250;Haven Reach;x
+561;23;220;250;East Feldip Bay;x
+562;25;200;200;Karamjan Mangroves;x
+563;26;200;250;Khazard Sea;x
+564;27;220;250;Ardougne Channel;x
+565;28;250;250;Catherby Harbour;x
+566;29;200;200;Bay of Entrana;x
+567;30;200;250;Gulf of Crandor;x
+568;31;220;250;Mudskipper Bay;x
+569;32;250;250;Karambwan Rift;x
+570;33;200;200;Hemenster Inlet;x
+571;34;200;250;Anglerine Gulf;x
+572;35;220;250;Gnomokai;x
+573;36;250;250;Coast of Rellekka;x
+574;37;200;200;Trollheim Sea;x
+575;38;200;250;Weiss Sea;x
+576;39;220;250;Acheron Approach;x
+577;40;250;250;Stone Sea;x
+578;41;200;200;Monkfish Cape;x
+579;42;200;250;Neitiznot Fjords;x
+580;43;220;250;Sea of Ungael;x
+581;44;250;250;Moonclan Bay;x
+582;45;200;200;Mirror of Zanaris;x
+583;46;200;250;Astral Sea;x
+584;47;220;250;Cape of Sea Trolls;x
+585;48;250;250;Fremennik Sea;x
+586;49;200;200;Elid Delta;x
+587;50;200;250;Crondis Sea;x
+588;51;220;250;Menaphos Overshoot;x
+589;52;250;250;Wushanko Gateway;x
+590;53;200;200;Slayers' Sea;x
+591;54;200;250;Sea of Meas;x
+592;55;220;250;Impassable Sea;x
+593;56;250;250;Enchanted Sea;x
+594;58;200;250;Explosive Sea;x
+595;59;220;250;Cape of Apples;x
+596;60;250;250;Tuai Leit Outcrops;x
+597;61;200;200;Ullek Bay;x
+598;62;200;250;Scabarite Sea;x
+599;63;220;250;Saradomin's Deliverance;x
+600;64;250;250;Cape of Harmony;x
+601;65;200;200;Sunrise Sea;x
+602;66;200;250;Chainja Channel;x
+603;67;220;250;Harmless Cape;x
+604;68;250;250;Nardah's Taunt;x
+605;70;200;250;Luke's Reef;x
+606;71;220;250;Cursed Archipelago;x
+607;72;250;250;The Other 50% Reef;x
+608;73;200;200;Chimera Straits;x
+609;74;200;250;Burning Sea;x
+610;75;220;250;Haranu Channel;x
+611;76;250;250;Cape of Clarity;x
+612;77;200;200;Eastern Flank;x
+613;78;200;250;Sea of Imprisonment;x
+614;79;220;250;Heritage Coast;x
+615;80;250;250;Stam'Pot;x
+616;81;200;200;Kraken Cove;x
+617;82;200;250;Gwenith Shore;x
+618;83;220;250;Coast of Prifddinas;x
+619;84;250;250;Lost Grove Sea;x
+620;85;200;200;Coast of Isafdar;x
+621;86;200;250;Seren's Ridge;x
+622;87;220;250;Tirannwn Cape;x
+623;88;250;250;Incandescent Shore;x
+624;89;200;200;Soulsea;x
+625;90;200;250;Nomadic Waters;x
+626;91;220;250;Goblins' Folly;x
+627;92;250;250;Mythic Cape;x
+628;93;200;200;West Feldip Bay;x
+629;94;200;250;Sea of Platypodes;x
+630;95;220;250;Ashdale Sea;x
+631;96;250;250;Crassian Sea;x
+632;97;200;200;Trench of Bandos;x
+633;98;200;250;Sea of Lost Newb;x
+634;99;220;250;Nowtboot Sea;x
+635;100;250;250;Coast of Uzer;x
+636;101;200;200;Eagle Shore;x
+637;102;200;250;Sanctity's End;x
+638;103;220;250;Pirates' Turn;x
+639;104;250;250;Ruins of Everlight;x
+640;105;200;200;Hardwood Coast;x
+641;106;200;250;'Rum' Enhanced Ocean;x
+642;107;220;250;'Rum'-off;x
+643;108;250;250;Sea of New Adventure;x
+644;109;200;200;Icyenes' Edge;x
+645;110;200;250;Stagnant Sea;x
+646;111;220;250;Mirror of Everlight;x
+647;112;250;250;Bay of Hallowvale;x
+648;113;200;200;Restless Shore;x
+649;114;200;250;Sea of Domina;x
+650;115;220;250;Fargone Ocean;x
+651;116;250;250;Fargone Ridge;x
+652;117;200;200;Risk Sea;x
+653;118;200;250;Lost Corner;x
+654;119;220;250;Sea of Sunk Barges;x
+655;120;250;250;Csillogó Sea;x
+656;121;200;200;Celestial Shore;x
+657;122;200;250;Dragontooth Cape;x
+658;123;220;250;Phasmatys Straits;x
+659;124;250;250;Fossil Island Approach;x
+660;125;200;200;Coast of the Northern Lordship;x
+661;126;200;250;Demons' Bay;x
+662;127;220;250;Coast of Daemonheim;x
+663;0;251;251;Lithkren Channel;x
+664;1;201;201;Tar Shore;x
+665;2;201;251;Ammonite Inlet;x
+666;3;221;251;Ashy Coast;x
+667;4;251;251;Dragonflight Sea;x
+668;5;201;201;Anachronist Cape;x
+669;6;201;251;Lost Jadinko Sea;x
+670;7;221;251;Mermaids' Reef;x
+671;8;251;251;Two Fossils' Channel;x
+672;9;201;201;Adamantite Cape;x
+673;10;201;251;Cape of Forinthry;x
+674;11;221;251;Chaotic Waters;x
+675;12;251;251;Deepest Wilderness;x
+676;13;201;201;Bay of Morra;x
+677;14;201;251;Sea's Start;x
+678;15;221;251;Hydepol Strait;x
+679;16;251;251;Cape of Hosidius;x
+680;17;201;201;Hobgoblins' Sea;x
+681;18;201;251;Piscarilius Bay;x
+682;19;221;251;Steppinston Pass;x
+683;20;251;251;Kaniq Sea;x
+684;21;201;201;Passage of Eternal Winter;x
+685;22;201;251;Tasakaal Sea;x
+686;23;221;251;Sea of Shards;x
+687;24;251;251;Sparkling Expanse;x
+688;25;201;201;Kebos Fault;x
+689;26;201;251;Coast of Kebos;x
+690;27;221;251;West Zeah Sea;x
+691;28;251;251;Lizards' Reef;x
+692;29;201;201;Crystal Trench;x
+693;30;201;251;Gateway of Zeah;x
+694;31;221;251;Antilacerti Reaches;x
+695;32;251;251;Hailstorm Runoff;x
+696;33;201;201;Coast of Fortis;x
+697;34;201;251;Mare Fortis;x
+698;35;221;251;Varlamore Ridge;x
+699;36;251;251;Cape of Wyrms;x
+700;37;201;201;Outer Avium Sea;x
+701;38;201;251;New Imcandoria Sea;x
+702;39;221;251;Avium Coast;x
+703;40;251;251;Siccum Maris;x
+704;41;201;201;Bluewake;x
+705;42;201;251;Navis Perierat;x
+706;43;221;251;Mare Stultum;x
+707;44;251;251;Turn Rursus;x
+708;45;201;201;Oceanum Novum;x
+709;46;201;251;Outer Ranul;x
+710;47;221;251;Occasus Delta;x
+711;48;251;251;Mare Vatum;x
+712;49;201;201;Mare Spiritus;x
+713;50;201;251;Sonitus Maris;x
+714;51;221;251;Mare Tempestas;x
+715;52;251;251;Mare Nubes;x
+716;53;201;201;Titanic Sea;x
+717;54;201;251;Cape of Quaesitum;x
+718;55;221;251;Wine Shores;x
+719;56;251;251;Tempest Bay;x
+720;57;201;201;Oram Vinum;x
+721;58;201;251;Furthest Custodia;x
+722;59;221;251;Western Course;x
+723;60;251;251;Impassable Sea;x
+724;61;201;201;Impassable Sea;x
+725;62;201;251;Impassable Sea;x
+726;63;221;251;Impassable Sea;x
+727;64;251;251;Impassable Sea;x
+728;65;201;201;Impassable Sea;x
+729;66;221;251;Impassable Sea;x
+730;67;221;251;Impassable Sea;x
+731;68;251;251;Impassable Sea;x
+732;69;201;201;Impassable Sea;x
+733;70;201;251;Impassable Sea;x
+734;71;221;251;Impassable Sea;x
+735;72;251;251;Impassable Sea;x
+736;73;201;201;Impassable Sea;x
+737;74;201;251;Impassable Sea;x
+738;75;221;251;Impassable Sea;x
+739;76;251;251;Impassable Sea;x
+740;77;201;201;Impassable Sea;x
+741;78;201;251;Impassable Sea;x
+742;79;221;251;Impassable Sea;x
+743;80;251;251;Impassable Sea;x
+744;81;201;201;Impassable Sea;x
+745;82;201;251;Impassable Sea;x
+746;83;221;251;Impassable Sea;x
+747;84;251;251;Impassable Sea;x
+748;85;201;201;Impassable Sea;x
+749;86;201;251;Impassable Sea;x
+750;87;221;251;Impassable Sea;x
+751;88;251;251;Impassable Sea;x
+752;89;201;201;Impassable Sea;x
+753;205;86;255;Arfordir Enaid;x
+754;77;88;0;Oer Annaturiol;x
+755;205;90;64;Pownyew;x
+756;77;92;128;Lost Sands;x
+757;205;94;192;Shard Rock;x
+758;77;96;255;Weindio;x
+759;205;98;0;Waiting Woods;x
+760;78;100;64;Shrine of Creation;x
+761;206;102;128;Slayers' Ruin;x
+762;78;104;192;Shrine of Destruction;x
+763;206;106;255;Soul Lake;x
+764;78;108;0;Fever Cove;x
+765;206;110;64;Slugling Shores;x
+766;78;112;128;Mount Brackish;x
+767;90;201;251;Eighth Sea;x
+768;207;114;192;Montagne-Elfe;x
+769;79;116;255;Avant-Poste;x
+770;207;118;0;Hanialoedd;x
+771;79;120;64;Esgyniad;x
+772;207;122;128;Trahaearn Province;x
+773;79;124;192;Madarch;x
+774;207;126;255;Pawya;x
+775;80;128;0;Arbre-Mort;x
+776;208;130;64;Sorcier;x
+777;80;132;128;Gutuspriw;x
+778;208;134;192;Salarin;x
+779;80;136;255;Ferrum Venari;x
+780;208;138;0;Retraite;x
+781;80;140;64;Central Draynor;x
+782;209;142;128;Sýrung;x
+783;81;144;192;Frostbite Mountain;x
+784;209;146;255;Hjem Hjemmefra;x
+785;81;148;0;Pludselig;x
+786;209;150;64;Mutaeatish;x
+787;81;152;128;Nasi;x
+788;209;154;192;Dawahi;x
+789;82;156;255;Het;x
+790;210;158;0;Dwellan;x
+791;82;32;64;Newbie Hill;x
+792;210;34;128;Cðcorrnete;x
+793;82;36;192;Farramor;x
+794;210;38;255;Dreng;x
+795;82;40;0;Thera's Valley;x
+796;211;42;64;Gimmian;x
+797;83;44;128;Frore;x
+798;211;46;192;Silvarea Mountains;x
+799;83;48;255;Pass Cliffs;x
+800;211;50;0;Swampy Lakes;x
+801;83;52;64;Swampy Lakes;x
+802;211;54;128;Chaos Chasm;x
+803;84;56;192;Dragon's Breath Chasm;x
+804;212;58;255;Dragon's Breath Chasm;x
+805;84;60;0;Shores of Life;x
+806;212;62;64;Ape Cove;x
+807;84;64;128;Ratchaburi;x
+808;212;66;192;Wall of Khazari;x
+809;84;68;255;Wall of Khazari;x
+810;213;70;0;Wall of Khazari;x
+811;85;72;64;White Wolf Mountain;x
+812;213;74;128;Triskelion Cliffs;x
+813;85;76;192;Midtroll Mountains;x
+814;213;78;255;Cliffs of War;x
+815;85;80;0;Cliffs of War;x
+816;213;82;64;Zamorak's Wall;x
+817;86;84;128;Zamorak's Wall;x
+818;214;86;192;North Troll Mountains;x
+819;86;88;255;Robust Cliffs;x
+820;214;90;0;Robust Cliffs;x
+821;86;92;64;Robust Cliffs;x
+822;214;94;128;Jiggig Mountains;x
+823;86;96;192;Galarpos Mountains;x
+824;215;98;255;Galarpos Mountains;x
+825;87;100;0;Galarpos Mountains;x
+826;215;102;64;Galarpos Mountains;x
+827;87;104;128;Galarpos Mountains;x
+828;215;106;192;Soulbound Mountains;x
+829;87;108;255;Lovakengj Mountains;x
+830;215;110;0;The Funnel;x
+831;88;112;64;The Funnel;x
+832;216;114;128;The Funnel;x
+833;88;116;192;The Funnel;x
+834;216;118;255;Slopes of Quidamortem;x
+835;88;120;0;Slopes of Quidamortem;x
+836;216;122;64;Custodia Mountains;x
+837;88;124;128;Custodia Mountains;x
+838;217;126;192;Custodia Mountains;x
+839;89;128;255;Custodia Mountains;x
+840;217;130;0;Quaesitum's Shield;x
+841;89;132;64;Proudspire;x
+842;1;48;32;Urzica;x
+843;129;50;79;Supliciu;x
+844;1;52;126;Liniste;x
+845;129;54;173;Dessous;x
+846;1;56;32;Inundat;x
+847;129;58;79;Crombwick;x
+848;2;60;126;Rottskirt;x
+849;130;62;173;Daeyalt;x
+850;2;64;32;Vyremeiyer;x
+851;130;66;79;Haie d'Ogre;x
+852;2;68;126;Prêt;x
+853;130;70;173;Grump;x
+854;2;72;32;Ma'at;x
+855;131;74;79;Madiya;x
+856;3;76;126;Gharbaan;x
+857;131;78;173;Masa;x
+858;3;80;32;Tumeken;x
+859;131;82;79;Almina' Aljanubiu;x
+860;3;84;126;Belfre;x
+861;131;86;173;Bosquet;x
+862;4;88;32;Fête;x
+863;164;170;39;Idel;x
+864;4;92;126;Casere;x
+865;132;94;173;Mynster;x
+866;4;96;32;Yamuru Algharb;x
+867;132;98;79;Scarab;x
+868;4;100;126;Sahalia;x
+869;133;102;173;Picaya;x
+870;5;104;32;Sticky Swamp;x
+871;133;106;79;Fyburglars;x
+872;5;108;126;Ibeli;x
+873;133;110;173;Dictewand;x
+874;5;112;32;Brisant;x
+875;133;114;79;Ascent;x
+876;6;116;126;West Anglerfish Isle;x
+877;134;118;173;Byrne;x
+878;6;120;32;Mire;x
+879;134;122;79;Nargaland;x
+880;6;124;126;Keranland;x
+881;134;126;173;Siharland;x
+882;6;128;32;Kronos;x
+883;135;130;79;Buchu;x
+884;7;132;126;Quidam Ridge;x
+885;135;134;173;Serenum;x
+886;7;136;32;Ventus Cuniculum;x
+887;135;138;79;Vita Nova;x
+888;7;140;126;Decresco;x
+889;135;142;173;Grando;x
+890;8;144;32;Alia Petram;x
+891;136;146;79;Fortis Beach;x
+892;8;148;126;Fructus;x
+893;91;221;251;Coast of Karuulm;x
+894;8;152;32;Gulvas;x
+895;136;154;79;Hege;x
+896;8;156;126;Brerd;x
+897;137;158;173;Lumshire;x
+898;9;32;32;Lake Occelus;x
+899;137;34;79;Barrier Lake;x
+900;9;36;126;Chainja;x
+901;137;38;173;Lám;x
+902;9;40;32;Llyfrgell;x
+903;92;251;251;Dragons' Depths;x
+904;93;201;201;Frozen Wind Waters;x
+905;94;201;251;Sea of Lithkren;x
+906;95;221;251;Draconic Trench;x
+907;96;251;251;Cartographer's Error;x
+908;97;201;201;Diluted Swamp;x
+909;98;201;251;Sandcrab Channel;x
+910;99;221;251;Ranul Sea;x
+911;100;251;251;Central Kebos Sea;x
+912;101;201;201;Far West Zeah Sea;x
+913;102;201;251;Tempoross Sea;x
+914;103;221;251;Miscellaneous Waters;x
+915;104;251;251;Basalt Shores;x
+916;105;201;201;Sea of Marginal Warmth;x
+917;106;201;251;Coast of Etceteria;x
+918;107;221;251;Raiders' Sea;x
+919;108;251;251;Frozen Stone Waters;x
+920;109;201;201;Cyrodra Coast;x
+921;110;201;251;Lovakengj's Edge;x
+922;111;221;251;Crushing Waters;x
+923;140;82;79;Cloëdig;x
+924;12;84;126;Hunters' Ruin;x
+925;141;86;173;Ironrock;x
+926;13;88;32;Ice Mountain Cliffs;x
+927;141;90;79;Ice Mountain Cliffs;x
+928;13;92;126;Smogshore;x
+929;141;94;173;Hosidius Cove;x
+930;13;96;32;Snakesands;x
+931;141;98;79;Hoshay;x
+932;14;100;126;Rugged Woods;x
+933;142;102;173;Modicum Mortem;x
+934;14;104;32;Golpar;x
+935;142;106;79;Chambers of Xeric;x
+936;14;108;126;Leckish;x
+937;142;110;173;Urn Ridge;x
+938;14;112;32;South Lumbridge Swamp;x
+939;143;114;79;Gewítan;x
+940;15;116;126;Remanis;x
+941;143;118;173;Cinan;x
+942;15;120;32;Gehild;x
+943;143;122;79;Begíemen;x
+944;15;124;126;The Edge;x
+945;143;126;173;Vyvin;x
+946;16;128;32;Ria's Splendour;x
+947;144;130;79;Padure Moarta;x
+948;16;132;126;Fantoma;x
+949;144;134;173;Intuneric;x
+950;16;136;32;Umbra;x
+951;144;138;79;Prehistoric Beach;x
+952;16;140;126;Wyvern Ascent;x
+953;145;142;173;Stuckfast Shore;x
+954;17;144;32;Daemonrest;x
+955;145;146;79;Newlight;x
+956;17;148;126;Desolate Hills;x
+957;145;150;173;Shadowloop;x
+958;17;152;32;Lavabridge;x
+959;145;154;79;Revenant;x
+960;18;156;126;Shakorexis;x
+961;146;158;173;Moatrock;x
+962;18;32;32;Empty Coast;x
+963;146;34;79;Chaotic Wastes;x
+964;18;36;126;Province of Plenty;x
+965;146;38;173;Mark of Guthix;x
+966;18;40;32;Wolfpit;x
+967;147;42;79;Hvile;x
+968;19;44;126;Frostbite Ascent;x
+969;147;46;173;Trollweiss Meadow;x
+970;19;48;32;Keldamine;x
+971;147;50;79;Rævenesland;x
+972;19;52;126;Isig Jakt;x
+973;147;54;173;Here Be Ice;x
+974;20;56;32;Och Så Vidare;x
+975;148;58;79;Impish Descent;x
+976;20;60;126;Sito;x
+977;148;62;173;Volencia;x
+978;20;64;32;North Bo;x
+979;148;66;79;Ymdroellog;x
+980;20;68;126;Gwarchae;x
+981;149;70;173;Bwystfil Tywyll;x
+982;21;72;32;Blessed Chasm;x
+983;149;74;79;Calon Y Goedwig;x
+984;21;76;126;Barbtail;x
+985;149;78;173;Mythic Isle;x
+986;21;80;32;Bewindla;x
+987;149;82;79;Bieda;x
+988;22;84;126;Renitee;x
+989;150;86;173;Harqui;x
+990;22;88;32;Cinqoundri;x
+991;150;90;79;Gutusquir;x
+992;22;92;126;Maple Bank;x
+993;112;251;251;Tempestus Sound;x
+994;22;96;32;Tempestus Reservoir;x
+995;151;98;79;Mage's Pond;x
+996;23;100;126;Ha'Áantaj;x
+997;151;102;173;Arcanum Oasis;x
+998;23;104;32;Hunters' Pond;x
+999;151;106;79;Locus Oasis;x
+1000;23;108;126;Tempoross Cove;x
+1001;113;201;201;Sea of Tolls;x
+1002;114;201;251;Shortcut Currents;x
+1003;152;114;79;Altarkiz;x
+1004;24;116;126;Westensetla;x
+1005;152;118;173;Rief's Horizon;x
+1006;24;120;32;Gemétend;x
+1007;152;122;79;Phyrrys;x
+1008;24;124;126;Forgeronne;x
+1009;153;126;173;Chomper;x
+1010;25;128;32;Tombcliff;x
+1011;153;130;79;Goran;x
+1012;25;132;126;Achey;x
+1013;233;94;0;Aenbi;x
+1014;181;129;99;Morgen;x
+1015;193;91;91;East Ranul Forest;x
+1016;132;90;79;Sefte;x
+1017;115;221;251;Impassable Sea;x
+1018;116;251;251;Impassable Sea;x
+1019;117;201;201;Impassable Sea;x
+1020;118;201;251;Impassable Sea;x
+1021;119;221;251;Impassable Sea;x
+1022;120;251;251;Impassable Sea;x
+1023;121;201;201;Impassable Sea;x
+1024;122;201;251;Impassable Sea;x
+1025;123;221;251;Impassable Sea;x
+1026;124;251;251;Impassable Sea;x
+1027;125;201;201;Impassable Sea;x
+1028;126;201;251;Waiko Cape;x
+1029;127;221;251;Flying Squid Sea;x
+1030;0;252;252;Sea of Uncertainty;x
+1031;1;202;202;Sea of Poor Aim;x
+1032;2;202;252;Takao Sea;x
+1033;3;222;252;Currents of Goshima;x
+1034;4;252;252;Sea of Whales;x
+1035;5;202;202;Sunlit Sea;x
+1036;6;202;252;Empty Lagoon;x
+1037;7;222;252;Sea Lizard Waters;x
+1038;8;252;252;Echo Rocks;x
+1039;9;202;202;Honazo Corals;x
+1040;10;202;252;Cape of Luminous Jellyfish;x
+1041;11;222;252;Dead Khan's Sea;x
+1042;12;252;252;Bay of Playful Sirens;x
+1043;13;202;202;Gulf of Fury;x
+1044;14;202;252;Earthquake Straits;x
+1045;15;222;252;Razor Corals;x
+1046;16;252;252;Blackened Sea;x
+1047;17;202;202;Keening Sea;x
+1048;18;202;252;Catch of the Hook;x
+1049;19;222;252;Bowlspill Sea;x
+1050;20;252;252;Blossoming Sea;x
+1051;21;202;202;Jade Straits;x
+1052;22;202;252;Lost Memory Channel;x
+1053;23;222;252;Bay of Sleeping Squids;x
+1054;24;252;252;Bowl Waters;x
+1055;25;202;202;Jade Monument;x
+1056;26;202;252;Jade Ocean;x
+1057;27;222;252;Jade Bay;x
+1058;28;252;252;Glittercave Waters;x
+1059;29;202;202;Seas Where The Dead Walk;x
+1060;30;202;252;Sea of Floating Towers;x
+1061;31;222;252;Waters of Death;x
+1062;32;252;252;Shambling Sea;x
+1063;33;202;202;Sea Which Taunts The Lost;x
+1064;34;202;252;Sea Which Goes Nowhere;x
+1065;35;222;252;The Hilt;x
+1066;36;252;252;Heavy Sea;x
+1067;37;202;202;Wisplight;x
+1068;38;202;252;The Reef that Lies to Mapmakers;x
+1069;39;222;252;Acoustic Cape;x
+1070;40;252;252;Azure Waters;x
+1071;41;202;202;Adamant Kiteshield Channel;x
+1072;42;202;252;Koiswarm Coast;x
+1073;43;222;252;The Blade;x
+1074;44;252;252;Farthest Wuskanko;x
+1075;45;202;202;Coast of the Lightning Ray;x
+1076;46;202;252;Exile's End;x
+1077;47;222;252;Faraway Sea;x
+1078;48;252;252;Lost Channel;x
+1079;49;202;202;Black Stone Shore;x
+1080;50;202;252;Pearl Sound;x
+1081;51;222;252;Straits of the Oyster Pearl;x
+1082;52;252;252;Sea of Monsters;x
+1083;53;202;202;Kami-Shima Cape;x
+1084;54;202;252;Sharkpearl Sea;x
+1085;55;222;252;Reef of Perpetual Storms;x
+1086;56;252;252;Sea of Knives;x
+1087;57;202;202;Pincer Currents;x
+1088;58;202;252;Khanoka Bay;x
+1089;59;222;252;Zhenzhu Sea;x
+1090;60;252;252;Whirlpool of Fire and Ash;x
+1091;61;202;202;White Currents;x
+1092;62;202;252;Inspiration Sea;x
+1093;63;222;252;Red Currents;x
+1094;64;252;252;Black Currents;x
+1095;65;202;202;Sea Which Scares Adventurers;x
+1096;66;202;252;Unknown Waters;x
+1097;165;46;173;Tuai Leit;x
+1098;37;248;32;Bamboo Forest;x
+1099;165;50;79;Berry Shores;x
+1100;38;52;126;Whale's Maw;x
+1101;166;54;173;Waiko Port;x
+1102;38;247;32;Waiko Island;x
+1103;166;58;79;Aminishi Shore;x
+1104;38;60;126;Temple of Seiryu;x
+1105;166;62;173;Aminishi Town;x
+1106;38;164;32;Tortle Isle;x
+1107;167;66;79;Ancestral Isles;x
+1108;39;68;126;Hanalan Beach;x
+1109;167;70;173;Cyclosis;x
+1110;39;72;32;Gongdung;x
+1111;167;74;79;Goshima Coast;x
+1112;39;76;126;Sagwa;x
+1113;167;78;173;Ai Jei City;x
+1114;40;80;32;Ganghwahada;x
+1115;168;82;79;Pogbalmul;x
+1116;40;84;126;Hideula;x
+1117;168;86;173;Echo Bay;x
+1118;40;88;32;West Hanto;x
+1119;168;90;79;Rivuaiasan;x
+1120;40;92;126;Sunlit Veil;x
+1121;169;94;173;Thalassia;x
+1122;41;96;32;Hwang;x
+1123;169;98;79;Siren's Shell;x
+1124;41;100;126;Hyu-Ji;x
+1125;169;102;173;Hwayag;x
+1126;41;104;32;Sanyangkkun;x
+1127;169;106;79;Bunswaegi;x
+1128;42;108;126;Honazo;x
+1129;170;110;173;Playful Bay;x
+1130;42;112;32;Chimera Isles;x
+1131;170;114;79;Earthquake Isles;x
+1132;42;116;126;Shin'en;x
+1133;170;118;173;Fistmarks of Genma;x
+1134;42;120;32;Keening Reef;x
+1135;171;122;79;Onyx Obelisk;x
+1136;43;124;126;Rapa Causeway;x
+1137;171;126;173;Rei Ti;x
+1138;43;128;32;Randoshaku;x
+1139;171;130;79;Azure Marsh;x
+1140;43;132;126;Teardrop;x
+1141;171;134;173;Yugo;x
+1142;44;136;32;Ai No Yokuso;x
+1143;172;138;79;Suretoshoa;x
+1144;44;140;126;Gurinto;x
+1145;172;142;173;Ren Bo;x
+1146;44;144;32;Yamanokyojin;x
+1147;172;146;79;Sakura;x
+1148;44;148;126;Genbu;x
+1149;173;150;173;Onsen;x
+1150;45;152;32;City of Stars;x
+1151;173;154;79;Surudoiiwa;x
+1152;45;156;126;Uranaishi;x
+1153;173;158;173;Shibea;x
+1154;45;32;32;Akuma;x
+1155;173;34;79;Aloft;x
+1156;46;36;126;Han Lun;x
+1157;174;38;173;Hisui;x
+1158;46;40;32;Wind's Home;x
+1159;174;42;79;Island of Clear Eyes;x
+1160;46;44;126;Crescent Island;x
+1161;174;246;173;Hana;x
+1162;46;48;32;Haibisukasu;x
+1163;175;50;79;Glittercaves;x
+1164;47;52;126;Dokutsu No Yane;x
+1165;175;54;173;Juniper;x
+1166;47;236;32;Tondeirukame;x
+1167;175;58;79;Kei Pi;x
+1168;206;217;77;Black Cove;x
+1169;175;62;173;Tattanogi;x
+1170;48;64;32;Raimei;x
+1171;176;66;79;Tokoko;x
+1172;48;68;126;Kurai Hana;x
+1173;176;70;173;Bimu;x
+1174;48;172;32;Memori;x
+1175;176;74;79;Kokai;x
+1176;48;76;126;Ashihama;x
+1177;177;78;173;Totemu Dokutsu;x
+1178;49;80;32;Ukabu Yosai;x
+1179;177;82;79;Flou Tar-Shei;x
+1180;49;84;126;Zhenzhu City;x
+1181;177;86;173;Peng;x
+1182;49;88;32;Hole in the World;x
+1183;177;90;79;Bianxing Jingang;x
+1184;50;92;126;Khanoka;x
+1185;178;94;173;Halls of Reckoning;x
+1186;50;96;32;Jade Gates;x
+1187;178;98;79;Lu Xing;x
+1188;50;100;126;New Heritage;x
+1189;178;202;173;Koi Coast;x
+1190;50;104;32;Furotingutawa;x
+1191;179;106;79;Yamanomachi;x
+1192;51;108;126;Paradise;x
+1193;179;110;173;Pearl Fortress;x
+1194;51;212;32;Shambling Lair;x
+1195;179;114;79;Yamada;x
+1196;51;116;126;Hagane City;x
+1197;179;118;173;Todai;x
+1198;52;120;32;Yaonai;x
+1199;180;122;79;Vantage;x
+1200;52;124;126;Spires of Grief;x
+1201;180;126;173;Byakko;x
+1202;52;128;32;Bubble of Mists;x
+1203;180;130;79;Mofa Shanhu;x
+1204;52;132;126;Oyster Pearl;x
+1205;181;134;173;Light-Under-Sea;x
+1206;53;136;32;Shanhu Deng;x
+1207;181;138;79;Bladewing Crag;x
+1208;53;140;126;Exile's Point;x
+1209;181;142;173;Lemonberry;x
+1210;53;144;32;Adamant Province;x
+1211;181;146;79;Jingjin;x
+1212;54;148;126;Jin Li;x
+1213;182;150;173;Gu;x
+1214;54;152;32;Heiyaoshí;x
+1215;182;154;79;Faraway;x
+1216;54;156;126;Black Stone Fortress;x
+1217;182;158;173;Azure;x
+1218;54;32;32;Tavi;x
+1219;183;34;79;Vynal;x
+1220;55;36;126;Shi Shore;x
+1221;183;38;173;Kamone;x
+1222;55;40;32;Sagi;x
+1223;183;42;79;Tsuru;x
+1224;55;44;126;Karasu;x
+1225;183;246;173;Washi;x
+1226;56;48;32;Hayabusa;x
+1227;184;50;79;Sea Monster Shores;x
+1228;56;252;126;Kami-Shima Nexus;x
+1229;184;54;173;Colossi Rise;x
+1230;56;56;32;Honovi;x
+1231;184;58;79;Kami;x
+1232;56;60;126;Eclipse Bay;x
+1233;185;62;173;Isle of V;x
+1234;57;164;32;Daemonsbridge;x
+1235;185;66;79;Dagonstone;x
+1236;57;68;126;Brylltide;x
+1237;185;70;173;Isle of Maple;x
+1238;57;172;32;Daemonheim Keep;x
+1239;185;74;79;Cliffs of Daemonheim;x
+1240;58;76;126;Maenhir;x
+1241;186;78;173;Winwydden;x
+1242;58;180;32;Perdita;x
+1243;186;82;79;Cynniglle;x
+1244;58;84;126;Mwsogl;x
+1245;186;86;173;Arfordir Coll;x
+1246;58;188;32;Entlan;x
+1247;187;90;79;Coedenwych;x
+1248;59;92;126;Lan Ddisglair;x
+1249;187;94;173;Lake Solak;x #Lake
+1250;67;222;252;Sea of Champions;x
+1251;68;252;252;Daemonheim Inlet;x
+1252;69;202;202;Impassable Sea;x
+1253;70;202;252;Impassable Sea;x
+1254;71;222;252;Impassable Sea;x
+1255;72;252;252;Impassable Sea;x
+1256;73;202;202;Impassable Sea;x
+1257;74;202;252;Ice Sea;x
+1258;75;222;252;Frost Sea;x
+1259;76;252;252;Sea of Slush;x
+1260;77;202;202;Ocean of Excessive Winter;x
+1261;78;202;252;Cod Shelf;x
+1262;79;222;252;Solid Waters;x
+1263;80;252;252;West Polar Ocean;x
+1264;81;202;202;East Polar Ocean;x
+1265;82;202;252;Blubber Sea;x
+1266;83;222;252;Sea of Mutinies;x
+1267;84;252;252;Shivering Depths;x
+1268;85;202;202;Ocean of Ancients;x
+1269;86;202;252;Draconic Depths;x
+1270;87;222;252;Sea Dragon Depths;x
+1271;88;252;252;East Forinthry Trench;x
+1272;89;202;202;West Forinthry Trench;x
+1273;90;202;252;Sea of Cursed Icebergs;x
+1274;91;222;252;Tusk Trench;x
+1275;92;252;252;Far Acheron Depths;x
+1276;93;202;202;Aurora Sea;x
+1277;94;202;252;Hiipulma Shores;x
+1278;95;222;252;Acheron Inlets;x
+1279;96;252;252;Iceberg Bay;x
+1280;97;202;202;Garmr Channel;x
+1281;98;202;252;Bay of Walruses;x
+1282;99;222;252;Palingrad Shores;x
+1283;100;252;252;Polar Bear Coast;x
+1284;101;202;202;Seal Shores;x
+1285;217;134;128;Medmera;x
+1286;89;136;192;Glidgrottor;x
+1287;217;138;255;Achuliasip;x
+1288;90;140;0;Ijskoud Bos;x
+1289;218;142;64;Ijsveld;x
+1290;90;144;128;Imcandoria City;x
+1291;218;146;192;Forge of Giants;x
+1292;90;148;255;South Garmr;x
+1293;218;150;0;Acheron Fjords;x
+1294;90;152;64;Frozen Hinterland;x
+1295;219;154;128;Tasuaq;x
+1296;91;156;192;Villsvin;x
+1297;219;158;255;Hiipulma;x
+1298;91;32;0;Shrine of Dreams;x
+1299;219;34;64;Aurore;x
+1300;91;36;128;Essence;x
+1301;219;38;192;Mammoth Coast;x
+1302;92;40;255;Polar Bear Isle;x
+1303;220;42;0;Buried Shrine;x
+1304;92;44;64;Palingrad;x
+1305;220;46;128;Motherland;x
+1306;92;48;192;Imcandomeer;x
+1307;220;50;255;Boerderij Ijsbaan;x
+1308;92;52;0;Ijspegelmeer;x
+1309;221;54;64;Tasersuaq;x
+1310;93;56;128;Lake Treska;x
+1311;221;58;192;Imcando Mountains;x
+1312;93;60;255;Wall of Achuliasip;x
+1313;221;62;0;Icelord Mountain;x
+1314;93;64;64;Frost Dragon Mountains;x
+1315;221;66;128;Iceslide Mountain;x
+1316;94;68;192;Dream Range;x
+1317;222;70;255;Aurore Mountain;x
+1318;94;72;0;Runequarry;x
+1319;222;74;64;Forwent;x
+1320;94;76;128;Glacias;x
+1321;222;78;192;Desolo;x
+1322;94;80;255;Adorno;x
+1323;223;82;0;Occulo;x
+1324;95;84;64;Torqueo;x
+1325;223;86;128;Cliffs of Daemonheim;x
+1326;95;88;192;Cliffs of Daemonheim;x
+1327;223;90;255;Firefate Lakes;x
+1328;95;92;0;Abandoned Moat;x
+1329;223;94;64;Mage's Moat;x
+1330;96;96;128;Guthix's Mark;x 
+1331;224;98;192;Lava Maze Lakes;x
+1332;96;100;255;Lava Maze Lakes;x
+1333;224;102;0;Lava Maze Lakes;x
+1334;96;104;64;Lava Maze Lakes;x
+1335;224;106;128;West Lavabridge;x
+1336;96;108;192;East Lavabridge;x
+1337;225;110;255;Ashen Peak Lake;x
+1338;97;112;0;Flames of Ourania;x
+1339;225;114;64;Destruction Lakes;x
+1340;97;116;128;Destruction Lakes;x
+1341;225;118;192;Destruction Lakes;x
+1342;97;120;255;Creation Lakes;x
+1343;225;122;0;Creation Lakes;x
+1344;98;124;64;Bloodsplatter Isle;x
+1345;226;126;128;Flametongue;x
+1346;98;128;192;Obelisk Eye;x
+1347;226;130;255;Dead Valley;x
+1348;98;132;0;Galarpos Mountains;x
+1349;226;134;64;Phoenix Lair;x
+1350;98;136;128;Baneshore;x
+1351;227;138;192;Barendir;x
+1352;99;140;255;West Troll Mountains;x
+1353;227;142;0;West Troll Mountains;x
+1354;99;144;64;Cliffs of Trollweiss;x
+1355;227;146;128;Wtidufæstenn;x
+1356;99;148;192;Regnboga;x
+1357;227;150;255;Lost Mines;x
+1358;100;152;0;Swamp Caves;x
+1359;228;154;64;Dorgesh-Kaan;x
+1360;100;156;128;South Dungeon;x
+1361;228;158;192;Lumbridge Swamp;x
+1362;100;32;255;Lumbridge Swamp;x
+1363;228;34;0;Plega;x
+1364;100;36;64;Weststræt;x
+1365;229;38;128;Puca;x
+1366;101;40;192;Sahar;x
+1367;229;42;255;Arine;x
+1368;101;44;0;Kharid's Edge;x
+1369;229;46;64;Bedabin Desert;x
+1370;101;48;128;Uzer Desert;x
+1371;229;50;192;Vulture Desert;x
+1372;102;52;255;Summoner's Desert;x
+1373;230;54;0;Bejárat;x
+1374;102;56;64;Szellem;x
+1375;230;58;128;Mort Myre Swamp;x
+1376;102;60;192;Donjon d'évasion;x
+1377;230;62;255;Mouton;x
+1378;102;64;0;Dougnerive;x
+1379;231;66;64;Minahar Mond;x
+1380;103;68;128;Migalelitore;x
+1381;231;70;192;Priwqui;x
+1382;103;72;255;Vinbois;x
+1383;231;74;0;Torvie;x
+1384;103;76;64;Parade-Côtière;x
+1385;231;78;128;Ouest-Ogremarche;x
+1386;104;80;192;Ffordd Masarn;x
+1387;232;82;255;Rhaeadr;x
+1388;104;84;0;Porth Grisial;x
+1389;232;86;64;Blaiddenbyd;x
+1390;104;88;128;Lanybrenin;x
+1391;232;90;192;Stenkrabbe;x
+1392;104;92;255;Tabttræ;x
+1393;153;134;173;Slayer Caves;x
+1394;217;164;164;Krystaldæmning;x
+1395;233;98;128;Munhadir;x
+1396;105;100;192;Lumbridge Swamp;x
+1397;233;102;255;Cuden;x
+1398;105;104;0;Edorvale;x
+1399;233;106;64;Holtgeat;x
+1400;106;108;128;King's Road;x
+1401;234;110;192;Haethweall;x
+1402;106;112;255;Törzshely;x
+1403;234;114;0;Gyertyapart;x
+1404;106;116;64;Alvópart;x
+1405;234;118;128;Mort Ridge Caves;x
+1406;106;120;192;Mort Ridge Cliffs;x
+1407;235;122;255;Marais Coast;x
+1408;107;124;0;Yashinoki;x
+1409;235;126;64;Tchiki;x
+1410;107;128;128;Priwandra;x
+1411;235;130;192;Riveducieux;x
+1412;107;132;255;Titheshore;x
+1413;235;134;0;Breadheart;x
+1414;108;136;64;Nitrewood;x
+1415;236;138;128;Willow Beach;x
+1416;108;140;192;Ethrain County;x
+1417;236;142;255;Kingsmine;x
+1418;108;144;0;Lakecliff;x
+1419;236;146;64;Autumn Road;x
+1420;108;148;128;Aesagrun;x
+1421;237;150;192;East Lacerta;x
+1422;109;152;255;Trobin County;x
+1423;237;154;0;Corporea;x
+1424;109;156;64;Blood Mountain;x
+1425;237;158;128;Hospring;x
+1426;109;32;192;Necrowood;x
+1427;237;34;255;Magiepass;x
+1428;110;36;0;Schwefel;x
+1429;238;38;64;Brawk;x
+1430;110;40;128;Pysk;x
+1431;238;42;192;Suphi;x
+1432;110;44;255;Giral;x
+1433;238;46;0;Mycil;x
+1434;110;48;64;Rada's Park;x
+1435;239;50;128;Korbzwerg;x

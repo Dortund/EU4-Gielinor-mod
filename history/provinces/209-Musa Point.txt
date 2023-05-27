@@ -1,0 +1,23 @@
+#209 - Musa Point
+owner = MUS
+controller = MUS
+add_core = MUS
+tribal_owner = ---
+culture = northkaramjan
+religion = karamjan
+trade_goods = fruit
+
+discovered_by = centraltechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 1
+
+is_city = yes
+
+center_of_trade = 1

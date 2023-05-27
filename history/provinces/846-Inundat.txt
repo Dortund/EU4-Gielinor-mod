@@ -1,0 +1,26 @@
+#846-Inundat
+owner = DES
+controller = DES
+add_core = DES
+add_core = SLP
+tribal_owner = ---
+culture = slepe
+religion = zamorak
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes

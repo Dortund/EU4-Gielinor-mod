@@ -1,0 +1,41 @@
+country_decisions = {
+	destroy_cabbages = {
+		potential = {
+			cabbage = 1
+			NOT = { religion = brassicaprime }
+			NOT = { mission_completed = CLY_grow_the_farms }
+			NOT = {
+				overlord = {
+					religion = brassicaprime
+				}
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+			 	trade_goods = cabbage
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			mil_power = 50
+		}
+		effect = {
+			add_mil_power = -50
+			every_owned_province = {
+				limit = {
+					trade_goods = cabbage
+				}
+				change_trade_goods = grains
+				add_province_modifier = {
+					name = brassica_destroyed_cabbages
+					duration = 7300
+				}
+				remove_province_modifier = brassica_sacred_cabbages
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 50
+	}
+}

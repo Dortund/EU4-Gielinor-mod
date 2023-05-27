@@ -1,0 +1,25 @@
+#461-Molch
+owner = MOC
+controller = MOC
+add_core = MOC
+tribal_owner = ---
+culture = molch
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 6
+base_production = 6
+base_manpower = 6
+
+fort_15th = yes 
+
+trade_goods = gemstones
+
+is_city = yes
+
+center_of_trade = 2
+
+add_province_triggered_modifier = religious_center

@@ -1,0 +1,54 @@
+﻿l_english:
+ flavor_evr.1.t:0 "Cadarn elves join the resistance!"
+ flavor_evr.1.da:0 "Some elves from the Cadarn kingdom have elected to permanently settle in Tirannwn to aid the resistance. This will provide us with a much-needed boost to our manpower, though there are concerns among some that the Cadarn kingdom could be significantly weakened in the process."
+ flavor_evr_1.db:0 "With the fall of the Cadarn kingdom in the east, some of the survivors have made their way over to Tirannwn to serve our cause."
+ flavor_evr.1.a:0 "We are seven clans united!"
+ 
+ flavor_evr.2.t:0 "Cadarn reaches out!"
+ flavor_evr.2.d:0 "The Cadarn clan has kindly decided to send us personnel to aid the resistance, at great risk to themselves. They will be ideal for fighting and developing our marginal lands."
+ flavor_evr.2.a:0 "Excellent."
+ 
+ flavor_evr.3.t:0 "Cadarn refuses to help!"
+ flavor_evr.3.d:0 "The Cadarn clan has heard of our plight, and has decided it's not in their best interests to intervene."
+ flavor_evr.3.a:0 "Any other clans want to betray us?"
+ 
+ flavor_evr.4.t:0 "King Tyras' Camp"
+ flavor_evr.4.d:0 "A human king has arrived in Isfadar, bringing a considerable army with him. He means us no ill will and has compensated us greatly for any lands we have lost in the process."
+ flavor_evr.4.a:0 "Let's hope Tyras is no tyrant!"
+ 
+ flavor_evr.5.t:0 "Serenist Assistance"
+ flavor_evr.5.d:0 "A smaller Serenist realm has sent soldiers to aid our resistance."
+ flavor_evr.5.a:0 "Excellent."
+ 
+ flavor_evr.6.t:0 "Legends of the Lost Grove"
+ flavor_evr.6.d:0 "In the Second Age, a group of elite elves headed west to a mysterious island to guard a being known as Solak. The island since vanished from view. But in a time like this, where the fate of all who follow Seren is on the line, such an island may be our only real safe harbour from the threat of Clan Iorwerth."
+ flavor_evr.6.a:0 "Seren, please save us!"
+ 
+ flavor_evr.7.t:0 "Settlement of the Lost Grove"
+ flavor_evr.7.d:0 "It seems Seren has heard our pleas, and allowed safe passage to the Lost Grove, where we shall rebuild our resistance to the forces of the Dark Lord."
+ flavor_evr.7.a:0 "Faith shall guide us forwards!"
+
+ flavor_evr.8.t:0 "The Light of Seren"
+ flavor_evr.8.d:0 "A strange visitor to [Root.GetName] speaks of a crystalline Goddess named Seren who once had a following across Gielinor. She claims her followers are powerful, but seek peace with other faiths."
+ flavor_evr.8.a:0 "If we let her preach a little, we could gain a good ally."
+ flavor_evr.8.b:0 "Go home and take your magic crystals with you!"
+ 
+ flavor_evr.9.t:0 "Return to the Underground Pass"
+ flavor_evr.9.d:0 "The vast twisting caves of the Underground Pass were never an ideal route to travel between Tirannwn and Kandarin, but now they seem more twisted and inpenetrable than ever before. Exploring the pass will not be a fast operation; we need to establish a base camp."
+ flavor_evr.9.a:0 "This sounds ominous."
+ 
+ flavor_evr.10.t:0 "The Temple of Shadow Rises"
+ flavor_evr.10.d:0 "Once whispers, voices from the Underground Pass have grown. In time these voices became visions. Visions of human armies, wasted by some unseen hand. Join us..."
+ flavor_evr.10.a:0 "We shall never join the Dark Lord!"
+ flavor_evr.10.b:0 "Join you? Okay!"
+ temple_of_shadow_rises_tooltip:0 "The §YTemple of Shadow§! has taken over the Underground Pass!"
+ 
+ flavor_evr.11.t:0 "Iorwerth Surrenders!"
+ flavor_evr.11.d:0 "With no reason to keep fighting, Clan Iorwerth has laid down their arms and has surrendered all their territory to the Elven Resistance--- or should that say, to Tirannwn!"
+ flavor_evr.11.a:0 "All glory to the restoration of Tirannwn!"
+ 
+ flavor_evr.12.t:0 "The Dark Lord is Unleashed!"
+ flavor_evr.12.d:0 "A terrible day has befallen Tirannwn. The Dark Lord, the remnant of Seren locked away lest it destroys us all, has been unleashed from the Temple of Light. Clan Iorwerth will be harder to stop than ever before."
+ flavor_evr.12.a:0 "Now is the time to panic!"
+ 
+ 

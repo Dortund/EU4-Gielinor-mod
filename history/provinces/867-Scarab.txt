@@ -1,0 +1,18 @@
+#866 - Yamuru Algharb
+
+tribal_owner = ---
+culture = bedabin
+religion = menaphite
+trade_goods = livestock_farm
+
+discovered_by = centraltechgroup
+discovered_by = kharidtechgroup
+
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 10
+native_ferocity = 10
+native_hostileness = 2

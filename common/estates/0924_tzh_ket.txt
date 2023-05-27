@@ -1,0 +1,133 @@
+estate_tzh_ket =
+{
+	icon = 24
+
+	# If true, country will get estate
+	trigger = {
+		has_reform = obsidian_caste
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		defensiveness = 0.2
+		shock_damage_received = -0.1
+	}
+	country_modifier_neutral = {
+	 	defensiveness = 0.2
+	}	
+	country_modifier_angry = {
+	 	defensiveness = -0.2
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		tzh_ket_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {	
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {	
+		desc = EST_VAL_COT
+		trigger = {
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_TRADE_INCOME
+		trigger = {
+			NOT = { trade_income_percentage = 0.25 }
+		}	
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.5
+			NOT = { trade_income_percentage = 0.75 }
+		}	
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.75
+		}	
+		influence = 10
+	}
+	
+	custom_name = {
+		desc = estate_kuu_narga
+		trigger = {
+			tag = KUU
+		}
+	}	
+
+	color = { 93 55 53 }
+
+	privileges = {
+		estate_tzh_ket_guardian_representation
+		estate_tzh_ket_capital_reinforcement
+	}
+
+	agendas = {
+		estate_tzh_ket_hire_advisor
+		estate_tzh_ket_fire_advisor
+		estate_tzh_ket_get_allies
+		estate_tzh_ket_befriend_rival_of_rival
+		estate_tzh_ket_relations_with_X
+		estate_tzh_ket_break_coalition
+		estate_tzh_ket_support_independence
+		estate_tzh_ket_retake_core
+		estate_tzh_ket_crush_revolts
+		estate_tzh_ket_regain_liberty
+		estate_tzh_ket_protect_our_culture
+		estate_tzh_ket_annex_subject
+		estate_tzh_ket_build_an_army
+		estate_tzh_ket_bigger_army_than_rival
+		estate_tzh_ket_build_up_manpower_reserves
+	}
+
+	influence_from_dev_modifier = 1.0
+}

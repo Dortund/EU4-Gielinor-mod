@@ -1,0 +1,23 @@
+#357-Fort Zemouregal
+owner = ZMG
+controller = ZMG
+add_core = ZMG
+tribal_owner = ---
+culture = zombie
+religion = zamorak
+
+hre = no
+
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+
+fort_15th = yes 
+
+trade_goods = bones
+
+is_city = yes

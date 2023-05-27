@@ -1,0 +1,114 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new technology, make sure they are uniquely named.
+
+
+# Groups must be defined BEFORE tables.
+
+#Nation Designer Cost is set to match triggers for starting institutions.
+
+groups = {
+	centraltechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	morytaniantechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	zeantechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	kharidtechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	dwarventechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	karamjantechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	fremenniktechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	northerntechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	bandostechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	monkeytechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	elventechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	kandarintechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	gnometechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+	wushankotechgroup = {
+		start_level = 3
+		start_cost_modifier = 0
+		nation_designer_cost = {
+			value = 75
+		}
+	}
+}
+
+tables = {
+	adm_tech = "technologies/adm.txt"
+	dip_tech = "technologies/dip.txt"
+	mil_tech = "technologies/mil.txt"
+}

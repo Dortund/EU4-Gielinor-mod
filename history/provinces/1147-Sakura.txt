@@ -1,0 +1,26 @@
+#1147 - Sakura
+owner = HRN
+controller = HRN
+add_core = HRN
+tribal_owner = ---
+culture = scythe_culture
+religion = genbu
+
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 1

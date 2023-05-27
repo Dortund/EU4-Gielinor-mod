@@ -1,0 +1,7 @@
+#Misthalin-Cweornshire
+vassal = {
+	first = MST
+	second = CWS
+	start_date = 1900.5.17
+	end_date = 2015.1.1
+}

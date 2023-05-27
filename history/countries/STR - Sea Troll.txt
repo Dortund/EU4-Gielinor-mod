@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = troll_tribe
+government_rank = 1
+primary_culture = seatroll
+religion = bandos
+technology_group = bandostechgroup
+capital = 281 #Piscatoris
+national_focus = MIL
+
+1901.12.15 = {
+	monarch = {
+		name = "Small Fishing Net"
+		dynasty = "Monkcatcher"
+		birth_date = 1886.3.4
+		adm = 2
+		dip = 0
+		mil = 6
+		female = yes
+	}
+}
+
+2133.11.13 = {
+	monarch = {
+		name = "Queen"
+		dynasty = "Kraken"
+		birth_date = 2085.1.17
+		adm = 2
+		dip = 0
+		mil = 6
+		female = yes
+	}
+}

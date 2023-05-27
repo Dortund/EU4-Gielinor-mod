@@ -1,0 +1,28 @@
+﻿l_english:
+ fall_of_cadarn.1.t:0 "Fall of Cadarn"
+ fall_of_cadarn.1.d:0 "Since the early Fourth Age, King Baxtorian Cadarn has established a realm of elves east of the Galarpos. Its historical stability owes itself to smart diplomacy, but instability in Tirannwn has complicated the situation. Now, with the elves of the Cadarn kingdom increasingly outnumbered, questions must be raised regarding whether or not the kingdom can stay together."
+ fall_of_cadarn.1.a:0 "This kingdom is for elves!"
+ fall_of_cadarn.1.b:0 "This kingdom is for all!"
+ 
+ fall_of_cadarn.2.t:0 "Elves Leave for the Resistance!"
+ fall_of_cadarn.2.d:0 "Seeing the future of Tirannwn has more important than their lives in our kingdom, a large number of elves have headed west to join the resistance. Human settlers are willing to take their place, but we must be wary of strengthening this population too much."
+ fall_of_cadarn.2.a:0 "Replenish the lost population with human settlers."
+ fall_of_cadarn.2.b:0 "We will see no more elven realms destroyed!"
+ 
+ fall_of_cadarn.3.t:0 "Ardignan Revolt"
+ fall_of_cadarn.3.d:0 "The rising human presence in our realm is sparking tension. These humans want to take direct control of the lands they occupy, and we may not necessarily be equipped to stop them..."
+ fall_of_cadarn.3.a:0 "This is Cadarn land!"
+ fall_of_cadarn.3.b:0 "Let them have the land."
+  
+ fall_of_cadarn.4.t:0 "Elves abandon our kingdom!"
+ fall_of_cadarn.4.d:0 "Day by day, more and more elves have decided that the fate of Tirannwn is more important than our realm, and have begun abandoning us. But without sufficient elves, the goblin population of Kandarin will exert increasingly more control."
+ fall_of_cadarn.4.a:0 "This is a disaster, but an unavoidable one."
+ fall_of_cadarn.4.b:0 "How dare they? Force them to stay!"
+ 
+ fall_of_cadarn.5.t:0 "Beauty of the Baxtorian Falls"
+ fall_of_cadarn.5.d:0 "In a terrifying time of uncertainty for Clan Cadarn, the rushing water of the Baxtorian Falls inspires peace."
+ fall_of_cadarn.5.a:0 "Nature endures - and so shall we."
+ 
+ fall_of_cadarn.100.t:0 "Cadarn Settles!"
+ fall_of_cadarn.100.d:0 "Leadership of [Root.Monarch.GetName] has ensured that whatever may have happened in the last few years, the Cadarn clan intend to remain as a presence in Kandarin."
+ fall_of_cadarn.100.a:0 "Adversity has given us strength."

@@ -1,0 +1,13 @@
+#1212 - Jin Li
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = advanced_ores
+
+is_city = yes

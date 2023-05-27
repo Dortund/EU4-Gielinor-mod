@@ -1,0 +1,32 @@
+########################################
+# Events for ex-colonial states
+########################################
+
+namespace = flavor_excolonial
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_excolonial.1
+	title = flavor_excolonial.1.t #Direction of our Government
+	desc = flavor_excolonial.1.d #One of the most important decisions in any new nation is to define how it shall be governed. Should we build a republic, a monarchy or a theocracy?
+	picture = KEBOS_LOWLANDS_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_excolonial.1.a #We shall have a Republic!
+		add_government_reform = federal_republic
+	}
+	option = {
+		name = flavor_excolonial.1.b #We shall have a Monarchy!
+		add_government_reform = new_world_kingdom
+	}
+	option = {
+		name = flavor_excolonial.1.c #We shall have a Theocracy!
+		add_government_reform = frontier_theocracy
+	}
+}

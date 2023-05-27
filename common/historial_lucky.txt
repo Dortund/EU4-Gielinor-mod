@@ -1,0 +1,47 @@
+# Order here is the priority for taking them, if trigger is true.
+
+#Donblas
+DBS = {
+	NOT = { 
+		exists = ASG 
+	}
+}
+
+#Carnilleus
+CLS = {
+	NOT = { 
+		exists = ADO
+	}
+	NOT = {
+		exists = KDR
+	}
+}
+
+#Ardougne
+ADO = {
+	NOT = {
+		exists = KDR
+	}
+}
+
+#Thorobshuun
+THO = {
+	NOT = { 
+		is_year = 1980
+	}
+}
+
+#Gunnar
+GUN = {
+	NOT = { 
+		is_year = 2100
+	}
+}
+
+#Paradise
+PRE = {
+	is_year = 2050
+	NOT = { 
+		is_year = 2200
+	}
+}

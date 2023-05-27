@@ -1,0 +1,21 @@
+#471-Mount Quidamortem
+owner = CNC
+controller = CNC
+add_core = CNC
+tribal_owner = ---
+culture = mountaintroll
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 5
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 1

@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = ardignan
+religion = saradomin
+technology_group = kandarintechgroup
+capital = 265 #East Ardougne
+national_focus = ADM
+
+2007.2.27 = {
+	monarch = {
+		name = "Tennyson"
+		dynasty = "Carnillean"
+		birth_date = 1973.9.17
+		death_date = 2022.3.30
+		adm = 2
+		dip = 4
+		mil = 5
+	}
+}

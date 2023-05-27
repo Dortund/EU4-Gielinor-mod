@@ -1,0 +1,40 @@
+########################################
+# Jas Religion Events
+########################################
+
+namespace = jas_events
+
+# Jas reform
+country_event = {
+	id = jas_events.1
+	title = jas_events.1.t #Understanding of Jas grows!
+	desc = jas_events.1.d #We will never truly understand the nature of Jas, though we at least can better-understand ourselves, even if this means increasing the rage that afflicts us.
+	picture = STONE_OF_JAS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = jas
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_stability = -1
+			release_all_subjects = yes 
+			add_doom = 25 
+		}
+	}
+	
+	option = {
+		name = jas_events.1.a #Perhaps some day we can finally be free of rage.
+		tooltip = {
+			add_stability = -1
+			release_all_subjects = yes
+			add_doom = 25
+		}
+	}
+}

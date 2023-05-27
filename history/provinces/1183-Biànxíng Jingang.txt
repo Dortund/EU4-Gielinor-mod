@@ -1,0 +1,17 @@
+#1183-Biànxíng Jingang
+
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = hunter_creatures
+
+is_city = yes

@@ -1,0 +1,20 @@
+#773 - Madarch
+owner = EVR
+controller = EVR
+add_core = EVR
+add_core = CRW
+tribal_owner = ---
+culture = crwys
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 1
+
+trade_goods = herblore_supplies
+
+is_city = yes

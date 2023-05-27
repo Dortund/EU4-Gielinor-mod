@@ -1,0 +1,19 @@
+government = theocracy
+add_government_reform = clerical_state_reform
+government_rank = 2
+primary_culture = khazari
+religion = karamjan
+technology_group = karamjantechgroup
+capital = 232 #Viyeldi
+national_focus = ADM
+
+1895.12.6 = {
+	monarch = {
+		name = "Yamo"
+		dynasty = "Kjarana"
+		birth_date = 1836.5.12
+		adm = 4
+		dip = 1
+		mil = 3
+	}
+}

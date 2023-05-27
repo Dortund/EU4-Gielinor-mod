@@ -1,0 +1,13 @@
+#1206 - Shanhú Deng
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fishing_spot
+
+is_city = yes

@@ -1,0 +1,23 @@
+#380 - Ungael
+owner = UNG
+controller = UNG
+add_core = UNG
+tribal_owner = ---
+culture = undeaddragon
+religion = godless
+
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+fort_15th = yes 
+
+trade_goods = bones
+latent_trade_goods = { rare_loot }
+
+is_city = yes

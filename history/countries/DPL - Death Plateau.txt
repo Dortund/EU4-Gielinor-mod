@@ -1,0 +1,31 @@
+government = tribal
+add_government_reform = troll_tribe
+government_rank = 1
+primary_culture = mountaintroll
+religion = bandos
+technology_group = bandostechgroup
+capital = 345 #Death Plateau
+national_focus = MIL
+historical_friend = TST
+
+2107.12.11 = {
+	monarch = {
+		name = "Ugly Rock"
+		dynasty = "Rockthrower"
+		birth_date = 2086.7.3
+		adm = 0
+		dip = 2
+		mil = 6
+	}
+}
+
+2140.3.7 = {
+	monarch = {
+		name = "Cliff"
+		dynasty = "Rockthrower"
+		birth_date = 2125.6.14
+		adm = 1
+		dip = 0
+		mil = 6
+	}
+}

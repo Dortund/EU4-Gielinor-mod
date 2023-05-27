@@ -1,0 +1,84 @@
+country_decisions = {
+
+	karamjan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_karamja_flag }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = KJA }
+			OR = {
+				culture_group = karamjan_group
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 209		# Musa Point
+				province_id = 213		# Brimhaven
+				province_id = 216		# Tai Bwo Wannai
+				province_id = 223		# Shilo
+				province_id = 227		# Kalumin
+				province_id = 232		# Viyeldi
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+				owns_core_province = 209		# Musa Point
+				owns_core_province = 213		# Brimhaven
+				owns_core_province = 216		# Tai Bwo Wannai
+				owns_core_province = 223		# Shilo
+				owns_core_province = 227		# Kalumin
+				owns_core_province = 232		# Viyeldi
+		}
+		effect = {
+			change_tag = KJA
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_karamja_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+}

@@ -1,0 +1,340 @@
+# All global modifiers are here. They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+# These names can NOT be removed or changes, as the code uses them....
+
+################
+null_modifier = {
+}
+################
+
+################
+# Chaos Group
+################
+
+#Empower Chaos Priest
+patriarch_state = {
+	local_state_maintenance_modifier = 0.1
+	local_monthly_devastation = -0.05
+}
+
+# Multiplied in provinces of same religion.
+patriarch_authority_local = {
+	local_institution_spread = 0.33
+	local_autonomy = -0.1
+	# local_unrest = -3
+	local_manpower_modifier = 0.33
+}
+
+#for the country
+patriarch_authority_global = {
+	global_missionary_strength = 0.02
+	church_influence_modifier = 0.10
+}
+
+##########################################################################
+# Global Static Modifiers
+##########################################################################
+
+base_values = {
+	max_absolutism = 65
+	merchants = 2							#Start with 2 merchants
+	diplomats = 2							#Start with 2 diplomats..
+	missionaries = 1						#1 missionary
+	army_tradition_decay = 0.05				#lose 5% yearly
+	navy_tradition_decay = 0.05				#lose 5% yearly
+	prestige_decay = 0.05					#lose 5% prestige each year
+	tolerance_own = 3
+	diplomatic_upkeep = 4
+	tolerance_heathen = -3
+	tolerance_heretic = -2
+	global_missionary_strength = 0.02
+	global_manpower = 10.0
+	advisor_pool = 3
+	colonist_placement_chance = 0.1
+	free_leader_pool = 2 #Feudalism isn't in this mod
+	republican_tradition = 1
+	monthly_fervor_increase = 1
+	vassal_income = 0.10
+	horde_unity = -2
+	devotion = -0.5
+	meritocracy = -2
+	governing_capacity = 200
+	num_accepted_cultures = 2
+	monthly_splendor = 1
+	artillery_levels_available_vs_fort = 5
+	cav_to_inf_ratio = 0.5
+	merc_maintenance_modifier = 0.1
+	monthly_heir_claim_increase = 0.208
+	tolerance_of_heretics_capacity = 3
+	tolerance_of_heathens_capacity = 3
+	max_flagships = 1
+	num_of_parliament_issues = 10
+}
+
+stability = {
+	global_trade_power = 0.01			#1% chance each step.
+	global_spy_defence = 0.05				#-15 to +15% modifier
+}
+
+positive_stability = {
+	global_unrest = -1					#-1% revolt risk each step
+	global_tax_modifier = 0.05
+	global_missionary_strength = 0.005
+	temples_influence = 0.02
+	mr_aristocrats_influence = 0.03
+	rr_jacobins_influence = 0.03
+	stability_cost_modifier = 0.50
+	monthly_fervor_increase = 1
+	devotion = 0.5
+	yearly_corruption = -0.02
+	global_institution_spread = 0.05
+	yearly_harmony = 0.25
+	monthly_kourend_disunity_power_1 = -0.1
+}
+
+negative_stability = {
+	global_unrest = -2					#-1% EXTRA revolt risk each step
+	legitimacy = 1
+	interest = -1
+	migration_cost = 0.1
+	devotion = 1
+	caravan_power = 0.05
+	yearly_patriarch_authority = -0.02
+	monthly_kourend_disunity_power_1 = -0.2
+}
+
+over_extension = {
+	global_foreign_trade_power = -1.0
+	stability_cost_modifier = 0.5
+	mercenary_cost = 0.5
+	diplomatic_reputation = -2
+	improve_relation_modifier = -0.5
+	global_unrest = 5
+	bureaucrats_influence = 0.5
+	mr_guilds_influence = 0.5
+	yearly_corruption = 0.5
+	monthly_kourend_disunity_power_1 = 5
+}
+
+
+
+###############################
+
+privateering = {
+	pr_captains_influence = 0.1
+	yearly_patriarch_authority = 0.001
+}
+
+
+
+doom = {
+	technology_cost = 0.5
+	idea_cost = 0.2
+	ae_impact = -1
+}
+
+authority = {
+	stability_cost_modifier = -0.1
+	global_unrest = -2
+	church_influence_modifier = 0.15
+}
+
+
+
+army_tradition = {
+	recover_army_morale_speed = 0.1
+	land_morale = 0.25
+	manpower_recovery_speed = 0.1
+	siege_ability = 0.05
+	temples_influence = 0.1
+	mr_aristocrats_influence = 0.1
+	rr_girondists_influence = 0.1
+	monthly_militarized_society = 0.1
+	nobles_loyalty_modifier = 0.05
+	maratha_loyalty_modifier = 0.05
+	rajput_loyalty_modifier = 0.05
+	janissaries_loyalty_modifier = 0.05
+	allowed_tercio_fraction = 0.1
+	allowed_samurai_fraction = 0.1
+}
+
+navy_tradition = {
+	recover_navy_morale_speed = 0.1
+	naval_morale = 0.25
+	trade_steering = 1.0
+	privateer_efficiency = 0.25
+	enuchs_influence = 0.1
+	mr_traders_influence = 0.1
+	blockade_efficiency = 1
+	sailors_recovery_speed = 0.2
+	burghers_loyalty_modifier = 0.05
+	vaisyas_loyalty_modifier = 0.05
+	allowed_geobukseon_fraction = 0.5
+	allowed_galleass_fraction = 0.5
+}
+
+
+
+positive_piety = { 
+	global_unrest = -2
+	development_cost = -0.15
+	technology_cost = 0.1
+	church_loyalty_modifier = 0.1
+}
+
+#For convenience, its multiplied by negative piety in code.
+negative_piety = { 
+	discipline = 0.05
+	global_tax_modifier = 0.15
+	global_unrest = 2
+	church_loyalty_modifier = -0.1
+}
+
+
+
+num_of_provinces = {
+	
+}
+
+absolutism = {
+	mercenary_manpower = 0.25
+	discipline = 0.05
+	core_decay_on_your_own = -0.5
+	development_cost = -0.2
+ 	administrative_efficiency = 0.1
+}
+
+# For autonomy mechanics
+autonomy_increased = {
+	local_unrest = -10
+}
+
+autonomy_decreased = {
+	local_unrest = 10
+}
+
+########################################
+# Karma
+########################################
+
+karma_just_right =
+{
+	global_missionary_strength = 0.02
+	defensiveness = 0.1
+}
+
+karma_too_high =
+{
+	land_morale = -0.1
+	global_missionary_strength = 0.02
+}
+
+karma_too_low =
+{
+	global_unrest = 2
+	defensiveness = 0.1
+}
+
+########################################
+# Harmony
+########################################
+
+high_harmony = {
+	tolerance_own = 1
+}
+
+low_harmony = {
+	tolerance_own = -3
+	development_cost = 0.25
+	legitimacy = -1
+	devotion = -1
+	horde_unity = -1
+	republican_tradition = -0.3
+	meritocracy = -2
+}
+
+########################################
+# Religious Schools (Used for the Godless)
+########################################
+
+ambivalence_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	merchants = 1
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+antitheist_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_missionary_strength = 0.015
+	innovativeness_gain = 0.5
+}
+
+evasive_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	defensiveness = 0.1
+	technology_cost = -0.05
+}
+
+humanist_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+	num_accepted_cultures = 1
+}
+
+monstrous_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_manpower_modifier = 0.1
+	global_sailors_modifier = 0.1
+}
+
+########################################
+# Government/Reform modfiers
+########################################
+
+# Multiplied by current meritocracy - 50
+meritocracy = {
+	global_spy_defence = 1.0
+	advisor_cost = -0.5
+}
+
+# Multiplied by 50 - meritocracy
+low_meritocracy = {
+	yearly_corruption = 0.2 #i.e. 0.1 at 0 Meritocracy
+}
+
+militarized_society = { #Reused for Unstable Governments
+ 	stability_cost_modifier = -0.5
+ 	global_unrest = -2
+}
+
+expand_administation_modifier = {
+	expand_administration_cost = 0.3 #Increased from 0.2
+	governing_capacity = 20
+}
+
+over_governing_capacity_modifier = {
+	stability_cost_modifier = 1.0
+	ae_impact = 0.5
+	improve_relation_modifier = -0.5
+	core_creation = 0.2
+	advisor_cost = 1.0
+}

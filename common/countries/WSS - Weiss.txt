@@ -1,0 +1,45 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 178 171 141 }
+
+revolutionary_colors = { 4 5 4 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Snowflake #0" = 1
+	"Boulder #0" = 1
+	"Butterfly #0" = 1
+	"Don't Know What #0" = 1
+	"Driftwood #0" = 1
+	"Icicle #0" = 1
+	"Icy Bones#0" = 1
+	"Mother #0" = 1
+	"Odd Mushroom #0" = 1
+	"Odd Stone #0" = 1
+	"Pebble #0" = 1
+	"Root #0" = 1
+	"Snowflake #0" = -1
+	"Boulder #0" = -1
+	"Butterfly #0" = -1
+	"Don't Know What #0" = -1
+	"Driftwood #0" = -1
+	"Icicle #0" = -1
+	"Icy Bones#0" = -1
+	"Mother #0" = -1
+	"Odd Mushroom #0" = -1
+	"Odd Stone #0" = -1
+	"Pebble #0" = -1
+	"Root #0" = -1
+}

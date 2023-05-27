@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = obsidian_caste
+government_rank = 2
+primary_culture = tzhaar
+religion = ful
+technology_group = karamjantechgroup
+capital = 212 #TzHaar
+national_focus = ADM
+historical_friend = MUS
+
+1912.12.6 = {
+	monarch = {
+		name = "Kah"
+		dynasty = "TzHaar-Mej"
+		birth_date = 1852.3.17
+		adm = 3
+		dip = 6
+		mil = 3
+	}
+}
+
+2153.9.19 = {
+	monarch = {
+		name = "Xek"
+		dynasty = "TzHaar-Mej"
+		birth_date = 2076.9.1
+		adm = 3
+		dip = 5
+		mil = 5
+	}
+}

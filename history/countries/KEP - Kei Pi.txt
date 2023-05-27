@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = bowl_culture
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1167 #Kei Pi
+historical_friend = PIN
+
+1923.3.12 = {
+	monarch = {
+		name = "Jiye"
+		dynasty = "Kei Pi"
+		birth_date = 1896.7.6
+		death_date = 1985.1.27
+		adm = 4
+		dip = 6
+		mil = 2
+	}
+}
+
+2162.5.7 = {
+	monarch = {
+		name = "Zairui"
+		dynasty = "Kei Pi"
+		birth_date = 2135.5.17
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}

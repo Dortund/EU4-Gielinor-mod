@@ -1,0 +1,393 @@
+namespace = fall_of_cadarn
+
+########################################
+# Fall of Cadarn
+########################################
+
+# Start
+country_event = {
+	id = fall_of_cadarn.1
+	title = fall_of_cadarn.1.t #Fall of Cadarn
+	desc = fall_of_cadarn.1.d #Since the early Fourth Age, King Baxtorian Cadarn has established a realm of elves east of the Galarpos. Its historical stability owes itself to smart diplomacy, but instability in Tirannwn has complicated the situation. Now, with the elves of the Cadarn kingdom increasingly outnumbered, questions must be raised regarding whether or not the kingdom can stay together.
+	picture = CADARN_GLARIAL_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = cda_fall_of_cadarn_start
+		set_country_flag = cda_replacing_elves_flag
+	}
+	
+	option = {
+		name = fall_of_cadarn.1.a #This kingdom is for elves!
+		add_stability = -2
+		add_country_modifier = {
+			name = "CDA_elven_favouritism"
+			duration = 7300
+		}
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = fall_of_cadarn.1.b #This kingdom is for all!
+		add_stability = -2
+		add_country_modifier = {
+			name = "CDA_equal_realm"
+			duration = 7300
+		}
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = {
+	id = fall_of_cadarn.2
+	title = fall_of_cadarn.2.t #Elves leave for the resistance!
+	desc = fall_of_cadarn.2.d #Seeing the future of Tirannwn has more important than their lives in our kingdom, a large number of elves have headed west to join the resistance. Human settlers are willing to take their place, but we must be wary of strengthening this population too much.
+	picture = ELVEN_RESISTANCE_LLETYA_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		tag = CDA
+		exists = EVR
+		exists = IOR
+		has_disaster = fall_of_cadarn
+		NOT = { has_country_flag = cda_no_more_exit }
+		NOT = { has_country_flag = cda_clan_identity_flag }
+		had_country_flag = {
+			flag = cda_replacing_elves_flag
+			days = 180
+		}
+		culture_group = elven_group
+		any_owned_province = {
+			region = kandarin_region
+			culture_group = elven_group
+			base_tax = 3
+			base_production = 3
+			base_manpower = 3
+			NOT = { has_province_modifier = CDA_coerced_settlers }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+		modifier = {
+			factor = 1.2
+			isolationism = 1
+		}
+		modifier = {
+			factor = 1.2
+			isolationism = 2
+		}
+		modifier = {
+			factor = 1.2
+			isolationism = 3
+		}
+		modifier = {
+			factor = 1.2
+			isolationism = 4
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			EVR = {
+				country_event = {
+					id = flavor_evr.1
+					days = 1
+				}
+			}
+		}
+		remove_country_flag = cda_replacing_elves_flag
+	}
+	
+	option = {
+		name = fall_of_cadarn.2.a #Replenish the lost population with human settlers.
+		random_owned_province = {
+			limit = {
+				region = kandarin_region
+				culture_group = elven_group
+				base_tax = 3
+				base_production = 3
+				base_manpower = 3
+				NOT = { has_province_modifier = CDA_coerced_settlers }
+			}
+			change_culture = ardignan
+			change_religion = saradomin
+			add_core = CLS
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		set_country_flag = cda_replacing_elves_flag
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = fall_of_cadarn.2.b #We will see no more elven realms destroyed!
+		random_owned_province = {
+			limit = {
+				region = kandarin_region
+				culture_group = elven_group
+				base_tax = 3
+				base_production = 3
+				base_manpower = 3
+			}
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+		set_country_flag = cda_replacing_elves_flag
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_cadarn.3
+	title = fall_of_cadarn.3.t #Ardignan Revolt
+	desc = fall_of_cadarn.3.d #The rising human presence in our realm is sparking tension. These humans want to take direct control of the lands they occupy, and we may not necessarily be equipped to stop them...
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {
+		tag = CDA
+		has_disaster = fall_of_cadarn
+		cda_trigger_has_elves = no
+		calc_true_if = {
+			any_owned_province = {
+				culture = ardignan
+			}
+			amount = 2
+		}
+		NOT = { has_country_flag = cda_reinforce_diplomacy_flag }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		name = fall_of_cadarn.3.a #This is Cadarn land!
+		random_owned_province = {
+			limit = { culture = ardignan }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3
+				}
+			}
+		every_owned_province = {
+			limit = { culture = ardignan }
+			add_province_modifier = { 
+				name = CDA_ardignan_revolt_modifier
+				duration = 7300
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = fall_of_cadarn.3.b #Let them have the land.
+		set_country_flag = cda_no_more_exit
+		every_owned_province = {
+			limit = { culture = ardignan }
+			cede_province = CLS
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_cadarn.4
+	title = fall_of_cadarn.4.t #Goblin Incursions
+	desc = fall_of_cadarn.4.d #Day by day, more and more elves have decided that the fate of Tirannwn is more important than our realm, and have begun abandoning us. But without sufficient elves, the goblin population of Kandarin will exert increasingly more control.
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		tag = CDA
+		exists = EVR
+		exists = IOR
+		has_disaster = fall_of_cadarn
+		NOT = { has_country_flag = cda_no_more_exit }
+		culture_group = elven_group
+		any_owned_province = {
+			region = kandarin_region
+			culture_group = elven_group
+			base_tax = 2
+			base_production = 2
+			base_manpower = 2
+		}
+		had_country_flag = {
+			flag = cda_replacing_elves_flag
+			days = 180
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+		modifier = {
+			factor = 1.1
+			isolationism = 1
+		}
+		modifier = {
+			factor = 1.1
+			isolationism = 2
+		}
+		modifier = {
+			factor = 1.1
+			isolationism = 3
+		}
+		modifier = {
+			factor = 1.1
+			isolationism = 4
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			EVR = {
+				country_event = {
+					id = flavor_evr.1
+					days = 1
+				}
+			}
+		}
+		remove_country_flag = cda_replacing_elves_flag
+	}
+	
+	option = {
+		name = fall_of_cadarn.4.a #This is a disaster, but an unavoidable one.
+		random_owned_province = {
+			limit = {
+				region = kandarin_region
+				culture_group = elven_group
+				base_tax = 2
+				base_production = 2
+				base_manpower = 2
+				NOT = { has_province_modifier = CDA_coerced_settlers }
+			}
+			change_culture = thorobshuun
+			change_religion = bandos
+		}
+		set_country_flag = cda_replacing_elves_flag
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = fall_of_cadarn.4.b #Mobilise the elves in the region!
+		add_mil_power = -100
+		add_yearly_manpower = -0.2
+		random_owned_province = {
+			limit = {
+				region = kandarin_region
+				culture_group = elven_group
+				base_tax = 2
+				base_production = 2
+				base_manpower = 2
+				NOT = { has_province_modifier = CDA_coerced_settlers }
+			}
+			add_province_modifier = { 
+				name = CDA_coerced_settlers
+				duration = 7300
+			}
+		}
+		set_country_flag = cda_replacing_elves_flag
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+}
+
+
+country_event = {
+	id = fall_of_cadarn.5
+	title = fall_of_cadarn.5.t #Beauty of the Baxtorian Falls
+	desc = fall_of_cadarn.5.d #In a terrifying time of uncertainty for Clan Cadarn, the rushing water of the Baxtorian Falls inspires peace.
+	picture = CADARN_GLARIAL_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = CDA
+		has_disaster = fall_of_cadarn
+		OR = {
+			owns_core_province = 257
+			owns_core_province = 322
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.8
+			isolationism = 1
+		}
+		modifier = {
+			factor = 0.8
+			isolationism = 2
+		}
+		modifier = {
+			factor = 0.8
+			isolationism = 3
+		}
+		modifier = {
+			factor = 0.8
+			isolationism = 4
+		}
+	}
+	
+	option = {
+		name = fall_of_cadarn.5.a #Nature endures - and so shall we.
+		add_stability_or_adm_power = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+country_event = {
+	id = fall_of_cadarn.100
+	title = fall_of_cadarn.100.t #Cadarn settles!
+	desc = fall_of_cadarn.100.d #Many doubted the presence of the Elves could last in Kandarin - including many of our own subjects. Yet the leadership of Leadership of [Root.Monarch.GetName] was steadfast. Clan Cadarn shall thrive!
+	picture = CADARN_GLARIAL_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		end_disaster = fall_of_cadarn
+		set_country_flag = cda_solved_depletion
+		hidden_effect = {
+			complete_mission = CDA_tirannwn_civil_war
+		}
+		clr_country_flag = cda_fall_of_cadarn_start
+		clr_country_flag = cda_replacing_elves_flag
+	}
+
+	option = {
+		name = fall_of_cadarn.100.a #Adversity has given us strength.
+		set_country_flag = cda_solved_fall
+		add_stability = 2
+		add_prestige = 50
+		remove_country_modifier = CDA_elven_favouritism
+		remove_country_modifier = CDA_equal_realm
+		hidden_effect = {
+			every_owned_province = {
+				remove_province_modifier = CDA_ardignan_revolt_modifier
+				remove_province_modifier = CDA_coerced_settlers
+			}
+		}
+	}
+}

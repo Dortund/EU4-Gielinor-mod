@@ -1,0 +1,32 @@
+#282-Nouvie
+owner = HZL
+controller = HZL
+add_core = HZL
+tribal_owner = ---
+culture = ouranian
+religion = zamorak
+
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+2105.2.27 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = KZD
+}

@@ -1,0 +1,31 @@
+#790 - Dwellan
+owner = DGK
+controller = DGK
+add_core = DGK
+tribal_owner = ---
+culture = drogokishuun
+religion = bandos
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = basic_ores
+
+is_city = yes
+
+1946.7.9 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+	remove_core = DGK
+	culture = silvarean
+	religion = saradomin
+}

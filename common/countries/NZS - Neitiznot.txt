@@ -1,0 +1,105 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 162 136 65 }
+
+revolutionary_colors = { 2 10 6 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Agnar #0" = 1
+	"Alfrick #0" = 1
+	"Armod #0" = 1
+	"Askeladden #0" = 1
+	"Bardur #0" = 1
+	"Beigarth #0" = 1
+	"Bjorn #0" = 1
+	"Blanin #0" = 1
+	"Bork #0" = 1
+	"Borrokar #0" = 1
+	"Brundt #0" = 1
+	"Drangund #0" = 1
+	"Dron #0" = 1
+	"Eldgrim #0" = 1
+	"Eric #0" = 1
+	"Erjolf #0" = 1
+	"Flosi #0" = 1
+	"Freidir #0" = 1
+	"Fridgeir #0" = 1
+	"Gjuki #0" = 1
+	"Gruva #0" = 1
+	"Gunnar #0" = 1
+	"Hannu #0" = 1
+	"Hrad #0" = 1
+	"Hrafn #0" = 1
+	"Hring #0" = 1
+	"Isaak #0" = 1
+	"Jarvald #0" = 1
+	"Jatizso #0" = 1
+	"Kjedelig #0" = 1
+	"Lanzig #0" = 1
+	"Magnus #0" = 1
+	"Manni #0" = 1
+	"Marmaros #0" = 1
+	"Mawnis #0" = 1
+	"Mord #0" = 1
+	"Neitiznot #0" = 1
+	"Nial #0" = 1
+	"Olaf #0" = 1
+	"Ospak #0" = 1
+	"Peer #0" = 1
+	"Pontak #0" = 1
+	"Reeso #0" = 1
+	"Reinn #0" = 1
+	"Sigli #0" = 1
+	"Sigmund #0" = 1
+	"Skuli #0" = 1
+	"Skulgrimen #0" = 1
+	"Slug #0" = 1
+	"Styrmir #0" = 1
+	"Sven #0" = 1
+	"Swensen #0" = 1
+	"Talsar #0" = 1
+	"Thakkrad #0" = 1
+	"Thorvar #0" = 1
+	"Torbrund #0" = 1
+	"Torfinn #0" = 1
+	"Torsteg #0" = 1
+	"Trogen #0" = 1
+	"Ulfric #0" = 1
+	"Volf #0" = 1
+	"Yorvik #0" = 1
+	
+	"Anne #0" = -1
+	"Bryll #0" = -1
+	"Freja #0" = -1
+	"Freygerd #0" = -1
+	"Hild #0" = -1
+	"Inga #0" = -1
+	"Jennella #0" = -1
+	"Jofridr #0" = -1
+	"Hilda #0" = -1
+	"Lensa #0" = -1
+	"Lisse #0" = -1
+	"Maria #0" = -1
+	"Sassilik #0" = -1
+	"Sif #0" = -1
+	"Signy #0" = -1
+	"Sonje #0" = -1
+	"Thora #0" = -1
+	"Vali #0" = -1
+	"Vanligga #0" = -1
+	"Vitharr #0" = -1
+	"Yrsa #0" = -1
+}

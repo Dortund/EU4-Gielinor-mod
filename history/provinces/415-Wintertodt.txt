@@ -1,0 +1,17 @@
+#415-Wintertodt
+owner = WTD
+controller = WTD
+add_core = WTD
+tribal_owner = ---
+culture = icelord
+religion = wen
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 8
+
+trade_goods = magic_supplies

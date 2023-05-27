@@ -1,0 +1,194 @@
+namespace = war_of_five_houses
+
+########################################
+# War of the Five Houses
+########################################
+
+# Start
+country_event = {
+	id = war_of_five_houses.1
+	title = war_of_five_houses.1.t #War of the Five Houses
+	desc = war_of_five_houses.1.d #What began as a series of squabbles among the houses of Kourend has escalated to all-out conflict. Whichever house wins shall remake Great Kourend in their own image...
+	picture = KOUREND_HOUSES_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		every_subject_country = {
+			if = {
+				limit = { has_reform = kourend_house }
+				add_government_reform = kourend_independent_house
+			}
+			grant_independence = yes
+		}
+		 every_core_province = { remove_core = KOU }
+	}
+	
+	option = {
+		name = war_of_five_houses.1.a #So it begins.
+		if = {
+			limit = {
+				faction_in_power = arceuus_faction
+				AUU = {	ai = yes }
+			}
+			switch_tag = AUU
+			AUU = {
+				country_event = {
+					id = war_of_five_houses.3
+					days = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = hosidius_faction
+				HOS = { ai = yes }
+			}
+			switch_tag = HOS
+			HOS = {
+				country_event = {
+					id = war_of_five_houses.3
+					days = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = lovakengj_faction
+				LOV = { ai = yes }
+			}
+			switch_tag = LOV
+			LOV = {
+				country_event = {
+					id = war_of_five_houses.3
+					days = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = piscarilius_faction
+				PCL = { ai = yes }
+			}
+			switch_tag = PCL
+			PCL = {
+				country_event = {
+					id = war_of_five_houses.3
+					days = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = shayzien_faction
+				SYZ = { ai = yes }
+			}
+			switch_tag = SYZ
+			SYZ = {
+				country_event = {
+					id = war_of_five_houses.3
+					days = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						faction_in_power = arceuus_faction
+						AUU = { ai = no }
+					}
+					AND = {
+						faction_in_power = hosidius_faction
+						HOS = { ai = no }
+					}
+					AND = {
+						faction_in_power = lovakengj_faction
+						LOV = { ai = no }
+					}
+					AND = {
+						faction_in_power = piscarilius_faction
+						PCL = { ai = no }
+					}
+					AND = {
+						faction_in_power = shayzien_faction
+						SYZ = { ai = no }
+					}
+					
+				
+				}
+			}
+			change_tag = KTW
+			add_government_reform = kourend_independent_house
+			swap_free_idea_group = yes
+			swap_non_generic_missions = yes
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_reform = kourend_independent_house
+				}
+				country_event = {
+					id = war_of_five_houses.2
+					days = 1
+				}
+				every_country = {
+					limit = {
+						has_reform = kourend_independent_house
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = kouhouse_war_of_five
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = war_of_five_houses.2
+	title = war_of_five_houses.2.t #Houses Divided
+	desc = war_of_five_houses.2.d #The crown of Great Kourend has failed to hold the country together, leaving every house for themselves. But if we were able to reunite the realm, we could crown ourselves ruler alone...
+	picture = KOUREND_HOUSES_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = war_of_five_houses.2.a #Ruler of all Kourend? Interesting...
+		399 = { add_permanent_claim = ROOT }
+		402 = { add_permanent_claim = ROOT }
+		407 = { add_permanent_claim = ROOT }
+		419 = { add_permanent_claim = ROOT }
+		426 = { add_permanent_claim = ROOT }
+		431 = { add_permanent_claim = ROOT }
+	}
+}
+
+country_event = {
+	id = war_of_five_houses.3
+	title = war_of_five_houses.3.t #Holder of the Crown Lands
+	desc = war_of_five_houses.3.d #As the most influential faction in the court of Great Kourend, we have inherited Kourend's crownlands.
+	picture = KOUREND_HOUSES_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = war_of_five_houses.3.a #This civil war should be easy!
+		inherit = KOU
+	}
+}
+

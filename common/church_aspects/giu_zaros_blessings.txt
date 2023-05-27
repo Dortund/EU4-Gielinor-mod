@@ -1,0 +1,60 @@
+demonic_pact = {
+	is_blessing = yes
+
+	modifier = {
+		num_accepted_cultures = 1
+	}
+}
+
+shadow_realm = {
+	is_blessing = yes
+
+	modifier = {
+		global_spy_defence = 0.25
+	}
+}
+
+reborn_church = {
+	is_blessing = yes
+
+	modifier = {
+		global_missionary_strength = 0.015
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.9
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.7
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.5
+			}
+		}
+	}
+}
+
+god_of_fate = {
+	is_blessing = yes
+
+	modifier = {
+		ae_impact = -0.10
+	}
+}
+
+ancient_magicks = {
+	is_blessing = yes
+
+	modifier = {
+		fire_damage = 0.05
+	}
+}

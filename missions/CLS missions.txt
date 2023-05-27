@@ -1,0 +1,290 @@
+carnilleus_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLS_bastion_of_saradomin = {
+		icon = mission_alliances
+		required_missions = { }
+		trigger = {
+			religion = saradomin
+			OR = {
+				reverse_has_opinion = {
+					who = ENT
+					value = 100
+				}
+				AND = {
+					NOT = { exists = ENT }
+					advisor = inquisitor
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "CLS_saradominist_mission"
+				duration = 3650
+			}
+		}
+	}
+	CLS_new_kandarin_faith = {
+		icon = mission_alliances
+		required_missions = { CLS_bastion_of_saradomin }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = cls_convert_5_provinces_tooltip
+				check_variable = { which = num_converted_religion value = 5 }
+			}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+}
+
+carnilleus_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLS_challenge_hazeel = {
+		icon = mission_challenge_hazeel
+		required_missions = { }
+		trigger = {
+			OR = {
+				army_size = HZL
+				NOT = { exists = HZL }
+			}
+			army_size = 10
+		}
+		effect = {
+			266 = { add_permanent_claim = ROOT }
+			861 = { add_permanent_claim = ROOT }
+			east_ardougne_area  = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	CLS_destroy_hazeel = {
+		icon = mission_conquer_50_development
+		required_missions = { CLS_challenge_hazeel }
+		provinces_to_highlight = {
+			province_id = 264
+			province_id = 265
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			NOT = { exists = HZL }
+			owns_core_province = 264
+			owns_core_province = 265
+		}
+		effect = {
+			west_ardougne_area  = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			every_owned_province = {
+				limit = {
+					area = east_ardougne_area
+					religion = zamorak
+				}
+				add_province_modifier = {
+					name = "CLS_purge_zamorak"
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+carnilleus_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLS_sinclair_relations = {
+		icon = mission_sinclair_relations
+		required_missions = { }
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = SIN
+					reverse_has_opinion = {
+						who = CLS
+						value = 100
+					}
+				}
+				is_rival = SIN
+				NOT = { exists = SIN }
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	
+	CLS_take_catherby = {
+		icon = mission_conquer_50_development
+		required_missions = { CLS_sinclair_relations CLS_organise_the_forces }
+		provinces_to_highlight = {
+			province_id = 247
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			country_or_non_sovereign_subject_holds = 247
+			247 = { 
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "CLS_naval_ambitions"
+				duration = 3650
+			}
+		}
+	}
+}
+
+carnilleus_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLS_organise_the_forces = {
+		icon = mission_conquer_50_development
+		required_missions = { }
+		trigger = {
+			army_professionalism = 0.05
+			army_size_percentage = 0.8
+		}
+		effect = {
+			add_casus_belli = {
+				target = CTH
+				type = cb_vassalize_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = SEE
+				type = cb_vassalize_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = TJT
+				type = cb_vassalize_mission
+				months = 120
+			}
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 247
+						province_id = 249
+						province_id = 259
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	CLS_forsee_this = {
+		icon = mission_conquer_50_development
+		required_missions = { CLS_organise_the_forces }
+		provinces_to_highlight = {
+			province_id = 249
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			country_or_non_sovereign_subject_holds = 249
+			249 = {
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+			}
+		effect = {
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 251
+						province_id = 252
+						province_id = 780
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+carnilleus_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLS_trajetory = {
+		icon = mission_conquer_50_development
+		position = 2
+		required_missions = { CLS_organise_the_forces }
+		provinces_to_highlight = {
+			province_id = 259
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			country_or_non_sovereign_subject_holds = 259
+			259 = {
+					OR = {
+						base_tax = 5
+						base_production = 5
+						base_manpower = 5
+					}
+				}
+			}
+		effect = {
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 253
+						province_id = 776
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

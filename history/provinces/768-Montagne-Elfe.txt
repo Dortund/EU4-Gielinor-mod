@@ -1,0 +1,36 @@
+#768-Montagne-Elfe
+owner = THO
+controller = THO
+add_core = THO
+tribal_owner = ---
+culture = thorobshuun
+religion = bandos
+
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 4
+
+trade_goods = logs
+
+is_city = yes
+
+1941.7.23 = {
+	owner = GNE
+	controller = GNE
+	add_core = GNE
+}
+
+1958.7.23 = {
+	owner = GNO
+	controller = GNO
+	add_core = GNO
+	remove_core = GNE
+}

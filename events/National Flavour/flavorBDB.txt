@@ -1,0 +1,56 @@
+########################################
+# Events for Bedabins
+########################################
+
+namespace = flavor_bdb
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_bdb.1
+	title = flavor_bdb.1.t #Devastation of the Desert Monkeys
+	desc = flavor_bdb.1.d #Monsters have struck upon the monkeys of the Kharidian Desert, with devastating consequences. Apmeken's chosen have been seemingly obliterated by the combined might of Leeuni, Ayuni and Eruni.
+	picture = NEW_APEMEKEN_DESERT_MONKEYS_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = BDB
+			AND = {
+				NOT = { exists = BDB }
+				tag = SOP
+			}
+			AND = {
+				NOT = { exists = BDB }
+				NOT = { exists = SOP }
+				owns_core_province = 81
+			}
+		}
+		is_year = 2119
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		name = flavor_bdb.1.a #This is a sad day for the allies of Apmeken.
+		add_dip_power = -25
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = APE
+					APE = {
+						NOT = { has_country_flag = APE_desert_colony_potential }
+					}
+				}
+				APE = {
+					country_event = {
+						id = flavor_ape.2
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+﻿l_english:
+ cleaving_of_the_gnome_empire.1.t:0 "Cleaving of the Gnome Empire"
+ cleaving_of_the_gnome_empire.1.d:0 "The Gnome Empire was a bold attempt to unify different groups of tree gnomes under one flag. However, the political dominance of the Tree Gnome Stronghold over the Tree Gnome Village has led to calls for secession, which have only become stronger in recent years. Shall we part on good terms or stay together on bad ones?"
+ cleaving_of_the_gnome_empire.1.a:0 "Let us split on good terms. I will lead the Gnome Stronghold."
+ cleaving_of_the_gnome_empire.1.b:0 "Let us split on good terms. I will lead the Tree Gnome Village."
+ cleaving_of_the_gnome_empire.1.c:0 "This empire shall never fall!"
+ 
+ cleaving_of_the_gnome_empire.2.t:0 "Fall of the Gnome Empire"
+ cleaving_of_the_gnome_empire.2.d:0 "The Gnome Empire has fallen, and with it the power it once possessed. Still, the people of our new realm have their own ideas on how to improve things."
+ cleaving_of_the_gnome_empire.2.a:0 "Let's have a look at what these new ideas are."
+ 
+ cleaving_of_the_gnome_empire.100.t:0 "Stability Restored in the Gnome Realms!"
+ cleaving_of_the_gnome_empire.100.d:0 "The Gnomes are no longer at each other's throats. Stability is restored."
+ cleaving_of_the_gnome_empire.100.a:0 "Hooray!"

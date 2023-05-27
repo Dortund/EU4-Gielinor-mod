@@ -1,0 +1,8 @@
+﻿l_english:
+ flavor_khn.1.t:0 "New Faiths"
+ flavor_khn.1.d:0 "What strange and wonderous beliefs we have come into contact with! A god of Chaos, a god of Order and a god of Balance! Some local people have been persuaded by their arguments - should we take them on board or continue with our own beliefs?"
+ flavor_khn.1.a:0 "Let us follow the God of Order!"
+ flavor_khn.1.b:0 "Let us follow the God of Balance!"
+ flavor_khn.1.c:0 "Let us follow the God of Chaos!"
+ flavor_khn.1.e:0 "These religions are fascinating, but we should keep our own ways."
+ KHN_changing_religion:0 "§RChanging religion to this would disallow us from becoming Khagan!§!"

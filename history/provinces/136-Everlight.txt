@@ -1,0 +1,20 @@
+#136 - Everlight
+owner = MYT
+controller = MYT
+add_core = MYT
+tribal_owner = ---
+culture = meiyer
+religion = saradomin
+
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+
+trade_goods = bones
+
+is_city = yes

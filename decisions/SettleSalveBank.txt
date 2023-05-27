@@ -1,0 +1,36 @@
+country_decisions = {
+
+	settle_salve_bank_decision = {
+		major = yes
+		potential = {
+			any_owned_province = {
+				region = morytania_region
+			}
+			111 = { is_empty = yes }
+		}
+		provinces_to_highlight = {
+			province_id = 111 #East Salve
+		}
+		allow = {
+			OR = {
+				owns_core_province = 112
+				owns_core_province = 842
+				owns_core_province = 114
+				owns_core_province = 113
+				owns_core_province = 1373
+			}
+			adm_tech = 15
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			111 = {
+				cede_province = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+}

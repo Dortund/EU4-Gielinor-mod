@@ -1,0 +1,41 @@
+#227 - Kalumin
+owner = KLU
+controller = KLU
+add_core = KLU
+tribal_owner = ---
+culture = jogre
+religion = bandos
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+discovered_by = TMP
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = naval_goods
+
+is_city = yes
+
+center_of_trade = 1
+
+2135.11.12 = {
+	owner = GLO
+	controller = GLO
+	add_core = GLO
+	culture = shilo
+	religion = karamjan
+}
+
+2174.5.6 = {
+	owner = GNO
+	controller = GNO
+	add_core = GNO
+	remove_core = GLO
+}

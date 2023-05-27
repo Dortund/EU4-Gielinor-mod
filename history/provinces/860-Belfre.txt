@@ -1,0 +1,41 @@
+#860 - Belfre
+owner = CLS
+controller = CLS
+add_core = CLS
+tribal_owner = ---
+culture = catherbian
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+trade_goods = logs
+latent_trade_goods = { divine_energy }
+
+is_city = yes
+
+2007.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	remove_core = CLS
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}

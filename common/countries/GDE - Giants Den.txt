@@ -1,0 +1,35 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 137 81 85 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Obor #0" = 5
+	"Kovac #0" = -5
+	"Klubu #0" = -5
+	"Silu #0" = -5
+	"Sermiar #0" = -5
+	"Banik #0" = -5
+	"Zberac #0" = -5
+	"Pekar #0" = -5
+	"Oborra #0" = -5
+	"Kovacina #0" = -5
+	"Klubua #0" = -5
+	"Sila #0" = -5
+	"Sermiarka #0" = -5
+	"Banikina #0" = -5
+	"Zberaca #0" = -5
+	"Pekara #0" = -5
+}

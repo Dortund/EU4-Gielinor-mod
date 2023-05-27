@@ -1,0 +1,21 @@
+#327-Gwenith
+owner = IOR
+controller = IOR
+add_core = IOR
+tribal_owner = ---
+culture = crwys
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 5
+base_manpower = 4
+
+trade_goods = grains
+
+is_city = yes
+
+center_of_trade = 1

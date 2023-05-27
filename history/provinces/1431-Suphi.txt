@@ -1,0 +1,19 @@
+#1431-Suphi
+owner = MOC
+controller = MOC
+add_core = MOC
+tribal_owner = ---
+culture = molch
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+trade_goods = hunter_creatures
+
+is_city = yes

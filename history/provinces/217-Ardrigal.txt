@@ -1,0 +1,23 @@
+#217 - Ardrigal
+owner = GLU
+controller = GLU
+add_core = GLU
+tribal_owner = ---
+culture = jogre
+religion = bandos
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = herblore_supplies
+
+is_city = yes

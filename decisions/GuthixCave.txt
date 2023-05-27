@@ -1,0 +1,54 @@
+country_decisions = {
+
+	open_cave_of_guthix = {
+		major = yes
+		potential = {
+			is_colonial_nation = no
+			any_province = { has_province_modifier = cave_of_guthix }
+		}
+		provinces_to_highlight = {
+			any_province = {
+				has_province_modifier = cave_of_guthix
+			}
+		}
+		allow = {
+			absolutism = 100
+			NOT = { religion = guthix }
+			is_free_or_tributary_trigger = yes
+			any_province = {
+				OR = {
+					controlled_by = ROOT
+					owned_by = ROOT
+				}
+				has_province_modifier = cave_of_guthix
+			}
+		}
+		effect = {
+			add_prestige = 100
+			every_province = {
+				limit = {
+					has_province_modifier = cave_of_guthix
+				}
+				remove_province_modifier = cave_of_guthix
+				cede_province = CGU
+				add_core = CGU
+				change_controller = CGU
+				change_religion = guthix
+			}
+			CGU = {
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+			}
+			set_global_flag = guthix_found
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+}

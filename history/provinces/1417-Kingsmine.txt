@@ -1,0 +1,33 @@
+#1417-Kingsmine
+owner = KOU
+controller = KOU
+add_core = KOU
+tribal_owner = ---
+culture = shayzien
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = basic_ores
+
+is_city = yes
+
+1969.11.5 = {
+	owner = KTW
+	controller = KTW
+	add_core = KTW
+	remove_core = KOU
+}
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+	remove_core = KTW
+}

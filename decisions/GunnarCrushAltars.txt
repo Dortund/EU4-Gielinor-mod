@@ -1,0 +1,69 @@
+country_decisions = {
+	gunnar_crush_altars = {
+		potential = {
+			has_reform = runecrafting_crusader
+			current_age = age_of_humans
+		}
+		provinces_to_highlight = {
+			AND = {
+			 	trade_goods = runes
+				NOT = { has_province_modifier = GUN_ruined_runecrafting_altar }
+				controlled_by = ROOT
+			}
+		}
+		allow = {
+			has_reform = runecrafting_crusader
+			current_age = age_of_humans
+		 	any_province = {
+				trade_goods = runes
+				NOT = { has_province_modifier = GUN_ruined_runecrafting_altar }
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			every_owned_province = {
+				limit = {
+					trade_goods = runes
+				}
+				add_province_modifier = {
+					name = GUN_ruined_runecrafting_altar
+					duration = -1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+
+	gunnar_restore_altars = {
+		potential = {
+			NOT = { has_reform = runecrafting_crusader }
+			any_owned_province = {
+				has_province_modifier = GUN_ruined_runecrafting_altar
+			}
+		}
+		provinces_to_highlight = {
+			any_province = {
+				has_province_modifier = GUN_ruined_runecrafting_altar
+			}
+		}
+		allow = {
+			absolutism = 25
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = GUN_ruined_runecrafting_altar
+				}
+				remove_province_modifier = GUN_ruined_runecrafting_altar
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 500
+	}
+}

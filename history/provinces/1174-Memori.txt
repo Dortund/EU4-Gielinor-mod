@@ -1,0 +1,17 @@
+#1174-Memori
+
+tribal_owner = ---
+culture = eastern_exile
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = bamboo
+
+is_city = yes

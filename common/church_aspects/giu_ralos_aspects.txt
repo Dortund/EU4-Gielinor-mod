@@ -1,0 +1,101 @@
+peaceful_age_aspect = {
+	sprite = "GFX_ralos_peaceful_age_aspect"
+	cost = 100
+	trigger = {
+		church_power = 100
+		mil = 1
+		has_regency = no
+		NOT = { adm = 6 }
+	}
+	effect = {
+		change_adm = 1
+		change_mil = -1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+internal_investment_aspect = {
+	sprite = "GFX_ralos_internal_investment_aspect"
+	cost = 100
+	trigger = {
+		church_power = 50
+		manpower_percentage = 0.1
+	}
+	effect = {
+		add_yearly_manpower = -1
+		random_owned_province = { 
+			add_base_production = 2
+		}
+	}
+}
+
+bastion_of_ralos_aspect = {
+	sprite = "GFX_ralos_bastion_of_ralos_aspect"
+	cost = 50
+	trigger = {
+		church_power = 50
+	}
+	effect = {
+		custom_tooltip = ralos_bastion_of_ralos_tooltip
+		hidden_effect = {
+			add_mercantilism = 1
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 5
+			}
+		}
+	}
+}
+
+joy_of_the_new_aspect = {
+	sprite = "GFX_ralos_joy_of_the_new_aspect"
+	cost = 200
+	trigger = {
+		church_power = 200
+		NOT = { has_heir = yes }
+	}
+	effect = {
+		define_heir = {
+			claim = 95
+		}
+	}
+}
+
+sunset_aspect = {
+	sprite = "GFX_ralos_sunset_aspect"
+	cost = 200
+	trigger = {
+		church_power = 200
+		NOT = {
+			stability = 3
+		}
+	}
+	effect = {
+		custom_tooltip = ralos_sunset_tooltip
+		hidden_effect = {
+			add_stability = 1
+			change_religion = ranul
+		}
+	}
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 3
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			stability = 0
+		}
+		modifier = {
+			factor = 0.5
+			stability = 1
+		}
+		modifier = {
+			factor = 0.5
+			stability = 2
+		}
+	}
+}

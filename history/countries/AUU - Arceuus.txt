@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = kourend_house
+government_rank = 1
+primary_culture = arceuus
+religion = saradomin
+technology_group = zeantechgroup
+capital = 407 #North Arceuus
+national_focus = ADM
+
+1265.3.17 = {
+	monarch = {
+		name = "Trobin"
+		dynasty = "Arceuus"
+		birth_date = 1208.10.31
+		adm = 6
+		dip = 5
+		mil = 2
+	}
+	heir = {
+		name = "Asteros"
+		dynasty = "Arceuus"
+		birth_date = 1231.1.13
+		claim = 100
+		adm = 5
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = free_thinker_personality
+	add_ruler_personality = scholar_personality
+	add_heir_personality = immortal_personality
+}

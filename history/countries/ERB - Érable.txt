@@ -1,0 +1,18 @@
+government = republic
+add_government_reform = plutocracy_reform
+government_rank = 1
+primary_culture = seer
+religion = armadyl
+technology_group = kandarintechgroup
+capital = 251 #Sudwulf
+
+1909.5.11 = {
+	monarch = {
+		name = "Phantuwti"
+		dynasty = "Laxmeister"
+		birth_date = 1873.2.9
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+}

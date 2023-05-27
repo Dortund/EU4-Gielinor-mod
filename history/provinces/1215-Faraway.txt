@@ -1,0 +1,12 @@
+#1215-Faraway
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = lesser_loot
+latent_trade_goods = { rare_loot }
+
+is_city = yes

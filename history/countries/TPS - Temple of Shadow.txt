@@ -1,0 +1,16 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = soulless
+add_accepted_culture = iorwerth
+religion = dark_lord
+technology_group = elventechgroup
+capital = 339 #Underground Pass
+national_focus = MIL
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

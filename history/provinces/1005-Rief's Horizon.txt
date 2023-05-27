@@ -1,0 +1,37 @@
+#1005-Rief's Horizon
+owner = CDU
+controller = CDU
+add_core = CDU
+tribal_owner = ---
+culture = taverlian
+religion = zamorak
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = flax
+
+is_city = yes
+
+1963.4.14 = {
+	owner = TAV
+	controller = TAV
+	add_core = TAV
+}
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+}

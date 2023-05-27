@@ -1,0 +1,84 @@
+########################################
+# Events for Ferox Enclave
+########################################
+
+namespace = flavor_fxe
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_fxe.1
+	title = flavor_fxe.1.t #Ferox Enclave
+	desc = flavor_fxe.1.d #Fascinated by the history of the land now known as the Wilderness, the mage Ferox has set out an expedition to create a save haven within it. This new Ferox Enclave accepts all faiths and does not tolerate violence within its walls.
+	picture = WARBANDS_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		capital_scope = {
+			OR = {
+				region = asgarnia_region
+				region = misthalin_region
+				region = forithry_region
+			}
+		}
+		159 = { is_empty = yes }
+		absolutism = 75
+		NOT = { exists = FXE }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			159 = {
+				cede_province = FXE
+				add_core = FXE
+				change_culture = rogue
+				change_religion = zamorak
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			FXE = {
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Ferox"
+					dynasty = "Carrallangar"
+					adm = 5
+					dip = 5
+					mil = 4
+					age = 39
+					claim = 100
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_fxe.1.a #Let's join the enclave!
+		switch_tag = FXE
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_fxe.1.b #Settling the Wilderness? Did they ever hear what happened the last time someone tried?
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

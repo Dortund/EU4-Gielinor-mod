@@ -1,0 +1,31 @@
+#295-Sarabank
+owner = IDI
+controller = IDI
+add_core = IDI
+tribal_owner = ---
+culture = idithuun
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 3
+
+trade_goods = lesser_loot
+
+is_city = yes
+
+2125.12.13 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	culture = ouranian
+	religion = saradomin
+	remove_core = IDI
+}

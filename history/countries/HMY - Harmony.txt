@@ -1,0 +1,30 @@
+government = theocracy
+add_government_reform = cloistered_order
+government_rank = 1
+primary_culture = entranan
+religion = saradomin
+technology_group = centraltechgroup
+capital = 148 #Harmony
+national_focus = ADM
+
+1921.12.28 = {
+	monarch = {
+		name = "John"
+		dynasty = "Preacher"
+		birth_date = 1875.11.12
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+2152.3.6 = {
+	monarch = {
+		name = "Tranquillity"
+		dynasty = "Norman"
+		birth_date = 2117.10.26
+		adm = 4
+		dip = 3
+		mil = 0
+	}
+}

@@ -1,0 +1,29 @@
+#777-Gutuspriw
+owner = GNE
+controller = GNE
+add_core = GNE
+culture = treegnome
+religion = guthix
+tribal_owner = ---
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = fruit
+
+is_city = yes
+
+1958.7.23 = {
+	owner = TGV
+	controller = TGV
+	add_core = TGV
+	remove_core = GNE
+}

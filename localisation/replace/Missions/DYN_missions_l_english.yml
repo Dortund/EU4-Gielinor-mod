@@ -1,0 +1,30 @@
+﻿l_english:
+ DYN_religious_consideration_title:0 "Religious Consideration"
+ DYN_religious_consideration_desc:0 "Zamorakians in northern Draynor clash with the predominantly Saradominist south. We should get this unrest under control."
+ dyn_religious_consideration_tooltip:0 "Your choice in this event will determine your subsequent missions on this path."
+ 
+ DYN_SARA_clean_up_the_manor_title:0 "Clean up the Manor"
+ DYN_SARA_clean_up_the_manor_desc:0 "The region around Draynor Manor is a frustrating hotbed of Zamorakian sentiment which needs to be cleaned up."
+ DYN_SARA_spread_the_light_title:0 "Spread the Light"
+ DYN_SARA_spread_the_light_desc:0 "Saradomin's word must wash over this land lest it falls into corruption."
+ 
+ DYN_NEUTRAL_friends_in_strange_places_title:0 "Friends in Strange Places"
+ DYN_NEUTRAL_friends_in_strange_places_desc:0 "We must practice what we preach when it comes to religious tolerance, and look beyond the narrow bounds of our faith for answers."
+ DYN_NEUTRAL_land_of_tolerance_title:0 "Land of Tolerance"
+ DYN_NEUTRAL_land_of_tolerance_desc:0 "Saradominists and Zamorakians living together is not impossible and shall strengthen our nation."
+ 
+ DYN_CHAOS_rise_of_chaos_title:0 "Rise of Chaos"
+ DYN_CHAOS_rise_of_chaos_desc:0 "It is time for the Saradominists of Draynor to be swept aside!"
+ DYN_CHAOS_army_of_darkness_title:0 "Army of Darkness"
+ DYN_CHAOS_army_of_darkness_desc:0 "Draynor Manor is home to potentially great power waiting to be unleashed - but we must be worthy of it."
+ DYN_CHAOS_stand_and_be_counted_title:0 "Stand and be Counted"
+ DYN_CHAOS_stand_and_be_counted_desc:0 "Count Drakan Draynor was stranded in Misthalin centuries ago. But with enough blood sacrifices, he can be brought to full power!"
+ 
+ DYN_retake_dry_isle_title:0 "Retake Drý Isle"
+ DYN_retake_dry_isle_desc:0 "Goblins have overrun Drý Isle! Without it under our control, our coast is extremely vulnerable to their naval raids."
+ DYN_naval_expansion_title:0 "Naval Expansion"
+ DYN_naval_expansion_desc:0 "To compete with key ports like Port Lina, we must expand our naval capacity."
+ DYN_maritime_trade_title:0 "Maritime Trade"
+ DYN_maritime_trade_desc:0 "Newfound naval power should be put to work maximising our regional trade power."
+ 
+ 

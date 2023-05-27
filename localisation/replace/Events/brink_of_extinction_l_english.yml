@@ -1,0 +1,42 @@
+﻿l_english:
+ brink_of_extinction.1.t:0 "The Brink of Extinction"
+ brink_of_extinction.1.d:0 "Occasionally, a TzHaar is born without a caste nor the memories of their ancestors. These are known as the Ga'al. While historically rare, more and more Ga'al have been born causing the TzHaar-Mej to worry about the TzHaar's future."
+ brink_of_extinction.1.a:0 "This could have dire consequences."
+ 
+ brink_of_extinction.2.t:0 "Large Number of Ga'al Births"
+ brink_of_extinction.2.d:0 "Our birthing pools have reported few Mej, Hur, Ket or Xil births in the last few weeks, and large numbers of Ga'al instead. Many Mej argue that such weaklings do not deserve to be named TzHaar, and their very presence will alarm the wider populace."
+ brink_of_extinction.2.a:0 "Send the Ga'al to the Fight Pits!"
+ brink_of_extinction.2.b:0 "Let the Ga'al live freely."
+ 
+ brink_of_extinction.3.t:0 "JalYt Adventurers Aid the Ga'al"
+ brink_of_extinction.3.d:0 "In a strange development, JalYt adventurers have taken to rescuing Ga'al from the Fight Pits."
+ brink_of_extinction.3.a:0 "Stop them!"
+ brink_of_extinction.3.b:0 "There is nothing we can do."
+
+ brink_of_extinction.4.t:0 "JalYt Adventurers Meet the Ga'al"
+ brink_of_extinction.4.d:0 "Curious JalYt have encountered Ga'al wandering Mor Ul Rek. With help from a TzHaar-Mej, they think they might be able to find answers in the Elder Kiln."
+ brink_of_extinction.4.a:0 "Let's see what comes of this."
+ brink_of_extinction.4.b:0 "We don't need the JalYt's help!"
+
+ brink_of_extinction.5.t:0 "A JalYt Communicates With the Ga'al"
+ brink_of_extinction.5.d:0 "A Ga'al, freed from the Fight Pits, has been championed by a JalYt adventurer who has embarked on a quest to the Elder Kiln in the hopes of forming them into a complete TzHaar."
+ brink_of_extinction.5.a:0 "Assist them; this could yield fruitful results."
+ brink_of_extinction.5.b:0 "We require no help from the JalYt!"
+
+ brink_of_extinction.6.t:0 "The Ga'al and the Elder Kiln"
+ brink_of_extinction.6.d:0 "The JalYt adventurer who embarked to the Elder Kiln has returned with word of the TokHaar, a race similar to, but older than the TzHaar. They control the Elder Kiln and demand we join them, away from Mor Ul Rek."
+ brink_of_extinction.6.a:0 "Evidently they're hostile!"
+ brink_of_extinction.6.b:0 "Attempt to negotiate."
+ 
+ brink_of_extinction.10.t:0 "Attack of the TokHaar"
+ brink_of_extinction.10.d:0 "From deeper inside the Karamja Volcano, the TokHaar attack with great force! Their control of the Elder Kiln was the cause of the volcano's cooling - defeat them, and we can end this threat to us once and for all!"
+ brink_of_extinction.10.a:0 "Let us face these so-called TokHaar."
+ 
+ brink_of_extinction.100.t:0 "Beyond the Brink"
+ brink_of_extinction.100.da:0 "The TzHaar are saved! With diligent work, the Elder Kiln has been restored to its full capabilities, under our full control. The heat of the Karamja Volcano is back to normal, and no more Ga'al are born."
+ brink_of_extinction.100.db:0 "With the fall of the TzHaar's guardians, the TzHaar have finally been driven past the point of extinction. Emerging in their place is the TokHaar; stronger adherents to the way of Ful and far more isolationist."
+ brink_of_extinction.100.dc:0 "The threat of the TokHaar has been handled, and the risk of extinction for the TzHaar has ended. But the question remains of what to do with the Ga'al who still inhabit our city."
+ brink_of_extinction.100.a:0 "Extinction was never an option."
+ brink_of_extinction.100.b:0 "At least I'm not extinct."
+ brink_of_extinction.100.c:0 "The Ga'al shall form a fifth caste!"
+ brink_of_extinction.100.e:0 "The Ga'al are not welcome!"

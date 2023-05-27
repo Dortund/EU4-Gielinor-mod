@@ -1,0 +1,251 @@
+namespace = kinshra_white_knight_war
+
+########################################
+# Kinshra-White Knight War
+########################################
+
+country_event = {
+	id = kinshra_white_knight_war.1
+	title = kinshra_white_knight_war.1.t #The Kinshra-White Knight War
+	picture = KINSHRA_WHITE_KNIGHT_WAR_eventPicture
+	
+	desc = {
+		trigger = {
+			religion = saradomin
+		}
+		desc = kinshra_white_knight_war.1.da #Religious tensions in Asgarnia have grown to the point where the Kinshra have declared themselves the legitimate rulers of Asgarnia and shall fight us to the death to secure that claim.
+	}
+	desc = {
+		trigger = {
+			religion = zamorak
+		}
+		desc = kinshra_white_knight_war.1.db #Those miserable loser White Knights think they should rule Asgarnia! How miserable that would be. They're preparing for war against us, so we should probably respond in kind.
+	}
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = asg_war164_start
+	}
+	
+	option = {
+		name = kinshra_white_knight_war.1.a #For the glory of Saradomin!
+		trigger = {
+			religion = saradomin
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = zamorak_rebels
+				size = 2
+			}
+		}
+		add_stability = -2
+	}
+	option = {
+		name = kinshra_white_knight_war.1.b #For the glory of Zamorak!
+		trigger = {
+			religion = zamorak
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = saradomin_rebels
+				size = 2
+			}
+		}
+		add_stability = -2
+	}
+}
+
+country_event = {
+	id = kinshra_white_knight_war.2
+	title = kinshra_white_knight_war.2.t #The Fate of Iban
+	picture = IBAN_LAIR_eventPicture
+	
+	desc = {
+		trigger = {
+			religion = saradomin
+		}
+		desc = kinshra_white_knight_war.2.da #In our efforts against the Kinshra, a covert operation has succeeded in bringing down one of the biggest threats - a warrior-mage named Iban. However, a witch by the name of Kardia managed to smuggle out his body with a plan to resurrect him in the western lands...
+	}
+	desc = {
+		trigger = {
+			religion = zamorak
+		}
+		desc = kinshra_white_knight_war.2.db #One of the Kinshra's finest nobles, swordsmen and mages, Iban, has been killed by White Knights in a cowardly attack. And then his body went missing! Rumours speak of a witch named Kardia taking the body - seemingly to resurrect him to serve Zamorak elsewhere.
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		tag = ASG
+		has_disaster = kinshra_white_knight_war
+		OR = {
+			338 = { is_empty = yes }
+			339 = { is_empty = yes }
+			982 = { is_empty = yes }
+		}
+		NOT = { exists = IBN }
+		NOT = { has_global_flag = temple_of_shadow_flag }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					338 = { is_empty = yes }
+				}
+				338 = {
+					add_core = IBN
+					cede_province = IBN
+					change_religion = zamorak
+					change_culture = soulless
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+					add_institution_embracement = {
+						which = statehood
+						value = 100
+					}
+					add_institution_embracement = {
+						which = exploration
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					339 = { is_empty = yes }
+				}
+				339 = {
+					add_core = IBN
+					cede_province = IBN
+					change_religion = zamorak
+					change_culture = soulless
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+					add_institution_embracement = {
+						which = statehood
+						value = 100
+					}
+					add_institution_embracement = {
+						which = exploration
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					982 = { is_empty = yes }
+				}
+				982 = {
+					add_core = IBN
+					cede_province = IBN
+					change_religion = zamorak
+					change_culture = dimnes
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+					add_institution_embracement = {
+						which = statehood
+						value = 100
+					}
+					add_institution_embracement = {
+						which = exploration
+						value = 100
+					}
+				}
+			}
+			tirannwn_region = {
+				discover_country = IBN
+			}
+			kandarin_region = {
+				discover_country = IBN
+			}
+			IBN = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Iban"
+					dynasty = "Zamoson"
+					culture = dimnes
+					religion = zamorak
+					adm = 4
+					dip = 3
+					mil = 4
+					age = 22
+					claim = 100
+				}
+				add_truce_with = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = kinshra_white_knight_war.2.a #Coming back from the dead? Clearly we should forget this conflict and side with Iban!
+		switch_tag = IBN
+	}
+	option = {
+		name = kinshra_white_knight_war.2.b #Iban's fate is no longer intertwined with Asgarnia's.
+		
+	}
+}
+
+country_event = {
+	id = kinshra_white_knight_war.100
+	title = kinshra_white_knight_war.100.t #End of the Kinshra-White Knight War
+	desc = kinshra_white_knight_war.100.d #The conflicts between the Kinshra and White Knights have finally come to an end.
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		clr_country_flag = asg_war164_start
+	}
+
+	option = {
+		name = kinshra_white_knight_war.100.a #For Asgarnia!
+		add_stability = 1
+	}
+}

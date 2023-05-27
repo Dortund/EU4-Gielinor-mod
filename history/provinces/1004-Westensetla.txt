@@ -1,0 +1,40 @@
+#1004-Westensetla
+owner = WST
+controller = WST
+add_core = WST
+tribal_owner = ---
+culture = burthorpian
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+1957.6.13 = {
+	owner = BTH
+	controller = BTH
+	add_core = BTH
+}
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+	remove_core = WST
+}
+
+2151.4.6 = {
+	owner = BTH
+	controller = BTH
+}

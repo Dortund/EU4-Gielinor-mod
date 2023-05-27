@@ -1,0 +1,18 @@
+government = tribal
+add_government_reform = feldip_tribe
+government_rank = 1
+primary_culture = ogre
+religion = bandos
+technology_group = bandostechgroup
+capital = 307 #Chompy
+
+1925.5.19 = {
+	monarch = {
+		name = "Komplymantz"
+		dynasty = "Uglogwee"
+		birth_date = 1899.10.5
+		adm = 1
+		dip = 1
+		mil = 4
+	}
+}

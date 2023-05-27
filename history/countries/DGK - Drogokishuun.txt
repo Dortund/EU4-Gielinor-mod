@@ -1,0 +1,23 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = drogokishuun
+religion = bandos
+technology_group = bandostechgroup
+capital = 21 #Nethan
+national_focus = MIL
+historical_friend = GGS
+historical_friend = HOR
+historical_friend = YUR
+historical_friend = NGU
+
+1927.6.12 = {
+	monarch = {
+		name = "Dirtteeth"
+		dynasty = "Drogokishuun"
+		birth_date = 1911.4.21
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}

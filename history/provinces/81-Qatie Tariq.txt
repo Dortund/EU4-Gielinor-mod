@@ -1,0 +1,22 @@
+#81 - Qatie Tariq
+owner = JAL
+controller = JAL
+add_core = JAL
+tribal_owner = ---
+culture = jaldraochtite
+religion = zaros
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = grains
+
+is_city = yes

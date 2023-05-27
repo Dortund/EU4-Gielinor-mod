@@ -1,0 +1,40 @@
+##################################################################################################
+# Also used for events.
+##################################################################################################
+
+example_modifier = {
+	local_unrest = -1
+}
+
+#############
+#Default high production provinces
+#############
+
+highprod_isle_of_adamant = {
+	trade_goods_size = 1
+}
+
+highprod_rei_ti = {
+	trade_goods_size = 1
+}
+
+#############
+#Elder Artefacts
+#############
+
+artefact_stone_of_jas = {
+	local_unrest = 1
+	discipline = 0.05
+}
+artefact_staff_of_armadyl = {
+	local_unrest = 1
+	leader_land_fire = 1
+}
+
+#############
+#Cave of Guthix
+#############
+
+cave_of_guthix = {
+	prestige = 1
+}

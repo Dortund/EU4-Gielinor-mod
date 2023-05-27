@@ -1,0 +1,56 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 171 169 61 }
+
+historical_idea_groups = {
+	quality_ideas
+	defensive_ideas
+	exploration_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Brian #0" = 5
+	"Donny #0" = 5
+	"Emerald #0" = 5
+	"Keith #0" = 5
+	"Martin #0" = 5
+	
+	"Heather #0" = -5
+	
+	"Camarst #0" = 1
+	"Darren #0" = 1
+	"Edmond #0" = 1
+	"Edward #0" = 1
+	"Ferox #0" = 25
+	"Gundai #0" = 1
+	"Ian #0" = 1
+	"Kolodion #0" = 1
+	"Larry #0" = 1
+	"Lundail #0" = 1
+	"Neil #0" = 1
+	"Marten #0" = 1
+	"Mishkal'un #0" = 1
+	"Noterazzo #0" = 1
+	"Richard #0" = 1
+	"Sam #0" = 1
+	"Sigismund #0" = 1
+	"Sil'as #0" = 1
+	"Simon #0" = 1
+	"Sin'keth #0" = 1
+	"Surok #0" = 1
+	"Tony #0" = 1
+	"William #0" = 1
+	
+	"Justine #0" = -1
+	"Lisa #0" = -1
+	"Mami #0" = -1
+	"Phabelle #0" = -1
+	"Scarophia #0" = -1
+}

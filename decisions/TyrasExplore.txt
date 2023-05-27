@@ -1,0 +1,65 @@
+country_decisions = {
+
+	tyras_explore = {
+		major = yes
+		potential = {
+			tag = TYS
+		}
+		provinces_to_highlight = {
+			province_id = 333 #Tyras Camp
+			province_id = 1390 #Port Tyras
+			333 = { owned_by = EVR }
+			1390 = { owned_by = EVR }
+		}
+		allow = {
+			adm_power = 150
+		}
+		effect = {
+			grant_independence = yes
+			333 = {
+				cede_province = TYS
+				add_core = TYS
+				remove_core = EVR
+				remove_core = AML
+				change_culture = ardignan
+				change_religion = saradomin
+				move_capital_effect = yes
+			 	change_province_name = "Tyras Camp"
+			}
+			1390 = {
+				cede_province = TYS
+				add_core = TYS
+				change_culture = ardignan
+				change_religion = saradomin
+				remove_core = EVR
+				remove_core = AML
+				change_province_name = "Port Tyras"
+			}
+			every_owned_province = {
+				limit = {
+					area = west_ardougne_area
+				}
+				cede_province = KDR
+			}
+			hidden_effect = {
+				KDR = {
+					country_event = { 
+						id = flavor_kdr.11
+						days = 1
+					}
+				}
+				EVR = {
+					country_event = { 
+						id = flavor_evr.4
+						days = 1
+					}
+				}
+				add_historic_friend = EVR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+}

@@ -1,0 +1,323 @@
+donblas_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = DBS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DBS_feed_the_tribe = {
+		icon = mission_conquer_50_development
+		position = 2
+		required_missions = { DBS_find_allies }
+		provinces_to_highlight = {
+			area = asgarnian_farmlands_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			asgarnian_farmlands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			port_sarim_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	DBS_conquer_the_coast = {
+		icon = mission_fall_of_sarim
+		position = 3
+		required_missions = { DBS_feed_the_tribe }
+		provinces_to_highlight = {
+			area = south_asgarnia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			port_sarim_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			rimmington_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_asgarnia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+donblas_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = DBS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DBS_find_allies = {
+		icon = mission_alliances
+		required_missions = {  } #none
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = building_alliances.tooltip
+				num_of_allies = 2
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			falador_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			asgarnian_farmlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			asgarnian_borderlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	DBS_towards_ice_mountain = {
+		icon = mission_conquer_50_development
+		required_missions = { DBS_find_allies }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 44
+				province_id = 863
+				province_id = 865
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 44
+			owns_core_province = 863
+			owns_core_province = 865
+		}
+		effect = {
+			add_adm_power = 50
+			if = {
+				limit = {
+					exists = CDZ
+				}
+				add_casus_belli = {
+					target = CDZ
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+		}
+	}
+}
+
+donblas_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = DBS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DBS_stand_against_the_wizards = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			OR = {
+				DWI = { humiliated_by = ROOT }
+				AND = {
+					army_size = DWI
+					navy_size = DWI
+				}
+				NOT = { exists = DWI }
+			}
+		}
+		effect = {
+			farramor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	DBS_stop_the_dark_wizards = {
+		icon = mission_conquer_50_development
+		position = 2
+		required_missions = { DBS_stand_against_the_wizards }
+		provinces_to_highlight = {
+			area = farramor_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			farramor_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			NOT = {
+			exists = DWI
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			taverley_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+						}
+						add_permanent_claim = ROOT
+					}
+			}
+	}
+		
+	DBS_conquest_of_taverley = {
+		icon = mission_conquer_50_development
+		position = 3
+		required_missions = { DBS_stop_the_dark_wizards }
+		provinces_to_highlight = {
+			province_id = 49
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			taverley_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			burthorpe_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			if = {
+				limit = {
+					religion = saradomin
+				}
+				country_event = {
+					id = flavor_dbs.1
+					days = 1
+				}
+			}
+		}
+	}	
+}
+
+donblas_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = DBS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DBS_power_in_asgarnia = {
+		icon = mission_conquer_50_development
+		required_missions = { }
+		provinces_to_highlight = {
+			region = asgarnia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {	
+			calc_true_if = {
+				all_owned_province = {
+					region = asgarnia_region
+					}
+				amount = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "DBS_ambitious_expansion"
+				duration = 3650
+				}
+			}
+		}
+
+	DBS_handle_misthalin = {
+		icon = mission_conquer_50_development
+		required_missions = { DBS_power_in_asgarnia }
+		trigger = {
+			has_idea = DBS_valzins_advice
+			OR = {
+				AND = {
+					alliance_with = MST
+					reverse_has_opinion = {
+						who = MST
+						value = 100
+					}
+				}
+			is_rival = MST
+			NOT = { exists = MST }
+			}
+		}
+		effect = {
+			if = {
+				limit = { alliance_with = MST }
+				add_historical_friend = MST
+				add_dip_power = 25
+			}
+			else = {
+				add_country_modifier = {
+					name = "DBS_defiance_of_misthalin"
+					duration = 7300
+				}
+			}
+		}
+	}
+
+}
+

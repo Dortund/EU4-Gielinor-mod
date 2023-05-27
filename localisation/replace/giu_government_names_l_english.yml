@@ -1,0 +1,75 @@
+﻿l_english:
+ COUNTY:0 "County"
+ GREAT_COUNTY:0 "Great County"
+
+ VILLAGE:0 "Village"
+ GENERAL:0 "General"
+ MARSHAL:0 "Marshal"
+ TRIBAL_KINGDOM:0 "Tribal Kingdom"
+ TRIBAL_EMPIRE:0 "Tribal Empire"
+ 
+ HOUSE:0 "House"
+ GREAT_HOUSE:0 "Great House"
+ 
+ GRAND_LORDSHIP:0 "Grand Lordship"
+ 
+ CITY_STATE:0 "City-State"
+ 
+ BURGHER:0 "Burgher"
+ GRAND_BURGHER:0 "Grand Burgher"
+ BURGHERESS:0 "Burgheress"
+ GRAND_BURGHERESS:0 "Grand Burgheress"
+
+ PRINCIPALITY:0 "Principality"
+ GREAT_PRINCIPALITY:0 "Great Principality"
+ GRAND_PRINCIPALITY:0 "Grand Principality"
+ PRINCE:0 "Prince"
+ PRINCESS:0 "Princess"
+ 
+ KHANATE:0 "Khanate"
+ KHAGANATE:0 "Khaganate"
+ 
+ KHAN:0 "Khan"
+ KHAGAN:0 "Khagan"
+ 
+ TOWN:0 "Town"
+ MAYOR:0 "Mayor"
+
+ HOLY_ISLAND:0 "Holy Island"
+
+ REGIME:0 "Regime"
+
+ SHAMANIC_STATE:0 "Shamanic State"
+ SHAMANIC_REALM:0 "Shamanic Realm"
+ SHAMANIC_EMPIRE:0 "Shamanic Empire"
+ SHAMAN:0 "Shaman"
+ SHAMANESS:0 "Shamaness"
+
+ ONEIROMANCER:0 "Oneiromancer"
+ REALM:0 "Realm"
+
+ CITY:0 "City"
+ GOLDEN_CITY:0 "Golden City"
+ 
+ METROPOLIS:0 "Metropolis"
+ DIRECTOR:0 "Director"
+ CHAIRMAN:0 "Chairman"
+ CHAIRWOMAN:0 "Chairwoman"
+
+ FATHER:0 "Father"
+ MOTHER:0 "Mother"
+
+ MINOR_CLAN:0 "Minor Clan"
+ CLAN:0 "Clan"
+ MAJOR_CLAN:0 "Major Clan"
+ UNITED_CLANS:0 "United Clans"
+ 
+ LAIR:0 "Lair"
+ BOSS:0 "Boss"
+ SUPERBOSS:0 "Superboss"
+ 
+ LESSER_KINGDOM:0 "Lesser Kingdom"
+ GREATER_KINGDOM:0 "Greater Kingdom"
+ 
+ HIGH_PRIEST:0 "High Priest"
+ HIGH_PRIESTESS:0 "High Priestess"

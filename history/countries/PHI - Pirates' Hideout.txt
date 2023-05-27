@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pirate_republic_reform
+government_rank = 1
+primary_culture = northernraider
+religion = v
+secondary_religion = godless
+technology_group = northerntechgroup
+capital = 195 #Peril Shore
+
+2152.7.21 = {
+	monarch = {
+		name = "Katherine"
+		dynasty = "Grey"
+		birth_date = 2123.11.23
+		adm = 2
+		dip = 0
+		mil = 5
+		female = yes
+	}
+}

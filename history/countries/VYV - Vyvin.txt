@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = south_asgarn
+religion = saradomin
+technology_group = centraltechgroup
+capital = 945
+
+1915.8.31 = {
+	monarch = {
+		name = "Radigad"
+		dynasty = "Vyvin"
+		birth_date = 1889.4.27
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

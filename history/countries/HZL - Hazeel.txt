@@ -1,0 +1,24 @@
+government = monarchy
+add_government_reform = mahjarrat_autocracy
+government_rank = 2
+primary_culture = ardignan
+add_accepted_culture = ouranian
+religion = zamorak
+technology_group = kandarintechgroup
+capital = 265 #Hazeel
+national_focus = MIL
+historical_friend = KZD
+
+1895.12.6 = {
+	monarch = {
+		name = "Hazeel"
+		dynasty = "of the Mahjarrat"
+		culture = mahjarrat
+		birth_date = 1.10.26
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

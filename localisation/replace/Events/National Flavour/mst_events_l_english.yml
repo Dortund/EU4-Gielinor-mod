@@ -1,0 +1,142 @@
+﻿l_english:
+ flavor_mst.1.t:0 "The Kharidians Demand Assistance!"
+ flavor_mst.1.d:0 "The Kharidians have argued that they lack the strength needed to defend the Kharidian Passes in future, without our assistance. Should we offer our support?"
+ flavor_mst.1.a:0 "Alright, but this better be their only demand."
+ flavor_mst.1.b:0 "They can sort it out themselves!"
+ 
+ flavor_mst.2.t:0 "Fate of the Narogoshuun"
+ flavor_mst.2.d:0 "We have expanded our land into a region with a heavy population of Narogoshuun goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?"
+ flavor_mst.2.a:0 "Drive the Narogoshuun to Asgarnia!"
+ flavor_mst.2.b:0 "Let them stay."
+
+ flavor_mst.3.t:0 "Narogoshuun Refugees"
+ flavor_mst.3.d:0 "Goblins from the Narogoshuun tribe have entered our lands from Misthalin, looking for sanctuary."
+ flavor_mst.3.a:0 "Clearly things aren't going well around the River Lum."
+ 
+ flavor_mst.4.t:0 "Fate of the Horogothgar"
+ flavor_mst.4.d:0 "We have expanded our land into a region with a heavy population of Horogothgar goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?"
+ flavor_mst.4.a:0 "Drive the Horogothgar to Asgarnia!"
+ flavor_mst.4.b:0 "Let them stay."
+ 
+ flavor_mst.5.t:0 "Horogothgar Refugees"
+ flavor_mst.5.d:0 "Goblins from the Horogothgar tribe have entered our lands from Misthalin, looking for sanctuary."
+ flavor_mst.5.a:0 "Clearly things aren't going well around the River Lum."
+ 
+ flavor_mst.6.t:0 "Fate of the Drogokishuun"
+ flavor_mst.6.d:0 "We have expanded our land into a region with a heavy population of Drogokishuun goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?"
+ flavor_mst.6.a:0 "Drive the Drogokishuun to Asgarnia!"
+ flavor_mst.6.b:0 "Let them stay."
+ 
+ flavor_mst.7.t:0 "Drogokishuun Refugees"
+ flavor_mst.7.d:0 "Goblins from the Drogokishuun tribe have entered our lands from Misthalin, looking for sanctuary."
+ flavor_mst.7.a:0 "To be fair, if I was in Misthalin, I'd want to flee too."
+ 
+ flavor_mst.8.t:0 "Fate of the Garagorshuun"
+ flavor_mst.8.d:0 "We have expanded our land into a region with a heavy population of Garagorshuun goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?"
+ flavor_mst.8.a:0 "Drive the Garagorshuun to Asgarnia!"
+ flavor_mst.8.b:0 "Let them stay."
+ 
+ flavor_mst.9.t:0 "Garagorshuun Refugees"
+ flavor_mst.9.d:0 "Goblins from the Garagorshuun tribe have entered our lands from Misthalin, looking for sanctuary."
+ flavor_mst.9.a:0 "To be fair, if I was in Misthalin, I'd want to flee too."
+ 
+ flavor_mst.10.t:0 "Fate of the Yurkolgokh"
+ flavor_mst.10.d:0 "We have expanded our land into a region with a heavy population of Yurkolgokh goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?"
+ flavor_mst.10.a:0 "Drive the Yurkolgokh to Asgarnia!"
+ flavor_mst.10.b:0 "Let them stay."
+ 
+ flavor_mst.11.t:0 "Yurkolgokh Refugees"
+ flavor_mst.11.d:0 "Goblins from the Yurkolgokh tribe have entered our lands from Misthalin, looking for sanctuary."
+ flavor_mst.11.a:0 "To be fair, if I was in Misthalin, I'd want to flee too."
+ 
+ flavor_mst.12.t:0 "Varrock Sewers"
+ flavor_mst.12.d:0 "The population of Varrock has grown over the decades, and its waste issues may soon become a problem. To this end, [ROOT.Monarch.GetTitle] [ROOT.Monarch.GetName] has considered investing in a small sewer. Before long, however, the plans went out of hand. Should we proceed with the sewer's construction?"
+ flavor_mst.12.a:0 "Fund the sewers!"
+ flavor_mst.12.b:0 "Surely a little smell is tolerable?"
+ 
+ flavor_mst.13.t:0 "Benny Gutenberg's Newspapers"
+ flavor_mst.13.d:0 "A writer by the name of Benny Gutenberg has come up with a novel idea - printing information about recent events on paper, and manufacturing such so-called newspapers in large amounts. This could promote literacy among the poor of Varrock - or inform the public about things they don't understand and should keep their noses out of."
+ flavor_mst.13.a:0 "So long as he doesn't report on us..."
+ 
+ flavor_mst.14.t:0 "Benny Gutenberg's Calendars"
+ flavor_mst.14.d:0 "Benny Gutenberg - creator and editor of the Varrock Herald newspaper, had a new idea: Cheap paper calendars so people can easily mark engagements for the coming year. So assured of his success, Benny put his printing press to work on a colossal order of calendars, only for most to remain unsold. These calendars would be dumped outside of Varrock where the city's poor scavenge. Before long, most of Varrock had a huge supply of calendars dated for year 169 of the Fifth Age. With the number of calendars exceeding the city's population, the same calendars would remain in use for as much as 13 years beyond their actual marked year."
+ flavor_mst.14.a:0 "So time hasn't come to a stop! I knew it!"
+ 
+ flavor_mst.15.t:0 "Curse of Enville"
+ flavor_mst.15.d:0 "A terrible shadow falls over Enville. The dangers of the Wilderness have grown in strength, and they draw to our border cities like moths to a line of fires. Raiders are coming, and if we do not commit to Enville's defence then there is no option but to evacuate everyone we can."
+ flavor_mst.15.a:0 "We are saving Enville no matter what it takes."
+ flavor_mst.15.b:0 "Evacuate the town!"
+ 
+ flavor_mst.16.t:0 "Nomad's Rivalis"
+ flavor_mst.16.d:0 "The warrior-mage Nomad has grown to be one of Misthalin's most powerful necromancers. Nomad claims to stand against other practitioners of this controversial art, and is willing to lend his powers for the defence of our nation, though for what gain to himself is hard to say."
+ flavor_mst.16.a:0 "Let's see what Nomad has to offer."
+ flavor_mst.16.b:0 "We can't fight evil with evil!"
+ 
+ flavor_mst.17.t:0 "A Strange Opponent"
+ flavor_mst.17.d:0 "Our war with Misthalin has had a strange twist: A powerful necromancer known only as Nomad has sided with the Misthalanians of all people - but perhaps this is his audition to us? Surely we would be a better fit than Misthalin and could win him over once the war is over."
+ flavor_mst.17.a:0 "We should try to recruit Nomad once the war ends."
+ flavor_mst.17.b:0 "Why should we bother recruiting an enemy?"
+ 
+ flavor_mst.18.t:0 "Recruitment of Nomad"
+ flavor_mst.18.d:0 "Our suspicions that Nomad was fighting us as an audition were correct. Soon after the end of our war, our and his agents met to discuss terms. He is willing to work for us, so long as he gains greater knowledge of the necromatic arts."
+ flavor_mst.18.a:0 "We shall tell him everything he wants to know."
+ flavor_mst.18.b:0 "We shall pretend to tell him everything he wants to know."
+ 
+ flavor_mst.19.t:0 "Nomad's Exodus"
+ flavor_mst.19.d:0 "After aiding us in a war, Nomad has suddenly vanished! We know not where."
+ flavor_mst.19.a:0 "Perhaps trusting a necromancer was not the best idea."
+ 
+ flavor_mst.20.t:0 "Nomad's Ponderis"
+ flavor_mst.20.d:0 "The warrior-mage Nomad suspects that we are keeping secrets from him, and have decided to leave our service. We has instead moved to a large island west of the Feldip Hills seemingly to pursue power his own way."
+ flavor_mst.20.a:0 "Let's join Nomad!"
+ flavor_mst.20.b:0 "He shall pay for this betrayal!"
+ 
+ flavor_mst.21.t:0 "Nomad's Travels"
+ flavor_mst.21.d:0 "We have received news that the warrior-mage Nomad has been spotted moving to a large island west of the Feldip Hills. Why he is doing this is at this stage unclear."
+ flavor_mst.21.a:0 "Let's join Nomad!"
+ flavor_mst.21.b:0 "Well, so long as he's happy."
+ 
+ flavor_mst.22.t:0 "Warbands!"
+ flavor_mst.22.d:0 "Word has spread of the death of Guthix. With it, the Gods once exiled from Gielinor are predicted to return, possibly leading to a whole new God Wars. To this end, roving warbands in the Wilderness have pledged themselves to Gods in the hopes that this will grant them legitimacy for their raiding actions."
+ flavor_mst.22.a:0 "Let us clear the way for the return of the Aviantese!"
+ flavor_mst.22.b:0 "In a time of war, there is only one god worth following."
+ flavor_mst.22.c:0 "The light of Saradomin shines even in such an evil realm!"
+ flavor_mst.22.e:0 "Forinthry is Zamorak's realm, and always shall be."
+ flavor_mst.22.f:0 "Warbands are still Warbands, regardless of which god they claim to follow."
+ 
+ flavor_mst.23.t:0 "Wizards' Tower Burns!"
+ flavor_mst.23.da:0 "Terrible news! An explosion at the Wizards' Tower has resulted in the tower burning to the ground, with the loss of many wizards. Many suspect Zamorakian wizards are to blame."
+ flavor_mst.23.db:0 "Terrible news! An explosion at the Wizards' Tower has resulted in the tower burning to the ground, with the loss of many wizards. Many suspect Saradominist wizards are to blame."
+ flavor_mst.23.a:0 "We will have vengeance on the Zamorakians!"
+ flavor_mst.23.b:0 "We will have vengeance on the Saradominists!"
+ flavor_mst.23.c:0 "All the wizards are to blame."
+ 
+ flavor_mst.24.t:0 "The Rebuilding of Wizards' Tower"
+ flavor_mst.24.da:0 "Those vile Zamorakians who burnt down Wizards' Tower are to be banned from the newly-constructed and significantly improved second Wizards' Tower!"
+ flavor_mst.24.db:0 "Those vile Saradominists who burnt down Wizards' Tower are to be banned from the newly-constructed and significantly improved second Wizards' Tower!"
+ flavor_mst.24.dc:0 "Some wizards have rebuilt their tower. Given the mess that happened last time, it's rather strange they want to repeat their old mistakes, but oh well."
+ flavor_mst.24.a:0 "Let's hope it's less flammable this time."
+ 
+ flavor_mst.25.t:0 "The Order of the Dagon'hai"
+ flavor_mst.25.da:0 "In our efforts to root out the vile Zamorakian menace who burnt down Wizards' Tower, a watchman has discovered a secret order of Zamorakian wizards operating in [Root.Capital.GetName] itself! We attempted to apprehend their forces, but they seem to have fled!"
+ flavor_mst.25.db:0 "In our efforts to root out the vile Saradominist menace who burnt down Wizards' Tower, a Zamorakian wizard order named the Dagon'hai has stepped forward to aid us in this cause."
+ flavor_mst.25.dc:0 "Our blaming of the wizards themselves for the burning of Wizards' Tower has promoted quite an anti-magic sentiment among our people. A watchman in particular has discovered a secretive Zamorakian order hiding in [Root.Capital.GetName]. The people want action against this perceived threat - what should we do?"
+ flavor_mst.25.de:0 "Our blaming of the wizards themselves for the burning of Wizards' Tower has promoted quite an anti-magic sentiment among our people. However, one Zamorakian magical order - the Dagon'Hai, has stepped forward claiming that they had no involvement in the burning of the tower, and that they only wish to serve Zamorak. How should we proceed?"
+ flavor_mst.25.a:0 "They can't hide forever."
+ flavor_mst.25.b:0 "Enemies of Zamorak shall be buried under the might of the Dagon'hai!"
+ flavor_mst.25.c:0 "The people want secret wizard orders out! Exile the Dagon'hai."
+ flavor_mst.25.e:0 "The Dagon'hai could still be useful for us."
+ flavor_mst.25.f:0 "They're Zamorakians, for chaos' sake! Let us work with them!"
+ 
+ flavor_mst.26.t:0 "The Chaos Tunnels"
+ flavor_mst.26.d:0 "The Zamorakian Dagon'hai order, after their exile from Varrock, have kept busy. They have excavated secret tunnels beneath the Wilderness known as the Chaos Tunnels - from there, their numbers have grown and so has their power."
+ flavor_mst.26.a:0 "I'm joining the Dagon'hai!"
+ flavor_mst.26.b:0 "Let them cower in their caves!"
+ 
+ flavor_mst.27.t:0 "Asgarnian Fears"
+ flavor_mst.27.d:0 "Misthalin has been the most powerful human nation in the known world for centuries - but that strength leads to fear from others. Our recent conquests in Asgarnia have alarmed the clans present, who threaten us with united action if we do not back down."
+ flavor_mst.27.a:0 "Withdraw from Asgarnia."
+ mst_leave_asgarnia_tooltip:0 "All owned provinces in Asgarnia will be returned to their previous owners, with your cores removed."
+ flavor_mst.27.b:0 "We are not about to squander our potential!"
+ mst_potential_asgarnian_coalition_tooltip:0 "§RWarning:§! This option will lead to the §ROverbearing Misthalin§! disaster, where you will likely face an §RAsgarnian coalition!§!"
+ 

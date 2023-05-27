@@ -1,0 +1,814 @@
+# Province Triggered modifiers are here.
+# These are added to provinces through the add_province_triggered_modifier effect
+#
+# Effects are fully scriptable here.
+
+
+###########################################
+# Just random test modifier
+###########################################
+test_modifier = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		owner = {
+			stability = 0
+		}
+	}
+
+	local_build_cost = 0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}
+
+religious_center = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		if = {
+			limit = {
+				province_id = 49 #Taverley
+			}
+			religion = guthix
+		}
+		else_if = {
+			limit = {
+				province_id = 56 # Saradomin's Landing
+			}
+			religion = saradomin
+		}
+		else_if = {
+			limit = {
+				province_id = 100 # Menaphos
+			}
+			religion = menaphite
+		}
+		else_if = {
+			limit = {
+				province_id = 101 # Sophanem
+			}
+			religion = menaphite
+		}
+		else_if = {
+			limit = {
+				province_id = 133 # Slepe
+			}
+			religion = zamorak
+		}
+		else_if = {
+			limit = {
+				province_id = 206 # Chaos Temple
+			}
+			religion = zamorak
+		}
+		else_if = {
+			limit = {
+				province_id = 212 # TzHaar City
+			}
+			religion = ful
+		}
+		else_if = {
+			limit = {
+				province_id = 216 #Tai Bwo Wannai
+			}
+			religion = karamjan
+		}
+		else_if = {
+			limit = {
+				province_id = 252 # Redvin
+			}
+			religion = armadyl
+		}
+		else_if = {
+			limit = {
+				province_id = 272 # Grand Tree
+			}
+			religion = guthix
+		}
+		else_if = {
+			limit = {
+				province_id = 305 #Gu'Tanoth
+			}
+			religion = bandos
+		}
+		else_if = {
+			limit = {
+				province_id = 317 #Oo'glog
+			}
+			religion = bandos
+		}
+		else_if = {
+			limit = {
+				province_id = 325 #Prifddinas
+			}
+			religion = seren
+		}
+		else_if = {
+			limit = {
+				province_id = 461 #Molch
+			}
+			religion = xeric
+		}
+		else_if = {
+			limit = {
+				province_id = 935 #Chambers of Xeric
+			}
+			religion = xeric
+		}
+		else_if = {
+			limit = {
+				province_id = 495 #Refuge's Hope
+			}
+			religion = ralos
+		}
+		else_if = {
+			limit = {
+				province_id = 510 #South Ranul Forest
+			}
+			religion = ranul
+		}
+		else_if = {
+			limit = {
+				province_id = 438 #Forthos
+			}
+			religion = ranul
+		}
+		else_if = {
+			limit = {
+				province_id = 415 #Wintertodt
+			}
+			religion = wen
+		}
+		else_if = {
+			limit = {
+				province_id = 1108 #Hanalan Beach
+			}
+			religion = hanalan
+		}
+		else_if = {
+			limit = {
+				province_id = 1109 #Cyclosis
+			}
+			religion = birman
+		}
+		else_if = {
+			limit = {
+				province_id = 1201 #Byakko
+			}
+			religion = byakko
+		}
+		else_if = {
+			limit = {
+				province_id = 1148 #Genbu
+			}
+			religion = genbu
+		}
+		else_if = {
+			limit = {
+				province_id = 1104 #Temple of Seiryu
+			}
+			religion = seiryu
+		}
+		else_if = {
+			limit = {
+				province_id = 1193 #Pearl Fortress
+			}
+			religion = suzaku
+		}
+		else_if = {
+			limit = {
+				province_id = 1233 #V's Island
+			}
+			religion = v
+		}
+	}
+	local_missionary_strength = -0.05
+}
+
+##########################################
+# National Flavour - Misthalin
+##########################################
+
+MST_paterdomus = {
+	potential = {
+		NOT = {	has_province_modifier = MST_reinforced_paterdomus }
+	}
+	trigger = {
+		owner = {
+			tag = MST
+		}
+		controller = {
+			tag = MST
+		}
+	}
+	local_defensiveness = 0.5
+	garrison_size = 0.5
+	garrison_growth = 0.1
+}
+
+MST_reinforced_paterdomus = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		owner = {
+			tag = MST
+		}
+		controller = {
+			tag = MST
+		}
+	}
+	local_defensiveness = 1
+	garrison_size = 1
+	garrison_growth = 0.25
+}
+
+##########################################
+# National Flavour - Morytania
+##########################################
+
+MYT_descendants_of_hallowvale = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		owner = {
+			religion_group = chaos_group
+		}
+		religion = saradomin
+	}
+	local_missionary_strength = -0.05
+}
+
+##########################################
+# National Flavour - Kandarin
+##########################################
+
+KDR_castle_wars_modifier = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		if = {
+			limit = {
+				province_id = 295 #sarabank
+			}
+			religion = saradomin
+		}
+		else_if = {
+			limit = {
+				province_id = 296 #zamobank
+			}
+			religion = zamorak
+		}
+	}
+ 	local_missionary_strength = -0.05
+}
+
+##########################################
+# National Flavour - Karamja
+##########################################
+
+KJA_integration_of_the_tzhaar = {
+	potential = {
+		OR = {
+			owned_by = KJA
+			owner = {
+				is_subject_of = KJA 
+			}
+		}
+	}
+	trigger = {
+		owned_by = KJA
+		culture = tzhaar
+		has_owner_accepted_culture = yes
+	}
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+	local_unrest = -5
+	local_tax_modifier = 0.2
+	local_production_efficiency = 0.2
+}
+
+##########################################
+# National Flavour - Tirannwn
+##########################################
+
+temple_of_light_modifier = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		province_id = 538 #Temple of Light
+		owner = {
+			religion = seren
+		}
+		NOT = { has_province_modifier = EVR_sealed_temple_of_light }
+	}
+	fire_damage = 0.05
+}
+
+##########################################
+# The Wilderness
+##########################################
+
+settled_wilderness = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		region = forinthry_region
+		NOT = { is_empty = yes }
+	}
+	max_attrition = 0.5
+	local_unrest = 1
+}
+
+# Low Population
+
+sparse_mild_wilderness = {
+	potential = {
+		OR = {
+		 	is_colony = yes
+			is_empty = yes
+		}
+	}
+	trigger = {
+		region = forinthry_region
+		NOT = { native_ferocity = 5 }
+		NOT = { native_hostileness = 5 }
+		NOT = { native_size = 10 }
+	}
+	max_attrition = 0.5
+	attrition = 0.5
+	local_colonial_growth = -50
+}
+
+sparse_moderate_wilderness = {
+	potential = {
+		OR = {
+		 	is_colony = yes
+			is_empty = yes
+		}
+	}
+
+	trigger = {
+		region = forinthry_region
+		OR = {
+			native_ferocity = 5
+			native_hostileness = 5
+		}
+		NOT = { native_ferocity = 11 }
+		NOT = { native_hostileness = 11 }
+		NOT = { native_size = 10 }
+	}
+	max_attrition = 1
+	attrition = 1
+	local_colonial_growth = -85
+}
+
+sparse_severe_wilderness = {
+	potential = {
+		OR = {
+		 	is_colony = yes
+			is_empty = yes
+		}
+	}
+
+	trigger = {
+		region = forinthry_region
+		OR = {
+			native_ferocity = 11
+			native_hostileness = 11
+		}
+		NOT = { native_size = 10 }
+	}
+	max_attrition = 1.5
+	attrition = 1.5
+	local_colonial_growth = -120
+}
+
+#Moderate population
+
+populous_mild_wilderness = {
+	potential = {
+		OR = {
+		 	is_colony = yes
+			is_empty = yes
+		}
+	}
+
+	trigger = {
+		region = forinthry_region
+		native_size = 10
+		NOT = { native_ferocity = 5 }
+		NOT = { native_hostileness = 5 }
+		NOT = { native_size = 25 }
+	}
+	max_attrition = 0.5
+	attrition = 0.5
+	local_colonial_growth = -85
+}
+
+populous_moderate_wilderness = {
+	potential = {
+		OR = {
+		 	is_colony = yes
+			is_empty = yes
+		}
+	}
+
+	trigger = {
+		region = forinthry_region
+		OR = {
+			native_ferocity = 5
+			native_hostileness = 5
+		}
+		NOT = { native_ferocity = 11 }
+		NOT = { native_hostileness = 11 }
+		NOT = { native_size = 25 }
+	}
+	max_attrition = 1
+	attrition = 1
+	local_colonial_growth = -120
+}
+
+populous_severe_wilderness = {
+	potential = {
+		OR = {
+		 	is_colony = yes
+			is_empty = yes
+		}
+	}
+
+	trigger = {
+		region = forinthry_region
+		native_size = 10
+		OR = {
+			native_ferocity = 11
+			native_hostileness = 11
+		}
+		NOT = { native_size = 25 }
+	}
+	max_attrition = 1.5
+	attrition = 1.5
+	local_colonial_growth = -155
+}
+
+#High population
+
+dense_mild_wilderness = {
+	potential = {
+		OR = {
+		 	is_colony = yes
+			is_empty = yes
+		}
+	}
+
+	trigger = {
+		region = forinthry_region
+		native_size = 25
+		NOT = { native_ferocity = 5 }
+		NOT = { native_hostileness = 5 }
+	}
+	max_attrition = 0.5
+	attrition = 0.5
+	local_colonial_growth = -120
+}
+
+dense_moderate_wilderness = {
+	potential = {
+		OR = {
+		 	is_colony = yes
+			is_empty = yes
+		}
+	}
+
+	trigger = {
+		region = forinthry_region
+		OR = {
+			native_ferocity = 5
+			native_hostileness = 5
+		}
+		native_size = 25
+		NOT = { native_ferocity = 11 }
+		NOT = { native_hostileness = 11 }
+	}
+	max_attrition = 1
+	attrition = 1
+	local_colonial_growth = -155
+}
+
+dense_severe_wilderness = {
+	potential = {
+		OR = {
+		 	is_colony = yes
+			is_empty = yes
+		}
+	}
+
+	trigger = {
+		region = forinthry_region
+		native_size = 25
+		native_ferocity = 11
+		native_hostileness = 11
+	}
+	max_attrition = 1.5
+	attrition = 1.5
+	local_colonial_growth = -190
+}
+
+##########################################
+# PROVINCES BORDERING THE WILDERNESS
+##########################################
+
+wildy_border_level_one = {
+	potential = {
+		NOT = { is_empty = yes }
+		any_empty_neighbor_province = {
+			region = forinthry_region
+			has_active_triggered_province_modifier = sparse_mild_wilderness
+		}
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_two }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_three }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+	}
+	trigger = {
+		owner = {
+			NOT = { technology_group = northerntechgroup }
+			NOT = { has_province_modifier = MST_beacon_network_province }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_two }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_three }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+		}
+	}
+	local_unrest = 0.2
+	local_missionary_strength = -0.004
+}
+
+wildy_border_level_two = {
+	potential = {
+		NOT = { is_empty = yes }
+		any_empty_neighbor_province = {
+			region = forinthry_region
+			has_active_triggered_province_modifier = sparse_moderate_wilderness
+		}
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_three }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+	}
+
+	trigger = {
+		owner = {
+			NOT = { technology_group = northerntechgroup }
+			NOT = { has_province_modifier = MST_beacon_network_province }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_three }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+		}
+	}
+	local_unrest = 0.4
+	local_missionary_strength = -0.008
+}
+
+wildy_border_level_three = {
+	potential = {
+		NOT = { is_empty = yes }
+		any_empty_neighbor_province = {
+			region = forinthry_region
+			has_active_triggered_province_modifier = populous_mild_wilderness
+		}
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+	}
+
+	trigger = {
+		owner = {
+			NOT = { technology_group = northerntechgroup }
+			NOT = { has_province_modifier = MST_beacon_network_province }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+		}
+	}
+	local_unrest = 0.6
+	local_missionary_strength = -0.012
+}
+
+wildy_border_level_four = {
+	potential = {
+		NOT = { is_empty = yes }
+		any_empty_neighbor_province = {
+			region = forinthry_region
+			has_active_triggered_province_modifier = sparse_severe_wilderness
+		}
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+	}
+
+	trigger = {
+		owner = {
+			NOT = { technology_group = northerntechgroup }
+			NOT = { has_province_modifier = MST_beacon_network_province }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+		}
+	}
+	local_unrest = 0.8
+	local_missionary_strength = -0.016
+}
+
+wildy_border_level_five = {
+	potential = {
+		NOT = { is_empty = yes }
+		any_empty_neighbor_province = {
+			region = forinthry_region
+			has_active_triggered_province_modifier = populous_moderate_wilderness
+		}
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+	}
+
+	trigger = {
+		owner = {
+			NOT = { technology_group = northerntechgroup }
+			NOT = { has_province_modifier = MST_beacon_network_province }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+		}
+	}
+	local_unrest = 1
+	local_missionary_strength = -0.020
+}
+
+wildy_border_level_six = {
+	potential = {
+		NOT = { is_empty = yes }
+		any_empty_neighbor_province = {
+			region = forinthry_region
+			has_active_triggered_province_modifier = dense_mild_wilderness
+		}
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+	}
+
+	trigger = {
+		owner = {
+			NOT = { technology_group = northerntechgroup }
+			NOT = { has_province_modifier = MST_beacon_network_province }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+		}
+	}
+	local_unrest = 1.2
+	local_missionary_strength = -0.024
+}
+
+wildy_border_level_seven = {
+	potential = {
+		NOT = { is_empty = yes }
+		any_empty_neighbor_province = {
+			region = forinthry_region
+			has_active_triggered_province_modifier = populous_severe_wilderness
+		}
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+	}
+
+	trigger = {
+		owner = {
+			NOT = { technology_group = northerntechgroup }
+			NOT = { has_province_modifier = MST_beacon_network_province }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+		}
+	}
+	local_unrest = 1.4
+	local_missionary_strength = -0.028
+}
+
+wildy_border_level_eight = {
+	potential = {
+		NOT = { is_empty = yes }
+		any_empty_neighbor_province = {
+			region = forinthry_region
+			has_active_triggered_province_modifier = dense_moderate_wilderness
+		}
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+	}
+
+	trigger = {
+		owner = {
+			NOT = { technology_group = northerntechgroup }
+			NOT = { has_province_modifier = MST_beacon_network_province }
+			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
+		}
+	}
+	local_unrest = 1.6
+	local_missionary_strength = -0.032
+}
+
+wildy_border_level_nine = {
+	potential = {
+		NOT = { is_empty = yes }
+		any_empty_neighbor_province = {
+			region = forinthry_region
+			has_active_triggered_province_modifier = dense_moderate_wilderness
+		}
+	}
+	trigger = {
+		owner = {
+			NOT = { technology_group = northerntechgroup }
+			NOT = { has_province_modifier = MST_beacon_network_province }
+		}
+	}
+	local_unrest = 1.8
+	local_missionary_strength = -0.036
+}
+
+##########################################
+# Elder Artefacts
+##########################################
+
+temple_of_ikov_local = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		always = yes
+	}
+	local_defensiveness = 0.1
+	local_hostile_movement_speed = -0.1
+}
+
+
+temple_to_guthix = {
+	potential = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		OR = {
+			controller = {
+				has_country_flag = knowledge_stone_of_jas
+			}
+			has_global_flag = temple_of_guthix_revealed
+		}
+
+	}
+	trigger = {
+		controller = {
+			has_country_flag = knowledge_stone_of_jas
+		}
+	}
+}

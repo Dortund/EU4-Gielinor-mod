@@ -1,0 +1,147 @@
+########################################
+# Events for Kharidians
+########################################
+
+namespace = flavor_kds
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_kds.1
+	title = flavor_kds.1.t #Settlement of Al Kharid
+	desc = flavor_kds.1.d #Misthalin has been driving goblins out of the southern Lum region to settle it themselves. However, goblins still prominent in the region and seeking vengeance, some Misthalin settlers have headed towards our lands instead. Combined with our own settlers, we can create a new city of Al Kharid.
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_kds.1.a #Excellent!
+		62 = {
+			add_core = KDS
+			cede_province = KDS
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.2
+	title = flavor_kds.2.t #Misthalin or Menaphos?
+	desc = flavor_kds.2.d #Despite being the key custodians of the Kharidian Passes keeping Misthalin safe from raids, they seem to have been neglecting us. With powers consolidating around the world, we need more than what we currently have if we are to survive. Either Misthalin offers us support, or we should seek someone else to help. Perhaps Menaphos?
+	picture = MENAPHOS_CITY_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = KDS
+		exists = MST
+		exists = MPS
+		adm_tech = 5
+		NOT = {	owns_core_province = 62 }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = flavor_kds.2.a #I'm sure Misthalin will help us.
+		MST = {
+			country_event = {
+				id = flavor_mst.1
+				days = 90
+			}
+		}
+	}
+	option = {
+		name = flavor_kds.2.b #Let's seek out Menaphos' assistance.
+		MPS = {
+			country_event = {
+				id = flavor_mps.1
+				days = 90
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.3
+	title = flavor_kds.3.t #Misthalin Grants Assistance
+	desc = flavor_kds.3.d #Misthalin has graciously granted us extra infrastructual support, allowing us to expand our realm further!
+	picture = MISTHALIN_LUMBRIDGE_CASTLE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_kds.3.a #Wonderful!
+		62 = {
+			add_core = KDS
+			cede_province = KDS
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.4
+	title = flavor_kds.4.t #Misthalin Refuses to Help!
+	desc = flavor_kds.4.d #Misthalin has declined to send us the extra support we requested.
+	picture = MISTHALIN_LUMBRIDGE_CASTLE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_kds.4.a #Booooo!
+	}
+}
+
+country_event = {
+	id = flavor_kds.5
+	title = flavor_kds.5.t #Menaphos Grants Assistance
+	desc = flavor_kds.5.d #Menaphos has graciously granted us infrastructual support and an alliance, allowing us to expand our realm further!
+	picture = MENAPHOS_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_kds.5.a #Wonderful!
+		62 = {
+			add_core = KDS
+			cede_province = KDS
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.6
+	title = flavor_kds.6.t #Menaphos Refuses to Help!
+	desc = flavor_kds.6.d #Menaphos has declined to send us the support we requested.
+	picture = MENAPHOS_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_kds.6.a #Booooo!
+	}
+}

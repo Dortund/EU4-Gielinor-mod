@@ -1,0 +1,77 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_holy_site_default"
+		texturefile = "gfx//interface//holy_sites//aksum.dds"
+	}
+
+### Zarosian Holy Sites ###
+
+	spriteType = {
+		name = "GFX_holy_site_20"
+		texturefile = "gfx//interface//holy_sites//paddewwa.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_23"
+		texturefile = "gfx//interface//holy_sites//senntisten.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_113"
+		texturefile = "gfx//interface//holy_sites//kharyrll.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_188"
+		texturefile = "gfx//interface//holy_sites//annakarl.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_358"
+		texturefile = "gfx//interface//holy_sites//ghorrock.dds"
+		loadType = "INGAME"
+	}
+	
+### Dark Lord Holy sites ###
+	
+	spriteType = {
+		name = "GFX_holy_site_325"
+		texturefile = "gfx//interface//holy_sites//prifddinas.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_holy_site_538"
+		texturefile = "gfx//interface//holy_sites//temple_of_light.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_holy_site_339"
+		texturefile = "gfx//interface//holy_sites//blessed_chasm.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_holy_site_337"
+		texturefile = "gfx//interface//holy_sites//lletya.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_holy_site_266"
+		texturefile = "gfx//interface//holy_sites//west_ardougne.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_holy_site_1346"
+		texturefile = "gfx//interface//holy_sites//obelisk_eye.dds"
+		loadType = "INGAME"
+	}
+}

@@ -1,0 +1,19 @@
+﻿l_english:
+ flavor_rel.1.t:0 "The Fremennik Isles"
+ flavor_rel.1.d:0 "The two brothers, Jatizso and Neitiznot, have been frequent rivals causing much strife in our realm. To this end, they have been banished from Rellekka so they can find someone else to pester. Neitiznot found an uninhabited island to the west, only for Jatizso to also settle on a nearby isle. The rivalry continues, only this time on a national scale. Should we take a side?"
+ flavor_rel.1.a:0 "Jatizso!"
+ flavor_rel.1.b:0 "Neitiznot!"
+ flavor_rel.1.c:0 "Let's stay out of it."
+ 
+ flavor_rel.2.t:0 "The Runecrafting Crusades"
+ flavor_rel.2.d:0 "The discovery of Rune Essence has led to an explosion in the magical arts, which the Fremennik have been divided on. While some embrace this new magical order, others view runecrafting as stealing power from the Gods themselves. A young warlord by the name of Gunnar has rallied this faction together, vowing to destroy the runecrafting altars once and for all."
+ flavor_rel.2.a:0 "Gunnar is right! Let us join his righteous crusade against the evils of Runecrafting!"
+ flavor_rel.2.b:0 "Let's give Gunnar the support he needs!"
+ flavor_rel.2.c:0 "Gunnar can make do with his closest supporters."
+ flavor_rel.2.e:0 "Runecrafting is a pain enough already, why make it worse?"
+ 
+ flavor_rel.3.t:0 "Conquest of the Maple Woods"
+ flavor_rel.3.d:0 "Our recent conquest of the Maple Woods area of northern Kandarin has made our Barbarian residents restless. They want to take the new lands for their own, but should we let them?"
+ flavor_rel.3.a:0 "Let the Barbarians move south."
+ flavor_rel.3.b:0 "How about they don't?"
+ 

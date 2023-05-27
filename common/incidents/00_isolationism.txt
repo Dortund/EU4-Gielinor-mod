@@ -1,0 +1,292 @@
+incident_tirannwn_civil_war = {
+
+	frame = 1
+	variable_initial = 0
+
+	potential = {
+		religion = seren
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = seren_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = seren_incident_recent }
+				had_country_flag = { flag = seren_incident_recent days = 7300 }
+			}
+		}
+		NOT = { exists = TNN }
+		exists = EVR
+		any_country = { religion = dark_lord }
+		current_age = age_of_mortals
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate_effect = {
+		country_event = { id = seren_events.100 }
+		clr_country_flag = seren_incident_recent
+		set_country_flag = active_incident_flag
+	}
+}
+
+incident_decline_of_clan_elders = {
+
+	frame = 2
+	variable_initial = 0
+
+	potential = {
+		religion = seren
+	}
+	
+	trigger = {
+		is_incident_happened = incident_tirannwn_civil_war
+		custom_trigger_tooltip = {
+			tooltip = seren_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = seren_incident_recent }
+				had_country_flag = { flag = seren_incident_recent days = 7300 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+	immediate_effect = {
+		country_event = { id = seren_events.200 }
+		clr_country_flag = seren_incident_recent
+		set_country_flag = active_incident_flag
+	}
+}
+
+incident_runecrafters = {
+
+	frame = 3
+	variable_initial = 0
+
+	potential = {
+		religion = seren
+	}
+
+	trigger = {
+		current_age = age_of_humans
+	 	is_institution_enabled = runecrafting
+		custom_trigger_tooltip = {
+			tooltip = seren_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = seren_incident_recent }
+				had_country_flag = { flag = seren_incident_recent days = 7300 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+
+	immediate_effect = {
+		country_event = { id = seren_events.300 }
+		clr_country_flag = seren_incident_recent
+		set_country_flag = active_incident_flag
+	}
+}
+
+incident_kandarin_relations = {
+
+	frame = 4
+	variable_initial = 0
+
+	potential = {
+		religion = seren
+	}
+
+	trigger = {
+		is_institution_enabled = statehood
+		any_country = {
+			culture_group = kandarin_group
+			capital_scope = { region = kandarin_region }
+			num_of_provinces_in_states = 10
+		}
+		custom_trigger_tooltip = {
+			tooltip = seren_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = seren_incident_recent }
+				had_country_flag = { flag = seren_incident_recent days = 7300 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+
+	immediate_effect = {
+		country_event = { id = seren_events.400 }
+		clr_country_flag = seren_incident_recent
+		set_country_flag = active_incident_flag
+	}
+}
+
+incident_zeah_diplomacy = {
+	frame = 5
+	variable_initial = 0
+
+	potential = {
+		religion = seren
+	}
+
+	trigger = {
+		is_institution_enabled = exploration
+		NOT = {
+			capital_scope = {
+				continent = zeah
+			}
+		}
+		any_country = {
+			culture_group = kourend_group
+			knows_country = ROOT
+		}
+		any_country = {
+			culture_group = varlamore_group
+			knows_country = ROOT
+		}
+		custom_trigger_tooltip = {
+			tooltip = seren_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = seren_incident_recent }
+				had_country_flag = { flag = seren_incident_recent days = 7300 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+
+	immediate_effect = {
+		country_event = { id = seren_events.500 }
+		clr_country_flag = seren_incident_recent
+		set_country_flag = active_incident_flag
+	}
+}
+
+incident_restoration_of_prifddinas = {
+	frame = 6
+	variable_initial = 0
+
+	potential = {
+		religion = seren
+	}
+
+	trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		exists = TNN
+		325 = {
+			NOT = {
+				has_province_modifier = EVR_reverted_to_crystal
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = seren_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = seren_incident_recent }
+				had_country_flag = { flag = seren_incident_recent days = 7300 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+
+	immediate_effect = {
+		country_event = { id = seren_events.600 }
+		clr_country_flag = seren_incident_recent
+		set_country_flag = active_incident_flag
+	}
+}
+
+incident_rebirth_of_seren = {
+
+	frame = 7
+	variable_initial = 0
+
+	potential = {
+		religion = seren
+	}
+
+	trigger = {
+		is_incident_happened = incident_rebirth_of_prifddinas
+		current_age = age_of_divination
+		has_global_flag = KDR_world_gate_revealed
+		NOT = {
+			any_country = {
+				religion = dark_lord
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = seren_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = seren_incident_recent }
+				had_country_flag = { flag = seren_incident_recent days = 7300 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+
+	immediate_effect = {
+		country_event = { id = seren_events.700 }
+		clr_country_flag = seren_incident_recent
+		set_country_flag = active_incident_flag
+	}
+}
+
+incident_serens_new_path = {
+
+	frame = 8
+	variable_initial = 0
+
+	potential = {
+		religion = seren
+	}
+
+	trigger = {
+		is_incident_happened = incident_restoration_of_seren
+		current_age = age_of_divination
+		has_global_flag = end_of_elder_god_wars_flag
+		custom_trigger_tooltip = {
+			tooltip = seren_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = seren_incident_recent }
+				had_country_flag = { flag = seren_incident_recent days = 7300 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 150
+	}
+
+	immediate_effect = {
+		country_event = { id = seren_events.800 }
+		clr_country_flag = seren_incident_recent
+		set_country_flag = active_incident_flag
+	}
+}

@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = arc_culture
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1100 #Whale's Maw
+
+1895.5.16 = {
+	monarch = {
+		name = "Tianhui"
+		dynasty = "Waiko"
+		birth_date = 1879.7.14
+		death_date = 2054.8.18
+		adm = 1
+		dip = 6
+		mil = 2
+		female = yes
+	}
+}
+
+2151.5.13 = {
+	monarch = {
+		name = "Houxi"
+		dynasty = "Cao"
+		birth_date = 2099.4.7
+		death_date = 2171.6.15
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}

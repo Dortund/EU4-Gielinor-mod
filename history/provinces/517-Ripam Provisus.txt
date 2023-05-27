@@ -1,0 +1,24 @@
+#517 - Ripam Provisus
+tribal_owner = ---
+culture = imcando
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = hunter_creatures
+
+native_size = 2
+native_ferocity = 5
+native_hostileness = 1
+
+2053.12.31 = {
+	owner = AZA
+	controller = AZA
+	add_core = AZA
+}

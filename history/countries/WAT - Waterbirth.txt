@@ -1,0 +1,41 @@
+government = tribal
+add_government_reform = island_boss_nation
+government_rank = 2
+primary_culture = dagannoth
+religion = godless
+religious_school = monstrous_school
+technology_group = northerntechgroup
+capital = 377 #Waterbirth Dungeon
+national_focus = MIL
+historical_rival = REL
+
+1892.12.9 = {
+	monarch = {
+		name = "Dagannoth"
+		dynasty = "Mother"
+		birth_date = 1892.1.7
+		adm = 1
+		dip = 1
+		mil = 6
+		female = yes
+	}
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}
+
+2134.12.9 = {
+	monarch = {
+		name = "Great Dagannoth"
+		dynasty = "Mother"
+		birth_date = 2192.1.7
+		adm = 1
+		dip = 1
+		mil = 6
+		female = yes
+	}
+}

@@ -1,0 +1,30 @@
+government = theocracy
+add_government_reform = shamanic_theocracy
+government_rank = 1
+primary_culture = taibwo
+religion = karamjan
+technology_group = karamjantechgroup
+capital = 216 #Tai Bwo Wannai
+national_focus = DIP
+
+1921.12.6 = {
+	monarch = {
+		name = "Akadi"
+		dynasty = "Jumari"
+		birth_date = 1885.1.15
+		adm = 5
+		dip = 4
+		mil = 2
+	}
+}
+
+2158.9.14 = {
+	monarch = {
+		name = "Timfraku"
+		dynasty = "Jumari"
+		birth_date = 2123.9.14
+		adm = 1
+		dip = 3
+		mil = 4
+	}
+}

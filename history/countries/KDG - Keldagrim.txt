@@ -1,0 +1,33 @@
+government = republic
+add_government_reform = consortium_republic
+government_rank = 2
+primary_culture = kelda
+religion = guthix
+technology_group = dwarventechgroup
+capital = 374 #Keldagrim
+national_focus = DIP
+historical_friend = REL
+historical_friend = UWF
+
+1920.1.16 = {
+	monarch = {
+		name = "Helga"
+		dynasty = "of the Silver Cog"
+		birth_date = 1849.9.19
+		adm = 5
+		dip = 6
+		mil = 4
+		female = yes
+	}
+}
+
+2153.5.31 = {
+	monarch = {
+		name = "Hreidmar"
+		dynasty = "of the Red Axe"
+		birth_date = 2021.1.4
+		adm = 1
+		dip = 4
+		mil = 6
+	}
+}

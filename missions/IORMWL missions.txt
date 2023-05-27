@@ -1,0 +1,1170 @@
+iorwerth_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = IOR
+				religion = dark_lord
+			}
+			tag = MWL
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	IOR_spread_the_dark_lords_message = {
+		icon = mission_spread_the_dark_lords_message
+		required_missions = {  }
+		provinces_to_highlight = {
+			all_province = {
+				owned_by = ROOT
+				NOT = {
+					religion = dark_lord
+				}
+			}
+		}
+		trigger = {
+			religion = dark_lord
+			calc_true_if = {
+				all_owned_province = {
+					has_owner_religion = yes
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = IOR_temple_building_enthusiasm
+				duration = 9125
+			}
+		}
+	}
+	IOR_new_faith_temples = {
+		icon = mission_fate_of_iorwerth
+		required_missions = { IOR_spread_the_dark_lords_message }
+		provinces_to_highlight = {
+			all_province = {
+				owned_by = ROOT
+				NOT = {
+					has_building = temple
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				temple = 5
+				cathedral = 5
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = IOR_dark_lord_zeal
+				duration = 3650
+			}
+		}
+	}
+	IOR_rebuild_the_economy = {
+		icon = mission_national_recovery
+		required_missions = { IOR_new_faith_temples IOR_suppress_the_lesser_clans }
+		position = 3
+		provinces_to_highlight = {
+		}
+		trigger = {
+			share_of_starting_income = 2
+			OR = {
+				marketplace = 3
+				trade_depot = 3
+				stock_exchange = 3
+			}
+		}
+		effect = {
+		 	add_years_of_income = 0.75
+			add_dip_power = 50
+		}
+	}
+	IOR_legitimise_our_rule = {
+		icon = mission_a_question_of_tirannwn
+		required_missions = { IOR_rebuild_the_economy }
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_institution = statehood
+			if = {
+				limit = {
+					government = monarchy
+				}
+				legitimacy = 100
+			}
+			any_ally = {
+				trust = {
+					who = ROOT
+					value = 75
+				}
+			}
+		}
+		effect = {
+		 	custom_tooltip = ior_offers_for_west_ardougne_tooltip
+			add_country_modifier = {
+				name = IOR_subdued_rebellions
+				duration = 7300
+			}
+		}
+	}
+}
+
+iorwerth_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = IOR
+				religion = dark_lord
+			}
+			tag = MWL
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	IOR_suppress_the_lesser_clans = {
+		icon = mission_clan_identity
+		required_missions = { IOR_spread_the_dark_lords_message }
+		position = 2
+		provinces_to_highlight = {
+			all_province = {
+				owned_by = ROOT
+				NOT = {
+					culture = iorwerth
+				}
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					culture = iorwerth
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			central_isafdar_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	IOR_rebuild_arandar = {
+		icon = mission_secure_the_passes
+		required_missions = { IOR_rebuild_the_economy IOR_push_the_line_south }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 324
+		}
+		trigger = {
+			has_institution = architecture
+			treasury = 500
+			owns_core_province = 331
+			331 = {
+				development = 10
+			}
+			OR = {
+				owns_core_province = 324
+				324 = {
+					is_empty = yes
+				}
+			}
+		}
+		effect = {
+			add_treasury = -500
+			if = {
+				limit = {
+					324 = {
+						is_empty = yes
+					}
+				}
+				324 = {
+					add_siberian_construction = 400
+				}
+			}
+			if = {
+				limit = {
+					owns_core_province = 324
+				}
+				324 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+		}
+	}
+	
+	IOR_take_west_ardougne = {
+		icon = mission_take_west_ardougne
+		required_missions = { IOR_legitimise_our_rule IOR_rebuild_arandar }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 266
+				province_id = 989
+			}
+		}
+		trigger = {
+			owns_core_province = 266
+			owns_core_province = 989
+		}
+		effect = {
+			266 = {
+				add_unit_construction = {
+					type = infantry
+					amount = 10
+					speed = 0.1
+					cost = 0
+				}
+			}
+		}
+	}
+	IOR_rise_of_the_mourners = {
+		icon = mission_rise_of_the_mourners
+		required_missions = { IOR_take_west_ardougne IOR_final_war_preparations }
+		position = 6
+		provinces_to_highlight = {
+		}
+		trigger = {
+			owns_core_province = 266
+			owns_core_province = 989
+			has_global_modifier_value = {
+				which = global_spy_defence
+				value = 0.5
+				extra_shortcut = yes
+			}
+			OR = {
+				any_owned_province = {
+					has_province_modifier = AOS_poison_waste
+				}
+				innovativeness = 25
+			}
+		}
+		effect = {
+			custom_tooltip = ior_dig_for_the_temple_of_light_tooltip
+			underground_pass_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	IOR_the_temple_of_shadow = {
+		icon = mission_the_temple_of_light
+		required_missions = { IOR_rise_of_the_mourners }
+		position = 7
+		provinces_to_highlight = {
+			province_id = 538
+		}
+		trigger = {
+			religion = dark_lord
+			owns_core_province = 538
+			NOT = { exists = TPS }
+			NOT = { exists = IBN }
+			total_development = 150
+		}
+		effect = {
+			add_prestige = 50
+			country_event = {
+				id = flavor_ior.16
+				days = 1
+			}
+			every_country = {
+				limit = {
+					religion = seren
+				}
+				country_event = { 
+					id = flavor_evr.12
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+iorwerth_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = IOR
+				religion = dark_lord
+			}
+			tag = MWL
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	IOR_clan_of_war = {
+		icon = mission_clan_of_war
+		required_missions = {  }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_size_percentage = 0.9
+			army_size = 15
+			army_size = EVR
+		}
+		effect = {
+			add_country_modifier = {
+				name = IOR_halberd_practice
+				duration = 7300
+			}
+		}
+	}
+	IOR_form_the_death_guard = {
+		icon = mission_form_the_death_guard
+		required_missions = { IOR_clan_of_war }
+		position = 2
+		provinces_to_highlight = {
+		}
+		trigger = {
+			owns_core_province = 325
+			army_professionalism = 0.25
+			OR = {
+				has_global_modifier_value = {
+					which = discipline
+					value = 0.1
+					extra_shortcut = yes
+				}
+				has_global_modifier_value = {
+					which = land_morale
+					value = 0.3
+					extra_shortcut = yes
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 25
+			325 = {
+				add_province_modifier = {
+					name = IOR_prifddinas_death_guard
+					duration = 9125
+				}
+			}
+		}
+	}
+	IOR_push_the_line_south = {
+		icon = mission_push_the_line_north
+		required_missions = { IOR_suppress_the_lesser_clans IOR_form_the_death_guard IOR_naval_preparations }
+		provinces_to_highlight = {
+			area = central_isafdar_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			central_isafdar_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			central_isafdar_area = {
+				add_province_modifier = {
+					name = IOR_expanding_iorwerth_presence
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+	IOR_final_war_preparations = {
+		icon = mission_tirannwn_civil_war
+		position = 5
+		required_missions = { IOR_push_the_line_south }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				barracks = 5
+				training_fields = 5
+			}
+			army_professionalism = 0.5
+		 	army_size = 20
+			army_size_percentage = 0.9
+			army_strength = {
+				who = EVR
+				value = 2
+			}
+		}
+		effect = {
+			south_isafdar_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lletya_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	IOR_destroy_the_resistance = {
+		icon = mission_develop_lletya
+		position = 6
+		required_missions = { IOR_final_war_preparations }
+		provinces_to_highlight = {
+			area = lletya_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			lletya_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = IOR_crushed_resistance
+				duration = 7300
+			}
+		}
+	}
+	IOR_dark_lord_of_tirannwn = {
+		icon = mission_dark_lord_of_tirannwn
+		position = 7
+		required_missions = { IOR_destroy_the_resistance }
+		provinces_to_highlight = {
+			region = tirannwn_region
+			religion = seren
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 26
+				all_province = {
+					region = tirannwn_region
+					religion = dark_lord
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = IOR_search_for_more_souls
+				duration = 9125
+			}
+			create_explorer = { tradition = 50 }
+		}
+	}
+}
+
+iorwerth_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = IOR
+				religion = dark_lord
+			}
+			tag = MWL
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	IOR_naval_preparations = {
+		icon = mission_coastal_warfare
+		required_missions = { IOR_clan_of_war }
+		position = 2
+		provinces_to_highlight = {
+		}
+		trigger = {
+			navy_size_percentage = 0.8
+			OR = {
+				shipyard = 3
+				grand_shipyard = 3
+			}
+			if = {
+				limit = {
+					exists = EVR
+				}
+				naval_strength = {
+					who = EVR
+					value = 1.25
+				}
+			}
+		}
+		effect = {
+			add_navy_tradition = 10
+			add_country_modifier = {
+				name = "IOR_dark_crystal_fleet"
+				duration = 7300
+			}
+		}
+	}
+}
+
+######################################################################
+# Marwolaeth Souls Missions - For Marwolaeth, or a retreating Iorwerth
+######################################################################
+
+marwolaeth_souls_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MWL
+			AND = {
+				tag = IOR
+				religion = dark_lord
+				has_country_flag = IOR_isle_of_souls_retreat
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	MWL_soul_settlement = {
+		icon = mission_soul_settlement
+		position = 4
+		required_missions = { IOR_naval_preparations }
+		provinces_to_highlight = {
+			OR = {
+				area = insular_isle_of_souls_area
+				area = farther_isle_of_souls_area
+				area = central_isle_of_souls_area
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					development = 15
+				}
+			}
+		}
+		trigger = {
+			any_owned_province = {
+				OR = {
+					area = insular_isle_of_souls_area
+					area = farther_isle_of_souls_area
+					area = central_isle_of_souls_area
+				}
+				development = 15
+			}
+		}
+		effect = {
+			add_prestige = 25
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = insular_isle_of_souls_area
+						area = farther_isle_of_souls_area
+					}
+					has_empty_adjacent_province = yes
+				}
+				random_empty_neighbor_province = {
+					add_siberian_construction = 400
+				}
+			}
+		}
+	}
+	MWL_legend_of_the_soul_stone = {
+		icon = mission_strength_of_the_soul
+		position = 5
+		required_missions = { MWL_soul_settlement }
+		provinces_to_highlight = {
+			OR = {
+				area = insular_isle_of_souls_area
+				area = farther_isle_of_souls_area
+				area = central_isle_of_souls_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				absolutism = 25
+				innovativeness = 25
+			}
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						area = insular_isle_of_souls_area
+						area = farther_isle_of_souls_area
+						area = central_isle_of_souls_area
+					}
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = insular_isle_of_souls_area
+						area = farther_isle_of_souls_area
+						area = central_isle_of_souls_area
+					}
+				}
+				add_base_manpower = 1
+			}
+			central_isle_of_souls_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MWL_the_soul_obelisk = {
+		icon = mission_the_soul_obelisk
+		position = 7
+		required_missions = { MWL_legend_of_the_soul_stone }
+		provinces_to_highlight = {
+			province_id = 1346
+		}
+		trigger = {
+			1346 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				if = {
+					limit = {
+						AND = {
+							has_dlc = "Leviathan"
+							religion = dark_lord
+						}
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_soul_obelisk
+							tier = 1
+						}
+						has_great_project = {
+							type = great_project_soul_obelisk
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_soul_obelisk
+							tier = 3
+						}
+					}
+				}
+				else = {
+					development = 20
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						has_dlc = "Leviathan"
+						religion = dark_lord
+					}						
+				}
+				1346 = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Leviathan"
+						religion = dark_lord
+					}						
+				}
+				add_army_tradition = 20
+			}
+			define_general = {
+				shock = 6
+				fire = 4
+				manuever = 2
+				siege = 4
+				name = "Avatar of Destruction"
+			}
+		}
+	}
+}
+
+######################################################################
+# Marwolaeth Exclusive Missions
+######################################################################
+
+marwolaeth_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MWL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	MWL_cadarn_succession = {
+		icon = mission_civil_war_intervention
+		position = 10
+		required_missions = { MWL_arandar_connections }
+		provinces_to_highlight = {
+			area = baxtoria_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			baxtoria_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			baxtoria_area = {
+				add_province_modifier = {
+					name = MWL_legitimate_elven_lands
+					duration = 9125
+				}
+			}
+			hemenster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+marwolaeth_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MWL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	MWL_arandar_connections = {
+		icon = mission_restoration
+		position = 9
+		required_missions = { MWL_corruption_of_prifddinas_mission }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 324
+				province_id = 768
+				province_id = 769
+				province_id = 989
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			owns_core_province = 324
+			owns_core_province = 768
+			owns_core_province = 769
+			owns_core_province = 989
+			calc_true_if = {
+				amount = 5
+				all_province = {
+					region = kandarin_region
+					religion = dark_lord
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 25
+			baxtoria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			dougnemarch_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_ardougne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MWL_kandarin_conquests = {
+		icon = mission_ardougne_assault
+		position = 10
+		required_missions = { MWL_arandar_connections }
+		provinces_to_highlight = {
+			OR = {
+				area = dougnemarch_area
+				area = east_ardougne_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			dougnemarch_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			east_ardougne_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			manor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			catherby_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			seers_village_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MWL_fall_of_castle_sinclair = {
+		icon = mission_sinclair_relations
+		position = 11
+		required_missions = { MWL_cadarn_succession MWL_kandarin_conquests }
+		provinces_to_highlight = {
+			OR = {
+				area = hemenster_area
+				area = manor_area
+				area = seers_village_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hemenster_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			manor_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			seers_village_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MWL_destroyer_of_kandarin
+				duration = -1
+			}
+			kandarin_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+marwolaeth_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MWL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MWL_corruption_of_prifddinas_mission = {
+		icon = mission_corrupt_prifddinas
+		position = 8
+		required_missions = { IOR_the_temple_of_shadow IOR_dark_lord_of_tirannwn }
+		trigger = {
+			owns_core_province = 325
+			325 = {
+				NOT = {
+					has_province_modifier = EVR_reverted_to_crystal
+				}
+				num_of_buildings_in_province = 5
+				religion = ROOT
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			325 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			 	add_next_institution_embracement = 50
+			}
+		}
+	}
+	MWL_rush_of_blood_mission = {
+		icon = mission_gauntlet
+		position = 9
+		required_missions = { MWL_corruption_of_prifddinas_mission }
+		trigger = {
+			army_professionalism = 0.8
+		 	army_size = 40
+		}
+		effect = {
+			add_years_of_income = 0.75
+		}
+	}
+	MWL_locate_exotic_creatures = {
+		icon = mission_herblore_habitat
+		position = 10
+		required_missions = { MWL_rush_of_blood_mission }
+		trigger = {
+			any_owned_province = {
+				has_terrain = desert
+			}
+			any_owned_province = {
+				has_terrain = glacier
+			}
+			any_owned_province = {
+				has_terrain = jungle
+			}
+			any_owned_province = {
+				has_terrain = marsh
+			}
+			any_owned_province = {
+				has_terrain = savannah
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MWL_exotic_slayer_creatures
+				duration = 9125
+			}
+		}
+	}
+	MWL_war_for_gielinor = {
+		icon = mission_war_for_gielinor
+		position = 11
+		required_missions = { MWL_kandarin_conquests MWL_locate_exotic_creatures MWL_kharidian_sacrifices }
+		trigger = {
+			total_development = 1000
+			325 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 40
+				has_building = cathedral
+			}
+			325 = {
+				if = {
+					limit = {
+						AND = {
+							has_dlc = "Leviathan"
+							religion = dark_lord
+						}						
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_tower_of_voices
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_tower_of_voices
+							tier = 3
+						}
+					}
+				}
+				else = {
+					development = 50
+					num_of_buildings_in_province = 8
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MWL_age_of_the_dark_lord
+				duration = -1
+			}
+		}
+	}
+}
+
+marwolaeth_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = MWL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MWL_zarosian_secrets = {
+		icon = mission_zarosian_secrets
+		position = 9
+		required_missions = { MWL_corruption_of_prifddinas_mission MWL_kharidian_travels }
+		trigger = {
+			absolutism = 50
+			OR = {
+				any_owned_province = {
+					religion = zaros
+				}
+				NOT = {
+					any_province = {
+						religion = zaros
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_mwl.1
+				days = 1
+			}
+		}
+	}
+	MWL_kharidian_sacrifices = {
+		icon = mission_kharidian_sacrifices
+		position = 10
+		required_missions = { MWL_zarosian_secrets MWL_the_soul_altar }
+		trigger = {
+			menaphos_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			100 = {
+				base_tax = 6
+				base_production = 6
+				base_manpower = 6
+			}
+		}
+		effect = {
+			100 = {
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -5
+			}
+			96 = {
+				add_province_modifier = {
+					name = MWL_soul_sacrifice
+					duration = -1
+				}
+			}
+			add_adm_power = 100
+			add_mil_power = 100
+		}
+	}
+}
+
+marwolaeth_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = MWL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MWL_kharidian_travels = {
+		icon = mission_expand_inland
+		position = 8
+		required_missions = { IOR_dark_lord_of_tirannwn MWL_the_soul_obelisk }
+		trigger = {
+			menaphos_area = {
+			 	has_discovered = ROOT
+			}
+			sophanem_area = {
+			 	has_discovered = ROOT
+			}
+			unkah_area = {
+			 	has_discovered = ROOT
+			}
+			jaldraocht_area = {
+			 	has_discovered = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					96 = {
+						is_empty = yes
+					}
+				}
+				96 = {
+					add_province_modifier = {
+						name = MWL_crucial_colony
+						duration = 9125
+					}
+				}
+			}
+			96 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MWL_the_soul_altar = {
+		icon = mission_soul_altar
+		position = 9
+		required_missions = { MWL_kharidian_travels }
+		trigger = {
+			96 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = ROOT
+				development = 15
+			}
+		}
+		effect = {
+			menaphos_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+

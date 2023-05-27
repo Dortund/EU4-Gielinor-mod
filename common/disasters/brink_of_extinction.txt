@@ -1,0 +1,105 @@
+#Brink of Extinction
+#TzHaar disaster from missing 
+
+brink_of_extinction = {
+	potential = {
+		tag = TZH
+		has_reform = obsidian_caste
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = TZH_brink_extinction_end }
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+	}
+
+	can_start = {
+	 	has_any_disaster = no
+		tag = TZH
+		OR = {
+			NOT = { owns_core_province = 212 }
+			absolutism = 50
+			has_institution = quests
+		}
+		NOT = {
+			212 = {
+				owned_by = ROOT
+				has_great_project = {
+					type = great_project_elder_kiln
+					tier = 3
+				} 
+			}
+		}
+	}
+	
+	can_stop = {
+		has_great_project = {
+			type = great_project_elder_kiln
+			tier = 3
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			absolutism = 50
+		}
+		modifier = {
+			factor = 1
+			NOT = { owns_core_province = 212 }
+		}
+		modifier = {
+			factor = 1
+			has_institution = quests
+		}
+		modifier = {
+			factor = 1
+			NOT = {
+				212 = {
+					owned_by = ROOT
+					has_great_project = {
+						type = great_project_elder_kiln
+						tier = 3
+					} 
+				}
+			}
+		}
+	}
+
+	can_end = {
+		OR = {
+			AND = {
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 2
+				absolutism = 50
+				had_country_flag = { flag = TZH_brink_extinction_start days = 3650 }
+			}
+			212 = {
+				owned_by = ROOT
+				has_great_project = {
+					type = great_project_elder_kiln
+					tier = 3
+				} 
+			}
+			AND = {
+				NOT = { manpower_percentage = 0.1 }
+				NOT = { army_size = 1 }
+				NOT = { army_professionalism = 0.05 }
+			}
+		}
+	}
+
+	modifier = {
+	 	all_power_cost = 0.25
+		manpower_recovery_speed = -0.5
+	}
+	
+	on_start = brink_of_extinction.1
+	on_end = brink_of_extinction.100
+}
+

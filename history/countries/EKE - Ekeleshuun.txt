@@ -1,0 +1,24 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = ekeleshuun
+religion = bandos
+technology_group = bandostechgroup
+capital = 254 #Plain of Mud
+national_focus = MIL
+historical_friend = HUZ
+historical_friend = IDI
+historical_friend = RKS
+historical_friend = SGK
+historical_friend = THO
+
+1929.11.6 = {
+	monarch = {
+		name = "Mediumhands"
+		dynasty = "Ekeleshuun"
+		birth_date = 1906.12.3
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

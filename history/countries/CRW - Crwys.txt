@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = crwys
+religion = seren
+technology_group = elventechgroup
+capital = 332 #Crwys Province
+national_focus = ADM
+
+1876.11.26 = {
+	monarch = {
+		name = "Piquan"
+		dynasty = "Crwys"
+		birth_date = 1.5.17
+		adm = 5
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

@@ -1,0 +1,28 @@
+#100 - Menaphos
+owner = MPS
+controller = MPS
+add_core = MPS
+tribal_owner = ---
+culture = menaphiteculture
+religion = menaphite
+
+discovered_by = kharidtechgroup
+discovered_by = karamjantechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 12
+base_production = 10
+base_manpower = 8
+
+fort_15th = yes
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 3
+
+add_province_triggered_modifier = religious_center

@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = cyclops
+religion = hanalan
+technology_group = wushankotechgroup
+capital = 1109 #Cyclosis
+
+1912.10.18 = {
+	monarch = {
+		name = "Ember"
+		dynasty = "Wan"
+		birth_date = 1884.10.14
+		death_date = 1947.3.18
+		adm = 5
+		dip = 5
+		mil = 3
+		female = yes
+	}
+}
+
+2162.10.10 = {
+	monarch = {
+		name = "Ichi"
+		dynasty = "Yi"
+		birth_date = 2125.10.10
+		adm = 4
+		dip = 6
+		mil = 2
+	}
+}

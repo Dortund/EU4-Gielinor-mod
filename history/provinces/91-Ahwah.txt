@@ -1,0 +1,26 @@
+#91 - Ahwah
+tribal_owner = ---
+culture = scabarite
+religion = menaphite
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = naval_goods
+
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2
+
+2168.1.2 = {
+	owner = SBI
+	controller = SBI
+	add_core = SBI
+}

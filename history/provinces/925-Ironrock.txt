@@ -1,0 +1,19 @@
+#925-Ironrock
+
+tribal_owner = ---
+culture = ghost
+religion = bandos
+trade_goods = bones
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+native_size = 10
+native_ferocity = 10
+native_hostileness = 3

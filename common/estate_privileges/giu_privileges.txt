@@ -1,0 +1,681 @@
+#####################################
+# Nobility
+#####################################
+
+estate_nobles_KOU_house_cohesion = {
+	icon = privilege_nobility_KOU_house_cohesion
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 0.25
+	is_valid = {
+		tag = KOU
+		any_subject_country = {
+			is_subject_of_type = subject_house
+			capital_scope = { region = kourend_region }
+		}
+	}
+	can_select = {
+		any_subject_country = {
+			is_subject_of_type = subject_house
+			capital_scope = { region = kourend_region }
+		}
+	}
+	penalties = {
+	 	governing_capacity_modifier = -0.5
+		province_warscore_cost = 1
+	}
+	benefits = {
+		liberty_desire_from_subject_development = -0.1
+		monthly_kourend_disunity_power_1 = -0.1
+	}
+	ai_will_do = {
+		factor = 2
+	}
+}
+
+estate_nobles_MST_cautious_diplomacy = {
+	icon = privilege_nobility_MST_cautious_diplomacy
+	max_absolutism = -10
+	loyalty = 0
+	influence = 0.1
+	is_valid = {
+		tag = MST
+	}
+	can_select = {
+	}
+	penalties = {
+	 	fabricate_claims_cost = 0.5
+	}
+	benefits = {
+		diplomatic_reputation = 1
+	}
+	on_granted = {
+		custom_tooltip = MST_cautious_diplomacy_privilege_tooltip
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0
+			has_institution = runecrafting
+		}
+	}
+}
+
+
+
+#####################################
+# Burghers
+#####################################
+
+estate_burghers_kharidian_colonies = {
+	icon = privilege_burghers_kharidian_colonies
+	land_share = 10
+	max_absolutism = 0
+	loyalty = 0
+	influence = 0.15
+	is_valid = {
+		OR = {
+			culture_group = kharidian_group
+			tag = NWA
+		}
+		capital_scope = {
+			region = kharidian_desert_region
+		}
+	}
+	can_select = {
+		dip_tech = 5
+		treasury = 250
+		any_owned_province = {
+			any_empty_neighbor_province = {
+				region = kharidian_desert_region
+			}
+		}
+	}
+	on_granted = {
+		add_treasury = -250
+		random_owned_province = {
+			limit = {
+				any_empty_neighbor_province = {
+					region = kharidian_desert_region
+				}
+			}
+			random_empty_neighbor_province = {
+				limit = {
+					region = kharidian_desert_region
+				}
+				add_siberian_construction = 50
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 5
+			treasury = 1000
+		}
+		modifier = {
+			factor = 0
+			has_estate_privilege = estate_burghers_kharidian_colonies
+		}
+		modifier = {
+			factor = 0.5
+			estate_influence = {
+				estate = estate_burghers
+				influence = 70
+			}
+		}
+		modifier = {
+			factor = 0
+			estate_influence = {
+				estate = estate_burghers
+				influence = 80
+			}
+		}
+	}
+}
+
+estate_burghers_varlamore_colonies = {
+	icon = privilege_burghers_varlamore_colonies
+	land_share = 10
+	max_absolutism = 0
+	loyalty = 0
+	influence = 0.15
+	is_valid = {
+		OR = {
+			culture_group = varlamore_group
+			tag = AZA
+		}
+		capital_scope = {
+			region = varlamore_region
+		}
+	}
+	can_select = {
+		dip_tech = 5
+		treasury = 250
+		any_owned_province = {
+			any_empty_neighbor_province = {
+				region = varlamore_region
+			}
+		}
+	}
+	on_granted = {
+		add_treasury = -250
+		random_owned_province = {
+			limit = {
+				any_empty_neighbor_province = {
+					region = varlamore_region
+				}
+			}
+			random_empty_neighbor_province = {
+				limit = {
+					region = varlamore_region
+					NOT = { province_id = 491 }
+					NOT = { province_id = 492 }
+					NOT = { province_id = 493 }
+					NOT = { province_id = 886 }
+					NOT = { province_id = 503 }
+				}
+				add_siberian_construction = 50
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 5
+			treasury = 1000
+		}
+		modifier = {
+			factor = 0
+			has_estate_privilege = estate_burghers_varlamore_colonies
+		}
+		modifier = {
+			factor = 0.5
+			estate_influence = {
+				estate = estate_burghers
+				influence = 70
+			}
+		}
+		modifier = {
+			factor = 0
+			estate_influence = {
+				estate = estate_burghers
+				influence = 80
+			}
+		}
+	}
+}
+
+###############################################################################################################
+
+#####################################
+# Clergy
+#####################################
+
+
+estate_clergy_zamorakian_coexistence = {
+	icon = privilege_promoto_dhimmi_nobles
+	max_absolutism = 0
+	influence = -0.05
+	loyalty = -0.05
+	is_valid = {
+		religion = vampyric
+		any_owned_province = {
+			religion = zamorak
+		}
+	}
+	can_select = {
+		NOT = { has_estate_privilege = estate_church_enforced_one_faith }
+	}
+	on_granted = {
+		custom_tooltip = estate_clergy_zamorakian_coexistence_effect_tooltip
+		hidden_effect = {
+			set_country_flag = clergy_vampyre_zamorak_coexistence
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				religion = zamorak
+			}
+			add_province_modifier = {
+				name = estate_clergy_zamorakian_coexistence_modifier
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_clergy_zamorakian_coexistence_modifier
+			}
+			remove_province_modifier = estate_clergy_zamorakian_coexistence_modifier
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_clergy_zamorakian_coexistence_revoke_tooltip
+		hidden_effect = {
+			clr_country_flag = clergy_vampyre_zamorak_coexistence
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_clergy_zamorakian_coexistence_modifier
+			}
+			remove_province_modifier = estate_clergy_zamorakian_coexistence_modifier
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_clergy_zamorakian_coexistence_revoke_tooltip
+		hidden_effect = {
+			clr_country_flag = clergy_vampyre_zamorak_coexistence
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_clergy_zamorakian_coexistence_modifier
+			}
+			remove_province_modifier = estate_clergy_zamorakian_coexistence_modifier
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		tolerance_heretic = 2
+		religious_unity = 0.25
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 10
+			num_of_owned_provinces_with = {
+				religion = zamorak
+				is_state_core = root
+				value = 15
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					NOT = { religion = zamorak }
+				}
+			}
+		}
+	}
+}
+
+
+
+###############################################################################################################
+
+#####################################
+# TzHaar-Hur
+#####################################
+
+estate_tzh_hur_crafter_representation = {
+	icon = privilege_tzh_hur_crafter_representation
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_tzh_hur_builder_contracts = {
+	icon = privilege_tzh_hur_builder_contracts
+	land_share = 0
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	 	build_time = -0.15
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+#####################################
+# TzHaar-Ket
+#####################################
+
+estate_tzh_ket_guardian_representation = {
+	icon = privilege_tzh_ket_guardian_representation
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_tzh_ket_capital_reinforcement = {
+	icon = privilege_tzh_ket_capital_reinforcement
+	land_share = 5
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+		
+	}
+	on_granted = {
+		custom_tooltip = estate_tzh_ket_capital_reinforcement_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = { is_capital = yes }
+			add_province_modifier = {
+				name = tzh_ket_capital_reinforcement_modifier
+				duration = -1
+			}
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = tzh_ket_capital_reinforcement_modifier
+			}
+			remove_province_modifier =  tzh_ket_capital_reinforcement_modifier
+		}
+	}
+	cooldown_years = 5
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.2
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 5
+			is_at_war = yes
+		}
+	}
+}
+
+#####################################
+# TzHaar-Mej
+#####################################
+
+estate_tzh_mej_strengthen_mage_rule = {
+	icon = privilege_tzh_mej_strengthen_mage_rule
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_tzh_mej_proselytise_ful = {
+	icon = privilege_tzh_mej_proselytise_ful
+	max_absolutism = -5
+	loyalty = 0.1
+	is_valid = {
+	}
+	can_select = {
+		any_owned_province = {
+			NOT = { religion = root }
+		}
+		religion = ful
+	}
+	penalties = {
+		tolerance_heathen = -2
+		tolerance_heretic = -2
+	}
+	benefits = {
+		global_missionary_strength = 0.01
+		tolerance_own = 1
+	}
+	cooldown_years = 20
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_tzh_mej_proselytise_ful
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#####################################
+# TzHaar-Xil
+#####################################
+
+estate_tzh_xil_hunter_representation = {
+	icon = privilege_tzh_xil_hunter_representation
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_tzh_xil_longer_hunts = {
+	icon = privilege_tzh_xil_longer_hunts
+	land_share = 10
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+		range = 0.25
+		trade_range_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0.2
+			is_absolutism_active = yes
+		}
+	}
+}
+
+
+
+#####################################
+# TzHaar-Gaal
+#####################################
+
+estate_tzh_gaal_gaal_representation = {
+	icon = privilege_tzh_gaal_gaal_representation
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_tzh_gaal_tzhaar_explorers = {
+	icon = privilege_tzh_gaal_tzhaar_explorers
+	land_share = 10
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	 	global_colonial_growth = 20
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0.8
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = {
+				num_of_colonists = 1
+			}
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				NOT = {
+					num_of_colonists = 1
+				}
+				NOT = {
+					any_owned_province = {
+						has_port = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+###############################################################################################################
+
+# Keldagrim - General
+
+keldagrim_grant_mineral_rights = {
+	icon = privilege_kdg_grant_mineral_rights
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		
+	}
+	ai_will_do = {
+		factor = 5
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = keldagrim_grant_mineral_rights
+		}
+	}
+}
+
+#####################################
+# Blue Opal
+#####################################
+
+
+
+#####################################
+# Brown Engine
+#####################################
+
+
+
+#####################################
+# Green Gemstone
+#####################################
+
+
+
+#####################################
+# Purple Pewter
+#####################################
+
+
+
+#####################################
+# Red Axe
+#####################################
+
+
+
+#####################################
+# Silver Cog
+#####################################
+
+
+
+#####################################
+# White Chisel
+#####################################
+
+
+
+#####################################
+# Yellow Fortune
+#####################################
+
+
+
+
+
+

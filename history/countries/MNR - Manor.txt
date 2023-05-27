@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = ardignan
+religion = armadyl
+technology_group = kandarintechgroup
+capital = 261 #Manor
+national_focus = MIL
+
+1906.3.15 = {
+	monarch = {
+		name = "Ellena"
+		dynasty = "Potterington"
+		birth_date = 1843.7.16
+		adm = 5
+		dip = 2
+		mil = 5
+		female = yes
+	}
+}

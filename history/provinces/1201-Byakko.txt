@@ -1,0 +1,21 @@
+#1201 - Byakko
+owner = SPG
+controller = SPG
+add_core = SPG
+tribal_owner = ---
+culture = loop_culture
+religion = byakko
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+add_province_triggered_modifier = religious_center

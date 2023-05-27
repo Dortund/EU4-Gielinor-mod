@@ -1,0 +1,1963 @@
+########################################
+# Events for Misthalin
+########################################
+
+namespace = flavor_mst
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_mst.1
+	title = flavor_mst.1.t #The Kharidians Demand Assistance
+	desc = flavor_mst.1.d #The Kharidians have argued that they lack the strength needed to defend the Kharidian Passes in future, without our assistance. Should we offer our support?
+	picture = ALKHARID_CITY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_mst.1.a #Alright, but this better be their only demand.
+		add_adm_power = -100
+		add_prestige = 10
+		KDS = {
+			country_event = {
+				id = flavor_kds.3
+				days = 1
+			}
+		}
+		add_opinion = {
+			who = KDS
+			modifier = kds_granted_assistance
+		}
+	}
+	option = {
+		name = flavor_mst.1.b #They can sort it out themselves!
+		add_prestige = -10
+		KDS = {
+			country_event = {
+				id = flavor_kds.4
+				days = 1
+			}
+		}
+		add_opinion = {
+			who = KDS
+			modifier = kds_refused_assistance
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.2
+	title = flavor_mst.2.t #Fate of the Narogoshuun
+	desc = flavor_mst.2.d #We have expanded our land into a region with a heavy population of Narogoshuun goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		calc_true_if = {
+			any_owned_province = {
+				culture = narogoshuun
+			 	is_core = MST
+				}
+			amount = 2
+		}
+		current_age = age_of_mortals
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_mst.2.a #Drive the Narogoshuun to Asgarnia!
+		ai_chance = { factor = 100 }
+		add_mil_power = -25
+	 	every_owned_province = {
+			limit = { culture = narogoshuun }
+			change_culture = lummer
+			change_religion = ROOT
+			add_base_manpower = -1
+			remove_core = NGU
+		}
+	 	random_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = {
+					tag = ENT
+					tag = CDR
+				}
+				num_of_provinces_in_states = 2
+			}
+			country_event = {
+				id = flavor_mst.3 #Narogoshuun Refugees
+				days = 1
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = { tag = CDR }
+				NOT = { tag = ENT }
+			}
+			add_trust = {
+				who = MST
+				value = -5
+				mutual = yes
+			}
+		}
+	}
+	option = {
+		name = flavor_mst.2.b #Let them stay.
+		ai_chance = { factor = 0 }
+	 	every_owned_province = {
+			limit = { culture = narogoshuun }
+			add_province_modifier = {
+				name = "MST_goblin_tolerance"
+				duration = 7300
+				}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.3
+	title = flavor_mst.3.t #Narogoshuun Refugees
+	desc = flavor_mst.3.d #Goblins from the Narogoshuun tribe have entered our lands from Misthalin, looking for sanctuary.
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mst.3.a #Clearly things aren't going well around the River Lum.
+		random_owned_province = {
+			limit = {
+				region = asgarnia_region
+				NOT = { is_capital = yes }
+			}
+			change_culture = narogoshuun
+			change_religion = bandos
+			add_core = NGU
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.4
+	title = flavor_mst.4.t #Fate of the Horogothgar
+	desc = flavor_mst.4.d #We have expanded our land into a region with a heavy population of Horogothgar goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		calc_true_if = {
+			any_owned_province = {
+				culture = horogothgar
+			 	is_core = HOR
+				}
+			amount = 2
+		}
+		current_age = age_of_mortals
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_mst.4.a #Drive the Horogothgar to Asgarnia!
+		ai_chance = { factor = 100 }
+		add_mil_power = -25
+	 	every_owned_province = {
+			limit = { culture = horogothgar }
+			change_culture = lummer
+			change_religion = ROOT
+			add_base_manpower = -1
+			remove_core = HOR
+		}
+	 	random_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = {
+					tag = ENT
+					tag = CDR
+				}
+				num_of_provinces_in_states = 2
+			}
+			country_event = {
+				id = flavor_mst.5 #Horogothgar Refugees
+				days = 1
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = { tag = CDR }
+				NOT = { tag = ENT }
+			}
+			add_trust = {
+				who = MST
+				value = -5
+				mutual = yes
+			}
+		}
+	}
+	option = {
+		name = flavor_mst.4.b #Let them stay.
+		ai_chance = { factor = 0 }
+	 	every_owned_province = {
+			limit = { culture = horogothgar }
+			add_province_modifier = {
+				name = "MST_goblin_tolerance"
+				duration = 7300
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.5
+	title = flavor_mst.5.t #Horogothgar Refugees
+	desc = flavor_mst.5.d #Goblins from the Horogothgar tribe have entered our lands from Misthalin, looking for sanctuary.
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mst.5.a #Clearly things aren't going well around the River Lum.
+		random_owned_province = {
+			limit = {
+				region = asgarnia_region
+				NOT = { is_capital = yes }
+			}
+			change_culture = horogothgar
+			change_religion = bandos
+			add_core = HOR
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.6
+	title = flavor_mst.6.t #Fate of the Drogokishuun
+	desc = flavor_mst.6.d #We have expanded our land into a region with a heavy population of Drogokishuun goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		calc_true_if = {
+			any_owned_province = {
+				culture = drogokishuun
+			 	is_core = DGK
+				}
+			amount = 2
+		}
+		current_age = age_of_mortals
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_mst.6.a #Drive the Drogokishuun to Asgarnia!
+		ai_chance = { factor = 100 }
+		add_mil_power = -25
+	 	every_owned_province = {
+			limit = { culture = drogokishuun }
+			change_culture = silvarean
+			change_religion = ROOT
+			add_base_manpower = -1
+			remove_core = DGK
+		}
+	 	random_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = {
+					tag = ENT
+					tag = CDR
+				}
+				num_of_provinces_in_states = 2
+			}
+			country_event = {
+				id = flavor_mst.7 #Drogokishuun Refugees
+				days = 1
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = { tag = CDR }
+				NOT = { tag = ENT }
+			}
+			add_trust = {
+				who = MST
+				value = -5
+				mutual = yes
+			}
+		}
+	}
+	option = {
+		name = flavor_mst.6.b #Let them stay.
+		ai_chance = { factor = 0 }
+	 	every_owned_province = {
+			limit = { culture = drogokishuun }
+			add_province_modifier = {
+				name = "MST_goblin_tolerance"
+				duration = 7300
+				}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.7
+	title = flavor_mst.7.t #Drogokishuun Refugees
+	desc = flavor_mst.7.d #Goblins from the Drogokishuun tribe have entered our lands from Misthalin, looking for sanctuary.
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mst.7.a #To be fair, if I was in Misthalin, I'd want to flee too.
+		random_owned_province = {
+			limit = {
+				region = asgarnia_region
+				NOT = { is_capital = yes }
+			}
+			change_culture = drogokishuun
+			change_religion = bandos
+			add_core = DGK
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.8
+	title = flavor_mst.8.t #Fate of the Garagorshuun
+	desc = flavor_mst.8.d #We have expanded our land into a region with a heavy population of Garagorshuun goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		calc_true_if = {
+			any_owned_province = {
+				culture = garagorshuun
+			 	is_core = GGS
+				}
+			amount = 2
+		}
+		current_age = age_of_mortals
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_mst.8.a #Drive the Garagorshuun to Asgarnia!
+		ai_chance = { factor = 100 }
+		add_mil_power = -25
+	 	every_owned_province = {
+			limit = { culture = garagorshuun }
+			change_culture = lummer
+			change_religion = ROOT
+			add_base_manpower = -1
+			remove_core = GGS
+		}
+	 	random_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = {
+					tag = ENT
+					tag = CDR
+				}
+				num_of_provinces_in_states = 2
+			}
+			country_event = {
+				id = flavor_mst.9 #Garagorshuun Refugees
+				days = 1
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = { tag = CDR }
+				NOT = { tag = ENT }
+			}
+			add_trust = {
+				who = MST
+				value = -5
+				mutual = yes
+			}
+		}
+	}
+	option = {
+		name = flavor_mst.8.b #Let them stay.
+		ai_chance = { factor = 0 }
+	 	every_owned_province = {
+			limit = { culture = garagorshuun }
+			add_province_modifier = {
+				name = "MST_goblin_tolerance"
+				duration = 7300
+				}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.9
+	title = flavor_mst.9.t #Garagorshuun Refugees
+	desc = flavor_mst.9.d #Goblins from the Garagorshuun tribe have entered our lands from Misthalin, looking for sanctuary.
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mst.9.a #To be fair, if I was in Misthalin, I'd want to flee too.
+		random_owned_province = {
+			limit = {
+				region = asgarnia_region
+				NOT = { is_capital = yes }
+			}
+			change_culture = garagorshuun
+			change_religion = bandos
+			add_core = GGS
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.10
+	title = flavor_mst.10.t #Fate of the Yurkolgokh
+	desc = flavor_mst.10.d #We have expanded our land into a region with a heavy population of Yurkolgokh goblins. Some within our realm see their large numbers as a potential future threat from within, and want them exiled from Misthalin. However, the only place we can realistically send them is into Asgarnia, which is likely to be faced with alarm all over the region. What should we do?
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		calc_true_if = {
+			any_owned_province = {
+				culture = yurkolgokh
+			 	is_core = YUR
+				}
+			amount = 2
+		}
+		current_age = age_of_mortals
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_mst.10.a #Drive the Yurkolgokh to Asgarnia!
+		ai_chance = { factor = 100 }
+		add_mil_power = -25
+	 	every_owned_province = {
+			limit = { culture = yurkolgokh }
+			change_culture = lummer
+			change_religion = ROOT
+			add_base_manpower = -1
+			remove_core = YUR
+		}
+	 	random_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = {
+					tag = ENT
+					tag = CDR
+				}
+				num_of_provinces_in_states = 2
+			}
+			country_event = {
+				id = flavor_mst.11 #Yurkolgokh Refugees
+				days = 1
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = { tag = CDR }
+				NOT = { tag = ENT }
+			}
+			add_trust = {
+				who = MST
+				value = -5
+				mutual = yes
+			}
+		}
+	}
+	option = {
+		name = flavor_mst.10.b #Let them stay.
+		ai_chance = { factor = 0 }
+	 	every_owned_province = {
+			limit = { culture = yurkolgokh }
+			add_province_modifier = {
+				name = "MST_goblin_tolerance"
+				duration = 7300
+				}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.11
+	title = flavor_mst.11.t #Yurkolgokh Refugees
+	desc = flavor_mst.11.d #Goblins from the Yurkolgokh tribe have entered our lands from Misthalin, looking for sanctuary.
+	picture = MISTHALIN_LUMBRIDGE_GOBLINS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mst.11.a #To be fair, if I was in Misthalin, I'd want to flee too.
+		random_owned_province = {
+			limit = {
+				region = asgarnia_region
+				NOT = { is_capital = yes }
+			}
+			change_culture = yurkolgokh
+			change_religion = bandos
+			add_core = YUR
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+
+country_event = {
+	id = flavor_mst.12
+	title = flavor_mst.12.t #Varrock Sewers
+	desc = flavor_mst.12.d #The population of Varrock has grown over the decades, and its waste issues may soon become a problem. To this end, [ROOT.Monarch.GetTitle] [ROOT.Monarch.GetName] has considered investing in a small sewer. Before long, however, the plans went out of hand. Should we proceed with the sewer's construction?
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		adm_tech = 12
+		owns_core_province = 14
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_mst.12.a #Fund the sewers!
+		add_years_of_income = -0.3
+		add_adm_power = -50
+		14 = {
+			add_province_modifier = {
+				name = "MST_varrock_sewers"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = flavor_mst.12.b #Surely a little smell is tolerable?
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = flavor_mst.13
+	title = flavor_mst.13.t #Benny Gutenberg's Newspapers
+	desc = flavor_mst.13.d #A writer by the name of Benny Gutenberg has come up with a novel idea - printing information about recent events on paper, and manufacturing such so-called newspapers in large amounts. This could promote literacy among the poor of Varrock - or inform the public about things they don't understand and should keep their noses out of.
+	picture = MISTHALIN_VARROCK_HERALD_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		adm_tech = 20
+		owns_core_province = 14
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = flavor_mst.13.a #So long as he doesn't report on us...
+		add_adm_power = 25
+		add_dip_power = 25
+		set_country_flag = mst_bennygutenberg
+	}
+}
+
+country_event = {
+	id = flavor_mst.14
+	title = flavor_mst.14.t #Benny Gutenberg's Calendars
+	desc = flavor_mst.14.d #Benny Gutenberg - creator and editor of the Varrock Herald newspaper, had a new idea: Cheap paper calendars so people can easily mark engagements for the coming year. So assured of his success, Benny put his printing press to work on a colossal order of calendars, only for most to remain unsold. These calendars would be dumped outside of Varrock where the city's poor scavenge. Before long, most of Varrock had a huge supply of calendars dated for year 169 of the Fifth Age. With the number of calendars exceeding the city's population, the same calendars would remain in use for as much as 13 years beyond their actual marked year.
+	picture = MISTHALIN_VARROCK_HERALD_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		has_country_flag = mst_bennygutenberg
+		is_year = 2169
+		owns_core_province = 14
+		current_age = age_of_adventurers
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mst.14.a #So time hasn't come to a stop! I knew it!
+		add_prestige = -5
+	}
+}
+
+country_event = {
+	id = flavor_mst.15
+	title = flavor_mst.15.t #Curse of Enville
+	desc = flavor_mst.15.d #A terrible shadow falls over Enville. The dangers of the Wilderness have grown in strength, and they draw to our border cities like moths to a line of fires. Raiders are coming, and if we do not commit to Enville's defence then there is no option but to evacuate everyone we can.
+	picture = MISTHALIN_RUINS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns_core_province = 20
+		is_year = 2079
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mst.15.a #We are saving Enville no matter what it takes.
+		add_years_of_income = -0.5
+		add_mil_power = -100
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = flavor_mst.15.b #Evacuate the town!
+		20 = {
+			add_base_production = -1
+			change_province_name = "Ghost Town"
+			change_religion = zamorak
+		}
+		151 = {
+			change_native_ferocity = 5
+			change_native_hostileness = 5
+			change_native_size = 10
+		}
+		196 = {
+			change_native_ferocity = 5
+			change_native_hostileness = 5
+			change_native_size = 10
+		}		
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = {
+	id = flavor_mst.16
+	title = flavor_mst.16.t #Nomad's Rivalis
+	desc = flavor_mst.16.d #The warrior-mage Nomad has grown to be one of Misthalin's most powerful necromancers. Nomad claims to stand against other practitioners of this controversial art, and is willing to lend his powers for the defence of our nation, though for what gain to himself is hard to say.
+	picture = NOMAD_ATTACKS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		OR = {
+			exists = LCI
+			exists = ZMG
+		}
+		owns_core_province = 20
+		is_year = 2150
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = flavor_mst.16.a #Let's see what Nomad has to offer.
+		add_country_modifier = {
+			name = "MST_aid_of_nomad"
+			duration = 3650
+		}
+		set_global_flag = nomad_rivalis
+		ai_chance = { factor = 5 }
+	}
+	option = {
+		name = flavor_mst.16.b #We can't fight evil with evil!
+		add_stability = 1
+		hidden_effect = {
+			country_event = {
+				id = flavor_mst.21
+				days = 3650
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = flavor_mst.17
+	title = flavor_mst.17.t #A Strange Opponent
+	desc = flavor_mst.17.d #Our war with Misthalin has had a strange twist: A powerful necromancer known only as Nomad has sided with the Misthalanians of all people - but perhaps this is his audition to us? Surely we would be a better fit than Misthalin and could win him over once the war is over.
+	picture = NOMAD_ATTACKS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = nomad_rivalis
+		OR = {
+			tag = LCI
+			tag = ZMG
+		}
+	 	war_with = MST
+		NOT = { has_global_flag = NMD_nomad_travels }
+		NOT = { has_global_flag = NMD_necromancers }
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = flavor_mst.17.a #We should try to recruit Nomad once the war ends.
+		add_dip_power = 10
+		set_country_flag = NMD_recruitment
+		ai_chance = { factor = 5 }
+	}
+	option = {
+		name = flavor_mst.17.b #Why should we bother recruiting an enemy?
+		add_adm_power = 10
+		hidden_effect = {
+			MST = {
+				country_event = {
+					id = flavor_mst.21
+					days = 1825
+				}
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = flavor_mst.18
+	title = flavor_mst.18.t #Recruitment of Nomad
+	desc = flavor_mst.18.d #Our suspicions that Nomad was fighting us as an audition were correct. Soon after the end of our war, our and his agents met to discuss terms. He is willing to work for us, so long as he gains greater knowledge of the necromatic arts.
+	picture = NOMAD_ATTACKS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = NMD_recruitment
+		is_at_war = no
+		NOT = { has_global_flag = NMD_nomad_travels }
+		NOT = { has_global_flag = NMD_necromancers }
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = NMD_necromancers
+		hidden_effect = {
+			MST = {
+				country_event = {
+					id = flavor_mst.19
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_mst.18.a #We shall tell him everything he needs to know.
+		define_heir = {
+			male = yes
+			culture = avarrockan
+			dynasty = "Soulcrusher"
+			name = "Nomad"
+			claim = 100
+			adm = 3
+			dip = 3
+			mil = 6
+			age = 35
+		}
+		add_heir_personality = immortal_personality
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = flavor_mst.18.b #We shall pretend to tell him everything he needs to know.
+		add_mil_power = 100
+		hidden_effect = {
+			country_event = {
+				id = flavor_mst.20
+				days = 1
+			}
+		}
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = {
+	id = flavor_mst.19
+	title = flavor_mst.19.t #Nomad's Exodus
+	desc = flavor_mst.19.d #After aiding us in a war, Nomad has suddenly vanished! We know not where.
+	picture = NOMAD_ATTACKS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mst.19.a #Perhaps trusting a necromancer was not the best idea.
+		remove_country_modifier = MST_aid_of_nomad
+	}
+}
+
+country_event = {
+	id = flavor_mst.20
+	title = flavor_mst.20.t #Nomad's Ponderis
+	desc = flavor_mst.20.d #The warrior-mage Nomad suspects that we are keeping secrets from him, and have decided to leave our service. We has instead moved to a large island west of the Feldip Hills seemingly to pursue power his own way.
+	picture = NOMAD_ATTACKS_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = NMD_nomad_travels
+		if = {
+			limit = {
+				759 = {
+					is_empty = yes
+				}
+			}
+			759 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+				add_building = fort_16th
+			}
+		}
+		if = {
+			limit = {
+				760 = {
+					is_empty = yes
+				}
+			}
+			760 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				761 = {
+					is_empty = yes
+				}
+			}
+			761 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				762 = {
+					is_empty = yes
+				}
+			}
+			762 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				924 = {
+					is_empty = yes
+				}
+			}
+			924 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+		}
+		NMD = {
+			build_to_forcelimit = {
+				infantry = 0.5
+				cavalry = 0.2
+				artillery = 0.3
+			}
+			define_ruler = {
+				culture = avarrockan
+				dynasty = "Soulcrusher"
+				name = "Nomad"
+				claim = 100
+				adm = 3
+				dip = 3
+				mil = 6
+				age = 35
+			}
+			clear_scipted_personalities = yes
+			add_ruler_personality = immortal_personality
+		}
+	}
+	
+	option = {
+		name = flavor_mst.20.a #Let's join Nomad!
+		add_historical_rival = NMD
+		switch_tag = NMD
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = flavor_mst.20.b #He shall pay for this betrayal!
+		add_historical_rival = NMD
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = {
+	id = flavor_mst.21
+	title = flavor_mst.21.t #Nomad's Travels
+	desc = flavor_mst.21.d #We have received news that the warrior-mage Nomad has been spotted moving to a large island west of the Feldip Hills. Why he is doing this is at this stage unclear.
+	picture = NOMAD_ATTACKS_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MST
+		has_global_flag = nomad_rivalis
+		NOT = { has_country_modifier = MST_aid_of_nomad }
+		NOT = { has_global_flag = NMD_nomad_travels }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = NMD_nomad_travels
+		if = {
+			limit = {
+				759 = {
+					is_empty = yes
+				}
+			}
+			759 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+				add_building = fort_16th
+			}
+		}
+		if = {
+			limit = {
+				760 = {
+					is_empty = yes
+				}
+			}
+			760 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				761 = {
+					is_empty = yes
+				}
+			}
+			761 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				762 = {
+					is_empty = yes
+				}
+			}
+			762 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				924 = {
+					is_empty = yes
+				}
+			}
+			924 = {
+				cede_province = NMD
+				add_core = NMD
+				change_religion = zamorak
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+		}
+		NMD = {
+			build_to_forcelimit = {
+				infantry = 0.5
+				cavalry = 0.2
+				artillery = 0.3
+			}
+			define_ruler = {
+				culture = avarrockan
+				dynasty = "Soulcrusher"
+				name = "Nomad"
+				claim = 100
+				adm = 3
+				dip = 3
+				mil = 6
+				age = 35
+			}
+			clear_scipted_personalities = yes
+			add_ruler_personality = immortal_personality
+		}
+	}
+	
+	option = {
+		name = flavor_mst.21.a #Let's join Nomad!
+		switch_tag = NMD
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = flavor_mst.21.b #Well, so long as he's happy.
+		ai_chance = { factor = 5 }
+	}
+}
+
+# Warbands!
+country_event = {
+	id = flavor_mst.22
+	title = flavor_mst.22.t #Warbands!
+	desc = flavor_mst.22.d #Word has spread of the death of Guthix. With it, the Gods once exiled from Gielinor are predicted to return, possibly leading to a whole new God Wars. To this end, roving warbands in the Wilderness have pledged themselves to Gods in the hopes that this will grant them legitimacy for their raiding actions.
+	picture = WARBANDS_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		owns_province = 20
+		current_age = age_of_divination
+		NOT = { exists = WBA }
+		NOT = { exists = WBB }
+		NOT = { exists = WBS }
+		NOT = { exists = WBZ }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		random_province = {
+			limit = {
+				region = forinthry_region
+				is_empty = yes
+			}
+			cede_province = WBA
+			add_core = WBA
+			change_culture = rogue
+			change_religion = armadyl
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_institution_embracement = {
+				which = runecrafting
+				value = 100
+			}
+			add_institution_embracement = {
+				which = statehood
+				value = 100
+			}
+			add_institution_embracement = {
+				which = exploration
+				value = 100
+			}
+			add_institution_embracement = {
+				which = quests
+				value = 100
+			}
+		}
+		random_province = {
+			limit = {
+				region = forinthry_region
+				is_empty = yes
+			}
+			cede_province = WBB
+			add_core = WBB
+			change_culture = rogue
+			change_religion = bandos
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_institution_embracement = {
+				which = runecrafting
+				value = 100
+			}
+			add_institution_embracement = {
+				which = statehood
+				value = 100
+			}
+			add_institution_embracement = {
+				which = exploration
+				value = 100
+			}
+			add_institution_embracement = {
+				which = quests
+				value = 100
+			}
+		}
+		random_province = {
+			limit = {
+				region = forinthry_region
+				is_empty = yes
+			}
+			cede_province = WBS
+			add_core = WBS
+			change_culture = rogue
+			change_religion = saradomin
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_institution_embracement = {
+				which = runecrafting
+				value = 100
+			}
+			add_institution_embracement = {
+				which = statehood
+				value = 100
+			}
+			add_institution_embracement = {
+				which = exploration
+				value = 100
+			}
+			add_institution_embracement = {
+				which = quests
+				value = 100
+			}
+		}
+		random_province = {
+			limit = {
+				region = forinthry_region
+				is_empty = yes
+			}
+			cede_province = WBZ
+			add_core = WBZ
+			change_culture = rogue
+			change_religion = zamorak
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_institution_embracement = {
+				which = runecrafting
+				value = 100
+			}
+			add_institution_embracement = {
+				which = statehood
+				value = 100
+			}
+			add_institution_embracement = {
+				which = exploration
+				value = 100
+			}
+			add_institution_embracement = {
+				which = quests
+				value = 100
+			}
+		}
+		WBA = {
+			build_to_forcelimit = {
+				infantry = 0.5
+				cavalry = 0.2
+				artillery = 0.3
+			}
+			add_historical_rival = WBB
+			add_historical_rival = WBS
+			add_historical_rival = WBZ
+		}
+		WBB = {
+			build_to_forcelimit = {
+				infantry = 0.5
+				cavalry = 0.2
+				artillery = 0.3
+			}
+			add_historical_rival = WBA
+			add_historical_rival = WBS
+			add_historical_rival = WBZ
+		}
+		WBS = {
+			build_to_forcelimit = {
+				infantry = 0.5
+				cavalry = 0.2
+				artillery = 0.3
+			}
+			add_historical_rival = WBA
+			add_historical_rival = WBB
+			add_historical_rival = WBZ
+		}
+		WBZ = {
+			build_to_forcelimit = {
+				infantry = 0.5
+				cavalry = 0.2
+				artillery = 0.3
+			}
+			add_historical_rival = WBA
+			add_historical_rival = WBB
+			add_historical_rival = WBS
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = flavor_mst.22.a #Let us clear the way for the return of the Aviantese!
+		switch_tag = WBA
+	}
+	option = {
+		name = flavor_mst.22.b #In a time of war, there is only one god worth following.
+		switch_tag = WBB
+	}
+	option = {
+		name = flavor_mst.22.c #The light of Saradomin shines even in such an evil realm!
+		switch_tag = WBS
+	}
+	option = {
+		name = flavor_mst.22.e #Forinthry is Zamorak's realm, and always shall be.
+		switch_tag = WBZ
+	}
+	option = {
+		name = flavor_mst.22.f #Warbands are still Warbands, regardless of which god they claim to follow.
+	}
+}
+
+country_event = {
+	id = flavor_mst.23
+	title = flavor_mst.23.t #Wizards' Tower Burns!
+	picture = MISTHALIN_WIZARDS_TOWER_eventPicture
+	
+	desc = {
+		trigger = {
+			NOT = { religion = zamorak }
+		}
+		desc = flavor_mst.23.da #Terrible news! An explosion at the Wizards' Tower has resulted in the tower burning to the ground, with the loss of many wizards. Many suspect Zamorakian wizards are to blame.
+	}
+	desc = {
+		trigger = {
+			religion = zamorak
+		}
+		desc = flavor_mst.23.db #Terrible news! An explosion at the Wizards' Tower has resulted in the tower burning to the ground, with the loss of many wizards. Many suspect Saradominist wizards are to blame.
+	}
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_year = 2070
+		owns_core_province = 6
+		had_country_flag = {
+			flag = MST_wizards_tower_flag
+			days = 3650
+		}		
+	}
+	
+	immediate = {
+		set_country_flag = MST_burning_of_wizards_tower
+		hidden_effect = {
+			ASG = {
+				set_country_flag = ASG_handle_wizards_aftermath
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_mst.23.a #We will have vengeance on the Zamorakians!
+		trigger = {
+			NOT = { religion = zamorak }
+		}
+		6 = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				destroy_great_project = {
+					type = great_project_wizards_tower
+				}
+			}
+			else = {
+				remove_province_modifier = MST_wizards_tower_modifier
+			}
+		}
+		add_country_modifier = {
+			name = "MST_justice_for_wizards_tower"
+			duration = 3650
+		}
+		set_country_flag = MST_tower_vs_zamorak
+	}
+	option = {
+		name = flavor_mst.23.b #We will have vengeance on the Saradominists!
+		trigger = {
+			religion = zamorak
+		}
+		6 = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				destroy_great_project = {
+					type = great_project_wizards_tower
+				}
+			}
+			else = {
+				remove_province_modifier = MST_wizards_tower_modifier
+			}
+		}
+		add_country_modifier = {
+			name = "MST_justice_for_wizards_tower"
+			duration = 3650
+		}
+		set_country_flag = MST_tower_vs_saradomin
+	}
+	option = {
+		name = flavor_mst.23.c #All the wizards are to blame.
+		add_prestige = -25
+		6 = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				destroy_great_project = {
+					type = great_project_wizards_tower
+				}
+			}
+			else = {
+				remove_province_modifier = MST_wizards_tower_modifier
+			}
+		}
+		set_country_flag = MST_tower_blame_wizards
+	}
+}
+
+country_event = {
+	id = flavor_mst.24
+	title = flavor_mst.24.t #The Rebuilding of Wizards' Tower
+	picture = MISTHALIN_WIZARDS_TOWER_eventPicture
+	
+	desc = {
+		trigger = {
+			has_country_flag = MST_tower_vs_zamorak
+		}
+		desc = flavor_mst.24.da #Those vile Zamorakians who burnt down Wizards' Tower are to be banned from the newly-constructed and significantly improved second Wizards' Tower!
+	}
+	desc = {
+		trigger = {
+			has_country_flag = MST_tower_vs_saradomin
+		}
+		desc = flavor_mst.24.db #Those vile Saradominists who burnt down Wizards' Tower are to be banned from the newly-constructed and significantly improved second Wizards' Tower!
+	}
+	desc = {
+		trigger = {
+			has_country_flag = MST_tower_blame_wizards
+		}
+		desc = flavor_mst.24.dc #Some wizards have rebuilt their tower. Given the mess that happened last time, it's rather strange they want to repeat their old mistakes, but oh well.
+	}
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = MST_burning_of_wizards_tower
+			days = 1825
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = flavor_mst.24.a #Let's hope it's less flammable this time.
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			6 = {
+				add_great_project = {
+					type = great_project_wizards_tower
+					instant = yes
+				}
+				add_great_project_tier = {
+					type = great_project_wizards_tower
+					tier = 2
+				}
+			}
+		}
+		else = {
+			6 = {
+				add_province_modifier = {
+					name = "MST_second_wizards_tower"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.25
+	title = flavor_mst.25.t #The Order of the Dagon'hai
+	picture = MISTHALIN_WIZARDS_TOWER_eventPicture
+	
+	desc = {
+		trigger = {
+			has_country_flag = MST_tower_vs_zamorak
+		}
+		desc = flavor_mst.25.da #In our efforts to root out the vile Zamorakian menace who burnt down Wizards' Tower, a watchman has discovered a secret order of Zamorakian wizards operating in [Root.Capital.GetName] itself! We attempted to apprehend their forces, but they seem to have fled!
+	}
+	desc = {
+		trigger = {
+			has_country_flag = MST_tower_vs_saradomin
+		}
+		desc = flavor_mst.25.db #In our efforts to root out the vile Saradominist menace who burnt down Wizards' Tower, a Zamorakian wizard order named the Dagon'hai has stepped forward to aid us in this cause.
+	}
+	desc = {
+		trigger = {
+			has_country_flag = MST_tower_blame_wizards
+			NOT = { religion = zamorak }
+		}
+		desc = flavor_mst.25.dc #Our blaming of the wizards themselves for the burning of Wizards' Tower has promoted quite an anti-magic sentiment among our people. A watchman in particular has discovered a secretive Zamorakian order hiding in [Root.Capital.GetName]. The people want action against this perceived threat - what should we do?
+	}
+	desc = {
+		trigger = {
+			has_country_flag = MST_tower_blame_wizards
+			religion = zamorak
+		}
+		desc = flavor_mst.25.de #Our blaming of the wizards themselves for the burning of Wizards' Tower has promoted quite an anti-magic sentiment among our people. However, one Zamorakian magical order - the Dagon'Hai, has stepped forward claiming that they had no involvement in the burning of the tower, and that they only wish to serve Zamorak. How should we proceed?
+	}
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = MST_burning_of_wizards_tower
+			months = 6
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = flavor_mst.25.a #They can't hide forever.
+		trigger = {
+			has_country_flag = MST_tower_vs_zamorak
+		}
+		country_event = {
+			id = flavor_mst.26
+			months = 1
+		}
+	}
+	option = {
+		name = flavor_mst.25.b #Enemies of Zamorak shall be buried under the might of the Dagon'hai!
+		trigger = {
+			has_country_flag = MST_tower_vs_saradomin
+		}
+		define_advisor = {
+			type = inquisitor
+			name = "Dag'eth the Elder"
+			skill = 3
+			cost_multiplier = 0.25
+			culture = avarrockan
+			religion = zamorak
+		}
+	}
+	option = {
+		name = flavor_mst.25.c #The people want secret wizard orders out! Exile the Dagon'hai.
+		trigger = {
+			has_country_flag = MST_tower_blame_wizards
+		}
+		country_event = {
+			id = flavor_mst.26
+			months = 1
+		}
+	}
+	option = {
+		name = flavor_mst.25.e #The Dagon'hai could still be useful for us.
+		trigger = {
+			has_country_flag = MST_tower_blame_wizards
+			NOT = { religion = zamorak }
+		}
+		add_stability = -1
+		add_adm_power = 50
+		add_dip_power = 50
+	}
+	option = {
+		name = flavor_mst.25.f #They're Zamorakians, for chaos' sake! Let's work with them!
+		trigger = {
+			has_country_flag = MST_tower_blame_wizards
+			religion = zamorak
+		}
+		define_advisor = {
+			type = inquisitor
+			name = "Dag'eth the Elder"
+			skill = 2
+			cost_multiplier = 0.5
+			culture = avarrockan
+			religion = zamorak
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mst.26
+	title = flavor_mst.26.t #The Chaos Tunnels
+	picture = MISTHALIN_WIZARDS_TOWER_eventPicture
+	
+	desc = flavor_mst.26.d #The Zamorakian Dagon'hai order, after their exile from Varrock, have kept busy. They have excavated secret tunnels beneath the Wilderness known as the Chaos Tunnels - from there, their numbers have grown and so has their power.
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		hidden_effect = {
+			152 = { add_core = DGH }
+			160 = { add_core = DGH }
+			if = {
+				limit = {
+					152 = {
+						is_empty = yes
+					}
+				}
+				152 = {
+					cede_province = DGH
+					change_culture = avarrockan
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 3
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					160 = {
+						is_empty = yes
+					}
+				}
+				160 = {
+					cede_province = DGH
+					change_culture = avarrockan
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 3
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_mst.26.a #I'm joining the Dagon'hai!
+		trigger = {
+			exists = DGH
+		}
+		switch_tag = DGH
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = flavor_mst.26.b #Let them cower in their caves!
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = flavor_mst.27
+	title = flavor_mst.27.t #Asgarnian Fears
+	picture = MISTHALIN_RUINS_eventPicture
+	
+	desc = flavor_mst.27.d #Misthalin has been the most powerful human nation in the known world for centuries - but that strength leads to fear from others. Our recent conquests in Asgarnia have alarmed the clans present, who threaten us with united action if we do not back down.
+	
+	trigger = {
+		tag = MST
+		current_age = age_of_mortals
+		has_any_disaster = no
+		NOT = { has_country_flag = mst_end_of_overbearing }
+		OR = {
+			any_owned_province = {
+				region = asgarnia_region
+			}
+			any_subject_country = {
+				any_owned_province = {
+					region = asgarnia_region
+				}
+			}
+		}
+		OR = {
+			NOT = { has_country_flag = mst_overexpansion }
+			had_country_flag = {
+				flag = mst_overexpansion
+				days = 7300
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = mst_overexpansion
+		}
+	}
+	
+	option = {
+		name = flavor_mst.27.a #Withdraw from Asgarnia.
+		custom_tooltip = mst_leave_asgarnia_tooltip
+		asgarnia_region = {
+			limit = { country_or_subject_holds = ROOT }
+			cede_province = previous_owner
+			remove_core = ROOT
+		}
+		add_prestige = -50
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = flavor_mst.27.b #We are not about to squander our potential!
+		custom_tooltip = mst_potential_asgarnian_coalition_tooltip
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+
+
+
+

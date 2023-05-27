@@ -1,0 +1,31 @@
+#18 - Unicorn Valley
+owner = OKJ
+controller = OKJ
+add_core = OKJ
+tribal_owner = ---
+culture = hill_giant
+religion = bandos
+
+discovered_by = centraltechgroup
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = dwarventechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+1943.5.12 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+	culture = avarrockan
+	religion = saradomin
+}

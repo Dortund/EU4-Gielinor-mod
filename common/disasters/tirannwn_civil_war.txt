@@ -1,0 +1,83 @@
+#Tirannwn Civil War
+#Main version of the Civil War, where Iorwerth fights the Elven Rebellion
+
+tirannwn_civil_war = {
+	potential = {
+		tag = TNN
+		NOT = { has_country_flag = had_tnn_civil_war }
+		NOT = { has_country_flag = tnn_reunified }
+		NOT = { exists = EVR }
+		NOT = { exists = IOR }
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+			NOT = { adm_tech = 2 } #This requirement is used as a short-term measure to stop these events occuring
+	}
+
+	can_start = {
+		num_of_owned_provinces_with = {
+				value = 1
+				culture = iorwerth
+			}
+		has_country_flag = tirannwn_settles_isolation
+	}
+	
+	
+	can_stop = {
+		NOT = {
+			num_of_owned_provinces_with = {
+				value = 1
+				culture = iorwerth
+			}
+		}
+	}
+	
+	progress = {
+	
+		modifier = {
+			factor = 1
+			325 = {
+				culture = iorwerth
+			}
+		}
+		modifier = {
+			factor = 1
+			num_of_owned_provinces_with = {
+				value = 1
+				culture = iorwerth
+			}
+		}
+		modifier = {
+			factor = 1
+			NOT = { accepted_culture = iorwerth }
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = -1
+			stability = 3
+		}
+		modifier = {
+			factor = -1
+			num_of_owned_provinces_with = {
+				value = 1
+				culture = cadarn
+			}
+		}
+	}
+
+	can_end = {
+		NOT = { exists = TNN }
+	}
+
+	modifier = {
+		global_unrest = 5
+	}	
+	
+	
+	on_start = tirannwn_civil_war.1
+	on_end = tirannwn_civil_war.100
+	
+}
+

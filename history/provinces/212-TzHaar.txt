@@ -1,0 +1,26 @@
+#212 - TzHaar
+owner = TZH
+controller = TZH
+add_core = TZH
+tribal_owner = ---
+culture = tzhaar
+religion = ful
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 8
+base_production = 7
+base_manpower = 10
+
+fort_15th = yes 
+
+trade_goods = gemstones
+
+is_city = yes
+
+center_of_trade = 2
+
+add_province_triggered_modifier = religious_center

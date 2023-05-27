@@ -1,0 +1,1100 @@
+﻿l_english:
+
+####################
+# Triggered Modifiers
+####################
+
+# Colonists
+
+ exploration_expansion_additional_colonists:0 "Additional Colonists"
+ desc_exploration_expansion_additional_colonists:0 "With the §YExploration§! institution, concepts of colonisation can be more effectively applied."
+
+ exploration_expansion_general_colonization_law:0 "General Colonisation Law"
+ desc_exploration_expansion_general_colonization_law:0 "With the §YExploration§! institution, concepts of colonisation can be more effectively applied."
+
+ exploration_exploration_colonial_ventures:0 "Colonial Ventures"
+ desc_exploration_exploration_colonial_ventures:0 "With the §YExploration§! institution, concepts of colonisation can be more effectively applied."
+
+ # Kandarin
+ 
+ kdr_knights_of_the_round_table:0 "Knights of the Round Table"
+ desc_kdr_knights_of_the_round_table:0 "The knights of Camelot have great expertise in leadership which has helped us keep our more autonomous regions in check."
+ 
+ # Tirannwn Civil War
+ 
+ civil_war_underdog:0 "Weaker Civil War Faction"
+ desc_civil_war_underdog:0 "Our weakness relative to our enemies in the Tirannwn Civil War is inspiring more desperate strategies."
+ civil_war_stronger:0 "Stronger Civil War Faction"
+ desc_civil_war_stronger:0 "Our strength in the Tirannwn Civil War has discouraged risky strategies."
+ civil_war_winning_conflict:0 "Winning Current Civil War Conflict"
+ desc_civil_war_winning_conflict:0 "We are winning our current conflict in the Tirannwn Civil War, and as a result are pulling back from riskier strategies."
+ civil_war_losing_conflict:0 "Losing Current Civil War Conflict"
+ desc_civil_war_losing_conflict:0 "We are losing our current conflict in the Tirannwn Civil War, and as a result are trying riskier strategies."
+
+####################
+# National Modifiers (decisions, events and missions)
+####################
+
+# Acheron
+
+ genacheron_site_of_innovations:0 "Site of Innovations"
+ desc_genacheron_site_of_innovations:0 "Recent developments in this realm have inspired its residents."
+ genacheron_redoubled_interest:0 "Redoubled Interest"
+ desc_genacheron_redoubled_interest:0 "With a dominant power having emerged in Acheron, their interest has turned to controlling the entire island."
+ 
+ genacheron_looking_for_allies:0 "Looking for Allies"
+ desc_genacheron_looking_for_allies:0 "After making a great expedition to discover new lands, we now believe it is time to seek out new friends in these areas."
+ genacheron_boss_preparation:0 "Boss Preparation"
+ desc_genacheron_boss_preparation:0 "Our people are prepared for a difficult fight against a powerful foe."
+ genacheron_dominance_of_acheron:0 "Dominance of Acheron"
+ desc_genacheron_dominance_of_acheron:0 "With our dominance of Acheron we can move virtually uncontested into its remaining provinces."
+
+# Ardougne
+
+ ADO_fishing_guild_modifier:0 "Fishing Guild"
+ desc_ADO_fishing_guild_modifier:0 "Rich fishing waters and the extensive expertise of nearby Hemenster has created one of the greatest destinations for fishing in all of Gielinor."
+ ADO_growth_of_ardougne_modifier:0 "Growth of Ardougne"
+ desc_ADO_growth_of_ardougne_modifier:0 "Ardougne started as merely a village, but as a bastion of relative peace in a chaotic Kandarin, it will soon grow to be the region's greatest city."
+ ADO_elemental_workshop_modifier:0 "Elemental Workshop"
+ desc_ADO_elemental_workshop_modifier:0 "The strange purple Elemental metal has been discovered under Seers' Village, with incredible applications in magical armour."
+ ADO_right_of_conquest:0 "Right of Conquest"
+ desc_ADO_right_of_conquest:0 "We are the legitimate voice of the humans of Kandarin and our neighbours - at least in part - believe it."
+ ADO_divine_outpost:0 "Divine Outpost"
+ desc_ADO_divine_outpost:0 "[Root.GetTag] shall be known as a new centre for the [Root.Religion.GetName] faith!"
+ ADO_drill_for_our_deity:0 "Drill for the [Root.Religion.GetName] faith"
+ desc_ADO_drill_for_our_deity:0 "Train so that we may fight the darkness that surrounds us!"
+
+# Al Kharid
+
+ ALK_depop_plateau:0 "Depopulation of the Plateau"
+ desc_ALK_depop_plateau:0 "Many residents of the Kharidian Plateau have relocated to Al Kharid, making this province distinctly underpopulated."
+ ALK_saradomist_integration:0 "Saradomist Integration"
+ desc_ALK_saradomist_integration:0 "Our policies of tolerance have encouraged Saradomist immigration."
+ ALK_citharede:0 "Abbey of St. Elspeth Citharede"
+ desc_ALK_citharede:0 "The Abbey of St. Elspeth Citharde is the largest Saradomist nunnery in Gielinor."
+ ALK_blue_training:0 "Blue Training"
+ desc_ALK_blue_training:0 "The Saradominist blue wizards have been invited to aid the efforts of the Magic Training Arena."
+ ALK_red_training:0 "Red Training"
+ desc_ALK_red_training:0 "The Zamorakian red wizards have been invited to aid the efforts of the Magic Training Arena."
+ ALK_green_training:0 "Green Training"
+ desc_ALK_green_training:0 "The Guthixian green wizards have been invited to aid the efforts of the Magic Training Arena."
+ ALK_grey_training:0 "Grey Training"
+ desc_ALK_grey_training:0 "The Magic Training Arena is ran by the efforts of Al Kharid's own wizards, without outside assistance."
+ ALK_merchant_fleet:0 "Merchant Fleet"
+ desc_ALK_merchant_fleet:0 "The growing Al Kharidian merchant fleet is carving out an increasingly strong share of regional trade."
+ ALK_agenda_of_espionage:0 "Agenda of Espionage"
+ desc_ALK_agenda_of_espionage:0 "Our recent policies have greatly encouraged development of the art of subterfuge."
+
+# Arposandra
+
+ AOS_poison_waste:0 "Poison Waste"
+ desc_AOS_poison_waste:0 "The swamps of southern Tirannwn have turned toxic and corrosive. Efforts to develop this land may well be futile."
+ 
+# Ape Atoll
+ 
+ genape_bo_isles_sailors:0 "Bo Isles Sailors"
+ desc_genape_bo_isles_sailors:0 "The strength of our navy is inspiring more monkeys to join."
+ genape_influx_of_runes:0 "Influx of Runes"
+ desc_genape_influx_of_runes:0 "Runecrafters in foreign lands have ensured the world has a steady supply of runes - and our monkey mages can experiment more than ever before."
+ genape_agility_training_modifier:0 "Agility Training"
+ desc_genape_agility_training_modifier:0 "Our efforts to set aside an area for agility training is allowing our troops to strengthen themselves faster than ever before."
+ genape_unify_ape_atoll:0 "Ape Atoll United"
+ desc_genape_unify_ape_atoll:0 "Bringing Ape Atoll under a single rule has inspired our subjects following the true faith."
+
+ APE_bo_isles_incomers:0 "Bo Isles Incomers"
+ desc_APE_bo_isles_incomers:0 "New settlers brought over from the Bo Isles are spreading their expertise."
+
+ APE_atoll_teleport:0 "Ape Atoll Teleport"
+ desc_APE_atoll_teleport:0 "Combining a banana with law, fire and water runes allows our more magically-inclined envoys to travel with great speed."
+ APE_desert_conquest:0 "Desert Conquests"
+ desc_APE_desert_conquest:0 "Successful attacks into the Kharidian Desert have provided ourselves with a great knowledge of how to fight in regions where resources are scarce."
+ APE_friend_of_apmeken:0 "Friend of Apmeken"
+ desc_APE_friend_of_apmeken:0 "Efforts to improve diplomacy in the Kharidian Desert have earned us the favour of the Menaphite goddess Apmeken."
+ APE_monkey_expansionism:0 "Monkey Expansionism"
+ desc_APE_monkey_expansionism:0 "Aggressive expansion of Ape Atoll's monkeys have led to them driving out non-monkey populations out of their territories."
+ APE_inspiration_of_marimbo:0 "Inspiration of Marimbo"
+ desc_APE_inspiration_of_marimbo:0 "The glory of the temple of Marim is inspiring our missionaries."
+ APE_sailors_of_mos_le_harmless:0 "Sailors of Mos Le' Harmless"
+ desc_APE_sailors_of_mos_le_harmless:0 "Freeing the Mos Le' Harmless monkey population from the menace of the Mwanu has freed them to offer their expertise to us."
+ APE_off_the_soul_list:0 "Off the Soul List"
+ desc_APE_off_the_soul_list:0 "During our invasion of the Shambling Lair, we were able to remove monkeys from the list of souls they aimed to collect. As a side-effect, our lifespans have been extended."
+ APE_students_to_masters:0 "Students to Masters"
+ desc_APE_students_to_masters:0 "We have proven ourselves as the greatest ninjas Gielinor has ever seen!"
+
+# Asgarnia
+
+ genasg_troll_guard:0 "Guarding Against Trolls"
+ desc_genasg_troll_guard:0 "Now we are the front line of Asgarnians against the forces of the Troll Stronghold, we must work on our defence against their vile rock-throwers."
+
+ ASG_black_knights_castle:0 "Black Knights' Castle"
+ desc_ASG_black_knights_castle:0 "Falador's castle is the headquarters of the Kinshra, or Black Knights."
+ ASG_white_knights_castle:0 "White Knights' Castle"
+ desc_ASG_white_knights_castle:0 "Falador's castle is the headquarters of the White Knights."
+ ASG_black_knights_fortress:0 "Black Knights' Fortress"
+ desc_ASG_black_knights_fortress:0 "This province is home to a mansion, serving as a major base of the Kinshra, or Black Knights."
+ ASG_white_knights_fortress:0 "White Knights' Fortress"
+ desc_ASG_white_knights_fortress:0 "This province is home to a mansion, serving as a major base of the White Knights."
+ ASG_castle_of_the_twin_knights:0 "Castle of the Twin Knights"
+ desc_ASG_castle_of_the_twin_knights:0 "The Zamorakian Black Knights and Saradominist White Knights awkwardly co-exist in the same castle in Falador."
+ ASG_banishment_of_the_black_knights:0 "Banishment of the Black Knights"
+ desc_ASG_banishment_of_the_black_knights:0 "The Black Knights have been banished from Asgarnia. Zamorakian subjects are not pleased about this turn of events."
+ ASG_banishment_of_the_white_knights:0 "Banishment of the White Knights"
+ desc_ASG_banishment_of_the_white_knights:0 "The White Knights have been banished from Asgarnia. Saradominist subjects are not pleased about this turn of events."
+ ASG_fall_of_the_knights:0 "Fall of the Knights"
+ desc_ASG_fall_of_the_knights:0 "With the White Knights and Black Knights alike disbanded in Asgarnia, we will have a hard time finding recruits for our army."
+ ASG_saradominist_fervour:0 "Saradominist Fervour"
+ desc_ASG_saradominist_fervour:0 "Our promotion of the Saradominist faith has made efforts to convert the heretics and heathens easier."
+ ASG_zamorakian_fervour:0 "Zamorakian Fervour"
+ desc_ASG_zamorakian_fervour:0 "Our promotion of the Zamorakian faith has made efforts to convert the heretics and heathens easier."
+ ASG_void_knight_recruitment_guthix:0 "Void Knight Recruitment"
+ desc_ASG_void_knight_recruitment_guthix:0 "Guided by Dracs Melrose and our faith in Guthix, the Void Knights are attracting many recruits to our side."
+ ASG_void_knight_recruitment_nonintervention:0 "Void Knight Recruitment"
+ desc_ASG_void_knight_recruitment_nonintervention:0 "Guided by Dracs Melrose, the Void Knights are attracting many recruits which to some extent are willing to fight for us."
+ ASG_void_knight_recruitment_other:0 "Void Knight Recruitment"
+ desc_ASG_void_knight_recruitment_other:0 "Guided by Dracs Melrose, the Void Knights are attracting many recruits which to some extent are willing to fight for us."
+ ASG_retreat_of_the_temple_knights:0 "Retreat of the Temple Knights"
+ desc_retreat_of_the_temple_knights:0 "The ancient order of the Temple Knights refuses to serve rulers of a heathen faith."
+ ASG_one_faith_crusade:0 "One Faith Crusade"
+ desc_ASG_one_faith_crusade:0 "In the aftermath of the burning of Wizards' Tower based on religious tensions, we have realised the need to more aggressively promote our faith."
+ ASG_exile_of_the_kinshra:0 "Exile of the Kinshra"
+ desc_ASG_exile_of_the_kinshra:0 "After some time tolerating the presence of the Black Knights in Asgarnia, we have realised the folly of our ways and have exiled them from the kingdom."
+ ASG_exile_of_the_white_knights:0 "Exile of the White Knights"
+ desc_ASG_exile_of_the_white_knights:0 "After some time tolerating the presence of the White Knights in Asgarnia, we have realised the folly of our ways and have exiled them from the kingdom."
+
+# Baxtoria
+
+ BXT_new_elven_capital:0 "New Elven Capital"
+ desc_BXT_new_elven_capital:0 "Baxtoria has supplanted the lands of Tirannwn as the predominant elven realm. As a consequence, this city is now considered the most important elven settlement."
+
+ BXT_expansion_of_democracy:0 "Expansion of Democracy"
+ desc_BXT_expansion_of_democracy:0 "The Cadarn Kingdom since it was first established in Kandarin always has tried to pursue diplomatic efforts with the various peoples of the region. With many of those areas now under Cadarn leadership, this diplomatic effort has been reflected in a limited form of democracy in Baxtoria."
+ BXT_crystalline_sunrise:0 "Crystalline Sunrise"
+ desc_BXT_crystalline_sunrise:0 "Far from Prifddinas, Seren's light shines. Every new individual welcomed into her light is a great blessing for us all!"
+ BXT_mobilising_armies:0 "Mobilising Armies"
+ desc_BXT_mobilising_armies:0 "Our mobilised forces within the Feldip Hills are looking further afield for combat training opportunities."
+ BXT_pax_baxtoria:0 "Pax Baxtoria"
+ desc_BXT_pax_baxtoria:0 "We have brought peace to the once turbulent Kandarin, and its surrounding regions."
+
+# Burthorpe
+
+ BTH_warriors_guild_modifier:0 "Warriors' Guild"
+ desc_BTH_warriors_guild_modifier:0 "The Warriors' Guild is Asgarnia's - and perhaps Gielinor's - greatest centre for the training of melee warriors."
+
+# Cadarn
+
+ CDA_elven_favouritism:0 "Elven Favouritism"
+ desc_CDA_elven_favouritism:0 "We have appealed to a sense of Elven cultural identity to attempt to solve our current crisis."
+ CDA_equal_realm:0 "Equal Realm"
+ desc_CDA_equal_realm:0 "We appeal to all our subjects of all faiths and cultures to stand as one in Clan Cadarn."
+
+ CDA_ardignan_revolt_modifier:0 "Ardignan Revolt"
+ desc_CDA_ardignan_revolt_modifier:0 "Ardignan settlers refuse to abide by the rule of Clan Cadarn."
+ CDA_coerced_settlers:0 "Coerced Settlers"
+ desc_CDA_coerced_settlers:0 "Cadarn settlers have been coerced into taking action against goblin invaders, at great cost of lives."
+
+ CDA_abandonment_of_the_elves:0 "Abandonment of the Elves"
+ desc_CDA_abandonment_of_the_elves:0 "By refusing to aid the Tirannwn Resistance, many within our realm consider it an abandonment of Seren's children."
+ CDA_outpost_of_seren:0 "Outpost of Seren"
+ desc_CDA_outpost_of_seren:0 "We are the key centre for Serenist worship outside of Tirannwn."
+ CDA_cadarn_eternal:0 "Cadarn Eternal"
+ desc_CDA_cadarn_eternal:0 "We have proven the worth of Clan Cadarn even in times of great hardship. Our people are closer than ever before."
+ CDA_national_recovery:0 "National Recovery"
+ desc_CDA_national_recovery:0 "Baxtorian's kingdom is restored, and elves are returning to our service."
+ CDA_conquest_of_the_hazeelite_lands:0 "Conquest of the Hazeelite Lands"
+ desc_CDA_conquest_of_the_hazeelite_lands:0 "We are viewed as largely a more benevolent leader than Hazeel was, so our new subjects are less prone to rebel."
+
+# Corsair Cove
+
+ CCO_corsair_banking:0 "Corsair Banking"
+ desc_CCO_corsair_banking:0 "Corsairs are serving our interests by securing our banks from would-be looters."
+
+# Crandor
+ 
+ CDR_time_to_mine:0 "Time to Mine"
+ desc_CDR_time_to_mine:0 "We are discovering great mineral riches deep in Crandor's volcano."
+ CDR_colonial_drive:0 "Colonial Drive"
+ desc_CDR_colonial_drive:0 "A new world calls, and Crandor shall answer!"
+ CDR_crandor_triumphant:0 "Crandor Triumphant"
+ desc_CDR_crandor_triumphant:0 "Crandor has proven itself as the true centre for trade in the entire Unquiet Ocean!"
+ CDR_international_trade:0 "International Trade"
+ desc_CDR_international_trade:0 "With the discovery of new trade opportunities far from our shores, we have persuaded our merchants to be willing to travel further to meet them."
+ CDR_magical_expansion:0 "Magical Expansion"
+ desc_CDR_magical_expansion:0 "Runecrafting has come to inspire the Crandorian people, as more and more each day take up the path of the wizard."
+ CDR_republican_navy_modifier:0 "Crandorian Republican Navy"
+ desc_CDR_republican_navy_modifier:0 "A strong navy shall shelter our shores from the powers of Asgarnia and Kandarin."
+ CDR_secrets_of_kethsi:0 "Secrets of Kethsi"
+ desc_CDR_secrets_of_kethsi:0 "In many ways, the Kethsians were like us - but we shall learn from their failures and emerge as a more powerful force than they ever could!"
+ CDR_wary_of_adventurers:0 "Wary of Adventurers"
+ desc_CDR_wary_of_adventurers:0 "Something tells us that excavating Crandor volcano is a very bad idea. Adventurers are not pleased."
+
+# Carnilleus
+
+ CLS_purge_zamorak:0 "Purge Zamorakians"
+ desc_CLS_purge_zamorak:0 "We have targeted this area as a key location for conversion to the true faith."
+ CLS_naval_ambitions:0 "Naval Ambitions"
+ desc_CLS_naval_ambitions:0 "The importance of developing a good navy has grown to ensure we can circumvent strong foes in Kandarin and defend against those from elsewhere."
+ CLS_saradominist_mission:0 "Saradominist Mission"
+ desc_CLS_saradomist_mission:0 "With the support of Entrana, we can begin to transform Kandarin from a chaotic mess of faiths into a new bastion of the Church of Saradomin."
+
+# Donblas
+ 
+ DBS_lenient_guthix_treatment:0 "Lenient Treatment of Guthixians"
+ desc_DBS_lenient_guthix_treatment:0 "We have elected to take a moderate approach to the treatment of followers of Guthix."
+ DBS_harsh_guthix_treatment:0 "Harsh Treatment of Guthixians"
+ desc_DBS_harsh_guthix_treatment:0 "We will see all Asgarnia as one faith!"
+ DBS_ambitious_expansion:0 "Ambitious Expansion"
+ desc_DBS_ambitious_expansion:0 "With the clear goal to unite Asgarnia under a single banner, our people are more able to see our ambitions through."
+ DBS_defiance_of_misthalin:0 "Defiance of Misthalin"
+ desc_DBS_defiance_of_misthalin:0 "We shall be no puppets of Misthalin, but the forgers of our own destiny!"
+ DBS_rise_of_white_knights:0 "Rise of the White Knights"
+ desc_DBS_rise_of_white_knights:0 "The White Knights serve the Donblas tribe and aim to spread the word of Saradomin."
+ DBS_rise_of_kinshra:0 "Rise of the Kinshra"
+ desc_DBS_rise_of_kinshra:0 "The Kinshra, or Black Knights, are a Zamorakian order which has pledged their support to the Donblas tribe in exchange for freedom to practice their religion."
+ DBS_rejection_of_zamorak:0 "Rejection of the Zamorakians"
+ desc_DBS_rejection_of_zamorak:0 "Zamorakians tried to weasel their way into our government! We can't let that happen."
+
+# Dark Wizards
+
+ DWI_gold_for_zamorak:0 "Gold for Zamorak"
+ desc_DWI_gold_for_zamorak:0 "Great riches are to be had in this province - but we have to get the hobgoblins out of the way first."
+
+# Draynor
+ DYN_light_of_saradomin:0 "Light of Saradomin"
+ desc_DYN_light_of_saradomin:0 "With the Zamorakians ousted from Draynor Manor, we are ready to spread the good word of Saradomin further away."
+ DYN_age_of_tolerance:0 "Age of Tolerance"
+ desc_DYN_age_of_tolerance:0 "Our alliances with countries of various religions are inspiring new ideas of how to arrange our own country."
+ DYN_heralds_of_draynor_drakan:0 "Heralds of Draynor Drakan"
+ desc_DYN_heralds_of_draynor_drakan:0 "Our army is enthusiastic about the impending return of Draynor Drakan to smite our enemies."
+ DYN_growth_of_naval_trade:0 "Growth of Naval Trade"
+ desc_DYN_growth_of_naval_trade:0 "With a stronger navy, Draynor can exert more power over local maritime trade routes."
+
+# Elven Resistance
+
+ EVR_resistance_base:0 "Resistance Base"
+ desc_EVR_resistance_base:0 "Lletya serves as our hidden base of operations from which the Tirannwn Resistance launches their guerilla campaigns."
+ EVR_reverted_to_crystal:0 "Reverted to Crystal"
+ desc_EVR_reverted_to_crystal:0 "Prifddinas has been reverted to crystal by the Clan Elders of Tirannwn. Attempting to develop the city in its present state is futile."
+ EVR_sealed_temple_of_light:0 "Sealed Temple of Light"
+ desc_EVR_sealed_temple_of_light:0 "Efforts to prevent enemies of the Tirannwn Resistance from taking the Temple of Light have succeeded in making it especially hard to assault."
+ EVR_serenist_preachers:0 "Serenist Preachers"
+ desc_EVR_serenist_preachers:0 "Preachers of the Serenist faith have been guaranteed rights in this province, which makes any present attempt to convert the province exceptionally difficult."
+ EVR_gnomish_laboratory:0 "Gnomish Laboratory"
+ desc_EVR_gnomish_laboratory:0 "Who knows what these gnomish technologies beneath Lletya can do?"
+ 
+ EVR_resistance_fleet_modifier:0 "The Resistance Fleet"
+ desc_EVR_resistance_fleet_modifier:0 "It is time to take the Tirannwn Resistance to another frontier: The sea. Already those who are able are flocking to our ports to assist our efforts in new ways."
+ EVR_raiding_iorwerth:0 "Raiding Iorwerth"
+ desc_EVR_raiding_iorwerth:0 "With a superior navy, we are able to put pressure on Iorwerth's coastline."
+ EVR_cadarn_support:0 "Support from Clan Cadarn"
+ desc_EVR_cadarn_support:0 "Clan Cadarn over in Kandarin is offering us considerable support for our efforts in the Tirannwn Civil War."
+ EVR_call_to_arms_modifier:0 "Call to ARMS"
+ desc_EVR_call_to_arms_modifier:0 "We have gained access to valuable mercenaries by engaging in wargames with other peoples."
+ EVR_precision_strikes:0 "Precision Strikes"
+ desc_EVR_precision_strikes:0 "Clan Cadarn's strength at precision strikes is aiding our ability to take down Iorwerth's defences."
+ EVR_kandarin_innovations:0 "Kandarin Innovations"
+ desc_EVR_kandarin_innovations:0 "Fresh ideas from Kandarin are aiding our cause."
+ EVR_seren_in_asgarnia:0 "Elves in Asgarnia"
+ desc_EVR_seren_in_asgarnia:0 "Elves have returned to Asgarnia after millennia, and are ready to reintroduce the true faith!"
+ EVR_arposandran_ideas:0 "Ideas from Arposandra"
+ desc_EVR_arposandran_ideas:0 "Occasional cave gnomes are travelling through our realm, and introducing strange new technologies."
+ EVR_destruction_of_the_dark_lord:0 "Destruction of the Dark Lord"
+ desc_EVR_destruction_of_the_dark_lord:0 "With the Dark Lord destroyed for good, converting the few who cling to such heresy will take no time at all."
+ EVR_open_panic:0 "Open Panic"
+ desc_EVR_open_panic:0 "The revival of the Dark Lord terrifies our people."
+
+# Gnome Empire
+
+ GNE_tree_gnome_village_rebels:0 "Tree Gnome Village Rebels"
+ desc_GNE_tree_gnome_village_rebels:0 "Gnomes in this province feel more affinity to the southern Tree Gnomes than to the Grand Tree."
+ GNE_bolrie_elected:0 "Bolrie Elected"
+ desc_GNE_bolrie_elected:0 "Bolrie is an unpopular choice for king in this province."
+ GNE_illusion_magicks:0 "Illusion Magicks"
+ desc_GNE_illusion_magicks:0 "Glouphrie's magical efforts are capable of winning battles without loss of life on either side."
+ GNE_tortoise_warfare:0 "Tortoise Warfare"
+ desc_GNE_tortoise_warfare:0 "The introduction of giant tortoises to our army has provided our cavalry with a significant combat advantage."
+ GNE_fool_of_a_king:0 "Fool of a King"
+ desc_GNE_fool_of_a_king:0 "Our monarch's past failures are an embarrassment to the whole Gnome Empire."
+ GNE_permanent_illusion_magicks:0 "Mastery of Illusion Magicks"
+ desc_GNE_permanent_illusion_magicks:0 "Glouphrie's dictatorship over the Gnome Empire has the silver lining that we can permanently rely on his illusion magicks to bolster the strength of our armies."
+ GNE_protector_of_yanille:0 "Protector of Yanille"
+ desc_GNE_protector_of_yanille:0 "Yanille acts as an effective first defence against the ogres of the Feldip Hills pushing further into Kandarin. Committing to defend it shall improve our relations with our neighbours."
+ GNE_guardian_of_yanille:0 "Guardian of Yanille"
+ desc_GNE_guardian_of_yanille:0 "Many residents of Yanille have accepted that our leadership is preferable to being subjugated by the Feldip ogres."
+
+# Gunnar
+
+ GUN_crusader_recruitment:0 "Crusader Recruitment"
+ desc_GUN_crusader_recruitment:0 "Huge numbers of people are flocking to the banner of the Runecrafting Crusades - Fremennik and non-Fremennik alike."
+ GUN_major_sabotage_by_the_gunnites:0 "Major Sabotage by the Gunnites"
+ desc_GUN_major_sabotage_by_the_gunnites:0 "Our pro-Runecrafting stance has angered supporters of Gunnar's Runecrafting Crusades, who are sabotaging our military efforts accordingly."
+ GUN_modest_sabotage_by_the_gunnites:0 "Modest Sabotage by the Gunnites"
+ desc_GUN_modest_sabotage_by_the_gunnites:0 "Our moderately pro-Runecrafting stance has angered supporters of Gunnar's Runecrafting Crusades, who are sabotaging our military efforts accordingly."
+
+
+ GUN_ruined_runecrafting_altar:0 "Ruined Runecrafting Altar"
+ desc_GUN_ruined_runecrafting_altar:0 "Gunnar's Crusade has destroyed the entrance to this runecrafting altar, and it is now unproductive."
+
+# Hanto
+ 
+ HNT_corruption_of_the_depths:0 "Corruption of the Depths"
+ desc_HNT_corruption_of_the_depths:0 "The glory of Xau-Tak shines upon Hanto and soon all its subjects shall realise this."
+ HNT_victory_over_xautak:0 "Victory Over Xau-Tak"
+ desc_HNT_victory_over_xautak:0 "We are among the very few who can claim victory against the ultimate horror of the ocean depths."
+
+# Iorwerth
+
+ IOR_prifddinas_death_guard:0 "Prifddinas Death Guard"
+ desc_IOR_prifddinas_death_guard:0 "The elite of Clan Iorwerth's troops keep Prifddinas well-defended."
+ IOR_expanding_iorwerth_presence:0 "Expanding Iorwerth Presence"
+ desc_IOR_expanding_iorwerth_presence:0 "Central Isafdar is a wild land that needs taming to better-serve Clan Iorwerth."
+ 
+ IOR_zeal_of_the_dark_lord:0 "Zeal of the Dark Lord"
+ desc_IOR_zeal_of_the_dark_lord:0 "Our faith is reinvigorated in the face of fresh relevations about the survival of part of Seren."
+ IOR_temple_building_enthusiasm:0 "Temple-Building Enthusiasm"
+ desc_IOR_temple_building_enthusiasm:0 "Our new faith deserves fresh dedicated buildings to the worship of the Dark Lord!"
+ IOR_dark_lord_zeal:0 "Dark Lord Zeal"
+ desc_IOR_dark_lord_zeal:0 "Excitement for the Dark Lord is inspiring a new wave of religious zeal."
+ IOR_subdued_rebellions:0 "Subdued Rebellions"
+ desc_IOR_subdued_rebellions:0 "Or international legitimacy is making it harder for rebel groups within our own territory to find supporters."
+ IOR_halberd_practice:0 "Halberd Practice"
+ desc_IOR_halberd_practice:0 "Halberds are unwieldy and slow in the hands of the inexperienced. It is crucial to ensure we never find ourselves with inexperienced troops."
+ IOR_dark_crystal_fleet:0 "Dark Crystal Fleet"
+ desc_IOR_dark_crystal_fleet:0 "Clan Iorwerth dominates on land, yet we remain vulnerable on the sea. Without a substantial naval expansion, we could be the victim of raids!."
+ IOR_third_age_research:0 "Third Age Research"
+ desc_IOR_third_age_research:0 "Our scholars turn to the history of the God Wars to find an alternative source of power for our Dark Lord."
+ IOR_crushed_resistance:0 "Crushed the Elven Resistance"
+ desc_IOR_crushed_resistance:0 "The remnants of the Elven Resistance will struggle to resist conversion to the ways of the Dark Lord."
+ IOR_search_for_more_souls:0 "Search for More Souls"
+ desc_IOR_search_for_more_souls:0 "With Tirannwn firmly in the Dark Lord's grasp, we must explore further afield to discover potential new converts or sacrifices."
+ IOR_terror_of_the_dark_lord:0 "Terror of the Dark Lord"
+ desc_IOR_terror_of_the_dark_lord:0 "Who can resist the power of the Dark Lord?"
+
+# Jatizso
+
+ JTZ_productive_mine:0 "Productive Mine"
+ desc_JTZ_productive_mine:0 "Many major miners mine more mithril and more!"
+
+# Kandarin
+ 
+ KDR_market_of_the_world:0 "Market of the World"
+ desc_KDR_market_of_the_world:0 "The establishment of Ardougne Market has staked out our ambition to be a major power in Gielinor in the future."
+ KDR_anti_thievery_efforts:0 "Anti-Thievery Efforts"
+ desc_KDR_anti_thievery_efforts:0 "Yes, we know that Ardougne has a reputation for crime. But we're working on it. We've even implemented two-factor authentication traps on our most valuable chests!"
+ 
+ KDR_castle_wars_modifier:0 "Faith of Castle Wars"
+ desc_KDR_castle_wars_modifier:0 "Having differing religions on the two sides of Castle Wars is a great incentive for the sides to fight harder."
+ KDR_world_gate_province:0 "The World Gate"
+ desc_KDR_world_gate_province:0 "The legendary gateway to other worlds - for those who know how to use it."
+
+# Khanoka
+ 
+ KHN_agriculture_boom:0 "Agriculture Boom"
+ desc_KHN_agriculture_boom:0 "Efforts to evenly develop our island are resulting in highly productive, well-staffed farms."
+ KHN_new_faith:0 "New Faith"
+ desc_KHN_new_faith:0 "Our people are fascinated with this new faith we have brought to Khanoka, and are eagerly accepting its spread."
+ KHN_port_investments:0 "Port Investments"
+ desc_KHN_port_investments:0 "New investments into port infrastructure are encouraging many more of our subjects to join our navy."
+ KHN_syncretic_policies:0 "Syncretic Policies"
+ desc_KHN_syncretic_policies:0 "We are allowing modest freedom of religion, so long as that religion takes on board some of the philosophies of the true faith."
+ KHN_western_operations:0 "Western Operations"
+ desc_KHN_western_operations:0 "Our trade dealings with The West necessitate wider travel for our merchants and diplomats."
+ 
+# Karamja
+
+ genkja_jogre_conquest:0 "Jogre Conquest"
+ desc_genkja_jogre_conquest:0 "It is time to oust the Jogre threat from Karamja once and for all!"
+ genkja_projecting_influence:0 "Projecting Influence"
+ desc_genkja_projecting_influence:0 "More and more people across Gielinor are beginning to learn about the true potential of Karamja."
+ genkja_dominance_of_karamja:0 "Dominance of Karamja"
+ desc_genkja_dominance_of_karamja:0 "With the southern portion of Karamja safely under our rule, it is time to focus on expansion in the north."
+ 
+ KJA_expanded_hardwood_grove:0 "Expanded Hardwood Grove"
+ desc_KJA_expanded_hardwood_grove:0 "Tai Bwo Wannai's rich teak and mahogany forests have been organised and expanded to maximise our production of valuable logs."
+ KJA_integration_of_the_tzhaar:0 "Integration of the TzHaar"
+ desc_KJA_integration_of_the_tzhaar:0 "The local TzHaar are considered an intrinsic part of the Karamjan nation."
+ KJA_anti_tzhaar_ethos:0 "Anti-Tzhaar Ethos"
+ desc_KJA_anti_tzhaar_ethos:0 "Harsh efforts against the TzHaar are causing significant local unrest."
+ KJA_expanded_shipyard_of_kalumin:0 "Expanded Shipyard of Kalumin"
+ desc_KJA_expanded_shipyard_of_kalumin:0 "With great investments, Kalumin now hosts one of Gielinor's foremost shipyards."
+ KJA_herblore_habitat_modifier:0 "Herblore Habitat"
+ desc_KJA_herblore_habitat_modifier:0 "Research into the local Jadinkos has yielded great promise for our herbalists."
+ KJA_subjugation_of_ape_atoll:0 "Subjugation of Ape Atoll"
+ desc_KJA_subjugation_of_ape_atoll:0 "The monkeys of Ape Atoll shall be treated by the Karamjans much like the monkeys of Karamja have already been - to be ignored at best, and to be made into seaweed sandwiches at worst."
+
+ KJA_defeat_of_ardougne:0 "Defeat of Ardougne"
+ desc_KJA_defeat_of_ardougne:0 "A major den of thieves and traders has been eliminated, freeing our guards and merchants to focus on other issues."
+ KJA_tzhaar_guard:0 "TzHaar Guard"
+ desc_KJA_tzhaar_guard:0 "TzHaar soldiers are being put to great use on the front lines of the Karamjan armies."
+ KJA_unquiet_ocean_trade_monopoly:0 "Unquiet Ocean Trade Monopoly"
+ desc_KJA_unquiet_ocean_trade_monopoly:0 "Our dominant position in the trade routes of the Unquiet Ocean is bringing in vast amounts of wealth."
+ KJA_tales_of_the_idols:0 "Tales of the Idols"
+ desc_KJA_tales_of_the_idols:0 "An ancient transcript of the legend of Gara-Dul has renewed interest in the history of the Karamjan Trinity."
+
+# Kharidians
+
+ KDS_toll_gate:0 "Toll Gate"
+ desc_KDS_toll_gate:0 "The famous toll gate of Al Kharid charges only a mere 10gp, but the huge demand for passage will quickly accumulate a large volume of gold for us."
+ KDS_saradominist_interest:0 "Saradominist Interest"
+ desc_KDS_saradominist_interest:0 "Our tolerance of different faiths has made it considerably easier to attract immigrants."
+ KDS_scimitar_production:0 "Scimitar Production"
+ desc_KDS_scimitar_production:0 "Local production of scimitars has cut the costs of maintaining our army."
+
+# Kourend
+ 
+ KOU_placated_house:0 "Placated House"
+ desc_KOU_placated_house:0 "This House of Great Kourend has been aided by the central government, and will be less likely to break free from its control."
+
+# Marwolaeth
+
+ MWL_crucial_colony:0 "Crucial Colony"
+ desc_MWL_crucial_colony:0 "The nation of Marwolaeth has identified this province as crucial to their future efforts, and have already put some investment into making the province easier to colonise."
+ MWL_legitimate_elven_lands:0 "Legitimate Elven Lands"
+ desc_MWL_legitimate_elven_lands:0 "Clan Iorwerth is in northern Kandarin to reclaim rightful elven lands!"
+ MWL_brother_of_seren:0 "Brother of Seren"
+ desc_MWL_brother_of_seren:0 "The Dark Lord's own family is celebrated in this province."
+ MWL_soul_sacrifice:0 "Soul Sacrifice"
+ desc_MWL_soul_sacrifice:0 "A sacrifice of souls has empowered the production of soul runes at this runecrafting altar."
+
+ MWL_exotic_slayer_creatures:0 "Exotic Slayer Creatures"
+ desc_MWL_exotic_slayer_creatures:0 "Strange beasts from around the world are giving our soldiers a unique training experience."
+ MWL_destroyer_of_kandarin:0 "Destroyer of Kandarin"
+ desc_MWL_destroyer_of_kandarin:0 "Humans of Kandarin have fallen to our unstoppable onslaught. To attempt to resist is to succeed in dying."
+ MWL_age_of_the_dark_lord:0 "Age of the Dark Lord"
+ desc_MWL_age_of_the_dark_lord:0 "What of the Age of Humans? A lie! For this is the age of the Dark Lord and their loyal elves!"
+
+# Menaphos
+ 
+ MPS_trade_monopoly:0 "Trade Monopoly"
+ desc_MPS_trade_monopoly:0 "Efforts to aid the Merchant District of Menaphos has resulted in the city exerting a huge amount of trade pressure over the region."
+ 
+# Miscellania
+
+ mce_adventurer_regency_modifier:0 "Adventurer Regency"
+ desc_mce_adventurer_regency_modifier:0 "Miscellania's operations are being taken care of by a trusted adventurer."
+
+# Misthalin
+ 
+ MST_diplomatic_resistance:0 "Diplomatic Resistance"
+ desc_MST_diplomatic_resistance:0 "We are attempting to band with others in Asgarnia to stop Misthalin's reckless expansion."
+ MST_military_resistance:0 "Military Resistance"
+ desc_MST_military_resistance:0 "We are aiming to unify Asgarnia against the Misthalanian threat."
+ MST_traitor_to_asgarnia:0 "Traitor to Asgarnia"
+ desc_MST_traitor_to_asgarnia:0 "We have elected to stand with Misthalin, much to the dislike of many of out subjects and neighbours."
+ MST_goblin_tolerance:0 "Goblin Tolerance"
+ desc_MST_goblin_tolerance:0 "A policy of tolerance towards the goblins of this region have made them less rebellious."
+ MST_grand_exchange_modifier:0 "Grand Exchange Headquarters"
+ desc_MST_grand_exchange_modifier:0 "This province is home to the Grand Exchange - the premier place to trade goods in all of Gielinor!"
+ MST_wizards_tower_modifier:0 "Wizards' Tower"
+ desc_MST_wizards_tower_modifier:0 "Wizards' Tower was established with the goal of advancing magical research, and would eventually eclipse even the Wizards' Guild in significance."
+ MST_second_wizards_tower:0 "Wizards' Tower"
+ desc_MST_second_wizards_tower:0 "This is the second Wizards' Tower, built after the first burnt down. It still serves as a key site of magical expertise."
+ MST_varrock_sewers:0 "Varrock Sewers"
+ desc_MST_varrock_sewers:0 "An extensive - probably too extensive - system of pipes under Varrock ensure that waste is kept away from the population, and there's somewhere to dump any zombies that wander in from the Wilderness."
+ 
+ MST_cornering_the_combat_market:0 "Cornering the Combat Market"
+ desc_MST_cornering_the_combat_market:0 "We dominate the market in the trade of high-performance combat equipment."
+ MST_stable_wizard_faith:0 "Stable Wizard Faith"
+ desc_MST_stable_wizard_faith:0 "With unpleasant religious discord among the wizards of Wizards' Tower dealt with, we have their undivided attention in aiding our nation."
+
+ MST_paterdomus:0 "Paterdomus"
+ desc_MST_paterdomus:0 "The first line of Misthalin's defence against monsters from Morytania, Paterdomus has been reinforced for centuries. Lately, however, the defences have fallen somewhat into disrepair."
+ MST_beacon_network_province:0 "Beacon Network"
+ desc_MST_beacon_network_province:0 "The beacon network warns Misthalin of oncoming threats, allowing a rapid response."
+ MST_traders_and_missionaries:0 "Traders and Missionaries"
+ desc_MST_traders_and_missionaries:0 "As we integrate the South Lum properly into Misthalin, missionaries have been interested in spreading the true faith here."
+ MST_reinforced_paterdomus:0 "Reinforced Paterdomus"
+ desc_MST_reinforced_paterdomus:0 "Paterdomus Temple is now reinforced and a particularly hard target for foes to take."
+ MST_localised_asgarnian_resistance:0 "Localised Asgarnian Resistance"
+ desc_MST_localised_asgarnian_resistance:0 "In the face of Misthalin's expansion, localised resistance movements have intensified in this province."
+ MST_strategic_outpost:0 "Strategic Outpost"
+ desc_MST_strategic_outpost:0 "Fort Forinthry is a valuable base of operations as we expand into the Wilderness."
+ MST_new_duchy_lands:0 "New Duchy Lands"
+ desc_MST_new_duchy_lands:0 "These provinces have been identified as lucrative spots for future Misthalanian colonies."
+ MST_tutorial_island_hub:0 "Isle of Tutors"
+ desc_MST_tutorial_island_hub:0 "The so-called Tutorial Island is now the most important centre for training fresh adventurers."
+ 
+ MST_fossil_research_modifier:0 "Fossil Research"
+ desc_MST_fossil_research_modifier:0 "Academic interest in paleoarchaeology is allowing us to explore further afield."
+ MST_aid_of_nomad:0 "Aid of Nomad"
+ desc_MST_aid_of_nomad:0 "The warrior-mage known simply as Nomad is assisting our war efforts."
+ MST_justice_for_wizards_tower:0 "Justice for Wizards' Tower"
+ desc_MST_justice_for_wizards_tower:0 "We shall avenge the burning of our great bastion of learning by turning all the heathens into believers of the one true faith!"
+ MST_rise_of_the_runecrafting_guild:0 "Rise of the Runecrafting Guild"
+ desc_MST_rise_of_the_runecrafting_guild:0 "The newly-established Runecrafting Guild at the Wizards' Tower is blessing our realm with a plentiful supply of runes and expertise on how best to use them."
+
+ MST_diplomatic_tension_easing:0 "Easing Diplomatic Tension"
+ desc_MST_diplomatic_tension_easing:0 "In the face of a potential Asgarnian coalition, we have elected to focus on easing tensions."
+ MST_harsh_line_against_asgarnia:0 "Harsh Line Against Asgarnia"
+ desc_MST_harsh_line_against_asgarnia:0 "In the face of a potential Asgarnian coalition, we have elected to rally our people for further warfare."
+
+# Morytania
+
+ MYT_theatre_of_blood:0 "Theatre of Blood"
+ desc_MYT_theatre_of_blood:0 "The unlucky souls of Meiyerditch may attempt to fight for their freedom here. Some adventurers and mercenaries from other realms have begun to take on the challenge as well."
+ MYT_assert_supremacy:0 "Assert Supremacy"
+ desc_MYT_assert_supremacy:0 "We have proven ourselves capable of retaking Morytania."
+ MYT_vyrewatch_innovation:0 "Vyrewatch Innovation"
+ desc_MYT_vyrewatch_innovation:0 "Our enemies will not know how to react to the Vyrewatch's new strategies."
+ MYT_pirate_mercenaries:0 "Pirate Mercenaries"
+ desc_MYT_pirate_mercenaries:0 "Vampyres are bad at crossing water, but luckily we've got the support of some pirates to do the naval plundering for us."
+ 
+ MYT_descendants_of_hallowvale:0 "Descendants of Hallowvale"
+ desc_MYT_descendants_of_hallowvale:0 "The residents of Meiyerditch are extremely loyal to their Saradominist faith and will be exceptionally hard to convert."
+
+# New Heritage
+
+ NHE_mountain_development:0 "Mountain Development"
+ desc_NHE_mountain_development:0 "Population pressures in New Heritage are causing residents to shoulder some of the costs of development in this province."
+ 
+ NHE_growing_immigration:0 "Growing Immigration"
+ desc_NHE_growing_immigration:0 "Efforts to keep our home isle safe from unrest have attracted newcomers from across Wushanko."
+ 
+# Palingrad
+ 
+ PLG_growth_of_palingrad:0 "Growth of Palingrad"
+ desc_PLG_growth_of_palingrad:0 "New investments in Palingrad have inspired infrastructural and institutional developments."
+ PLG_naval_enthusiasm:0 "Naval Enthusiasm"
+ desc_PLG_naval_enthusiasm:0 "Our inspiring navy is enouraging more penguins to volunteer."
+ 
+ PLG_new_spying_opportunities:0 "New Spying Opportunities"
+ desc_PLG_new_spying_opportunities:0 "Let's see what we can find out about this strange world!"
+ PLG_military_investments:0 "Military Investments"
+ desc_PLG_military_investments:0 "We have poured considerable resources into the expansion of the military."
+ 
+# Rellekka
+ 
+ REL_runecrafting_crusader_unrest:0 "Runecrafting Crusader Unrest"
+ desc_REL_runecrafting_crusader_unrest:0 "Our attempts to suppress the Runecrafting Crusades have been met with an enormous amount of resistance."
+ REL_fremennik_slayer_dungeon:0 "Fremennik Slayer Dungeon"
+ desc_REL_fremennik_slayer_dungeon:0 "Home to all manner of unique beasts from cave crawlers to kurasks, these caves serve as an excellent training ground for our armies."
+ 
+ REL_longship_culture_modifier:0 "Longship Culture"
+ desc_REL_longship_culture_modifier:0 "The Fremennik history of constructing longships has been re-affirmed, to our benefit."
+ REL_lunar_sea_voyages:0 "Lunar Sea Voyages"
+ desc_REL_lunar_sea_voyages:0 "Our sailors - and conquering warriors - are willing to travel further than ever before for glory!"
+ REL_coastal_expansion:0 "Coastal Expansion"
+ desc_REL_coastal_expansion:0 "Recent coastal acquisitions have expanded our navy's potential."
+ REL_end_of_the_daggermouth_threat:0 "End of the Dagannoth Threat"
+ desc_REL_end_of_the_daggermouth_threat:0 "With one of the biggest immediate dangers to Rellekka eliminated, our people feel much safer to travel the seas once again looking for fresh opportunities."
+ REL_dungeoneers:0 "Dungeoneers"
+ desc_REL_dungeoneers:0 "The depths of Daemonheim have inspired the new art of Dungeoneering, where our bravest adventurers attempt to delve into ever-stranger depths."
+
+# Scabarites
+ 
+ SBI_reconstruction_of_ullek:0 "Reconstruction of Ullek"
+ desc_SBI_reconstruction_of_ullek:0 "Once among the greatest of Kharid's cities, Ullek was left in ruins by Zamorak's minions during the Third Age. But some of the ruins are still livable, and can be easily adapted into new dwellings."
+ SBI_by_scabaras_hand:0 "By Scabaras' Hand"
+ desc_SBI_by_scabaras_hand:0 "It shall be done."
+
+# Tirannwn 
+ 
+ TNN_construction_boom:0 "Construction Boom"
+ desc_TNN_construction_boom:0 "Extensive investment in developing this province's infrastructure has ensured that future construction efforts shall be cheaper."
+ TNN_internal_faith_focus:0 "Internal Faith Focus"
+ desc_TNN_internal_faith_focus:0 "We shall ensure even those who have never seen Seren shall know of her glory."
+ TNN_development_of_the_lost_grove:0 "Development of the Lost Grove"
+ desc_TNN_development_of_the_lost_grove:0 "With the Lost Grove securely under our rule, we can safely use its magics to create a more habitable environment for our elves."
+ TNN_border_guard:0 "Border Guard"
+ desc_TNN_border_guard:0 "Extra resources have been placed into securing this province's defences."
+ TNN_expansion_of_death_rune_crafting:0 "Expansion of Death Runecrafting"
+ desc_TNN_expansion_of_death_rune_crafting:0 "Recent investments into the Temple of Light have made it far easier than before to produce the highly-prized death runes."
+
+ TNN_flow_of_anima:0 "Flow of Anima"
+ desc_TNN_flow_of_anima:0 "With Solak's support, we are benefitting from the power of the Anima Mundi."
+ TNN_new_relations:0 "New Relations"
+ desc_TNN_new_relations:0 "New opportunities for diplomacy in Zeah have encouraged the expansion of our diplomatic corps."
+ TNN_elves_of_varlamore:0 "Elves of Varlamore"
+ desc_TNN_elves_of_varlamore:0 "New wealth from Varlamore is flooding into Tirannwn."
+ TNN_new_trade_opportunities:0 "New Trade Opportunities"
+ desc_TNN_new_trade_opportunities:0 "Tirannwn's postwar reconstruction has made the region a vastly more lucrative target for trade."
+ TNN_eastward_reach:0 "Eastward Reach"
+ desc_TNN_eastward_reach:0 "Intriguing discoveries to the east are encouraging our people to travel further afield."
+ TNN_control_of_the_crystal_ocean:0 "Control of the Crystal Ocean"
+ desc_TNN_control_of_the_crystal_ocean:0 "Our dominant position over the Crystal Ocean makes our naval defences especially potent."
+ TNN_council_leader:0 "Council Leader"
+ desc_TNN_council_leader:0 "By forcing ourselves to the forefront of Gielinor's diplomacy, we are reaping the benefits."
+ TNN_naval_expansion_modifier:0 "Naval Expansion"
+ desc_TNN_naval_expansion_modifier:0 "Such fine crafting work by Clan Ithell on these ships! This work is attracting many new elves to Tirannwn's navy."
+ TNN_inspiration_of_prifddinas:0 "Inspiration of Prifddinas"
+ desc_TNN_inspiration_of_prifddinas:0 "The unparalleled construction of Prifddinas inspires all to emulate its shining example."
+ 
+# TzHaar
+ 
+ TZH_faith_of_the_earth_modifier:0 "Faith of the Earth"
+ desc_TZH_faith_of_the_earth_modifier:0 "With the situation at the Elder Kiln brought under control, we have a renewed understanding of the ways of Ful."
+ TZH_colonies_of_the_gaal:0 "Colonies of the Ga'al"
+ desc_TZH_colonies_of_the_gaal:0 "Heartened by their recent exploration efforts, the Ga'al wish to colonise more of Wushanko."
+ TZH_builders_of_the_world:0 "Builders of the World"
+ desc_TZH_builders_of_the_world:0 "Crisis on the TzHaar volcano was averted by great building efforts, which has inspired our people to continue them further."
+ TZH_glory_of_the_tokhaar:0 "Glory of the TokHaar"
+ desc_TZH_glory_of_the_tokhaar:0 "The Tokhaar shall destroy the unworthy as they build the perfect world!"
+ TZH_entrenched_caste_power:0 "Entrenched Caste Power"
+ desc_TZH_entrenched_caste_power:0 "The old traditions of the TzHaar caste system have been entrenched, ensuring the loyalty of the castes' elites."
+ TZH_eternal_stability:0 "Eternal Stability"
+ desc_TZH_eternal_stability:0 "After the chaos at the Elder Kiln, we have elected to pursue a path of calm stability in future."
+ 
+# Varlamore
+ 
+ VAR_dead_citadel:0 "Dead Citadel"
+ desc_VAR_dead_citadel:0 "This province seems cursed and unsuited for resettlement."
+ VAR_fletching_guild_modifier:0 "Fletching Guild"
+ desc_VAR_fletching_guild_modifier:0 "The Fletching Guild at Arida's Edge uses the area's rich biodiversity to experiment with a wide range of wood carving techniques."
+ VAR_college_of_bards_modifier:0 "Varlamore College of Bards"
+ desc_VAR_college_of_bards_modifier:0 "The greatest Bards' College in Gielinor, this location takes advantage of Tempestus' unparalleled acoustics to create the most beautiful songs ever heard."
+ VAR_hunters_guild_modifier:0 "Hunters' Guild"
+ desc_VAR_hunters_guild_modifier:0 "The Hunters' Guild takes advantage of Avium's rich diversity to produce furs, pelts, meat and more for Varlamore."
+ VAR_fortis_cothon_modifier:0 "Fortis Cothon"
+ desc_VAR_fortis_cothon_modifier:0 "This unique shipyard offers a great boon to our shipbuilding capabilities."
+ VAR_kourendwatch_fortification_modifier:0 "Kourendwatch Fortifications"
+ desc_VAR_kourendwatch_fortification_modifier:0 "By reinforcing the northern coast of Varlamore against sea attacks, would-be invaders from the north are forced to make more complicated routes."
+ VAR_fletching_innovation:0 "Fletching Innovation"
+ desc_VAR_fletching_innovation:0 "With the new Fletching Guild at Arida's Edge, all kinds of new techniques are being tried."
+
+# Varze
+
+ VRZ_glory_to_saradomin:0 "Glory to Saradomin"
+ desc_VRZ_glory_to_saradomin:0 "Winning Entrana's favour has bolstered our faith further than it has ever before been bolstered."
+
+# Wushanko
+
+ genwhk_grand_city_of_wushanko:0 "Grand City of Wushanko"
+ desc_genwhk_grand_city_of_wushanko:0 "This city has proven itself as one of the most important in the entire Wushanko Isles, and by extension, in all of Gielinor."
+ 
+ genwhk_agent_of_change:0 "Agent of Change"
+ desc_genwhk_agent_of_change:0 "Having played a part in the collapse of the Council of Khans, we are now able to reap the rewards."
+ genwhk_challenge_the_guardians:0 "Challenge the Guardians"
+ desc_genwhk_challenge_the_guardians:0 "Our faith is as much a part of the Wushanko Isles as the faith others have in the Wushanko Guardians. It is time they learnt that."
+ genwhk_excellent_advice:0 "Excellent Advice"
+ desc_genwhk_excellent_advice:0 "Efforts to fund good governance have paid off with, well, good governance."
+ genwhk_growing_trade_influence:0 "Growing Trade Influence"
+ desc_genwhk_growing_trade_influence:0 "As we expand our navy, so too do we expand our ability to trade larger and larger quantities of goods."
+ genwhk_gunpowder_pioneers:0 "Gunpowder Pioneers"
+ desc_genwhk_gunpowder_pioneers:0 "Gunpowder originated in the Wushanko Isles, and our proximity to sites of production are allowing us to pioneer novel uses for it in combat."
+ genwhk_journey_to_the_west:0 "Journey to the West"
+ desc_genwhk_journey_to_the_west:0 "Having grown to become one of the most powerful nations in Gielinor, it is time to face the rest of the world head-on."
+ genwhk_naval_influence:0 "Naval Influence"
+ desc_genwhk_naval_influence:0 "Our new fleet is the beginning of our reputation on the high seas - long may it grow until all the useless Khans fear us."
+ genwhk_naval_siege_support:0 "Naval Siege Support"
+ desc_genwhk_naval_siege_support:0 "Our navy has learnt much through privateering and embargo efforts, and are ready to apply that aggressive behaviour on more formidable targets."
+ genwhk_new_wushanko_faith:0 "New Wushanko Faith"
+ desc_genwhk_new_wushanko_faith:0 "Our faith is new to the Wushanko Isles, but it has lately gained ground allowing us to build momentum. May the [Root.Religion.GetName] faith prevail!"
+ genwhk_power_of_corruption:0 "Power of Corruption"
+ desc_genwhk_power_of_corruption:0 "No-one is immune to Xau-Tak's whispers."
+ genwhk_power_of_the_new_khagan:0 "Power of the New Khagan"
+ desc_genwhk_power_of_the_new_khagan:0 "Newly and legitimately elected to the office of Khagan, [Root.Monarch.GetName] is viewed as a possible agent for change across the Council of Khans."
+ genwhk_trading_diplomacy:0 "Trading Diplomacy"
+ desc_genwhk_trading_diplomacy:0 "As more and more nations become accustomed to our trade, the possibility of them supporting our bid to become Khagan has grown."
+ genwhk_victory_over_the_west:0 "Victory Over the West"
+ desc_genwhk_victory_over_the_west:0 "All will fear the name of [Root.GetName] as our armies march upon their unprepared lands!"
+ genwhk_war_readiness:0 "War Readiness"
+ desc_genwhk_war_readiness:0 "We have trained our forces well - now it is time to use them."
+
+# TzHaar
+
+ TZH_volcanic_frontier:0 "Volcanic Frontier"
+ desc_TZH_volcanic_frontier:0 "A new population is rushing to enjoy the newly-settled cliffs of the Karamja Volcano."
+ TZH_tzhaar_hur_architecture:0 "TzHaar-Hur Architecture"
+ desc_TZH_tzhaar_hur_architecture:0 "Efforts of the TzHaar-Hur have ensured our city shall stand the test of time."
+ TZH_tzhaar_ket_reinforcement:0 "TzHaar-Ket Reinforcement"
+ desc_TZH_tzhaar_ket_reinforcement:0 "Efforts of the TzHaar-Ket have reinforced our city defences."
+ TZH_influx_of_runes:0 "Influx of Runes"
+ desc_TZH_influx_of_runes:0 "Our depleted stocks of runes are finally being replaced by the spread of runecrafting."
+ TZH_defended_home_trade:0 "Defence of the Tokkul Market"
+ desc_TZH_defended_home_trade:0 "We have made great efforts to secure the hunting grounds of Mor Ul Rek."
+ TZH_strength_of_the_tzhaar_ket:0 "Strength of the TzHaar-Ket"
+ desc_TZH_strength_of_the_tzhaar_ket:0 "Recent reforms to the structure of the TzHaar-Ket caste have made our military more powerful."
+ 
+ TZH_rejection_of_the_gaal:0 "Rejection of the Ga'al"
+ desc_TZH_rejection_of_the_gaal:0 "The Ga'al have been rejected from inclusion in TzHaar society."
+ TZH_extinction_of_the_tzhaar:0 "Extinction of the TzHaar"
+ desc_TZH_extinction_of_the_tzhaar:0 "The isolationist TokHaar have supplanted the TzHaar."
+
+# Zemouregal
+
+ ZMG_espionage_expansion:0 "Espionage Expansion"
+ desc_ZMG_espionage_expansion:0 "So, I know exactly where everything is in Misthalin. This will make efforts to extract their secrets all the easier."
+ ZMG_twin_constructs:0 "Twin Constructs"
+ desc_ZMG_twin_constructs:0 "It is rather frustrating to have two completely separate pieces of land, but between my undead forces and the chaos druids, I'm making it work. Because I am amazing."
+ 
+####################
+# Misc Triggered Modifiers
+####################
+ 
+ temple_of_light_modifier:0 "Temple of Light"
+ desc_temple_of_light_modifier:0 "The Temple of Light was built to protect the world from the energies of the Death Altar and a being known as the Dark Lord."
+  
+####################
+# Wilderness Modifiers
+####################
+ 
+ settled_wilderness:0 "Settled Wilderness"
+ desc_settled_wilderness:0 "This province is in the unstable land of the Wilderness. Armies can potentially suffer higher attrition here, and the strange energies of the land make people restless."
+ sparse_mild_wilderness:0 "Sparsely-Populated Mild Wilderness"
+ desc_sparse_mild_wilderness:0 "This province is about as safe as the Wilderness gets. It will rarely produce adverse effects in adjacent settled provinces and will be only slightly difficult to colonise."
+ sparse_moderate_wilderness:0 "Sparsely-Populated Moderate Wilderness"
+ desc_sparse_moderate_wilderness:0 "This province is moderately dangerous. It will sometimes produce adverse effects in adjacent settled provinces. Its low population makes it only mildly difficult to colonise."
+ sparse_severe_wilderness:0 "Sparsely-Populated Severe Wilderness"
+ desc_sparse_severe_wilderness:0 "This province is very dangerous. It will often produce adverse effects in adjacent settled provinces. Its low population makes it only moderately difficult to colonise."
+ populous_mild_wilderness:0 "Moderately-Populated Mild Wilderness"
+ desc_populous_mild_wilderness:0 "This province is fairly safe. It will rarely produce adverse effects in adjacent settled provinces. Its moderate population makes it moderately difficult to colonise."
+ populous_moderate_wilderness:0 "Moderately-Populated Moderate Wilderness"
+ desc_populous_moderate_wilderness:0 "This province is moderately dangerous. It will sometimes produce adverse effects in adjacent settled provinces. Its moderate population makes it moderately difficult to colonise."
+ populous_severe_wilderness:0 "Moderately-Populated Severe Wilderness"
+ desc_populous_severe_wilderness:0 "This province is very dangerous. It will often produce adverse effects in adjacent settled provinces. Its moderate population makes it moderately difficult to colonise."
+ dense_mild_wilderness:0 "Densely-Populated Mild Wilderness"
+ desc_dense_mild_wilderness:0 "This province is fairly safe. It will rarely produce adverse effects in adjacent settled provinces. Its high population makes it difficult to colonise."
+ dense_moderate_wilderness:0 "Densely-Populated Moderate Wilderness"
+ desc_dense_moderate_wilderness:0 "This province is moderately dangerous. It will sometimes produce adverse effects in adjacent settled provinces. Its high population makes it very difficult to colonise."
+ dense_severe_wilderness:0 "Densely-Populated Severe Wilderness"
+ desc_dense_severe_wilderness:0 "This province could scarcely be more dangerous. It is near-impossible to colonise and will frequently produce adverse effects in adjacent settled provinces."
+ 
+ wildy_border_level_one:0 "Wilderness Border (Level 1/9)"
+ desc_wildy_border_level_one:0 "This province borders uncolonised Wilderness provinces, but only those of a very low risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
+ wildy_border_level_two:0 "Wilderness Border (Level 2/9)"
+ desc_wildy_border_level_two:0 "This province borders uncolonised Wilderness provinces, but only those of a low risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
+ wildy_border_level_three:0 "Wilderness Border (Level 3/9)"
+ desc_wildy_border_level_three:0 "This province borders uncolonised Wilderness provinces, but only those of a relatively low risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
+ wildy_border_level_four:0 "Wilderness Border (Level 4/9)"
+ desc_wildy_border_level_four:0 "This province borders uncolonised Wilderness provinces, but only those of a low or moderate risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
+ wildy_border_level_five:0 "Wilderness Border (Level 5/9)"
+ desc_wildy_border_level_five:0 "This province borders uncolonised Wilderness provinces, but only those up to a moderate risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
+ wildy_border_level_six:0 "Wilderness Border (Level 6/9)"
+ desc_wildy_border_level_six:0 "This province borders uncolonised Wilderness provinces, but only those up to a moderately high risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
+ wildy_border_level_seven:0 "Wilderness Border (Level 7/9)"
+ desc_wildy_border_level_seven:0 "This province borders uncolonised Wilderness provinces, including at least one of a high risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
+ wildy_border_level_eight:0 "Wilderness Border (Level 8/9)"
+ desc_wildy_border_level_eight:0 "This province borders uncolonised Wilderness provinces, including at least one of a very high risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
+ wildy_border_level_nine:0 "Wilderness Border (Level 9/9)"
+ desc_wildy_border_level_nine:0 "This province borders uncolonised Wilderness provinces, including at least one of an extremely high risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
+ 
+####################
+# Government and Estate Modifiers
+####################
+ 
+ arceuus_in_power:0 "Arceuus in Power"
+ desc_arceuus_in_power:0 "House Arceuus currently holds the balance of power in Great Kourend, and our people's desire for independence has reduced accordingly."
+ hosidius_in_power:0 "Hosidius in Power"
+ desc_hosidius_in_power:0 "House Hosidius currently holds the balance of power in Great Kourend, and our people's desire for independence has reduced accordingly."
+ lovakengj_in_power:0 "Lovakengj in Power"
+ desc_lovakengj_in_power:0 "House Lovakengj currently holds the balance of power in Great Kourend, and our people's desire for independence has reduced accordingly."
+ piscarilius_in_power:0 "Piscarilius in Power"
+ desc_piscarilius_in_power:0 "House Piscarilius currently holds the balance of power in Great Kourend, and our people's desire for independence has reduced accordingly."
+ shayzien_in_power:0 "Shayzien in Power"
+ desc_shayzien_in_power:0 "House Arceuus currently holds the balance of power in Great Kourend, and our people's desire for independence has reduced accordingly."
+ 
+ kou_stable_arceuus:0 "Loyal Arceuus"
+ desc_kou_stable_arceuus:0 "House Arceuus is remaining loyal to Great Kourend and strengthening our legitimacy."
+ kou_stable_hosidius:0 "Loyal Hosidius"
+ desc_kou_stable_hosidius:0 "House Hosidius is remaining loyal to Great Kourend and strengthening our legitimacy."
+ kou_stable_lovakengj:0 "Loyal Lovakengj"
+ desc_kou_stable_lovakengj:0 "House Lovakengj is remaining loyal to Great Kourend and strengthening our legitimacy."
+ kou_stable_piscarilius:0 "Loyal Piscarilius"
+ desc_kou_stable_piscarilius:0 "House Piscarilius is remaining loyal to Great Kourend and strengthening our legitimacy."
+ kou_stable_shayzien:0 "Loyal Shayzien"
+ desc_kou_stable_shayzien:0 "House Shayzien is remaining loyal to Great Kourend and strengthening our legitimacy."
+ 
+ kou_rebellious_arceuus:0 "Rebellious Arceuus"
+ desc_kou_rebellious_arceuus:0 "House Arceuus is openly defying our rule, weakening the cohesion of Great Kourend."
+ kou_rebellious_hosidius:0 "Rebellious Hosidius"
+ desc_kou_rebellious_hosidius:0 "House Hosidius is openly defying our rule, weakening the cohesion of Great Kourend."
+ kou_rebellious_lovakengj:0 "Rebellious Lovakengj"
+ desc_kou_rebellious_lovakengj:0 "House Lovakengj is openly defying our rule, weakening the cohesion of Great Kourend."
+ kou_rebellious_piscarilius:0 "Rebellious Piscarilius"
+ desc_kou_rebellious_piscarilius:0 "House Piscarilius is openly defying our rule, weakening the cohesion of Great Kourend."
+ kou_rebellious_shayzien:0 "Rebellious Shayzien"
+ desc_kou_rebellious_shayzien:0 "House Shayzien is openly defying our rule, weakening the cohesion of Great Kourend."
+ 
+ kou_independent_arceuus:0 "Independent Arceuus"
+ desc_kou_independent_arceuus:0 "We have entirely lost control of House Arceuus. Unless this situation can be restored, our grip on the Kingdom as a whole will rapidly loosen."
+ kou_independent_hosidius:0 "Independent Hosidius"
+ desc_kou_independent_hosidius:0 "We have entirely lost control of House Hosidius. Unless this situation can be restored, our grip on the Kingdom as a whole will rapidly loosen."
+ kou_independent_lovakengj:0 "Independent Lovakengj"
+ desc_kou_independent_lovakengj:0 "We have entirely lost control of House Lovakengj. Unless this situation can be restored, our grip on the Kingdom as a whole will rapidly loosen."
+ kou_independent_piscarilius:0 "Independent Piscarilius"
+ desc_kou_independent_piscarilius:0 "We have entirely lost control of House Piscarilius. Unless this situation can be restored, our grip on the Kingdom as a whole will rapidly loosen."
+ kou_independent_shayzien:0 "Independent Shayzien"
+ desc_kou_independent_shayzien:0 "We have entirely lost control of House Shayzien. Unless this situation can be restored, our grip on the Kingdom as a whole will rapidly loosen."
+ 
+ tzh_ket_capital_reinforcement_modifier:0 "Capital Reinforcement"
+ desc_tzh_ket_capital_reinforcement_modifier:0 "This city's guardians have heavily reinforced its defences making it extremely resistant to attack."
+ trade_post_in_wushanko:0 "Major Trading Post"
+ desc_trade_post_in_wushanko:0 "This port is a major trading post for the bamboo and gunpowder coming out of Wushanko."
+ 
+ 
+####################
+# Elder Artefacts and Sixth Age
+####################
+ 
+ stone_of_jas_knowledge:0 "Stone of Jas Knowledge"
+ desc_stone_of_jas_knowledge:0 "The Catalyst, more commonly known as the Stone of Jas, is an incredibly powerful artefact. Few are even aware of its existence, so only prior knowledge or high-quality adventurers can unravel this mystery."
+ staff_of_armadyl_knowledge:0 "Staff of Armadyl Knowledge"
+ desc_staff_of_armadyl_knowledge:0 "The Siphon, more commonly known as the Staff of Armadyl, is an incredibly powerful artefact. Few are even aware of its existence, so only prior knowledge or high-quality adventurers can unravel this mystery."
+ guthix_rest_place_knowledge:0 "Guthix's Resting Place Knowledge"
+ desc_guthix_rest_place_knowledge:0 "After the God Wars, Guthix slept somewhere in the world. With sufficient adventurers or power, we may be able to work out where that location is..."
+ 
+ temple_of_ikov_local:0 "Temple of Ikov"
+ desc_temple_of_ikov_local:0 "The Temple of Ikov is an ancient base for human worshippers of Armadyl."
+ temple_to_guthix:0 "Temple to Guthix"
+ desc_temple_to_guthix:0 "The legendary Temple of Guthix has been revealed, which may host within it a power beyond imagining..."
+ 
+ artefact_stone_of_jas:0 "Stone of Jas"
+ desc_artefact_stone_of_jas:0 "Otherwise known as the Catalyst, this stone has shaped the world literally and figuratively."
+ artefact_staff_of_armadyl:0 "Staff of Armadyl"
+ desc_artefact_staff_of_armadyl:0 "Also known as the Siphon, this staff destroyed the body of the Empty Lord and allowed Zamorak to ascend to godhood."
+ 
+ cave_of_guthix:0 "Cave of Guthix"
+ desc_cave_of_guthix:0 "This may be the entrance to the chamber of Guthix himself. It would take a minor miracle just to get the door open..."
+ 
+####################
+# Religious Modifiers
+####################
+
+ # Armadyl
+ 
+ armadyl_loyal_converts:0 "Loyal Converts"
+ desc_armadyl_loyal_converts:0 "Armadyl has made accommodations for the former followers of Seren who wish to join his faith, making our conversion efforts exceptionally easy."
+ armadyl_wings_of_armadyl_modifier:0 "The Wings of Armadyl"
+ desc_armadyl_wings_of_armadyl_modifier:0 "Armadyl has taken us under his wing, but we will never forget the good and ill that came from our time following Seren."
+
+ # Godless
+ 
+ godless_forget_the_faith:0 "Forget the Faith"
+ desc_godless_forget_the_faith:0 "Seren betrayed us and left us with nothing but ashes. No god is worth following."
+
+ # Hanalan/Birman
+ 
+ hanalan_bringer_of_salt_modifier:0 "Bringer of Salt"
+ desc_hanalan_bringer_of_salt_modifier:0 "Our faith in the ways of Hanalan are helping us to find more salt."
+ hanalan_metaphorical_thought_modifier:0 "Metaphorical Thought"
+ desc_hanalan_metaphorical_thought_modifier:0 "Our abstract view of divinity and philosophy is aiding our efforts to develop new ideas."
+ hanalan_sunny_disposition_modifier:0 "Sunny Disposition"
+ desc_hanalan_sunny_disposition_modifier:0 "The light of the sun inspires a positive outlook on all things, and our neighbours have taken note of this."
+ hanalan_wind_breath_modifier:0 "Breath of the Wind"
+ desc_hanalan_wind_breath_modifier:0 "Faith in the winds guided by Hanalan inspires us to move with it."
+ 
+ birman_bringer_of_the_sweet_modifier:0 "Bringer of the Sweet"
+ desc_birman_bringer_of_the_sweet_modifier:0 "Our faith in the ways of Birman are helping us find the sweetest of fruit."
+ birman_celestial_navigation_modifier:0 "Celestial Navigation"
+ desc_birman_celestial_navigation_modifier:0 "Birman's beard is a chart of stars that shall guide our sailors through the night."
+ birman_contemplation_modifier:0 "Contemplation"
+ desc_birman_contemplation_modifier:0 "Priests of Birman are spending their time considering the mysteries of Gielinor."
+ birman_tropical_cocktails_modifier:0 "Tropical Cocktails"
+ desc_birman_tropical_cocktails_modifier:0 "Our following of Birman and the fruit he brings is inspiring us to create some excellent recipes."
+ 
+ # Lucien
+ 
+ lucien_ascent_of_lucien:0 "Ascent of Lucien"
+ desc_lucien_ascent_of_lucien:0 "Lucien has declared himself a god, and with his immense power backing his claim, few will openly dispute this."
+ lucien_working_alone:0 "Working Alone"
+ desc_lucien_working_alone:0 "We have enacted a doctrine of acting independently from the rest of the world and its religions."
+ lucien_pragmatic_diplomacy:0 "Pragmatic Diplomacy"
+ desc_lucien_pragmatic_diplomacy:0 "We have adopted a course of careful diplomacy, downplaying the power of Lucien in order to appear more equal to our potential allies."
+ 
+ # Marimbo
+ 
+ marimbo_utilitarianism:0 "Utlitarianism"
+ desc_marimbo_utilitarianism:0 "Efforts to provide the greatest happiness for the greatest number of citizens have made this province especially productive."
+ marimbo_free_trader_faith:0 "Protected Trader Heresies"
+ desc_marimbo_free_trader_faith:0 "Some heretical practices among traders have been tolerated here to avoid interfering with their business."
+ 
+ marimbo_reduced_taxation:0 "Reduced Taxation"
+ desc_marimbo_reduced_taxation:0 "Taxes have been reduced for the time being in order to help achieve Marimbo's goal of happiness for all. Hopefully the loss of revenue won't cause more damage than this solves."
+ marimbo_equity:0 "Happiness for the Unhappy"
+ desc_marimbo_equity:0 "We are pursuing a national effort to target unhappiness."
+ 
+ # Seren Local
+ 
+ seren_syncretic_runecrafting_expertise:0 "Syncretic Runecrafting Expertise"
+ desc_seren_syncretic_runecrafting_expertise:0 "Expertise drawn from elven magics as well as human runecrafters are greatly enhancing the output of the Death Altar."
+ seren_double_reinforcement:0 "Double Reinforcement"
+ desc_seren_double_reinforcement:0 "With extra support from human safeguards, nothing is getting into the Temple of Light."
+ seren_ralos_cultivation:0 "Ralossian Cultivation"
+ desc_seren_ralos_cultivation:0 "Local people have been convinced that the Varlamorean god Ralos is another aspect of Seren and have begun worshipping him."
+ 
+ seren_inclusion_of_iorwerth:0 "Inclusion of Iorwerth"
+ desc_seren_inclusion_of_iorwerth:0 "The inclusion of Clan Iorwerth is aiding our reconstruction efforts in Prifddinas."
+ seren_restrictions_on_iorwerth:0 "Restrictions on Iorwerth in Prifddinas"
+ desc_seren_restrictions_on_iorwerth:0 "Our policy of placing Clan Iorwerth under strict supervision in Prifddinas is causing resentment."
+ seren_exile_of_iorwerth:0 "Exile of Clan Iorwerth"
+ desc_seren_exile_of_iorwerth:0 "Clan Iorwerth is outraged at their exile from Prifddinas."
+ seren_prifddinas_pilgrims:0 "Prifddinas Pilgrims"
+ desc_seren_prifddinas_pilgrims:0 "Serenist pilgrims to Prifddinas are allowed to freely move out of our lands."
+ seren_restricted_prifddinas_pilgrims:0 "Restricted Pilgrimages to Prifddinas"
+ desc_seren_restricted_prifddinas_pilgrims:0 "Pilgrimages to Prifddinas have been restricted in order to bolster domestic stability."
+ 
+ seren_celebrating_the_new_elder_gods:0 "Celebrating the New Elder Gods"
+ desc_seren_celebrating_the_new_elder_gods:0 "This province is celebrating the glory of the Elder Gods and their freshly-hatched offspring!"
+ 
+ # Seren National
+ 
+ seren_outside_assistance:0 "Outside Assistance"
+ desc_seren_outside_assistance:0 "Our Resistance is attempting to attract allies against Iorwerth, regardless of their religious affiliations."
+ seren_insular_assistance:0 "Insular Assistance"
+ desc_seren_insular_assistance:0 "Our civil war is already about protecting the memory of Seren! We aren't about to make things worse by bringing in non-Serenists."
+ seren_free_elf_movement:0 "Free Elf Movement"
+ desc_seren_free_elf_movement:0 "We have enacted a policy of allowing elves to freely come and go from Tirannwn, if they are able."
+ seren_closed_elf_movement:0 "Restrictions on Elven Migration"
+ desc_seren_closed_elf_movement:0 "Concerned at the risk to governance from the open movement of elves to and from Tirannwn, we have restricted it."
+ seren_open_trade:0 "Open Trade Policy"
+ desc_seren_open_trade:0 "To help cover the loss of trade resulting from the Tirannwn Civil War, we have loosened some trade restrictions."
+ seren_closed_trade:0 "Restrictive Trade Policy"
+ desc_seren_closed_trade:0 "With an active civil war in Tirannwn, now is perhaps not the best time to be shaking up trade policy."
+ seren_contemplating_the_dark_lord:0 "Contemplating the Dark Lord"
+ desc_seren_contemplating_the_dark_lord:0 "We are allowing more open discussion of Dark Lord heresy to better-understand Clan Iorwerth's motivations."
+ seren_anything_but_the_dark_lord:0 "Anything but the Dark Lord"
+ desc_seren_anything_but_the_dark_lord:0 "We will work with anyone to bring down Clan Iorwerth - but not the followers of the Dark Lord."
+ seren_only_seren_guides_us:0 "Only Seren Guides Us"
+ desc_seren_only_seren_guides_us:0 "There is no role for outside faiths in our fight against the Dark Lord."
+ 
+ seren_new_leadership:0 "New Leadership"
+ desc_seren_new_leadership:0 "With the elven Clan Elders in retreat, we are promoting the ideas of new leaders."
+ seren_traditional_leadership:0 "Traditional Leadership"
+ desc_seren_traditional_leadership:0 "Even though many elven Clan Elders are in retreat, we are promoting their style of leadership."
+ seren_guidance_of_the_world:0 "Guidance of the World"
+ desc_seren_guidance_of_the_world:0 "Gielinor has much to offer our people; we do not have to be in the shadow of the Clan Elders."
+ seren_faith_and_stability:0 "Faith and Stability"
+ desc_seren_faith_and_stability:0 "Faith in Seren shall steer us through these uncertain times."
+ seren_clan_nepotism:0 "Clan Nepotism"
+ desc_seren_clan_nepotism:0 "Even in the face of changes in Serenist society, we have entrenched the traditional power of the main Clan families."
+ seren_harsher_leadership:0 "Harsher Leadership"
+ desc_seren_harsher_leadership:0 "Too many were questioning our leadership. They won't now."
+ 
+ seren_expansion_of_runecrafting:0 "Expansion of Runecrafting"
+ desc_seren_expansion_of_runecrafting:0 "Runecrafting is fascinating, and bringing in many new magical apprentices!"
+ seren_traditional_magics:0 "Traditional Magics"
+ desc_seren_traditional_magics:0 "Traditional elven magics shall not be sullied by these strange human runecrafters."
+ 
+ seren_age_of_collaboration:0 "Age of Collaboration"
+ desc_seren_age_of_collaboration:0 "The growth of human power in Kandarin should be celebrated!"
+ seren_age_of_competition:0 "Age of Competition"
+ desc_seren_age_of_competition:0 "The up-and-coming human realms who follow opposing gods is a threat to Seren's followers!"
+ seren_age_of_isolation:0 "Age of Isolation"
+ desc_seren_age_of_isolation:0 "There is no need to be concerned about the dealings of foreign human realms."
+ seren_open_border_policy:0 "Open Border Policy"
+ desc_seren_open_border_policy:0 "We have temporarily loosened our borders, allowing a greater number of non-Serenist settlers."
+ seren_closed_border_policy:0 "Closed Border Policy"
+ desc_seren_closed_border_policy:0 "In order to stop incursions from non-Serenist human settlers, we have enacted harsher border restrictions."
+ 
+ seren_zean_traders:0 "Zean Traders"
+ desc_seren_zean_traders:0 "Traders from the western continent have been provided with access to our markets."
+ seren_zean_caution:0 "Zean Caution"
+ desc_seren_zean_caution:0 "The prospect of yet another area of vulnerability for followers of Seren have influenced a cautious policy towards the Zean continent."
+ seren_zean_shipbuilding_methods:0 "Zean Shipbuilding Methods"
+ desc_seren_zean_shipbuilding_methods:0 "We are presently paying for shipbuilding experts from Zeah to improve our naval designs."
+ seren_ralos_tolerance:0 "Ralossian Tolerance"
+ desc_seren_ralos_tolerance:0 "Varlamore has told us that Ralos and Seren are one and the same. We therefore are persuing a policy of tolerance towards this alternative faith."
+ seren_ralos_minor_tolerance:0 "Ralossian Tolerance"
+ desc_seren_ralos_minor_tolerance:0 "Varlamore has told us that Ralos and Seren may have a philosophical connection. We therefore are persuing a policy of tolerance towards this alternative faith."
+ seren_ralos_possible_link:0 "Possible Seren-Ralos Link"
+ desc_seren_ralos_possible_link:0 "With no conclusive signs, rumours are spreading in our country of a link between Seren and Ralos."
+ 
+ seren_opening_of_prifddinas:0 "Opening of Prifddinas"
+ desc_seren_opening_of_prifddinas:0 "Prifddinas is open to non-Serenists, who have brought fresh trade opportunities to Tirannwn."
+ seren_restrictions_in_prifddinas:0 "Restricted Opening of Prifddinas"
+ desc_seren_restrictions_in_prifddinas:0 "Access to Prifddinas is somewhat restricted for the time being to aid with its reconstruction."
+ seren_strict_prifddinas_closure:0 "Strict Closure of Prifddinas"
+ desc_seren_strict_prifddinas_closure:0 "To prevent extremists from seizing Prifddinas again, we are banning everyone who disagrees with us from entering!"
+ seren_domestic_trade_push:0 "Domestic Trade Agenda"
+ desc_seren_domestic_trade_push:0 "To counteract the growing presence of Prifddinas in trade, we have redoubled our domestic trading efforts."
+ 
+ seren_rejoice_in_rebirth:0 "Rejoicing in Seren's Rebirth"
+ desc_seren_rejoice_in_rebirth:0 "Our population is excited at the prospect of Seren returning to us!"
+ seren_stealth_seren_mission:0 "Stealth Mission for Seren"
+ desc_seren_stealth_seren_mission:0 "We are keeping our plans to restore Seren closely under wraps."
+ seren_skepticism_for_rebirth:0 "Skepticism for Seren's Rebirth"
+ desc_seren_skepticism_for_rebirth:0 "Despite the good intentions of those who wish to restore Seren, the result may not be the Seren we know."
+ seren_glory_to_the_reborn_goddess:0 "Glory to the Reborn Goddess"
+ desc_seren_glory_to_the_reborn_goddess:0 "Praise the return of Seren, Goddess of crystal and light!"
+ seren_not_our_seren:0 "Not Our Seren"
+ desc_seren_not_our_seren:0 "People claim that this crystal being is Seren, but this seems unlikely."
+ seren_dark_lord_returns:0 "The Dark Lord Returns"
+ desc_seren_dark_lord_returns:0 "In a spell of bizarre decision-making, our leaders have declared that if Seren is being brought back, so too should the Dark Lord."
+ seren_lore_of_zaros:0 "Lore of Zaros"
+ desc_seren_lore_of_zaros:0 "Knowledge from Zarosians are inspiring our people as they decide on the future of Seren."
+ seren_defiance_of_zaros:0 "Defiance of Zaros"
+ desc_seren_defiance_of_zaros:0 "Our people will not subject themselves to twisted knowledge from an evil God!"
+ seren_godless_inclinations:0 "Godless Inclinations"
+ desc_seren_godless_inclinations:0 "Recent policy in our realm comes suspiciously close to rejecting all Gods."
+ seren_new_age_of_openness:0 "New Age of Openness"
+ desc_seren_new_age_of_openness:0 "The return of Seren gives us new-found confidence on the world stage."
+ seren_age_of_continuity:0 "Age of Continuity"
+ desc_seren_age_of_continuity:0 "The return of Seren should not change the sensible policies we have already embarked upon."
+ seren_new_age_of_isolationism:0 "New Age of Isolationism"
+ desc_seren_new_age_of_isolationism:0 "In the face of Seren's return, we must stay well-defended against her enemies."
+ seren_a_goddess_restored:0 "A Goddess Restored"
+ desc_seren_a_goddess_restored:0 "Let all who follow Seren rejoice in her return!"
+ seren_false_restoration:0 "False Restoration of Seren"
+ desc_seren_false_restoration:0 "The attempt to restore Seren was misguided at best. The result does not resemble the Seren we know and love."
+ 
+ seren_turning_from_seren:0 "Turning from Seren"
+ desc_seren_turning_from_seren:0 "Seren's betrayal of her closest followers has devastated support for her."
+ seren_excusing_seren:0 "Excusing Seren"
+ desc_seren_excusing_seren:0 "We stand by Seren and believe her recent actions were not driven by her judgement, but outside influences."
+ seren_denying_the_false_goddess:0 "Denying the False Goddess"
+ desc_seren_denying_the_false_goddess:0 "Whoever hatched the Elder Gods' eggs was not Seren. The true Seren would never do that."
+ seren_steadfast_faith:0 "Steadfast Faith"
+ desc_seren_steadfast_faith:0 "We back Seren, no matter what."
+  
+ # Tuska
+ 
+ tuska_doomsday_preachers:0 "Doomsday Preachers"
+ desc_tuska_doomsday_preachers:0 "Tuska will eat of them, and they will be of Tuska! They will fill the belly of a god! This is the gift of Tuska!"
+ tuska_children_of_tuska:0 "Children of Tuska"
+ desc_tuska_children_of_tuska:0 "Oh! What devastation Tuska wrought! Truly, we were blessed to bear witness to her last and greatest triumph, and we shall forevermore follow in her memory."
+ 
+ # Vampyric
+ 
+ estate_clergy_zamorakian_coexistence_modifier:0 "Zamorakian Co-Existence"
+ desc_estate_clergy_zamorakian_coexistence_modifier:0 "The Zamorakian faithful in this province are not viewed as a threat to their Vampyric masters."
+ vampyric_enforced_vampyric_faith:0 "Enforced Vampyric Faith"
+ desc_vampyric_enforced_vampyric_faith:0 "Vampyric religious interests are being strictly enforced in this province."
+
+ # Zamorak 
+ 
+ zamorak_desecrated_forinthry:0 "Desecrated Forinthry"
+ desc_zamorak_desecrated_forinthry:0 "Lord Zamorak himself destroyed the land of Forinthry, and Zamorakians treat this land as if it is blessed by him."
+ 
+ # Zemouregal
+ 
+ zemouregal_control_the_altars:0 "Control of the Altars"
+ desc_zemouregal_control_the_altars:0 "Zemouregal is actively redirecting the power of prayers towards himself."
+ zemouregal_expanded_altar_siphoning:0 "Expanded Altar Siphoning"
+ desc_zemouregal_expanded_altar_siphoning:0 "We are secretly infiltrating heretical altars to grant Zemouregal power from them."
+ zemouregal_forceful_conversions:0 "Forceful Conversions"
+ desc_zemouregal_forceful_conversions:0 "Heathens are being forcefully stamped out by our religious leaders for the cause of Zemouregal."
+ 
+####################
+# Institutions
+####################
+ 
+ runecrafting_curtail_spread:0 "Curtail Spread of Runecrafting"
+ desc_runecrafting_curtail_spread:0 "Our nation is deliberately holding back the spread of Runecrafting in order to appease anti-Runecrafting Fremennik groups."
+
+####################
+# Special high-production provinces
+####################
+
+ highprod_isle_of_adamant:0 "Vast Adamantite Deposits"
+ desc_highprod_isle_of_adamant:0 "The Isle of Adamant has a remarkably high quantity of adamantite, made even more remarkable by its relative scarcity elsewhere in Wushanko."
+ highprod_rei_ti:0 "Gems of Rei Ti"
+ desc_highprod_rei_ti:0 "While Rei Ti was originally set up as a black slate mining colony, large quantities of particularly valuable gems have been found instead."
+ highprod_rune_essence_mine:0 "Rune Essence Mine"
+ desc_highprod_rune_essence_mine:0 "The location simply known as the Rune Essence Mine is by far Gielinor's greatest deposit of blank runestones ready for runecrafting."
+ 
+####################
+# World Events
+####################
+
+ eldergodwars_desperate_adventurer_call:0 "Desperate Adventurer Call"
+ desc_eldergodwars_desperate_adventurer_call:0 "At a time like this, we need a hero."
+ eldergodwars_national_dread:0 "National Dread"
+ desc_eldergodwars_national_dread:0 "Recent revelations have cast a shadow over our realm. The people are terrified at what is to come."
+ eldergodwars_elder_god_wars:0 "The Elder God Wars"
+ desc_eldergodwars_elder_god_wars:0 "The stakes of the Elder God Wars are so high that practically all of Gielinor is involved."
+ eldergodwars_for_the_elder_gods:0 "For the Elder Gods"
+ desc_eldergodwars_for_the_elder_gods:0 "The Great Revision must come to pass!"
+ eldergodwars_against_the_elder_gods:0 "Against the Elder Gods"
+ desc_eldergodwars_against_the_elder_gods:0 "For the sake of Gielinor, we stand against our own Gods and creators."
+
+
+ 

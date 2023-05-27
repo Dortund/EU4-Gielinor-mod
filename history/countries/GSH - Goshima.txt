@@ -1,0 +1,60 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = arc_culture
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1110 #Gongdung
+
+1909.9.19 = {
+	monarch = {
+		name = "Linmei"
+		dynasty = "Goshima"
+		birth_date = 1887.6.11
+		death_date = 1952.8.19
+		adm = 4
+		dip = 1
+		mil = 3
+	}
+}
+
+2142.10.10 = {
+	monarch = {
+		name = "Changxun"
+		dynasty = "Goshima"
+		birth_date = 2089.5.13
+		death_date = 2073.2.4
+		adm = 5
+		dip = 6
+		mil = 5
+		female = yes
+	}
+}
+
+2073.2.4 = {
+	monarch = {
+		name = "Jiangshi"
+		dynasty = "Goshima"
+		birth_date = 2089.5.13
+		death_date = 2184.10.10
+		adm = 0
+		dip = 0
+		mil = 0
+		female = yes
+		culture = jiangshi
+	}
+}
+
+
+2184.10.10 = {
+	monarch = {
+		name = "Coraline"
+		dynasty = "Gullivan"
+		birth_date = 2089.5.13
+		adm = 1
+		dip = 3
+		mil = 5
+		female = yes
+		culture = south_asgarn
+	}
+}

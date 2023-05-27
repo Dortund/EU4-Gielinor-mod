@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = hefin
+religion = seren
+technology_group = elventechgroup
+capital = 334 #Hefin Province
+national_focus = ADM
+
+1746.7.29 = {
+	monarch = {
+		name = "Carys"
+		dynasty = "Hefin"
+		birth_date = 1.12.25
+		adm = 5
+		dip = 2
+		mil = 3
+		female = yes
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

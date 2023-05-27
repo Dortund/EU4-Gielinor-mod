@@ -1,0 +1,25 @@
+#806 - Ape Cove
+owner = MRM
+controller = MRM
+add_core = MRM
+tribal_owner = ---
+culture = gorilla
+religion = marimbo
+
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+
+trade_goods = bones
+
+is_city = yes
+
+1965.6.15 = {
+	owner = APE
+	controller = APE
+	add_core = APE
+}

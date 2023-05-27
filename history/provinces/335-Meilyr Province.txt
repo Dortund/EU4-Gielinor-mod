@@ -1,0 +1,20 @@
+#335 - Meilyr Province
+owner = EVR
+controller = EVR
+add_core = EVR
+add_core = MIY
+tribal_owner = ---
+culture = meilyr
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes

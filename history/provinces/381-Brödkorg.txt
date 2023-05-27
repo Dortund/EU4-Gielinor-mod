@@ -1,0 +1,21 @@
+#381-Brödkorg
+owner = MCE
+controller = MCE
+add_core = MCE
+tribal_owner = ---
+culture = miscellanean
+religion = v
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = fish
+
+is_city = yes

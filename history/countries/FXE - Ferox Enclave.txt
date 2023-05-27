@@ -1,0 +1,18 @@
+government = republic
+add_government_reform = rogue_republic
+government_rank = 1
+primary_culture = rogue
+religion = zamorak
+technology_group = northerntechgroup
+capital = 159 #Ferox
+
+2168.7.16 = {
+	monarch = {
+		name = "Ferox"
+		dynasty = "Carrallangar"
+		birth_date = 2129.8.4
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}

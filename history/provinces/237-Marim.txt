@@ -1,0 +1,29 @@
+#237 - Marim
+owner = MRM
+controller = MRM
+add_core = MRM
+tribal_owner = ---
+culture = gorilla
+religion = marimbo
+
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 5
+
+fort_15th = yes 
+
+trade_goods = fruit
+
+is_city = yes
+
+center_of_trade = 1
+
+1965.6.15 = {
+	owner = APE
+	controller = APE
+	add_core = APE
+}

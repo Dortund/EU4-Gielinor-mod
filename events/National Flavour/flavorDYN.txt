@@ -1,0 +1,126 @@
+########################################
+# Events for Draynor
+########################################
+
+namespace = flavor_dyn
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_dyn.1
+	title = flavor_dyn.1.t #Zamorakians of Draynor
+	desc = flavor_dyn.1.d #Zamorakians are a fact of life in our realm, from dark wizards to those who serve the rumoured vampyre Count Draynor. Many Saradominists of Draynor live in fear of their power and demand we take a more active policy against them.
+	picture = ZAMORAK_ICON_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_dyn.1.a #Let the light of Saradomin be wielded against these servants of evil!
+		if = {
+			limit = {
+				NOT = { religion = saradomin }
+			}
+			change_religion = saradomin
+		}
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = flavor_dyn.1.b #We need to learn to live together.
+		set_country_flag = DYN_religious_peace_flag
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = flavor_dyn.1.c #Power, you say? Glory to Zamorak!
+		if = {
+			limit = {
+				NOT = { religion_group = chaos_group }
+			}
+			change_religion = zamorak
+		}
+		swap_non_generic_missions = yes
+	}
+}
+
+country_event = {
+	id = flavor_dyn.2
+	title = flavor_dyn.2.t #The Return of Count Draynor
+	desc = flavor_dyn.2.d #Since around 1100 of the Fourth Age, the vampyre Draynor Drakan has been stranded in Misthalin, steadily losing power. But now as the power of Draynor's followers grow, and the supply of blood to feed him increases, he is finally strong enough to take a position of leadership.
+	picture = ZAMORAK_ICON_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_dyn.2.a #Draynor shall at last prove his worth to his brother!
+		change_religion = vampyric
+		set_country_flag = DYN_vampyre_leadership
+		define_ruler = {
+			name = "Draynor"
+			dynasty = "Drakan"
+			male = yes
+			culture = trueborn_vampyre
+			religion = vampyric
+			adm = 2
+			max_random_adm = 2
+			dip = 2
+			max_random_dip = 2
+			mil = 4
+			max_random_mil = 4
+			age = 8000
+			claim = 100
+		}
+		hidden_effect = {
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+		}
+	 	set_capital = 8
+		8 = {
+			change_religion = vampyric
+		}
+		add_government_reform = vampyre_kingdom
+	}
+	option = {
+		name = flavor_dyn.2.b #Draynor shall take revenge on his brother!
+		set_country_flag = DYN_vampyre_leadership
+		define_ruler = {
+			name = "Draynor"
+			dynasty = "Drakan"
+			male = yes
+			culture = trueborn_vampyre
+			religion = zamorak
+			adm = 2
+			max_random_adm = 2
+			dip = 2
+			max_random_dip = 2
+			mil = 4
+			max_random_mil = 4
+			age = 8000
+			claim = 100
+		}
+		hidden_effect = {
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+		}
+		set_capital = 8
+		add_government_reform = vampyre_kingdom
+	}
+	option = {
+		name = flavor_dyn.2.c #Draynor shall lead our armies, not our nation.
+		define_general = {
+			shock = 6
+			fire = 3
+			manuever = 6
+			siege = 2
+			name = "Draynor Drakan"
+			trait = ruthless_personality
+		}
+	}
+}

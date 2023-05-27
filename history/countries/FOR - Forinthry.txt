@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = mahjarrat_autocracy
+government_rank = 3
+primary_culture = skeleton
+religion = zamorak
+technology_group = northerntechgroup
+capital = 159 #Ferox

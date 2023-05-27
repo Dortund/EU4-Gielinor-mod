@@ -1,0 +1,519 @@
+########################################
+# Events for Rellekka
+########################################
+
+namespace = flavor_rel
+normal_or_historical_nations = yes
+
+# The Fremennik Isles
+country_event = {
+	id = flavor_rel.1
+	title = flavor_rel.1.t
+	desc = flavor_rel.1.d
+	picture = FREMENNIK_LANDING_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = REL
+		is_year = 1980
+		385 = { is_empty = yes }
+		386 = { is_empty = yes }
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = flavor_rel.1.a
+		switch_tag = JTZ
+		385 = {
+			add_core = NZS
+			cede_province = NZS
+			change_culture = rellekkan
+			change_religion = v
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			change_trade_goods = livestock_farm
+		}
+		NZS = {
+			discover_country = REL
+			discover_country = JTZ
+			385 = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+		}
+		386 = {
+			add_core = JTZ
+			cede_province = JTZ
+			change_culture = rellekkan
+			change_religion = v
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			change_trade_goods = advanced_ores
+		}
+		JTZ = {
+			discover_country = REL
+			discover_country = NZS
+				386 = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+			}
+	}
+	
+	option = {
+		name = flavor_rel.1.b
+		switch_tag = NZS
+		385 = {
+			add_core = NZS
+			cede_province = NZS
+			change_culture = rellekkan
+			change_religion = v
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			change_trade_goods = livestock_farm
+		}
+		NZS = {
+			discover_country = REL
+			discover_country = JTZ
+				385 = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+			}
+		386 = {
+			add_core = JTZ
+			cede_province = JTZ
+			change_culture = rellekkan
+			change_religion = v
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			change_trade_goods = advanced_ores
+		}
+		JTZ = {
+			discover_country = REL
+			discover_country = NZS
+				386 = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+			}
+	}
+
+	option = {
+		name = flavor_rel.1.c
+		385 = {
+			add_core = NZS
+			cede_province = NZS
+			change_culture = rellekkan
+			change_religion = v
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			change_trade_goods = livestock_farm
+		}
+		NZS = {
+			discover_country = REL
+			discover_country = JTZ
+				385 = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+			}
+		386 = {
+			add_core = JTZ
+			cede_province = JTZ
+			change_culture = rellekkan
+			change_religion = v
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			change_trade_goods = advanced_ores
+		}
+		JTZ = {
+			discover_country = REL
+			discover_country = NZS
+				386 = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+			}
+	}
+}
+
+# The Runecrafting Crusades
+country_event = {
+	id = flavor_rel.2
+	title = flavor_rel.2.t
+	desc = flavor_rel.2.d #The discovery of Rune Essence has led to an explosion in the magical arts, which the Fremennik have been divided on. While some embrace this new magical order, others view runecrafting as stealing power from the Gods themselves. A young warlord by the name of Gunnar has rallied this faction together, vowing to destroy the runecrafting altars once and for all.
+	picture = RUNECRAFTING_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		NOT = { is_year = 2080 }
+		is_at_war = no
+		OR = {
+			AND = {
+				tag = REL
+				owns_core_province = 368
+				calc_true_if = {
+					any_owned_province = {
+						culture = barbarian
+						runecrafting = 50
+						}
+					amount = 2
+					}
+			}
+			AND = {
+				culture_group = fremennik_group
+				owns_core_province = 368
+				calc_true_if = {
+					any_owned_province = {
+						culture = barbarian
+						runecrafting = 60
+						}
+					amount = 3
+					}
+			}
+			AND = {
+				NOT = { culture_group = fremennik_group }
+				NOT = { exists = REL }
+				owns_core_province = 368
+				calc_true_if = {
+					any_owned_province = {
+						culture = barbarian
+						runecrafting = 70
+						}
+					amount = 4
+					}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_rel.2.a # Gunnar is right! Let us join his righteous crusade against the evils of Runecrafting!
+		every_owned_province = {
+			limit = {
+				OR = {
+					culture = barbarian
+					region = kandarin_region
+				}
+			}
+			add_core = GUN
+			remove_core = ROOT
+			cede_province = GUN
+		}
+		create_alliance = GUN
+		hidden_effect = {
+			GUN = {
+				add_splendor = 750
+				change_government_reform_progress = 100
+				add_army_professionalism = 0.2
+				define_ruler = {
+					name = "Gunnar"
+					dynasty = "Magecrusher"
+					adm = 3
+					dip = 5
+					mil = 6
+					age = 18
+					claim = 100
+				}
+				add_ruler_personality = tactical_genius_personality
+				change_religion = v
+				add_historical_friend = REL
+				capital_scope = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 2
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+				
+				add_idea_group = offensive_ideas
+				add_idea_group = quantity_ideas
+				add_idea = bayonet_leaders
+				add_idea = national_conscripts
+				add_idea = superior_firepower
+				add_idea = glorious_arms
+				add_idea = engineer_corps
+				add_idea = grand_army
+				add_idea = napoleonic_warfare
+				add_idea = mass_army
+				add_idea = the_young_can_serve
+				add_idea = enforced_service
+				add_idea = the_old_and_infirm
+				add_idea = camp_followers
+				add_idea = garrison_conscription
+				add_idea = expanded_supply_trains
+			}
+			REL = {
+				add_historical_friend = GUN
+			}
+		}
+		switch_tag = GUN
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = flavor_rel.2.b # Let's give Gunnar the support he needs!
+		every_owned_province = {
+			limit = {
+				OR = {
+					culture = barbarian
+					region = kandarin_region
+				}
+			}
+			add_core = GUN
+			remove_core = ROOT
+			cede_province = GUN
+		}
+		create_alliance = GUN
+		hidden_effect = {
+			GUN = {
+				add_splendor = 750
+				change_government_reform_progress = 100
+				add_army_professionalism = 0.2
+				define_ruler = {
+					name = "Gunnar"
+					dynasty = "Magecrusher"
+					adm = 3
+					dip = 5
+					mil = 6
+					age = 18
+					claim = 100
+				}
+				add_ruler_personality = tactical_genius_personality
+				change_religion = v
+				add_historical_friend = REL
+				capital_scope = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 2
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+				
+				add_idea_group = offensive_ideas
+				add_idea_group = quantity_ideas
+				add_idea = bayonet_leaders
+				add_idea = national_conscripts
+				add_idea = superior_firepower
+				add_idea = glorious_arms
+				add_idea = engineer_corps
+				add_idea = grand_army
+				add_idea = napoleonic_warfare
+				add_idea = mass_army
+				add_idea = the_young_can_serve
+				add_idea = enforced_service
+				add_idea = the_old_and_infirm
+				add_idea = camp_followers
+				add_idea = garrison_conscription
+				add_idea = expanded_supply_trains
+			}
+			REL = {
+				add_historical_friend = GUN
+			}
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	option = {
+		name = flavor_rel.2.c # Gunnar can make do with his closest supporters.
+		every_owned_province = {
+			limit = {
+				culture = barbarian
+			}
+			add_core = GUN
+			remove_core = ROOT
+			cede_province = GUN
+		}
+		hidden_effect = {
+			GUN = {
+				add_splendor = 750
+				change_government_reform_progress = 100
+				add_army_professionalism = 0.2
+				define_ruler = {
+					name = "Gunnar"
+					dynasty = "Magecrusher"
+					adm = 3
+					dip = 5
+					mil = 6
+					age = 18
+					claim = 100
+				}
+				add_ruler_personality = tactical_genius_personality
+				change_religion = v
+				capital_scope = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 2
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+				
+				add_idea_group = offensive_ideas
+				add_idea_group = quantity_ideas
+				add_idea = bayonet_leaders
+				add_idea = national_conscripts
+				add_idea = superior_firepower
+				add_idea = glorious_arms
+				add_idea = engineer_corps
+				add_idea = grand_army
+				add_idea = napoleonic_warfare
+				add_idea = mass_army
+				add_idea = the_young_can_serve
+				add_idea = enforced_service
+				add_idea = the_old_and_infirm
+				add_idea = camp_followers
+				add_idea = garrison_conscription
+				add_idea = expanded_supply_trains
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				culture_group = fremennik_group
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_rel.2.e # Runecrafting is a pain enough already, why make it worse?
+		every_owned_province = {
+			limit = {
+				culture = barbarian
+			}
+			add_core = GUN
+			add_province_modifier = {
+				name = "REL_runecrafting_crusader_unrest"
+				duration = 7300
+				}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				culture_group = fremennik_group
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_rel.3
+	title = flavor_rel.3.t #Conquest of the Maple Woods
+	desc = flavor_rel.3.d #Our recent conquest of the Maple Woods area of northern Kandarin has made our Barbarian residents restless. They want to take the new lands for their own, but should we let them?
+	picture = FREMENNIK_LANDING_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_rel.3.a #Let the Barbarians move south.
+			rellekka_area = {
+				limit = { is_core = ROOT }
+				change_culture = rellekkan
+			}
+			east_fremennik_area = {
+				limit = { is_core = ROOT }
+				change_culture = rellekkan
+			}
+			maple_wood_area = {
+				limit = { is_core = ROOT }
+				change_culture = barbarian
+				change_religion = v
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = 1
+			}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_rel.3.b #How about they don't?
+		add_dip_power = 50
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

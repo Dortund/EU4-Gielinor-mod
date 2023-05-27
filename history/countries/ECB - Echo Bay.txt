@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = skull_culture
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1117 #Echo Bay
+
+1928.5.10 = {
+	monarch = {
+		name = "Youdun"
+		dynasty = "Echo"
+		birth_date = 1912.12.16
+		death_date = 1978.11.21
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+2141.12.7 = {
+	monarch = {
+		name = "Oyu"
+		dynasty = "Wenkui"
+		birth_date = 2105.3.8
+		adm = 0
+		dip = 0
+		mil = 4
+	}
+}

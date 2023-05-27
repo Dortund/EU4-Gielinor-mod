@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = cursed_scorpion
+religion = zamorak
+technology_group = northerntechgroup
+capital = 192 #Scorpia
+national_focus = MIL
+
+15.11.25 = {
+	monarch = {
+		name = "Scorpia"
+		dynasty = "the Scorpion"
+		birth_date = 11.12.27
+		adm = 2
+		dip = 0
+		mil = 5
+		female = yes
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

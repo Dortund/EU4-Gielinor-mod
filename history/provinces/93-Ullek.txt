@@ -1,0 +1,31 @@
+#93 - Ullek
+
+tribal_owner = ---
+culture = ghost
+religion = menaphite
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 1
+
+trade_goods = basic_ores
+
+is_city = yes
+
+center_of_trade = 1
+
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2
+
+2120.1.2 = {
+	owner = SBI
+	controller = SBI
+	add_core = SBI
+	culture = scabarite
+}

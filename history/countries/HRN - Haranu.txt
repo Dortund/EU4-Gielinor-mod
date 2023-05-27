@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = scythe_culture
+religion = genbu
+technology_group = wushankotechgroup
+capital = 1147 #Sakura
+historical_friend = PPH
+
+elector = yes
+
+1929.2.15 = {
+	monarch = {
+		name = "Iesada"
+		dynasty = "Haranu"
+		birth_date = 1901.2.15
+		death_date = 1975.2.15
+		adm = 2
+		dip = 5
+		mil = 5
+	}
+}
+
+2135.2.15 = {
+	monarch = {
+		name = "Tsuguhito"
+		dynasty = "Haranu"
+		birth_date = 2105.2.15
+		adm = 2
+		dip = 6
+		mil = 5
+	}
+}

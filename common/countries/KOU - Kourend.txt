@@ -1,0 +1,176 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 13 128 84 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Archeio #0" = 5
+	"Asteros #0" = 5
+	"Ektheme #0" = 5
+	"Enoch #0" = 5
+	"Freald #0" = 5
+	"Horphis #0" = 5
+	"Krato #0" = 5
+	"Logios #0" = 5
+	"Meleti #0" = 5
+	"Pagida #0" = 5
+	"Rassain #0" = 5
+	"Regath #0" = 5
+	"Trobin #0" = 5
+	"Trossa #0" = 5
+	"Tyss #0" = 5
+	
+	"Arcis #0" = -5
+	"Aretha #0" = -5
+	"Biblia #0" = -5
+	"Clerris #0" = -5
+	"Filamina #0" = -5
+	"Galana #0" = -5
+	"Ignisia #0" = -5
+	"Imerominia #0" = -5
+	"Istoria #0" = -5
+	"Logosia #0" = -5
+	"Mofina #0" = -5
+	"Mori #0" = -5
+	"Thyria #0" = -5
+	"Villia #0" = -5
+	
+	"Fuggy #0" = 5
+	"Jorra #0" = 5
+	"Loinur #0" = 5
+	"Mogrim #0" = 5
+	"Munty #0" = 5
+	"Smoggy #0" = 5
+	"Toothy #0" = 5
+	"Thirus #0" = 5
+	"Undor #0" = 5
+	"Unkar #0" = 5
+	
+	"Lovada #0" = -5
+	"Miriam #0" = -5
+	"Moggy #0" = -5
+	"Raeli #0" = -5
+	"Stuliette #0" = -5
+	"Traxi #0" = -5
+	"Vulcana #0" = -5
+	
+	"Alan #0" = 5
+	"Arno #0" = 5
+	"Artur #0" = 5
+	"Berry #0" = 5
+	"Derse #0" = 5
+	"Ethrain #0" = 5
+	"Gordon #0" = 5
+	"Gricoller #0" = 5
+	"Horace #0" = 5
+	"Jarvis #0" = 5
+	"Jean #0" = 5
+	"Jon #0" = 5
+	"Johnathan #0" = 5
+	"Kai #0" = 5
+	"Kandur #0" = 5
+	"Keith #0" = 5
+	"Konoo #0" = 5
+	"Pandur #0" = 5
+	"Ramocean #0" = 5
+	"Richard #0" = 5
+	
+	"Alexandra #0" = -5
+	"Allanna #0" = -5
+	"Amelia #0" = -5
+	"Barbara #0" = -5
+	"Bologa #0" = -5
+	"Elena #0" = -5
+	"Esther #0" = -5
+	"Ewesey #0" = -5
+	"Golova #0" = -5
+	"Jane #0" = -5
+	"Leela #0" = -5
+	"Logava #0" = -5
+	"Mariah #0" = -5
+	"Marisi #0" = -5
+	"Mary #0" = -5
+	"Murfet #0" = -5
+	"Nesty #0" = -5
+	"Nikkie #0" = -5
+	"Olivia #0" = -5
+	"Perry #0" = -5
+	"Rosie #0" = -5
+	"Talia #0" = -5
+	"Taylor #0" = -5
+	"Vannah #0" = -5
+	
+	"Alry #0" = 5
+	"Bast #0" = 5
+	"Devan #0" = 5
+	"Frankie #0" = 5
+	"Ish #0" = 5
+	"Magoro #0" = 5
+	"Nicholas #0" = 5
+	"Rakkar #0" = 5
+	"Piliar #0" = 5
+	"Robert #0" = 5
+	"Tynan #0" = 5
+	"Veos #0" = 5
+	
+	"Kenelme #0" = -5
+	"Leenz #0" = -5
+	"Shauna #0" = -5
+	
+	"Hosa #0" = 5
+	"Martin #0" = 5
+	"Lan #0" = 5
+	"Reginald #0" = 5
+	"Robert #0" = 5
+	"Roy #0" = 5
+	"Tomas #0" = 5
+	
+	"Alyssa #0" = -5
+	"Elise #0" = -5
+	"Rose #0" = -5
+	
+	"Babacus #0" = 5
+	"Kalt #0" = 5
+	"Lars #0" = 5
+	"Osten #0" = 5
+	"Phileas #0" = 5
+	"Seabry #0" = 5
+	"Shiro #0" = 5
+	"Tony #0" = 5
+	"Vir #0" = 5
+	
+	"Amelia #0" = -5
+	"Briget #0" = -5
+	"Elena #0" = -5
+	"Emma #0" = -5
+	"Ginea #0" = -5
+	"Jennifer #0" = -5
+	"Kilian #0" = -5
+	"Rachelle #0" = -5
+	"Salara #0" = -5
+	"Sdiar #0" = -5
+	"Shayda #0" = -5
+	
+	"Byrne #4" = 50
+	"Hagen #4" = 50
+	"Hern #3" = 50
+	"Karreig #0" = 50
+	"Kharedst #0" = 50
+	"Rada #4" = 50
+	
+	"Agata #3" = -50
+	"Biyrene #3" = -50
+	"Sevil #3" = -50
+}

@@ -1,0 +1,34 @@
+#East Lumbridge Swamp
+owner = HOR
+controller = HOR
+add_core = HOR
+tribal_owner = ---
+culture = horogothgar
+religion = bandos
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = basic_ores
+
+is_city = yes
+
+1954.3.14 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+	remove_core = NGU
+	culture = lummer
+	religion = saradomin
+	change_province_name = "Lummouth"
+}

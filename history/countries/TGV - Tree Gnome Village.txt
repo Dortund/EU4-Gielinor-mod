@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = treegnome
+religion = guthix
+technology_group = gnometechgroup
+capital = 286 #Priw Gnomo Andralo
+national_focus = DIP
+historical_friend = GNO
+historical_friend = CDA
+
+1958.7.23 = {
+	monarch = {
+		name = "Bolrie"
+		dynasty = "Hashar"
+		birth_date = 1939.10.5
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+
+1973.9.7 = {
+	monarch = {
+		name = "Bolren"
+		dynasty = "Hashar"
+		birth_date = 1945.7.23
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+}

@@ -1,0 +1,1518 @@
+######################################################################
+# Elven Resistance
+######################################################################
+
+elven_resistance_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = EVR
+			tag = TNN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	EVR_fog_of_war = {
+		icon = mission_fog_of_war
+		position = 2
+		required_missions = { EVR_develop_our_base }
+		trigger = {
+			OR = {
+				has_spy_network_in = {
+					who = IOR
+					value = 75
+				}
+				NOT = {
+					exists = IOR
+				}
+				NOT = {
+					IOR = {
+						religion = dark_lord
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = IOR
+					IOR = {
+						religion = dark_lord
+					}
+				}
+				every_owned_province = {
+					undiscover_country = IOR
+				}
+			}
+			else = {
+				add_prestige = 25
+			}
+		}
+	}
+	EVR_western_sea_discoveries = {
+		icon = mission_western_sea_discoveries
+		position = 4
+		required_missions = { EVR_fog_of_war EVR_coastal_warfare }
+		trigger = {
+			north_lost_grove_area = {
+			 	has_discovered = ROOT
+			}
+			south_lost_grove_area = {
+			 	has_discovered = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 25
+			north_lost_grove_area = {
+				discover_country = EVR
+			}
+			south_lost_grove_area = {
+				discover_country = EVR
+			}
+		}
+	}
+	EVR_arms_mercenaries = {
+		icon = mission_call_to_arms
+		position = 5
+		required_missions = { EVR_western_sea_discoveries }
+		trigger = {
+			has_institution = exploration
+			army_tradition = 50
+		}
+		effect = {
+			add_country_modifier = {
+				name = EVR_call_to_arms_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+
+elven_resistance_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = EVR
+			tag = TNN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	EVR_develop_our_base = {
+		icon = mission_develop_lletya
+		position = 1
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 337
+		}
+		trigger = {
+			337 = {
+				development = 15
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			337 = {
+				add_province_modifier = {
+					name = "EVR_resistance_base"
+					duration = 7300
+				}
+			}
+		}
+	}
+	EVR_resistance_fleet = {
+		icon = mission_new_elven_navy
+		position = 2
+		required_missions = { EVR_develop_our_base }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				shipyard = 2
+				grand_shipyard = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "EVR_resistance_fleet_modifier"
+				duration = 7300
+			}
+		}
+	}
+	EVR_coastal_warfare = {
+		icon = mission_coastal_warfare
+		position = 3
+		required_missions = { EVR_resistance_fleet }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			naval_forcelimit = 15
+			navy_size_percentage = 0.8
+			if = {
+				limit = {
+					exists = IOR
+				}
+				naval_strength = {
+					who = IOR
+					value = 1.25
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = IOR
+					IOR = {
+						religion = dark_lord
+					}
+				}
+				add_country_modifier = {
+					name = EVR_raiding_iorwerth
+					duration = 3650
+				}
+			}
+			else = {
+				add_dip_power = 50
+			}
+		}
+	}
+}
+
+elven_resistance_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = EVR
+			tag = TNN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	EVR_save_the_clan_elders = {
+		icon = mission_save_the_clan_elders
+		required_missions = {  }
+		trigger = {
+			OR = {
+				owns_core_province = 325
+				325 = { controlled_by = EVR }
+				AND = {
+					has_spy_network_in = {
+						who = IOR
+						value = 50
+					}
+					IOR = {
+						owns_core_province = 325
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 325
+					}
+				add_prestige = 25
+			}
+			else = {
+				if = {
+					limit = {
+						325 = { controlled_by = EVR }
+					}
+					add_mil_power = 50
+					IOR = {
+						country_event = {
+							id = flavor_ior.3
+							days = 1
+						}
+					}
+				}
+				else = {
+					add_spy_network_in = {
+						who = IOR
+						value = -50
+					}
+					add_dip_power = 50
+					IOR = {
+						country_event = {
+							id = flavor_ior.3
+							days = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	EVR_revert_prifddinas_to_crystal = {
+		icon = mission_a_question_of_tirannwn
+		required_missions = { EVR_save_the_clan_elders }
+		trigger = {
+			OR = {
+				owns_core_province = 325
+				AND = {
+					has_spy_network_in = {
+						who = IOR
+						value = 50
+					}
+					IOR = {
+						owns_core_province = 325
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 325
+					}
+				add_prestige = 25
+			}
+			else = {
+				add_spy_network_in = {
+					who = IOR
+					value = -50
+				}
+				325 = {
+					add_base_tax = -10
+					add_base_production = -6
+					add_base_manpower = -6
+					add_province_modifier = {
+						name = "EVR_reverted_to_crystal"
+						duration = -1
+					}
+				}
+				IOR = {
+					country_event = {
+						id = flavor_ior.2
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	EVR_population_advantage = {
+		icon = mission_clan_identity
+		position = 3
+		required_missions = { EVR_revert_prifddinas_to_crystal }
+		trigger = {
+			OR = {
+				total_development = IOR
+				NOT = { exists = IOR }
+			}
+		}
+		effect = {
+			north_isafdar_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	EVR_push_the_line_north = {
+		icon = mission_push_the_line_north
+		position = 5
+		required_missions = { EVR_population_advantage EVR_cadarnite_training }
+		provinces_to_highlight = {
+			area = north_isafdar_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			north_isafdar_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = evr_open_the_underground_pass_tooltip
+			underground_pass_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	EVR_underground_pass_exploration = {
+		icon = mission_underground_pass_exploration
+		position = 6
+		required_missions = { EVR_push_the_line_north }
+		provinces_to_highlight = {
+			province_id = 338
+		}
+		trigger = {
+			owns_core_province = 338
+			338 = {
+				development = 10
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 982
+				}
+				add_adm_power = 50
+			}
+			if = {
+				limit = {
+					982 = {
+						is_empty = yes
+					}
+				}
+				982 = {
+					add_siberian_construction = 200
+				}
+			}
+		}
+	}
+	EVR_the_temple_of_light = {
+		icon = mission_the_temple_of_light
+		position = 7
+		required_missions = { EVR_underground_pass_exploration }
+		provinces_to_highlight = {
+			province_id = 538
+		}
+		trigger = {
+			owns_core_province = 538
+			NOT = { exists = TPS }
+			NOT = { exists = IBN }
+			total_development = 150
+		}
+		effect = {
+			custom_tooltip = evr_quick_civil_war_end_tooltip
+			add_country_modifier = {
+				name = EVR_destruction_of_the_dark_lord
+				duration = 9125
+			}
+			IOR = {
+				country_event = {
+					id = flavor_ior.7
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+elven_resistance_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = EVR
+			tag = TNN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	EVR_gnomish_relations = {
+		icon = mission_the_grand_tree
+		required_missions = {  }
+		
+		trigger = {
+			OR = {
+			 	any_ally = {
+					culture_group = gnome_group
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				any_rival_country = {
+					culture_group = gnome_group
+				}
+				NOT = {
+					any_country = {
+						culture_group = gnome_group
+					}
+				}
+			}
+		}
+		effect = {
+			arandar_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	EVR_technology_exchange = {
+		icon = mission_technology_exchange
+		position = 2
+		required_missions = { EVR_gnomish_relations }
+		trigger = {
+			has_institution = runecrafting
+			owns_core_province = 337
+		}
+		effect = {
+			337 = {
+				add_province_modifier = {
+					name = "EVR_gnomish_laboratory"
+					duration = 9125
+				}
+			}
+		}
+	}
+	EVR_fate_of_cadarn = {
+		icon = mission_fate_of_the_kingdom
+		position = 3
+		required_missions = { EVR_revert_prifddinas_to_crystal }
+		trigger = {
+			OR = {
+				development_in_provinces = {
+					value = 30
+					culture = cadarn
+				}
+				AND = {
+					exists = CDA
+					alliance_with = CDA
+					CDA = {
+						total_development = 100
+					}
+				}
+				AND = {
+					exists = BXT
+					alliance_with = BXT
+				}
+				employed_advisor = {
+					culture = cadarn
+					category = MIL
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						alliance_with = CDA
+						alliance_with = BXT
+					}
+				}
+				add_dip_power = 50
+			}
+			else = {
+				add_mil_power = 50
+			}
+		}
+	}
+	EVR_cadarnite_training = {
+		icon = mission_clan_serves_the_people
+		position = 4
+		required_missions = { EVR_fate_of_cadarn }
+		trigger = {
+			army_professionalism = 0.25
+			OR = {
+				has_global_modifier_value = {
+					which = discipline
+					value = 0.1
+					extra_shortcut = yes
+				}
+				has_global_modifier_value = {
+					which = land_morale
+					value = 0.3
+					extra_shortcut = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = EVR_precision_strikes
+				duration = 3650
+			}
+		}
+	}
+	EVR_adventurer_allies = {
+		icon = mission_adventurer
+		position = 5
+		required_missions = { EVR_cadarnite_training }
+		trigger = {
+		 	absolutism = 50
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+	EVR_friends_in_the_east = {
+		icon = mission_kandarin_free_of_foes
+		position = 6
+		required_missions = { EVR_adventurer_allies EVR_kandarin_spycraft }
+		trigger = {
+		 	OR = {
+				alliance_with = TYS
+				any_ally = {
+					is_great_power = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = building_alliances.tooltip
+					num_of_allies = 2
+					calc_true_if = {
+						all_ally = {
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+							capital_scope = {
+								continent = west_runescape
+							}
+						}
+						amount = 2
+					}
+				}
+			}
+		}
+		effect = {
+		 	add_yearly_manpower = 1
+			add_dip_power = 50
+		}
+	}
+}
+
+elven_resistance_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = EVR
+			tag = TNN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	EVR_cave_gnomes = {
+		position = 2
+		icon = mission_glouphrie
+		required_missions = { EVR_gnomish_relations }
+		trigger = {
+			has_global_modifier_value = {
+				which = spy_offence
+				value = 0.5
+				extra_shortcut = yes
+			}
+			OR = {
+				exists = AOS
+				owns_core_province = 341
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = EVR_arposandran_ideas
+				duration = 7300
+			}
+		}
+	}
+	
+	EVR_wrath_of_zulrah = {
+		position = 3
+		icon = mission_wrath_of_zulrah
+		required_missions = { EVR_technology_exchange EVR_cave_gnomes }
+		trigger = {
+			owns_core_province = 334
+			owns_core_province = 337
+			has_institution = exploration
+		}
+		effect = {
+			arposandra_area = {
+				discover_country = ROOT
+			}
+			add_absolutism = 10
+		}
+	}
+	
+	EVR_kandarin_spycraft = {
+		position = 5
+		icon = mission_kandarin_spycraft
+		required_missions = { EVR_cadarnite_training }
+		trigger = {
+			OR = {
+			 	is_incident_happened = incident_kandarin_relations
+				current_age = age_of_adventurers
+				current_age = age_of_divination
+			}
+			any_country = {
+				capital_scope = {
+					region = kandarin_region
+				}
+				has_spy_network_from = {
+					who = ROOT
+					value = 75
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = EVR_kandarin_innovations
+				duration = 3650
+			}
+			entrana_bay_area = {
+				discover_country = ROOT
+			}
+			tutors_sea_area = {
+				discover_country = ROOT
+			}
+			south_asgarnia_area = {
+				discover_country = ROOT
+			}
+		}
+	}
+	EVR_light_of_asgarnia = {
+		position = 6
+		icon = mission_proselytise_seren
+		required_missions = { EVR_kandarin_spycraft }
+		trigger = {
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.05
+				extra_shortcut = yes
+			}
+			OR = {
+				AND = {
+					religion = seren
+					any_country = {
+						capital_scope = {
+							region = asgarnia_region
+						}
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				any_owned_province = {
+					region = asgarnia_region
+					has_owner_religion = yes
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = EVR_light_of_asgarnia_tooltip
+			if = {
+				limit = {
+					any_country = {
+						capital_scope = {
+							region = asgarnia_region
+						}
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						capital_scope = {
+							region = asgarnia_region
+						}
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					country_event = {
+						id = flavor_evr.8
+						days = 30
+					}
+				}
+				add_dip_power = 50
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						region = asgarnia_region
+					}
+				}
+				add_country_modifier = {
+					name = EVR_seren_in_asgarnia
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+
+######################################################################
+# Tirannwn Grove Missions - For Tirannwn, or a retreating Elven Resistance
+######################################################################
+
+tirannwn_grove_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = TNN
+			AND = {
+				tag = EVR
+				has_country_flag = EVR_retreat_to_the_grove
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	TNN_resettlement_of_the_grove = {
+		icon = mission_settle_the_lost_grove
+		position = 5
+		required_missions = { EVR_western_sea_discoveries }
+		provinces_to_highlight = {
+			OR = {
+				area = north_lost_grove_area
+				area = south_lost_grove_area
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					development = 15
+				}
+			}
+		}
+		trigger = {
+			any_owned_province = {
+				OR = {
+					area = north_lost_grove_area
+					area = south_lost_grove_area
+				}
+				development = 15
+			}
+		}
+		effect = {
+			add_prestige = 25
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = north_lost_grove_area
+						area = south_lost_grove_area
+					}
+					has_empty_adjacent_province = yes
+				}
+				random_empty_neighbor_province = {
+					add_siberian_construction = 400
+				}
+			}
+		}
+	}
+	TNN_save_solak = {
+		icon = mission_save_solak
+		position = 6
+		required_missions = { TNN_resettlement_of_the_grove }
+		provinces_to_highlight = {
+			province_id = 1243
+		}
+		trigger = {
+			owns_core_province = 1243
+		}
+		effect = {
+			add_mil_power = 100
+			add_country_modifier = {
+				name = TNN_flow_of_anima
+				duration = 3650
+			}
+		}
+	}
+	TNN_control_of_the_lost_grove = {
+		icon = mission_control_of_the_lost_grove
+		position = 7
+		required_missions = { TNN_save_solak }
+		provinces_to_highlight = {
+			OR = {
+				area = north_lost_grove_area
+				area = south_lost_grove_area
+			}
+			NOT = {	owned_by = ROOT }
+		}
+		trigger = {
+			north_lost_grove_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			south_lost_grove_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			north_lost_grove_area = {
+				add_province_modifier = {
+					name = TNN_development_of_the_lost_grove
+					duration = 9125
+				}
+			}
+			south_lost_grove_area = {
+				add_province_modifier = {
+					name = TNN_development_of_the_lost_grove
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+
+######################################################################
+# Tirannwn exclusive missions
+######################################################################
+
+tirannwn_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = TNN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TNN_crystal_ocean_travels = {
+		icon = mission_scout_zeah
+		position = 6
+		required_missions = { TNN_resettlement_of_the_grove }
+		trigger = {
+			has_discovered = 525
+			has_discovered = 488
+			has_discovered = 442
+			has_discovered = 399
+		}
+		effect = {
+			add_country_modifier = {
+				name = TNN_new_relations
+				duration = 7300
+			}
+		}
+	}
+	TNN_land_of_sunset = {
+		icon = mission_land_of_sunset
+		position = 8
+		required_missions = { TNN_crystal_ocean_travels TNN_control_of_the_lost_grove }
+		trigger = {
+			OR = {
+				is_incident_happened = incident_zeah_diplomacy
+				NOT = { religion = seren }
+			}
+			calc_true_if = {
+				all_province = {
+					region = varlamore_region
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TNN_elves_of_varlamore
+				duration = 9125
+			}
+		}
+	}
+	TNN_strength_of_the_soul = {
+		icon = mission_strength_of_the_soul
+		position = 11
+		required_missions = { TNN_land_of_sunset TNN_ithell_shipbuilding }
+		trigger = {
+			329 = {
+				is_strongest_trade_power = ROOT
+			}
+			525 = {
+				is_strongest_trade_power = ROOT
+			}
+			923 = {
+				is_strongest_trade_power = ROOT
+			}
+			calc_true_if = {
+				all_province = {
+					region = varlamore_region
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				amount = 10
+			}
+			calc_true_if = {
+				all_province = {
+					OR = {
+						area = insular_isle_of_souls_area
+						area = farther_isle_of_souls_area
+						area = central_isle_of_souls_area
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				amount = 8
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TNN_control_of_the_crystal_ocean
+				duration = -1
+			}
+		}
+	}
+}
+
+tirannwn_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = TNN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	TNN_power_of_the_death_altar = {
+		icon = mission_power_of_the_death_altar
+		position = 8
+		required_missions = { EVR_the_temple_of_light }
+		provinces_to_highlight = {
+			province_id = 538
+		}
+		trigger = {
+			538 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				has_owner_religion = yes
+			}
+			538 = {
+				if = {
+					limit = {
+						AND = {
+							has_dlc = "Leviathan"
+							religion = seren
+						}						
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_temple_of_light
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_temple_of_light
+							tier = 3
+						}
+					}
+				}
+				else = {
+					development = 20
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						has_dlc = "Leviathan"
+						religion = seren
+					}						
+				}
+				add_adm_power = 100
+			}
+			538 = {
+				add_province_modifier = {
+					name = TNN_expansion_of_death_rune_crafting
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+	TNN_buildings_of_ithell = {
+		icon = mission_buildings_of_clan_ithell
+		position = 9
+		required_missions = { TNN_restoration_of_prifddinas_mission }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			calc_true_if = {
+				desc = build_manufactories_mission_tooltip
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 20
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			add_years_of_income = 1.5
+		}
+	}
+	TNN_ithell_shipbuilding = {
+		icon = mission_grand_ship
+		position = 10
+		required_missions = { TNN_buildings_of_ithell }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				grand_shipyard = 5
+				drydock = 5
+			}
+			navy_size = 100
+			has_leader_with = {
+				admiral = yes
+				total_pips = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TNN_naval_expansion_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+
+tirannwn_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = TNN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TNN_restoration_of_prifddinas_mission = {
+		icon = mission_restoration_of_prifddinas
+		position = 8
+		required_missions = { EVR_the_temple_of_light }
+		trigger = {
+			owns_core_province = 325
+			325 = {
+				NOT = {
+					has_province_modifier = EVR_reverted_to_crystal
+				}
+				num_of_buildings_in_province = 5
+				religion = ROOT
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			325 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			 	add_next_institution_embracement = 50
+			}
+		}
+	}
+	TNN_national_recovery = {
+		icon = mission_national_recovery
+		position = 9
+		required_missions = { TNN_restoration_of_prifddinas_mission }
+		trigger = {
+			development_in_provinces = {
+				value = 350
+				region = tirannwn_region
+			}
+			calc_true_if = {
+				all_province = {
+					region = tirannwn_region
+					province_has_center_of_trade_of_level = 2
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TNN_new_trade_opportunities
+				duration = 9125
+			}
+		}
+	}
+	TNN_kandarin_trade = {
+		icon = mission_kandarin_trade
+		position = 10
+		required_missions = { TNN_national_recovery }
+		trigger = {
+			265 = {
+				trade_share = {
+					country = ROOT
+					share = 35
+				}
+			}
+			272 = {
+				trade_share = {
+					country = ROOT
+					share = 35
+				}
+			}
+			247 = {
+				trade_share = {
+					country = ROOT
+					share = 15
+				}
+			}
+			281 = {
+				trade_share = {
+					country = ROOT
+					share = 15
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_years_of_income = 0.5
+		}
+	}
+	TNN_glory_of_prifddinas = {
+		icon = mission_glory_of_prifddinas
+		position = 11
+		required_missions = { TNN_ithell_shipbuilding TNN_kandarin_trade TNN_gauntlet_and_rush_of_blood }
+		trigger = {
+			325 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 50
+				has_building = cathedral
+				has_building = stock_exchange
+			}
+			325 = {
+				if = {
+					limit = {
+						AND = {
+							has_dlc = "Leviathan"
+							religion = seren
+						}						
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_tower_of_voices
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_tower_of_voices
+							tier = 3
+						}
+					}
+				}
+				else = {
+					development = 65
+					num_of_buildings_in_province = 10
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TNN_inspiration_of_prifddinas
+				duration = -1
+			}
+		}
+	}
+	TNN_return_to_kandarin = {
+		icon = mission_return_to_kandarin
+		position = 12
+		required_missions = { TNN_glory_of_prifddinas }
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = kandarin_region
+					has_owner_religion = yes
+				}
+				amount = 15
+			}
+		}
+		effect = {
+			kandarin_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+tirannwn_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = TNN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TNN_secure_the_passes = {
+		icon = mission_secure_the_passes
+		position = 8
+		required_missions = { EVR_the_temple_of_light EVR_friends_in_the_east }
+		provinces_to_highlight = {
+			OR = {
+				area = arandar_area
+				area = underground_pass_area
+				province_id = 337
+			}
+			NOT = {	owned_by = ROOT }
+		}
+		trigger = {
+			owns_core_province = 337
+			arandar_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			underground_pass_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			324 = {
+				fort_level = 6
+			}
+			337 = {
+				fort_level = 6
+			}
+			OR = {
+				339 = {
+					fort_level = 6
+				}
+				981 = {
+					fort_level = 6
+				}
+			}
+		}
+		effect = {
+			324 = {
+				add_province_modifier = {
+					name = TNN_border_guard
+					duration = 9125
+				}
+			}
+			337 = {
+				add_province_modifier = {
+					name = TNN_border_guard
+					duration = 9125
+				}
+			}
+			339 = {
+				add_province_modifier = {
+					name = TNN_border_guard
+					duration = 9125
+				}
+			}
+			981 = {
+				add_province_modifier = {
+					name = TNN_border_guard
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+	TNN_fate_of_iorwerth = {
+		icon = mission_fate_of_iorwerth
+		position = 9
+		required_missions = { TNN_restoration_of_prifddinas_mission }
+		trigger = {
+			NOT = { exists = IOR }
+		 	religious_unity = 1
+			OR = {
+			 	is_incident_happened = incident_restoration_of_prifddinas
+				NOT = { religion = seren }
+			}
+		}
+		effect = {
+			add_adm_power = 25
+			add_dip_power = 25
+		}
+	}
+	TNN_gauntlet_and_rush_of_blood = {
+		icon = mission_gauntlet
+		position = 10
+		required_missions = { TNN_fate_of_iorwerth }
+		trigger = {
+			army_professionalism = 0.75
+		 	army_size = 35
+		}
+		effect = {
+			add_years_of_income = 0.5
+		}
+	}
+}
+
+tirannwn_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = TNN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TNN_eastward_exploration_mission = {
+		icon = mission_journey_to_wushanko
+		position = 7
+		required_missions = { EVR_friends_in_the_east }
+		trigger = {
+			27 = {
+				has_discovered = ROOT
+			}
+			84 = {
+				has_discovered = ROOT
+			}
+			87 = {
+				has_discovered = ROOT
+			}
+			127 = {
+				has_discovered = ROOT
+			}
+			1238 = {
+				has_discovered = ROOT
+			}
+			OR = {
+				any_known_country = {
+					religion = zaros
+				}
+				NOT = {
+					any_country = {
+						religion = zaros
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TNN_eastward_reach
+				duration = 7300
+			}
+		}
+	}
+	TNN_shadows_of_the_world_gate = {
+		icon = mission_shadows_of_the_world_gate
+		position = 9
+		required_missions = { TNN_secure_the_passes TNN_eastward_exploration_mission }
+		trigger = {
+		 	absolutism = 80
+			has_global_modifier_value = {
+				which = spy_offence
+				value = 0.5
+				extra_shortcut = yes
+			}
+			owns_core_province = 324
+		}
+		effect = {
+			add_devotion = 10
+			add_legitimacy = 10
+			add_republican_tradition = 10
+			atarisundri_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	TNN_age_of_divines = {
+		icon = mission_age_of_divines
+		position = 10
+		required_missions = { TNN_fate_of_iorwerth TNN_shadows_of_the_world_gate }
+		trigger = {
+		 	current_age = age_of_divination
+			divine_energy = 2
+			OR = {
+				AND = {
+					religion = seren
+					is_incident_happened = incident_rebirth_of_seren
+				}
+				AND = {
+					NOT = { religion = seren }
+					atarisundri_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+					has_global_flag = KDR_world_gate_revealed
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = seren
+				}
+				define_general = {
+					shock = 5
+					fire = 6
+					manuever = 3
+					siege = 3
+					name = "Helwyr Cywir"
+				}
+			}
+			if = {
+				limit = {
+					NOT = { religion = seren }
+				}
+				eagles_peak_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	TNN_council_of_gielinor = {
+		icon = mission_council_of_gielinor
+		position = 11
+		required_missions = { TNN_age_of_divines }
+		trigger = {
+			is_great_power = yes
+			any_ally = {
+				is_great_power = yes
+			}
+			calc_true_if = {
+				all_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				amount = 5
+			}
+			num_of_trusted_allies = 3
+		}
+		effect = {
+			add_dip_power = 100
+			add_country_modifier = {
+				name = TNN_council_leader
+				duration = 9125
+			}
+		}
+	}
+}

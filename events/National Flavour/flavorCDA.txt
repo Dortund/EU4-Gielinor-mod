@@ -1,0 +1,280 @@
+########################################
+# Events for Cadarn
+########################################
+
+namespace = flavor_cda
+normal_or_historical_nations = yes
+
+# Note - this event is commented out because it has now been reworked into part of the Tirannwn Civil War Serenist Incident.
+#country_event = {
+#	id = flavor_cda.1
+#	title = flavor_cda.1.t #Tirannwn at war!
+#	desc = flavor_cda.1.d #The Iorwerth Clan has betrayed the rest of Tirannwn and taken Prifddinas! They clearly have dangerous ambitions which we should help put a stop to, and our Lord Baxtorian Cadarn is leading an expedition to do so. But this has left our own lands vulnerable - what should we do about this?
+#	picture = TIRANNWN_PRIFDDINAS_eventPicture
+#	
+#	trigger = {
+#		tag = CDA
+#		exists = EVR
+#		exists = IOR
+#	}
+#	major = yes
+#	
+#	fire_only_once = yes
+#
+#	mean_time_to_happen = {
+#		days = 60
+#	}
+#	
+#	immediate = {
+#		set_country_flag = CDA_tirannwn_decision
+#	}
+#	
+#	option = {
+#		name = flavor_cda.1.a #Stay the course and send all the support we can!
+#		add_opinion = {
+#			who = EVR
+#			modifier = cda_joined_resistance
+#		}
+#		EVR = {
+#			country_event = {
+#				id = flavor_evr.2
+#				days = 1
+#			}
+#		}
+#		create_alliance = EVR
+#		add_prestige = 50
+#		add_yearly_manpower = -0.5
+#		ai_chance = {
+#			factor = 0.9
+#		}
+#		GNE = {
+#			if = {
+#				limit = { alliance_with = CDA }
+#				country_event = {
+#					id = flavor_gne.17
+#					days = 30
+#				}
+#			}
+#		}
+#		set_country_flag = CDA_support_tirannwn
+#	}
+#	option = {
+#		name = flavor_cda.1.b #The future is on this side of the Galarpos. Recall Baxtorian.
+#	 	add_stability = -1
+#		set_country_flag = CDA_return_of_baxtorian
+#		define_ruler = {
+#			name = "Baxtorian"
+#			dynasty = "Cadarn"
+#			adm = 3
+#			dip = 5
+#			mil = 3
+#			age = 1929
+#			claim = 100
+#		}
+#		hidden_effect = {
+#			add_ruler_personality = immortal_personality
+#			add_ruler_personality = charismatic_negotiator_personality
+#			add_ruler_personality = inspiring_leader_personality
+#			define_consort = {
+#				country_of_origin = TNN
+#				name = "Glarial"
+#				dynasty = "Anterth"
+#				age = 2000
+#				female = yes
+#				adm = 5
+#				dip = 6
+#				mil = 0
+#			}
+#			add_queen_personality = immortal_personality
+#			add_queen_personality = silver_tongue_personality
+#			add_queen_personality = benevolent_personality
+#		}
+#		add_opinion = {
+#			who = EVR
+#			modifier = cda_refused_resistance
+#		}
+#		EVR = {
+#			country_event = {
+#				id = flavor_evr.3
+#				days = 1
+#			}
+#		}
+#		add_country_modifier = {
+#			name = "CDA_abandonment_of_the_elves"
+#			duration = 7300
+#		}
+#		add_prestige = -25
+#		ai_chance = {
+#			factor = 0.1
+#		}
+#		set_country_flag = CDA_abandoning_tirannwn
+#	}
+#}
+
+country_event = {
+	id = flavor_cda.2
+	title = flavor_cda.2.t #The Gnome Empire Turns Their Back
+	desc = flavor_cda.2.d #Terrible news, $MONARCHTITLE$. The Gnome Empire sees our valiant effort to assist our Tirannwnaidd allies as a waste of resources, and are seriously questioning our continued alliance. Prepare for a difficult few years ahead...
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cda.2.a #Trifling gnomes!
+	}
+}
+
+country_event = {
+	id = flavor_cda.3
+	title = flavor_cda.3.t #The Gnome Empire Has Our Back
+	desc = flavor_cda.3.d #Despite our presently precarious situation, [GNE.Monarch.GetName] of the Gnome Empire has insisted on keeping our alliance. This should help secure our position in Kandarin while we help our friends in Tirannwn.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cda.3.a #At least things didn't get any worse.
+	}
+}
+
+country_event = {
+	id = flavor_cda.4
+	title = flavor_cda.4.t #Friends Indeed
+	desc = flavor_cda.4.d #Wonderous news, my $MONARCHTITLE$! The Gnome Empire has decided to provide extra support to our nation while we send elves into Tirannwn! This leaves our kingdom considerably less exposed to outside threats, though it may leave the Gnome Empire somewhat vulnerable.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cda.4.a #I knew allying gnomes was a good idea!
+	}
+}
+
+country_event = {
+	id = flavor_cda.5
+	title = flavor_cda.5.t #Elves of Kandarin
+	desc = {
+		trigger = {
+			religion = bandos
+		}
+		desc = flavor_cda.5.da #We find many pointy-eared weaklings in our way. They no have leader so we crush!
+	}
+	desc = {
+		trigger = {
+			NOT = { religion = bandos }
+		}
+		desc = flavor_cda.5.db #The fall of the elven kingdom in Kandarin have left the remaining elves in a precarious position. How should we handle them?
+	}
+	
+	picture = CADARN_GLARIAL_eventPicture
+	
+	trigger = {
+		NOT = { culture_group = elven_group }
+		NOT = { exists = CDA }
+		NOT = { exists = BXT }
+		exists = EVR
+		current_age = age_of_mortals
+		any_owned_province = {
+			region = kandarin_region
+			culture_group = elven_group
+		}
+		NOT = {
+			has_country_flag = CDA_no_elves_leave
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cda.6.a #This our land!
+		trigger = {
+			religion = bandos
+		}
+		any_owned_province = {
+			limit = {
+				region = kandarin_region
+				culture_group = elven_group
+			}
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+	}
+	
+	option = {
+		name = flavor_cda.6.b #Crush the elves!
+		trigger = {
+			NOT = { religion = bandos }
+		}
+		add_mil_power = -100
+		any_owned_province = {
+			limit = {
+				region = kandarin_region
+				culture_group = elven_group
+			}
+			change_culture = ROOT
+			change_religion = ROOT
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_cda.6.c #Allow the elves safe passage to Tirannwn.
+		trigger = {
+			NOT = { religion = bandos }
+		}
+		any_owned_province = {
+			limit = {
+				region = kandarin_region
+				culture_group = elven_group
+			}
+			change_culture = ROOT
+			change_religion = ROOT
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		EVR = {
+			country_event = {
+				id = flavor_evr.1
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_cda.6.e #Incorporate the elves into our realm.
+		trigger = {
+			NOT = { religion = bandos }
+		}
+		custom_tooltip = CDA_no_elves_leave_tooltip
+		set_country_flag = CDA_no_elves_leave
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

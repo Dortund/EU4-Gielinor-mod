@@ -1,0 +1,32 @@
+#1419-Autumn Road
+owner = HRS
+controller = HRS
+add_core = HRS
+tribal_owner = ---
+culture = arceuus
+religion = zamorak
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = hunter_creatures
+
+is_city = yes
+
+1944.9.16 = {
+	owner = SYZ
+	controller = SYZ
+	add_core = SYZ
+	culture = shayzien
+}
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

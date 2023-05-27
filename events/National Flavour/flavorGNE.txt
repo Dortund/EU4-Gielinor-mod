@@ -1,0 +1,858 @@
+########################################
+# Events for Gnome Empire
+########################################
+
+namespace = flavor_gne
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_gne.1
+	title = flavor_gne.1.t #Hazelmere, the Ethereal
+	desc = flavor_gne.1.d #Hazelmere was one of the original gnomes who grew The Grand Tree, and remains an important figure in our kingdom as our finest tree-whisperer. We should be sure to recruit him by $MONARCH$'s side.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GNE
+			tag = GNO
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_gne.1.a #Let us consider it.
+		define_advisor = {
+			type = statesman
+			name = "Hazelmere the Ethereal"
+			religion = ROOT
+			skill = 3
+			cost_multiplier = 0.25
+			}
+		set_country_flag = gne_hazelmere_the_ethereal
+	}
+}
+
+country_event = {
+	id = flavor_gne.2
+	title = flavor_gne.2.t #Oaknock, the Engineer
+	desc = flavor_gne.2.d #An excellent engineer by the name of Oaknock has caught the interest of $MONARCH$. He has a particular knack for working with elven technology and could make an excellent advisor.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GNE
+			tag = GNO
+		}
+		adm_tech = 4
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_gne.2.a #Can he fix it? Yes he can!
+		define_advisor = {
+			type = natural_scientist
+			name = "Oaknock the Engineer"
+			religion = ROOT
+			skill = 3
+			cost_multiplier = 0.25
+			}
+		set_country_flag = gne_oaknock_the_engineer
+	}
+}
+
+country_event = {
+	id = flavor_gne.3
+	title = flavor_gne.3.t #Giant Tortoises
+	desc = flavor_gne.3.d #We have discovered a population of giant tortoises which would make excellent mounts! One has already been presented to $MONARCH$ to serve as their personal steed, which they have named Mibbiwocket.
+	picture = GNOME_GIANT_TORTOISE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GNE
+			tag = GNO
+		}
+		OR = {
+			num_of_explorers = 1
+			dip_tech = 5
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 100
+	}
+	
+	option = {
+		name = flavor_gne.3.a #All enemies of the Gnome Empire will learn to fear the name Mibbiwocket!
+			add_country_modifier = {
+				name = "GNE_tortoise_warfare"
+				duration = 3650
+			}
+	}
+}
+
+country_event = {
+	id = flavor_gne.4
+	title = flavor_gne.4.t #Glouphrie, the Untrusted
+	desc = flavor_gne.4.d #A powerful mage has caught our attention. His name is Glouphrie and his expertise lies in illusion spells. Some in the court are concerned about his intentions, but his abilities could turn the tide of battle even if we had a numbers disadvantage.
+	picture = GLOUPHRIE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GNE
+			tag = GNO
+		}
+		mil_tech = 5
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = flavor_gne.4.a #We can probably trust him.
+			add_country_modifier = {
+				name = "GNE_illusion_magicks"
+				duration = 3650
+			}
+		set_country_flag = gne_glouphrie_the_untrusted
+	}
+}
+
+country_event = {
+	id = flavor_gne.5
+	title = flavor_gne.5.t #The Death of Argento
+	desc = flavor_gne.5.d #There is sad news to report. The eldest Spirit Tree, Argento, is dead. Thanks to the efforts of Oaknock's machines, we have discovered that he was killed some time ago and an illusion was placed upon him to cover this up. The culprit appears to be none other than Glouphrie.
+	picture = GNOME_TREEHOUSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GNE
+			tag = GNO
+			tag = TGV
+		}
+		owns_core_province = 270
+		has_country_flag = gne_glouphrie_the_untrusted
+		has_country_flag = gne_oaknock_the_engineer
+	}
+
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	option = {
+		name = flavor_gne.5.a #I knew we shouldn't have trusted him!
+		remove_country_modifier = GNE_illusion_magicks
+		clr_country_flag = gne_glouphrie_the_untrusted
+		set_country_flag = gne_glouphrie_exiled
+	}
+}
+
+country_event = {
+	id = flavor_gne.6
+	title = flavor_gne.6.t #The City of Arposandra
+	desc = flavor_gne.6.d #It turns out Glouphrie has more allies than we thought. A large number of Gnomish families seem to be heading south, to the southernmost part of the Galarpos Mountains. We hear of only one word: Arposandra.
+	picture = GLOUPHRIE_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GNE
+			tag = GNO
+			tag = TGV
+		}
+		has_country_flag = gne_glouphrie_exiled
+		341 = { is_empty = yes }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = flavor_gne.6.a #Let's join this so-called Arposandra!
+		341 = {
+			add_core = AOS
+			cede_province = AOS
+			change_province_name = "Arposandra"
+		}
+		switch_tag = AOS
+	}
+	option = {
+		name = flavor_gne.6.b #Well, at least Glouphrie's keeping himself busy.
+		341 = {
+			add_core = AOS
+			cede_province = AOS
+			change_province_name = "Arposandra"
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gne.7
+	title = flavor_gne.7.t #Overstretched Empire?
+	desc = flavor_gne.7.d #The Gnome Empire has expanded considerably in recent years, but the relatively tight-knit administration has struggled to assert authority over all of it. Representatives of the Tree Gnome Village in particular have been voicing their disapproval with their tendency to be left out of decision-making processes. This may eventually lead to the Gnome Empire splitting in two.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GNE
+		total_development = 300
+		NOT = { adm_tech = 10 }
+		NOT = { has_country_flag = gne_had_empire_split }
+		OR = {
+			owns_core_province = 263
+			owns_core_province = 264
+			owns_core_province = 265
+			owns_core_province = 266
+			owns_core_province = 282
+			owns_core_province = 283
+			owns_core_province = 284
+			owns_core_province = 285
+			owns_core_province = 286
+			owns_core_province = 287
+			owns_core_province = 288
+			owns_core_province = 289
+			owns_core_province = 290
+			owns_core_province = 291
+			owns_core_province = 292
+			owns_core_province = 293
+			owns_core_province = 294
+			owns_core_province = 295
+			owns_core_province = 296
+			owns_core_province = 775
+			owns_core_province = 777
+			owns_core_province = 778
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 263
+					province_id = 264
+					province_id = 265
+					province_id = 266
+					province_id = 282
+					province_id = 283
+					province_id = 284
+					province_id = 285
+					province_id = 286
+					province_id = 287
+					province_id = 288
+					province_id = 289
+					province_id = 290
+					province_id = 291
+					province_id = 292
+					province_id = 293
+					province_id = 294
+					province_id = 295
+					province_id = 296
+					province_id = 775
+					province_id = 777
+					province_id = 778
+				}
+			}
+			add_core = TGV
+		}
+	}
+	
+	option = {
+		name = flavor_gne.7.a #We can delay a push for independence with greater autonomy for our southern provinces.
+		set_country_flag = gne_slow_split
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 263
+					province_id = 264
+					province_id = 265
+					province_id = 266
+					province_id = 282
+					province_id = 283
+					province_id = 284
+					province_id = 285
+					province_id = 286
+					province_id = 287
+					province_id = 288
+					province_id = 289
+					province_id = 290
+					province_id = 291
+					province_id = 292
+					province_id = 293
+					province_id = 294
+					province_id = 295
+					province_id = 296
+					province_id = 775
+					province_id = 777
+					province_id = 778
+				}
+			}
+			add_local_autonomy = 30
+		}
+	}
+	option = {
+		name = flavor_gne.7.b #We are the Gnome Empire, not the Gnome Democracy!
+		set_country_flag = gne_fast_split
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 263
+					province_id = 264
+					province_id = 265
+					province_id = 266
+					province_id = 282
+					province_id = 283
+					province_id = 284
+					province_id = 285
+					province_id = 286
+					province_id = 287
+					province_id = 288
+					province_id = 289
+					province_id = 290
+					province_id = 291
+					province_id = 292
+					province_id = 293
+					province_id = 294
+					province_id = 295
+					province_id = 296
+					province_id = 775
+					province_id = 777
+					province_id = 778
+				}
+			}
+			add_province_modifier = {
+				GNE_tree_gnome_village_rebels
+				duration = 3650
+			}
+		}
+	}
+ }
+
+country_event = {
+	id = flavor_gne.8
+	title = flavor_gne.8.t #Succession of Healthorg
+	desc = flavor_gne.8.d #With the passing of our greatest King, succession has fallen to $MONARCH$. But another candidate named Bolrie from the Tree Gnome Village has stepped forward. He accuses $MONARCH$ of being too friendly with humans and blind to the threats around our empire. Putting Bolrie on the throne would help strengthen the internal relations between the Gnome Stronghold and Tree Gnome Village, but his seeming xenophobic tendencies could cause us other trouble down the line.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GNE
+		owns_core_province = 286
+		OR = {
+			NOT = { adm = 6 }
+			NOT = { dip = 5 }
+			NOT = { mil = 6 }
+			NOT = { has_ruler = "Healthorg" }
+		}
+		has_country_flag = gne_glouphrie_exiled
+		NOT = { has_country_flag = gne_healthorg_successor_uncontested }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gne.8.a #Nonsense! $MONARCH$ is clearly the best leader!
+		add_legitimacy = 10
+		set_country_flag = gne_tgv_snubbed
+		ai_chance = {
+			factor = 0.9
+		}
+	}
+	option = {
+		name = flavor_gne.8.b #Bolrie makes some good points...
+		add_legitimacy = -10
+		define_ruler = {
+			name = "Bolrie"
+			dynasty = "Yarys"
+			adm = 6
+			dip = 1
+			mil = 5
+			age = 27
+			claim = 95
+			add_ruler_personality = scholar
+		}
+		set_country_flag = gne_unlikely_candidate
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gne.9
+	title = flavor_gne.9.t #Succession of Healthorg
+	desc = flavor_gne.9.d #With the passing of our greatest King, succession has fallen to $MONARCH$, and was uncontested.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GNE
+		OR = {
+			NOT = { owns_core_province = 286 }
+			NOT = { has_country_flag = gne_glouphrie_exiled }
+		}
+		OR = {
+			NOT = { adm = 6 }
+			NOT = { dip = 5 }
+			NOT = { mil = 6 }
+			NOT = { has_ruler = "Healthorg" }
+		}
+		NOT = { has_country_flag = gne_tgv_snubbed }
+		NOT = { has_country_flag = gne_unlikely_candidate }
+		NOT = { has_country_flag = gne_likely_candidate }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = gne_healthorg_successor_uncontested
+	}
+	
+	option = {
+		name = flavor_gne.9.a #Long live $MONARCH$!
+		add_legitimacy = 5
+	}
+}
+
+country_event = {
+	id = flavor_gne.10
+	title = flavor_gne.10.t #Secessionist Pressures
+	desc = flavor_gne.10.d #The population of our southern provinces have decided that the time for greater autonomy has come. Soon this crisis will reach boiling point, and we will have to either be heavy-handed or split the empire. Neither is desirable.
+	picture = GNOME_TREEHOUSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GNE
+		OR = {
+			has_country_flag = gne_glouphrie_exiled
+			has_country_flag = gne_tgv_snubbed
+			has_country_flag = gne_slow_split
+			has_country_flag = gne_fast_split
+		}
+		NOT = { has_country_flag = gne_unlikely_candidate }
+		NOT = { has_global_flag = gne_end_of_old_empire }
+		OR = {
+			owns_core_province = 263
+			owns_core_province = 264
+			owns_core_province = 265
+			owns_core_province = 266
+			owns_core_province = 282
+			owns_core_province = 283
+			owns_core_province = 284
+			owns_core_province = 285
+			owns_core_province = 286
+			owns_core_province = 287
+			owns_core_province = 288
+			owns_core_province = 289
+			owns_core_province = 290
+			owns_core_province = 291
+			owns_core_province = 292
+			owns_core_province = 293
+			owns_core_province = 294
+			owns_core_province = 295
+			owns_core_province = 296
+			owns_core_province = 775
+			owns_core_province = 777
+			owns_core_province = 778
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+		modifier = {
+			factor = 0.2
+			has_country_flag = gne_fast_split
+		}
+		modifier = {
+			factor = 2
+			has_country_flag = gne_slow_split
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = gne_glouphrie_exiled
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = gne_tgv_snubbed
+		}
+		modifier = {
+			factor = 0
+			has_country_flag = gne_unlikely_candidate
+		}
+	}
+	
+	immediate = {
+		set_country_flag = gne_gnome_secessionists
+	}
+	
+	option = {
+		name = flavor_gne.10.a #We'll deal with these secessionists in due time.
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 263
+					province_id = 264
+					province_id = 265
+					province_id = 266
+					province_id = 282
+					province_id = 283
+					province_id = 284
+					province_id = 285
+					province_id = 286
+					province_id = 287
+					province_id = 288
+					province_id = 289
+					province_id = 290
+					province_id = 291
+					province_id = 292
+					province_id = 293
+					province_id = 294
+					province_id = 295
+					province_id = 296
+					province_id = 775
+					province_id = 777
+					province_id = 778
+				}
+			}
+			add_province_modifier = GNE_tree_gnome_village_rebels
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gne.11
+	title = flavor_gne.11.t #Bolrie's Advisor
+	desc = flavor_gne.11.d #When Bolrie rose to power, he also took a personal advisor with him. This advisor recommends that in the face of dangerous humans, gnomes would do well to band together. He suggests seeking stronger ties with the estranged city of Arposandra.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GNE
+		has_country_flag = gne_unlikely_candidate
+		exists = AOS
+		has_ruler = "Bolrie"
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = flavor_gne.11.a #By Guthix, he's right!
+		add_opinion = {
+			who = AOS
+			modifier = gne_gnomes_stick_together
+		}
+		AOS = {
+			country_event = {
+				id = flavor_aos.1
+				days = 1
+			}
+		}
+		set_country_flag = gne_aos_infiltration
+	}
+	
+	option = {
+		name = flavor_gne.11.b #This isn't a priority right now.
+		set_country_flag = gne_refused_aos
+	}
+}
+
+country_event = {
+	id = flavor_gne.12
+	title = flavor_gne.12.t #Yewnock's Suspicions
+	desc = flavor_gne.12.d #Yewnock, son of Oaknock, is every bit as gifted an engineer as his father, and is equally effective at dispelling illusions. After becoming suspicious of Bolrie's personal advisor, he's made a startling discovery - this gnome is none other than Glouphrie! Long thought dead among most of the Gnome Empire, this relevation has come as a great surprise.
+	picture = GNOME_TREEHOUSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GNE
+		OR = {
+			has_country_flag = gne_aos_infiltration
+			has_country_flag = gne_refused_aos
+		}
+		
+		has_ruler = "Bolrie"
+	}
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 3
+			has_country_flag = gne_refused_aos
+		}
+	}
+	
+	immediate = {
+		clr_country_flag = gne_refused_aos
+		clr_country_flag = gne_aos_infiltration
+		set_country_flag = gne_glouphrie_caught
+	}
+	
+	option = {
+		name = flavor_gne.12.a #Just as planned.
+		define_ruler = {
+			name = "Glouphrie"
+			dynasty = "Imblewyn"
+			birth_date = 1871.10.11
+			adm = 2
+			dip = 5
+			mil = 6
+			clear_scripted_personalities = yes
+			add_ruler_personality = intricate_web_weaver_personality
+		}
+		create_alliance = AOS
+		set_country_flag = gne_glouphrie_rules
+		AOS = {
+			country_event = {
+				id = flavor_aos.2
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = flavor_gne.12.b #Bolrie's in league with Glouphrie! Death to the betrayer king!
+		clr_country_flag = gne_unlikely_candidate
+		set_country_flag = gne_likely_candidate
+		kill_ruler = yes
+		add_stability = -1
+	}
+	
+	option = {
+		name = flavor_gne.12.c #Wow, that was a close one.
+		set_country_flag = gne_aos_close_call
+		add_legitimacy = -20
+		add_stability = -1
+		add_country_modifier = {
+			name = "GNE_fool_of_a_king"
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gne.13
+	title = flavor_gne.13.t #Succession of Bolrie
+	desc = flavor_gne.13.d #With the passing of Bolrie, succession has fallen to $MONARCH$, though his faithful advisor has also thrown his hat into the ring. Should we take the safe bet with $MONARCH$ or risk it?
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GNE
+		NOT = { has_ruler = "Bolrie" }
+		has_country_flag = gne_unlikely_candidate
+		NOT = { has_country_flag = gne_glouphrie_caught }
+		NOT = { has_country_flag = gne_glouphrie_rules }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gne.13.a #We'll be safe with $MONARCH$!
+		add_legitimacy = 5
+		country_event = {
+			id = flavor_gne.14
+			days = 1
+		}
+	}
+	option = {
+		name = flavor_gne.13.b #Let's take a chance on this advisor.
+		country_event = {
+			id = flavor_gne.15
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gne.14
+	title = flavor_gne.14.t #Results of the Election
+	desc = flavor_gne.14.d #$MONARCH$'s position has been secured. The late Bolrie's advisor has left, muttering to himself.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gne.14 #Good riddance.
+	}
+}
+
+country_event = {
+	id = flavor_gne.15
+	title = flavor_gne.15.t #Results of the Election
+	desc = flavor_gne.15.d #As the results of the election was about to be revealed, Yewknock, son of Oaknock and one of our finest engineers, burst into the room. He shouted across the room, exhausted but determined, to stop - for Bolrie's former advisor is none other than Glouphrie in disguise!
+	picture = GLOUPHRIE_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gne.15 #Just as planned.
+		define_ruler = {
+			name = "Glouphrie"
+			dynasty = "Imblewyn"
+			birth_date = 1871.10.11
+			adm = 2
+			dip = 5
+			mil = 6
+			clear_scripted_personalities = yes
+			add_ruler_personality = intricate_web_weaver_personality
+		}
+		create_alliance = AOS
+		set_country_flag = gne_glouphrie_rules
+		AOS = {
+			country_event = {
+				id = flavor_aos.2
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gne.16
+	title = flavor_gne.16.t #The Death of Glouphrie
+	desc = flavor_gne.16.d #Glouphrie's reign of terror has ended.
+	picture = GLOUPHRIE_eventPicture
+	
+	trigger = {
+		tag = GNE
+		NOT = { has_ruler = "Glouphrie" }
+		has_country_flag = gne_glouphrie_rules
+		NOT = { has_global_flag = gne_end_of_old_empire }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gne.16 #Phew.
+		clr_country_flag = gne_glouphrie_rules
+	}
+}
+
+country_event = {
+	id = flavor_gne.17
+	title = flavor_gne.17.t #Vulernability of Cadarn
+	desc = flavor_gne.17.d #Our allies, the Cadarn clan, have sent a significant portion of their forces westward to Tirannwn. Many in our empire view this development as a sign the elves intend to withdraw from Kandarin, or at the very least will be unable to assist us when we need it. In the courts, there are calls for us to break our alliance so we can shift resources elsewhere. What should we do?
+	picture = CADARN_GLARIAL_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 36
+	}
+	
+	option = {
+		name = flavor_gne.17.a #The people have spoken. We cannot hold onto this alliance much longer.
+		remove_historical_friend = CDA
+		remove_historical_friend = TNN
+		add_trust = {
+			who = CDA
+			value = -50
+			mutual = yes
+		}
+		add_opinion = {
+			who = CDA
+			modifier = gne_trifling_gnomes
+		}
+		CDA = {
+			add_opinion = {
+				who = GNE
+				modifier = gne_no_longer_worthwhile
+			}
+			country_event = {
+				id = flavor_cda.2
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 0.8
+		}
+	}
+	option = {
+		name = flavor_gne.17.b #Keep the relations as they are.
+		add_stability = -1
+		CDA = {
+			country_event = {
+				id = flavor_cda.3
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+	option = {
+		name = flavor_gne.17.c #Let us shoulder Cadarn's burden!
+		add_prestige = 50
+		add_stability = -2
+		add_country_modifier = {
+			name = "CDA_depleted_armies"
+			duration = 7300
+		}
+		add_trust = {
+			who = CDA
+			value = 25
+			mutual = yes
+		}
+		add_opinion = {
+			who = CDA
+			modifier = gne_friend_indeed
+		}
+		ai_chance = {
+			factor = 0.1
+		}
+		CDA = {
+			add_country_modifier = CDA_gnomish_assistance
+			country_event = {
+				id = flavor_cda.4
+				days = 1
+			}
+		}
+	}
+}

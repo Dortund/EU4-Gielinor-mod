@@ -1,0 +1,33 @@
+#281-Piscatoris
+owner = STR
+controller = STR
+add_core = STR
+tribal_owner = ---
+culture = seatroll
+religion = bandos
+
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 4
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 1
+
+2149.11.21 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	culture = piscatorian
+	religion = saradomin
+}

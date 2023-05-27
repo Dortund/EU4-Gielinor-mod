@@ -1,0 +1,24 @@
+government = tribal
+add_government_reform = quidamortem_boss_nation
+government_rank = 2
+primary_culture = quidamortem
+religion = xeric
+technology_group = zeantechgroup
+capital = 935 #Chambers of Xeric
+national_focus = MIL
+historical_friend = LCT
+historical_friend = MOH
+historical_rival = KOU
+
+1033.10.3 = {
+	monarch = {
+		name = "Great Olm"
+		dynasty = "the Guardian"
+		birth_date = 1025.10.4
+		adm = 2
+		dip = 2
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

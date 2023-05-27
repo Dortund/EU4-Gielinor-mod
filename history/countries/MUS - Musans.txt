@@ -1,0 +1,34 @@
+government = tribal
+add_government_reform = migratory_tribe
+government_rank = 1
+primary_culture = northkaramjan
+religion = karamjan
+technology_group = karamjantechgroup
+capital = 209 #Musa Point
+national_focus = DIP
+historical_friend = TZH
+
+1928.4.18 = {
+	monarch = {
+		name = "Karamji"
+		dynasty = "Lobbis"
+		birth_date = 1909.3.7
+		adm = 2
+		dip = 6
+		mil = 2
+	}
+}
+
+2130.7.11 = {
+	add_government_reform = merchants_reform
+	monarch = {
+		name = "Zwurd"
+		dynasty = "Pheesh"
+		culture = north_asgarn
+		religion = saradomin
+		birth_date = 2109.4.17
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}

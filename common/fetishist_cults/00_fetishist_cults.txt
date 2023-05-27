@@ -1,0 +1,373 @@
+###
+#GOBLIN/HOBGOBLIN
+###
+
+cower_strategy = {
+ 	recover_army_morale_speed = 0.05
+	leader_land_manuever = 1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = cover_strategy
+			AND = {
+				culture_group = goblin_group
+				NOT = { culture = hobgoblin }
+			}
+		}
+	}
+	sprite = 1
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+raider_strategy = {
+ 	loot_amount = 0.25
+	privateer_efficiency = 0.25
+
+	allow = {
+		OR = {
+			has_unlocked_cult = raider_strategy
+			culture_group = goblin_group
+		}
+	}
+	sprite = 2
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+spear_strategy = {
+ 	infantry_power = 0.05
+	movement_speed = 0.10
+
+	allow = {
+		OR = {
+			has_unlocked_cult = spear_strategy
+			culture_group = goblin_group
+		}
+	}
+	sprite = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+geomancer_strategy = {
+ 	fire_damage = 0.05
+	tolerance_own = 1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = cover_strategy
+			primary_culture = hobgoblin
+		}
+	}
+	sprite = 4
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+###
+# Ogre
+###
+
+feldip_consolidation_strategy = {
+ 	development_cost = -0.1
+	province_warscore_cost = 0.1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = feldip_consolidation_strategy
+			AND = {
+				primary_culture = ogre
+				capital_scope = {
+					continent = west_runescape
+				}
+			}
+			
+		}
+	}
+	sprite = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+ronin_strategy = {
+ 	raze_power_gain = 0.2
+	drill_gain_modifier = 0.1
+	allow = {
+		OR = {
+			has_unlocked_cult = ronin_strategy
+			AND = {
+				primary_culture = ogre
+				capital_scope = {
+					continent = wushanko_isles_continent
+				}
+			}
+			
+		}
+	}
+	sprite = 17
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shamanic_strategy = {
+ 	siege_ability = 0.1
+ 	global_missionary_strength = 0.01
+
+	allow = {
+		OR = {
+			has_unlocked_cult = shamanic_strategy
+			culture_group = ogre_group
+		}
+	}
+	sprite = 6
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+jig_strategy = {
+ 	global_unrest = -1
+	drill_decay_modifier = -0.1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = jig_strategy
+			culture_group = ogre_group
+		}
+	}
+	sprite = 7
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+jogre_strategy = {
+ 	land_attrition = -0.1
+ 	build_time = -0.1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = jogre_strategy
+			primary_culture = jogre
+		}
+	}
+	sprite = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+mogre_strategy = {
+ 	global_sailors_modifier = 0.15
+ 	navy_tradition_decay = -0.01
+
+	allow = {
+		OR = {
+			has_unlocked_cult = mogre_strategy
+			primary_culture = mogre
+		}
+	}
+	sprite = 9
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+###
+# Troll
+###
+
+naming_ritual_strategy = {
+ 	prestige_from_land = 1
+	shock_damage = 0.1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = naming_ritual_strategy
+			culture_group = troll_group
+		}
+	}
+	sprite = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+rockthrower_strategy = {
+ 	leader_land_fire = 1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = rockthrower_strategy
+			culture_group = troll_group
+		}
+	}
+	sprite = 11
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+reform_strategy = {
+ 	diplomatic_reputation = 1
+	global_institution_spread = 0.1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = reform_strategy
+			culture_group = troll_group
+		}
+	}
+	sprite = 12
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+###
+# Special
+###
+
+chosen_commander_strategy = {
+ 	leader_land_shock = 2
+	army_tradition = 1
+
+	allow = {
+		has_unlocked_cult = chosen_commander_strategy
+	}
+	sprite = 13
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+###
+# Giant
+###
+
+bread_baking_strategy = {
+	global_autonomy = -0.05
+ 	supply_limit_modifier = 0.05
+
+	allow = {
+		OR = {
+			has_unlocked_cult = gold_hoarding_strategy
+			culture_group = giant_group
+		}
+	}
+	sprite = 14
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+gold_hoarding_strategy = {
+ 	inflation_reduction = 0.1
+ 	interest = -0.25
+
+	allow = {
+		OR = {
+			has_unlocked_cult = gold_hoarding_strategy
+			culture_group = giant_group
+		}
+	}
+	sprite = 15
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+acoustics_strategy = {
+ 	adm_tech_cost_modifier = -0.1
+	tolerance_heathen = 1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = gold_hoarding_strategy
+			primary_culture = cloud_giant
+		}
+	}
+	sprite = 16
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+###
+# Ork
+###
+
+recordkeeping_strategy = {
+ 	legitimacy = 1
+	meritocracy = 1
+	republican_tradition = 0.5
+	reform_progress_growth = 0.15
+
+	allow = {
+		OR = {
+			has_unlocked_cult = recordkeeping_strategy
+			culture_group = ork_group
+		}
+	}
+	sprite = 18
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+support_strategy = {
+ 	diplomatic_upkeep = 1
+	monthly_favor_modifier = 0.15
+
+	allow = {
+		OR = {
+			has_unlocked_cult = recordkeeping_strategy
+			culture_group = ork_group
+		}
+	}
+	sprite = 19
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+triangular_formation_strategy = {
+ 	discipline = 0.05
+	allow = {
+		OR = {
+			has_unlocked_cult = recordkeeping_strategy
+			culture_group = ork_group
+		}
+	}
+	sprite = 20
+
+	ai_will_do = {
+		factor = 1
+	}
+}

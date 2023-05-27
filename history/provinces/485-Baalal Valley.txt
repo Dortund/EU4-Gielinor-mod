@@ -1,0 +1,23 @@
+#485 - Baalal Valley
+owner = BAA
+controller = BAA
+add_core = BAA
+tribal_owner = ---
+culture = baalal
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = magic_supplies
+
+is_city = yes
+
+center_of_trade = 1

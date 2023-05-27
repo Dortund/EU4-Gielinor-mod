@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = rogue_republic
+government_rank = 1
+primary_culture = rogue
+religion = zamorak
+technology_group = northerntechgroup
+capital = 164
+national_focus = ADM
+
+2159.1.17 = {
+	monarch = {
+		name = "Black Heather"
+		dynasty = "Dyemer"
+		birth_date = 2131.10.13
+		adm = 5
+		dip = 3
+		mil = 6
+	}
+}

@@ -1,0 +1,31 @@
+#1012-Achey
+owner = ULW
+controller = ULW
+add_core = ULW
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+2159.3.12 = {
+	owner = FEL
+	controller = FEL
+	add_core = FEL
+	remove_core = ULW
+}

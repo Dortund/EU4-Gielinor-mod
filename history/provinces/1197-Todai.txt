@@ -1,0 +1,19 @@
+#1197 - Todai
+owner = YMD
+controller = YMD
+add_core = YMD
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = fishing_spot
+
+is_city = yes

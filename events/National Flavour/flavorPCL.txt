@@ -1,0 +1,25 @@
+########################################
+# Events for Piscarilius
+########################################
+
+namespace = flavor_pcl
+normal_or_historical_nations = yes
+
+# 
+country_event = {
+	id = flavor_pcl.1
+	title = flavor_pcl.1.t #[KOU.Monarch.GetTitle] [KOU.Monarch.GetName] gives us a delicious bribe!
+	desc = flavor_pcl.1.d #[KOU.Monarch.GetTitle] [KOU.Monarch.GetName] has made a so-called donation to Piscarilius, but it's clearly a bribe. Can't complain; money is money.
+	picture = KOUREND_HOUSES_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_pcl.1.a #How wonderful!
+		add_treasury = 250
+	}
+}

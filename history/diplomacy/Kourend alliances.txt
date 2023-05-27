@@ -1,0 +1,44 @@
+#Kourend-Arceuus
+dependency = {
+	subject_type = "subject_house"
+	first = KOU
+	second = AUU
+	start_date = 1800.1.1
+	end_date = 1969.11.5
+}
+
+#Kourend-Hosidius
+dependency = {
+	subject_type = "subject_house"
+	first = KOU
+	second = HOS
+	start_date = 1800.1.1
+	end_date = 1969.11.5
+}
+
+#Kourend-Lovakengj
+dependency = {
+	subject_type = "subject_house"
+	first = KOU
+	second = LOV
+	start_date = 1800.1.1
+	end_date = 1969.11.5
+}
+
+#Kourend-Piscarilius
+dependency = {
+	subject_type = "subject_house"
+	first = KOU
+	second = PCL
+	start_date = 1800.1.1
+	end_date = 1969.11.5
+}
+
+#Kourend-Shayzien
+dependency = {
+	subject_type = "subject_house"
+	first = KOU
+	second = SYZ
+	start_date = 1800.1.1
+	end_date = 1969.11.5
+}

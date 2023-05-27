@@ -1,0 +1,21 @@
+#1216-Black Stone Fortress
+owner = RNO
+controller = RNO
+add_core = RNO
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 4
+
+fort_15th = yes
+
+trade_goods = gemstones
+
+is_city = yes

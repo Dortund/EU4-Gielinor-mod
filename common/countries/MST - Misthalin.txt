@@ -1,0 +1,146 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 158 0 165 }
+
+revolutionary_colors = { 2 10 6 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+ship_names = {
+	"Edelweiss" "Lady Lumbridge" "Waka" "Stormbreaker"
+}
+
+monarch_names = {
+	"Aeonisig #0" = 1
+	"Alfi #0" = 1
+	"Altrodor #0" = 1
+	"Andrew #0" = 1
+	"Arthur #0" = 1
+	"Avan #0" = 1
+	"Badden #0" = 1
+	"Balek #0" = 1
+	"Baraek #0" = 1
+	"Botolph #0" = 1
+	"Brana #0" = 1
+	"Brugsen #0" = 1
+	"Cadmus #0" = 1
+	"Caleb #0" = 1
+	"Charles #0" = 1
+	"Clive #0" = 1
+	"Devlin #0" = 1
+	"Dimintheis #0" = 1
+	"Draul #0" = 1
+	"Enhtor #0" = 1
+	"Erasmus #0" = 1
+	"Eustace #0" = 1
+	"Everard #0" = 1
+	"Feoras #0" = 1
+	"Frey #0" = 1
+	"Gideon #0" = 1
+	"Gordon #0" = 1
+	"Haige #0" = 1
+	"Harlan #0" = 1
+	"Hartwin #0" = 1
+	"Hans #0" = 1
+	"Herbert #0" = 1
+	"Horvik #0" = 1
+	"Ian #0" = 1
+	"Isaac #0" = 1
+	"Ingald #0" = 1
+	"Ivandis #0" = 1
+	"John #0" = 1
+	"Johnathon #0" = 1
+	"Kherian #0" = 1
+	"Lawrence #0" = 1
+	"Layte #0" = 1
+	"Lev #0" = 1
+	"Marfet #0" = 1
+	"Marius #0" = 1
+	"Matthew #0" = 1
+	"Merrick #0" = 1
+	"Minas #0" = 1
+	"Paul #0" = 1
+	"Phileas #0" = 1
+	"Philop #0" = 1
+	"Prysin #0" = 1
+	"Raminme #0" = 1
+	"Randulf #0" = 1
+	"Reldo #0" = 1
+	"Roald #0" = 1
+	"Robert #0" = 1
+	"Romily #0" = 1
+	"Rupert #0" = 1
+	"Samuel #0" = 1
+	"Sani #0" = 1
+	"Sarl #0" = 1
+	"Stephan #0" = 1
+	"Straven #0" = 1
+	"Stuart #0" = 1
+	"Talvoy #0" = 1
+	"Tarquin #0" = 1
+	"Terrova #0" = 1
+	"Thomas #0" = 1
+	"Thrander #0" = 1
+	"Tobias #0" = 1
+	"Tolna #0" = 1
+	"Torrcs #0" = 1
+	"Traznor #0" = 1
+	"Treznor #0" = 1
+	"Trevick #0" = 1
+	"Varmen #0" = 1
+	"Walter #0" = 1
+	"Wilfred #0" = 1
+	"Wilough #0" = 1
+	
+	"Ailane #0" = -1
+	"Ana #0" = -1
+	"Anna #0" = -1
+	"Anne #0" = -1
+	"Benita #0" = -1
+	"Brynna #0" = -1
+	"Caitlin #0" = -1
+	"Catherina #0" = -1
+	"Debora #0" = -1
+	"Donie #0" = -1
+	"Elizabeth #0" = -1
+	"Ellamaria #0" = -1
+	"Eloise #0" = -1
+	"Elsie #0" = -1
+	"Emma #0" = -1
+	"Essiandar #0" = -1
+	"Esther #0" = -1
+	"Ethel #0" = -1
+	"Gertrude #0" = -1
+	"Helda #0" = -1
+	"Idonea #0" = -1
+	"Iffie #0" = -1
+	"Ilona #0" = -1
+	"Irena #0" = -1
+	"Isabella #0" = -1
+	"Jennica #0" = -1
+	"Katrine #0" = -1
+	"Lara #0" = -1
+	"Launa #0" = -1
+	"Lucretia #0" = -1
+	"Mabel #0" = -1
+	"Martina #0" = -1
+	"Mavis #0" = -1
+	"Nemarti #0" = -1
+	"Olivia #0" = -1
+	"Phillipa #0" = -1
+	"Tassie #0" = -1
+	"Thessalia #0" = -1
+	"Trista #0" = -1
+	"Turine #0" = -1
+}

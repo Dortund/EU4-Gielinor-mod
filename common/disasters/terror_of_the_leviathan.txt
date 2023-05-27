@@ -1,0 +1,70 @@
+#Terror of the Leviathan
+#Occurs for Hanto during the Fifth Age
+
+terror_of_the_leviathan = {
+	potential = {
+		tag = HNT
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+		NOT = { religion = xautak }
+		NOT = { has_country_flag = HNT_end_of_terror }
+		OR = {
+			current_age = age_of_humans
+			current_age = age_of_adventurers
+		}
+	}
+
+	can_start = {
+	 	has_any_disaster = no
+		tag = HNT
+		OR = {
+			current_age = age_of_humans
+			current_age = age_of_adventurers
+		}
+	}
+	
+	can_stop = {
+		religion = xautak
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2
+			NOT = { army_size = 15 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { religion = xautak }
+		}
+		modifier = {
+			factor = -1
+			navy_size_percentage = 1
+		}
+	}
+
+	can_end = {
+		OR = {
+			religion = xautak
+			AND = {
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 2
+				had_country_flag = { flag = HNT_terror_start days = 3650 }
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 5
+		naval_attrition = 0.5
+		global_tax_modifier = -0.25
+		global_trade_power = -0.25
+	}
+	
+	on_start = terror_of_the_leviathan.1
+	on_end = terror_of_the_leviathan.100
+}
+

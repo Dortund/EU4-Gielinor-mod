@@ -1,0 +1,23 @@
+#1171-Tokoko
+owner = TKK
+controller = TKK
+add_core = TKK
+tribal_owner = ---
+culture = bowl_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 1

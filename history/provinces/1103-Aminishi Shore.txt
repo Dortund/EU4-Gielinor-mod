@@ -1,0 +1,24 @@
+#1103 - Aminishi Shore
+owner = AMS
+controller = AMS
+add_core = AMS
+tribal_owner = ---
+culture = arc_culture
+religion = seiryu
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = monkeytechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = lesser_loot
+
+is_city = yes

@@ -1,0 +1,16 @@
+#342-Incomitatus
+tribal_owner = ---
+culture = cavegnome
+religion = guthix
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = livestock_farm
+
+native_size = 15
+native_ferocity = 15
+native_hostileness = 5

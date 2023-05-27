@@ -1,0 +1,54 @@
+########################################
+# Events for Menaphos
+########################################
+
+namespace = flavor_mps
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_mps.1
+	title = flavor_mps.1.t #The Kharidians Request Assistance
+	desc = flavor_mps.1.d #On the opposite side of the Kharidian Desert, a small group calling themselves the Kharidians seeks our assistance. With some investment, they would be able to expand their lands, and we would gain a decent ally in the north. Should we offer our support?
+	picture = ALKHARID_CITY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_mps.1.a #Hmm, seems like a good idea...
+		add_adm_power = -75
+		add_prestige = 10
+		KDS = {
+			country_event = {
+				id = flavor_kds.5
+				days = 1
+			}
+		}
+		add_opinion = {
+			who = KDS
+			modifier = kds_granted_assistance
+		}
+		create_alliance = KDS
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_mps.1.b #We'll not get involved.
+		add_prestige = -5
+		KDS = {
+			country_event = {
+				id = flavor_kds.6
+				days = 1
+			}
+		}
+		add_opinion = {
+			who = KDS
+			modifier = kds_refused_assistance
+		}
+	}
+}

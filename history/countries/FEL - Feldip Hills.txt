@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = feldip_government
+government_rank = 2
+primary_culture = ogre
+religion = bandos
+technology_group = bandostechgroup
+capital = 305 #Gu'Tanoth
+national_focus = MIL
+
+1965.2.27 = {
+	monarch = {
+		name = "Rawna"
+		dynasty = "Bashcrash"
+		birth_date = 1928.10.4
+		adm = 0
+		dip = 1
+		mil = 5
+		female = yes
+	}
+}
+
+2168.3.15 = {
+	monarch = {
+		name = "Skrach"
+		dynasty = "Uglogwee"
+		birth_date = 2127.3.7
+		adm = 2
+		dip = 5
+		mil = 2
+	}
+}

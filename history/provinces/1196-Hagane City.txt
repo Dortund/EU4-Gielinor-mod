@@ -1,0 +1,19 @@
+#1196 - Hagane City
+owner = YMD
+controller = YMD
+add_core = YMD
+tribal_owner = ---
+culture = siren
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 4
+base_manpower = 3
+
+trade_goods = manufactured_goods
+
+is_city = yes

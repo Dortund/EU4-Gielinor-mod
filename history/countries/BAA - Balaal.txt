@@ -1,0 +1,32 @@
+government = theocracy
+add_government_reform = shamanic_theocracy
+government_rank = 1
+primary_culture = baalal
+religion = xeric
+technology_group = zeantechgroup
+capital = 485 #Baalal Valley
+national_focus = ADM
+
+1919.11.7 = {
+	monarch = {
+		name = "Aapo"
+		dynasty = "Babajide"
+		birth_date = 1894.9.13
+		adm = 5
+		dip = 0
+		mil = 6
+		female = yes
+	}
+}
+
+2166.12.2 = {
+	monarch = {
+		name = "Wak"
+		dynasty = "Babajide"
+		birth_date = 2141.6.7
+		adm = 6
+		dip = 6
+		mil = 4
+		female = yes
+	}
+}

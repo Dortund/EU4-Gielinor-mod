@@ -1,0 +1,62 @@
+#Country Name: Please seefilename.
+
+graphical_culture = easterngfx
+
+color = { 12 12 36 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+ship_names = {
+	"The Seahound"
+}
+
+monarch_names = {
+	"Barker #0" = 1
+	"Boris #0" = 1
+	"Brax #0" = 1
+	"Dmitri #0" = 1
+	"Eduard #0" = 1
+	"Fidelio #0" = 1
+	"Fyodor #0" = 1
+	"Georgy #0" = 1
+	"Imre #0" = 1
+	"Jeroen #0" = 1
+	"Jerrod #0" = 1
+	"Joseph #0" = 1
+	"Lev #0" = 1
+	"Lygrass #0" = 1
+	"Manti #0" = 1
+	"Nikolai #0" = 1
+	"Ralph #0" = 1
+	"Roavar #0" = 1
+	"Rufus #0" = 1
+	"Sbott #0" = 1
+	"Yuri #0" = 1
+	
+	"Alexis #0" = -1
+	"Alice #0" = -1
+	"Galina #0" = -1
+	"Greta #0" = -1
+	"Helga #0" = -1
+	"Irina #0" = -1
+	"Ksenia #0" = -1
+	"Larsa #0" = -1
+	"Liliya #0" = -1
+	"Milla #0" = -1
+	"Moira #0" = -1
+	"Nikita #0" = -1
+	"Sofiya #0" = -1
+	"Svetlana #0" = -1
+	"Vera #0" = -1
+	"Yadviga #0" = -1
+	"Zoja #0" = -1
+}

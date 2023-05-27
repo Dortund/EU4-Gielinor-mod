@@ -1,0 +1,26 @@
+country_decisions = {
+	MWL_corrupt_prifddinas = {
+		potential = {
+			tag = MWL
+			religion = dark_lord
+			325 = { has_province_modifier = EVR_reverted_to_crystal }
+		}
+		allow = {
+			owns_core_province = 325
+			325 = { has_province_modifier = EVR_reverted_to_crystal }
+		}
+		effect = {
+			325 = {
+				remove_province_modifier = EVR_reverted_to_crystal
+				add_base_tax = 6
+				add_base_production = 6
+				add_base_manpower = 6
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+}

@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = south_asgarn
+religion = saradomin
+technology_group = centraltechgroup
+capital = 36 #Feorweg
+
+1927.7.28 = {
+	monarch = {
+		name = "Rachael"
+		dynasty = "Clayminer"
+		birth_date = 1888.3.7
+		adm = 4
+		dip = 4
+		mil = 0
+		female = yes
+	}
+}

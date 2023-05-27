@@ -1,0 +1,33 @@
+government = republic
+add_government_reform = sirenic_republic
+government_rank = 1
+primary_culture = siren
+religion = genbu
+technology_group = wushankotechgroup
+capital = 1158 #Wind's Home
+
+1912.7.5 = {
+	monarch = {
+		name = "Umi"
+		dynasty = "Asaka"
+		birth_date = 1875.2.30
+		death_date = 1954.5.18
+		adm = 2
+		dip = 4
+		mil = 5
+		female = yes
+	}
+}
+
+2162.4.10 = {
+	monarch = {
+		name = "Kyo"
+		dynasty = "Asaka"
+		birth_date = 2125.7.5
+		death_date = 2181.4.20
+		adm = 3
+		dip = 3
+		mil = 1
+		female = yes
+	}
+}

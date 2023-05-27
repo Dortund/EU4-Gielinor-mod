@@ -1,0 +1,19 @@
+#469-Xeric's Claw
+owner = CNC
+controller = CNC
+add_core = CNC
+tribal_owner = ---
+culture = mountaintroll
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = livestock_farm
+
+is_city = yes

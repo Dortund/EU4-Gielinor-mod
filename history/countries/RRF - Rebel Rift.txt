@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = rogue_republic
+government_rank = 1
+primary_culture = fortis
+religion = ranul
+technology_group = zeantechgroup
+capital = 503 #Rebel Rift
+historical_friend = KOU
+
+2139.3.16 = {
+	monarch = {
+		name = "Aimone"
+		dynasty = "Sforza"
+		birth_date = 2132.6.17
+		adm = 4
+		dip = 6
+		mil = 3
+	}
+}

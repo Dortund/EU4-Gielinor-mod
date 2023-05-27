@@ -1,0 +1,621 @@
+########################################
+# Marimbo Piety Events
+########################################
+
+namespace = marimbo_piety_event
+
+# Ninja Trainers in [spread_of_extreme_practices_province.GetAreaName]
+country_event = {
+	id = marimbo_piety_event.1
+	title = marimbo_piety_event.1.t
+	desc = marimbo_piety_event.1.d # Ninja monkeys have become an increasingly common sight around [spread_of_extreme_practices_province.GetAreaName], inspiring the general populace to follow in their example. But is not such rigorous training and disciplined practice against Marimbo's values of hedonism?
+	picture = DEATH_LOTUS_NINJA_STAR_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = marimbo
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { is_state = yes }
+				save_event_target_as = spread_of_extreme_practices_province
+			}
+		}
+	}
+	
+	option = {
+		name = marimbo_piety_event.1.a #Curtail the ninjas!
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				piety = 0.1
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 65
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 80
+			}
+		}
+		add_piety = 0.10
+	}
+	option = {
+		name = marimbo_piety_event.1.b #Leave them be
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.1 }
+			}
+			modifier = {
+				factor = 1.5
+				is_year = 2000
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { dominant_religion = ROOT }
+			}
+		}
+		add_piety = -0.10
+	}
+}
+
+# Travelling Scholars
+country_event = {
+	id = marimbo_piety_event.2
+	title = marimbo_piety_event.2.t
+	desc = marimbo_piety_event.2.d #Travelling scholars have brought back books of good governing practices. Sounds like a lot of hard work...
+	picture = APE_ATOLL_MONKEYS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = marimbo
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = marimbo_piety_event.2.a #Surely a bit of organisation can make our parties all the better!
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				piety = 0.1
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+		}
+		add_piety = 0.10
+		add_adm_power = 10
+	}
+	option = {
+		name = marimbo_piety_event.2.b #Reading? Books?! I don't have time for that!
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.1 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { dominant_religion = ROOT }
+			}
+		}
+		add_piety = -0.10
+		add_legitimacy = 10
+	}
+}
+
+# Monkey Archers Rally Support
+country_event = {
+	id = marimbo_piety_event.3
+	title = marimbo_piety_event.3.t
+	desc = marimbo_piety_event.3.d #To assist in the defence of [Root.GetName], our monkey archers have started pushing for wider recruitment. This would be an excellent opportunity to replenish our manpower pool, but will we have anyone left to do anything else?
+	picture = APE_ATOLL_MONKEYS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = marimbo
+		NOT = { manpower_percentage = 0.6 }
+		NOT = { piety = 0 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = marimbo_piety_event.3.a #We don't need any more archers!
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { legitimacy = 70 }
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+			modifier = {
+				factor = 1.25
+				is_year = 2050
+			}
+		}
+		add_piety = 0.15
+		add_legitimacy = 10
+	}
+	option = {
+		name = marimbo_piety_event.3.b #Let them recruit.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.1 }
+			}
+			modifier = {
+				factor = 0.75
+				is_year = 2050
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { dominant_religion = ROOT }
+			}
+		}
+		add_piety = -0.10
+		add_yearly_manpower = 0.5
+	}
+}
+
+# Religious Compromise
+country_event = {
+	id = marimbo_piety_event.4
+	title = marimbo_piety_event.4.t
+	desc = marimbo_piety_event.4.d # Our state has neither pushed far into the ways of hedonism nor the ways of disciplined. This spirit of compromise has reduced the risk of religious and other revolts.
+	picture = APE_ATOLL_MONKEYS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_piety = yes
+		piety = -0.2
+		NOT = { piety = 0.2 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = marimbo_piety_event.4.a #Great!
+		add_stability_or_adm_power = yes
+	}
+}
+
+# Debate over the legacy of Marimbo
+country_event = {
+	id = marimbo_piety_event.5
+	title = marimbo_piety_event.5.t
+	desc = marimbo_piety_event.5.d #Our priests tell us Marimbo once lived among us, but had to leave us alongside all the other major gods of Gielinor. As a consequence, living according to Marimbo's will requires a great deal of assumption and interpretation.
+	picture = APE_ATOLL_MONKEYS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = marimbo
+		NOT = { current_age = age_of_divination }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = marimbo_piety_event.5.a #I'm sure the priests know what they're doing.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				piety = 0.1
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+		}
+		add_piety = 0.15
+	}
+	option = {
+		name = marimbo_piety_event.5.b #Forget the priests! I'll rule my way until Marimbo tells me otherwise!
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.1 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { dominant_religion = ROOT }
+			}
+		}
+		add_piety = -0.15
+	}
+}
+
+# The Case of the Shy
+country_event = {
+	id = marimbo_piety_event.6
+	title = marimbo_piety_event.6.t
+	desc = marimbo_piety_event.6.d #Not everyone partakes in parties equally. While some are out upon the dance floor, others escape the noise into the kitchen.
+	picture = APE_ATOLL_MONKEYS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = marimbo
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = marimbo_piety_event.6.a #The kitchen is still part of the party.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				piety = 0.1
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+		}
+		add_piety = 0.1
+	}
+	option = {
+		name = marimbo_piety_event.6.b #We shall fight your right to disobey our parties!
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.1 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { dominant_religion = ROOT }
+			}
+		}
+		add_piety = -0.1
+	}
+}
+
+# Utilitarianism
+country_event = {
+	id = marimbo_piety_event.7
+	title = marimbo_piety_event.7.t
+	desc = marimbo_piety_event.7.d #There has been some public debate over the issue of national happiness, and how to best-achieve it. One view known as utilitarianism advocates for the greatest happiness for the greatest number, while an opposing view argues we should raise the happiness of the most unhappy first, even if it means the overall net gain to happiness is smaller.
+	picture = APE_ATOLL_MONKEYS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_piety = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = marimbo_piety_event.7.a #Utilitarianism is right.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				piety = 0.1
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+		}
+		add_piety = 0.1
+		capital_scope = {
+			add_province_modifier = {
+				name = "marimbo_utilitarianism"
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = marimbo_piety_event.7.b #Let us tend to those most unhappy first.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				piety = 0.1
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+		}
+		add_piety = 0.1
+		add_country_modifier = {
+			name = "marimbo_equity"
+			duration = 3650
+		}
+	}
+	option = {
+		name = marimbo_piety_event.7.c #Who cares about this philosophical nonsense?
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.1 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { dominant_religion = ROOT }
+			}
+		}
+		add_piety = -0.1
+	}
+}
+
+# Relieving the Tax Burden
+country_event = {
+	id = marimbo_piety_event.8
+	title = marimbo_piety_event.8.t
+	desc = marimbo_piety_event.8.d #There is some concern among the priests of [Root.GetName] that an excessive tax burden is a barrier to happiness for much of our population. On the other hand, we could use this tax money ourselves to improve their lives.
+	picture = APE_ATOLL_MONKEYS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = marimbo
+		piety = 0.3
+		NOT = { has_country_modifier = marimbo_reduced_taxation }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = marimbo_piety_event.8.a #We will lessen the tax burden.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+		}
+		add_piety = 0.1
+		add_country_modifier = {
+			name = "marimbo_reduced_taxation"
+			duration = 3650
+		}
+	}
+	option = {
+		name = marimbo_piety_event.8.b #The state needs the money.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				NOT = { dominant_religion = ROOT }
+			}
+		}
+		add_piety = -0.15
+		
+	}
+}
+
+# The Graveyards
+country_event = {
+	id = marimbo_piety_event.9
+	title = marimbo_piety_event.9.t
+	desc = marimbo_piety_event.9.d #Not many come to the graveyards of [Root.GetName]. They fear being haunted; they fear the sombre atmosphere - but most of all, they do not wish to talk about death.
+	picture = APE_ATOLL_MONKEYS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_piety = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = marimbo_piety_event.9.a #They should not fear the dead, but let their life stories inspire them to create a better world for all.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				piety = 0.1
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+		}
+		add_piety = 0.1
+	}
+	option = {
+		name = marimbo_piety_event.9.b #Then they had better shape up and face facts!
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.1 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { dominant_religion = ROOT }
+			}
+		}
+		add_piety = -0.1
+	}
+}
+
+# Trader Privileges and the Faith
+country_event = {
+	id = marimbo_piety_event.10
+	title = marimbo_piety_event.10.t
+	desc = marimbo_piety_event.10.d #Not everything [Root.GetName] needs can be made within it - and with this international trade comes the spread of new ideas - many of which can undermine faith in Marimbo. One moment we're importing goods - the next we're importing strict ideas of how to live!
+	picture = APE_ATOLL_MONKEYS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_piety = yes
+		num_of_cities = 2
+		any_owned_province = {
+			is_capital = no
+			NOT = { has_province_modifier = marimbo_free_trader_faith }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { is_capital = no }
+				save_event_target_as = fraternity_province
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					development = 5
+				}
+				save_event_target_as = fraternity_province
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					development = 10
+				}
+				save_event_target_as = fraternity_province
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					development = 15
+				}
+				save_event_target_as = fraternity_province
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					development = 20
+				}
+				save_event_target_as = fraternity_province
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = marimbo_piety_event.10.a #Make it clear to our traders that they must keep the faith.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				piety = 0.1
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 35
+			}
+			modifier = {
+				factor = 1.5
+				num_of_cities = 50
+			}
+		}
+		add_piety = 0.1
+		add_prestige = 10
+	}
+	option = {
+		name = marimbo_piety_event.10.b #Some leeway could enable more efficient trade.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.1 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { dominant_religion = ROOT }
+			}
+		}
+		add_piety = -0.1
+		event_target:fraternity_province = {
+			add_local_autonomy = 25
+			add_province_modifier = {
+				name = "marimbo_free_trader_faith"
+				duration = 3650
+			}
+		}
+	}
+}

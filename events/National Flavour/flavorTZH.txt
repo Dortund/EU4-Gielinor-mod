@@ -1,0 +1,78 @@
+########################################
+# Events for TzHaar
+########################################
+
+namespace = flavor_tzh
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_tzh.1
+	title = flavor_tzh.1.t #The Discovery of the Tasakaal
+	desc = flavor_tzh.1.d #Long, long ago, the Tasakaal set off west from Mor Ul Rek in what they viewed as following Ful's word. We have finally re-established contact!
+	picture = TZHAAR_ENTRANCE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TZH
+		is_at_war = no
+		karuulm_area = { has_discovered = ROOT }
+		exists = KUU
+	}
+
+	immediate = {
+		hidden_effect = {
+			KUU = {
+				country_event = { 
+					id = flavor_tzh.2
+					days = 1
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_tzh.1.a #Excellent.
+		add_historical_friend = KUU
+	}
+}
+
+country_event = {
+	id = flavor_tzh.2
+	title = flavor_tzh.2.t #The TzHaar Make Contact
+	desc = flavor_tzh.2.d #Long, long ago, the Tasakaal set off west from Mor Ul Rek to follow Ful's word. It seems now we are met with some of the city's denziens, and our contact is re-established.
+	picture = TZHAAR_ENTRANCE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KUU
+		is_at_war = no
+		212 = { has_discovered = ROOT }
+		exists = TZH
+	}
+
+	immediate = {
+		hidden_effect = {
+			TZH = {
+				country_event = { 
+					id = flavor_tzh.1
+					days = 1
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_tzh.2.a #Excellent.
+		add_historical_friend = TZH
+	}
+}

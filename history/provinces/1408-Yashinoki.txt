@@ -1,0 +1,18 @@
+#1408-Yashinoki
+tribal_owner = ---
+culture = shi
+religion = byakko
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = bamboo
+
+is_city = yes
+
+native_size = 50
+native_ferocity = 50
+native_hostileness = 50

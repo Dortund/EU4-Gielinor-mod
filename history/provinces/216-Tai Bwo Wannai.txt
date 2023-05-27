@@ -1,0 +1,29 @@
+#216 - Tai Bwo Wannai
+owner = TBW
+controller = TBW
+add_core = TBW
+tribal_owner = ---
+culture = taibwo
+religion = karamjan
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = tropical_logs
+
+is_city = yes
+
+center_of_trade = 1
+
+add_province_triggered_modifier = religious_center

@@ -1,0 +1,395 @@
+zemouregal_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZMG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ZMG_fractured_realm = {
+		icon = mission_alliances
+		required_missions = {  }
+		position = 1
+		trigger = {
+			development_in_provinces = {
+				value = 20
+				area = heart_of_the_wilderness_area
+			}
+			development_in_provinces = {
+				value = 12
+				area = ritual_site_area
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ZMG_twin_constructs"
+				duration = 3650
+			}
+		}
+	}
+	ZMG_southeastern_portion = {
+		icon = mission_alliances
+		required_missions = { ZMG_fractured_realm }
+		position = 2
+		trigger = {
+			206 = {
+			 	owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+		}
+		effect = {
+			206 = {
+				add_base_tax = 2
+				add_base_manpower = 2
+			}
+			158 = { add_permanent_claim = ROOT }
+		}
+	}
+	
+	ZMG_southern_expansion = {
+		icon = mission_alliances
+		required_missions = { ZMG_southeastern_portion }
+		position = 3
+		trigger = {
+			owns_core_province = 167
+			adm_tech = 10
+			OR = {
+				owns_core_province = 158
+				AND = {
+					treasury = 250
+					adm_power = 100
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 158
+				}
+				add_adm_power = 50
+			}
+			else = {
+				add_treasury = -250
+				add_adm_power = -100
+				158 = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+		}
+	}
+}
+
+zemouregal_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZMG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ZMG_northwestern_portion = {
+		icon = mission_alliances
+		required_missions = { ZMG_fractured_realm ZMG_an_awkward_relationship }
+		position = 2
+		trigger = {
+			357 = {
+			 	owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+		}
+		effect = {
+			357 = {
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			352 = { add_permanent_claim = ROOT }
+		}
+	}
+	ZMG_lamistards_tunnels = {
+		icon = mission_alliances
+		required_missions = { ZMG_northwestern_portion }
+		position = 3
+		trigger = {
+			owns_core_province = 357
+			adm_tech = 10
+			OR = {
+				owns_core_province = 352
+				AND = {
+					treasury = 250
+					adm_power = 100
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 352
+				}
+				add_adm_power = 50
+			}
+			else = {
+				add_treasury = -250
+				add_adm_power = -100
+				352 = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+		}
+	}
+	ZMG_invade_varrock = {
+		icon = mission_alliances
+		required_missions = { ZMG_southern_expansion ZMG_match_misthalin }
+		position = 4
+		trigger = {
+			owns_core_province = 14
+		}
+		effect = {
+			north_lum_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			kings_road_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			edgeville_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+zemouregal_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZMG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ZMG_an_awkward_relationship = {
+		icon = mission_alliances
+		required_missions = {  }
+		position = 1
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = LCI
+					reverse_has_opinion = {
+						who = LCI
+						value = 100
+					}
+				}
+				is_rival = LCI
+				NOT = { exists = LCI }
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	
+	ZMG_map_out_misthalin = {
+		icon = mission_alliances
+		required_missions = { ZMG_an_awkward_relationship ZMG_wilderness_trade }
+		position = 2
+		trigger = {
+			2 = { has_discovered = ROOT }
+			6 = { has_discovered = ROOT }
+			7 = { has_discovered = ROOT }
+			8 = { has_discovered = ROOT }
+			21 = { has_discovered = ROOT }
+			938 = { has_discovered = ROOT }
+			539 = { has_discovered = ROOT }
+			540 = { has_discovered = ROOT }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ZMG_espionage_expansion"
+				duration = 3650
+			}
+		}
+	}
+	
+	ZMG_match_misthalin = {
+		icon = mission_alliances
+		required_missions = { ZMG_map_out_misthalin }
+		position = 3
+		trigger = {
+			army_size = MST
+			mil_tech = 10
+		}
+		effect = {
+			16 = { add_core = ZMG }
+			varrock_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+zemouregal_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZMG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ZMG_wilderness_trade = {
+		icon = mission_alliances
+		required_missions = {  }
+		position = 1
+		trigger = {
+			dip_tech = 5
+			OR = {
+				206 = {
+					is_strongest_trade_power = ROOT
+				}
+				357 = {
+					is_strongest_trade_power = ROOT
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+}
+
+zemouregal_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZMG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ZMG_best_of_the_mahjarrat = {
+		icon = mission_alliances
+		required_missions = {  }
+		position = 1
+		trigger = {
+		 	army_size = BRS
+		 	army_size = HZL
+		 	army_size = KZD
+			army_size = LCI
+		}
+		effect = {
+			add_prestige = 25
+			add_mil_power = 25
+		}
+	}
+	
+	
+	ZMG_best_the_bosses = {
+		icon = mission_alliances
+		required_missions = { ZMG_wilderness_trade ZMG_best_of_the_mahjarrat }
+		position = 2
+		trigger = {
+		 	army_size = CST
+			land_morale = CST
+			army_size = KBD
+			land_morale = KBD
+			army_size = SRP
+			land_morale = SRP
+			army_size = VET
+			land_morale = VET
+			army_size = VNN
+			land_morale = VNN
+			owns_core_province = 167
+			OR = {
+				owns_core_province = 169
+				169 = {
+					is_empty = yes
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 169
+				}
+				add_mil_power = 50
+			}
+			else = {
+				169 = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+			171 = { add_permanent_claim = ROOT }
+			184 = { add_permanent_claim = ROOT }
+		}
+	}
+	
+	ZMG_boss_slayer = {
+		icon = mission_alliances
+		required_missions = { ZMG_best_the_bosses }
+		position = 2
+		trigger = {
+		 	owns_core_province = 171
+		 	owns_core_province = 184
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 185
+				}
+				add_mil_power = 150
+			}
+			else = {
+				185 = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+				add_mil_power = 100
+			}
+		}
+	}
+}
+
+
+

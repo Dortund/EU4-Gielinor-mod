@@ -1,0 +1,104 @@
+war_footing_aspect = {
+	sprite = "GFX_ranul_war_footing_aspect"
+	cost = 100
+	trigger = {
+		church_power = 100
+		mil = 1
+		has_regency = no
+		NOT = { mil = 6 }
+	}
+	effect = {
+		change_mil = 1
+		change_adm = -1
+	}
+}
+
+explore_the_mysteries_aspect = {
+	sprite = "GFX_ranul_explore_the_mysteries_aspect"
+	cost = 50
+	trigger = {
+		church_power = 50
+		manpower_percentage = 0.1
+	}
+	effect = {
+		add_yearly_manpower = -1
+		random_owned_province = { 
+			add_base_tax = 2
+		}
+	}
+}
+
+death_is_another_path_aspect = {
+	sprite = "GFX_ranul_death_is_another_path_aspect"
+	cost = 100
+	trigger = {
+		church_power = 100
+	}
+	effect = {
+		add_war_exhaustion = -2
+	}
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 0
+			NOT = { war_exhaustion = 2 }
+		}
+		modifier = {
+			factor = 2
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 2
+			war_exhaustion = 6
+		}
+	}
+}
+
+moving_on_aspect = {
+	sprite = "GFX_ranul_moving_on_aspect"
+	cost = 200
+	trigger = {
+		church_power = 200
+		has_regency = no
+	}
+	effect = {
+		kill_ruler = yes
+	}
+}
+
+sunrise_aspect = {
+	sprite = "GFX_ranul_sunrise_aspect"
+	cost = 200
+	trigger = {
+		church_power = 200
+		NOT = {
+			stability = 3
+		}
+	}
+	effect = {
+		custom_tooltip = ranul_sunrise_tooltip
+		hidden_effect = {
+			add_stability = 1
+			change_religion = ralos
+		}
+	}
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 3
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			stability = 0
+		}
+		modifier = {
+			factor = 0.5
+			stability = 1
+		}
+		modifier = {
+			factor = 0.5
+			stability = 2
+		}
+	}
+}

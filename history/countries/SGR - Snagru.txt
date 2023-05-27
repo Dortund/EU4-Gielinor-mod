@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = feldip_tribe
+government_rank = 1
+primary_culture = ogre
+religion = bandos
+technology_group = bandostechgroup
+capital = 316 #Eucalyptus Forest
+
+1913.5.8 = {
+	monarch = {
+		name = "Frawd"
+		dynasty = "Spiderstomper"
+		birth_date = 1902.4.19
+		female = yes
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+}

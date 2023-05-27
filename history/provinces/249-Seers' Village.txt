@@ -1,0 +1,49 @@
+#249 - Seers' Village
+owner = SEE
+controller = SEE
+add_core = SEE
+tribal_owner = ---
+culture = seer
+religion = guthix
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 4
+base_manpower = 4
+
+fort_15th = yes 
+
+trade_goods = logs
+
+is_city = yes
+
+center_of_trade = 1
+
+2062.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	remove_core = SEE
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}
+
+2132.7.13 = {
+	owner = CML
+	controller = CML
+	add_core = CML
+	remove_core = KDR
+}

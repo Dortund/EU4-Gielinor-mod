@@ -1,0 +1,33 @@
+#1412-Titheshore
+owner = HHB
+controller = HHB
+add_core = HHB
+tribal_owner = ---
+culture = hobgoblin
+religion = bandos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+1952.3.13 = {
+	owner = HOS
+	controller = HOS
+	add_core = HOS
+	culture = hosidius
+	religion = zamorak
+}
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

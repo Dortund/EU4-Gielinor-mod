@@ -1,0 +1,28 @@
+#368-Rellekka
+owner = REL
+controller = REL
+add_core = REL
+tribal_owner = ---
+culture = rellekkan
+religion = v
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 6
+base_production = 6
+base_manpower = 5
+
+fort_15th = yes 
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 2

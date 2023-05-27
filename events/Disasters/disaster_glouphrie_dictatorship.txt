@@ -1,0 +1,61 @@
+namespace = glouphrie_dictatorship
+
+########################################
+# Glouphrie Dictatorship
+########################################
+
+# Start of the Dictatorship
+country_event = {
+	id = glouphrie_dictatorship.1
+	title = glouphrie_dictatorship.1.t #Glouphrie seizes the Gnome Empire!
+	desc = glouphrie_dictatorship.1.d #The infamous Glouphrie the Untrusted has seized control of the Gnome Empire. Given his destruction of the oldest Spirit Tree in existence just a few years ago, the subjects of the Gnome Empire are not too happy about the situation. Unless Glouphrie can reassert control, it's going to be a messy few years...
+	picture = GLOUPHRIE_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = gne_had_glouphrie_dictatorship
+	}
+	
+	option = {
+		name = glouphrie_dictatorship.1.a #And so it begins.
+		add_stability = -3
+	}
+}
+
+# Situation Resolved
+country_event = {
+	id = glouphrie_dictatorship.100
+	title = glouphrie_dictatorship.100.t #Order Restored in the Gnome Empire
+	desc = glouphrie_dictatorship.100.d #The rebellion has come to an end, and what remains of the Gnome Empire can be governed properly now.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = gne_had_glouphrie_dictatorship
+		clr_country_flag = gne_had_glouphrie_dictatorship
+	}
+	
+	option = {
+		name = glouphrie_dictatorship.100.a #And so it ends.
+		add_stability = 2
+		if = {
+			limit = { has_country_flag = gne_glouphrie_rules }
+			add_country_modifier = {
+				name = "GNE_permanent_illusion_magicks"
+				duration = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = alkharidian
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 62 #Al Kharid
+national_focus = DIP
+historical_friend = MST
+
+1967.3.17 = {
+	monarch = {
+		name = "Jaraah"
+		dynasty = "Mirza"
+		birth_date = 1914.12.10
+		adm = 5
+		dip = 6
+		mil = 4
+	}
+}
+
+2137.3.17 = {
+	monarch = {
+		name = "Shah"
+		dynasty = "Mirza"
+		birth_date = 2112.12.10
+		adm = 4
+		dip = 6
+		mil = 3
+	}
+}
+
+2150.1.1 = {
+	add_absolutism = 35
+}

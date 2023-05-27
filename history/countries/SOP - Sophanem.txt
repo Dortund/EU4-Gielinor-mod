@@ -1,0 +1,39 @@
+government = theocracy
+add_government_reform = monastic_state_reform
+government_rank = 2
+primary_culture = menaphiteculture
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 101 #Sophanem
+historical_friend = MPS
+
+1929.1.1 = {
+	monarch = {
+		name = "Isfan"
+		dynasty = "of Sophanem"
+		birth_date = 1884.11.28
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+1930.1.1 = {
+	add_opinion = {
+		who = MPS
+		modifier = mps_sister_cities
+	}
+}
+
+2145.3.19 = {
+	monarch = {
+		name = "Djediufankh"
+		dynasty = "of Sophanem"
+		birth_date = 2117.11.9
+		adm = 2
+		dip = 4
+		mil = 0
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = pious_personality
+}

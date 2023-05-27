@@ -1,0 +1,52 @@
+﻿l_english:
+ eldergodwars.1.t:0 "The Allure of Divine Energy"
+ eldergodwars.1.d:0 "The huge amount of divine energy unleashed by the death of Guthix led to the development of the art of Divination, where diviners extract this power for their own use - or for the use of the Gods. But what could the consequences be of all this divine power - like a beacon to the heavens? Who knows what is out there, waiting to unleash itself upon Gielinor?"
+ eldergodwars.1.a:0 "It's just some divine energy, what's there to worry about?"
+
+ eldergodwars.2.t:0 "Harbingers of Tuska"
+ eldergodwars.2.d:0 "A portal has opened, and through it strange beasts from another world herald their god's coming. The great beast Tuska shall hurtle towards Gielinor, to the ruin of all in her path..."
+ eldergodwars.2.a:0 "Another God joins the party. So what?"
+ 
+ eldergodwars.3.t:0 "Tuska Comes"
+ eldergodwars.3.d:0 "Drawn by the divine power coursing around Gielinor, the great beast Tuska is charging through the heavens towards Gielinor. Only a concerted effort will stop her from devastating the world's cities to appease her endless appetite."
+ eldergodwars.3.a:0 "Tuska must be stopped!"
+ eldergodwars_stop_tuska_tooltip:0 "§YIf any non-Tuska Great Power has an Adventurer Rating of 100 or higher in exactly 2 years, they will defeat Tuska. Otherwise, Tuska will win causing significant damage to the development of all Great Powers and rewarding any nation that follows her.§!"
+ 
+ eldergodwars.4.t:0 "Tuska Crashes to Gielinor"
+ eldergodwars.4.da:0 "The raging boar-god Tuska has been slain. The momentum of the body could not be stopped however, and hurtled into the Unquiet Ocean. Still, the threat is eliminated for good."
+ eldergodwars.4.db:0 "Tuska could not be stopped. Crashing into Gielinor, she crashed through major cities before finally being brought down by the other gods. While she will no longer be a threat, the devastation shall be immense."
+ eldergodwars.4.a:0 "Gielinor is saved!"
+ eldergodwars.4.b:0 "Gielinor is devastated."
+ 
+ eldergodwars.5.t:0 "[Root.GetName] is devastated by Tuska"
+ eldergodwars.5.d:0 "Tuska could not be stopped. She ripped through our cities before finally being slain by a coalition of Gods."
+ eldergodwars.5.a:0 "Clearly the other Great Powers are to blame for this atrocity."
+ 
+ eldergodwars.6.t:0 "The Elder Eggs"
+ eldergodwars.6.da:0 "Recent events in Gielinor - from the arrival of Tuska to the return of Seren - have shaken the world. But now, the most powerful adventurers of the world tell us that worse is coming. The eggs of the Elder Gods, terrifying entities from beyond time, rest beneath Gielinor's surface. And if the Elder Gods were to reach them, the entire world shall be destroyed."
+ eldergodwars.6.db:0 "The time of the Great Revision shall soon be upon us, and the rebirth of all things. Such a fate is unavoidable - but one that nearly all of Gielinor will attempt to stop. We must steel ourselves, as a terrible war is coming."
+ eldergodwars.6.a:0 "Be ready, for soon a war is upon us."
+ 
+ eldergodwars.7.t:0 "The Elder God Wars"
+ eldergodwars.7.da:0 "The Gods of Gielinor have put aside their differences to defend Gielinor from the Elder Gods, and across Gielinor, from the dagannoths of Waterbirth Island to the beasts of Kami-Shima are determined to save the world from destruction."
+ eldergodwars.7.db:0 "The Elder Gods call upon the faithful to serve them in the Great Revision, where they shall be reborn."
+ eldergodwars.7.a:0 "This war must be won by any means."
+ eldergodwars.7.b:0 "We support our Gods."
+ eldergodwars.7.c:0 "We cannot participate in the destruction of our home."
+ 
+ eldergodwars.8.t:0 "Zamorak Abandons the Elder God Wars"
+ eldergodwars.8.da:0 "The Elder God Wars have led to stagnation. Where there is stagnation, there is not chaos, and there is not the opportunity to improve things. Lord Zamorak has placed his hand off the balance and left the battlefield of the Elder God Wars."
+ eldergodwars.8.db:0 "Zamorak has, unsurprisingly, betrayed us all, and doomed us all in the process! He has withdrawn from the Elder God Wars, and it is unclear if the Elder Gods can now be defeated."
+ eldergodwars.8.a:0 "And so shall we!"
+ eldergodwars.8.b:0 "That is his call. We shall fight on."
+ eldergodwars.8.c:0 "He should burn like he burnt Forinthry!"
+ 
+ eldergodwars.9.t:0 "The End of the Elder God Wars"
+ eldergodwars.9.da:0 "Without Zamorak's assistance, the only way to end the Elder God Wars would be to destroy the Elder Gods' eggs. As a child of the Elder Gods, Seren did not accept and took them to a distant world. They hatched, destroying all life on the world, but with far less power than if they had hatched on Gielinor."
+ eldergodwars.9.db:0 "Seren placed the Elder Gods above her own followers and hatched their eggs on another world, rather than see them be destroyed. An entire world's life was utterly extinguished in the process, though these newly-hatched Elder Gods are far weaker and Gielinor is saved."
+ eldergodwars.9.dc:0 "A new generation of Elder Gods has arisen thanks to their child Seren, but on a different world where they have not developed to be as powerful. Rumour has it that one of the Elder Gods did not make it, but such an assertion seems impossible."
+ eldergodwars.9.a:0 "The world is saved, but the consequences of this war may be terrible."
+ eldergodwars.9.b:0 "This will be painful news for the faithful."
+ eldergodwars.9.c:0 "On the bright side, I get to continue leading [Root.GetName]."
+ end_of_elder_god_wars_flag:0 "End of the Elder God Wars"
+ 

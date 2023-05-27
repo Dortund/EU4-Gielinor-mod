@@ -1,0 +1,100 @@
+#War of Five Houses
+#The Kourend Civil War
+
+war_of_five_houses = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+	}
+
+	can_start = {
+		has_government_power = {
+			mechanic_type = house_disunity_mechanic
+			power_type = kourend_disunity_power_1
+			value = 75
+		}
+	 	has_any_disaster = no
+	}
+	
+	can_stop = {
+		AND = {
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			stability = 1
+			NOT = {
+				has_government_power = {
+					mechanic_type = house_disunity_mechanic
+					power_type = kourend_disunity_power_1
+					value = 50
+				}
+			}
+			AUU = { is_subject_of = KOU }
+			HOS = { is_subject_of = KOU }
+			LOV = { is_subject_of = KOU }
+			PCL = { is_subject_of = KOU }
+			SYZ = { is_subject_of = KOU }
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2
+			has_government_power = {
+				mechanic_type = house_disunity_mechanic
+				power_type = kourend_disunity_power_1
+				value = 10
+			}
+		}
+		modifier = {
+			factor = 1
+			has_government_power = {
+				mechanic_type = house_disunity_mechanic
+				power_type = kourend_disunity_power_1
+				value = 25
+			}
+		}
+		modifier = {
+			factor = 1
+			has_government_power = {
+				mechanic_type = house_disunity_mechanic
+				power_type = kourend_disunity_power_1
+				value = 50
+			}
+		}
+		modifier = {
+			factor = 1
+			has_government_power = {
+				mechanic_type = house_disunity_mechanic
+				power_type = kourend_disunity_power_1
+				value = 75
+			}
+		}
+		modifier = {
+			factor = 1
+			has_government_power = {
+				mechanic_type = house_disunity_mechanic
+				power_type = kourend_disunity_power_1
+				value = 90
+			}
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+	}
+
+	can_end = {
+		NOT = { exists = KOU }
+	}
+
+	modifier = {
+		global_unrest = 5
+		global_autonomy = 0.1
+		monthly_kourend_disunity_power_1 = 1
+	}
+	
+	on_start = war_of_five_houses.1
+	on_end = war_of_five_houses.100
+}
+

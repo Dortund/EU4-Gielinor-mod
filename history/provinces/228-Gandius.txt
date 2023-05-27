@@ -1,0 +1,22 @@
+#228 - Gandius
+owner = KLU
+controller = KLU
+add_core = KLU
+tribal_owner = ---
+culture = jogre
+religion = bandos
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+discovered_by = TMP
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 3
+
+trade_goods = herblore_supplies
+
+is_city = yes

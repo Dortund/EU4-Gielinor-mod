@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = miscellanean_monarchy
+government_rank = 2
+primary_culture = miscellanean
+religion = v
+secondary_religion = guthix
+technology_group = fremenniktechgroup
+capital = 382 #Miscellania
+national_focus = ADM
+historical_friend = REL
+
+1911.11.12 = {
+	monarch = {
+		name = "Aplannka"
+		dynasty = "Undsaw"
+		birth_date = 1887.6.21
+		adm = 4
+		dip = 4
+		mil = 0
+		female = yes
+	}
+}
+
+2157.11.29 = {
+	monarch = {
+		name = "Vargas"
+		dynasty = "Äventyrare"
+		birth_date = 2124.12.17
+		adm = 4
+		dip = 4
+		mil = 1
+	}
+}

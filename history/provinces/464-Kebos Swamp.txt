@@ -1,0 +1,21 @@
+#464-Kebos Swamp
+owner = LCT
+controller = LCT
+add_core = LCT
+tribal_owner = ---
+culture = molch
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 5
+
+trade_goods = naval_goods
+
+is_city = yes
+
+center_of_trade = 1

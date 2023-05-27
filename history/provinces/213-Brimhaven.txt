@@ -1,0 +1,34 @@
+#213 - Brimhaven
+culture = northkaramjan
+religion = karamjan
+tribal_owner = ---
+
+discovered_by = centraltechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+trade_goods = fruit
+
+native_size = 25
+native_ferocity = 5
+native_hostileness = 2
+
+center_of_trade = 1
+
+2043.8.31 = {
+	owner = BHV
+	controller = BHV
+	add_core = BHV
+	culture = brimhaven
+	religion = godless
+	add_building = fort_15th
+}

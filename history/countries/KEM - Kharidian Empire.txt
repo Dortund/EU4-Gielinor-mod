@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 3
+primary_culture = menaphiteculture
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 100 #Menaphos
+national_focus = ADM
+
+2200.5.15 = {
+	monarch = {
+		name = "Osmetaten"
+		dynasty = "Misra"
+		birth_date = 2174.11.5
+		adm = 6
+		dip = 6
+		mil = 2
+	}
+}

@@ -1,0 +1,41 @@
+#150 - Burnt Coal Basin
+culture = skeleton
+religion = zamorak
+tribal_owner = ---
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 3
+base_manpower = 2
+
+trade_goods = basic_ores
+
+native_size = 10
+native_ferocity = 5
+native_hostileness = 5
+
+add_province_triggered_modifier = settled_wilderness
+add_province_triggered_modifier = sparse_mild_wilderness
+add_province_triggered_modifier = sparse_moderate_wilderness
+add_province_triggered_modifier = sparse_severe_wilderness
+add_province_triggered_modifier = populous_mild_wilderness
+add_province_triggered_modifier = populous_moderate_wilderness
+add_province_triggered_modifier = populous_severe_wilderness
+add_province_triggered_modifier = dense_mild_wilderness
+add_province_triggered_modifier = dense_moderate_wilderness
+add_province_triggered_modifier = dense_severe_wilderness
+
+add_province_triggered_modifier = wildy_border_level_one
+add_province_triggered_modifier = wildy_border_level_two
+add_province_triggered_modifier = wildy_border_level_three
+add_province_triggered_modifier = wildy_border_level_four
+add_province_triggered_modifier = wildy_border_level_five
+add_province_triggered_modifier = wildy_border_level_six
+add_province_triggered_modifier = wildy_border_level_seven
+add_province_triggered_modifier = wildy_border_level_eight
+add_province_triggered_modifier = wildy_border_level_nine

@@ -1,0 +1,100 @@
+########################################
+# Events for Karamja
+########################################
+
+namespace = flavor_kja
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_kja.1
+	title = flavor_kja.1.t #Fate of the TzHaar
+	desc = flavor_kja.1.d #The obsidian people known as the TzHaar have lived under northern Karamja for countless ages. Their relations with our people have not typically been hostile, yet their presence is often viewed as a barrier to our unification of Karamja. We must decide what to do with them.
+	picture = TZHAAR_ENTRANCE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag  = KJA_fate_of_tzhaar_flag
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_kja.1.a #The TzHaar are Karamjans, like we are.
+		add_accepted_culture = tzhaar
+		212 = {
+			add_province_triggered_modifier = KJA_integration_of_the_tzhaar
+		}
+		if = {
+			limit = {
+				TZH = {
+					is_subject_of = ROOT
+				}
+			}
+			TZH = {
+				add_liberty_desire = -20
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_kja.1.b #The TzHaar shall retain some independence in exchange for serving us in war.
+		if = {
+			limit = {
+				TZH = {
+					is_subject_of = ROOT
+					NOT = { is_subject_of_type = march }
+				}
+			}
+			create_march = TZH
+		}
+		else = {
+			212 = {
+				add_core = TZH
+				cede_province = TZH
+			}
+			create_march = TZH
+		}
+		add_country_modifier = {
+			name = KJA_tzhaar_guard
+			duration = 9125
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}	
+	option = {
+		name = flavor_kja.1.c #The TzHaar are nothing more than an obstacle to us.
+		if = {
+			limit = {
+				owns_core_province = 212
+			}
+			212 = {
+				nationalist_rebels = 2
+				add_province_modifier = {
+					name = KJA_anti_tzhaar_ethos
+					duration = 7300
+				}
+			}
+		}
+		else = {
+			212 = {
+				add_core = ROOT
+				cede_province = ROOT
+				nationalist_rebels = 3
+				add_province_modifier = {
+					name = KJA_anti_tzhaar_ethos
+					duration = 7300
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+} 

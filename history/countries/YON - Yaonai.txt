@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = loop_culture
+religion = zaros
+technology_group = wushankotechgroup
+capital = 1198 #Yaonai
+
+1899.12.30 = {
+	monarch = {
+		name = "Houxi"
+		dynasty = "Lan"
+		birth_date = 1881.8.17
+		death_date = 1934.2.3
+		adm = 4
+		dip = 6
+		mil = 2
+	}
+}
+
+2159.3.12 = {
+	monarch = {
+		name = "Yunjian"
+		dynasty = "Du"
+		birth_date = 2133.7.5
+		adm = 4
+		dip = 6
+		mil = 3
+	}
+}

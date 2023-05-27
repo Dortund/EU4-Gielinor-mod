@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = hobgoblin
+religion = bandos
+technology_group = bandostechgroup
+capital = 40 #County Braed
+national_focus = MIL
+
+1927.6.12 = {
+	monarch = {
+		name = "Gra'magor"
+		dynasty = "Hobgoblin"
+		birth_date = 1903.12.1
+		adm = 1
+		dip = 5
+		mil = 5
+	}
+}

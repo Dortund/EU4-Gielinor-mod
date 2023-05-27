@@ -1,0 +1,19 @@
+#502 - Proudhail Pass
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = centralis
+religion = ranul
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = logs
+
+is_city = yes

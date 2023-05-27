@@ -1,0 +1,19 @@
+#1360 - South Dungeon
+owner = DSK
+controller = DSK
+add_core = DSK
+tribal_owner = ---
+culture = dorgeshuun
+religion = godless
+
+discovered_by = DSK
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+
+trade_goods = herblore_supplies
+
+is_city = yes

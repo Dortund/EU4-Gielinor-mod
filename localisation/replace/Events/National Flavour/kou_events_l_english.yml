@@ -1,0 +1,10 @@
+﻿l_english:
+ flavor_kou.1.t:0 "Control Reasserted"
+ flavor_kou.1.d:0 "A House of Kourend thought they could escape our grasp, but they have returned to our control."
+ flavor_kou.1.a:0 "And don't break free again!"
+ 
+ flavor_kou.2.t:0 "Rebel Rift"
+ flavor_kou.2.d:0 "Our enemy Varlamore has little history of external conflict, so their army and guards have tended to look inwards. Some, escaping this pressure, have lived remotely in the savannah. But at a time of war, we need any support we can get in Varlamore. For that reason, our spies have succeeded in getting a few defectors to Varlamore to establish an outpost at Rebel Rift."
+ flavor_kou.2.a:0 "I want to take personal command of this new outpost."
+ flavor_kou.2.b:0 "Secure an alliance with this new outpost."
+ flavor_kou.2.c:0 "That wasn't the plan; just leave the rebels be."

@@ -1,0 +1,38 @@
+#51-Burthorpe
+owner = BTH
+controller = BTH
+add_core = BTH
+tribal_owner = ---
+culture = burthorpian
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 7
+base_production = 6
+base_manpower = 7
+
+fort_15th = yes 
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 1
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+	remove_core = WST
+}
+
+2151.4.6 = {
+	owner = BTH
+	controller = BTH
+}

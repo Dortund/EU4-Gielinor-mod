@@ -1,0 +1,27 @@
+﻿l_english:
+ zemouregal_flavor.1.t:0 "Bored!"
+ zemouregal_flavor.1.d:0 "Lord Zemouregal declares himself to be, and I quote, booorrrreeeed. Is there something we could do to rectify this situation?"
+ zemouregal_flavor.1.a:0 "Make some of our subjects fight each other? That's always a laugh."
+ zemouregal_flavor.1.b:0 "Let's let an adventurer in to $CAPITAL_CITY$ and see what happens!"
+ zemouregal_flavor.1.c:0 "How about a treasure trail?"
+ zemouregal_flavor.1.e:0 "We have no ideas at this time."
+ 
+ zemouregal_flavor.2.t:0 "Replacing Zamorak's Teachings?"
+ zemouregal_flavor.2.d:0 "As the successor to the Zamorakians, the followers of Zemouregal do not necessarily have to define themselves by chaos. Which direction should we take?"
+ zemouregal_flavor.2.a:0 "Chaos is still fine by me!"
+ zemouregal_flavor.2.b:0 "We should seriously consider a change in direction."
+ 
+ zemouregal_flavor.3.t:0 "Prayer Siphoning"
+ zemouregal_flavor.3.d:0 "Lord Zemouregal has an ingenious method of rewiring altars to direct prayers directly to him, allowing us to exploit heretics and heathens to our own ends. Should we expand this?"
+ zemouregal_flavor.3.a:0 "That sounds like an excellent idea!"
+ zemouregal_flavor.3.b:0 "Why exploit heretics when we can just convert them?"
+ 
+ zemouregal_flavor.4.t:0 "Population Concentration"
+ zemouregal_flavor.4.d:0 "Lord Zemouregal is of the view that $CAPITAL_CITY$ would be a lot more fun with more people in it, so that his various whims could be better-achieved."
+ zemouregal_flavor.4.a:0 "Yes, this sounds like a good idea."
+ zemouregal_flavor.4.b:0 "Our realm can't accommodate this change."
+ 
+ zemouregal_flavor.5.t:0 "Necromancer Relations"
+ zemouregal_flavor.5.d:0 "Ah, necromancers! They bring the dead back to close-enough-to life! Zemouregal is the best one, of course, but there's plenty of others around that could be useful to us. Expanding their role would provide us with an extra supply of reanimated bodies, but our clergy might be upset. What's our response?"
+ zemouregal_flavor.5.a:0 "Keep the necromancers as they are."
+ zemouregal_flavor.5.b:0 "Expand the role of the necromancers."

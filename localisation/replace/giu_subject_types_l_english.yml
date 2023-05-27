@@ -1,0 +1,6 @@
+﻿l_english:
+  subject_house: "House"
+  subject_house_long_desc: "There are five Houses of Kourend, which all (in theory) swear fealty to the crown."
+  subject_house_is_our: "$NAME|Y$ is one of our Houses."
+  subject_house_title: "House"
+  subject_house_title_plural: "Houses"

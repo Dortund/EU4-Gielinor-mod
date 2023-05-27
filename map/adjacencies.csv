@@ -1,0 +1,62 @@
+From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
+896;4;sea;539;-1;-1;-1;-1;Brerd-West Lumbridge Swamp
+3;62;sea;539;-1;-1;-1;-1;East Lumbridge Swamp-Al Kharid
+6;7;sea;540;-1;-1;-1;-1;Wizards Tower-Draynor
+89;90;sea;597;-1;-1;-1;-1;Tamsah-Akthanakos
+97;98;sea;586;-1;-1;-1;-1;'iimbraturia-Amiral
+858;98;sea;586;-1;-1;-1;-1;Tumeken-Amiral
+98;99;sea;586;-1;-1;-1;-1;Amiral-Crondis
+859;99;sea;586;-1;-1;-1;-1;Almina' Aljanubiu-Crondis
+99;855;sea;586;-1;-1;-1;-1;Crondis-Madiya
+142;144;sea;603;-1;-1;-1;-1;Mos Ayes Le'-La Grotte
+147;900;sea;602;-1;-1;-1;-1;Brassage-Chainja
+200;201;sea;670;-1;-1;-1;-1;Fossil's Heart-House on the Hill
+211;217;sea;569;-1;-1;-1;-1;Gublinch-Pothole
+220;233;sea;559;-1;-1;-1;-1;Graakh-Cairn Isle
+238;978;sea;556;-1;-1;-1;-1;Windswept Isle-Insular Bo
+291;1008;sea;568;-1;-1;-1;-1;Gandiushewo-Forgeronne
+306;1011;sea;561;-1;-1;-1;-1;Feldip Mangroves-Goran
+780;256;sea;570;-1;-1;-1;-1;Retraite-Coal Trucks
+315;985;sea;627;-1;-1;-1;-1;Warforge-Mythic Isle
+365;366;sea;915;-1;-1;-1;-1;Barbarian Outpost-Barren Shore
+373;972;sea;574;-1;-1;-1;-1;Jaktområdet-Isig Jakt
+381;384;sea;914;-1;-1;-1;-1;Brödkorg-Etceteria
+383;384;sea;576;-1;-1;-1;-1;Sogthorpe-Etceteria
+385;388;sea;579;-1;-1;-1;-1;Neitiznot-Arktiskfuru
+388;389;sea;579;-1;-1;-1;-1;Arktiskfuru-Trollkast
+386;387;sea;585;-1;-1;-1;-1;Jatizso-Kobberøy
+387;389;sea;577;-1;-1;-1;-1;Kobberøy-Trollkast
+399;400;sea;681;-1;-1;-1;-1;Port Piscarilius-East Anglerfish Isle
+399;876;sea;681;-1;-1;-1;-1;Port Piscarilius-West Anglerfish Isle
+405;876;sea;681;-1;-1;-1;-1;West Anglerfish Isle-Foreboding Shore
+436;437;sea;678;-1;-1;-1;-1;Crabclaw Isle-Crab Raises
+488;490;sea;719;-1;-1;-1;-1;Aldarin-Arida's Edge
+491;492;sea;993;-1;-1;-1;-1;Tempestus-Singing Isle
+492;886;sea;993;-1;-1;-1;-1;Singing Isle-Ventus Cuniculum
+491;886;sea;993;-1;-1;-1;-1;Tempestus-Ventus Cuniculum
+765;766;sea;641;-1;-1;-1;-1;Slugling Shores-Mount Brackish
+805;806;sea;551;-1;-1;-1;-1;Shores of Life-Ape Cove
+1104;1105;sea;1034;-1;-1;-1;-1;Aminishi
+1105;1106;sea;1034;-1;-1;-1;-1;Aminishi-Tortle
+1106;1107;sea;1034;-1;-1;-1;-1;IslandTurtles
+1105;1107;sea;1034;-1;-1;-1;-1;Aminishi-Turtles
+1112;1120;sea;1035;-1;-1;-1;-1;Sagwa-Sunlit Veil
+1130;1138;sea;608;-1;-1;-1;-1;Chimera-Randoshaku
+1147;1149;sea;614;-1;-1;-1;-1;Sakura-Onsen
+1163;1164;sea;1058;-1;-1;-1;-1;Glittercaves
+1186;1188;sea;1088;-1;-1;-1;-1;New Heritage-Khanoka
+1186;1187;sea;1088;-1;-1;-1;-1;KhanokaSouth
+1184;1187;sea;1090;-1;-1;-1;-1;KhanokaNorth
+1182;1187;sea;1090;-1;-1;-1;-1;Khanoka-Hole
+1182;1179;sea;1088;-1;-1;-1;-1;Hole-Flou
+1181;1176;sea;1087;-1;-1;-1;-1;Flou-Ashihama
+1178;1195;sea;1087;-1;-1;-1;-1;Ashihama-Yamada
+1196;1197;sea;1086;-1;-1;-1;-1;YamadaInternal
+1213;1214;sea;1070;-1;-1;-1;-1;GuArchipelago
+1236;1237;sea;661;-1;-1;-1;-1;Daemonheim
+1289;1291;sea;1280;-1;-1;-1;-1;IsleofGarmr
+1301;1302;sea;1283;-1;-1;-1;-1;PolarBearIsle
+1303;1302;sea;1283;-1;-1;-1;-1;PolarBearIsle
+924;1346;lake;763;-1;-1;-1;-1;CentralIsleofSouls
+761;1346;lake;763;-1;-1;-1;-1;CentralIsleofSouls
+-1;-1;;-1;-1;-1;-1;-1;-1;

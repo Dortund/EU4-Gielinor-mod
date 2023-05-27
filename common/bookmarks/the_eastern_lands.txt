@@ -1,0 +1,21 @@
+bookmark =
+{
+	name = "THE_EASTERN_LANDS_NAME"
+	desc = "THE_EASTERN_LANDS_DESC"
+	date = 1930.6.1
+	
+	center = 1232
+	
+	country = NHE
+	country = KHN
+	country = FTS
+	country = WKO
+	country = AIJ
+	country = HNT
+	country = SSH
+	country = HRN
+	country = SSY
+	country = FLB
+	country = BBM
+	country = TVV
+}

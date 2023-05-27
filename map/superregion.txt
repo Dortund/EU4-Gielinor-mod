@@ -1,0 +1,61 @@
+# A region can only belong to one super region.
+
+east_old_world_superregion = {
+	misthalin_region
+	asgarnia_region
+	kharidian_desert_region
+	morytania_region
+	forinthry_region
+	outer_isles_region
+}
+
+west_old_world_superregion = {
+	karamja_region
+	southern_isles_region
+	kandarin_region
+	feldip_hills_region
+	tirannwn_region
+	troll_country_region
+	fremennik_region
+	acheron_region
+}
+
+zeah_superregion = {
+	kourend_region
+	kebos_region
+	varlamore_region
+}
+
+wushanko_isles_superregion = {
+	arc_region
+	skull_region
+	hook_region
+	scythe_region
+	bowl_region
+	pincers_region
+	loop_region
+	shield_region
+}
+
+# Sea super regions are used by AI to plan naval bases (it wants at least one fleet in each it has non-home presence if possible).
+
+south_sea_superregion = {
+	unquiet_ocean_region
+	crystal_ocean_region
+}
+
+north_sea_superregion = {
+	lunar_sea_region
+	northern_sea_region
+}
+
+zeah_sea_superregion = {
+	east_zeah_sea_region
+	sea_of_kebos_region
+	shining_ocean_region
+}
+
+eastern_sea_superregion = {
+	eastern_sea_region
+	far_eastern_sea_region
+}

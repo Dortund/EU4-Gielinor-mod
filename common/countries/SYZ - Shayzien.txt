@@ -1,0 +1,51 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 132 26 13 }
+
+revolutionary_colors = { 3 4 5 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Babacus #0" = 5
+	"Kalt #0" = 5
+	"Lars #0" = 5
+	"Osten #0" = 5
+	"Phileas #0" = 5
+	"Seabry #0" = 5
+	"Shiro #0" = 5
+	"Tony #0" = 5
+	"Vir #0" = 5
+	"Amelia #0" = -5
+	"Briget #0" = -5
+	"Elena #0" = -5
+	"Emma #0" = -5
+	"Ginea #0" = -5
+	"Jennifer #0" = -5
+	"Kilian #0" = -5
+	"Rachelle #0" = -5
+	"Salara #0" = -5
+	"Sdiar #0" = -5
+	"Shayda #0" = -5
+	"Hosa #0" = 1
+	"Martin #0" = 1
+	"Lan #0" = 1
+	"Reginald #0" = 1
+	"Robert #0" = 1
+	"Roy #0" = 1
+	"Tomas #0" = 1
+	"Alyssa #0" = -1
+	"Elise #0" = -1
+	"Rose #0" = -1
+}

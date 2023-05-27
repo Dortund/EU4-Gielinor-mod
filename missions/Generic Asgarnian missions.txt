@@ -1,0 +1,303 @@
+genasg_missions_2 = {
+	slot = 2
+	generic = yes
+	ai = yes
+	potential = {
+		culture_group = asgarnian_group
+		capital_scope = {
+			region = asgarnia_region
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genasg_grow_the_economy = {
+		icon = mission_entrepot_of_india
+		required_missions = {  }
+		position = 1
+		trigger = {
+			share_of_starting_income = 1.5
+		}
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	genasg_proselytise_the_faith = {
+		icon = mission_hands_praying
+		required_missions = { genasg_grow_the_economy }
+		position = 2
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = obj_convert_2_provinces_tooltip
+				check_variable = { which = num_converted_religion value = 2 }
+			}
+		}
+		effect = {
+			add_patriarch_authority = 0.05
+			add_papal_influence = 10
+			if = {
+				limit = {
+					religion = guthix
+					karma = 0
+				}
+				add_karma = -15
+			}
+			if = {
+				limit = {
+					religion = guthix
+					NOT = { karma = 0 }
+				}
+				add_karma = 15
+			}
+		}
+	}
+	genasg_stable_expansion = {
+		icon = mission_high_income
+		required_missions = { genasg_proselytise_the_faith }
+		position = 3
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = asgarnia_region
+				is_city = yes
+			}
+			NOT = { average_autonomy = 5 }
+			stability = 3
+		}
+		effect = {
+			add_prestige = 25
+			41 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	genasg_onward_to_farradorn = {
+		icon = mission_conquer_50_development
+		required_missions = { genasg_stable_expansion }
+		position = 4
+		trigger = {
+			41 = {
+				owned_by = ROOT
+				controlled_by = ROOT
+				is_core = ROOT
+				development = 25
+			}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+}
+
+genasg_missions_3 = {
+	slot = 3
+	generic = yes
+	ai = yes
+	potential = {
+		culture_group = asgarnian_group
+		capital_scope = {
+			region = asgarnia_region
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genasg_friends_in_asgarnia = {
+		icon = mission_alliances
+		required_missions = {  }
+		position = 1
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					capital_scope = {
+						region = asgarnia_region
+					}
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	
+	genasg_misthalin_relations = {
+		icon = mission_monarch_in_throne_room
+		required_missions = { genasg_friends_in_asgarnia }
+		position = 2
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = MST
+					reverse_has_opinion = {
+						who = MST
+						value = 100
+					}
+				}
+				NOT = {
+					reverse_has_opinion = {
+						who = MST
+						value = -50
+					}
+				}
+				NOT = { exists = MST }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						reverse_has_opinion = {
+							who = MST
+							value = -50
+						}
+					}
+				}
+				add_opinion = {
+					who = MST
+					modifier = genasg_curse_misthalin
+				}
+				add_mil_power = 50
+			}
+			else = {
+				add_opinion = {
+					who = MST
+					modifier = genasg_friend_of_misthalin
+				}
+				add_dip_power = 25
+			}
+		}
+	}
+	
+	genasg_trade_dominance = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { genasg_misthalin_relations }
+		position = 3
+		trigger = {
+			33 = {
+				is_strongest_trade_power = ROOT
+			}
+			41 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			33 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	genasg_coastal_control = {
+		icon = mission_invade_island
+		required_missions = { genasg_trade_dominance }
+		position = 4
+		trigger = {
+			owns_core_province = 33
+			num_of_heavy_ship = 5
+		 	num_of_light_ship = 15
+		}
+		effect = {
+			add_dip_power = 100
+		}
+	}
+}
+
+genasg_missions_4 = {
+	slot = 4
+	generic = yes
+	ai = yes
+	potential = {
+		culture_group = asgarnian_group
+		capital_scope = {
+			region = asgarnia_region
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genasg_organise_the_troops = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {  }
+		position = 1
+		trigger = {
+			army_professionalism = 0.05
+			army_size_percentage = 0.9
+		 	num_of_generals = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	genasg_decent_army = {
+		icon = mission_assemble_an_army
+		required_missions = { genasg_organise_the_troops }
+		position = 2
+		trigger = {
+			army_tradition = 25
+			army_size = 15
+		}
+		effect = {
+			add_yearly_manpower = 0.2
+			capital_scope = {
+				add_base_manpower = 1
+			}
+		}
+	}
+	genasg_inland_expansion = {
+		icon = mission_rb_import_potatoes
+		required_missions = { genasg_decent_army }
+		position = 3
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = asgarnia_region
+				 	NOT = { has_port = yes }
+				}
+				amount = 10
+			}
+			any_owned_province = {
+				OR = {
+					area = taverley_area
+					area = burthorpe_area
+				}
+			}
+		}
+		effect = {
+			add_yearly_manpower = 0.2
+			capital_scope = {
+				add_base_manpower = 1
+			}
+			51 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	genasg_burthorpe_border = {
+		icon = the_alpine_wall
+		required_missions = { genasg_inland_expansion }
+		position = 4
+		trigger = {
+			burthorpe_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+				name = genasg_troll_guard
+				duration = 7300
+			}
+			add_mil_power = 100
+		}
+	}
+}

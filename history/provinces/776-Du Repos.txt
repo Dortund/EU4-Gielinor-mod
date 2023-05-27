@@ -1,0 +1,44 @@
+#776-Du Repos
+owner = MNR
+controller = MNR
+add_core = MNR
+tribal_owner = ---
+culture = catherbian
+religion = armadyl
+
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 3
+
+trade_goods = advanced_logs
+
+is_city = yes
+
+1982.5.13 = {
+	owner = HZL
+	controller = HZL
+	add_core = HZL
+}
+
+2007.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	remove_core = MNR
+	religion = saradomin
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}

@@ -1,0 +1,116 @@
+# base_price = X			base price in $. (default is 1.0 if not specified
+# goldtype = yes/no			This resource works like 'gold' if yes, using prices from mine-value in province instead of supply/demand and baseprice. Also creates gold-inflation
+
+
+# New resources
+
+advanced_logs = {
+	base_price = 3
+}
+
+advanced_ores = {
+	base_price = 3
+}
+
+basic_ores = {
+	base_price = 2
+}
+
+bones = {
+	base_price = 2
+}
+
+cabbage = {
+	base_price = 2
+	#+25%: At least 25 Brassica Prime provinces; follows faith; 2+ cabbage-producing provinces
+}
+
+divine_energy = {
+	base_price = 10
+	#+10%: Invention institution
+}
+
+fishing_spot = {
+	base_price = 2
+	#+10%: Barbarian Outpost is Barbarian culture with 40+ adventurer rating
+}
+
+flax = {
+	base_price = 3
+}
+
+fruit = {
+	base_price = 2.5
+}
+
+gemstones = {
+	base_price = 4
+}
+
+grains = {
+	base_price = 2.5
+}
+
+herblore_supplies = {
+	base_price = 2.5
+}
+
+hunter_creatures = {
+	base_price = 2
+}
+
+lesser_loot = {
+	base_price = 3
+	#-25%: Greater Loot unlocked
+}
+
+logs = {
+	base_price = 2
+	#+25%: Invention institution
+}
+
+livestock_farm = {
+	base_price = 2
+}
+
+magic_supplies = {
+	base_price = 2.5
+	#+40%: Runecrafting institution
+}
+
+manufactured_goods = {
+	base_price = 3
+	#+25%: Invention institution
+}
+
+naval_goods = {
+	base_price = 2.5
+	#+20%: Exploration institution
+}
+
+rare_loot = {
+	base_price = 5
+}
+
+runes = {
+	base_price = 8
+	#-25%: Runecrafting institution
+}
+
+runite = {
+	base_price = 5
+	#-20%: Greater Loot unlocked
+}
+
+tropical_logs = {
+	base_price = 2.5
+}
+
+bamboo = {
+	base_price = 2.5
+}
+
+gunpowder = {
+	base_price = 3.5
+	#+20%: Gunpowder-producing nation builds artillery
+}

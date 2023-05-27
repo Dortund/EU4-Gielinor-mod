@@ -1,0 +1,36 @@
+########################################
+# Events for Marwolaeth
+########################################
+
+namespace = flavor_mwl
+normal_or_historical_nations = yes
+
+# Zarosian Legends
+country_event = {
+	id = flavor_mwl.1
+	title = flavor_mwl.1.t
+	desc = flavor_mwl.1.d #Zarosian legends seem to corroborate the stories of such a god being Seren's brother, and yet the two differ greatly. Both the heretical view of Seren and the Dark Lord have a great attachment to the lives and deaths of people, yet Zaros seems... empty. Without passion.
+	picture = JALDRAOCHT_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_mwl.1.a #We should make room for the celebration of Seren's family.
+		random_owned_area = {
+			change_religion = zaros
+			add_province_modifier = {
+				name = MWL_brother_of_seren
+				duration = 9125
+			}
+		}
+		add_dip_power = 100
+	}
+	option = {
+		name = flavor_mwl.1.b #We will not entertain yet another heresy.
+		add_mil_power = 75
+	}
+}

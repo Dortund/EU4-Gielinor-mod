@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = plutocracy_reform
+government_rank = 2
+primary_culture = meiyer
+religion = saradomin
+technology_group = morytaniantechgroup
+capital = 136 #Everlight
+national_focus = ADM

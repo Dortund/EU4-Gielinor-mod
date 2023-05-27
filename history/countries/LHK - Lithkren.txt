@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = island_boss_nation
+government_rank = 1
+primary_culture = metaldragon
+religion = jas
+technology_group = northerntechgroup
+capital = 198 #Lithkren
+national_focus = MIL
+
+476.12.3 = {
+	monarch = {
+		name = "Zorgoth"
+		dynasty = "Dactyl"
+		culture = "dragonkin"
+		birth_date = 1.1.1
+		adm = 4
+		dip = 0
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

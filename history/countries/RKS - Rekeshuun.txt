@@ -1,0 +1,35 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = rekeshuun
+religion = bandos
+technology_group = bandostechgroup
+capital = 288 #Scorpius
+national_focus = MIL
+historical_friend = EKE
+historical_friend = HUZ
+historical_friend = IDI
+historical_friend = SGK
+historical_friend = THO
+
+1921.7.11 = {
+	monarch = {
+		name = "Dirtteeth"
+		dynasty = "Rekeshuun"
+		birth_date = 1903.2.19
+		adm = 4
+		dip = 2
+		mil = 5
+	}
+}
+
+2163.3.17 = {
+	monarch = {
+		name = "Blobnose"
+		dynasty = "Rekeshuun"
+		birth_date = 1903.2.19
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}

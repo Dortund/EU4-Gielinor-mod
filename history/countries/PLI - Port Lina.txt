@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = merchants_reform
+government_rank = 1
+primary_culture = south_asgarn
+religion = saradomin
+technology_group = centraltechgroup
+capital = 33 #Port Lina
+national_focus = DIP
+historical_rival = MKM
+
+1928.3.17 = {
+	monarch = {
+		name = "Stannius"
+		dynasty = "Lina"
+		birth_date = 1908.11.4
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}

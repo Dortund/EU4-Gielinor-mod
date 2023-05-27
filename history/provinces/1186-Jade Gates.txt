@@ -1,0 +1,21 @@
+#1186-Jade Gates
+owner = KHN
+controller = KHN
+add_core = KHN
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = manufactured_goods
+
+is_city = yes

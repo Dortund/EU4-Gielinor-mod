@@ -1,0 +1,3 @@
+discovered_by = fremenniktechgroup
+discovered_by = dwarventechgroup
+discovered_by = northerntechgroup

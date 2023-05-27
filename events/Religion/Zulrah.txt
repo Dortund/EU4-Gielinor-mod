@@ -1,0 +1,49 @@
+########################################
+# Zulrah Religion Events
+########################################
+
+namespace = zulrah_events
+
+# Zulrah reform
+country_event = {
+	id = zulrah_events.1
+	title = zulrah_events.1.t #The faith of Zulrah grows!
+	desc = zulrah_events.1.d #We have built a great nation in the name of Zulrah, and we are willing to sacrifice our accomplishments to appease the Great Serpent.
+	picture = ZULRAH_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = zulrah
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_stability = -2
+			add_manpower = -25
+		}
+	}
+	
+	option = {
+		name = zulrah_events.1.a #Sacrifice our wealth for the Serpent!
+		all_owned_province = {
+			add_base_tax = -1
+		}
+	}
+	option = {
+		name = zulrah_events.1.b #Sacrifice our production for the Serpent!
+		all_owned_province = {
+			add_base_production = -1
+		}
+	}
+	option = {
+		name = zulrah_events.1.c #Sacrifice our manpower for the Serpent!
+		all_owned_province = {
+			add_base_manpower = -1
+		}
+	}
+}

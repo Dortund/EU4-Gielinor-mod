@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = phoenix
+add_accepted_culture = reborn_warrior
+religion = guthix
+technology_group = kandarintechgroup
+capital = 1349 #Phoenix Lair
+
+1177.1.6 = {
+	monarch = {
+		name = "Phoenix"
+		dynasty = "of the Lair"
+		culture = phoenix
+		birth_date = 677.1.6
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

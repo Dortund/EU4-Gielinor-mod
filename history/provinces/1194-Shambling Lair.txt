@@ -1,0 +1,22 @@
+#1194 - Shambling Lair
+owner = SBL
+controller = SBL
+add_core = SBL
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 6
+
+fort_15th = yes
+
+trade_goods = lesser_loot
+latent_trade_goods = { rare_loot }
+
+is_city = yes

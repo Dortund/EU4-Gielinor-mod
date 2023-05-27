@@ -1,0 +1,251 @@
+mps_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MPS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MPS_imperial_district_mission = {
+		icon = mission_alliances
+		position = 1
+		required_missions = {  }
+		trigger = {
+			owns_core_province = 100
+			legitimacy = 100
+			AND = {
+				employed_advisor = {
+					category = ADM 
+				}
+				employed_advisor = {
+					category = DIP
+				}
+				employed_advisor = {
+					category = MIL
+				}
+			}
+			NOT = { is_in_deficit = yes }
+		}
+		effect = {
+			add_adm_power = 25
+			add_prestige = 10
+		}
+	}
+	
+	MPS_soul_altar = {
+		icon = mission_soul_altar
+		position = 3
+		required_missions = { MPS_expand_inland }
+		trigger = {
+			owns_core_province = 858
+			has_institution = runecrafting
+			OR = {
+				owns_core_province = 96
+				96 = { is_empty = yes }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 96
+				}
+				96 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				100 = {
+					add_base_tax = -1
+					add_base_production = -1
+					add_base_manpower = -1
+				}
+				96 = {
+					add_core = ROOT
+					cede_province = ROOT				
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					hidden_effect = {
+						add_institution_embracement = {
+							which = reconstruction
+							value = 100
+						}
+						add_institution_embracement = {
+							which = architecture
+							value = 100
+						}
+						add_institution_embracement = {
+							which = runecrafting
+							value = 100
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+mps_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MPS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MPS_worker_district_mission = {
+		icon = mission_alliances
+		position = 1
+		required_missions = {  }
+		trigger = {
+			owns_core_province = 100
+			OR = {
+				workshop = 2
+				counting_house = 2
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+		}
+	}
+	
+	MPS_expand_inland = {
+		icon = mission_expand_inland
+		position = 2
+		required_missions = { MPS_imperial_district_mission MPS_worker_district_mission }
+		trigger = {
+			owns_core_province = 100
+			has_institution = architecture
+			OR = {
+				owns_core_province = 857
+				857 = { is_empty = yes }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 857
+				}
+				857 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				100 = {
+					add_base_tax = -1
+					add_base_production = -1
+					add_base_manpower = -1
+				}
+				857 = {
+					add_core = ROOT
+					cede_province = ROOT				
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+		}
+	}
+}
+
+mps_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MPS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MPS_merchant_district_mission = {
+		icon = mission_alliances
+		position = 1
+		required_missions = {  }
+		trigger = {
+			owns_core_province = 100
+			100 = {
+				has_most_province_trade_power = ROOT
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+				}
+			}
+		}
+		effect = {
+			100 = {
+				add_province_modifier = {
+					name = MPS_trade_monopoly
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+mps_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = MPS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MPS_port_district_mission = {
+		icon = mission_alliances
+		position = 1
+		required_missions = {  }
+		trigger = {
+			owns_core_province = 100
+			naval_forcelimit = 20
+			navy_size_percentage = 0.9
+		}
+		effect = {
+			add_navy_tradition = 10
+		}
+	}
+}
+
+mps_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = MPS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MPS_royal_menaphite_army = {
+		icon = mission_alliances
+		position = 1
+		required_missions = {  }
+		trigger = {
+			army_professionalism = 0.2
+			OR = {
+				barracks = 2
+				training_fields = 2
+			}
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 69 66 48 }
+
+revolutionary_colors = { 3 4 3 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Anvil #0" = 1
+	"Arrg #0" = 1
+	"Ash #0" = 1
+	"Berry #0" = 1
+	"Big Rock #0" = 1
+	"Bubbles #0" = 1
+	"Burntmeat #0" = 1
+	"Crate #0" = 1
+	"Dad #0" = 1
+	"Diplomat #0" = 1
+	"Drunken Dwarf's Leg #0" = 1
+	"Dwarf Bone #0" = 1
+	"Flipper #0" = 1
+	"GP #0" = 1
+	"Harpoon #0" = 1
+	"Jelly #0" = 1
+	"Kob #0" = 1
+	"Kraka #0" = 1
+	"Kris #0" = 1
+	"Lol #0" = 1
+	"Magic Stick #0" = 1
+	"Milkshake #0" = 1
+	"Morningstar #0" = 1
+	"Mushroom #0" = 1
+	"My Arm #0" = 1
+	"Pretty Flower #0" = 1
+	"Poorly Cooked Karabwan #0" = 1
+	"Rock #0" = 1
+	"Sparkly Crystal #0" = 1
+	"The Map #0" = 1
+	"Tilt #0" = 1
+	"Tiny Insect #0" = 1
+	"Twig #0" = 1
+	"Ug #0" = 1
+	"Wolf Bones #0" = 1
+	"Wolf Meat #0" = 1
+	"Anvil #0" = -1
+	"Ash #0" = -1
+	"Berry #0" = -1
+	"Big Rock #0" = -1
+	"Bubbles #0" = -1
+	"Burntmeat #0" = -1
+	"Crate #0" = -1
+	"Dad #0" = -1
+	"Diplomat #0" = -1
+	"Drunken Dwarf's Leg #0" = -1
+	"Dwarf Bone #0" = -1
+	"Flipper #0" = -1
+	"GP #0" = -1
+	"Harpoon #0" = -1
+	"Jelly #0" = -1
+	"Kob #0" = -1
+	"Kraka #0" = -1
+	"Kris #0" = -1
+	"Lol #0" = -1
+	"Magic Stick #0" = -1
+	"Milkshake #0" = -1
+	"Morningstar #0" = -1
+	"Mushroom #0" = -1
+	"My Arm #0" = -1
+	"Pretty Flower #0" = -1
+	"Poorly Cooked Karabwan #0" = -1
+	"Rock #0" = -1
+	"Sparkly Crystal #0" = -1
+	"The Map #0" = -1
+	"Tilt #0" = -1
+	"Tiny Insect #0" = -1
+	"Twig #0" = -1
+	"Wolf Bones #0" = -1
+	"Wolf Meat #0" = -1
+	"Aga #0" = -1
+}

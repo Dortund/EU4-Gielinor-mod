@@ -1,0 +1,28 @@
+#1210 - Adamant Province
+owner = IOA
+controller = IOA
+add_core = IOA
+tribal_owner = ---
+culture = shield_culture
+religion = byakko
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = advanced_ores
+
+fort_15th = yes
+
+is_city = yes
+
+center_of_trade = 1
+
+add_province_modifier = { 
+    name = highprod_isle_of_adamant
+    duration = -1
+}

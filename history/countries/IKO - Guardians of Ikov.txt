@@ -1,0 +1,31 @@
+government = theocracy
+add_government_reform = monastic_order_reform
+government_rank = 1
+primary_culture = catherbian
+religion = armadyl
+technology_group = kandarintechgroup
+capital = 252 #Redvin
+national_focus = DIP
+
+1929.1.1 = {
+	monarch = {
+		name = "Iridor"
+		dynasty = "Underwing"
+		birth_date = 1896.5.7
+		adm = 3
+		dip = 6
+		mil = 4
+	}
+}
+
+2149.11.8 = {
+	monarch = {
+		name = "Idria"
+		dynasty = "of Ikov"
+		birth_date = 2102.4.23
+		adm = 4
+		dip = 5
+		mil = 2
+		female = yes
+	}
+}

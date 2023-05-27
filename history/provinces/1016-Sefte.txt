@@ -1,0 +1,26 @@
+#1016 - Sefte
+owner = ANM
+controller = ANM
+add_core = ANM
+tribal_owner = ---
+culture = north_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+}

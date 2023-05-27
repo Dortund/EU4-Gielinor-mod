@@ -1,0 +1,21 @@
+#1420-Aesagrun
+owner = AES
+controller = AES
+add_core = AES
+tribal_owner = ---
+culture = barbarian
+religion = v
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 4
+
+fort_15th = yes
+
+trade_goods = hunter_creatures
+
+is_city = yes

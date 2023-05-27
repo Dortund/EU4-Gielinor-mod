@@ -1,0 +1,26 @@
+#350-Troll Stronghold
+owner = TST
+controller = TST
+add_core = TST
+tribal_owner = ---
+culture = mountaintroll
+religion = bandos
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 6
+
+fort_15th = yes 
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+center_of_trade = 1

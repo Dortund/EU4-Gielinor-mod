@@ -1,0 +1,72 @@
+government = monarchy
+add_government_reform = kandarin_monarchy
+government_rank = 2
+primary_culture = ardignan
+religion = saradomin
+technology_group = kandarintechgroup
+capital = 265 #East Ardougne
+national_focus = ADM
+
+2098.11.2 = {
+	monarch = {
+		name = "Harros"
+		dynasty = "Ardignas"
+		birth_date = 2059.7.23
+		death_date = 2106.5.31
+		adm = 5
+		dip = 5
+		mil = 3
+		religion = guthix
+	}
+}
+
+2106.5.31 = {
+	monarch = {
+		name = "Narras"
+		dynasty = "Ardignas"
+		birth_date = 2080.7.23
+		death_date = 2124.4.20
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+2124.4.20 = {
+	monarch = {
+		name = "Ulthas"
+		dynasty = "Ardignas"
+		birth_date = 2099.7.23
+		death_date = 2136.2.8
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+2136.2.8 = {
+	monarch = {
+		name = "Lathas"
+		dynasty = "Ardignas"
+		birth_date = 2120.5.12
+		death_date = 2184.8.11
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+2150.1.1 = {
+	add_absolutism = 25
+}
+
+2184.8.11 = {
+	monarch = {
+		name = "Thoros"
+		dynasty = "Ardignas"
+		birth_date = 2134.2.13
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}

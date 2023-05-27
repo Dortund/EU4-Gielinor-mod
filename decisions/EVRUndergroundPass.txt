@@ -1,0 +1,27 @@
+country_decisions = {
+	EVR_open_the_underground_pass = {
+		potential = {
+			tag = EVR
+			exists = IOR
+			mission_completed = EVR_push_the_line_north
+			338 = {
+				is_empty = yes
+			}
+		}
+		allow = {
+			owns_core_province = 335
+			mil_power = 100
+		}
+		effect = {
+			add_mil_power = -100
+			country_event = {
+				id = flavor_evr.9
+				days = 1
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+}

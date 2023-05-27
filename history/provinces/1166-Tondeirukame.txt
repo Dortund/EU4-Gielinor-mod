@@ -1,0 +1,17 @@
+#1166-Tondeirukame
+
+tribal_owner = ---
+culture = eastern_exile
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes

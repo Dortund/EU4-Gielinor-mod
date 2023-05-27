@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = treegnome
+religion = guthix
+technology_group = gnometechgroup
+capital = 272 #Ta Quir Priw
+national_focus = DIP
+historical_friend = CDA
+historical_friend = TGV
+
+1958.7.23 = {
+	monarch = {
+		name = "Argenthorg"
+		dynasty = "Shareen"
+		birth_date = 1913.7.13
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+}
+
+2155.11.16 = {
+	monarch = {
+		name = "Narnode"
+		dynasty = "Shareen"
+		birth_date = 2102.12.12
+		adm = 3
+		dip = 5
+		mil = 5
+	}
+}

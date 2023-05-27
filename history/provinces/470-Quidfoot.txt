@@ -1,0 +1,19 @@
+#470-Quidfoot
+owner = CNC
+controller = CNC
+add_core = CNC
+tribal_owner = ---
+culture = mountaintroll
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+
+trade_goods = herblore_supplies
+
+is_city = yes

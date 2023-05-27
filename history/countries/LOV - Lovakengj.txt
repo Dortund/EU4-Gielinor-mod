@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = kourend_house
+government_rank = 1
+primary_culture = lovakengj
+religion = guthix
+technology_group = zeantechgroup
+capital = 419 #Lovakengj
+national_focus = MIL
+
+1893.10.7 = {
+	monarch = {
+		name = "Drunakin"
+		dynasty = "Lovakengj"
+		birth_date = 1860.5.11
+		adm = 2
+		dip = 1
+		mil = 5
+	}
+}
+
+2141.1.10 = {
+	monarch = {
+		name = "Vulcana"
+		dynasty = "Lovakengj"
+		birth_date = 2013.6.12
+		adm = 1
+		dip = 2
+		mil = 4
+		female = yes
+	}
+}

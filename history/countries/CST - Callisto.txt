@@ -1,0 +1,28 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = corrupt_bear
+religion = zamorak
+technology_group = northerntechgroup
+capital = 187 #Callisto
+national_focus = MIL
+
+5.1.15 = {
+	monarch = {
+		name = "Callisto"
+		dynasty = "the Cursed Bear"
+		birth_date = 1.2.17
+		adm = 0
+		dip = 0
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

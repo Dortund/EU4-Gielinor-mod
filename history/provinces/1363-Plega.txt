@@ -1,0 +1,35 @@
+#1363-Plega
+owner = DYS
+controller = DYS
+add_core = DYS
+tribal_owner = ---
+culture = north_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = logs
+latent_trade_goods = { divine_energy }
+
+is_city = yes
+
+1963.9.10 = {
+	owner = DBS
+	controller = DBS
+	add_core = DBS
+}
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+	remove_core = DBS
+}

@@ -1,0 +1,23 @@
+#1198 - Yaonai
+owner = YON
+controller = YON
+add_core = YON
+tribal_owner = ---
+culture = loop_culture
+religion = zaros
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 1

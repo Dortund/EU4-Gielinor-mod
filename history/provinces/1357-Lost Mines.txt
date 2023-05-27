@@ -1,0 +1,16 @@
+#1357 - 
+tribal_owner = ---
+culture = dorgeshuun
+religion = godless
+
+discovered_by = DSK
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+
+trade_goods = basic_ores
+
+is_city = yes

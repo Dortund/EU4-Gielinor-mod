@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = midkharidian
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 86 #Nardah
+historical_friend = PVC
+
+1922.5.8 = {
+	monarch = {
+		name = "Sirrie"
+		dynasty = "Elidi"
+		birth_date = 1885.12.31
+		adm = 5
+		dip = 4
+		mil = 3
+		female = yes
+	}
+}
+
+2143.12.5 = {
+	monarch = {
+		name = "Awusah"
+		dynasty = "Elidi"
+		birth_date = 2117.7.30
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}

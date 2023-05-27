@@ -1,0 +1,27 @@
+#407-North Arceuus
+owner = AUU
+controller = AUU
+add_core = AUU
+tribal_owner = ---
+culture = arceuus
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = magic_supplies
+
+is_city = yes
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

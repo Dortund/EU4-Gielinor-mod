@@ -1,0 +1,322 @@
+####################################################
+# Price Change Events
+####################################################
+
+namespace = giu_prices
+
+# Expansion of Runecrafting
+country_event = {
+	id = giu_prices.1
+	title = giu_prices.1.t #Expansion of Runecrafting
+	desc = giu_prices.1.d #The art of Runecrafting has begun to spread throughout the world. Runes are no longer as limited a commodity, and as a consequence their value has fallen. However, a growing number of mages has increased the value of associated supplies.
+	picture = RUNECRAFTING_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		runes = 1
+		NOT = { has_global_flag = expansion_of_runecrafting }
+		calc_true_if = {
+			all_country = {
+				has_institution = runecrafting
+			}
+			amount = 5
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = giu_prices.1.a #At least there's more mages to buy our wares!
+		change_price = {
+			trade_goods = runes
+			key = RUNES_CRAFTEXPAND
+			value = -0.25
+			duration = -1
+		}
+		change_price = {
+			trade_goods = magic_supplies
+			key = RUNES_CRAFTEXPAND
+			value = 0.4
+			duration = -1
+		}
+		add_years_of_income = 0.25
+		add_prestige = 20
+		set_global_flag = expansion_of_runecrafting
+	}
+}
+
+# Dissassembly
+country_event = {
+	id = giu_prices.2
+	title = giu_prices.2.t #Invention Components
+	desc = giu_prices.2.d #Budding inventors across Gielinor are actively dismantling anything they can find for parts they can use in new devices. Basic logs are a reliable source of simple parts, while manufactured goods break down into all kinds of useful pieces. This newfound demand is raising prices.
+	picture = INVENTION_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		manufactured_goods = 1
+		NOT = { has_global_flag = invention_components }
+		calc_true_if = {
+			all_country = {
+				has_institution = invention
+			}
+			amount = 5
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = giu_prices.2.a #More money for us!
+		change_price = {
+			trade_goods = logs
+			key = INV_COMPS
+			value = 0.25
+			duration = -1
+		}
+		change_price = {
+			trade_goods = manufactured_goods
+			key = INV_COMPS
+			value = 0.25
+			duration = -1
+		}
+		add_years_of_income = 0.25
+		add_prestige = 25
+		set_global_flag = invention_components
+	}
+}
+
+# Barbarian Fishing
+country_event = {
+	id = giu_prices.3
+	title = giu_prices.3.t #Barbarian Fishing
+	desc = giu_prices.3.d #Ancient Barbarian fishing methods involving heavy fishing rods have spread through Gielinor like wildfire after many adventurers have realised it to be an excellent training opportunity, even if the fish produced are not worth keeping. This shift has reduced the number of fish on the market and hence increased their value.
+	picture = DEEP_SEA_FISHING_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		622 = {
+			culture = barbarian
+			owner = ROOT
+			is_core = ROOT
+		}
+		absolutism = 40
+		NOT = { has_global_flag = barbarian_fishing }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = giu_prices.3.a #These fish are good for nothing but worthless caviar!
+		change_price = {
+			trade_goods = fishing_spot
+			key = BARB_FISHING
+			value = 0.1
+			duration = -1
+		}
+		add_adm_power = 50
+		add_prestige = 25
+		set_global_flag = barbarian_fishing
+	}
+}
+
+# Call of the Sea
+country_event = {
+	id = giu_prices.4
+	title = giu_prices.4.t #The Call of the Sea
+	desc = giu_prices.4.d #Growing interest in exploration has fuelled a desire for naval goods affecting their prices throughout Gielinor.
+	picture = EXPLORATION_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		naval_goods = 1
+		NOT = { has_global_flag = call_of_the_sea }
+		calc_true_if = {
+			all_country = {
+				has_institution = exploration
+			}
+			amount = 5
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = giu_prices.4.a #All I hear is the call of money.
+		change_price = {
+			trade_goods = naval_goods
+			key = NAVAL_GOODS_CALL
+			value = 0.2
+			duration = -1
+		}
+		add_years_of_income = 0.25
+		add_prestige = 20
+		set_global_flag = call_of_the_sea
+	}
+}
+
+# 
+country_event = {
+	id = giu_prices.5
+	title = giu_prices.5.t #The Charge Pack
+	desc = giu_prices.5.d #In order to power the myriad of new devices invented every day, the charge pack has been developed. This acts as a battery for divine energy, aiding portability - and making divine energy's value surge to ever-greater heights.
+	picture = INVENTION_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		divine_energy = 1
+		NOT = { has_global_flag = charge_pack }
+		has_institution = invention
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = giu_prices.5.a #They better invent a bigger coin pouch to hold all this cash!
+		change_price = {
+			trade_goods = divine_energy
+			key = INV_CHARGEPACK
+			value = 0.1
+			duration = -1
+		}
+		add_years_of_income = 0.5
+		add_prestige = 10
+		set_global_flag = charge_pack
+	}
+}
+
+country_event = {
+	id = giu_prices.6
+	title = giu_prices.6.t #Adventurers Gear Up
+	desc = giu_prices.6.d #The toughest adventurers in Gielinor have been taking on ever-more dangerous dungeons with the hope of ever-greater loot and fame. As they grow in experience and find better gear, their ability to retrieve loot has grown, and dungeons once-slow to explore are in danger of becoming overexploited. Meanwhile, the once-valuable runite has lost significant value as more powerful weapons and armour are being uncovered.
+	picture = TREASURE_CHESTS_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		rare_loot = 1
+		NOT = { has_global_flag = need_more_loot }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = giu_prices.6.a #Good thing we have the most valuable loot then!
+		change_price = {
+			trade_goods = lesser_loot
+			key = OVERGEARED_ADVENTURERS
+			value = -0.25
+			duration = -1
+		}
+		change_price = {
+			trade_goods = runite
+			key = OVERGEARED_ADVENTURERS
+			value = -0.20
+			duration = -1
+		}
+		add_years_of_income = 0.25
+		add_prestige = 50
+		set_global_flag = need_more_loot 
+	}
+}
+
+country_event = {
+	id = giu_prices.7
+	title = giu_prices.7.t #Growing Use of Gunpowder
+	desc = giu_prices.7.d #As cannons grow in popularity throughout Gielinor, the need for gunpowder similarly is growing. This will mean great wealth shall come to the Skulls region of the Wushanko Isles, where most of the world's gunpowder is produced.
+	picture = CANNON_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		gunpowder = 1
+		num_of_artillery = 3
+		NOT = { has_global_flag = growing_gunpowder }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = giu_prices.7.a #Our economy is booming!
+		change_price = {
+			trade_goods = gunpowder
+			key = CANNON_GUNPOWDER
+			value = 0.20
+			duration = -1
+		}
+		add_years_of_income = 0.5
+		add_prestige = 25
+		set_global_flag = growing_gunpowder
+	}
+}
+
+country_event = {
+	id = giu_prices.8
+	title = giu_prices.8.t #Triumph of Brassica Prime!
+	desc = giu_prices.8.d #The God of the Cabbages has spread his leafy goodness throughout this world with ourselves as his humble servants. The world is beginning to see the true value of cabbages!
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		religion = brassicaprime
+		cabbage = 2
+		NOT = { has_global_flag = brassica_triumph }
+		calc_true_if = {
+			all_province = {
+				religion = brassicaprime
+			}
+			amount = 25
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = giu_prices.8.a #Deliciousness is power.
+		change_price = {
+			trade_goods = cabbage
+			key = CABBAGE_TRIUMPH
+			value = 0.25
+			duration = -1
+		}
+		add_harmony = 25
+		add_prestige = 10
+		set_global_flag = brassica_triumph
+	}
+}
+
+
+
+
+
+

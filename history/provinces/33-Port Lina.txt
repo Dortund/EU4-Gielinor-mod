@@ -1,0 +1,34 @@
+#33 - Port Lina
+owner = PLI
+controller = PLI
+add_core = PLI
+tribal_owner = ---
+culture = south_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = kharidtechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 6
+base_production = 6
+base_manpower = 5
+
+fort_15th = yes 
+
+trade_goods = naval_goods
+
+is_city = yes
+
+center_of_trade = 2
+
+2021.10.30 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+	change_province_name = "Port Sarim"
+}

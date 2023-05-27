@@ -1,0 +1,19 @@
+#422-Giants' Den
+owner = GDE
+controller = GDE
+add_core = GDE
+tribal_owner = ---
+culture = hill_giant
+religion = bandos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = fishing_spot
+
+is_city = yes

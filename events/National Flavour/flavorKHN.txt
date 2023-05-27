@@ -1,0 +1,55 @@
+########################################
+# Events for Khanoka
+########################################
+
+namespace = flavor_khn
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_khn.1
+	title = flavor_khn.1.t #New Faiths
+	desc = flavor_khn.1.d #What strange and wonderous beliefs we have come into contact with! A god of Chaos, a god of Order and a god of Balance! Some local people have been persuaded by their arguments - should we take them on board or continue with our own beliefs?
+	picture = GOD_EMISSARIES_eventPicture
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_khn.1.a # Let us follow the God of Order!
+		custom_tooltip = KHN_changing_religion
+		change_religion = saradomin
+		add_country_modifier = {
+			name = KHN_new_faith
+			duration = 8125
+		}
+	}
+	option = {
+		name = flavor_khn.1.b # Let us follow the God of Balance!
+		custom_tooltip = KHN_changing_religion
+		change_religion = guthix
+		add_country_modifier = {
+			name = KHN_new_faith
+			duration = 8125
+		}
+	}
+	option = {
+		name = flavor_khn.1.c # Let us follow the God of Chaos!
+		custom_tooltip = KHN_changing_religion
+		change_religion = zamorak
+		add_country_modifier = {
+			name = KHN_new_faith
+			duration = 8125
+		}
+	}
+	option = {
+		name = flavor_khn.1.e # These religions are fascinating, but we should keep our own ways.
+		add_country_modifier = {
+			name = KHN_syncretic_policies
+			duration = 8125
+		}
+	}
+}

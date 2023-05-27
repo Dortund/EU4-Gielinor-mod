@@ -1,0 +1,24 @@
+#859 - Almina' Aljanubiu
+owner = MPS
+controller = MPS
+add_core = MPS
+tribal_owner = ---
+culture = menaphiteculture
+religion = menaphite
+
+discovered_by = kharidtechgroup
+discovered_by = karamjantechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 1

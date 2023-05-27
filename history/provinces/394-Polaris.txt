@@ -1,0 +1,19 @@
+#394 - Polaris
+owner = MOO
+controller = MOO
+add_core = MOO
+tribal_owner = ---
+culture = moonclan
+religion = v
+
+hre = no
+
+discovered_by = fremenniktechgroup
+
+base_tax = 3
+base_production = 2
+base_manpower = 1
+
+trade_goods = flax
+
+is_city = yes

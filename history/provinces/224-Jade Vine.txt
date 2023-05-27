@@ -1,0 +1,22 @@
+#224 - Jade Vine
+owner = KLU
+controller = KLU
+add_core = KLU
+add_core = SHI
+tribal_owner = ---
+culture = shilo
+religion = karamjan
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = herblore_supplies
+
+is_city = yes

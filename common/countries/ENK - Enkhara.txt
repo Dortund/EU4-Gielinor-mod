@@ -1,0 +1,20 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 124 26 13 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	# "Enkhara #0" = -1 # Commented out to allow for revival event
+}

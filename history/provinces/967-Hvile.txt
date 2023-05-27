@@ -1,0 +1,30 @@
+#967-Hvile (Jhallan's cave)
+tribal_owner = ---
+culture = icetroll
+religion = bandos
+
+hre = no
+
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+
+trade_goods = herblore_supplies
+
+native_size = 5
+native_ferocity = 15
+native_hostileness = 10
+
+add_province_triggered_modifier = wildy_border_level_one
+add_province_triggered_modifier = wildy_border_level_two
+add_province_triggered_modifier = wildy_border_level_three
+add_province_triggered_modifier = wildy_border_level_four
+add_province_triggered_modifier = wildy_border_level_five
+add_province_triggered_modifier = wildy_border_level_six
+add_province_triggered_modifier = wildy_border_level_seven
+add_province_triggered_modifier = wildy_border_level_eight
+add_province_triggered_modifier = wildy_border_level_nine

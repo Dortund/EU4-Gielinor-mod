@@ -1,0 +1,50 @@
+#262-Tour-Druide
+owner = CDA
+controller = CDA
+add_core = CDA
+tribal_owner = ---
+culture = meilyr
+religion = seren
+
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+1930.8.24 = {
+	owner = HZL
+	controller = HZL
+	add_core = HZL
+	culture = ardignan
+	religion = zamorak
+	remove_core = CDA
+	base_tax = 3
+	base_production = 3
+	base_manpower = 2
+}
+
+2007.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	remove_core = HZL
+	religion = saradomin
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}

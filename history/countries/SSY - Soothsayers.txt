@@ -1,0 +1,33 @@
+government = republic
+add_government_reform = magiocracy
+government_rank = 1
+primary_culture = scythe_culture
+religion = genbu
+technology_group = wushankotechgroup
+capital = 1155 #Aloft
+
+1911.8.24 = {
+	monarch = {
+		name = "Heying"
+		dynasty = "Xu"
+		birth_date = 1882.3.11
+		death_date = 1961.10.3
+		adm = 2
+		dip = 4
+		mil = 5
+		female = yes
+	}
+}
+
+2169.1.27 = {
+	monarch = {
+		name = "Luzhen"
+		dynasty = "Chang"
+		birth_date = 2143.3.24
+		death_date = 2181.11.10
+		adm = 0
+		dip = 2
+		mil = 3
+		female = yes
+	}
+}

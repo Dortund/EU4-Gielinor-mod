@@ -1,0 +1,24 @@
+government = republic
+add_government_reform = magiocracy
+government_rank = 1
+primary_culture = avarrockan
+add_accepted_culture = ghost
+religion = zamorak
+technology_group = centraltechgroup
+capital = 759 #Waiting Woods
+
+2161.2.10 = {
+	monarch = {
+		culture = avarrockan
+		dynasty = "Soulcrusher"
+		name = "Nomad"
+		claim = 100
+		birth_date = 2126.1.11
+		adm = 3
+		dip = 3
+		mil = 6
+	}
+	clear_scipted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+

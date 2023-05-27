@@ -1,0 +1,34 @@
+#West Lumbridge Swamp
+owner = GGS
+controller = GGS
+add_core = GGS
+tribal_owner = ---
+culture = garagorshuun
+religion = bandos
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 2
+
+trade_goods = advanced_ores
+
+is_city = yes
+
+1954.3.14 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+	remove_core = GGS
+	culture = lummer
+	religion = saradomin
+	change_province_name = "West Swamp"
+}

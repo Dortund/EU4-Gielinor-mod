@@ -1,0 +1,635 @@
+ardougne_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ADO
+			tag = KDR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ADO_withstand_the_tragedy = {
+		icon = mission_steppe_warriors
+		required_missions = { ADO_holy_forces }
+		position = 3
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				has_country_flag = kdr_dreaded_years_end
+				AND = {
+					NOT = { religion = saradomin }
+					has_institution = exploration
+					has_global_modifier_value = {
+						which = tolerance_heathen
+						value = 0.02
+					}
+				}
+				AND = {
+					religion = saradomin
+					has_institution = exploration
+				}
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+		}
+	}
+}
+
+ardougne_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ADO
+			tag = KDR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ADO_divine_cause = {
+		icon = mission_hands_praying
+		required_missions = {  }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = obj_convert_10_provinces_tooltip
+				check_variable = { which = num_converted_religion value = 10 }
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+				name = ADO_divine_outpost
+				duration = 7300
+			}
+		}
+	}
+	
+	ADO_holy_forces = {
+		icon = crush_heretic_strongholds
+		required_missions = { ADO_divine_cause ADO_growth_of_ardougne }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			temple = 5
+			army_size_percentage = 0.9
+			manpower_percentage = 0.5
+		}
+		effect = {
+			add_country_modifier = { 
+				name = ADO_drill_for_our_deity
+				duration = 3650
+			}
+		}
+	}
+	ADO_take_the_ancient_guild = {
+		icon = fight_bosnian_heresies
+		required_missions = { ADO_unquiet_navy }
+		provinces_to_highlight = {
+			OR = {
+				area = yanille_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			yanille_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				runecrafting = 100
+			}
+		}
+		effect = {
+			293 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			kandarin_corner_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+ardougne_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ADO
+			tag = KDR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ADO_growth_of_ardougne = {
+		icon = mission_early_modern_university
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 264
+			province_id = 265
+			province_id = 266
+		}
+		trigger = {
+			owns_core_province = 264
+			owns_core_province = 265
+			owns_core_province = 266
+			development_in_provinces = {
+				value = 40
+				OR = {
+					province_id = 264
+					province_id = 265
+					province_id = 266
+				}
+			}
+		}
+		effect = {
+			264 = {
+				add_province_modifier = { 
+					name = ADO_growth_of_ardougne_modifier
+					duration = 3650
+				}
+			}
+			265 = {
+				add_province_modifier = { 
+					name = ADO_growth_of_ardougne_modifier
+					duration = 3650
+				}
+			}
+			266 = {
+				add_province_modifier = { 
+					name = ADO_growth_of_ardougne_modifier
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	ADO_unquiet_navy = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { ADO_growth_of_ardougne }
+		provinces_to_highlight = {
+			province_id = 263
+			province_id = 264
+		}
+		trigger = {
+			navy_size_percentage = 0.8
+			263 = {
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+					has_building = dock
+					has_building = drydock
+				}
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			264 = {
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+					has_building = dock
+					has_building = drydock
+				}
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 25
+			yanille_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+ardougne_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ADO
+			tag = KDR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ADO_greater_ardougne = {
+		icon = mission_unite_home_region
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				area = west_ardougne_area
+				area = east_ardougne_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			west_ardougne_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			east_ardougne_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+				name = ADO_right_of_conquest
+				duration = 3650
+			}
+			hemenster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			catherby_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ADO_fishing_guild_mission = {
+		icon = mission_rb_cod_wars
+		position = 3
+		required_missions = { ADO_unquiet_navy ADO_greater_ardougne }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 254
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			254 = {
+				is_core = ROOT
+				owned_by = ROOT
+				OR = {
+					has_building = wharf
+					has_building = soldier_households
+					has_building = impressment_offices
+				}
+			}
+		}
+		effect = {
+			254 = {
+			 	change_province_name = "Fishing Guild"
+				add_province_modifier = { 
+					name = ADO_fishing_guild_modifier
+					duration = -1  
+				}
+			}
+			baxtoria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+ardougne_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ADO
+			tag = KDR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ADO_catherby_coast = {
+		icon = mission_retake_ceuta
+		position = 2
+		required_missions = { ADO_greater_ardougne }
+		provinces_to_highlight = {
+			OR = {
+				area = catherby_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			catherby_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			seers_village_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			manor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ADO_hinterland_expansion = {
+		icon = mission_rb_conquer_wales
+		position = 3
+		required_missions = { ADO_catherby_coast }
+		provinces_to_highlight = {
+			OR = {
+				area = seers_village_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			seers_village_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			manor_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			maple_wood_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ADO_elemental_workshop_mission = {
+		icon = mission_have_manufactories
+		position = 4
+		required_missions = { ADO_hinterland_expansion }
+		trigger = {
+			innovativeness = 5
+			249 = {
+				is_core = ROOT
+				owned_by = ROOT
+				base_production = 10
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		effect = {
+			249 = {
+				change_trade_goods = advanced_ores
+				add_province_modifier = { 
+					name = ADO_elemental_workshop_modifier
+					duration = -1  
+				}
+			}
+			define_advisor = {
+				name = "Vitruvius"
+				type = natural_scientist
+				skill = 2
+				discount = yes
+				culture = seer
+			}
+		}
+	}
+}
+
+kandarin_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = KDR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDR_castle_wars = {
+		icon = fortress_of_belgrade
+		required_missions = { ADO_withstand_the_tragedy ADO_take_the_ancient_guild }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 295
+				province_id = 296
+			}
+		}
+		trigger = {
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = 0.02
+			}
+			295 = {
+				is_core = ROOT
+				owned_by = ROOT
+			 	fort_level = 4
+			}
+			296 = {
+				is_core = ROOT
+				owned_by = ROOT
+			 	fort_level = 4
+			}
+		}
+		effect = {
+			add_army_tradition = 10
+			add_army_professionalism = 0.05
+			
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				295 = {
+					add_great_project_tier = {
+						type = great_project_castle_wars
+						tier = 1
+					}
+				}
+			}
+			else = {
+				295 = {
+					add_province_triggered_modifier = KDR_castle_wars_modifier
+				}
+				296 = {
+					add_province_triggered_modifier = KDR_castle_wars_modifier
+				}
+			}
+			295 = {
+				change_religion = saradomin
+			}
+			296 = {
+				change_religion = zamorak
+			}
+			ourania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+kandarin_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = KDR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDR_market_for_a_nation = {
+		icon = mission_dominate_persian_gulf
+		position = 4
+		required_missions = { ADO_unquiet_navy }
+		trigger = {
+			265 = {
+				is_core = ROOT
+				owned_by = ROOT
+				development = 30
+				province_has_center_of_trade_of_level = 3
+				OR = {
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = { 
+				name = KDR_market_of_the_world
+				duration = 3650
+			}
+		}
+	}
+	
+	KDR_stop_thieves = {
+		icon = mission_entrepot_of_india
+		position = 5
+		required_missions = { KDR_market_for_a_nation }
+		trigger = {
+			has_global_modifier_value = {
+				which = global_spy_defence
+				value = 0.4
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+				name = KDR_anti_thievery_efforts
+				duration = 3650
+			}
+			define_advisor = {
+				type = spymaster
+				skill = 3
+				discount = yes
+				culture = ardignan
+			}
+		}
+	}
+}
+
+kandarin_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = KDR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDR_bays_of_kandarin_mission = {
+		icon = mission_invade_island
+		position = 4
+		required_missions = { ADO_fishing_guild_mission }
+		trigger = {
+			calc_true_if = {
+				any_owned_province = {
+					has_port = yes
+					OR = {
+						area = maple_wood_area
+						area = hemenster_area
+						area = baxtoria_area
+					}
+				}
+				amount = 4
+			}
+			571 = {
+				has_most_province_trade_power = ROOT
+			}
+		}
+		effect = {
+			piscatoris_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KDR_piscatoris_fishing_colony = {
+		icon = mission_piscatoris_fishing_colony
+		position = 5
+		required_missions = { KDR_bays_of_kandarin_mission }
+		trigger = {
+			281 = {
+				is_core = ROOT
+				owned_by = ROOT
+				NOT = { nationalism = 1 }
+			}
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					area = piscatoris_area
+					NOT = { province_id = 1349 }
+				}
+				change_culture = piscatorian
+				change_religion = ROOT
+			}
+		}
+	}
+}

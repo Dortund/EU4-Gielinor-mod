@@ -1,0 +1,30 @@
+#372-Inngangur
+owner = ULJ
+controller = ULJ
+add_core = ULJ
+tribal_owner = ---
+culture = rellekkan
+religion = v
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+trade_goods = basic_ores
+
+is_city = yes
+
+1949.12.16 = {
+	owner = REL
+	controller = REL
+	add_core = REL
+}

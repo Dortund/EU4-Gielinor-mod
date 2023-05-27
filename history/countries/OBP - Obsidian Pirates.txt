@@ -1,0 +1,32 @@
+government = republic
+add_government_reform = pirate_republic_reform
+government_rank = 1
+primary_culture = wushanko_pirate
+religion = byakko
+technology_group = wushankotechgroup
+capital = 1214 #Heiyàoshí
+historical_rival = TGU
+
+1928.8.21 = {
+	monarch = {
+		name = "Tianhui"
+		dynasty = "Xie"
+		birth_date = 1905.8.9
+		death_date = 1945.4.2
+		adm = 0
+		dip = 6
+		mil = 6
+		female = yes
+	}
+}
+
+2164.3.15 = {
+	monarch = {
+		name = "Yiling"
+		dynasty = "Xie"
+		birth_date = 2129.3.19
+		adm = 2
+		dip = 4
+		mil = 0
+	}
+}

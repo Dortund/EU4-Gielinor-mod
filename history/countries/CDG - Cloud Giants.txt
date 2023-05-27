@@ -1,0 +1,30 @@
+government = tribal
+add_government_reform = cloud_giant_tribe
+government_rank = 2
+primary_culture = cloud_giant
+religion = bandos
+technology_group = zeantechgroup
+capital = 493 #Giant Hills
+national_focus = MIL
+
+1890.4.4 = {
+	monarch = {
+		name = "Dlevel"
+		dynasty = "Fudkake"
+		birth_date = 1865.8.12
+		adm = 4
+		dip = 0
+		mil = 4
+	}
+}
+
+2150.1.17 = {
+	monarch = {
+		name = "Sliver"
+		dynasty = "Titanson"
+		birth_date = 2132.6.30
+		adm = 6
+		dip = 4
+		mil = 5
+	}
+}

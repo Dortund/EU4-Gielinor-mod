@@ -1,0 +1,19 @@
+#326-Gorlah
+owner = IOR
+controller = IOR
+add_core = IOR
+tribal_owner = ---
+culture = hefin
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = tropical_logs
+
+is_city = yes

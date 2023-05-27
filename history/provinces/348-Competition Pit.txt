@@ -1,0 +1,22 @@
+#348-Competition Pit
+owner = TST
+controller = TST
+add_core = TST
+tribal_owner = ---
+culture = mountaintroll
+religion = bandos
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 3
+
+trade_goods = livestock_farm
+
+is_city = yes

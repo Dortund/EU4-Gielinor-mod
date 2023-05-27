@@ -1,0 +1,25 @@
+#1131 - Earthquake Isles
+owner = SRI
+controller = SRI
+add_core = SRI
+tribal_owner = ---
+culture = eastern_exile
+religion = seiryu
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = basic_ores
+
+is_city = yes

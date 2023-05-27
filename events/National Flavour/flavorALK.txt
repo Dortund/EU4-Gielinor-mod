@@ -1,0 +1,196 @@
+########################################
+# Events for Al Kharid
+########################################
+
+namespace = flavor_alk
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_alk.1
+	title = flavor_alk.1.t #Depopulation of the Plateau
+	desc = flavor_alk.1.d #With the settlement and growth of Al Kharid, many of the residents of the Kharidian highlands have moved to the lowlands to seek their fortune. While this movement will make Al Kharid even more powerful, it will leave the highlands distinctly unpopulated.
+	picture = ALKHARID_CITY_eventPicture
+	
+	trigger = {
+		tag = ALK
+		has_institution = architecture
+		owns_core_province = 62
+		owns_core_province = 63
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = flavor_alk.1.a #Shame. I was growing rather attached to the plateau.
+		62 = {
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		63 = {
+			add_base_tax = -2
+			add_base_production = -1
+			add_base_manpower = -1
+			add_province_modifier = {
+				name = "ALK_depop_plateau"
+				duration = 3650
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_alk.2
+	title = flavor_alk.2.t #The Magic Training Arena
+	desc = flavor_alk.2.d #Runecrafting has brought the magical arts across the world, but new wizards frequently mishandle spells and die in the process. With the recent discovery of the Fire Altar in Al Kharid, and plenty of unused land, wizards are proposing we host an arena for magic training. However, there are many competing groups of wizards all asking that the arena teaches according to their own views...
+	picture = ALKHARID_CITY_eventPicture
+	
+	trigger = {
+		tag = ALK
+		owns_core_province = 64
+		64 = { trade_goods = runes }
+		66 = {
+			OR = {
+				owned_by = ROOT
+				is_empty = yes 
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_alk.2.a #Implement the Blue Wizards' proposal.
+		66 = {
+			add_core = ROOT
+			cede_province = ROOT
+			change_trade_goods = magic_supplies
+			change_province_name = "Training Arena"
+			add_province_modifier = {
+				name = "ALK_blue_training"
+				duration = -1
+			}
+			change_religion = saradomin
+			add_base_tax = 1
+		}
+	}
+	option = {
+		name = flavor_alk.2.b #Implement the Red Wizards' proposal.
+		66 = {
+			add_core = ROOT
+			cede_province = ROOT
+			change_trade_goods = magic_supplies
+			change_province_name = "Duel Tower"
+			add_province_modifier = {
+				name = "ALK_red_training"
+				duration = -1
+			}
+			change_religion = zamorak
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = flavor_alk.2.c #Implement the Green Wizards' proposal.
+		66 = {
+			add_core = ROOT
+			cede_province = ROOT
+			change_trade_goods = magic_supplies
+			change_province_name = "Wizards' Clearing"
+			add_province_modifier = {
+				name = "ALK_green_training"
+				duration = -1
+			}
+			change_religion = guthix
+			add_base_production = 1
+		}
+	}
+	option = {
+		name = flavor_alk.2.e #We'll make this arena ourselves!
+		add_treasury = -100
+		66 = {
+			add_core = ROOT
+			cede_province = ROOT
+			change_trade_goods = magic_supplies
+			change_province_name = "Scabaras' Library"
+			add_province_modifier = {
+				name = "ALK_grey_training"
+				duration = -1
+			}
+			change_religion = menaphite
+		}
+	}
+}
+
+country_event = {
+	id = flavor_alk.3
+	title = flavor_alk.3.t #Soldiers to Smiths
+	desc = flavor_alk.3.d #As our people have settled in the city of Al Kharid, their priorities have shifted. More permanent buildings allow the pass to the southern desert to be more easily guarded, and consequentially many soldiers have shifted to new professions - particularly in the field of smithing. What remains in our army is our best soldiers.
+	picture = ALKHARID_CITY_eventPicture
+	
+	trigger = {
+		tag = ALK
+		owns_core_province = 61
+		owns_core_province = 62
+		adm_tech = 8
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_alk.3.a #The smiths can still fight if we need them to, right?
+		add_army_professionalism = 0.02
+		62 = {
+			add_base_production = 2
+			add_base_manpower = -2
+		}
+	}
+}
+
+country_event = {
+	id = flavor_alk.4
+	title = flavor_alk.4.t #The Spirit Anglers
+	desc = flavor_alk.4.d #The fishers and sailors of the eastern Unquiet Ocean speak of a terrible ancient creature known as Tempoross, made out of the sea itself and capable of conjuring storms. To defeat it, some of our own sailors have established the Spirit Anglers, and request we fund their expedition to a staging ground closer to Tempoross - the Ruins of Unkah should do nicely.
+	picture = TEMPOROSS_RISES_eventPicture
+	
+	trigger = {
+		tag = ALK
+		owns_core_province = 62
+		exists = TMP
+		95 = { is_empty = yes }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = flavor_alk.4.a #The Spirit Anglers shall have their funding!
+		add_sailors = -1000
+		add_treasury = -250
+		add_dip_power = -50
+		95 = {
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		1000 = { add_permanent_claim = ROOT }
+	}
+	option = {
+		name = flavor_alk.4.b #We cannot afford this.
+		add_prestige = -5
+	}
+}
+

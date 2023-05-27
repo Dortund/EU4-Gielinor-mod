@@ -1,0 +1,29 @@
+#36 - Feorweg
+owner = FRW
+controller = FRW
+add_core = FRW
+tribal_owner = ---
+culture = south_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = basic_ores
+
+is_city = yes
+
+2021.10.30 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+}

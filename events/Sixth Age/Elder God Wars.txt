@@ -1,0 +1,543 @@
+########################################
+# Events from Tuska Comes to the Extinction quest.
+########################################
+
+namespace = eldergodwars
+normal_or_historical_nations = yes
+
+country_event = {
+	id = eldergodwars.1
+	title = eldergodwars.1.t #The Allure of Divine Energy
+	desc = eldergodwars.1.d #The huge amount of divine energy unleashed by the death of Guthix led to the development of the art of Divination, where diviners extract this power for their own use - or for the use of the Gods. But what could the consequences be of all this divine power - like a beacon to the heavens? Who knows what is out there, waiting to unleash itself upon Gielinor?
+	picture = DIVINE_WISPS_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		current_age = age_of_divination
+		production_leader = {
+			trade_goods = divine_energy
+		}
+		calc_true_if = {
+			all_province = {
+				trade_goods = divine_energy
+			}
+			amount = 15
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+		
+	option = {
+		name = eldergodwars.1.a #It's just some divine energy, what's there to worry about?
+		add_prestige = 10
+		hidden_effect = {
+			set_global_flag = eldergodwars_attract_tuska
+		}
+	}
+}
+
+country_event = {
+	id = eldergodwars.2
+	title = eldergodwars.2.t #Harbingers of Tuska
+	desc = eldergodwars.2.d #A portal has opened, and through it strange beasts from another world herald their god's coming. The great beast Tuska shall hurtle towards Gielinor, to the ruin of all in her path...
+	picture = TUSKA_AIRUT_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		had_global_flag = {
+			flag = eldergodwars_attract_tuska
+			days = 730
+		}
+		owns_or_non_sovereign_subject_of = 280
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+		
+	option = {
+		name = eldergodwars.2.a #Another God joins the party. So what?
+		280 = {
+			change_religion = tuska
+			change_culture = airut
+			spawn_rebels = {
+				type = tuska_rebels
+				size = 3
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_great_power = yes
+					NOT = { religion = tuska }
+				}
+				country_event = { 
+					id = eldergodwars.3
+					days = 365
+				}
+			}
+			every_country = {
+				limit = {
+					religion = tuska
+				}
+				country_event = { 
+					id = tuska_flavour.1
+					days = 365
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eldergodwars.3
+	title = eldergodwars.3.t #Tuska Comes
+	desc = eldergodwars.3.d #Drawn by the divine power coursing around Gielinor, the great beast Tuska is charging through the heavens towards Gielinor. Only a concerted effort will stop her from devastating the world's cities to appease her endless appetite.
+	picture = TUSKA_BEAST_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = eldergodwars_tuska_comes
+	}
+		
+	option = {
+		name = eldergodwars.3.a #Tuska must be stopped!
+		add_stability = -1
+		custom_tooltip = eldergodwars_stop_tuska_tooltip
+		add_country_modifier = {
+			name = eldergodwars_desperate_adventurer_call
+			duration = 730
+		}
+	}
+}
+
+country_event = {
+	id = eldergodwars.4
+	title = eldergodwars.4.t #Tuska Crashes to Gielinor
+		
+	desc = {
+		trigger = {
+			any_great_power = {
+				absolutism = 100
+			}
+		}
+		desc = eldergodwars.4.da #The raging boar-god Tuska has been slain. The momentum of the body could not be stopped however, and hurtled into the Unquiet Ocean. Still, the threat is eliminated for good.
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				any_great_power = {
+					absolutism = 100
+				}
+			}
+		}
+		desc = eldergodwars.4.db #Tuska could not be stopped. Crashing into Gielinor, she crashed through major cities before finally being brought down by the other gods. While she will no longer be a threat, the devastation shall be immense.
+	}
+	
+	picture = TUSKA_BEAST_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		AND = {
+			OR = {
+				AND = {
+					is_great_power = yes
+					absolutism = 100
+				}
+				AND = {
+					is_great_power = yes
+					NOT = { great_power_rank = 2 }
+					NOT = {
+						any_great_power = {
+							absolutism = 100
+						}
+					}
+				}
+			}
+			had_global_flag = {
+				flag = eldergodwars_tuska_comes
+				days = 730
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+	option = {
+		name = eldergodwars.4.a #Gielinor is saved!
+		trigger = {
+			any_great_power = {
+				absolutism = 100
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = tuska
+				}
+				country_event = { 
+					id = tuska_flavour.2
+					days = 1
+				}
+			}
+
+		}
+		add_stability = 1
+		add_mil_power = 100
+		add_prestige = 100
+	}
+	option = {
+		name = eldergodwars.4.b #Gielinor is devastated.
+		trigger = {
+			NOT = {
+				any_great_power = {
+					absolutism = 100
+				}
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = tuska
+				}
+				country_event = { 
+					id = tuska_flavour.3
+					days = 1
+				}
+			}
+			every_country = {
+				limit = {
+					AND = {
+						is_great_power = yes
+						NOT = { religion = tuska }
+						NOT = { tag = ROOT }
+					}
+				}
+				country_event = { 
+					id = eldergodwars.5
+					days = 1
+				}
+			}
+		}
+		every_owned_province = {
+			limit = {
+				base_tax = 4
+				base_production = 4
+				base_manpower = 4
+			}
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+	}
+}
+
+country_event = {
+	id = eldergodwars.5
+	title = eldergodwars.5.t #[Root.GetName] is devastated by Tuska.
+	desc = eldergodwars.5.d #Tuska could not be stopped. She ripped through our cities before finally being slain by a coalition of Gods.
+	
+	picture = TUSKA_BEAST_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+	option = {
+		name = eldergodwars.5.a #Clearly the other Great Powers are to blame for this atrocity.
+		every_owned_province = {
+			limit = {
+				base_tax = 4
+				base_production = 4
+				base_manpower = 4
+			}
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+	}
+}
+
+country_event = {
+	id = eldergodwars.6
+	title = eldergodwars.6.t #The Elder Eggs
+	
+	desc = {
+		trigger = {
+			NOT = { religion_group = elder_god_group }
+		}
+		desc = eldergodwars.6.da #Recent events in Gielinor - from the arrival of Tuska to the return of Seren - have shaken the world. But now, the most powerful adventurers of the world tell us that worse is coming. The eggs of the Elder Gods, terrifying entities from beyond time, rest beneath Gielinor's surface. And if the Elder Gods were to reach them, the entire world shall be destroyed.
+	}
+	desc = {
+		trigger = {
+			religion_group = elder_god_group
+		}
+		desc = eldergodwars.6.db #The time of the Great Revision shall soon be upon us, and the rebirth of all things. Such a fate is unavoidable - but one that nearly all of Gielinor will attempt to stop. We must steel ourselves, as a terrible war is coming.
+	}
+	picture = ELDER_EGGS_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		current_age = age_of_divination
+		had_global_flag = {
+			flag = eldergodwars_tuska_comes
+			days = 1000
+		}
+		has_global_flag = rebirth_of_seren_flag
+		OR = {
+			owns = 23
+			owns = 87
+		}
+		NOT = { has_global_flag = end_of_elder_god_wars_flag }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+		
+	option = {
+		name = eldergodwars.6.a #Be ready, for soon a war is upon us.
+		add_country_modifier = {
+			name = "eldergodwars_national_dread"
+			duration = 365
+		}
+		hidden_effect = {
+			set_global_flag = eldergodwars_eldereggs
+			every_country = {
+				country_event = {
+					id = eldergodwars.7
+					days = 365
+				}
+			}
+			every_country = {
+				country_event = {
+					id = eldergodwars.9
+					days = 730
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eldergodwars.7
+	title = eldergodwars.7.t #The Elder God Wars
+	
+	desc = {
+		trigger = {
+			NOT = { religion_group = elder_god_group }
+		}
+		desc = eldergodwars.7.da #The Gods of Gielinor have put aside their differences to defend Gielinor from the Elder Gods, and across Gielinor, from the dagannoths of Waterbirth Island to the beasts of Kami-Shima are determined to save the world from destruction.
+	}
+	desc = {
+		trigger = {
+			religion_group = elder_god_group
+		}
+		desc = eldergodwars.7.db #The Elder Gods call upon the faithful to serve them in the Great Revision, where they shall be reborn.
+	}
+	picture = ELDER_GOD_WARS_eventPicture
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		set_global_flag = elder_god_wars_flag
+	}
+		
+	option = {
+		name = eldergodwars.7.a #This war must be won by any means.
+		trigger = {
+			NOT = { religion_group = elder_god_group }
+		}
+		add_country_modifier = {
+			name = "eldergodwars_elder_god_wars"
+			duration = 730
+		}
+	}
+	option = {
+		name = eldergodwars.7.b #We support our Gods.
+		trigger = {
+			religion_group = elder_god_group
+		}
+		add_country_modifier = {
+			name = "eldergodwars_for_the_elder_gods"
+			duration = 730
+		}
+		every_country = {
+			limit = {
+				NOT = { 
+					religion_group = elder_god_group
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = elder_god_wars_enemies
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = elder_god_wars_enemies
+			}
+		}
+	}
+	option = {
+		name = eldergodwars.7.c #We cannot participate in the destruction of our home.
+		trigger = {
+			religion_group = elder_god_group
+		}
+		add_country_modifier = {
+			name = "eldergodwars_against_the_elder_gods"
+			duration = 730
+		}
+	}
+}
+
+country_event = {
+	id = eldergodwars.8
+	title = eldergodwars.8.t #Zamorak Abandons the Elder God Wars
+	desc = {
+		trigger = {
+			religion = zamorak
+		}
+		desc = eldergodwars.8.da #The Elder God Wars have led to stagnation. Where there is stagnation, there is not chaos, and there is not the opportunity to improve things. Lord Zamorak has placed his hand off the balance and left the battlefield of the Elder God Wars.
+	}
+	desc = {
+		trigger = {
+			NOT = { religion_group = elder_god_group }
+			NOT = { religion = zamorak }
+		}
+		desc = eldergodwars.8.db #Zamorak has, unsurprisingly, betrayed us all, and doomed us all in the process! He has withdrawn from the Elder God Wars, and it is unclear if the Elder Gods can now be defeated.
+	}
+	picture = ELDER_GOD_WARS_eventPicture
+	
+	trigger = {
+		has_global_flag = {
+			flag = elder_god_wars_flag
+			days = 365
+		}
+		NOT = { has_global_flag = end_of_elder_god_wars_flag }
+		NOT = { religion_group = elder_god_group }
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+		
+	option = {
+		name = eldergodwars.8.a #And so shall we!
+		trigger = {
+			religion = zamorak
+		}
+		add_patriarch_authority = 0.05
+		remove_country_modifier = eldergodwars_elder_god_wars
+		every_country = {
+			limit = {
+				NOT = { religion = zamorak }
+				NOT = { religion_group = elder_god_group }
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = elder_god_wars_traitors
+			}
+		}
+	}
+	option = {
+		name = eldergodwars.8.b #That is his call. We shall fight on.
+		trigger = {
+			religion = zamorak
+		}
+		add_prestige = 50
+		add_patriarch_authority = -0.05
+	}
+	option = {
+		name = eldergodwars.8.c #He should burn like he burnt Forinthry!
+		trigger = {
+			NOT = { religion = zamorak }
+			NOT = { religion_group = elder_god_group }
+		}
+	}
+}
+
+country_event = {
+	id = eldergodwars.9
+	title = eldergodwars.9.t #The End of the Elder God Wars
+	
+	desc = {
+		trigger = {
+			NOT = { religion_group = elder_god_group }
+			NOT = { religion = seren }
+		}
+		desc = eldergodwars.9.da #Without Zamorak's assistance, the only way to end the Elder God Wars would be to destroy the Elder Gods' eggs. As a child of the Elder Gods, Seren did not accept and took them to a distant world. They hatched, destroying all life on the world, but with far less power than if they had hatched on Gielinor.
+	}
+	desc = {
+		trigger = {
+			religion = seren
+		}
+		desc = eldergodwars.9.db #Seren placed the Elder Gods above her own followers and hatched their eggs on another world, rather than see them be destroyed. An entire world's life was utterly extinguished in the process, though these newly-hatched Elder Gods are far weaker and Gielinor is saved.
+	}
+	desc = {
+		trigger = {
+			religion_group = elder_god_group
+		}
+		desc = eldergodwars.9.dc #A new generation of Elder Gods has arisen thanks to their child Seren, but on a different world where they have not developed to be as powerful. Rumour has it that one of the Elder Gods did not make it, but such an assertion seems impossible.
+	}
+	picture = SEREN_RECONSTRUCTED_eventPicture
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		set_global_flag = end_of_elder_god_wars_flag
+	}
+		
+	option = {
+		name = eldergodwars.9.a #The world is saved, but the consequences of this war may be terrible.
+		trigger = {
+			NOT = { religion_group = elder_god_group }
+			NOT = { religion = seren }
+		}
+		if = {
+			limit = {
+				NOT = { religion = zamorak }
+			}
+			add_prestige = 100
+		}
+	}
+	option = {
+		name = eldergodwars.9.b #This will be painful news for the faithful.
+		trigger = {
+			religion = seren
+		}
+	}
+	option = {
+		name = eldergodwars.9.c #On the bright side, I get to continue leading [Root.GetName].
+		trigger = {
+			religion_group = elder_god_group
+		}
+	}
+}
+

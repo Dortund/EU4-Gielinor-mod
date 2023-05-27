@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = trahaearn
+religion = seren
+technology_group = elventechgroup
+capital = 331 #Trahaearn Province
+national_focus = ADM
+
+1.3.29 = {
+	monarch = {
+		name = "Tangwen"
+		dynasty = "Trahaearn"
+		birth_date = 1.1.17
+		adm = 5
+		dip = 2
+		mil = 4
+		female = yes
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

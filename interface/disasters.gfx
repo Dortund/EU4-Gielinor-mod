@@ -1,0 +1,62 @@
+spriteTypes = {
+ spriteType = {
+  name = "GFX_disaster_tirannwn_civil_war"
+  texturefile = "gfx//interface//disasters//tirannwn_civil_war.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
+  name = "GFX_disaster_brink_of_extinction"
+  texturefile = "gfx//interface//disasters//brink_of_extinction.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
+  name = "GFX_disaster_cleaving_of_the_gnome_empire"
+  texturefile = "gfx//interface//disasters//cleaving_of_the_gnome_empire.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
+  name = "GFX_disaster_dreaded_years_of_tragedy"
+  texturefile = "gfx//interface//disasters//dreaded_years_of_tragedy.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
+  name = "GFX_disaster_fall_of_cadarn"
+  texturefile = "gfx//interface//disasters//fall_of_cadarn.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
+  name = "GFX_disaster_glouphrie_dictatorship"
+  texturefile = "gfx//interface//disasters//glouphrie_dictatorship.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
+  name = "GFX_disaster_kinshra_white_knight_war"
+  texturefile = "gfx//interface//disasters//kinshra_white_knight_war.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
+  name = "GFX_disaster_overbearing_misthalin"
+  texturefile = "gfx//interface//disasters//overbearing_misthalin.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
+  name = "GFX_disaster_terror_of_the_leviathan"
+  texturefile = "gfx//interface//disasters//terror_of_the_leviathan.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
+  name = "GFX_disaster_war_of_five_houses"
+  texturefile = "gfx//interface//disasters//war_of_five_houses.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+}

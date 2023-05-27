@@ -1,0 +1,97 @@
+country_decisions = {
+
+	ape_atoll_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_ape_atoll_flag }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = APE }
+			OR = {
+				primary_culture = gorilla
+				primary_culture = atoll_monkey
+			}
+			religion = marimbo
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 805
+				province_id = 235
+				province_id = 236
+				province_id = 237
+				province_id = 806
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 805
+			owns_core_province = 235
+			owns_core_province = 236
+			owns_core_province = 237
+			owns_core_province = 806
+			OR = {
+				tag = BOI
+				NOT = { exists = BOI }
+			}			
+		}
+		effect = {
+			change_tag = APE
+			swap_non_generic_missions = yes
+			237 = {
+				move_capital_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_ape_atoll_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					OR = {
+						owns_core_province = 238
+						owns_core_province = 978
+						owns_core_province = 239
+					}
+				}
+				country_event = { 
+					id = flavor_ape.1
+					days = 5
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+}

@@ -1,0 +1,74 @@
+country_decisions = {
+	IOR_east_galarpos_purchase = {
+		potential = {
+			tag = IOR
+			exists = EVR
+			mission_completed = IOR_legitimise_our_rule
+			NOT = { has_global_flag = IOR_buying_west_ardy }
+			NOT = { has_country_flag = IOR_west_ardy_purchase_attempt }
+			NOT = { owns_core_province = 266 }
+			NOT = { owns_core_province = 989 }
+		}
+		allow = {
+			any_ally = {
+				owns_core_province = 266
+				owns_core_province = 989
+				num_of_provinces_in_states = 5
+			}
+			treasury = 1000
+			dip_power = 100
+		}
+		effect = {
+			custom_tooltip = IOR_east_galarpos_purchase_tooltip
+			add_treasury = -1000
+			add_dip_power = -100
+			set_country_flag = IOR_west_ardy_purchase_attempt
+			266 = {
+				owner = {
+					country_event = {
+						id = flavor_ior.12
+						days = 1
+					}
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		ai_importance = 50
+	}
+	IOR_temple_of_light_dig = {
+		potential = {
+			tag = IOR
+			exists = EVR
+			mission_completed = IOR_rise_of_the_mourners
+			981 = {
+				is_empty = yes
+			}
+		}
+		allow = {
+			owns_core_province = 989
+			989 = {
+				base_tax = 3
+				base_production = 3
+				base_manpower = 3
+			}
+		}
+		effect = {
+			989 = {
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+			}
+			country_event = {
+				id = flavor_ior.11
+				days = 1
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+}

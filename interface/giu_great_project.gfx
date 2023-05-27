@@ -1,0 +1,247 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_great_project_great_project_arceuus_library"	
+		texturefile = "gfx//interface//great_projects//great_project_arceuus_library.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_battle_colosseum"	
+		texturefile = "gfx//interface//great_projects//great_project_battle_colosseum.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_black_stone_fortress"
+		texturefile = "gfx//interface//great_projects//great_project_black_stone_fortress.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_byakkos_lair"	
+		texturefile = "gfx//interface//great_projects//great_project_byakkos_lair.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_cairn_isle"	
+		texturefile = "gfx//interface//great_projects//great_project_cairn_isle.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_castle_wars"	
+		texturefile = "gfx//interface//great_projects//great_project_castle_wars.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_chambers_of_xeric"	
+		texturefile = "gfx//interface//great_projects//great_project_chambers_of_xeric.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_college_of_bards"	
+		texturefile = "gfx//interface//great_projects//great_project_college_of_bards.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_daemonheim"	
+		texturefile = "gfx//interface//great_projects//great_project_daemonheim.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_dark_altar"	
+		texturefile = "gfx//interface//great_projects//great_project_dark_altar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_doors_of_dinh"	
+		texturefile = "gfx//interface//great_projects//great_project_doors_of_dinh.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_dragonkin_laboratory"	
+		texturefile = "gfx//interface//great_projects//great_project_dragonkin_laboratory.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_duel_arena"	
+		texturefile = "gfx//interface//great_projects//great_project_duel_arena.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_elder_kiln"	
+		texturefile = "gfx//interface//great_projects//great_project_elder_kiln.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_entrana_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_entrana_cathedral.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_falador_castle"	
+		texturefile = "gfx//interface//great_projects//great_project_falador_castle.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_forge_of_giants"	
+		texturefile = "gfx//interface//great_projects//great_project_forge_of_giants.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_genbus_lair"	
+		texturefile = "gfx//interface//great_projects//great_project_genbus_lair.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_giant_dwarf"	
+		texturefile = "gfx//interface//great_projects//great_project_giant_dwarf.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_grand_tree"	
+		texturefile = "gfx//interface//great_projects//great_project_grand_tree.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_halls_of_reckoning"	
+		texturefile = "gfx//interface//great_projects//great_project_halls_of_reckoning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_great_project_imcandoria_depths"	
+		texturefile = "gfx//interface//great_projects//great_project_imcandoria_depths.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_kami_shima"	
+		texturefile = "gfx//interface//great_projects//great_project_kami_shima.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_falling_blossom"
+		texturefile = "gfx//interface//great_projects//great_project_falling_blossom.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_jalkabir"	
+		texturefile = "gfx//interface//great_projects//great_project_jalkabir.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_jaltevas"	
+		texturefile = "gfx//interface//great_projects//great_project_jaltevas.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_marim_temple"	
+		texturefile = "gfx//interface//great_projects//great_project_marim_temple.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_mastaba_of_senliten"	
+		texturefile = "gfx//interface//great_projects//great_project_mastaba_of_senliten.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_myths_guild"	
+		texturefile = "gfx//interface//great_projects//great_project_myths_guild.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_ooglog_spa"	
+		texturefile = "gfx//interface//great_projects//great_project_ooglog_spa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_palingrad_foundry"	
+		texturefile = "gfx//interface//great_projects//great_project_palingrad_foundry.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_paterdomus"	
+		texturefile = "gfx//interface//great_projects//great_project_paterdomus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_plain_of_mud_temple"	
+		texturefile = "gfx//interface//great_projects//great_project_plain_of_mud_temple.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_soul_obelisk"	
+		texturefile = "gfx//interface//great_projects//great_project_soul_obelisk.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_suzakus_perch"	
+		texturefile = "gfx//interface//great_projects//great_project_suzakus_perch.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_sword_of_edicts"	
+		texturefile = "gfx//interface//great_projects//great_project_sword_of_edicts.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_taverley_stone_circle"	
+		texturefile = "gfx//interface//great_projects//great_project_taverley_stone_circle.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_temple_at_senntisten"	
+		texturefile = "gfx//interface//great_projects//great_project_temple_at_senntisten.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_temple_of_aminishi"	
+		texturefile = "gfx//interface//great_projects//great_project_temple_of_aminishi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_temple_of_ikov"	
+		texturefile = "gfx//interface//great_projects//great_project_temple_of_ikov.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_temple_of_light"	
+		texturefile = "gfx//interface//great_projects//great_project_temple_of_light.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_temple_of_lost_ancients"	
+		texturefile = "gfx//interface//great_projects//great_project_temple_of_lost_ancients.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_theatre_of_blood"	
+		texturefile = "gfx//interface//great_projects//great_project_theatre_of_blood.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_tower_of_voices"	
+		texturefile = "gfx//interface//great_projects//great_project_tower_of_voices.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_tuai_leit_library"	
+		texturefile = "gfx//interface//great_projects//great_project_tuai_leit_library.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_ullek"	
+		texturefile = "gfx//interface//great_projects//great_project_ullek.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_viggoras_folly"	
+		texturefile = "gfx//interface//great_projects//great_project_viggoras_folly.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_wizards_guild"	
+		texturefile = "gfx//interface//great_projects//great_project_wizards_guild.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_wizards_tower"	
+		texturefile = "gfx//interface//great_projects//great_project_wizards_tower.dds"
+	}
+}

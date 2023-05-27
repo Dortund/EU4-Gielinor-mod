@@ -1,0 +1,124 @@
+estate_tzh_xil =
+{
+	icon = 26
+
+	# If true, country will get estate
+	trigger = {
+		has_reform = obsidian_caste
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		movement_speed = 0.20
+		trade_goods_size_modifier = 0.1
+	}
+	country_modifier_neutral = {
+		movement_speed = 0.20
+	}	
+	country_modifier_angry = {
+		movement_speed = -0.20
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		tzh_xil_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {	
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {	
+		desc = EST_VAL_COT
+		trigger = {
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_TRADE_INCOME
+		trigger = {
+			NOT = { trade_income_percentage = 0.25 }
+		}	
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.5
+			NOT = { trade_income_percentage = 0.75 }
+		}	
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.75
+		}	
+		influence = 10
+	}
+	
+	custom_name = {
+		desc = estate_kuu_maten
+		trigger = {
+			tag = KUU
+		}
+	}	
+
+	color = { 128 26 13 }
+
+	privileges = {
+		estate_tzh_xil_hunter_representation
+		estate_tzh_xil_longer_hunts
+	}
+
+	agendas = {
+		estate_tzh_xil_hire_advisor
+		estate_tzh_xil_fire_advisor
+		estate_tzh_ket_condottieri_rivals
+		estate_tzh_xil_increase_trade_power_in_X
+		estate_tzh_xil_recover_abysmal_prestige
+		estate_tzh_xil_improve_prestige
+	}
+
+	influence_from_dev_modifier = 1.0
+}

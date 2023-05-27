@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = dimnes
+religion = zamorak
+technology_group = centraltechgroup
+capital = 793 #Farramor
+
+1909.11.28 = {
+	monarch = {
+		name = "Astorias"
+		dynasty = "Rennard"
+		birth_date = 1914.5.16
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}

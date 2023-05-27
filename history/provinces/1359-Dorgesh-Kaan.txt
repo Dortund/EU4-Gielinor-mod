@@ -1,0 +1,21 @@
+#1359 - Dorgesh-Kaan
+owner = DSK
+controller = DSK
+add_core = DSK
+tribal_owner = ---
+culture = dorgeshuun
+religion = godless
+
+discovered_by = DSK
+
+hre = no
+
+base_tax = 8
+base_production = 8
+base_manpower = 3
+
+center_of_trade = 1
+
+trade_goods = manufactured_goods
+
+is_city = yes

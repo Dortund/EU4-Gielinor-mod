@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = seer
+religion = guthix
+technology_group = kandarintechgroup
+capital = 249 #Seers' Village
+historical_friend = CTH
+
+1889.4.10 = {
+	monarch = {
+		name = "Sera"
+		dynasty = "Herenswaith"
+		birth_date = 1843.4.11
+		adm = 6
+		dip = 4
+		mil = 2
+		female = yes
+	}
+}

@@ -1,0 +1,38 @@
+########################################
+# Events for Crailey
+########################################
+
+namespace = flavor_cly
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_cly.1
+	title = flavor_cly.1.t #Brassica Prime?
+	desc = flavor_cly.1.d #The conquest of Draynor has had a curious effect in Cawlshire. It is as if the plants themselves speak to us in our dreams, thanking us for purging a great evil. They whisper the name: Brassica Prime.
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cly.1.a #Evidently the one true god is a giant talking cabbage.
+		change_religion = brassicaprime
+		capital_scope = { 
+			change_religion = brassicaprime
+		}
+		add_prestige = -10
+		ai_chance = {
+			factor = 0.9
+		}
+	}
+	option = {
+		name = flavor_cly.1.b #AHH A TALKING CABBAGE!
+		capital_scope = { 
+			add_devastation = 5
+		}
+	}
+}

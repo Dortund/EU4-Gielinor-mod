@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pirate_republic_reform
+government_rank = 1
+primary_culture = corsair
+religion = godless
+religious_school = ambivalence_school
+technology_group = kandarintechgroup
+capital = 317 #Corsair Cove
+national_focus = DIP
+
+2167.1.2 = {
+	monarch = {
+		name = "Tick"
+		dynasty = "Tock"
+		birth_date = 2127.4.5
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}

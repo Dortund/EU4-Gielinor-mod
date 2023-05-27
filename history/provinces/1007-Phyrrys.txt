@@ -1,0 +1,31 @@
+#1007-Phyrrys
+owner = RKS
+controller = RKS
+add_core = RKS
+tribal_owner = ---
+culture = rekeshuun
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = fish
+
+is_city = yes
+
+2125.12.13 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = RKS
+	culture = ouranian
+	religion = zamorak
+}

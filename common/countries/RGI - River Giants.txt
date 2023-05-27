@@ -1,0 +1,27 @@
+#Country Name: Please seefilename.
+
+graphical_culture = asiangfx
+
+color = { 104 93 155 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Bakkian #0" = 1
+	"Hydros #0" = 1
+	"Ripo #0" = 1
+	"Strom #0" = 1
+	"Bakki #0" = -1
+	"Hydraci #0" = -1
+	"Ripa #0" = -1	
+	"Storma #0" = -1
+}

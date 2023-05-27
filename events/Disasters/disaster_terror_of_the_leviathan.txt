@@ -1,0 +1,139 @@
+namespace = terror_of_the_leviathan
+
+########################################
+# Fall of Cadarn
+########################################
+
+# Start
+country_event = {
+	id = terror_of_the_leviathan.1
+	title = terror_of_the_leviathan.1.t #Terror of the Leviathan
+	desc = terror_of_the_leviathan.1.d #Massive sea creatures are not unusual in the Wushanko Isles, but this one scouted around Hanto is different. This Crassian Leviathan possesses horrific dark powers which must be bargained with or stopped for the survival of the island.
+	picture = TERROR_OF_THE_LEVIATHAN_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = HNT_terror_start
+	}
+	
+	option = {
+		name = terror_of_the_leviathan.1.a #We have no hope but to side with the Leviathan.
+		change_religion = xautak
+		capital_scope = {
+			change_religion = xautak
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = terror_of_the_leviathan.1.b #We shall stand and fight!
+		custom_tooltip = HNT_fight_the_beast #Successfully holding off the corruption of Xau-Tak will yield permanent rewards for Hanto.
+		add_stability = -1
+		random_owned_province = {
+			xautak_rebels = 2
+		}
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = {
+	id = terror_of_the_leviathan.2
+	title = terror_of_the_leviathan.2.t # Servants of Xau-Tak
+	desc =  terror_of_the_leviathan.2.d # Some of our subjects seem to have been subdued by the power of the Crassian Leviathan. They are trying to convince others that Xau-Tak is the only true god, and they are using strange powers to try and back up their arguments.
+	picture = TERROR_OF_THE_LEVIATHAN_eventPicture
+	
+	trigger = {
+		has_disaster = terror_of_the_leviathan
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+	
+	option = {
+		name = terror_of_the_leviathan.2.a #Fight them off - quickly!
+		random_owned_province = {
+			xautak_rebels = 2
+		}
+	}
+}
+
+country_event = {
+	id = terror_of_the_leviathan.3
+	title = terror_of_the_leviathan.3.t # Armies of Xau-Tak
+	desc =  terror_of_the_leviathan.3.d # A massive Crassian force has landed on our shores! We must defeat it in the name of all we hold dear!
+	picture = TERROR_OF_THE_LEVIATHAN_eventPicture
+	
+	trigger = {
+		has_disaster = terror_of_the_leviathan
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = terror_of_the_leviathan.3.a # The [Root.Religion.GetName] believers shall never bow to Xau-Tak.
+		random_owned_province = {
+			xautak_rebels = 3
+		}
+	}
+}
+
+country_event = {
+	id = terror_of_the_leviathan.100
+	title = terror_of_the_leviathan.100.t #End of the Terror
+	
+	desc = {
+		trigger = {
+			religion = xautak
+		}
+		desc = terror_of_the_leviathan.100.da #In the end, there was no terror but ourselves. We have seen beyond our weakness and embraced the true power of the depths.
+	}
+	desc = {
+		trigger = {
+			NOT = { religion = xautak }
+		}
+		desc = terror_of_the_leviathan.100.db #It was a hard-fought battle, but the Crassian Leviathan has been defeated once and for all. Though the struggle was devastating for Hanto and its people, we can now rejoice as we have shown Wushanko - and all of Gielnor - our power.
+	}
+	
+	picture = TERROR_OF_THE_LEVIATHAN_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		end_disaster = terror_of_the_leviathan
+		set_country_flag = HNT_end_of_terror
+		clr_country_flag = HNT_terror_start
+	}
+
+	option = {
+		name = terror_of_the_leviathan.100.a #All glory to Xau-Tak!
+		trigger = {
+			religion = xautak
+		}
+		add_stability = 1
+		add_country_modifier = {
+			name = HNT_corruption_of_the_depths
+			duration = 3650
+		}
+	}
+	option = {
+		name = terror_of_the_leviathan.100.b #Hanto Prevails!
+		trigger = {
+			NOT = { religion = xautak }
+		}
+		add_stability = 1
+		add_country_modifier = {
+			name = HNT_victory_over_xautak
+			duration = -1
+		}
+	}
+}

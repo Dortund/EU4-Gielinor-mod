@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = magiocracy
+government_rank = 1
+primary_culture = rogue
+religion = zamorak
+technology_group = northerntechgroup
+capital = 194 #Mage Arena
+national_focus = MIL
+
+2160.9.22 = {
+	monarch = {
+		name = "Kolodion"
+		dynasty = "Dag'eth"
+		birth_date = 2108.11.23
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+}

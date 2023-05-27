@@ -1,0 +1,30 @@
+#287-Ourania
+owner = HUZ
+controller = HUZ
+add_core = HUZ
+tribal_owner = ---
+culture = ouranian
+religion = zamorak
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 3
+
+trade_goods = hunter_creatures
+latent_trade_goods = { runes }
+
+is_city = yes
+
+2039.3.21 = {
+	owner = KZD
+	controller = KZD
+	add_core = KZD
+	remove_core = HUZ
+}

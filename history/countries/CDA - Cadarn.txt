@@ -1,0 +1,54 @@
+government = monarchy
+add_government_reform = elven_aristocracy
+government_rank = 2
+primary_culture = cadarn
+religion = seren
+technology_group = elventechgroup
+capital = 258 #South Baxtoria
+national_focus = DIP
+historical_friend = GNE
+historical_friend = TNN
+
+#	monarch = {
+#		name = "Baxtorian"
+#		dynasty = "Cadarn"
+#		birth_date = 1.2.23
+#		adm = 4
+#		dip = 6
+#		mil = 4
+#	}
+#	clear_scripted_personalities = yes
+#	add_ruler_personality = immortal_personality
+#	add_ruler_personality = charismatic_negotiator_personality
+#	add_ruler_personality = inspiring_leader_personality
+
+20.6.15 = {
+	monarch = {
+		country_of_origin = TNN
+		name = "Glarial"
+		dynasty = "Anterth"
+		birth_date = 1.4.12
+		death_date = 1935.11.5
+		female = yes
+		adm = 5
+		dip = 6
+		mil = 0
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = silver_tongue_personality
+	add_ruler_personality = benevolent_personality
+}
+1879.11.3 = {
+	heir = {
+		name = "Eirlys"
+		dynasty = "Cadarn"
+		birth_date = 1879.11.3
+		female = yes
+		claim = 100
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+

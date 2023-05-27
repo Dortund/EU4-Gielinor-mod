@@ -1,0 +1,25 @@
+#382-Miscellania
+owner = MCE
+controller = MCE
+add_core = MCE
+tribal_owner = ---
+culture = miscellanean
+religion = v
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 2
+
+fort_15th = yes 
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+center_of_trade = 1

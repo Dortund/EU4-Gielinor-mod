@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = arc_culture
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1105 #Aminishi Town
+
+1925.2.27 = {
+	monarch = {
+		name = "Yulong"
+		dynasty = "Ashihama"
+		birth_date = 1905.1.26
+		death_date = 1976.9.18
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+2143.11.16 = {
+	monarch = {
+		name = "Bo"
+		dynasty = "Ashihama"
+		birth_date = 2115.7.25
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}

@@ -1,0 +1,21 @@
+#493 - Giant Hills
+owner = CDG
+controller = CDG
+add_core = CDG
+tribal_owner = ---
+culture = cloud_giant
+religion = bandos
+
+discovered_by = CDG
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 4
+
+fort_15th = yes 
+
+trade_goods = manufactured_goods
+
+is_city = yes

@@ -1,0 +1,97 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 44 40 40 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Glouphrie #0" = 10
+	"Glouron #0" = 10
+	"Glout #0" = 10
+	"Glouck #0" = 10
+	"Aluft #0" = 1
+	"Argenthorg #0" = 1
+	"Blurberry #0" = 1
+	"Bolkoy #0" = 1
+	"Bolrie #0" = 1
+	"Bolongo #0" = 1
+	"Brambickle #0" = 1
+	"Brimstail #0" = 1
+	"Burkor #0" = 1
+	"Cludio #0" = 1
+	"Copernicus #0" = 1
+	"Daero #0" = 1
+	"Darius #0" = 1
+	"Dobwinkle #0" = 1
+	"Eebel #0" = 1
+	"Elknock #0" = 1
+	"Ermin #0" = 1
+	"Errdo #0" = 1
+	"Farquie #0" = 1
+	"Felfiz #0" = 1
+	"Frizzy #0" = 1
+	"Froono #0" = 1
+	"Giuseppe #0" = 1
+	"Glough #0" = 1
+	"Gnormadium #0" = 1
+	"Gulluck #0" = 1
+	"Heckel #0" = 1
+	"Hieronymus #0" = 1
+	"Hudo #0" = 1
+	"Laidee #0" = 1
+	"Lammy #0" = 1
+	"Laneel #0" = 1
+	"Longramble #0" = 1
+	"Narnode #0" = 1
+	"Nirol #0" = 1
+	"Nyriki #0" = 1
+	"Oomad #0" = 1
+	"Peregrim #0" = 1
+	"Penwie #0" = 1
+	"Perrdur #0" = 1
+	"Praistan #0" = 1
+	"Pukkamay #0" = 1
+	"Remsai #0" = 1
+	"Schepbur #0" = 1
+	"Spang #0" = 1
+	"Swinmari #0" = 1
+	"Tamble #0" = 1
+	"Timble #0" = 1
+	"Nacklepen #0" = 1
+	"Wilfred #0" = 1
+	"Winkin #0" = 1
+	"Wurbel #0" = 1
+	"Yaktwee #0" = 1
+	"Yewnock #0" = 1
+	"Yulf #0" = 1
+	"Ani #0" = -1
+	"Anita #0" = -1
+	"Azalea #0" = -1
+	"Cheri #0" = -1
+	"Dalila #0" = -1
+	"Damwin #0" = -1
+	"Deelie #0" = -1
+	"Donna #0" = -1
+	"Fara #0" = -1
+	"Femi #0" = -1
+	"Gena #0" = -1
+	"Latlink #0" = -1
+	"Meegle #0" = -1
+	"Mieliki #0" = -1
+	"Norda #0" = -1
+	"Prissy #0" = -1
+	"Sarble #0" = -1
+	"Sasquine #0" = -1
+	"Terri #0" = -1
+}

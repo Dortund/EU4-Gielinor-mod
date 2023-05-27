@@ -1,0 +1,282 @@
+########################################
+# Events for the Mahjarrat
+########################################
+
+namespace = mahjarrat_events
+normal_or_historical_nations = yes
+
+country_event = {
+	id = mahjarrat_events.1
+	title = mahjarrat_events.1.t #Revival
+	desc = mahjarrat_events.1.d #Our pathetic enemies think our great leader is defeated - but we can not be so easily stopped.
+	picture = LUCIEN_ATTACKS_eventPicture
+	
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					tag = AKO
+					was_tag = AKO
+				}
+				NOT = { has_global_flag = flag_death_of_akthanakos }
+				NOT = { has_ruler = "Akthanakos"}
+			}
+			AND = {
+				OR = {
+					tag = BWS
+					was_tag = BWS
+				}
+				NOT = { has_global_flag = flag_death_of_sliske }
+				NOT = { has_ruler = "Sliske"}
+			}
+			AND = {
+				OR = {
+					tag = DMH
+					was_tag = DMH
+				}
+				NOT = { has_global_flag = flag_death_of_bilrach }
+				NOT = { has_ruler = "Bilrach"}
+			}
+			AND = {
+				OR = {
+					tag = ENK
+					was_tag = ENK
+				}
+				NOT = { has_global_flag = flag_death_of_enkhara }
+				NOT = { has_ruler = "Enkhara"}
+			}
+			AND = {
+				OR = {
+					tag = HZL
+					was_tag = HZL
+				}
+				NOT = { has_global_flag = flag_death_of_hazeel }
+				NOT = { has_ruler = "Hazeel"}
+			}
+			AND = {
+				OR = {
+					tag = KZD
+					was_tag = KZD
+				}
+				NOT = { has_global_flag = flag_death_of_khazard }
+				NOT = { has_ruler = "Khazard"}
+			}
+			AND = {
+				OR = {
+					tag = LCI
+					was_tag = LCI
+				}
+				NOT = { has_global_flag = flag_death_of_lucien }
+				NOT = { has_ruler = "Lucien"}
+			}
+			AND = {
+				OR = {
+					tag = ZMG
+					was_tag = ZMG
+				}
+				NOT = { has_global_flag = flag_death_of_zemouregal }
+				NOT = { has_ruler = "Zemouregal"}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = mahjarrat_events.1.a #Arise once more!
+		if = {
+			limit = {
+				OR = {
+					tag = AKO
+					was_tag = AKO
+				}
+			}
+			custom_tooltip = mahjarrat_events_akthanakos_revived
+			hidden_effect = {
+				define_ruler = {
+					name = "Akthanakos"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					male = yes
+					age = 2000
+					adm = 2
+					dip = 2
+					mil = 5
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = BWS
+					was_tag = BWS
+				}
+			}
+			custom_tooltip = mahjarrat_events_sliske_revived
+			hidden_effect = {
+				define_ruler = {
+					name = "Sliske"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					male = yes
+					age = 2000
+					adm = 1
+					dip = 5
+					mil = 6
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = DMH
+					was_tag = DMH
+				}
+			}
+			custom_tooltip = mahjarrat_events_bilrach_revived
+			hidden_effect = {
+				define_ruler = {
+					name = "Bilrach"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					male = yes
+					age = 2000
+					adm = 5
+					dip = 4
+					mil = 5
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = ENK
+					was_tag = ENK
+				}
+			}
+			custom_tooltip = mahjarrat_events_enkhara_revived
+			hidden_effect = {
+				define_ruler = {
+					name = "Enkhara"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					female = yes
+					age = 2000
+					adm = 3
+					dip = 2
+					mil = 4
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = HZL
+					was_tag = HZL
+				}
+			}
+			custom_tooltip = mahjarrat_events_hazeel_revived
+			hidden_effect = {
+				define_ruler = {
+					name = "Hazeel"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					male = yes
+					age = 2000
+					adm = 4
+					dip = 3
+					mil = 4
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = KZD
+					was_tag = KZD
+				}
+			}
+			custom_tooltip = mahjarrat_events_khazard_revived
+			hidden_effect = {
+				define_ruler = {
+					name = "Khazard"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					male = yes
+					age = 2000
+					adm = 2
+					dip = 1
+					mil = 5
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = LCI
+					was_tag = LCI
+				}
+			}
+			custom_tooltip = mahjarrat_events_lucien_revived
+			hidden_effect = {
+				define_ruler = {
+					name = "Lucien"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					male = yes
+					age = 2000
+					adm = 5
+					dip = 4
+					mil = 5
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = ZMG
+					was_tag = ZMG
+				}
+			}
+			custom_tooltip = mahjarrat_events_zemouregal_revived
+			hidden_effect = {
+				define_ruler = {
+					name = "Zemouregal"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					male = yes
+					age = 2000
+					adm = 4
+					dip = 2
+					mil = 3
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+		}
+	}
+}

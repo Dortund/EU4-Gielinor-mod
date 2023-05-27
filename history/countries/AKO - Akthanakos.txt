@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = mahjarrat_autocracy
+government_rank = 1
+primary_culture = camelwarrior
+religion = zaros
+technology_group = kharidtechgroup
+capital = 90 #Akthanakos Isle
+national_focus = MIL
+historical_rival = ENK
+
+2170.12.6 = {
+	monarch = {
+		name = "Akthanakos"
+		dynasty = "of the Mahjarrat"
+		culture = mahjarrat
+		birth_date = 1.10.26
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

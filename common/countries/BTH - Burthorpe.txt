@@ -1,0 +1,89 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 130 11 42 }
+
+revolutionary_colors = { 3 4 5 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Bernald #0" = 10
+	"Denulth #0" = 10
+	"Dunstan #0" = 10
+	"Eadberg #0" = 10
+	"Eohric #0" = 10
+	"Jute #0" = 10
+	"Ocga #0" = 10
+	"Penda #0" = 10
+	"Saba #0" = 10
+	"Tam #0" = 10
+	"Tobias #0" = 10
+	"Tostig #0" = 10
+	"Turael #0" = 10
+	"Unferth #0" = 10
+	
+	"Achietties #0" = -10
+	"Breoca #0" = -10
+	"Carwen #0" = -10
+	"Ceolberg #0" = -10
+	"Hild #0" = -10
+	"Hygd #0" = -10
+	"Spria #0" = -10
+	
+	"Alfred #0" = 1
+	"Amik #0" = 1
+	"Brian #0" = 1
+	"Flynn #0" = 1
+	"Frank #0" = 1
+	"Harold #0" = 1
+	"Harry #0" = 1
+	"Herquin #0" = 1
+	"Jake #0" = 1
+	"Jeff #0" = 1
+	"Jones #0" = 1
+	"Larry #0" = 1
+	"Marcus #0" = 1
+	"Nicholas #0" = 1
+	"Nigel #0" = 1
+	"Norman #0" = 1
+	"Radigad #0" = 1
+	"Ramsey #0" = 1
+	"Ren #0" = 1
+	"Sam #0" = 1
+	"Velrak #0" = 1
+	"Wayne #0" = 1
+	"Will #0" = 1
+	
+	"Alison #0" = -1
+	"Amy #0" = -1
+	"Carwen #0" = -1
+	"Cassie #0" = -1
+	"Clara #0" = -1
+	"Elise #0" = -1
+	"Emily #0" = -1
+	"Grace #0" = -1
+	"Heskel #0" = -1
+	"Lucy #0" = -1
+	"Jacquelyn #0" = -1
+	"Judith #0" = -1
+	"Kaylee #0" = -1
+	"Mary #0" = -1
+	"Megan #0" = -1
+	"Nora #0" = -1
+	"Rachael #0" = -1
+	"Ruth #0" = -1
+	"Sophie #0" = -1
+	"Tau #0" = -1
+	"Tina #0" = -1
+}

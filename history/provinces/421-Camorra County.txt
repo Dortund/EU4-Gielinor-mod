@@ -1,0 +1,25 @@
+#421-Camorra County
+owner = SYZ
+controller = SYZ
+add_core = SYZ
+tribal_owner = ---
+culture = shayzien
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 3
+
+trade_goods = logs
+
+is_city = yes
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

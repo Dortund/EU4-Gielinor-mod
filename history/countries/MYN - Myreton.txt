@@ -1,0 +1,22 @@
+government = theocracy
+add_government_reform = theocratic_government_reform
+government_rank = 1
+primary_culture = north_coaster
+religion = saradomin
+technology_group = centraltechgroup
+capital = 122 #Speluncae
+
+1923.2.24 = {
+	monarch = {
+		name = "Domin"
+		dynasty = "Kludge"
+		birth_date = 1869.11.5
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	add_opinion = {
+		who = MST
+		modifier = MST_wrong_side_of_salve
+	}
+}

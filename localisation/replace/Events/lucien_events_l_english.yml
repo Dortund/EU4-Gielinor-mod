@@ -1,0 +1,26 @@
+﻿l_english:
+ lucien_flavor.1.t:0 "Yet Another Adventurer Horde"
+ lucien_flavor.1.d:0 "Such a nuisance adventurers are! They don't know when to leave Lord Lucien alone. Another group has entered the lands of [Root.GetName] lately and while they pledge not to harm our master, can we really trust them?"
+ lucien_flavor.1.a:0 "Keep an eye on them, but let them stay."
+ lucien_flavor.1.b:0 "Exile them!"
+ lucien_flavor.1.c:0 "Destroy them and raise their corpses!"
+
+ lucien_flavor.2.t:0 "The Doubters"
+ lucien_flavor.2.d:0 "Murmurs in our realm abound that Lucien is not truly a god yet. Such blasphemy should be dealt with, but making a show of force could come across as a sign of weakness rather than strength."
+ lucien_flavor.2.a:0 "The rumours will fizzle out with time."
+ lucien_flavor.2.b:0 "Crush those dissenters!"
+ 
+ lucien_flavor.3.t:0 "The Monks of Lucien and the Ambitious Mages"
+ lucien_flavor.3.d:0 "The following of Lucien is divided between those who worship him as a god, and those who see him as an example to strive towards. The first of these factions is spearheaded by the Monks of Lucien, who see the ambition of the latter faction to be dangerous for our common faith. However, the ambitious mages who wish to learn from Lucien's example could be powerful allies to our cause."
+ lucien_flavor.3.a:0 "Lucien is unique; no others can ever possess even a fraction of his power."
+ lucien_flavor.3.b:0 "Scholars of the lost and powerful magicks shall find a home in the nation of [Root.GetName]."
+ 
+ lucien_flavor.4.t:0 "Ancient Knowledge"
+ lucien_flavor.4.d:0 "Immense power rests in the ancient artefacts and magicks of times gone by - before even Lucien himself emerged. Yet the pursuit of ancient knowledge is rife with risk - discovery can take decades of research and costs resources which could be dedicated to studies of more contemporary technology."
+ lucien_flavor.4.a:0 "To control the future, we must explore the past."
+ lucien_flavor.4.b:0 "The past is in the past; we must turn to the advancements of the current age."
+ 
+ lucien_flavor.5.t:0 "Our Own Path"
+ lucien_flavor.5.d:0 "None are above Lucien, Master of a Thousand Curses. The lesser beings shall perish! Unfortunately, statements such as these are not held by the rest of the world, and may make diplomacy difficult. We shall have to decide if it is worth alienating the rest of Gielinor in the name of the faith."
+ lucien_flavor.5.a:0 "Let the world be against us! We know we are right."
+ lucien_flavor.5.b:0 "We need allies right now. We can betray them later."

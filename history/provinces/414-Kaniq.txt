@@ -1,0 +1,31 @@
+#414-Kaniq
+owner = PCL
+controller = PCL
+add_core = PCL
+tribal_owner = ---
+culture = piscarilius
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 2
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}
+
+2135.6.15 = {
+	base_tax = 1
+	base_production = 1
+	base_manpower = 1
+}

@@ -1,0 +1,24 @@
+#133 - Slepe
+owner = MYT
+controller = MYT
+add_core = MYT
+add_core = SLP
+tribal_owner = ---
+culture = slepe
+religion = zamorak
+
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 4
+base_manpower = 4
+
+trade_goods = manufactured_goods
+latent_trade_goods = { rare_loot }
+
+is_city = yes
+
+center_of_trade = 1

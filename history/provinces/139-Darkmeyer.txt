@@ -1,0 +1,21 @@
+#139 - Darkmeyer
+owner = MYT
+controller = MYT
+add_core = MYT
+tribal_owner = ---
+culture = trueborn_vampyre
+religion = vampyric
+
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 7
+base_production = 6
+base_manpower = 5
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 2

@@ -1,0 +1,288 @@
+########################################
+# Events for Mos le' Harmless
+########################################
+
+namespace = flavor_msh
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_msh.1
+	title = flavor_msh.1.t #Pirate Mercenaries for Morytania
+	desc = flavor_msh.1.d #Morytania has paid to hire some pirate mercenaries from Mos le' Harmless. We haven't really got a say in the matter, but we have received a fair sum of gold.
+	picture = PIRATE_BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_msh.1.a #So long as Morytania's pirate mercenaries don't raid us...
+		add_treasury = 150
+	}
+}
+
+country_event = {
+	id = flavor_msh.2
+	title = flavor_msh.2.t #Pirates of Brimhaven
+	desc = flavor_msh.2.d #Ahoy! Some sailors over in the Unquiet Ocean have decided to make some noise, and have set up their own pirate town. We sail in different waters, so they're no competition to us. Perhaps we should seek closer ties?
+	picture = PIRATE_BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_msh.2.a #Ahoy!
+		add_historical_friend = BHV
+		add_opinion = {
+			who = BHV
+			modifier = msh_fellow_pirates
+		}
+		discover_province = 213
+		discover_province = 872
+		BHV = {
+			add_historical_friend = MSH
+			add_opinion = {
+				who = MSH
+				modifier = msh_fellow_pirates
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_msh.3
+	title = flavor_msh.3.t #Pirates of Peril
+	desc = flavor_msh.3.d #Some pirates have run themselves aground on the north coast of the Wilderness. Unable to fix up their ship, they've established an impromptu colony.
+	picture = PIRATE_BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		is_year = 2152
+		195 = { is_empty = yes }
+		NOT = { exists = PHI }
+		OR = {
+			tag = MSH
+			AND = {
+				NOT = { exists = MSH }
+				capital_scope = {
+					region = forinthry_region
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			195 = {
+				cede_province = PHI
+				add_core = PHI
+				change_religion = godless
+				change_culture = northernraider
+				add_building = fort_16th
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+			PHI = {
+				build_to_forcelimit = {
+					infantry = 0.5
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_msh.3.a #Join these landlubbers!
+		switch_tag = PHI
+	}
+	option = {
+		name = flavor_msh.3.b #Alright. Do you have any useful news?
+		
+	}
+}
+
+country_event = {
+	id = flavor_msh.4
+	title = flavor_msh.4.t #Yo Ho Ho and a Bottle of 'Rum'
+	desc = flavor_msh.4.d #Captain Braindeath has made a product known simply as Artificially Produced Hyper Condensed Sweetened 'Rum' Flavour Distillate, or 'rum' for short. Tis about the most cursed thing in all the seas, yet pirates can't stop drinking the swill. It's all made on a secret isle not too far from Mos Le' Harmless.
+	picture = PIRATE_BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		is_year = 2151
+		764 = { is_empty = yes }
+		NOT = { exists = PHI }
+		OR = {
+			tag = MSH
+			AND = {
+				NOT = { exists = MSH }
+				has_reform = pirate_republic
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			764 = {
+				cede_province = BDI
+				add_core = BDI
+				change_religion = godless
+				change_culture = harmlean
+				add_building = fort_16th
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+			if = {
+				limit = {
+					765 = { is_empty = yes }
+				}
+				765 = {
+					cede_province = BDI
+					add_core = BDI
+					change_religion = godless
+					change_culture = harmlean
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+					add_institution_embracement = {
+						which = statehood
+						value = 100
+					}
+					add_institution_embracement = {
+						which = exploration
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					766 = { is_empty = yes }
+				}
+				766 = {
+					cede_province = BDI
+					add_core = BDI
+					change_religion = godless
+					change_culture = harmlean
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+					add_institution_embracement = {
+						which = statehood
+						value = 100
+					}
+					add_institution_embracement = {
+						which = exploration
+						value = 100
+					}
+				}
+			}
+			add_historical_friend = BDI
+			BDI = {
+				set_religious_school = {
+					group = nonintervention_group
+					school = ambivalence_school
+				}
+				build_to_forcelimit = {
+					light_ship = 0.5
+					transport = 0.2
+					infantry = 0.5
+					artillery = 0.3
+				}
+				add_historical_friend = MSH
+				define_ruler = {
+					name = "Richard"
+					dynasty = "Braindeath"
+					age = 26
+					adm = 4
+					dip = 6
+					mil = 4
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {
+		name = flavor_msh.4.a #Let's get brewin'!
+		switch_tag = BDI
+	}
+	option = {
+		name = flavor_msh.4.b #Ye gods! Get sailors away from that swill!
+	}
+}

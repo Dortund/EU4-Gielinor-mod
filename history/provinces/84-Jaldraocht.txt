@@ -1,0 +1,20 @@
+#84 - Jaldraocht
+owner = JAL
+controller = JAL
+add_core = JAL
+tribal_owner = ---
+culture = jaldraochtite
+religion = zaros
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = magic_supplies
+
+is_city = yes

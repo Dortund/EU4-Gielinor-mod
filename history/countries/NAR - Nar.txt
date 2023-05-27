@@ -1,0 +1,18 @@
+government = tribal
+add_government_reform = feldip_tribe
+government_rank = 1
+primary_culture = ogre
+religion = bandos
+technology_group = bandostechgroup
+capital = 310 #Nar
+
+1912.4.12 = {
+	monarch = {
+		name = "Bogrog"
+		dynasty = "Nar"
+		birth_date = 1865.5.12
+		adm = 5
+		dip = 4
+		mil = 2
+	}
+}

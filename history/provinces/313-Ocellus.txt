@@ -1,0 +1,32 @@
+#313-Ocellus
+owner = OOG
+controller = OOG
+add_core = OOG
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+discovered_by = karamjantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = hunter_creatures
+
+native_size = 35
+native_ferocity = 10
+native_hostileness = 15
+
+2159.3.12 = {
+	owner = FEL
+	controller = FEL
+	add_core = FEL
+	remove_core = OOG
+}

@@ -1,0 +1,32 @@
+#971-Rævenesland
+owner = RVL
+controller = RVL
+add_core = RVL
+tribal_owner = ---
+culture = barbarian
+religion = guthix
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+fort_15th = yes 
+
+trade_goods = logs
+
+is_city = yes
+
+1965.9.27 = {
+	owner = REL
+	controller = REL
+	add_core = REL
+}

@@ -1,0 +1,27 @@
+#492 - Singing Isle
+owner = CDG
+controller = CDG
+add_core = CDG
+tribal_owner = ---
+culture = cloud_giant
+religion = bandos
+
+discovered_by = CDG
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 3
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+1943.11.5 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+	culture = tempestite
+	religion = ralos
+}

@@ -1,0 +1,49 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 85 48 99 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Archeio #0" = 5
+	"Asteros #0" = 5
+	"Ektheme #0" = 5
+	"Enoch #0" = 5
+	"Freald #0" = 5
+	"Horphis #0" = 5
+	"Krato #0" = 5
+	"Logios #0" = 5
+	"Meleti #0" = 5
+	"Pagida #0" = 5
+	"Rassain #0" = 5
+	"Regath #0" = 5
+	"Trobin #0" = 5
+	"Trossa #0" = 5
+	"Tyss #0" = 5
+	
+	"Arcis #0" = -5
+	"Aretha #0" = -5
+	"Biblia #0" = -5
+	"Clerris #0" = -5
+	"Filamina #0" = -5
+	"Galana #0" = -5
+	"Ignisia #0" = -5
+	"Imerominia #0" = -5
+	"Istoria #0" = -5
+	"Logosia #0" = -5
+	"Mofina #0" = -5
+	"Mori #0" = -5
+	"Thyria #0" = -5
+	"Villia #0" = -5
+}

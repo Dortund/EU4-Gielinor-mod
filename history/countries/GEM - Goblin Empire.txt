@@ -1,0 +1,7 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 3
+primary_culture = ekeleshuun
+religion = bandos
+technology_group = bandostechgroup
+capital = 254 #Plain of Mud

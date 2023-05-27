@@ -1,0 +1,19 @@
+#524 - Custodem Capitis
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = fortis
+religion = ranul
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = manufactured_goods
+
+is_city = yes

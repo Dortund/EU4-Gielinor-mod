@@ -1,0 +1,68 @@
+﻿l_english:
+ flavor_ior.1.t:0 "Temple of Light Sealed!"
+ flavor_ior.1.d:0 "Those fools in the Elven Resistance have sealed the Temple of Light! It would be extremely difficult to assault it directly at this point. Perhaps we can try later?"
+ flavor_ior.1.a:0 "We will break through eventually."
+ 
+ flavor_ior.2.t:0 "The Reversion of Prifddinas"
+ flavor_ior.2.d:0 "It is a terrible day. The members of the Elven Resistance have successfully reverted our fair city of Prifddinas to a mere seed. Until we find the means to restore it, we are significantly weakened."
+ flavor_ior.2.a:0 "We will find a way."
+ 
+ flavor_ior.3.t:0 "Clan Elders Freed!"
+ flavor_ior.3.d:0 "The mindless Elven Resistance have freed their oh-so-precious clan elders. The elders do, admittedly, hold a lot of power so we need to crush the Resistance before they can do anything worse."
+ flavor_ior.3.a:0 "The resistance shall be crushed!"
+ 
+ flavor_ior.4.t:0 "Whispers of the Dark Lord"
+ flavor_ior.4.d:0 "A voice called $MONARCH$ to war, and now they have received just that. This voice resonates much like the shards of dear departed Seren, yet has a strength to it not seen since before her shattering. It is clear we must follow this remaining voice of Seren and see where it leads us."
+ flavor_ior.4.a:0 "We must obey our God!"
+ 
+ flavor_ior.5.t:0 "[KDR.Monarch.GetName] of Kandarin reaches out!"
+ flavor_ior.5.d:0 "Apparently on the other side of the Galarpos Mountains a whole different kind of internal conflict has been happening. [KDR.Monarch.GetTitle] [KDR.Monarch.GetName] of Kandarin has requested an alliance to handle [KDR.Monarch.GetHerHis] rival's claims in the kingdom. We in return may be able to claim West Ardougne for ourselves; vital for our endgame plans to summon the Dark Lord."
+ flavor_ior.5.a:0 "Let's ally with [KDR.Monarch.GetName]!"
+ flavor_ior.5.b:0 "Let's not."
+ 
+ flavor_ior.6.t:0 "Plague City"
+ flavor_ior.6.d:0 "Finally, the alliance with Kandarin is paying off. We have received dominion over West Ardougne; the population of which shall make excellent sacrifices to the Dark Lord. Let us fake a plague in the city so we can shield it from the outside world."
+ flavor_ior.6.a:0 "For the Dark Lord!"
+ 
+ flavor_ior.7.t:0 "Destruction of the Dark Lord"
+ flavor_ior.7.d:0 "It... happened. The Resistance destroyed the fragment of Seren. Voices are already calling out for surrender and the end of the war."
+ flavor_ior.7.a:0 "If we do not act fast, we will lose the war."
+ ior_soon_to_surrender_tooltip:0 "If we remain following the Dark Lord, have no provinces or subjects outside Tirannwn, and the Elven Resistance has three times our development, our people will §Rimmediately surrender§!."
+ 
+ flavor_ior.8.t:0 "The Surrender of Clan Iorwerth"
+ flavor_ior.8.d:0 "The populace of Clan Iorwerth no longer has any will to fight in the Tirannwn Civil War, and has surrended to the Elven Resistance."
+ flavor_ior.8.a:0 "There is an old Dwarven phrase: Losing is fun."
+ 
+ flavor_ior.9.t:0 "The Backup Plan"
+ flavor_ior.9.d:0 "The Elven Resistance has nearly defeated us! To make a successful comeback, we need to find power outside of Tirannwn. "
+ flavor_ior.9.a:0 "There must be some remnants from the God Wars somewhere..."
+ 
+ flavor_ior.10.t:0 "Voyage of Lost Souls"
+ flavor_ior.10.d:0 "It was a treacherous journey, but a modest number of settlers from Clan Iorwerth have landed on the shores of the Isle of Souls. We must rebuild the Dark Lord's following here, and locate the Soul Stone to increase our power."
+ flavor_ior.10.a:0 "This war is not over yet."
+ 
+ flavor_ior.11.t:0 "The Temple of Light Excavation"
+ flavor_ior.11.d:0 "Our fake plague is the perfect cover for kidnapping humans and forcing them to work in our mines! Through their efforts, we will find a route to the Temple of Light, where the Dark Lord dwells!"
+ flavor_ior.11.a:0 "The Dark Lord calls..."
+ 
+ flavor_ior.12.t:0 "Clan Iorwerth Offers to Purchase Provinces"
+ flavor_ior.12.d:0 "Our ally, Clan Iorwerth, offers to pay us a large sum of gold in exchange for two provinces we control in western Kandarin."
+ flavor_ior.12.a:0 "Agreed!"
+ flavor_ior.12.b:0 "We are not exposing weakness to anyone, even our ally."
+ 
+ flavor_ior.13.t:0 "Successful Purchase of the Eastern Galarpos!"
+ flavor_ior.13.d:0 "Our ally has agreed to sell us key provinces in the eastern Galarpos, giving us a crucial foothold on the way to the Temple of Light!"
+ flavor_ior.13.a:0 "Excellent!"
+ 
+ flavor_ior.14.t:0 "Galarpos Purchase Denied!"
+ flavor_ior.14.d:0 "Our so-called ally thinks a bit of land is more important than our friendship."
+ flavor_ior.14.a:0 "At least we get our money back."
+ 
+ flavor_ior.15.t:0 "Rising Shadows"
+ flavor_ior.15.d:0 "Strange news emerges from our excavation for the Temple of Light. Large numbers of miners have vanished or been killed. Deadly shadows and dark beasts have been spotted - hostile to anything that approaches. It seems to free the Dark Lord, we must push through the monsters it manifested..."
+ flavor_ior.15.a:0 "Forgive the Dark Lord, for they know not what they do."
+ flavor_ior.15.b:0 "Forget Clan Iorwerth! I'm joining the Dark Lord directly!"
+ 
+ flavor_ior.16.t:0 "Release of the Dark Lord"
+ flavor_ior.16.d:0 "With the defences of the Temple of Light broken open, the Dark Lord is free to enact vengeance!"
+ flavor_ior.16.a:0 "This is what Seren would have wanted."

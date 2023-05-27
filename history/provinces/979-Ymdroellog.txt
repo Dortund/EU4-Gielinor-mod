@@ -1,0 +1,19 @@
+#979-Ymdroellog
+owner = IOR
+controller = IOR
+add_core = IOR
+tribal_owner = ---
+culture = iorwerth
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 3
+
+trade_goods = hunter_creatures
+
+is_city = yes

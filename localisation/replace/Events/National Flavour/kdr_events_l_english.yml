@@ -1,0 +1,63 @@
+﻿l_english:
+ flavor_kdr.1.t:0 "Knights of the Round Table"
+ flavor_kdr.1.d:0 "The people of Kandarin are gripped in awe at the sight of the arrival of a mysterious knightly order led by a so-called King Arthur. They have apparently arrived from another world and believe Gielinor would be a safe haven for them for the time being. Importantly for us, they're willing to govern our northern provinces, and Lord Sinclair is more than willing to give up his castle for them."
+ flavor_kdr.1.a:0 "May I join the Knights of the Round Table?"
+ kdr_tooltip_play_as_cml:0 "Choosing this option would cause you to play as Camelot instead of Kandarin."
+ flavor_kdr.1.b:0 "King Arthur shall find sanctuary!"
+ kdr_tooltip_camelot_governance:0 "So long as Camelot remains subject to Kandarin and has development equal to at least 10% of its overlord, it will eliminate Kandarin's minimum autonomy penalty."
+ flavor_kdr.1.c:0 "We've got enough kings as it is."
+ kdr_tooltip_no_cml:0 "Choosing this option will prevent Camelot from appearing in this game."
+ 
+ flavor_kdr.2.t:0 "Splitting Heirs"
+ flavor_kdr.2.d:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName], in [Root.Monarch.GetHerHis] infinite wisdom, has decided that for the good of Kandarin, the governance of Ardougne should be divided between the heirs [Root.Heir.GetName] and [Root.Heir.GetHerHis]' younger sibling Tyras. [Root.Heir.GetName] is furious at the arrangement, but perhaps it could help teach [Root.Heir.GetHerHim] humility?"
+ flavor_kdr.2.a:0 "Let it be so."
+ flavor_kdr.2.b:0 "[Root.Monarch.GetName]! I'd strongly advise against such a course of action!"
+ 
+ flavor_kdr.3.t:0 "The Division of Ardougne"
+ flavor_kdr.3.d:0 "With the ascension of [Root.Monarch.GetName] to the throne of Kandarin, the decision to split Ardougne has been implemented. Tyras has taken West Ardougne, though seems disinterested in governing beyond there. [Root.Monarch.GetName] remains in charge of the rest of Kandarin."
+ flavor_kdr.3.a:0 "Let's take Lathas' side."
+ flavor_kdr.3.b:0 "We're staying with [Root.Monarch.GetName]."
+ 
+ flavor_kdr.4.t:0 "Tyras Becomes Heir"
+ flavor_kdr.4.d:0 "The death of the former heir means Tyras is now the sole claimant to the throne of Kandarin. The realm is no longer in danger of being divided in two."
+ flavor_kdr.4.a:0 "Hopefully this heir lives this time."
+ 
+ flavor_kdr.5.t:0 "End of an Arrangement"
+ flavor_kdr.5.d:0 "Kandarin's change in governance structure means that any arrangement to split the country between heirs is no longer valid."
+ flavor_kdr.5.a:0 "Okay."
+ 
+ flavor_kdr.6.t:0 "A City Divided"
+ flavor_kdr.6.d:0 "As Kandarin does not control any of West Ardougne, it can hardly be expected to give the city to Tyras. Kandarin shall no longer be divided upon [Root.Monarch.GetName]'s death."
+ flavor_kdr.6.a:0 "Okay."
+ 
+ flavor_kdr.7.t:0 "Frustration of Tyras"
+ flavor_kdr.7.d:0 "Tyras has taken a chunk out of Kandarin, one which should be rectified. Rumours tell of a power to the west which may be able to aid us - the Iorwerth Clan. Perhaps we should seek ties?"
+ flavor_kdr.7.a:0 "We should seek ties with Clan Iorwerth!"
+ flavor_kdr.7.b:0 "Out of the question!"
+ 
+ flavor_kdr.8.t:0 "Success at Clan Iorwerth"
+ flavor_kdr.8.d:0 "Clan Iorwerth accepts our plans for an alliance! They have a plan for West Ardougne which they request in exchange for their aid against Tyras; a fair enough exchange."
+ flavor_kdr.8.a:0 "Excellent!"
+ 
+ flavor_kdr.9.t:0 "Failure at Clan Iorwerth"
+ flavor_kdr.9.d:0 "Clan Iorwerth has rejected our plans for an alliance! The fools."
+ flavor_kdr.9.a:0 "Booo!"
+ 
+ flavor_kdr.10.t:0 "Allies Against Tyras"
+ flavor_kdr.10.d:0 "The Iorwerth Clan are good allies to us and potentially could be very helpful in our attempts to assert our claims over Tyras' holdings."
+ flavor_kdr.10.a:0 "Hopefully only good can come of this."
+ 
+ flavor_kdr.11.t:0 "The Fate of West Ardougne"
+ flavor_kdr.11.d:0 "Tyras has left Kandarin and with it the claim to West Ardougne essentially falls into our control."
+ flavor_kdr.11.a:0 "Excellent!"
+ 
+ flavor_kdr.12.t:0 "Iorwerth's Claim"
+ flavor_kdr.12.d:0 "Now that we have control over the area of West Ardougne, we need to keep up our end of the bargain for Iorwerth. They want control of the city for some unknown reason, and have devised a genius cover: We fake a plague and build a wall around West Ardougne, claiming it must be quarantined for our own good."
+ flavor_kdr.12.a:0 "What's wrong with a little deception if it means the defeat of Tyras?"
+ 
+ flavor_kdr.13.t:0 "The World Gate"
+ flavor_kdr.13.d:0 "There were rumours that the resident races of Gielinor came from other worlds via a great portal - and now there is evidence. Pulled out of the shadows is the World Gate - a route to all manner of other worlds for those who know how to use it."
+ flavor_kdr.13.a:0 "I sure hope nothing terrible comes through that gate."
+ KDR_world_gate_revealed:0 "World Gate Revealed"
+ 
+ 

@@ -1,0 +1,40 @@
+#945-Vyvin
+owner = VYV
+controller = VYV
+add_core = VYV
+tribal_owner = ---
+culture = south_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+1957.10.13 = {
+	owner = DWI
+	controller = DWI
+	add_core = DWI
+}
+
+1986.11.17 = {
+	owner = DBS
+	controller = DBS
+	add_core = DBS
+}
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+	remove_core = DBS
+}

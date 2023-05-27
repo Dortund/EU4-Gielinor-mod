@@ -1,0 +1,96 @@
+#Country Name: Please seefilename.
+
+graphical_culture = inuitgfx
+
+color = { 221 241 255 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Nauja #0" = 1
+	"Nirliq #0" = 1
+	"Nuniq #0" = 1
+	"Nuvuk #0" = 1
+	"Oki #0" = 1
+	"Pamiuq #0" = 1
+	"Patuktuq #0" = 1
+	"Pauloosie #0" = 1
+	"Petuwaq #0" = 1
+	"Pimniq #0" = 1
+	"Piqqaluyungmik #0" = 1
+	"Pittiulak #0" = 1
+	"Pukajaak #0" = 1
+	"Qajak #0" = 1
+	"Qammutiq #0" = 1
+	"Qamut #0" = 1
+	"Qannik #0" = 1
+	"Qaumaniq #0" = 1
+	"Qausiqtuk #0" = 1
+	"Qimmiabruk #0" = 1
+	"Qimmiq #0" = 1
+	"Qulitalik #0" = 1
+	"Sauri #0" = 1
+	"Sighna #0" = 1
+	"Siluk #0" = 1
+	"Sivoy #0" = 1
+	"Sivuugun #0" = 1
+	"Taktuq #0" = 1
+	"Taliriktug #0" = 1
+	"Tikaani #0" = 1
+	"Tiqriganiannig #0" = 1
+	"Tukkuyummavungga #0" = 1
+	"Tulimak #0" = 1
+	"Tulimaq #0" = 1
+	"Tulugaq #0" = 1
+	"Tungajuaq #0" = 1
+	"Tupiq #0" = 1
+	"Tuuq #0" = 1
+	"Ugalik #0" = 1
+	"Ujurak #0" = 1
+	"Ukiuk #0" = 1
+	"Unnuk #0" = 1
+	"Usuiituk #0" = 1
+	
+	"Ahnah #0" = -1
+	"Akna #0" = -1
+	"Chena #0" = -1
+	"Corazon #0" = -1
+	"Desna #0" = -1
+	"Kaskae #0" = -1
+	"Kaya #0" = -1
+	"Kirima #0" = -1
+	"Koko #0" = -1
+	"Malina #0" = -1
+	"Adlartok #0" = -1
+	"Ahnah #0" = -1
+	"Akiak #0" = -1
+	"Anana #0" = -1
+	"Anernerk #0" = -1
+	"Annakpok #0" = -1
+	"Aput #0" = -1
+	"Ataciare #0" = -1
+	"Atka #0" = -1
+	"Aukaneck #0" = -1
+	"Biisaiyowaq #0" = -1
+	"Buniq #0" = -1
+	"Chulyin #0" = -1
+	"Cikup #0" = -1
+	"Corazon #0" = -1
+	"Cupun #0" = -1
+	"Hey #0" = -1
+	"Iluak #0" = -1
+	"Iluq #0" = -1
+	"Imnek #0" = -1
+	"Ipiktok #0" = -1
+	"Iqniq #0" = -1
+	"Kakrayok  #0" = -1
+}

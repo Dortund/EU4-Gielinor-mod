@@ -1,0 +1,7 @@
+#Keldagrim-Unterwulf
+alliance = {
+	first = KDG
+	second = UWF
+	start_date = 1980.7.31
+	end_date = 2300.1.1
+}

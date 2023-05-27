@@ -1,0 +1,29 @@
+#488-Aldarin
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = aldarin
+religion = ralos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = fruit
+
+is_city = yes
+
+center_of_trade = 2
+
+2000.1.1 = {
+	base_tax = 6
+	base_production = 5
+	base_manpower = 5
+}

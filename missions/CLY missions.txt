@@ -1,0 +1,274 @@
+crailey_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLY
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLY_grow_the_farms = {
+		icon = mission_rb_import_potatoes
+		required_missions = {  } #none
+		provinces_to_highlight = {
+			province_id = 37
+			}
+		trigger = {
+			37 = {
+				base_production = 7
+				base_tax = 7
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+			37 = {
+				change_trade_goods = cabbage
+			}
+		}
+	}
+	
+	CLY_cabbage_legend = {
+		icon = found_the_vatican_library
+		position = 3
+		required_missions = { CLY_curse_of_draynor }
+		trigger = {
+				has_idea = CLY_legend_of_brassica_prime
+				total_development = 100
+				37 = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				draynor_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		effect = {
+				country_event = {
+					id = flavor_cly.1
+					days = 1
+				}
+			}
+	}
+}
+
+crailey_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLY
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLY_curse_of_draynor = {
+		icon = Compulsory_Education
+		position = 2
+		required_missions = { CLY_grow_the_farms CLY_a_port_of_our_own }
+		provinces_to_highlight = {
+			area = draynor_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			draynor_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			breadbasket_of_misthalin_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+		}
+	}
+}
+
+crailey_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLY
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLY_a_port_of_our_own = {
+		icon = secure_the_republic
+		required_missions = {  } #none
+		provinces_to_highlight = {
+			province_id = 33
+			}
+		trigger = {
+			owns_core_province = 33
+			navy_size = 8
+		}
+		effect = {
+			draynor_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			port_sarim_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			tutorial_island_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+		}
+	}
+	
+	CLY_we_all_must_start_somewhere = {
+		icon = mission_rb_conquer_the_isles
+		position = 2
+		required_missions = { CLY_a_port_of_our_own }
+		provinces_to_highlight = {
+			area = tutorial_island_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			tutorial_island_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 50
+		}
+	}
+	
+	CLY_second_breadbasket = {
+		icon = mission_rb_conquer_wales
+		position = 3
+		required_missions = { CLY_curse_of_draynor CLY_we_all_must_start_somewhere }
+		provinces_to_highlight = {
+			area = breadbasket_of_misthalin_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			breadbasket_of_misthalin_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			varrock_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+crailey_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLY
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLY_unite_southern_asgarnia = {
+		icon = prosper_in_piedmont
+		position = 2
+		required_missions = { CLY_a_port_of_our_own CLY_repel_the_donblas }
+		provinces_to_highlight = {
+			area = port_sarim_area
+			area = south_asgarnia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			port_sarim_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			south_asgarnia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			rimmington_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+		}
+	}
+}
+
+crailey_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = CLY
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CLY_repel_the_donblas = {
+		icon = mission_rb_unite_the_clans
+		required_missions = {  } #none
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { exists = DBS }
+					total_development = 100
+				}
+				AND = {
+					army_size = DBS
+					total_development = DBS
+					prestige = DBS
+				}
+			}
+		}
+		effect = {
+			falador_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			asgarnian_farmlands_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+		}
+	}
+}

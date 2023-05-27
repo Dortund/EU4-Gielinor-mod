@@ -1,0 +1,38 @@
+#269-Androundri
+owner = THO
+controller = THO
+add_core = THO
+tribal_owner = ---
+culture = thorobshuun
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 5
+
+trade_goods = flax
+
+is_city = yes
+
+1941.7.23 = {
+	owner = GNE
+	controller = GNE
+	add_core = GNE
+	remove_core = THO
+	culture = treegnome
+	religion = guthix
+}
+
+1958.7.23 = {
+	owner = GNO
+	controller = GNO
+	add_core = GNO
+	remove_core = GNE
+}

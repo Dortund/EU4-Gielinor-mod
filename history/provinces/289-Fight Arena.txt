@@ -1,0 +1,27 @@
+#289-Fight Arena
+owner = KZD
+controller = KZD
+add_core = KZD
+tribal_owner = ---
+culture = ouranian
+religion = zamorak
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+discovered_by = monkeytechgroup
+discovered_by = karamjantechgroup
+discovered_by = karamjantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 4
+
+fort_15th = yes 
+
+trade_goods = manufactured_goods
+
+is_city = yes

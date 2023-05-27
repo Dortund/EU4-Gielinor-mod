@@ -1,0 +1,23 @@
+#1136 - Rapa Causeway
+owner = BZL
+controller = BZL
+add_core = BZL
+tribal_owner = ---
+culture = eastern_exile
+religion = suzaku
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = basic_ores
+
+is_city = yes

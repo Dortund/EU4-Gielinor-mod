@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = feldip_tribe
+government_rank = 1
+primary_culture = ogre
+religion = bandos
+technology_group = bandostechgroup
+capital = 317 #Oo'glog
+
+1923.4.9 = {
+	monarch = {
+		name = "Muggh"
+		dynasty = "Spiderstomper"
+		birth_date = 1907.3.21
+		female = yes
+		adm = 6
+		dip = 0
+		mil = 5
+	}
+}

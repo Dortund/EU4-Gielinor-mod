@@ -1,0 +1,469 @@
+namespace = tirannwn_civil_war
+
+########################################
+# Tirannwn Civil War
+########################################
+
+# Start of the Civil War
+country_event = {
+	id = tirannwn_civil_war.1
+	title = tirannwn_civil_war.1.t #The Tirannwn Civil War
+	desc = tirannwn_civil_war.1.d #The flow of elves from Tirannwn to Baxtorian's kingdom east of the Galarpos mountains has resulted in something of a power vacuum back in Prifddinas. The Cadarn clan, formally the most powerful clan in Tirannwn, has all but left the realm allowing the Iorwerth Clan to consolidate power. A resistance movement has rapidly sprung up to oppose them, but without outside assistance, they will be outmatched.
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = had_tnn_civil_war
+		set_country_flag = tnn_civil_war_start_event
+		hidden_effect = {
+			325 = {
+			add_core = IOR
+			cede_province = IOR
+			remove_core = TNN
+			}
+			337 = {
+			add_core = EVR
+			cede_province = EVR
+			remove_core = TNN
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+				}
+			change_trade_goods = flax
+			}
+		}
+	}
+	
+	option = {
+		name = tirannwn_civil_war.1.a #For the resistance! Tirannwn must be ruled by the eight clans!
+		switch_tag = EVR
+		
+		hidden_effect = {
+			TNN = {
+				country_event = {
+					id = tirannwn_civil_war.2
+					days = 1
+				}
+				clr_country_flag = tnn_civil_war_start_event
+			}
+			IOR = {
+				add_historical_rival = EVR
+			}
+			EVR = {
+				add_historical_rival = IOR
+			}
+		}
+		
+	}
+	option = {
+		name = tirannwn_civil_war.1.b #For Iorwerth! Tirannwn is rightfully ours!
+		switch_tag = IOR
+		
+		hidden_effect = {
+			TNN = {
+				country_event = {
+					id = tirannwn_civil_war.2
+					days = 1
+				}
+				clr_country_flag = tnn_civil_war_start_event
+			}
+			IOR = {
+				add_historical_rival = EVR
+			}
+			EVR = {
+				add_historical_rival = IOR
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tirannwn_civil_war.2
+	title = tirannwn_civil_war.2.t #Tirannwn Disintegrates
+	desc = tirannwn_civil_war.2.d #
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_country_flag = tnn_civil_war_start_event
+		set_global_flag = elven_civil_war
+		every_owned_province = {
+			limit = {
+				NOT = {
+					OR = {
+					province_id = 332
+					province_id = 333
+					province_id = 334
+					province_id = 335
+					province_id = 336
+					province_id = 338
+					province_id = 339
+					province_id = 538
+					province_id = 773
+					province_id = 774
+					province_id = 980
+					province_id = 981
+					province_id = 982
+					province_id = 983
+					}
+				}
+			}
+			add_core = IOR
+			cede_province = IOR
+			remove_core = TNN
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 332
+					province_id = 333
+					province_id = 334
+					province_id = 335
+					province_id = 336
+					province_id = 338
+					province_id = 339
+					province_id = 538
+					province_id = 773
+					province_id = 774
+					province_id = 980
+					province_id = 981
+					province_id = 982
+					province_id = 983
+				}
+			}
+			add_core = EVR
+			cede_province = EVR
+			remove_core = TNN
+		}
+	}
+
+	option = {
+		name = tirannwn_civil_war.2.a #Ouch.
+			CDA = {
+				country_event = {
+					id = tirannwn_civil_war.3
+					days = 100
+				}
+			}
+	}
+}
+
+country_event = {
+	id = tirannwn_civil_war.3
+	title = tirannwn_civil_war.3.t #Tirannwn at war!
+	desc = tirannwn_civil_war.3.d #We have received word that the Iorwerth Clan has betrayed the rest of Tirannwn and taken Prifddinas! They clearly have dangerous ambitions which we should help put a stop to, though doing so would stretch our resources thin and leave ourselves vulnerable.
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = tirannwn_civil_war.3.a #Bring everything we can and let us lead this rebellion!
+		add_opinion = {
+			who = EVR
+			modifier = cda_joined_resistance
+		}
+		EVR = {
+			add_country_modifier = {
+				name = "EVR_cadarn_support"
+				duration = 7300
+			}
+		}
+		add_government_reform = unstable_monarchy
+		hidden_effect = {
+			add_militarised_society = 25
+		}
+		create_alliance = EVR
+		switch_tag = EVR
+		ai_chance = {
+			factor = 0
+		}
+		GNE = {
+			if = {
+				limit = { alliance_with = CDA }
+				country_event = {
+					id = tirannwn_civil_war.7
+					days = 30
+				}
+			}
+		}
+	}
+	option = {
+		name = tirannwn_civil_war.3.b #Send all the support we can!
+		add_opinion = {
+			who = EVR
+			modifier = cda_joined_resistance
+		}
+		EVR = {
+			country_event = {
+				id = tirannwn_civil_war.4
+				days = 1
+			}
+		}
+		add_government_reform = unstable_monarchy
+		hidden_effect = {
+			add_militarised_society = 25
+		}
+		create_alliance = EVR
+		add_prestige = 50
+		ai_chance = {
+			factor = 0.9
+		}
+		GNE = {
+			if = {
+				limit = { alliance_with = CDA }
+				country_event = {
+					id = tirannwn_civil_war.7
+					days = 30
+				}
+			}
+		}
+	}
+	option = {
+		name = tirannwn_civil_war.3.e #The future is on this side of the Galarpos.
+		add_opinion = {
+			who = EVR
+			modifier = cda_refused_resistance
+		}
+		EVR = {
+			country_event = {
+				id = tirannwn_civil_war.6
+				days = 1
+			}
+		}
+		add_country_modifier = {
+			name = "CDA_abandonment_of_the_elves"
+			duration = 7300
+		}
+		add_prestige = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = tirannwn_civil_war.4
+	title = tirannwn_civil_war.4.t #Cadarn reaches out!
+	desc = tirannwn_civil_war.4.d #The Cadarn clan has kindly decided to send us personnel to aid the resistance, at great risk to themselves. They will be ideal for fighting and developing our marginal lands.
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tirannwn_civil_war.4.a #Excellent.
+		add_country_modifier = {
+			name = "EVR_cadarn_support"
+			duration = 7300
+		}
+	}
+}
+
+#Note: Following event can no longer be activated.
+country_event = {
+	id = tirannwn_civil_war.5
+	title = tirannwn_civil_war.5.t #Cadarn somewhat reaches out!
+	desc = tirannwn_civil_war.5.d #The Cadarn clan has kindly decided to join in our struggle.
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tirannwn_civil_war.5.a #Excellent.
+	}
+}
+
+country_event = {
+	id = tirannwn_civil_war.6
+	title = tirannwn_civil_war.6.t #Cadarn refuses to help!
+	desc = tirannwn_civil_war.6.d #The Cadarn clan has heard of our plight, and has decided it's not in their best interests to intervene.
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tirannwn_civil_war.6.a #Any other clans want to betray us?
+	}
+}
+
+country_event = {
+	id = tirannwn_civil_war.7
+	title = tirannwn_civil_war.7.t #Vulernability of Cadarn
+	desc = tirannwn_civil_war.7.d #Our allies, the Cadarn clan, have sent a significant portion of their forces westward to Tirannwn. Many in our empire view this development as a sign the elves intend to withdraw from Kandarin, or at the very least will be unable to assist us when we need it. In the courts, there are calls for us to break our alliance so we can shift resources elsewhere. What should we do?
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 36
+	}
+	
+	option = {
+		name = tirannwn_civil_war.7.a #The people have spoken. We cannot hold onto this alliance much longer.
+		remove_historical_friend = CDA
+		remove_historical_friend = TNN
+		add_trust = {
+			who = CDA
+			value = -50
+			mutual = yes
+		}
+		add_opinion = {
+			who = CDA
+			modifier = gne_trifling_gnomes
+		}
+		CDA = {
+			add_opinion = {
+				who = GNE
+				modifier = gne_no_longer_worthwhile
+			}
+			country_event = {
+				id = tirannwn_civil_war.8
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 0.8
+		}
+	}
+	option = {
+		name = tirannwn_civil_war.7.b #Keep the relations as they are.
+		add_stability = -1
+		CDA = {
+			country_event = {
+				id = tirannwn_civil_war.9
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+	option = {
+		name = tirannwn_civil_war.7.c #Let us shoulder Cadarn's burden!
+		add_prestige = 50
+		add_stability = -2
+		add_country_modifier = {
+			name = "CDA_depleted_armies"
+			duration = 7300
+		}
+		add_trust = {
+			who = CDA
+			value = 25
+			mutual = yes
+		}
+		add_opinion = {
+			who = CDA
+			modifier = gne_friend_indeed
+		}
+		ai_chance = {
+			factor = 0.1
+		}
+		CDA = {
+			add_country_modifier = CDA_gnomish_assistance
+			country_event = {
+				id = tirannwn_civil_war.10
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tirannwn_civil_war.8
+	title = tirannwn_civil_war.8.t #The Gnome Empire Turns Their Back
+	desc = tirannwn_civil_war.8.d #Terrible news, $MONARCHTITLE$. The Gnome Empire sees our valiant effort to assist our Tirannwnaidd allies as a waste of resources, and are seriously questioning our continued alliance. Prepare for a difficult few years ahead...
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tirannwn_civil_war.8.a #Trifling gnomes!
+	}
+}
+
+country_event = {
+	id = tirannwn_civil_war.9
+	title = tirannwn_civil_war.9.t #The Gnome Empire Has Our Back
+	desc = tirannwn_civil_war.9.d #Despite our presently precarious situation, [GNE.Monarch.GetName] of the Gnome Empire has insisted on keeping our alliance. This should help secure our position in Kandarin while we help our friends in Tirannwn.
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tirannwn_civil_war.9.a #At least things didn't get any worse.
+	}
+}
+
+country_event = {
+	id = tirannwn_civil_war.10
+	title = tirannwn_civil_war.10.t #Friends Indeed
+	desc = tirannwn_civil_war.10.d #Wonderous news, my $MONARCHTITLE$! The Gnome Empire has decided to provide extra support to our nation while we send elves into Tirannwn! This leaves our kingdom considerably less exposed to outside threats, though it may leave the Gnome Empire somewhat vulnerable.
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tirannwn_civil_war.10.a #I knew allying gnomes was a good idea!
+	}
+}
+
+country_event = {
+	id = tirannwn_civil_war.100
+	title = tirannwn_civil_war.100.t #End of the Civil War (currently only for debug purposes)
+	desc = tirannwn_civil_war.100.d #Wonderous news, my $MONARCHTITLE$! We've ended the civil war!
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_country_flag = had_tnn_civil_war
+		clr_country_flag = tnn_civil_war_start_event
+	}
+	
+	option = {
+		name = tirannwn_civil_war.10.a #Alright.
+	}
+}

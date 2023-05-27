@@ -1,0 +1,28 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = icelord
+religion = wen
+technology_group = zeantechgroup
+capital = 415 #Wintertodt
+national_focus = MIL
+
+1.1.15 = {
+	monarch = {
+		name = "Wintertodt"
+		dynasty = "Howling Storm"
+		birth_date = 1.1.1
+		adm = 2
+		dip = 0
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

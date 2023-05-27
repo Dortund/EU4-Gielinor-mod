@@ -1,0 +1,132 @@
+########################################
+# Events for Corsair Cove
+########################################
+
+namespace = flavor_cco
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_cco.1
+	title = flavor_cco.1.t #Corsairs!
+	desc = flavor_cco.1.d #Corsairs from a southern continent have arrived in the Feldip Hills, looking for shelter. They have considerable wealth and a great ability to protect bank vaults, and hence are willing to pay dearly for the province of Oo'glog.
+	picture = PIRATE_BATTLE_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		owns_core_province = 317
+		is_year = 2167
+		NOT = { exists = CCO }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					315 = { is_empty = yes }
+				}
+				315 = {
+					cede_province = CCO
+					add_core = CCO
+				}
+				CCO = {
+					add_truce_with = ROOT
+					build_to_forcelimit = {
+						heavy_ship = 0.3
+						light_ship = 0.2
+						transport = 0.5
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_cco.1.a #Let's join the Corsairs!
+		hidden_effect = {
+			317 = {
+				cede_province = CCO
+				add_core = CCO
+				remove_core = ROOT
+				change_province_name = "Corsair Cove"
+			}
+			CCO = {
+				add_truce_with = ROOT
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Tick"
+					dynasty = "Tock"
+					adm = 3
+					dip = 4
+					mil = 2
+					age = 40
+					claim = 100
+				}
+			}
+		}
+		switch_tag = CCO
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_cco.1.b #It's just one province, and the money is amazing...
+		317 = {
+			cede_province = CCO
+			add_core = CCO
+			remove_core = ROOT
+			change_province_name = "Corsair Cove"
+		}
+		hidden_effect = {
+			CCO = {
+				add_truce_with = ROOT
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Tick"
+					dynasty = "Tock"
+					adm = 3
+					dip = 4
+					mil = 2
+					age = 40
+					claim = 100
+				}
+			}
+		}
+		add_years_of_income = 2.5
+		add_country_modifier = {
+			name = CCO_corsair_banking
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_cco.1.c #Are we sure this is a good idea?
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

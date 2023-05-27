@@ -1,0 +1,25 @@
+#1423-Corporea
+owner = AUU
+controller = AUU
+add_core = AUU
+tribal_owner = ---
+culture = arceuus
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = bones
+
+is_city = yes
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = shilo
+religion = karamjan
+technology_group = karamjantechgroup
+capital = 223 #Shilo
+national_focus = DIP
+
+1921.12.6 = {
+	monarch = {
+		name = "Luradal"
+		dynasty = "Shayalan"
+		birth_date = 1901.3.18
+		adm = 5
+		dip = 1
+		mil = 6
+	}
+}
+
+2137.1.2 = {
+	monarch = {
+		name = "Jiminua"
+		dynasty = "Shayalan"
+		birth_date = 2115.9.22
+		adm = 4
+		dip = 4
+		mil = 4
+		female = yes
+	}
+}

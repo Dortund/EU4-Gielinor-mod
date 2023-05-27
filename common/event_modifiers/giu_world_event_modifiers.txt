@@ -1,0 +1,32 @@
+#example_modifier = {
+#	local_unrest = -1
+#}
+
+#############
+#Elder God Wars
+#############
+
+eldergodwars_desperate_adventurer_call = {
+	max_absolutism = 10
+ 	autonomy_change_time = -0.75
+}
+
+eldergodwars_national_dread = {
+	global_unrest = 2
+}
+eldergodwars_elder_god_wars = {
+	global_manpower_modifier = -0.75
+	manpower_recovery_speed = -0.75
+	global_tax_modifier = -0.25
+}
+eldergodwars_for_the_elder_gods = {
+	tolerance_own = 5
+	tolerance_heretic = 5
+	global_manpower_modifier = -0.9
+	manpower_recovery_speed = -0.9
+}
+eldergodwars_against_the_elder_gods = {
+	tolerance_own = -5
+	tolerance_heretic = -5
+}
+

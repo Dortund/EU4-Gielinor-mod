@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = warband
+government_rank = 1
+primary_culture = rogue
+religion = saradomin
+technology_group = northerntechgroup
+capital = 167 #Forgotten Cemetery
+national_focus = MIL
+
+2182.4.25 = {
+	monarch = {
+		name = "Stario"
+		dynasty = "Payne"
+		birth_date = 2110.5.17
+		adm = 5
+		dip = 3
+		mil = 5
+	}
+}

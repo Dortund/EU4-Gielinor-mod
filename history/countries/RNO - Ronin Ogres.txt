@@ -1,0 +1,30 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = ogre
+religion = bandos
+technology_group = wushankotechgroup
+capital = 1216 #Black Stone Fortress
+
+1901.11.24 = {
+	monarch = {
+		name = "Grunther"
+		dynasty = "Ronin"
+		birth_date = 1902.7.18
+		death_date = 1954.12.4
+		adm = 2
+		dip = 3
+		mil = 5
+	}
+}
+
+2163.7.2 = {
+	monarch = {
+		name = "Scarg"
+		dynasty = "Ronin"
+		birth_date = 2131.8.15
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}

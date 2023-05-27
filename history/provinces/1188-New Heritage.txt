@@ -1,0 +1,23 @@
+#1188-New Heritage
+owner = NHE
+controller = NHE
+add_core = NHE
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 10
+base_production = 10
+base_manpower = 8
+
+fort_15th = yes
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 2

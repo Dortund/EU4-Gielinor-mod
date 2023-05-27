@@ -1,0 +1,12 @@
+government = republic
+add_government_reform = federal_republic
+government_rank = 2
+primary_culture = hosidius
+add_accepted_culture = lovakengj
+add_accepted_culture = shayzien
+add_accepted_culture = arceuus
+add_accepted_culture = piscarilius
+religion = saradomin
+technology_group = zeantechgroup
+capital = 402 #Kingstown
+

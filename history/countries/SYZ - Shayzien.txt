@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = kourend_house
+government_rank = 1
+primary_culture = shayzien
+religion = saradomin
+technology_group = zeantechgroup
+capital = 426 #Shayzien
+national_focus = MIL
+
+1930.2.5 = {
+	monarch = {
+		name = "Robert"
+		dynasty = "Shayzien"
+		birth_date = 1913.5.11
+		adm = 0
+		dip = 0
+		mil = 6
+	}
+}

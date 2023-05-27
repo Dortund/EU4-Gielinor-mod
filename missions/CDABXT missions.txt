@@ -1,0 +1,844 @@
+cadarn_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CDA
+			tag = BXT
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDA_clan_serves_the_people = {
+		icon = mission_clan_serves_the_people
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 255
+		}
+		trigger = {
+			255 = {
+				owned_by = ROOT
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+			manpower_percentage = 0.25
+		}
+		effect = {
+			add_yearly_manpower = -2.5
+			255 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+
+	CDA_glory_to_glarial = {
+		icon = mission_glory_to_glarial
+		required_missions = { CDA_clan_serves_the_people }
+		provinces_to_highlight = {
+			province_id = 255
+		}
+		trigger = {
+			255 = {
+				owned_by = ROOT
+				development = 16
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+			}
+		effect = {
+			add_country_modifier = {
+				name = "CDA_outpost_of_seren"
+				duration = 9125
+			}
+		}
+	}
+	
+	CDA_proselytise_seren = {
+		icon = mission_proselytise_seren
+		required_missions = { CDA_glory_to_glarial }
+		trigger = {
+			religion = seren
+			calc_true_if = {
+				all_owned_province = {
+					NOT = { culture_group = elven_group }
+					religion = seren
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_prestige = 20
+		}
+	}
+}
+
+cadarn_missions_2a = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CDA
+			tag = BXT
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDA_stabilise_the_realm = {
+		icon = balance_the_estates
+		required_missions = { CDA_tirannwn_civil_war }
+		position = 2
+		trigger = {
+			stability = 2
+			if = {
+				limit = {
+					government = monarchy
+				}
+				legitimacy = 90
+			}
+			NOT = {
+				num_of_rebel_armies = 1
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_disaster = fall_of_cadarn
+				}
+				change_government_reform_progress = 100
+			}
+			else = {
+				add_adm_power = 25
+			}
+		}
+	}
+}
+	
+baxtoria_missions_2a = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BXT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	BXT_eirlys_parliament = {
+		icon = mission_rb_monopolize_the_channel
+		required_missions = { CDA_proselytise_seren CDA_fate_of_the_kingdom }
+		position = 4
+		trigger = {
+			current_size_of_parliament = 20
+		 	percentage_backing_issue = 0.9
+		}
+		effect = {
+			add_country_modifier = {
+				name = "BXT_expansion_of_democracy"
+				duration = 7300
+			}
+		}
+	}
+}
+	
+
+cadarn_missions_2b = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CDA
+			tag = BXT
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDA_atarisundri_expansion = {
+		icon = mission_atarisundri
+		required_missions = { CDA_restoration }
+		position = 5
+		provinces_to_highlight = {
+			area = atarisundri_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			atarisundri_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			eagles_peak_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			piscatoris_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	CDA_piscatoris_settlement = {
+		icon = mission_piscatoris_fishing_colony
+		required_missions = { CDA_atarisundri_expansion CDA_new_elven_navy }
+		position = 6
+		provinces_to_highlight = {
+			province_id = 281
+		}
+		trigger = {
+			owns_core_province = 281
+		 	any_owned_province = {
+				OR = {
+					area = eagles_peak_area
+					area = piscatoris_area
+				}
+				religion = seren
+				culture_group = elven_group
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						OR = {
+							area = eagles_peak_area
+							area = piscatoris_area
+						}
+						has_empty_adjacent_province = yes
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							area = eagles_peak_area
+							area = piscatoris_area
+						}
+						has_empty_adjacent_province = yes
+					}
+					random_empty_neighbor_province = {
+						add_siberian_construction = 100
+					}
+				}
+			}
+			else = {
+				add_adm_power = 50
+			}
+		}
+	}
+}
+
+cadarn_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CDA
+			tag = BXT
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDA_tirannwn_civil_war = {
+		icon = mission_tirannwn_civil_war
+		required_missions = {  }
+		position = 1
+		trigger = {
+			OR = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = CDA_tirannwn_civil_war_tooltip
+						OR = {
+							has_country_flag = CDA_support_tirannwn
+							has_country_flag = CDA_abandoning_tirannwn
+						}
+					}
+					has_disaster = fall_of_cadarn
+				}
+				NOT = { current_age = age_of_mortals }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_disaster = fall_of_cadarn
+				}
+				custom_tooltip = CDA_tirannwn_civil_war_tooltip2
+			}
+			else = {
+				add_prestige = 10
+			}
+		}
+	}
+	
+	CDA_reinforce_diplomacy = {
+		icon = mission_the_grand_tree
+		required_missions = { CDA_tirannwn_civil_war }
+		position = 2
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_disaster = fall_of_cadarn
+				}
+				custom_tooltip = CDA_reinforce_diplomacy_tooltip
+				set_country_flag = cda_reinforce_diplomacy_flag
+			}
+			else = {
+				add_dip_power = 75
+			}
+		}
+	}
+	
+	CDA_fate_of_the_kingdom = {
+		icon = mission_fate_of_the_kingdom
+		required_missions = { CDA_stabilise_the_realm CDA_reinforce_diplomacy CDA_clan_identity }
+		position = 3
+		trigger = {
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			manpower_percentage = 0.5
+			army_size_percentage = 0.8
+			OR = {
+				NOT = {
+					has_disaster = fall_of_cadarn
+				}
+				custom_trigger_tooltip = {
+					tooltip = CDA_fall_ten_years_tooltip
+					had_country_flag = {
+						flag = cda_fall_of_cadarn_start
+						days = 3650
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = CDA_fate_of_the_kingdom_tooltip
+			add_country_modifier = {
+				name = "CDA_cadarn_eternal"
+				duration = -1
+			}
+			clr_country_flag = cda_fall_of_cadarn_start
+		}
+	}
+	
+	CDA_restoration = {
+		icon = mission_restoration
+		required_missions = { CDA_fate_of_the_kingdom }
+		position = 4
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					culture_group = elven_group
+					religion = seren
+				}
+				amount = 8
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = "CDA_national_recovery"
+				duration = 7300
+			}
+			hemenster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			atarisundri_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	CDA_new_elven_navy = {
+		icon = mission_new_elven_navy
+		required_missions = { CDA_restoration }
+		position = 5
+		trigger = {
+			navy_size_percentage = 0.8
+			OR = {
+				dock = 3
+				drydock = 3
+				shipyard = 3
+				grand_shipyard = 3
+			}
+		}
+		effect = {
+			add_navy_tradition = 15
+			add_dip_power = 50
+		}
+	}
+}
+
+cadarn_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CDA
+			tag = BXT
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDA_clan_identity = {
+		icon = mission_clan_identity
+		required_missions = { CDA_tirannwn_civil_war }
+		position = 2
+		trigger = {
+			OR = {
+				AND = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+				}
+				has_any_disaster = no
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_disaster = fall_of_cadarn
+				}
+				custom_tooltip = CDA_clan_identity_tooltip
+				set_country_flag = cda_clan_identity_flag
+			}
+			add_adm_power = 50
+		}
+	}
+	CDA_plain_of_mud = {
+		icon = mission_plain_of_mud
+		required_missions = { CDA_restoration }
+		position = 5
+		provinces_to_highlight = {
+			area = hemenster_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hemenster_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			manor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_ardougne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	CDA_war_against_hazeel = {
+		icon = mission_challenge_hazeel
+		required_missions = { CDA_plain_of_mud }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				province_id = 264
+				province_id = 265
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			NOT = { exists = HZL }
+			owns_core_province = 264
+			owns_core_province = 265
+		}
+		effect = {
+			add_country_modifier = {
+				name = CDA_conquest_of_the_hazeelite_lands
+				duration = 7300
+			}
+			khazard_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	CDA_khazards_doom = {
+		icon = mission_khazards_doom
+		required_missions = { CDA_war_against_hazeel }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 264
+				province_id = 265
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			NOT = { exists = KZD }
+			owns_core_province = 289
+			owns_core_province = 290
+		}
+		effect = {
+			add_mil_power = 100
+			289 = {
+				change_province_name = "Hunters' Arena"
+			}
+			290 = {
+				change_province_name = "Port Rhiannon"
+			}
+		}
+	}
+}
+
+cadarn_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CDA
+			tag = BXT
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CDA_civil_war_intervention = {
+		icon = mission_civil_war_intervention
+		required_missions = { CDA_tirannwn_civil_war }
+		position = 2
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = EVR
+					reverse_has_opinion = {
+						who = EVR
+						value = 150
+					}
+				}
+				AND = {
+					alliance_with = TNN
+					reverse_has_opinion = {
+						who = TNN
+						value = 150
+					}
+				}
+				calc_true_if = {
+					all_owned_province = {
+						region = tirannwn_region
+					}
+					amount = 5
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					calc_true_if = {
+						all_owned_province = {
+							region = tirannwn_region
+						}
+						amount = 5
+					}
+				}
+				add_mil_power = 50
+			}
+			else = {
+				add_dip_power = 50
+			}
+		}
+	}
+}
+
+baxtoria_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BXT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	BXT_glarials_cathedrals = {
+		icon = mission_hefin_cathedral
+		required_missions = { CDA_proselytise_seren }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 255
+				province_id = 265
+			}
+		}
+		trigger = {
+			religion = seren
+			255 = {
+				owned_by = ROOT
+				has_building = cathedral
+			}
+			265 = {
+				owned_by = ROOT
+				has_building = cathedral
+				development = 25
+			}
+		}
+		effect = {
+			custom_tooltip = BXT_glarials_cathedrals_tooltip
+			country_event = { 
+				id = flavor_bxt.1
+			}
+		}
+	}
+	
+	BXT_asgarnian_presence = {
+		icon = mission_expand_the_realm
+		required_missions = { BXT_glarials_cathedrals BXT_eirlys_parliament }
+		position = 5
+		trigger = {
+			religion = seren
+			calc_true_if = {
+				all_province = {
+					region = asgarnia_region
+					religion = seren
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = BXT_crystalline_sunrise
+				duration = -1
+			}
+		}
+	}
+}
+
+baxtoria_missions_2b = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BXT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	BXT_kandarin_free_of_foes = {
+		icon = mission_kandarin_free_of_foes
+		required_missions = { CDA_piscatoris_settlement BXT_feldip_foothold }
+		position = 8
+		trigger = {
+			is_great_power = yes
+			NOT = {
+				any_rival_country = {
+					capital_scope = {
+						region = kandarin_region
+					}
+				}
+				any_enemy_country = {
+					capital_scope = {
+						region = kandarin_region
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = BXT_pax_baxtoria
+				duration = -1
+			}
+		}
+	}
+}
+
+baxtoria_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BXT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	BXT_feldip_foothold = {
+		icon = mission_feldip_foothold
+		required_missions = { CDA_new_elven_navy CDA_war_against_hazeel }
+		position = 7
+		provinces_to_highlight = {
+			region = feldip_hills_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = feldip_hills_region
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			ooglog_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	BXT_call_to_arms = {
+		icon = mission_call_to_arms
+		required_missions = { BXT_feldip_foothold }
+		position = 8
+		provinces_to_highlight = {
+			province_id = 315
+		}
+		trigger = {
+			army_professionalism = 0.75
+			315 = {
+				owned_by = ROOT
+				has_building = training_fields
+				OR = {
+					has_building = regimental_camp
+					has_building = conscription_center
+				}
+				NOT = {	unrest = 0 }
+			}
+		}
+		effect = {
+		 	create_explorer = { tradition = 75 }
+			add_country_modifier = {
+				name = BXT_mobilising_armies
+				duration = 7300
+			}
+		}
+	}
+}
+
+baxtoria_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BXT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	BXT_a_question_of_tirannwn = {
+		icon = mission_a_question_of_tirannwn
+		required_missions = { CDA_clan_identity CDA_civil_war_intervention}
+		position = 3
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { exists = EVR }
+					NOT = { exists = TNN }
+					NOT = { exists = IOR }
+					NOT = { exists = MWL }
+					owns_core_province = 325
+					calc_true_if = {
+						all_owned_province = {
+							region = tirannwn_region
+						}
+						amount = 15
+					}
+				}
+				AND = {
+					NOT = {
+						any_owned_province = {
+							region = tirannwn_region
+						}
+					}
+					development_in_provinces = {
+						value = 200
+						culture_group = elven_group
+						religion = seren
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					calc_true_if = {
+						all_owned_province = {
+							region = tirannwn_region
+						}
+						amount = 15
+					}
+				}
+				tirannwn_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				capital_scope = {
+					add_province_modifier = {
+						name = BXT_new_elven_capital
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}

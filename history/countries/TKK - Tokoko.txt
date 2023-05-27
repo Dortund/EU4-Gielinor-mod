@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = bowl_culture
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1171 #Tokoko
+historical_friend = DLO
+
+1905.12.3 = {
+	monarch = {
+		name = "Bai"
+		dynasty = "Tokoko"
+		birth_date = 1886.2.20
+		death_date = 1963.6.30
+		adm = 1
+		dip = 2
+		mil = 6
+		female = yes
+	}
+}
+
+2169.1.1 = {
+	monarch = {
+		name = "Nikuyoku"
+		dynasty = "Suzhen"
+		birth_date = 2134.4.16
+		death_date = 2169.12.5
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

@@ -1,0 +1,21 @@
+#231-Yomni
+owner = KZI
+controller = KZI
+add_core = KZI
+tribal_owner = ---
+culture = khazari
+religion = karamjan
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 3
+
+trade_goods = tropical_logs
+
+is_city = yes

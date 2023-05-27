@@ -1,0 +1,19 @@
+#455-Battlefront
+owner = MOC
+controller = MOC
+add_core = MOC
+tribal_owner = ---
+culture = molch
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 5
+
+trade_goods = herblore_supplies
+
+is_city = yes

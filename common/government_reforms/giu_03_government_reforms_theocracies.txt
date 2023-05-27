@@ -1,0 +1,960 @@
+##############################
+#Leadership
+##############################
+
+apostocracy = {
+	potential = {
+		tag = ENT
+	}
+	lock_level_when_selected = yes
+	modifiers = {
+		prestige_per_development_from_conversion = 0.33
+		tolerance_own = 1
+		church_influence_modifier = 0.2
+	}
+	valid_for_nation_designer = no
+	icon = "icon_apostocracy"
+	allow_normal_conversion = yes
+	legacy_equivalent = apostocracy_legacy
+	papacy = yes
+	allow_convert = no
+	lock_level_when_selected = yes
+	fixed_rank = 2
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+bardic_order = {
+	potential = {
+		NOT = { tag = ENT }
+		NOT = { tag = CGU }
+		OR = {
+			religion = ralos
+			religion = ranul 
+			religion = v
+		}
+	}
+    fixed_rank = 1
+	modifiers = {
+	 	prestige_decay = -0.01
+		dip_tech_cost_modifier = -0.05
+		institution_spread_from_true_faith = 0.1
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	icon = "icon_bardic_order"
+	allow_normal_conversion = yes
+	legacy_equivalent = bardic_order_legacy
+	monastic = yes
+}
+
+cloistered_order = {
+	icon = "religious_leader"
+	potential = {
+		OR = {
+			tag = HMY
+			tag = SBI
+		}
+	}
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = cloistered_order_legacy
+	icon = "icon_cloistered_order"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		production_efficiency = 0.05
+		global_tax_modifier = 0.05
+		stability_cost_to_declare_war = 1
+		governing_capacity_modifier = -0.5		
+	 	diplomatic_upkeep = -1
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+}
+
+cult_of_reason = {
+	icon = "icon_cult_of_reason"
+	potential = {
+		NOT = { tag = ENT }
+		NOT = { tag = CGU }
+		religion = godless
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = cult_of_reason_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		 idea_cost = -0.1
+	}
+}
+
+druidic_order = {
+	potential = {
+		has_reform = druidic_order
+	}
+	modifiers = {
+		monthly_fervor_increase = 1
+		monthly_karma = 0.1
+		yearly_patriarch_authority = 0.001
+		fort_maintenance_modifier = -0.2
+		tolerance_own = 1
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	icon = "icon_druidic_order"
+	allow_normal_conversion = yes
+	legacy_equivalent = monastic_order_government
+	monastic = yes
+	fixed_rank = 1
+}
+
+druidic_state = {
+	icon = "icon_druidic_state"
+	potential = {
+		NOT = { tag = ENT }
+		NOT = { tag = CGU }
+		OR = {
+			religion = guthix
+			religion = karamjan
+			religion = zamorak
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = druidic_state_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		monthly_fervor_increase = 1
+		monthly_karma = 0.1
+		yearly_patriarch_authority = 0.001
+	}
+}
+
+frontier_theocracy = {
+	icon = "icon_new_world_kingdom"
+	potential = {
+		is_former_colonial_nation = yes
+	}
+	allow_normal_conversion = no
+	legacy_equivalent = frontier_theocracy_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+	 	global_colonial_growth = 30
+		global_missionary_strength = 0.02
+	}
+}
+
+guthixian_cave = {
+	icon = "icon_guthixian_cave"
+	potential = {
+		tag = CGU
+		religion = guthix
+	}
+	allow_normal_conversion = no
+	legacy_equivalent = guthixian_cave_legacy
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	modifiers = {
+		can_not_declare_war = yes
+		can_not_build_colonies = yes
+		can_not_send_merchants = yes
+		
+	 	liberty_desire = 1000
+		governing_capacity_modifier = -0.98
+		
+	 	global_tax_income = 36
+		horde_unity = 5
+		
+		global_manpower_modifier = 2
+		land_forcelimit_modifier = 2
+		loot_amount = 1
+		reinforce_cost_modifier = -0.75
+		
+		army_tradition = 2
+		discipline = 0.1
+	 	defensiveness = 0.25
+		hostile_attrition = 1
+	}
+}
+
+monastic_order_reform = {
+	potential = {
+		NOT = { tag = ENT }
+		NOT = { tag = CGU }
+		NOT = { religion = bandos }
+		NOT = { religion = xeric }
+		NOT = { religion = karamjan }
+		NOT = { religion = v }
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.2
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	icon = "icon_monastic_order"
+	allow_normal_conversion = yes
+	legacy_equivalent = monastic_order_government
+	monastic = yes
+	fixed_rank = 1
+}
+
+shamanic_theocracy = {
+	potential = {
+		NOT = { tag = ENT }
+		NOT = { tag = CGU }
+		OR = {
+			religion = bandos 
+			religion = xeric 
+			religion = karamjan
+		}
+	}
+	modifiers = {
+		leader_land_fire = 1
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	icon = "icon_shamanic_theocracy"
+	allow_normal_conversion = yes
+	legacy_equivalent = shamanic_theocracy_legacy
+	monastic = yes
+}
+
+theocratic_government_reform = {
+	icon = "icon_theocratic_government"
+	potential = {
+		NOT = { tag = ENT }
+		NOT = { tag = CGU }
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government_reform_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		global_tax_modifier = 0.05
+	}
+}
+
+##############################
+# Internal/External Mission
+##############################
+
+internal_mission_reform = {
+	icon = "clergyman"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_own = 2
+	}
+}
+
+external_mission_reform = {
+	icon = "soldiers"
+	allow_normal_conversion = yes
+	modifiers = {
+		manpower_recovery_speed = 0.1
+	}
+}
+
+mission_of_balance_reform = {
+	icon = "icon_mission_of_balance"
+	allow_normal_conversion = yes
+	potential = {
+		religion = guthix
+	}
+	modifiers = {
+	 	yearly_karma_decay = 0.01
+		land_maintenance_modifier = -0.05
+	}
+	ai = {
+		factor = 2.5
+	}
+}
+
+##############################
+# Divine Cause
+##############################
+
+combat_heresy_reform = {
+	icon = "soldiers_2"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { religion = ralos }
+		NOT = { religion = ranul }
+		NOT = { religion = godless }
+		NOT = { religion = guthix }
+		NOT = { religion = v }
+	}
+	modifiers = {
+		land_morale = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+expel_heathens_reform = {
+	icon = "landscape"
+	allow_normal_conversion = yes
+	modifiers = {
+		development_cost = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+play_the_villain_reform = {
+	icon = "icon_chaos_principle"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			religion = lucien
+			religion = zamorak
+			religion = zemouregal
+		}
+	}
+	modifiers = {
+		ae_impact = 0.2
+		unjustified_demands = -0.5
+		yearly_patriarch_authority = 0.002
+	}
+	ai = {
+		factor = 2
+	}
+}
+
+
+prevent_god_war_reform = {
+	icon = "icon_prevent_god_wars"
+	allow_normal_conversion = yes
+	potential = {
+		religion = guthix
+	}
+	modifiers = {
+		warscore_cost_vs_other_religion = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+safeguard_holy_sites_reform = {
+	icon = "church"
+	allow_normal_conversion = yes
+	modifiers = {
+		prestige = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+##############################
+# Education of the State
+##############################
+
+combat_training_reform = {
+	icon = "icon_combat_training"
+	allow_normal_conversion = yes
+	potential = {
+	}
+	modifiers = {
+		drill_gain_modifier = 0.25
+		mil_tech_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+experimental_haven_reform = {
+	icon = "icon_experimental_haven"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { religion_group = autocratic_group }
+	}
+	modifiers = {
+		innovativeness_gain = 0.5
+		idea_cost = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+oral_tradition_reform = {
+	icon = "icon_oral_tradition"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = druidic_state
+			has_reform = druidic_order
+			has_reform = shamanic_theocracy
+		}
+	}
+	modifiers = {
+		institution_spread_from_true_faith = 0.25
+		monarch_admin_power = 1
+	}
+	ai = {
+		factor = 2
+	}
+}
+
+tutorials_reform = {
+	icon = "icon_tutorials"
+	allow_normal_conversion = yes
+	potential = {
+	}
+	modifiers = {
+		technology_cost = -0.025
+		max_absolutism = 15
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+##############################
+# Clergy in Administration
+##############################
+
+entranan_priests_reform = {
+	icon = "icon_apostocracy"
+	allow_normal_conversion = yes
+	potential = {
+		religion = saradomin
+		NOT = { tag = ENT }
+	}
+	modifiers = {
+		papal_influence = 0.5
+		church_influence_modifier = 0.1
+	}
+}
+
+loyal_nobility_reform = {
+	icon = "nobleman"
+	allow_normal_conversion = yes
+	modifiers = {
+		army_tradition = 0.25
+		nobles_influence_modifier = 0.1
+		nobles_loyalty_modifier = 0.05
+	}
+}
+
+pious_merchants_reform = {
+	icon = "merchant"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_trade_power = 0.05
+		burghers_influence_modifier = 0.1
+		burghers_loyalty_modifier = 0.05
+	}
+}
+
+religious_administrators_reform = {
+	icon = "paper_with_seal_3"
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.1
+	}
+}
+
+subservient_administrators_reform = {
+	icon = "paper_with_seal"
+	allow_normal_conversion = yes
+	modifiers = {
+		yearly_corruption = -0.1
+	}
+}
+
+##############################
+# Secularization
+##############################
+
+antitheist_state = {
+	icon = "icon_antitheist_state"
+	allow_normal_conversion = yes
+	potential = {
+		religion  = godless
+	}
+	modifiers = {
+		idea_cost = -0.1
+		global_institution_spread = 0.1
+		technology_cost = -0.05
+		tolerance_heretic = -1
+		tolerance_heathen = -2
+	}
+	effect = {
+		if = {
+			limit = { 
+				NOT = {
+					religious_school = {
+						group = nonintervention_group
+						school = antitheist_school
+					}
+				}
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = antitheist_school
+			}
+		}
+	}
+}
+
+crown_leader_reform = {
+	icon = "crown_highlighted"
+	allow_normal_conversion = yes
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		NOT = { tag = ENT }
+		NOT = { tag = CGU }
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		lose_reforms = 3
+		change_government = monarchy
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+open_to_adventurers_reform = {
+	icon = "icon_adventurer_delegation"
+	allow_normal_conversion = yes
+	modifiers = {
+		yearly_absolutism = 1
+	}
+}
+
+partial_secularisation_reform = {
+	icon = "partial_secularisation_reform"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { religion  = godless }
+	}
+	modifiers = {
+		idea_cost = -0.1
+		global_institution_spread = 0.05
+	}
+}
+
+proclaim_republic_reform = {
+	icon = "parliament_highlighted"
+	allow_normal_conversion = yes
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		NOT = { tag = ENT }
+		NOT = { tag = CGU }
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		lose_reforms = 2
+		change_government = republic
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+##############################
+# Separation of Powers
+##############################
+
+centralise_theocratic_power = {
+	icon = "divine_guidance_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+	 	global_autonomy = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+
+regionally_elected_commanders = {
+	icon = "regionally_elected_commanders"
+	allow_normal_conversion = yes
+	fixed_rank = 0
+	modifiers = {
+		global_unrest = -1
+	}
+	
+	potential = {
+		OR = {
+			has_reform = monastic_order_reform
+			has_reform = druidic_order
+			has_reform = shamanic_theocracy
+		}
+	}
+	
+	trigger = {
+		OR = {
+			has_reform = monastic_order_reform
+			has_reform = shamanic_theocracy
+		}
+		OR = {
+			NOT = { has_estate = estate_nobles }
+			crown_stronger_than_estate = { estate = estate_nobles }
+		}
+	}
+
+	conditional = {
+		has_parliament = yes
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+theocratic_democracy_reform = {
+	icon = "assembly_hall"
+	modifiers = {
+		global_unrest = -1
+	}
+	
+	potential = {
+		NOT = { 
+			has_reform = monastic_order_reform
+			has_reform = druidic_order
+			has_reform = shamanic_theocracy
+		}
+	}
+	
+	trigger = {
+		NOT = { has_reform = monastic_order_reform }
+		NOT = { has_reform = shamanic_theocracy }
+		OR = {
+			NOT = { has_estate = estate_nobles }
+			crown_stronger_than_estate = { estate = estate_nobles }
+		}
+	}
+
+	conditional = {
+		has_parliament = yes
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+##############################
+#The Nature of Our Faith
+##############################
+
+church_and_state_reform = {
+	potential = {
+		NOT = {
+			religion = godless
+		}
+	}
+	icon = "church_and_state_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_policy = 1
+	}
+}
+
+gods_are_our_protectors = {
+	potential = {
+		NOT = {
+			religion = godless
+			religion = v
+		}
+	}
+	icon = "icon_gods_as_protectors"
+	allow_normal_conversion = yes
+	modifiers = {
+	 	defensiveness = 0.10
+		global_spy_defence = 0.1
+	}
+}
+
+gods_are_our_servants = {
+	potential = {
+		NOT = {
+			religion = godless
+			religion = guthix
+			religion = v
+		}
+	}
+	icon = "icon_gods_as_servants"
+	allow_normal_conversion = yes
+	modifiers = {
+	 	tolerance_own = -1
+		devotion = -1
+		max_absolutism = 30
+	}
+}
+
+manipulate_the_gods = {
+	potential = {
+		religion = godless
+		current_age = age_of_divination
+	}
+	icon = "icon_manipulate_the_gods"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomats = 1
+		improve_relation_modifier = 0.25
+		ae_impact = -0.1
+	}
+}
+
+philosophy_over_faith = {
+	potential = {
+		OR = {
+			religion = godless
+			religion = guthix
+			religion = v
+		}
+	}
+	icon = "icon_philosophy_over_faith"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_heretic = 1
+	 	tolerance_heathen = 1
+	}
+}
+
+v_the_guardian = {
+	potential = {
+		religion = v
+	}
+	icon = "icon_v_the_guardian"
+	allow_normal_conversion = yes
+	modifiers = {
+ 	 	discipline = 0.025
+		ship_durability = 0.05
+	}
+}
+##############################
+#Culture, Faith and the State
+##############################
+
+# Imported
+
+religious_culture_reform = {
+	icon = "mission_to_civilize_reform"
+	allow_normal_conversion = yes
+
+	modifiers = {
+		governing_capacity = 250
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+harmonization_of_cultures_reform = {
+	icon = "generic_people"
+	allow_normal_conversion = yes
+
+	modifiers = {
+		promote_culture_cost = -0.5
+		same_culture_advisor_cost = -0.2
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+cultural_safe_haven_reform = {
+	icon = "man_and_children"
+	allow_normal_conversion = yes
+
+	modifiers = {
+		manpower_in_accepted_culture_provinces = 0.1
+		manpower_in_culture_group_provinces = 0.1
+	}
+	#custom_attributes = {
+	#	unrest_per_accepted_culture = yes	#Reduces Global Unrest by 0.25 per accepted culture	#For 1.35, not implemented yet.
+	#}
+	ai = {
+		factor = 1
+	}
+}
+
+taxation_of_the_foreigners_reform = {
+	icon = "government_for_people_reform"
+	allow_normal_conversion = yes
+
+	modifiers = {
+		global_tax_modifier = 0.5
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		custom_attributes = {
+			may_not_reduce_tax_on_own_exploitation = yes	#25% Chance
+			may_not_reduce_tax_on_foreign_exploitation = yes	#50% Chance
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+# Mod-specific
+
+non_elven_proselytising_reform = {
+	potential = {
+		religion = seren
+	}
+	icon = "icon_non_elven_proselytising"
+	allow_normal_conversion = yes
+	modifiers = {
+ 		num_accepted_cultures = 2
+		global_heathen_missionary_strength = 0.02
+	}
+}
+
+undead_faithful_reform = {
+	potential = {
+		OR = {
+			religion = lucien
+			religion = zemouregal
+		}		
+	}
+	icon = "icon_undead_faithful"
+	allow_normal_conversion = yes
+	modifiers = {
+	 	culture_conversion_cost = -0.25
+		manpower_recovery_speed = 0.1
+	}
+}
+
+vampyres_first_reform = {
+	potential = {
+		religion = vampyric
+		culture_group = vampyre_group
+	}
+	icon = "icon_vampyres_first"
+	allow_normal_conversion = yes
+	modifiers = {
+	 	relation_with_other_culture = -20
+		num_accepted_cultures = -1
+		manpower_in_own_culture_provinces = 0.25
+		same_culture_advisor_cost = -0.25
+	}
+}
+
+##############################
+#Faith and the World
+##############################
+
+cabbages_for_all = {
+	potential = {
+		religion = brassicaprime
+	}
+	icon = "icon_cabbages_for_all"
+	allow_normal_conversion = yes
+	modifiers = {
+	 	harmonization_speed = 0.5
+	}
+	ai = {
+		factor = 5
+	}
+}
+
+intervene_for_nonintervention = {
+	icon = "icon_intervene_for_nonintervention"
+	allow_normal_conversion = yes
+	potential = {
+		religion_group = nonintervention_group
+	}
+	trigger = {
+		religion_group = nonintervention_group
+	}
+	modifiers = {
+	 	global_missionary_strength = 0.03
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+religion_in_one_country_reform = {
+	icon = "rioting_burning_2"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			has_reform = philosophy_over_faith
+		}
+	}
+	trigger = {
+		NOT = {
+			has_reform = philosophy_over_faith
+		}
+	}
+	modifiers = {
+		warscore_cost_vs_other_religion = -0.3
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+religious_permanent_revolution_reform = {
+	icon = "religious_permanent_revolution_reform"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			has_reform = philosophy_over_faith
+		}
+	}
+	trigger = {
+		NOT = {
+			has_reform = philosophy_over_faith
+		}
+	}
+	effect = {
+		custom_tooltip = world_crusade_tt
+	}
+	modifiers = {
+		enforce_religion_cost = -0.4
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+secret_church_reform = {
+	icon = "icon_secret_church"
+	allow_normal_conversion = yes
+	potential = {
+		religion = zaros
+	}
+	trigger = {
+		religion = zaros
+	}
+	modifiers = {
+		spy_offence = 0.25
+		discovered_relations_impact = -0.5
+		rebel_support_efficiency = 0.5
+	}
+	ai = {
+		factor = 4
+	}
+}
+

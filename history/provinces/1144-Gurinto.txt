@@ -1,0 +1,24 @@
+#1144-Gurinto
+owner = PUR
+controller = PUR
+add_core = PUR
+tribal_owner = ---
+culture = scythe_culture
+religion = genbu
+
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = hunter_creatures
+
+is_city = yes

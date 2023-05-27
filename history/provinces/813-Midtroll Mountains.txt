@@ -1,0 +1,5 @@
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup

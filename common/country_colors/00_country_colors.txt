@@ -1,0 +1,39 @@
+# Country unit colors.
+
+# example_tag_template = {
+    # color1= { 205 32 26  } #60% of character
+    # color2= { 255 255 255  } #30% of character
+    # color3= { 70 50 40  } #Up to 10% -> try map color here
+# }
+
+# Misthalin
+MST = {
+    color1= { 158 0 165 }
+    color2= { 0 189 0 }
+    color3= { 158 0 165 }
+}
+
+# Morytania
+MOR = {
+    color1= { 151 10 39 }
+	color2= { 10 10 10 }
+    color3= { 151 10 39 }
+}
+
+# Mudskipper Mogres
+MKM = {
+    color1= { 137 39 12 }
+    color2= { 37 46 17 }
+    color3= { 137 39 12 }
+}
+
+# Port Lina
+PLI = {
+    color1= { 196 208 216 }
+    color2= { 34 31 31 }
+    color3= { 196 208 216 }
+}
+
+
+
+

@@ -1,0 +1,24 @@
+#981-Bwystfil Tywyll
+
+tribal_owner = ---
+culture = hefin
+religion = seren
+
+discovered_by = dwarventechgroup
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = runite
+
+2168.9.20 = {
+	owner = IOR
+	controller = IOR
+	add_core = IOR
+	culture = iorwerth
+	religion = dark_lord
+}

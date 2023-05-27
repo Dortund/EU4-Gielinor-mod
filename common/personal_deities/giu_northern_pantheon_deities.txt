@@ -1,0 +1,106 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+
+sun_mother = {
+	land_attrition = -0.15
+	monarch_lifespan = 0.15
+	
+	potential = { religion = northern_pantheon }
+	sprite = 9
+	
+	ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 2
+			ADM = 5
+		}	
+		modifier = {
+			factor = 2
+			DIP = 5
+		}	
+		modifier = {
+			factor = 2
+			MIL = 5
+		}
+		modifier = {
+			factor = 2
+			ADM = 6
+		}	
+		modifier = {
+			factor = 2
+			DIP = 6
+		}	
+		modifier = {
+			factor = 2
+			MIL = 6
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { ADM = 4 }
+		}	
+		modifier = {
+			factor = 0.5
+			NOT = { ADM = 4 }
+		}		
+		modifier = {
+			factor = 0.5
+			NOT = { ADM = 4 }
+		}
+	}
+}
+
+father_of_storms = {
+	siege_ability = 0.15
+	shock_damage = 0.1
+	
+	potential = { religion = northern_pantheon }
+	sprite = 10
+	
+	ai_will_do = {
+		factor = 3
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+son_of_the_hunt = {
+	global_trade_goods_size_modifier = 0.1
+	drill_gain_modifier = 0.25
+	potential = { religion = northern_pantheon }
+	sprite = 11
+	
+	ai_will_do = {
+		factor = 3
+		modifier = {
+			factor = 0.5
+			is_at_war = yes
+		}
+	}
+}
+
+mountain_daughter = {
+	tolerance_own = 1
+ 	monthly_reform_progress_modifier = 0.15
+	potential = { religion = northern_pantheon }
+	sprite = 12
+	ai_will_do = {
+		factor = 4
+	}
+}
+
+the_kendal = {
+	harsh_treatment_cost = -0.5
+	diplomatic_reputation = -1
+	potential = { religion = northern_pantheon }
+	sprite = 13
+	ai_will_do = {
+		factor = 2
+	}
+}
+

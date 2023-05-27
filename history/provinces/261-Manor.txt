@@ -1,0 +1,48 @@
+#261-Manor
+owner = MNR
+controller = MNR
+add_core = MNR
+tribal_owner = ---
+culture = ardignan
+religion = armadyl
+
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+fort_15th = yes 
+
+trade_goods = livestock_farm
+
+is_city = yes
+
+1982.5.13 = {
+	owner = HZL
+	controller = HZL
+	add_core = HZL
+}
+
+2007.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	remove_core = MNR
+	remove_core = HZL
+	religion = saradomin
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = MNR
+	remove_core = ADO
+}

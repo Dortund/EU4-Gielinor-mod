@@ -1,0 +1,227 @@
+tst_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = TST
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TST_better_than_weiss = {
+		icon = mission_alliances
+		position = 1
+		required_missions = { }
+		trigger = {
+			OR = {
+				NOT = { exists = WSS }
+				owns_core_province = 783
+				AND = {
+					WSS = {
+						any_neighbor_country = {
+							tech_difference = 2
+						}
+					}
+					army_size = WSS
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+		}
+	}
+}
+
+tst_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = TST
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TST_explore_stuff = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { TST_better_than_weiss }
+		trigger = {
+		 	has_institution = exploration
+			dip_tech = 15
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+}
+
+tst_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = TST
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TST_annoying_dead_stuff = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { TST_good_army }
+		trigger = {
+		 	has_spawned_rebels = zombie_rebels
+			mil_tech = 10
+		}
+		effect = {
+			add_mil_power = 25
+		}
+	}
+	
+	TST_death_plateau = {
+		icon = mission_alliances
+		position = 3
+		required_missions = { TST_explore_stuff TST_annoying_dead_stuff }
+		trigger = {
+		 	OR = {
+				exists = DPL
+				owns_core_province = 345
+				AND = {
+					345 = {
+						is_empty = yes
+					}
+					army_professionalism = 0.5
+					manpower = 20
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					345 = {
+						is_empty = yes
+					}
+				}
+				345 = {
+					cede_province = DPL
+					add_core = DPL
+					change_culture = mountaintroll
+					change_religion = bandos
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 5
+					add_building = fort_15th
+				}
+				create_alliance = DPL
+			 	add_historical_friend = DPL
+				hidden_effect = {
+					DPL = {
+						build_to_forcelimit = {
+							infantry = 0.5
+							cavalry = 0.2
+							artillery = 0.3
+						}
+						add_historical_friend = TST
+						add_historical_rival = BTH
+						add_historical_rival = WST
+					}
+				}
+			}
+			else = {
+				add_mil_power = 50
+			}
+		}
+	}
+}
+
+tst_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = TST
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TST_good_army = {
+		icon = mission_alliances
+		position = 1
+		required_missions = {  }
+		trigger = {
+		 	land_forcelimit = 10
+			army_size = 10
+		}
+		effect = {
+			add_casus_belli = {
+				target = KDG
+				type = cb_humiliate_rotw
+				months = 60
+			}
+			capital_scope = {
+				add_institution_embracement = {
+					which = reconstruction
+					value = 50
+				}
+			}
+		}
+	}
+	TST_humiliate_dwarves = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { TST_good_army }
+		trigger = {
+		 	OR = {
+				NOT = { exists = KDG }
+				has_won_war_against = {
+					who = KDG
+					max_years_since = 25
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					1351 = {
+						is_empty = yes
+					}
+				}
+				1351 = {
+					add_siberian_construction = 250
+				}
+			}
+			keldagrim_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	TST_keldagrim_assault = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { TST_humiliate_dwarves }
+		trigger = {
+			keldagrim_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = keldagrim_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			add_prestige = 50
+			capital_scope = {
+				add_next_institution_embracement = 50
+			}
+		}
+	}
+}

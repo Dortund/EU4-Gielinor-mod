@@ -1,0 +1,19 @@
+#1199 - Vantage
+owner = YON
+controller = YON
+add_core = YON
+tribal_owner = ---
+culture = loop_culture
+religion = zaros
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = fishing_spot
+
+is_city = yes

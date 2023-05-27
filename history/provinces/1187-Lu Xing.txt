@@ -1,0 +1,19 @@
+#1187 - Lu Xing
+owner = KHN
+controller = KHN
+add_core = KHN
+tribal_owner = ---
+culture = siren
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = naval_goods
+
+is_city = yes

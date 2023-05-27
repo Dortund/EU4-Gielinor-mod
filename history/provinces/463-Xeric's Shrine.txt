@@ -1,0 +1,19 @@
+#463-Xeric's Shrine
+owner = MOC
+controller = MOC
+add_core = MOC
+tribal_owner = ---
+culture = molch
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = naval_goods
+
+is_city = yes

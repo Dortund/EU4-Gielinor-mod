@@ -1,0 +1,616 @@
+########################################
+# Events for non-Northern Tech nations bordering the Wilderness
+########################################
+
+namespace = wildernessborder
+normal_or_historical_nations = yes
+
+########################################
+# CASH REWARD
+########################################
+
+# Level One
+
+country_event = {
+	id = wildernessborder.101
+	title = wildernessborder.101.t # A Coin in the Wilderness
+	desc = wildernessborder.101.d # Living next to the Wilderness can have its benefits. Those who enter to fight and die soon after setting foot within the Wilderness can leave behind some valuable supplies, which we are able to sell.
+	picture = TREASURE_CHESTS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_one
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.101.a #Great!
+		add_years_of_income = 0.1
+	}
+}
+
+# Level Two
+
+country_event = {
+	id = wildernessborder.102
+	title = wildernessborder.102.t # Coins in the Wilderness
+	desc = wildernessborder.102.d # Living next to the Wilderness can have its benefits. Those who enter to fight and die soon after setting foot within the Wilderness can leave behind valuable supplies, which we are able to sell.
+	picture = TREASURE_CHESTS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_two
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.102.a #Great!
+		add_years_of_income = 0.2
+	}
+}
+
+# Level Three
+
+country_event = {
+	id = wildernessborder.103
+	title = wildernessborder.103.t # Armour in the Wilderness
+	desc = wildernessborder.103.d # Living next to the Wilderness can have its benefits. Those who enter to fight and die soon after setting foot within the Wilderness can be looted for valuable armour, which then can be sold.
+	picture = TREASURE_CHESTS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_three
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.103.a #Great!
+		add_years_of_income = 0.3
+	}
+}
+
+# Level Four
+
+country_event = {
+	id = wildernessborder.104
+	title = wildernessborder.104.t # Weapons in the Wilderness
+	desc = wildernessborder.104.d # Living next to the Wilderness can have its benefits. Those who enter to fight and die soon after setting foot within the Wilderness can be looted for valuable weaponry, which then can be sold.
+	picture = TREASURE_CHESTS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_four
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.104.a #Great!
+		add_years_of_income = 0.4
+	}
+}
+
+# Level Five
+
+country_event = {
+	id = wildernessborder.105
+	title = wildernessborder.105.t # Runes in the Wilderness
+	desc = wildernessborder.105.d # Living next to the Wilderness can have its benefits. Our people have discovered the remains of a mage who carried a large supply of valuable runes, which they have sold for a profit, providing us with some healthy tax revenues.
+	picture = TREASURE_CHESTS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_five
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.105.a #Great!
+		add_years_of_income = 0.5
+	}
+}
+
+# Level Six
+
+country_event = {
+	id = wildernessborder.106
+	title = wildernessborder.106.t # Battlefield Remains in the Wilderness
+	desc = wildernessborder.106.d # Living next to the Wilderness can have its benefits. Our people have discovered the remains of a skirmish including weapons, armour and runes. They have sold these supplies for profit, providing us with some healthy tax revenues.
+	picture = TREASURE_CHESTS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_six
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.106.a #Amazing!
+		add_years_of_income = 0.6
+	}
+}
+
+# Level Seven
+
+country_event = {
+	id = wildernessborder.107
+	title = wildernessborder.107.t # Abandoned Gold in the Wilderness
+	desc = wildernessborder.107.d # Living next to the Wilderness can have its benefits. While many would-be heroes have entered the Wilderness - even with valuable supplies due to pride - few survive. However, some of our border residents are familiar enough with the nearby parts of the Wilderness that they have been able to retrieve some of these valuable supplies.
+	picture = TREASURE_CHESTS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_seven
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.107.a #Amazing!
+		add_years_of_income = 0.7
+	}
+}
+
+# Level Eight
+
+country_event = {
+	id = wildernessborder.108
+	title = wildernessborder.108.t # Valuable Loot in the Wilderness
+	desc = wildernessborder.108.d # Living next to the Wilderness can have its benefits. The land is dotted with Second and Third Age ruins, the secrets of which have never fully been explored. Some of our residents have found a cache of ancient jewellery which they have promptly sold for a profit.
+	picture = TREASURE_CHESTS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_eight
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.108.a #Amazing!
+		add_years_of_income = 0.8
+	}
+}
+
+# Level Nine
+
+country_event = {
+	id = wildernessborder.109
+	title = wildernessborder.109.t # Very Valuable Loot in the Wilderness
+	desc = wildernessborder.109.d # Living next to the Wilderness can have its benefits. Many would-be tomb robbers avoid the region, leaving great potential hauls to be found. Our people have discovered a Second Age tomb full of buried gold!
+	picture = TREASURE_CHESTS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_nine
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.109.a #Incredible!
+		add_years_of_income = 1
+	}
+}
+
+########################################
+# ZOMBIES
+########################################
+
+# No effect until level 4
+
+# Level Four
+
+country_event = {
+	id = wildernessborder.204
+	title = wildernessborder.204.t # Wilderness Zombie Raid
+	desc = wildernessborder.204.d # In the cursed lands of Forinthry, the dead can walk again. While disorganised, zombies can nonetheless deal plenty of damage if not properly handled.
+	picture = ZOMBIES_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_four
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.204.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_four }
+			spawn_rebels = {
+				type = zombie_rebels
+				size = 1
+				}
+		}
+	}
+}
+
+# Level Five
+
+country_event = {
+	id = wildernessborder.205
+	title = wildernessborder.205.t # Wilderness Zombie Raid
+	desc = wildernessborder.205.d # In the cursed lands of Forinthry, the dead can walk again. While disorganised, zombies can nonetheless deal plenty of damage if not properly handled.
+	picture = ZOMBIES_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_five
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.205.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_five }
+			spawn_rebels = {
+				type = zombie_rebels
+				size = 1
+				}
+		}
+	}
+}
+
+# Level Six
+
+country_event = {
+	id = wildernessborder.206
+	title = wildernessborder.206.t # Wilderness Zombie Raid
+	desc = wildernessborder.206.d # In the cursed lands of Forinthry, the dead can walk again. While disorganised, zombies can nonetheless deal plenty of damage if not properly handled.
+	picture = ZOMBIES_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_six
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.206.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_six }
+			spawn_rebels = {
+				type = zombie_rebels
+				size = 1
+				}
+		}
+	}
+}
+
+# Level Seven
+
+country_event = {
+	id = wildernessborder.207
+	title = wildernessborder.207.t # Wilderness Zombie Ambush
+	desc = wildernessborder.207.d # In the cursed lands of Forinthry, the dead can walk again. While fairly disorganised, zombies can nonetheless deal plenty of damage if not properly handled.
+	picture = ZOMBIES_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_seven
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.207.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_seven }
+			spawn_rebels = {
+				type = zombie_rebels
+				size = 2
+				}
+		}
+	}
+}
+
+# Level Eight
+
+country_event = {
+	id = wildernessborder.208
+	title = wildernessborder.208.t # Wilderness Zombie Ambush
+	desc = wildernessborder.208.d # In the cursed lands of Forinthry, the dead can walk again. While fairly disorganised, zombies can nonetheless deal plenty of damage if not properly handled.
+	picture = ZOMBIES_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_eight
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.208.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_eight }
+			spawn_rebels = {
+				type = zombie_rebels
+				size = 2
+				}
+		}
+	}
+}
+
+# Level Nine
+
+country_event = {
+	id = wildernessborder.209
+	title = wildernessborder.209.t # Wilderness Zombie Invasion
+	desc = wildernessborder.209.d # In the cursed lands of Forinthry, the dead can walk again. This zombie invasion seems unusually organised and dangerous.
+	picture = ZOMBIES_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_nine
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.209.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_nine }
+			spawn_rebels = {
+				type = zombie_rebels
+				size = 3
+				}
+		}
+	}
+	
+	option = {
+		name = wildernessborder.209.b #Can't we just let the zombies win?
+		trigger = {
+			any_owned_province = {
+				has_active_triggered_province_modifier = wildy_border_level_nine
+				NOT = { culture = zombie } 
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_active_triggered_province_modifier = wildy_border_level_nine
+				NOT = { culture = zombie }
+			}
+		}
+		change_culture = zombie
+		add_prestige = -25
+	}
+}
+
+########################################
+# BANDITS
+########################################
+
+# No effect until level 4
+
+# Level Four
+
+country_event = {
+	id = wildernessborder.304
+	title = wildernessborder.304.t # Wilderness Bandit Raid
+	desc = wildernessborder.304.d # Bandits frequently come from the Wilderness to raid whichever cities they can reach. If well-led, they can be a threat, but we should be able to handle them.
+	picture = WARBANDS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_four
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.304.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_four }
+			spawn_rebels = {
+				type = bandit_rebels
+				size = 1
+				}
+		}
+	}
+}
+
+# Level Five
+
+country_event = {
+	id = wildernessborder.305
+	title = wildernessborder.305.t # Wilderness Bandit Raid
+	desc = wildernessborder.305.d # Bandits frequently come from the Wilderness to raid whichever cities they can reach. If well-led, they can be a threat, but we should be able to handle them.
+	picture = WARBANDS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_five
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.305.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_five }
+			spawn_rebels = {
+				type = bandit_rebels
+				size = 1
+				}
+		}
+	}
+}
+
+# Level Six
+
+country_event = {
+	id = wildernessborder.306
+	title = wildernessborder.306.t # Wilderness Bandit Raid
+	desc = wildernessborder.306.d # Bandits frequently come from the Wilderness to raid whichever cities they can reach. If well-led, they can be a threat, but we should be able to handle them.
+	picture = WARBANDS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_six
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.306.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_six }
+			spawn_rebels = {
+				type = bandit_rebels
+				size = 1
+				}
+		}
+	}
+}
+
+# Level Seven
+
+country_event = {
+	id = wildernessborder.307
+	title = wildernessborder.307.t # Wilderness Bandit Ambush
+	desc = wildernessborder.307.d # Bandits frequently come from the Wilderness to raid whichever cities they can reach. If well-led, they can be a threat, but we should be able to handle them.
+	picture = WARBANDS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_seven
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.307.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_seven }
+			spawn_rebels = {
+				type = bandit_rebels
+				size = 2
+				}
+		}
+	}
+}
+
+# Level Eight
+
+country_event = {
+	id = wildernessborder.308
+	title = wildernessborder.308.t # Wilderness Bandit Ambush
+	desc = wildernessborder.308.d # Bandits frequently come from the Wilderness to raid whichever cities they can reach. If well-led, they can be a threat, but we should be able to handle them.
+	picture = WARBANDS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_eight
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder.308.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_eight }
+			spawn_rebels = {
+				type = bandit_rebels
+				size = 2
+				}
+		}
+	}
+}
+
+# Level Nine
+
+country_event = {
+	id = wildernessborder.309
+	title = wildernessborder209.t # Wilderness Bandit Invasion
+	desc = wildernessborder209.d # Bandits frequently come from the Wilderness to raid whichever cities they can reach. If well-led, they can be a threat, but we should be able to handle them.
+	picture = WARBANDS_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			has_active_triggered_province_modifier = wildy_border_level_nine
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360 #Do not scale to national development; the longer a Wildy border you have, the more events you should get!
+	}
+	
+	option = {
+		name = wildernessborder209.a #We must deal with this!
+		random_owned_province = {
+			limit = { has_active_triggered_province_modifier = wildy_border_level_nine }
+			spawn_rebels = {
+				type = bandit_rebels
+				size = 3
+				}
+		}
+	}
+}

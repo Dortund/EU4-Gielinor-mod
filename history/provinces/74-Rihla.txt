@@ -1,0 +1,20 @@
+#74 - Rihla
+owner = PVC
+controller = PVC
+add_core = PVC
+tribal_owner = ---
+culture = midkharidian
+religion = menaphite
+trade_goods = livestock_farm
+
+discovered_by = centraltechgroup
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+is_city = yes

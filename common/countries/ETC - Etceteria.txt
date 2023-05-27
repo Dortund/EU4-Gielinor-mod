@@ -1,0 +1,56 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 140 36 29 }
+
+revolutionary_colors = { 2 10 6 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Alrik #0" = 1
+	"Brand #0" = 1
+	"Broddi #0" = 1
+	"Derrik #0" = 1
+	"Einar #0" = 1
+	"Finn #0" = 1
+	"Frodi #0" = 1
+	"Fromond #0" = 1
+	"Ghrim #0" = 1
+	"Haming #0" = 1
+	"Kjallak #0" = 1
+	"Leif #0" = 1
+	"Magnus #0" = 1
+	"Moldof #0" = 1
+	"Osvald #0" = 1
+	"Ragnar #0" = 1
+	"Ragnvald #0" = 1
+	"Rhazien #0" = 1
+	"Runolf #0" = 1
+	"Tjorvi #0" = 1
+	"Vargas #0" = 1
+	
+	"Ashild #0" = -1
+	"Astrid #0" = -1
+	"Gunnhild #0" = -1
+	"Halla #0" = -1
+	"Helga #0" = -1
+	"Ingrid #0" = -1
+	"Matilda #0" = -1
+	"Rannveig #0" = -1
+	"Runa #0" = -1
+	"Sigrid #0" = -1
+	"Thora #0" = -1
+	"Thorhild #0" = -1
+	"Valgerd #0" = -1
+}

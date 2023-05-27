@@ -1,0 +1,30 @@
+#96 - Alruwh
+
+tribal_owner = ---
+culture = menaphiteculture
+religion = menaphite
+trade_goods = fishing_spot
+latent_trade_goods = { runes }
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2
+
+2005.4.26 = {
+	owner = MPS
+	controller = MPS
+	add_core = MPS
+	add_base_tax = 1
+	add_base_production = 1
+	add_base_manpower = 1
+}

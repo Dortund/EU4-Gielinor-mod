@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = hook_culture
+religion = genbu
+technology_group = wushankotechgroup
+capital = 1132 #Shin'en
+
+1909.9.19 = {
+	monarch = {
+		name = "Linmei"
+		dynasty = "Fei"
+		birth_date = 1887.6.11
+		death_date = 1952.8.19
+		adm = 4
+		dip = 1
+		mil = 3
+	}
+}
+
+2133.3.16 = {
+	monarch = {
+		name = "Changxun"
+		dynasty = "Du"
+		birth_date = 2110.8.14
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}

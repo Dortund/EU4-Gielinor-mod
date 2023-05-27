@@ -1,0 +1,21 @@
+#1213 - Gu
+owner = TGU
+controller = TGU
+add_core = TGU
+tribal_owner = ---
+culture = shield_culture
+religion = byakko
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 4
+
+trade_goods = lesser_loot
+
+is_city = yes
+
+center_of_trade = 1

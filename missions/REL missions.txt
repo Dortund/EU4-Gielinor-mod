@@ -1,0 +1,468 @@
+rellekka_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = REL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	REL_longship_culture = {
+		icon = mission_advance_to_the_dnieper
+		required_missions = {  }
+		position = 3
+		trigger = {
+			OR = {
+				shipyard = 2
+				grand_shipyard = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "REL_longship_culture_modifier"
+				duration = 3650
+			}
+		}
+	}
+	
+	REL_shores_of_daemonheim = {
+		icon = mission_shores_of_daemonheim
+		required_missions = { REL_fremennik_voyages }
+		position = 5
+		trigger = {
+			906 = { has_discovered = ROOT }
+			1236 = { has_discovered = ROOT }
+			1238 = { has_discovered = ROOT }
+			num_of_colonists = 1
+			OR = {
+				owns_core_province = 1236
+				AND = {
+					1236 = { is_empty = yes }
+					absolutism = 75
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 1236
+				}
+				1236 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				1236 = {
+					add_siberian_construction = 400
+				}
+			}
+			daemonheim_peninsula_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	REL_daemonheim_base_camp = {
+		icon = mission_daemonheim_base_camp
+		required_missions = { REL_shores_of_daemonheim }
+		position = 6
+		trigger = {
+			owns_core_province = 1236
+			owns_core_province = 1235
+			owns_core_province = 1234
+			owns_core_province = 1238
+		}
+		effect = {
+			add_country_modifier = {
+				name = REL_dungeoneers
+				duration = -1
+			}
+		}
+	}
+}
+
+rellekka_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = REL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	REL_fremennik_family = {
+		icon = mission_alliances
+		required_missions = { REL_dwarven_diplomacy }
+		position = 2
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					culture_group = fremennik_group
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	
+	REL_fremennik_voyages = {
+		icon = mission_protect_white_sea_trade
+		required_missions = { REL_longship_culture REL_fremennik_family }
+		position = 4
+		trigger = {
+			num_of_light_ship = 15
+			num_of_explorers = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "REL_lunar_sea_voyages"
+				duration = 7300
+			}
+		}
+	}
+	REL_to_the_new_world = {
+		icon = mission_to_the_new_world
+		required_missions = { REL_fremennik_voyages }
+		position = 5
+		trigger = {
+			zeah = { has_discovered = ROOT }
+		}
+		effect = {
+			add_prestige = 50
+		}
+	}
+	REL_scout_zeah = {
+		icon = mission_scout_zeah
+		required_missions = { REL_to_the_new_world }
+		position = 6
+		trigger = {
+			399 = { has_discovered = ROOT }
+			414 = { has_discovered = ROOT }
+			442 = { has_discovered = ROOT }
+			453 = { has_discovered = ROOT }
+			525 = { has_discovered = ROOT }
+		}
+		effect = {
+			wintertodt_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+rellekka_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = REL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	REL_dwarven_diplomacy = {
+		icon = mission_dwarven_diplomacy
+		required_missions = {  }
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = KDG
+					reverse_has_opinion = {
+						who = KDG
+						value = 100
+					}
+				}
+				is_rival = KDG
+				NOT = { exists = KDG }
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			hunterlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	REL_daggermouth_landing = {
+		icon = mission_daggermouth_landing
+		required_missions = { REL_fremennik_family }
+		position = 3
+		trigger = {
+			navy_size = WAT
+			OR = {
+				owns_core_province = 376
+				AND = {
+					dip_power = 50
+					mil_power = 50
+					dip_tech = 10
+					mil_tech = 10
+					376 = {
+						is_empty = yes
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 376
+					}
+				add_mil_power = 50
+				376 = {
+					change_trade_goods = herblore_supplies
+				}
+			}
+			else = {
+				add_dip_power = -50
+				add_mil_power = -50
+				376 = {
+					add_siberian_construction = 400
+					change_trade_goods = herblore_supplies
+				}
+			}
+			377 = { add_permanent_claim = ROOT }
+		}
+	}
+	REL_death_to_the_daggermouths = {
+		icon = mission_death_to_the_daggermouths
+		required_missions = { REL_daggermouth_landing }
+		position = 4
+		trigger = {
+			NOT = { exists = WAT }
+			owns_core_province = 377
+			absolutism = 10
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = REL_end_of_the_daggermouth_threat
+				duration = 3650
+			}
+		}
+	}
+	REL_acheron_settlement = {
+		icon = mission_rb_settle_the_north
+		required_missions = { REL_fremennik_voyages REL_death_to_the_daggermouths }
+		position = 5
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = acheron_region
+				}
+				amount = 3
+			}
+			any_owned_province = {
+				region = acheron_region
+			 	province_has_center_of_trade_of_level = 1
+			}
+		}
+		effect = {
+			add_years_of_income = 0.25
+			random_owned_province = {
+				limit = {
+					region = acheron_region
+					province_has_center_of_trade_of_level = 1
+				}
+				change_culture = ROOT
+				change_religion = ROOT
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+}
+
+rellekka_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = REL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	REL_expand_our_coastline = {
+		icon = mission_invade_island
+		position = 2
+		required_missions = { REL_dwarven_diplomacy }
+		provinces_to_highlight = {
+			area = hunterlands_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hunterlands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = REL_coastal_expansion
+				duration = 9125
+			}
+			east_fremennik_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { culture = mountaintribe }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	REL_outfoxed = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { REL_expand_our_coastline }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 369
+				province_id = 370
+				province_id = 971
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 369
+			owns_core_province = 370
+			owns_core_province = 971
+		}
+		effect = {
+			add_mil_power = 50
+			maple_wood_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	REL_kandarin_buffer = {
+		icon = mission_retake_ceuta
+		position = 4
+		required_missions = { REL_outfoxed }
+		provinces_to_highlight = {
+			area = maple_wood_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			maple_wood_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_rel.3
+				days = 1
+			}
+		}
+	}
+}
+
+rellekka_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = REL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	REL_slayer_dungeon = {
+		icon = mission_slayer_dungeon
+		position = 4
+		required_missions = { REL_outfoxed }
+		trigger = {
+			1393 = {
+				owned_by = ROOT
+				is_core = ROOT
+				base_manpower = 4
+			}
+			OR = {
+			 	army_tradition = 75
+				army_professionalism = 0.35
+			}
+		}
+		effect = {
+			1393 = {
+				add_province_modifier = {
+					name = "REL_fremennik_slayer_dungeon"
+					duration = -1
+				}
+			}
+		}
+	}
+	REL_path_of_the_hunter = {
+		icon = hispaniae
+		position = 5
+		required_missions = { REL_slayer_dungeon }
+		trigger = {
+			373 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					development = 10
+					has_building = tradecompany
+				}
+			}
+			972 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					development = 10
+					has_building = tradecompany
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 0.25
+			379 = { add_permanent_claim = ROOT }
+		}
+	}
+	REL_smite_the_basilisks = {
+		icon = danubian_power
+		position = 6
+		required_missions = { REL_path_of_the_hunter }
+		trigger = {
+			379 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			380 = { add_permanent_claim = ROOT }
+		}
+	}
+}

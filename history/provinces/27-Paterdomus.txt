@@ -1,0 +1,29 @@
+#27 - Paterdomus
+owner = MST
+controller = MST
+add_core = MST
+tribal_owner = ---
+culture = silvarean
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = bones
+
+is_city = yes
+
+if = {
+	limit = {
+		NOT = { has_dlc = "Leviathan" }
+	}
+	add_province_triggered_modifier = MST_paterdomus
+}

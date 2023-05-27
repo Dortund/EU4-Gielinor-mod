@@ -1,0 +1,23 @@
+#233-Cairn Isle
+owner = RTK
+controller = RTK
+add_core = RTK
+tribal_owner = ---
+culture = taibwo
+religion = karamjan
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = bones
+
+is_city = yes

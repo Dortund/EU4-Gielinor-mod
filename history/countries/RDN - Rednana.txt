@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+primary_culture = atoll_monkey
+religion = marimbo
+technology_group = monkeytechgroup
+capital = 236 #Rednana
+
+1921.6.15 = {
+	monarch = {
+		name = "Dugopul"
+		dynasty = "of Rednana"
+		culture = atoll_monkey
+		birth_date = 1902.3.21
+		adm = 4
+		dip = 1
+		mil = 5
+	}
+}

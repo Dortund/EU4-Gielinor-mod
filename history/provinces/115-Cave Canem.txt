@@ -1,0 +1,25 @@
+#115 - Cave Canem
+owner = CFS
+controller = CFS
+add_core = CFS
+tribal_owner = ---
+culture = canifian
+religion = zamorak
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+trade_goods = logs
+
+is_city = yes

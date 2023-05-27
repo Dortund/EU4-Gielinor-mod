@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = migratory_tribe
+government_rank = 1
+primary_culture = achuliasip
+religion = northern_pantheon
+technology_group = northerntechgroup
+capital = 1287 # Achuliasip
+
+1921.4.15 = {
+	monarch = {
+		name = "Atka"
+		dynasty = "Kayuqtuq"
+		birth_date = 1887.7.15
+		adm = 5
+		dip = 1
+		mil = 5
+		female = yes
+	}
+}
+
+2141.10.19 = {
+	monarch = {
+		name = "Corazon"
+		dynasty = "Kayuqtuq"
+		birth_date = 2124.5.13
+		adm = 4
+		dip = 4
+		mil = 5
+		female = yes
+	}
+	add_government_reform = noble_kingdom
+}

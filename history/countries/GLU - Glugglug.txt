@@ -1,0 +1,30 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 2
+primary_culture = jogre
+religion = bandos
+technology_group = bandostechgroup
+capital = 217 #Ardrigal
+national_focus = MIL
+
+1910.5.21 = {
+	monarch = {
+		name = "Oglog"
+		dynasty = "Cavescratcher"
+		birth_date = 1887.6.8
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}
+
+2143.10.23 = {
+	monarch = {
+		name = "Ugloog"
+		dynasty = "Cavescratcher"
+		birth_date = 2126.7.11
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}

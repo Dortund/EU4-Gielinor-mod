@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = south_asgarn
+religion = saradomin
+technology_group = centraltechgroup
+capital = 37 #Cawlshire
+national_focus = MIL
+
+1923.11.2 = {
+	monarch = {
+		name = "Eli"
+		dynasty = "of Cawl"
+		birth_date = 1898.3.7
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

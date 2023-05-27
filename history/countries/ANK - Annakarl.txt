@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = avernic
+religion = zamorak
+technology_group = northerntechgroup
+capital = 188 #Annakarl
+national_focus = DIP
+
+1857.7.4 = {
+	monarch = {
+		name = "Es'chrion"
+		dynasty = "Greeyatkh"
+		birth_date = 1734.7.5
+		adm = 2
+		dip = 6
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

@@ -1,0 +1,21 @@
+#849-Daeyalt
+owner = MYT
+controller = MYT
+add_core = MYT
+tribal_owner = ---
+culture = meiyer
+religion = saradomin
+
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 3
+
+trade_goods = advanced_ores
+
+is_city = yes
+
+add_province_triggered_modifier = MYT_descendants_of_hallowvale

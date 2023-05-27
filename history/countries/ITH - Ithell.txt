@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = ithell
+religion = seren
+technology_group = elventechgroup
+capital = 336 #Ithell Province
+national_focus = ADM
+
+1641.4.17 = {
+	monarch = {
+		name = "Gwen"
+		dynasty = "Ithell"
+		birth_date = 1.6.12
+		adm = 6
+		dip = 4
+		mil = 2
+		female = yes
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

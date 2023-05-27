@@ -1,0 +1,22 @@
+#1405 - Mort Ridge Caves
+tribal_owner = ---
+culture = skeleton
+religion = zamorak
+
+discovered_by = morytaniantechgroup
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = advanced_ores
+
+is_city = yes

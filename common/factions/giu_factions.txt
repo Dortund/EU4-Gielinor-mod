@@ -1,0 +1,207 @@
+########################################
+# Pirate Factions
+########################################
+
+pr_buccaneers = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		republican_tradition = 1
+		sailors_recovery_speed = 0.2
+		global_tax_modifier = -0.05
+	}
+}
+
+pr_smugglers = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		global_trade_power = 0.1
+		trade_efficiency = 0.1
+		prestige = -0.5
+	}
+}
+
+pr_captains = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		leader_naval_fire = 1
+		naval_morale = 0.1
+		stability_cost_modifier = 0.1
+	}
+}
+
+########################################
+# Kourend Factions
+########################################
+
+#		arceuus_faction
+#		hosidius_faction
+#		lovakengj_faction
+#		piscarilius_faction
+#		shayzien_faction
+
+shayzien_faction = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		manpower_recovery_speed = 0.2
+		army_tradition = 0.5
+	}
+}
+
+lovakengj_faction = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+		development_cost = -0.05
+	}
+}
+
+piscarilius_faction = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		sailors_recovery_speed = 0.2
+		diplomatic_reputation = 1
+	}
+}
+
+hosidius_faction = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		global_unrest = -1
+		land_maintenance_modifier = -0.05
+	}
+}
+
+arceuus_faction = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		production_efficiency = 0.1
+		monarch_lifespan = 0.15
+	}
+}
+
+########################################
+# Tirannwn Factions
+########################################
+
+#		amlodd_faction
+#		cadarn_faction
+#		crwys_faction
+#		hefin_faction
+#		ithell_faction
+#		meilyr_faction
+#		trahaearn_faction
+#		iorwerth_faction
+#		cywir_faction
+
+amlodd_faction = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		cavalry_cost = -0.15
+		cavalry_power = 0.1
+		land_attrition = -0.1
+	}
+}
+
+cadarn_faction = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		discipline = 0.25
+		drill_gain_modifier = 0.25
+	}
+}
+
+crwys_faction = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		development_cost = -0.1
+		global_own_trade_power = 0.1
+		global_spy_defence = 0.15
+	}
+}
+
+cywir_faction = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		prestige_decay = -0.01
+	 	all_power_cost = -0.025
+	}
+}
+
+hefin_faction = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		tolerance_own = 2
+		leader_land_manuever = 1
+		leader_naval_manuever = 1
+	}
+}
+
+iorwerth_faction = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		army_tradition = 1
+		shock_damage = 0.1
+		land_forcelimit_modifier = 0.10
+	}
+}
+
+ithell_faction = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		build_time = -0.15
+		global_unrest = -1
+		ship_durability = 0.05
+	}
+}
+
+meilyr_faction = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		range = 0.25
+		global_colonial_growth = 15
+		idea_cost = -0.1
+	}
+}
+
+trahaearn_faction = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		production_efficiency = 0.1
+		global_trade_goods_size_modifier = 0.1
+		inflation_reduction = 0.05
+	}
+}

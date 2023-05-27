@@ -1,0 +1,82 @@
+#Cleaving of the Gnome Empire
+
+cleaving_of_the_gnome_empire = {
+	potential = {
+		tag = GNE
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = gne_had_empire_split }
+	}
+
+	can_start = {
+		NOT = { adm = 6 }
+		NOT = { dip = 6 }
+		NOT = { mil = 6 }
+	}
+	
+	
+	can_stop = {
+		exists = TGV
+		NOT = { exists = GNE }
+		}
+	
+	progress = {
+	
+		modifier = {
+			factor = 3
+			has_country_flag = gne_fast_split
+		}
+		modifier = {
+			factor = 2
+			total_development = 250
+		}
+		modifier = {
+			factor = 2
+			has_country_flag = gne_gnome_secessionists
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 1
+			has_country_flag = gne_tgv_snubbed
+		}
+		modifier = {
+			factor = -1
+			has_country_flag = gne_slow_split
+		}
+		modifier = {
+			factor = -1
+			has_country_flag = gne_unlikely_candidate
+		}
+		modifier = {
+			factor = -1
+			stability = 3
+		}
+		
+	}
+
+	can_end = {
+		OR = {
+			AND = {
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 1
+				had_country_flag = { flag = gne_had_empire_split days = 3650 }
+			}
+			NOT = { exists = GNE }
+		}
+
+	}
+
+	modifier = {
+		global_unrest = 5
+	}
+	
+	on_start = cleaving_of_the_gnome_empire.1
+	on_end = cleaving_of_the_gnome_empire.100
+}
+

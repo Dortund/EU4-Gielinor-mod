@@ -1,0 +1,103 @@
+#Country Name: Please seefilename.
+
+graphical_culture = muslimgfx
+
+color = { 255 100 0 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Ali #0" = 1
+	"Aristarchus #0" = 1
+	"Artimeus #0" = 1
+	"Awusah #0" = 1
+	"Badir #0" = 1
+	"Dommik #0" = 1
+	"Ellis #0" = 1
+	"Faisal #0" = 1
+	"Faruq #0" = 1
+	"Fayez #0" = 1
+	"Garai #0" = 1
+	"Ghaslor #0" = 1
+	"Hakeem #0" = 1
+	"Hesham #0" = 1
+	"Hallak #0" = 1
+	"Hamid #0" = 1
+	"Ima #0" = 1
+	"Jadid #0" = 1
+	"Jalal #0" = 1
+	"Jaraah #0" = 1
+	"Jarr #0" = 1
+	"Jex #0" = 1
+	"Karim #0" = 1
+	"Kazemde #0" = 1
+	"Klenter #0" = 1
+	"Louie #0" = 1
+	"Malik #0" = 1
+	"Mubariz #0" = 1
+	"Musa #0" = 1
+	"Nkuku #0" = 1
+	"Poltenip #0" = 1
+	"Radat #0" = 1
+	"Raetul #0" = 1
+	"Raheem #0" = 1
+	"Rashid #0" = 1
+	"Reen #0" = 1
+	"Rokuh #0" = 1
+	"Sabeil #0" = 1
+	"Sabreen #0" = 1
+	"Sami #0" = 1
+	"Seddu #0" = 1
+	"Shantay#0" = 1
+	"Siad #0" = 1
+	"Siamun #0" = 1
+	"Tarik #0" = 1
+	"Toralis #0" = 1
+	"Osmumten #0" = 1
+	"Osman #0" = 1
+	"Osmun #0" = 1
+	"Ozan #0" = 1
+	"Usi #0" = 1
+	"Waseem #0" = 1
+	"Zahwa #0" = 1
+	"Zeid #0" = 1
+	"Zeke #0" = 1
+	
+	"A'abla #0" = -1
+	"Afrah #0" = -1
+	"Ayesha #0" = -1
+	"Dalal #0" = -1
+	"Gelin #0" = -1
+	"Habibah #0" = -1
+	"Jamila #0" = -1
+	"Leela #0" = -1
+	"Lisah #0" = -1
+	"Malala #0" = -1
+	"Maisa #0" = -1
+	"Maysa #0" = -1
+	"Meena #0" = -1
+	"Menhet #0" = -1
+	"Meskhenet #0" = -1
+	"Nathifa #0" = -1
+	"Nefertari #0" = -1
+	"Nirrie #0" = -1
+	"Pia #0" = -1
+	"Ranael #0" = -1
+	"Selma #0" = -1
+	"Senliten #0" = -1
+	"Shiratti #0" = -1
+	"Tafani #0" = -1
+	"Tirrie #0" = -1
+	"Urbi #0" = -1
+	"Zahra #0" = -1
+	"Zahur #0" = -1
+}

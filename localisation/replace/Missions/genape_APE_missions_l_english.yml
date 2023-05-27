@@ -1,0 +1,82 @@
+﻿l_english:
+
+ #Generic
+
+ genape_marimbos_legacy_title:0 "Marimbo's Legacy"
+ genape_marimbos_legacy_desc:0 "They say Marimbo once walked among us, but left after one great final party. It is up for us now to determine the direction of our faith."
+ genape_rise_of_marim_title:0 "Rise of Marim"
+ genape_rise_of_marim_desc:0 "Marim, while now in a partially-ruined state, was once the shining city of Ape Atoll. Let us initiate efforts to restore it."
+ 
+ genape_expansionism_title:0 "Expansionism"
+ genape_expansionism_desc:0 "The provinces to the south of Ape Atoll are very poorly developed to say the least, but with limited land available for our population, it may well be necessary to expand into them."
+ genape_jungle_life_title:0 "Jungle Life"
+ genape_jungle_life_desc:0 "Who knows what secrets we could uncover in this relatively unpopulated portion of Ape Atoll?"
+
+ genape_primate_sailors_title:0 "Primate Sailors"
+ genape_primate_sailors_desc:0 "The natural agility of monkeys makes them great at some of the operations of sailing a ship, and gorillas can keep them disciplined enough to actually go somewhere."
+ genape_bo_isle_expedition_title:0 "Bo Isles Expedition"
+ genape_bo_isle_expedition_desc:0 "To sail across the sea between Ape Atoll and the Bo Isles would achieve much in bringing the primates of the southern seas together."
+ genape_ape_atoll_united_title:0 "Ape Atoll United"
+ genape_ape_atoll_united_desc:0 "Marimbo's faithful followers in and around Ape Atoll ought to be united under one rule, once and for all!"
+ 
+ genape_round_up_the_rabble_title:0 "Round Up the Rabble"
+ genape_round_up_the_rabble_desc:0 "It's no great secret that in the past monkeys have been a disorganised bunch. But if we want to unite Ape Atoll, we'll at least have to round up a bunch together in the same place at the same time - easier said than done."
+ genape_monkey_business_title:0 "Monkey Business"
+ genape_monkey_business_desc:0 "The heart of Ape Atoll hosts a decent monkey population which could be trained into a decent fighting force with sufficient effort."
+ 
+ genape_knowledge_of_the_ninjas_title:0 "Knowledge of the Ninjas"
+ genape_knowledge_of_the_ninjas_desc:0 "Word has reached Ape Atoll of stealthy fighters from the Wushanko Isles who take out their targets with careful precision. Maybe with a bit of training, we too could reap these rewards?"
+ genape_monkey_magic_title:0 "Monkey Magic"
+ genape_monkey_magic_desc:0 "Smacking together rocks is fun. Smacking together magic rocks is even better - but the supplies of them are rather limited! If only there was a way to get more..."
+ genape_agility_training_title:0 "Agility Training"
+ genape_agility_training_desc:0 "Monkeys are agile - but are they agile enough to make up for their small size? We should set aside some land as a designated centre for agility training."
+ 
+ # Unified Ape Atoll
+ 
+ ape_way_of_hedonism_title:0 "The Way of Hedonism"
+ ape_way_of_hedonism_desc:0 "After such a time of violence and unrest, we must remember Marimbo's wishes for monkeys to live together in peace."
+ ape_expand_the_temple_title:0 "Expand the Temple"
+ ape_expand_the_temple_desc:0 "Marim's temple has fallen into disrepair over the centuries - it falls to us to restore it!"
+
+ ape_monkey_madness_title:0 "Monkey Madness"
+ ape_monkey_madness_desc:0 "There are monkeys all over Gielinor, but they tend to be kept down by humans and other such people. Let us raise the banner of freedom for all of them!"
+ ape_primate_union_title:0 "Primate Union"
+ ape_primate_union_desc:0 "A true primate union requires us to represent not just a large number of monkeys, but a wide variety of them!"
+ ape_primate_union_tooltip:0 "Accept any two of the Desert, Karamjan or Mos le' Harmless monkey cultures, and have them present in your realm."
+ ape_drive_out_the_humans_title:0 "Drive Out the Humans"
+ ape_drive_out_the_humans_desc:0 "Karamja's humans must stand aside for the glory of Marimbo's chosen!"
+ ape_karamjan_dominance_title:0 "Karamjan Dominance"
+ ape_karamjan_dominance_desc:0 "Central Karamja has an ideal climate for our expansion."
+ 
+ ape_pirate_monkeys_title:0 "Pirate Monkeys"
+ ape_pirate_monkeys_desc:0 "No longer fighting among themselves - at least, not as much - our sailor monkeys are now free to benefit our nation in other ways. Piracy could bring in goods from elsewhere in the world without us having to trouble ourselves with awkward conversations with humans."
+ ape_anti_human_coalition_title:0 "Anti-Human Coalition"
+ ape_anti_human_coalition_desc:0 "Many in Ape Atoll take the view that the humans of Karamja, Kandarin, Asgarnia and Misthalin could grow to be huge threats to use, so we should pre-emptively build a coalition against them."
+ ape_invasion_of_karamja_title:0 "Invasion of Karamja"
+ ape_invasion_of_karamja_desc:0 "Though they are foolish in comparison to ourselves, the monkeys of Karamja could be useful allies. We could finally end their subjugation under human and jogre rule!"
+ ape_isle_of_the_mwanu_title:0 "Isle of the Mwanu"
+ ape_isle_of_the_mwanu_desc:0 "Terrified monkeys to the east live in fear of the terrifying Mwanu - enemies to our ancestors! We must liberate them!"
+ ape_curse_of_the_sea_title:0 "Curse of the Sea"
+ ape_curse_of_the_sea_desc:0 "It is time to end the Mwanu menace once and for all."
+ ape_leave_them_in_shambles_title:0 "Leave Them in Shambles"
+ ape_leave_them_in_shambles_desc:0 "Legend speaks of a king of monkeys who escaped the clutches of two beast-headed necromancers. It turns out the legend is true - and the necromancers survive! We must destroy them and free the souls they have captive!"
+ 
+ ape_fate_of_the_desert_monkeys_title:0 "The Desert Monkeys"
+ ape_fate_of_the_desert_monkeys_desc:0 "Something curious is afoot in the Kharidian Desert - something to do with monkeys. But what? We must investigate."
+ ape_kharidian_colony_title:0 "Kharidian Colony"
+ ape_kharidian_colony_desc:0 "With the help of mysterious adventurer monkeys, we can aid the remaining desert monkeys in their time of need - and establish an excellent outpost for ourselves."
+ ape_kharidian_colony_tooltip:0 "Completing this mission will create the nation of New Apemeken as a subject."
+ ape_do_no_evil_title:0 "Do No Evil"
+ ape_do_no_evil_desc:0 "With our presence in Kharid established, we should secure ourselves permanently via diplomacy or conquest."
+ ape_journey_to_the_east_title:0 "Journey to the East"
+ ape_journey_to_the_east_desc:0 "Legends speak of the greatest ninjas of all - the Death Lotus - found deep in the Wushanko Isles. We are their students - but we shall become the masters."
+ ape_the_most_ninja_title:0 "The Most Ninja"
+ ape_the_most_ninja_desc:0 "To prove our mastery of the ninja arts, we must take down the Death Lotus."
+ 
+ ape_homeward_teleport_title:0 "Homeward Teleport"
+ ape_homeward_teleport_desc:0 "Our mages theorise that if we combined a banana with various runes, we would be able to create a teleport spell to Marim. While only skilled mages could use it, it would be a great boon to diplomacy."
+ ape_assemble_the_ninjas_title:0 "Assemble the Ninjas"
+ ape_assemble_the_ninjas_desc:0 "We've had a few random ninjas here and there before, but now it is time to assemble a true force to be reckoned with."
+ ape_ninja_discipline_mission_title:0 "Ninja Discipline"
+ ape_ninja_discipline_mission_desc:0 "Now that we have an impressive ninja force, we need to train them to be worthy of the Wushanko ninjas which inspired them."
+ 

@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = exile_clan
+government_rank = 1
+primary_culture = eastern_exile
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1130 #Chimera Isles
+historical_rival = BZL
+historical_rival = SRI
+
+1929.4.27 = {
+	monarch = {
+		name = "Jianchun"
+		dynasty = "Tang"
+		birth_date = 1909.11.13
+		death_date = 1941.3.7
+		adm = 0
+		dip = 3
+		mil = 6
+	}
+}
+
+2157.8.7 = {
+	monarch = {
+		name = "Wenshi"
+		dynasty = "Tang"
+		birth_date = 2112.3.19
+		adm = 1
+		dip = 2
+		mil = 6
+	}
+}

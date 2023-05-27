@@ -1,0 +1,33 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = midkharidian
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 75 #Pollnivneach
+national_focus = DIP
+historical_friend = NDH
+
+1927.5.7 = {
+	monarch = {
+		name = "Hassan"
+		dynasty = "Naseem"
+		birth_date = 1901.10.29
+		adm = 0
+		dip = 6
+		mil = 2
+	}
+}
+
+
+
+2155.4.4 = {
+	monarch = {
+		name = "Hakeem"
+		dynasty = "Ali"
+		birth_date = 2099.5.28
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+}

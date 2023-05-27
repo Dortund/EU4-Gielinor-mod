@@ -1,0 +1,173 @@
+country_decisions = {
+	raid_temple_of_ikov = {
+		major = yes
+		potential = {
+			NOT = { religion = armadyl }
+			NOT = { tag = IKO }
+			is_colonial_nation = no
+			has_country_flag = knowledge_staff_of_armadyl
+			252 = { has_active_triggered_province_modifier = temple_of_ikov_local }
+		}
+		provinces_to_highlight = {
+			province_id = 252 # Redvin
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			any_province = {
+				OR = {
+					controlled_by = ROOT
+					owned_by = ROOT
+				}
+				has_active_triggered_province_modifier = temple_of_ikov_local
+			}
+			mil_power = 100
+		}
+		effect = {
+			add_mil_power = -100
+			add_prestige = 50
+			252 = {	remove_province_triggered_modifier = temple_of_ikov_local }
+			capital_scope = {
+				add_province_modifier = {
+					name = artefact_staff_of_armadyl
+					duration = -1  
+				}
+			}
+			set_global_flag = armadyl_staff_taken
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+
+	raid_the_guthixian_temple = {
+		major = yes
+		potential = {
+			NOT = { religion = guthix }
+			is_colonial_nation = no
+			has_country_flag = knowledge_stone_of_jas
+			any_province = { has_active_triggered_province_modifier = temple_to_guthix }
+			NOT = { has_global_flag = jas_stone_taken }
+		}
+		provinces_to_highlight = {
+			any_province = {
+				has_active_triggered_province_modifier = temple_to_guthix
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			any_province = {
+				OR = {
+					controlled_by = ROOT
+					owned_by = ROOT
+				}
+				has_active_triggered_province_modifier = temple_to_guthix
+			}
+			mil_power = 250
+		}
+		effect = {
+			add_mil_power = -250
+			add_prestige = 50
+			every_province = { 
+				limit = {
+					has_province_modifier = temple_to_guthix
+				}
+				remove_province_triggered_modifier = temple_to_guthix }
+			capital_scope = {
+				add_province_modifier = { 
+					name = artefact_stone_of_jas
+					duration = -1  
+				}
+			}
+			set_global_flag = jas_stone_taken
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+
+
+	capture_the_staff_of_armadyl = {
+		major = yes
+		potential = {
+			is_colonial_nation = no
+			has_country_flag = knowledge_staff_of_armadyl
+			any_province = {
+				has_province_modifier = artefact_staff_of_armadyl
+			}
+			capital_scope = {
+				NOT = { has_province_modifier = artefact_staff_of_armadyl }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			any_province = {
+				OR = {
+					controlled_by = ROOT
+					owned_by = ROOT
+				}
+				has_province_modifier = artefact_staff_of_armadyl
+			}
+		}
+		effect = {
+			add_prestige = 50
+			every_province = {
+				remove_province_modifier = artefact_staff_of_armadyl
+			}
+			capital_scope = {
+				add_province_modifier = { 
+					name = artefact_staff_of_armadyl
+					duration = -1  
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+
+	capture_the_stone_of_jas = {
+		major = yes
+		potential = {
+			is_colonial_nation = no
+			has_country_flag = knowledge_stone_of_jas
+			any_province = {
+				has_province_modifier = artefact_stone_of_jas
+			}
+			capital_scope = {
+				NOT = { has_province_modifier = artefact_stone_of_jas }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			any_province = {
+				OR = {
+					controlled_by = ROOT
+					owned_by = ROOT
+				}
+				has_province_modifier = artefact_stone_of_jas
+			}
+		}
+		effect = {
+			add_prestige = 50
+			every_province = {
+				remove_province_modifier = artefact_staff_of_armadyl
+			}
+			capital_scope = {
+				add_province_modifier = { 
+					name = artefact_stone_of_jas
+					duration = -1  
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+
+}

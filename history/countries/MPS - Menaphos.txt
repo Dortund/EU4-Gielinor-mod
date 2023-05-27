@@ -1,0 +1,40 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = menaphiteculture
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 100 #Menaphos
+national_focus = ADM
+historical_friend = SOP
+
+1911.5.12 = {
+	monarch = {
+		name = "Osfo"
+		dynasty = "of Menaphos"
+		birth_date = 1866.12.6
+		adm = 5
+		dip = 2
+		mil = 4
+	}
+}
+
+1930.1.1 = {
+	add_opinion = {
+		who = SOP
+		modifier = mps_sister_cities
+	}
+}
+
+2113.7.5 = {
+	monarch = {
+		name = "Kemesis"
+		dynasty = "of Menaphos"
+		birth_date = 2094.3.15
+		adm = 1
+		dip = 3
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = secretive_personality
+}

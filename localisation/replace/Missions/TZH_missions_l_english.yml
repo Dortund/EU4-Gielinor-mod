@@ -1,0 +1,73 @@
+﻿l_english:
+ TZH_tzhaar_mej_loyalty_title:0 "TzHaar-Mej Loyalty"
+ TZH_tzhaar_mej_loyalty_desc:0 "The TzHaar-Mej are our caste of mages. Gain their favour and they shall lead our realm."
+ TZH_tzhaar_mej_mission_title:0 "TzHaar-Mej Duties"
+ TZH_tzhaar_mej_mission_desc:0 "Let the TzHaar-Mej lead our armies against all those who would threaten our glorious city!"
+ TZH_spread_of_runes_title:0 "Spread of Runes"
+ TZH_spread_of_runes_desc:0 "We have held a stash of runestones for thousands of years, yet this stash shall not last indefinitely. If only there was a way to make more..."
+
+ TZH_reform_the_faith_title:0 "Reform the Faith"
+ TZH_reform_the_faith_desc:0 "Our connection to Ful has grown weak over the millennia, and with that we have become spiritually weak. Let us build, build up to a more prosperous realm!"
+ TZH_fate_of_the_kiln_title:0 "Fate of the Kiln"
+ TZH_fate_of_the_kiln_desc:0 "Some way or another we need to understand the Kiln that shaped us all."
+ TZH_fate_of_the_kiln_disaster_tooltip:0 "Have completed the Brink of Extinction disaster, and is not presently in a disaster.\n\nThe outcome of the disaster, or your decision to develop the Elder Kiln, will affect which missions are unlocked beyond this point."
+
+ TZH_tzhaar_gaal_loyalty_title:0 "TzHaar-Ga'al Loyalty"
+ TZH_tzhaar_gaal_loyalty_desc:0 "With the TzHaar-Ga'al integrated into our society, we should ensure they are comfortable within it."
+ TZH_tzhaar_journey_to_wushanko_title:0 "Journey to Wushanko"
+ TZH_tzhaar_journey_to_wushanko_desc:0 "The Ga'al in their travels believe they have found great wealth in the Wushanko Isles - and not to mention plenty of volcanic islands for us to settle."
+
+ TZH_unmatched_city_title:0 "Unmatched City"
+ TZH_unmatched_city_desc:0 "With the Elder Kiln on our side, it is time to build Mor Ul Rek to heights never seen before!"
+ TZH_monuments_of_gielinor_title:0 "Monuments of Gielinor"
+ TZH_monuments_of_gielinor_desc:0 "We are the builders of Gielinor! And we always shall be!"
+
+ TZH_the_glory_of_combat_title:0 "The Glory of Combat"
+ TZH_the_glory_of_combat_desc:0 "The weak TzHaar could never hope to match our glory!"
+ TZH_the_will_of_ful_title:0 "The Will of Ful"
+ TZH_the_will_of_ful_desc:0 "Most of the TokHaar are content to keep close to home, but TzKal-Zuk demands direct action. Whether for Ful or simply his own amusement is difficult to tell."
+
+ TZH_entrench_the_caste_powers_title:0 "Entrench the Caste Powers"
+ TZH_entrench_the_caste_powers_desc:0 "If we offer concessions to our castes, it should lessen their concerns about recent events involving the Elder Kiln."
+ TZH_restoring_order_title:0 "Restoring Order"
+ TZH_restoring_order_desc:0 "After recent chaos, it seems appropriate to reassure the castes of Mor Ul Rek that things shall return to normal."
+
+
+
+ TZH_tzhaar_hur_loyalty_title:0 "TzHaar-Hur Loyalty"
+ TZH_tzhaar_hur_loyalty_desc:0 "The TzHaar-Hur are our caste of crafters. Gain their favour and they shall build up our realm."
+ TZH_tzhaar_hur_mission_title:0 "TzHaar-Hur Duties"
+ TZH_tzhaar_hur_mission_desc:0 "Let the TzHaar-Hur work ever more diligently to create an ever more perfect city."
+ TZH_architects_worth_title:0 "Architects' Worth"
+ TZH_architects_worth_desc:0 "Let us bask in the fruits of our labour!"
+ 
+ TZH_volcanic_expansion_title:0 "Volcanic Expansion"
+ TZH_volcanic_expansion_desc:0 "With the cliffs of the Karamja Volcano secured, we can take our realm to new heights."
+ TZH_faith_of_the_earth_title:0 "Faith of the Earth"
+ TZH_faith_of_the_earth_desc:0 "Let us share our newfound knowledge of the Elder Kiln!"
+ 
+ TZH_musan_diplomacy_title:0 "Musan Diplomacy"
+ TZH_musan_diplomacy_desc:0 "We have only had contact with humans for a brief time, though the humans known as the Musans have treated us well. Perhaps a more formal mutual agreement would benefit us both?"
+ TZH_cliffs_of_the_volcano_title:0 "Cliffs of the Volcano"
+ TZH_cliffs_of_the_volcano_desc:0 "With the castes of the TzHaar strengthened, the time has come to expand beyond Mor Ul Rek to the surface world."
+ TZH_lava_ships_title:0 "Lava Ships"
+ TZH_lava_ships_desc:0 "Developments in magic have allowed the TzHaar to travel over the sea without falling to dangerously cold levels. Some say we could use the steam from our fires to power our ships and move faster, but we have no time for such nonsense."
+ TZH_crandor_volcano_title:0 "Crandor Volcano"
+ TZH_crandor_volcano_desc:0 "The volcanic terrain of Crandor Isle makes it an ideal location to expand into. Their local skills at seafaring should serve us well."
+ TZH_find_the_tasakaal_title:0 "Find the Tasakaal"
+ TZH_find_the_tasakaal_desc:0 "Our library speaks of an offshoot of TzHaar who headed westward and were never seen again. With our newfound maritime capabilities, perhaps we could sail west and rediscover them?"
+ 
+ TZH_tzhaar_xil_loyalty_title:0 "TzHaar-Xil Loyalty"
+ TZH_tzhaar_xil_loyalty_desc:0 "The TzHaar-Xil are our caste of hunters. Gain their favour and we shall have a ready supply of food for our people."
+ TZH_tzhaar_xil_mission_title:0 "TzHaar-Xil Duties"
+ TZH_tzhaar_xil_mission_desc:0 "Our contacts with the surface world have led to the discovery of many excellent hunting spots, but in order to access them we need to make favourable arrangements with the JalYt. Perhaps we can trade our volcanic goods in exchange for hunting rights?"
+ TZH_reinforce_the_home_trade_title:0 "Reinforce the Home Trade"
+ TZH_reinforce_the_home_trade_desc:0 "While the TzHaar-Ket explore new places to hunt, we should not neglect the importance of hunting grounds in our own territory. Let us strengthen and protect or domestic tokkul economy so that the TzHaar-Xil always has somewhere to fall back on."
+ 
+ TZH_tzhaar_ket_loyalty_title:0 "TzHaar-Ket Loyalty"
+ TZH_tzhaar_ket_loyalty_desc:0 "The TzHaar-Ket are our caste of guardians. Gain their favour and our realm shall be well-protected."
+ TZH_tzhaar_ket_mission_title:0 "TzHaar-Ket Duties"
+ TZH_tzhaar_ket_mission_desc:0 "To resist the threat of demons to our city, the TzHaar-Ket need to reinforce our defences."
+ TZH_reorganise_the_guard_title:0 "Reorganise the Guard"
+ TZH_reorganise_the_guard_desc:0 "Demons and JalYt alike have exposed the weaknesses in the traditional fighting style of the TzHaar-Ket."
+ 

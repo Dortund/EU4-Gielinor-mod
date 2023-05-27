@@ -1,0 +1,88 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 186 103 46 }
+
+revolutionary_colors = { 4 10 3 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Ak #0" = 1
+	"Bol #0" = 1
+	"Brekt #0" = 1
+	"Frok #0" = 1
+	"Gek #0" = 1
+	"Grol #0" = 1
+	"Het #0" = 1
+	"Ix #0" = 1
+	"Jal #0" = 1
+	"Jeh #0" = 1
+	"Jok #0" = 1
+	"Kad #0" = 1
+	"Kah #0" = 1
+	"Kal #0" = 1
+	"Klag #0" = 1
+	"Kol #0" = 1
+	"Kot #0" = 1
+	"Lek #0" = 1
+	"Lor #0" = 1
+	"Lurk #0" = 1
+	"Malk #0" = 1
+	"Mor #0" = 1
+	"Rek #0" = 1
+	"Roh #0" = 1
+	"Rok #0" = 1
+	"Ryl #0" = 1
+	"Teg #0" = 1
+	"Tak #0" = 1
+	"Tel #0" = 1
+	"Tog #0" = 1
+	"Yit'tal #0" = 1
+	"Xox #0" = 1
+	"Zuh #0" = 1
+	
+	"Ak #0" = -1
+	"Bol #0" = -1
+	"Brekt #0" = -1
+	"Frok #0" = -1
+	"Gek #0" = -1
+	"Grol #0" = -1
+	"Het #0" = -1
+	"Ix #0" = -1
+	"Jal #0" = -1
+	"Jeh #0" = -1
+	"Jok #0" = -1
+	"Kad #0" = -1
+	"Kah #0" = -1
+	"Kal #0" = -1
+	"Klag #0" = -1
+	"Kol #0" = -1
+	"Kot #0" = -1
+	"Lek #0" = -1
+	"Lor #0" = -1
+	"Lurk #0" = -1
+	"Malk #0" = -1
+	"Mor #0" = -1
+	"Rek #0" = -1
+	"Roh #0" = -1
+	"Rok #0" = -1
+	"Ryl #0" = -1
+	"Teg #0" = -1
+	"Tak #0" = -1
+	"Tel #0" = -1
+	"Tog #0" = -1
+	"Yit'tal #0" = -1
+	"Xox #0" = -1
+	"Zuh #0" = -1
+}

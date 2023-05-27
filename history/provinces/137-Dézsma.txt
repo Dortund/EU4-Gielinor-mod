@@ -1,0 +1,23 @@
+#137 - Dézsma
+owner = MYT
+controller = MYT
+add_core = MYT
+tribal_owner = ---
+culture = meiyer
+religion = saradomin
+
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 4
+
+trade_goods = basic_ores
+
+is_city = yes
+
+center_of_trade = 1
+
+add_province_triggered_modifier = MYT_descendants_of_hallowvale

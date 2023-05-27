@@ -1,0 +1,329 @@
+kourend_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KOU_placate_arceuus = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+		 	overlord_of = AUU
+				faction_in_power = arceuus_faction
+				reverse_has_opinion = {
+					who = AUU
+					value = 150
+				}
+				adm_power = 50
+			}
+		effect = {
+				add_opinion = {
+					who = AUU
+					modifier = kou_placated_house
+				}
+				add_adm_power = -50	
+				AUU = {
+					country_event = {
+						id = flavor_kouhouse.1
+						days = 1
+					}
+				}
+			}
+	}
+
+	KOU_invest_in_arceuus_library = {
+		icon = mission_conquer_50_development
+		position = 2
+		required_missions = { KOU_placate_arceuus }
+		provinces_to_highlight = {
+			province_id = 407
+		}
+		trigger = {
+		 	overlord_of = AUU
+			has_institution = architecture
+			407 = {
+				num_of_times_improved = 6
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_opinion = {
+				who = AUU
+				modifier = kou_aided_house
+			}
+		}
+	}
+}
+
+kourend_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KOU_placate_hosidius = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+		 	overlord_of = HOS
+				faction_in_power = hosidius_faction
+				reverse_has_opinion = {
+					who = HOS
+					value = 150
+				}
+				years_of_income = 0.2
+			}
+		effect = {
+				add_opinion = {
+					who = HOS
+					modifier = kou_placated_house
+				}
+				add_years_of_income = -0.2
+				HOS = {
+					country_event = {
+						id = flavor_kouhouse.1
+						days = 1
+					}
+				}
+			tithe_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = HOS
+				}
+			south_hosidius_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = HOS
+				}
+			}
+	}
+
+	KOU_shores_of_hosidius = {
+		icon = mission_conquer_50_development
+		position = 2
+		required_missions = { KOU_placate_hosidius }
+		provinces_to_highlight = {
+			area = tithe_area
+			area = south_hosidius_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+		 	overlord_of = HOS
+			tithe_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_hosidius_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 0.4
+			add_opinion = {
+				who = HOS
+				modifier = kou_aided_house
+			}
+		}
+	}
+}
+
+kourend_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KOU_placate_lovakengj = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+	 	overlord_of = LOV
+				faction_in_power = lovakengj_faction
+				reverse_has_opinion = {
+					who = LOV
+					value = 150
+				}
+			dip_power = 50
+			}
+		effect = {
+				add_opinion = {
+					who = LOV
+					modifier = kou_placated_house
+				}
+			add_dip_power = -50
+				LOV = {
+					country_event = {
+						id = flavor_kouhouse.1
+						days = 1
+					}
+				}
+			}
+	}
+	KOU_status_of_the_dwarves = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { KOU_placate_lovakengj }
+		trigger = {
+		 	overlord_of = LOV
+			LOV = {
+				total_development = AUU
+				total_development = SYZ
+				total_development = PCL
+			}
+		}
+		effect = {
+			add_dip_power = 100
+			add_opinion = {
+				who = LOV
+				modifier = kou_aided_house
+			}
+		}
+	}
+}
+
+kourend_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KOU_placate_piscarilius = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+		 	overlord_of = PCL
+				faction_in_power = piscarilius_faction
+				reverse_has_opinion = {
+					who = PCL
+					value = 150
+				}
+		 	sailors_percentage = 0.50
+			}
+		effect = {
+				add_opinion = {
+					who = PCL
+					modifier = kou_placated_house
+				}
+			add_yearly_sailors = -0.5
+				PCL = {
+					country_event = {
+						id = flavor_kouhouse.1
+						days = 1
+					}
+				}
+			}
+	}
+	KOU_fund_piscarilius = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { KOU_placate_piscarilius }
+		trigger = {
+		 	overlord_of = PCL
+			treasury = 250
+			}
+		effect = {
+			add_treasury = -250
+			add_yearly_sailors = 1
+			add_opinion = {
+				who = PCL
+				modifier = kou_aided_house
+			}
+			PCL = {
+				country_event = {
+					id = flavor_pcl.1
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+kourend_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOU
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KOU_placate_shayzien = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+		 	overlord_of = SYZ
+				faction_in_power = shayzien_faction
+				reverse_has_opinion = {
+					who = SYZ
+					value = 150
+				}
+				mil_power = 50
+			}
+		effect = {
+				add_opinion = {
+					who = SYZ
+					modifier = kou_placated_house
+				}
+				add_mil_power = -50
+				SYZ = {
+					country_event = {
+						id = flavor_kouhouse.1
+						days = 1
+					}
+				}
+				necromancer_woods_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = SYZ
+				}
+			}
+	}
+	KOU_down_with_the_necromancers = {
+		icon = mission_conquer_50_development
+		position = 2
+		required_missions = { KOU_placate_shayzien }
+		provinces_to_highlight = {
+			area = necromancer_woods_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+		 	overlord_of = SYZ
+			army_professionalism = 0.1
+			necromancer_woods_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			add_opinion = {
+				who = SYZ
+				modifier = kou_aided_house
+			}
+		}
+	}
+}
+
+
+

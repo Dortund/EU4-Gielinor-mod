@@ -1,0 +1,74 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 156 183 210 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Alfonse #0" = 1
+	"Altarkiz #0" = 1
+	"Arsen #0" = 1
+	"Bedread #0" = 1
+	"Ben #0" = 1
+	"Bill #0" = 1
+	"Charley #0" = 1
+	"Charlie #0" = 1
+	"Colin #0" = 1
+	"Dan #0" = 1
+	"Davey #0" = 1
+	"Davey-boy #0" = 1
+	"Davon #0" = 1
+	"Dell #0" = 1
+	"Eric #0" = 1
+	"Garth #0" = 1
+	"Garv #0" = 1
+	"Gnocci #0" = 1
+	"Grubor #0" = 1
+	"Hector #0" = 1
+	"Izzy #0" = 1
+	"Jack #0" = 1
+	"Jake #0" = 1
+	"Jed #0" = 1
+	"Jenkins #0" = 1
+	"Jimmy #0" = 1
+	"Joe #0" = 1
+	"Lee #0" = 1
+	"Luke #0" = 1
+	"Mallard #0" = 1
+	"Matt #0" = 1
+	"Mike #0" = 1
+	"Mufassar #0" = 1
+	"Palmer #0" = 1
+	"Pat #0" = 1
+	"Patchy #0" = 1
+	"Pete #0" = 1
+	"Ralph #0" = 1
+	"Sandy #0" = 1
+	"Shultz #0" = 1
+	"Smith #0" = 1
+	"Trobert #0" = 1
+	"Yusuf #0" = 1
+	
+	"Betty #0" = -1
+	"Cassie #0" = -1
+	"Cora #0" = -1
+	"Coraline #0" = -1
+	"Emma #0" = -1
+	"Jackie #0" = -1
+	"Jennifer #0" = -1
+	"Lisa #0" = -1
+	"Mama #0" = -1
+	"Stanky #0" = -1
+	"Wanda #0" = -1
+}

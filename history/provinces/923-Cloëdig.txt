@@ -1,0 +1,21 @@
+#923-Cloëdig
+
+tribal_owner = ---
+culture = ghost
+religion = armadyl
+
+trade_goods = tropical_logs
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 2
+
+native_size = 10
+native_ferocity = 10
+native_hostileness = 3
+
+center_of_trade = 1

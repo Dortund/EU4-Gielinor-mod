@@ -1,0 +1,32 @@
+country_decisions = {
+	zemouregal_religion_decision = {
+		potential = {
+			has_country_flag = formed_new_varrock_flag
+			NOT = { is_religion_enabled = zemouregal }
+			NOT = { current_age = age_of_divination }
+		}
+		allow = {
+			is_great_power = yes
+			misthalin_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+		 	enable_religion = zemouregal
+			change_religion = zemouregal
+			capital_scope = {
+				change_religion = zemouregal
+			}
+			add_country_modifier = { 
+				name = zemouregal_control_the_altars
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 200
+	}
+}

@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = feudal_reform
+government_rank = 2
+primary_culture = imcando
+religion = saradomin
+technology_group = zeantechgroup
+capital = 512 #Avizaal
+national_focus = DIP
+historical_friend = VAR
+
+1921.4.12 = {
+	monarch = {
+		name = "Thurga"
+		dynasty = "Greatrock"
+		birth_date = 1871.10.18
+		adm = 2
+		dip = 4
+		mil = 2
+		female = yes
+	}
+}
+
+2132.6.5 = {
+	monarch = {
+		name = "Akana"
+		dynasty = "Greatrock"
+		birth_date = 2076.2.21
+		adm = 5
+		dip = 6
+		mil = 4
+		female = yes
+	}
+}

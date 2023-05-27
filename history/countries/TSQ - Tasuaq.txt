@@ -1,0 +1,30 @@
+government = tribal
+add_government_reform = migratory_tribe
+government_rank = 1
+primary_culture = tasuaq
+religion = northern_pantheon
+technology_group = northerntechgroup
+capital = 1295 #Tasuaq
+
+1916.5.17 = {
+	monarch = {
+		name = "Qulitalik"
+		dynasty = "Silaluk"
+		birth_date = 1895.5.9
+		adm = 4
+		dip = 0
+		mil = 3
+	}
+}
+
+2135.11.23 = {
+	monarch = {
+		name = "Tulugaq"
+		dynasty = "Amaruq"
+		birth_date = 2113.4.17
+		adm = 4
+		dip = 6
+		mil = 1
+	}
+	add_government_reform = noble_kingdom
+}

@@ -1,0 +1,13 @@
+﻿l_english:
+
+# ADM - Expansion
+ additional_colonists_title:0 "Additional Colonists"
+ additional_colonists_desc:0 "Gielinor has many treasures and secrets to explore, but the greatest treasures are often found furthest from home. Let us inspire our people to set up new outposts so that they can bring home great wealth!\nProvides +1 Colonist with the §YExploration§! institution."
+ general_colonization_law_title:0 "General Colonisation Law"
+ general_colonization_law_desc:0 "Standardising the rules and regulations surrounding our colonies can reduce the risk of disagreements and societal collapse.\nProvides +1 Colonist with the §YExploration§! institution."
+
+# ADM - Exploration
+ colonial_ventures_title:0 "Colonial Ventures"
+ colonial_ventures_desc:0 "Opportunity awaits! For the modest sum of gold pieces required to make such a dangerous journey, you shall receive it doubled in the future! Your armour shall be gleaming gold and your raw gems expertly cut in this wonderous new world.\nProvides +1 Colonist with the §YExploration§! institution."
+ 
+ 

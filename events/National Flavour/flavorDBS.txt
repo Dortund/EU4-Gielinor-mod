@@ -1,0 +1,125 @@
+########################################
+# Events for Donblas
+########################################
+
+namespace = flavor_dbs
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_dbs.1
+	title = flavor_dbs.1.t #Guthixian Relations
+	desc = flavor_dbs.1.d #To say the conquest of Taverley was controversial would be an understatement. 
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_dbs.1.a #Let's take a tolerant approach.
+		every_owned_province = {
+			limit = { religion = guthix }
+			add_province_modifier = {
+				name = "DBS_lenient_guthix_treatment"
+				duration = 7300
+			}
+		}
+		ai_chance = {
+			factor = 0.9
+		}
+	}
+	option = {
+		name = flavor_dbs.1.b #Asgarnia is for Saradomists only!
+		every_owned_province = {
+			limit = { religion = guthix }
+			add_province_modifier = {
+				name = "DBS_harsh_guthix_treatment"
+				duration = 7300
+			}
+		 }
+	}
+}
+
+country_event = {
+	id = flavor_dbs.2
+	title = flavor_dbs.2.t #The White Knights of Farradorn
+	desc = flavor_dbs.2.d #The ancient Saradomist order of the White Knights has defended Farradorn since before the days of Old Asgarnia, and have pledged their support to the Donblas tribe.
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {
+		tag = DBS
+		mil_tech = 5
+		religion = saradomin
+		owns_core_province = 41
+	}
+	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_dbs.2.a #Arise, Sirs!
+		add_country_modifier = {
+			name = "DBS_rise_of_white_knights"
+			duration = 7300
+		}
+		set_country_flag = DBS_white_knights_flag
+	}
+}
+
+country_event = {
+	id = flavor_dbs.3
+	title = flavor_dbs.3.t #The Guidance of Valzin
+	desc = flavor_dbs.3.d #	The wealthy noble Valzin family from Misthalin has an intriguing proposal for our tribe: they will aid our attempts to unite Asgarnia on the condition we accept religious freedom for Zamorakians. Do so and he will lead an order of Zamorakian knights: The Kinshra. 
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {
+		tag = DBS
+		has_idea = DBS_valzins_advice
+		NOT = { religion = zamorak }
+	}
+	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_dbs.3.a #Arise, Kinshra!
+		add_country_modifier = {
+			name = "DBS_rise_of_kinshra"
+			duration = 7300
+		}
+		set_country_flag = DBS_black_knights_flag
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_dbs.3.b #We can do without the Black Knights.
+		add_country_modifier = {
+			name = "DBS_rejection_of_zamorak"
+			duration = 7300
+		}
+		reverse_add_opinion = {
+			who = MST
+			modifier = dbs_rejected_kinshra
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

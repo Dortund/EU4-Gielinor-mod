@@ -1,0 +1,28 @@
+#1014 - Morgen
+owner = RBR
+controller = RBR
+add_core = RBR
+tribal_owner = ---
+culture = south_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+2021.10.30 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+}

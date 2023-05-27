@@ -1,0 +1,31 @@
+#62 - Al Kharid
+
+culture = alkharidian
+religion = menaphite
+tribal_owner = ---
+
+trade_goods = manufactured_goods
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+native_size = 25
+native_ferocity = 2
+native_hostileness = 2
+
+center_of_trade = 1
+
+1937.1.4 = {
+	owner = ALK
+	controller = ALK
+	add_core = ALK
+	add_building = fort_15th
+}

@@ -1,0 +1,29 @@
+﻿l_english:
+ dreaded_years_of_tragedy.1.t:0 "The Dreaded Years of Tragedy"
+ dreaded_years_of_tragedy.1.d:0 "Kandarin has never been as centralised as other major human realms like Misthalin. This has meant that internal problems have been difficult to manage, escalating in widespread sabotage efforts from Zamorakians."
+ dreaded_years_of_tragedy.1.a:0 "We must crush the cruel Zamorakians!"
+ dreaded_years_of_tragedy.1.b:0 "Perhaps we can use diplomatic efforts to relieve tensions?"
+ 
+ dreaded_years_of_tragedy.2.t:0 "Triumph of the Zamorakians"
+ dreaded_years_of_tragedy.2.d:0 "The Cadarn realm has failed to hold together. With much of the army fighting in Tirannwn, and no social cohesion remaining, what civilians remain have been massacred by bandits, goblins and other such groups. The dream of a kingdom east of the Galarpos is dead."
+ dreaded_years_of_tragedy.2.a:0 "The Dreaded Years of Tragedy have come to a sudden end as Zamorakians take control of Kandarin."
+ 
+ dreaded_years_of_tragedy.3.t:0 "Spontaneous Combustion"
+ dreaded_years_of_tragedy.3.d:0 "Screams of agony ring out as people and entire villages suddenly catch ablaze. We suspect the Zamorakians are to blame."
+ dreaded_years_of_tragedy.3.a:0 "It is the Zamorakians who should burn."
+ 
+ dreaded_years_of_tragedy.4.t:0 "Poisoned Water"
+ dreaded_years_of_tragedy.4.d:0 "An epidemic of boils has devastated our population. We believe those rebellious Zamorakians are to blame."
+ dreaded_years_of_tragedy.4.a:0 "A pox on the Zamorakians!"
+ 
+ dreaded_years_of_tragedy.5.t:0 "Invisible Children"
+ dreaded_years_of_tragedy.5.d:0 "Zamorakian mages have turned children invisible. Parents are terrified as they cannot find their families, while the most unruly children are causing trouble even the Zamorakians could not dream of."
+ dreaded_years_of_tragedy.5.a:0 "So the children aren't skipping school, they're just invisible? A likely story."
+ 
+ dreaded_years_of_tragedy.6.t:0 "The Great Battle"
+ dreaded_years_of_tragedy.6.d:0 "Zamorakian mischief has gone too far. The good [Root.religion.GetName] people of Kandarin wish to band together against this menace once and for all - though the Zamorakians are responding in kind with a huge army. Whoever wins shall determine the future of Kandarin..."
+ dreaded_years_of_tragedy.6.a:0 "The future of Kandarin shall be decided here."
+ 
+ dreaded_years_of_tragedy.100.t:0 "End of the Dreaded Years of Tragedy"
+ dreaded_years_of_tragedy.100.d:0 "The Great Battle caused devastation to Ardougne's people, and to all those who participated - [Root.religion.GetName] or Zamorakian - it has become evident that religious conflict in Kandarin would destroy them all. Two survivors - one [Root.religion.GetName] and one Zamorakian have decided to together follow the path of balance and rule Kandarin together."
+ dreaded_years_of_tragedy.100.a:0 "For Kandarin!"

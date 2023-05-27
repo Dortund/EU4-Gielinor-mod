@@ -1,0 +1,19 @@
+#1181-Péng
+owner = FTS
+controller = FTS
+add_core = FTS
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = bones
+
+is_city = yes

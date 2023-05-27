@@ -1,0 +1,21 @@
+#198-Lithkren
+owner = LHK
+controller = LHK
+add_core = LHK
+tribal_owner = ---
+culture = metaldragon
+religion = jas
+
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 5
+
+fort_15th = yes 
+
+trade_goods = bones
+
+is_city = yes

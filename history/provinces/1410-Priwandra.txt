@@ -1,0 +1,33 @@
+#1410-Priwandra
+owner = GNE
+controller = GNE
+add_core = GNE
+tribal_owner = ---
+culture = treegnome
+religion = guthix
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 2
+
+trade_goods = advanced_logs
+
+is_city = yes
+
+center_of_trade = 1
+
+1958.7.23 = {
+	owner = GNO
+	controller = GNO
+	add_core = GNO
+	remove_core = GNE
+}

@@ -1,0 +1,30 @@
+government = republic
+add_government_reform = plutocracy_reform
+government_rank = 1
+primary_culture = dimnes
+religion = zamorak
+technology_group = northerntechgroup
+capital = 161 #Dark Warriors' Fortress
+national_focus = MIL
+
+2076.4.9 = {
+	monarch = {
+		name = "Marius"
+		dynasty = "Krand"
+		birth_date = 2035.11.12
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+2156.9.14 = {
+	monarch = {
+		name = "Marcus"
+		dynasty = "Ufbrand"
+		birth_date = 2135.2.21
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}

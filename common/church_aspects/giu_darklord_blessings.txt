@@ -1,0 +1,62 @@
+death_fascination = {
+	is_blessing = yes
+
+	modifier = {
+		prestige_from_land = 0.5
+		prestige_from_naval = 0.5
+	}
+}
+
+godly_remnants = {
+	is_blessing = yes
+
+	modifier = {
+		army_tradition = 0.5
+	}
+}
+
+strange_whispers = {
+	is_blessing = yes
+
+	modifier = {
+		global_missionary_strength = 0.015
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.9
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.7
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.5
+			}
+		}
+	}
+}
+
+sacrificial_population = {
+	is_blessing = yes
+
+	modifier = {
+		harsh_treatment_cost = -0.2
+	}
+}
+
+reckless_expansion = {
+	is_blessing = yes
+
+	modifier = {
+	 	administrative_efficiency = 0.05
+	 	ae_impact = 0.25
+	}
+}

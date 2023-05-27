@@ -1,0 +1,33 @@
+government = republic
+add_government_reform = political_dynasties
+government_rank = 1
+primary_culture = yanillian
+religion = godless
+religious_school = humanist_school
+technology_group = kandarintechgroup
+capital = 985 #Myths' Guild
+national_focus = DIP
+
+2051.12.7 = {
+	monarch = {
+		name = "Uhld"
+		dynasty = "Andreson"
+		adm = 5
+		dip = 3
+		mil = 5
+		birth_date = 2016.7.12
+		claim = 100
+	}
+}
+
+2157.11.6 = {
+	monarch = {
+		name = "Alec"
+		dynasty = "Kincade"
+		adm = 5
+		dip = 4
+		mil = 4
+		birth_date = 2104.6.11
+		claim = 100
+	}
+}

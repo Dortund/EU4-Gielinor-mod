@@ -1,0 +1,19 @@
+#328-Crystal Coast
+owner = IOR
+controller = IOR
+add_core = IOR
+tribal_owner = ---
+culture = iorwerth
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+trade_goods = fishing_spot
+
+is_city = yes

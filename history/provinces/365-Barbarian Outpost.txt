@@ -1,0 +1,26 @@
+#365 - Barbarian Outpost
+owner = BAO
+controller = BAO
+add_core = BAO
+tribal_owner = ---
+culture = barbarian
+religion = guthix
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 5
+
+fort_15th = yes 
+
+trade_goods = livestock_farm
+
+is_city = yes

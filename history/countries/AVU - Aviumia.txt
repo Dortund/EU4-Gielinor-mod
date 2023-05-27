@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = new_world_kingdom
+government_rank = 2
+primary_culture = fortis
+religion = zamorak
+technology_group = zeantechgroup
+capital = 488
+

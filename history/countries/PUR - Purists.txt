@@ -1,0 +1,32 @@
+government = republic
+add_government_reform = military_dictatorship_reform
+government_rank = 1
+primary_culture = scythe_culture
+religion = genbu
+technology_group = wushankotechgroup
+capital = 1145 #Ren Bo
+historical_rival = HUJ
+
+
+1905.4.25 = {
+	monarch = {
+		name = "Gaoxu"
+		dynasty = "Fan"
+		birth_date = 1882.1.12
+		death_date = 1946.6.5
+		adm = 1
+		dip = 5
+		mil = 5
+	}
+}
+
+2151.11.15 = {
+	monarch = {
+		name = "Youlun"
+		dynasty = "Fan"
+		birth_date = 2097.4.16
+		adm = 1
+		dip = 5
+		mil = 5
+	}
+}

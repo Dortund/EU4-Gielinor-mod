@@ -1,0 +1,25 @@
+#1124 - Hyu-Ji
+owner = HUJ
+controller = HUJ
+add_core = HUJ
+tribal_owner = ---
+culture = sea_orphan
+religion = seiryu
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = gunpowder
+
+is_city = yes

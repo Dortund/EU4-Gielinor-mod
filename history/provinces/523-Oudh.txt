@@ -1,0 +1,19 @@
+#523 - Oudh
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = fortis
+religion = ranul
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = grains
+
+is_city = yes

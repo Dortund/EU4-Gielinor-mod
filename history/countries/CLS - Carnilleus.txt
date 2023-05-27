@@ -1,0 +1,36 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = ardignan
+add_accepted_culture = catherbian
+religion = saradomin
+technology_group = kandarintechgroup
+capital = 536 #Honeyflax
+national_focus = MIL
+historical_rival = HZL
+
+1896.2.18 = {
+	monarch = {
+		name = "Hextus"
+		dynasty = "Carnillean"
+		birth_date = 1882.4.16
+		adm = 5
+		dip = 3
+		mil = 5
+	}
+}
+
+1997.5.28 = {
+	monarch = {
+		name = "Tennyson"
+		dynasty = "Carnillean"
+		birth_date = 1973.9.17
+		death_date = 2022.3.30
+		adm = 2
+		dip = 4
+		mil = 5
+	}
+}
+
+1916.12.1 = { leader = {	name = "Abigale Carnillean"	type = general female = yes	fire = 1	shock = 5	manuever = 2	siege = 3	death_date = 1955.6.13 } }
+

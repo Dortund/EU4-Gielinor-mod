@@ -1,0 +1,293 @@
+#########################################################################
+# OPINION MODIFIERS # Do not rename this to 00_opinion_modifiers!
+##########################################################################
+
+##############
+# FIXED
+##############
+
+#Boss Tags
+
+boss_tag_opinion = {
+	opinion = -1000
+}
+
+#Misthalin
+
+MST_wrong_side_of_salve = {
+	opinion = -100
+}
+
+
+##############
+# TIMED
+##############
+
+###Religion
+
+seren_words_of_runecrafter_support = {
+	opinion = 50
+	yearly_decay = 1
+}
+seren_words_of_runecrafter_oppose = {
+	opinion = -50
+	yearly_decay = 1
+}
+seren_gave_away_temple_of_light_position = {
+	opinion = -50
+	yearly_decay = 2
+}
+seren_accepted_saradominist_preachers = {
+	opinion = 100
+	yearly_decay = 3
+}
+seren_saradominist_favouritism = {
+	opinion = 50
+	yearly_decay = 2
+}
+
+seren_ralos_same = {
+	opinion = 150
+	yearly_decay = 2
+}
+seren_ralos_lie = {
+	opinion = -75
+	yearly_decay = 2
+}
+seren_ralos_influence = {
+	opinion = 50
+	yearly_decay = 3
+}
+
+seren_praise_for_prifddinas = {
+	opinion = 100
+	yearly_decay = 2
+}
+seren_snubbed_prifddinas = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+###World Events
+
+elder_god_wars_enemies = {
+	opinion = -200
+	yearly_decay = 4
+}
+elder_god_wars_traitors = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+
+###National
+
+#Asgarnian Generic
+
+genasg_friend_of_misthalin = {
+	opinion = 50
+	yearly_decay = 2
+}
+genasg_curse_misthalin = {
+	opinion = -75
+	yearly_decay = 1
+}
+
+
+#Asgarnia
+
+asg_hosted_refugees = {
+	opinion = 150
+	yearly_decay = 2
+}
+asg_neglected_refugees = {
+	opinion = -50
+	yearly_decay = 1
+}
+asg_evil_response = {
+	opinion = -150
+	yearly_decay = 2
+}
+
+#Cadarn
+
+cda_joined_resistance = {
+	opinion = 75
+	yearly_decay = 2
+}
+
+cda_limited_resistance_support = {
+	opinion = 25
+	yearly_decay = 1
+}
+
+cda_refused_resistance = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+#Donblas
+
+dbs_rejected_kinshra = {
+	opinion = 50
+	yearly_decay = 2
+}
+
+#Elven Resistance
+
+evr_accepted_seren_preachers = {
+	opinion = 100
+	yearly_decay = 2
+}
+evr_rejected_seren_preachers = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+#Gnome Empire
+
+gne_trifling_gnomes = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+gne_no_longer_worthwhile = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+gne_friend_indeed = {
+	opinion = 75
+	yearly_decay = 2
+}
+
+gne_gnomes_stick_together = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+#Gunnar
+
+gun_runecrafting_nemesis = {
+	opinion = -150
+	yearly_decay = 3
+}
+gun_runecrafting_enemy = {
+	opinion = -75
+	yearly_decay = 2
+}
+gun_runecrafting_aligned = {
+	opinion = 75
+	yearly_decay = 2
+}
+gun_runecrafting_friend = {
+	opinion = 150
+	yearly_decay = 2
+}
+
+
+#Iorwerth
+
+ior_kandarin_alliance = {
+	opinion = 200
+	yearly_decay = 5
+}
+ior_contemplating_the_dark_lord = {
+	opinion = 75
+	yearly_decay = 3
+}
+ior_sold_us_provinces = {
+	opinion = 150
+	yearly_decay = 1
+}
+ior_refused_to_sell_us_provinces = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+
+#Kharidians
+
+kds_refused_assistance = {
+	opinion = -50
+	yearly_decay = 2
+}
+kds_granted_assistance = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+#Kandarin
+
+kdr_no_ior_alliance = {
+	opinion = -50
+	yearly_decay = 2
+}
+
+#Kourend
+
+kou_placated_house = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+kou_aided_house = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+kou_small_help = {
+	opinion = 15
+	yearly_decay = 1
+}
+
+kou_small_hinderance = {
+	opinion = -15
+	yearly_decay = 1
+}
+
+#Kourend Houses
+
+kouhouse_war_of_five = {
+	opinion = -100
+	yearly_decay = 4
+}
+
+#Menaphos
+
+mps_sister_cities = {
+	opinion = 150
+	yearly_decay = 1
+}
+
+#Misthalin
+
+mst_asgarnian_friend = {
+	opinion = 100
+	yearly_decay = 4
+}
+mst_goes_too_far = {
+	opinion = -100
+	yearly_decay = 2
+}
+mst_common_resistance_struggle = {
+	opinion = 100
+	yearly_decay = 4
+}
+mst_also_against_misthalin = {
+	opinion = 50
+	yearly_decay = 3
+}
+mst_asgarnian_traitor = {
+	opinion = -100
+	yearly_declay = 3
+}
+
+#Mos le'Harmless
+
+msh_fellow_pirates = {
+	opinion = 100
+	yearly_decay = 1
+}
+
+

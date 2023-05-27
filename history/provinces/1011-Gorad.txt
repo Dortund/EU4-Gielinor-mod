@@ -1,0 +1,26 @@
+#1011-Gorad
+owner = GOR
+controller = GOR
+add_core = GOR
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = logs
+
+is_city = yes

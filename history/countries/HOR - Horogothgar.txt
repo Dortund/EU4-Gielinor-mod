@@ -1,0 +1,23 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = horogothgar
+religion = bandos
+technology_group = bandostechgroup
+capital = 3 #Lummouth
+national_focus = MIL
+historical_friend = DGK
+historical_friend = GGS
+historical_friend = NGU
+historical_friend = YUR
+
+1929.6.12 = {
+	monarch = {
+		name = "Bonearms"
+		dynasty = "Horogothgar"
+		birth_date = 1906.3.17
+		adm = 2
+		dip = 0
+		mil = 4
+	}
+}

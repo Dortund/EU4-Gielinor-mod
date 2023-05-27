@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = magiocracy
+government_rank = 1
+primary_culture = arceuus
+add_accepted_culture = lovakengj
+religion = zamorak
+technology_group = zeantechgroup
+capital = 1426 #Necrowood
+historical_friend = HRS
+
+1913.11.1 = {
+	monarch = {
+		name = "Shera"
+		dynasty = "Arceuus"
+		birth_date = 1873.7.30
+		adm = 5
+		dip = 4
+		mil = 4
+		female = yes
+	}
+}

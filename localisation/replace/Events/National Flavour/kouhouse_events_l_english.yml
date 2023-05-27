@@ -1,0 +1,8 @@
+﻿l_english:
+ flavor_kouhouse.1.t:0 "[KOU.Monarch.GetTitle] [KOU.Monarch.GetName] buys our favour!"
+ flavor_kouhouse.1.d:0 "[KOU.Monarch.GetTitle] [KOU.Monarch.GetName] has seen it fit to invest in our House. Our people will appreciate it, though it will make it harder to make a break for independence."
+ flavor_kouhouse.1.a:0 "It's a mixed blessing."
+ 
+ flavor_kouhouse.2.t:0 "Independence for [Root.GetName]"
+ flavor_kouhouse.2.d:0 "We have successfully broken free of the vile [KOU.Monarch.GetTitle] [KOU.Monarch.GetName]'s grasp and no longer must be saddled with the burden of being a house of Kourend."
+ flavor_kouhouse.2.a:0 "Freedom!"

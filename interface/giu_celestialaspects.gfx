@@ -1,0 +1,111 @@
+spriteTypes = {
+
+	#Ralos
+
+	spriteType = {
+		name = "GFX_ralos_bastion_of_ralos_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ralos_bastion_of_ralos_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ralos_internal_investment_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ralos_internal_investment_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ralos_joy_of_the_new_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ralos_joy_of_the_new_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ralos_peaceful_age_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ralos_peaceful_age_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ralos_sunset_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ralos_sunset_icon.dds"
+	}
+
+	#Ranul
+
+	spriteType = {
+		name = "GFX_ranul_death_is_another_path_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ranul_death_is_another_path_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ranul_explore_the_mysteries_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ranul_explore_the_mysteries_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ranul_moving_on_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ranul_moving_on_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ranul_sunrise_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ranul_sunrise_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ranul_war_footing_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/ranul_war_footing_icon.dds"
+	}
+
+	#Hanalan
+	
+	spriteType = {
+		name = "GFX_hanalan_breath_of_the_wind_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/hanalan_breath_of_the_wind_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_hanalan_bringer_of_salt_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/hanalan_bringer_of_salt_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_hanalan_metaphorical_thought_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/hanalan_metaphorical_thought_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_hanalan_moonrise_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/hanalan_moonrise_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_hanalan_sunny_disposition_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/hanalan_sunny_disposition_icon.dds"
+	}
+
+	#Birman
+
+	spriteType = {
+		name = "GFX_birman_bringer_of_the_sweet_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/birman_bringer_of_the_sweet_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_birman_celestial_navigation_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/birman_celestial_navigation_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_birman_contemplation_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/birman_contemplation_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_birman_moonset_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/birman_moonset_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_birman_tropical_cocktails_aspect"
+		texturefile = "gfx/interface/church_aspects_celestial/birman_tropical_cocktails_icon.dds"
+	}
+
+}	

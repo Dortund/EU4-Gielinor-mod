@@ -1,0 +1,1306 @@
+##################################################################################################
+# Also used for national flavour events.
+##################################################################################################
+
+example_modifier = {
+	local_unrest = -1
+}
+
+#############
+#Acheron
+#############
+
+# Local
+
+genacheron_site_of_innovations = {
+	local_institution_spread = 0.25
+	local_build_cost = -0.1
+}
+genacheron_redoubled_interest = {
+	local_colonial_growth = 50
+}
+
+# National
+genacheron_looking_for_allies = {
+	diplomatic_reputation = 1
+	envoy_travel_time = -0.25
+}
+genacheron_boss_preparation = {
+	land_morale = 0.05
+	naval_morale = 0.05
+}
+genacheron_dominance_of_acheron = {
+	colonists = 1
+}
+
+#############
+#Ardougne
+#############
+
+#Local
+
+ADO_fishing_guild_modifier = {
+	local_sailors_modifier = 0.5
+	trade_goods_size_modifier = 0.5
+}
+ADO_growth_of_ardougne_modifier = {
+	local_build_cost = -0.1
+	local_build_time = -0.2
+}
+ADO_elemental_workshop_modifier = {
+	trade_goods_size_modifier = 0.25
+}
+
+#National
+ADO_right_of_conquest = {
+ 	ae_impact = -0.1
+	improve_relation_modifier = 0.1
+}
+ADO_divine_outpost = {
+	tolerance_own = 1
+}
+ADO_drill_for_our_deity = {
+	drill_gain_modifier = 0.5
+}
+
+#############
+#Al Kharid
+#############
+
+#Local
+
+ALK_depop_plateau = {
+	local_development_cost = 0.2
+}
+ALK_saradomist_integration = {
+	local_unrest = -2
+	local_development_cost = -0.2
+	local_missionary_strength = -0.05
+}
+ALK_citharede = {
+	local_unrest = -1
+	local_missionary_strength = -0.03
+}
+
+ALK_blue_training = {
+	prestige = 0.5
+	local_tax_modifier = 0.1
+	local_missionary_strength = -0.02
+}
+ALK_red_training = {
+	prestige = 0.5
+	local_institution_spread = 0.25
+	local_missionary_strength = -0.02
+}
+ALK_green_training = {
+	prestige = 0.5
+ 	local_governing_cost = -0.25
+	local_missionary_strength = -0.02
+}
+ALK_grey_training = {
+	prestige = 0.5
+ 	local_unrest = -1
+}
+
+#National
+
+ALK_merchant_fleet = {
+	global_trade_power = 0.1
+}
+ALK_agenda_of_espionage = {
+	spy_offence = 0.25
+}
+
+#############
+#Arposandra
+#############
+
+#Local
+AOS_poison_waste = {
+ 	local_development_cost = 0.1
+	local_friendly_movement_speed = 0.1
+ 	local_hostile_movement_speed = 0.1
+	supply_limit_modifier = -0.25
+	attrition = 0.5
+}
+
+#############
+#Ape Atoll
+#############
+
+#Local
+APE_bo_isles_incomers = {
+	local_development_cost = -0.35
+	local_institution_spread = 0.2
+}
+
+#National
+genape_bo_isles_sailors = {
+	naval_maintenance_modifier = -0.25
+	global_sailors_modifier = 0.25
+}
+genape_influx_of_runes = {
+	technology_cost = -0.05
+}
+genape_agility_training_modifier = {
+	yearly_army_professionalism = 0.01
+ 	drill_gain_modifier = 0.25
+}
+genape_unify_ape_atoll = {
+ 	tolerance_own = 2
+}
+APE_atoll_teleport = {
+	envoy_travel_time = -0.25
+}
+APE_desert_conquest = {
+	land_attrition = -0.1
+}
+APE_friend_of_apmeken = {
+	tolerance_heathen = 1
+}
+APE_monkey_expansionism = {
+	culture_conversion_cost = -0.15
+}
+APE_inspiration_of_marimbo = {
+	global_missionary_strength = 0.01
+	missionary_maintenance_cost = -0.25
+}
+APE_sailors_of_mos_le_harmless = {
+	global_sailors_modifier = 0.25
+}
+APE_off_the_soul_list = {
+	monarch_lifespan = 0.1
+}
+APE_students_to_masters = {
+	mil_tech_cost_modifier = -0.1
+}
+
+#############
+#Asgarnian Generic
+#############
+
+#National
+genasg_troll_guard = {
+	fire_damage_received = -0.05
+}
+
+#############
+#Asgarnia
+#############
+
+
+#Local
+ASG_black_knights_castle = {
+ 	local_defensiveness = 0.1
+	garrison_growth = 0.1
+}
+ASG_white_knights_castle = {
+ 	local_defensiveness = 0.1
+	garrison_growth = 0.1
+}
+ASG_black_knights_fortress = {
+ 	local_missionary_strength = -0.05
+	local_unrest = -2
+ 	local_manpower_modifier = 0.25
+}
+ASG_white_knights_fortress = {
+ 	local_missionary_strength = -0.05
+	local_unrest = -2
+ 	local_manpower_modifier = 0.25
+}
+ASG_castle_of_the_twin_knights = {
+ 	local_unrest = 2
+	garrison_growth = 0.2
+}
+
+#National
+ASG_banishment_of_the_black_knights = {
+	global_missionary_strength = 0.02
+	tolerance_heathen = -2
+	global_manpower_modifier = -0.10
+}
+ASG_banishment_of_the_white_knights = {
+	global_missionary_strength = 0.02
+	tolerance_heathen = -2
+	global_manpower_modifier = -0.10
+}
+ASG_fall_of_the_knights = {
+	global_manpower_modifier = -0.2
+}
+ASG_saradominist_fervour = {
+	global_missionary_strength = 0.1
+}
+ASG_zamorakian_fervour = {
+	global_missionary_strength = 0.1
+}
+ASG_void_knight_recruitment_guthix = {
+	tolerance_own = 1
+	global_manpower_modifier = 0.1
+}
+ASG_void_knight_recruitment_nonintervention = {
+	tolerance_heretic = 1
+	global_manpower_modifier = 0.1
+}
+ASG_void_knight_recruitment_other = {
+	tolerance_heathen = 1
+	global_manpower_modifier = 0.1
+}
+ASG_retreat_of_the_temple_knights = {
+	spy_offence = -0.2
+	missionary_maintenance_cost = -0.25
+}
+ASG_one_faith_crusade = {
+	tolerance_heathen = -2
+	warscore_cost_vs_other_religion = -0.25
+}
+ASG_exile_of_the_kinshra = {
+	tolerance_heathen = -1
+	global_manpower_modifier = -0.05
+	tolerance_own = 1
+}
+ASG_exile_of_the_white_knights = {
+	tolerance_heathen = -1
+	global_manpower_modifier = -0.05
+	tolerance_own = 1
+}
+
+#############
+#Baxtoria
+#############
+
+#Local
+BXT_new_elven_capital = {
+	local_development_cost = -0.25
+	local_production_efficiency = 0.25
+}
+
+#National
+BXT_expansion_of_democracy = {
+	years_of_nationalism = -5
+	global_unrest = -1
+}
+BXT_crystalline_sunrise = {
+	prestige_per_development_from_conversion = 0.2
+}
+BXT_mobilising_armies = {
+	drill_gain_modifier = 0.25
+	colonists = 1
+}
+BXT_pax_baxtoria = {
+	diplomatic_reputation = 1
+}
+
+
+#############
+#Burthorpe
+#############
+
+#Local
+BTH_warriors_guild_modifier = {
+ 	local_manpower_modifier = 0.25
+	regiment_recruit_speed = -0.25
+}
+
+#############
+#Cadarn
+#############
+
+#National
+CDA_outpost_of_seren = {
+	tolerance_own = 1
+	global_missionary_strength = 0.01
+}
+CDA_cadarn_eternal = {
+	stability_cost_modifier = -0.05
+	same_culture_advisor_cost = -0.1
+}
+CDA_national_recovery = {
+	manpower_recovery_speed = 0.25
+	all_power_cost = -0.1
+}
+CDA_conquest_of_the_hazeelite_lands = {
+	years_of_nationalism = -5
+}
+
+#############
+#Corsair Cove
+#############
+
+CCO_corsair_banking = {
+	interest = -0.5
+	inflation_reduction = 0.05
+}
+
+#############
+#Crandor
+#############
+
+#Local
+CDR_time_to_mine = {
+	trade_goods_size_modifier = 0.2
+}
+
+#National
+CDR_colonial_drive = {
+	colonists = 1
+	global_colonial_growth = 10
+}
+CDR_crandor_triumphant = {
+	global_trade_power = 0.1
+}
+CDR_international_trade = {
+	trade_range_modifier = 0.5
+}
+CDR_magical_expansion = {
+	leader_land_fire = 1
+}
+CDR_republican_navy_modifier = {
+	navy_tradition = 0.5
+	naval_maintenance_modifier = -0.2
+}
+CDR_secrets_of_kethsi = {
+	fire_damage = 0.05
+	fire_damage_received = -0.05
+}
+CDR_wary_of_adventurers = {
+	discipline = 0.025
+	yearly_absolutism = -0.1
+	max_absolutism = -10
+}
+
+#############
+#Carnilleus
+#############
+
+#Local
+
+CLS_purge_zamorak = {
+	local_missionary_strength = 0.03
+	local_missionary_maintenance_cost = -0.25
+}
+
+#National
+
+CLS_naval_ambitions = {
+	global_ship_cost = -0.1
+	naval_morale = 0.05
+	blockade_efficiency = 0.25
+}
+CLS_saradominist_mission = {
+	global_missionary_strength = 0.01
+	papal_influence = 1
+}
+
+#############
+#Donblas
+#############
+
+#Local
+
+DBS_lenient_guthix_treatment = {
+	local_unrest = -2
+	local_missionary_strength = -0.03
+}
+DBS_harsh_guthix_treatment = {
+	local_unrest = 4
+	local_missionary_strength = 0.02
+}
+
+#National
+
+DBS_ambitious_expansion = {
+ 	manpower_recovery_speed = 0.1
+	years_of_nationalism = -5
+}
+DBS_defiance_of_misthalin = {
+	land_morale = 0.05
+	diplomatic_upkeep = 1
+}
+DBS_rise_of_white_knights = {
+	defensiveness = 0.1
+ 	papal_influence = 1
+}
+DBS_rise_of_kinshra = {
+	siege_ability = 0.1
+	tolerance_heathen = 2
+	yearly_patriarch_authority = 0.1
+}
+DBS_rejection_of_zamorak = {
+	tolerance_own = 1
+	tolerance_heathen = -1
+}
+
+#############
+#Dark Wizards
+#############
+
+#Local
+
+DWI_gold_for_zamorak = {
+	local_missionary_strength = 0.03
+	local_culture_conversion_cost = -0.25
+}
+
+#############
+#Draynor
+#############
+
+DYN_light_of_saradomin = {
+	global_missionary_strength = 0.02
+}
+
+DYN_age_of_tolerance = {
+	idea_cost = -0.1
+}
+
+DYN_heralds_of_draynor_drakan = {
+	land_morale = 0.1
+}
+
+
+DYN_growth_of_naval_trade = {
+ 	global_ship_trade_power = 0.2
+	global_own_trade_power = 0.1
+}
+
+#############
+#Elven Resistance
+#############
+
+#Local
+
+EVR_resistance_base = {
+	local_manpower_modifier = 0.5
+	local_defensiveness = 0.5
+}
+EVR_reverted_to_crystal = {
+	local_development_cost = 10
+}
+EVR_sealed_temple_of_light = {
+	local_defensiveness = 0.5
+	local_hostile_attrition = 2
+	local_tax_modifier = -0.5
+	local_production_efficiency = -0.5
+	local_manpower = -0.5
+}
+EVR_serenist_preachers = {
+	local_missionary_strength = -0.1
+	local_religious_unity_contribution = -1
+	local_unrest = -5
+}
+EVR_gnomish_laboratory = {
+	allowed_num_of_buildings = 1
+	local_build_cost = -0.25
+}
+
+#National
+
+EVR_resistance_fleet_modifier = {
+	global_sailors_modifier = 0.25
+	global_ship_recruit_speed = -0.15
+}
+EVR_raiding_iorwerth = {
+	may_perform_slave_raid = yes
+ 	loot_amount = 0.25
+}
+EVR_call_to_arms_modifier = {
+	mercenary_cost = -0.10
+ 	merc_maintenance_modifier = -0.10
+	mercenary_discipline = 0.05
+}
+EVR_precision_strikes = {
+	siege_ability = 0.15
+}
+EVR_kandarin_innovations = {
+	technology_cost = -0.025
+	idea_cost = -0.05
+}
+EVR_seren_in_asgarnia = {
+	warscore_cost_vs_other_religion = -0.2
+}
+EVR_arposandran_ideas = {
+	global_institution_spread = 0.2
+}
+EVR_destruction_of_the_dark_lord = {
+	global_heretic_missionary_strength = 0.1
+}
+EVR_open_panic = {
+	tolerance_own = -2
+	global_unrest = 1
+}
+
+#############
+#Gnome Empire
+#############
+
+#Local
+
+GNE_tree_gnome_village_rebels = {
+	local_unrest = 2
+}
+GNE_bolrie_elected = {
+	local_unrest = -2
+}
+
+
+#National
+
+GNE_illusion_magicks = {
+	land_morale = 0.10
+}
+GNE_tortoise_warfare = {
+	cavalry_power = 0.10
+}
+GNE_fool_of_a_king = {
+	land_morale = -0.10
+	naval_morale = -0.10
+	legitimacy = -0.5
+}
+GNE_permanent_illusion_magicks = {
+	land_morale = 0.10
+}
+GNE_protector_of_yanille = {
+	improve_relation_modifier = 0.1
+}
+GNE_guardian_of_yanille = {
+	years_of_nationalism = -5
+}
+
+#############
+#Gunnar
+#############
+
+#National
+GUN_crusader_recruitment = {
+	global_regiment_cost = -0.5
+ 	global_regiment_recruit_speed = -0.5
+ 	manpower_recovery_speed = 1
+ 	land_maintenance_modifier = -0.5
+}
+GUN_major_sabotage_by_the_gunnites = {
+	shock_damage_received = 0.1
+	ae_impact = 0.2
+}
+GUN_modest_sabotage_by_the_gunnites = {
+	shock_damage_received = 0.05
+	ae_impact = 0.1
+}
+
+
+#Local
+GUN_ruined_runecrafting_altar = {
+	trade_goods_size_modifier = -0.9
+}
+
+#############
+#Hanto
+#############
+
+#National
+HNT_corruption_of_the_depths = {
+	global_missionary_strength = 0.1
+	missionary_maintenance_cost = -0.5
+}
+HNT_victory_over_xautak = {
+	prestige = 1
+	diplomatic_reputation = 1
+}
+
+#############
+#Iorwerth
+#############
+
+#Local
+
+IOR_prifddinas_death_guard = {
+	local_defensiveness = 0.1
+ 	local_garrison_size = 0.25
+	regiment_recruit_speed = -0.25
+}
+IOR_expanding_iorwerth_presence = {
+ 	local_missionary_strength = 0.01
+ 	local_build_cost = -0.2
+}
+
+#National
+
+IOR_zeal_of_the_dark_lord = {
+ 	religious_unity = 0.25
+}
+IOR_temple_building_enthusiasm = {
+	build_cost = -0.1
+	culture_conversion_cost = -0.1
+}
+IOR_dark_lord_zeal = {
+	tolerance_own = 1
+}
+IOR_subdued_rebellions = {
+	global_unrest = -1
+ 	global_autonomy = -0.025
+}
+IOR_halberd_practice = {
+	drill_gain_modifier = 0.25
+}
+IOR_dark_crystal_fleet = {
+	global_sailors_modifier = 0.25
+	global_ship_recruit_speed = -0.15
+}
+IOR_third_age_research = {
+	global_institution_spread = 0.25
+	range = 0.15
+}
+IOR_crushed_resistance = {
+ 	missionary_maintenance_cost = -0.25
+	global_heretic_missionary_strength = 0.02
+}
+IOR_search_for_more_souls = {
+	range = 0.25
+ 	naval_attrition = -0.1
+}
+IOR_terror_of_the_dark_lord = {
+	fire_damage = 0.1
+	army_tradition_decay = -0.01
+	improve_relation_modifier = -0.25
+}
+
+#############
+#Jatizso
+#############
+
+#Local
+
+JTZ_productive_mine = {
+	trade_goods_size_modifier = 0.25
+}
+
+#############
+#Kandarin
+#############
+
+#Local
+
+KDR_world_gate_province = {
+ 	prestige = 0.5
+}
+
+
+#National
+KDR_market_of_the_world = {
+ 	global_trade_power = 0.1
+}
+KDR_anti_thievery_efforts = {
+ 	yearly_corruption = -0.1
+}
+
+#############
+#Khanoka
+#############
+
+#National
+KHN_agriculture_boom = {
+	global_trade_goods_size_modifier = 0.1
+}
+KHN_new_faith = {
+	global_missionary_strength = 0.05
+	tolerance_heathen = 2
+}
+KHN_port_investments = {
+	global_sailors_modifier = 0.2
+ 	naval_morale = 0.05
+}
+KHN_syncretic_policies = {
+	tolerance_heathen = 2
+}
+KHN_western_operations = {
+	trade_range_modifier = 0.25
+ 	envoy_travel_time = -0.25
+}
+
+#############
+#Karamjan Generic
+#############
+
+#National
+genkja_jogre_conquest = {
+ 	global_missionary_strength = 0.02
+	culture_conversion_cost = -0.1
+}
+genkja_projecting_influence = {
+ 	global_trade_power = 0.1
+	global_institution_spread = 0.1
+}
+genkja_dominance_of_karamja = {
+	global_colonial_growth = 10
+	colonists = 1
+}
+
+#############
+#Karamja
+#############
+
+#Local
+KJA_expanded_hardwood_grove = {
+	trade_goods_size_modifier = 1
+}
+KJA_anti_tzhaar_ethos = {
+	local_unrest = 10
+	local_missionary_strength = 0.02
+	local_culture_conversion_cost = -0.25
+}
+KJA_expanded_shipyard_of_kalumin = {
+ 	local_sailors_modifier = 0.5
+	ship_recruit_speed = -0.25
+}
+KJA_herblore_habitat_modifier = {
+	trade_goods_size_modifier = 1
+	local_institution_spread = 0.25
+}
+KJA_subjugation_of_ape_atoll = {
+	local_missionary_strength = 0.02
+	local_culture_conversion_cost = -0.25
+}
+
+#National
+KJA_defeat_of_ardougne = {
+	global_spy_defence = 0.15
+ 	global_trade_power = 0.1
+}
+KJA_tales_of_the_idols = {
+	tolerance_own = 1
+	monthly_fervor_increase = 0.5
+}
+KJA_tzhaar_guard = {
+	shock_damage_received = -0.1
+}
+KJA_unquiet_ocean_trade_monopoly = {
+ 	merchants = 1
+ 	trade_efficiency = 0.1
+}
+
+
+#############
+#Kharidians
+#############
+
+#Local
+
+KDS_toll_gate = {
+	local_tax_modifier = 0.25
+}
+KDS_saradominist_interest = {
+	local_development_cost = -0.15
+}
+
+#National
+
+KDS_scimitar_production = {
+	land_maintenance_modifier = -0.1
+}
+
+#############
+#Kourend/Generic Kourend Houses
+#############
+
+#National
+
+KOU_placated_house = {
+	global_tax_modifier = 0.05
+	liberty_desire = -10
+	development_cost = -0.05
+}
+
+#############
+#Marwolaeth
+#############
+
+# Local
+
+MWL_crucial_colony = {
+	local_colonist_placement_chance = 0.25
+	local_colony_cost_modifier = -1
+	local_institution_spread = 0.5
+}
+MWL_legitimate_elven_lands = {
+	local_missionary_strength = 0.02
+	local_culture_conversion_cost = -0.25
+}
+MWL_brother_of_seren = {
+	local_missionary_strength = -0.1
+	local_religious_unity_contribution = -1
+	local_unrest = -5
+}
+MWL_soul_sacrifice = {
+	trade_goods_size_modifier = 1
+}
+
+# National
+
+MWL_exotic_slayer_creatures = {
+	drill_gain_modifier = 0.5
+	yearly_absolutism = 1
+}
+MWL_destroyer_of_kandarin = {
+	years_of_nationalism = -5
+}
+MWL_age_of_the_dark_lord = {
+	missionaries = 1
+	warscore_cost_vs_other_religion = -0.25
+}
+
+#############
+#Menaphos
+#############
+
+#Local
+
+MPS_trade_monopoly = {
+	province_trade_power_value = 1
+}
+
+#############
+#Misthalin
+#############
+
+#Local
+
+MST_beacon_network_province = {
+	local_friendly_movement_speed = 0.1
+}
+MST_traders_and_missionaries = {
+	local_missionary_strength = 0.03
+	local_missionary_maintenance_cost = -0.15
+}
+MST_goblin_tolerance = {
+	local_missionary_strength = -0.02
+	local_culture_conversion_cost = 0.25
+ 	local_unrest = -2
+}
+MST_grand_exchange_modifier = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.25
+}
+MST_wizards_tower_modifier = {
+ 	local_institution_spread = 0.25
+	prestige = 0.5
+}
+MST_second_wizards_tower = {
+ 	local_institution_spread = 0.25
+	prestige = 0.5
+}
+MST_varrock_sewers = {
+	local_unrest = -1
+	local_development_cost = -0.1
+}
+MST_strategic_outpost = {
+	local_defensiveness = 0.25
+	local_garrison_size = 0.25
+}
+MST_new_duchy_lands = {
+	local_colonial_growth = 20
+	local_colonist_placement_chance = 0.05
+}
+MST_tutorial_island_hub = {
+	yearly_absolutism = 0.5
+	max_absolutism = 5
+}
+
+#National
+
+MST_fossil_research_modifier = {
+	range = 0.33
+}
+MST_aid_of_nomad = {
+	manpower_recovery_speed = 0.1
+}
+MST_justice_for_wizards_tower = {
+	global_missionary_strength = 0.01
+	prestige_per_development_from_conversion = 0.25
+	tolerance_heathen = -1
+}
+MST_cornering_the_combat_market = {
+	yearly_absolutism = 1
+ 	mercenary_discipline = 0.05
+}
+MST_stable_wizard_faith = {
+	tolerance_own = 1
+	fire_damage = 0.05
+}
+MST_rise_of_the_runecrafting_guild = {
+	global_institution_spread = 0.25
+	fire_damage = 0.1
+}
+
+
+#############
+#Morytania
+#############
+
+#Local
+
+MYT_theatre_of_blood = {
+	prestige = 0.5
+}
+
+#National
+
+MYT_assert_supremacy = {
+	diplomatic_annexation_cost = -0.2
+}
+MYT_vyrewatch_innovation = {
+	shock_damage_received = -0.1
+}
+MYT_pirate_mercenaries = {
+	may_perform_slave_raid = yes
+ 	light_ship_cost = -0.2
+}
+
+#############
+#New Heritage
+#############
+
+# Local
+
+NHE_mountain_development = {
+	local_development_cost = -0.25
+}
+
+# National
+
+NHE_growing_immigration = {
+	development_cost = -0.1
+}
+
+#############
+#Palingrad
+#############
+
+# Local
+
+PLG_growth_of_palingrad = {
+	local_development_cost = -0.5
+	local_institution_spread = 0.25
+}
+PLG_naval_enthusiasm = {
+	local_sailors_modifier = 0.25
+	local_build_cost = -0.1
+}
+
+#National
+PLG_new_spying_opportunities = {
+	spy_offence = 0.25
+	envoy_travel_time = -0.25
+}
+PLG_military_investments = {
+	global_manpower_modifier = 0.2
+	land_maintenance_modifier = -0.10
+}
+
+
+#############
+#Rellekka
+#############
+
+#Local
+
+REL_runecrafting_crusader_unrest = {
+	local_unrest = 15
+}
+
+REL_fremennik_slayer_dungeon = {
+	local_manpower_modifier = 0.25
+	army_tradition = 0.1
+}
+
+#National
+
+REL_longship_culture_modifier = {
+	navy_tradition = 0.5
+	naval_maintenance_modifier = -0.1
+}
+REL_lunar_sea_voyages = {
+	range = 0.25
+}
+REL_coastal_expansion = {
+	global_ship_cost = -0.1
+	sailors_recovery_speed = 0.25
+}
+REL_end_of_the_daggermouth_threat = {
+	global_colonial_growth = 15
+	colonist_placement_chance = 0.05
+}
+REL_dungeoneers = {
+	max_absolutism = 10
+}
+
+#############
+#Scabarites
+#############
+
+#Local
+SBI_reconstruction_of_ullek = {
+	local_build_cost = -0.25
+	local_build_time = -0.25
+}
+
+#National
+
+SBI_by_scabaras_hand = {
+	tolerance_own = 1
+}
+
+#############
+#Tirannwn
+#############
+
+#Local
+
+TNN_construction_boom = {
+	local_build_cost = -0.25
+	local_build_time = -0.25
+}
+TNN_development_of_the_lost_grove = {
+	local_development_cost = -0.2
+}
+TNN_border_guard = {
+	local_defensiveness = 0.25
+}
+TNN_expansion_of_death_rune_crafting = {
+	trade_goods_size_modifier = 1
+}
+
+
+#National
+
+TNN_internal_faith_focus = {
+	tolerance_own = 2
+	spy_offence = -0.5
+}
+TNN_flow_of_anima = {
+	fire_damage = 0.05
+	tolerance_heathen = 1
+}
+TNN_new_relations = {
+	diplomats = 1
+	envoy_travel_time = -0.15
+}
+TNN_elves_of_varlamore = {
+	global_tariffs = 0.25
+}
+TNN_new_trade_opportunities = {
+ 	global_trade_power = 0.2
+}
+TNN_eastward_reach = {
+	range = 0.33
+}
+TNN_control_of_the_crystal_ocean = {
+	own_coast_naval_combat_bonus = 1
+}
+TNN_council_leader = {
+	diplomats = 1
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.25
+}
+TNN_naval_expansion_modifier = {
+	sailors_recovery_speed = 0.1
+	colonist_placement_chance = 0.05
+}
+TNN_inspiration_of_prifddinas = {
+ 	development_cost_modifier = -0.1
+}
+
+#############
+#TzHaar
+#############
+
+#Local
+
+TZH_volcanic_frontier = {
+	local_build_cost = -0.2
+}
+
+#National
+
+TZH_faith_of_the_earth_modifier = {
+	global_missionary_strength = 0.02
+	missionaries = 1
+}
+TZH_colonies_of_the_gaal = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+TZH_builders_of_the_world = {
+	great_project_upgrade_cost = -0.1
+}
+TZH_glory_of_the_tokhaar = {
+ 	governing_capacity_modifier = -0.5
+ 	global_foreign_trade_power = -0.5
+	tolerance_own = 2
+	tolerance_heathen = -2
+ 	discipline = 0.1
+}
+TZH_entrenched_caste_power = {
+	tzh_hur_loyalty_modifier = 0.1
+	tzh_ket_loyalty_modifier = 0.1
+	tzh_mej_loyalty_modifier = 0.1
+	tzh_xil_loyalty_modifier = 0.1
+}
+TZH_eternal_stability = {
+ 	stability_cost_modifier = -0.15
+}
+
+
+#############
+#Varlamore
+#############
+
+#Local
+
+VAR_dead_citadel = {
+	min_local_autonomy = 90
+	local_development_cost = 1
+}
+VAR_fletching_guild_modifier = {
+	trade_goods_size = 1
+}
+VAR_college_of_bards_modifier = {
+	prestige = 0.5
+}
+VAR_hunters_guild_modifier = {
+	trade_goods_size = 1
+}
+VAR_fortis_cothon_modifier = {
+	local_sailors_modifier = 0.25
+	ship_recruit_speed = -0.25
+}
+VAR_kourendwatch_fortification_modifier = {
+	blockade_force_required = 0.5
+	hostile_disembark_speed = 1.0
+}
+
+#National
+
+VAR_fletching_innovation = {
+	innovativeness_gain = 0.5
+}
+
+#############
+#Varze
+#############
+
+#National
+
+VRZ_glory_to_saradomin = {
+	papal_influence = 1
+	global_missionary_strength = 0.01
+}
+
+#############
+#Wushanko Generic
+#############
+
+#Local
+
+genwhk_grand_city_of_wushanko = {
+ 	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+ 	local_manpower_modifier = 0.1
+}
+
+#National
+
+genwhk_agent_of_change = {
+ 	ae_impact = -0.1
+	global_institution_spread = 0.1
+}
+genwhk_challenge_the_guardians = {
+ 	warscore_cost_vs_other_religion = -0.25
+}
+genwhk_excellent_advice = {
+	advisor_pool = 1
+	advisor_cost = -0.1
+}
+genwhk_growing_trade_influence = {
+ 	global_ship_trade_power = 0.2
+}
+genwhk_gunpowder_pioneers = {
+	artillery_cost = -0.10
+	artillery_power = 0.10
+}
+genwhk_journey_to_the_west = {
+	range = 0.25
+	trade_range_modifier = 0.25
+	spy_offence = 0.25
+}
+genwhk_naval_influence = {
+ 	navy_tradition = 0.5
+}
+genwhk_naval_siege_support = {
+ 	siege_blockade_progress = 1
+}
+genwhk_new_wushanko_faith = {
+	global_missionary_strength = 0.015
+}
+genwhk_power_of_corruption = {
+	missionary_maintenance_cost = -0.75
+}
+genwhk_power_of_the_new_khagan = {
+ 	imperial_authority = 0.25
+}
+genwhk_trading_diplomacy = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.1
+}
+genwhk_victory_over_the_west = {
+ 	prestige = 1
+	global_heathen_missionary_strength = 0.02
+	fabricate_claims_cost = -0.2
+}
+genwhk_war_readiness = {
+	land_morale = 0.05
+ 	drill_decay_modifier = -0.1
+}
+
+#############
+#TzHaar
+#############
+
+#Local
+TZH_tzhaar_hur_architecture = {
+	allowed_num_of_buildings = 1
+	local_build_cost = -0.1
+	local_build_time = -0.1
+}
+TZH_tzhaar_ket_reinforcement = {
+	local_defensiveness = 0.1
+	garrison_growth = 0.1
+}
+
+#Nation
+TZH_influx_of_runes = {
+	technology_cost = -0.05
+ 	global_regiment_cost = -0.1
+}
+TZH_defended_home_trade = {
+	global_own_trade_power = 0.2
+	trade_efficiency = 0.1
+}
+TZH_strength_of_the_tzhaar_ket = {
+	infantry_power = 0.1
+}
+
+#############
+#Zemouregal
+#############
+
+#National
+
+ZMG_espionage_expansion = {
+	spy_offence = 0.2
+}
+ZMG_twin_constructs = {
+	build_cost = -0.1
+	build_time = -0.1
+}
+
+
+

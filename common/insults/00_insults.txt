@@ -1,0 +1,2038 @@
+# Nation, any sender
+
+insult_ape_atoll = {
+	trigger = {
+		tag = APE
+	}
+}
+
+insult_ardougne = {
+	trigger = {
+		OR = {
+			tag = ADO
+			tag = KDR
+		}
+		owns_core_province = 265
+	}
+}
+
+insult_asgarnia_saradomin = {
+	trigger = {
+		tag = ASG
+		religion = saradomin
+	}
+}
+
+insult_asgarnia_zamorak = {
+	trigger = {
+		tag = ASG
+		religion = zamorak
+		FROM = {
+			NOT = { religion = zamorak }
+		}
+	}
+}
+
+insult_barrows = {
+	trigger = {
+		tag = BRS
+	}
+}
+
+insult_bdr = {
+	trigger = {
+		tag = BDR
+	}
+}
+
+insult_braindeath = {
+	trigger = {
+		tag = BDI
+	}
+}
+
+insult_canem = {
+	trigger = {
+		tag = CFS
+	}
+}
+
+insult_crandor = {
+	trigger = {
+		tag = CDR
+	}
+}
+
+insult_cyc_from_bandos = {
+	trigger = {
+		tag = CYC
+		NOT = { current_age = age_of_divination }
+		NOT = {
+			religion = bandos
+		}
+		FROM = {
+			religion = bandos
+			NOT = { culture_group = goblin_group }
+		}
+	}
+}
+
+insult_cyc_from_bandos_goblin = {
+	trigger = {
+		tag = CYC
+		NOT = { current_age = age_of_divination }
+		NOT = {
+			religion = bandos
+		}
+		FROM = {
+			religion = bandos
+			culture_group = goblin_group
+		}
+	}
+}
+
+insult_cywir = {
+	trigger = {
+		tag = CYW
+	}
+}
+
+insult_dlo = {
+	trigger = {
+		tag = DLO
+	}
+}
+
+insult_donblas = {
+	trigger = {
+		tag = DBS
+	}
+}
+
+insult_entrana_from_excom = {
+	trigger = {
+		tag = ENT
+		FROM = {
+			is_excommunicated = yes
+		}
+	}
+}
+
+insult_evr_dl = {
+	trigger = {
+		tag = EVR
+		religion = dark_lord
+	}
+}
+
+insult_gunnar = {
+	trigger = {
+		tag = GUN
+	}
+}
+
+insult_kandarin = {
+	trigger = {
+		tag = KDR
+	}
+}
+
+insult_keldagrim = {
+	trigger = {
+		tag = KEL
+	}
+}
+
+insult_kharidian_empire = {
+	trigger = {
+		tag = KEM
+		FROM = {
+			NOT = {
+			religion_group = menaphite_group
+			religion = seren
+			}
+		}
+	}
+}
+
+insult_kourend = {
+	trigger = {
+		tag = KOU
+		FROM = {
+			NOT = {
+			tag = AUU
+			tag = HOS
+			tag = LOV
+			tag = PCL
+			tag = SYZ
+			tag = KTW
+			}
+		}
+	}
+}
+
+insult_kzd_zaros_mahjarrat = {
+	trigger = {
+		tag = KZD
+		FROM = {
+			ruler_culture = mahjarrat
+			religion = zaros
+		}
+	}
+}
+
+insult_menaphos = {
+	trigger = {
+		tag = MPS
+	}
+}
+
+insult_misthalin_ge = {
+	trigger = {
+		tag = MST
+		has_idea = MST_grand_exchange
+		16 = {
+			owned_by = MST
+			is_core = MST
+		}
+	}
+}
+
+insult_misthalin_lumby = {
+	trigger = {
+		tag = MST
+		south_lum_area = {
+			type = all
+			owned_by = MST
+			is_core = MST
+			}
+		breadbasket_of_misthalin_area = {
+			type = all
+			owned_by = MST
+			is_core = MST
+			}
+	}
+}
+
+insult_morytania = {
+	trigger = {
+		tag = MYT
+	}
+}
+
+insult_nhe = {
+	trigger = {
+		tag = NHE
+	}
+}
+
+insult_noncanon = {
+	trigger = {
+		OR = {
+		tag = AES
+		tag = ANM
+		tag = BAA
+		tag = BSP
+		tag = CLY
+		tag = CNC
+		tag = CYN
+		tag = ENV
+		tag = ERB
+		tag = FRW
+		tag = GLU
+		tag = HHB
+		tag = HRS
+		tag = KDS
+		tag = KLU
+		tag = LCT
+		tag = MNR
+		tag = RVL
+		tag = SNG
+		tag = TJT
+		tag = SGR
+		tag = TES
+		# From 1.0.2
+		tag = AUB
+		tag = AVU
+		tag = BXT
+		tag = GDO
+		tag = MWL
+		tag = UPZ
+		tag = URV
+		# From 1.1.0
+		tag = FNS
+		tag = KNJ
+		tag = HKT
+		tag = RSG
+		tag = TRK
+		# From 1.2.0a
+		tag = TPS
+		# From 1.3.0
+		tag = TSQ
+		tag = AHS
+		# From 1.4.0
+		tag = BNZ
+		tag = BOI
+		tag = MRM
+		tag = RDN
+		# From 1.5.0
+		tag = CPT
+		tag = CWS
+		tag = OKJ
+		tag = ULJ
+		tag = KTR
+		tag = MYN
+		}
+	}
+}
+
+insult_noncanon2 = {
+	trigger = {
+		OR = {
+		tag = AES
+		tag = ANM
+		tag = BAA
+		tag = BSP
+		tag = CLY
+		tag = CNC
+		tag = CYN
+		tag = ENV
+		tag = ERB
+		tag = FRW
+		tag = GLU
+		tag = HHB
+		tag = HRS
+		tag = KDS
+		tag = KLU
+		tag = LCT
+		tag = MNR
+		tag = RVL
+		tag = SNG
+		tag = TJT
+		tag = SGR
+		tag = TES
+		# From 1.0.2
+		tag = AUB
+		tag = AVU
+		tag = BXT
+		tag = GDO
+		tag = MWL
+		tag = UPZ
+		tag = URV
+		# From 1.1.0
+		tag = FNS
+		tag = KNJ
+		tag = HKT
+		tag = RSG
+		tag = TRK
+		# From 1.2.0a
+		tag = TPS
+		# From 1.3.0
+		tag = TSQ
+		tag = AHS
+		# From 1.4.0
+		tag = BNZ
+		tag = BOI
+		tag = MRM
+		tag = RDN
+		# From 1.5.0
+		tag = CPT
+		tag = CWS
+		tag = OKJ
+		tag = ULJ
+		tag = KTR
+		tag = MYN
+		}
+	}
+}
+
+insult_pescaling = {
+	trigger = {
+		tag = PES
+	}
+}
+
+insult_scarabites = {
+	trigger = {
+		tag = SBI
+		FROM = {
+			NOT = { religion = menaphite }
+		}
+	}
+}
+
+insult_sea_slugs = {
+	trigger = {
+		tag = SSG
+	}
+}
+
+insult_seers = {
+	trigger = {
+		tag = SEE
+	}
+}
+
+insult_shilo = {
+	trigger = {
+		tag = SHI
+	}
+}
+
+insult_sophanem = {
+	trigger = {
+		tag = SOP
+	}
+}
+
+insult_tgv = {
+	trigger = {
+		tag = TGV
+	}
+}
+
+insult_tzhaar = {
+	trigger = {
+		tag = TZH
+	}
+}
+
+insult_upz = {
+	trigger = {
+		tag = UPZ
+	}
+}
+
+insult_zarosian_empire = {
+	trigger = {
+		tag = ZAR
+	}
+}
+
+#########################################################
+#Nation, specific sender but any recipient
+#########################################################
+
+insult_from_ape = {
+	trigger = {
+		FROM = { tag = APE }
+	}
+}
+
+insult_from_bao = {
+	trigger = {
+		FROM = { tag = BAO }
+	}
+}
+
+insult_from_etc = {
+	trigger = {
+		FROM = { tag = ETC }
+	}
+}
+
+insult_from_gno = {
+	trigger = {
+		OR = {
+			FROM = { tag = GNO }
+			FROM = { tag = GNE }
+		}
+	}
+}
+
+insult_from_rel = {
+	trigger = {
+		FROM = { tag = REL }
+	}
+}
+
+insult_from_rel2 = {
+	trigger = {
+		FROM = { tag = REL }
+	}
+}
+
+insult_from_see = {
+	trigger = {
+		FROM = { tag = SEE }
+	}
+}
+
+insult_from_see2 = {
+	trigger = {
+		FROM = { tag = SEE }
+	}
+}
+
+insult_from_ibn = {
+	trigger = {
+		FROM = { tag = IBN }
+	}
+}
+
+insult_from_ibn2 = {
+	trigger = {
+		FROM = { tag = IBN }
+	}
+}
+
+insult_from_ibn3 = {
+	trigger = {
+		FROM = { tag = IBN }
+	}
+}
+
+insult_from_lucien = {
+	trigger = {
+		FROM = {
+			tag = LCI
+			has_ruler = "Lucien"
+		}
+	}
+}
+
+insult_from_moo = {
+	trigger = {
+		FROM = { tag = MOO }
+	}
+}
+
+insult_from_rich_mst = {
+	trigger = {
+		OR = {
+			num_of_loans = 5
+			is_bankrupt = yes
+		}
+		FROM = { tag = MST }
+	}
+}
+
+#########################################################
+#Nation, specific sender and recipient
+#########################################################
+
+insult_lunar_from_fremmy = {
+	trigger = {
+		tag = MOO
+		FROM = { culture_group = fremennik_group }
+	}
+}
+
+insult_fremmy_from_lunar = {
+	trigger = {
+		culture_group = fremennik_group
+		FROM = { tag = MOO }
+	}
+}
+
+insult_jtz_ntz = {
+	trigger = {
+		tag = NTZ
+		FROM = { tag = JTZ }
+	}
+}
+
+insult_ntz_jtz = {
+	trigger = {
+		tag = JTZ
+		FROM = { tag = NTZ }
+	}
+}
+
+insult_ubs_ntzjtz = {
+	trigger = {
+		OR = {
+			tag = NTZ
+			tag = JTZ
+		}
+		FROM = { tag = UBS }
+		exists = NTZ
+		exists = JTZ
+	}
+}
+
+insult_hos_mnr = {
+	trigger = {
+		tag = MNR
+		FROM = { tag = HOS }
+	}
+}
+
+insult_bth_syz = {
+	trigger = {
+		tag = SYZ
+		FROM = { tag = BTH }
+	}
+}
+
+insult_sar_mst_zam_myt = {
+	trigger = {
+		tag = MYT
+		religion = zamorak
+		FROM = {
+			tag = MST 
+			religion = saradomin
+		}
+	}
+}
+
+insult_zmg_mst = {
+	trigger = {
+		tag = MST
+		FROM = { tag = ZMG }
+	}
+}
+
+insult_mst_zmg = {
+	trigger = {
+		tag = ZMG
+		FROM = { tag = MST }
+	}
+}
+
+insult_tzh_kuu_ful = {
+	trigger = {
+		tag = KUU
+		religion = ful
+		FROM = {
+			tag = TZH
+			religion = ful
+		}
+	}
+}
+
+insult_evr_seren_ior_dl = {
+	trigger = {
+		tag = IOR
+		religion = dark_lord
+		FROM = {
+			tag = EVR
+			religion = seren
+		}
+	}
+}
+
+insult_ior_dl_evr_seren = {
+	trigger = {
+		tag = EVR
+		religion = seren
+		FROM = {
+			tag = IOR
+			religion = dark_lord
+		}
+	}
+}
+
+insult_gnome_aos = {
+	trigger = {
+		tag = AOS
+		FROM = {
+			OR = {
+				tag = GNE
+				tag = GNO
+				tag = TGV
+			}
+		}
+	}
+}
+
+insult_kdr_pcl = {
+	trigger = {
+		tag = PCL
+		FROM = {
+			tag = KDR
+		}
+	}
+}
+
+insult_cdz_moo = {
+	trigger = {
+		tag = MOO
+		FROM = {
+			tag = CDZ
+		}
+	}
+}
+
+insult_ssg_kdr = {
+	trigger = {
+		tag = KDR
+		FROM = {
+			tag = SSG
+		}
+	}
+}
+
+insult_mst_moo = {
+	trigger = {
+		tag = MOO
+		FROM = {
+			OR = {
+				tag = MST
+				tag = DYN
+			}
+		}
+	}
+}
+
+insult_msh_bhv = {
+	trigger = {
+		tag = BHV
+		FROM = {
+			tag = MSH
+		}
+	}
+}
+
+insult_msh_mst = {
+	trigger = {
+		tag = MSH
+		has_idea = MST_cooks_guild
+		FROM = {
+			OR = {
+				tag = MSH
+				tag = BDI
+			}
+		}
+	}
+}
+
+insult_var_bth = {
+	trigger = {
+		tag = BTH
+		FROM = {
+			tag = VAR
+		}
+	}
+}
+
+insult_pirates_asg = {
+	trigger = {
+		culture_group = pirate_group
+		FROM = {
+			tag = ASG
+		}
+	}
+}
+
+insult_mrf_kzd = {
+	trigger = {
+		tag = KZD
+		FROM = {
+			tag = MRF
+		}
+	}
+}
+
+insult_myt_auu = {
+	trigger = {
+		tag = AUU
+		FROM = {
+			tag = MYT
+		}
+	}
+}
+
+insult_pli_alk = {
+	trigger = {
+		tag = ALK
+		FROM = {
+			OR = {
+				tag = PLI
+				tag = ASG
+			}
+		}
+	}
+}
+
+insult_bzl_glksri = {
+	trigger = {
+		OR = {
+			tag = GLK
+			tag = SRI
+		}
+		FROM = { tag = BZL }
+	}
+}
+
+insult_glk_bzlsri = {
+	trigger = {
+		OR = {
+			tag = BZL
+			tag = SRI
+		}
+		FROM = { tag = GLK }
+	}
+}
+
+insult_sri_bzlglk = {
+	trigger = {
+		OR = {
+			tag = GLK
+			tag = BZL
+		}
+		FROM = { tag = SRI }
+	}
+}
+
+insult_rel_var = {
+	trigger = {
+		tag = VAR
+		FROM = { tag = REL }
+	}
+}
+
+###########################
+#To cultures
+###########################
+
+insult_camel_group = {
+	trigger = {
+		culture_group = camel_group
+		FROM = {
+			NOT = { culture_group = camel_group }
+		}
+	}
+}
+
+insult_mechanical_group = {
+	trigger = {
+		culture_group = mechanical_group
+		FROM = {
+			NOT = { culture_group = mechanical_group }
+		}
+	}
+}
+
+###########################
+#From cultures
+###########################
+
+insult_from_troll = {
+	trigger = {
+		FROM = { culture_group = troll_group }
+	}
+}
+
+###########################
+#Goblins
+###########################
+
+insult_goblins_from_dgk = {
+	trigger = {
+		OR = {
+			tag = EKE
+			tag = GGS
+			tag = HOR
+			tag = HUZ
+			tag = IDI
+			tag = NGU
+			tag = RKS
+			tag = SGK
+			tag = THO
+			tag = YUR
+		}
+		FROM = { tag = DGK }
+	}
+}
+
+insult_goblins_from_eke = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = GGS
+			tag = HOR
+			tag = HUZ
+			tag = IDI
+			tag = NGU
+			tag = RKS
+			tag = SGK
+			tag = THO
+			tag = YUR
+		}
+		FROM = { tag = EKE }
+	}
+}
+
+insult_goblins_from_ggs = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = EKE
+			tag = HOR
+			tag = HUZ
+			tag = IDI
+			tag = NGU
+			tag = RKS
+			tag = SGK
+			tag = THO
+			tag = YUR
+		}
+		FROM = { tag = GGS }
+	}
+}
+
+insult_goblins_from_hor = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = EKE
+			tag = GGS
+			tag = HUZ
+			tag = IDI
+			tag = NGU
+			tag = RKS
+			tag = SGK
+			tag = THO
+			tag = YUR
+		}
+		FROM = { tag = HOR }
+	}
+}
+
+insult_goblins_from_huz = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = EKE
+			tag = GGS
+			tag = HOR
+			tag = IDI
+			tag = NGU
+			tag = RKS
+			tag = SGK
+			tag = THO
+			tag = YUR
+		}
+		FROM = { tag = HUZ }
+	}
+}
+
+insult_goblins_from_idi = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = EKE
+			tag = GGS
+			tag = HOR
+			tag = HUZ
+			tag = NGU
+			tag = RKS
+			tag = SGK
+			tag = THO
+			tag = YUR
+		}
+		FROM = { tag = IDI }
+	}
+}
+
+insult_goblins_from_ngu = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = EKE
+			tag = GGS
+			tag = HOR
+			tag = HUZ
+			tag = IDI
+			tag = RKS
+			tag = SGK
+			tag = THO
+			tag = YUR
+		}
+		FROM = { tag = NGU }
+	}
+}
+
+insult_goblins_from_rks = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = EKE
+			tag = GGS
+			tag = HOR
+			tag = HUZ
+			tag = IDI
+			tag = NGU
+			tag = SGK
+			tag = THO
+			tag = YUR
+		}
+		FROM = { tag = RKS }
+	}
+}
+
+insult_goblins_from_sgk = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = EKE
+			tag = GGS
+			tag = HOR
+			tag = HUZ
+			tag = IDI
+			tag = NGU
+			tag = RKS
+			tag = THO
+			tag = YUR
+		}
+		FROM = { tag = SGK }
+	}
+}
+
+insult_goblins_from_tho = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = EKE
+			tag = GGS
+			tag = HOR
+			tag = HUZ
+			tag = IDI
+			tag = NGU
+			tag = RKS
+			tag = SGK
+			tag = YUR
+		}
+		FROM = { tag = THO }
+	}
+}
+
+insult_goblins_from_yur = {
+	trigger = {
+		OR = {
+			tag = DGK
+			tag = EKE
+			tag = GGS
+			tag = HOR
+			tag = HUZ
+			tag = IDI
+			tag = NGU
+			tag = RKS
+			tag = SGK
+			tag = THO
+		}
+		FROM = { tag = YUR }
+	}
+}
+
+###########################
+# Gods
+###########################
+
+insult_armadyl = {
+	trigger = {
+		religion = armadyl
+		FROM = { 
+			NOT = { religion = armadyl }
+		}
+	}
+}
+
+insult_armadyl_from_zamorak = {
+	trigger = {
+		religion = armadyl
+		FROM = { 
+			religion = zamorak
+		}
+	}
+}
+
+insult_armadyl_from_bsp = {
+	trigger = {
+		religion = armadyl
+		FROM = {
+			OR = {
+				tag = BSP
+				tag = HHB
+			}
+
+		}
+	}
+}
+
+insult_bandos = {
+	trigger = {
+		religion = bandos
+		FROM = { 
+			NOT = { religion = bandos }
+		}
+	}
+}
+
+insult_bik = {
+	trigger = {
+		religion = bik
+		FROM = { 
+			NOT = { religion = bik }
+		}
+	}
+}
+
+insult_brassica_prime = {
+	trigger = {
+		religion = brassicaprime
+		FROM = {
+			NOT = {
+			religion = brassicaprime
+			religion = zamorak
+			}
+		}
+	}
+}
+
+insult_brassica_prime2 = {
+	trigger = {
+		religion = brassicaprime
+		FROM = {
+			NOT = {
+			religion = brassicaprime
+			}
+		}
+	}
+}
+
+insult_brassica_prime_from_zamorak = {
+	trigger = {
+		religion = brassicaprime
+		FROM = {
+			religion = zamorak
+		}
+	}
+}
+
+insult_byakko = {
+	trigger = {
+		religion = byakko
+		FROM = {
+			NOT = {
+				religion = byakko
+			}
+		}
+	}
+}
+
+insult_dark_lord = {
+	trigger = {
+		religion = dark_lord
+		FROM = {
+			NOT = {
+				religion = dark_lord
+			}
+		}
+	}
+}
+
+insult_dark_lord_from_zamorak = {
+	trigger = {
+		religion = dark_lord
+		FROM = {
+			religion = zamorak
+		}
+	}
+}
+
+insult_dark_lord_from_zaros = {
+	trigger = {
+		religion = dark_lord
+		FROM = {
+			religion = zaros
+		}
+	}
+}
+
+insult_genbu = {
+	trigger = {
+		religion = genbu
+		FROM = {
+			NOT = {
+				religion = genbu
+			}
+		}
+	}
+}
+
+insult_godless_not_sixth_age = {
+	trigger = {
+		NOT = { current_age = age_of_divination }
+		religion = godless
+		FROM = {
+			NOT = { religion_group = nonintervention_group }
+		}
+	}
+}
+
+insult_godless_sixth_age = {
+	trigger = {
+		current_age = age_of_divination
+		religion = godless
+		FROM = {
+			NOT = { religion_group = nonintervention_group }
+		}
+	}
+}
+
+insult_guthix_not_sixth_age = {
+	trigger = {
+		NOT = { current_age = age_of_divination }
+		religion = guthix
+		FROM = { 
+			NOT = {
+				religion_group = nonintervention_group
+				religion = armadyl
+			}
+		}
+	}
+}
+
+insult_guthix_sixth_age = {
+	trigger = {
+		current_age = age_of_divination
+		religion = guthix
+		FROM = { 
+			NOT = {
+				religion_group = nonintervention_group
+				religion = armadyl
+			}
+		}
+	}
+}
+
+insult_hanalan_or_birman = {
+	trigger = {
+		OR = {
+			religion = hanalan
+			religion = birman
+		}
+		FROM = { 
+			NOT = { religion = hanalan }
+			NOT = { religion = birman }
+		}
+	}
+}
+
+insult_hanalan_or_birman2 = {
+	trigger = {
+		OR = {
+			religion = hanalan
+			religion = birman
+		}
+		FROM = { 
+			NOT = { religion = hanalan }
+			NOT = { religion = birman }
+		}
+	}
+}
+
+insult_hanalan = {
+	trigger = {
+		religion = hanalan
+		FROM = { 
+			NOT = { religion = hanalan }
+			NOT = { religion = birman }
+		}
+	}
+}
+
+insult_birman = {
+	trigger = {
+		religion = birman
+		FROM = { 
+			NOT = { religion = hanalan }
+			NOT = { religion = birman }
+			NOT = { religion = brassicaprime }
+		}
+	}
+}
+
+insult_ful = {
+	trigger = {
+		religion = ful
+		FROM = { 
+			NOT = { religion = ful }
+		}
+	}
+}
+
+insult_jas = {
+	trigger = {
+		religion = jas
+		FROM = { 
+			NOT = { religion = jas }
+		}
+	}
+}
+
+insult_karamjan = {
+	trigger = {
+		religion = karamjan
+		FROM = {
+			NOT = {
+			religion = karamjan
+			religion = menaphite
+			religion = v
+			religion = northern_pantheon
+			}
+		}
+	}
+}
+
+insult_lucien_or_zemouregal_faith = {
+	trigger = {
+		OR = {
+			religion = lucien
+			religion = zemouregal
+		}		
+		FROM = {
+			NOT = { religion = zemouregal }
+			NOT = { religion = lucien }
+		}
+	}
+}
+
+insult_lucien_or_zemouregal_from_zamorak = {
+	trigger = {
+		OR = {
+			religion = lucien
+			religion = zemouregal
+		}		
+		FROM = {
+			religion = zamorak
+		}
+		NOT = { current_age = age_of_divination }
+	}
+}
+
+insult_marimbo = {
+	trigger = {
+		religion = marimbo
+		FROM = { 
+			NOT = { religion = marimbo }
+		}
+	}
+}
+
+insult_menaphite = {
+	trigger = {
+		religion = menaphite
+		FROM = { 
+			NOT = { religion = menaphite }
+		}
+	}
+}
+
+insult_northern_pantheon = {
+	trigger = {
+		religion = northern_pantheon	
+		FROM = {
+			NOT = { religion = northern_pantheon }
+		}
+	}
+}
+
+insult_queen_of_ashes = {
+	trigger = {
+		religion = queen_of_ashes
+		FROM = {
+			NOT = { religion = queen_of_ashes }
+		}
+	}
+}
+
+insult_ralos = {
+	trigger = {
+		religion = ralos
+		FROM = { 
+			NOT = { 
+				religion_group = celestial_group 
+				religion_group = menaphite_group
+			}
+		}
+	}
+}
+
+insult_ralos_from_menaphite = {
+	trigger = {
+		OR = {
+			religion = ralos
+			religion = hanalan
+		}
+		FROM = { 
+			religion_group = menaphite_group
+		}
+	}
+}
+
+insult_ranul = {
+	trigger = {
+		religion = ranul
+		FROM = {
+			NOT = { religion_group = celestial_group }
+		}
+	}
+}
+
+insult_ranul_from_moonclan = {
+	trigger = {
+		religion = ranul
+		FROM = {
+			tag = MOO
+			NOT = { religion = ranul }
+		}
+	}
+}
+
+insult_ranul_from_vampyric = {
+	trigger = {
+		religion = ranul
+		FROM = {
+			OR = {
+				culture_group = vampyre_group
+				religion = vampyric
+			}
+		}
+	}
+}
+
+insult_saradomin = {
+	trigger = {
+		religion = saradomin
+		FROM = {
+			NOT = { religion = saradomin }
+		}
+	}
+}
+
+insult_saradomin2 = {
+	trigger = {
+		religion = saradomin
+		FROM = {
+			NOT = { religion = saradomin }
+		}
+	}
+}
+
+insult_saradomin_sixth_age = {
+	trigger = {
+		religion = saradomin
+		current_age = age_of_divination
+		FROM = {
+			NOT = { religion = saradomin }
+		}
+	}
+}
+
+insult_seiryu = {
+	trigger = {
+		religion = seiryu
+		FROM = {
+			NOT = {
+				religion = seiryu
+			}
+		}
+	}
+}
+
+insult_seren = {
+	trigger = {
+		religion = seren
+		FROM = {
+			NOT = { religion_group = transcendent_group }
+		}
+	}
+}
+
+insult_suzaku = {
+	trigger = {
+		religion = suzaku
+		FROM = {
+			NOT = {
+				religion = suzaku
+			}
+		}
+	}
+}
+
+insult_tuska = {
+	trigger = {
+		religion = tuska
+		FROM = {
+			NOT = { religion = tuska }
+		}
+	}
+}
+
+insult_v = {
+	trigger = {
+		religion = v
+		FROM = {
+			NOT = { religion = v }
+		}
+	}
+}
+
+insult_v2 = {
+	trigger = {
+		religion = v
+		FROM = {
+			NOT = { religion = v }
+		}
+	}
+}
+
+insult_vampyric = {
+	trigger = {
+		religion = vampyric
+		FROM = {
+			NOT = { religion = vampyric }
+		}
+	}
+}
+
+insult_wen = {
+	trigger = {
+		religion = wen
+		FROM = {
+			NOT = { religion_group = elder_god_group }
+		}
+	}
+}
+
+insult_xautak = {
+	trigger = {
+		religion = xautak
+		FROM = {
+			NOT = { religion = xautak }
+		}
+	}
+}
+
+insult_xeric = {
+	trigger = {
+		religion = xeric
+		FROM = {
+			NOT = { religion = xeric }
+		}
+	}
+}
+
+insult_xeric2 = {
+	trigger = {
+		religion = xeric
+		FROM = {
+			NOT = { religion = xeric }
+		}
+	}
+}
+
+insult_xeric3 = {
+	trigger = {
+		religion = xeric
+		FROM = {
+			NOT = { religion = xeric }
+		}
+	}
+}
+
+insult_zamorak = {
+	trigger = {
+		religion = zamorak
+		FROM = { 
+			NOT = { religion = zamorak }
+			}
+	}
+}
+
+insult_zamorak_from_karamja = {
+	trigger = {
+		religion = zamorak
+		FROM = { religion = karamjan }
+	}
+}
+
+insult_zamorak_rebels = {
+	trigger = {
+		religion = zamorak
+		num_of_rebel_armies = 1
+		FROM = { 
+			NOT = { religion = zamorak }
+			}
+	}
+}
+
+insult_zaros = {
+	trigger = {
+		religion = zaros
+		FROM = {
+			NOT = { religion = zaros }
+		}
+	}
+}
+
+insult_zaros_from_saranthium = {
+	trigger = {
+		religion = zaros
+		FROM = {
+			tag = SRT
+			NOT = { religion = zaros }
+		}
+	}
+}
+
+insult_zulrah = {
+	trigger = {
+		religion = zulrah
+		FROM = {
+			NOT = { religion = zulrah }
+		}
+	}
+}
+
+insult_zulrah_from_arposandra = {
+	trigger = {
+		religion = zulrah
+		FROM = {
+			tag = AOS
+			NOT = { religion = zulrah }
+		}
+	}
+}
+
+insult_zulrah_from_xeric = {
+	trigger = {
+		religion = zulrah
+		FROM = {
+			religion = xeric
+		}
+	}
+}
+
+###########################
+# From religion
+###########################
+
+insult_from_saradomin = {
+	trigger = {
+		NOT = {
+			religion = ralos
+			religion = saradomin
+			religion = seren }
+		FROM = { religion = saradomin }
+	}
+}
+
+insult_from_xautak = {
+	trigger = {
+		NOT = {	religion = xautak }
+		FROM = { religion = xautak }
+	}
+}
+
+###########################
+# Intrafaith
+###########################
+
+insult_armadyl_incorp_corp = {
+	trigger = {
+		religion = armadyl
+		has_church_aspect = corporealists_aspect
+		NOT = { has_church_aspect = incorporealists_aspect }
+		FROM = {
+			religion = armadyl
+			has_church_aspect = incorporealists_aspect
+			NOT = { has_church_aspect = corporealists_aspect }
+		}
+		NOT = { current_age = age_of_divination }
+	}
+}
+
+insult_armadyl_corp_incorp = {
+	trigger = {
+		religion = armadyl
+		has_church_aspect = incorporealists_aspect
+		NOT = { has_church_aspect = corporealists_aspect }
+		FROM = {
+			religion = armadyl
+			has_church_aspect = corporealists_aspect
+			NOT = { has_church_aspect = incorporealists_aspect }
+		}
+		NOT = { current_age = age_of_divination }
+	}
+}
+
+###########################
+#To governments
+###########################
+
+insult_boss_nation = {
+	trigger = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+		FROM = {
+			NOT = { has_reform = boss_nation }
+			NOT = { has_reform = island_boss_nation }
+			NOT = { has_reform = quidamortem_boss_nation }
+		}
+	}
+}
+
+insult_boss_nation2 = {
+	trigger = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+		FROM = {
+			NOT = { has_reform = boss_nation }
+			NOT = { has_reform = island_boss_nation }
+			NOT = { has_reform = quidamortem_boss_nation }
+		}
+	}
+}
+
+insult_unstable_monarchy = {
+	trigger = {
+		has_reform = unstable_monarchy
+		FROM = {
+			NOT = { has_reform = unstable_monarchy }
+		}
+	}
+}
+
+###########################
+#From governments
+###########################
+
+insult_from_boss_nation = {
+	trigger = {
+		OR = {
+			NOT = { has_reform = boss_nation }
+			NOT = { has_reform = island_boss_nation }
+			NOT = { has_reform = quidamortem_boss_nation }
+		}
+		FROM = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+}
+
+#######################################################
+
+# Default
+
+insult_default = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default2 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default3 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default4 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default5 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default6 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default7 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default8 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default9 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default10 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default11 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default12 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default13 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default14 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_default15 = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_no_army = {
+	trigger = {
+		NOT = { army_size = 1 }
+	}
+}
+
+insult_bookkeeping = {
+	trigger = {
+		FROM = {
+			trade_income_percentage = 0.33
+		}
+		NOT  = { trade_income_percentage = 0.33 }
+	}
+}
+
+insult_heir_hunter = {
+	trigger = {
+		has_regency = no
+		has_heir = yes
+		OR = {
+			heir_adm = 4
+			heir_mil = 4
+			heir_dip = 4
+		}
+	}
+}
+
+insult_monarchy = {
+	trigger = {
+		government = monarchy
+		has_regency = no
+		FROM = {
+			government = monarchy
+		}
+	}
+}
+
+insult_guybrush = {
+	trigger = {
+		FROM = { has_ruler = "Guybrush" }
+	}
+}
+
+insult_against_guybrush = {
+	trigger = {
+		has_ruler = "Guybrush"
+	}
+}
+
+insult_low_dipadm = {
+	trigger = {
+		has_regency = no
+		OR = {
+			NOT = { ADM = 2 }
+			NOT = { DIP = 2 }
+		}
+	}
+}
+
+insult_pvp = {
+	trigger = {
+		ai = no
+		FROM = { ai = no }
+	}
+}
+
+insult_pvp2 = {
+	trigger = {
+		ai = no
+		FROM = { ai = no }
+	}
+}
+
+insult_fort = {
+	trigger = {
+		any_owned_province = {
+			fort_level = 3
+		}
+		FROM = {
+			mil_tech = 7
+		}
+	}
+}
+
+insult_revolutionary = {
+	trigger = {
+		has_regency = no
+		FROM = {
+			OR = {
+				has_reform = revolutionary_empire_reform
+				is_revolutionary_republic_trigger = yes
+			}
+		}
+	}
+}
+
+insult_monarchy_rank = {
+	trigger = {
+		FROM = {
+			government = monarchy
+			government_rank = 2
+		}
+		government_rank = 1
+		has_regency = no
+	}
+}
+
+insult_low_adm = {
+	trigger = {
+		NOT = {
+			ADM = 2
+		}
+	}
+}
+
+insult_against_craven = {
+	trigger = {
+		ruler_has_personality = craven_personality
+	}
+}
+
+insult_against_sinner = {
+	trigger = {
+		ruler_has_personality = sinner_personality
+		has_consort = yes
+	}
+}
+
+insult_loans = {
+	trigger = {
+		OR = {
+			num_of_loans = 5
+			is_bankrupt = yes
+		}
+	}
+}
+
+insult_rebels = {
+	trigger = {
+		num_of_rebel_armies = 1
+	}
+}
+
+insult_low_mil_tech = {
+	trigger = {
+		NOT = { mil_tech = FROM }
+	}
+}
+
+insult_republic_to_monarchy = {
+	trigger = {
+		government = monarchy
+		FROM = {
+			has_reform = peasants_republic
+		}
+	}
+}
+
+insult_pirates_1 = {
+	trigger = {
+		FROM = {
+			has_reform = pirate_republic_reform
+		}
+	}
+}
+
+insult_pirates_2 = {
+	trigger = {
+		FROM = {
+			has_reform = pirate_republic_reform
+		}
+	}
+}
+
+insult_pirates_3 = {
+	trigger = {
+		FROM = {
+			has_reform = pirate_republic_reform
+		}
+	}
+}
+
+insult_pirates_4 = {
+	trigger = {
+		FROM = {
+			has_reform = pirate_republic_reform
+		}
+		ruler_has_personality = drunkard_personality
+	}
+}
+
+insult_pirates_5 = {
+	trigger = {
+		FROM = {
+			has_reform = pirate_republic_reform
+		}
+	}
+}
+
+insult_jungle = {
+	trigger = {
+		FROM = {
+			NOT = { num_of_cities = ROOT }
+			NOT = {
+				capital_scope = {
+					OR = {
+						has_terrain = jungle
+						has_terrain = marsh
+					}
+				}
+			}
+		}
+		capital_scope = {
+			OR = {
+				has_terrain = jungle
+				has_terrain = marsh
+			}
+		}
+	}
+}

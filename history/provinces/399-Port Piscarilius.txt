@@ -1,0 +1,29 @@
+#399-Port Piscarilius
+owner = PCL
+controller = PCL
+add_core = PCL
+tribal_owner = ---
+culture = piscarilius
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 7
+base_manpower = 4
+
+fort_15th = yes 
+
+trade_goods = naval_goods
+
+is_city = yes
+
+center_of_trade = 2
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

@@ -1,0 +1,47 @@
+#248 - Sinclair
+owner = SIN
+controller = SIN
+add_core = SIN
+tribal_owner = ---
+culture = catherbian
+religion = saradomin
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 4
+
+fort_15th = yes 
+
+trade_goods = logs
+
+is_city = yes
+
+2062.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}
+
+2132.7.13 = {
+	owner = CML
+	controller = CML
+	add_core = CML
+	remove_core = KDR
+	change_province_name = "Camelot"
+}

@@ -1,0 +1,27 @@
+#125 - Mort'ton
+owner = MRT
+controller = MRT
+add_core = MRT
+tribal_owner = ---
+culture = north_coaster
+religion = saradomin
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 5
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = herblore_supplies
+
+is_city = yes

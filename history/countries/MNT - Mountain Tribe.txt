@@ -1,0 +1,33 @@
+government = tribal
+add_government_reform = migratory_tribe
+government_rank = 1
+primary_culture = mountaintribe
+religion = northern_pantheon
+technology_group = fremenniktechgroup
+capital = 371 #Fjellcamp
+
+1903.11.12 = {
+	monarch = {
+		name = "Rollo"
+		dynasty = "Sigmundson"
+		birth_date = 1890.7.18
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+}
+
+2141.3.7 = {
+	monarch = {
+		name = "Hamal"
+		dynasty = "Wulfgard"
+		birth_date = 2115.18.12
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+2155.3.7 = {
+	add_government_reform = settled_tribe
+}

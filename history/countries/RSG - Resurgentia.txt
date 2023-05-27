@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = loop_culture
+religion = zaros
+technology_group = wushankotechgroup
+capital = 1202 #Bubble of Mists

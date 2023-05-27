@@ -1,0 +1,32 @@
+#Tutorial Island
+owner = YUR
+controller = YUR
+add_core = YUR
+tribal_owner = ---
+culture = yurkolgokh
+religion = bandos
+
+discovered_by = centraltechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+trade_goods = livestock_farm
+
+is_city = yes
+
+2003.9.24 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+	remove_core = YUR
+	change_culture = lummer
+	change_religion = saradomin
+}

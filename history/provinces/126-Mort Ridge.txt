@@ -1,0 +1,26 @@
+#126 - Mort Ridge
+owner = MRT
+controller = MRT
+add_core = MRT
+tribal_owner = ---
+culture = north_coaster
+religion = saradomin
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = basic_ores
+
+is_city = yes

@@ -1,0 +1,5070 @@
+namespace = seren_events
+
+#######################################################
+#######################################################
+#######################################################
+
+# General Events
+
+
+
+
+#######################################################
+#######################################################
+#######################################################
+# Civil War Incident
+
+#Serenists and the Tirannwn Civil War
+country_event = {
+	id = seren_events.100
+	title = seren_events.100.t
+	desc = {
+		trigger = {
+			tag = EVR
+		}
+		desc = seren_events.100.da #A shadow falls upon Tirannwn, as Clan Iorwerth has seized control of Prifddinas for their own unclear ends. The fight back begins now - but we will likely need help. Should we look within our Serenist faith or be willing to risk looking beyond it?
+	}
+	desc = {
+		trigger = {
+			tag = CDA
+		}
+		desc = seren_events.100.db #The Iorwerth Clan has betrayed the rest of Tirannwn and taken Prifddinas! They clearly have dangerous ambitions which we should help put a stop to, and our Lord Baxtorian Cadarn is leading an expedition to do so. But this has left our own lands vulnerable - what should we do about this?
+	}
+	desc = {
+		trigger = {
+			NOT = { tag = EVR }
+			NOT = { tag = CDA }
+		}
+		desc = seren_events.100.dc #The Iorwerth Clan has betrayed the rest of Tirannwn and taken Prifddinas! They clearly have dangerous ambitions which we could help put a stop to, but our people are divided on whether taking such a bold course of action would help or hinder our realm.
+	}
+	
+	picture = SEREN_INCIDENT_CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = seren_events.100.a #We need help - even if the helpers don't follow the will of Seren.
+		trigger = {
+			tag = EVR
+		}
+		
+		custom_tooltip = seren_incident_tirannwn_civil_war.tt
+		custom_tooltip = seren_events.open.tt
+		add_country_modifier = {
+			name = "seren_outside_assistance"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.101
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.100.b #Outsiders would only make things worse.
+		trigger = {
+			tag = EVR
+		}
+		
+		custom_tooltip = seren_incident_tirannwn_civil_war.tt
+		custom_tooltip = seren_events.isolation.tt
+		add_country_modifier = {
+			name = "seren_insular_assistance"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.101
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.100.c #Stay the course and send all the support we can!
+		trigger = {
+			tag = CDA
+		}
+		custom_tooltip = seren_incident_tirannwn_civil_war.tt
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 1
+		}
+		add_opinion = {
+			who = EVR
+			modifier = cda_joined_resistance
+		}
+		EVR = {
+			country_event = {
+				id = flavor_evr.2
+				days = 1
+			}
+		}
+		create_alliance = EVR
+		add_prestige = 50
+		add_yearly_manpower = -0.5
+		GNE = {
+			if = {
+				limit = { alliance_with = CDA }
+				country_event = {
+					id = flavor_gne.17
+					days = 30
+				}
+			}
+		}
+		set_country_flag = CDA_support_tirannwn
+		hidden_effect = {
+			country_event = {
+				id = seren_events.101
+				days = 1095
+			}
+		}
+		ai_chance = {
+			factor = 0.9
+		}
+	}
+	
+	option = {
+		name = seren_events.100.e #The future is on this side of the Galarpos. Recall Baxtorian.
+		trigger = {
+			tag = CDA
+		}
+		custom_tooltip = seren_incident_tirannwn_civil_war.tt
+		custom_tooltip = seren_events.much.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 5
+		}
+	 	add_stability = -1
+		set_country_flag = CDA_return_of_baxtorian
+		define_ruler = {
+			name = "Baxtorian"
+			dynasty = "Cadarn"
+			adm = 3
+			dip = 5
+			mil = 3
+			age = 1929
+			claim = 100
+		}
+		hidden_effect = {
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = charismatic_negotiator_personality
+			add_ruler_personality = inspiring_leader_personality
+			define_consort = {
+				country_of_origin = TNN
+				name = "Glarial"
+				dynasty = "Anterth"
+				age = 2000
+				female = yes
+				adm = 5
+				dip = 6
+				mil = 0
+			}
+			add_queen_personality = immortal_personality
+			add_queen_personality = silver_tongue_personality
+			add_queen_personality = benevolent_personality
+		}
+		add_opinion = {
+			who = EVR
+			modifier = cda_refused_resistance
+		}
+		EVR = {
+			country_event = {
+				id = flavor_evr.3
+				days = 1
+			}
+		}
+		add_country_modifier = {
+			name = "CDA_abandonment_of_the_elves"
+			duration = 7300
+		}
+		add_prestige = -25
+		set_country_flag = CDA_abandoning_tirannwn
+		hidden_effect = {
+			country_event = {
+				id = seren_events.101
+				days = 1095
+			}
+		}
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+	
+	option = {
+		name = seren_events.100.f #We must involve ourselves for the sake of Seren!
+		trigger = {
+			NOT = { tag = EVR }
+			NOT = { tag = CDA }
+		}
+		custom_tooltip = seren_incident_tirannwn_civil_war.tt
+		custom_tooltip = seren_events.open.tt
+		add_yearly_manpower = -0.5
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 1
+		}
+		add_opinion = {
+			who = EVR
+			modifier = cda_joined_resistance
+		}
+		EVR = {
+			country_event = {
+				id = flavor_evr.5
+				days = 1
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.101
+				days = 1095
+			}
+		}
+	}
+
+	option = {
+		name = seren_events.100.g #We cannot get involved so blatantly.
+		trigger = {
+			NOT = { tag = EVR }
+			NOT = { tag = CDA }
+		}
+		custom_tooltip = seren_incident_tirannwn_civil_war.tt
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 3
+		}
+		add_opinion = {
+			who = EVR
+			modifier = cda_refused_resistance
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.101
+				days = 1095
+			}
+		}
+	}	
+}
+
+#The Movement of Elves
+country_event = {
+	id = seren_events.101
+	title = seren_events.101.t
+	desc = seren_events.101.d #Elves are coming to and from the lands held by the Elven Resistance - some seek sanctuary from the war, and some seek to aid the conflict in any way they can. But this could have a destabilising effect on our ability to govern [Root.GetName] - so how should we proceed?
+	picture = SEREN_INCIDENT_CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.101.a #We should support the free movement of elves!
+	custom_tooltip = seren_events.open.tt
+		add_country_modifier = {
+			name = "seren_free_elf_movement"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.102
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.101.b #We need to more tightly control the movement of elves.
+		custom_tooltip = seren_events.isolation.tt
+		add_country_modifier = {
+			name = "seren_closed_elf_movement"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.102
+				days = 1095
+			}
+		}
+	}
+}
+
+#New Trade Routes
+country_event = {
+	id = seren_events.102
+	title = seren_events.102.t
+	desc = seren_events.102.d #The Civil War has broken many of our old trade connections. To ensure a steady flow of gold and goods, some suggest we open up our trade to foreign merchants even if it impairs our ability to regulate it.
+	picture = SEREN_INCIDENT_CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+
+	
+	option = {
+		name = seren_events.102.a #Open the trade routes!
+		custom_tooltip = seren_events.open.tt
+		add_country_modifier = {
+			name = "seren_open_trade"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.103
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.102.b #Our own workers produce enough; we don't need to mess around with trade routes!
+		custom_tooltip = seren_events.isolation.tt
+		add_mercantilism = 1
+		add_country_modifier = {
+			name = "seren_closed_trade"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.103
+				days = 1095
+			}
+		}
+	}
+}
+
+#The Dark Lord Heresy
+country_event = {
+	id = seren_events.103
+	title = seren_events.103.t
+	desc = seren_events.103.d #The fog of war has complicated our efforts to understand Clan Iorwerth's aims. From what we gather, they still claim to be serving Seren while promoting a so-called Dark Lord. Understanding this heresy would help allow us to understand Iorwerth's goals...
+	picture = SEREN_INCIDENT_CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+
+	
+	option = {
+		name = seren_events.103.a #Let us investigate this heresy.
+		custom_tooltip = seren_events.open.tt
+		
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 1
+		}
+		add_country_modifier = {
+			name = "seren_contemplating_the_dark_lord"
+			duration = 3650
+		}
+		add_opinion = {
+			who = IOR
+			modifier = ior_contemplating_the_dark_lord
+		}
+		reverse_add_opinion = {
+			who = IOR
+			modifier = ior_contemplating_the_dark_lord
+		}
+		set_country_flag = end_of_tirannwn_civil_war_chain
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = seren_events.103.b #We can work with other faiths, but the Dark Lord is a step too far!
+		custom_tooltip = seren_events.middle_way.tt
+				
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 2
+		}
+		add_country_modifier = {
+			name = "seren_anything_but_the_dark_lord"
+			duration = 3650
+		}
+		set_country_flag = end_of_tirannwn_civil_war_chain
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = seren_events.103.c #The path of Seren is the only path worth following.
+		custom_tooltip = seren_events.isolation.tt
+				
+		add_incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 4
+		}
+		add_country_modifier = {
+			name = "seren_only_seren_guides_us"
+			duration = 3650
+		}
+		set_country_flag = end_of_tirannwn_civil_war_chain
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+# RESULT: Open Realm
+country_event = {
+	id = seren_events.104
+	title = seren_events.104.t
+	desc = seren_events.104.d
+	picture = SEREN_INCIDENT_CIVIL_WAR_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_tirannwn_civil_war
+		has_country_flag = end_of_tirannwn_civil_war_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_tirannwn_civil_war
+				value = 8
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	
+	option = {
+		name = "seren_events.104.a" #
+		if = {
+			limit = { NOT = { religion = seren } }
+			add_isolationism = -1
+			end_incident = incident_tirannwn_civil_war
+		}
+		else = {
+			add_isolationism = -1
+			end_incident = incident_tirannwn_civil_war
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Stay put
+country_event = {
+	id = seren_events.105
+	title = seren_events.105.t
+	desc = seren_events.105.d
+	picture = SEREN_INCIDENT_CIVIL_WAR_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_tirannwn_civil_war
+		has_country_flag = end_of_tirannwn_civil_war_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_tirannwn_civil_war
+				value = 11
+			}
+		}
+		incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 8
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.105.a" #A prosperous time lies ahead.
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				end_incident = incident_tirannwn_civil_war
+			}
+			else = {
+				end_incident = incident_tirannwn_civil_war
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Isolation
+country_event = {
+	id = seren_events.106
+	title = seren_events.106.t
+	desc = seren_events.106.d
+	picture = SEREN_INCIDENT_CIVIL_WAR_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_tirannwn_civil_war
+		has_country_flag = end_of_tirannwn_civil_war_chain
+		incident_variable_value = {
+			incident = incident_tirannwn_civil_war
+			value = 11
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.106.a" #
+		
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_tirannwn_civil_war
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_tirannwn_civil_war
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#######################################################
+#######################################################
+#######################################################
+
+# Decline of Clan Elders incident
+
+
+country_event = {
+	id = seren_events.200
+	title = seren_events.200.t #Decline of Clan Elders
+	desc = seren_events.200.d #The Elven Clan Elders have guided Seren's followers for millennia. However, many have begun to take a step back from leadership positions - some fear for their lives from followers of the Dark Lord, while others feel the Civil War is a sign of their failure to lead.
+	
+	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = seren_events.200.a #We should leave our options for leadership open.
+		
+		custom_tooltip = seren_incident_decline_of_clan_elders.tt
+		custom_tooltip = seren_events.open.tt
+		add_country_modifier = {
+			name = "seren_new_leadership"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.201
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.200.b #Tradition serves us best.
+		
+		custom_tooltip = seren_incident_decline_of_clan_elders
+		custom_tooltip = seren_events.isolation.tt
+		add_country_modifier = {
+			name = "seren_traditional_leadership"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.201
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.201
+	title = seren_events.201.t #Codification of Old Teachings
+	desc = seren_events.201.d #Though the world endlessly changes, that does not mean old knowledge is irrelevant. The old teachings of the Elders could be compiled into a document of how best to govern, but might the present be too weighed down by the past?
+	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = seren_events.201.a #It is time to move on from the old ways.
+		custom_tooltip = seren_events.much.openness.tt
+		
+		hidden_effect = {
+			country_event = {
+				id = seren_events.202
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.201.b #We should limit ourselves to an oral, not written, tradition.
+		custom_tooltip = seren_events.middle_way.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.202
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.201.c #Let us codify the old teachings.
+		custom_tooltip = seren_events.isolation.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.202
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.201.e #Let us codify, and strongly adhere to, the old teachings.
+		custom_tooltip = seren_events.much.isolation.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 4
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.202
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.202
+	title = seren_events.202.t #Reassuring the Public
+	desc = seren_events.202.d #Without the Elders to directly guide them, the public need reassurance in [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s rule. How should this be achieved?
+	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = seren_events.202.a #We shall find new guidance among the best of all peoples!
+		custom_tooltip = seren_events.much.openness.tt
+		add_country_modifier = {
+			name = "seren_guidance_of_the_world"
+			duration = 7300
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.203
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.202.b #Our [Root.Monarch.GetTitle] embodies the nation!
+		custom_tooltip = seren_events.middle_way.tt
+		trigger = {
+			OR = {
+				government = monarchy
+				government = tribal
+				government = native
+			}
+		}
+		add_legitimacy = 20
+		add_horde_unity = 20
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.203
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.202.c #The potential for anyone to rule shall inspire the people!
+		custom_tooltip = seren_events.middle_way.tt
+		
+		trigger = {
+			NOT = { government = monarchy }
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+		add_republican_tradition = 10
+		add_devotion = 20
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.203
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.202.d #Our faith in Seren shall keep us safe from all uncertainties.
+		custom_tooltip = seren_events.isolation.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 3
+		}
+		add_country_modifier = {
+			name = "seren_faith_and_stability"
+			duration = 7300
+		}
+		
+		hidden_effect = {
+			country_event = {
+				id = seren_events.203
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.203
+	title = seren_events.203.t #The Forgotten Families
+	desc = seren_events.203.d #Elven clans are named for their most powerful families. Lesser families within these clans are frequently sidelined, yet with the decline of the old Clan Elders, they may have an opportunity for more prominent leadership positions.
+	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = seren_events.203.a #We should ensure more equal standing for all.
+		custom_tooltip = seren_events.open.tt
+		add_stability = 1
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.204
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.203.b #Who even are these people?
+		custom_tooltip = seren_events.isolation.tt
+		add_country_modifier = {
+			name = "seren_clan_nepotism"
+			duration = 3650
+		}
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.204
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.204
+	title = seren_events.204.t #Order of Succession
+	
+	desc = {
+		trigger = {
+			OR = {
+				government = monarchy
+				government = tribal
+				government = native
+			}
+		}
+		desc = seren_events.204.da #A final, but most crucial question of governance without the Clan Elders has emerged - should our structure of governance itself change?
+	}
+	desc = {
+		trigger = {
+			NOT = { government = monarchy }
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+		desc = seren_events.204.db #A final, but most crucial question of governance without the Clan Elders has emerged - is it time to reexamine our leadership?
+	}
+
+	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = seren_events.204.a #It is clear that our system of inheritance has failed. Let us become a republic!
+		trigger = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+		}
+		add_stability = -2
+		change_government = political_dynasties
+		
+		custom_tooltip = seren_events.open.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 1
+		}
+		set_country_flag = end_of_decline_of_clan_elders_chain
+	}
+	option = {
+		name = seren_events.204.b #It is clear that our system of inheritance has failed. Let us reform!
+		trigger = {
+			government = native
+		}
+		add_stability = -1
+		change_government_reform_progress = 250
+		
+		custom_tooltip = seren_events.open.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 1
+		}
+		set_country_flag = end_of_decline_of_clan_elders_chain
+	}
+	option = {
+		name = seren_events.204.c #We could go for some slight reform.
+		trigger = {
+			OR = {
+				government = monarchy
+				government = tribal
+				government = native
+			}
+		}
+		change_government_reform_progress = 50
+		custom_tooltip = seren_events.middle_way.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 2
+		}
+		set_country_flag = end_of_decline_of_clan_elders_chain
+	}
+	option = {
+		name = seren_events.204.e #[Root.Monarch.GetTitle] [Root.Monarch.GetName]'s position is the surest sign of stability! No reform!
+		trigger = {
+			OR = {
+				government = monarchy
+				government = tribal
+				government = native
+			}
+		}
+		custom_tooltip = seren_events.isolation.tt
+		add_legitimacy = 10
+		add_horde_unity = 10
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 3
+		}
+		set_country_flag = end_of_decline_of_clan_elders_chain
+	}
+	
+	
+	option = {
+		name = seren_events.204.f #It is an excellent time for reform.
+		trigger = {
+			NOT = { government = monarchy }
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+		change_government_reform_progress = 50
+		
+		custom_tooltip = seren_events.open.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 1
+		}
+		set_country_flag = end_of_decline_of_clan_elders_chain
+	}
+	option = {
+		name = seren_events.204.g #Let us stay our present course.
+		trigger = {
+			NOT = { government = monarchy }
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+		add_prestige = 25
+		
+		custom_tooltip = seren_events.middle_way.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 2
+		}
+		set_country_flag = end_of_decline_of_clan_elders_chain
+	}
+	option = {
+		name = seren_events.204.h #Clearly questioning our rule means we're not strict enough!
+		trigger = {
+			NOT = { government = monarchy }
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+		add_dip_power = -25
+		add_country_modifier = {
+			name = "seren_harsher_leadership"
+			duration = 7300
+		}
+		
+		custom_tooltip = seren_events.isolation.tt
+		
+		add_incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 3
+		}
+		set_country_flag = end_of_decline_of_clan_elders_chain
+	}
+}
+
+
+# RESULT: Open Realm
+country_event = {
+	id = seren_events.205
+	title = seren_events.205.t
+	desc = seren_events.205.d
+	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_decline_of_clan_elders
+		has_country_flag = end_of_decline_of_clan_elders_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_decline_of_clan_elders
+				value = 8
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	
+	option = {
+		name = "seren_events.205.a" #
+		if = {
+			limit = { NOT = { religion = seren } }
+			add_isolationism = -1
+			end_incident = incident_decline_of_clan_elders
+		}
+		else = {
+			add_isolationism = -1
+			end_incident = incident_decline_of_clan_elders
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Stay put
+country_event = {
+	id = seren_events.105
+	title = seren_events.105.t
+	desc = seren_events.105.d
+	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_decline_of_clan_elders
+		has_country_flag = end_of_decline_of_clan_elders_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_decline_of_clan_elders
+				value = 13
+			}
+		}
+		incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 8
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.105.a" #A prosperous time lies ahead.
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				end_incident = incident_decline_of_clan_elders
+			}
+			else = {
+				end_incident = incident_decline_of_clan_elders
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#RESULT: Isolation
+country_event = {
+	id = seren_events.106
+	title = seren_events.106.t
+	desc = seren_events.106.d
+	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_decline_of_clan_elders
+		has_country_flag = end_of_decline_of_clan_elders_chain
+		incident_variable_value = {
+			incident = incident_decline_of_clan_elders
+			value = 13
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.106.a" #
+		
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_decline_of_clan_elders
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_decline_of_clan_elders
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#######################################################
+#######################################################
+#######################################################
+
+# Runecrafters incident
+
+country_event = {
+	id = seren_events.300
+	title = seren_events.300.t #The Rise of Runecrafting
+	desc = seren_events.300.d #Human realms have started to embrace the long-lost art of Runecrafting - where blank runes are imbued with energy creating fresh supplies of runestones. With it, more humans than ever are capable of using magic - but could this be a threat to the largely elven worshippers of Seren?
+	
+	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = seren_events.300.a #Runecrafting is the future!
+		
+		custom_tooltip = seren_incident_runecrafters.tt
+		custom_tooltip = seren_events.open.tt
+		if = {
+			limit = {
+				NOT = { exists = GUN }
+				NOT = { has_global_flag = GUN_end_of_crusades_flag }
+			}
+			hidden_effect = {
+				change_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 3
+				}
+			}
+			custom_tooltip = seren_crusader_vulnerability_plus3_tooltip
+		}
+		add_country_modifier = {
+			name = "seren_expansion_of_runecrafting"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_runecrafters
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+					id = seren_events.301
+					days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.300.b #We can use magic perfectly fine without wasting resources on this craft.
+		
+		custom_tooltip = seren_incident_runecrafters.tt
+		custom_tooltip = seren_events.isolation.tt
+		if = {
+			limit = {
+				NOT = { exists = GUN }
+				NOT = { has_global_flag = GUN_end_of_crusades_flag }
+			}
+			hidden_effect = {
+				change_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = -1
+				}
+			}
+			custom_tooltip = seren_crusader_vulnerability_minus1_tooltip
+		}
+		add_country_modifier = {
+			name = "seren_traditional_magics"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_runecrafters
+			value = 4
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.301
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.301
+	title = seren_events.301.t #Rune Essence
+	desc = seren_events.301.d #Discovered far to the north, Rune Essence is a kind of rock particularly receptive to runic energies. However, elves have had something similar - albeit less versatile - in the form of tephra.
+	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = seren_events.301.a #Clearly the humans are onto something great.
+		custom_tooltip = seren_events.much.openness.tt
+		if = {
+			limit = {
+				NOT = { exists = GUN }
+				NOT = { has_global_flag = GUN_end_of_crusades_flag }
+			}
+			hidden_effect = {
+				change_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 2
+				}
+			}
+			custom_tooltip = seren_crusader_vulnerability_plus2_tooltip
+		}
+		capital_scope = {
+			add_institution_embracement = {
+				which = runecrafting
+				value = 50
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { exists = GUN }
+					NOT = { has_global_flag = GUN_end_of_crusades_flag }
+				}
+				country_event = {
+					id = seren_events.302
+					days = 60
+				}
+			}
+			else = {
+				country_event = {
+					id = seren_events.303
+					days = 1095
+				}
+			}
+		}
+	}
+	option = {
+		name = seren_events.301.b #What if we tried to combine the two?
+		custom_tooltip = seren_events.open.tt
+		change_innovativeness = 1
+		add_incident_variable_value = {
+			incident = incident_runecrafters
+			value = 1
+		}
+		if = {
+			limit = {
+				NOT = { exists = GUN }
+				NOT = { has_global_flag = GUN_end_of_crusades_flag }
+			}
+			hidden_effect = {
+				change_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 3
+				}
+			}
+			custom_tooltip = seren_crusader_vulnerability_plus3_tooltip
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { exists = GUN }
+					NOT = { has_global_flag = GUN_end_of_crusades_flag }
+				}
+				country_event = {
+					id = seren_events.302
+					days = 60
+				}
+			}
+			else = {
+				country_event = {
+					id = seren_events.303
+					days = 1095
+				}
+			}
+		}
+	}
+	option = {
+		name = seren_events.301.c #Rune Essence surely can't do anything tephra cannot.
+		custom_tooltip = seren_events.isolation.tt
+		custom_tooltip = seren_crusader_vulnerability_plus3_tooltip
+		add_army_tradition = 5
+		
+		if = {
+			limit = {
+				NOT = { exists = GUN }
+				NOT = { has_global_flag = GUN_end_of_crusades_flag }
+			}
+			hidden_effect = {
+				change_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = -2
+				}
+			}
+			custom_tooltip = seren_crusader_vulnerability_minus2_tooltip
+		}
+		
+		add_incident_variable_value = {
+			incident = incident_runecrafters
+			value = 4
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { exists = GUN }
+					NOT = { has_global_flag = GUN_end_of_crusades_flag }
+				}
+				country_event = {
+					id = seren_events.302
+					days = 60
+				}
+			}
+			else = {
+				country_event = {
+					id = seren_events.303
+					days = 1095
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.302
+	title = seren_events.302.t #The Crusaders
+	desc = seren_events.302.d #The runecrafters of the human realms are not without enemies. A group of humans known as the Fremennik have a large anti-runecrafting faction which is gaining support to destroy the runecrafting altars.
+	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = seren_events.302.a #We should intervene to protect the runecrafters!
+		custom_tooltip = seren_events.much.openness.tt
+		custom_tooltip = seren_crusader_vulnerability_plus3_tooltip
+		every_country = {
+			limit = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 3
+				}
+			}
+			add_opinion = {
+				who = PREV
+				modifier = seren_words_of_runecrafter_support
+			}
+		}
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = 3
+			}
+			country_event = {
+				id = seren_events.303
+				days = 1095
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				capital_scope = {
+					region = kandarin_region
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = EVR
+			}
+		}
+	}
+	option = {
+		name = seren_events.302.b #We should intervene to help hold back runecrafting!
+		custom_tooltip = seren_events.much.openness.tt
+		custom_tooltip = seren_crusader_vulnerability_minus3_tooltip
+		every_country = {
+			limit = {
+				check_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 3
+				}
+			}
+			add_opinion = {
+				who = PREV
+				modifier = seren_words_of_runecrafter_oppose
+			}
+		}
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -3
+			}
+			country_event = {
+				id = seren_events.303
+				days = 1095
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				capital_scope = {
+					region = kandarin_region
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = EVR
+			}
+		}
+	}
+	option = {
+		name = seren_events.302.c #This isn't our fight.
+		custom_tooltip = seren_events.much.isolation.tt
+		hidden_effect = {
+			add_incident_variable_value = {
+				incident = incident_runecrafters
+				value = 6
+			}
+			country_event = {
+				id = seren_events.303
+				days = 1095
+			}
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 10
+				tag = EVR
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.303
+	title = seren_events.303.t #Secrets of the Death Altar
+	desc = { #Owned by your nation
+		trigger = {
+			owns_core_province = 538
+		}
+		desc = "seren_events.303.da" #Runes may only be created at sites of great runic power - and we possess one of the most powerful at the Temple of Light. Collaboration with runecrafters could be a great boon for our magical abilities, but also give the world information on that province we may prefer they don't have.
+	}
+	desc = { #Occupied during the Civil War, but not by a Civil War enemy
+		trigger = {
+			538 = {
+				NOT = {
+					is_empty = yes
+					owned_by = ROOT
+					owned_by = IBN
+					owned_by = TPS
+					owned_by = IOR
+					owned_by = MWL
+				}
+			}
+			any_country = {
+				religion = dark_lord
+			}
+		}
+		desc = "seren_events.303.db" #Hidden in the Galarpos Mountains is the powerful Death Altar, one of Gielinor's greatest concentrations of runic energy. Due to its power we cannot afford to let the enemies of Seren take it, but unfortunately it has fallen into a third party. Perhaps we should seek outside assistance in handling this situation?
+	}
+	desc = { #Occupied by a Civil War enemy
+		trigger = {
+			538 = {
+				OR = {
+					owned_by = IBN
+					owned_by = TPS
+					AND = {
+						owned_by = IOR
+						IOR = {
+							religion = dark_lord
+						}
+					}
+					owned_by = MWL
+				}
+			}
+		}
+		desc = "seren_events.303.dc" #Runic power comes in many forms - few more powerful than the Death Altar under the Galarpos Mountains. But now, the altar has fallen to the enemies of Seren - should we get outside help to take it back?
+	}
+	desc = { #Occupied not during the Civil War by another country
+		trigger = {
+			538 = {
+				NOT = {
+					is_empty = yes
+					owned_by = ROOT
+					owned_by = IBN
+					owned_by = TPS
+					owned_by = IOR
+					owned_by = MWL
+				}
+			}
+			NOT = {
+				any_country = {
+					religion = dark_lord
+				}
+			}
+		}
+		desc = "seren_events.303.de" #Runic power comes in many forms - few more powerful than the Death Altar under the Galarpos Mountains. This is perhaps why another nation has taken control of the Temple of Light. How should we respond to this?
+	}
+	desc = { #Empty, not during the Civil War
+		trigger = {
+			538 = {
+				is_empty = yes
+			}
+			NOT = {
+				any_country = {
+					religion = dark_lord
+				}
+			}
+		}
+		desc = "seren_events.303.df" #Hidden away under the Galarpos Mountains is the Temple of Light, home to the Death Runecrafting Altar. For the time being it is under no-one's control so no-one can abuse its power, though we could consider how we could learn more about it with the involvement of outside powers.
+	}
+	desc = { #Empty, during the civil war
+		trigger = {
+			538 = {
+				is_empty = yes
+			}
+			any_country = {
+				religion = dark_lord
+			}
+		}
+		desc = "seren_events.303.dg" #Hidden away under the Galarpos Mountains is the Temple of Light, home to the Death Runecrafting Altar. We cannot let the enemies of Seren get hold of this power - but perhaps by working with a third party we can reinforce its safeguards?
+	}
+
+	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = seren_events.303.a #Let us invite runecrafters to share their expertise on the Death Altar!
+		trigger = {
+			owns_core_province = 538
+		}
+		if = {
+			limit = {
+				NOT = { exists = GUN }
+				NOT = { has_global_flag = GUN_end_of_crusades_flag }
+			}
+			hidden_effect = {
+				change_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 3
+				}
+			}
+			custom_tooltip = seren_crusader_vulnerability_plus3_tooltip
+		}
+		add_dip_power = 25
+		538 = {
+			add_province_modifier = {
+				name = seren_syncretic_runecrafting_expertise
+				duration = 9125
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					capital_scope = {
+						OR = {
+							region = tirannwn_region
+							region = kandarin_region
+						}
+					}
+				}
+				538 = {
+					discover_country = PREV
+				}
+			}
+		}
+		custom_tooltip = seren_give_away_temple_position.tt
+		custom_tooltip = seren_events.much.openness.tt
+		
+		set_country_flag = end_of_runecrafters_chain
+	}
+	option = {
+		name = seren_events.303.b #Share the secret of the Death Altar to help reinforce its protections.
+		trigger = {
+			538 = {
+				OR = {
+					is_empty = yes
+					owned_by = ROOT
+				}			
+			}
+		}
+		add_mil_power = 25
+		538 = {
+			add_province_modifier = {
+				name = seren_double_reinforcement
+				duration = 9125
+			}
+		}
+		custom_tooltip = seren_events.much.openness.tt
+		if = {
+			limit = {
+				NOT = { exists = GUN }
+				NOT = { has_global_flag = GUN_end_of_crusades_flag }
+			}
+			hidden_effect = {
+				change_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = 3
+				}
+			}
+			custom_tooltip = seren_crusader_vulnerability_plus3_tooltip
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					capital_scope = {
+						OR = {
+							region = tirannwn_region
+							region = kandarin_region
+						}
+					}
+				}
+				538 = {
+					discover_country = PREV
+				}
+			}
+		}
+		custom_tooltip = seren_give_away_temple_position.tt
+		custom_tooltip = seren_events.much.openness.tt
+		
+		set_country_flag = end_of_runecrafters_chain
+	}
+	option = {
+		name = seren_events.303.c #Exposing the altar's location would help us to capture it!
+		trigger = {
+			538 = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_empty = yes }
+			}
+		}
+		add_mil_power = 50
+		538 = {
+			owner = {
+				add_opinion = {
+					who = PREV
+					modifier = seren_gave_away_temple_of_light_position
+				}
+			}
+		}
+		hidden_effect = {
+			add_incident_variable_value = {
+				incident = incident_runecrafters
+				value = 2
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						OR = {
+							region = tirannwn_region
+							region = kandarin_region
+						}
+					}
+				}
+				538 = {
+					discover_country = PREV
+				}
+			}
+		}
+		custom_tooltip = seren_events.open.tt
+		custom_tooltip = seren_give_away_temple_position.tt
+		set_country_flag = end_of_runecrafters_chain
+	}
+	
+	option = {
+		name = seren_events.303.e #The Death Altar poses a threat to Tirannwn - we need help to get it destroyed!
+		custom_tooltip = seren_events.middle_way.tt
+		trigger = {
+			538 = { is_empty = yes }
+			any_country = {
+				religion = dark_lord
+			}
+			NOT = { has_global_flag = GUN_end_of_crusades_flag }
+		}
+		if = {
+			limit = {
+				exists = GUN
+			}
+			GUN = {
+				country_event = { 
+					id = flavor_gun.5
+					days = 1
+				}
+			}
+			custom_tooltip = seren_request_gunnars_help_tooltip
+			set_country_flag = seren_request_gunnars_help_flag
+		}
+		else = {
+			set_global_flag = seren_bounty_for_death_altar_flag
+			custom_tooltip = seren_bounty_for_death_altar_tooltip
+		}
+		hidden_effect = {
+			change_variable = {
+				which = CrusaderVulnerabilityVariable
+				value = -3
+			}
+		}
+		custom_tooltip = seren_crusader_vulnerability_minus3_tooltip
+		hidden_effect = {
+			add_incident_variable_value = {
+				incident = incident_runecrafters
+				value = 3
+			}
+		}
+		set_country_flag = end_of_runecrafters_chain
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = seren_events.303.f #We should keep the secret.
+		custom_tooltip = seren_events.isolation.tt
+		hidden_effect = {
+			add_incident_variable_value = {
+				incident = incident_runecrafters
+				value = 4
+			}
+		}
+		set_country_flag = end_of_runecrafters_chain
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 10
+				tag = EVR
+			}
+		}
+	}
+}
+
+
+#The Gunnite Expedition
+country_event = {
+	id = seren_events.304
+	title = seren_events.304.t
+	desc = seren_events.304.d #The Runecrafting Crusaders have agreed to send an expedition to the Death Altar in order to destroy it. Hopefully they will not be sidetracked along the way...
+	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = seren_events.304.a #It was a necessary decision.
+	}
+}
+
+#The Gunnites Refuse!
+country_event = {
+	id = seren_events.305
+	title = seren_events.305.t
+	desc = seren_events.305.d #The Runecrafting Crusaders declined to lead an expedition to destroy the Death Altar!
+	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = seren_events.305.a #It was probably a long shot.
+	}
+}
+
+#Corruption of the Death Altar Expedition
+country_event = {
+	id = seren_events.306
+	title = seren_events.306.t
+	desc = {
+		trigger = {
+			religion = seren
+		}
+		desc = seren_events.306.da #An expedition of Fremennik entered the Underground Pass in an attempt to find and destroy the Death Altar. However, forces of the Dark Lord seem to have corrupted them instead!
+	}
+	desc = {
+		trigger = {
+			religion = dark_lord
+		}
+		desc = seren_events.306.db #Some filthy Fremennik thought they could march right in to the Temple of Light! Fools! They serve the Dark Lord now.
+	}
+	picture = IBAN_LAIR_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = seren_events.306.a #Why did anyone think sending barbarians down there was a good idea?
+		trigger = {
+			religion = seren
+		}
+	}
+	option = {
+		name = seren_events.306.b #We truly have followed the most powerful aspect of Seren.
+		trigger = {
+			religion = dark_lord
+		}
+	}
+}
+
+#Devastation of the Death Altar
+country_event = {
+	id = seren_events.307
+	title = seren_events.307.t
+	desc = {
+		trigger = {
+			religion = seren
+		}
+		desc = seren_events.307.da #An expedition of Fremennik entered the Underground Pass in an attempt to find and destroy the Death Altar - and they've devastated it to the best of their ability.
+	}
+	desc = {
+		trigger = {
+			religion = dark_lord
+		}
+		desc = seren_events.307.db #Some filthy Fremennik thought they could march right in to the Temple of Light and devastate the Death Altar! Reviving the Dark Lord is going to be much harder now.
+	}
+	picture = IBAN_LAIR_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = seren_events.307.a #Like it or not, that was an impressive feat.
+		trigger = {
+			religion = seren
+		}
+	}
+	option = {
+		name = seren_events.307.b #Curses!
+		trigger = {
+			religion = dark_lord
+		}
+	}
+}
+
+#RESULT: Open
+country_event = {
+	id = seren_events.308
+	title = seren_events.308.t
+	desc = seren_events.308.d
+	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_runecrafters
+		has_country_flag = end_of_runecrafters_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_runecrafters
+				value = 7
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	
+	option = {
+		name = "seren_events.308.a" #
+		if = {
+			limit = { NOT = { religion = seren } }
+			add_isolationism = -1
+			end_incident = incident_runecrafters
+		}
+		else = {
+			add_isolationism = -1
+			end_incident = incident_runecrafters
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Stay put
+country_event = {
+	id = seren_events.309
+	title = seren_events.309.t
+	desc = seren_events.309.d
+	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_runecrafter
+		has_country_flag = end_of_runecrafters_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_runecrafters
+				value = 11
+			}
+		}
+		incident_variable_value = {
+			incident = incident_runecrafters
+			value = 7
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.309.a" #A prosperous time lies ahead.
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				end_incident = incident_runecrafters
+			}
+			else = {
+				end_incident = incident_runecrafters
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+RESULT: Isolation
+country_event = {
+	id = seren_events.310
+	title = seren_events.310.t
+	desc = seren_events.310.d
+	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_runecrafters
+		has_country_flag = end_of_runecrafters_chain
+		incident_variable_value = {
+			incident = incident_runecrafters
+			value = 11
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.310.a" #
+		
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_runecrafters
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_runecrafters
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#######################################################
+#######################################################
+#######################################################
+
+# Kandarin Relations incident
+
+country_event = {
+	id = seren_events.400
+	title = seren_events.400.t #Kandarin Relations
+	desc = seren_events.400.d #Throughout much of the Fourth Age, humans largely lived in small clans. Times change, however, and the rise of larger and larger human nation-states are a cause for concern for many among the largely elven following of Seren.
+	
+	picture = SEREN_INCIDENT_HUMAN_NATIONHOOD_eventPicture
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = seren_events.400.a #We should celebrate this development!
+		
+		custom_tooltip = seren_incident_kandarin_relations.tt
+		custom_tooltip = seren_events.open.tt
+		
+		add_country_modifier = {
+			name = "seren_age_of_collaboration"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.401
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.400.b #We need to stop this development!
+		
+		custom_tooltip = seren_incident_kandarin_relations.tt
+		custom_tooltip = seren_events.open.tt
+		
+		add_country_modifier = {
+			name = "seren_age_of_competition"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.401
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.400.c #We don't care.
+		custom_tooltip = seren_incident_kandarin_relations.tt
+		custom_tooltip = seren_events.isolation.tt
+		
+		add_country_modifier = {
+			name = "seren_age_of_isolation"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.401
+				days = 1095
+			}
+		}
+	}
+}
+
+#Border Security
+country_event = {
+	id = seren_events.401
+	title = seren_events.401.t
+	desc = seren_events.401.d #With humans spreading throughout Kandarin and beyond, their new settlements have been built without heed to existing borders. Some among the [Root.GetAdjective] people are concerned that soon these human settlements will push back our territory.
+	picture = SEREN_INCIDENT_HUMAN_NATIONHOOD_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.401.a #Humans come and go. Seren is eternal.
+		custom_tooltip = seren_events.open.tt
+		add_dip_power = 10
+		add_country_modifier = {
+			name = "seren_open_border_policy"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.402
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.401.b #We need a more active policy to stop these border incursions.
+		custom_tooltip = seren_events.middle_way.tt
+		add_mil_power = 10
+		trigger = {
+			any_neighbor_country = {
+				capital_scope = {
+					region = kandarin_region
+				}
+			}
+		}
+		every_neighbor_country = {
+			limit = {
+				capital_scope = {
+					region = kandarin_region
+				}
+			}
+			add_casus_belli = {
+				target = PREV
+				type = cb_border_war
+				months = 12
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.402
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.401.c #We need to close our borders.
+		custom_tooltip = seren_events.isolation.tt
+		add_adm_power = 10
+		add_country_modifier = {
+			name = "seren_closed_border_policy"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 4
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.402
+				days = 1095
+			}
+		}
+	}
+}
+
+
+#The Saradominists
+country_event = {
+	id = seren_events.402
+	title = seren_events.402.t
+	desc = {
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					region = kandarin_region
+					religion = saradomin
+				}
+				amount = 20
+			}
+		}
+		desc = seren_events.402.da #Followers of Saradomin, the God of Order, provided useful aid for the Elves during the God Wars. Their descendants have now established a strong presence in Kandarin and are looking to proselytise further. How should we handle them?
+	}
+	desc = {
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					region = kandarin_region
+					religion = saradomin
+				}
+				amount = 5
+			}
+			NOT = {
+				calc_true_if = {
+					all_province = {
+						region = kandarin_region
+						religion = saradomin
+					}
+					amount = 20
+				}
+			}
+		}
+		desc = seren_events.402.db #Followers of Saradomin, the God of Order, provided useful aid for the Elves during the God Wars. Their descendants have now established a moderate presence in Kandarin, and they could make decent allies. How should we handle them?
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				calc_true_if = {
+					all_province = {
+						region = kandarin_region
+						religion = saradomin
+					}
+					amount = 5
+				}
+			}
+		}
+		desc = seren_events.402.dc #Followers of Saradomin, the God of Order, provided useful aid for the Elves during the God Wars. Their descendants in Kandarin however show little of the promise their ancestors once had. How should we handle them?
+	}
+	picture = SEREN_INCIDENT_HUMAN_NATIONHOOD_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.402.a #We could improve relations by accepting a limited number of Saradominist proselytisers.
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					region = kandarin_region
+					religion = saradomin
+				}
+				amount = 5
+			}
+		}
+		custom_tooltip = seren_events.open.tt
+		random_owned_province = {
+			limit = {
+				NOT = { religion = saradomin }
+			}
+			change_religion = saradomin
+		}
+		every_country = {
+			limit = {
+				religion = saradomin
+				capital_scope = {
+					region = kandarin_region
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = seren_accepted_saradominist_preachers
+			}
+		}
+		
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 1
+		}
+		set_country_flag = end_of_kandarin_relations_chain
+	}
+	option = {
+		name = seren_events.402.b #We could repay the Saradominists' ancestors by taking their descendants in as refugees.
+		trigger = {
+			any_owned_province = {
+				NOT = { development = 20 }
+				NOT = { religion = saradomin }
+			}
+			NOT = {
+				any_country = {
+					capital_scope = {
+						region = kandarin_region
+					}
+					religion = saradomin
+				}
+			}
+		}
+		custom_tooltip = seren_events.open.tt
+		random_owned_province = {
+			limit = {
+				NOT = { development = 20 }
+				NOT = { religion = saradomin }
+			}
+			change_culture = ardignan
+			change_religion = saradomin
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 1
+		}
+		set_country_flag = end_of_kandarin_relations_chain
+	}
+	option = {
+		name = seren_events.402.c #We could implement favourable policies for Saradominists compared to other religions.
+		
+		custom_tooltip = seren_events.middle_way.tt
+		
+		every_country = {
+			limit = {
+				religion = saradomin
+				capital_scope = {
+					region = kandarin_region
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = seren_saradominist_favouritism
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.403
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.402.e #What their ancestors did is meaningless to us now.
+		custom_tooltip = seren_events.isolation.tt
+		
+		add_incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 3
+		}
+		set_country_flag = end_of_kandarin_relations_chain
+	}
+}
+
+#RESULT: Open
+country_event = {
+	id = seren_events.403
+	title = seren_events.403.t
+	desc = seren_events.403.d
+	picture = SEREN_INCIDENT_HUMAN_NATIONHOOD_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_kandarin_relations
+		has_country_flag = end_of_kandarin_relations_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_kandarin_relations
+				value = 5
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	
+	option = {
+		name = "seren_events.403.a" #
+		if = {
+			limit = { NOT = { religion = seren } }
+			add_isolationism = -1
+			end_incident = incident_kandarin_relations
+		}
+		else = {
+			add_isolationism = -1
+			end_incident = incident_kandarin_relations
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Stay put
+country_event = {
+	id = seren_events.404
+	title = seren_events.404.t
+	desc = seren_events.404.d
+	picture = SEREN_INCIDENT_HUMAN_NATIONHOOD_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_kandarin_relations
+		has_country_flag = end_of_kandarin_relations_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_kandarin_relations
+				value = 7
+			}
+		}
+		incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 5
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.404.a" #A prosperous time lies ahead.
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				end_incident = incident_kandarin_relations
+			}
+			else = {
+				end_incident = incident_kandarin_relations
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Isolation
+country_event = {
+	id = seren_events.405
+	title = seren_events.405.t
+	desc = seren_events.405.d
+	picture = SEREN_INCIDENT_HUMAN_NATIONHOOD_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_kandarin_relations
+		has_country_flag = end_of_kandarin_relations_chain
+		incident_variable_value = {
+			incident = incident_kandarin_relations
+			value = 7
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.405.a" #
+		
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_kandarin_relations
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_kandarin_relations
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#######################################################
+#######################################################
+#######################################################
+
+# Zean Diplomacy incident
+
+country_event = {
+	id = seren_events.500
+	title = seren_events.500.t #Zean Diplomacy
+	desc = seren_events.500.d #Across the Crystal Ocean come travellers from a strange land of lizards and colossal trees they call Zeah. Apparently they have inhabited this landmass since the God Wars, and are now looking for new opportunities for diplomacy and trade.
+	
+	picture = SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.500.a #Let us accept these new traders with open arms!
+		
+		custom_tooltip = seren_incident_zean_diplomacy.tt
+		custom_tooltip = seren_events.open.tt
+		add_country_modifier = {
+			name = "seren_zean_traders"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+					id = seren_events.501
+					days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.500.b #Great. Now not even the western sea is safe.
+		custom_tooltip = seren_incident_zean_diplomacy.tt
+		custom_tooltip = seren_events.isolation.tt
+		add_country_modifier = {
+			name = "seren_zean_caution"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.501
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.501
+	title = seren_events.501.t #Shipbuilders of the Western Continent
+	desc = seren_events.501.d #If we are to keep ourselves safe from potential Zean threats, it may be necessary to draw on their naval expertise. The cities of Piscarilius and Civitas illa Fortis in particular have an established shipbuilding tradition - perhaps we could seek their assistance?
+	picture = SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.501.a #Let us hire some of their shipbuilders.
+		trigger = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		custom_tooltip = seren_events.open.tt
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = "seren_zean_shipbuilding_methods"
+			duration = 7300
+		}
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.502
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.501.b #Naval defences?! What are you talking about? We don't have a port!
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+				}
+			}
+		}
+		custom_tooltip = seren_events.middle_way.tt
+		add_prestige = -5
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.502
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.501.c #We don't need help from some young upstarts!
+		trigger = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		custom_tooltip = seren_events.isolation.tt
+		add_prestige = 25
+		
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.502
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.502
+	title = seren_events.502.t #Light of Varlamore
+	desc = {
+		trigger = {
+			exists = VAR
+			VAR = {
+				OR = {
+					religion = ralos
+					religion = ranul
+				}
+			}
+		}
+		desc = seren_events.502.da #Travellers from Zeah speak of the land of Varlamore, home of bards, guards and a very curious religious practice. They speak of a god named Ralos, associated with the sun. But is not Seren the aspect of light? Should we investigate?
+	}
+	desc = {
+		trigger = {
+			exists = VAR
+			VAR = {
+				NOT = { religion = ralos }
+				NOT = { religion = ranul }
+			}
+		}
+		desc = seren_events.502.db #Travellers from Zeah speak of the land of Varlamore, home of bards, guards and a recently-defunct religious practice of following a sun god known as Ralos. But is not Seren the aspect of light? Should we investigate?
+	}
+	desc = {
+		trigger = {
+			NOT = { exists = VAR }
+		}
+		desc = seren_events.502.dc #Travellers from Zeah speak of the ruins of a kingdom known as Varlamore, which followed a sun god known as Ralos. But is not Seren the aspect of light? Should we investigate?
+	}
+	
+	picture = SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.502.a #We should seek an audience with Varlamore to learn more about Ralos.
+		trigger = {
+			exists = VAR
+		}
+		custom_tooltip = seren_events.open.tt
+
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 1
+		}
+		VAR = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = VAR_elven_contact }
+				}
+				country_event = {
+					id = flavor_var.3
+					days = 1
+				}
+			}
+		}
+		set_country_flag = seren_ralos_investigations_flag
+		hidden_effect = {
+			country_event = {
+				id = seren_events.503
+				days = 30
+			}
+			country_event = {
+				id = seren_events.505
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.502.b #We should investigate the Varlamorean region to learn more about Ralos.
+		trigger = {
+			NOT = { exists = VAR }
+		}
+		custom_tooltip = seren_events.open.tt
+
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.504
+				days = 30
+			}
+			country_event = {
+				id = seren_events.505
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.502.c #Come now! The desert sun god Tumeken isn't Seren, neither is whatever Ralos is!
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.505
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.503
+	title = seren_events.503.t #Varlamore's Reply
+	desc = {
+		trigger = {
+			has_global_flag = seren_is_ralos_flag
+		}
+		desc = seren_events.503.da #We have found an astonishing result of our inquiry into Ralos. They have convincingly made the case that Ralos and Seren are one and the same!
+	}
+	desc = {
+		trigger = {
+			has_global_flag = seren_ralos_mistrust_flag
+		}
+		desc = seren_events.503.db #Varlamore must take us for fools. They have made a blatant lie claiming that Seren and Ralos are one and the same.
+	}
+	desc = {
+		trigger = {
+			has_global_flag = seren_ralos_ideology_flag
+		}
+		desc = seren_events.503.dc #The people of Varlamore seem to know little of Seren, though they seem to have the view that there must be an ideological connection between the gods. If Ralos exists, perhaps Seren spoke to him? If not, perhaps Ralos worship is inspired by Seren?
+	}
+	desc = {
+		trigger = {
+			has_global_flag = seren_no_ralos_tie_flag
+		}
+		desc = seren_events.503.de #Varlamore has denied any connection between Ralos and Seren.
+	}
+	
+	picture = SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.503.a #Incredible! We must bring this interpretation of Seren to our people at once!
+		trigger = {
+			has_global_flag = seren_is_ralos_flag
+		}
+		random_owned_province = {
+			add_province_modifier = {
+				name = "seren_ralos_cultivation"
+				duration = 7300
+			}
+			change_religion = ralos
+		}
+		reverse_add_opinion = {
+			who = VAR
+			modifier = seren_ralos_same
+		}
+		
+	}
+	
+	option = {
+		name = seren_events.503.b #We should be tolerant to this alternative take on Seren.
+		trigger = {
+			has_global_flag = seren_is_ralos_flag
+		}
+		add_country_modifier = {
+			name = "seren_ralos_tolerance"
+			duration = 3650
+		}
+		reverse_add_opinion = {
+			who = VAR
+			modifier = seren_ralos_same
+		}
+	}
+	
+	option = {
+		name = seren_events.503.c #We are not that gullible!
+		trigger = {
+			has_global_flag = seren_ralos_mistrust_flag
+		}
+		reverse_add_opinion = {
+			who = VAR
+			modifier = seren_ralos_lie
+		}
+	}
+	option = {
+		name = seren_events.503.e #There is no closure here, but that is better than bad news.
+		trigger = {
+			has_global_flag = seren_ralos_ideology_flag
+		}
+		add_country_modifier = {
+			name = "seren_ralos_minor_tolerance"
+			duration = 3650
+		}
+		reverse_add_opinion = {
+			who = VAR
+			modifier = seren_ralos_influence
+		}
+	}
+	option = {
+		name = seren_events.503.f #Oh well.
+		trigger = {
+			has_global_flag = seren_no_ralos_tie_flag
+		}
+		
+	}
+}
+
+country_event = {
+	id = seren_events.504
+	title = seren_events.504.t #Varlamorean Investigations
+	desc = seren_events.504.d #Among the ruins of Ralossian temples, we have found very vague artefacts connected to light and the sun. Whatever connection this has to Seren is up to our own interpretation.
+	picture = SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.504.a #Maybe there is a Seren tie after all?
+		add_country_modifier = {
+			name = "seren_ralos_possible_link"
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = seren_events.504.b #This is just meaningless rubble.
+		add_prestige = 25
+	}
+}
+
+country_event = {
+	id = seren_events.505
+	title = seren_events.505.t #The Dark Altar
+	desc = seren_events.505.d #In the far north of Zeah is a strange altar of twisted magics. Terrible corrupted crystals sprout from this Dark Altar, warping the creatures around it.
+	picture = SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.505.a #This is the terrible work of Zaros! We must intervene!
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 1
+		}
+		409 = {
+			 add_claim = ROOT
+		}
+		set_country_flag = end_of_zean_diplomacy_chain
+	}
+	
+	option = {
+		name = seren_events.505.b #This is not our concern.
+		custom_tooltip = seren_events.middle_way.tt
+		add_incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 2
+		}
+		set_country_flag = end_of_zean_diplomacy_chain
+	}
+}
+
+#RESULT: Open
+country_event = {
+	id = seren_events.506
+	title = seren_events.506.t
+	desc = seren_events.506.d
+	picture = SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_zeah_diplomacy
+		has_country_flag = end_of_zean_diplomacy_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_zean_diplomacy
+				value = 6
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	
+	option = {
+		name = "seren_events.506.a" #
+		if = {
+			limit = { NOT = { religion = seren } }
+			add_isolationism = -1
+			end_incident = incident_zean_diplomacy
+		}
+		else = {
+			add_isolationism = -1
+			end_incident = incident_zean_diplomacy
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Stay put
+country_event = {
+	id = seren_events.507
+	title = seren_events.507.t
+	desc = seren_events.507.d
+	picture = SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_zeah_diplomacy
+		has_country_flag = end_of_zean_diplomacy_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_zean_diplomacy
+				value = 8
+			}
+		}
+		incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 6
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.507.a" #
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				end_incident = incident_zean_diplomacy
+			}
+			else = {
+				end_incident = incident_zean_diplomacy
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Isolation
+country_event = {
+	id = seren_events.508
+	title = seren_events.508.t
+	desc = seren_events.508.d
+	picture = SEREN_INCIDENT_ZEAN_DIPLOMACY_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_zeah_diplomacy
+		has_country_flag = end_of_zean_diplomacy_chain
+		incident_variable_value = {
+			incident = incident_zean_diplomacy
+			value = 8
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.508.a" #
+		
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_zean_diplomacy
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_zean_diplomacy
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#######################################################
+#######################################################
+#######################################################
+
+# Reconstruction of Prifddinas incident
+
+country_event = {
+	id = seren_events.600
+	title = seren_events.600.t #The Reconstruction of Prifddinas
+	desc = {
+		trigger = {
+			tag = TNN
+		}
+		desc = seren_events.600.da #The city of Prifddinas is in its rightful status as the capital of Serenist worship, though there is much work yet to do in its restoration. Some argue that to open the city at a delicate time could sabotage this process, though others claim that Tirannwn's isolation is exactly what caused this problem in the first place.
+	}
+	desc = {
+		trigger = {
+			NOT = { tag = TNN }
+		}
+		desc = seren_events.600.db #The oldest city of the Elves on Gielinor, Prifddinas, has been restored in the name of Seren. But times have changed considerably since then - is Prifddinas still worthy of its status as the centre of Serenist worship, or is it best that we downplay its status lest it falls again?
+	}
+	
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = seren_events.600.a #The city should be opened for all!
+		trigger = {
+			tag = TNN
+		}
+		custom_tooltip = seren_incident_restoration_of_prifddinas.tt
+		custom_tooltip = seren_events.open.tt
+		add_country_modifier = {
+			name = "seren_opening_of_prifddinas"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+					id = seren_events.601
+					days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.600.b #Let us restrict the city to Serenists.
+		trigger = {
+			tag = TNN
+		}
+		custom_tooltip = seren_incident_restoration_of_prifddinas.tt
+		custom_tooltip = seren_events.isolation.tt
+		add_country_modifier = {
+			name = "seren_restrictions_in_prifddinas"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.601
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.600.c #Clearly the control was not tight enough! Only loyal Serenists of Tirannwn should enter!
+		trigger = {
+			tag = TNN
+		}
+		custom_tooltip = seren_incident_restoration_of_prifddinas.tt
+		custom_tooltip = seren_events.much.isolation.tt
+		add_country_modifier = {
+			name = "seren_strict_prifddinas_closure"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.601
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.600.e #The restoration of Prifddinas should be celebrated by all Serenists!
+		trigger = {
+			NOT = { tag = TNN }
+		}
+		custom_tooltip = seren_incident_restoration_of_prifddinas.tt
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 1
+		}
+		reverse_add_opinion = {
+			who = TNN
+			modifier = seren_praise_for_prifddinas
+		}
+		add_dip_power = 10
+		hidden_effect = {
+			country_event = {
+					id = seren_events.603
+					days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.600.f #Prifddinas is important, yes, but not the only city that matters to Seren.
+		trigger = {
+			NOT = { tag = TNN }
+		}
+		custom_tooltip = seren_incident_restoration_of_prifddinas.tt
+		custom_tooltip = seren_events.middle_way.tt
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 2
+		}
+		add_adm_power = 10
+		hidden_effect = {
+			country_event = {
+				id = seren_events.603
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.600.g #Only [Root.Capital.GetName] holds the key to the future.
+		trigger = {
+			NOT = { tag = TNN }
+		}
+		custom_tooltip = seren_incident_restoration_of_prifddinas.tt
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		add_prestige = 10
+		reverse_add_opinion = {
+			who = TNN
+			modifier = seren_snubbed_prifddinas
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.603
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.601
+	title = seren_events.601.t #Construction Materials
+	desc = seren_events.601.d #The reconstruction of Prifddinas requires us to decide what we should use to help rebuild it. Purists argue that the city was sung from crystal and should primarily rely on crystal structures. However, some reformists believe we should be willing to import other materials to prevent the vulnerabilities crystals can have.
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.601.a #Let us strengthen Prifddinas with wood, brick and stone!
+		custom_tooltip = seren_events.open.tt
+		if = {
+			limit = {
+				owns_core_province = 325
+			}
+			add_years_of_income = -0.5
+			325 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.602
+				days = 1095
+			}
+		}
+	}
+	
+	option = {
+		name = seren_events.601.b #Prifddinas is a city of crystal, and always should be.
+		custom_tooltip = seren_events.isolation.tt
+		if = {
+			limit = {
+				owns_core_province = 325
+			}
+			325 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.602
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.602
+	title = seren_events.602.t #Clan Iorwerth and Prifddinas
+	desc = {
+		trigger = {
+			NOT = { primary_culture = iorwerth }
+		}
+		desc = seren_events.602.da #With the end of the Tirannwn Civil War, many elves call out for vengeance against Clan Iorwerth, and that they should be exiled from Prifddinas.
+	}
+	desc = {
+		trigger = {
+			primary_culture = iorwerth
+		}
+		desc = seren_events.602.db #Clan Iorwerth as a whole has been falsely blamed for the Tirannwn Civil War - but how could that be, when Clan Iorwerth now leads a restored Serenist Prifddinas? What should we do to reassure the populace that we are not their enemy?
+	}
+	
+	
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.602.a #Clan Iorwerth is to be fully integrated into the new Prifddinas!
+		trigger = {
+			NOT = { primary_culture = iorwerth }
+		}
+		custom_tooltip = seren_events.open.tt
+		if = {
+			limit = {
+				owns_core_province = 325
+			}
+			325 = {
+				add_province_modifier = {
+					name = seren_inclusion_of_iorwerth
+					duration = 9125
+				}
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 1
+		}
+		set_country_flag = end_of_restoration_of_prifddinas_chain
+	}
+	
+	option = {
+		name = seren_events.602.b #Clan Iorwerth can stay, but should be subject to restrictions.
+		trigger = {
+			NOT = { primary_culture = iorwerth }
+		}
+		custom_tooltip = seren_events.middle_way.tt
+		every_owned_province = {
+			limit = {
+				culture = iorwerth
+			}
+			add_province_modifier = {
+				name = seren_restrictions_on_iorwerth
+				duration = 9125
+			}
+		}
+		if = {
+			limit = {
+			 	has_faction = iorwerth_faction
+			}
+			add_faction_influence = {
+				faction = iorwerth_faction
+				influence = -20
+			}
+		}
+		
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 2
+		}
+		set_country_flag = end_of_restoration_of_prifddinas_chain
+	}
+	
+	option = {
+		name = seren_events.602.c #Exile Clan Iorwerth from Prifddinas!
+		trigger = {
+			NOT = { primary_culture = iorwerth }
+		}
+		custom_tooltip = seren_events.isolation.tt
+		every_owned_province = {
+			limit = {
+				culture = iorwerth
+			}
+			add_province_modifier = {
+				name = seren_exile_of_iorwerth
+				duration = 9125
+			}
+		}
+		if = {
+			limit = {
+				325 = {
+					owned_by = ROOT
+					culture = iorwerth
+				}
+			}
+			325 = {
+				change_culture = cadarn
+			}
+		}
+		if = {
+			limit = {
+			 	has_faction = iorwerth_faction
+			}
+			add_faction_influence = {
+				faction = iorwerth_faction
+				influence = -100
+			}
+		}
+		
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		set_country_flag = end_of_restoration_of_prifddinas_chain
+	}
+	option = {
+		name = seren_events.602.e #We could invite ambassadors from overseas to legitimise our new regime.
+		trigger = {
+			primary_culture = iorwerth
+		}
+		custom_tooltip = seren_events.open.tt
+		add_dip_power = 50
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 1
+		}
+		set_country_flag = end_of_restoration_of_prifddinas_chain
+	}
+	
+	option = {
+		name = seren_events.602.f #Emphasise condemnation of those who worshipped the Dark Lord.
+		trigger = {
+			primary_culture = iorwerth
+		}
+		custom_tooltip = seren_events.middle_way.tt
+		add_adm_power = 50
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 2
+		}
+		set_country_flag = end_of_restoration_of_prifddinas_chain
+	}
+	
+	option = {
+		name = seren_events.602.g #They will have to learn to live with us.
+		trigger = {
+			primary_culture = iorwerth
+		}
+		custom_tooltip = seren_events.isolation.tt
+		add_mil_power = 50
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		set_country_flag = end_of_restoration_of_prifddinas_chain
+	}
+}
+
+country_event = {
+	id = seren_events.603
+	title = seren_events.603.t #Prifddinas Pilgrimages
+	desc = seren_events.603.d #More and more of our people are making pilgrimages to Prifddinas, viewing it as the most sacred city to the Serenist faith. However, such a movement could threaten to undermine the status of [Root.GetName] as an independent nation in favour of subservience to Tirannwn.
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.603.a #Let the pilgrims pass!
+		custom_tooltip = seren_events.open.tt
+		add_country_modifier = {
+			name = "seren_prifddinas_pilgrims"
+			duration = 9125
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.604
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.603.b #Restrict the pilgrimages.
+		custom_tooltip = seren_events.isolation.tt
+		add_country_modifier = {
+			name = "seren_restricted_prifddinas_pilgrims"
+			duration = 9125
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.604
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.604
+	title = seren_events.604.t #Trade Relations with Prifddinas
+	desc = seren_events.604.d #Prifddinas' re-emergence makes it a critical centre of trade which our merchants are eager not to miss out on.
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.604.a #We shouldn't turn down fresh opportunities.
+		custom_tooltip = seren_events.open.tt
+		325 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 9125
+				power = 20
+				key = serenist_traders_in_prif_tt
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 1
+		}
+		set_country_flag = end_of_restoration_of_prifddinas_chain
+	}
+	option = {
+		name = seren_events.604.b #Shouldn't our focus be in Kandarin, a bigger market?
+		custom_tooltip = seren_events.middle_way.tt
+		265 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 9125
+				power = 20
+				key = serenist_traders_in_ardougne_tt
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 2
+		}
+		set_country_flag = end_of_restoration_of_prifddinas_chain
+	}
+	option = {
+		name = seren_events.604.c #Those traders should stay home.
+		custom_tooltip = seren_events.isolation.tt
+		add_country_modifier = {
+			name = seren_domestic_trade_push
+			duration = 9125
+		}
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		set_country_flag = end_of_restoration_of_prifddinas_chain
+	}
+}
+
+#RESULT: Open
+country_event = {
+	id = seren_events.605
+	title = seren_events.605.t
+	desc = {
+		trigger = {
+			owns_core_province = 325
+		}
+		desc = seren_events.605.da #
+	}
+	desc = {
+		trigger = {
+			NOT = { owns_core_province = 325 }
+		}
+		desc = seren_events.605.db #
+	}
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_restoration_of_prifddinas
+		has_country_flag = end_of_restoration_of_prifddinas_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_restoration_of_prifddinas
+				value = 5
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	
+	option = {
+		name = "seren_events.605.a" #
+		if = {
+			limit = { NOT = { religion = seren } }
+			add_isolationism = -1
+			end_incident = incident_restoration_of_prifddinas
+		}
+		else = {
+			add_isolationism = -1
+			end_incident = incident_restoration_of_prifddinas
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Stay put
+country_event = {
+	id = seren_events.606
+	title = seren_events.606.t
+	desc = {
+		trigger = {
+			owns_core_province = 325
+		}
+		desc = seren_events.606.da #
+	}
+	desc = {
+		trigger = {
+			NOT = { owns_core_province = 325 }
+		}
+		desc = seren_events.606.db #
+	}
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_restoration_of_prifddinas
+		has_country_flag = end_of_restoration_of_prifddinas_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_restoration_of_prifddinas
+				value = 8
+			}
+		}
+		incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 5
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.606.a" #
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				end_incident = incident_restoration_of_prifddinas
+			}
+			else = {
+				end_incident = incident_restoration_of_prifddinas
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Isolation
+country_event = {
+	id = seren_events.607
+	title = seren_events.607.t
+	desc = {
+		trigger = {
+			owns_core_province = 325
+		}
+		desc = seren_events.607.da #
+	}
+	desc = {
+		trigger = {
+			NOT = { owns_core_province = 325 }
+		}
+		desc = seren_events.607.db #
+	}
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_restoration_of_prifddinas
+		has_country_flag = end_of_restoration_of_prifddinas_chain
+		incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 8
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.607.a" #
+		
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_restoration_of_prifddinas
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_restoration_of_prifddinas
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#######################################################
+#######################################################
+#######################################################
+
+# Rebirth of Seren incident
+
+country_event = {
+	id = seren_events.700
+	title = seren_events.700.t #The Rebirth of Seren
+	desc = {
+		trigger = {
+			NOT = { has_global_flag = rebirth_of_seren_flag }
+		}
+		desc = seren_events.700.da #Crystals shudder. Can you hear them? They are shaking more and more violently. They call out! Call out for Seren to be made whole again!
+	}
+	desc = {
+		trigger = {
+			has_global_flag = rebirth_of_seren_flag
+		}
+		desc = seren_events.700.db #Seren's restoration requires immediate consideration regarding the direction of our faith.
+	}
+	
+	picture = SEREN_INCIDENT_SEREN_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = seren_events.700.a #All shall rejoice at the rebirth of Seren!
+		trigger = {
+			NOT = { has_global_flag = rebirth_of_seren_flag }
+		}
+		custom_tooltip = seren_incident_rebirth_of_seren.tt
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		custom_tooltip = seren_rebirth_support_plus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = 3
+			}
+		}
+		add_country_modifier = {
+			name = "seren_rejoice_in_rebirth"
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.701
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.700.b #This is a good idea - but we need to be discreet about it.
+		trigger = {
+			NOT = { has_global_flag = rebirth_of_seren_flag }
+		}
+		custom_tooltip = seren_incident_rebirth_of_seren.tt
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 3
+		}
+		custom_tooltip = seren_rebirth_support_plus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = 3
+			}
+		}
+		add_country_modifier = {
+			name = "seren_stealth_seren_mission"
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.701
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.700.c #Seren shattered herself for a reason. We should not be meddling with this.
+		trigger = {
+			NOT = { has_global_flag = rebirth_of_seren_flag }
+		}
+		custom_tooltip = seren_incident_rebirth_of_seren.tt
+		custom_tooltip = seren_events.middle_way.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 2
+		}
+		custom_tooltip = seren_rebirth_support_minus2_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = -2
+			}
+		}
+		add_country_modifier = {
+			name = "seren_skepticism_for_rebirth"
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.701
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.700.e #Seren's return can only bestow greatness for [Root.GetName]!
+		trigger = {
+			has_global_flag = rebirth_of_seren_flag
+		}
+		custom_tooltip = seren_incident_rebirth_of_seren.tt
+		custom_tooltip = seren_rebirth_support_plus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = 3
+			}
+		}
+		add_country_modifier = {
+			name = "seren_glory_to_the_reborn_goddess"
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.706
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.700.f #This new Seren is not the Seren we know.
+		trigger = {
+			has_global_flag = rebirth_of_seren_flag
+		}
+		custom_tooltip = seren_incident_rebirth_of_seren.tt
+		custom_tooltip = seren_rebirth_support_minus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = -3
+			}
+		}
+		add_country_modifier = {
+			name = "seren_not_our_seren"
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.706
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.701
+	title = seren_events.701.t #The Dark Lord and Seren
+	desc = {
+		trigger = {
+			check_variable = {
+				which = SerenRebirthSupportVariable
+				value = 1
+			}
+		}
+		desc = seren_events.701.da #A faction of elves and adventurers have embarked on the journey to reconstruct Seren's body. They believe that reintegrating the Dark Lord - a fragment of Seren previously split off from her body - would strengthen her.
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = SerenRebirthSupportVariable
+					value = 1
+				}
+			}
+		}
+		desc = seren_events.701.db #Regardless of our pleas not to attempt to reconstruct Seren's body, a faction of elves and adventurers have set out to do so. They believe that reintegrating the Dark Lord - a fragment of Seren previously split off from her body - would strengthen her.
+	}
+	
+	picture = SEREN_INCIDENT_SEREN_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.701.a #Reintegrating the Dark Lord would help broaden Seren's understanding.
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		custom_tooltip = seren_rebirth_support_plus3_tooltip
+		add_adm_power = 25
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = 3
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.702
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.701.b #We fought to stop the Dark Lord, not strengthen it!
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		custom_tooltip = seren_rebirth_support_minus2_tooltip
+		add_mil_power = 25
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = -2
+			}
+		}		
+		hidden_effect = {
+			country_event = {
+				id = seren_events.702
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.701.c #To counterbalance the return of Seren, we should rebuild the Dark Lord!
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = SerenRebirthSupportVariable
+					value = 1
+				}
+			}
+			has_global_modifier_value = {
+				which = tolerance_heretic
+				value = 4
+			}
+		}
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		custom_tooltip = seren_rebirth_support_minus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = -3
+			}
+		}
+		add_country_modifier = {
+			name = "seren_dark_lord_returns"
+			duration = 9125
+		}
+		random_owned_province = {
+			change_religion = dark_lord
+		}		
+		hidden_effect = {
+			country_event = {
+				id = seren_events.702
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.702
+	title = seren_events.702.t #Seren and Zaros
+	desc = seren_events.702.d #Seren has a brother, spoken about in shadows and whispers. The Empty Lord. Zaros. The history between Serenists and Zarosians is strained to put it mildly, but with an event as monumentous as the restoration of Seren, it may be time to reach out to the forgotten God's followers...
+	
+	picture = SEREN_INCIDENT_SEREN_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.702.a #Zarosian knowledge would strengthen Seren.
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		custom_tooltip = seren_rebirth_support_plus3_tooltip
+		add_country_modifier = {
+			name = "seren_lore_of_zaros"
+			duration = 3650
+		}
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = 3
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.703
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.702.b #Zarosians could help us sabotage the foolish attempts to build a false Seren.
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		custom_tooltip = seren_rebirth_support_minus3_tooltip
+		add_country_modifier = {
+			name = "seren_lore_of_zaros"
+			duration = 3650
+		}
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = -3
+			}
+		}		
+		hidden_effect = {
+			country_event = {
+				id = seren_events.703
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.702.c #Seren's light needs no help.
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		custom_tooltip = seren_rebirth_support_plus3_tooltip
+		add_country_modifier = {
+			name = "seren_defiance_of_zaros"
+			duration = 3650
+		}
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = 3
+			}
+		}	
+		hidden_effect = {
+			country_event = {
+				id = seren_events.703
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.702.e #The situation is bad enough already; we do not need the Zarosians!
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_restoration_of_prifddinas
+			value = 3
+		}
+		custom_tooltip = seren_rebirth_support_minus2_tooltip
+		add_country_modifier = {
+			name = "seren_godless_inclinations"
+			duration = 3650
+		}
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = -2
+			}
+		}		
+		hidden_effect = {
+			country_event = {
+				id = seren_events.703
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.703
+	title = seren_events.703.t #The Lost Clan
+	desc = seren_events.703.d #The World Gate has opened the way to Tarddiad, original home of the elves, and home to crystals necessary for the reconstruction of Seren. One of the original nine elven clans, Clan Cywir, never left the world, but has now become overdependent on the crystals in Seren's absence.
+	
+	picture = SEREN_INCIDENT_SEREN_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.703.a #It is time that all of Seren's children were reunited.
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		custom_tooltip = seren_rebirth_support_plus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = 3
+			}
+		}
+		if = {
+			limit = {
+				has_reform = tirannwn_republic
+			}
+			add_government_reform = return_of_cywir_reform
+		}
+		if = {
+			limit = {
+				owns_core_province = 269
+			}
+			269 = {
+				change_culture = cywir
+				change_religion = seren
+				add_core = CYW
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		if = {
+			limit = {
+				owns_core_province = 768
+			}
+			768 = {
+				change_culture = cywir
+				change_religion = seren
+				add_core = CYW
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_core_province = 269 }
+				NOT = { owns_core_province = 768 }
+			}
+			random_owned_province = {
+				change_culture = cywir
+				change_religion = seren
+				add_core = CYW
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.705
+				days = 1095
+			}
+			country_event = {
+				id = seren_events.704
+				days = 500
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = seren_events.703.b #Clan Cywir shall be a valuable voice for scepticism.
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		custom_tooltip = seren_rebirth_support_minus2_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = -2
+			}
+		}
+		if = {
+			limit = {
+				has_reform = tirannwn_republic
+			}
+			add_government_reform = return_of_cywir_reform
+		}
+		if = {
+			limit = {
+				owns_core_province = 269
+			}
+			269 = {
+				change_culture = cywir
+				change_religion = seren
+				add_core = CYW
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		if = {
+			limit = {
+				owns_core_province = 768
+			}
+			768 = {
+				change_culture = cywir
+				change_religion = seren
+				add_core = CYW
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_core_province = 269 }
+				NOT = { owns_core_province = 768 }
+			}
+			random_owned_province = {
+				change_culture = cywir
+				change_religion = seren
+				add_core = CYW
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.705
+				days = 1095
+			}
+			country_event = {
+				id = seren_events.704
+				days = 500
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = seren_events.703.c #Let's just get the information we need to restore Seren and move on.
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 3
+		}
+		custom_tooltip = seren_rebirth_support_plus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = 3
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.705
+				days = 1095
+			}
+			country_event = {
+				id = seren_events.704
+				days = 500
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = seren_events.703.e #Going to Tarddiad is a fruitless cause.
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 3
+		}
+		custom_tooltip = seren_rebirth_support_minus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = -3
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.705
+				days = 1095
+			}
+			country_event = {
+				id = seren_events.704
+				days = 500
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.704
+	title = seren_events.704.t #The Return of Seren
+	desc = seren_events.704.d #Seren is no longer shattered. Her body has been re-assembled, and she sets foot on Gielinor for the first time in over 2,000 years.
+	picture = SEREN_INCIDENT_SEREN_RESTORATION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = seren_events.704.a #The Sixth Age just became a little safer for Serenists.
+		add_prestige = 100
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		set_global_flag = rebirth_of_seren_flag
+	}
+}
+
+country_event = {
+	id = seren_events.705
+	title = seren_events.705.t #Seren's Role
+	desc = seren_events.705.d #With Seren reborn, the question lies before us: What role she should play in [Root.GetName]?
+	
+	picture = SEREN_INCIDENT_SEREN_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.705.a #Seren is free to do as she pleases!
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		add_adm_power = 10
+		add_dip_power = 10
+		add_mil_power = 10
+		custom_tooltip = seren_rebirth_support_plus3_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = 3
+			}
+		}
+		set_country_flag = end_of_rebirth_of_seren_chain
+	}
+	option = {
+		name = seren_events.705.b #Seren should limit her involvement in the lives of mortals.
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 3
+		}
+		add_prestige = 25
+		custom_tooltip = seren_rebirth_support_minus1_tooltip
+		hidden_effect = {
+			change_variable = {
+				which = SerenRebirthSupportVariable
+				value = -1
+			}
+		}
+		set_country_flag = end_of_rebirth_of_seren_chain
+	}
+}
+
+country_event = {
+	id = seren_events.706
+	title = seren_events.706.t #Seren's Return and Openness
+	desc = seren_events.706.d #Followers of Seren now find themselves in a brave new world with their Goddess. The opportunities seem so open - the opportunity for change immense.
+	
+	picture = SEREN_INCIDENT_SEREN_RESTORATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = seren_quick_restoration_chain
+	}
+	
+	option = {
+		name = seren_events.706.a #This is a time to open out to the world!
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		
+		set_country_flag = end_of_rebirth_of_seren_chain
+	}
+	option = {
+		name = seren_events.706.b #This is a time of potential. But only due to the policies we have already pursued.
+		custom_tooltip = seren_events.middle_way.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 2
+		}
+		
+		set_country_flag = end_of_rebirth_of_seren_chain
+	}
+	option = {
+		name = seren_events.706.c #We must safeguard ourselves in this strange new world!
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 3
+		}
+		
+		set_country_flag = end_of_rebirth_of_seren_chain
+	}
+}
+
+#RESULT: Open, Pro Seren
+country_event = {
+	id = seren_events.707
+	title = seren_events.707.t #The Love of Seren
+	desc = seren_events.707.d #Seren's return is a blessing upon [Root.GetName]. We are now ready to open up our borders and share Seren's glory with the world!
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_restoration_of_prifddinas
+		has_country_flag = end_of_restoration_of_prifddinas_chain
+		OR = {
+			AND = {
+				NOT = { has_country_flag = seren_quick_restoration_chain }
+				NOT = {
+					incident_variable_value = {
+						incident = incident_rebirth_of_seren
+						value = 8
+					}
+				}
+				check_variable = {
+					which = SerenRebirthSupportVariable
+					value = 0
+				}
+			}
+			AND = {
+				has_country_flag = seren_quick_restoration_chain
+				NOT = {
+					incident_variable_value = {
+						incident = incident_rebirth_of_seren
+						value = 2
+					}
+				}
+				check_variable = {
+					which = SerenRebirthSupportVariable
+					value = 0
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "seren_events.707.a" #Praise Seren!
+		if = {
+			limit = { NOT = { religion = seren } }
+			add_isolationism = -1
+			end_incident = incident_restoration_of_prifddinas
+		}
+		else = {
+			add_isolationism = -1
+			end_incident = incident_restoration_of_prifddinas
+		}
+		add_country_modifier = {
+			name = "seren_a_goddess_restored"
+			duration = -1
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+
+#RESULT: Stay put, Pro Seren
+country_event = {
+	id = seren_events.708
+	title = seren_events.708.t #The Blessings of Seren
+	desc = seren_events.708.d #The glory of Seren shines upon [Root.GetName]. That is all the change we need at this time.
+
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_restoration_of_prifddinas
+		has_country_flag = end_of_restoration_of_prifddinas_chain
+		OR = {
+			AND = {
+				NOT = { has_country_flag = seren_quick_restoration_chain }
+				incident_variable_value = {
+					incident = incident_rebirth_of_seren
+					value = 8
+				}
+				NOT = {
+					incident_variable_value = {
+						incident = incident_rebirth_of_seren
+						value = 13
+					}
+				}
+				check_variable = {
+					which = SerenRebirthSupportVariable
+					value = 0
+				}
+			}
+			AND = {
+				has_country_flag = seren_quick_restoration_chain
+				incident_variable_value = {
+					incident = incident_rebirth_of_seren
+					value = 2
+				}
+				NOT = {
+					incident_variable_value = {
+						incident = incident_rebirth_of_seren
+						value = 3
+					}
+				}
+				check_variable = {
+					which = SerenRebirthSupportVariable
+					value = 0
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "seren_events.708.a" #Praise Seren!
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				end_incident = incident_restoration_of_prifddinas
+			}
+			else = {
+				end_incident = incident_restoration_of_prifddinas
+			}
+		}
+		add_country_modifier = {
+			name = "seren_a_goddess_restored"
+			duration = -1
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#RESULT: Isolation, Pro Seren
+country_event = {
+	id = seren_events.709
+	title = seren_events.709.t #Seren, Defender of $COUNTRY$
+	desc = seren_events.709.d #Seren's return is a blessing to [Root.GetName], but we must remember that the world is dangerous and there is no guarantee that Seren's blessing is enough to protect us from the evil elsewhere in Gielinor.
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_restoration_of_prifddinas
+		has_country_flag = end_of_restoration_of_prifddinas_chain
+		OR = {
+			AND = {
+				NOT = { has_country_flag = seren_quick_restoration_chain }
+				incident_variable_value = {
+					incident = incident_rebirth_of_seren
+					value = 13
+				}
+				check_variable = {
+					which = SerenRebirthSupportVariable
+					value = 0
+				}
+			}
+			AND = {
+				has_country_flag = seren_quick_restoration_chain
+				incident_variable_value = {
+					incident = incident_rebirth_of_seren
+					value = 3
+				}
+				check_variable = {
+					which = SerenRebirthSupportVariable
+					value = 0
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.709.a" #
+		
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_restoration_of_prifddinas
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_restoration_of_prifddinas
+			}
+		}
+		add_country_modifier = {
+			name = "seren_a_goddess_restored"
+			duration = -1
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#RESULT: Open, Anti Seren
+country_event = {
+	id = seren_events.710
+	title = seren_events.710.t #Looking to the Future
+	desc = seren_events.710.d #Seren's apparent restoration was a mistake. Whatever is this being made of Seren's crystals is not the Goddess we know. It seems time to look outward for fresh ideas on the future, rather than trying to recapture a lost past.
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_restoration_of_prifddinas
+		has_country_flag = end_of_restoration_of_prifddinas_chain
+		OR = {
+			AND = {
+				NOT = { has_country_flag = seren_quick_restoration_chain }
+				NOT = {
+					incident_variable_value = {
+						incident = incident_rebirth_of_seren
+						value = 8
+					}
+				}
+				NOT = {
+					check_variable = {
+						which = SerenRebirthSupportVariable
+						value = 0
+					}
+				}
+			}
+			AND = {
+				has_country_flag = seren_quick_restoration_chain
+				NOT = {
+					incident_variable_value = {
+						incident = incident_rebirth_of_seren
+						value = 2
+					}
+				}
+				NOT = {
+					check_variable = {
+						which = SerenRebirthSupportVariable
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "seren_events.710.a" #Praise the real Seren!
+		if = {
+			limit = { NOT = { religion = seren } }
+			add_isolationism = -1
+			end_incident = incident_restoration_of_prifddinas
+		}
+		else = {
+			add_isolationism = -1
+			end_incident = incident_restoration_of_prifddinas
+		}
+		add_country_modifier = {
+			name = "seren_false_restoration"
+			duration = -1
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+
+#RESULT: Stay put, Anti Seren
+country_event = {
+	id = seren_events.711
+	title = seren_events.711.t #The Future is Our Own
+	desc = seren_events.711.d #Should we open or close our borders. Do we believe in this so-called resurrected Seren or not? The answer is evidently to carry on as we have before.
+
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_restoration_of_prifddinas
+		has_country_flag = end_of_restoration_of_prifddinas_chain
+		OR = {
+			AND = {
+				NOT = { has_country_flag = seren_quick_restoration_chain }
+				incident_variable_value = {
+					incident = incident_rebirth_of_seren
+					value = 8
+				}
+				NOT = {
+					incident_variable_value = {
+						incident = incident_rebirth_of_seren
+						value = 13
+					}
+				}
+				NOT = {
+					check_variable = {
+						which = SerenRebirthSupportVariable
+						value = 0
+					}
+				}
+			}
+			AND = {
+				has_country_flag = seren_quick_restoration_chain
+				incident_variable_value = {
+					incident = incident_rebirth_of_seren
+					value = 2
+				}
+				NOT = {
+					incident_variable_value = {
+						incident = incident_rebirth_of_seren
+						value = 3
+					}
+				}
+				NOT = {
+					check_variable = {
+						which = SerenRebirthSupportVariable
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "seren_events.711.a" #Praise Seren?
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				end_incident = incident_restoration_of_prifddinas
+			}
+			else = {
+				end_incident = incident_restoration_of_prifddinas
+			}
+		}
+		add_country_modifier = {
+			name = "seren_false_restoration"
+			duration = -1
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#RESULT: Isolation, Anti Seren
+country_event = {
+	id = seren_events.712
+	title = seren_events.712.t #The Strange New World
+	desc = seren_events.712.d #Gielinor nowadays is full of strange ideas of resurrecting Gods. We want no part of that nonsense!
+	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_restoration_of_prifddinas
+		has_country_flag = end_of_restoration_of_prifddinas_chain
+		OR = {
+			AND = {
+				NOT = { has_country_flag = seren_quick_restoration_chain }
+				incident_variable_value = {
+					incident = incident_rebirth_of_seren
+					value = 13
+				}
+				NOT = {
+					check_variable = {
+						which = SerenRebirthSupportVariable
+						value = 0
+					}
+				}
+			}
+			AND = {
+				has_country_flag = seren_quick_restoration_chain
+				incident_variable_value = {
+					incident = incident_rebirth_of_seren
+					value = 3
+				}
+				NOT = {
+					check_variable = {
+						which = SerenRebirthSupportVariable
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.712.a" #Hail to Seren's memory!
+		
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_restoration_of_prifddinas
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_restoration_of_prifddinas
+			}
+		}
+		add_country_modifier = {
+			name = "seren_false_restoration"
+			duration = -1
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}
+
+#######################################################
+#######################################################
+#######################################################
+
+# The New Path of Seren incident
+
+country_event = {
+	id = seren_events.800
+	title = seren_events.800.t #The New Path of Seren
+	desc = seren_events.800.d #At the end of the Elder God Wars, Seren abandoned her followers to side with the Elder Gods, knowing that this could result in our destruction. Such a decision has devastated Serenists across Gielinor and increasing numbers of elves are outwardly denouncing her.
+	
+	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = seren_events.800.a #This is all Seren's fault.
+		custom_tooltip = seren_incident_rebirth_of_seren.tt
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		add_country_modifier = {
+			name = "seren_turning_from_seren"
+			duration = 7300
+		}
+		country_event = {
+			id = seren_events.801
+			days = 1095
+		}
+	}
+	option = {
+		name = seren_events.800.b #Seren was impaired!
+		custom_tooltip = seren_incident_serens_new_path.tt
+		custom_tooltip = seren_events.middle_way.tt
+		add_incident_variable_value = {
+			incident = incident_serens_new_path
+			value = 2
+		}
+		add_country_modifier = {
+			name = "seren_excusing_seren"
+			duration = 7300
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.802
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.800.c #That wasn't Seren!
+		custom_tooltip = seren_incident_serens_new_path.tt
+		custom_tooltip = seren_events.isolation.tt
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = SerenRebirthSupportVariable
+					value = 0
+				}
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_serens_new_path
+			value = 3
+		}
+		add_country_modifier = {
+			name = "seren_denying_the_false_goddess"
+			duration = 7300
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.802
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = seren_events.800.e #Seren was right!
+		custom_tooltip = seren_incident_serens_new_path.tt
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_serens_new_path
+			value = 3
+		}
+		add_country_modifier = {
+			name = "seren_steadfast_faith"
+			duration = 7300
+		}
+		hidden_effect = {
+			country_event = {
+				id = seren_events.803
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = seren_events.801
+	title = seren_events.801.t #The Wings of Armadyl
+	desc = seren_events.801.d #Word has come around that Armadyl once spoke with Seren with the proposal of a shared future for elves and aviansie alike. Unlike Seren, Armadyl has remained steadfast in his support for the downtrodden and could be the god we need at such a time.
+	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.801.a #The future is with Armadyl.
+		set_country_flag = end_of_serens_new_path_chain
+		change_religion = armadyl
+		capital_scope = {
+			change_religion = armadyl
+		}
+		add_country_modifier = {
+			name = "armadyl_loyal_converts"
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = "armadyl_wings_of_armadyl_modifier"
+			duration = -1
+		}
+	}
+	option = {
+		name = seren_events.801.b #No god is worth serving.
+		set_country_flag = end_of_serens_new_path_chain
+		change_religion = armadyl
+		capital_scope = {
+			change_religion = godless
+		}
+		add_country_modifier = {
+			name = "godless_forget_the_faith"
+			duration = 3650
+		}
+	}
+	option = {
+		name = seren_events.801.c #We are open to alternative philosophies, but will not convert from our faith.
+		custom_tooltip = seren_events.open.tt
+		
+		add_incident_variable_value = {
+			incident = incident_serens_new_path
+			value = 1
+		}
+		set_country_flag = end_of_serens_new_path_chain
+	}
+	option = {
+		name = seren_events.801.e #We are not going to abandon our faith just because its head went astray.
+		custom_tooltip = seren_events.isolation.tt
+		
+		add_incident_variable_value = {
+			incident = incident_serens_new_path
+			value = 3
+		}
+		set_country_flag = end_of_serens_new_path_chain
+	}
+}
+
+country_event = {
+	id = seren_events.802
+	title = seren_events.802.t #Philosophy in Uncertain Times
+	desc = seren_events.802.d #With our official view that Seren was not responsible for the hatching of the Elder Gods' eggs, it has become important to consider if our religion is not defined by the actions of its nominal head, what should it be defined by?
+	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.802.a #We should re-orient ourselves to a philosophy of openness.
+		custom_tooltip = seren_events.much.openness.tt
+		change_innovativeness = 5
+		set_country_flag = end_of_serens_new_path_chain
+	}
+	option = {
+		name = seren_events.802.b #The community we built around the faith of Seren is the most important thing.
+		custom_tooltip = seren_events.middle_way.tt
+		add_dip_power = 50
+		add_incident_variable_value = {
+			incident = incident_serens_new_path
+			value = 2
+		}
+		set_country_flag = end_of_serens_new_path_chain
+	}
+	option = {
+		name = seren_events.802.c #Seren's teachings will continue to guide us.
+		custom_tooltip = seren_events.isolation.tt
+		add_adm_power = 50
+		add_incident_variable_value = {
+			incident = incident_serens_new_path
+			value = 3
+		}
+		set_country_flag = end_of_serens_new_path_chain
+	}
+}
+
+country_event = {
+	id = seren_events.803
+	title = seren_events.803.t #Loyalty in a Hostile World
+	desc = seren_events.803.d #Gielinor as a whole does not look positively on the Elder Gods, but they are necessary for the operation of all things. Seren's actions to save them reflect how she saved us by bringing the elves to Gielinor - but how can we make our people and the world aware of this?
+	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = seren_events.803.a #The Elder Gods are to be celebrated, not demonised!
+		custom_tooltip = seren_events.open.tt
+		add_incident_variable_value = {
+			incident = incident_rebirth_of_seren
+			value = 1
+		}
+		random_list = {
+			33 = {
+				random_owned_province = {
+					change_religion = ful
+					add_province_modifier = {
+						name = seren_celebrating_the_new_elder_gods
+						duration = 9125
+					}
+				}
+			}
+			33 = {
+				random_owned_province = {
+					change_religion = bik
+					add_province_modifier = {
+						name = seren_celebrating_the_new_elder_gods
+						duration = 9125
+					}
+				}
+			}
+			33 = {
+				random_owned_province = {
+					change_religion = wen
+					add_province_modifier = {
+						name = seren_celebrating_the_new_elder_gods
+						duration = 9125
+					}
+				}
+			}
+		}
+		set_country_flag = end_of_serens_new_path_chain
+	}
+	option = {
+		name = seren_events.803.b #Without Seren, Gielinor would have never been saved.
+		custom_tooltip = seren_events.middle_way.tt
+		add_incident_variable_value = {
+			incident = incident_serens_new_path
+			value = 2
+		}
+		set_country_flag = end_of_serens_new_path_chain
+	}
+	option = {
+		name = seren_events.803.c #We do not need to convince a closed-minded world.
+		custom_tooltip = seren_events.isolation.tt
+		add_incident_variable_value = {
+			incident = incident_serens_new_path
+			value = 3
+		}
+		set_country_flag = end_of_serens_new_path_chain
+	}
+}
+
+# RESULT: Open Realm
+country_event = {
+	id = seren_events.804
+	title = seren_events.804.t
+	desc = seren_events.804.d
+	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_serens_new_direction
+		has_country_flag = end_of_serens_new_direction_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_serens_new_direction
+				value = 4
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	
+	option = {
+		name = "seren_events.804.a"
+		if = {
+			limit = { NOT = { religion = seren } }
+			add_isolationism = -1
+			end_incident = incident_serens_new_direction
+		}
+		else = {
+			add_isolationism = -1
+			end_incident = incident_serens_new_direction
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Stay put
+country_event = {
+	id = seren_events.805
+	title = seren_events.805.t
+	desc = seren_events.805.d
+	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_serens_new_direction
+		has_country_flag = end_of_serens_new_direction_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_serens_new_direction
+				value = 5
+			}
+		}
+		incident_variable_value = {
+			incident = incident_serens_new_direction
+			value = 4
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.805.a"
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				end_incident = incident_serens_new_direction
+			}
+			else = {
+				end_incident = incident_serens_new_direction
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+	
+}
+
+#RESULT: Isolation
+country_event = {
+	id = seren_events.806
+	title = seren_events.806.t
+	desc = seren_events.806.d
+	picture = SEREN_INCIDENT_SEREN_NEW_DIRECTION_eventPicture
+	
+	trigger = {
+		is_incident_active = incident_serens_new_direction
+		has_country_flag = end_of_serens_new_direction_chain
+		incident_variable_value = {
+			incident = incident_serens_new_direction
+			value = 5
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "seren_events.806.a"
+		
+		if = {
+			limit = { NOT = { religion = seren } }
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_serens_new_direction
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_serens_new_direction
+			}
+		}
+		clr_country_flag = active_incident_flag
+		set_country_flag = seren_incident_recent
+	}
+}

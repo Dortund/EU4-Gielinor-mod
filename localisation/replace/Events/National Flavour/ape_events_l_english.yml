@@ -1,0 +1,21 @@
+﻿l_english:
+ flavor_ape.1.t:0 "The Fate of the Bo Isles"
+ flavor_ape.1.d:0 "Having successfully united Ape Atoll, a question remains about the outlying Bo Isles, which are poor in value and vulnerable to invasion. There are calls in Marim to bring the ape population from there to our mainland in order to better-pool our resources."
+ flavor_ape.1.a:0 "The Bo Isles will remain under our control, no matter the cost!"
+ flavor_ape.1.b:0 "We should centralise our population on Ape Atoll."
+
+ flavor_ape.2.t:0 "Foreign Monkeys Arrive"
+ flavor_ape.2.d:0 "Three wise monkeys have arrived in Ape Atoll. Their origins are unclear, but they have pledged their services to us."
+ flavor_ape.2.a:0 "We could find a use for them."
+ APE_desert_monkeys_arrive:0 "Arrival of the Desert Monkeys"
+ 
+ flavor_ape.3.t:0 "Monkeys in the Desert?"
+ flavor_ape.3.da:0 "Arriving on the shores of the Kharidian Desert, the last of the desert monkeys declared that we should re-establish the presence of the desert monkeys here."
+ flavor_ape.3.db:0 "Our conquests in Kharid have left many humans in shock and confusion - but some are overjoyed at the return of monkeys to a land in dire need of them. Our translators tell us they want to see a permanent colony of monkeys in Kharid following the old desert monkey ways."
+ flavor_ape.3.dc:0 "A strange monkey with shockingly little knowledge of day-to-day living in Ape Atoll has requested we establish a colony in the Kharidian Desert. They promise there is great wealth to be found - and choc-ices."
+ flavor_ape.3.a:0 "Perhaps we should consider it."
+ 
+ flavor_ape.4.t:0 "The Desert Monkey Colony of New Apmeken"
+ flavor_ape.4.d:0 "Nestled between the camel's humps in the central Kharidian Desert lies a new monkey colony. However, this colony seeks to honour the ways of desert monkeys past and will promote the respective culture and faith accordingly."
+ flavor_ape.4.a:0 "Let's join in with this colony!"
+ flavor_ape.4.b:0 "They better bring us lots of chimp ices!"

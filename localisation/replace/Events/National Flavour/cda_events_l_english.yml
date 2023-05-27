@@ -1,0 +1,27 @@
+﻿l_english:
+ flavor_cda.1.t:0 "Tirannwn at war!"
+ flavor_cda.1.d:0 "The Iorwerth Clan has betrayed the rest of Tirannwn and taken Prifddinas! They clearly have dangerous ambitions which we should help put a stop to, and our Lord Baxtorian Cadarn is leading an expedition to do so. But this has left our own lands vulnerable - what should we do about this?"
+ flavor_cda.1.a:0 "Stay the course and send all the support we can!"
+ flavor_cda.1.b:0 "The future is on this side of the Galarpos. Recall Baxtorian."
+ CDA_return_of_baxtorian:0 "Return of Baxtorian"
+ 
+ flavor_cda.2.t:0 "The Gnome Empire Turns Their Back"
+ flavor_cda.2.d:0 "Terrible news, $MONARCHTITLE$. The Gnome Empire sees our valiant effort to assist our Tirannwnaidd allies as a waste of resources, and are seriously questioning our continued alliance. We should prepare for a difficult few years ahead."
+ flavor_cda.2.a:0 "Trifling gnomes!"
+ 
+ flavor_cda.3.t:0 "The Gnome Empire Has Our Back"
+ flavor_cda.3.d:0 "Despite our presently precarious situation, [GNE.Monarch.GetName] of the Gnome Empire has insisted on keeping our alliance. This should help secure our position in Kandarin while we help our friends in Tirannwn."
+ flavor_cda.3.a:0 "At least things didn't get any worse."
+ 
+ flavor_cda.4.t:0 "Friends Indeed"
+ flavor_cda.4.d:0 "Wonderous news, my $MONARCHTITLE$! The Gnome Empire has decided to provide extra support to our nation while we send elves into Tirannwn! This leaves our kingdom considerably less exposed to outside threats, though it may leave the Gnome Empire somewhat vulnerable."
+ flavor_cda.4.a:0 "I knew allying gnomes was a good idea!"
+ 
+ flavor_cda.5.t:0 "Elves of Kandarin"
+ flavor_cda.5.da:0 "We find many pointy-eared weaklings in our way. They no have leader so we crush!"
+ flavor_cda.5.db:0 "The fall of the elven kingdom in Kandarin have left the remaining elves in a precarious position. How should we handle them?"
+ flavor_cda.6.a:0 "This our land!"
+ flavor_cda.6.b:0 "Crush the elves!"
+ flavor_cda.6.c:0 "Allow the elves safe passage to Tirannwn."
+ flavor_cda.6.e:0 "Incorporate the elves into our realm."
+ CDA_no_elves_leave_tooltip:0 "Picking this option prevents your nation receiving this event again."

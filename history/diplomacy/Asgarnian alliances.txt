@@ -1,0 +1,31 @@
+#Donblas-Varze
+vassal = {
+	first = DBS
+	second = VRZ
+	start_date = 1900.1.1
+	end_date = 2008.12.31
+}
+
+#Dark Wizards-Rennard
+vassal = {
+	first = DWI
+	second = RNN
+	start_date = 1900.1.1
+	end_date = 2008.12.31
+}
+
+#Asgarnia-Musans
+vassal = {
+	first = ASG
+	second = MUS
+	start_date = 2130.7.11
+	end_date = 2230.1.1
+}
+
+#Asgarnia-Burthorpe
+march = {
+	first = ASG
+	second = BTH
+	start_date = 2151.4.6
+	end_date = 2230.1.1
+}

@@ -1,0 +1,13 @@
+#1208 - Exile's Point
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fruit
+
+is_city = yes

@@ -1,0 +1,30 @@
+﻿l_english:
+ vampyric_flavor.1.t:0 "Blood Tithes"
+ vampyric_flavor.1.d:0 "Blood is a central resource in Vampyric society - it sustains us physically and spiritually. We demand a tithe of blood from all the human subjects of our realm - but how much should we demand now?"
+ vampyric_flavor.1.a:0 "Demand a large tithe!"
+ vampyric_flavor.1.b:0 "Request a modest tithe."
+ 
+ vampyric_flavor.2.t:0 "Vampyric Castes"
+ vampyric_flavor.2.d:0 "Vampyres are divided into castes based on power - juveniles, juvinates and vyres. While there is no real chance of lesser vampyres taking over our realm, sometimes they become restless and threaten to disrupt the supply of blood tithes. How should we handle this?"
+ vampyric_flavor.2.a:0 "Enforce the caste system!"
+ vampyric_flavor.2.b:0 "Provide token concessions."
+ 
+ vampyric_flavor.3.t:0 "The Power of the [Root.Monarch.GetTitle]"
+ vampyric_flavor.3.d:0 "Many of the rituals of the Vampyric clergy predate even Zamorak's rise to godhood, but faced with the strength of our [Root.Monarch.GetTitle] any ritual [Root.Monarch.GetSheHe] personally dislikes can be easily pushed aside."
+ vampyric_flavor.3.a:0 "Keep the rituals."
+ vampyric_flavor.3.b:0 "Remove the rituals."
+ 
+ vampyric_flavor.4.t:0 "Spider Eggs"
+ vampyric_flavor.4.d:0 "Historically, spiders have been vilified by vampyres. Ritual destruction of spider nests has become one way our faith distinguishes itself - though rather than destroying spider eggs, we could also consider selling them to herbalists for some quick money."
+ vampyric_flavor.4.a:0 "Destroy the eggs!"
+ vampyric_flavor.4.b:0 "Sell the eggs!"
+ 
+ vampyric_flavor.5.t:0 "Controversial Haemalchemist Practices"
+ vampyric_flavor.5.d:0 "Haemalchemy is the act of using magic to manipulate blood. These practices have largely been carried out in secret, though recently someone has been found practicing this craft publically. Does this have the potential to strengthen us, or is it a heresy to the purity of plasma?"
+ vampyric_flavor.5.a:0 "Stamp down on the practice."
+ vampyric_flavor.5.b:0 "Leave them be."
+ 
+ vampyric_flavor.6.t:0 "Non-Vampyres and the Faith"
+ vampyric_flavor.6.d:0 "We Vampyres broke off from the Church of Zamorak at the end of the Third Age, though have retained many of its practices. Such an arrangement suits us, who are clearly superior to the demonic, werewolf and human mob which makes up many of Zamorak's followers. Yet the inverse is also true - our teachings largely do not suit non-vampyres. Perhaps it is better to let them convert to the somewhat objectionable Zamorak lest they convert to a faith far more objectionable?"
+ vampyric_flavor.6.a:0 "Let them convert to Zamorak."
+ vampyric_flavor.6.b:0 "Zamorak is weak!"

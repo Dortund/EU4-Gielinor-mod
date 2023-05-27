@@ -1,0 +1,586 @@
+
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+###########################################
+# Pseudo-ideas
+###########################################
+
+mce_adventurer_regency_modifier = {
+	potential = {
+		has_idea = MCE_adventurer_regency
+	}
+	trigger = {
+		has_regency = yes
+	}
+	legitimacy = 2
+	yearly_absolutism = 1
+}
+
+
+exploration_expansion_additional_colonists = {
+	potential = {
+		has_idea = additional_colonists
+	}
+	trigger = {
+		has_institution = exploration
+	}
+	colonists = 1
+}
+
+exploration_expansion_general_colonization_law = {
+	potential = {
+		has_idea = general_colonization_law
+	}
+	trigger = {
+		has_institution = exploration
+	}
+	colonists = 1
+}
+
+exploration_exploration_colonial_ventures = {
+	potential = {
+		has_idea = colonial_ventures
+	}
+	trigger = {
+		has_institution = exploration
+	}
+	colonists = 1
+}
+
+###########################################
+# Elder Artefacts
+###########################################
+
+stone_of_jas_knowledge = {
+	potential = {
+		OR = {
+			has_country_flag = knowledge_stone_of_jas
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_flag = knowledge_stone_of_jas
+			AND = {
+				absolutism = 100
+				adm_tech = 20
+				dip_tech = 20
+				mil_tech = 20
+			}
+			AND = {
+				absolutism = 90
+				any_enemy_country = {
+					has_country_flag = knowledge_stone_of_jas
+				}
+			}
+			AND = {
+				absolutism = 80
+				any_known_country = {
+					has_country_flag = knowledge_stone_of_jas
+					has_spy_network_from = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			ruler_culture = trueborn_vampyre
+			ruler_culture = mahjarrat
+			ruler_culture = moonclan
+		}
+	}
+}
+
+staff_of_armadyl_knowledge = {
+	potential = {
+		OR = {
+			has_country_flag = knowledge_staff_of_armadyl
+			AND = {
+				tag = IKO
+				religion = armadyl
+			}
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_flag = knowledge_staff_of_armadyl
+			AND = {
+				absolutism = 100
+				adm_tech = 20
+				dip_tech = 20
+				mil_tech = 20
+			}
+			AND = {
+				absolutism = 90
+				any_enemy_country = {
+					has_country_flag = knowledge_staff_of_armadyl
+				}
+			}
+			AND = {
+				absolutism = 80
+				any_known_country = {
+					has_country_flag = knowledge_staff_of_armadyl
+					has_spy_network_from = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			AND = {
+				tag = IKO
+				religion = armadyl
+			}
+			ruler_culture = mahjarrat
+		}
+	}
+}
+
+guthix_rest_place_knowledge = {
+	potential = {
+		OR = {
+			AND = {
+				OR = {
+					current_age = age_of_adventurers
+					current_age = age_of_divination
+				}
+				has_country_flag = knowledge_stone_of_jas
+				has_country_flag = knowledge_staff_of_armadyl
+				has_global_flag = jas_stone_taken
+				has_global_flag = armadyl_staff_taken
+			}
+		has_global_flag = guthix_rest_revealed
+		}
+		NOT = { has_global_flag = death_of_guthix }
+		NOT = { has_global_flag = guthix_found }
+	}
+	trigger = {
+		OR = {
+			AND = {
+				absolutism = 100
+				adm_tech = 20
+				dip_tech = 20
+				mil_tech = 20
+			}
+			capital_scope = {
+				has_province_modifier = artefact_staff_of_armadyl
+				has_province_modifier = artefact_stone_of_jas
+			}
+		}		
+	}
+}
+
+###########################################
+# Cadarn Instability
+###########################################
+
+# No longer used
+#cda_no_longer_elven = {
+#	potential = {
+#		tag = CDA
+#		has_reform = unstable_monarchy
+#	}
+#	trigger = {
+#		cda_trigger_has_elves = no
+#	}
+#	monthly_militarized_society = -1
+#}
+
+
+###########################################
+# Kourend Government
+###########################################
+arceuus_in_power = {
+	potential = {
+		tag = AUU
+		is_subject_of = KOU
+	}
+	trigger = {
+		KOU = { faction_in_power = arceuus_faction }
+	}
+	liberty_desire = -10
+	prestige = 0.5
+}
+hosidius_in_power = {
+	potential = {
+		tag = HOS
+		is_subject_of = KOU
+	}
+	trigger = {
+		KOU = { faction_in_power = hosidius_faction }
+	}
+	liberty_desire = -10
+	prestige = 0.5
+}
+lovakengj_in_power = {
+	potential = {
+		tag = LOV
+		is_subject_of = KOU
+	}
+	trigger = {
+		KOU = { faction_in_power = lovakengj_faction }
+	}
+	liberty_desire = -10
+	prestige = 0.5
+}
+piscarilius_in_power = {
+	potential = {
+		tag = PCL
+		is_subject_of = KOU
+	}
+	trigger = {
+		KOU = { faction_in_power = piscarilius_faction }
+	}
+	liberty_desire = -10
+	prestige = 0.5
+}
+shayzien_in_power = {
+	potential = {
+		tag = SYZ
+		is_subject_of = KOU
+	}
+	trigger = {
+		KOU = { faction_in_power = shayzien_faction }
+	}
+	liberty_desire = -10
+	prestige = 0.5
+}
+
+#Stable subjects
+
+kou_stable_arceuus = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		AUU = {
+			is_subject_of = KOU
+			NOT = { liberty_desire = 50 }
+		}
+	}
+	monthly_kourend_disunity_power_1 = -0.1
+}
+kou_stable_hosidius = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		HOS = {
+			is_subject_of = KOU
+			NOT = { liberty_desire = 50 }
+		}
+	}
+	monthly_kourend_disunity_power_1 = -0.1
+}
+kou_stable_lovakengj = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		LOV = {
+			is_subject_of = KOU
+			NOT = { liberty_desire = 50 }
+		}
+	}
+	monthly_kourend_disunity_power_1 = -0.1
+}
+kou_stable_piscarilius = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		PCL = {
+			is_subject_of = KOU
+			NOT = { liberty_desire = 50 }
+		}
+	}
+	monthly_kourend_disunity_power_1 = -0.1
+}
+kou_stable_shayzien = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		SYZ = {
+			is_subject_of = KOU
+			NOT = { liberty_desire = 50 }
+		}
+	}
+	monthly_kourend_disunity_power_1 = -0.1
+}
+
+#Rebellious Subjects
+
+kou_rebellious_arceuus = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		AUU = {
+			is_subject_of = KOU
+			liberty_desire = 50
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.25
+	arceuus_faction_influence = -0.1
+}
+kou_rebellious_hosidius = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		HOS = {
+			is_subject_of = KOU
+			liberty_desire = 50
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.25
+	hosidius_faction_influence = -0.1
+}
+kou_rebellious_lovakengj = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		LOV = {
+			is_subject_of = KOU
+			liberty_desire = 50
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.25
+	lovakengj_faction_influence = -0.1
+}
+kou_rebellious_piscarilius = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		PCL = {
+			is_subject_of = KOU
+			liberty_desire = 50
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.25
+	piscarilius_faction_influence = -0.1
+}
+kou_rebellious_shayzien = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		SYZ = {
+			is_subject_of = KOU
+			liberty_desire = 50
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.25
+	shayzien_faction_influence = -0.1
+}
+
+#Independent Houses
+
+kou_independent_arceuus = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		AUU = {
+			NOT = { is_subject_of = KOU }
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.5
+	arceuus_faction_influence = -1
+}
+kou_independent_hosidius = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		HOS = {
+			NOT = { is_subject_of = KOU }
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.5
+	hosidius_faction_influence = -1
+}
+kou_independent_lovakengj = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		LOV = {
+			NOT = { is_subject_of = KOU }
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.5
+	lovakengj_faction_influence = -1
+}
+kou_independent_piscarilius = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		PCL = {
+			NOT = { is_subject_of = KOU }
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.5
+	piscarilius_faction_influence = -1
+}
+kou_independent_shayzien = {
+	potential = {
+		tag = KOU
+		has_reform = kourend_monarchy
+	}
+	trigger = {
+		SYZ = {
+			NOT = { is_subject_of = KOU }
+		}
+	}
+	monthly_kourend_disunity_power_1 = 0.5
+	shayzien_faction_influence = -1
+}
+
+###########################################
+# Kandarin
+###########################################
+
+kdr_knights_of_the_round_table = {
+	potential = {
+		tag = KDR
+		exists = CML
+	}
+	trigger = {
+		CML = {
+			is_subject_of = KDR
+		 	development_of_overlord_fraction = 0.1
+		}
+	}
+ 	min_autonomy_in_territories = -0.1
+}
+
+###########################################
+# Tirannwn Civil War
+###########################################
+
+civil_war_underdog = {
+	potential = {
+		has_government_mechanic = elven_desperation_mechanic
+	}
+	trigger = {
+		if = {
+			limit = {
+				tag = EVR
+			}
+			NOT = { total_development = IOR }
+		}
+		if = {
+			limit = {
+				tag = IOR
+			}
+			NOT = { total_development = EVR }
+		}
+	}
+ 	monthly_elven_desperation_power_1 = 1
+}
+
+civil_war_stronger = {
+	potential = {
+		has_government_mechanic = elven_desperation_mechanic
+	}
+	trigger = {
+		if = {
+			limit = {
+				tag = EVR
+			}
+			total_development = IOR
+		}
+		if = {
+			limit = {
+				tag = IOR
+			}
+			total_development = EVR
+		}
+	}
+ 	monthly_elven_desperation_power_1 = -1
+}
+
+civil_war_winning_conflict = {
+	potential = {
+		has_government_mechanic = elven_desperation_mechanic
+	}
+	trigger = {
+		if = {
+			limit = {
+				tag = EVR
+			}
+		 	war_with = IOR
+			war_score_against = {
+				who = IOR
+				value = 10
+			}
+		}
+		if = {
+			limit = {
+				tag = IOR
+			}
+		 	war_with = EVR
+			war_score_against = {
+				who = EVR
+				value = 10
+			}
+		}
+	}
+ 	monthly_elven_desperation_power_1 = -1
+}
+
+civil_war_losing_conflict = {
+	potential = {
+		has_government_mechanic = elven_desperation_mechanic
+	}
+	trigger = {
+		if = {
+			limit = {
+				tag = EVR
+			}
+		 	war_with = IOR
+			NOT = {
+				war_score_against = {
+					who = IOR
+					value = -10
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = IOR
+			}
+		 	war_with = EVR
+			NOT = {
+				war_score_against = {
+					who = EVR
+					value = -10
+				}
+			}
+		}
+	}
+ 	monthly_elven_desperation_power_1 = 2
+}

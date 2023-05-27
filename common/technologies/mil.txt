@@ -1,0 +1,786 @@
+monarch_power = MIL
+
+# applied when a country is ahead of time in this technology
+# no bonus for MIL currently
+# ahead_of_time = {
+# }
+
+# Pre-era techs
+technology = {
+	# Tech 0
+	year = 1836
+	
+	sprite_level = 1
+
+	infantry_fire		= 	0.25
+	infantry_shock 		= 	0.20	
+	cavalry_shock  		= 	0.8	
+	land_morale 		= 	2.0
+}
+
+technology = {
+	# Tech 1
+	year = 1876
+	expects_institution = {
+		reconstruction = 0.25
+	}
+	infantry_shock		= 	0.1
+	infantry_fire 		= 	0.1
+	
+	fort_15th = yes
+		
+	enable = bandostech_1_infantry
+	enable = centraltech_1_infantry
+	enable = dwarventech_1_infantry
+	enable = elventech_1_infantry
+	enable = fremenniktech_1_infantry
+	enable = gnometech_1_infantry
+	enable = kandarintech_1_infantry
+	enable = karamjantech_1_infantry
+	enable = kharidtech_1_infantry
+	enable = morytaniantech_1_infantry
+	enable = monkeytech_1_infantry
+	enable = northerntech_1_infantry
+	enable = wushankotech_1_infantry
+	enable = zeantech_1_infantry
+	
+	enable = bandostech_1_cavalry
+	enable = centraltech_1_cavalry
+	enable = dwarventech_1_cavalry
+	enable = elventech_1_cavalry
+	enable = fremenniktech_1_cavalry
+	enable = gnometech_1_cavalry
+	enable = kandarintech_1_cavalry
+	enable = karamjantech_1_cavalry
+	enable = kharidtech_1_cavalry
+	enable = morytaniantech_1_cavalry
+	enable = monkeytech_1_cavalry
+	enable = northerntech_1_cavalry
+	enable = wushankotech_1_cavalry
+	enable = zeantech_1_cavalry
+}
+
+technology = {
+	# Tech 2
+	year = 1906
+	expects_institution = {
+		reconstruction = 0.5
+	}
+	infantry_shock		= 	0.2
+	cavalry_shock		= 	0.2
+	
+	combat_width = 5
+}
+
+# The 30 big techs from here on
+
+technology = {
+	# Tech 3
+	year = 1926
+	expects_institution = {
+		reconstruction = 0.5
+	}
+	land_morale = 	0.5
+	may_drill = yes
+}
+
+technology = {
+	# Tech 4
+	year = 1939
+	expects_institution = {
+		reconstruction = 0.5
+	}
+	#Pike Square
+	
+
+	land_morale = 	0.5
+	military_tactics 	= 	0.25
+}
+
+technology = {
+	# Tech 5
+	year = 1952
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.15
+	}
+	#Standardised Pikes
+	supply_limit 		= 	0.5
+	infantry_shock		= 	0.15
+	cavalry_shock		= 	0.2
+
+	enable = bandostech_5_infantry
+	enable = centraltech_5_infantry
+	enable = dwarventech_5_infantry
+	enable = elventech_5_infantry
+	enable = fremenniktech_5_infantry
+	enable = kandarintech_5_infantry
+	enable = karamjantech_5_infantry
+	enable = kharidtech_5_infantry
+	enable = morytaniantech_5_infantry
+	enable = monkeytech_5_infantry
+	enable = northerntech_5_infantry
+	enable = wushankotech_5_infantry
+	enable = zeantech_5_infantry
+	
+	combat_width = 2
+}
+
+technology = {
+	# Tech 6
+	year = 1965
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.3
+	}
+	#Arquebus
+	military_tactics 	= 	0.25
+	infantry_shock		= 	0.30
+	infantry_fire 		= 	0.20
+	
+	
+	barracks = yes
+
+
+	enable = bandostech_6_cavalry
+	enable = centraltech_6_cavalry
+	enable = dwarventech_6_cavalry
+	enable = elventech_6_cavalry
+	enable = kandarintech_6_cavalry
+	enable = kharidtech_6_cavalry
+	enable = wushankotech_6_cavalry
+
+	combat_width = 2
+}
+
+technology = {
+	# Tech 7
+	year = 1978
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+	}
+	#The limber
+	artillery_fire 		= 	1
+	artillery_shock 	=	0.05
+	military_tactics 	= 	0.25
+	enable = alltech_7_cannon 
+	enable = dwarventech_7_cannon
+}
+
+technology = {
+	# Tech 8
+	year = 1991
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+	}
+	#Pike and Shot
+	infantry_fire		= 	0.25
+	cavalry_shock		=	0.8
+
+	
+	regimental_camp = yes
+}
+
+technology = {
+	# Tech 9
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.15
+	}
+	year = 2004
+	
+	#Ditch
+	
+	enable = bandostech_9_infantry
+	enable = centraltech_9_infantry
+	enable = dwarventech_9_infantry
+	enable = elventech_9_infantry
+	enable = fremenniktech_9_infantry
+	enable = gnometech_9_infantry
+	enable = kandarintech_9_infantry
+	enable = karamjantech_9_infantry
+	enable = kharidtech_9_infantry
+	enable = monkeytech_9_infantry
+	enable = morytaniantech_9_infantry
+	enable = northerntech_9_infantry
+	enable = wushankotech_9_infantry
+	enable = zeantech_9_infantry
+
+	military_tactics 	= 	0.25
+	combat_width = 1	
+}
+
+technology = {
+	# Tech 10
+	year = 2017
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.3
+	}
+	#Reiter
+	maneuver_value 		= 	0.25
+
+	enable = alltech_10_cannon 
+	enable = dwarventech_10_cannon
+	
+	enable = bandostech_10_cavalry
+	enable = centraltech_10_cavalry
+	enable = dwarventech_10_cavalry
+	enable = elventech_10_cavalry
+	enable = fremenniktech_10_cavalry
+	enable = gnometech_10_cavalry
+	enable = kandarintech_10_cavalry
+	enable = karamjantech_10_cavalry
+	enable = kharidtech_10_cavalry
+	enable = monkeytech_10_cavalry
+	enable = morytaniantech_10_cavalry
+	enable = northerntech_10_cavalry
+	enable = wushankotech_10_cavalry
+	enable = zeantech_10_cavalry
+
+}
+
+technology = {
+	# Tech 11
+	year = 2030
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+	}
+	#Matchlock Musket
+	infantry_shock		= 	0.20
+	cavalry_fire		= 	0.5
+
+	
+	weapons = yes
+	
+	combat_width = 2
+}
+	
+technology = {
+	# Tech 12
+	year = 2043
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+	}
+	#Spanish Square
+	sprite_level = 2
+	
+	supply_limit 		= 	0.5
+	military_tactics	=	0.25
+
+	enable = bandostech_12_infantry
+	enable = centraltech_12_infantry
+	enable = dwarventech_12_infantry
+	enable = elventech_12_infantry
+	enable = fremenniktech_12_infantry
+	enable = gnometech_12_infantry
+	enable = kandarintech_12_infantry
+	enable = karamjantech_12_infantry
+	enable = kharidtech_12_infantry
+	enable = monkeytech_12_infantry
+	enable = morytaniantech_12_infantry
+	enable = northerntech_12_infantry
+	enable = wushankotech_12_infantry
+	enable = zeantech_12_infantry
+
+}
+
+technology = {
+	# Tech 13
+	year = 2056
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.15
+	}
+	#Trunnions
+	artillery_shock 	= 	0.1
+	artillery_fire 		= 	0.4
+	
+	enable = alltech_13_cannon 
+	enable = dwarventech_13_cannon
+}
+
+technology = {
+	# Tech 14
+	year = 2069
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.3
+	}
+	#Star Bastions
+	fort_16th = yes
+	infantry_fire		=	0.3
+	
+	enable = bandostech_14_cavalry
+	enable = centraltech_14_cavalry
+	enable = dwarventech_14_cavalry
+	enable = elventech_14_cavalry
+	enable = fremenniktech_14_cavalry
+	enable = gnometech_14_cavalry
+	enable = kandarintech_14_cavalry
+	enable = karamjantech_14_cavalry
+	enable = kharidtech_14_cavalry
+	enable = monkeytech_14_cavalry
+	enable = morytaniantech_14_cavalry
+	enable = northerntech_14_cavalry
+	enable = wushankotech_14_cavalry
+	enable = zeantech_14_cavalry
+
+	combat_width = 2
+}
+
+technology = {
+	# Tech 15
+	year = 2082
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+	}
+	#Maurician Infantry
+	land_morale 		=	1.0
+	military_tactics	=	0.25
+	
+	enable = bandostech_15_infantry
+	enable = centraltech_15_infantry
+	enable = dwarventech_15_infantry
+	enable = elventech_15_infantry
+	enable = fremenniktech_15_infantry
+	enable = gnometech_15_infantry
+	enable = kandarintech_15_infantry
+	enable = karamjantech_15_infantry
+	enable = kharidtech_15_infantry
+	enable = monkeytech_15_infantry
+	enable = morytaniantech_15_infantry
+	enable = northerntech_15_infantry
+	enable = wushankotech_15_infantry
+	enable = zeantech_15_infantry
+}
+
+technology = {
+	# Tech 16
+	year = 2095
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+	}
+	#Standardisation of Calibre
+	artillery_shock 	= 	0.1
+	artillery_fire 		= 	1.0	
+
+
+	training_fields = yes
+	
+	combat_width = 1
+	
+	enable = alltech_16_cannon 
+	enable = dwarventech_16_cannon
+}
+
+technology = {
+	# Tech 17
+	year = 2108
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.15
+	}
+	cavalry_shock		=	1.0
+	supply_limit		= 	0.5	
+	
+	enable = bandostech_17_cavalry
+	enable = dwarventech_17_cavalry
+	enable = elventech_17_cavalry
+	enable = kandarintech_17_cavalry
+	enable = karamjantech_17_cavalry
+	enable = monkeytech_17_cavalry
+	enable = morytaniantech_17_cavalry
+	enable = wushankotech_17_cavalry
+}
+
+technology = {
+	# Tech 18
+	year = 2121
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.3
+	}
+	#Carbine
+	maneuver_value 		= 	0.25
+
+	enable = alltech_18_cannon 
+	enable = dwarventech_18_cannon
+	
+	combat_width = 2
+}
+
+technology = {
+	# Tech 19
+	year = 2134
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+	}
+	#Gustavian Infantry
+	military_tactics 	= 	0.25
+	supply_limit		=	0.5
+
+	fort_17th = yes
+
+	enable = bandostech_19_infantry
+	enable = centraltech_19_infantry
+	enable = dwarventech_19_infantry
+	enable = elventech_19_infantry
+	enable = fremenniktech_19_infantry
+	enable = gnometech_19_infantry
+	enable = kandarintech_19_infantry
+	enable = karamjantech_19_infantry
+	enable = kharidtech_19_infantry
+	enable = monkeytech_19_infantry
+	enable = morytaniantech_19_infantry
+	enable = northerntech_19_infantry
+	enable = wushankotech_19_infantry
+	enable = zeantech_19_infantry
+}
+
+technology = {
+	# Tech 20
+	year = 2147
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+	}
+	#Killing Grounds
+	
+	infantry_fire		= 	0.5
+		
+	enable = alltech_20_cannon 
+	enable = dwarventech_20_cannon	
+
+	combat_width = 2
+}
+
+technology = {
+	# Tech 21
+	year = 2160
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.15
+	}
+	#Line Infantry
+	sprite_level = 3
+	military_tactics 	= 	0.25
+	
+	infantry_shock 		=	0.5
+}
+
+technology = {
+	# Tech 22
+	year = 2173
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.3
+	}
+	#Cartridge	(1620)?)
+	cavalry_fire		=	0.5
+	artillery_shock 	=	0.1
+	artillery_fire		=	2.0
+	
+	combat_width = 2
+	
+	conscription_center = yes
+
+	enable = alltech_22_cannon 
+	enable = dwarventech_22_cannon		
+}
+
+technology = {
+	# Tech 23
+	year = 2186
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+	}
+	#Light Cavalry
+	
+	cavalry_shock		=	1.0
+	military_tactics 	= 	0.25
+	maneuver_value 		= 	0.5
+
+	enable = bandostech_23_infantry
+	enable = centraltech_23_infantry
+	enable = dwarventech_23_infantry
+	enable = elventech_23_infantry
+	enable = fremenniktech_23_infantry
+	enable = gnometech_23_infantry
+	enable = kandarintech_23_infantry
+	enable = karamjantech_23_infantry
+	enable = kharidtech_23_infantry
+	enable = monkeytech_23_infantry
+	enable = wushankotech_23_infantry
+	enable = bandostech_23_cavalry
+	enable = centraltech_23_cavalry
+	enable = dwarventech_23_cavalry
+	enable = elventech_23_cavalry
+	enable = fremenniktech_23_cavalry
+	enable = gnometech_23_cavalry
+	enable = kandarintech_23_cavalry
+	enable = karamjantech_23_cavalry
+	enable = kharidtech_23_cavalry
+	enable = monkeytech_23_cavalry
+	enable = morytaniantech_23_cavalry
+	enable = northerntech_23_cavalry
+	enable = wushankotech_23_cavalry
+	enable = zeantech_23_cavalry
+}
+
+technology = {
+	# Tech 24
+	year = 2201
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+		invention = 0.15
+	}
+	#Covered Way
+	fort_18th	= yes	
+	military_tactics 	= 	0.25
+
+	combat_width = 2
+}
+
+technology = {
+	# Tech 25
+	year = 2216
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+		invention = 0.3
+	}
+	#Metallurgy
+	artillery_shock 	=	0.1
+	artillery_fire		=	2.0
+	
+	enable = alltech_25_cannon 
+	enable = dwarventech_25_cannon	
+}
+
+technology = {
+	# Tech 26
+	year = 2231
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+		invention = 0.5
+	}
+	#Light Infantry Companies
+	sprite_level = 4
+
+	land_morale			=	1.0
+
+	enable = bandostech_26_infantry
+	enable = centraltech_26_infantry
+	enable = dwarventech_26_infantry
+	enable = elventech_26_infantry
+	enable = fremenniktech_26_infantry
+	enable = gnometech_26_infantry
+	enable = kandarintech_26_infantry
+	enable = karamjantech_26_infantry
+	enable = kharidtech_26_infantry
+	enable = monkeytech_26_infantry
+	enable = morytaniantech_26_infantry
+	enable = northerntech_26_infantry
+	enable = wushankotech_26_infantry
+	enable = zeantech_26_infantry
+	
+	combat_width = 2
+}
+
+technology = {
+	# Tech 27
+	year = 2246
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+		invention = 0.5
+	}
+	#Bayonet
+	supply_limit		=	0.5
+	infantry_fire		= 	0.5	
+}
+
+technology = {
+	# Tech 28
+	year = 2261
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+		invention = 0.5
+	}
+	#Cuirassier
+	maneuver_value 		= 	0.25
+	infantry_shock		=	0.5	
+	
+	enable = bandostech_28_cavalry
+	enable = centraltech_28_cavalry
+	enable = dwarventech_28_cavalry
+	enable = elventech_28_cavalry
+	enable = fremenniktech_28_cavalry
+	enable = gnometech_28_cavalry
+	enable = kandarintech_28_cavalry
+	enable = karamjantech_28_cavalry
+	enable = kharidtech_28_cavalry
+	enable = monkeytech_28_cavalry
+	enable = morytaniantech_28_cavalry
+	enable = northerntech_28_cavalry
+	enable = wushankotech_28_cavalry
+	enable = zeantech_28_cavalry
+
+}
+
+technology = {
+	# Tech 29
+	year = 2276
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+		invention = 0.5
+	}
+	#Defense in Depth
+		
+	enable = alltech_29_cannon
+	enable = dwarventech_29_cannon
+}
+
+technology = {
+	# Tech 30
+	year = 2291
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+		invention = 0.5
+	}
+	#Impulse Warfare
+	#sprite_level = 5	
+	
+	military_tactics	=	0.25
+	land_morale			=	1.0
+	maneuver_value = 0.25
+	
+	enable = bandostech_30_infantry
+	enable = centraltech_30_infantry
+	enable = dwarventech_30_infantry
+	enable = elventech_30_infantry
+	enable = fremenniktech_30_infantry
+	enable = gnometech_30_infantry
+	enable = kandarintech_30_infantry
+	enable = karamjantech_30_infantry
+	enable = kharidtech_30_infantry
+	enable = monkeytech_30_infantry
+	enable = morytaniantech_30_infantry
+	enable = northerntech_30_infantry
+	enable = wushankotech_30_infantry
+	enable = zeantech_30_infantry
+}
+
+technology = {
+	# Tech 31
+	year = 2306
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+		invention = 0.5
+	}
+	#Rifle
+	cavalry_shock		=	1.0
+	infantry_fire		=	1.0
+	supply_limit		=	0.5
+}
+
+technology = {
+	# Tech 32
+	year = 2321
+	expects_institution = {
+		reconstruction = 0.5
+		architecture = 0.5
+		runecrafting = 0.5
+		statehood = 0.5
+		exploration = 0.5
+		quests = 0.5
+		invention = 0.5
+	}
+	#Field Howitzer
+	military_tactics	=	0.25
+	artillery_shock		=	0.1
+	artillery_fire		=	2.0	
+}

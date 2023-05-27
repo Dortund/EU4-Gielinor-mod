@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = avernic
+religion = zamorak
+technology_group = zeantechgroup
+capital = 510 #South Ranul Forest
+national_focus = ADM
+
+1969.12.17 = {
+	monarch = {
+		name = "Xil'gar"
+		dynasty = "Gsot't"
+		birth_date = 1913.3.17
+		adm = 5
+		dip = 2
+		mil = 5
+	}
+}

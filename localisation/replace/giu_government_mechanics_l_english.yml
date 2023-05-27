@@ -1,0 +1,21 @@
+﻿l_english:
+
+############### Elven Desperation
+
+ ability_elven_desperation_mechanic:0 "Civil War Desperation"
+ elven_desperation_mechanic:0 "Civil War Desperation"
+ elven_desperation_power_1:0 "Civil War Desperation"
+ monthly_elven_desperation_power_1:0 "Monthly Civil War Desperation"
+ elven_desperation_last_stand:0 "Last Stand"
+ elven_desperation_last_stand_desc:0 "Call on the struggling people to regroup for one last stand!"
+
+############### Kourend House Disunity
+ 
+ ability_house_disunity_mechanic:0 "House Disunity"
+ house_disunity_mechanic:0 "House Disunity"
+ kourend_disunity_power_1:0 "House Disunity"
+ monthly_kourend_disunity_power_1:0 "Monthly House Disunity"
+ reduce_disunity:0 "Placate Separatists"
+ reduce_disunity_desc:0 "Using the patronage of our monarch, we can attempt to keep Great Kourend cohesive for a little bit longer."
+ 
+ 

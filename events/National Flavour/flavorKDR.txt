@@ -1,0 +1,538 @@
+########################################
+# Events for Kandarin
+########################################
+
+namespace = flavor_kdr
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_kdr.1
+	title = flavor_kdr.1.t #The Knights of the Round Table
+	desc = flavor_kdr.1.d #The people of Kandarin are gripped in awe at the sight of the arrival of a mysterious knightly order led by a so-called King Arthur. They have apparently arrived from another world and believe Gielinor would be a safe haven for them for the time being. Importantly for us, they're willing to govern our northern provinces, and Lord Sinclair is more than willing to give up his castle for them.
+	picture = CAMELOT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KDR
+		owns_core_province = 248
+		owns_core_province = 250
+		is_year = 2132
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = flavor_kdr.1.a #May I join the Knights of the Round Table?
+		every_owned_province = {
+			limit = {
+			 	province_id = 247
+			 	province_id = 248
+			 	province_id = 249
+			 	province_id = 252
+			 	province_id = 780
+			 	province_id = 253
+			 	province_id = 259
+			 	province_id = 536
+			 	province_id = 256
+			}
+			add_core = CML
+			cede_province = CML
+		}
+		create_march = CML
+		248 = {
+			change_province_name = "Camelot"
+		}
+		250 = {
+			change_province_name = "Sinclair Mansion"
+		}
+		switch_tag = CML
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = kdr_tooltip_play_as_cml
+	}
+	option = {
+		name = flavor_kdr.1.b #King Arthur shall find sanctuary!
+		every_owned_province = {
+			limit = {
+			 	province_id = 247
+			 	province_id = 248
+			 	province_id = 249
+			 	province_id = 252
+			 	province_id = 780
+			 	province_id = 248
+			 	province_id = 253
+			 	province_id = 259
+			 	province_id = 536
+			 	province_id = 256
+			}
+			add_core = CML
+			cede_province = CML
+		}
+		create_march = CML
+		248 = {
+			change_province_name = "Camelot"
+		}
+		250 = {
+			change_province_name = "Sinclair Mansion"
+		}
+		ai_chance = {
+			factor = 10
+		}
+		custom_tooltip = kdr_tooltip_camelot_governance
+	}
+	option = {
+		name = flavor_kdr.1.c #We've got enough kings as it is.
+		add_prestige = -10
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = kdr_tooltip_no_cml
+	}
+}
+
+country_event = {
+	id = flavor_kdr.2
+	title = flavor_kdr.2.t #Splitting Heirs
+	desc = flavor_kdr.2.d # [Root.Monarch.GetTitle] [Root.Monarch.GetName], in [Root.Monarch.GetHerHis] infinite wisdom, has decided that for the good of Kandarin, the governance of Ardougne should be divided between the heirs [Root.Heir.GetName] and [Root.Heir.GetHerHis]' younger sibling Tyras. [Root.Heir.GetName] is furious at the arrangement, but perhaps it could help teach [Root.Heir.GetHerHim] humility?
+	picture = CAMELOT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KDR
+		is_year = 2135
+		has_reform = kandarin_monarchy
+		owns_core_province = 265
+		owns_core_province = 266
+	 	dynasty = "Ardignas"
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {	has_heir = yes }
+				}
+				define_heir = {
+					name = "Lathas"
+					dynasty = "Ardignas"
+					culture = ardignan
+					religion = zamorak
+					adm = 1
+					dip = 2
+					mil = 2
+					age = 18
+					claim = 75
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_kdr.2.a #Let it be so.
+		set_ruler_flag = KDR_ready_to_split_ardougne
+		set_country_flag = KDR_lathas_and_tyras
+		set_heir_flag = KDR_jealousy
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_kdr.2.b #[Root.Monarch.GetName]! I'd strongly advise against such a course of action!
+		add_stability = -1
+		add_heir_claim = 10
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kdr.3
+	title = flavor_kdr.3.t #The Division of Ardougne
+	desc = flavor_kdr.3.d #With the ascension of [Root.Monarch.GetName] to the throne of Kandarin, the decision to split Ardougne has been implemented. Tyras has taken West Ardougne, though seems disinterested in governing beyond there. [Root.Monarch.GetName] remains in charge of the rest of Kandarin.
+	picture = CAMELOT_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = KDR
+		has_reform = kandarin_monarchy
+		NOT = { has_ruler_flag = KDR_ready_to_split_ardougne }
+		has_country_flag = KDR_lathas_and_tyras
+		any_province = {
+			limit = {
+				country_or_subject_holds = ROOT
+				area = west_ardougne_area
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = KDR_lathas_and_tyras
+			all_province = {
+				limit = {
+					country_or_subject_holds = ROOT
+					area = west_ardougne_area
+				}
+				cede_province = TYS
+				add_core = TYS
+			}
+			TYS = {
+				add_truce_with = ROOT
+				build_to_forcelimit = {
+					heavy_ship = 0.3
+					light_ship = 0.2
+					transport = 0.5
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Tyras"
+					dynasty = "Ardignas"
+					adm = 1
+					dip = 3
+					mil = 5
+					age = 16
+					claim = 100
+				}
+			}
+			create_march = TYS
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_kdr.3.a #Let's take Tyras' side.
+		switch_tag = TYS
+	}
+	option = {
+		name = flavor_kdr.3.b #We're staying with [Root.Monarch.GetName].
+		
+	}
+}
+
+country_event = {
+	id = flavor_kdr.4
+	title = flavor_kdr.4.t #Tyras Becomes Heir
+	desc = flavor_kdr.4.d #The death of the former heir means Tyras is now the sole claimant to the throne of Kandarin. The realm is no longer in danger of being divided in two.
+	picture = CAMELOT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KDR
+		has_reform = kandarin_monarchy
+		has_ruler_flag = KDR_ready_to_split_ardougne
+		NOT = { has_heir_flag = KDR_jealousy }
+	}
+	
+	immediate = {
+		clr_country_flag = KDR_lathas_and_tyras
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_kdr.4.a #Hopefully this heir lives this time.
+		define_heir = {
+			name = "Tyras"
+			dynasty = "Ardignas"
+			adm = 1
+			dip = 3
+			mil = 5
+			age = 16
+			claim = 100
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kdr.5
+	title = flavor_kdr.5.t #End of an Arrangement
+	desc = flavor_kdr.5.d #Kandarin's change in governance structure means that any arrangement to split the country between heirs is no longer valid.
+	picture = CAMELOT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KDR
+		NOT = { has_reform = kandarin_monarchy }
+		has_country_flag = KDR_lathas_and_tyras
+	}
+	
+	immediate = {
+		clr_country_flag = KDR_lathas_and_tyras
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_kdr.5.a #Okay.
+	}
+}
+
+country_event = {
+	id = flavor_kdr.6
+	title = flavor_kdr.6.t #A City Divided
+	desc = flavor_kdr.6.d #As Kandarin does not control any of West Ardougne, it can hardly be expected to give the city to Tyras. Kandarin shall no longer be divided upon [Root.Monarch.GetName]'s death.
+	picture = CAMELOT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KDR
+		has_country_flag = KDR_lathas_and_tyras
+		NOT = {
+			any_province = {
+				limit = {
+					country_or_subject_holds = ROOT
+					area = west_ardougne_area
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		clr_country_flag = KDR_lathas_and_tyras
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_kdr.6.a #Okay.
+	}
+}
+
+country_event = {
+	id = flavor_kdr.7
+	title = flavor_kdr.7.t #Frustration of Tyras
+	desc = flavor_kdr.7.d #Tyras has taken a chunk out of Kandarin, one which should be rectified. Rumours tell of a power to the west which may be able to aid us - the Iorwerth Clan. Perhaps we should seek ties?
+	picture = CAMELOT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KDR
+		exists = TYS
+		exists = IOR
+	 	any_core_province = {
+			owned_by = TYS
+		}
+		NOT = { has_country_flag = KDR_already_allied_ior }
+		NOT = { has_global_flag = IOR_buying_west_ardy }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		set_country_flag = KDR_consider_ior_ally
+	}
+	
+	option = {
+		name = flavor_kdr.7.a #We should seek ties with Clan Iorwerth!
+		IOR = {
+			country_event = { 
+				id = flavor_ior.5
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = flavor_kdr.7.b #Out of the question!
+	}
+}
+
+# Success at Clan Iorwerth
+country_event = {
+	id = flavor_ior.8
+	title = flavor_ior.8.t
+	desc = flavor_ior.8.d #Clan Iorwerth accepts our plans for an alliance! They have a plan for West Ardougne which they request in exchange for their aid against Tyras; a fair enough exchange.
+	picture = CAMELOT_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = flavor_kdr.8.a #Excellent!
+		add_opinion = {
+			who = IOR
+			modifier = ior_kandarin_alliance
+		}
+		set_country_flag = KDR_ally_in_iorwerth
+	}
+}
+
+# Failure at Clan Iorwerth
+country_event = {
+	id = flavor_ior.9
+	title = flavor_ior.9.t
+	desc = flavor_ior.9.d #Clan Iorwerth has rejected our plans for an alliance! The fools.
+	picture = CAMELOT_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = flavor_kdr.9.a #Booo!
+		add_opinion = {
+			who = IOR
+			modifier = kdr_no_ior_alliance
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kdr.10
+	title = flavor_kdr.10.t #Allies Against Tyras
+	desc = flavor_kdr.10.d #The Iorwerth Clan are good allies to us and potentially could be very helpful in our attempts to assert our claims over Tyras' holdings.
+	picture = CAMELOT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KDR
+		exists = TYS
+		exists = IOR
+	 	any_core_province = {
+			owned_by = TYS
+		}
+		alliance_with = IOR
+		NOT = { has_country_flag = KDR_consider_ior_ally }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		IOR = { 
+			set_country_flag = IOR_ally_in_kandarin
+		}
+		set_country_flag = KDR_already_allied_ior
+	}
+	
+	option = {
+		name = flavor_kdr.10.a #Hopefully only good can come of this.
+		add_dip_power = 10
+	}
+}
+
+country_event = {
+	id = flavor_kdr.11
+	title = flavor_kdr.11.t #The Fate of West Ardougne
+	desc = flavor_kdr.11.d #Tyras has left Kandarin and with it the claim to West Ardougne essentially falls into our control.
+	picture = CAMELOT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = KDR_west_ardougne_fate
+	}
+	
+	option = {
+		name = flavor_kdr.11.a #Excellent!
+		add_prestige = 25
+	}
+}
+
+country_event = {
+	id = flavor_kdr.12
+	title = flavor_kdr.12.t #Iorwerth's Claim
+	desc = flavor_kdr.12.d #Now that we have control over the area of West Ardougne, we need to keep up our end of the bargain for Iorwerth. They want control of the city for some unknown reason, and have devised a genius cover: We fake a plague and build a wall around West Ardougne, claiming it must be quarantined for our own good.
+	picture = IORWERTH_PLAGUE_CITY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns_core_province = 266
+		owns_core_province = 989
+		has_country_flag = KDR_west_ardougne_fate
+		IOR = { has_country_flag = IOR_ally_in_kandarin }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_kdr.11.a #What's wrong with a little deception if it means the defeat of Tyras?
+		266 = {
+			cede_province = IOR
+		}
+		989 = {
+			cede_province = IOR
+		}
+		IOR = {
+			country_event = { 
+				id = flavor_ior.6
+				days = 5
+			}
+		}
+		
+	}
+}
+
+country_event = {
+	id = flavor_kdr.13
+	title = flavor_kdr.13.t #The World Gate
+	desc = flavor_kdr.13.d #There were rumours that the resident races of Gielinor came from other worlds via a great portal - and now there is evidence. Pulled out of the shadows is the World Gate - a route to all manner of other worlds for those who know how to use it.
+	picture = WORLD_GATE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		current_age = age_of_divination
+		owns_core_province = 269
+		absolutism = 80
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_kdr.13.a #I sure hope nothing terrible comes through that gate.
+		269 = {
+		 	change_province_name = "World Gate"
+			add_province_modifier = { 
+				name = KDR_world_gate_province
+				duration = -1 
+			}
+		}
+		set_global_flag = KDR_world_gate_revealed
+	}
+}

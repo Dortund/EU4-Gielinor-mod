@@ -1,0 +1,25 @@
+#232-Viyeldi
+owner = KZI
+controller = KZI
+add_core = KZI
+tribal_owner = ---
+culture = khazari
+religion = karamjan
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 4
+base_manpower = 2
+
+fort_15th = yes 
+
+trade_goods = magic_supplies
+
+is_city = yes
+
+center_of_trade = 1

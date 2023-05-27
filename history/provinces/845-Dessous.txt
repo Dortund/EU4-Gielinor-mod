@@ -1,0 +1,28 @@
+#845 - Dessous
+owner = DES
+controller = DES
+add_core = DES
+tribal_owner = ---
+culture = humanborn_vampyre
+religion = vampyric
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 2
+base_manpower = 2
+
+fort_15th = yes 
+
+trade_goods = bones
+
+is_city = yes
+

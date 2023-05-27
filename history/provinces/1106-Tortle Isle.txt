@@ -1,0 +1,26 @@
+#1106 - Tortle Isle
+
+tribal_owner = ---
+culture = arc_culture
+religion = seiryu
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = monkeytechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fruit
+
+is_city = yes
+
+native_size = 2
+native_ferocity = 1
+native_hostileness = 1

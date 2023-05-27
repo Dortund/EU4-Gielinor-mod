@@ -1,0 +1,147 @@
+########################################
+# Events surrounding the Cave of Guthix
+########################################
+
+namespace = guthixcave
+normal_or_historical_nations = yes
+
+country_event = {
+	id = guthixcave.1
+	title = guthixcave.1.t #Cave of Guthix discovered!
+	desc = guthixcave.1.d #The God Guthix ended the God Wars and has prevented other Gods from setting foot in Gielinor. Since that time, he has slept - where exactly was unknown until now.
+	picture = CAVE_OF_GUTHIX_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		current_age = age_of_adventurers
+		has_country_modifier = guthix_rest_place_knowledge
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+	option = {
+		name = guthixcave.1.a #While Guthix sleeps the world wakes.
+		add_prestige = 50
+		random_province = {
+			limit = {
+				OR = {
+					continent = west_runescape
+					continent = east_runescape
+				}
+				NOT = { is_island = yes }
+			}
+			add_province_modifier = {
+				name = cave_of_guthix
+				duration = -1
+			}
+		}
+		set_global_flag = guthix_rest_revealed
+	}
+}
+
+country_event = {
+	id = guthixcave.2
+	title = guthixcave.2.t #The Death of Guthix
+	desc = guthixcave.2.d #The Cave of Guthix has been broken into and its defending automatons beaten back. All that was left was the God Guthix, who fell to the combined might of Gielinor's most powerful army.
+	picture = CAVE_OF_GUTHIX_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = death_of_guthix }
+		NOT = { religion_group = nonintervention_group }
+		exists = CGU
+		CGU = {
+			capital_scope = {
+				controlled_by = ROOT
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = guthixcave.2.a #A new age has begun.
+		add_prestige = 100
+		add_adm_power = 250
+		add_dip_power = 250
+		add_mil_power = 250
+		
+		set_global_flag = death_of_guthix
+	}
+}
+
+country_event = {
+	id = guthixcave.3
+	title = guthixcave.3.t #The Gods Must Not Return
+	desc = guthixcave.3.d #Our forces are confused as to why we are occupying the Cave of Guthix. Aren't we trying to stop the Gods from returning to Gielinor?
+	picture = CAVE_OF_GUTHIX_eventPicture
+	
+	trigger = {
+		religion_group = nonintervention_group
+		any_owned_province = {
+			is_core = CGU
+		}
+		NOT = { has_global_flag = death_of_guthix }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = guthixcave.3.a #Okay, okay, you can have your cave back.
+		add_prestige = -50
+		every_owned_province = {
+			limit = {
+				is_core = CGU
+			}
+			cede_province = CGU
+		}
+	}
+	option = {
+		name = guthixcave.3.b #There are to be no Gods in Gielinor - not even Guthix!
+		add_prestige = -50
+		change_religion = godless
+		set_religious_school = {
+			group = nonintervention_group
+			school = antitheist_school
+		}
+		country_event = {
+			id = guthixcave.4
+			days = 1
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = guthixcave.4
+	title = guthixcave.4.t #The Betrayal of Guthix
+	desc = guthixcave.4.d #There are to be no gods in Gielinor, even if that meant killing Guthix who was preventing many more from entering the world.
+	picture = CAVE_OF_GUTHIX_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = guthixcave.4.a #A new age has begun.
+		add_adm_power = 250
+		add_dip_power = 250
+		add_mil_power = 250
+		set_global_flag = death_of_guthix
+	}
+}
+

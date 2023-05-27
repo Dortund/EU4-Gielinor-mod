@@ -1,0 +1,141 @@
+########################################
+# Elder Artefact Discovery Events
+########################################
+
+namespace = elderdiscovery
+normal_or_historical_nations = yes
+
+country_event = {
+	id = elderdiscovery.1
+	title = elderdiscovery.1.t #The Stone of Jas
+	desc = elderdiscovery.1.d #We have become aware of a stone of overwhelming power present upon the world of Gielinor: The Stone of Jas.
+	picture = STONE_OF_JAS_eventPicture
+	
+	trigger = {
+		has_country_modifier = stone_of_jas_knowledge
+		NOT = {
+			has_country_flag = knowledge_stone_of_jas
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = knowledge_stone_of_jas
+	}
+	
+	option = {
+		name = elderdiscovery.1.a #Can we keep this discovery secret?
+		add_prestige = 10
+		set_country_flag = knowledge_stone_of_jas
+	}
+}
+
+country_event = {
+	id = elderdiscovery.2
+	title = elderdiscovery.2.t #The Staff of Armadyl
+	desc = elderdiscovery.2.d #We have gained awareness that the almighty weapon, the Staff of Armadyl, is present upon Gielinor. Perhaps we should look for it?
+	picture = STAFF_OF_ARMADYL_eventPicture
+	
+	trigger = {
+		has_country_modifier = staff_of_armadyl_knowledge
+		NOT = {
+			tag = IKO
+			has_country_flag = knowledge_staff_of_armadyl
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = knowledge_staff_of_armadyl
+	}
+	
+	option = {
+		name = elderdiscovery.2.a #Can we keep this discovery secret?
+		add_prestige = 10
+		set_country_flag = knowledge_staff_of_armadyl
+	}
+}
+
+country_event = {
+	id = elderdiscovery.3
+	title = elderdiscovery.3.t #The Staff of Armadyl
+	desc = elderdiscovery.3.d #We are the keepers of the Staff of Armadyl, one of the most powerful weapons Gielinor has ever seen. This great force for justice inspires all those who defend it in the Temple of Ikov.
+	picture = STAFF_OF_ARMADYL_eventPicture
+	
+	trigger = {
+		tag = IKO
+		NOT = {
+			has_country_flag = knowledge_staff_of_armadyl
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_country_flag = knowledge_staff_of_armadyl
+	}
+	
+	option = {
+		name = elderdiscovery.3.a # May it never fall into enemy hands.
+		add_mil_power = 50
+		add_church_power = 25
+		set_country_flag = knowledge_staff_of_armadyl
+	}
+}
+
+country_event = {
+	id = elderdiscovery.4
+	title = elderdiscovery.4.t #The Temple of Guthix
+	desc = elderdiscovery.4.d #An ancient temple to Guthix has been discovered. It is believed to contain the most powerful artefact in all of Gielinor.
+	picture = STONE_OF_JAS_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		has_country_flag = knowledge_stone_of_jas
+		any_province = {
+			AND = {
+				OR = {
+					controlled_by = ROOT
+					owned_by = ROOT
+				}
+				has_active_triggered_province_modifier = temple_to_guthix
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = elderdiscovery.4.a #The race is on to extract the stone!
+		trigger = {
+			NOT = { religion = Guthix }
+		}
+		add_prestige = 50
+		set_global_flag = temple_of_guthix_revealed
+	}
+	
+	option = {
+		name = elderdiscovery.4.b #Keep the stone safe!
+		trigger = {
+			religion = Guthix
+		}
+		add_prestige = 50
+		set_global_flag = temple_of_guthix_revealed
+	}
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = barbarian
+religion = v
+secondary_religion = northern_pantheon
+technology_group = fremenniktechgroup
+capital = 971 #Raevenesland
+national_focus = DIP
+historical_friend = BAO
+
+1921.2.7 = {
+	monarch = {
+		name = "Sigli"
+		dynasty = "Erikson"
+		birth_date = 1900.9.12
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+}

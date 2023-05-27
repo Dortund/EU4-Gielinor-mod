@@ -1,0 +1,19 @@
+#1170 - Raimei
+owner = TNO
+controller = TNO
+add_core = TNO
+tribal_owner = ---
+culture = bowl_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = fishing_spot
+
+is_city = yes

@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = arceuus
+add_accepted_culture = shayzien
+add_accepted_culture = undead_lizardman
+religion = zamorak
+technology_group = zeantechgroup
+capital = 932 #Rugged Woods
+national_focus = ADM
+historical_friend = SWM
+
+1928.11.1 = {
+	monarch = {
+		name = "Horphis"
+		dynasty = "Arceuus"
+		birth_date = 1865.1.30
+		adm = 2
+		dip = 3
+		mil = 6
+	}
+}

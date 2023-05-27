@@ -1,0 +1,206 @@
+########################################
+# Events for Arposandra
+########################################
+
+namespace = flavor_aos
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_aos.1 
+	title = flavor_aos.1.t #Good Tidings From The Gnome Empire
+	desc = flavor_aos.1.d #It appears the Gnome Empire have finally decided that we aren't so bad after all, and have decided to seek better relations.
+	picture = GNOME_GRAND_TREE_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_aos.1.a #Seems we must have successfully infiltrated them.
+		add_opinion = {
+			who = GNE
+			modifier = gne_gnomes_stick_together
+		}
+	}
+}
+
+country_event = {
+	id = flavor_aos.2 
+	title = flavor_aos.2.t #Glouphrie Takes the Gnome Empire!
+	desc = flavor_aos.2.d #Our founder has taken over the Gnome Empire as supreme leader. Though many gnomes considered him dead, we should never count out his ability to create illusions. His first order of business was to secure an alliance with us!
+	picture = GLOUPHRIE_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_aos.2.a #Excellent.
+	}
+}
+
+country_event = {
+	id = flavor_aos.3
+	title = flavor_aos.3.t #The Poison Waste
+	desc = flavor_aos.3.d #All our magical experiments in Arposandra create waste, and it needs to go somewhere. The deep swamps of southern Tirannwn seem as good a place as any, but lately our waste is having a very strange effect on the ecosystem...
+	picture = MORYTANIA_SWAMP_eventPicture
+	
+	trigger = {
+		tag = AOS
+		341 = {
+			owned_by = ROOT
+			development = 15	
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = flavor_aos.3.a #It's surely nothing to worry about.
+		add_prestige = -10
+		344 = {
+			change_province_name = "Poison Waste"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					owns = 333
+					owns = 334
+					owns = 336
+					owns = 773
+					owns = 1390
+				}
+			}
+			country_event = {
+				id = flavor_aos.4
+				days = 1
+			}
+		}
+		
+	}
+}
+
+country_event = {
+	id = flavor_aos.4
+	title = flavor_aos.4.t #The Poison Waste
+	desc = flavor_aos.4.d #A horrific stench rises from Deepest Isfadar. Plantlife has begun dying around the swamp, and the swamp has begun eating into the land...
+	picture = MORYTANIA_SWAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_aos.4.a #What could have caused this?
+	 	every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 333
+					province_id = 334
+					province_id = 336
+					province_id = 773
+					province_id = 1390
+				}
+				add_province_modifier = { 
+					name = AOS_poison_waste
+					duration = -1  
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_aos.5
+	title = flavor_aos.5.t #Zul-Andra
+	desc = flavor_aos.5.d #Refugees from [Root.GetName] along with those from other realms have found their way to southern Tirannwn, where they encountered a monstrous snake! In exchange for letting them live, they now provide live sacrifices to the snake and consider it their god.
+	picture = ZULRAH_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = AOS
+			AND = {
+				NOT = {
+					exists = AOS
+				}
+				random_country = {
+					limit = {
+						capital_scope = {
+							region = tirannwn_region
+						}
+					}	
+				}
+			}
+		}
+		334 = { is_empty = yes }
+		has_institution = exploration
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = flavor_aos.5.a #Let's join them!
+		334 = {
+			change_province_name = "Zul-Andra"
+			add_core = ZUA
+			cede_province = ZUA
+			change_culture = cave_gnome
+			change_religion = zulrah
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+		}
+		ZUA = {
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+		}
+		switch_tag = ZUA
+	}
+	option = {
+		name = flavor_aos.5.b #A snake as a god? Whatever next?
+		334 = {
+			change_province_name = "Zul-Andra"
+			add_core = ZUA
+			cede_province = ZUA
+			change_culture = cavegnome
+			change_religion = zulrah
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+		}
+		ZUA = {
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+		}
+	}
+}

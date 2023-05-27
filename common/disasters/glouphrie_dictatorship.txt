@@ -1,0 +1,57 @@
+#Glouphrie Dictatorship
+#Secret disaster for the Gnome Empire under very specific conditions
+
+glouphrie_dictatorship = {
+	potential = {
+		tag = GNE
+		has_country_flag = gne_glouphrie_rules
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = gne_had_glouphrie_dictatorship }
+	}
+
+	can_start = {
+		tag = GNE
+		has_country_flag = gne_glouphrie_rules
+	}
+	
+	
+	can_stop = {
+			OR = {
+				NOT = { has_ruler = "Glouphrie" }
+				NOT = { has_country_flag = gne_glouphrie_rules }
+			}
+	}
+	
+	progress = {
+	
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			has_country_flag = gne_glouphrie_rules
+		}
+		
+	}
+
+	can_end = {
+		OR = {
+			AND = {
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 1
+				had_country_flag = { flag = gne_had_glouphrie_dictatorship days = 1825 }
+			}
+			NOT = { has_country_flag = gne_glouphrie_rules }
+		}
+	}
+
+	modifier = {
+		global_unrest = 10
+	}
+	
+	on_start = glouphrie_dictatorship.1
+	on_end = glouphrie_dictatorship.100
+}
+

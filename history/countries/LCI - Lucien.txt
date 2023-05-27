@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = mahjarrat_autocracy
+government_rank = 1
+primary_culture = undeadtroll
+religion = zamorak
+technology_group = northerntechgroup
+capital = 355 #Ice Canyon
+national_focus = DIP
+historical_friend = ZMG
+
+1761.12.6 = {
+	monarch = {
+		name = "Lucien"
+		dynasty = "of the Mahjarrat"
+		culture = mahjarrat
+		birth_date = 1.12.29
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

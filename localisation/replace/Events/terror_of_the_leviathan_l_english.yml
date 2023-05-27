@@ -1,0 +1,20 @@
+﻿l_english:
+ terror_of_the_leviathan.1.t:0 "Terror of the Leviathan"
+ terror_of_the_leviathan.1.d:0 "Massive sea creatures are not unusual in the Wushanko Isles, but this one scouted around Hanto is different. This Crassian Leviathan possesses horrific dark powers which must be bargained with or stopped for the survival of the island."
+ terror_of_the_leviathan.1.a:0 "We have no hope but to side with the Leviathan."
+ terror_of_the_leviathan.1.b:0 "We shall stand and fight!"
+ HNT_fight_the_beast:0 "Successfully holding off the corruption of Xau-Tak will yield permanent prestige and diplomatic reputation for Hanto."
+ 
+ terror_of_the_leviathan.2.t:0 "Servants of Xau-Tak"
+ terror_of_the_leviathan.2.d:0 "Some of our subjects seem to have been subdued by the power of the Crassian Leviathan. They are trying to convince others that Xau-Tak is the only true god, and they are using strange powers to try and back up their arguments."
+ terror_of_the_leviathan.2.a:0 "Fight them off - quickly!"
+ 
+ terror_of_the_leviathan.3.t:0 "Armies of Xau-Tak"
+ terror_of_the_leviathan.3.d:0 "A massive Crassian force has landed on our shores! We must defeat it in the name of all we hold dear!"
+ terror_of_the_leviathan.3.a:0 "The [Root.Religion.GetName] believers shall never bow to Xau-Tak."
+ 
+ terror_of_the_leviathan.100.t:0 "End of the Terror"
+ terror_of_the_leviathan.100.da:0 "In the end, there was no terror but ourselves. We have seen beyond our weakness and embraced the true power of the depths."
+ terror_of_the_leviathan.100.db:0 "It was a hard-fought battle, but the Crassian Leviathan has been defeated once and for all. Though the struggle was devastating for Hanto and its people, we can now rejoice as we have shown Wushanko - and all of Gielnor - our power."
+ terror_of_the_leviathan.100.a:0 "All glory to Xau-Tak!"
+ terror_of_the_leviathan.100.b:0 "Hanto Prevails!"

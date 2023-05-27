@@ -1,0 +1,37 @@
+#Lumbridge isn't named as such until 4A 1937. Known as South Lum at game start.
+owner = NGU
+controller = NGU
+add_core = NGU
+tribal_owner = ---
+culture = narogoshuun
+religion = bandos
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 5
+base_manpower = 4
+
+fort_15th = yes
+
+trade_goods = livestock_farm
+
+is_city = yes
+
+center_of_trade = 1
+
+1937.1.4 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+	remove_core = NGU
+	culture = lummer
+	religion = saradomin
+ 	change_province_name = "Lumbridge"
+}

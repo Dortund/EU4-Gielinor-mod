@@ -1,0 +1,34 @@
+#435-The Tithelands
+owner = HHB
+controller = HHB
+add_core = HHB
+add_core = HOS
+tribal_owner = ---
+culture = hosidius
+religion = zamorak
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = fruit
+
+is_city = yes
+
+1952.3.13 = {
+	owner = HOS
+	controller = HOS
+	remove_core = HHB
+}
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}
+
+center_of_trade = 1

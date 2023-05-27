@@ -1,0 +1,41 @@
+country_decisions = {
+	lucien_religion = {
+		potential = {
+			tag = LCI
+			OR = {
+				any_owned_province = {
+					has_province_modifier = artefact_stone_of_jas
+				}
+				any_owned_province = {
+					has_province_modifier = artefact_staff_of_armadyl
+				}
+			}
+			NOT = { is_religion_enabled = lucien }
+		}
+		allow = {
+			AND = {
+				any_owned_province = {
+					has_province_modifier = artefact_stone_of_jas
+				}
+				any_owned_province = {
+					has_province_modifier = artefact_staff_of_armadyl
+				}
+			}
+		}
+		effect = {
+		 	enable_religion = lucien
+			change_religion = lucien
+			capital_scope = {
+				change_religion = lucien
+			}
+			add_country_modifier = { 
+				name = lucien_ascent_of_lucien
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 200
+	}
+}

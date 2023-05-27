@@ -1,0 +1,983 @@
+misthalin_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MST
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MST_establish_wizards_tower = {
+		icon = mission_establish_wizards_tower
+		position = 1
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 6
+		}
+		trigger = {
+			is_at_war = no
+			has_institution = runecrafting
+			6 = {
+				owned_by = ROOT
+				is_core = ROOT
+				runecrafting = 100
+			}
+		}
+		effect = {
+			6 = {
+				change_province_name = "Wizards' Tower"
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				change_trade_goods = magic_supplies
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					6 = {
+						add_great_project_tier = {
+							type = great_project_wizards_tower
+							tier = 1
+						}
+					}
+				}
+				else = {
+					add_province_modifier = {
+						name = "MST_wizards_tower_modifier"
+						duration = -1
+					}
+				}
+			}
+			set_country_flag = MST_wizards_tower_flag
+		}
+	}
+	
+	MST_faith_and_magic = {
+		icon = mission_ice_mountain_monastery
+		position = 3
+		required_missions = { MST_establish_wizards_tower }
+		provinces_to_highlight = {
+			province_id = 6
+		}
+		trigger = {
+			has_institution = statehood
+			OR = {
+				temple = 10
+				cathedral = 10
+			}
+			6 = {
+				owned_by = ROOT
+				is_core = ROOT
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_wizards_tower
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_wizards_tower
+							tier = 3
+						}
+					}
+				}
+				else = {
+					development = 20
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MST_stable_wizard_faith
+				duration = 9125
+			}
+		}
+	}
+	
+	MST_adventurer_training = {
+		icon = mission_adventurer_training
+		position = 5
+		required_missions = { MST_faith_and_magic MST_annex_draynor }
+		provinces_to_highlight = {
+			province_id = 6
+		}
+		trigger = {
+			innovativeness = 20
+			tutorial_island_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			1 = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+			792 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+			896 = {
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+			
+		}
+		effect = {
+			791 = {
+				add_province_modifier = {
+					name = MST_tutorial_island_hub
+					duration = -1
+				}
+			}
+			add_adm_power = 50
+			set_country_flag = MST_adventurer_training_flag
+		}
+	}	
+}
+
+misthalin_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MST
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	MST_subjugate_draynor = {
+		icon = mission_subjugate_draynor
+		required_missions = { MST_settle_the_south }
+		position = 3
+		provinces_to_highlight = {
+			area = draynor_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_at_war = no
+			draynor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			north_lum_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MST_annex_draynor = {
+		icon = mission_annex_draynor
+		required_missions = { MST_subjugate_draynor }
+		position = 4
+		provinces_to_highlight = {
+			area = draynor_area
+			NOT = { owns = ROOT }
+		}
+		trigger = {
+			is_at_war = no
+			draynor_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			edgeville_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MST_integration_of_edgeville = {
+		icon = mission_integration_of_edgeville
+		required_missions = { MST_annex_draynor }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 20
+		}
+		trigger = {
+			is_at_war = no
+			owns_core_province = 20
+			has_institution = quests
+			absolutism = 25
+			treasury = 250
+		}
+		effect = {
+			add_treasury = -250
+			20 = {
+				change_province_name = "Edgeville"
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			hidden_effect = {
+				ENV = { 
+					override_country_name = EDGEVILLE
+				}		
+			}
+		}
+	}
+	MST_runecrafting_guild = {
+		icon = mission_air_rune
+		position = 6
+		required_missions = { MST_adventurer_training }
+		provinces_to_highlight = {
+			province_id = 6
+		}
+		trigger = {
+			has_institution = exploration
+			innovativeness = 40
+			6 = {
+				owned_by = ROOT
+				is_core = ROOT
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					has_great_project = {
+						type = great_project_wizards_tower
+						tier = 3
+					}
+				}
+				else = {
+					development = 35
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MST_rise_of_the_runecrafting_guild
+				duration = 9125
+			}
+		}
+	}
+}
+
+misthalin_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MST
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MST_kharidian_ties = {
+		icon = mission_kharidian_diplomacy
+		required_missions = {  }
+		
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						exists = ALK
+					}
+				}
+				OR = {
+					AND = {
+						alliance_with = KDS
+						reverse_has_opinion = {
+							who = KDS
+							value = 100
+						}
+					}
+					is_rival = KDS
+					NOT = { exists = KDS }
+				}
+			}
+			else = {
+				OR = {
+					AND = {
+						alliance_with = ALK
+						reverse_has_opinion = {
+							who = ALK
+							value = 100
+						}
+					}
+					is_rival = ALK
+					NOT = { exists = ALK }
+				}
+			}
+		}
+		effect = {
+			breadbasket_of_misthalin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_lum_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	MST_settle_the_south = {
+		icon = mission_settle_the_south
+		position = 2
+		required_missions = { MST_kharidian_ties }
+		provinces_to_highlight = {
+			area = south_lum_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_at_war = no
+			south_lum_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			2 = {
+				change_province_name = "Lumbridge"
+				add_base_tax = 2
+				add_base_production = 1
+				add_base_manpower = 1
+				change_culture = lummer
+				change_religion = ROOT
+			}
+			lumbridge_swamp_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_casus_belli = {
+				target = DYN
+				type = cb_vassalize_mission
+				months = 60
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						62 = { is_empty = yes }
+						exists = KDS
+					}
+				}
+				KDS = {
+					country_event = {
+						id = flavor_kds.1
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	MST_lum_trade = {
+		icon = mission_lum_trade
+		position = 3
+		required_missions = { MST_settle_the_south }
+		provinces_to_highlight = {
+			province_id = 2
+		}
+		trigger = {
+			is_at_war = no
+			2 = {
+				owned_by = ROOT
+				fort_level = 2
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			south_lum_area = {
+				limit = {
+					owned_by = ROOT
+					NOT = { religion = ROOT	}
+				}
+				add_province_modifier = {
+					name = "MST_traders_and_missionaries"
+					duration = 7300
+				}
+			}
+			breadbasket_of_misthalin_area = {
+				limit = {
+					owned_by = ROOT
+					NOT = { religion = ROOT	}
+				}
+				add_province_modifier = {
+					name = "MST_traders_and_missionaries"
+					duration = 7300
+				}
+			}
+		}
+	}
+	MST_bank_of_varrock_mission = {
+		icon = mission_bank_of_varrock_mission
+		position = 4
+		required_missions = { MST_lum_trade }
+		provinces_to_highlight = {
+			province_id = 14
+		}
+		trigger = {
+			is_at_war = no
+			has_idea = MST_bank_of_varrock
+			14 = {
+				owned_by = ROOT
+				development = 30
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			change_innovativeness = 2
+		}
+	}
+	MST_grand_exchange_mission = {
+		icon = mission_grand_exchange_mission
+		position = 5
+		required_missions = { MST_bank_of_varrock_mission }
+		provinces_to_highlight = {
+			province_id = 16
+		}
+		trigger = {
+			is_at_war = no
+			has_idea = MST_grand_exchange
+			absolutism = 25
+			16 = {
+				is_strongest_trade_power = ROOT
+				province_has_center_of_trade_of_level = 2
+				development = 20
+			}
+			2 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			16 = {
+				add_province_modifier = {
+					name = "MST_grand_exchange_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+	MST_combat_market = {
+		icon = mission_combat_market
+		required_missions = { MST_integration_of_edgeville MST_grand_exchange_mission }
+		position = 6
+		trigger = {
+			absolutism = 50
+			num_of_trading_bonuses = 5
+			trading_bonus = {
+				trade_goods = rare_loot
+				value = yes
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+			add_mercantilism = 2
+			add_country_modifier = {
+				name = MST_cornering_the_combat_market
+				duration = 9125
+			}
+		}
+	}
+}
+misthalin_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = MST
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MST_take_the_swamp = {
+		icon = mission_take_the_swamp
+		position = 3
+		required_missions = { MST_settle_the_south }
+		provinces_to_highlight = {
+			OR = {
+				area = lumbridge_swamp_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_at_war = no
+			lumbridge_swamp_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			3 = {
+				change_province_name = "Lummouth"
+			}
+			4 = {
+				change_province_name = "West Swamp"
+			}
+			938 = {
+				change_province_name = "South Swamp"
+			}
+			tutorial_island_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	MST_human_realm = {
+		icon = mission_human_realm
+		position = 4
+		required_missions = { MST_lum_trade MST_take_the_swamp }
+		provinces_to_highlight = {
+			south_lum_area = {
+				type = all
+				NOT = {
+					OR = {
+						culture = avarrockan
+						culture = draynor
+						culture = lummer
+						culture = silvarean
+						}
+					}
+			}
+			breadbasket_of_misthalin_area = {
+				type = all
+				NOT = {
+					OR = {
+						culture = avarrockan
+						culture = draynor
+						culture = lummer
+						culture = silvarean
+					}
+				}
+			}
+		}
+		trigger = {
+			is_at_war = no
+			south_lum_area = {
+				type = all
+				OR = {
+					culture = avarrockan
+					culture = draynor
+					culture = lummer
+					culture = silvarean
+				}
+			}
+			breadbasket_of_misthalin_area = {
+				type = all
+				OR = {
+					culture = avarrockan
+					culture = draynor
+					culture = lummer
+					culture = silvarean
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 50
+		}
+	}
+	MST_beacon_network = {
+		icon = mission_beacon_network
+		position = 5
+		required_missions = { MST_human_realm MST_saranthium_investigations }
+		trigger = {
+			has_idea = MST_beacons
+			owns_core_province = 16
+			owns_core_province = 17
+			owns_core_province = 20
+			owns_core_province = 24
+			owns_core_province = 25
+			owns_core_province = 26
+			owns_core_province = 27
+		}
+		effect = {
+			add_dip_power = 50
+			16 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 7300
+				}
+			}
+			17 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 7300
+				}
+			}
+			20 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 7300
+				}
+			}
+			24 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 7300
+				}
+			}
+			25 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 7300
+				}
+			}
+			26 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 7300
+				}
+			}
+			27 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 7300
+				}
+			}			
+		}
+	}
+	MST_river_of_blood = {
+		icon = mission_river_of_blood
+		position = 6
+		required_missions = { 
+			MST_beacon_network
+		}
+		trigger = {
+			OR = {
+					MYT = { humiliated_by = ROOT }
+					AND = {
+						is_great_power = yes
+						MYT = { is_great_power = no }
+					}
+					NOT = { exists = MYT }
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			canifis_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			mort_myre_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MST_into_the_wilderness = {
+		icon = mission_into_the_wilderness
+		position = 7
+		required_missions = { MST_combat_market MST_river_of_blood }
+		trigger = {
+			is_at_war = no
+			absolutism = 75
+			OR = {
+				owns_core_province = 154
+				AND = {
+					154 = {
+						is_empty = yes				
+					}
+					treasury = 100
+					adm_power = 50
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					154 = {
+						is_empty = yes 
+					}
+				}
+				add_treasury = -100
+				add_adm_power = -50
+				154 = {
+					add_siberian_construction = 200
+				}
+			}
+			else = {
+				154 = {
+					add_permanent_claim = MST
+				}
+				add_mil_power = 50
+			}
+		}
+	}
+	MST_fort_forinthry = {
+		icon = mission_fort_forinthry
+		position = 8
+		required_missions = { MST_into_the_wilderness }
+		trigger = {
+			154 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 15
+				fort_level = 6
+				has_building = cathedral
+				has_building = town_hall
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		effect = {
+			154 = {
+				change_province_name = "Fort Forinthry"
+				add_province_modifier = {
+					name = MST_strategic_outpost
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = {
+					is_empty = yes
+					OR = {
+						area = dying_woods_area
+						area = chaos_tunnels_area
+					}
+				}
+				add_province_modifier = {
+					name = MST_new_duchy_lands
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+
+misthalin_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = MST
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MST_misthalin_army = {
+		icon = mission_misthalin_army
+		position = 1
+		required_missions = {  }
+		trigger = {
+			OR = {
+				army_size_percentage = 0.9
+				army_professionalism = 0.1
+			}
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			add_mil_power = 50
+			kings_road_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			saranthium_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MST_oust_the_drogokishuun = {
+		icon = mission_oust_the_drogokishuun
+		position = 2
+		required_missions = { MST_misthalin_army }
+		provinces_to_highlight = {
+			OR = {
+				area = kings_road_area
+				area = saranthium_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			kings_road_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			saranthium_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+	MST_reinforce_paterdomus = {
+		icon = mission_reinforce_paterdomus
+		position = 3
+		required_missions = { MST_oust_the_drogokishuun }
+		provinces_to_highlight = {
+			province_id = 27
+		}
+		trigger = {
+			27 = {
+				fort_level = 4
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			27 = {
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					add_base_manpower = 2
+				}
+				else = {
+					remove_province_modifier = MST_paterdomus
+					add_province_triggered_modifier = MST_reinforced_paterdomus
+				}
+			}
+		}
+	}
+	MST_saranthium_investigations = {
+		icon = mission_saranthium_investigations
+		position = 4
+		required_missions = { MST_reinforce_paterdomus }
+		provinces_to_highlight = {
+			province_id = 21
+			province_id = 22
+			province_id = 23
+			province_id = 790
+		}
+		trigger = {
+			OR = {
+				21 = {
+					owned_by = ROOT
+					development = 12
+					has_building = university
+				}
+				22 = {
+					owned_by = ROOT
+					development = 12
+					has_building = university
+				}
+				23 = {
+					owned_by = ROOT
+					development = 12
+					has_building = university
+				}
+			}
+		}
+		effect = {
+			change_innovativeness = 2
+		}
+	}
+	MST_fossil_research = {
+		icon = mission_fossil_research
+		position = 5
+		required_missions = { MST_saranthium_investigations }
+		trigger = {
+			is_at_war = no
+			innovativeness = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = "MST_fossil_research_modifier"
+				duration = 3650
+			}
+			create_explorer = {
+				tradition = 60
+			}
+		}
+	}
+	
+	MST_fossil_island_discovery = {
+		icon = mission_fossil_island_discovery
+		position = 6
+		required_missions = { MST_fossil_research }
+		trigger = {
+			is_at_war = no
+			absolutism = 50
+			201 = {
+				has_discovered = MST
+			}
+			outer_fossil_isles_area = {
+				has_discovered = MST
+			}
+			west_fossil_island_area = {
+				has_discovered = MST
+			}
+			east_fossil_island_area = {
+				has_discovered = MST
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					201 = {
+						is_empty = yes 
+					}
+				}
+				201 = {
+					add_siberian_construction = 200
+				}
+			}
+			else = {
+				201 = {
+					add_permanent_claim = MST
+				}
+				add_dip_power = 50
+			}
+		}
+	}
+}

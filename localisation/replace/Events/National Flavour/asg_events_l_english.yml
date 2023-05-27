@@ -1,0 +1,103 @@
+﻿l_english:
+ flavor_asg.1.t:0 "Crandorian Refugees"
+ flavor_asg.1.d:0 "A massive dragon has erupted from Crandor Isle! Crandorians are attempting to seek refuge on our shores. What should we do?"
+ flavor_asg.1.a:0 "We will grant the Crandorians asylum!"
+ flavor_asg.1.b:0 "Forget the Crandorians! What about ourselves?"
+ flavor_asg.1.c:0 "A weak Crandor you say? That island is ours!"
+ 
+ flavor_asg.2.t:0 "Triumph of the Knights"
+ flavor_asg.2.d:0 "We have successfully built a unified Asgarnia under our rule, with the help of the White Knights and the Kinshra, though the two orders are uncomfortable working alongside each other in the new realm. What is the best approach to placate them in the new kingdom?"
+ flavor_asg.2.a:0 "The White Knights shall defend Falador; the Kinshra will be granted a generous estate."
+ flavor_asg.2.b:0 "Asgarnia is for the Saradominists! Banish the Kinshra."
+ flavor_asg.2.c:0 "The Kinshra are the future! Grant the White Knights land away from Falador."
+ flavor_asg.2.e:0 "We have seen the darkness and shall embrace it. Exile the White Knights."
+ flavor_asg.2.f:0 "The knights shall co-exist in the capital!"
+ flavor_asg.2.g:0 "Who cares about the knightly orders?"
+ 
+ flavor_asg.3.t:0 "Visions of Dracs Melrose"
+ flavor_asg.3.d:0 "A man by the name of Dracs Melrose has received a vision from Guthix himself. There is a future threat to the balance of the world, and it shall require a military response. To this end, Melrose pledges to reform the ancient order of the Void Knights."
+ flavor_asg.3.a:0 "Will they help us avoid future troubles?"
+ flavor_asg.3.b:0 "Make this man an advisor!"
+ 
+ flavor_asg.4.t:0 "Visions of Dracs Melrose"
+ flavor_asg.4.d:0 "A man by the name of Dracs Melrose has received a vision from Guthix himself about some kind of future threat, and he wants to re-create the old Void Knights. How should we respond?"
+ flavor_asg.4.a:0 "Will they help us avoid future troubles?"
+ flavor_asg.4.b:0 "No! There is to be no rivalry to the true faith!"
+ 
+ flavor_asg.5.t:0 "Fate of the Void Knights"
+ flavor_asg.5.d:0 "After taking Taverley as part of the glorious unification of Asgarnia, we have a situation to contend with - namely, the fate of the Guthixian Void Knights."
+ flavor_asg.5.a:0 "Integrate the order into Asgarnia."
+ flavor_asg.5.b:0 "Destroy the order!"
+ flavor_asg.5.c:0 "Elevate the order above all others!"
+ 
+ flavor_asg.6.t:0 "Pest Control"
+ flavor_asg.6.d:0 "Over in the southern seas of Gielinor, strange incursions from another world have intensified. The order of Void Knights now believe this is specifically what they were formed to handle, and are prepared to face it head-on."
+ flavor_asg.6.a:0 "Forget my country, I'm joining the Void Knights!"
+ flavor_asg.6.b:0 "The Void Knights deserve our support."
+ flavor_asg.6.c:0 "Forget this country! Forget the Void Knights! I'm joining the Pests!"
+ flavor_asg.6.e:0 "Let the Void Knights do their thing; I don't care."
+
+ flavor_asg.7.t:0 "Pest Control"
+ flavor_asg.7.d:0 "Over in the southern seas of Gielinor, strange incursions from another world have intensified. Apparently some long-dead Guthixian order could have helped, but it was stamped out."
+ flavor_asg.7.a:0 "Forget this country! I'm joining the Pests!"
+ flavor_asg.7.b:0 "It surely can't be that bad?"
+
+ flavor_asg.8.t:0 "The Charred Folk"
+ flavor_asg.8.d:0 "An exceptionally violent Zamorakian group known as the Charred Folk have menaced fellow believers and religious rivals alike. Asgarnians have banded together to exile them to the Wilderness, though they may conduct further raids in future."
+ flavor_asg.8.a:0 "A murderous cult of extremists? I'm in!"
+ flavor_asg.8.b:0 "Good riddance."
+
+ flavor_asg.9.t:0 "Supremacy of the Void Knights"
+ flavor_asg.9.d:0 "Recent decisions made in Asgarnia have sidelined the White and Black Knights in favour of the Void Knights. There are now open whisperings among the populace that the Asgarnian government secretly intends to convert to the Guthixian faith."
+ flavor_asg.9.a:0 "Guthix shall bring us balance!"
+ flavor_asg.9.b:0 "I'm not Guthixian! I just like their knights, that's all!"
+ 
+ flavor_asg.10.t:0 "Retreat of the Temple Knights"
+ flavor_asg.10.d:0 "The Temple Knights are an ancient Saradominist order based in Asgarnia which engages in covert operations. As Asgarnia is not presently of the Saradominist faith, they have gone into hiding and will not serve our nation."
+ flavor_asg.10.a:0 "So be it."
+ 
+ flavor_asg.11.t:0 "Return of the Temple Knights"
+ flavor_asg.11.d:0 "Asgarnia's shift back to the true Saradominist faith has seen the ancient order of the Temple Knights return to serve the nation."
+ flavor_asg.11.a:0 "Excellent."
+ 
+ flavor_asg.12.t:0 "Strange Investigations"
+ flavor_asg.12.d:0 "Something is rotten in the state of Asgarnia. [Root.Dip_Advisor.GetName] speaks of a terrible conspiracy [Root.Dip_Advisor.GetSheHe] is beginning to uncover. The Temple Knights - they do not serve the master we thought they did..."
+ flavor_asg.12.a:0 "Then who do they serve? We must know!"
+ flavor_asg.12.b:0 "We disrupted their plans somehow by converting Asgarnia. But what do they plan?"
+ 
+ flavor_asg.13.t:0 "Temple of the Empty Lord"
+ flavor_asg.13.d:0 "[Root.Dip_Advisor.GetName] has done it. [Root.Dip_Advisor.GetName] has discovered an ancient plot running back centuries by the followers of none other than the Empty Lord himself - Zaros. Zarosians have for centuries infiltrated the Temple Knights for unknown ends, but with their plot discovered, it is finally time to eliminate this evil once and for all."
+ flavor_asg.13.a:0 "Destroy the traitors to Saradomin!"
+ flavor_asg.13.b:0 "It is time to end the meddling of the Empty Lord."
+ 
+ flavor_asg.14.t:0 "Misthalanians insult the true faith!"
+ flavor_asg.14.da:0 "The Zamorakian scum which rules in Misthalin have blamed good Saradominists for the burning of their wizard tower. This demands justice!"
+ flavor_asg.14.db:0 "The fools which rule Misthalin have blamed Zamorakians for the burning of their wizard tower. This demands justice!"
+ flavor_asg.14.a:0 "Misthalin shall pay for their insolence."
+ 
+ flavor_asg.15.t:0 "Questions of Faith as the Tower Burns"
+ flavor_asg.15.da:0 "The Wizards' Tower in Misthalin has burned down, and Zamorakians are viewed as the main culprit. This has had repercussions even here in Asgarnia, where there are calls for us to end our tolerance of the Zamorakian Kinshra."
+ flavor_asg.15.db:0 "The Wizards' Tower in Misthalin has burned down, and Zamorakians are viewed as the main culprit. The White Knights are furious that more hasn't been done to stamp out the scourge of Zamorakian belief, and demand we take action."
+ flavor_asg.15.dc:0 "The Wizards' Tower in Misthalin has burned down, and Saradominists are viewed as the main culprit. This has had repercussions even here in Asgarnia, where there are calls for us to end our tolerance of the Saradominist White Knights."
+ flavor_asg.15.de:0 "The Wizards' Tower in Misthalin has burned down, and Saradominists are viewed as the main culprit. The Kinshra are not surprised at this cowardly attack, but do applaud the application of Zamorak's chaotic teachings by the Saradominists responsible."
+ flavor_asg.15.df:0 "The Wizards' Tower in Misthalin has burned down, and Zamorakians are viewed as the main culprit. This has had repercussions even here in Asgarnia, where there are calls for us to no longer treat the Zamorakian Kinshra so equally to the Saradominist White Knights."
+ flavor_asg.15.dg:0 "The Wizards' Tower in Misthalin has burned down, and Saradominists are viewed as the main culprit. This has had repercussions even here in Asgarnia, where there are calls for us to no longer treat the Saradominist White Knights so equally to the Zamorakian Kinshra."
+ flavor_asg.15.a:0 "We have been too tolerant to the Kinshra."
+ flavor_asg.15.b:0 "It's time to fight more veremently for the true faith."
+ flavor_asg.15.c:0 "We have been too tolerant to the White Knights."
+ flavor_asg.15.e:0 "We do not need to take reckless action at this time."
+ flavor_asg.15.f:0 "It's probably best if we withdrew the Kinshra from Falador."
+ flavor_asg.15.g:0 "It's probably best if we withdrew the White Knights from Falador."
+ flavor_asg.15.h:0 "It's Misthalin we're talking about, why should we worry?" 
+ 
+ flavor_asg.16.t:0 "The Dark Warriors' Fortress"
+ flavor_asg.16.da:0 "After exiling the Kinshra from Asgarnia, an offshoot has found their way north into the Wilderness, building a castle known as the Dark Warriors' Fortress. What this offshoot's goals are remains uncertain."
+ flavor_asg.16.db:0 "Although some in the Kinshra believe that they have been unfairly sidelined in Asgarnia and therefore should seize power, there are others who have decided there is no future for them in Asgarnia and instead they should find their own lands in the Wilderness. This offshoot has built a castle known as the Dark Warriors' Fortress."
+ flavor_asg.16.dc:0 "Sick of having to share power with the White Knights, an offshoot of the Kinshra have decided to settle their own realm in the Wilderness, anchored by the Dark Warriors' Fortress."
+ flavor_asg.16.de:0 "Asgarnia is led by the mighty Kinshra, but that is not good enough for some traitors who believe that only the Wilderness is sufficiently chaotic enough for them. They've gone off to found their useless little Dark Warriors' Fortress or something."
+ flavor_asg.16.a:0 "Let us join up with this Dark Warriors' Fortress."
+ flavor_asg.16.b:0 "Why would anyone want to move to the Wilderness?"
+
+ 
+ 
+ 

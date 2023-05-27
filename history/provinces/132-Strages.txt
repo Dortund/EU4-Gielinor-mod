@@ -1,0 +1,21 @@
+#132 - Strages
+owner = MYT
+controller = MYT
+add_core = MYT
+add_core = SLP
+tribal_owner = ---
+culture = slepe
+religion = zamorak
+
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+trade_goods = logs
+
+is_city = yes

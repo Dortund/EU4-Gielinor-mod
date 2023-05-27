@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = draynor
+religion = saradomin
+technology_group = centraltechgroup
+capital = 7 #Draynor Coast
+national_focus = DIP
+historical_friend = PLI
+historical_friend = CLY
+
+1925.4.16 = {
+	monarch = {
+		name = "Randulf"
+		dynasty = "Enroy"
+		birth_date = 1863.9.5
+		adm = 3
+		dip = 1
+		mil = 5
+	}
+}

@@ -1,0 +1,33 @@
+#928-Smogshore
+owner = AES
+controller = AES
+add_core = AES
+tribal_owner = ---
+culture = barbarian
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+1976.2.14 = {
+	owner = HOS
+	controller = HOS
+	add_core = HOS
+	culture = hosidius
+	religion = saradomin
+}
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

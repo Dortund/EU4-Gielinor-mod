@@ -1,0 +1,24 @@
+#69 - Kalphite
+owner = KPH
+controller = KPH
+add_core = KPH
+tribal_owner = ---
+culture = kalphite
+religion = menaphite
+trade_goods = herblore_supplies
+
+discovered_by = centraltechgroup
+discovered_by = kharidtechgroup
+
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 4
+
+fort_15th = yes
+
+is_city = yes
+
+native_size = 50
+native_ferocity = 20
+native_hostileness = 10

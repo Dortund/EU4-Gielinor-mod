@@ -1,0 +1,31 @@
+##################################################
+#
+# ADVISORS FOR THE GNOME EMPIRE
+#
+##################################################
+#Advisor types:
+##################################################
+#philosopher
+#natural_scientist
+#artist
+#statesman
+#treasurer 
+#naval_reformer
+#army_reformer 
+#trader
+#theologian 
+#spymaster 
+#colonial_governor 
+#diplomat
+##################################################
+
+advisor = {
+	advisor_id = 10000
+	name = "Glouphrie the Untrusted"
+	location = 273
+	discount = yes
+	skill = 3
+	type = army_reformer
+	date = 1871.10.11
+	death_date = 2185.6.15
+}

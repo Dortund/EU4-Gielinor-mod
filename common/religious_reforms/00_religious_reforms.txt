@@ -1,0 +1,197 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+# ai_will do does not actually determine weighting, but AI will not pick an idea with ai_will_do = 0
+# ROOT = country picking the idea
+# groups set to colonial=yes will be higher prioritized by the AI when spending power
+
+
+
+xautak_reforms = {
+	trigger = {
+		religion = xautak
+	}	
+
+	can_buy_idea = {
+		is_at_war = no
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+		num_of_cities = 20
+		NOT = { overextension_percentage = 0.01 }
+	}
+	
+	xautak_reform_1 = { #ruler_of_seas
+	 	naval_forcelimit_modifier = 0.2
+	 	sailor_maintenance_modifer = -0.2
+	}
+	xautak_reform_2 = { #foresight
+		technology_cost = -0.05
+	}
+	xautak_reform_3 = { #cursed_pirates
+		may_perform_slave_raid = yes
+	}
+	xautak_reform_4 = { #inevitability
+		tolerance_own = 2
+	}
+	xautak_reform_5 = { #landcrawlers
+		global_sailors_modifier = 0.25
+		allowed_marine_fraction = 0.1
+	}	
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+xeric_reforms = {
+	trigger = {
+		religion = xeric
+	}	
+
+	can_buy_idea = {
+		is_at_war = no
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+		authority = 100
+		num_of_cities = 10
+	}
+	
+	xeric_reform_1 = { #lizardman_spit
+		fire_damage = 0.1
+	}
+	xeric_reform_2 = { #growing_numbers
+		global_manpower_modifier = 0.2
+	}
+	xeric_reform_3 = { #organised_rituals
+		tolerance_own = 1
+	}
+	xeric_reform_4 = { #rebuild_the_empire
+		core_creation = -0.1
+	}
+	xeric_reform_5 = { #subjugation
+		years_of_nationalism = -5
+	}	
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+zulrah_reforms = {
+	trigger = {
+		religion = zulrah
+	}	
+
+	can_buy_idea = {
+		all_owned_province = {
+			base_tax = 2
+			base_production = 2
+			base_manpower = 2
+		}
+	 	manpower = 25
+		is_at_war = no
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+	}
+	
+	zulrah_reform_1 = { #harsh_negotiations
+	 	province_warscore_cost = -0.15
+	}
+	zulrah_reform_2 = { #baptism_in_eels
+		global_missionary_strength = 0.02
+	}	
+	zulrah_reform_3 = { #expand_sacrifices
+		harsh_treatment_cost = -0.33
+	}
+	zulrah_reform_4 = { #we_all_have_our_time
+		recover_army_morale_speed = 0.05
+	 	recover_navy_morale_speed = 0.05
+	}
+	zulrah_reform_5 = { #swamp_boating
+		navy_tradition = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+ful_reforms = {
+	trigger = {
+		religion = ful
+	}	
+
+	can_buy_idea = {
+		all_owned_province = {
+			religion = ful
+		}
+	 	manpower_percentage = 0.75
+		is_at_war = no
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+		capital_scope = {
+			development = 40
+			base_tax = 10
+			base_production = 10
+			base_manpower = 10
+		}
+	}
+	
+	ful_reform_1 = { #ancient_wisdom
+	 	legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+	 	candidate_random_bonus = 1
+	}
+	ful_reform_2 = { #true_god_of_balance
+		tolerance_own = 1
+	}	
+	ful_reform_3 = { #world-shapers
+		build_time = -0.15
+	}
+	ful_reform_4 = { #volcanic_wealth
+		global_tax_modifier = 0.1
+	}
+	ful_reform_5 = { #openness
+		diplomatic_reputation = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+jas_reforms = {
+	trigger = {
+		religion = jas
+	}	
+
+	can_buy_idea = {
+		vassal = 5
+		is_at_war = no
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+		NOT = { doom = 50 }
+	}
+	
+	jas_reform_1 = { #most_powerful_of_gods
+		prestige = 1
+	}
+	jas_reform_2 = { #siege_weaponry
+		artillery_power = 0.10
+	}
+	jas_reform_3 = { #destruction_of_cities
+		siege_ability = 0.1
+	}
+	jas_reform_4 = { #orikalkum
+		infantry_power = 0.10
+	}
+	jas_reform_5 = { #dragon_science
+		idea_cost = -0.1
+	}	
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

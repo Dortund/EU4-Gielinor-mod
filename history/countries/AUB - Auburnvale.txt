@@ -1,0 +1,8 @@
+government = theocracy
+add_government_reform = frontier_theocracy
+government_rank = 2
+primary_culture = hosidius
+religion = guthix
+technology_group = zeantechgroup
+capital = 460
+

@@ -1,0 +1,26 @@
+#1110 - Gongdung
+owner = GSH
+controller = GSH
+add_core = GSH
+tribal_owner = ---
+culture = arc_culture
+religion = seiryu
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = monkeytechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = bamboo
+
+fort_15th = yes
+
+is_city = yes

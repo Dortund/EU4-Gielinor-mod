@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = north_coaster
+religion = saradomin
+technology_group = centraltechgroup
+capital = 116 #Castle Rolo
+national_focus = DIP
+
+1903.12.12 = {
+	monarch = {
+		name = "Rolosen"
+		dynasty = "Ringbearer"
+		birth_date = 1885.11.4
+		adm = 4
+		dip = 6
+		mil = 3
+	}
+}
+

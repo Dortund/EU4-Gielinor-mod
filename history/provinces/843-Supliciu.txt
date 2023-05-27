@@ -1,0 +1,32 @@
+#843-Supliciu
+owner = PPH
+controller = PPH
+add_core = PPH
+tribal_owner = ---
+culture = north_coaster
+religion = zamorak
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+fort_15th = yes 
+
+trade_goods = naval_goods
+
+is_city = yes
+
+2035.5.17 = {
+	culture = ghost
+}

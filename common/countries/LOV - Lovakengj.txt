@@ -1,0 +1,39 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 238 209 29 }
+
+revolutionary_colors = { 3 4 5 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Fuggy #0" = 5
+	"Jorra #0" = 5
+	"Loinur #0" = 5
+	"Mogrim #0" = 5
+	"Munty #0" = 5
+	"Smoggy #0" = 5
+	"Toothy #0" = 5
+	"Thirus #0" = 5
+	"Undor #0" = 5
+	"Unkar #0" = 5
+	
+	"Lovada #0" = -5
+	"Miriam #0" = -5
+	"Moggy #0" = -5
+	"Raeli #0" = -5
+	"Stuliette #0" = -5
+	"Traxi #0" = -5
+	"Vulcana #0" = -5
+}

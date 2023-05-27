@@ -1,0 +1,58 @@
+#256-Kohlenfeld
+owner = CDA
+controller = CDA
+add_core = CDA
+tribal_owner = ---
+culture = cadarn
+religion = seren
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 3
+
+trade_goods = basic_ores
+
+is_city = yes
+
+center_of_trade = 2
+
+1930.8.24 = {
+	owner = THO
+	controller = THO
+	add_core = THO
+	culture = thorobshuun
+	religion = bandos
+	remove_core = CDA
+}
+
+2027.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	culture = kelda
+	religion = guthix
+	remove_core = THO
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}
+
+2132.7.13 = {
+	owner = CML
+	controller = CML
+	add_core = CML
+	remove_core = KDR
+}

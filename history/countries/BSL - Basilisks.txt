@@ -1,0 +1,30 @@
+government = tribal
+add_government_reform = island_boss_nation
+government_rank = 1
+primary_culture = basilisk
+religion = godless
+religious_school = monstrous_school
+technology_group = northerntechgroup
+capital = 379 #Isle of Stone
+national_focus = MIL
+historical_rival = REL
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}
+
+1.1.1 = {
+	monarch = {
+		name = "The Jormungand"
+		dynasty = "Serpent King"
+		birth_date = 1.1.1
+		adm = 2
+		dip = 2
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

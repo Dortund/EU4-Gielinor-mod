@@ -1,0 +1,21 @@
+#857-Masa
+
+tribal_owner = ---
+culture = menaphiteculture
+religion = menaphite
+
+trade_goods = manufactured_goods
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2

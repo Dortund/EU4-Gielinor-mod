@@ -1,0 +1,36 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 2
+primary_culture = pincers_culture
+add_accepted_culture = siren
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1176 #Ashihama
+
+1928.4.11 = {
+	monarch = {
+		name = "Mika"
+		dynasty = "Asaka"
+		birth_date = 1895.9.14
+		death_date = 1931.7.9
+		adm = 5
+		dip = 3
+		mil = 6
+		female = yes
+		culture = siren
+	}
+}
+
+2146.10.13 = {
+	monarch = {
+		name = "Etsuko"
+		dynasty = "Asaka"
+		birth_date = 2130.4.19
+		adm = 2
+		dip = 4
+		mil = 2
+		female = yes
+		culture = siren
+	}
+}
+

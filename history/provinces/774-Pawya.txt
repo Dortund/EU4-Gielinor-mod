@@ -1,0 +1,22 @@
+#774 - Pawya
+owner = EVR
+controller = EVR
+add_core = EVR
+add_core = MIY
+tribal_owner = ---
+culture = meilyr
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+
+fort_15th = yes
+
+trade_goods = hunter_creatures
+
+is_city = yes

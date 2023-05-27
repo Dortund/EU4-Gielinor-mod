@@ -1,0 +1,39 @@
+#865-Mynster
+owner = VRZ
+controller = VRZ
+add_core = VRZ
+tribal_owner = ---
+culture = north_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = livestock_farm
+
+fort_15th = yes 
+
+is_city = yes
+
+add_province_triggered_modifier = wildy_border_level_one
+add_province_triggered_modifier = wildy_border_level_two
+add_province_triggered_modifier = wildy_border_level_three
+add_province_triggered_modifier = wildy_border_level_four
+add_province_triggered_modifier = wildy_border_level_five
+add_province_triggered_modifier = wildy_border_level_six
+add_province_triggered_modifier = wildy_border_level_seven
+add_province_triggered_modifier = wildy_border_level_eight
+add_province_triggered_modifier = wildy_border_level_nine
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+}

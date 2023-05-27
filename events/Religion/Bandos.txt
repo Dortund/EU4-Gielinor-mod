@@ -1,0 +1,385 @@
+##############################
+# Bandosian Flavor Events    #
+##############################
+
+namespace = bandos_flavor
+
+#Discovering Goblin strategies
+country_event = {
+	id = bandos_flavor.1
+	title = bandos_flavor.1.t
+	desc = bandos_flavor.1.d
+	picture = BANDOS_GOBLINS_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = cover_strategy }
+		NOT = { has_country_flag = goblin_strats }
+		OR = {
+			accepted_culture = drogokishuun
+			accepted_culture = ekeleshuun
+			accepted_culture = garagorshuun
+			accepted_culture = horogothgar
+			accepted_culture = huzamogaarb
+			accepted_culture = idithuun
+			accepted_culture = narogoshuun
+			accepted_culture = rekeshuun
+			accepted_culture = saragorgok
+			accepted_culture = thorobshuun
+			accepted_culture = yurkolgokh
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = goblin_strats
+	}
+
+
+	option = {
+		name = bandos_flavor.1.a
+		unlock_cult = cower_strategy
+		unlock_cult = raider_strategy
+		unlock_cult = spear_strategy
+	}
+}
+
+#Discovering Hobgoblin strategies
+country_event = {
+	id = bandos_flavor.2
+	title = bandos_flavor.2.t
+	desc = bandos_flavor.2.d
+	picture = BANDOS_HOBGOBLIN_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = geomancer_strategy }
+		NOT = { has_country_flag = hobgoblin_strats }
+		OR = {
+			accepted_culture = hobgoblin
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = hobgoblin_strats
+	}
+
+	option = {
+		name = bandos_flavor.2.a
+		unlock_cult = geomancer_strategy
+		unlock_cult = raider_strategy
+		unlock_cult = spear_strategy
+	}
+}
+
+#Discovering Ogre strategies (Not Wushanko)
+country_event = {
+	id = bandos_flavor.3
+	title = bandos_flavor.3.t
+	desc = bandos_flavor.3.d
+	picture = BANDOS_OGRE_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = feldip_consolidation_strategy }
+		NOT = { has_country_flag = ogre_strats }
+		accepted_culture = ogre
+		any_owned_province = {
+			continent = west_runescape
+			culture = ogre
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = ogre_strats
+	}
+
+
+	option = {
+		name = bandos_flavor.3.a
+		unlock_cult = feldip_consolidation_strategy
+		unlock_cult = shamanic_strategy
+		unlock_cult = jig_strategy
+	}
+}
+
+#Discovering Jogre strategies
+country_event = {
+	id = bandos_flavor.4
+	title = bandos_flavor.4.t
+	desc = bandos_flavor.4.d
+	picture = BANDOS_JOGRE_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = jogre_strategy }
+		NOT = { has_country_flag = jogre_strats }
+		OR = {
+			accepted_culture = jogre
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = jogre_strats
+	}
+
+	option = {
+		name = bandos_flavor.4.a
+		unlock_cult = jogre_strategy
+		unlock_cult = shamanic_strategy
+		unlock_cult = jig_strategy
+	}
+}
+
+#Discovering Mogre strategies
+country_event = {
+	id = bandos_flavor.5
+	title = bandos_flavor.5.t
+	desc = bandos_flavor.5.d
+	picture = BANDOS_JOGRE_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = mogre_strategy }
+		NOT = { has_country_flag = mogre_strats }
+		OR = {
+			accepted_culture = mogre
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = mogre_strats
+	}
+
+
+	option = {
+		name = bandos_flavor.5.a
+		unlock_cult = mogre_strategy
+		unlock_cult = shamanic_strategy
+		unlock_cult = jig_strategy
+	}
+}
+
+#Discovering Troll strategies
+country_event = {
+	id = bandos_flavor.6
+	title = bandos_flavor.6.t
+	desc = bandos_flavor.6.d
+	picture = BANDOS_TROLLS_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = naming_ritual_strategy }
+		NOT = { has_country_flag = troll_strats }
+		OR = {
+			accepted_culture = mountaintroll
+			accepted_culture = icetroll
+			accepted_culture = seatroll
+			accepted_culture = rivertroll
+			accepted_culture = undeadtroll
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = troll_strats
+	}
+
+
+	option = {
+		name = bandos_flavor.6.a
+		unlock_cult = naming_ritual_strategy
+		unlock_cult = rockthrower_strategy
+		unlock_cult = reform_strategy
+	}
+}
+
+#Discovering Giant strategies
+country_event = {
+	id = bandos_flavor.7
+	title = bandos_flavor.7.t
+	desc = bandos_flavor.7.d
+	picture = BANDOS_GIANTS_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = bread_baking_strategy }
+		NOT = { has_country_flag = general_giant_strats }
+		OR = {
+			accepted_culture = hill_giant
+			accepted_culture = river_giant
+			accepted_culture = cave_giant
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = general_giant_strats
+	}
+
+	option = {
+		name = bandos_flavor.7.a
+		unlock_cult = bread_baking_strategy
+		unlock_cult = gold_hoarding_strategy
+	}
+}
+
+#Discovering Cloud Giant strategies
+country_event = {
+	id = bandos_flavor.8
+	title = bandos_flavor.8.t
+	desc = bandos_flavor.8.d
+	picture = BANDOS_GIANTS_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = acoustics_strategy }
+		NOT = { has_country_flag = cloud_giant_strats }
+		OR = {
+			accepted_culture = cloud_giant
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = cloud_giant_strats
+	}
+
+	option = {
+		name = bandos_flavor.8.a
+		unlock_cult = bread_baking_strategy
+		unlock_cult = gold_hoarding_strategy
+		unlock_cult = acoustics_strategy
+	}
+}
+
+#Discovering the Chosen Commander strategy via strong goblin state
+country_event = {
+	id = bandos_flavor.9
+	title = bandos_flavor.9.t
+	desc = bandos_flavor.9.d
+	picture = BANDOS_CHOSEN_COMMANDER_eventPicture
+
+	trigger = {
+		religion = bandos
+		OR = {
+			primary_culture = drogokishuun
+			primary_culture = ekeleshuun
+			primary_culture = garagorshuun
+			primary_culture = horogothgar
+			primary_culture = huzamogaarb
+			primary_culture = idithuun
+			primary_culture = narogoshuun
+			primary_culture = rekeshuun
+			primary_culture = saragorgok
+			primary_culture = thorobshuun
+			primary_culture = yurkolgokh
+		}
+		government_rank = 3
+		NOT = { has_adopted_cult = chosen_commander_strategy }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+
+	option = {
+		name = bandos_flavor.9.a
+		unlock_cult = chosen_commander_strategy
+	}
+}
+
+#Discovering Ogre strategies (Wushanko)
+country_event = {
+	id = bandos_flavor.10
+	title = bandos_flavor.10.t
+	desc = bandos_flavor.10.d
+	picture = BANDOS_OGRE_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = ronin_strategy }
+		NOT = { has_country_flag = wushanko_ogre_strats }
+		accepted_culture = ogre
+		any_owned_province = {
+			continent = wushanko_isles_continent
+			culture = ogre
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = wushanko_ogre_strats
+	}
+
+
+	option = {
+		name = bandos_flavor.10.a
+		unlock_cult = ronin_strategy
+		unlock_cult = shamanic_strategy
+		unlock_cult = jig_strategy
+	}
+}
+
+#Discovering Ork strategies
+country_event = {
+	id = bandos_flavor.11
+	title = bandos_flavor.11.t
+	desc = bandos_flavor.11.d
+	picture = BANDOS_ORKS_eventPicture
+
+	trigger = {
+		religion = bandos
+		NOT = { has_adopted_cult = triangular_formation_strategy }
+		NOT = { has_country_flag = ork_strats }
+		accepted_culture = ork
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = ork_strats
+	}
+
+
+	option = {
+		name = bandos_flavor.11.a
+		unlock_cult = recordkeeping_strategy
+		unlock_cult = support_strategy
+		unlock_cult = triangular_formation_strategy
+	}
+}

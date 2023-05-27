@@ -1,0 +1,20 @@
+government = tribal
+add_government_reform = warband
+government_rank = 1
+primary_culture = rogue
+religion = bandos
+technology_group = northerntechgroup
+capital = 172 #Bone Yard
+national_focus = MIL
+
+2182.4.25 = {
+	monarch = {
+		name = "Probita"
+		dynasty = "Rarve"
+		birth_date = 2135.3.7
+		adm = 3
+		dip = 3
+		mil = 6
+		female = yes
+	}
+}

@@ -1,0 +1,24 @@
+government = tribal
+add_government_reform = bandosian_horde
+government_rank = 1
+primary_culture = huzamogaarb
+religion = bandos
+technology_group = bandostechgroup
+capital = 775 #Arbre-Mort
+national_focus = MIL
+historical_friend = EKE
+historical_friend = IDI
+historical_friend = RKS
+historical_friend = SGK
+historical_friend = THO
+
+1929.1.17 = {
+	monarch = {
+		name = "Toadears"
+		dynasty = "Huzamogaarb"
+		birth_date = 1907.1.27
+		adm = 2
+		dip = 3
+		mil = 0
+	}
+}

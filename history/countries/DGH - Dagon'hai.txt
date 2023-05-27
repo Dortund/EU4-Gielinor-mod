@@ -1,0 +1,42 @@
+government = republic
+add_government_reform = magiocracy
+government_rank = 1
+primary_culture = avarrockan
+religion = zamorak
+technology_group = northerntechgroup
+capital = 160 #Chaos Point
+
+2052.2.17 = {
+	monarch = {
+		name = "Dag'eth"
+		dynasty = "the Elder"
+		birth_date = 1995.3.12
+		death_date = 2070.7.24
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+2070.7.24 = {
+	monarch = {
+		name = "Sin'keth"
+		dynasty = "Magis"
+		birth_date = 2048.2.10
+		death_date = 2131.6.8
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}
+
+2131.6.8 = {
+	monarch = {
+		name = "Surok"
+		dynasty = "Magis"
+		birth_date = 2091.3.27
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

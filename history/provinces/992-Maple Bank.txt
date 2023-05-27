@@ -1,0 +1,38 @@
+#992 - Maple Bank
+owner = ERB
+controller = ERB
+add_core = ERB
+tribal_owner = ---
+culture = seer
+religion = armadyl
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = logs
+
+is_city = yes
+
+2062.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	remove_core = ERB
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}

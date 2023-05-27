@@ -1,0 +1,150 @@
+graphical_culture = westerngfx
+
+color = { 86 175 187 }
+
+revolutionary_colors = { 3 4 2 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Ramarno #0" = 10
+	"Thalmund #0" = 10
+	"Thurgo #0" = 10
+	
+	"Abel #0" = 1
+	"Alvis #1" = 1
+	"Armicus #0" = 1
+	"Askel #0" = 1
+	"Audmann #0" = 1
+	"Austri #0" = 1
+	"Baden #0" = 1
+	"Bentamir #0" = 1
+	"Bisi #0" = 1
+	"Blandebir #0" = 1
+	"Blasidar #0" = 1
+	"Boff #0" = 1
+	"Bordis #0" = 1
+	"Boric #0" = 1
+	"Brendt #0" = 1
+	"Brunolt #0" = 1
+	"Dardar #0" = 1
+	"Derni #0" = 1
+	"Dernu #0" = 1
+	"Donal #0" = 1
+	"Dondakan #0" = 1
+	"Doric #0" = 1
+	"Dororan #0" = 1
+	"Drogo #0" = 1
+	"Dromund #0" = 1
+	"Drorkar #0" = 1
+	"Egil #0" = 1
+	"Elof #0" = 1
+	"Evryn #0" = 1
+	"Farli #0" = 1
+	"Ferd #0" = 1
+	"Fior #0" = 1
+	"Fullangr #0" = 1
+	"Gadrin #0" = 1
+	"Gamfred #0" = 1
+	"Gauss #0" = 1
+	"Gilob #0" = 1
+	"Gozdaron #1" = 1
+	"Grendt #0" = 1
+	"Grundt #0" = 1
+	"Gudrik #0" = 1
+	"Gulldamar #0" = 1
+	"Gunslik #0" = 1
+	"Hammerspike #0" = 1
+	"Hegir #0" = 1
+	"Hervi #0" = 1
+	"Hirko #0" = 1
+	"Holoy #0" = 1
+	"Hofuthand #0" = 1
+	"Hreidmar #0" = 1
+	"Hugi #0" = 1
+	"Hugor #0" = 1
+	"Hura #0" = 1
+	"Isak #0" = 1
+	"Ivar #0" = 1
+	"Jaak #0" = 1
+	"Jakob #0" = 1
+	"Jorzik #0" = 1
+	"Kamen #0" = 1
+	"Karl #0" = 1
+	"Klank #0" = 1
+	"Klaas #0" = 1
+	"Kjut #0" = 1
+	"Khorvak #0" = 1
+	"Lakki #0" = 1
+	"Lawgof #0" = 1
+	"Lollk #0" = 1
+	"Luitger #0" = 1
+	"Lukas #0" = 1
+	"Medwin #0" = 1
+	"Miodvetnir #0" = 1
+	"Myndill #0" = 1
+	"Nigall #0" = 1
+	"Niloof #0" = 1
+	"Nolar #0" = 1
+	"Nulodion #0" = 1
+	"Nurmof #0" = 1
+	"Obert #0" = 1
+	"Odmar #0" = 1
+	"Ordan #0" = 1
+	"Oxi #0" = 1
+	"Perdu #0" = 1
+	"Randivor #0" = 1
+	"Rauborn #0" = 1
+	"Reinald #0" = 1
+	"Riki #0" = 1
+	"Rind #0" = 1
+	"Rohak #0" = 1
+	"Rolad #0" = 1
+	"Runvastr #0" = 1
+	"Rutmir #0" = 1
+	"Santiri #0" = 1
+	"Saro #0" = 1
+	"Stankers #0" = 1
+	"Sten #0" = 1
+	"Suak #0" = 1
+	"Sune #0" = 1
+	"Sven #0" = 1
+	"Tati #0" = 1
+	"Teplin #0" = 1
+	"Thak #0" = 1
+	"Thaki #0" = 1
+	"Thordur #0" = 1
+	"Thorgel #0" = 1
+	"Tombar #0" = 1
+	"Ulifed #0" = 1
+	"Utrec #0" = 1
+	"Vaeringk #0" = 1
+	"Veldaban #0" = 1
+	"Vestri #0" = 1
+	"Vigr #0" = 1
+	"Wemund #0" = 1
+	"Yodri #0" = 1
+	
+	"Agmundi #0" = -1
+	"Anleif #0" = -1
+	"Brae #0" = -1
+	"Fjoila #0" = -1
+	"Freda #0" = -1
+	"Grenda #0" = -1
+	"Haera #0" = -1
+	"Hilda #0" = -1
+	"Jari #0" = -1
+	"Kara #0" = -1
+	"Meike #0" = -1
+	"Sagira #0" = -1
+	"Vermundi #0" = -1
+}

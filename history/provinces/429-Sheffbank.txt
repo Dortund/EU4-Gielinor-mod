@@ -1,0 +1,25 @@
+#429-Sheffbank
+owner = HOS
+controller = HOS
+add_core = HOS
+tribal_owner = ---
+culture = hosidius
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = grains
+
+is_city = yes
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

@@ -1,0 +1,323 @@
+namespace = vampyric_flavor
+
+#Blood Tithes
+country_event = {
+	id = vampyric_flavor.1
+	title = vampyric_flavor.1.t
+	desc = vampyric_flavor.1.d
+	picture = VAMPYRIC_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = vampyric
+		OR = {
+			primary_culture = trueborn_vampyre
+			primary_culture = humanborn_vampyre
+		}
+		any_owned_province = {
+			NOT = { religion = vampyric }
+			base_tax = 2
+			base_production = 2
+			base_manpower = 2
+			OR = {
+				culture_group = hallowvale_group
+				culture_group = misthalin_group
+				culture_group = wushanko_group
+			}
+		}
+		any_owned_province = {
+			culture_group = vampyre_group
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				NOT = { religion = vampyric }
+				base_tax = 2
+				base_production = 2
+				base_manpower = 2
+				OR = {
+					culture_group = hallowvale_group
+					culture_group = misthalin_group
+					culture_group = wushanko_group
+				}
+			}
+			set_province_flag = blood_tithe
+		}
+	}
+	
+	option = {
+		name = vampyric_flavor.1.a
+		add_patriarch_authority = 0.1
+		add_estate_church_loyalty_effect = yes
+		random_owned_province = {
+			limit = {
+				has_province_flag = blood_tithe
+			}
+			random_list = {
+				33 = { add_base_tax = -1 }
+				33 = { add_base_production = -1 }
+				33 = { add_base_manpower = -1 }
+			}
+			clr_province_flag = blood_tithe
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = vampyric_flavor.1.b
+		add_patriarch_authority = -0.05
+		reduce_estate_church_loyalty_effect = yes
+		random_owned_province = {
+			limit = {
+				has_province_flag = blood_tithe
+			}
+			clr_province_flag = blood_tithe
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Vampyric Castes
+country_event = {
+	id = vampyric_flavor.2
+	title = vampyric_flavor.2.t
+	desc = vampyric_flavor.2.d
+	picture = VAMPYRIC_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = vampyric
+		OR = {
+			primary_culture = trueborn_vampyre
+			primary_culture = humanborn_vampyre
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			NOT = { patriarch_authority = 0.05 }
+		}
+	}
+	
+	option = {
+		name = vampyric_flavor.2.a
+		add_patriarch_authority = 0.05
+		add_estate_nobles_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { stability = 0 }
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = vampyric_flavor.2.b
+		add_patriarch_authority = -0.05
+		add_stability_or_adm_power = yes
+		reduce_estate_nobles_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				stability = 0
+				factor = 0
+			}
+		}
+	}
+}
+
+#The Power of the [Root.Monarch.GetTitle]
+country_event = {
+	id = vampyric_flavor.3
+	title = vampyric_flavor.3.t
+	desc = vampyric_flavor.3.d
+	picture = VAMPYRIC_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = vampyric
+		is_lesser_in_union = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = vampyric_flavor.3.a
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = vampyric_flavor.3.b
+		add_patriarch_authority = -0.05
+		add_republican_tradition = 5
+		add_legitimacy = 10
+		add_horde_unity = 10
+		add_meritocracy = 10
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#
+country_event = {
+	id = vampyric_flavor.4
+	title = vampyric_flavor.4.t
+	desc = vampyric_flavor.4.d
+	picture = VAMPYRIC_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = vampyric
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = vampyric_flavor.4.a
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = vampyric_flavor.4.b
+		add_patriarch_authority = -0.05
+		add_years_of_income = 0.25
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Controversial Haemalchemist Practices
+country_event = {
+	id = vampyric_flavor.5
+	title = vampyric_flavor.5.t
+	desc = vampyric_flavor.5.d
+	picture = VAMPYRIC_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		religion = vampyric
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = vampyric_flavor.5.a
+		add_patriarch_authority = 0.05
+		add_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = vampyric_flavor.5.b
+		add_patriarch_authority = -0.05
+		add_mil_power = 50
+		reduce_estate_church_loyalty_effect = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Non-Vampyres and the Faith
+country_event = {
+	id = vampyric_flavor.6
+	title = vampyric_flavor.6.t
+	desc = vampyric_flavor.6.d
+	picture = VAMPYRIC_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		OR = {
+			primary_culture = trueborn_vampyre
+			primary_culture = humanborn_vampyre
+		}
+		religion = vampyric
+		any_owned_province = {
+			religion = vampyric
+			NOT = { culture_group = vampyre_group }
+		}
+	}
+	
+	immediate = {
+		random_owned_province = { 
+			limit = {
+				religion = vampyric
+				NOT = { culture_group = vampyre_group }
+			}
+			set_province_flag = non_vampyre_vampyric
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = vampyric_flavor.6.a #Let them convert to Zamorak.
+		random_owned_province = {
+			limit = {
+				has_province_flag = non_vampyre_vampyric
+			}
+			change_religion = zamorak
+			clr_province_flag = non_vampyre_vampyric
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+	}
+	option = {
+		name = vampyric_flavor.6.b #Zamorak is weak!
+		random_owned_province = {
+			limit = {
+				has_province_flag = non_vampyre_vampyric
+			}
+			add_province_modifier = {
+				name = "vampyric_enforced_vampyric_faith"
+				duration = 3650
+			}
+			clr_province_flag = non_vampyre_vampyric
+		}
+	}
+}

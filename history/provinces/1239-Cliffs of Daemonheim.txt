@@ -1,0 +1,4 @@
+#1239 - Cliffs of Daemonheim
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = northerntechgroup

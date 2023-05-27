@@ -1,0 +1,141 @@
+#Kinshra-White Knight war
+
+kinshra_white_knight_war = {
+	potential = {
+		tag = ASG
+	 	current_age = age_of_adventurers
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = asg_war164_start }
+		NOT = { has_country_flag = asg_war164_end }
+		OR = {
+			has_country_flag = ASG_shared_knight_castle
+			has_country_flag = ASG_white_falador_black_fortress
+			has_country_flag = ASG_black_falador_white_fortress
+			has_country_flag = ASG_white_knights_only
+			has_country_flag = ASG_black_knights_only
+		}
+		OR = {
+			religion = saradomin
+			religion = zamorak
+		}
+	}
+
+	can_start = {
+		if = {
+			limit = {
+				has_country_flag = ASG_shared_knight_castle
+			}
+			NOT = {
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 1
+				}
+			}
+		}
+		elseif = {
+			limit = {
+				OR = {
+					has_country_flag = ASG_white_falador_black_fortress
+					has_country_flag = ASG_black_falador_white_fortress
+				}
+			}
+			NOT = {
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 3
+				}
+			}
+		}
+		else = {
+			NOT = {
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 5
+				}
+			}
+		}
+	}
+	
+	
+	can_stop = {
+		if = {
+			limit = {
+				has_country_flag = ASG_shared_knight_castle
+			}
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = 1
+			}
+		}
+		elseif = {
+			limit = {
+				OR = {
+					has_country_flag = ASG_white_falador_black_fortress
+					has_country_flag = ASG_black_falador_white_fortress
+				}
+			}
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = 3
+			}
+		}
+		else = {
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = 5
+			}
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2
+			NOT = {
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 2
+		}
+		modifier = {
+			factor = -1
+			stability = 3
+		}
+	}
+
+	can_end = {
+		OR = {
+			AND = {
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 1
+				had_country_flag = {
+					flag = asg_war164_start
+					days = 3650
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				religion = saradomin
+				religion = zamorak
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 5
+		tolerance_heathen = -5
+	}
+	
+	on_start = kinshra_white_knight_war.1
+	on_end = kinshra_white_knight_war.100
+}
+

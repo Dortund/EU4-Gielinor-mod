@@ -1,0 +1,141 @@
+country_decisions = {
+	IOR_retreat_plans = {
+		potential = {
+			tag = IOR
+			religion = dark_lord
+			has_government_mechanic = elven_desperation_mechanic
+			exists = EVR
+			EVR = {
+				religion = seren
+			}
+			NOT = { has_country_flag = IOR_making_retreat_plans }
+		}
+		allow = {
+			dip_tech = 5
+			NOT = { total_development = 50 }
+			IOR = { total_development = 150 }
+			has_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = 100
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = -50
+			}
+			country_event = {
+				id = flavor_ior.9
+				days = 1
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+	IOR_isle_of_souls_settlement = {
+		potential = {
+			tag = IOR
+			religion = dark_lord
+			has_government_mechanic = elven_desperation_mechanic
+			exists = IOR
+			EVR = {
+				religion = seren
+			}
+			has_country_flag = IOR_making_retreat_plans
+			NOT = { has_country_flag = IOR_isle_of_souls_retreat }
+			923 = {
+				is_empty = yes
+			}
+		}
+		allow = {
+			dip_tech = 5
+			NOT = { total_development = 50 }
+			IOR = { total_development = 150 }
+			has_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = 100
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = -100
+			}
+			country_event = {
+				id = flavor_ior.10
+				days = 1
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+
+	IOR_isle_of_souls_expansion = {
+		potential = {
+			tag = IOR
+			religion = dark_lord
+			has_country_flag = IOR_isle_of_souls_retreat
+			any_owned_province = {
+				any_empty_neighbor_province = {
+					OR = {
+						area = insular_isle_of_souls_area
+						area = farther_isle_of_souls_area
+					}
+				}
+			}
+		}
+		allow = {
+			any_owned_province = {
+				any_empty_neighbor_province = {
+					OR = {
+						area = insular_isle_of_souls_area
+						area = farther_isle_of_souls_area
+					}
+				}
+			}
+			has_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = 75
+			}
+			adm_power = 75
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = -75
+			}
+			add_adm_power = -75
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = insular_isle_of_souls_area
+						area = farther_isle_of_souls_area
+					}
+				}
+				random_empty_neighbor_province = {
+					limit = {
+						OR = {
+							area = insular_isle_of_souls_area
+							area = farther_isle_of_souls_area
+						}
+					}
+					add_colonysize = 200
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+}

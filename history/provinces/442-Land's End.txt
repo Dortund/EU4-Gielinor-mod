@@ -1,0 +1,42 @@
+#442-Land's End
+owner = HRS
+controller = HRS
+add_core = HRS
+tribal_owner = ---
+culture = piscarilius
+religion = zamorak
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = flax
+
+is_city = yes
+
+center_of_trade = 1
+
+1944.9.16 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+	remove_core = HRS
+}
+
+1969.11.5 = {
+	owner = KTW
+	controller = KTW
+	add_core = KTW
+	remove_core = KOU
+}
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+	remove_core = KTW
+}

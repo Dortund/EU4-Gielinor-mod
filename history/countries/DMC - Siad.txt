@@ -1,0 +1,18 @@
+government = republic
+add_government_reform = rogue_republic
+government_rank = 1
+primary_culture = midkharidian
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 71 #Desert Mining Camp
+
+2157.4.14 = {
+	monarch = {
+		name = "Siad"
+		dynasty = "Said"
+		birth_date = 2115.4.14
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

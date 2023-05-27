@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = pirate_republic_reform
+government_rank = 1
+primary_culture = harmlean
+religion = godless
+religious_school = ambivalence_school
+technology_group = centraltechgroup
+capital = 142 #Mos Ayes Le'
+national_focus = DIP
+
+1929.8.31 = {
+	monarch = {
+		name = "Lucas"
+		dynasty = "the Moderately Lucky"
+		birth_date = 1906.4.5
+		adm = 2
+		dip = 6
+		mil = 5
+	}
+}
+
+2168.5.29 = {
+	monarch = {
+		name = "Harry"
+		dynasty = "Brass Hand"
+		birth_date = 2112.7.11
+		adm = 2
+		dip = 6
+		mil = 5
+	}
+}

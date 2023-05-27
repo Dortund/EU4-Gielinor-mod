@@ -1,0 +1,25 @@
+#439-Xeric's Look-out
+owner = SYZ
+controller = SYZ
+add_core = SYZ
+tribal_owner = ---
+culture = shayzien
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 2
+
+trade_goods = advanced_logs
+
+is_city = yes
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

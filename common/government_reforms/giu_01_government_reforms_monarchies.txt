@@ -1,0 +1,1369 @@
+##########################
+##########################
+#Feudalism vs Autocracy:
+##########################
+##########################
+
+autocracy_reform = {
+	icon = "icon_autocracy"
+	allow_normal_conversion = yes
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		unjustified_demands = -0.1
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
+clan_monarchy = {
+	icon = "icon_clan_monarchy"
+	potential = {
+		AND = {
+			OR = {
+				culture_group = asgarnian_group
+				culture_group = kandarin_group
+				culture_group = misthalin_group
+			}
+			NOT = { map_setup = map_setup_random }
+		}
+		has_reform = clan_monarchy
+	}
+	legacy_equivalent = clan_monarchy_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	fixed_rank = 1
+	modifiers = {
+		land_morale = 0.1
+		years_of_nationalism = -5
+		diplomatic_upkeep = -1
+		max_absolutism = -20
+		governing_capacity = -50
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+consortium_monarchy = {
+	icon = "icon_consortium_monarchy"
+	allow_normal_conversion = no
+	modifiers = {
+		legitimacy = -0.5
+		global_trade_power = 0.25
+		stability_cost_modifier = -0.2
+	}
+	valid_for_nation_designer = yes
+	start_territory_to_estates = 0.5
+	nation_designer_cost = 40
+	legacy_equivalent = consortium_monarchy_legacy
+	potential = {
+		tag = KDG
+	}
+	boost_income = yes
+	duration = 4
+	conditional = {
+		can_use_trade_post = yes
+	}
+	conditional = {
+		can_form_trade_league = yes
+		trade_city_reform = dwarven_outpost
+	}
+	conditional = {
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = dwarven_outpost
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		is_merchant_republic = yes
+		blocked_call_diet = yes
+	}
+	ai = {
+		factor = 1 #generic
+	}
+}
+
+elven_aristocracy = {
+	icon = "icon_elven_aristocracy"
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			tag = CDA
+			NOT = { map_setup = map_setup_random }
+		}
+	}
+	legacy_equivalent = elven_aristocracy_legacy
+	allow_force_tributary = no
+	valid_for_nation_designer = no
+	fixed_rank = 2
+	start_territory_to_estates = 0.25
+
+	modifiers = {
+		nobles_influence_modifier = 0.05
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+exile_clan = {
+	icon = "icon_exile_clan"
+	allow_normal_conversion = no
+	legacy_equivalent = exile_clan_legacy
+	lock_level_when_selected = yes
+	modifiers = {
+		legitimacy = -0.5
+		max_absolutism = -50
+		naval_forcelimit_modifier = 0.5
+		capture_ship_chance = 0.33
+		global_manpower_modifier = 0.1
+		land_forcelimit_modifier = 0.1
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	queen = no
+	heir = no
+	duration = 5
+	has_term_election = yes
+	
+	potential = {
+		has_reform = exile_clan
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	can_form_trade_league = no
+	
+	nation_designer_trigger = {
+		capital_scope = {
+			has_port = yes
+			province_is_on_an_island = yes
+		}
+	}
+
+	removed_effect = {
+		clr_country_flag = pirate_mutineer_council
+	}
+
+	factions_frame = 9
+	factions = {
+		pr_buccaneers
+		pr_smugglers
+		pr_captains
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+fateful_kingdom = {
+	icon = "icon_fateful_kingdom"
+	potential = {
+		OR = {
+			AND = {
+				religion = zaros
+				have_had_reform = fateful_kingdom
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = fateful_kingdom
+			}
+		}
+	}
+	legacy_equivalent = fateful_kingdom_legacy
+	allow_force_tributary = no
+	valid_for_nation_designer = no
+	start_territory_to_estates = 0.25
+
+	effect = {
+		custom_tooltip = world_crusade_tt
+	}
+	modifiers = {
+		range = 0.5
+		prestige = 1
+		infantry_power = 0.10
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+feldip_government = {
+	icon = "icon_feldip_government"
+	potential = {
+		AND = {
+			tag = FEL
+			NOT = { map_setup = map_setup_random }
+		}
+	}
+	legacy_equivalent = feldip_government_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		defensiveness = 0.1
+		max_absolutism = -20
+	}
+	queen = no
+	heir = no
+	duration = 4
+	has_term_election = yes
+	states_general_mechanic = {
+		ogres = {
+			female_advisor_chance = -10
+		 	cavalry_power = 0.10
+			harsh_treatment_cost = -0.2
+		}
+		ogresses = {
+			female_advisor_chance = 10
+			leader_land_shock = 1
+		 	development_cost = -0.05
+		}
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+great_khanate = {
+	icon = "icon_great_khanate"
+	potential = {
+		have_had_reform = great_khanate
+	}
+	legacy_equivalent = khanate_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+	fixed_rank = 2
+	modifiers = {
+		church_power_modifier = 0.25
+	 	global_sailors_modifier = 0.1
+		global_ship_cost = -0.1
+	 	trade_range_modifier = 0.25
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		force_admiral_leader = yes
+	}
+}
+
+horde_kingdom = {
+	icon = "icon_horde_kingdom"
+	potential = { has_reform = horde_kingdom }
+	legacy_equivalent = horde_kingdom_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+	modifiers = {
+		land_maintenance_modifier = -0.05
+		leader_cost = -0.1
+		discipline = 0.025
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+kandarin_monarchy = {
+	icon = "icon_kandarin_monarchy"
+	allow_normal_conversion = no
+	potential = {
+		have_had_reform = kandarin_monarchy
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 15
+	legacy_equivalent = kandarin_monarchy_legacy
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 100
+	 	min_autonomy_in_territories = 0.1
+	 	num_accepted_cultures = 2
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+	has_parliament = yes
+
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+}
+
+khanate = {
+	icon = "icon_khanate"
+	potential = {
+		OR = {
+			culture_group = wushanko_group
+			culture_group = cyclops_group
+		}
+	}
+	legacy_equivalent = khanate_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		governing_capacity = -100
+	 	global_sailors_modifier = 0.1
+		global_ship_cost = -0.1
+	 	trade_range_modifier = 0.25
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		force_admiral_leader = yes
+	}
+}
+
+kourend_monarchy = {
+	icon = "icon_kourend_monarchy"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			NOT = { map_setup = map_setup_random }
+			have_had_reform = kourend_monarchy
+		}
+	}
+	legacy_equivalent = kourend_monarchy_legacy
+	allow_force_tributary = no
+	valid_for_nation_designer = no
+	factions = {
+		arceuus_faction
+		hosidius_faction
+		lovakengj_faction
+		piscarilius_faction
+		shayzien_faction
+	}
+
+	fixed_rank = 2
+	start_territory_to_estates = 0.25
+
+	modifiers = {
+		diplomatic_upkeep = 1
+		num_accepted_cultures = 1
+	}
+	conditional = {
+		government_abilities = {
+			house_disunity_mechanic
+		}
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+kourend_reformed_monarchy = {
+	icon = "icon_kourend_reformed_monarchy"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			tag = KOU
+			NOT = { map_setup = map_setup_random }
+			have_had_reform = kourend_reformed_monarchy
+		}
+	}
+	legacy_equivalent = kourend_reformed_monarchy_legacy
+	allow_force_tributary = no
+	valid_for_nation_designer = no
+	factions = {
+		arceuus_faction
+		hosidius_faction
+		lovakengj_faction
+		piscarilius_faction
+		shayzien_faction
+	}
+
+	start_territory_to_estates = 0.25
+
+	modifiers = {
+    	governing_capacity = 100
+		num_accepted_cultures = 1
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+	}
+}
+
+kourend_house = {
+	icon = "icon_kourend_house"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			OR = {
+				tag = AUU
+				tag = HOS
+				tag = LOV
+				tag = PCL
+				tag = SYZ
+			}
+			NOT = { map_setup = map_setup_random }
+		}
+	}
+	legacy_equivalent = kourend_house_legacy
+	allow_force_tributary = no
+	valid_for_nation_designer = no
+	fixed_rank = 1
+	start_territory_to_estates = 0.25
+
+	modifiers = {
+	 	province_warscore_cost = 1
+		core_creation = 0.5
+		ae_impact = 0.5
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+kourend_independent_house = {
+	icon = "icon_kourend_independent_house"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			OR = {
+				tag = AUU
+				tag = HOS
+				tag = KTW
+				tag = LOV
+				tag = PCL
+				tag = SYZ
+			}
+			NOT = { map_setup = map_setup_random }
+		}
+	}
+	legacy_equivalent = kourend_independent_house_legacy
+	allow_force_tributary = no
+	valid_for_nation_designer = no
+	fixed_rank = 1
+	start_territory_to_estates = 0.25
+
+	modifiers = {
+		ae_impact = -0.1
+	 	diplomatic_upkeep = -1
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+mahjarrat_autocracy = {
+	icon = "icon_mahjarrat_autocracy"
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			have_had_reform = mahjarrat_autocracy
+			AND = {
+				ruler_culture = mahjarrat
+				NOT = { map_setup = map_setup_random }
+			}
+		}
+	}
+	legacy_equivalent = mahjarrat_autocracy_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+	 	free_leader_pool = 1
+		war_exhaustion = -0.03
+	 	global_unrest = 1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	queen = no
+	heir = no
+}
+
+miscellanean_monarchy = {
+	icon = "icon_miscellanean_monarchy"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			OR = {
+				tag = MCE
+				tag = ETC
+			}
+			NOT = { map_setup = map_setup_random }
+		}
+	}
+	legacy_equivalent = miscellanean_monarchy_legacy
+	allow_force_tributary = no
+	valid_for_nation_designer = no
+
+	start_territory_to_estates = 0.25
+
+	modifiers = {
+		development_cost = -0.05
+		global_unrest = -1
+		land_forcelimit_modifier = -0.1
+		global_manpower_modifier = -0.1
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+new_world_kingdom = {
+	icon = "icon_new_world_kingdom"
+	allow_normal_conversion = no
+	legacy_equivalent = new_world_kingdom_legacy
+	potential = {
+		is_former_colonial_nation = yes
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	fixed_rank = 1
+	modifiers = {
+	 	ae_impact = -0.1
+		years_of_nationalism = -5
+		legitimacy = -0.5
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+
+noble_kingdom = {
+	icon = "icon_noble_kingdom"
+	allow_normal_conversion = yes
+	legacy_equivalent = noble_kingdom_legacy
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+
+	start_territory_to_estates = 0.4
+
+	modifiers = {
+		vassal_income = 0.25
+		nobles_influence_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+principality_burthorpe = {
+	icon = "icon_principality_burthorpe"
+	potential = {
+		AND = {
+			tag = BTH
+			NOT = { map_setup = map_setup_random }
+		}
+	}
+	legacy_equivalent = principality_burthorpe_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 1
+	modifiers = {
+		army_tradition = 0.5
+		governing_capacity = -100
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+shining_kingdom = {
+	icon = "icon_shining_kingdom"
+	potential = {
+		AND = {
+			tag = VAR
+			NOT = { map_setup = map_setup_random }
+		}
+	}
+	legacy_equivalent = shining_kingdom_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	modifiers = {
+		governing_capacity = 100
+		tolerance_heretic = 2
+		global_colonial_growth = 10
+		global_heretic_missionary_strength = -0.02
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+unstable_monarchy = {
+	icon = "icon_unstable_kingdom"
+	allow_normal_conversion = no
+	potential = { has_reform = unstable_monarchy }
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	legacy_equivalent = unstable_monarchy_legacy
+
+	modifiers = {
+		province_warscore_cost = 0.25
+		stability_cost_modifier = 0.5
+		global_unrest = 2
+		governing_capacity_modifier = -0.5
+		yearly_patriarch_authority = 0.05
+	}
+}
+
+vampyre_kingdom = {
+	icon = "icon_vampyre_kingdom"
+	potential = {
+		OR = {
+			AND = {
+				culture_group = vampyre_group
+				NOT = { map_setup = map_setup_random }
+			}
+			has_country_flag = DYN_vampyre_leadership
+		}
+	}
+	legacy_equivalent = vampyre_kingdom_legacy
+	lock_level_when_selected = yes
+	allow_force_tributary = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	modifiers = {
+		naval_forcelimit_modifier = -0.25
+		global_sailors_modifier = -0.25
+		nobles_influence_modifier = 0.1
+		land_forcelimit_modifier = 0.10
+		global_manpower_modifier = 0.10
+		tolerance_heretic = 2
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+##########################
+##########################
+#Noble Privileges
+##########################
+##########################
+
+grant_balanced_privileges_reform = {
+	icon = "icon_grant_balanced_privileges"
+	allow_normal_conversion = yes
+	potential = {
+	}
+	modifiers = {
+	 	stability_cost_modifier = -0.2
+	}
+	ai = {
+		factor = 1.5
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+	}
+}
+
+grant_noble_privileges_reform = {
+	icon = "icon_grant_noble_privileges"
+	allow_normal_conversion = yes
+	potential = {
+		has_estate = estate_nobles
+	}
+	modifiers = {
+	 	legitimacy = 0.25
+		heir_chance = 0.5
+		nobles_influence_modifier = 0.05
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 2
+			NOT = { legitimacy = 50 }
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { has_heir = yes }
+		}
+	}
+}
+
+grant_theocratic_privileges_reform = {
+	icon = "icon_theocratic_government"
+	allow_normal_conversion = yes
+	potential = {
+		has_estate = estate_church
+	}
+	modifiers = {
+		global_tax_modifier = 0.05
+		global_missionary_strength = 0.005
+		church_influence_modifier = 0.1
+	}
+	ai = {
+		factor = 2
+	}
+}
+
+grant_trader_privileges_reform = {
+	icon = "icon_merchant_republic"
+	allow_normal_conversion = yes
+	potential = {
+		has_estate = estate_burghers
+	}
+	modifiers = {
+		trade_range_modifier = 0.3
+		trade_efficiency = 0.05
+		burghers_influence_modifier = 0.1
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.35
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				trade_income_percentage = 0.25
+			}
+		}
+	}
+}
+
+kou_house_privileges_reform = {
+	icon = "icon_kourend_house"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = kourend_monarchy
+			has_reform = kourend_reformed_monarchy
+		}
+	}
+	modifiers = {
+		global_unrest = -1
+	 	reduced_liberty_desire_on_same_continent = 5
+	}
+	ai = {
+		factor = 5
+	}
+}
+
+ior_civil_war_focus_reform = {
+	icon = "icon_elven_desperation_reform"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		tag = IOR
+		religion = dark_lord
+		EVR = {
+			religion = seren
+			exists = yes
+		}
+	}
+	modifiers = {
+	 	province_warscore_cost = 0.25
+		land_forcelimit = 5
+		global_manpower = 5
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		government_abilities = {
+			elven_desperation_mechanic
+		}
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+vampyric_tiers_reform = {
+	icon = "icon_vampyric_tiers"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = vampyre_group
+	}
+	modifiers = {
+	 	legitimacy = 0.5
+		advisor_cost = -0.1
+	}
+	ai = {
+		factor = 5
+	}
+}
+
+##########################
+##########################
+#Bureauocracy
+##########################
+##########################
+
+centralize_reform = {
+	icon = "paper_with_seal_3"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.05
+	}
+}
+
+decentralize_reform = {
+	icon = "map"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		num_accepted_cultures = 2
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = {
+				any_owned_province = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+				}
+			}
+		}
+	}
+}
+
+##########################
+##########################
+#Administrative Cadre
+##########################
+##########################
+
+clergy_in_administration_reform = {
+	icon = "religious_leader"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+		NOT = {
+			religion = karamjan
+			religion = bandos
+			religion = xeric
+		}
+	}
+	modifiers = {
+		free_adm_policy = 1
+
+		church_influence_modifier = 0.1
+		church_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = {
+				estate = estate_church
+				influence = 90
+			}
+		}
+	}
+}
+
+of_noble_bearing_reform = {
+	icon = "nobleman"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	modifiers = {
+		leader_cost = -0.1
+		nobles_influence_modifier = 0.1
+		nobles_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = {
+				estate = estate_nobles
+				influence = 90
+			}
+		}
+	}
+}
+
+meritocratic_focus_reform = {
+	icon = "merchant"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		advisor_cost = -0.1
+		burghers_influence_modifier = 0.1
+		burghers_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = {
+				estate = estate_burghers
+				influence = 90
+			}
+		}
+	}
+}
+
+shamanic_administration_reform = {
+	icon = "icon_shamanic_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			religion = bandos
+			religion = karamjan
+			religion = xeric		
+		}
+	}
+	modifiers = {
+		global_missionary_strength = 0.015
+
+		church_influence_modifier = 0.1
+		church_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = {
+				estate = estate_church
+				influence = 90
+			}
+		}
+	}
+}
+
+##########################
+##########################
+#Deliberative Assembly
+##########################
+##########################
+
+royal_decree_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	modifiers = {
+		free_mil_policy = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+aristocratic_court_reform = {
+	icon = "soldiers_2"
+	allow_normal_conversion = yes
+	modifiers = {
+		army_tradition_decay = -0.003
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+expand_the_kourend_council_reform = {
+	icon = "icon_expand_the_kourend_council"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = kourend_monarchy
+			has_reform = kourend_reformed_monarchy
+		}
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.2
+		state_governing_cost = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+restrain_the_kourend_council_reform = {
+	icon = "icon_restrain_the_kourend_council"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = kourend_monarchy
+			has_reform = kourend_reformed_monarchy
+		}
+	}
+	modifiers = {
+		legitimacy = 0.5
+		global_autonomy = -0.02
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+##########################
+##########################
+#Legitimation of Power
+##########################
+##########################
+
+# Imported:
+## Subversive Means
+## Institutional Constraints
+## Regulation of Selfishness
+## Prevention of Anarchy
+## Social Contract
+
+machiavellianistic_rule_reform = { #Subversive Means
+	icon = "icon_subversive_means"
+	allow_normal_conversion = yes
+	#potential = {
+	#	OR = {
+	#		is_revolutionary = no
+	#		NOT = { has_dlc = "Emperor" }
+	#	}
+	#}
+	modifiers = {
+		stability_cost_to_declare_war = -1
+		ae_impact = 0.15
+		max_absolutism = 10
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+six_livres_reform = { #Institutional Constraints
+	icon = "icon_institutional_constraints"
+	allow_normal_conversion = yes
+	#potential = {
+	#	OR = {
+	#		is_revolutionary = no
+	#		NOT = { has_dlc = "Emperor" }
+	#	}
+	#}
+	modifiers = {
+		all_estate_influence_modifier = -0.05
+		years_of_nationalism = -5
+		global_unrest = -1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+two_treatises_reform = { #Regulation of Selfishness
+	icon = "icon_regulation_of_selfishness"
+	allow_normal_conversion = yes
+	#potential = {
+	#	OR = {
+	#		is_revolutionary = no
+	#		NOT = { has_dlc = "Emperor" }
+	#	}
+	#}
+	modifiers = {
+		expand_administration_cost = -1
+		yearly_corruption = -0.05
+		num_accepted_cultures = 1
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		custom_attributes = {
+			halved_parliament_bribes = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+the_leviathan_reform = { #Prevention of Anarchy
+	icon = "icon_prevention_of_anarchy"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			religion = lucien
+			religion = vampyric
+			religion = zamorak
+			religion = zemouregal
+		}
+	}
+	modifiers = {
+		harsh_treatment_cost = -0.33
+		global_rebel_suppression_efficiency = 0.5
+		reduced_liberty_desire = 10
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+the_social_contract_reform = { #Social Contract
+	icon = "icon_social_contract"
+	allow_normal_conversion = yes
+	#potential = {
+	#	OR = {
+	#		is_revolutionary = no
+	#		NOT = { has_dlc = "Emperor" }
+	#	}
+	#}
+	modifiers = {
+		no_religion_penalty = yes
+		global_unrest = -1
+	}
+	custom_attributes = {
+		enforced_interfaith_dialogue_buff = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+# New
+
+right_of_might_reform = {
+	icon = "icon_right_of_might"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			religion = bandos
+			religion = xeric
+			religion = tuska
+			religion = queen_of_ashes
+		}
+	}
+	modifiers = {
+		monarch_military_power = 1
+	 	possible_mil_policy = 1
+		war_exhaustion = -0.03
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+god_among_mortals_reform = {
+	icon = "icon_god_among_mortals"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			religion = lucien
+			religion = zemouregal
+			religion = zulrah
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+	 	global_missionary_strength = 0.01
+		enforce_religion_cost = -0.25
+	}
+	ai = {
+		factor = 2
+	}
+}
+
+##########################
+##########################
+#Absolutism and Constitutionalism
+##########################
+##########################
+
+absolutist_governance_reform = {
+	icon = "queen"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_capacity = 250
+	}
+	ai = {
+		factor = 1.5
+	}
+}
+
+regional_representation_reform = {
+	icon = "assembly_hall"
+	allow_normal_conversion = yes
+	modifiers = {
+		min_autonomy_in_territories = -0.10
+	}
+}
+
+constitutional_law_reform_monarchy = {
+	icon = "icon_constitutional_law"
+	allow_normal_conversion = yes
+	potential = {
+		religion = armadyl
+	}
+	modifiers = {
+		yearly_corruption = -0.1
+	}
+}
+
+##########################
+##########################
+#Separation of Powers
+##########################
+##########################
+
+adventurer_delegation_reform = {
+	icon = "icon_adventurer_delegation"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	modifiers = {
+		max_absolutism = 5
+		yearly_absolutism = 0.5
+	}
+	ai = {
+		factor = 1.5
+	}
+}
+
+legislative_houses_reform = {
+	icon = "parliament_hall"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	modifiers = {
+		possible_adm_policy = 1
+	}
+}
+
+become_a_republic_reform = {
+	icon = "parliament_highlighted"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+		NOT = { has_reform = kourend_monarchy }
+		NOT = { has_reform = kourend_reformed_monarchy }
+	}
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		lose_reforms = 3
+		change_government = republic
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+install_theocratic_government_reform = {
+	icon = "pope_highlighted"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		lose_reforms = 4
+		change_government = theocracy
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+kou_council_leadership_reform = {
+	icon = "icon_kourend_council_leadership"
+	allow_normal_conversion = yes
+	potential = {
+		or = {
+			has_reform = kourend_monarchy
+			has_reform = kourend_reformed_monarchy
+		}
+		is_revolutionary = no
+	}
+	trigger = {
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		lose_reforms = 3
+		change_government = republic
+		add_government_reform = kourend_council
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			has_regency = no
+		}
+		modifier = {
+			factor = 5
+			has_regency = yes
+		}
+	}
+}
+
+constitutional_monarchy_reform = {
+	icon = "icon_constitutional_monarchy"
+	modifiers = {
+		global_unrest = -1
+	}
+	
+	trigger = {
+		NOT = { has_reform = kandarin_monarchy }
+		OR = {
+			NOT = { has_estate = estate_nobles }
+			crown_stronger_than_estate = { estate = estate_nobles }
+		}
+	}
+
+	conditional = {
+		has_parliament = yes
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+	ai = {
+		factor = 1
+	}
+	post_removed_effect = {
+		give_estate_land_share_init = { estate = estate_nobles }
+	}
+}

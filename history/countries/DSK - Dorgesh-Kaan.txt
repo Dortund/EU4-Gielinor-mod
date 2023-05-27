@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = political_dynasties
+government_rank = 2
+primary_culture = dorgeshuun
+religion = godless
+religious_school = evasive_school
+technology_group = bandostechgroup
+capital = 1539 #Dorgesh-Kaan
+national_focus = ADM
+
+1929.6.12 = {
+	monarch = {
+		name = "Delgon"
+		dynasty = "of the Dorgeshuun"
+		birth_date = 1910.5.12
+		adm = 6
+		dip = 5
+		mil = 2
+	}
+}
+
+2164.6.23 = {
+	monarch = {
+		name = "Ur-Tag"
+		dynasty = "of the Dorgeshuun"
+		birth_date = 2110.7.14
+		adm = 5
+		dip = 5
+		mil = 0
+	}
+}

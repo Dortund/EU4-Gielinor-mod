@@ -1,0 +1,30 @@
+#311-Romper
+owner = NAR
+controller = NAR
+add_core = NAR
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = tropical_logs
+latent_trade_goods = { divine_energy }
+
+is_city = yes
+
+2159.3.12 = {
+	owner = FEL
+	controller = FEL
+	add_core = FEL
+	remove_core = NAR
+}

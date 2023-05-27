@@ -1,0 +1,227 @@
+
+#Define estate loyalty and influence modifiers here
+
+estate_kel_blue_opal = {
+	modifier_definition = {
+		type = loyalty
+		key = kel_blue_opal_loyalty_modifier
+		trigger = {
+			has_estate = estate_kel_blue_opal
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = kel_blue_opal_influence_modifier
+		trigger = {
+			has_estate = estate_kel_blue_opal
+		}
+	}
+}
+
+estate_kel_brown_engine = {
+	modifier_definition = {
+		type = loyalty
+		key = kel_brown_engine_loyalty_modifier
+		trigger = {
+			has_estate = estate_kel_brown_engine
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = kel_brown_engine_influence_modifier
+		trigger = {
+			has_estate = estate_kel_brown_engine
+		}
+	}
+}
+
+estate_kel_green_gemstone = {
+	modifier_definition = {
+		type = loyalty
+		key = kel_green_gemstone_loyalty_modifier
+		trigger = {
+			has_estate = estate_kel_green_gemstone
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = kel_green_gemstone_influence_modifier
+		trigger = {
+			has_estate = estate_kel_green_gemstone
+		}
+	}
+}
+
+estate_kel_purple_pewter = {
+	modifier_definition = {
+		type = loyalty
+		key = kel_purple_pewter_loyalty_modifier
+		trigger = {
+			has_estate = estate_kel_purple_pewter
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = kel_purple_pewter_influence_modifier
+		trigger = {
+			has_estate = estate_kel_purple_pewter
+		}
+	}
+}
+
+estate_kel_red_axe = {
+	modifier_definition = {
+		type = loyalty
+		key = kel_red_axe_loyalty_modifier
+		trigger = {
+			has_estate = estate_kel_red_axe
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = kel_red_axe_influence_modifier
+		trigger = {
+			has_estate = estate_kel_red_axe
+		}
+	}
+}
+
+estate_kel_silver_cog = {
+	modifier_definition = {
+		type = loyalty
+		key = kel_silver_cog_loyalty_modifier
+		trigger = {
+			has_estate = estate_kel_silver_cog
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = kel_silver_cog_influence_modifier
+		trigger = {
+			has_estate = estate_kel_silver_cog
+		}
+	}
+}
+
+estate_kel_white_chisel = {
+	modifier_definition = {
+		type = loyalty
+		key = kel_white_chisel_loyalty_modifier
+		trigger = {
+			has_estate = estate_kel_white_chisel
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = kel_white_chisel_influence_modifier
+		trigger = {
+			has_estate = estate_kel_white_chisel
+		}
+	}
+}
+
+estate_kel_yellow_fortune = {
+	modifier_definition = {
+		type = loyalty
+		key = kel_yellow_fortune_loyalty_modifier
+		trigger = {
+			has_estate = estate_kel_yellow_fortune
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = kel_yellow_fortune_influence_modifier
+		trigger = {
+			has_estate = estate_kel_yellow_fortune
+		}
+	}
+}
+
+
+estate_tzh_hur = {
+	modifier_definition = {
+		type = loyalty
+		key = tzh_hur_loyalty_modifier
+		trigger = {
+			has_estate = estate_tzh_hur
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = tzh_hur_influence_modifier
+		trigger = {
+			has_estate = estate_tzh_hur
+		}
+	}
+}
+
+estate_tzh_ket = {
+	modifier_definition = {
+		type = loyalty
+		key = tzh_ket_loyalty_modifier
+		trigger = {
+			has_estate = estate_tzh_ket
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = tzh_ket_influence_modifier
+		trigger = {
+			has_estate = estate_tzh_ket
+		}
+	}
+}
+
+estate_tzh_mej = {
+	modifier_definition = {
+		type = loyalty
+		key = tzh_mej_loyalty_modifier
+		trigger = {
+			has_estate = estate_tzh_mej
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = tzh_mej_influence_modifier
+		trigger = {
+			has_estate = estate_tzh_mej
+		}
+	}
+}
+
+estate_tzh_xil = {
+	modifier_definition = {
+		type = loyalty
+		key = tzh_xil_loyalty_modifier
+		trigger = {
+			has_estate = estate_tzh_xil
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = tzh_xil_influence_modifier
+		trigger = {
+			has_estate = estate_tzh_xil
+		}
+	}
+}
+
+estate_tzh_gaal = {
+	modifier_definition = {
+		type = loyalty
+		key = tzh_gaal_loyalty_modifier
+		trigger = {
+			has_estate = estate_tzh_gaal
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = tzh_gaal_influence_modifier
+		trigger = {
+			has_estate = estate_tzh_gaal
+		}
+	}
+}
+
+
+

@@ -1,0 +1,95 @@
+# INSTRUCTIONS:
+# -------------
+# is_triggered_only - Triggered from within the code or by event effects. DO NOT REMOVE THE STOCK ONES.
+# months - The number of months this CB will be valid. Only works for triggered CBs.
+# prerequisites - A condition that automatically activates a CB. Does not work for triggered CBs.
+# no_opinion_hit - If yes you get no negative opinion from this
+#
+# ROOT = attacker
+# FROM = target
+#
+# NOTE: The order in which the peace options are listed is the order in which the AI will normally prioritize them in peace treaties
+#
+# TRIGGERED - Triggered from within the code or by event effects
+# --------------------------------------------------------------
+
+# Kourend House broke free
+cb_restore_kourend_house = {
+	valid_for_subject = no
+
+	prerequisites = {
+		OR = {
+			has_reform = kourend_monarchy
+			has_reform = kourend_reformed_monarchy
+			has_reform = kourend_council
+		}
+		is_revolutionary = no
+		FROM = {
+			has_reform = kourend_independent_house
+			is_subject = no
+		}
+	}
+
+	war_goal = goal_take_capital_disloyal_house
+}
+
+#Kourend - War of Five Houses
+cb_reunite_kourend = {
+	valid_for_subject = no
+
+	prerequisites = {
+		NOT = { exists = KOU }
+		OR = {
+			tag = AUU
+			tag = HOS
+			tag = KTW
+			tag = LOV
+			tag = PCL
+			tag = SYZ
+		}
+		is_revolutionary = no
+		FROM = {
+			any_owned_province = {
+				region = kourend_region
+			}
+			is_subject = no
+			or = {
+				tag = AUU
+				tag = HOS
+				tag = KTW
+				tag = LOV
+				tag = PCL
+				tag = SYZ
+			}
+		}
+	}
+	war_goal = goal_reunite_kourend
+}
+
+cb_unify_asgarnia = {
+	valid_for_subject = no
+
+	prerequisites = {
+		NOT = { exists = ASG }
+		NOT = { tag = ENT }
+		NOT = { tag = CDR }
+		dip_tech = 6
+		culture_group = asgarnian_group
+		capital_scope = { region = asgarnia_region }
+		is_revolutionary = no
+		FROM = {
+			any_owned_province = {
+				AND = {
+					region = asgarnia_region
+					NOT = {
+						area = entrana_area
+						area = crandor_area
+						province_id = 52
+					}
+				}
+			}
+		}
+	}
+	war_goal = goal_unify_asgarnia
+}
+

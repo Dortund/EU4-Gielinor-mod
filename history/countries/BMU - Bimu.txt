@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = bowl_culture
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1173 #Bimu
+
+1927.2.19 = {
+	monarch = {
+		name = "Yuehanxun"
+		dynasty = "Sima"
+		birth_date = 1905.1.7
+		death_date = 1979.8.15
+		adm = 6
+		dip = 4
+		mil = 0
+		female = yes
+	}
+}
+
+2151.12.11 = {
+	monarch = {
+		name = "Hubbub"
+		dynasty = "Whaler"
+		birth_date = 2129.12.11
+		adm = 1
+		dip = 6
+		mil = 4
+	}
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = catherbian
+add_accepted_culture = seer
+religion = saradomin
+technology_group = kandarintechgroup
+capital = 248 #Sinclair
+national_focus = MIL
+historical_friend = CLS
+
+1913.2.18 = {
+	monarch = {
+		name = "Marcus"
+		dynasty = "Sinclair"
+		birth_date = 1909.4.16
+		adm = 5
+		dip = 4
+		mil = 1
+	}
+}

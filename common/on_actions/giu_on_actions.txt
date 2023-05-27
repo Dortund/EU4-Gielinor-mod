@@ -1,0 +1,285 @@
+#When adding effects directly in on_actions always consider if it would be best to do so through a scripted effect. on_actions with a lot of script in them are harder to get an overview of.
+
+on_startup = {
+	set_hre_religion_treaty = yes
+	set_allow_female_emperor = yes
+	emperor = {
+		save_global_event_target_as = Emperor
+	}
+	if = {
+		limit = {
+			is_emperor_of_china = yes
+		}
+		save_global_event_target_as = EmperorOfChina
+	}
+	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
+	
+	if = {
+		limit = {
+			NOT = {
+				any_province = {
+					has_province_modifier = temple_to_guthix
+				}
+			
+			}
+		}
+		random_province = {
+			limit = {
+				OR = {
+					continent = west_runescape
+					continent = east_runescape
+				}
+				NOT = { is_island = yes }
+			}
+			add_province_triggered_modifier = temple_to_guthix
+		}
+	}
+}
+
+on_religion_change = {
+	###Remove Armadyl modifiers
+	if = {
+		limit = {
+			NOT = { religion = armadyl }
+		}
+		remove_country_modifier = armadyl_loyal_converts
+		remove_country_modifier = armadyl_wings_of_armadyl_modifier
+	}
+	###Remove Dark Lord modifiers
+	if = {
+		limit = {
+			NOT = { religion = dark_lord }
+		}
+		remove_country_modifier = IOR_terror_of_the_dark_lord
+	}
+	###Remove Godless modifiers
+	if = {
+		limit = {
+			NOT = { religion = godless }
+		}
+		remove_country_modifier = godless_forget_the_faith
+	}
+	###Remove Tuska modifiers
+	if = {
+		limit = {
+			NOT = { religion = tuska }
+		}
+		remove_country_modifier = tuska_doomsday_preachers
+		remove_country_modifier = tuska_children_of_tuska
+	}
+	###Remove Seren modifiers
+	if = {
+		limit = {
+			NOT = { religion = seren }
+		}
+		remove_country_modifier = seren_outside_assistance
+		remove_country_modifier = seren_insular_assistance
+		remove_country_modifier = seren_free_elf_movement
+		remove_country_modifier = seren_closed_elf_movement
+		remove_country_modifier = seren_open_trade
+		remove_country_modifier = seren_closed_trade
+		remove_country_modifier = seren_contemplating_the_dark_lord
+		remove_country_modifier = seren_anything_but_the_dark_lord
+		remove_country_modifier = seren_only_seren_guides_us
+		
+		remove_country_modifier = seren_new_leadership
+		remove_country_modifier = seren_traditional_leadership
+		remove_country_modifier = seren_guidance_of_the_world
+		remove_country_modifier = seren_faith_and_stability
+		remove_country_modifier = seren_clan_nepotism
+		remove_country_modifier = seren_harsher_leadership
+		
+		remove_country_modifier = seren_expansion_of_runecrafting
+		remove_country_modifier = seren_traditional_magics
+
+		remove_country_modifier = seren_age_of_collaboration
+		remove_country_modifier = seren_age_of_competition
+		remove_country_modifier = seren_age_of_isolation
+		remove_country_modifier = seren_open_border_policy
+		remove_country_modifier = seren_closed_border_policy
+		
+		remove_country_modifier = seren_zean_traders
+		remove_country_modifier = seren_zean_caution
+		remove_country_modifier = seren_zean_shipbuilding_methods
+		remove_country_modifier = seren_ralos_tolerance
+		remove_country_modifier = seren_ralos_minor_tolerance
+		remove_country_modifier = seren_ralos_possible_link
+		
+		remove_country_modifier = seren_opening_of_prifddinas
+		remove_country_modifier = seren_restrictions_in_prifddinas
+		remove_country_modifier = seren_strict_prifddinas_closure
+		remove_country_modifier = seren_domestic_trade_push
+		
+		remove_country_modifier = seren_rejoice_in_rebirth
+		remove_country_modifier = seren_stealth_seren_mission
+		remove_country_modifier = seren_skepticism_for_rebirth
+		remove_country_modifier = seren_glory_to_the_reborn_goddess
+		remove_country_modifier = seren_not_our_seren
+		remove_country_modifier = seren_dark_lord_returns
+		remove_country_modifier = seren_lore_of_zaros
+		remove_country_modifier = seren_defiance_of_zaros
+		remove_country_modifier = seren_godless_inclinations
+		remove_country_modifier = seren_new_age_of_openness
+		remove_country_modifier = seren_age_of_continuity
+		remove_country_modifier = seren_new_age_of_isolationism
+		remove_country_modifier = seren_a_goddess_restored
+		remove_country_modifier = seren_false_restoration
+		
+		remove_country_modifier = seren_turning_from_seren
+		remove_country_modifier = seren_excusing_seren
+		remove_country_modifier = seren_denying_the_false_goddess
+		remove_country_modifier = seren_steadfast_faith
+	}
+}
+
+on_bi_yearly_pulse_3 = {
+
+	events = {
+		muslim_school_events.20 #Pick School
+	}
+	random_events = {
+		100 = new_court_flavour_events.21 #religious resignation
+		100 = new_court_flavour_events.25 #blood is thicker than water
+		200 = 0
+		
+		#Kourend events
+		100 = kourendgov.1 #AUU vs HOS
+		100 = kourendgov.2 #AUU vs LOV
+		100 = kourendgov.3 #AUU vs PCL
+		100 = kourendgov.4 #AUU vs SYZ
+		100 = kourendgov.5 #HOS vs LOV
+		100 = kourendgov.6 #HOS vs PCL
+		100 = kourendgov.7 #HOS vs SYZ
+		100 = kourendgov.8 #LOV vs PCL
+		100 = kourendgov.9 #LOV vs SYZ
+		100 = kourendgov.10 #PCL vs SYZ
+	}
+}
+
+on_thri_yearly_pulse_2 = {
+	random_events = {
+		# Random to increase or decrease chaos.
+		25 = zamorak_flavor.1
+		20 = zamorak_flavor.2
+		25 = zamorak_flavor.3
+		25 = zamorak_flavor.4
+		25 = zamorak_flavor.5
+		25 = vampyric_flavor.1
+		20 = vampyric_flavor.2
+		25 = vampyric_flavor.3
+		25 = vampyric_flavor.4
+		25 = vampyric_flavor.5
+		10 = vampyric_flavor.6
+		25 = zemouregal_flavor.1
+		20 = zemouregal_flavor.2
+		25 = zemouregal_flavor.3
+		25 = zemouregal_flavor.4
+		25 = zemouregal_flavor.5
+		25 = lucien_flavor.1
+		20 = lucien_flavor.2
+		25 = lucien_flavor.3
+		25 = lucien_flavor.4
+		10 = lucien_flavor.5
+		
+		# Marimbo Piety
+		40 = marimbo_piety_event.1
+		40 = marimbo_piety_event.2
+		40 = marimbo_piety_event.3
+		20 = marimbo_piety_event.4
+		20 = marimbo_piety_event.5
+		40 = marimbo_piety_event.6
+		40 = marimbo_piety_event.7
+		40 = marimbo_piety_event.8
+		40 = marimbo_piety_event.9
+		40 = marimbo_piety_event.10
+		
+		300 = 0
+	}
+}
+
+on_buy_religious_reform = {
+	events = {
+		ful_events.1
+		jas_events.1
+		xautak_events.1
+		xeric_events.1
+		zulrah_events.1
+	}
+}
+
+##########################
+# Brassica Prime harmonisation
+##########################
+
+on_harmonized_chaos = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.1
+	}
+}
+on_harmonized_karamjan = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.2
+	}
+}
+on_harmonized_menaphite = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.3
+	}
+}
+on_harmonized_nonintervention = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.4
+	}
+}
+on_harmonized_order = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.5
+	}
+}
+on_harmonized_transcendent = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.6
+	}
+}
+on_harmonized_elder = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.7
+	}
+}
+on_harmonized_autocratic = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.8
+	}
+}
+on_harmonized_marimbo = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.9
+	}
+}
+on_harmonized_horror = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.10
+	}
+}
+on_harmonized_celestial = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.10
+	}
+}
+on_harmonized_wushanko = {
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		brassicaprime_events.10
+	}
+}

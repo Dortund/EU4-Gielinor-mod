@@ -1,0 +1,26 @@
+bookmark =
+{
+	name = "AGE_OF_MORTALS_NAME"
+	desc = "AGE_OF_MORTALS_DESC"
+	date = 1930.6.1
+	
+	center = 41
+	default = yes
+	
+	country = MST
+	country = MYT
+	country = VAR
+	country = DBS
+	country = KDS
+	country = MPS
+	country = REL
+	country = CLS
+	country = GNE
+	country = IOR
+	country = EVR
+	country = KOU
+	
+	easy_country = MST
+	easy_country = MYT
+	easy_country = VAR
+}

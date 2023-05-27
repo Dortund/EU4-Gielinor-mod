@@ -1,0 +1,20 @@
+government = theocracy
+add_government_reform = monastic_order_reform
+government_rank = 1
+primary_culture = taverlian
+religion = guthix
+technology_group = centraltechgroup
+capital = 238 #Windswept Isle
+national_focus = MIL
+
+2146.4.24 = {
+	monarch = {
+		name = "Matthias"
+		dynasty = "Goanfix"
+		birth_date = 2106.6.9
+		death_date = 2178.6.24
+		adm = 5
+		dip = 5
+		mil = 3
+	}
+}

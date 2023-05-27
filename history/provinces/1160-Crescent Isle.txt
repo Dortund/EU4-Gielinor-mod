@@ -1,0 +1,23 @@
+#1160-Crescent Isle
+owner = CSI
+controller = CSI
+add_core = CSI
+tribal_owner = ---
+culture = bowl_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 1

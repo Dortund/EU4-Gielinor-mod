@@ -1,0 +1,42 @@
+#250 - Autumn Path (Sinclair Mansion)
+owner = SIN
+controller = SIN
+add_core = SIN
+tribal_owner = ---
+culture = seer
+religion = guthix
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = livestock_farm
+
+is_city = yes
+
+2062.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	religion = saradomin
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}
+
+2132.7.13 = {
+	change_province_name = "Sinclair Mansion"
+}

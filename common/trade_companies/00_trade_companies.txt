@@ -1,0 +1,509 @@
+trade_company_bubble_of_mists = {
+	color = { 207 240 255 }
+	provinces = {
+		1198 1199 1200 1201 1202 1203 1204 1205 1206 1207 1208 1209 1210 1211 1212 1213 1214
+		1215 1216 1217 1218 1219 1220 1221 1222 1223 1224 1225 1226 1227 1228 1229 1230 1231 1408
+	}
+	names = {
+		name = "TRADE_COMPANY_BUBBLEOFMISTS_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_BUBBLEOFMISTS_Wushanko_Trade_Company"
+	}
+}
+
+trade_company_han_lun = {
+	color = { 184 212 161 }
+	provinces = {
+		1128 1129 1130 1131 1132 1133 1134 1135 1136 1137 1138 1139 1140 1141 1142 1143
+		1144 1145 1146 1147 1148 1149 1150 1151 1152 1153 1154 1155 1156 1157 1158 1159 1232
+	}
+	names = {
+		name = "TRADE_COMPANY_HANLUN_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_HANLUN_Wushanko_Trade_Company"
+	}
+}
+
+trade_company_new_heritage = {
+	color = { 166 72 70 }
+	provinces = {
+		1160 1161 1162 1163 1164 1165 1166 1167 1168 1169 1170 1171 1172 1173 1174 1175
+		1176 1177 1178 1179 1180 1181 1182 1183 1184 1185 1186 1187 1188 1189 1190 1191
+		1192 1193 1194 1195 1196 1197
+	}
+	names = {
+		name = "TRADE_COMPANY_NEWHERITAGE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_NEWHERITAGE_Wushanko_Trade_Company"
+	}
+}
+
+trade_company_waiko = {
+	color = { 16 122 130 }
+	provinces = {
+		1097 1098 1099 1100 1101 1102 1103 1104 1105 1106 1107 1108
+		1109 1110 1111 1112 1113 1114 1115 1116 1117 1118 1119 1120
+		1121 1122 1123 1124 1125 1126 1127
+	}
+	names = {
+		name = "TRADE_COMPANY_WAIKO_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_WAIKO_Wushanko_Trade_Company"
+	}
+}
+
+trade_company_khazari = {
+	color = { 50 200 60 }
+	
+	provinces = {
+		216 220 221 222 223 229 230 231 232 233 234 235 236 237 238 239 805 806 976 978
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_KHAZARI_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_KHAZARI_Western_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_ardougne = {
+	color = { 161 41 33 }
+	
+	provinces = {
+		258 261 262 265 266 267 268 269 270 271 283 284 285 286 287 288 289 295 296 768 769 775 777 851 852 862 989
+		1007 1347 1377 1378 1379 1381 1385 1411
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_ARDOUGNE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_ARDOUGNE_Western_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_ooglog = {
+	color = { 165 120 218 }
+	
+	provinces = {
+		290 291 292 305 306 307 312 313 316 317 293 294 778 853 984
+		1008 1011 1012 1013 1384
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_OOGLOG_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_OOGLOG_Western_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_isle_of_souls = {
+	color = { 198 175 2 }
+	
+	provinces = {
+		753 754 755 756 757 758 759 760 761 762 923 924 925
+		308 309 310 311 314 315 985
+		1009 1010 1346
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_ISLE_OF_SOULS_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_ISLE_OF_SOULS_Western_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_trollheim = {
+	color = { 69 66 48 }
+	
+	provinces = {
+		50 51 52 345 346 347 348 349 350 351 352 353 370 371 783 794 946 968 969 1351 1393
+		1004
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_TROLLHEIM_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_TROLLHEIM_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_dareeyak = {
+	color = { 112 97 126 }
+	
+	provinces = {
+		160 161 162 163 164 165 174 175 176 177 178 179 354 355 356 357 869 958 959 960
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_DAREEYAK_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_DAREEYAK_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_lava_dragon_isle = {
+	color = { 229 0 0 }
+	
+	provinces = {
+		159 166 167 168 169 172 173 180 181 182 183 184 185 206 961
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_LAVA_DRAGON_ISLE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_LAVA_DRAGON_ISLE_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_coast_of_forinthry = {
+	color = { 99 60 44 }
+	
+	provinces = {
+		171 187 188 189 190 191 192 193 194 195 196 197 358 359 962 963 964 965 966 967 1345
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_COAST_OF_FORINTHRY_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_COAST_OF_FORINTHRY_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_lunar_isle = {
+	color = { 233 207 235 }
+	
+	provinces = {
+		277 280 281 380 385 386 387 388 389 390 391 392 393 394 395 396 779
+		1233 1349 1380
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_LUNAR_ISLE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_LUNAR_ISLE_Western_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_rellekka = {
+	color = { 110 64 34 }
+	
+	provinces = {
+		366 367 368 369 372 373 374 376 377 378 379 381 382 383 384 784 970 971 972 973 974 1350 1391 1392 1394
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_RELLEKKA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_RELLEKKA_Western_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_falador = {
+	color = { 80 80 162 }
+	
+	provinces = {
+		8 19 20 38 39 41 43 44 45 46 47 48 49 149 150 151 781 782 795 796 863 865 901 939 986 1006 1016 1355 1363 1364
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_FALADOR_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_FALADOR_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_bays_of_kandarin = {
+	color = { 76 107 44 }
+	
+	provinces = {
+		251 252 253 254 255 256 257 272 273 274 275 276 278 279 322 365 780 785 990 991 1410
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_BAYS_OF_KANDARIN_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_BAYS_OF_KANDARIN_Western_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_daemonheim = {
+	color = { 210 181 129 }
+	
+	provinces = {
+		112 114 116 117 155 156 198 199 200 201 202 203 204 205 842 870 949 951 952 953 954 955
+		170 186 1234 1235 1236 1237 1238 1320 1321 1322 1323 1324
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_DAEMONHEIM_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_DAEMONHEIM_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_acheron = {
+	color = { 229 229 229 }
+	
+	provinces = {
+		1285 1286 1287 1288 1289 1290 1291 1292 1293 1294 1295 1296 1297 1298 1299 1300 1301 1302 1303 1304 1305
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_ACHERON_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_ACHERON_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+
+trade_company_varrock = {
+	color = { 158 0 165 }
+	
+	provinces = {
+		12 13 14 15 16 17 18 21 22 23 24 25 26 27 152 153 154 157 158 790 894 895 940 941 956 957 1356 1398 1399 1400 1401
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_VARROCK_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_VARROCK_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_darkmeyer = {
+	color = { 151 10 39 }
+	
+	provinces = {
+		111 113 115 118 121 122 123 124 125 127 130 138 139 140 844 845 846 849 850 950 1373 1374 1402
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_DARKMEYER_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_DARKMEYER_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_isafdar_coast = {
+	color = { 0 29 14 }
+	
+	provinces = {
+		327 328 329 330 332 333 334 770 771 980
+		1240 1241 1242 1243 1244 1245 1246 1247 1248 1390
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_ISAFDAR_COAST_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_ISAFDAR_COAST_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_hallowvale = {
+	color = { 59 96 99 }
+	
+	provinces = {
+		126 128 129 132 133 134 135 136 137 142 143 144 145 146 147 148 764 765 766 847 848 900 947
+		119 120 131 843 948 1344 1403 1404 1405 1407
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_HALLOWVALE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_HALLOWVALE_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_catherby = {
+	color = { 95 174 214 }
+	
+	provinces = {
+		213 214 247 248 249 250 259 260 263 264 282 536 860 871 776 861 992 1376 1382 1383
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_CATHERBY_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_CATHERBY_Western_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_musa_point = {
+	color = { 161 154 111 }
+	
+	provinces = {
+		209 210 211 212 215 217 218 219 224 225 226 227 228 872 975 977
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_MUSA_POINT_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_MUSA_POINT_Western_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_south_lum = {
+	color = { 65 167 181 }
+	
+	provinces = {
+		1 2 3 4 5 9 10 11 61 62 63 64 65 66 67 69 70 789 791 792 867 896 897 938 942 1000 1003 1357 1358 1359 1360 1395 1397
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_SOUTH_LUM_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_SOUTH_LUM_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_uzer = {
+	color = { 181 125 118 }
+	
+	provinces = {
+		78 79 80 87 89 90 91 92 93 786 787 86
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_UZER_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_UZER_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_pollnivneach = {
+	color = { 225 239 155 }
+	
+	provinces = {
+		71 72 73 74 75 76 77 82 83 84 88 94 856 868 106 1366 1367 68
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_POLLNIVNEACH_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_POLLNIVNEACH_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_menaphos = {
+	color = { 27 75 108 }
+	
+	provinces = {
+		81 85 95 96 97 98 99 100 101 102 788 854 855 857 858 859 866
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_MENAPHOS_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_MENAPHOS_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_port_sarim = {
+	color = { 196 208 216 }
+	
+	provinces = {
+		6 7 33 34 35 36 37 40 42 56 57 58 59 60 793 797 864 943 945 987 988 1005 1014 1365
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_PORT_SARIM_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_PORT_SARIM_Eastern_Gielinor_Trade_Company"
+	}
+}
+
+trade_company_prifddinas = {
+	color = { 127 255 255 }
+	
+	provinces = {
+		324 325 326 331 335 336 337 338 339 340 341 342 538 772 773 774 902 979 981 982 983 1386 1387 1388 1389
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_PRIFDDINAS_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_PRIFDDINAS_Western_Gielinor_Trade_Company"
+	}
+}

@@ -1,0 +1,82 @@
+namespace = tuska_flavor
+
+#Arrival of Tuska
+country_event = {
+	id = tuska_flavor.1
+	title = tuska_flavor.1.t #Arrival of Tuska
+	desc = tuska_flavor.1.d #Our great god Tuska is approaching Gielinor! She shall devour the unworthy as she has on countless other worlds!
+	picture = TUSKA_BEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tuska_flavor.1.a #Tus-ka! Tus-ka! Tus-ka!
+		custom_tooltip = tuska_make_the_god_triumph_tooltip
+		add_prestige = 50
+		add_stability = 1
+		add_country_modifier = {
+			name = tuska_doomsday_preachers
+			duration = -1 
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Tuska Loses
+country_event = {
+	id = tuska_flavor.2
+	title = tuska_flavor.2.t #The Fall of Tuska
+	desc = tuska_flavor.2.d #Before she could even reach Gielinor, our god was cruelly assassinated. But we shall still honour her memory as the Children of Tuska! Tus-ka! Tus-ka! Tus-ka!
+	picture = TUSKA_BEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tuska_flavor.2.a #Gielinor just wasn't ready for a giant boar god from across the stars.
+		add_prestige = -50
+		remove_country_modifier = tuska_doomsday_preachers
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Tuska Wins
+country_event = {
+	id = tuska_flavor.3
+	title = tuska_flavor.3.t #Tuska's Last Triumph
+	desc = tuska_flavor.3.d #Oh! What a display! What sheer devastation Tuska wrought! Cities destroyed! Yes, the lesser Gods banded together to kill her, but who could ever top the performance of the greatest god ever to roam the heavens!
+	picture = TUSKA_BEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tuska_flavor.3.a #We are the Children of Tuska. No lesser god shall ever take that from us!
+		add_prestige = 100
+		add_stability = 1
+		remove_country_modifier = tuska_doomsday_preachers
+		add_country_modifier = {
+			name = tuska_children_of_tuska
+			duration = -1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+

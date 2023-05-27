@@ -1,0 +1,164 @@
+dark_wizard_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = DWI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DWI_ally_urval = {
+		icon = mission_alliances
+		required_missions = {  } #none
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = CDU
+					reverse_has_opinion = {
+						who = CDU
+						value = 150
+					}
+				}
+				AND = {
+					owns_core_province = 793
+					NOT = { exists = CDU }
+				}
+			}
+		}
+		effect = {
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 40
+						province_id = 864
+						province_id = 35
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+dark_wizard_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = DWI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DWI_riches_of_deofolwitga = {
+		icon = mission_alliances
+		required_missions = { DWI_ally_urval }
+		position = 2
+		provinces_to_highlight = {
+			province_id = 40
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 40
+		}
+		effect = {
+			40 = {
+				add_province_modifier = {
+					name = "DWI_gold_for_zamorak"
+					duration = 7300
+				}
+			}
+			asgarnian_farmlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	DWI_break_the_farming_order = {
+		icon = mission_alliances
+		required_missions = { DWI_riches_of_deofolwitga }
+		position = 3
+		provinces_to_highlight = {
+			area = asgarnian_farmlands_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			asgarnian_farmlands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			port_sarim_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+			}
+		}
+	}
+	DWI_port_of_call = {
+		icon = mission_alliances
+		required_missions = { DWI_take_down_rimmington DWI_break_the_farming_order }
+		position = 4
+		provinces_to_highlight = {
+			area = port_sarim_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			port_sarim_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+}
+
+dark_wizard_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = DWI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DWI_take_down_rimmington = {
+		icon = mission_alliances
+		required_missions = { DWI_riches_of_deofolwitga }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 864
+				province_id = 35
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 864
+			owns_core_province = 35
+		}
+		effect = {
+			add_mil_power = 50
+			south_asgarnia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

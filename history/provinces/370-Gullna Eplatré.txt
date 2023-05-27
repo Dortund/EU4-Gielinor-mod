@@ -1,0 +1,32 @@
+#370-Gullna Eplatré
+owner = RVL
+controller = RVL
+add_core = RVL
+tribal_owner = ---
+culture = mountaintroll
+religion = bandos
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = livestock_farm
+latent_trade_goods = { divine_energy }
+
+is_city = yes
+
+1965.9.27 = {
+	owner = REL
+	controller = REL
+	add_core = REL
+}

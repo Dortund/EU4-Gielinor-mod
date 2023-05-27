@@ -1,0 +1,346 @@
+namespace = overbearing_misthalin
+
+########################################
+# Overbearing Misthalin
+########################################
+
+# Start
+country_event = {
+	id = overbearing_misthalin.1
+	title = overbearing_misthalin.1.t #Overbearing Misthalin
+	desc = overbearing_misthalin.1.d #Misthalin's unchecked expansion is about to face a rude awakening. The Asgarnian clans, alarmed at the prospect of being subsumed into the rule of [MST.Capital.GetName]'s rule, and Misthalin's refusal to back down, are preparing a grand coalition to keep away such an existential threat.
+
+	picture = MISTHALIN_RUINS_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = mst_overbearing
+			set_country_flag = mst_overbearing_start
+			every_country = {
+				limit = {
+					capital_scope = { region = asgarnia_region }
+					NOT = { tag = MST }
+					NOT = { alliance_with = MST }
+					NOT = { religion = bandos }
+				}
+				country_event = {
+					id = overbearing_misthalin.2
+					days = 1
+				}
+				add_opinion = {
+					who = MST
+					modifier = mst_goes_too_far
+				}
+				add_trust = {
+					who = MST
+					value = -25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = overbearing_misthalin.1.a #Let us try to negotiate.
+		custom_tooltip = mst_overbearing_negotiate_tooltip
+		add_country_modifier = {
+			name = MST_diplomatic_tension_easing
+			duration = -1
+		}
+		every_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = { tag = MST }
+				NOT = { alliance_with = MST }
+				NOT = { is_subject_of = MST }
+			}
+			add_aggressive_expansion = {
+				who = MST
+				value = 18
+				apply_calc = yes
+			}
+		}
+		add_prestige = -25
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = overbearing_misthalin.1.b #What could these measly Asgarnians possibly do to us?!
+		custom_tooltip = mst_overbearing_extreme_tooltip
+		add_country_modifier = {
+			name = MST_harsh_line_against_asgarnia
+			duration = -1
+		}
+		every_country = {
+			limit = {
+				capital_scope = { region = asgarnia_region }
+				NOT = { tag = MST }
+				NOT = { alliance_with = MST }
+				NOT = { is_subject_of = MST }
+			}
+			add_aggressive_expansion = {
+				who = MST
+				value = 22
+				apply_calc = yes
+			}
+		}
+		every_owned_province = {
+			limit = {
+				region = asgarnia_region
+			}
+			add_province_modifier = {
+				name = MST_localised_asgarnian_resistance
+				duration = 7300
+			}
+		}
+		add_prestige = 10
+		ai_chance = { factor = 0.9 }
+	}
+}
+
+country_event = {
+	id = overbearing_misthalin.2
+	title = overbearing_misthalin.2.t # Misthalin goes too far!
+	desc = overbearing_misthalin.2.d #The Kingdom of Misthalin, apparently not seeing itself as powerful enough already, has decided to invade Asgarnia. This is a threat to the continued existence to all Asgarnian realms! What approach should we take?
+	picture = MISTHALIN_LUMBRIDGE_CASTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = overbearing_misthalin.2.a #We must band together to face this menace!
+		add_country_modifier = {
+			name = "MST_diplomatic_resistance"
+			duration = 7300
+		}
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				capital_scope = { region = asgarnia_region }
+				NOT = { religion = bandos }
+				NOT = { tag = MST }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = mst_common_resistance_struggle
+			}
+			add_trust = {
+				who = ROOT
+				value = 10
+				mutual = yes
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				alliance_with = MST
+			}
+		}
+	}
+	option = {
+		name = overbearing_misthalin.2.b #We must unite Asgarnia before Misthalin can!
+		add_country_modifier = {
+			name = "MST_military_resistance"
+			duration = 7300
+		}
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				capital_scope = { region = asgarnia_region }
+				NOT = { religion = bandos }
+				NOT = { tag = MST }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = mst_also_against_misthalin
+			}
+			add_trust = {
+				who = ROOT
+				value = 5
+				mutual = yes
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				alliance_with = MST
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = DBS
+					tag = DWI
+				}
+			}
+		}
+	}
+	option = {
+		name = overbearing_misthalin.2.c #We're siding with Misthalin!
+		hidden_effect = {
+			remove_opinion = {
+				who = MST
+				modifier = mst_goes_too_far
+			}
+			add_trust = {
+				who = MST
+				value = 25
+				mutual = yes
+			}
+		}
+		reverse_add_opinion = {
+			who = MST
+			modifier = mst_asgarnian_friend
+		}
+		add_trust = {
+			who = MST
+			value = 10
+			mutual = yes
+		}
+		add_country_modifier = {
+			name = "MST_traitor_to_asgarnia"
+			duration = 7300
+		}
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				capital_scope = { region = asgarnia_region }
+				NOT = { religion = bandos }
+				NOT = { alliance_with = MST }
+				NOT = { tag = MST }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = mst_asgarnian_traitor
+			}
+			add_trust = {
+				who = ROOT
+				value = -10
+				mutual = yes
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { alliance_with = MST }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = overbearing_misthalin.100
+	title = overbearing_misthalin.100.t #Misthalin Borders Settled!
+	
+	desc = {
+		trigger = {
+			any_owned_province = {
+				region = asgarnia_region
+			}
+		}
+		desc = overbearing_misthalin.100.da #It is a day of great triumph for Misthalin. In the face of seemingly overwhelming opposition, Misthalin has stood firm and held onto its Asgarnian territories. Never again will such a coalition be able to challenge Misthalin's might.
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					region = asgarnia_region
+				}
+			}
+		}
+		desc = overbearing_misthalin.100.db #Misthalin has failed in its attempts to take land in Asgarnia. But not all hope is lost. With Misthalin appearing weak to the Asgarnians, they will have much more trouble forming a coalition against us in future.
+	}
+	picture = MISTHALIN_LUMBRIDGE_CASTLE_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = overbearing_misthalin.100.a #For the glory of [Root.Monarch.GetTitle] [Root.Monarch.GetName]!
+		add_prestige = 100
+		add_stability = 1
+		add_mil_power = 250
+		trigger = {
+			any_owned_province = {
+				region = asgarnia_region
+			}
+		}
+		if = { 
+			limit = {
+				any_owned_province = {
+					region = asgarnia_region
+				}
+			}
+			set_country_flag = MST_expanded_borders
+			every_owned_province = {
+				limit = { region = asgarnia_region }
+				remove_province_modifier = MST_localised_asgarnian_resistance
+			}
+		}
+		remove_country_modifier = MST_diplomatic_tension_easing
+		remove_country_modifier = MST_harsh_line_against_asgarnia
+		clr_country_flag = mst_overbearing_start
+		clr_global_flag = mst_overbearing
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					capital_scope = { region = asgarnia_region }
+				}
+				remove_country_modifier = MST_diplomatic_resistance
+				remove_country_modifier = MST_military_resistance
+				remove_country_modifier = MST_traitor_to_asgarnia
+			}
+		}
+		set_country_flag = mst_end_of_overbearing
+	}
+	option = {
+		name = overbearing_misthalin.100.b #Misthalin shall rebuild!
+		add_prestige = -10
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					region = asgarnia_region
+				}
+			}
+		}
+		if = { 
+			limit = {
+				any_owned_province = {
+					region = asgarnia_region
+				}
+			}
+			set_country_flag = MST_expanded_borders
+			every_owned_province = {
+				limit = { region = asgarnia_region }
+				remove_province_modifier = MST_localised_asgarnian_resistance
+			}
+		}
+		remove_country_modifier = MST_diplomatic_tension_easing
+		remove_country_modifier = MST_harsh_line_against_asgarnia
+		clr_country_flag = mst_overbearing_start
+		clr_global_flag = mst_overbearing
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					capital_scope = { region = asgarnia_region }
+				}
+				remove_country_modifier = MST_diplomatic_resistance
+				remove_country_modifier = MST_military_resistance
+				remove_country_modifier = MST_traitor_to_asgarnia
+			}
+		}
+		set_country_flag = mst_end_of_overbearing
+	}
+}

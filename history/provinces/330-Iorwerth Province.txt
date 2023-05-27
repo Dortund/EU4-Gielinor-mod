@@ -1,0 +1,22 @@
+#330 - Iorwerth Province
+owner = IOR
+controller = IOR
+add_core = IOR
+add_core = IOR
+tribal_owner = ---
+culture = iorwerth
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 4
+
+fort_15th = yes
+
+trade_goods = fishing_spot
+
+is_city = yes

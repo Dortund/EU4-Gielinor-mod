@@ -1,0 +1,34 @@
+#932-Rugged Woods
+owner = HRS
+controller = HRS
+add_core = HRS
+tribal_owner = ---
+culture = arceuus
+religion = zamorak
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = magic_supplies
+
+is_city = yes
+
+1944.9.16 = {
+	owner = SYZ
+	controller = SYZ
+	add_core = SYZ
+	culture = shayzien
+}
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

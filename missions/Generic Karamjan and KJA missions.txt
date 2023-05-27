@@ -1,0 +1,770 @@
+genkja_missions_2 = {
+	slot = 2
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				culture_group = karamjan_group
+				religion = karamjan
+			}
+			tag = KJA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genkja_build_temples = {
+		icon = mission_hands_praying
+		required_missions = {  }
+		position = 1
+		trigger = {
+			temple = 3
+		}
+		effect = {
+			add_adm_power = 25
+			add_fervor = 25
+		}
+	}
+	
+	genkja_create_holy_orders = {
+		icon = mission_early_game_buildings
+		required_missions = { genkja_build_temples }
+		position = 2
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = genkja_three_holy_orders
+				num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+					genkja_trigger_holy_order = yes
+					value = 3
+				}
+			}
+		}
+		effect = {
+			add_fervor = 50
+		}
+	}
+	
+	genkja_outside_institutions = {
+		icon = mission_african_trade_post
+		required_missions = { genkja_create_holy_orders genkja_karamjan_fleet }
+		position = 3
+		trigger = {
+			capital_scope = {
+				current_institution = 100
+			}
+			NOT = {
+				any_country = {
+					tech_difference = 2
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+	
+	genkja_trinity_for_all = {
+		icon = mission_trinity_for_all
+		required_missions = { genkja_outside_institutions }
+		position = 4
+		trigger = {
+			religion = karamjan
+			any_subject_country = {
+				religion = karamjan
+				capital_scope = {
+					NOT = { region = karamja_region }
+				}
+				NOT = { culture_group = karamjan_group }
+			}
+		}
+		effect = {
+			add_fervor = 50
+		}
+	}
+}
+
+genkja_missions_3 = {
+	slot = 3
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				culture_group = karamjan_group
+				religion = karamjan
+			}
+			tag = KJA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genkja_island_ally = {
+		icon = mission_alliances
+		required_missions = {  }
+		position = 1
+		trigger = {
+			OR = {
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+						capital_scope = {
+							region = karamja_region
+						}
+					}
+					amount = 1
+				}
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 3
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	
+	genkja_karamjan_fleet = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { genkja_island_ally }
+		position = 2
+		trigger = {
+			num_of_heavy_ship = 5
+		 	num_of_light_ship = 15
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genkja_projecting_influence"
+				duration = 3650
+			}
+		}
+	}
+	
+	genkja_island_dominance = {
+		icon = mission_island_dominance
+		required_missions = { genkja_outside_institutions genkja_cultural_expansion }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = central_karamja_area
+				area = eastern_karamja_area
+				area = tai_bwo_wannai_area
+				area = shilo_area
+				area = kharazi_jungle_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			central_karamja_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			eastern_karamja_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			tai_bwo_wannai_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			shilo_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			kharazi_jungle_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genkja_dominance_of_karamja"
+				duration = 7300
+			}
+		}
+	}
+}
+
+genkja_missions_4 = {
+	slot = 4
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				culture_group = karamjan_group
+				religion = karamjan
+			}
+			tag = KJA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genkja_outmatch_jogres = {
+		icon = mission_steer_trade_to_bengal
+		required_missions = {  }
+		position = 1
+		trigger = {
+			army_size = 10
+			OR = {
+				army_size = GLU
+				NOT = { exists = GLU }
+			}
+			OR = {
+				army_size = KLU
+				NOT = { exists = KLU }
+			}
+		}
+		effect = {
+			add_prestige = 10
+			add_army_tradition = 10
+		}
+	}
+	genkja_push_back_the_jogres = {
+		icon = mission_caribbean_cn
+		required_missions = { genkja_outmatch_jogres }
+		position = 2
+		provinces_to_highlight = {
+			province_id = 217
+			province_id = 218
+			province_id = 224
+			province_id = 225
+			province_id = 226
+			province_id = 227
+			province_id = 228
+			province_id = 977
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = genkja_old_jogre_lands
+				calc_true_if = {
+					all_owned_province = {
+						OR = {
+							province_id = 217
+							province_id = 218
+							province_id = 224
+							province_id = 225
+							province_id = 226
+							province_id = 227
+							province_id = 228
+							province_id = 977
+						}
+					}
+					amount = 3
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "genkja_jogre_conquest"
+				duration = 9125
+			}
+			central_karamja_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_karamja_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	genkja_cultural_expansion = {
+		icon = mission_establish_the_black_guard
+		required_missions = { genkja_push_back_the_jogres }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = central_karamja_area
+				area = eastern_karamja_area
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					culture_group = karamjan_group
+				}
+			}
+		}
+		trigger = {
+			central_karamja_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				culture_group = karamjan_group
+			}
+			eastern_karamja_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				culture_group = karamjan_group
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			tai_bwo_wannai_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			shilo_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			kharazi_jungle_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+karamja_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = KJA
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KJA_punish_the_zamorakians = {
+		icon = mission_punish_the_zamorakians
+		required_missions = { genkja_trinity_for_all }
+		position = 5
+		trigger = {
+			religion = karamjan
+			OR = {
+				calc_true_if = {
+					all_province = {
+						religion = zamorak
+						has_missionary = yes
+					}
+					amount = 3
+				}
+				NOT = {
+					calc_true_if = {
+						all_country = {
+							religion = zamorak
+						}
+						amount = 10
+					}
+				}
+			}
+		}
+		effect = {
+			east_ardougne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KJA_ardougne_assault = {
+		icon = mission_ardougne_assault
+		required_missions = { KJA_punish_the_zamorakians }
+		position = 6
+		trigger = {
+			owns_core_province = 264
+			owns_core_province = 265
+		}
+		effect = {
+			add_country_modifier = {
+				name = KJA_defeat_of_ardougne
+				duration = 9125 #25 years
+			}
+		}
+	}
+	KJA_overgrown_idols = {
+		icon = mission_overgrown_idols
+		required_missions = { KJA_herblore_habitat_mission }
+		position = 7
+		trigger = {
+			religion = karamjan
+			226 = {
+				has_building = counting_house
+				has_building = plantations
+			}
+			absolutism = 65
+		}
+		effect = {
+			add_country_modifier = {
+				name = KJA_tales_of_the_idols
+				duration = 9125
+			}
+		}
+	}
+}
+
+karamja_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = KJA
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KJA_restore_cairn_isle = {
+		icon = mission_portuguese_interference
+		required_missions = { genkja_trinity_for_all }
+		position = 5
+		trigger = {
+			religion = karamjan
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				233 = {
+					has_great_project = {
+						type = great_project_cairn_isle
+						tier = 2
+					}
+				}
+			}
+			else = {
+				233 = {
+					has_building = cathedral
+					development = 20
+				}
+			}
+		}
+		effect = {
+			add_fervor = 50
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				233 = {
+					add_base_tax = 3
+				}
+			}
+			else = {
+				add_adm_power = 100
+			}
+		}
+	}
+	
+	KJA_herblore_habitat_mission = {
+		icon = mission_herblore_habitat
+		required_missions = { KJA_groves_and_manufactories }
+		position = 6
+		trigger = {
+			229 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_building = plantations
+				development = 20
+			}
+			OR = {
+				absolutism = 50
+				any_ally = {
+					religion = guthix
+				}
+			}
+		}
+		effect = {
+			229 = {
+				add_province_modifier = {
+					name = KJA_herblore_habitat_modifier
+					duration = -1
+				}
+			}
+			marim_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			ape_atoll_jungle_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	KJA_take_the_atoll = {
+		icon = mission_ape_atoll_united
+		required_missions = { KJA_herblore_habitat_mission }
+		position = 7
+		trigger = {
+			owns_core_province = 236
+			owns_core_province = 237
+			owns_core_province = 806
+			owns_core_province = 235
+			owns_core_province = 805
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = marim_area
+						area = ape_atoll_jungle_area
+					}
+					culture_group = monkey_group
+				}
+				add_province_modifier = {
+					name = KJA_subjugation_of_ape_atoll
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+
+karamja_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = KJA
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KJA_groves_and_manufactories = {
+		icon = mission_clear_the_delta
+		required_missions = { genkja_island_dominance }
+		position = 5
+		trigger = {
+			216 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_building = mills
+				base_production = 5
+			}
+			OR = {
+				230 = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_building = mills
+					base_production = 5
+				}
+				231 = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_building = mills
+					base_production = 5
+				}
+			}
+		}
+		effect = {
+			216 = {
+				add_base_production = 2
+				add_province_modifier = { 
+					name = KJA_expanded_hardwood_grove
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	KJA_shipyard_expansion = {
+		icon = mission_shipyard_expansion
+		required_missions = { KJA_groves_and_manufactories }
+		position = 6
+		trigger = {
+			OR = {
+				navy_size_percentage = 0.9
+				navy_size = 100
+			}
+			227 = {
+				owned_by = ROOT
+				has_building = grand_shipyard
+			 	province_has_center_of_trade_of_level = 2
+				base_production = 10
+			}
+		}
+		effect = {
+			227 = {
+				add_province_modifier = {
+					name = KJA_expanded_shipyard_of_kalumin
+					duration = -1
+				}
+			}
+			crandor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	KJA_crandorian_conquest = {
+		icon = mission_tzh_crandor_volcano
+		required_missions = { KJA_shipyard_expansion }
+		position = 7
+		trigger = {
+			crandor_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			south_asgarnia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	KJA_fall_of_sarim = {
+		icon = mission_fall_of_sarim
+		required_missions = { KJA_crandorian_conquest }
+		position = 8
+		trigger = {
+			south_asgarnia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			33 = {
+				has_most_province_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = KJA_unquiet_ocean_trade_monopoly
+				duration = -1
+			}
+		}
+	}
+}
+
+karamja_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = KJA
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KJA_bandosians_overseas = {
+		icon = mission_invade_island
+		required_missions = { genkja_cultural_expansion }
+		position = 4
+		trigger = {
+			any_owned_province = {
+				NOT = { region = karamja_region }
+				religion = bandos
+			}
+		}
+		effect = {
+			feldip_jungle_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	KJA_fate_of_the_tzhaar = {
+		icon = mission_tzh_mej
+		required_missions = { genkja_island_dominance }
+		position = 5
+		trigger = {
+			musa_area = {
+				owns_or_non_sovereign_subject_of = ROOT
+			}
+		}
+		effect = {
+			country_event = { 
+				id = flavor_kja.1
+				days = 1
+			}
+		}
+	}
+	
+	KJA_the_jade_vine = {
+		icon = mission_jade_vine
+		required_missions = { KJA_groves_and_manufactories }
+		position = 6
+		trigger = {
+			owns_core_province = 224
+			OR = {
+				absolutism = 25
+				has_institution = quests
+			}
+			OR = {
+				guthix = 1
+				innovativeness = 20
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			add_years_of_income = 0.5
+		}
+	}
+	
+	KJA_livid_exports = {
+		icon = mission_livid_exports
+		required_missions = { KJA_the_jade_vine KJA_shipyard_expansion }
+		position = 7
+		trigger = {
+			owns_core_province = 224
+			has_discovered = 394
+			394 = {
+				has_merchant = ROOT
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_years_of_income = 0.5
+		}
+	}
+}

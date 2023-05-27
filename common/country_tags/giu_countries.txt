@@ -1,0 +1,353 @@
+# As an internal note-to-self, all nations without localised national ideas will have #NL after them.
+#Misthalin
+CPT = "countries/CPT - Cyperaton.txt"
+CWS = "countries/CWS - Cweornshire.txt"
+DGK = "countries/DGK - Drogokishuun.txt"
+DSK = "countries/DSK - Dorgesh-Kaan.txt"
+DYN = "countries/DYN - Draynor.txt"
+ENV = "countries/ENV - Enville.txt"
+GGS = "countries/GGS - Garagorshuun.txt"
+HOR = "countries/HOR - Horogothgar.txt"
+MST	= "countries/MST - Misthalin.txt"
+NGU = "countries/NGU - Narogoshuun.txt"
+NVA = "countries/NVA - New Varrock.txt"
+OKJ = "countries/OKJ - Okraj.txt"
+SRT = "countries/SRT - Saranthium.txt"					#NL
+YUR = "countries/YUR - Yurkolgokh.txt"
+ZAR = "countries/ZAR - Zarosian Empire.txt"				#NL
+
+#Asgarnia
+ANM = "countries/ANM - Anmas.txt"
+ASG = "countries/ASG - Asgarnia.txt"
+BRD = "countries/BRD - Brerdas.txt"
+BSP = "countries/BSP - Braedsnape.txt"					#NL
+BTH = "countries/BTH - Burthorpe.txt"
+CDR = "countries/CDR - Crandor.txt"
+CDU = "countries/CDU - Chaos Druids.txt"
+CDZ = "countries/CDZ - Camdozaal.txt"
+CLY = "countries/CLY - Crailey.txt"
+CSE = "countries/CSE - Casere.txt"						#NL
+CSN = "countries/CSN - Cashien.txt"
+CYN = "countries/CYN - Cynling.txt"
+DBS = "countries/DBS - Donblas.txt"
+DWI = "countries/DWI - Dark Wizards.txt"
+DYS = "countries/DYS - Drýas.txt"						#NL
+ELV = "countries/ELV - Elvarg.txt"						#NL
+ENT = "countries/ENT - Entrana.txt"
+FRW = "countries/FRW - Feorweg.txt"
+HRW = "countries/HRW - Heoruwearg.txt"					#NL
+MKM = "countries/MKM - Mudskipper.txt"
+NIM = "countries/NIM - New Imcandoria.txt"				#NL
+PLI	= "countries/PLI - Port Lina.txt"
+RBR = "countries/RBR - Rebrum.txt"						#NL
+RIM = "countries/RIM - Rimmington.txt"
+RNN = "countries/RNN - Rennard.txt"						#NL
+SDE = "countries/SDE - Sonde.txt"
+SNG = "countries/SNG - Singréne.txt"
+TAV = "countries/TAV - Taverley.txt"
+UWF = "countries/UWF - Unterwulf.txt"					#NL
+URV = "countries/URV - Urval Order.txt"
+VRZ = "countries/VRZ - Varze.txt"
+VYV = "countries/VYV - Vyvin.txt"
+WST = "countries/WST - Westensetla.txt"
+
+#Kharid
+AKO = "countries/AKO - Akthanakos.txt"
+ALK = "countries/ALK - Al Kharid.txt"
+BDS = "countries/BDS - Bedabins.txt"
+DMC = "countries/DMC - Siad.txt"
+ENK = "countries/ENK - Enkhara.txt"
+JAL = "countries/JAL - Jaldraocht.txt"
+KEM = "countries/KEM - Kharidian Empire.txt"			#NL
+KDS = "countries/KDS - Kharidians.txt"
+KPH = "countries/KPH - Kalphite Lair.txt"
+MPS = "countries/MPS - Menaphos.txt"
+NDH = "countries/NDH - Nardah.txt"
+NWA = "countries/NWA - New Apmeken.txt"
+PVC = "countries/PVC - Pollnivneach.txt"
+SBI = "countries/SBI - Scabarites.txt"
+SOP = "countries/SOP - Sophanem.txt"
+TMP = "countries/TMP - Tempoross.txt"
+
+#Morytania
+BWS = "countries/BWS - Barrows.txt"
+BDR = "countries/BDR - Burgh de Rott.txt"				#NL
+CFS = "countries/CFS - Canem.txt"
+DES = "countries/DES - Dessous.txt"
+HVL = "countries/HVL - Hallowvale.txt"
+LNC = "countries/LNC - Lordship of the North Coast.txt"
+MYN = "countries/MYN - Myreton.txt"
+MYT = "countries/MYT - Morytania.txt"
+MRT = "countries/MRT - Mortton.txt"
+PPH = "countries/PPH - Port Phasmatys.txt"
+SLP = "countries/SLP - Slepe.txt"
+
+#Forinthry
+ANK = "countries/ANK - Annakarl.txt"
+BZR = "countries/BZR - Berserkers.txt"					#NL
+CRD = "countries/CRD - Charred Folk.txt"				#NL
+CST = "countries/CST - Callisto.txt"					#NL
+DGH = "countries/DGH - Dagon'hai.txt"
+DMH = "countries/DMH - Daemonheim.txt"
+DWF = "countries/DWF - Dark Warriors Fortress.txt"		#NL
+FOR = "countries/FOR - Forinthry.txt"					#NL
+FXE = "countries/FXE - Ferox Enclave.txt"				#NL
+KBD = "countries/KBD - King Black Dragon.txt"			#NL
+MGA = "countries/MGA - Mage Arena.txt"					#NL
+PHI = "countries/PHI - Pirates' Hideout.txt"			#NL
+ROG = "countries/ROG - Rogues' Castle.txt"				#NL
+SRP = "countries/SRP - Scorpia.txt"						#NL
+VET = "countries/VET - Vet'ion.txt"						#NL
+VNN = "countries/VNN - Venenatis.txt"					#NL
+WBA = "countries/WBA - Armadyl Warband.txt"				#NL
+WBB = "countries/WBB - Bandos Warband.txt"				#NL
+WBC = "countries/WBC - Wilderness Bandit Camp.txt"
+WBS = "countries/WBS - Saradomin Warband.txt"			#NL
+WBZ = "countries/WBZ - Zamorak Warband.txt"				#NL
+
+#Outer Isles
+BDI = "countries/BDI - Braindeath.txt"
+HMY = "countries/HMY - Harmony.txt"
+LHK = "countries/LHK - Lithkren.txt"					#NL
+MRF = "countries/MRF - Merfolk.txt"						#NL
+MSH = "countries/MSH - Mos Le' Harmless.txt"
+MWU = "countries/MWU - Mwanu.txt"						#NL
+
+#Karamja
+BHV = "countries/BHV - Brimhaven.txt"
+GLU = "countries/GLU - Glugglug.txt"
+GLO = "countries/GLO - Glough.txt"
+KJA = "countries/KJA - Karamja.txt"
+KLU = "countries/KLU - Kalumin.txt"
+KZI = "countries/KZI - Khazari.txt"
+MUS = "countries/MUS - Musans.txt"
+RTK = "countries/RTK - Rantuki.txt"
+SHI = "countries/SHI - Shilo.txt"
+TBW = "countries/TBW - Tai Bwo Wannai.txt"
+TZH = "countries/TZH - TzHaar.txt"
+
+#Southern Isles
+APE = "countries/APE - Ape Atoll.txt"
+BNZ = "countries/BNZ - Bonzara.txt"
+BOI = "countries/BOI - Bo Isles.txt"
+MRM = "countries/MRM - Marim.txt"
+NMD = "countries/NMD - Nomad.txt"
+RDN = "countries/RDN - Rednana.txt"
+VKO = "countries/VKO - Void Knights.txt"
+VPE = "countries/VPE - Void Pests.txt"
+
+#Kandarin
+ADO = "countries/ADO - Ardougne.txt"
+BXT = "countries/BXT - Baxtoria.txt"
+CGU = "countries/CGU - Cave of Guthix.txt"
+CLS = "countries/CLS - Carnilleus.txt"
+CML = "countries/CML - Camelot.txt"
+CTH = "countries/CTH - Catherby.txt"
+EKE = "countries/EKE - Ekeleshuun.txt"
+ERB = "countries/ERB - Érable.txt"
+GEM = "countries/GEM - Goblin Empire.txt"
+GNE = "countries/GNE - Gnome Empire.txt"
+GNO = "countries/GNO - Gnome Stronghold.txt"
+GDO = "countries/GDO - Grand Ourania.txt"
+HUZ = "countries/HUZ - Huzamogaarb.txt"
+HZL = "countries/HZL - Hazeel.txt"
+JNG = "countries/JNG - Janger.txt"						#NL
+KDR = "countries/KDR - Kandarin.txt"
+KZD = "countries/KZD - Khazard.txt"
+IDI = "countries/IDI - Idithuun.txt"
+IKO = "countries/IKO - Guardians of Ikov.txt"
+MNR = "countries/MNR - Manor.txt"
+OGG = "countries/OGG - Og.txt"							#NL
+PXL = "countries/PXL - Phoenix Lair.txt"
+RKS = "countries/RKS - Rekeshuun.txt"
+SGK = "countries/SGK - Saragorgok.txt"
+SEE = "countries/SEE - Seers' Village.txt"
+SIN = "countries/SIN - Sinclair.txt"
+SSG = "countries/SSG - Sea Slugs.txt"					#NL
+STR = "countries/STR - Sea Trolls.txt"
+TGV = "countries/TGV - Tree Gnome Village.txt"
+THO = "countries/THO - Thorobshuun.txt"
+TJT = "countries/TJT - Trajet.txt"
+YLE = "countries/YLE - Yanille.txt"
+
+#Feldip Hills
+CCO = "countries/CCO - Corsair Cove.txt"
+FEL = "countries/FEL - Feldip Hills.txt"
+GOR = "countries/GOR - Gorad.txt"						#NL
+GUT = "countries/GUT - Gu'Tanoth.txt"					#NL
+MYG = "countries/MYG - Myths Guild.txt"
+NAR = "countries/NAR - Nar.txt"
+OOG = "countries/OOG - Oo'glog.txt"						#NL
+SGR = "countries/SGR - Snagru.txt"						#NL
+TES = "countries/TES - Tess.txt"						#NL
+ULW = "countries/ULW - Uglogwee.txt"					#NL
+
+#Tirannwn
+AML = "countries/AML - Amlodd.txt"
+AOS = "countries/AOS - Arposandra.txt"
+CDA = "countries/CDA - Cadarn.txt"
+CRW = "countries/CRW - Crwys.txt"
+CYW = "countries/CYW - Cywir.txt"
+EVR = "countries/EVR - Elven Resistance.txt"
+HEF = "countries/HEF - Hefin.txt"
+IBN = "countries/IBN - Iban.txt"
+IOR = "countries/IOR - Iorwerth.txt"
+ITH = "countries/ITH - Ithell.txt"
+MWL = "countries/MWL - Marwolaeth.txt"
+MIY = "countries/MIY - Meilyr.txt"
+SLK = "countries/SLK - Solak.txt"
+THN = "countries/THN - Trahaearn.txt"
+TNN = "countries/TNN - Tirannwn.txt"
+TPS = "countries/TPS - Temple of Shadow.txt"
+TYS = "countries/TYS - Tyras.txt"
+ZUA = "countries/ZUA - Zul-Andra.txt"
+
+#Troll Country
+DPL = "countries/DPL - Death Plateau.txt"				#NL
+KDG = "countries/KDG - Keldagrim.txt"
+LCI = "countries/LCI - Lucien.txt"
+TST = "countries/TST - Troll Stronghold.txt"			#NL
+WSS = "countries/WSS - Weiss.txt"						#NL
+ZMG = "countries/ZMG - Zemouregal.txt"
+
+#Fremennik
+BAO = "countries/BAO - Barbarian Outpost.txt"
+ETC = "countries/ETC - Etceteria.txt"
+FEM = "countries/FEM - Fremennik Empire.txt"
+GUN = "countries/GUN - Gunnar.txt"						#NL
+JTZ = "countries/JTZ - Jatizso.txt"
+KTR = "countries/KTR - Kyattreach.txt"
+MNT = "countries/MNT - Mountain Tribe.txt"
+MOO	= "countries/MOO - Moonclan.txt"
+MCE = "countries/MCE - Miscellania.txt"
+NZS = "countries/NZS - Neitiznot.txt"
+PRC = "countries/PRC - Pirates Cove.txt"
+RVL = "countries/RVL - Rævenesland.txt"
+REL = "countries/REL - Rellekka.txt"
+UBS = "countries/UBS - Uboafshudup.txt"
+ULJ = "countries/ULJ - Ulvejægere.txt"
+WAT = "countries/WAT - Waterbirth.txt"
+
+#Acheron
+AHR = "countries/AHR - Acheron.txt"
+AHS = "countries/AHS - Achuliasip.txt"
+BSL = "countries/BSL - Basilisks.txt"
+FRG = "countries/FRG - Forge of Giants.txt"
+ILD = "countries/ILD - Idol Depths.txt"
+PES = "countries/PES - Pescaling.txt"
+PLG = "countries/PLG - Palingrad.txt"
+TSQ = "countries/TSQ - Tasuaq.txt"
+UNG = "countries/UNG - Ungael.txt"
+
+#Kourend
+AES = "countries/AES - Aesagrun.txt"
+AUU = "countries/AUU - Arceuus.txt"
+GDE = "countries/GDE - Giants Den.txt"					#NL
+HHB = "countries/HHB - Hoshob.txt"
+HOS = "countries/HOS - Hosidius.txt"
+HRS = "countries/HRS - Heroraisers.txt"					#NL
+KOU = "countries/KOU - Kourend.txt"
+KTW = "countries/KTW - Kingstown.txt"					#NL
+LOV = "countries/LOV - Lovakengj.txt"
+MRR = "countries/MRR - Morra.txt"						#NL
+PCL = "countries/PCL - Piscarilius.txt"
+SWM = "countries/SWM - Shadowmancers.txt"
+SYZ = "countries/SYZ - Shayzien.txt"
+UPZ = "countries/UPZ - United Provinces of Zeah.txt"
+WTD = "countries/WTD - Wintertodt.txt"					#NL
+XER = "countries/XER - Xerician Empire.txt"				#NL
+
+#Kebos
+AUB = "countries/AUB - Auburnvale.txt"
+BAA = "countries/BAA - Baalal.txt"
+CNC = "countries/CNC - Cronch.txt"
+LCT = "countries/LCT - Lacerta.txt"						#NL
+MOC = "countries/MOC - Molch.txt"
+KBS = "countries/KBS - Kebos.txt"						#NL
+KUU = "countries/KUU - Karuulm.txt"
+QMT = "countries/QMT - Quidamortem.txt"					#NL
+
+#Varlamore
+AVU = "countries/AVU - Aviumia.txt"
+AZA = "countries/AZA - Avizaal.txt"
+CDG = "countries/CDG - Cloud Giants.txt"
+RDE = "countries/RDE - Rain Demons.txt"					#NL
+RRF = "countries/RRF - Rebel Rift.txt"					#NL
+VAR = "countries/VAR - Varlamore.txt"
+WYM = "countries/WYM - Colossal Wyrm.txt"				#NL
+
+#Arc
+AMS = "countries/AMS - Aminishi.txt"
+CYC = "countries/CYC - Cyclosis.txt"
+GSH = "countries/GSH - Goshima.txt"
+KNJ = "countries/KNJ - Konjinja.txt"
+TUL = "countries/TUL - Tuai Leit.txt"
+WHM = "countries/WHM - Whale's Maw.txt"
+WKO = "countries/WKO - Waiko.txt"
+
+#Skull
+AIJ = "countries/AIJ - Ai Jei.txt" 
+CGI = "countries/CGI - Cave Giants.txt"
+ECB = "countries/ECB - Echo Bay.txt"
+HNT = "countries/HNT - Hanto.txt"
+HUJ = "countries/HUJ - Hyu-Ji.txt"
+SDR = "countries/SDR - Shadow Reef.txt"
+SKU = "countries/SKU - The Skulls.txt"
+SSH = "countries/SSH - Siren's Shell.txt"
+TSS = "countries/TSS - Thalassia.txt"
+
+#Hook
+BZL = "countries/BZL - Blazing Lanterns.txt"
+FMG = "countries/FMG - Fistmarks of Gemna.txt"
+GLK = "countries/GLK - Golden Katanas.txt"
+HNZ = "countries/HNZ - Honazo.txt"
+KJI = "countries/KJI - Ken Ji.txt"
+RTI = "countries/RTI - Rei Ti.txt"
+SRI = "countries/SRI - Storm Riders.txt"
+
+#Scythe
+HKT = "countries/HKT - Hebikatochi.txt"
+HNL = "countries/HNL - Han Lun.txt"
+HRN = "countries/HRN - Haranu.txt"
+PUR = "countries/PUR - Purists.txt"
+RGI = "countries/RGI - River Giants.txt"
+RTM = "countries/RTM - City of Stars.txt"
+SSY = "countries/SSY - Soothsayers.txt"
+WDH = "countries/WDH - Wind's Home.txt"
+
+#Bowl
+BMU = "countries/BMU - Bimu.txt"
+CSI = "countries/CSI - Crescent Isle.txt"
+FLB = "countries/FLB - Falling Blossom.txt"
+GTT = "countries/GTT - Glittercaves.txt"
+KEP = "countries/KEP - Kei Pi.txt"
+PIN = "countries/PIN - The Pins.txt"
+TNO = "countries/TNO - Tattanogi.txt"
+TKK = "countries/TKK - Tokoko.txt"
+
+#Pincers
+AHH = "countries/AHH - Ashihama.txt"
+DLO = "countries/DLO - Death Lotus.txt"
+FNS = "countries/FNS - Fenisento.txt"
+FTS = "countries/FTS - Flou Tar-Shei.txt"
+KHG = "countries/KHG - Khaganate.txt"
+KHN = "countries/KHN - Khanoka.txt"
+NHE = "countries/NHE - New Heritage.txt"
+PRE = "countries/PRE - Paradise.txt"
+SBL = "countries/SBL - Shambling Lair.txt"
+WHK = "countries/WHK - Wushanko.txt"
+YMD = "countries/YMD - Yamada.txt"
+
+#Loop
+BBM = "countries/BBM - Bubble of Mists.txt"
+RSG = "countries/RSG - Resurgentia.txt"
+SPG = "countries/SPG - Spires of Grief.txt"
+TRK = "countries/TRK - Torakoku.txt"
+YON = "countries/YON - Yaonai.txt"
+
+#Shield
+IOA = "countries/IOA - Isle of Adamant.txt"
+OBP = "countries/OBP - Obsidian Pirates.txt"
+RNO = "countries/RNO - Ronin Ogres.txt"
+TGU = "countries/TGU - Gu.txt"
+TVV = "countries/TVV - Tavi-Vynal.txt"

@@ -1,0 +1,211 @@
+namespace = cleaving_of_the_gnome_empire
+
+########################################
+# Cleaving of the Gnome Empire
+########################################
+
+# Start of the breaking
+country_event = {
+	id = cleaving_of_the_gnome_empire.1
+	title = cleaving_of_the_gnome_empire.1.t #Cleaving of the Gnome Empire
+	desc = cleaving_of_the_gnome_empire.1.d #The Gnome Empire was a bold attempt to unify different groups of tree gnomes under one flag. However, the political dominance of the Tree Gnome Stronghold over the Tree Gnome Village has led to calls for secession, which have only become stronger in recent years. Shall we part on good terms or stay together on bad ones?
+	picture = GNOME_TREEHOUSE_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = gne_had_empire_split
+	}
+	
+	option = {
+		name = cleaving_of_the_gnome_empire.1.a #Let us split on good terms. I will lead the Gnome Stronghold.
+		change_tag = GNO
+		set_government_rank = 2
+		GNO = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						province_id = 263
+						province_id = 264
+						province_id = 265
+						province_id = 266
+						province_id = 282
+						province_id = 283
+						province_id = 284
+						province_id = 285
+						province_id = 286
+						province_id = 287
+						province_id = 288
+						province_id = 289
+						province_id = 290
+						province_id = 291
+						province_id = 292
+						province_id = 293
+						province_id = 294
+						province_id = 295
+						province_id = 296
+						province_id = 775
+						province_id = 777
+						province_id = 778
+						province_id = 851
+						province_id = 852
+						province_id = 862
+						province_id = 989
+						province_id = 1007
+						province_id = 1008
+					}
+				}
+				add_core = TGV
+				cede_province = TGV
+				remove_core = GNO
+			}
+			country_event = {
+				id = cleaving_of_the_gnome_empire.2
+				days = 1
+			}
+			add_historical_friend = TGV
+		}
+		TGV = {
+			add_historical_friend = GNO
+		}
+		ai_chance = { factor = 1 }
+		set_global_flag = gne_end_of_old_empire
+	}
+	option = {
+		name = cleaving_of_the_gnome_empire.1.b #Let us split on good terms. I will lead the Tree Gnome Village.
+		change_tag = TGV
+		set_government_rank = 2
+		TGV = {
+			every_owned_province = { 
+				limit = {
+					NOT = {
+						OR = {
+							province_id = 263
+							province_id = 264
+							province_id = 265
+							province_id = 266
+							province_id = 282
+							province_id = 283
+							province_id = 284
+							province_id = 285
+							province_id = 286
+							province_id = 287
+							province_id = 288
+							province_id = 289
+							province_id = 290
+							province_id = 291
+							province_id = 292
+							province_id = 293
+							province_id = 294
+							province_id = 295
+							province_id = 296
+							province_id = 775
+							province_id = 777
+							province_id = 778
+							province_id = 851
+							province_id = 852
+							province_id = 862
+							province_id = 989
+							province_id = 1007
+							province_id = 1008
+						}
+					}
+				}
+				add_core = GNO
+				cede_province = GNO
+				remove_core = TGV
+			}
+			country_event = {
+				id = cleaving_of_the_gnome_empire.2
+				days = 1
+			}
+			add_historical_friend = GNO
+		}
+		GNO = {
+			add_historical_friend = TGV
+		}
+		set_global_flag = gne_end_of_old_empire
+	}
+	option = {
+		name = cleaving_of_the_gnome_empire.1.c #This empire shall never fall!
+		add_stability = -3
+		every_owned_province = { 
+			limit = {
+				OR = {
+					province_id = 263
+					province_id = 264
+					province_id = 265
+					province_id = 266
+					province_id = 282
+					province_id = 283
+					province_id = 284
+					province_id = 285
+					province_id = 286
+					province_id = 287
+					province_id = 288
+					province_id = 289
+					province_id = 290
+					province_id = 291
+					province_id = 292
+					province_id = 293
+					province_id = 294
+					province_id = 295
+					province_id = 296
+					province_id = 775
+					province_id = 777
+					province_id = 778
+					province_id = 851
+					province_id = 852
+					province_id = 862
+					province_id = 989
+					province_id = 1007
+					province_id = 1008
+				}
+			}
+			add_core = TGV
+		}
+		random_owned_province = {
+			limit = { is_core = TGV }
+			nationalist_rebels = 3
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = cleaving_of_the_gnome_empire.2
+	title = cleaving_of_the_gnome_empire.2.t #Fall of the Gnome Empire
+	desc = cleaving_of_the_gnome_empire.2.d #The Gnome Empire has fallen, and with it the power it once possessed. Still, the people of our new realm have their own ideas on how to improve things.
+	picture = GNOME_TREEHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = cleaving_of_the_gnome_empire.2.a #Let's have a look at what these new ideas are.
+		swap_free_idea_group = yes
+	}
+}
+
+country_event = {
+	id = cleaving_of_the_gnome_empire.100
+	title = cleaving_of_the_gnome_empire.100.t #Stability Restored in the Gnome Realms!
+	desc = cleaving_of_the_gnome_empire.100.d #The Gnomes are no longer at each other's throats. Stability is restored.
+	picture = GNOME_GRAND_TREE_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		clr_country_flag = gne_had_empire_split
+	}
+
+	option = {
+		name = cleaving_of_the_gnome_empire.100.a #Hooray!
+		add_stability = 2
+	}
+}

@@ -1,0 +1,330 @@
+khanreform_trade_relations = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		local_institution_spread = 0.05
+	}
+	
+	all = {
+		trade_range_modifier = 0.25
+	}
+	gui_container = mainline
+}
+
+khanreform_reorganised_council = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		local_build_cost = -0.05
+		local_development_cost = -0.05
+	}
+	on_effect = {
+		imperial_ban_allowed = yes
+	}
+	off_effect = {
+		imperial_ban_allowed = no
+	}
+	required_reform = khanreform_trade_relations
+	gui_container = mainline
+}
+
+khanreform_regular_summits = {
+	empire = hre
+	required_reform = khanreform_reorganised_council
+	gui_container = mainline
+
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		local_unrest = -2
+	}
+	emperor = {
+		diplomatic_reputation = 1
+		diplomats = 1
+	}
+	on_effect = {
+		custom_tooltip = "EXPAND_EMPIRE_CB"
+	}
+}
+
+khanreform_khagan_taxes = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	all = {
+		stability_cost_modifier = -0.1
+	}
+	emperor_per_prince = {
+		global_tax_income = 0.5
+	}
+	required_reform = khanreform_regular_summits
+	gui_container = mainline
+}
+
+khanreform_reaffirm_merchant_rights = {
+	empire = hre
+	required_reform = khanreform_khagan_taxes
+	gui_container = mainline
+
+	potential = {
+		has_dlc = "Emperor"
+	}
+	all = {
+	 	republican_tradition = 0.3
+		merchants = 1
+	}
+	emperor = {
+		free_city_imperial_authority = 0.5
+	}
+}
+
+khanreform_khagan_bureaucracy = {
+	empire = hre
+	required_reform = khanreform_reaffirm_merchant_rights
+	gui_container = mainline
+
+	potential = {
+		has_dlc = "Emperor"
+	}
+	all = {
+	 	meritocracy = 1
+		same_culture_advisor_cost = -0.1
+	}
+	emperor = {
+		advisor_pool = 1
+	}
+}
+
+khanreform_united_front = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	all = {
+		free_dip_policy = 1
+	}
+	emperor = {
+		prestige = 0.5
+	}
+	on_effect = {
+		internal_hre_cb = no
+	}
+	off_effect = {
+		internal_hre_cb = yes
+	}
+	required_reform = khanreform_khagan_bureaucracy
+	gui_container = mainline
+}
+
+#########################
+# Decentralise
+#########################
+
+khanreform_religious_freedom = {
+	empire = hre
+	required_reform = khanreform_united_front
+	disabled_by = khanreform_religious_restrictions
+	gui_container = left_branch
+
+	potential = {
+		has_dlc = "Emperor"
+	}
+	all = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+	elector = {
+		tolerance_heretic = 1
+	}
+	emperor = {
+		tolerance_heathen = 1
+	}
+}
+
+khanreform_port_rights = {
+	empire = hre
+	required_reform = khanreform_religious_freedom
+	gui_container = left_branch
+
+	potential = {
+		has_dlc = "Emperor"
+	}
+	all = {
+		global_sailors = 2000
+	}
+	elector_per_prince = {
+		global_sailors = 100
+	}
+	emperor_per_prince = {
+		global_sailors = 50
+	}
+	province = {
+		local_friendly_movement_speed = 0.1
+	}
+}
+
+khanreform_great_cities = {
+	empire = hre
+	required_reform = khanreform_port_rights
+	gui_container = left_branch
+
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		local_development_cost = -0.05
+	}
+	elector_per_prince = {
+		development_cost = -0.001
+	}
+	emperor_per_prince = {
+		development_cost = -0.001
+	}
+}
+
+khanreform_colonial_expansion = {
+	empire = hre
+	required_reform = khanreform_great_cities
+	gui_container = left_branch
+
+	potential = {
+		has_dlc = "Emperor"
+	}
+	all = {
+		colonists = 1
+	}
+	emperor_per_prince = {
+		global_colonial_growth = 0.5
+	}
+}
+
+khanreform_shared_administrators = {
+	empire = hre
+	required_reform = khanreform_colonial_expansion
+	gui_container = left_branch
+
+	potential = {
+		has_dlc = "Emperor"
+	}
+	emperor_per_prince = {
+		administrative_efficiency = 0.002
+	}
+	elector_per_prince = {
+		administrative_efficiency = 0.001
+	}
+}
+
+#########################
+# Centralise
+#########################
+
+khanreform_religious_restrictions = { 
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	emperor = {
+		global_missionary_strength = 0.02
+	}
+	on_effect = {
+		set_global_flag = khagan_enforce_religion
+	}
+	off_effect = {
+		clr_global_flag = khagan_enforce_religion
+	}
+	required_reform = khanreform_united_front
+	disabled_by = khanreform_religious_freedom
+	gui_container = right_branch
+}
+
+
+khanreform_defensive_obligations = {
+	empire = hre
+	required_reform = khanreform_religious_restrictions
+	gui_container = right_branch
+	potential = {
+		has_dlc = "Emperor"
+	}
+	emperor_per_prince = {
+		global_manpower = 0.15
+	}
+}
+
+khanreform_fixed_capital = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	emperor = {
+		imperial_authority = 0.25
+	}
+	on_effect = {
+		if = {
+			limit = {
+				hre_religion_locked = no
+				hre_religion_treaty = no
+			}
+			set_hre_religion_treaty = yes
+		}
+		hre_inheritable = yes
+	}
+	off_effect = {
+		hre_inheritable = no
+	}
+	required_reform = khanreform_defensive_obligations
+	gui_container = right_branch
+}
+
+khanreform_revoke_khan_privileges = {
+	empire = hre
+	war = yes			#this may cause a war, so special AI check needed, to not lose many.
+	potential = {
+		has_dlc = "Emperor"
+	}
+	member = {
+		global_unrest = -1
+	}
+	
+	emperor = {
+		imperial_authority = 0.25
+	}
+	on_effect = {
+	
+		emperor = {
+			country_event = { id = council_reforms.1 tooltip = revoke_khan_tooltip }
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					num_of_cities = 1
+					NOT = { vassal_of = ROOT }
+				}
+				country_event = { id = council_reforms.2 }
+			}
+		}
+	}
+	required_reform = khanreform_fixed_capital
+	gui_container = right_branch
+}
+
+khanreform_declare_khaganate = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	on_effect = {
+		emperor = {
+			country_event = { id = council_reforms.3 tooltip = united_khaganate_tooltip }
+		}
+	}
+	required_reform = khanreform_revoke_khan_privileges
+	gui_container = right_branch
+}

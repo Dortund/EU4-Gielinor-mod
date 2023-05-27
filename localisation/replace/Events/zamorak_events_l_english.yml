@@ -1,0 +1,25 @@
+﻿l_english:
+ zamorak_flavor.1.t:0 "The Question of Debts"
+ zamorak_flavor.1.d:0 "The wealthy of our realm demand attention is paid to our economy - they worry that pressures of inflation could destroy the accumulated wealth of the realm. Yet Zamorak's own priests preach that comfort breeds complacency, and few are more comfortable than the rich."
+ zamorak_flavor.1.a:0 "Inflation is Zamorak's blessing."
+ zamorak_flavor.1.b:0 "We could probably do with less inflation."
+ 
+ zamorak_flavor.2.t:0 "Easing from Chaos?"
+ zamorak_flavor.2.d:0 "The Lord Zamorak's teaching of strength through chaos clashes with the lives of lay people. They complain the instability in their lives, far from aiding their support of their Lord, gets in the way of it. Should we lessen the burden on our populace or follow the clergy's demands?"
+ zamorak_flavor.2.a:0 "We shall only find strength through chaos."
+ zamorak_flavor.2.b:0 "True chaos cannot exist without periods of stability."
+ 
+ zamorak_flavor.3.t:0 "The State and the Clergy"
+ zamorak_flavor.3.d:0 "$CAPITAL_CITY$ is home to an endless push and pull of the government and the clergy, each vying for control of the nation. Lord Zamorak himself would be proud of this struggle! Who should we support?"
+ zamorak_flavor.3.a:0 "The Clergy!"
+ zamorak_flavor.3.b:0 "The Government!"
+ 
+ zamorak_flavor.4.t:0 "Monastic Wealth"
+ zamorak_flavor.4.d:0 "It has come to our attention that an order of $COUNTRY_ADJ$ monks have been hoarding cash out of the prying eyes of the public. Our state could benefit greatly from those funds, and would perhaps remind the monks not to live complacent lives - but then again, seizing this much cash is bound to anger the wider clergy."
+ zamorak_flavor.4.a:0 "Let the monks keep the money."
+ zamorak_flavor.4.b:0 "Seize the money!"
+ 
+ zamorak_flavor.5.t:0 "Church Administrators"
+ zamorak_flavor.5.d:0 "An up-and-coming member of the Church of Zamorak has made a name for themselves in their efficient running of numerous rituals and wider church events. Their services would be of great benefit to the $COUNTRY_ADJ$ state, although the Church is likely to complain about losing one of their best."
+ zamorak_flavor.5.a:0 "Let the Church keep their star administrator."
+ zamorak_flavor.5.b:0 "The management of $COUNTRY$ needs all the help it can get!"

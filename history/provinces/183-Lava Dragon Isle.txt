@@ -1,0 +1,42 @@
+#183-Lava Dragon Isle
+culture = chromaticdragon
+religion = jas
+tribal_owner = ---
+
+discovered_by = morytaniantechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 3
+
+trade_goods = bones
+
+native_size = 10
+native_ferocity = 10
+native_hostileness = 10
+
+center_of_trade = 1
+
+add_province_triggered_modifier = settled_wilderness
+add_province_triggered_modifier = sparse_mild_wilderness
+add_province_triggered_modifier = sparse_moderate_wilderness
+add_province_triggered_modifier = sparse_severe_wilderness
+add_province_triggered_modifier = populous_mild_wilderness
+add_province_triggered_modifier = populous_moderate_wilderness
+add_province_triggered_modifier = populous_severe_wilderness
+add_province_triggered_modifier = dense_mild_wilderness
+add_province_triggered_modifier = dense_moderate_wilderness
+add_province_triggered_modifier = dense_severe_wilderness
+
+add_province_triggered_modifier = wildy_border_level_one
+add_province_triggered_modifier = wildy_border_level_two
+add_province_triggered_modifier = wildy_border_level_three
+add_province_triggered_modifier = wildy_border_level_four
+add_province_triggered_modifier = wildy_border_level_five
+add_province_triggered_modifier = wildy_border_level_six
+add_province_triggered_modifier = wildy_border_level_seven
+add_province_triggered_modifier = wildy_border_level_eight
+add_province_triggered_modifier = wildy_border_level_nine

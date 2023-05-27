@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = miscellanean_monarchy
+government_rank = 2
+primary_culture = miscellanean
+religion = v
+secondary_religion = guthix
+technology_group = fremenniktechgroup
+capital = 384 #Etceteria
+national_focus = MIL
+historical_friend = REL
+
+1907.11.12 = {
+	monarch = {
+		name = "Hammar"
+		dynasty = "Undnale"
+		birth_date = 1889.7.22
+		adm = 5
+		dip = 1
+		mil = 4
+	}
+}
+
+2155.11.12 = {
+	monarch = {
+		name = "Sigrid"
+		dynasty = "Axeguard"
+		birth_date = 2115.10.3
+		adm = 5
+		dip = 1
+		mil = 3
+		female = yes
+	}
+}

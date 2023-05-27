@@ -1,0 +1,33 @@
+#333 - Amlodd Province
+owner = EVR
+controller = EVR
+add_core = EVR
+add_core = AML
+tribal_owner = ---
+culture = amlodd
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 3
+
+trade_goods = livestock_farm
+
+is_city = yes
+
+fort_15th = yes
+
+2168.9.20 = {
+	owner = TYS
+	controller = TYS
+	add_core = TYS
+	culture = ardignan
+	religion = saradomin
+	remove_core = EVR
+	remove_core = AML
+	change_province_name = "Tyras Camp"
+}

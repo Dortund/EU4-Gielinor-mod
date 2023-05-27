@@ -1,0 +1,123 @@
+#Overbearing Misthalin
+#Occurs when Misthalin tries to go too far west too early.
+
+overbearing_misthalin = {
+	potential = {
+		tag = MST
+		current_age = age_of_mortals
+		NOT = { exists = ASG }
+		NOT = { has_country_flag = MST_expanded_borders }
+	}
+
+	can_start = {
+		is_great_power = yes
+		OR = {
+			any_owned_province = {
+				region = asgarnia_region
+				}
+			any_subject_country = {
+				any_owned_province = {
+					region = asgarnia_region
+				}
+			}
+		}
+	 	has_any_disaster = no
+	}
+	
+	can_stop = {
+		NOT = {
+			any_owned_province = {
+				region = asgarnia_region
+			}
+			any_subject_country = {
+				any_owned_province = {
+					region = asgarnia_region
+				}
+			}
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			any_owned_province = {
+				region = asgarnia_region
+				}
+		}
+		modifier = {
+			factor = 1
+			any_subject_country = {
+				any_owned_province = {
+					region = asgarnia_region
+					}
+				}
+		}
+		modifier = {
+			factor = 1
+			num_of_owned_provinces_with = {
+				value = 3
+				region = asgarnia_region
+			}
+		}
+		modifier = {
+			factor = 1
+			any_subject_country = {
+				num_of_owned_provinces_with = {
+					value = 3
+					region = asgarnia_region
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				value = 5
+				region = asgarnia_region
+			}
+		}
+		modifier = {
+			factor = 2
+			any_subject_country = {
+				num_of_owned_provinces_with = {
+					value = 5
+					region = asgarnia_region
+				}
+			}
+		}
+	}
+
+	can_end = {
+		OR = {
+			AND = {
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 2
+				had_country_flag = { flag = mst_overbearing_start days = 3650 }
+			}
+			NOT = {
+				any_owned_province = {
+					region = asgarnia_region
+				}
+				any_subject_country = {
+					any_owned_province = {
+						region = asgarnia_region
+					}
+				}
+			}
+		}
+	}
+
+	modifier = {
+		diplomatic_reputation = -1
+	}
+	
+	on_start = overbearing_misthalin.1
+	on_end = overbearing_misthalin.100
+}

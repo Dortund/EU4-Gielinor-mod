@@ -1,0 +1,118 @@
+government = monarchy
+add_government_reform = kourend_monarchy
+government_rank = 2
+primary_culture = hosidius
+add_accepted_culture = lovakengj
+add_accepted_culture = shayzien
+add_accepted_culture = arceuus
+add_accepted_culture = piscarilius
+religion = saradomin
+technology_group = zeantechgroup
+capital = 402 #Kingstown
+national_focus = ADM
+historical_rival = MOH
+
+759.10.1 = {
+	set_estate_privilege = estate_nobles_KOU_house_cohesion
+}
+
+1883.12.3 = {
+	monarch = {
+		name = "Hern"
+		monarch_name = "Hern III"
+		dynasty = "Piscarilius"
+		culture = piscarilius
+		birth_date = 1832.6.13
+		death_date = 1909.2.18
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = LOV
+		name = "Miranda"
+		dynasty = "Lovakengj"
+		culture = lovakengj
+		birth_date = 1837.1.1
+		death_date = 1917.6.8
+		female = yes
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+	heir = {
+		name = "Hagen"
+		monarch_name = "Hagen V"
+		dynasty = "Piscarilius"
+		culture = piscarilius
+		birth_date = 1863.6.13
+		death_date = 1928.2.18
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+	add_militarised_society = 50
+}
+1909.2.18 = {
+	monarch = {
+		name = "Hagen"
+		monarch_name = "Hagen V"
+		dynasty = "Piscarilius"
+		culture = piscarilius
+		birth_date = 1863.6.13
+		death_date = 1928.2.18
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SYZ
+		name = "Ginea"
+		dynasty = "Shayzien"
+		culture = shayzien
+		birth_date = 1865.12.1
+		death_date = 1982.7.12
+		female = yes
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	heir = {
+		name = "Agata"
+		monarch_name = "Agata IV"
+		dynasty = "Piscarilius"
+		culture = piscarilius
+		birth_date = 1891.2.11
+		death_date = 1969.11.5
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+1928.2.18 = {
+	monarch = {
+		name = "Agata"
+		monarch_name = "Agata IV"
+		dynasty = "Piscarilius"
+		culture = piscarilius
+		birth_date = 1891.2.11
+		death_date = 1969.11.5
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+1980.1.1 = { remove_estate_privilege = estate_nobles_KOU_house_cohesion }
+
+2149.7.16 = {
+	government = republic
+	add_government_reform = kourend_council
+	monarch = {
+		name = "Kourend Council"
+		adm = 1
+		dip = 4
+		mil = 2
+		regent = yes
+	}
+}

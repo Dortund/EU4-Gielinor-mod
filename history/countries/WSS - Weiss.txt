@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = troll_tribe
+government_rank = 1
+primary_culture = icetroll
+religion = bandos
+technology_group = bandostechgroup
+capital = 351 #Ice Path
+national_focus = MIL
+
+1927.12.7 = {
+	monarch = {
+		name = "Hot Spring"
+		dynasty = "Frostcruncher"
+		birth_date = 1898.12.4
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+
+2119.1.12 = {
+	monarch = {
+		name = "Mother"
+		dynasty = "Dwarfslayer"
+		birth_date = 2101.9.6
+		adm = 1
+		dip = 0
+		mil = 5
+	}
+}
+
+2135.9.6 = { capital = 359 }

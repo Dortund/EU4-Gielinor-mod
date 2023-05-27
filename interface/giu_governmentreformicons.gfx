@@ -1,0 +1,779 @@
+spriteTypes = {
+
+	################
+	### Monarchy
+	################
+
+	# Tier 1
+
+	spriteType = {
+		name = "government_reform_icon_autocracy"
+		texturefile = "gfx//interface//government_reform_icons//icon_autocracy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_clan_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_clan_monarchy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_consortium_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_consortium_monarchy.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_icon_elven_aristocracy"
+		texturefile = "gfx//interface//government_reform_icons//icon_elven_aristocracy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_exile_clan"
+		texturefile = "gfx//interface//government_reform_icons//icon_exile_clan.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_fateful_kingdom"
+		texturefile = "gfx//interface//government_reform_icons//icon_fateful_kingdom.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_feldip_government"
+		texturefile = "gfx//interface//government_reform_icons//icon_feldip_government.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_great_khanate"
+		texturefile = "gfx//interface//government_reform_icons//icon_great_khanate.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_horde_kingdom"
+		texturefile = "gfx//interface//government_reform_icons//icon_horde_kingdom.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_kandarin_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_kandarin_monarchy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_khanate"
+		texturefile = "gfx//interface//government_reform_icons//icon_khanate.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_kourend_house"
+		texturefile = "gfx//interface//government_reform_icons//icon_kourend_house.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_kourend_independent_house"
+		texturefile = "gfx//interface//government_reform_icons//icon_kourend_independent_house.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_kourend_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_kourend_monarchy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_kourend_reformed_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_kourend_reformed_monarchy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_mahjarrat_autocracy"
+		texturefile = "gfx//interface//government_reform_icons//icon_mahjarrat_autocracy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_miscellanean_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_miscellanean_monarchy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_new_world_kingdom"
+		texturefile = "gfx//interface//government_reform_icons//icon_new_world_kingdom.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_noble_kingdom"
+		texturefile = "gfx//interface//government_reform_icons//icon_noble_kingdom.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_principality_burthorpe"
+		texturefile = "gfx//interface//government_reform_icons//icon_principality_burthorpe.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_shining_kingdom"
+		texturefile = "gfx//interface//government_reform_icons//icon_shining_kingdom.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_icon_unstable_kingdom"
+		texturefile = "gfx//interface//government_reform_icons//icon_unstable_kingdom.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_vampyre_kingdom"
+		texturefile = "gfx//interface//government_reform_icons//icon_vampyre_kingdom.dds"
+	}
+	
+	# Tier 2
+	
+	spriteType = {
+		name = "government_reform_icon_grant_balanced_privileges"
+		texturefile = "gfx//interface//government_reform_icons//icon_grant_balanced_privileges.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_grant_noble_privileges"
+		texturefile = "gfx//interface//government_reform_icons//icon_grant_noble_privileges.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_vampyric_tiers"
+		texturefile = "gfx//interface//government_reform_icons//icon_vampyric_tiers.dds"
+	}
+	
+	# Tier 5
+	
+	spriteType = {
+		name = "government_reform_icon_expand_the_kourend_council"
+		texturefile = "gfx//interface//government_reform_icons//icon_expand_the_kourend_council.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_restrain_the_kourend_council"
+		texturefile = "gfx//interface//government_reform_icons//icon_restrain_the_kourend_council.dds"
+	}
+	
+	# Tier 6
+	
+	spriteType = {
+		name = "government_reform_icon_constitutional_law"
+		texturefile = "gfx//interface//government_reform_icons//icon_constitutional_law.dds"
+	}
+	
+	# Tier 7
+	
+	spriteType = {
+		name = "government_reform_icon_adventurer_delegation"
+		texturefile = "gfx//interface//government_reform_icons//icon_adventurer_delegation.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_constitutional_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_constitutional_monarchy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_kourend_council_leadership"
+		texturefile = "gfx//interface//government_reform_icons//icon_kourend_council_leadership.dds"
+	}
+	
+	# Legitimation of Power
+	
+	spriteType = {
+		name = "government_reform_icon_god_among_mortals"
+		texturefile = "gfx//interface//government_reform_icons//icon_god_among_mortals.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_institutional_constraints"
+		texturefile = "gfx//interface//government_reform_icons//icon_god_among_mortals.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_prevention_of_anarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_prevention_of_anarchy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_regulation_of_selfishness"
+		texturefile = "gfx//interface//government_reform_icons//icon_regulation_of_selfishness.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_right_of_might"
+		texturefile = "gfx//interface//government_reform_icons//icon_right_of_might.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_social_contract"
+		texturefile = "gfx//interface//government_reform_icons//icon_social_contract.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_subversive_means"
+		texturefile = "gfx//interface//government_reform_icons//icon_subversive_means.dds"
+	}
+	
+	################
+	### Republic
+	################
+
+	# Tier 1
+
+	spriteType = {
+		name = "government_reform_icon_chalkeocracy"
+		texturefile = "gfx//interface//government_reform_icons//icon_chalkeocracy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_consortium_republic"
+		texturefile = "gfx//interface//government_reform_icons//icon_consortium_republic.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_dwarven_outpost"
+		texturefile = "gfx//interface//government_reform_icons//icon_dwarven_outpost.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_kourend_council"
+		texturefile = "gfx//interface//government_reform_icons//icon_kourend_council.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_magiocracy"
+		texturefile = "gfx//interface//government_reform_icons//icon_magiocracy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_merchant_republic"
+		texturefile = "gfx//interface//government_reform_icons//icon_merchant_republic.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_military_dictatorship"
+		texturefile = "gfx//interface//government_reform_icons//icon_military_dictatorship.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_obsidian_castes"
+		texturefile = "gfx//interface//government_reform_icons//icon_obsidian_castes.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_pirate_republic"
+		texturefile = "gfx//interface//government_reform_icons//icon_pirate_republic.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_political_dynasties"
+		texturefile = "gfx//interface//government_reform_icons//icon_political_dynasties.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_rogue_republic"
+		texturefile = "gfx//interface//government_reform_icons//icon_rogue_republic.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_sirenic_republic"
+		texturefile = "gfx//interface//government_reform_icons//icon_sirenic_republic.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_tirannwn_republic"
+		texturefile = "gfx//interface//government_reform_icons//icon_tirannwn_republic.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_tirannwn_resistance"
+		texturefile = "gfx//interface//government_reform_icons//icon_tirannwn_resistance.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_town_council"
+		texturefile = "gfx//interface//government_reform_icons//icon_town_council.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_trade_city"
+		texturefile = "gfx//interface//government_reform_icons//icon_trade_city.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_trading_colony"
+		texturefile = "gfx//interface//government_reform_icons//icon_trading_colony.dds"
+	}
+	
+	
+	# Tier 2
+	
+	spriteType = {
+		name = "government_reform_icon_apprenticeship_education"
+		texturefile = "gfx//interface//government_reform_icons//icon_apprenticeship_education.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_none_above_seren"
+		texturefile = "gfx//interface//government_reform_icons//icon_none_above_seren.dds"
+	}
+
+	# Tier 5
+	
+	spriteType = {
+		name = "government_reform_icon_deregulate_consortium"
+		texturefile = "gfx//interface//government_reform_icons//icon_deregulate_consortium.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_entrench_mystic_rule"
+		texturefile = "gfx//interface//government_reform_icons//icon_entrench_mystic_rule.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_icon_regulate_consortium"
+		texturefile = "gfx//interface//government_reform_icons//icon_regulate_consortium.dds"
+	}
+	
+	# Tier 6
+	
+	spriteType = {
+		name = "government_reform_icon_emergency_powers"
+		texturefile = "gfx//interface//government_reform_icons//icon_emergency_powers.dds"
+	}
+	
+	# Tier 7
+	
+	spriteType = {
+		name = "government_reform_icon_chaos_principle"
+		texturefile = "gfx//interface//government_reform_icons//icon_chaos_principle.dds"
+	}
+	
+	# Tier 8
+	
+	spriteType = {
+		name = "government_reform_icon_meeting_of_the_clans"
+		texturefile = "gfx//interface//government_reform_icons//icon_meeting_of_the_clans.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_integration_of_the_gaal"
+		texturefile = "gfx//interface//government_reform_icons//icon_integration_of_the_gaal.dds"
+	}
+	
+	# Tier 9
+	
+	spriteType = {
+		name = "government_reform_icon_smithing_contest"
+		texturefile = "gfx//interface//government_reform_icons//icon_smithing_contest.dds"
+	}
+	
+	# Tier 10
+	
+	spriteType = {
+		name = "government_reform_icon_kourend_reinstate_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_kourend_reinstate_monarchy.dds"
+	}
+
+	################
+	### Theocracy
+	################
+
+	# Tier 1
+
+	spriteType = {
+		name = "government_reform_icon_apostocracy"
+		texturefile = "gfx//interface//government_reform_icons//icon_apostocracy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_bardic_order"
+		texturefile = "gfx//interface//government_reform_icons//icon_bardic_order.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_cloistered_order"
+		texturefile = "gfx//interface//government_reform_icons//icon_cloistered_order.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_cult_of_reason"
+		texturefile = "gfx//interface//government_reform_icons//icon_cult_of_reason.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_druidic_order"
+		texturefile = "gfx//interface//government_reform_icons//icon_druidic_order.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_druidic_state"
+		texturefile = "gfx//interface//government_reform_icons//icon_druidic_state.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_guthixian_cave"
+		texturefile = "gfx//interface//government_reform_icons//icon_guthixian_cave.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_monastic_order"
+		texturefile = "gfx//interface//government_reform_icons//icon_monastic_order.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_shamanic_theocracy"
+		texturefile = "gfx//interface//government_reform_icons//icon_shamanic_theocracy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_theocratic_government"
+		texturefile = "gfx//interface//government_reform_icons//icon_theocratic_government.dds"
+	}
+	
+	# Tier 2
+	
+	spriteType = {
+		name = "government_reform_icon_mission_of_balance"
+		texturefile = "gfx//interface//government_reform_icons//icon_mission_of_balance.dds"
+	}
+	
+	# Education
+	
+	spriteType = {
+		name = "government_reform_icon_combat_training"
+		texturefile = "gfx//interface//government_reform_icons//icon_combat_training.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_experimental_haven"
+		texturefile = "gfx//interface//government_reform_icons//icon_experimental_haven.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_oral_tradition"
+		texturefile = "gfx//interface//government_reform_icons//icon_oral_tradition.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_tutorials"
+		texturefile = "gfx//interface//government_reform_icons//icon_tutorials.dds"
+	}
+	
+	# Tier 3
+	
+	spriteType = {
+		name = "government_reform_icon_prevent_god_wars"
+		texturefile = "gfx//interface//government_reform_icons//icon_prevent_god_wars.dds"
+	}
+	
+	# Tier 5
+	
+	spriteType = {
+		name = "government_reform_icon_antitheist_state"
+		texturefile = "gfx//interface//government_reform_icons//icon_antitheist_state.dds"
+	}
+	
+	# Tier 7
+	
+	spriteType = {
+		name = "government_reform_icon_gods_as_servants"
+		texturefile = "gfx//interface//government_reform_icons//icon_gods_as_servants.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_gods_as_protectors"
+		texturefile = "gfx//interface//government_reform_icons//icon_gods_as_protectors.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_manipulate_the_gods"
+		texturefile = "gfx//interface//government_reform_icons//icon_manipulate_the_gods.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_philosophy_over_faith"
+		texturefile = "gfx//interface//government_reform_icons//icon_philosophy_over_faith.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_v_the_guardian"
+		texturefile = "gfx//interface//government_reform_icons//icon_v_the_guardian.dds"
+	}
+	
+	# Tier 9
+	
+	spriteType = {
+		name = "government_reform_icon_non_elven_proselytising"
+		texturefile = "gfx//interface//government_reform_icons//icon_non_elven_proselytising.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_undead_faithful"
+		texturefile = "gfx//interface//government_reform_icons//icon_undead_faithful.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_vampyres_first"
+		texturefile = "gfx//interface//government_reform_icons//icon_vampyres_first.dds"
+	}
+	
+	# Tier 10
+
+	spriteType = {
+		name = "government_reform_icon_cabbages_for_all"
+		texturefile = "gfx//interface//government_reform_icons//icon_cabbages_for_all.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_intervene_for_nonintervention"
+		texturefile = "gfx//interface//government_reform_icons//icon_intervene_for_nonintervention.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_secret_church"
+		texturefile = "gfx//interface//government_reform_icons//icon_secret_church.dds"
+	}
+	
+	################
+	### Tribal
+	################
+
+	# Tier 1
+	
+	spriteType = {
+		name = "government_reform_icon_bandosian_horde"
+		texturefile = "gfx//interface//government_reform_icons//icon_bandosian_horde.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_icon_boss_nation"
+		texturefile = "gfx//interface//government_reform_icons//icon_boss_nation.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_cloud_giant_tribe"
+		texturefile = "gfx//interface//government_reform_icons//icon_cloud_giant_tribe.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_feldip_tribe"
+		texturefile = "gfx//interface//government_reform_icons//icon_feldip_tribe.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_goblin_empire"
+		texturefile = "gfx//interface//government_reform_icons//icon_goblin_empire.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_island_boss_nation"
+		texturefile = "gfx//interface//government_reform_icons//icon_island_boss_nation.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_kharidian_tribe"
+		texturefile = "gfx//interface//government_reform_icons//icon_kharidian_tribe.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_migratory_tribe"
+		texturefile = "gfx//interface//government_reform_icons//icon_migratory_tribe.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_mogre_horde"
+		texturefile = "gfx//interface//government_reform_icons//icon_mogre_horde.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_quidamortem_boss_nation"
+		texturefile = "gfx//interface//government_reform_icons//icon_quidamortem_boss_nation.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_runecrafting_crusader"
+		texturefile = "gfx//interface//government_reform_icons//icon_runecrafting_crusader.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_settled_tribe"
+		texturefile = "gfx//interface//government_reform_icons//icon_settled_tribe.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_troll_tribe"
+		texturefile = "gfx//interface//government_reform_icons//icon_troll_tribe.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_unleashed_horde"
+		texturefile = "gfx//interface//government_reform_icons//icon_unleashed_horde.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_warband"
+		texturefile = "gfx//interface//government_reform_icons//icon_warband.dds"
+	}
+	
+	# Tier 2
+
+	spriteType = {
+		name = "government_reform_icon_isolationist_culture"
+		texturefile = "gfx//interface//government_reform_icons//icon_isolationist_culture.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_maritime_culture"
+		texturefile = "gfx//interface//government_reform_icons//icon_maritime_culture.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_razer_culture"
+		texturefile = "gfx//interface//government_reform_icons//icon_razer_culture.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_resilience"
+		texturefile = "gfx//interface//government_reform_icons//icon_resilience.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_terror_of_seas"
+		texturefile = "gfx//interface//government_reform_icons//icon_terror_of_seas.dds"
+	}
+	
+	# Tier 3
+	
+	spriteType = {
+		name = "government_reform_icon_inward_pressure"
+		texturefile = "gfx//interface//government_reform_icons//icon_inward_pressure.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_open_to_challenge"
+		texturefile = "gfx//interface//government_reform_icons//icon_open_to_challenge.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_outward_pressure"
+		texturefile = "gfx//interface//government_reform_icons//icon_outward_pressure.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_strict_obedience"
+		texturefile = "gfx//interface//government_reform_icons//icon_strict_obedience.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_xenophobe"
+		texturefile = "gfx//interface//government_reform_icons//icon_xenophobe.dds"
+	}
+	
+	# Tier 4
+	
+	spriteType = {
+		name = "government_reform_icon_expansionist_boss"
+		texturefile = "gfx//interface//government_reform_icons//icon_expansionist_boss.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_internal_development"
+		texturefile = "gfx//interface//government_reform_icons//icon_internal_development.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_organise_army"
+		texturefile = "gfx//interface//government_reform_icons//icon_organise_army.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_organise_navy"
+		texturefile = "gfx//interface//government_reform_icons//icon_organise_navy.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_raider_boss"
+		texturefile = "gfx//interface//government_reform_icons//icon_raider_boss.dds"
+	}
+	
+	# Tier 5
+	
+	spriteType = {
+		name = "government_reform_icon_greater_boss_nation"
+		texturefile = "gfx//interface//government_reform_icons//icon_greater_boss_nation.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_pirate_highlighted"
+		texturefile = "gfx//interface//government_reform_icons//icon_pirate_highlighted.dds"
+	}
+	
+	################
+	### Shared
+	################
+	
+	# Religious
+	
+	spriteType = {
+		name = "government_reform_icon_corporealists"
+		texturefile = "gfx//interface//government_reform_icons//icon_corporealists.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_incorporealists"
+		texturefile = "gfx//interface//government_reform_icons//icon_incorporealists.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_peaceful_contemplation"
+		texturefile = "gfx//interface//government_reform_icons//icon_peaceful_contemplation.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_reinstate_pantheon"
+		texturefile = "gfx//interface//government_reform_icons//icon_reinstate_pantheon.dds"
+	}
+	
+	
+	# Economic
+	
+	spriteType = {
+		name = "government_reform_icon_absurd_taxation"
+		texturefile = "gfx//interface//government_reform_icons//icon_absurd_taxation.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_alchemical_economics"
+		texturefile = "gfx//interface//government_reform_icons//icon_alchemical_economics.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_armour_trimming"
+		texturefile = "gfx//interface//government_reform_icons//icon_armour_trimming.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_expand_titles"
+		texturefile = "gfx//interface//government_reform_icons//icon_expand_titles.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_grand_exchange"
+		texturefile = "gfx//interface//government_reform_icons//icon_grand_exchange.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_no_internal_market"
+		texturefile = "gfx//interface//government_reform_icons//icon_no_internal_market.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_subsidised_pilgrimage"
+		texturefile = "gfx//interface//government_reform_icons//icon_subsidised_pilgrimage.dds"
+	}
+	
+	# Miscellaneous
+	
+	spriteType = {
+		name = "government_reform_icon_elven_desperation_reform"
+		texturefile = "gfx//interface//government_reform_icons//icon_elven_desperation_reform.dds"
+	}
+}

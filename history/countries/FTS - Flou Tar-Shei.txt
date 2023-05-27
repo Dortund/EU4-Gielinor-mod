@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 2
+primary_culture = pincers_culture
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1179 #Flou Tar-Shei
+
+1928.4.11 = {
+	monarch = {
+		name = "Fuyuan"
+		dynasty = "Shang"
+		birth_date = 1905.11.4
+		death_date = 1973.6.11
+		adm = 2
+		dip = 5
+		mil = 4
+		female = yes
+	}
+}
+
+2135.6.12 = {
+	monarch = {
+		name = "Finia"
+		dynasty = "Shang"
+		birth_date = 2109.5.11
+		adm = 1
+		dip = 6
+		mil = 4
+	}
+}
+

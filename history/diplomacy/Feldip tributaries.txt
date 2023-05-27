@@ -1,0 +1,101 @@
+################
+#Gu'Tanoth
+################
+
+#Gorad tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = GUT
+	second = GOR
+	start_date = 1915.6.5
+	end_date = 1965.2.27
+}
+
+#Janger tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = GUT
+	second = JNG
+	start_date = 1915.6.5
+	end_date = 1965.2.27
+}
+
+#Nar tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = GUT
+	second = NAR
+	start_date = 1915.6.5
+	end_date = 1965.2.27
+}
+
+#Og tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = GUT
+	second = OGG
+	start_date = 1915.6.5
+	end_date = 1965.2.27
+}
+
+#Uglogwee tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = GUT
+	second = ULW
+	start_date = 1915.6.5
+	end_date = 1965.2.27
+}
+
+################
+#Oo'glog
+################
+
+#Snagru tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = OOG
+	second = SGR
+	start_date = 1915.6.5
+	end_date = 1965.2.27
+}
+
+#Tess tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = OOG
+	second = TES
+	start_date = 1915.6.5
+	end_date = 1965.2.27
+}
+
+################
+#Feldips
+################
+
+#Gorad tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = FEL
+	second = GOR
+	start_date = 1965.2.27
+	end_date = 2300.1.1
+}
+
+#Janger tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = FEL
+	second = JNG
+	start_date = 1965.2.27
+	end_date = 2300.1.1
+}
+
+#Og tributary
+dependency = {
+	subject_type = "tributary_state"
+	first = FEL
+	second = OGG
+	start_date = 1965.2.27
+	end_date = 2300.1.1
+}

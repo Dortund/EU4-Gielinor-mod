@@ -1,0 +1,20 @@
+#850-Vyremeiyer
+owner = MYT
+controller = MYT
+add_core = MYT
+tribal_owner = ---
+culture = humanborn_vampyre
+religion = vampyric
+
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 2
+
+trade_goods = magic_supplies
+latent_trade_goods = { rare_loot }
+
+is_city = yes

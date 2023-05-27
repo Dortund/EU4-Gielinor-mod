@@ -1,0 +1,27 @@
+#56 - Saradomin's Landing
+owner = ENT
+controller = ENT
+add_core = ENT
+tribal_owner = ---
+culture = entranan
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = livestock_farm
+latent_trade_goods = { runes }
+
+is_city = yes
+
+add_province_triggered_modifier = religious_center

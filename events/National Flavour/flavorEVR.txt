@@ -1,0 +1,372 @@
+########################################
+# Events for the Elven Resistance
+########################################
+
+namespace = flavor_evr
+normal_or_historical_nations = yes
+
+# Cadarn elves join the resistance!
+country_event = {
+	id = flavor_evr.1
+	title = flavor_evr.1.t
+	desc = {
+		trigger = {
+			OR = {
+				exists = CDA
+				exists = BXT
+			}
+		}
+		desc = flavor_evr.1.da #Some elves from the Cadarn kingdom have elected to permanently settle in Tirannwn to aid the resistance. This will provide us with a much-needed boost to our manpower, though there are concerns among some that the Cadarn kingdom could be significantly weakened in the process.
+	}
+	desc = {
+		trigger = {
+			NOT = { exists = CDA }
+			NOT = { exists = BXT }
+		}
+		desc = flavor_evr.1.db #With the fall of the Cadarn kingdom in the east, some of the survivors have made their way over to Tirannwn to serve our cause.
+	}
+	picture = ELVEN_RESISTANCE_LLETYA_eventPicture
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_evr.a #We are seven clans united!
+		random_owned_province = {
+			limit = {
+				region = tirannwn_region
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			change_culture = cadarn
+			change_religion = seren
+		}
+	}
+}
+
+country_event = {
+	id = flavor_evr.2
+	title = flavor_evr.2.t #Cadarn reaches out!
+	desc = flavor_evr.2.d #The Cadarn clan has kindly decided to send us personnel to aid the resistance, at great risk to themselves. They will be ideal for fighting and developing our marginal lands.
+	picture = CADARN_GLARIAL_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_evr.2.a #Excellent.
+		add_yearly_manpower = 0.5
+		add_country_modifier = {
+			name = "EVR_cadarn_support"
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = flavor_evr.3
+	title = flavor_evr.3.t #Cadarn refuses to help!
+	desc = flavor_evr.3.d #The Cadarn clan has heard of our plight, and has decided it's not in their best interests to intervene.
+	picture = CADARN_GLARIAL_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_evr.3.a #Any other clans want to betray us?
+	}
+}
+
+country_event = {
+	id = flavor_evr.4
+	title = flavor_evr.4.t #King Tyras' Camp
+	desc = flavor_evr.4.d #A human king has arrived in Isfadar, bringing a considerable army with him. He means us no ill will and has compensated us greatly for any lands we have lost in the process.
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_evr.4.a #Let's hope Tyras is no tyrant!
+		add_historical_friend = TYS
+		add_years_of_income = 1.5
+	 	add_adm_power = 150
+		add_dip_power = 150
+		add_mil_power = 150
+	}
+}
+
+country_event = {
+	id = flavor_evr.5
+	title = flavor_evr.5.t #Serenist Assistance
+	desc = flavor_evr.5.d #A smaller Serenist realm has sent soldiers to aid our resistance.
+	picture = SEREN_CATHEDRAL_eventPicture
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_evr.5.a #Excellent.
+		add_yearly_manpower = 0.25
+	}
+}
+
+country_event = {
+	id = flavor_evr.6
+	title = flavor_evr.6.t #Legends of the Lost Grove
+	desc = flavor_evr.6.d #In the Second Age, a group of elite elves headed west to a mysterious island to guard a being known as Solak. The island since vanished from view. But in a time like this, where the fate of all who follow Seren is on the line, such an island may be our only real safe harbour from the threat of Clan Iorwerth.
+	picture = TIRANNWN_LOST_GROVE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_evr.6.a #Seren, please save us!
+		619 = {
+			discover_country = ROOT
+		}
+		621 = {
+			discover_country = ROOT
+		}
+		1240 = {
+			discover_country = ROOT
+		}
+		1244 = {
+			discover_country = ROOT
+		}
+		set_country_flag = EVR_seeking_the_lost_grove
+	}
+}
+
+country_event = {
+	id = flavor_evr.7
+	title = flavor_evr.7.t #Settlement of the Lost Grove
+	desc = flavor_evr.7.d #It seems Seren has heard our pleas, and allowed safe passage to the Lost Grove, where we shall rebuild our resistance to the forces of the Dark Lord.
+	picture = TIRANNWN_LOST_GROVE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = EVR_retreat_to_the_grove
+	}
+	
+	option = {
+		name = flavor_evr.7.a #Faith shall guide us forwards!
+		1244 = {
+			cede_province = ROOT
+			add_core = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+			move_capital_effect = yes
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		
+		north_lost_grove_area = {
+			discover_country = ROOT
+		}
+		south_lost_grove_area = {
+			discover_country = ROOT
+		}
+		complete_mission = EVR_western_sea_discoveries
+		swap_non_generic_missions = yes
+	}
+}
+
+
+country_event = {
+	id = flavor_evr.8
+	title = flavor_evr.8.t #The Light of Seren
+	desc = flavor_evr.8.d #A strange visitor to [Root.GetName] speaks of a crystalline Goddess named Seren who once had a following across Gielinor. She claims her followers are powerful, but seek peace with other faiths.
+	picture = SEREN_PEWS_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_evr.8.a #If we let her preach a little, we could gain a good ally.
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+				region = asgarnia_region
+			}
+			change_religion = seren
+		}
+		every_country = {
+			limit = {
+				religion = seren
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = evr_accepted_seren_preachers
+			}
+		}
+		add_dip_power = 25
+		
+	}
+	option = {
+		name = flavor_evr.8.b #Go home and take your magic crystals with you!
+		every_country = {
+			limit = {
+				religion = seren
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = evr_rejected_seren_preachers
+			}
+		}
+		add_prestige = 10
+		
+	}
+}
+
+country_event = {
+	id = flavor_evr.9
+	title = flavor_evr.9.t #Return to the Underground Pass
+	desc = flavor_evr.9.d #The vast twisting caves of the Underground Pass were never an ideal route to travel between Tirannwn and Kandarin, but now they seem more twisted and inpenetrable than ever before. Exploring the pass will not be a fast operation; we need to establish a base camp.
+	picture = IBAN_LAIR_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_evr.9.a #This sounds ominous.
+		338 = {
+			add_siberian_construction = 100
+		}
+	}
+}
+
+country_event = {
+	id = flavor_evr.10
+	title = flavor_evr.10.t #The Temple of Shadow Rises
+	desc = flavor_evr.10.d #Once whispers, voices from the Underground Pass have grown. In time these voices became visions. Visions of human armies, wasted by some unseen hand. Join us...
+	picture = IBAN_LAIR_eventPicture
+	fire_only_once = yes
+	is_major = yes
+	
+	trigger = {
+		tag = EVR
+		538 = { is_empty = yes }
+		owns_core_province = 538
+		owns_core_province = 982
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		set_global_flag = temple_of_shadow_flag
+		hidden_effect = {
+			538 = {
+				cede_province = TPS
+				add_core = TPS
+				change_culture = soulless
+				change_religion = dark_lord
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				add_next_institution_embracement = 100
+			}
+			982 = {
+				cede_province = TPS
+				add_core = TPS
+				change_culture = soulless
+				change_religion = dark_lord
+			}
+			338 = {
+				cede_province = TPS
+				add_core = TPS
+				change_religion = dark_lord
+			}
+			TPS = {
+				tirannwn_region = {
+					discover_country = ROOT
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_evr.10.a #We shall never join the Dark Lord!
+		custom_tooltip = temple_of_shadow_rises_tooltip
+	}
+	option = {
+		name = flavor_evr.10.b #Join you? Okay!
+		custom_tooltip = temple_of_shadow_rises_tooltip
+		switch_tag = TPS
+	}
+}
+
+country_event = {
+	id = flavor_evr.11
+	title = flavor_evr.11.t #Iorwerth Surrenders!
+	desc = flavor_evr.11.d #With no reason to keep fighting, Clan Iorwerth has laid down their arms and has surrendered all their territory to the Elven Resistance--- or should that say, to Tirannwn!
+	picture = IBAN_LAIR_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	is_major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = flavor_evr.11.a #All glory to the restoration of Tirannwn!
+		inherit = IOR
+	}
+}
+
+country_event = {
+	id = flavor_evr.12
+	title = flavor_evr.12.t #The Dark Lord is Unleashed!
+	desc = flavor_evr.12.d #A terrible day has befallen Tirannwn. The Dark Lord, the remnant of Seren locked away lest it destroys us all, has been unleashed from the Temple of Light. Clan Iorwerth will be harder to stop than ever before.
+	picture = DARK_LORD_eventPicture
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = flavor_evr.12.a #Now is the time to panic!
+		add_country_modifier = {
+			name = EVR_open_panic
+			duration = 9125
+		}
+	}
+}

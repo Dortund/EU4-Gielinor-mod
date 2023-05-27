@@ -1,0 +1,77 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 133 123 137 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+
+monarch_names = {
+	"Anlaf #0" = 10
+	"Bhuler #0" = 10
+	"Bryant #0" = 10
+	"Derygull #0" = 10
+	"Ewain #0" = 10
+	"Kuam #0" = 10
+	"Plyan #0" = 10
+	"Stario #0" = 10
+	"Tiffy #0" = 10
+	"Vey #0" = 10
+	"Altra #0" = -10
+	"Eva #0" = -10
+	"Alfred #0" = 1
+	"Amik #0" = 1
+	"Brian #0" = 1
+	"Flynn #0" = 1
+	"Frank #0" = 1
+	"Harold #0" = 1
+	"Harry #0" = 1
+	"Herquin #0" = 1
+	"Jake #0" = 1
+	"Jeff #0" = 1
+	"Jones #0" = 1
+	"Larry #0" = 1
+	"Marcus #0" = 1
+	"Nicholas #0" = 1
+	"Nigel #0" = 1
+	"Norman #0" = 1
+	"Radigad #0" = 1
+	"Ramsey #0" = 1
+	"Ren #0" = 1
+	"Sam #0" = 1
+	"Velrak #0" = 1
+	"Wayne #0" = 1
+	"Will #0" = 1
+	
+	"Alison #0" = -1
+	"Amy #0" = -1
+	"Carwen #0" = -1
+	"Cassie #0" = -1
+	"Clara #0" = -1
+	"Elise #0" = -1
+	"Emily #0" = -1
+	"Grace #0" = -1
+	"Heskel #0" = -1
+	"Lucy #0" = -1
+	"Jacquelyn #0" = -1
+	"Judith #0" = -1
+	"Kaylee #0" = -1
+	"Mary #0" = -1
+	"Megan #0" = -1
+	"Nora #0" = -1
+	"Rachael #0" = -1
+	"Ruth #0" = -1
+	"Sophie #0" = -1
+	"Tau #0" = -1
+	"Tina #0" = -1
+}

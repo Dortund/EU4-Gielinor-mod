@@ -1,0 +1,33 @@
+government = tribal
+add_government_reform = settled_tribe
+government_rank = 1
+primary_culture = barbarian
+religion = v
+secondary_religion = guthix
+technology_group = fremenniktechgroup
+capital = 365 #Barbarian Outpost
+national_focus = MIL
+historical_friend = RVL
+
+1927.7.12 = {
+	monarch = {
+		name = "Sieglinde"
+		dynasty = "Stonejumper"
+		birth_date = 1901.2.11
+		adm = 2
+		dip = 6
+		mil = 3
+		female = yes
+	}
+}
+
+2162.8.11 = {
+	monarch = {
+		name = "Cain"
+		dynasty = "Goblinslasher"
+		birth_date = 2122.1.4
+		adm = 3
+		dip = 1
+		mil = 5
+	}
+}

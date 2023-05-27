@@ -1,0 +1,26 @@
+#129 - Shadowglade
+owner = BDR
+controller = BDR
+add_core = BDR
+tribal_owner = ---
+culture = meiyer
+religion = saradomin
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fishing_spot
+
+is_city = yes

@@ -1,0 +1,33 @@
+government = tribal
+add_government_reform = cloud_giant_tribe
+government_rank = 2
+primary_culture = hill_giant
+add_accepted_culture = fire_giant
+add_accepted_culture = ice_giant
+religion = bandos
+technology_group = northerntechgroup
+capital = 1291 #Forge of Giants
+
+1922.12.18 = {
+	monarch = {
+		name = "Kovacina"
+		dynasty = "the Hill Giant"
+		birth_date = 1910.1.5
+		death_date = 1944.2.3
+		adm = 5
+		dip = 2
+		mil = 4
+		female = yes
+	}
+}
+
+2154.4.5 = {
+	monarch = {
+		name = "Zberac"
+		dynasty = "the Hill Giant"
+		birth_date = 2124.7.6
+		adm = 5
+		dip = 4
+		mil = 2
+	}
+}

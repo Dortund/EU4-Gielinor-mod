@@ -1,0 +1,24 @@
+#851-Haie d'Ogre
+owner = OGG
+controller = OGG
+add_core = OGG
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+fort_15th = yes

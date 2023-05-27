@@ -1,0 +1,79 @@
+country_decisions = {
+
+	urval_order_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_urval_order_flag }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = URV }
+			religion = zamorak
+			has_reform = druidic_state
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 20
+				province_id = 49
+				province_id = 206
+				province_id = 769
+				province_id = 778
+				province_id = 793
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+				owns_core_province = 49 #Taverley
+				owns_core_province = 793 #Taverley Dungeon
+			OR = {
+				AND = {
+					owns_core_province = 20 #Edgeville
+					owns_core_province = 206 #Low Wildy Chaos Altar
+				}
+				AND = {
+					owns_core_province = 769 #Chaos Druid Tower
+					owns_core_province = 778 #Salarin
+				}
+			}
+		}
+		effect = {
+			change_tag = URV
+			swap_non_generic_missions = yes
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = druidic_order
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_urval_order_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

@@ -1,0 +1,65 @@
+fall_of_cadarn = {
+	potential = {
+		tag = CDA
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = CDA_return_of_baxtorian }
+		NOT = { has_country_flag = cda_solved_depletion }
+	}
+
+	can_start = {
+	 	has_any_disaster = no
+	}
+	
+	can_stop = {
+		has_country_flag = CDA_return_of_baxtorian
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2
+			NOT = { has_country_flag = CDA_return_of_baxtorian }
+		}
+		modifier = {
+			factor = 2
+			NOT = { dominant_culture = cadarn }
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 3 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { army_professionalism = 0.5 }
+		}
+	}
+
+	can_end = {
+		mission_completed = CDA_fate_of_the_kingdom
+	}
+
+	modifier = {
+		all_power_cost =  0.25
+		manpower_recovery_speed = -0.10
+	 	global_unrest = 1
+	}
+	
+	on_start = fall_of_cadarn.1
+	on_end = fall_of_cadarn.100
+	
+	on_monthly = {
+        events = {
+        }
+		random_events = {
+			3000 = 0
+			15 = fall_of_cadarn.2 # Elves Leave for the Resistance!
+			15 = fall_of_cadarn.4 # Goblin Incursions
+			1 = fall_of_cadarn.5 #Beauty of the Baxtorian Falls
+		}
+	}
+}
+

@@ -1,0 +1,63 @@
+#Country Name: Please seefilename.
+
+graphical_culture = africangfx
+
+color = { 170 90 131 }
+
+revolutionary_colors = { 4 10 3 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Bervirius #0" = 1
+	"Danthalas #0" = 1
+	"Duradel #0" = 1
+	"Gabooty #0" = 1
+	"Fanellaman #0" = 1
+	"Fernahei #0" = 1
+	"Hajedy #0" = 1
+	"Ibeli #0" = 1
+	"Irvig #0" = 1
+	"Jagbakoba #0" = 1
+	"Kaleb #0" = 1
+	"Karaday #0" = 1
+	"Kedoaba #0" = 1
+	"Kedenda #0" = 1
+	"Lapalok #0" = 1
+	"Lubufu #0" = 1
+	"Luthas #0" = 1
+	"Mambo #0" = 1
+	"Murcaily #0" = 1
+	"Mosol #0" = 1
+	"Ranalph #0" = 1
+	"Rionasta #0" = 1
+	"Safta #0" = 1
+	"San #0" = 1
+	"Saniboch #0" = 1
+	"Seravel #0" = 1
+	"Sharimika #0" = 1
+	"Timfraku #0" = 1
+	"Tamayu #0" = 1
+	"Tiadeche #0" = 1
+	"Tinsay #0" = 1
+	"Trufitus #0" = 1
+	"Ungadulu #0" = 1
+	"Vigroy #0" = 1
+	"Yanni #0" = 1
+	"Yohnus #0" = 1
+	"Zadimus #0" = 1
+	"Jiminua #0" = -1
+	"Kuradal #0" = -1
+	"Layleen #0" = -1
+	"Rashiliyia #0" = -1
+	"Rimba #0" = -1
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = yanillian
+add_accepted_culture = ouranian
+religion = saradomin
+technology_group = kandarintechgroup
+capital = 293 #Yanille
+national_focus = DIP
+
+1923.11.2 = {
+	monarch = {
+		name = "Zavathora"
+		dynasty = "Runeseeker"
+		birth_date = 1861.7.3
+		adm = 6
+		dip = 2
+		mil = 5
+		female = yes
+	}
+}

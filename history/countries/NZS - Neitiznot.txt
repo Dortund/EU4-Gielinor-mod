@@ -1,0 +1,34 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = rellekkan
+religion = v
+secondary_religion = guthix
+technology_group = fremenniktechgroup
+capital = 385 #Neitiznot
+national_focus = MIL
+historical_friend = REL
+historical_rival = JTZ
+
+1980.4.12 = {
+	monarch = {
+		name = "Neitiznot"
+		dynasty = "Burowgar"
+		birth_date = 1962.7.13
+		adm = 3
+		dip = 0
+		mil = 3
+	}
+}
+
+2133.2.6 = {
+	monarch = {
+		name = "Mawnis"
+		dynasty = "Burowgar"
+		birth_date = 2116.8.26
+		adm = 5
+		dip = 3
+		mil = 4
+	}
+}
+

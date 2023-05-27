@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = skull_culture
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1118 #Hanto
+
+1916.2.1 = {
+	monarch = {
+		name = "Biao"
+		dynasty = "Hanto"
+		birth_date = 1899.11.14
+		death_date = 1965.7.6
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+2037.2.25 = { religion = xautak }
+
+2145.7.13 = {
+	monarch = {
+		name = "Gaosui"
+		dynasty = "Hanto"
+		birth_date = 2111.5.13
+		death_date = 2172.1.16
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}

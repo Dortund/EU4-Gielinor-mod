@@ -1,0 +1,22 @@
+#219-Nature Altar
+owner = TBW
+controller = TBW
+add_core = TBW
+tribal_owner = ---
+culture = taibwo
+religion = karamjan
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 1
+
+trade_goods = herblore_supplies
+latent_trade_goods = { runes }
+
+is_city = yes

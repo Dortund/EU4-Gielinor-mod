@@ -1,0 +1,27 @@
+#142 - Mos Ayes Le'
+owner = MSH
+controller = MSH
+add_core = MSH
+tribal_owner = ---
+culture = harmlean
+religion = godless
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = grains
+
+is_city = yes
+
+center_of_trade = 2

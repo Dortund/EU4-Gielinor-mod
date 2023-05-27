@@ -1,0 +1,36 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = rellekkan
+religion = v
+secondary_religion = guthix
+technology_group = fremenniktechgroup
+capital = 368 #Rellekka
+national_focus = DIP
+historical_friend = ETC
+historical_friend = JTZ
+historical_friend = KDG
+historical_friend = MCE
+historical_friend = NTZ
+
+1913.9.11 = {
+	monarch = {
+		name = "Pontak"
+		dynasty = "Friedirson"
+		birth_date = 1885.10.20
+		adm = 4
+		dip = 5
+		mil = 3
+	}
+}
+
+2153.9.11 = {
+	monarch = {
+		name = "Brundt"
+		dynasty = "Hagenson"
+		birth_date = 2124.12.17
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}

@@ -1,0 +1,47 @@
+country_decisions = {
+
+	weiss_retreat = {
+		potential = {
+			tag = WSS
+			359 = { is_empty = yes }
+		}
+		provinces_to_highlight = {
+			province_id = 359 #Weiss
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			adm_tech = 10
+			OR = {
+				had_recent_war = 10
+				is_at_war = yes
+			}
+			OR = {
+				NOT = { manpower_percentage = 0.1 }
+				capital_scope = {
+					NOT = { controlled_by = ROOT }
+				}
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+			359 = {
+				cede_province = WSS
+				add_core = WSS
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				change_culture = icetroll
+				change_religion = ROOT
+				move_capital_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+}

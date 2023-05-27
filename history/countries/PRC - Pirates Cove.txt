@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pirate_republic_reform
+government_rank = 1
+primary_culture = northernraider
+religion = v
+secondary_religion = godless
+technology_group = fremenniktechgroup
+capital = 391 #Pirates' Cove
+national_focus = DIP
+
+2168.3.2 = {
+	monarch = {
+		name = "Bentley"
+		dynasty = "Raidersen"
+		birth_date = 2133.7.24
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

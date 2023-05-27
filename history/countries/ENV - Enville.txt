@@ -1,0 +1,41 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = avarrockan
+add_accepted_culture = lummer
+religion = zamorak
+technology_group = centraltechgroup
+capital = 20 #Enville
+
+1921.3.17 = {
+	monarch = {
+		name = "Altrodor"
+		dynasty = "Doar"
+		birth_date = 1901.12.5
+		death_date = 1975.4.1
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = ENV
+		name = "Jennica"
+		dynasty = "Urhney"
+		birth_date = 1907.11.2
+		death_date = 1985.7.17
+		female = yes
+		adm = 1
+		dip = 4
+		mil = 6
+	}
+	heir = {
+		name = "Varmen"
+		dynasty = "Doar"
+		birth_date = 1925.12.1
+		death_date = 1991.2.3
+		claim = 85
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}

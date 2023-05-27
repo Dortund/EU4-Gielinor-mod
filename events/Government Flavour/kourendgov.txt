@@ -1,0 +1,947 @@
+########################################
+# Events for Kourend governments
+########################################
+
+namespace = kourendgov
+normal_or_historical_nations = yes
+
+country_event = {
+	id = kourendgov.1
+	title = kourendgov.1.t #Resurrect the Harvest?
+	desc = kourendgov.1.d #A farmer of Hosidius has lost their harvest to disease. They are petitioning the mages of Arceuus to resurrect their crops, but the cost of doing so is expensive and may be more than the value of the crops.
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = arceuus_faction
+		has_faction = hosidius_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.1.a #Arceuus should lend their aid.
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+			who = HOS
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = arceuus_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = hosidius_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.1.b #The Hosidian farmer ought to be better at farming.
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+			who = HOS
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = arceuus_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = hosidius_faction
+			influence = -10
+		}
+	}
+	option = {
+		name = kourendgov.1.c #How about the government covers the resurrection cost?
+		add_years_of_income = -0.1
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+				who = HOS
+				modifier = kou_small_help
+			}
+		}
+	}
+}
+
+country_event = {
+	id = kourendgov.2
+	title = kourendgov.2.t #Magical Pollution
+	desc = kourendgov.2.d #Dwarves of Lovakengj have issued a complaint about the outpouring of magical energies from mages of House Arceuus. Dwarves are largely unable to use magic, and hence find it difficult to clean up magical pollution.
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = arceuus_faction
+		has_faction = lovakengj_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.2.a #Arceuus should take responsibility.
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+			who = LOV
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = arceuus_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = lovakengj_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.2.b #Arceuus has no such responsibilities.
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+			who = LOV
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = arceuus_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = lovakengj_faction
+			influence = -10
+		}
+	}
+	option = {
+		name = kourendgov.2.c #Let's pay someone to clean it up.
+		add_years_of_income = -0.1
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+				who = LOV
+				modifier = kou_small_help
+			}
+		}
+	}
+}
+
+country_event = {
+	id = kourendgov.3
+	title = kourendgov.3.t #Sailors' Superstitions
+	desc = kourendgov.3.d #Sailors of Piscarilius have been suspicious of House Arceuus' tampering with the dead. They say that it's bad luck and Arceuus needs to rein in their resurrections.
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = arceuus_faction
+		has_faction = piscarilius_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.3.a #House Arceuus needs to remember to respect the dead.
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+			who = PCL
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = arceuus_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.3.b #The operations of Arceuus respect life! Piscarilius needs to learn that.
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+			who = PCL
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = arceuus_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = -10
+		}
+	}
+}
+
+country_event = {
+	id = kourendgov.4
+	title = kourendgov.4.t #Melee or Magic?
+	desc = kourendgov.4.d #A debate is taking place between a scholar of Arceuus and a senior member of the Shayzien army. Is melee combat or magic better?
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = arceuus_faction
+		has_faction = shayzien_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.4.a #Melee!
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+			who = SYZ
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = arceuus_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = shayzien_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.4.b #Magic!
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+			who = SYZ
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = arceuus_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = shayzien_faction
+			influence = -10
+		}
+	}
+	option = {
+		name = kourendgov.4.c #Range!
+		if = {
+			limit = {
+				exists = AUU
+			}
+			add_opinion = {
+			who = AUU
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+				who = SYZ
+				modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = arceuus_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = shayzien_faction
+			influence = -10
+		}
+	}
+}
+
+country_event = {
+	id = kourendgov.5
+	title = kourendgov.5.t #Hop Shortage!
+	desc = kourendgov.5.d #House Lovakengj is in panic after their supplies of hops run dry! We could divert some beer from Hosidius in the meantime, but the Hosidians are unlikely to appreciate that.
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = hosidius_faction
+		has_faction = lovakengj_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.5.a #Divert the beer to the Lovakengj dwarves.
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+			who = HOS
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+			who = LOV
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = hosidius_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = lovakengj_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.5.b #Dwarves will just have to do with less beer for now.
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+			who = HOS
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+			who = LOV
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = hosidius_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = lovakengj_faction
+			influence = -10
+		}
+	}
+}
+
+country_event = {
+	id = kourendgov.6
+	title = kourendgov.6.t #Naval Food Standards
+	desc = kourendgov.6.d #A representative of House Hosidius has voiced concern about House Piscarilius' increasing use of foreign food imports at the expense of their Hosidian farmers. A representative of House Piscarilius has replied that the terrible quality of Hosidian food is the reason for this.
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = hosidius_faction
+		has_faction = piscarilius_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.6.a #House Hosidius needs to improve their food quality.
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+			who = HOS
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+			who = PCL
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = hosidius_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.6.b #Piscarilius needs to buy local.
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+			who = HOS
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+			who = PCL
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = hosidius_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = -10
+		}
+	}
+	option = {
+		name = kourendgov.6.c #Who cares?
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+			who = HOS
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+				who = PCL
+				modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = hosidius_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = -10
+		}
+	}
+}
+
+country_event = {
+	id = kourendgov.7
+	title = kourendgov.7.t #Poachers!
+	desc = kourendgov.7.d #Poachers have been spotted killing livestock on Hosidian fields. House Hosidius demands action from Shayzien, but House Shayzien protests that their resources are stretched thin as it is.
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = hosidius_faction
+		has_faction = shayzien_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.7.a #House Shayzien is right.
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+			who = HOS
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+			who = SYZ
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = hosidius_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = shayzien_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.7.b #Hosidius needs that support.
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+			who = HOS
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+			who = SYZ
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = hosidius_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = shayzien_faction
+			influence = -10
+		}
+	}
+	option = {
+		name = kourendgov.7.c #We can cover the costs.
+		add_years_of_income = -0.1
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+			who = SYZ
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = HOS
+			}
+			add_opinion = {
+				who = HOS
+				modifier = kou_small_help
+			}
+		}
+	}
+}
+
+country_event = {
+	id = kourendgov.8
+	title = kourendgov.8.t #Navigational Equipment
+	desc = kourendgov.8.d #House Piscarilius requires more compasses, timepieces and the like for their navigations. House Lovakengj would be well-equipped to create these, but there is distrust between the houses following an earlier botched deal, and Lovakengj wants the payment upfront.
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = lovakengj_faction
+		has_faction = piscarilius_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.8.a #We're all part of Great Kourend! Piscarilius can be trusted.
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+			who = LOV
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+			who = PCL
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = lovakengj_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.8.b #House Piscarilius needs to pay up-front.
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+			who = LOV
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+			who = PCL
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = lovakengj_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = -10
+		}
+	}
+	option = {
+		name = kourendgov.8.c #Why doesn't Piscarilius pay Lovakengj in rats?
+		trigger = {
+			OR = {
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = charismatic_negotiator_personality
+				ruler_has_personality = silver_tongue_personality
+			}
+		}
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+			who = LOV
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+			who = PCL
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = lovakengj_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = 10
+		}
+	}
+}
+
+country_event = {
+	id = kourendgov.9
+	title = kourendgov.9.t #Shayzien demands faster weapon deliveries!
+	desc = kourendgov.9.d #A furious representative of House Shayzien tells us that if Lovakengj can't supply weapons faster, lives in the Shayzien army will be lost. A Lovakengj representative shouts in response that there's no use supplying the human-biased peacekeeping of Shayzien.
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = lovakengj_faction
+		has_faction = shayzien_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.9.a #Lives are on the line. Lovakengj must comply.
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+			who = LOV
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+			who = SYZ
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = lovakengj_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = shayzien_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.9.b #House Shayzien must not ignore their duties to House Lovakengj.
+		if = {
+			limit = {
+				exists = LOV
+			}
+			add_opinion = {
+			who = LOV
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+			who = SYZ
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = lovakengj_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = shayzien_faction
+			influence = -10
+		}
+	}
+}
+
+country_event = {
+	id = kourendgov.10
+	title = kourendgov.10.t #The Crimes of Piscarilius
+	desc = kourendgov.10.d #It's an open secret that House Piscarilius has a shady history, and their port is often plagued with crime. However, their underhanded methods have sometimes been crucial to Great Kourend's future. House Shayzien is demanding we give them more rights to break into Piscarilian houses and break up criminal activities - how should we respond?
+	picture = KOUREND_HOUSES_eventPicture
+
+	trigger = {
+		has_faction = piscarilius_faction
+		has_faction = shayzien_faction
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kourendgov.10.a #Crime must be held in check.
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+			who = PCL
+			modifier = kou_small_hinderance
+			}
+		}
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+			who = SYZ
+			modifier = kou_small_help
+			}
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = -10
+		}
+		add_faction_influence = {
+			faction = shayzien_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = kourendgov.10.b #Shayzien cannot impose themselves onto Piscarilius.
+		if = {
+			limit = {
+				exists = PCL
+			}
+			add_opinion = {
+			who = PCL
+			modifier = kou_small_help
+			}
+		}
+		if = {
+			limit = {
+				exists = SYZ
+			}
+			add_opinion = {
+			who = SYZ
+			modifier = kou_small_hinderance
+			}
+		}
+		add_faction_influence = {
+			faction = piscarilius_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = shayzien_faction
+			influence = -10
+		}
+	}
+}

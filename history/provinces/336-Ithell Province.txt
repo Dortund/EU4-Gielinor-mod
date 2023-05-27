@@ -1,0 +1,20 @@
+#335 - Ithell Province
+owner = EVR
+controller = EVR
+add_core = EVR
+add_core = ITH
+tribal_owner = ---
+culture = ithell
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+trade_goods = advanced_logs
+
+is_city = yes

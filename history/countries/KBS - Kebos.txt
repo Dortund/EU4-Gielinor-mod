@@ -1,0 +1,22 @@
+government = theocracy
+add_government_reform = shamanic_theocracy
+government_rank = 1
+primary_culture = kebos_culture
+religion = xeric
+technology_group = zeantechgroup
+capital = 460 #
+historical_friend = QMT
+historical_friend = MOH
+historical_rival = KOU
+
+1929.11.7 = {
+	monarch = {
+		name = "Ixazaluoh"
+		dynasty = "Kebos"
+		birth_date = 1908.9.13
+		adm = 4
+		dip = 3
+		mil = 6
+		female = yes
+	}
+}

@@ -1,0 +1,25 @@
+#223-Shilo
+owner = SHI
+controller = SHI
+add_core = SHI
+tribal_owner = ---
+culture = shilo
+religion = karamjan
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = gemstones
+
+is_city = yes
+
+center_of_trade = 1

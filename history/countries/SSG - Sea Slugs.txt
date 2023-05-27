@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = sea_slug
+religion = zamorak
+technology_group = kandarintechgroup
+capital = 263 #Witchaven
+national_focus = DIP
+
+2169.2.11 = {
+	monarch = {
+		name = "Medron"
+		dynasty = "Mahey'ish"
+		birth_date = 1.1.1
+		adm = 4
+		dip = 6
+		mil = 5
+	}
+}

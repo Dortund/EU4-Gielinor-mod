@@ -1,0 +1,42 @@
+
+# Used to determine if the country is strong enough to force 
+# out the rest of the estates for actions that would have them
+# removed.
+crown_stronger_than_estate = {
+	crown_land_share = $estate$
+	estate_loyalty = {
+		estate = $estate$
+		higher_than_influence = yes
+	}
+}
+
+has_any_estates = {
+	OR = {
+		has_estate = estate_brahmins
+		has_estate = estate_burghers
+		has_estate = estate_church
+		has_estate = estate_cossacks
+		has_estate = estate_dhimmi
+		has_estate = estate_jains
+		has_estate = estate_maratha
+		has_estate = estate_nobles
+		has_estate = estate_nomadic_tribes
+		has_estate = estate_rajput
+		has_estate = estate_vaisyas
+		
+		has_estate = estate_kel_blue_opal
+		has_estate = estate_kel_brown_engine
+		has_estate = estate_kel_green_gemstone
+		has_estate = estate_kel_purple_pewter
+		has_estate = estate_kel_red_axe
+		has_estate = estate_kel_silver_cog
+		has_estate = estate_kel_white_chisel
+		has_estate = estate_kel_yellow_fortune
+		
+		has_estate = estate_tzh_hur
+		has_estate = estate_tzh_ket
+		has_estate = estate_tzh_mej
+		has_estate = estate_tzh_xil
+		has_estate = estate_tzh_gaal
+	}
+}

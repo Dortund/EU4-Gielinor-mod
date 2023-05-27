@@ -1,0 +1,28 @@
+#14 - Varrock
+owner = MST
+controller = MST
+add_core = MST
+tribal_owner = ---
+culture = avarrockan
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 9
+base_production = 9
+base_manpower = 7
+
+fort_15th = yes
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 2

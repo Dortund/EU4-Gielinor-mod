@@ -1,0 +1,46 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = sea_orphan
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1124 #Hyu-Ji
+historical_rival = PUR
+
+1925.5.12 = {
+	monarch = {
+		name = "Changzhi"
+		dynasty = "Dong"
+		birth_date = 1876.2.23
+		death_date = 1961.3.12
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+}
+
+2168.13.3 = {
+	monarch = {
+		name = "Tubjub"
+		dynasty = "Hyu-Ji"
+		birth_date = 2145.3.17
+		death_date = 2180.12.11
+		culture = skull_culture
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+2180.12.11 = {
+	monarch = {
+		name = "Marcus"
+		dynasty = "Fine"
+		culture = north_asgarn
+		religion = saradomin
+		birth_date = 2147.12.11
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}

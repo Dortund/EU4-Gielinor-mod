@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = vampyre_kingdom
+government_rank = 1
+primary_culture = humanborn_vampyre
+add_accepted_culture = canifian
+add_accepted_culture = slepe
+religion = vampyric
+technology_group = morytaniantechgroup
+capital = 845 #Dessous
+national_focus = MIL
+
+458.2.2 = {
+	monarch = {
+		name = "Dessous"
+		dynasty = "Harvester of Blood"
+		birth_date = 1.10.23
+		adm = 0
+		dip = 4
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

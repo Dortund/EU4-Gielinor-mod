@@ -1,0 +1,19 @@
+#933-Modicum Mortem
+owner = LCT
+controller = LCT
+add_core = LCT
+tribal_owner = ---
+culture = molch
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 4
+
+trade_goods = naval_goods
+
+is_city = yes

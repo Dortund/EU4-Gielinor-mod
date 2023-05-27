@@ -1,0 +1,641 @@
+kharidian_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = ALK
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDS_religious_tolerance = {
+		icon = mission_alliances
+		required_missions = { KDS_misthalanian_relations }
+		position = 2
+		trigger = {
+			saradomin = 0
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = "KDS_saradominist_interest"
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+kharidian_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = ALK
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDS_misthalanian_relations = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = MST
+					reverse_has_opinion = {
+						who = MST
+						value = 100
+					}
+				}
+				is_rival = MST
+				NOT = { exists = MST }
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	
+	KDS_expand_our_trade_power = {
+		icon = mission_alliances
+		required_missions = { KDS_misthalanian_relations }
+		trigger = {
+			63 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+		}
+	}
+}
+
+kharidian_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = ALK
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDS_settle_al_kharid = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			OR = {
+				owns_core_province = 62
+				AND = {
+				treasury = 100
+				adm_power = 50
+				adm_tech = 6
+				62 = {
+					is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 62
+			}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 62
+					}
+				add_adm_power = 50
+				62 = {
+					change_trade_goods = manufactured_goods
+				}
+			}
+			else = {
+				add_treasury = -100
+				add_adm_power = -50
+				62 = {
+					add_siberian_construction = 400
+					change_trade_goods = manufactured_goods
+				}
+			}
+		}
+	}
+	
+	KDS_rusum_pass = {
+		icon = mission_alliances
+		required_missions = { KDS_settle_al_kharid }
+		trigger = {
+			AND = {
+				OR = {
+					has_idea = KDS_hold_the_pass
+					has_idea = ALK_toll_gate
+				}
+				OR = {
+					owns_core_province = 61
+					AND = {
+						treasury = 100
+						dip_power = 75
+						61 = {
+							is_empty = yes
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 61
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 61
+				}
+				add_dip_power = 25
+				61 = {
+					add_province_modifier = {
+						name = "KDS_toll_gate"
+						duration = 9125
+					}
+				}
+			}
+			else = {
+				add_treasury = -100
+				add_dip_power = -75
+				61 = {
+					add_siberian_construction = 400
+					add_province_modifier = {
+						name = "KDS_toll_gate"
+						duration = 9125
+					}
+					change_trade_goods = livestock_farm
+				}
+			}
+		}
+	}
+}
+
+kharidian_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = ALK
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDS_hets_land = {
+		icon = mission_alliances
+		required_missions = { }
+		trigger = {
+			OR = {
+				owns_core_province = 789
+				AND = {
+					has_personal_deity = het
+					treasury = 50
+					mil_power = 25
+					manpower_percentage = 0.25
+					789 = {
+						is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 789
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 789
+				}
+				789 = {
+					add_base_manpower = 2
+				}
+			}
+			else = {
+				add_treasury = -50
+				add_mil_power = -25
+				add_yearly_manpower = -2.5
+				789 = {
+					add_siberian_construction = 400
+					change_trade_goods = lesser_loot
+				}
+			}
+		}
+	}
+	
+	KDS_scimitar_manufacture = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { KDS_worthy_army KDS_hets_land KDS_settle_al_kharid }
+		trigger = {
+			62 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 6
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "KDS_scimitar_production"
+				duration = 3650
+			}
+			65 = { add_permanent_claim = ROOT }
+			1395 = { add_permanent_claim = ROOT }
+		}
+	}
+}
+
+kharidian_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = ALK
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDS_worthy_army = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			army_size = 8
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+	
+	KDS_professional_brothers = {
+		icon = mission_alliances
+		required_missions = { KDS_worthy_army }
+		trigger = {
+			army_professionalism = 0.1
+			land_morale = 3.5
+			}
+		effect = {
+			add_prestige = 10
+			add_mil_power = 50
+		}
+	}
+}
+
+####################################################
+# Al-Kharid
+####################################################
+
+alkharidian_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ALK
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ALK_encourage_saradomist_immigration = {
+		icon = mission_alliances
+		required_missions = { KDS_religious_tolerance KDS_expand_our_trade_power }
+		trigger = {
+			any_ally = {
+				trust = { who = ROOT value = 60 }
+				religion = saradomin
+			}
+			stability = 3
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { is_capital = yes }
+				}
+				change_religion = saradomin
+				add_base_tax = 2
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = "ALK_saradomist_integration"
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+	ALK_abbey_of_st_elspeth = {
+		icon = mission_alliances
+		required_missions = { ALK_encourage_saradomist_immigration }
+		trigger = {
+			63 = {
+				has_building = cathedral
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			saradomin = 1
+		}
+		effect = {
+			63 = {
+				change_province_name = "Citharede Abbey"
+				change_religion = saradomin
+				add_base_tax = 2
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = "ALK_citharede"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+alkharidian_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ALK
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ALK_pollnivneach_trade = {
+		icon = mission_alliances
+		required_missions = { KDS_expand_our_trade_power }
+		trigger = {
+			75 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			95 = { add_permanent_claim = ROOT }
+		}
+	}
+	
+	ALK_banks_of_the_salve = {
+		icon = mission_alliances
+		position = 6
+		required_missions = { ALK_pollnivneach_trade }
+		trigger = {
+			owns_core_province = 66
+			absolutism = 90
+			OR = {
+				owns_core_province = 67
+				AND = {
+					adm_power = 75
+					mil_power = 75
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 67
+					}
+				add_mil_power = 50
+			}
+			else = {
+				add_adm_power = -75
+				add_mil_power = -75
+				67 = {
+					add_siberian_construction = 400
+				}
+			}
+		}
+	}
+}
+
+alkharidian_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ALK
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ALK_kharidian_port = {
+		icon = mission_alliances
+		required_missions = { KDS_expand_our_trade_power KDS_rusum_pass }
+		trigger = {
+			62 = {
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			num_of_light_ship = 10
+		}
+		provinces_to_highlight = {
+			province_id = 62
+			}
+		effect = {
+			add_country_modifier = {
+				name = "ALK_merchant_fleet"
+				duration = 3650
+			}
+		}
+	}
+	ALK_menaphite_relations = {
+		icon = mission_alliances
+		required_missions = { ALK_kharidian_port }
+		trigger = {
+			total_development = 50
+			OR = {
+				owns_core_province = 100
+				100 = {
+					owner = {
+						alliance_with = ROOT
+					}
+				}
+				100 = {
+					owner = {
+						is_rival = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	
+	ALK_spies_of_al_kharid = {
+		icon = mission_alliances
+		required_missions = { ALK_menaphite_relations }
+		trigger = {
+			advisor = spymaster
+			any_rival_country = {
+				has_spy_network_from = {
+					who = ROOT
+					value = 75
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ALK_agenda_of_espionage"
+				duration = 3650
+			}
+		}
+	}
+}
+
+alkharidian_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ALK
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ALK_local_metal_source = {
+		icon = mission_alliances
+		required_missions = { KDS_rusum_pass KDS_scimitar_manufacture }
+		trigger = {
+			OR = {
+				army_size = 20
+				any_owned_province = { has_building = soldier_households }
+				any_owned_province = { has_building = impressment_offices }
+				any_owned_province = { has_building = conscription_center }
+				mil_tech = 12
+			}
+			OR = {
+				owns_core_province = 65
+				AND = {
+					treasury = 200
+					mil_power = 75
+					manpower_percentage = 0.2
+					65 = {
+						is_empty = yes
+					}
+				}
+			}
+			OR = {
+				owns_core_province = 1395
+				AND = {
+					treasury = 100
+					mil_power = 35
+					manpower_percentage = 0.1
+					1395 = {
+						is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 65
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 65
+				}
+				65 = {
+					add_base_production = 2
+				}
+			}
+			else = {
+				add_treasury = -200
+				add_mil_power = -75
+				add_yearly_manpower = -2
+				65 = {
+					add_siberian_construction = 500
+					change_trade_goods = basic_ores
+				}
+			}
+			if = {
+				limit = {
+					owns_core_province = 1395
+				}
+				65 = {
+					add_base_tax = 1
+				}
+			}
+			else = {
+				add_treasury = -100
+				add_mil_power = -35
+				add_yearly_manpower = -1
+				1395 = {
+					add_siberian_construction = 100
+				}
+			}
+		}
+	}
+}
+
+alkharidian_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ALK
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ALK_expand_the_training_grounds = {
+		icon = mission_alliances
+		required_missions = { KDS_scimitar_manufacture KDS_professional_brothers }
+		position = 3
+		trigger = {
+			OR = {
+				owns_core_province = 64
+				AND = {
+					treasury = 200
+					mil_power = 50
+					manpower_percentage = 0.2
+					64 = {
+						is_empty = yes
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 64
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 64
+					}
+				64 = {
+					add_base_manpower = 2
+					}
+				}
+			else = {
+				add_treasury = -200
+				add_mil_power = -50
+				add_yearly_manpower = -2
+				64 = {
+					add_siberian_construction = 400
+					change_trade_goods = lesser_loot
+				}
+			}
+		}
+	}
+}

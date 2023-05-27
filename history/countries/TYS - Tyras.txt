@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = kandarin_monarchy
+government_rank = 2
+primary_culture = ardignan
+religion = saradomin
+technology_group = kandarintechgroup
+capital = 266 #West Ardougne
+national_focus = ADM
+add_historical_friend = EVR
+add_historical_friend = TNN
+
+2136.2.8 = {
+	monarch = {
+		name = "Tyras"
+		dynasty = "Ardignas"
+		birth_date = 2121.6.13
+		death_date = 2172.9.20
+		adm = 1
+		dip = 3
+		mil = 5
+	}
+}

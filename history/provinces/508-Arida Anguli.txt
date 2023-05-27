@@ -1,0 +1,25 @@
+#508 - Arida Anguli
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = centralis
+religion = ralos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 1
+
+trade_goods = livestock_farm
+
+is_city = yes
+
+2000.1.1 = {
+	base_tax = 3
+	base_production = 3
+	base_manpower = 2
+}

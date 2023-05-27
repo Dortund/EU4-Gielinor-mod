@@ -1,0 +1,32 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = meiyer
+religion = saradomin
+technology_group = morytaniantechgroup
+capital = 128 #Burgh de Rott
+national_focus = DIP
+
+1927.1.6 = {
+	monarch = {
+		name = "Catalina"
+		dynasty = "Ryak"
+		birth_date = 1901.11.17
+		adm = 6
+		dip = 5
+		mil = 1
+		female = yes
+	}
+}
+
+2168.3.22 = {
+	monarch = {
+		name = "Elisabeta"
+		dynasty = "Ryak"
+		birth_date = 2143.9.18
+		adm = 2
+		dip = 6
+		mil = 3
+		female = yes
+	}
+}

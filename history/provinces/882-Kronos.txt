@@ -1,0 +1,27 @@
+#882-Kronos
+owner = KBS
+controller = KBS
+add_core = KBS
+tribal_owner = ---
+culture = kebos_culture
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = tropical_logs
+
+is_city = yes
+
+2153.1.5 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+	culture = hosidius
+	religion = saradomin
+}

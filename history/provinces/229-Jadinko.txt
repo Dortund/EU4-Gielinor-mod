@@ -1,0 +1,22 @@
+#229-Jadinko/Herblore Habitat
+owner = KZI
+controller = KZI
+add_core = KZI
+tribal_owner = ---
+culture = jadinko
+religion = karamjan
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+discovered_by = TMP
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 1
+
+trade_goods = herblore_supplies
+
+is_city = yes

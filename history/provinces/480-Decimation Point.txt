@@ -1,0 +1,18 @@
+#480 - Decimation Point
+tribal_owner = ---
+culture = skeleton
+religion = ranul
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = bones
+
+native_size = 10
+native_ferocity = 5
+native_hostileness = 5

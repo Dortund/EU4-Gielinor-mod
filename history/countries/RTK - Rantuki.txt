@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = taibwo
+religion = karamjan
+technology_group = karamjantechgroup
+capital = 220 #Graakh Grounds
+national_focus = DIP
+
+1924.3.7 = {
+	monarch = {
+		name = "Layleen"
+		dynasty = "Paramaya"
+		birth_date = 1891.11.9
+		adm = 2
+		dip = 5
+		mil = 3
+		female = yes
+	}
+}
+
+2157.3.15 = {
+	monarch = {
+		name = "Rimba"
+		dynasty = "Paramaya"
+		birth_date = 2085.4.17
+		adm = 2
+		dip = 5
+		mil = 3
+		female = yes
+	}
+}

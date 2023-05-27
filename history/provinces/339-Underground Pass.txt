@@ -1,0 +1,27 @@
+#339-Underground Pass
+
+tribal_owner = ---
+culture = hefin
+religion = seren
+
+discovered_by = dwarventechgroup
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+2165.11.1 = {
+	owner = IBN
+	controller = IBN
+	add_core = IBN
+	culture = soulless
+	religion = zamorak
+	fort_16th = yes
+}

@@ -1,0 +1,34 @@
+government = republic
+add_government_reform = plutocracy_reform
+government_rank = 1
+primary_culture = north_coaster
+religion = saradomin
+technology_group = centraltechgroup
+capital = 119 #Port Phasmatys
+national_focus = DIP
+historical_friend = LNC
+historical_friend = HRN
+
+1926.6.15 = {
+	monarch = {
+		name = "Colosen"
+		dynasty = "Shipwright"
+		birth_date = 1890.12.4
+		adm = 5
+		dip = 6
+		mil = 4
+	}
+}
+
+2035.5.17 = {
+	monarch = {
+		name = "Necrovarus"
+		dynasty = "Hanto"
+		birth_date = 2005.2.15
+		culture = ghost
+		adm = 1
+		dip = 1
+		mil = 5
+	}
+	change_primary_culture = ghost
+}

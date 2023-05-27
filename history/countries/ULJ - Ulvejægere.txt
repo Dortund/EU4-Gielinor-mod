@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = rellekkan
+religion = v
+secondary_religion = northern_pantheon
+technology_group = fremenniktechgroup
+capital = 1392 #
+
+1919.3.14 = {
+	monarch = {
+		name = "Siglah"
+		dynasty = "Patrull"
+		birth_date = 1873.7.27
+		adm = 2
+		dip = 5
+		mil = 0
+	}
+}

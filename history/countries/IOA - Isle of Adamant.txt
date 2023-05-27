@@ -1,0 +1,30 @@
+government = republic
+add_government_reform = free_city
+government_rank = 1
+primary_culture = shield_culture
+religion = byakko
+technology_group = wushankotechgroup
+capital = 1210 #Adamant Province
+
+1930.1.1 = {
+	monarch = {
+		name = "Jiye"
+		dynasty = "Pan"
+		birth_date = 1895.7.5
+		death_date = 1961.3.12
+		adm = 4
+		dip = 4
+		mil = 0
+	}
+}
+
+2160.1.1 = {
+	monarch = {
+		name = "Zairui"
+		dynasty = "Cui"
+		birth_date = 2132.4.15
+		adm = 5
+		dip = 6
+		mil = 0
+	}
+}

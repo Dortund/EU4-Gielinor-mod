@@ -1,0 +1,94 @@
+########################################
+# Events for Mage Arena
+########################################
+
+namespace = flavor_mga
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_mga.1
+	title = flavor_mga.1.t #Kolodion's Mage Arena
+	desc = flavor_mga.1.d #Deep in the Wilderness, a mage by the name of Kolodion has established a brutal arena full of mages representing different gods, fighting each other to the death. However, by the standards of the Wilderness, this is one of the safer, more regulated areas.
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		194 = { is_empty = yes }
+		NOT = { exists = MGA }
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		absolutism = 50
+		capital_scope = {
+			OR = {
+				region = asgarnia_region
+				region = misthalin_region
+				region = forinthry_region
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			195 = {
+				cede_province = MGA
+				add_core = MGA
+				change_religion = zamorak
+				change_culture = rogue
+				add_building = fort_16th
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				add_institution_embracement = {
+					which = exploration
+					value = 100
+				}
+			}
+			MGA = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					artillery = 0.3
+				}
+				define_ruler = {
+					name = "Kolodion"
+					dynasty = "Dag'eth"
+					adm = 3
+					dip = 4
+					mil = 5
+					age = 52
+					claim = 95
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mga.1.a #Let's join up with Kolodion!
+		switch_tag = MGA
+	}
+	option = {
+		name = flavor_mga.1.b #Let's stay out of it.
+		
+	}
+}

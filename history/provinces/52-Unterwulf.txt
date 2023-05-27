@@ -1,0 +1,40 @@
+#52-Unterwulf
+
+culture = taverlian
+religion = guthix
+tribal_owner = ---
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = manufactured_goods
+
+native_size = 10
+native_ferocity = 5
+native_hostileness = 5
+
+center_of_trade = 1
+
+1980.7.31 = {
+	owner = UWF
+	controller = UWF
+	add_core = UWF
+	culture = kelda
+	religion = guthix
+	base_tax = 2
+	base_production = 3
+	base_manpower = 2
+	fort_15th = yes
+}
+

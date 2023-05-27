@@ -1,0 +1,41 @@
+bhv_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BHV
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	BHV_brimhaven_dungeon_mission = {
+		icon = mission_african_gold
+		position = 1
+		required_missions = { }
+		trigger = {
+			owns_core_province = 872
+			absolutism = 50
+			OR = {
+				owns_core_province = 871
+				AND = {
+					871 = { is_empty = yes }
+					dip_power = 100
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 871
+				}
+				add_years_of_income = 0.25
+			}
+			else = {
+				871 = {
+					add_core = ROOT
+					cede_province = ROOT					
+				}
+			}
+		}
+	}
+}

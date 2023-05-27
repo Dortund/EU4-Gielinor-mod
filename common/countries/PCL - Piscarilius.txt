@@ -1,0 +1,49 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 136 168 199 }
+
+revolutionary_colors = { 3 4 5 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Alry #0" = 5
+	"Bast #0" = 5
+	"Devan #0" = 5
+	"Frankie #0" = 5
+	"Ish #0" = 5
+	"Magoro #0" = 5
+	"Nicholas #0" = 5
+	"Rakkar #0" = 5
+	"Piliar #0" = 5
+	"Robert #0" = 5
+	"Tynan #0" = 5
+	"Veos #0" = 5
+	
+	"Kenelme #0" = -5
+	"Leenz #0" = -5
+	"Shauna #0" = -5
+	
+	"Hosa #0" = 1
+	"Martin #0" = 1
+	"Lan #0" = 1
+	"Reginald #0" = 1
+	"Robert #0" = 1
+	"Roy #0" = 1
+	"Tomas #0" = 1
+	
+	"Alyssa #0" = -1
+	"Elise #0" = -1
+	"Rose #0" = -1
+}

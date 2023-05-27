@@ -1,0 +1,30 @@
+#939 - Gewítan
+owner = DYN
+controller = DYN
+add_core = DYN
+tribal_owner = ---
+culture = draynor
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+2083.1.28 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+}

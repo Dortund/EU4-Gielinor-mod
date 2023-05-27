@@ -1,0 +1,18 @@
+#482 - Outlaw Overlook
+tribal_owner = ---
+culture = aldarin
+religion = ranul
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 2
+
+trade_goods = magic_supplies
+
+native_size = 10
+native_ferocity = 5
+native_hostileness = 5

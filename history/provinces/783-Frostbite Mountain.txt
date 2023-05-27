@@ -1,0 +1,26 @@
+#783-Frostbite Mountain
+owner = WSS
+controller = WSS
+add_core = WSS
+tribal_owner = ---
+culture = icetroll
+religion = bandos
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 2
+
+trade_goods = livestock_farm
+
+is_city = yes
+
+native_size = 5
+native_ferocity = 25
+native_hostileness = 20

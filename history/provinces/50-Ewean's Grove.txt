@@ -1,0 +1,30 @@
+#50-Ewean's Grove
+owner = TAV
+controller = TAV
+add_core = TAV
+tribal_owner = ---
+culture = taverlian
+religion = guthix
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+}

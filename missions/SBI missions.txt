@@ -1,0 +1,186 @@
+sbi_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = SBI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	SBI_faith_of_scabaras = {
+		icon = mission_alliances
+		position = 2
+		required_missions = {  }
+		trigger = {
+			religion = menaphite
+			has_personal_deity = scabaras
+			OR = {
+				temple = 1
+				cathedral = 1
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = SBI_by_scabaras_hand
+				duration = 7300
+			}
+		}
+	}
+	
+	SBI_scabarite_science = {
+		icon = mission_alliances
+		position = 3
+		required_missions = { SBI_faith_of_scabaras }
+		trigger = {
+			innovativeness = 10
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+}
+
+sbi_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = SBI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	SBI_tunnels_of_ullek = {
+		icon = mission_alliances
+		position = 3
+		required_missions = { SBI_faith_of_scabaras SBI_scabarite_mage_training }
+		trigger = {
+			owns_core_province = 92
+			OR = {
+				owns_core_province = 93
+				AND = {
+					93 = { is_empty = yes }
+					adm_power = 100
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 93
+				}
+				add_adm_power = 25
+			}
+			else = {
+				93 = {
+					add_core = ROOT
+					cede_province = ROOT
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+				}
+				add_adm_power = -100
+			}
+		}
+	}
+	
+	SBI_development_of_ullek = {
+		icon = mission_alliances
+		position = 4
+		required_missions = { SBI_tunnels_of_ullek }
+		trigger = {
+			93 = {
+				owned_by = ROOT
+				is_core = ROOT
+			 	development = 12
+			}
+		}
+		effect = {
+			93 = {
+				add_province_modifier = { 
+					name = SBI_reconstruction_of_ullek
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+	SBI_swamps_of_ullek = {
+		icon = mission_alliances
+		position = 5
+		required_missions = { SBI_development_of_ullek }
+		trigger = {
+			owns_core_province = 92
+			OR = {
+				owns_core_province = 91
+				AND = {
+					93 = { is_empty = yes }
+					adm_power = 150
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 91
+				}
+				add_adm_power = 25
+			}
+			else = {
+				91 = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+				add_adm_power = -150
+			}
+		}
+	}
+}
+
+sbi_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = SBI
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	SBI_scarab_riders = {
+		icon = mission_alliances
+		position = 1
+		required_missions = {  }
+		trigger = {
+			OR = {
+				barracks = 1
+				training_fields = 1
+			}
+			num_of_cavalry = 4
+			NOT = { is_in_deficit = yes }
+		}
+		effect = {
+			add_mil_power = 25
+			add_army_professionalism = 0.05
+		}
+	}
+	
+	SBI_scabarite_mage_training = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { SBI_scarab_riders }
+		trigger = {
+			mil_tech = 12
+		 	army_professionalism = 0.5
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+}

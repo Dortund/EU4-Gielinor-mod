@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = iorwerth
+religion = dark_lord
+technology_group = elventechgroup
+capital = 538 #Temple of Light
+national_focus = MIL

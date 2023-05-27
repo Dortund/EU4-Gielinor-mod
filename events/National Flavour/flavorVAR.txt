@@ -1,0 +1,140 @@
+########################################
+# Events for Varlamore
+########################################
+
+namespace = flavor_var
+normal_or_historical_nations = yes
+
+# The Fall of Quaesitum
+country_event = {
+	id = flavor_var.1
+	title = flavor_var.1.t
+	desc = flavor_var.1.d
+	picture = VARLAMORE_MAP_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = VAR
+		is_year = 1900
+		owns_core_province = 497 #Quaesitum
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = flavor_var.1.a
+		ai_chance = { factor = 90 }
+		add_yearly_manpower = -4
+		490 = {
+			add_core = VAR
+			cede_province = VAR
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			change_culture = fortis
+			change_religion = ranul
+		}
+		497 = {
+			add_base_tax = -2
+			add_base_production = -3
+			add_base_manpower = -1
+			add_province_modifier = {
+				name = "VAR_dead_citadel"
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_var.1.b
+		ai_chance = { factor = 10 }
+		490 = {
+			add_core = VAR
+			cede_province = VAR
+			change_culture = fortis
+			change_religion = ranul
+		}
+		497 = {
+			add_base_tax = -2
+			add_base_production = -3
+			add_base_manpower = -1
+			add_province_modifier = {
+				name = "VAR_dead_citadel"
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_var.2
+	title = flavor_var.2.t # The Rebel Rift
+	desc = flavor_var.2.d # Treachery! Kourend has used their spy networks to pull together loose rebel groups into something more coherent.
+	picture = WARBANDS_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_var.2.a # We must handle this Rebel Rift.
+	}
+}
+
+country_event = {
+	id = flavor_var.3
+	title = flavor_var.3.t # Tales of the Goddess of Light
+	desc = {
+		trigger = {
+			OR = {
+				religion = ralos
+				religion = ranul
+			}
+		}
+		desc = flavor_var.3.da #Pointy-eared humanoids from the east are curious about our faith in Ralos. They are questioning a possible connection between Ralos' light and the light of their Goddess Seren. What should we tell them?
+	}
+	desc = {
+		trigger = {
+			NOT = { religion = ralos }
+			NOT = { religion = ranul }
+		}
+		desc = flavor_var.3.db #Pointy-eared humanoids from the east are curious about the abandoned god Ralos. They are questioning a possible connection between Ralos' light and the light of their Goddess Seren. What should we tell them?
+	}
+	picture = TIRANNWN_PRIFDDINAS_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = VAR_elven_contact
+	}
+	
+	option = {
+		name = flavor_var.3.a # Imply that the Gods are one and the same.
+		custom_tooltip = var_lying_about_seren.tt
+		random_list = {
+			20 = {
+				set_global_flag = seren_is_ralos_flag
+			}
+			80 = {
+				set_global_flag = seren_ralos_mistrust_flag
+			}
+		}
+	}
+	option = {
+		name = flavor_var.3.b # Suggest there may be some ideological link, but nothing more.
+		set_global_flag = seren_ralos_ideology_flag
+	}
+	option = {
+		name = flavor_var.3.c # Those fools wouldn't know a true god if it smote them.
+		set_global_flag = seren_no_ralos_tie_flag
+	}
+}

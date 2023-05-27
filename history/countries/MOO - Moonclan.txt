@@ -1,0 +1,34 @@
+government = republic
+add_government_reform = magiocracy
+government_rank = 2
+primary_culture = moonclan
+religion = v
+secondary_religion = guthix
+technology_group = fremenniktechgroup
+capital = 393 #Moonclan Town
+
+1929.6.15 = {
+	monarch = {
+		name = "Solaria"
+		dynasty = "Luna"
+		birth_date = 1906.2.12
+		adm = 6
+		dip = 2
+		mil = 3
+		female = yes
+	}
+}
+
+
+
+2141.12.3 = {
+	monarch = {
+		name = "Mechtatel"
+		dynasty = "Astraldottir"
+		birth_date = 2103.7.24
+		adm = 5
+		dip = 4
+		mil = 5
+		female = yes
+	}
+}

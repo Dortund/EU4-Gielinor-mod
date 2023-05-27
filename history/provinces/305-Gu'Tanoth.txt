@@ -1,0 +1,35 @@
+#305-Gu'Tanoth
+owner = GUT
+controller = GUT
+add_core = GUT
+tribal_owner = ---
+culture = ogre
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 4
+base_manpower = 6
+
+fort_15th = yes 
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+center_of_trade = 1
+
+add_province_triggered_modifier = religious_center
+
+2159.3.12 = {
+	owner = FEL
+	controller = FEL
+	add_core = FEL
+	remove_core = GUT
+}

@@ -1,0 +1,28 @@
+#1109 - Cyclosis
+owner = CYC
+controller = CYC
+add_core = CYC
+tribal_owner = ---
+culture = cyclops
+religion = birman
+
+discovered_by = kharidtechgroup
+discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
+discovered_by = monkeytechgroup
+discovered_by = MSH
+discovered_by = PPH
+
+hre = yes
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+trade_goods = manufactured_goods
+
+fort_15th = yes
+
+is_city = yes
+
+add_province_triggered_modifier = religious_center

@@ -1,0 +1,19 @@
+﻿l_english:
+ CB_ALLOWED_po_become_subject_house:0 "Become House Subject"
+ PEACE_po_become_subject_house:0 "Become House Subject"
+ po_become_subject_house_desc:0 "§Y[From.TAG.GetName]§! will become subject to [Root.TAG.GetName] once more."
+ cb_restore_kourend_house:0 "Restore Independent House"
+ cb_restore_kourend_house_desc:0 "They have broken free of their rightful place!"
+ DISLOYAL_HOUSE_WAR_NAME:0 "War of Kourendite Cohesion"
+ goal_take_capital_disloyal_house:0 "Control §Y[From.Capital.GetName]§!"
+ 
+ cb_reunite_kourend:0 "Reunite Kourend"
+ cb_reunite_kourend_desc:0 "We must reunite Great Kourend under a single rule!"
+ FIVE_HOUSES_WAR_NAME:0 "War of Five Houses"
+ goal_reunite_kourend:0 "Show Superiority"
+ 
+ cb_unify_asgarnia:0 "Unify Asgarnia"
+ cb_unify_asgarnia_desc:0 "The 22 tribes of Asgarnia must be united under one banner."
+ UNIFY_ASGARNIA_WAR_NAME:0 "War of Asgarnian Unification"
+ goal_unify_asgarnia:0 "Show Superiority"
+ 

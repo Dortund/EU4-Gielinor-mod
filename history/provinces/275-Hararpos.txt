@@ -1,0 +1,39 @@
+#275 - Hararpos
+owner = SGK
+controller = SGK
+add_core = SGK
+tribal_owner = ---
+culture = saragorgok
+religion = bandos
+
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = advanced_logs
+
+is_city = yes
+
+1983.7.23 = {
+	owner = GNO
+	controller = GNO
+	add_core = GNO
+	culture = rivertroll
+	base_manpower = 1
+}
+
+2149.11.21 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+}

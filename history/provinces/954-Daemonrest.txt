@@ -1,0 +1,14 @@
+#954-Daemonrest
+tribal_owner = ---
+culture = mermaid
+religion = godless
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fishing_spot
+
+is_city = yes

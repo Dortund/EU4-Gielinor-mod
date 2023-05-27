@@ -1,0 +1,25 @@
+#416-Steigend
+owner = LOV
+controller = LOV
+add_core = LOV
+tribal_owner = ---
+culture = lovakengj
+religion = guthix
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

@@ -1,0 +1,243 @@
+########################################
+# Events for Ape Atoll
+########################################
+
+namespace = flavor_ape
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_ape.1
+	title = flavor_ape.1.t #The Fate of the Bo Isles
+	desc = flavor_ape.1.d #Having successfully united Ape Atoll, a question remains about the outlying Bo Isles, which are poor in value and vulnerable to invasion. There are calls in Marim to bring the ape population from there to our mainland in order to better-pool our resources.
+	picture = VOID_PEST_CONTROL_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_ape.1.a #The Bo Isles will remain under our control, no matter the cost!
+		add_adm_power = -50
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = flavor_ape.1.b #We should centralise our population on Ape Atoll.
+		if = {
+			limit = {
+				owns = 238
+			}
+			238 = {
+				remove_core = ROOT
+				cede_province = ---
+			}
+			237 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		if = {
+			limit = {
+				owns = 978
+			}
+			978 = {
+				remove_core = ROOT
+				cede_province = ---
+			}
+			237 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		if = {
+			limit = {
+				owns = 239
+			}
+			239 = {
+				remove_core = ROOT
+				cede_province = ---
+			}
+			237 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		ape_atoll_jungle_area = {
+			limit = {
+				owned_by = ROOT
+			}
+			add_province_modifier = { 
+				name = APE_bo_isles_incomers
+				duration = 8125 
+			}
+		}
+		marim_area = {
+			limit = {
+				owned_by = ROOT
+			}
+			add_province_modifier = { 
+				name = APE_bo_isles_incomers
+				duration = 8125 
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = flavor_ape.2
+	title = flavor_ape.2.t #Foreign Monkeys Arrive
+	desc = flavor_ape.2.d #Three wise monkeys have arrived in Ape Atoll. Their origins are unclear, but they have pledged their services to us.
+	picture = NEW_APEMEKEN_DESERT_MONKEYS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_ape.2.a #We could find a use for them.
+		define_advisor = {
+			type = theologian
+			skill = 2
+			culture = desert_monkey
+			cost_multiplier = 0.25
+			religion = menaphite
+		}
+		set_country_flag = APE_desert_monkeys_arrive
+	}
+}
+
+country_event = {
+	id = flavor_ape.3
+	title = flavor_ape.3.t #Monkeys in the Desert?
+	desc = {
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = kharidian_desert_region
+				}
+				amount = 5
+			}
+			has_country_flag = APE_desert_monkeys_arrive
+		}
+		desc = flavor_ape.3.da #Arriving on the shores of the Kharidian Desert, the last of the desert monkeys declared that we should re-establish the presence of the desert monkeys here.
+	}
+	desc = {
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = kharidian_desert_region
+				}
+				amount = 5
+			}
+			NOT = { has_country_flag = APE_desert_monkeys_arrive }
+		}
+		desc = flavor_ape.3.db #Our conquests in Kharid have left many humans in shock and confusion - but some are overjoyed at the return of monkeys to a land in dire need of them. Our translators tell us they want to see a permanent colony of monkeys in Kharid following the old desert monkey ways.
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				calc_true_if = {
+					all_owned_province = {
+						region = kharidian_desert_region
+					}
+					amount = 5
+				}
+			}
+			has_country_flag = APE_desert_monkeys_arrive
+		}
+		desc = flavor_ape.3.dc #A strange monkey with shockingly little knowledge of day-to-day living in Ape Atoll has requested we establish a colony in the Kharidian Desert. They promise there is great wealth to be found - and choc-ices.
+	}
+	
+	picture = VOID_PEST_CONTROL_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = APE_desert_colony_potential
+		set_country_flag = APE_desert_monkeys_arrive
+	}
+	
+	option = {
+		name = flavor_ape.3.a #Perhaps we should consider it.
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = flavor_ape.4
+	title = flavor_ape.4.t #The Desert Monkey Colony of New Apmeken
+	desc = flavor_ape.4.d #Nestled between the camel's humps in the central Kharidian Desert lies a new monkey colony. However, this colony seeks to honour the ways of desert monkeys past and will promote the respective culture and faith accordingly.
+	picture = NEW_APEMEKEN_DESERT_MONKEYS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			70 = {
+				add_core = NWA
+				cede_province = NWA
+				change_culture = desert_monkey
+				change_religion = menaphite
+				add_institution_embracement = {
+					which = reconstruction
+					value = 100
+				}
+				add_institution_embracement = {
+					which = architecture
+					value = 100
+				}
+				add_institution_embracement = {
+					which = runecrafting
+					value = 100
+				}
+				add_institution_embracement = {
+					which = statehood
+					value = 100
+				}
+				change_trade_goods = gemstones
+			}
+			NWA = {
+				add_historical_friend = APE
+			}
+			add_historical_friend = NWA
+			create_vassal = NWA
+		}
+	}
+	
+	option = {
+		name = flavor_ape.4.a #Let's join in with this colony!
+		add_prestige = 25
+		switch_tag = NWA
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_ape.4.b #They better bring us lots of chimp ices!
+		add_prestige = 25
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

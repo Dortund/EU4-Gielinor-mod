@@ -1,0 +1,250 @@
+﻿l_english:
+ 
+ #Misthalin
+ 
+ great_project_wizards_tower_title:0 "Wizards' Tower"
+ great_project_wizards_tower:0 "Wizards' Tower"
+ great_project_great_project_wizards_tower:0 "Wizards' Tower"
+ 
+ great_project_paterdomus_title:0 "Paterdomus"
+ great_project_paterdomus:0 "Paterdomus"
+ great_project_great_project_paterdomus:0 "Paterdomus"
+ 
+ great_project_temple_at_senntisten_title:0 "Temple at Senntisten"
+ great_project_temple_at_senntisten:0 "Temple at Senntisten"
+ great_project_great_project_temple_at_senntisten:0 "Temple at Senntisten"
+ 
+ #Asgarnia
+ 
+ great_project_entrana_cathedral_title:0 "Entrana Cathedral"
+ great_project_entrana_cathedral:0 "Entrana Cathedral"
+ great_project_great_project_entrana_cathedral:0 "Entrana Cathedral"
+ province_is_or_accepts_saradomin_tt:0 "Province and country must be of the §YSaradominist§! faith."
+ 
+ great_project_falador_castle_title:0 "Falador Castle"
+ great_project_falador_castle:0 "Falador Castle"
+ great_project_great_project_falador_castle:0 "Falador Castle"
+ 
+ great_project_taverley_stone_circle_title:0 "Taverley Stone Circle"
+ great_project_taverley_stone_circle:0 "Taverley Stone Circle"
+ great_project_great_project_taverley_stone_circle:0 "Taverley Stone Circle"
+ 
+ #Kharid
+ 
+ great_project_duel_arena_title:0 "Emir's Arena"
+ great_project_duel_arena:0 "Emir's Arena"
+ great_project_great_project_duel_arena:0 "Emir's Arena"
+ 
+ great_project_jalkabir_title:0 "Jalkabir"
+ great_project_jalkabir:0 "Jalkabir"
+ great_project_great_project_jalkabir:0 "Jalkabir"
+ 
+ great_project_jaltevas_title:0 "Jaltevas"
+ great_project_jaltevas:0 "Jaltevas"
+ great_project_great_project_jaltevas:0 "Jaltevas"
+ 
+ great_project_mastaba_of_senliten_title:0 "Mastaba of Senliten"
+ great_project_mastaba_of_senliten:0 "Mastaba of Senliten"
+ great_project_great_project_mastaba_of_senliten:0 "Mastaba of Senliten"
+ 
+ great_project_ullek_title:0 "Ullek"
+ great_project_ullek:0 "Ullek"
+ great_project_great_project_ullek:0 "Ullek"
+ 
+ #Morytania
+ 
+ great_project_theatre_of_blood_title:0 "Theatre of Blood"
+ great_project_theatre_of_blood:0 "Theatre of Blood"
+ great_project_great_project_theatre_of_blood:0 "Theatre of Blood"
+ 
+ great_project_viggoras_folly_title:0 "Viggora's Folly"
+ great_project_viggoras_folly:0 "Viggora's Folly"
+ great_project_great_project_viggoras_folly:0 "Viggora's Folly"
+ 
+ #Forinthry
+ 
+ great_project_daemonheim_title:0 "Daemonheim Keep"
+ great_project_daemonheim:0 "Daemonheim Keep"
+ great_project_great_project_daemonheim:0 "Daemonheim Keep"
+ 
+ great_project_dragonkin_laboratory_title:0 "Dragonkin Laboratory"
+ great_project_dragonkin_laboratory:0 "Dragonkin Laboratory"
+ great_project_great_project_dragonkin_laboratory:0 "Dragonkin Laboratory"
+ 
+ great_project_sword_of_edicts_title:0 "Sword of Edicts"
+ great_project_sword_of_edicts:0 "Sword of Edicts"
+ great_project_great_project_sword_of_edicts:0 "Sword of Edicts"
+ 
+ #Outer Isles - No monuments
+ 
+ #Karamja
+ 
+ great_project_cairn_isle_title:0 "Cairn Isle"
+ great_project_cairn_isle:0 "Cairn Isle"
+ great_project_great_project_cairn_isle:0 "Cairn Isle"
+ 
+ great_project_elder_kiln_title:0 "Elder Kiln"
+ great_project_elder_kiln:0 "Elder Kiln"
+ great_project_great_project_elder_kiln:0 "Elder Kiln"
+ 
+ #Southern Isles
+ 
+ great_project_soul_obelisk_title:0 "Soul Obelisk"
+ great_project_soul_obelisk:0 "Soul Obelisk"
+ great_project_great_project_soul_obelisk:0 "Soul Obelisk"
+ 
+ great_project_marim_temple_title:0 "Temple of Marimbo"
+ great_project_marim_temple:0 "Temple of Marimbo"
+ great_project_great_project_marim_temple:0 "Temple of Marimbo"
+ 
+ #Kandarin
+ 
+ great_project_castle_wars_title:0 "Castle Wars"
+ great_project_castle_wars:0 "Castle Wars"
+ great_project_great_project_castle_wars:0 "Castle Wars"
+ 
+ great_project_grand_tree_title:0 "Grand Tree"
+ great_project_grand_tree:0 "Grand Tree"
+ great_project_great_project_grand_tree:0 "Grand Tree"
+ 
+ great_project_plain_of_mud_temple_title:0 "Plain of Mud Temple"
+ great_project_plain_of_mud_temple:0 "Plain of Mud Temple"
+ great_project_great_project_plain_of_mud_temple:0 "Plain of Mud Temple"
+ 
+ great_project_temple_of_ikov_title:0 "Temple of Ikov"
+ great_project_temple_of_ikov:0 "Temple of Ikov"
+ great_project_great_project_temple_of_ikov:0 "Temple of Ikov"
+ 
+ great_project_wizards_guild_title:0 "Wizards' Guild"
+ great_project_wizards_guild:0 "Wizards' Guild"
+ great_project_great_project_wizards_guild:0 "Wizards' Guild"
+ 
+ #Feldip Hills
+ 
+ great_project_myths_guild_title:0 "Myths' Guild"
+ great_project_myths_guild:0 "Myths' Guild"
+ great_project_great_project_myths_guild:0 "Myths' Guild"
+ 
+ great_project_ooglog_spa_title:0 "Oo'glog Spa"
+ great_project_ooglog_spa:0 "Oo'glog Spa"
+ great_project_great_project_ooglog_spa:0 "Oo'glog Spa"
+ 
+ #Tirannwn
+ 
+ great_project_temple_of_light_title:0 "Temple of Light"
+ great_project_temple_of_light:0 "Temple of Light"
+ great_project_great_project_temple_of_light:0 "Temple of Light"
+ 
+ great_project_tower_of_voices_title:0 "Tower of Voices"
+ great_project_tower_of_voices:0 "Tower of Voices"
+ great_project_great_project_tower_of_voices:0 "Tower of Voices"
+ 
+ #Troll Country
+ 
+ great_project_giant_dwarf_title:0 "Giant Dwarf"
+ great_project_giant_dwarf:0 "Giant Dwarf"
+ great_project_great_project_giant_dwarf:0 "Giant Dwarf"
+ 
+ great_project_temple_of_lost_ancients_title:0 "Temple of the Lost Ancients"
+ great_project_temple_of_lost_ancients:0 "Temple of the Lost Ancients"
+ great_project_great_project_temple_of_lost_ancients:0 "Temple of the Lost Ancients"
+ 
+ #Fremennik - No monuments
+ 
+ #Acheron
+ 
+ great_project_forge_of_giants_title:0 "Forge of Giants"
+ great_project_forge_of_giants:0 "Forge of Giants"
+ great_project_great_project_forge_of_giants:0 "Forge of Giants"
+ 
+ great_project_imcandoria_depths_title:0 "Imcandoria Depths"
+ great_project_imcandoria_depths:0 "Imcandoria Depths"
+ great_project_great_project_imcandoria_depths:0 "Imcandoria Depths"
+ 
+ great_project_palingrad_foundry_title:0 "Palingrad Foundry"
+ great_project_palingrad_foundry:0 "Palingrad Foundry"
+ great_project_great_project_palingrad_foundry:0 "Palingrad Foundry"
+ 
+ #Kourend
+ 
+ great_project_arceuus_library_title:0 "Arceuus Library"
+ great_project_arceuus_library:0 "Arceuus Library"
+ great_project_great_project_arceuus_library:0 "Arceuus Library"
+ 
+ great_project_dark_altar_title:0 "Dark Altar"
+ great_project_dark_altar:0 "Dark Altar"
+ great_project_great_project_dark_altar:0 "Dark Altar"
+ 
+ great_project_doors_of_dinh_title:0 "Doors of Dinh"
+ great_project_doors_of_dinh:0 "Doors of Dinh"
+ great_project_great_project_doors_of_dinh:0 "Doors of Dinh"
+ 
+ #Kebos
+ 
+ great_project_chambers_of_xeric_title:0 "Chambers of Xeric"
+ great_project_chambers_of_xeric:0 "Chambers of Xeric"
+ great_project_great_project_chambers_of_xeric:0 "Chambers of Xeric"
+ 
+ #Varlamore
+ 
+ great_project_battle_colosseum_title:0 "Battle Colosseum"
+ great_project_battle_colosseum:0 "Battle Colosseum"
+ great_project_great_project_battle_colosseum:0 "Battle Colosseum"
+ 
+ great_project_college_of_bards_title:0 "College of Bards"
+ great_project_college_of_bards:0 "College of Bards"
+ great_project_great_project_college_of_bards:0 "College of Bards"
+ 
+ #Arc
+ 
+ great_project_tuai_leit_library_title:0 "Tuai Leit Library"
+ great_project_tuai_leit_library:0 "Tuai Leit Library"
+ great_project_great_project_tuai_leit_library:0 "Tuai Leit Library"
+ 
+ great_project_temple_of_aminishi_title:0 "Temple of Aminishi"
+ great_project_temple_of_aminishi:0 "Temple of Aminishi"
+ great_project_great_project_temple_of_aminishi:0 "Temple of Aminishi"
+ 
+ #Skull - No monuments
+ 
+ #Hook - No momuments
+ 
+ #Scythe
+ 
+ great_project_genbus_lair_title:0 "Genbu's Lair"
+ great_project_genbus_lair:0 "Genbu's Lair"
+ great_project_great_project_genbus_lair:0 "Genbu's Lair"
+ 
+ #Bowl
+ 
+ great_project_falling_blossom_title:0 "Falling Blossom Gardens"
+ great_project_falling_blossom:0 "Falling Blossom Gardens"
+ great_project_great_project_falling_blossom:0 "Falling Blossom Gardens"
+ 
+ #Pincers
+ 
+ great_project_halls_of_reckoning_title:0 "Halls of Reckoning"
+ great_project_halls_of_reckoning:0 "Halls of Reckoning"
+ great_project_great_project_halls_of_reckoning:0 "Halls of Reckoning"
+ 
+ great_project_suzakus_perch_title:0 "Suzaku's Perch"
+ great_project_suzakus_perch:0 "Suzaku's Perch"
+ great_project_great_project_suzakus_perch:0 "Suzaku's Perch"
+ 
+ #Loop
+ 
+ great_project_byakkos_lair_title:0 "Byakko's Lair"
+ great_project_byakkos_lair:0 "Byakko's Lair"
+ great_project_great_project_byakkos_lair:0 "Byakko's Lair"
+ 
+ #Shield
+ 
+ great_project_black_stone_fortress_title:0 "Black Stone Fortress"
+ great_project_black_stone_fortress:0 "Black Stone Fortress"
+ great_project_great_project_black_stone_fortress:0 "Black Stone Fortress"
+ 
+ great_project_kami_shima_title:0 "Kami-Shima Nexus"
+ great_project_kami_shima:0 "Kami-Shima Nexus"
+ great_project_great_project_kami_shima:0 "Kami-Shima Nexus"
+ 
+ 

@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = catherbian
+religion = saradomin
+technology_group = kandarintechgroup
+capital = 247 #Catherby
+historical_friend = SEE
+
+1911.4.10 = {
+	monarch = {
+		name = "Clarisse"
+		dynasty = "Fisher"
+		birth_date = 1887.4.10
+		adm = 5
+		dip = 5
+		mil = 0
+		female = yes
+	}
+}

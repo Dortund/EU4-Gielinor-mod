@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = shield_culture
+add_accepted_culture = siren
+religion = byakko
+technology_group = wushankotechgroup
+capital = 1218 #Tavi
+
+1898.11.13 = {
+	monarch = {
+		name = "Gaoxu"
+		dynasty = "Tavi"
+		birth_date = 1875.2.23
+		death_date = 1944.2.18
+		adm = 6
+		dip = 0
+		mil = 1
+	}
+}
+
+2163.3.11 = {
+	monarch = {
+		name = "Haruko"
+		dynasty = "Vynal"
+		birth_date = 2132.7.5
+		death_date = 2172.11.30
+		adm = 6
+		dip = 4
+		mil = 2
+		female = yes
+	}
+}

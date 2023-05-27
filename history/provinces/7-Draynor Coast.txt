@@ -1,0 +1,34 @@
+#7 - Draynor Village
+owner = DYN
+controller = DYN
+add_core = DYN
+tribal_owner = ---
+culture = draynor
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 5
+base_production = 5
+base_manpower = 4
+
+fort_15th = yes
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 1
+
+2083.1.28 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+}

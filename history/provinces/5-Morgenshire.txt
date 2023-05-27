@@ -1,0 +1,32 @@
+#Morgenshire (Lumbridge Woods/Lumbridge Crater)
+owner = NGU
+controller = NGU
+add_core = NGU
+tribal_owner = ---
+culture = narogoshuun
+religion = bandos
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+trade_goods = advanced_logs
+
+is_city = yes
+
+1937.1.4 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+	remove_core = NGU
+	culture = lummer
+	religion = saradomin
+}

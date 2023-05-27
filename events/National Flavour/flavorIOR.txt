@@ -1,0 +1,519 @@
+########################################
+# Events for Iorwerth
+########################################
+
+namespace = flavor_ior
+normal_or_historical_nations = yes
+
+# Temple of Light sealed!
+country_event = {
+	id = flavor_ior.1
+	title = flavor_ior.1.t
+	desc = flavor_ior.1.d #Those fools in the Elven Resistance have sealed the Temple of Light! It would be extremely difficult to assault it directly at this point. Perhaps we can try later?
+	picture = TIRANNWN_TEMPLE_LIGHT_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_ior.1.a #We will break through eventually.
+		add_government_power = {
+			mechanic_type = elven_desperation_mechanic
+			power_type = elven_desperation_power_1
+			value = 10
+		}
+	}
+}
+
+# The Reversion of Prifddinas
+country_event = {
+	id = flavor_ior.2
+	title = flavor_ior.2.t
+	desc = flavor_ior.2.d #It is a dark day. The members of the Elven Resistance have successfully reverted our fair city of Prifddinas to a mere seed. Until we find the means to restore it, we are significantly weakened.
+	picture = TIRANNWN_PRIFDDINAS_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_ior.2.a #We will find a way.
+		add_government_power = {
+			mechanic_type = elven_desperation_mechanic
+			power_type = elven_desperation_power_1
+			value = 10
+		}
+	}
+}
+
+# Clan Elders Freed!
+country_event = {
+	id = flavor_ior.3
+	title = flavor_ior.3.t
+	desc = flavor_ior.3.d #The mindless so-called resistance rabble have freed their oh-so-precious clan elders. The elders do, admittedly, hold a lot of power so we need to crush the resistance before they can do anything worse.
+	picture = TIRANNWN_PRIFDDINAS_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_ior.3.a #The resistance shall be crushed!
+		add_government_power = {
+			mechanic_type = elven_desperation_mechanic
+			power_type = elven_desperation_power_1
+			value = 10
+		}
+	}
+}
+
+# Whispers of the Dark Lord
+country_event = {
+	id = flavor_ior.4
+	title = flavor_ior.4.t
+	desc = flavor_ior.4.d #A voice called $MONARCH$ to war, and now they have received just that. This voice resonates much like the shards of dear departed Seren, yet has a strength to it not seen since before her shattering. It is clear we must follow this remaining voice of Seren and see where it leads us.
+	picture = DARK_LORD_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IOR
+		prifddinas_area = {
+			owned_by = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_ior.4.a #We must obey our God!
+		enable_religion = dark_lord
+		change_religion = dark_lord
+		prifddinas_area = {
+			change_religion = dark_lord
+		}
+		add_country_modifier = {
+			name = "IOR_zeal_of_the_dark_lord"
+			duration = 3650
+		}
+	}
+}
+
+# [KDR.Monarch.GetName] of Kandarin reaches out!
+country_event = {
+	id = flavor_ior.5
+	title = flavor_ior.5.t
+	desc = flavor_ior.5.d #Apparently on the other side of the Galarpos Mountains a whole different kind of internal conflict has been happening. [KDR.Monarch.GetTitle] [KDR.Monarch.GetName] of Kandarin has requested an alliance to handle [KDR.Monarch.GetHerHis] rival's claims in the kingdom. We in return may be able to claim West Ardougne for ourselves; vital for our endgame plans to summon the Dark Lord.
+	picture = CAMELOT_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = flavor_ior.5.a #Let's ally with [KDR.Monarch.GetName]!
+		create_alliance = KDR
+		add_opinion = {
+			who = KDR
+			modifier = ior_kandarin_alliance
+		}
+		set_country_flag = IOR_ally_in_kandarin
+		KDR = {
+			country_event = { 
+				id = flavor_kdr.8
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_ior.5.b #Let's not.
+		KDR = {
+			country_event = { 
+				id = flavor_kdr.9
+				days = 1
+			}
+		}
+	}
+}
+
+# Plague City
+country_event = {
+	id = flavor_ior.6
+	title = flavor_ior.6.t
+	desc = flavor_ior.6.d #Finally, the alliance with Kandarin is paying off. We have received dominion over West Ardougne; the population of which shall make excellent sacrifices to the Dark Lord. Let us fake a plague in the city so we can shield it from the outside world.
+	picture = IORWERTH_PLAGUE_CITY_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_ior.6.a #For the Dark Lord!
+		set_global_flag = IOR_buying_west_ardy
+	}
+}
+
+# Destruction of the Dark Lord
+country_event = {
+	id = flavor_ior.7
+	title = flavor_ior.7.t
+	desc = flavor_ior.7.d #It... happened. The Resistance destroyed the fragment of Seren. Voices are already calling out for surrender and the end of the war.
+	picture = DARK_LORD_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_ior.7.a #If we do not act fast, we will lose the war.
+		custom_tooltip = ior_soon_to_surrender_tooltip
+		set_country_flag = ior_soon_to_surrender
+		add_prestige = -100
+		remove_country_modifier = IOR_terror_of_the_dark_lord
+	}
+}
+
+# The Surrender of Clan Iorwerth
+country_event = {
+	id = flavor_ior.8
+	title = flavor_ior.8.t
+	desc = flavor_ior.8.d #The populace of Clan Iorwerth no longer has any will to fight in the Tirannwn Civil War, and has surrended to the Elven Resistance.
+	picture = DARK_LORD_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IOR
+		exists = EVR
+		has_country_flag = ior_soon_to_surrender
+		religion = dark_lord
+		NOT = {
+			any_subject_country = {
+				any_owned_province = {
+					NOT = { region = tirannwn_region }
+				}
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				NOT = { region = tirannwn_region }
+			}
+		}
+		variable_arithmetic_trigger = {
+			export_to_variable = {
+				which = our_total_development
+				value = trigger_value:total_development
+			}
+			export_to_variable = {
+				which = from_total_development
+				value = trigger_value:total_development
+				who = FROM
+			}
+			multiply_variable = { which = from_total_development value = 3 }
+			
+			check_variable = { which = from_total_development which = our_total_development }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_ior.8.a #There is an old Dwarven phrase: Losing is fun.
+		EVR = {
+			country_event = {
+				id = flavor_evr.11
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_ior.9
+	title = flavor_ior.9.t #The Backup Plan
+	desc = flavor_ior.9.d #The Elven Resistance has nearly defeated us! To make a successful comeback, we need to find power outside of Tirannwn. 
+	picture = NOMAD_ISLE_OF_SOULS_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_ior.9.a #There must be some remnants from the God Wars somewhere...
+		add_country_modifier = {
+			name = IOR_third_age_research
+			duration = 3650
+		}
+		set_country_flag = IOR_making_retreat_plans
+	}
+}
+
+country_event = {
+	id = flavor_ior.10
+	title = flavor_ior.10.t #Voyage of Lost Souls
+	desc = flavor_ior.10.d #It was a treacherous journey, but a modest number of settlers from Clan Iorwerth have landed on the shores of the Isle of Souls. We must rebuild the Dark Lord's following here, and locate the Soul Stone to increase our power.
+	picture = NOMAD_ISLE_OF_SOULS_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = IOR_isle_of_souls_retreat
+	}
+	
+	option = {
+		name = flavor_ior.10.a #This war is not over yet.
+		923 = {
+			cede_province = ROOT
+			add_core = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+			move_capital_effect = yes
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		
+		central_isle_of_souls_area = {
+			discover_country = ROOT
+		}
+		complete_mission = IOR_naval_preparations
+		swap_non_generic_missions = yes
+	}
+}
+
+country_event = {
+	id = flavor_ior.11
+	title = flavor_ior.11.t #The Temple of Light Excavation
+	desc = flavor_ior.11.d #Our fake plague is the perfect cover for kidnapping humans and forcing them to work in our mines! Through their efforts, we will find a route to the Temple of Light, where the Dark Lord dwells!
+	picture = IBAN_LAIR_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_ior.11.a #The Dark Lord calls...
+		981 = {
+			add_siberian_construction = 100
+		}
+	}
+}
+
+country_event = {
+	id = flavor_ior.12
+	title = flavor_ior.12.t #Clan Iorwerth Offers to Purchase Provinces
+	desc = flavor_ior.12.d #Our ally, Clan Iorwerth, offers to pay us a large sum of gold in exchange for two provinces we control in western Kandarin. 
+	picture = IORWERTH_PLAGUE_CITY_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_ior.12.a #Agreed!
+		add_treasury = 1000
+		add_dip_power = 100
+		266 = {
+			cede_province = IOR
+			add_core = IOR
+			remove_core = ROOT
+		}
+		989 = {
+			cede_province = IOR
+			add_core = IOR
+			remove_core = ROOT
+		}
+		IOR = {
+			country_event = {
+				id = flavor_ior.13
+				days = 1
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = ior_sold_us_provinces
+			}
+		}
+		ai_chance = {
+			factor = 100		
+		}
+	}
+	option = {
+		name = flavor_ior.12.b #We are not exposing weakness to anyone, even our ally.
+		IOR = {
+			country_event = {
+				id = flavor_ior.14
+				days = 1
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = ior_refused_to_sell_us_provinces
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_ior.13
+	title = flavor_ior.13.t #Successful Purchase of the Eastern Galarpos!
+	desc = flavor_ior.13.d #Our ally has agreed to sell us key provinces in the eastern Galarpos, giving us a crucial foothold on the way to the Temple of Light!
+	picture = IORWERTH_PLAGUE_CITY_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_ior.13.a #Excellent!
+	}
+}
+
+country_event = {
+	id = flavor_ior.14
+	title = flavor_ior.14.t #Galarpos Purchase Denied!
+	desc = flavor_ior.14.d #Our so-called ally thinks a bit of land is more important than our friendship.
+	picture = IORWERTH_PLAGUE_CITY_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_ior.14.a #At least we get our money back.
+		add_treasury = 1000
+		add_dip_power = 100
+	}
+}
+
+
+country_event = {
+	id = flavor_ior.15
+	title = flavor_ior.15.t #Rising Shadows
+	desc = flavor_ior.15.d #Strange news emerges from our excavation for the Temple of Light. Large numbers of miners have vanished or been killed. Deadly shadows and dark beasts have been spotted - hostile to anything that approaches. It seems to free the Dark Lord, we must push through the monsters it manifested...
+	picture = IBAN_LAIR_eventPicture
+	fire_only_once = yes
+	is_major = yes
+	
+	trigger = {
+		tag = IOR
+		538 = { is_empty = yes }
+		owns_core_province = 981
+		NOT = { has_global_flag = temple_of_shadow_flag }
+	}
+
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	immediate = {
+		set_global_flag = temple_of_shadow_flag
+		hidden_effect = {
+			538 = {
+				cede_province = TPS
+				add_core = TPS
+				change_culture = soulless
+				change_religion = dark_lord
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+				add_next_institution_embracement = 100
+			}
+			981 = {
+				cede_province = TPS
+				add_core = TPS
+				change_culture = soulless
+				change_religion = dark_lord
+			}
+			TPS = {
+				tirannwn_region = {
+					discover_country = ROOT
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_ior.15.a #Forgive the Dark Lord, for they know not what they do.
+		custom_tooltip = temple_of_shadow_rises_tooltip
+	}
+	option = {
+		name = flavor_ior.15.b #Forget Clan Iorwerth! I'm joining the Dark Lord directly!
+		custom_tooltip = temple_of_shadow_rises_tooltip
+		switch_tag = TPS
+	}
+}
+
+country_event = {
+	id = flavor_ior.16
+	title = flavor_ior.16.t #Release of the Dark Lord
+	desc = flavor_ior.16.d #With the defences of the Temple of Light broken open, the Dark Lord is free to enact vengeance!
+	picture = DARK_LORD_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	is_major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_ior.16.a #This is what Seren would have wanted.
+		add_country_modifier = {
+			name = IOR_terror_of_the_dark_lord
+			duration = -1
+		}
+	}
+}
+
+

@@ -1,0 +1,33 @@
+#121 - Mort Myre
+owner = MYN
+controller = MYN
+add_core = MYN
+tribal_owner = ---
+culture = north_coaster
+religion = saradomin
+
+discovered_by = BDI
+discovered_by = LNC
+discovered_by = MYN
+discovered_by = MRT
+discovered_by = MSH
+discovered_by = PPH
+discovered_by = morytaniantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = naval_goods
+
+is_city = yes
+
+2023.6.29 = {
+	owner = CFS
+	controller = CFS
+	add_core = CFS
+	culture = ghast
+	religion = zamorak
+}

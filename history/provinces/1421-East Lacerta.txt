@@ -1,0 +1,26 @@
+#1421-East Lacerta
+owner = SYZ
+controller = SYZ
+add_core = SYZ
+add_core = MOH
+tribal_owner = ---
+culture = molch
+religion = xeric
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+1989.9.4 = {
+	owner = KOU
+	controller = KOU
+	add_core = KOU
+}

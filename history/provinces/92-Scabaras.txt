@@ -1,0 +1,22 @@
+#92 - Scabaras
+owner = SBI
+controller = SBI
+add_core = SBI
+tribal_owner = ---
+culture = scabarite
+religion = menaphite
+
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = basic_ores
+
+is_city = yes

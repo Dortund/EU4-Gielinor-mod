@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = north_asgarn
+religion = saradomin
+technology_group = centraltechgroup
+capital = 1006
+
+1907.7.21 = {
+	monarch = {
+		name = "Heskel"
+		dynasty = "Cashien"
+		birth_date = 1892.3.27
+		adm = 5
+		dip = 3
+		mil = 0
+		female = yes
+	}
+}

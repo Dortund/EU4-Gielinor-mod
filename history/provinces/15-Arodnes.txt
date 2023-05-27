@@ -1,0 +1,23 @@
+#15 - Arodnes
+owner = MST
+controller = MST
+add_core = MST
+tribal_owner = ---
+culture = avarrockan
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 3
+
+trade_goods = grains
+
+is_city = yes

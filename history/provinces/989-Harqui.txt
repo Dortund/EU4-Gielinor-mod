@@ -1,0 +1,37 @@
+#989-Harqui
+owner = GNE
+controller = GNE
+add_core = GNE
+tribal_owner = ---
+culture = treegnome
+religion = guthix
+
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = magic_supplies
+
+is_city = yes
+
+2149.5.26 = {
+	owner = TYS
+	controller = TYS
+	add_core = TYS
+	culture = ardignan
+	religion = zamorak
+}
+
+2168.9.20 = {
+	owner = IOR
+	controller = IOR
+	add_core = IOR
+}

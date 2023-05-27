@@ -1,0 +1,58 @@
+#Country Name: Please seefilename.
+
+graphical_culture = easterngfx
+
+color = { 112 77 76 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Barlak #0" = 1
+	"Bartak #0" = 1
+	"Bozin #0" = 1
+	"Dartog #0" = 1
+	"Delgon #0" = 1
+	"Dorgan #0" = 1
+	"Durgok #0" = 1
+	"Elgon #0" = 1
+	"Fandon #0" = 1
+	"Gamdin #0" = 1
+	"Hergon #0" = 1
+	"Jobo #0" = 1
+	"Kazgar #0" = 1
+	"Lorzan #0" = 1
+	"Lurgon #0" = 1
+	"Mistag #0" = 1
+	"Nardok #0" = 1
+	"Oldak #0" = 1
+	"Reldak #0" = 1
+	"Tegdak #0" = 1
+	"Turgall #0" = 1
+	"Turgok #0" = 1
+	"Ulgon #0" = 1
+	"Undak #0" = 1
+	
+	"Andil #0" = -1
+	"Caldi #0" = -1
+	"Elzik #0" = -1
+	"Gerdi #0" = -1
+	"Gundik #0" = -1
+	"Inglin #0" = -1
+	"Kenti #0" = -1
+	"Markog #0" = -1
+	"Mernik #0" = -1
+	"Miltog #0" = -1
+	"Tindar #0" = -1
+	"Torzek #0" = -1
+	"Zanik #0" = -1
+	"Zenkog #0" = -1
+}

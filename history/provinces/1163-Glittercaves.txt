@@ -1,0 +1,19 @@
+#1163-Glittercaves
+owner = GTT
+controller = GTT
+add_core = GTT
+tribal_owner = ---
+culture = siren
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = basic_ores
+
+is_city = yes

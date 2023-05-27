@@ -1,0 +1,34 @@
+government = theocracy
+add_government_reform = shamanic_theocracy
+government_rank = 2
+primary_culture = molch
+religion = xeric
+technology_group = zeantechgroup
+capital = 461 #Molch
+national_focus = MIL
+historical_friend = LCT
+historical_friend = QMT
+historical_friend = KBS
+historical_rival = KOU
+
+1929.11.7 = {
+	monarch = {
+		name = "Gabor"
+		dynasty = "Chan"
+		birth_date = 1908.9.13
+		adm = 5
+		dip = 1
+		mil = 5
+	}
+}
+
+2143.1.10 = {
+	monarch = {
+		name = "Ek'ans"
+		dynasty = "Chan"
+		birth_date = 2126.1.10
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}

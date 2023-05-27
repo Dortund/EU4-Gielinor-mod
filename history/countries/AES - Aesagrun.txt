@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = settled_tribe
+government_rank = 1
+primary_culture = barbarian
+religion = v
+secondary_religion = saradomin
+technology_group = zeantechgroup
+capital = 1420 #Aesagrun
+national_focus = MIL
+
+1921.5.21 = {
+	monarch = {
+		name = "Talvald"
+		dynasty = "Aesadottir"
+		birth_date = 1903.5.11
+		adm = 5
+		dip = 6
+		mil = 5
+		female = yes
+	}
+}
+
+2158.12.3 = {
+	monarch = {
+		name = "Rekvald"
+		dynasty = "Aesadottir"
+		birth_date = 2133.2.23
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

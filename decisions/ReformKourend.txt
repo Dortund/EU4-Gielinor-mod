@@ -1,0 +1,98 @@
+country_decisions = {
+
+	reform_kourend = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_kourend_flag }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = AUU
+				tag = HOS
+				tag = KTW
+				tag = LOV
+				tag = PCL
+				tag = SYZ
+			}
+			NOT = { exists = KOU }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 399
+				province_id = 402
+				province_id = 407
+				province_id = 419
+				province_id = 426
+				province_id = 431
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 399
+			owns_core_province = 402
+			owns_core_province = 407
+			owns_core_province = 419
+			owns_core_province = 426
+			owns_core_province = 431
+		}
+		effect = {
+			402 = {
+				move_capital_effect = yes
+			}
+			change_tag = KOU
+			add_government_reform = kourend_reformed_monarchy
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_prestige = 50
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_kourend_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			hidden_effect = {
+				complete_mission = KOU_placate_arceuus
+				complete_mission = KOU_invest_in_arceuus_library
+				complete_mission = KOU_placate_hosidius
+				complete_mission = KOU_shores_of_hosidius
+				complete_mission = KOU_placate_lovakengj
+				complete_mission = KOU_status_of_the_dwarves
+				complete_mission = KOU_placate_piscarilius
+				complete_mission = KOU_fund_piscarilius
+				complete_mission = KOU_placate_shayzien
+				complete_mission = KOU_down_with_the_necromancers
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 600
+	}
+
+}

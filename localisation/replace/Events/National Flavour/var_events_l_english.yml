@@ -1,0 +1,19 @@
+﻿l_english:
+ flavor_var.1.t:0 "The Fall of Quaesitum"
+ flavor_var.1.d:0 "The citadel of Quaesitum was Varlamore's shining hope for a strong city defending Varlamore's southern coast. Despite its defensive position and plentiful supplies of gold, a terrible malady has befallen the population. A fresh supply of water sourced from Arcanum Oasis, believed to grant the local animals immortality, has had very much the reverse effect. With the city in chaos, a few survivors have fled north-west to Arida's Edge."
+ flavor_var.1.a:0 "Those poor people! Let us offer what support they need."
+ flavor_var.1.b:0 "All that for some water?"
+ 
+ flavor_var.2.t:0 "The Rebel Rift"
+ flavor_var.2.d:0 "Treachery! Kourend has used their spy networks to pull together loose rebel groups into something more coherent."
+ flavor_var.2.a:0 "We must handle this Rebel Rift."
+ 
+ flavor_var.3.t:0 "Tales of the Goddess of Light"
+ flavor_var.3.da:0 "Pointy-eared humanoids from the east are curious about our faith in Ralos. They are questioning a possible connection between Ralos' light and the light of their Goddess Seren. What should we tell them?"
+ flavor_var.3.db:0 "Pointy-eared humanoids from the east are curious about the abandoned god Ralos. They are questioning a possible connection between Ralos' light and the light of their Goddess Seren. What should we tell them?"
+ flavor_var.3.a:0 "Imply that the Gods are one and the same."
+ var_lying_about_seren.tt:0 "Such a blatant lie is unlikely to be said convincingly."
+ flavor_var.3.b:0 "Suggest there may be some ideological link, but nothing more."
+ flavor_var.3.c:0 "Those fools wouldn't know a true god if it smote them."
+ 
+ 

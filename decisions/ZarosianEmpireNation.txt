@@ -1,0 +1,109 @@
+country_decisions = {
+
+	zaros_empire_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_zaros_empire_flag }
+			was_never_end_game_tag_trigger = yes
+			religion = zaros
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = ZAR }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = misthalin_region
+				region = asgarnia_region
+				province_id = 64 # Arina
+				province_id = 112 # Viggora's Folly
+				province_id = 113 # Canifis
+				province_id = 163 # Dareeyak
+				province_id = 166 # Carrallangar
+				province_id = 188 # Annakarl
+				province_id = 358 # Ghorrock
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+				misthalin_region = {
+					type = all
+					owned_by = ROOT
+				}
+				asgarnia_region = {
+					type = all
+					owned_by = ROOT
+				}
+				owns_core_province = 64		# Arina
+				owns_core_province = 112	# Viggora's Folly
+				owns_core_province = 113	# Canifis
+				owns_core_province = 163 # Dareeyak
+				owns_core_province = 166 # Carrallangar
+				owns_core_province = 188 # Annakarl
+				owns_core_province = 358 # Ghorrock
+		}
+		effect = {
+			23 = {
+				move_capital_effect = yes
+				change_province_name = "Senntisten"
+			}
+			change_tag = ZAR
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_prestige = 50
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_zaros_empire_flag
+			if = {
+				limit = {
+					NOT = { primary_culture = silvarean }
+				}
+				change_primary_culture = silvarean
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			20 = {
+				change_province_name = "Paddewwa"
+			}
+			46 = {
+				change_province_name = "Lassar"
+			}
+			112 = {
+				change_province_name = "Viggora's Fortress"
+			}
+			113 = {
+				change_province_name = "Kharyrll"
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 600
+	}
+
+}

@@ -1,0 +1,21 @@
+#1164-Dokutsu No Yane
+owner = GTT
+controller = GTT
+add_core = GTT
+tribal_owner = ---
+culture = bowl_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = naval_goods
+
+is_city = yes

@@ -1,0 +1,31 @@
+#325-Prifddinas
+owner = IOR
+controller = IOR
+add_core = IOR
+tribal_owner = ---
+culture = iorwerth
+religion = dark_lord
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 12
+base_production = 9
+base_manpower = 9
+
+fort_15th = yes 
+
+trade_goods = flax
+
+is_city = yes
+
+center_of_trade = 2
+
+add_province_triggered_modifier = religious_center
+
+1930.7.30 = {
+	base_tax = 3
+	base_production = 3
+	base_manpower = 3
+}

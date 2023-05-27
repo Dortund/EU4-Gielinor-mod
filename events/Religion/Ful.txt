@@ -1,0 +1,48 @@
+########################################
+# Ful Religion Events
+########################################
+
+namespace = ful_events
+
+# Ful reform
+country_event = {
+	id = ful_events.1
+	title = ful_events.1.t #Our faith grows!
+	desc = ful_events.1.d #We have built up [ROOT.Capital] to a great size, but it is clear our work is not to the standard of Ful. We shall strive ever higher to appease her, even if it means starting our labour once more! We have learnt much from our experience and our faith grows stronger.
+	picture = ELDER_KILN_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = ful
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_stability = -2
+			
+			capital_scope = {
+				add_base_tax = -9
+				add_base_production = -9
+				add_base_manpower = -9
+			}
+			add_yearly_manpower = -0.75
+		}
+		
+	}	
+	
+	option = {
+		name = ful_events.1.a #Let us build up [ROOT.Capital] once more!
+		tooltip = {
+			add_stability = -2	
+		}		
+	}
+}
+
+
+
+

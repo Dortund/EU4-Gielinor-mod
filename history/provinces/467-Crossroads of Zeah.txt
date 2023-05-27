@@ -1,0 +1,19 @@
+#467-Crossroads of Zeah
+owner = CNC
+controller = CNC
+add_core = CNC
+tribal_owner = ---
+culture = mountaintroll
+religion = bandos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 2
+
+trade_goods = livestock_farm
+
+is_city = yes

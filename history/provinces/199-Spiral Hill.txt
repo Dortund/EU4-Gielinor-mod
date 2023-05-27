@@ -1,0 +1,23 @@
+#199-Spiral Hill
+owner = MRF
+controller = MRF
+add_core = MRF
+tribal_owner = ---
+culture = mermaid
+religion = godless
+
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+fort_15th = yes 
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 1

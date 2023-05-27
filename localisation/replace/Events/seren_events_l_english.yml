@@ -1,0 +1,426 @@
+﻿l_english:
+
+ #1-99: General, no incident
+
+ #100-199: Civil War
+
+ seren_events.100.t:0 "Serenists and the Tirannwn Civil War"
+ seren_events.100.da:0 "A shadow falls upon Tirannwn, as Clan Iorwerth has seized control of Prifddinas for their own unclear ends. The fight back begins now - but we will likely need help. Should we look within our Serenist faith or be willing to risk looking beyond it?"
+ seren_events.100.db:0 "The Iorwerth Clan has betrayed the rest of Tirannwn and taken Prifddinas! They clearly have dangerous ambitions which we should help put a stop to, and our Lord Baxtorian Cadarn is leading an expedition to do so. But this has left our own lands vulnerable - what should we do about this?"
+ seren_events.100.dc:0 "The Iorwerth Clan has betrayed the rest of Tirannwn and taken Prifddinas! They clearly have dangerous ambitions which we could help put a stop to, but our people are divided on whether taking such a bold course of action would help or hinder our realm."
+ seren_events.100.a:0 "We need help - even if the helpers don't follow the will of Seren."
+ seren_events.100.b:0 "Outsiders would only make things worse."
+ seren_events.100.c:0 "Stay the course and send all the support we can!"
+ seren_events.100.e:0 "The future is on this side of the Galarpos. Recall Baxtorian."
+ seren_events.100.f:0 "We must involve ourselves for the sake of Seren!"
+ seren_events.100.g:0 "We cannot get involved so blatantly."
+ CDA_support_tirannwn:0 "Supporting the Elven Resistance"
+ CDA_abandoning_tirannwn:0 "Refusing to support the Elven Resistance"
+
+ seren_events.101.t:0 "The Movement of Elves"
+ seren_events.101.d:0 "Elves are coming to and from the lands held by the Elven Resistance - some seek sanctuary from the war, and some seek to aid the conflict in any way they can. But this could have a destabilising effect on our ability to govern [Root.GetName] - so how should we proceed?"
+ seren_events.101.a:0 "We should support the free movement of elves!"
+ seren_events.101.b:0 "We need to more tightly control the movement of elves."
+ 
+ seren_events.102.t:0 "New Trade Routes"
+ seren_events.102.d:0 "The Civil War has broken many of our old trade connections. To ensure a steady flow of gold and goods, some suggest we open up our trade to foreign merchants even if it impairs our ability to regulate it."
+ seren_events.102.a:0 "Open the trade routes!"
+ seren_events.102.b:0 "Our own workers produce enough; we don't need to mess around with trade routes!"
+ 
+ seren_events.103.t:0 "The Dark Lord Heresy"
+ seren_events.103.d:0 "The fog of war has complicated our efforts to understand Clan Iorwerth's aims. From what we gather, they still claim to be serving Seren while promoting a so-called Dark Lord. Understanding this heresy would help allow us to understand Iorwerth's goals..."
+ seren_events.103.a:0 "Let us investigate this heresy."
+ seren_events.103.b:0 "We can work with other faiths, but the Dark Lord is a step too far!"
+ seren_events.103.c:0 "The path of Seren is the only path worth following."
+ 
+ seren_events.104.t:0 "$COUNTRY$ Opens Up"
+ seren_events.104.d:0 "The children of Seren must look to new paths in order to help defeat the Dark Lord. $COUNTRY$ is therfore to persue a more permanent approach of openness."
+ seren_events.104.a:0 "Praise Seren!"
+ 
+ seren_events.105.t:0 "Policies of $COUNTRY$ Remain Unchanged"
+ seren_events.105.d:0 "After much consideration, it has been decided henceforth that $COUNTRY$ should continue its present degree of isolation, despite the changes brought on by the Tirannwn Civil War."
+ seren_events.105.a:0 "Praise Seren!"
+
+ seren_events.106.t:0 "$COUNTRY$ Becomes More Isolated"
+ seren_events.106.d:0 "Securing our nation requires not just keeping the Dark Lord out, but restricting any possible corruption. $COUNTRY$ shall persue a more isolationist approach for the forseeable future."
+ seren_events.106.a:0 "Praise Seren!" 
+ 
+ #200-299: Decline of Clan Elders
+ 
+ seren_events.200.t:0 "Decline of Clan Elders"
+ seren_events.200.d:0 "The Elven Clan Elders have guided Seren's followers for millennia. However, many have begun to take a step back from leadership positions - some fear for their lives from followers of the Dark Lord, while others feel the Civil War is a sign of their failure to lead."
+ seren_events.200.a:0 "We should leave our options for leadership open."
+ seren_events.200.b:0 "Tradition serves us best."
+
+ seren_events.201.t:0 "Codification of Old Teachings"
+ seren_events.201.d:0 "Though the world endlessly changes, that does not mean old knowledge is irrelevant. The old teachings of the Elders could be compiled into a document of how best to govern, but might the present be too weighed down by the past?"
+ seren_events.201.a:0 "It is time to move on from the old ways."
+ seren_events.201.b:0 "We should limit ourselves to an oral, not written, tradition."
+ seren_events.201.c:0 "Let us codify the old teachings."
+ seren_events.201.e:0 "Let us codify, and strongly adhere to, the old teachings."
+ 
+ seren_events.202.t:0 "Reassuring the Public"
+ seren_events.202.d:0 "Without the Elders to directly guide them, the public need reassurance in [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s rule. How should this be achieved?"
+ seren_events.202.a:0 "We shall find new guidance among the best of all peoples!"
+ seren_events.202.b:0 "Our [Root.Monarch.GetTitle] embodies the nation!"
+ seren_events.202.c:0 "The potential for anyone to rule shall inspire the people!"
+ seren_events.202.e:0 "Our faith in Seren shall keep us safe from all uncertainties."
+ 
+ seren_events.203.t:0 "The Forgotten Families"
+ seren_events.203.d:0 "Elven clans are named for their most powerful families. Lesser families within these clans are frequently sidelined, yet with the decline of the old Clan Elders, they may have an opportunity for more prominent leadership positions."
+ seren_events.203.a:0 "We should ensure more equal standing for all."
+ seren_events.203.b:0 "Who even are these people?"
+ 
+ seren_events.204.t:0 "Order of Succession"
+ seren_events.204.da:0 "A final, but most crucial question of governance without the Clan Elders has emerged - should our structure of governance itself change?"
+ seren_events.204.db:0 "A final, but most crucial question of governance without the Clan Elders has emerged - is it time to reexamine our leadership?"
+ seren_events.204.a:0 "It is clear that our system of inheritance has failed. Let us become a republic!"
+ seren_events.204.b:0 "It is clear that our system of inheritance has failed. Let us reform!"
+ seren_events.204.c:0 "We could go for some slight reform."
+ seren_events.204.e:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName]'s position is the surest sign of stability! No reform!"
+ seren_events.204.f:0 "It is an excellent time for reform."
+ seren_events.204.g:0 "Let us stay our present course."
+ seren_events.204.h:0 "Clearly questioning our rule means we're not strict enough!"
+ 
+ seren_events.205.t:0 "$COUNTRY$ Opens Up"
+ seren_events.205.d:0 "In the face of the Clan Elders retreating from $COUNTRY$'s governance, our course of action is to keep our options open both inside and outside of $COUNTRY$."
+ seren_events.205.a:0 "Praise Seren!"
+ 
+ seren_events.206.t:0 "Policies of $COUNTRY$ Remain Unchanged"
+ seren_events.206.d:0 "The Clan Elders come and go, but $COUNTRY$ persists regardless. Our nation's stance on how open it should be has not changed."
+ seren_events.206.a:0 "Praise Seren!"
+
+ seren_events.207.t:0 "$COUNTRY$ Becomes More Isolated"
+ seren_events.207.d:0 "If the Clan Elders are retreating from the world, our nation shall too. Our nation has moved towards a position of greater isolation."
+ seren_events.207.a:0 "Praise Seren!"
+ 
+ #300-399: Runecrafters
+ 
+ seren_events.300.t:0 "The Rise of Runecrafting"
+ seren_events.300.d:0 "Human realms have started to embrace the long-lost art of Runecrafting - where blank runes are imbued with energy creating fresh supplies of runestones. With it, more humans than ever are capable of using magic - but could this be a threat to the largely elven worshippers of Seren?"
+ seren_events.300.a:0 "Runecrafting is the future!"
+ seren_events.300.b:0 "We can use magic perfectly fine without wasting resources on this craft."
+ 
+ seren_crusader_vulnerability_plus1_tooltip:0 "If your realm has a low level of isolation, this choice will make it §Yslightly more vulnerable§! to the enemies of Runecrafting."
+ seren_crusader_vulnerability_plus2_tooltip:0 "If your realm has a low level of isolation, this choice will make it §Ymoderately more vulnerable§! to the enemies of Runecrafting."
+ seren_crusader_vulnerability_plus3_tooltip:0 "If your realm has a low level of isolation, this choice will make it §Ysignificantly more vulnerable§! to the enemies of Runecrafting."
+ seren_crusader_vulnerability_minus1_tooltip:0 "If your realm has a low level of isolation, this choice will make it §Yslightly less vulnerable§! to the enemies of Runecrafting."
+ seren_crusader_vulnerability_minus2_tooltip:0 "If your realm has a low level of isolation, this choice will make it §Ymoderately less vulnerable§! to the enemies of Runecrafting."
+ seren_crusader_vulnerability_minus3_tooltip:0 "If your realm has a low level of isolation, this choice will make it §Ysignificantly less vulnerable§! to the enemies of Runecrafting."
+ 
+ seren_events.301.t:0 "Rune Essence"
+ seren_events.301.d:0 "Discovered far to the north, Rune Essence is a kind of rock particularly receptive to runic energies. However, elves have had something similar - albeit less versatile - in the form of tephra."
+ seren_events.301.a:0 "Clearly the humans are onto something great."
+ seren_events.301.b:0 "What if we tried to combine the two?"
+ seren_events.301.c:0 "Rune Essence surely can't do anything tephra cannot."
+ 
+ seren_events.302.t:0 "The Crusaders"
+ seren_events.302.d:0 "The runecrafters of the human realms are not without enemies. A group of humans known as the Fremennik have a large anti-runecrafting faction which is gaining support to destroy the runecrafting altars."
+ seren_events.302.a:0 "We should intervene to protect the runecrafters!"
+ seren_events.302.b:0 "We should intervene to help hold back runecrafting!"
+ seren_events.302.c:0 "This isn't our fight."
+ 
+ seren_events.303.t:0 "Secrets of the Death Altar"
+ seren_events.303.da:0 "Runes may only be created at sites of great runic power - and we possess one of the most powerful at the Temple of Light. Collaboration with runecrafters could be a great boon for our magical abilities, but also give the world information on that province we may prefer they don't have."
+ seren_events.303.db:0 "Hidden in the Galarpos Mountains is the powerful Death Altar, one of Gielinor's greatest concentrations of runic energy. Due to its power we cannot afford to let the enemies of Seren take it, but unfortunately it has fallen into a third party. Perhaps we should seek outside assistance in handling this situation?"
+ seren_events.303.dc:0 "Runic power comes in many forms - few more powerful than the Death Altar under the Galarpos Mountains. But now, the altar has fallen to the enemies of Seren - should we get outside help to take it back?"
+ seren_events.303.de:0 "Runic power comes in many forms - few more powerful than the Death Altar under the Galarpos Mountains. This is perhaps why another nation has taken control of the Temple of Light. How should we respond to this?"
+ seren_events.303.df:0 "Hidden away under the Galarpos Mountains is the Temple of Light, home to the Death Runecrafting Altar. For the time being it is under no-one's control so no-one can abuse its power, though we could consider how we could learn more about it with the involvement of outside powers."
+ seren_events.303.dg:0 "Hidden away under the Galarpos Mountains is the Temple of Light, home to the Death Runecrafting Altar. We cannot let the enemies of Seren get hold of this power - but perhaps by working with a third party we can reinforce its safeguards?"
+ seren_events.303.a:0 "Let us invite runecrafters to share their expertise on the Death Altar!"
+ seren_events.303.b:0 "Share the secret of the Death Altar to help reinforce its protections."
+ seren_events.303.c:0 "Exposing the altar's location would help us to capture it!"
+ seren_events.303.e:0 "The Death Altar poses a threat to Tirannwn - we need help to get it destroyed!"
+ seren_events.303.f:0 "We should keep the secret."
+ seren_give_away_temple_position.tt:0 "The position of the Temple of Light will be revealed to all nations in the Tirannwn and Kandarin regions."
+ seren_request_gunnars_help_tooltip:0 "We will send a secret emissary to §YGunnar§! who will be able to decide on whether to send an expedition to the Death Altar."
+ seren_bounty_for_death_altar_tooltip:0 "If the opposition to Runecrafting took a more organised form, they would have the opportunity to lead an expedition to destroy the Death Altar."
+ 
+ seren_events.304.t:0 "The Gunnite Expedition"
+ seren_events.304.d:0 "The Runecrafting Crusaders have agreed to send an expedition to the Death Altar in order to destroy it. Hopefully they will not be sidetracked along the way..."
+ seren_events.304.a:0 "It was a necessary decision."
+
+ seren_events.305.t:0 "The Gunnites Refuse!"
+ seren_events.305.d:0 "The Runecrafting Crusaders declined to lead an expedition to destroy the Death Altar!"
+ seren_events.305.a:0 "It was probably a long shot."
+
+ seren_events.306.t:0 "Corruption of the Death Altar Expedition"
+ seren_events.306.da:0 "An expedition of Fremennik entered the Underground Pass in an attempt to find and destroy the Death Altar. However, forces of the Dark Lord seem to have corrupted them instead!"
+ seren_events.306.db:0 "Some filthy Fremennik thought they could march right in to the Temple of Light! Fools! They serve the Dark Lord now."
+ seren_events.306.a:0 "Why did anyone think sending barbarians down there was a good idea?"
+ seren_events.306.b:0 "We truly have followed the most powerful aspect of Seren."
+ 
+ seren_events.307.t:0 "Devastation of the Death Altar"
+ seren_events.307.da:0 "An expedition of Fremennik entered the Underground Pass in an attempt to find and destroy the Death Altar - and they've devastated it to the best of their ability."
+ seren_events.307.db:0 "Some filthy Fremennik thought they could march right in to the Temple of Light and devastate the Death Altar! Reviving the Dark Lord is going to be much harder now."
+ seren_events.307.a:0 "Like it or not, that was an impressive feat."
+ seren_events.307.b:0 "Curses!"
+ 
+ seren_events.308.t:0 "$COUNTRY$ Opens Up"
+ seren_events.308.d:0 "The conflict over Runecrafting is something $COUNTRY$ needs to be involved with, some way or another. As such, our policies have moved towards openness."
+ seren_events.308.a:0 "Praise Seren!"
+ 
+ seren_events.309.t:0 "Policies of $COUNTRY$ Remain Unchanged"
+ seren_events.309.d:0 "Runecrafting is another fad, and it too shall fade with time. Our country's stance on how open it should be has not changed."
+ seren_events.309.a:0 "Praise Seren!"
+
+ seren_events.310.t:0 "$COUNTRY$ Becomes More Isolated"
+ seren_events.310.d:0 "The fight over Runecrafting is not ours to be had. $COUNTRY$ shall cut itself off from this useless argument."
+ seren_events.310.a:0 "Praise Seren!"
+ 
+ #400-499: Kandarin Relations
+ 
+ seren_events.400.t:0 "Kandarin Relations"
+ seren_events.400.d:0 "Throughout much of the Fourth Age, humans largely lived in small clans. Times change, however, and the rise of larger and larger human nation-states are a cause for concern for many among the largely elven following of Seren."
+ seren_events.400.a:0 "We should celebrate this development!"
+ seren_events.400.b:0 "We need to stop this development!"
+ seren_events.400.c:0 "We don't care."
+ 
+ seren_events.401.t:0 "Border Security"
+ seren_events.401.d:0 "With humans spreading throughout Kandarin and beyond, their new settlements have been built without heed to existing borders. Some among the [Root.GetAdjective] people are concerned that soon these human settlements will push back our territory."
+ seren_events.401.a:0 "Humans come and go. Seren is eternal."
+ seren_events.401.b:0 "We need a more active policy to stop these border incursions."
+ seren_events.401.c:0 "We need to close our borders."
+ 
+ seren_events.402.t:0 "The Saradominists"
+ seren_events.402.da:0 "Followers of Saradomin, the God of Order, provided useful aid for the Elves during the God Wars. Their descendants have now established a strong presence in Kandarin and are looking to proselytise further. How should we handle them?"
+ seren_events.402.db:0 "Followers of Saradomin, the God of Order, provided useful aid for the Elves during the God Wars. Their descendants have now established a moderate presence in Kandarin, and they could make decent allies. How should we handle them?"
+ seren_events.402.dc:0 "Followers of Saradomin, the God of Order, provided useful aid for the Elves during the God Wars. Their descendants in Kandarin however show little of the promise their ancestors once had. How should we handle them?"
+ seren_events.402.a:0 "We could improve relations by accepting a limited number of Saradominist proselytisers."
+ seren_events.402.b:0 "We could repay the Saradominists' ancestors by taking their descendants in as refugees."
+ seren_events.402.c:0 "We could implement favourable policies for Saradominists compared to other religions."
+ seren_events.402.e:0 "What their ancestors did is meaningless to us now."
+ 
+ seren_events.403.t:0 "$COUNTRY$ Opens Up"
+ seren_events.403.d:0 "The future of Kandarin is something that [Root.GetName] cannot ignore. As a consequence of our choices, our nation has shifted towards a more open direction."
+ seren_events.403.a:0 "Praise Seren!"
+ 
+ seren_events.404.t:0 "Policies of $COUNTRY$ Remain Unchanged"
+ seren_events.404.d:0 "Whatever changes in Kandarin, our policies will not. Our country's stance on how open it should be has not changed."
+ seren_events.404.a:0 "Praise Seren!"
+
+ seren_events.405.t:0 "$COUNTRY$ Becomes More Isolated"
+ seren_events.405.d:0 "As Kandarin changes, we must be free of its non-Serenist influences. $COUNTRY$ is to be more isolated than before."
+ seren_events.405.a:0 "Praise Seren!"
+ 
+ #500-599: Zean Diplomacy
+ 
+ seren_events.500.t:0 "Zean Diplomacy"
+ seren_events.500.d:0 "Across the Crystal Ocean come travellers from a strange land of lizards and colossal trees they call Zeah. Apparently they have inhabited this landmass since the God Wars, and are now looking for new opportunities for diplomacy and trade."
+ seren_events.500.a:0 "Let us accept these new traders with open arms!"
+ seren_events.500.b:0 "Great. Now not even the western sea is safe."
+ 
+ seren_events.501.t:0 "Shipbuilders of the Western Continent"
+ seren_events.501.d:0 "If we are to keep ourselves safe from potential Zean threats, it may be necessary to draw on their naval expertise. The cities of Piscarilius and Civitas illa Fortis in particular have an established shipbuilding tradition - perhaps we could seek their assistance?"
+ seren_events.501.a:0 "Let us hire some of their shipbuilders."
+ seren_events.501.b:0 "Naval defences?! What are you talking about? We don't have a port!"
+ seren_events.501.c:0 "We don't need help from some young upstarts!"
+ 
+ seren_events.502.t:0 "Light of Varlamore"
+ seren_events.502.da:0 "Travellers from Zeah speak of the land of Varlamore, home of bards, guards and a very curious religious practice. They speak of a god named Ralos, associated with the sun. But is not Seren the aspect of light? Should we investigate?"
+ seren_events.502.db:0 "Travellers from Zeah speak of the land of Varlamore, home of bards, guards and a recently-defunct religious practice of following a sun god known as Ralos. But is not Seren the aspect of light? Should we investigate?"
+ seren_events.502.dc:0 "Travellers from Zeah speak of the ruins of a kingdom known as Varlamore, which followed a sun god known as Ralos. But is not Seren the aspect of light? Should we investigate?"
+ seren_events.502.a:0 "We should seek an audience with Varlamore to learn more about Ralos."
+ seren_events.502.b:0 "We should investigate the Varlamorean region to learn more about Ralos."
+ seren_events.502.c:0 "Come now! The desert sun god Tumeken isn't Seren, neither is whatever Ralos is!"
+ 
+ seren_events.503.t:0 "Varlamore's Reply"
+ seren_events.503.da:0 "We have found an astonishing result of our inquiry into Ralos. They have convincingly made the case that Ralos and Seren are one and the same!"
+ seren_events.503.db:0 "Varlamore must take us for fools. They have made a blatant lie claiming that Seren and Ralos are one and the same."
+ seren_events.503.dc:0 "The people of Varlamore seem to know little of Seren, though they seem to have the view that there must be an ideological connection between the gods. If Ralos exists, perhaps Seren spoke to him? If not, perhaps Ralos worship is inspired by Seren?"
+ seren_events.503.de:0 "Varlamore has denied any connection between Ralos and Seren."
+ seren_events.503.a:0 "Incredible! We must bring this interpretation of Seren to our people at once!"
+ seren_events.503.b:0 "We should be tolerant to this alternative take on Seren."
+ seren_events.503.c:0 "We are not that gullible!"
+ seren_events.503.e:0 "There is no closure here, but that is better than bad news."
+ seren_events.503.f:0 "Oh well."
+ 
+ seren_events.504.t:0 "Varlamorean Investigations"
+ seren_events.504.d:0 "Among the ruins of Ralossian temples, we have found very vague artefacts connected to light and the sun. Whatever connection this has to Seren is up to our own interpretation."
+ seren_events.504.a:0 "Maybe there is a Seren tie after all?"
+ seren_events.504.b:0 "This is just meaningless rubble."
+ 
+ seren_events.505.t:0 "The Dark Altar"
+ seren_events.505.d:0 "In the far north of Zeah is a strange altar of twisted magics. Terrible corrupted crystals sprout from this Dark Altar, warping the creatures around it."
+ seren_events.505.a:0 "This is the terrible work of Zaros! We must intervene!"
+ seren_events.505.b:0 "This is not our concern."
+ 
+ seren_events.506.t:0 "$COUNTRY$ Opens Up"
+ seren_events.506.d:0 "The destiny of our people is intertwined by that of the western continent of Zeah. As a consequence of our choices, our nation has shifted towards a more open direction."
+ seren_events.506.a:0 "Praise Seren!"
+ 
+ seren_events.507.t:0 "Policies of $COUNTRY$ Remain Unchanged"
+ seren_events.507.d:0 "What happens in Zeah is largely irrelevant to our governance here. Our country's stance on how open it should be has not changed."
+ seren_events.507.a:0 "Praise Seren!"
+
+ seren_events.508.t:0 "$COUNTRY$ Becomes More Isolated"
+ seren_events.508.d:0 "Zeah could be a threat to us, and it is best that we keep away from it. $COUNTRY$ is to be more isolated than before."
+ seren_events.508.a:0 "Praise Seren!"
+ 
+ #600-699: Restoration of Prifddinas
+ 
+ seren_events.600.t:0 "The Reconstruction of Prifddinas"
+ seren_events.600.da:0 "The city of Prifddinas is in its rightful status as the capital of Serenist worship, though there is much work yet to do in its restoration. Some argue that to open the city at a delicate time could sabotage this process, though others claim that Tirannwn's isolation is exactly what caused this problem in the first place."
+ seren_events.600.db:0 "The oldest city of the Elves on Gielinor, Prifddinas, has been restored in the name of Seren. But times have changed considerably since then - is Prifddinas still worthy of its status as the centre of Serenist worship, or is it best that we downplay its status lest it falls again?"
+ seren_events.600.a:0 "The city should be opened for all!"
+ seren_events.600.b:0 "Let us restrict the city to Serenists."
+ seren_events.600.c:0 "Clearly the control was not tight enough! Only loyal Serenists of Tirannwn should enter!"
+ seren_events.600.e:0 "The restoration of Prifddinas should be celebrated by all Serenists!"
+ seren_events.600.f:0 "Prifddinas is important, yes, but not the only city that matters to Seren."
+ seren_events.600.g:0 "Only [Root.Capital.GetName] holds the key to the future."
+ 
+ seren_events.601.t:0 "Construction Materials"
+ seren_events.601.d:0 "The reconstruction of Prifddinas requires us to decide what we should use to help rebuild it. Purists argue that the city was sung from crystal and should primarily rely on crystal structures. However, some reformists believe we should be willing to import other materials to prevent the vulnerabilities crystals can have."
+ seren_events.601.a:0 "Let us strengthen Prifddinas with wood, brick and stone!"
+ seren_events.601.b:0 "Prifddinas is a city of crystal, and always should be."
+ 
+ seren_events.602.t:0 "Clan Iorwerth and Prifddinas"
+ seren_events.602.da:0 "With the end of the Tirannwn Civil War, many elves call out for vengeance against Clan Iorwerth, and that they should be exiled from Prifddinas."
+ seren_events.602.db:0 "Clan Iorwerth as a whole has been falsely blamed for the Tirannwn Civil War - but how could that be, when Clan Iorwerth now leads a restored Serenist Prifddinas? What should we do to reassure the populace that we are not their enemy?"
+ seren_events.602.a:0 "Clan Iorwerth is to be fully integrated into the new Prifddinas!"
+ seren_events.602.b:0 "Clan Iorwerth can stay, but should be subject to restrictions."
+ seren_events.602.c:0 "Exile Clan Iorwerth from Prifddinas!"
+ seren_events.602.e:0 "We could invite ambassadors from overseas to legitimise our new regime."
+ seren_events.602.f:0 "Emphasise condemnation of those who worshipped the Dark Lord."
+ seren_events.602.g:0 "They will have to learn to live with us."
+ 
+ seren_events.603.t:0 "Prifddinas Pilgrimages"
+ seren_events.603.d:0 "More and more of our people are making pilgrimages to Prifddinas, viewing it as the most sacred city to the Serenist faith. However, such a movement could threaten to undermine the status of [Root.GetName] as an independent nation in favour of subservience to Tirannwn."
+ seren_events.603.a:0 "Let the pilgrims pass!"
+ seren_events.603.b:0 "Restrict the pilgrimages."
+ 
+ seren_events.604.t:0 "Trade Relations with Prifddinas"
+ seren_events.604.d:0 "Prifddinas' re-emergence makes it a critical centre of trade which our merchants are eager not to miss out on."
+ seren_events.604.a:0 "We shouldn't turn down fresh opportunities."
+ serenist_traders_in_prif_tt:0 "Serenist Traders in Prifddinas"
+ seren_events.604.b:0 "Shouldn't our focus be in Kandarin, a bigger market?"
+ serenist_traders_in_ardougne_tt:0 "Serenist Traders in Central Kandarin"
+ seren_events.604.c:0 "Those traders should stay home."
+ 
+ seren_events.605.t:0 "$COUNTRY$ Opens Up"
+ seren_events.605.da:0 "Prifddinas is to be a city for all! Let Gielinor rejoice that her crown jewel has re-emerged brighter than ever before."
+ seren_events.605.db:0 "The changing fates of Prifddinas have made us re-assess our policies regarding how open we want our realm to be. [Root.GetName] shall now be more open to foreign influences!"
+ seren_events.605.a:0 "Praise Seren!"
+ 
+ seren_events.606.t:0 "Policies of $COUNTRY$ Remain Unchanged"
+ seren_events.606.da:0 "The restoration of Prifddinas is no cause for us to radically change our policies. After all, our existing approach got us to this point already - why should we change?"
+ seren_events.606.db:0 "Cities fall and cities rise. Even Prifddinas itself went and returned anew. This is life. And this does not concern our policymaking."
+ seren_events.606.a:0 "Praise Seren!"
+
+ seren_events.607.t:0 "$COUNTRY$ Becomes More Isolated"
+ seren_events.607.da:0 "It is evident that to prevent Prifddinas from falling again to shadow, we must isolate it more strictly than before."
+ seren_events.607.db:0 "So, Prifddinas has been restored. And the cycle of destruction can begin anew. Clearly, it is best if [Root.GetName] has no part in that, and keeps its borders tightly controlled."
+ seren_events.607.a:0 "Praise Seren!" 
+ 
+ #700-799: Rebirth of Seren
+ 
+ seren_events.700.t:0 "The Rebirth of Seren"
+ seren_events.700.da:0 "Crystals shudder. Can you hear them? They are shaking more and more violently. They call out! Call out for Seren to be made whole again!"
+ seren_events.700.db:0 "Seren's restoration requires immediate consideration regarding the direction of our faith."
+ seren_events.700.a:0 "All shall rejoice at the rebirth of Seren!"
+ seren_events.700.b:0 "This is a good idea - but we need to be discreet about it."
+ seren_events.700.c:0 "Seren shattered herself for a reason. We should not be meddling with this."
+ seren_events.700.e:0 "Seren's return can only bestow greatness for [Root.GetName]!"
+ seren_events.700.f:0 "This new Seren is not the Seren we know."
+ 
+ seren_events.701.t:0 "The Dark Lord and Seren"
+ seren_events.701.da:0 "A faction of elves and adventurers have embarked on the journey to reconstruct Seren's body. They believe that reintegrating the Dark Lord - a fragment of Seren previously split off from her body - would strengthen her."
+ seren_events.701.db:0 "Regardless of our pleas not to attempt to reconstruct Seren's body, a faction of elves and adventurers have set out to do so. They believe that reintegrating the Dark Lord - a fragment of Seren previously split off from her body - would strengthen her."
+ seren_events.701.a:0 "Reintegrating the Dark Lord would help broaden Seren's understanding."
+ seren_events.701.b:0 "We fought to stop the Dark Lord, not strengthen it!"
+ seren_events.701.c:0 "To counterbalance the return of Seren, we should rebuild the Dark Lord!"
+ 
+ seren_events.702.t:0 "Seren and Zaros"
+ seren_events.702.d:0 "Seren has a brother, spoken about in shadows and whispers. The Empty Lord. Zaros. The history between Serenists and Zarosians is strained to put it mildly, but with an event as monumentous as the restoration of Seren, it may be time to reach out to the forgotten God's followers..."
+ seren_events.702.a:0 "Zarosian knowledge would strengthen Seren."
+ seren_events.702.b:0 "Zarosians could help us sabotage the foolish attempts to build a false Seren."
+ seren_events.702.c:0 "Seren's light needs no help."
+ seren_events.702.e:0 "The situation is bad enough already; we do not need the Zarosians!"
+ 
+ seren_events.703.t:0 "The Lost Clan"
+ seren_events.703.d:0 "The World Gate has opened the way to Tarddiad, original home of the elves, and home to crystals necessary for the reconstruction of Seren. One of the original nine elven clans, Clan Cywir, never left the world, but has now become overdependent on the crystals in Seren's absence."
+ seren_events.703.a:0 "It is time that all of Seren's children were reunited."
+ seren_events.703.b:0 "Clan Cywir shall be a valuable voice for scepticism."
+ seren_events.703.c:0 "Let's just get the information we need to restore Seren and move on."
+ seren_events.703.e:0 "Going to Tarddiad is a fruitless cause."
+ 
+ seren_events.704.t:0 "The Return of Seren"
+ seren_events.704.d:0 "Seren is no longer shattered. Her body has been re-assembled, and she sets foot on Gielinor for the first time in over 2,000 years."
+ seren_events.704.a:0 "The Sixth Age just became a little safer for Serenists."
+ 
+ seren_events.705.t:0 "Seren's Role"
+ seren_events.705.d:0 "With Seren reborn, the question lies before us: What role she should play in [Root.GetName]?"
+ seren_events.705.a:0 "Seren is free to do as she pleases!"
+ seren_events.705.b:0 "Seren should limit her involvement in the lives of mortals."
+ 
+ seren_events.706.t:0 "Seren's Return and Openness"
+ seren_events.706.d:0 "Followers of Seren now find themselves in a brave new world with their Goddess. The opportunities seem so open - the opportunity for change immense."
+ seren_events.706.a:0 "This is a time to open out to the world!"
+ seren_events.706.b:0 "This is a time of potential. But only due to the policies we have already pursued."
+ seren_events.706.c:0 "We must safeguard ourselves in this strange new world!"
+ 
+ seren_events.707.t:0 "The Love of Seren"
+ seren_events.707.d:0 "Seren's return is a blessing upon [Root.GetName]. We are now ready to open up our borders and share Seren's glory with the world!"
+ seren_events.707.a:0 "Praise Seren!"
+ 
+ seren_events.708.t:0 "The Blessings of Seren"
+ seren_events.708.d:0 "The glory of Seren shines upon [Root.GetName]. That is all the change we need at this time."
+ seren_events.708.a:0 "Praise Seren!"
+ 
+ seren_events.709.t:0 "Seren, Defender of $COUNTRY$"
+ seren_events.709.d:0 "Seren's return is a blessing to [Root.GetName], but we must remember that the world is dangerous and there is no guarantee that Seren's blessing is enough to protect us from the evil elsewhere in Gielinor."
+ seren_events.709.a:0 "Praise Seren!"
+ 
+ seren_events.710.t:0 "Looking to the Future"
+ seren_events.710.d:0 "Seren's apparent restoration was a mistake. Whatever is this being made of Seren's crystals is not the Goddess we know. It seems time to look outward for fresh ideas on the future, rather than trying to recapture a lost past."
+ seren_events.710.a:0 "Praise the real Seren!"
+ 
+ seren_events.711.t:0 "The Future is Our Own"
+ seren_events.711.d:0 "Should we open or close our borders. Do we believe in this so-called resurrected Seren or not? The answer is evidently to carry on as we have before."
+ seren_events.711.a:0 "Praise Seren?"
+ 
+ seren_events.712.t:0 "The Strange New World"
+ seren_events.712.d:0 "Gielinor nowadays is full of strange ideas of resurrecting Gods. We want no part of that nonsense!"
+ seren_events.712.a:0 "Praise Seren?"
+ 
+ #800-899: Seren's New Direction
+ 
+ seren_events.800.t:0 "The New Path of Seren"
+ seren_events.800.d:0 "At the end of the Elder God Wars, Seren abandoned her followers to side with the Elder Gods, knowing that this could result in our destruction. Such a decision has devastated Serenists across Gielinor and increasing numbers of elves are outwardly denouncing her."
+ seren_events.800.a:0 "This is all Seren's fault."
+ seren_events.800.b:0 "Seren was impaired!"
+ seren_events.800.c:0 "That wasn't Seren!"
+ seren_events.800.e:0 "Seren was right!"
+ 
+ seren_events.801.t:0 "The Wings of Armadyl"
+ seren_events.801.d:0 "Word has come around that Armadyl once spoke with Seren with the proposal of a shared future for elves and aviansie alike. Unlike Seren, Armadyl has remained steadfast in his support for the downtrodden and could be the god we need at such a time."
+ seren_events.801.a:0 "The future is with Armadyl."
+ seren_events.801.b:0 "No god is worth serving."
+ seren_events.801.c:0 "We are open to alternative philosophies, but will not convert from our faith."
+ seren_events.801.e:0 "We are not going to abandon our faith just because its head went astray."
+
+ seren_events.802.t:0 "Philosophy in Uncertain Times"
+ seren_events.802.d:0 "With our official view that Seren was not responsible for the hatching of the Elder Gods' eggs, it has become important to consider if our religion is not defined by the actions of its nominal head, what should it be defined by?"
+ seren_events.802.a:0 "We should re-orient ourselves to a philosophy of openness."
+ seren_events.802.b:0 "The community we built around the faith of Seren is the most important thing."
+ seren_events.802.c:0 "Seren's teachings will continue to guide us."
+ 
+ seren_events.803.t:0 "Loyalty in a Hostile World"
+ seren_events.803.d:0 "Gielinor as a whole does not look positively on the Elder Gods, but they are necessary for the operation of all things. Seren's actions to save them reflect how she saved us by bringing the elves to Gielinor - but how can we make our people and the world aware of this?"
+ seren_events.803.a:0 "The Elder Gods are to be celebrated, not demonised!"
+ seren_events.803.b:0 "Without Seren, Gielinor would have never been saved."
+ seren_events.803.c:0 "We do not need to convince a closed-minded world."
+ 
+ seren_events.804.t:0 "$COUNTRY$ Opens Up"
+ seren_events.804.d:0 "In the aftermath of Seren's actions, we must become more involved in the world."
+ seren_events.804.a:0 "Praise our people."
+ 
+ seren_events.805.t:0 "Policies of $COUNTRY$ Remain Unchanged"
+ seren_events.805.d:0 "What Seren did or didn't do is irrelevant to the governing of our state. We are not about to open or close our borders any more than before."
+ seren_events.805.a:0 "Praise our people."
+
+ seren_events.806.t:0 "$COUNTRY$ Becomes More Isolated"
+ seren_events.806.d:0 "If the world is to condemn Seren, so be it. We can operate alone."
+ seren_events.806.a:0 "Praise our people."
+ 
+ 

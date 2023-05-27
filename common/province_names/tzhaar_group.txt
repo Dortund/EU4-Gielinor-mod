@@ -1,0 +1,7 @@
+212 = "Mor Ul Rek" #TzHaar City
+
+#Bonus
+46 = "YtTok" #Camdozaal (Ice Mountain)
+374 = "Jal-Hur" #Keldagrim
+415 = "MorYt Jad" #Wintertodt
+525 = "Ul-Ket" #Civitas illa Fortis

@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = migratory_tribe
+government_rank = 1
+primary_culture = berserker
+religion = zamorak
+technology_group = northerntechgroup
+capital = 164 #Wilderness Bandit Camp
+national_focus = MIL
+
+2057.10.28 = {
+	monarch = {
+		name = "Lungrim"
+		dynasty = "Charr"
+		birth_date = 2019.9.15
+		adm = 1
+		dip = 0
+		mil = 5
+	}
+}

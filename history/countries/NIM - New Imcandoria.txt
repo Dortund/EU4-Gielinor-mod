@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = feudal_reform
+government_rank = 2
+primary_culture = imcando
+religion = saradomin
+technology_group = dwarventechgroup
+capital = 46 #Camdozaal
+national_focus = ADM

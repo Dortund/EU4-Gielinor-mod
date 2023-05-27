@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = dimnes
+add_accepted_culture = soulless
+religion = zamorak
+technology_group = centraltechgroup
+capital = 339 #Underground Pass
+national_focus = MIL
+
+2165.11.1 = {
+	monarch = {
+		name = "Iban"
+		dynasty = "Zamoson"
+		birth_date = 2143.5.11
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = malevolent_personality
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

@@ -1,0 +1,25 @@
+#805-Shores of Life
+owner = BNZ
+controller = BNZ
+add_core = BNZ
+tribal_owner = ---
+culture = atoll_monkey
+religion = marimbo
+
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = tropical_logs
+
+is_city = yes
+
+1965.6.15 = {
+	owner = APE
+	controller = APE
+	add_core = APE
+}

@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = burthorpian
+religion = saradomin
+technology_group = centraltechgroup
+capital = 51 #Burthorpe
+national_focus = MIL
+
+1929.5.3 = {
+	monarch = {
+		name = "Velbar"
+		dynasty = "Burra"
+		birth_date = 1900.5.3
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}
+
+2151.4.6 = {
+	monarch = {
+		name = "Anlaf"
+		dynasty = "Donblas"
+		birth_date = 2133.8.9
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+}

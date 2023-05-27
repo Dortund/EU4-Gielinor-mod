@@ -1,0 +1,19 @@
+#1185-Halls of Reckoning
+owner = KHN
+controller = KHN
+add_core = KHN
+tribal_owner = ---
+culture = pincers_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+trade_goods = manufactured_goods
+
+is_city = yes

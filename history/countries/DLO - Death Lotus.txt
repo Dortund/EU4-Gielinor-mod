@@ -1,0 +1,32 @@
+government = republic
+add_government_reform = rogue_republic
+government_rank = 1
+primary_culture = pincers_culture
+add_accepted_culture = bowl_culture
+religion = suzaku
+technology_group = wushankotechgroup
+capital = 1193 #Pearl Fortress
+historical_friend = TKK
+
+1925.10.10 = {
+	monarch = {
+		name = "Cikai"
+		dynasty = "Xue"
+		birth_date = 1900.12.17
+		death_date = 1977.11.19
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+
+2140.7.12 = {
+	monarch = {
+		name = "Baby Tooth"
+		dynasty = "Su"
+		birth_date = 2129.7.16
+		adm = 2
+		dip = 0
+		mil = 2
+	}
+}

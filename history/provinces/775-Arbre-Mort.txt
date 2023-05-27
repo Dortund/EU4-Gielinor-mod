@@ -1,0 +1,33 @@
+#775-Arbre-Mort
+owner = HUZ
+controller = HUZ
+add_core = HUZ
+tribal_owner = ---
+culture = huzamogaarb
+religion = bandos
+
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = logs
+
+is_city = yes
+
+2039.3.21 = {
+	owner = KZD
+	controller = KZD
+	add_core = KZD
+	remove_core = HUZ
+	culture = ouranian
+	religion = zamorak
+}

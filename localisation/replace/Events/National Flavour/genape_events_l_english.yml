@@ -1,0 +1,12 @@
+﻿l_english:
+ flavor_genape.1.t:0 "The Shaking Caverns"
+ flavor_genape.1.d:0 "Beneath the jungles of southern Ape Atoll is a cave system riddled with skeletal monkeys. They could help make up the numbers of our population, but integrating the undead is sure to upset a lot of people."
+ flavor_genape.1.a:0 "The dead can dance!"
+ flavor_genape.1.b:0 "Bones are for burying!"
+ 
+ flavor_genape.2.t:0 "Ninja Enthusiasm"
+ flavor_genape.2.d:0 "A wave of enthusiasm for all things ninja has swept over [Root.GetName]. A large number of monkeys want to join in - where should we direct them?"
+ flavor_genape.2.a:0 "We could use more manpower."
+ flavor_genape.2.a_tooltip:0 "Instantly gain 5,000 infantry in your capital."
+ flavor_genape.2.b:0 "We could use more sailors."
+ flavor_genape.2.b_tooltip:0 "Instantly gain 3 light ships in random coastal provinces."

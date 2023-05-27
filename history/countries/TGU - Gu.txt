@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = shield_culture
+add_accepted_culture = sea_orphan
+add_accepted_culture = sky_orphan
+religion = byakko
+technology_group = wushankotechgroup
+capital = 1213 #Gu
+historical_rival = OBP
+
+1901.7.29 = {
+	monarch = {
+		name = "Xiurong"
+		dynasty = "Gu"
+		birth_date = 1880.2.13
+		death_date = 1953.5.13
+		adm = 6
+		dip = 1
+		mil = 1
+		female = yes
+	}
+}
+
+2164.11.25 = {
+	monarch = {
+		name = "Bian"
+		dynasty = "Gu"
+		birth_date = 2134.4.23
+		death_date = 2178.10.11
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

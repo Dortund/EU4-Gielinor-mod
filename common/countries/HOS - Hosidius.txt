@@ -1,0 +1,78 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 50 109 64 }
+
+revolutionary_colors = { 3 4 5 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Alan #0" = 5
+	"Arno #0" = 5
+	"Artur #0" = 5
+	"Berry #0" = 5
+	"Derse #0" = 5
+	"Ethrain #0" = 5
+	"Gordon #0" = 5
+	"Gricoller #0" = 5
+	"Horace #0" = 5
+	"Jarvis #0" = 5
+	"Jean #0" = 5
+	"Jon #0" = 5
+	"Johnathan #0" = 5
+	"Kai #0" = 5
+	"Kandur #0" = 5
+	"Keith #0" = 5
+	"Konoo #0" = 5
+	"Pandur #0" = 5
+	"Ramocean #0" = 5
+	"Richard #0" = 5
+	
+	"Alexandra #0" = -5
+	"Allanna #0" = -5
+	"Amelia #0" = -5
+	"Barbara #0" = -5
+	"Bologa #0" = -5
+	"Elena #0" = -5
+	"Esther #0" = -5
+	"Ewesey #0" = -5
+	"Golova #0" = -5
+	"Jane #0" = -5
+	"Leela #0" = -5
+	"Logava #0" = -5
+	"Mariah #0" = -5
+	"Marisi #0" = -5
+	"Mary #0" = -5
+	"Murfet #0" = -5
+	"Nesty #0" = -5
+	"Nikkie #0" = -5
+	"Olivia #0" = -5
+	"Perry #0" = -5
+	"Rosie #0" = -5
+	"Talia #0" = -5
+	"Taylor #0" = -5
+	"Vannah #0" = -5
+	
+	"Hosa #0" = 1
+	"Martin #0" = 1
+	"Lan #0" = 1
+	"Reginald #0" = 1
+	"Robert #0" = 1
+	"Roy #0" = 1
+	"Tomas #0" = 1
+	
+	"Alyssa #0" = -1
+	"Elise #0" = -1
+	"Rose #0" = -1
+}

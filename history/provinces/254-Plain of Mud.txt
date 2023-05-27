@@ -1,0 +1,38 @@
+#254 - Plain of Mud
+owner = EKE
+controller = EKE
+add_core = EKE
+tribal_owner = ---
+culture = ekeleshuun
+religion = bandos
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = bandostechgroup
+discovered_by = elventechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 7
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+2027.2.27 = {
+	owner = ADO
+	controller = ADO
+	add_core = ADO
+	base_manpower = 2
+}
+
+2098.11.2 = {
+	owner = KDR
+	controller = KDR
+	add_core = KDR
+	remove_core = ADO
+}

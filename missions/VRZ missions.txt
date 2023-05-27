@@ -1,0 +1,187 @@
+varze_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = VRZ
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	VRZ_ice_mountain_monastery = {
+		icon = mission_ice_mountain_monastery
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 865
+		}
+		trigger = {
+			religion = saradomin
+			865 = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+				is_core = ROOT
+			}
+		}
+		effect = {
+			865 = {
+				change_religion = ROOT
+			}
+			define_advisor = {
+				type = theologian
+				religion = ROOT
+				skill = 2
+				cost_multiplier = 0.5
+			}
+			add_papal_influence = 10
+		}
+	}
+	
+	VRZ_earn_entranas_favour = {
+		icon = mission_earn_entranas_favour
+		position = 2
+		required_missions = { VRZ_ice_mountain_monastery }
+		trigger = {
+			religion = saradomin
+			OR = {
+				is_papal_controller = yes
+				reverse_has_opinion = {
+					who = ENT
+					value = 150
+				}
+			}
+			num_of_cardinals = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "VRZ_glory_to_saradomin"
+				duration = 9125
+			}
+		}
+	}
+	VRZ_faithful_expansion = {
+		icon = mission_faithful_expansion
+		position = 3
+		required_missions = { genasg_proselytise_the_faith VRZ_earn_entranas_favour }
+		trigger = {
+			NOT = { is_subject = yes }
+			religion = saradomin
+			papal_influence = 100
+			any_owned_province = {
+				any_empty_neighbor_province = {
+					region = forinthry_region
+				}
+			}
+		}
+		effect = {
+			add_papal_influence = -100
+			random_owned_province = {
+				limit = {
+					any_empty_neighbor_province = {
+						region = forinthry_region
+					}
+				}
+				random_empty_neighbor_province = {
+					limit = {
+						region = forinthry_region
+					}
+					add_siberian_construction = 50
+				}
+			}
+		}
+	}
+	
+}
+
+varze_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = VRZ
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	VRZ_achieve_independence = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {  }
+		trigger = {
+			NOT = { is_subject = yes }
+			army_size_percentage = 0.9
+		}
+		effect = {
+			asgarnian_borderlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	VRZ_expand_the_realm = {
+		icon = mission_expand_the_realm
+		position = 2
+		required_missions = { VRZ_achieve_independence }
+		provinces_to_highlight = {
+			area = asgarnian_borderlands_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			asgarnian_borderlands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			falador_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+					add_permanent_claim = ROOT
+			}
+			farramor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	VRZ_into_the_wilderness = {
+		icon = mission_into_the_wilderness
+		position = 3
+		required_missions = { VRZ_expand_the_realm genasg_decent_army }
+		trigger = {
+			NOT = { is_subject = yes }
+			army_professionalism = 0.5
+			mil_power = 100
+			any_owned_province = {
+				any_empty_neighbor_province = {
+					region = forinthry_region
+				}
+			}
+		}
+		effect = {
+			add_mil_power = -100
+			random_owned_province = {
+				limit = {
+					any_empty_neighbor_province = {
+						region = forinthry_region
+					}
+				}
+				random_empty_neighbor_province = {
+					limit = {
+						region = forinthry_region
+					}
+					add_siberian_construction = 50
+				}
+			}
+		}
+	}
+}

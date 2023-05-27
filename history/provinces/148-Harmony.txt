@@ -1,0 +1,26 @@
+#148 - Harmony
+owner = HMY
+controller = HMY
+add_core = HMY
+tribal_owner = ---
+culture = entranan
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+fort_15th = yes
+
+trade_goods = grains
+
+is_city = yes
+
+center_of_trade = 1

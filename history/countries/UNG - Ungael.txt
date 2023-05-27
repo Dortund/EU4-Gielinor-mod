@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = island_boss_nation
+government_rank = 1
+primary_culture = undeaddragon
+religion = godless
+religious_school = monstrous_school
+technology_group = northerntechgroup
+capital = 380 #Ungael
+national_focus = MIL
+
+1.2.1 = {
+	monarch = {
+		name = "Vorkath"
+		dynasty = "of Zorgoth"
+		birth_date = 1.2.1
+		adm = 0
+		dip = 0
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

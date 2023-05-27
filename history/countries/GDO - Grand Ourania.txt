@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = mahjarrat_autocracy
+government_rank = 2
+primary_culture = ouranian
+add_accepted_culture = ardignan
+add_accepted_culture = yanillian
+religion = zamorak
+technology_group = kandarintechgroup
+capital = 287 #Ourania

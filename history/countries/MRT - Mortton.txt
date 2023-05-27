@@ -1,0 +1,30 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = north_coaster
+religion = saradomin
+technology_group = centraltechgroup
+capital = 125 #Mortton
+national_focus = ADM
+
+1913.1.7 = {
+	monarch = {
+		name = "Razilium"
+		dynasty = "Erkle"
+		birth_date = 1899.11.5
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+2130.3.14 = {
+	monarch = {
+		name = "Ulsquire"
+		dynasty = "Shauncy"
+		birth_date = 2093.10.18
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}

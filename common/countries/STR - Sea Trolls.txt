@@ -1,0 +1,61 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 89 109 83 }
+
+revolutionary_colors = { 2 5 7 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Beer Glass #0" = 5
+	"Boat #0" = 5
+	"Casket #0" = 5
+	"Fishing Explosive #0" = 5
+	"Gravel #0" = 5
+	"Left Boot #0" = 5
+	"Lobster #0" = 5
+	"Mine #0" = 5
+	"Mogre #0" = 5
+	"Mudskipper #0" = 5
+	"Octopus #0" = 5
+	"Penguin #0" = 5
+	"Right Boot #0" = 5
+	"Sand #0" = 5
+	"Scuba #0" = 5
+	"Shark #0" = 5
+	"Shrimp #0" = 5
+	"Small Fishing Net #0" = 5
+	"Squid #0" = 5
+	"Whale #0" = 5
+	"Beer Glass #0" = -5
+	"Boat #0" = -5
+	"Casket #0" = -5
+	"Fishing Explosive #0" = -5
+	"Gravel #0" = -5
+	"Left Boot #0" = -5
+	"Lobster #0" = -5
+	"Mine #0" = -5
+	"Mogre #0" = -5
+	"Mudskipper #0" = -5
+	"Octopus #0" = -5
+	"Penguin #0" = -5
+	"Right Boot #0" = -5
+	"Sand #0" = -5
+	"Scuba #0" = -5
+	"Shark #0" = -5
+	"Shrimp #0" = -5
+	"Small Fishing Net #0" = -5
+	"Squid #0" = -5
+	"Whale #0" = -5
+}

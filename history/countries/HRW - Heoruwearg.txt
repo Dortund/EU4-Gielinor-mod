@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = taverlian
+religion = guthix
+technology_group = centraltechgroup
+capital = 946
+
+1912.7.22 = {
+	monarch = {
+		name = "Alain"
+		dynasty = "Oval"
+		birth_date = 1897.4.21
+		adm = 2
+		dip = 0
+		mil = 1
+	}
+}

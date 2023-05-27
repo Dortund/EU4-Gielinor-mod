@@ -1,0 +1,1072 @@
+####################
+####################
+# tribal_administration
+####################
+####################
+
+bandosian_horde = {
+	icon = "icon_bandosian_horde"
+	allow_normal_conversion = no
+	potential = {
+		religion = bandos
+		NOT = { has_reform = boss_nation }
+	}
+	legacy_equivalent = bandosian_horde_legacy
+	nomad = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.5
+
+	modifiers = {
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
+		loot_amount = 0.25
+		global_institution_spread = -0.15
+		reinforce_cost_modifier = -0.5
+		movement_speed = 0.2
+		shock_damage = 0.1
+		fire_damage_received = 0.05
+		naval_forcelimit_modifier = -0.5
+	 	global_sailors_modifier = -0.5
+	}
+}
+
+boss_nation = {
+	icon = "icon_boss_nation"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		has_reform = boss_nation
+	}
+	legacy_equivalent = boss_nation_legacy
+	fixed_rank = 1
+	valid_for_nation_designer = no
+	nomad = yes
+	allow_convert = no
+	modifiers = {
+		can_not_declare_war = yes
+		can_not_build_missionaries = yes
+		can_not_build_colonies = yes
+		can_not_send_merchants = yes
+		
+	 	liberty_desire = 1000
+		governing_capacity_modifier = -0.98
+		
+	 	global_tax_income = 36
+		horde_unity = 5
+		
+		global_manpower_modifier = 2
+		land_forcelimit_modifier = 2
+		loot_amount = 1
+		reinforce_cost_modifier = -0.75
+		
+		army_tradition = 2
+		discipline = 0.1
+	 	defensiveness = 0.25
+		hostile_attrition = 1
+	}
+	queen = no
+	heir = no
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+cloud_giant_tribe = {
+	icon = "icon_cloud_giant_tribe"
+	potential = {
+	 	culture_group = giant_group
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	legacy_equivalent = cloud_giant_tribe_legacy
+	modifiers = {
+		global_tax_modifier = 0.1
+		shock_damage = 0.1
+	}
+}
+
+feldip_tribe = {
+	icon = "icon_feldip_tribe"
+	potential = {
+	 	has_reform = feldip_tribe
+	}
+	allow_force_tributary = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	legacy_equivalent = feldip_tribe_legacy
+	modifiers = {
+		shock_damage = 0.10
+		war_exhaustion = -0.05
+		land_maintenance_modifier = -0.10
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+goblin_empire = {
+	icon = "icon_goblin_empire"
+	allow_normal_conversion = no
+	potential = {
+		religion = bandos
+		has_reform = goblin_empire
+	}
+	legacy_equivalent = goblin_empire_legacy
+	fixed_rank = 3
+	nomad = yes
+	valid_for_nation_designer = no
+	nation_designer_cost = 150
+
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.5
+
+	modifiers = {
+		horde_unity = 1
+		global_manpower_modifier = 0.5
+		land_forcelimit_modifier = 0.5
+		manpower_recovery_speed = 0.1
+		loot_amount = 0.5
+		global_institution_spread = -0.15
+		reinforce_speed = 0.5
+		reinforce_cost_modifier = -0.75
+		movement_speed = 0.2
+		discipline = -0.05
+		land_morale = -0.10
+	}
+}
+
+island_boss_nation = {
+	icon = "icon_island_boss_nation"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		has_reform = island_boss_nation
+	}
+	legacy_equivalent = boss_nation_legacy
+	fixed_rank = 1
+	valid_for_nation_designer = no
+	nomad = yes
+	allow_convert = no
+	modifiers = {
+		can_not_declare_war = yes
+		can_not_build_missionaries = yes
+		can_not_build_colonies = yes
+		can_not_send_merchants = yes
+		
+	 	liberty_desire = 1000
+		governing_capacity_modifier = -0.98
+		
+	 	global_tax_income = 36
+		horde_unity = 5
+		
+		global_manpower_modifier = 1
+		land_forcelimit_modifier = 1
+		loot_amount = 1
+		reinforce_cost_modifier = -0.5
+		
+		army_tradition = 1
+		discipline = 0.1
+	 	defensiveness = 0.25
+		hostile_attrition = 1
+		
+		global_sailors_modifier = 1
+		sailors_recovery_speed = 0.25
+		naval_forcelimit_modifier = 1
+		global_ship_cost = -0.2
+		naval_maintenance_modifier = -0.2
+	}
+	queen = no
+	heir = no
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+kharidian_tribe = {
+	icon = "icon_kharidian_tribe"
+	allow_normal_conversion = no
+	potential = {
+		tag = KDS
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	legacy_equivalent = kharidian_tribe_legacy
+	native_mechanic = no
+	fixed_rank = 1
+	lock_level_when_selected = yes
+	modifiers = {
+	 	improve_relation_modifier = 0.1
+		land_forcelimit_modifier = 0.1
+		global_manpower_modifier = 0.1
+	}
+}
+
+migratory_tribe = {
+	icon = "icon_migratory_tribe"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = migratory_tribe
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = -10
+	legacy_equivalent = migratory_tribe_legacy
+	native_mechanic = yes
+	allow_migration = yes
+	fixed_rank = 1
+	lock_level_when_selected = yes
+	modifiers = {
+		land_attrition = -0.1
+	 	improve_relation_modifier = 0.1
+	}
+}
+
+mogre_horde = {
+	icon = "icon_mogre_horde"
+	allow_normal_conversion = no
+	potential = {
+		tag = MKM
+		NOT = { has_reform = boss_nation }
+	}
+	legacy_equivalent = mogre_horde_legacy
+	nomad = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.5
+
+	modifiers = {
+		global_manpower_modifier = 0.1
+		land_forcelimit_modifier = 0.1
+		loot_amount = 0.25
+		global_institution_spread = -0.15
+		reinforce_cost_modifier = -0.5
+		movement_speed = 0.1
+		shock_damage = 0.05
+		fire_damage_received = 0.05
+		naval_forcelimit_modifier = 0.25
+	 	global_sailors_modifier = 0.25
+	}
+}
+
+quidamortem_boss_nation = {
+	icon = "icon_quidamortem_boss_nation"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		has_reform = quidamortem_boss_nation
+	}
+	legacy_equivalent = quidamortem_boss_nation_legacy
+	fixed_rank = 1
+	valid_for_nation_designer = no
+	nomad = yes
+	allow_convert = no
+	modifiers = {
+		can_not_declare_war = yes
+		can_not_build_missionaries = yes
+		can_not_build_colonies = yes
+		can_not_send_merchants = yes
+		
+	 	liberty_desire = 1000
+		governing_capacity_modifier = -0.98
+		
+	 	global_tax_income = 36
+		horde_unity = 5
+		
+		global_manpower_modifier = 2
+		land_forcelimit_modifier = 2
+		loot_amount = 1
+		reinforce_cost_modifier = -0.75
+		
+		army_tradition = 2
+		discipline = 0.1
+	 	defensiveness = 0.25
+		hostile_attrition = 1
+	}
+	queen = no
+	heir = no
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+runecrafting_crusader = {
+	icon = "icon_runecrafting_crusader"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = runecrafting_crusader
+	}
+	legacy_equivalent = runecrafting_crusader_legacy
+	nomad = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 200
+
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.25
+
+	modifiers = {
+	 	global_tax_income = 60
+		global_manpower = 20
+	 	land_forcelimit = 20
+		land_maintenance_modifier = -0.10
+		global_institution_spread = -0.15
+		siege_ability = 0.25
+		reinforce_cost_modifier = -0.5
+		shock_damage = 0.1
+		fire_damage_received = -0.1
+		administrative_efficiency = 0.05
+	}
+}
+
+settled_tribe = {
+	icon = "icon_settled_tribe"
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	legacy_equivalent = settled_tribe_legacy
+	native_mechanic = no
+	fixed_rank = 1
+	lock_level_when_selected = yes
+	modifiers = {
+ 	 	build_time = -0.05
+	}
+}
+
+troll_tribe = {
+	icon = "icon_troll_tribe"
+	potential = {
+		culture_group = troll_group
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	legacy_equivalent = troll_tribe_legacy
+	modifiers = {
+		global_institution_spread = -0.15
+		technology_cost = 0.05
+		shock_damage = 0.2
+	 	army_tradition_from_battle = 0.5
+		land_maintenance_modifier = -0.1
+	}
+}
+
+unleashed_horde = {
+	icon = "icon_unleashed_horde"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = unleashed_horde
+	}
+	legacy_equivalent = unleashed_horde_legacy
+	nomad = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.5
+
+	modifiers = {
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
+		loot_amount = 0.50
+		global_institution_spread = -0.15
+		reinforce_cost_modifier = -0.5
+		cav_to_inf_ratio = 0.25
+		movement_speed = 0.2
+		years_of_nationalism = -5
+	}
+}
+
+warband = {
+	icon = "icon_warband"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = warband
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+	legacy_equivalent = warband_legacy
+	nomad = yes
+	native_mechanic = no
+	allow_migration = yes
+	fixed_rank = 1
+	lock_level_when_selected = yes
+	modifiers = {
+		tolerance_own = 2
+		global_regiment_recruit_speed = -0.5
+		leader_land_fire = 1
+		leader_land_shock = 1
+		discipline = 0.05
+		justify_trade_conflict_cost = -0.75
+		horde_unity = 1
+	}
+}
+
+####################
+####################
+#tribal_cultural_values
+####################
+####################
+
+isolationist_culture_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_isolationist_culture"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+		defensiveness = 0.1
+		diplomatic_upkeep = -1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = {
+				num_of_allies = 1
+			}
+		}
+		modifier = {
+			factor = 0
+			num_of_allies = 4
+		}
+	}
+}
+
+maritime_culture_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_maritime_culture"
+	potential = {
+		NOT = { is_nomad = yes }
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		navy_tradition = 0.5
+		global_sailors_modifier = 0.15
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 10
+			capital_scope = {
+				is_island = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+				}
+			}
+		}
+	}
+}
+
+razer_culture_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_razer_culture"
+	potential = {
+		is_nomad = yes
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		raze_power_gain = 0.1
+	}
+	ai = {
+		factor = 5
+	}
+}
+
+trader_culture_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_merchant_republic"
+	potential = {
+		NOT = { is_nomad = yes }
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		global_own_trade_power = 0.1
+	 	trade_efficiency = 0.05
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+# Boss reforms
+
+terror_of_seas_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_terror_of_seas"
+	potential = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		global_sailors_modifier = 2
+		sailors_recovery_speed = 0.25
+		naval_forcelimit_modifier = 2
+		global_ship_cost = -0.5
+		naval_maintenance_modifier = -0.5
+		leader_naval_fire = 1
+		leader_naval_manuever = 1
+		leader_naval_shock = 1
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 10
+			capital_scope = {
+				is_island = yes
+			}
+		}
+		modifier = {
+			factor = 100
+			tag = TMP
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+				}
+			}
+		}
+	}
+}
+
+resilience_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_resilience"
+	potential = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		country_military_power = 1
+		fort_maintenance_modifier = -0.5
+		fire_damage_received = -0.1
+		shock_damage_received = -0.1
+		manpower_recovery_speed = 0.2
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+####################
+####################
+#tribal_religion
+####################
+####################
+
+strict_obedience_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_strict_obedience"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+		religion = bandos
+	}
+	modifiers = {
+		tolerance_own = 2
+		tolerance_heretic = -2
+		tolerance_heathen = -2
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 5
+			culture_group = goblin_group
+		}
+	}
+}
+
+inward_pressure_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_inward_pressure"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		global_missionary_strength = 0.01
+		missionary_maintenance_cost = -0.25
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 0
+			religious_unity = 0.95
+		}
+	}
+}
+
+outward_pressure_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_outward_pressure"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		warscore_cost_vs_other_religion = -0.2
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 5
+			tag = GUN
+		}
+	}
+}
+
+# Boss reforms
+
+open_to_challenge_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_open_to_challenge"
+	potential = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.2
+		global_institution_spread = 0.2
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 5
+			tag = ZUA
+		}
+	}
+}
+
+xenophobe_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_xenophobe"
+	potential = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		same_culture_advisor_cost = -0.3
+		culture_conversion_cost = -0.2
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 5
+			tag = WAT
+		}
+	}
+}
+
+####################
+####################
+#tribal_modernization
+####################
+####################
+
+internal_development_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_internal_development"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		development_cost = -0.05
+		build_cost = -0.05
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 2
+			NOT = { total_development = 20 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { total_development = 40 }
+		}
+	}
+}
+
+organised_army_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_organise_army"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		discipline = 0.025
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+organised_navy_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_organise_navy"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+		OR = {
+			NOT = { is_nomad = yes }
+			culture = mogre
+			culture_group = fremennik_group
+		}
+	}
+	modifiers = {
+		ship_durability = 0.05
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 10
+			capital_scope = {
+				is_island = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+				}
+			}
+		}
+	}
+}
+
+# Boss reforms
+
+raider_boss_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_raider_boss"
+	potential = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		global_trade_power = 0.25
+		privateer_efficiency = 0.25
+		embargo_efficiency = 0.25
+	 	justify_trade_conflict_cost = -0.75
+	 	loot_amount = 0.5
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 5
+			has_reform = terror_of_seas_reform
+		}
+	}
+}
+
+expansionist_boss_reform = {
+	allow_normal_conversion = yes
+	icon = "icon_expansionist_boss"
+	potential = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = 0.08
+	 	core_creation = -0.5
+	}
+	ai = {
+		factor = 2
+	}
+}
+
+####################
+####################
+#tribal_reformation
+####################
+####################
+
+eternal_tribe_reform = {
+	icon = "tribal_civil_society"
+	potential = {
+		is_nomad = no
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		legitimacy = 1
+	 	stability_cost_modifier = -0.25
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+reformed_horde_reform = {
+	icon = "rioting_burning_2"
+	potential = {
+		is_nomad = yes
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		horde_unity = 1
+		nomadic_tribes_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+tribe_to_kingdom_reform = {
+	icon = "king_highlighted"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	allow_normal_conversion = yes
+	effect = {
+		lose_reforms = 4
+		change_government = monarchy
+		add_government_reform = noble_kingdom
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+tribe_to_republic_reform = {
+	icon = "parliament_highlighted"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	allow_normal_conversion = yes
+	effect = {
+		lose_reforms = 4
+		change_government = republic
+		add_government_reform = political_dynasties
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_reform = bandosian_horde
+				has_reform = runecrafting_crusader
+				has_reform = unleashed_horde
+				NOT = { trade_income_percentage = 0.3 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				num_of_centers_of_trade = 5
+				trade_income_percentage = 0.4
+			}
+		}
+	}
+}
+
+tribe_to_theocracy_reform = {
+	icon = "pope_highlighted"
+	potential = {
+		NOT = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	allow_normal_conversion = yes
+	effect = {
+		lose_reforms = 4
+		change_government = republic
+		add_government_reform = political_dynasties
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_reform = bandosian_horde
+				has_reform = runecrafting_crusader
+				has_reform = unleashed_horde
+			}
+		}
+	}
+}
+
+# Boss reforms
+
+boss_to_horde_reform = {
+	icon = "horde_riding_highlighted"
+	potential = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	allow_normal_conversion = yes
+	effect = {
+		lose_reforms = 4
+		add_government_reform = unleashed_horde
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+boss_to_kingdom_reform = {
+	icon = "king_highlighted"
+	potential = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	allow_normal_conversion = yes
+	effect = {
+		lose_reforms = 4
+		change_government = monarchy
+		add_government_reform = horde_kingdom
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+boss_to_pirate_reform = {
+	icon = "icon_pirate_highlighted"
+	potential = {
+		OR = {
+			AND = {
+				has_reform = boss_nation
+				has_reform = terror_of_seas_reform
+				has_reform = raider_boss_reform
+			}
+			has_reform = island_boss_nation
+		}
+	}
+	allow_normal_conversion = yes
+	effect = {
+		lose_reforms = 4
+		change_government = republic
+		add_government_reform = pirate_republic_reform
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+greater_boss_nation_reform = {
+	icon = "icon_greater_boss_nation"
+	potential = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		global_manpower_modifier = 1
+		land_forcelimit_modifier = 1
+		global_sailors_modifier = 1
+		naval_forcelimit_modifier = 1
+		governing_capacity_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+	}
+}

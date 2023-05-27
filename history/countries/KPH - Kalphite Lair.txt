@@ -1,0 +1,38 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 2
+primary_culture = kalphite
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 69 #Kalphite
+
+1912.1.7 = {
+	monarch = {
+		name = "Queen"
+		dynasty = "Kalphite"
+		birth_date = 1903.2.12
+		adm = 3
+		dip = 0
+		mil = 5
+		female = yes
+	}
+}
+
+2167.9.7 = {
+	monarch = {
+		name = "Queen"
+		dynasty = "Kalphite"
+		birth_date = 2142.9.7
+		adm = 3
+		dip = 0
+		mil = 5
+		female = yes
+	}
+}
+
+every_country = {
+	add_opinion = {
+		who = ROOT
+		modifier = boss_tag_opinion
+	}
+}

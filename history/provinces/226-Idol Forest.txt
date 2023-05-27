@@ -1,0 +1,21 @@
+#226 - Idol Forest
+owner = KLU
+controller = KLU
+add_core = KLU
+tribal_owner = ---
+culture = jogre
+religion = bandos
+
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = monkeytechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = herblore_supplies
+
+is_city = yes

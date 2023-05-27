@@ -1,0 +1,17 @@
+#Morytania-Canem
+dependency = {
+	subject_type = "tributary_state"
+	first = MYT
+	second = CFS
+	start_date = 1900.1.1
+	end_date = 2184.4.25
+}
+
+#Morytania-Dessous
+vassal = {
+	first = MYT
+	second = DES
+	start_date = 1900.1.1
+	end_date = 2250.1.1
+}
+

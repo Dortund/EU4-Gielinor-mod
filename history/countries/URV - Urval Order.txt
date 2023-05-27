@@ -1,0 +1,9 @@
+government = theocracy
+add_government_reform = druidic_order
+government_rank = 2
+primary_culture = taverlian
+religion = zamorak
+technology_group = centraltechgroup
+capital = 1005
+national_focus = ADM
+historical_friend = DWI

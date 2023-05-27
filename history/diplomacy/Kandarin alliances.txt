@@ -1,0 +1,7 @@
+#Kandarin-Camelot
+march = {
+	first = KDR
+	second = CML
+	start_date = 2132.7.13
+	end_date = 2300.1.1
+}

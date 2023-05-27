@@ -1,0 +1,32 @@
+#35 - Rimmington
+owner = RIM
+controller = RIM
+add_core = RIM
+tribal_owner = ---
+culture = south_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 6
+base_production = 5
+base_manpower = 4
+
+fort_15th = yes 
+
+trade_goods = advanced_logs
+
+is_city = yes
+
+center_of_trade = 1
+
+2021.10.30 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+}

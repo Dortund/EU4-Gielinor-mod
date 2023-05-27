@@ -1,0 +1,23 @@
+government = republic
+add_government_reform = tirannwn_republic
+government_rank = 3
+primary_culture = cadarn
+religion = seren
+technology_group = elventechgroup
+capital = 325 #Prifddinas
+national_focus = ADM
+historical_friend = CDA
+historical_friend = GNE
+
+1482.7.15 = {
+	monarch = {
+		name = "Faiyen"
+		dynasty = "Iorwerth"
+		birth_date = 583.7.29
+		adm = 4
+		dip = 0
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

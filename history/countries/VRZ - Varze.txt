@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = north_asgarn
+religion = saradomin
+technology_group = centraltechgroup
+capital = 865 #Mynster
+national_focus = MIL
+
+1926.6.5 = {
+	monarch = {
+		name = "Bruccen"
+		dynasty = "Varze"
+		birth_date = 1900.3.12
+		adm = 0
+		dip = 3
+		mil = 6
+	}
+}

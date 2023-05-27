@@ -1,0 +1,21 @@
+#495 - Refuge's Hope
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = centralis
+religion = ralos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = herblore_supplies
+
+is_city = yes
+
+add_province_triggered_modifier = religious_center

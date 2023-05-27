@@ -1,0 +1,20 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = ent
+religion = guthix
+technology_group = elventechgroup
+capital = 1243 #Cynniglle
+
+2.5.29 = {
+	monarch = {
+		name = "Solak"
+		dynasty = "the Grove Guardian"
+		birth_date = 1.5.29
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

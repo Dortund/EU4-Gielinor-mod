@@ -1,0 +1,43 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 124 247 252 }
+
+revolutionary_colors = { 4 10 3 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+monarch_names = {
+	"Dar #0" = 100
+	"Jor #0" = 100
+	"San #0" = 100
+	"Corkat #0" = 1
+	"Darcor #0" = 1
+	"Fornek #0" = 1
+	"Garbek #0" = 1
+	"Gorhak #0" = 1
+	"Haldor #0" = 1
+	"Kormar #0" = 1
+	"Leke #0" = 1
+	"Lornor #0" = 1
+	"Mallak #0" = 1
+	"Marmor #0" = 1
+	"Orrvor #0" = 1
+	"Tarfol #0" = 1
+	"Uurrak #0" = 1
+	"Vornas #0" = 1
+	"Vortas #0" = 1
+	"Wengra #0" = 1
+	"Xorrah #0" = 1
+	"Konar #0" = -1
+}

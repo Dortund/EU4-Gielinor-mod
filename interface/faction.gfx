@@ -1,0 +1,275 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_faction_window_bg"	
+		texturefile = "gfx//interface//china_bg.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_arrow"	
+		texturefile = "gfx//interface//china_arrow.tga"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_faction_circle_bg"	
+		texturefile = "gfx//interface//china_circle_bg.tga"
+		noOfFrames = 2
+	}
+
+	# Pirate factions
+
+	spriteType = {
+		name = "GFX_faction_pr_buccaneers"	
+		texturefile = "gfx//interface//pr_faction_buccaneers.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_pr_buccaneers"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	
+	spriteType = {
+		name = "GFX_faction_pr_smugglers"	
+		texturefile = "gfx//interface//pr_faction_smugglers.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_pr_smugglers"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_faction_pr_captains"	
+		texturefile = "gfx//interface//pr_faction_captains.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_pr_captains"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}
+	
+
+	# Celestial Empire
+	spriteType = {
+		name = "GFX_faction_bg_temples"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_temples"	
+		texturefile = "gfx//interface//china_temple.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_enuchs"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_enuchs"	
+		texturefile = "gfx//interface//china_eunuch.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_bureaucrats"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}		
+	spriteType = {
+		name = "GFX_faction_bureaucrats"	
+		texturefile = "gfx//interface//china_bureaucrat.tga"
+	}
+	# Merchant Republics
+	
+	spriteType = {
+		name = "GFX_faction_bg_mr_guilds"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_mr_guilds"	
+		texturefile = "gfx//interface//guilds_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_mr_traders"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_mr_traders"	
+		texturefile = "gfx//interface//traders_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_mr_aristocrats"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_mr_aristocrats"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
+	
+	# Revolutionary Republics
+	
+	spriteType = {
+		name = "GFX_faction_bg_rr_jacobins"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_rr_jacobins"	
+		texturefile = "gfx//interface//jacobins_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_rr_royalists"
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_rr_royalists"	
+		texturefile = "gfx//interface//imperials_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_rr_girondists"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_rr_girondists"	
+		texturefile = "gfx//interface//girondists_icon.tga"
+	}	
+
+	# Kourend Monarchy/Republic
+	spriteType = {
+		name = "GFX_faction_bg_arceuus_faction"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_arceuus_faction"	
+		texturefile = "gfx//interface//arceuus_faction_icon.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_bg_hosidius_faction"	
+		texturefile = "gfx//interface//faction_green_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_hosidius_faction"	
+		texturefile = "gfx//interface//hosidius_faction_icon.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_bg_lovakengj_faction"	
+		texturefile = "gfx//interface//faction_yellow_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_lovakengj_faction"	
+		texturefile = "gfx//interface//lovakengj_faction_icon.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_bg_piscarilius_faction"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_piscarilius_faction"	
+		texturefile = "gfx//interface//piscarilius_faction_icon.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_bg_shayzien_faction"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}		
+	spriteType = {
+		name = "GFX_faction_shayzien_faction"
+		texturefile = "gfx//interface//shayzien_faction_icon.tga"
+	}
+	
+	#Tirannwn Resistance/Republic
+	
+	spriteType = {
+		name = "GFX_faction_bg_amlodd_faction"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_amlodd_faction"	
+		texturefile = "gfx//interface//amlodd_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_cadarn_faction"	
+		texturefile = "gfx//interface//faction_green_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_cadarn_faction"	
+		texturefile = "gfx//interface//cadarn_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_crwys_faction"	
+		texturefile = "gfx//interface//faction_lightgreen_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_crwys_faction"	
+		texturefile = "gfx//interface//crwys_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_cywir_faction"	
+		texturefile = "gfx//interface//faction_cyan_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_cywir_faction"	
+		texturefile = "gfx//interface//cywir_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_hefin_faction"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_hefin_faction"	
+		texturefile = "gfx//interface//hefin_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_iorwerth_faction"	
+		texturefile = "gfx//interface//faction_black_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_iorwerth_faction"	
+		texturefile = "gfx//interface//iorwerth_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_ithell_faction"	
+		texturefile = "gfx//interface//faction_white_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_ithell_faction"	
+		texturefile = "gfx//interface//ithell_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_meilyr_faction"	
+		texturefile = "gfx//interface//faction_jade_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_meilyr_faction"	
+		texturefile = "gfx//interface//meilyr_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_trahaearn_faction"	
+		texturefile = "gfx//interface//faction_pink_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_trahaearn_faction"	
+		texturefile = "gfx//interface//trahaearn_faction_icon.tga"
+	}
+
+}

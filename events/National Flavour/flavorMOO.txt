@@ -1,0 +1,86 @@
+########################################
+# Events for Moon Clan (Lunar Isle)
+########################################
+
+namespace = flavor_moo
+normal_or_historical_nations = yes
+
+# Pirates' Cove
+country_event = {
+	id = flavor_moo.1
+	title = flavor_moo.1.t #The Pirates' Cove
+	desc = flavor_moo.1.d #An enormous ship has pulled into the dock at Lunar Isle helmed by one Captain Bentley who claims to have captured the ship from some gnomes. He has settled his pirates on a nearby island though has no ill will towards us.
+	picture = PIRATE_BATTLE_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = MOO
+		exists = GLO
+		exists = PHI
+		391 = {	is_empty = yes }
+	}
+	
+	immediate = {
+		391 = {
+			cede_province = PRC
+			add_core = PRC
+			change_religion = v
+			change_culture = northernraider
+			add_building = fort_16th
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_institution_embracement = {
+				which = runecrafting
+				value = 100
+			}
+			add_institution_embracement = {
+				which = statehood
+				value = 100
+			}
+			add_institution_embracement = {
+				which = exploration
+				value = 100
+			}
+		}
+		PRC = {
+			build_to_forcelimit = {
+				infantry = 0.7
+				artillery = 0.3
+				heavy_ship = 0.3
+				light_ship = 0.2
+				transport = 0.5	
+			}
+			add_historical_friend = MOO
+			define_ruler = {
+				dynasty = "Raidersen"
+				name = "Bentley"
+				claim = 100
+				adm = 3
+				dip = 4
+				mil = 3
+				age = 32
+			}
+		}
+		add_historical_friend = PRC
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = flavor_moo.1.a #I'm joining the pirates!
+		switch_tag = PRC
+	}
+	option = {
+		name = flavor_moo.1.b #Alright, but they better not raid us.
+	}
+}

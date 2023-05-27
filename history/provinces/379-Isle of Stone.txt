@@ -1,0 +1,24 @@
+#379 - Isle of Stone
+owner = BSL
+controller = BSL
+add_core = BSL
+tribal_owner = ---
+culture = basilisk
+religion = godless
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 2
+
+fort_15th = yes 
+
+trade_goods = fishing_spot
+latent_trade_goods = { rare_loot }
+
+is_city = yes

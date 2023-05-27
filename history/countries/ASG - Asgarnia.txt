@@ -1,0 +1,36 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = north_asgarn
+religion = saradomin
+technology_group = centraltechgroup
+capital = 41 #Falador
+national_focus = ADM
+
+2008.6.5 = {
+	monarch = {
+		name = "Radallin"
+		dynasty = "Donblas"
+		birth_date = 1978.2.28
+		adm = 5
+		dip = 5
+		mil = 6
+	}
+}
+
+
+2126.4.6 = {
+	monarch = {
+		name = "Vallance"
+		dynasty = "Donblas"
+		birth_date = 2083.6.23
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+}
+
+
+2150.1.1 = {
+	add_absolutism = 45
+}

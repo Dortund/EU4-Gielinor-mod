@@ -1,0 +1,120 @@
+gunnar_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = GUN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	GUN_raise_the_forces = {
+		icon = mission_alliances
+		required_missions = {  }
+		position = 1
+		trigger = {
+			army_size = 15
+		}
+		effect = {
+			every_province = {
+				limit = {
+					culture = barbarian
+					continent = west_runescape
+				}
+				add_core = ROOT
+			}
+			maple_wood_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			247 = { add_permanent_claim = ROOT }
+		}
+	}
+	GUN_towards_white_wolf = {
+		icon = mission_alliances
+		required_missions = { GUN_raise_the_forces }
+		position = 2
+		provinces_to_highlight = {
+			province_id = 247
+		}
+		trigger = {
+			owns_core_province = 247			
+		}
+		effect = {
+			taverley_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	GUN_cross_the_mountain = {
+		icon = mission_alliances
+		required_missions = { GUN_towards_white_wolf }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 49
+			province_id = 50
+		}
+		trigger = {
+			OR = {
+				owns_core_province = 49
+				owns_core_province = 50
+			}
+		}
+		effect = {
+			mountain_valley_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			43 = { add_permanent_claim = ROOT }
+			44 = { add_permanent_claim = ROOT }
+		}
+	}
+	GUN_mountain_valley = {
+		icon = mission_alliances
+		required_missions = { GUN_cross_the_mountain }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 44
+			province_id = 1006
+		}
+		trigger = {
+			OR = {
+				owns_core_province = 44
+				owns_core_province = 1006
+			}
+		}
+		effect = {
+			ice_mountain_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			asgarnian_borderlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			north_lum_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

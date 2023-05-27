@@ -1,0 +1,136 @@
+country_decisions = {
+	EVR_lost_grove_investigations = {
+		potential = {
+			tag = EVR
+			religion = seren
+			has_government_mechanic = elven_desperation_mechanic
+			exists = IOR
+			IOR = {
+				religion = dark_lord
+			}
+			NOT = { has_country_flag = EVR_seeking_the_lost_grove }
+		}
+		allow = {
+			dip_tech = 5
+			NOT = { total_development = 50 }
+			IOR = { total_development = 150 }
+			has_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = 100
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = -50
+			}
+			country_event = {
+				id = flavor_evr.6
+				days = 1
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+	EVR_lost_grove_settlement = {
+		potential = {
+			tag = EVR
+			religion = seren
+			has_government_mechanic = elven_desperation_mechanic
+			exists = IOR
+			IOR = {
+				religion = dark_lord
+			}
+			has_country_flag = EVR_seeking_the_lost_grove
+			NOT = { has_country_flag = EVR_retreat_to_the_grove }
+			1244 = {
+				is_empty = yes
+			}
+		}
+		allow = {
+			dip_tech = 5
+			NOT = { total_development = 50 }
+			IOR = { total_development = 150 }
+			has_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = 100
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = -100
+			}
+			country_event = {
+				id = flavor_evr.7
+				days = 1
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+
+	EVR_lost_grove_expansion = {
+		potential = {
+			tag = EVR
+			religion = seren
+			has_country_flag = EVR_retreat_to_the_grove
+			any_owned_province = {
+				any_empty_neighbor_province = {
+					OR = {
+						area = north_lost_grove_area
+						area = south_lost_grove_area
+					}
+				}
+			}
+		}
+		allow = {
+			any_owned_province = {
+				any_empty_neighbor_province = {
+					OR = {
+						area = north_lost_grove_area
+						area = south_lost_grove_area
+					}
+				}
+			}
+			has_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = 75
+			}
+			adm_power = 75
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = -75
+			}
+			add_adm_power = -75
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = north_lost_grove_area
+						area = south_lost_grove_area
+					}
+					has_empty_adjacent_province = yes
+				}
+				random_empty_neighbor_province = {
+					add_colonysize = 200
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+}

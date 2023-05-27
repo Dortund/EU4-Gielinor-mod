@@ -1,0 +1,38 @@
+#60 = South Crandor
+owner = CDR
+controller = CDR
+add_core = CDR
+tribal_owner = ---
+culture = crandorian
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 2
+
+trade_goods = advanced_ores
+
+is_city = yes
+
+center_of_trade = 1
+
+2139.9.23 = {
+	owner = ELV
+	controller = ELV
+	add_core = ELV
+	remove_core = CDR
+	base_tax = 1
+	base_production = 1
+	base_manpower = 1
+	culture = hobgoblin
+	religion = bandos
+}

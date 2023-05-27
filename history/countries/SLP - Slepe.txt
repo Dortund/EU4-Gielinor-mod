@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = slepe
+religion = zamorak
+technology_group = morytaniantechgroup
+capital = 133 #Slepe
+national_focus = ADM

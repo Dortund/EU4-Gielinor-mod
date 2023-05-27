@@ -1,0 +1,21 @@
+#398-Road's End
+owner = KOU
+controller = KOU
+add_core = KOU
+tribal_owner = ---
+culture = piscarilius
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = basic_ores
+
+is_city = yes
+
+center_of_trade = 1

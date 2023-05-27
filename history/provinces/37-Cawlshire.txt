@@ -1,0 +1,36 @@
+#37 - Cawlshire
+owner = CLY
+controller = CLY
+add_core = CLY
+tribal_owner = ---
+culture = south_asgarn
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = grains
+
+is_city = yes
+
+1952.6.11 = {
+	owner = DBS
+	controller = DBS
+	add_core = DBS
+}
+
+2008.4.6 = {
+	owner = ASG
+	controller = ASG
+	add_core = ASG
+	remove_core = DBS
+}

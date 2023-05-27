@@ -1,0 +1,23 @@
+#1162-Haibisukasu
+owner = FLB
+controller = FLB
+add_core = FLB
+tribal_owner = ---
+culture = bowl_culture
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = bamboo
+
+is_city = yes
+
+center_of_trade = 1

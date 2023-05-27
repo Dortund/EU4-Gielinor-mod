@@ -1,0 +1,140 @@
+estate_tzh_mej =
+{
+	icon = 25
+
+	# If true, country will get estate
+	trigger = {
+		has_reform = obsidian_caste
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		devotion = 1.5
+		horde_unity = 1.5
+		legitimacy = 1.5
+		meritocracy = 1.5
+		republican_tradition = 0.5
+		global_tax_modifier = 0.1
+	}
+	country_modifier_neutral = {
+		devotion = 1.5
+		horde_unity = 1.5
+		legitimacy = 1.5
+		meritocracy = 1.5
+		republican_tradition = 0.5
+	}	
+	country_modifier_angry = {
+		devotion = -1.5
+		horde_unity = -1.5
+		legitimacy = -1.5
+		meritocracy = -1.5
+		republican_tradition = -0.5
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		tzh_mej_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {	
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {	
+		desc = EST_VAL_COT
+		trigger = {
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_TRADE_INCOME
+		trigger = {
+			NOT = { trade_income_percentage = 0.25 }
+		}	
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.5
+			NOT = { trade_income_percentage = 0.75 }
+		}	
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.75
+		}	
+		influence = 10
+	}
+	
+	custom_name = {
+		desc = estate_kuu_sihar
+		trigger = {
+			tag = KUU
+		}
+	}	
+
+	color = { 162 34 17 }
+
+	privileges = {
+		estate_tzh_mej_strengthen_mage_rule
+		estate_tzh_mej_proselytise_ful
+	}
+
+	agendas = {
+		estate_tzh_mej_hire_advisor
+		estate_tzh_mej_fire_advisor
+		estate_tzh_mej_convert_province_x
+		estate_tzh_mej_reduce_war_exhaustion
+		estate_tzh_mej_recover_stability
+		estate_tzh_mej_increase_stability
+		estate_tzh_mej_reduce_overextension
+		estate_tzh_mej_restore_devotion
+		estate_tzh_mej_protect_brethren
+		estate_tzh_mej_relations_with_dotf
+	}
+
+	influence_from_dev_modifier = 1.0
+}

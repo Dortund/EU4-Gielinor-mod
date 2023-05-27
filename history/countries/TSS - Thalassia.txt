@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = khanate
+government_rank = 1
+primary_culture = skull_culture
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1121 #Thalassia
+
+1922.7.23 = {
+	monarch = {
+		name = "Heying"
+		dynasty = "Thalassia"
+		birth_date = 1902.7.22
+		death_date = 1979.11.3
+		adm = 3
+		dip = 3
+		mil = 4
+		female = yes
+	}
+}
+
+2168.2.25 = {
+	monarch = {
+		name = "Tombi"
+		dynasty = "Thalassia"
+		birth_date = 2142.2.25
+		death_date = 2180.12.11
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}

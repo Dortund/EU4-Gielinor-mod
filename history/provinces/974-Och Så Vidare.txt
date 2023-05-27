@@ -1,0 +1,21 @@
+#974-Och Så Vidare
+owner = ETC
+controller = ETC
+add_core = ETC
+tribal_owner = ---
+culture = miscellanean
+religion = v
+
+discovered_by = dwarventechgroup
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = tropical_logs
+
+is_city = yes

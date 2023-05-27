@@ -1,0 +1,15 @@
+﻿l_english:
+ flavor_vpe.1.t:0 "Pest Control"
+ flavor_vpe.1.d:0 "A strange assortment of beasts have flooded out of portals in the south end of the Bo Isles. These Void Pests have already taken over half the island - and without careful effort they could take more!"
+ flavor_vpe.1.a:0 "Forget my country, I'm joining the Pests!"
+ flavor_vpe.1.b:0 "This is most troubling."
+ flavor_vpe.1.c:0 "We should reach out for help."
+ flavor_vpe.1.e:0 "We should reach out for help, even if that means sacrificing more land."
+ flavor_vpe.1.e_tooltip:0 "§YChoosing this option will surrender the Windswept Isle to the Void Knights.§!"
+ 
+ flavor_vpe.2.t:0 "The Void Knights' Time Has Come"
+ flavor_vpe.2.d:0 "A distress call rings out in the Unquiet Ocean. An island has become overran by strange creatures from another world - just as prophecised by the Void Knights. With little notice, they already set sail to establish their outpost."
+ flavor_vpe.2.a:0 "Forget my country, I'm joining the Void Knights!"
+ flavor_vpe.2.b:0 "The Void Knights deserve our support."
+ flavor_vpe.2.c:0 "Let the Void Knights do their thing; I don't care."
+ 

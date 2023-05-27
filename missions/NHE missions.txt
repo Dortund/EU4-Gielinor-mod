@@ -1,0 +1,134 @@
+# New Heritage Missions
+# Do not use column 2, 3 or 4 between positions 1 and 6 to prevent overlap with generic Wushanko missions
+
+nhe_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = NHE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	NHE_prosperous_living = {
+		icon = the_alpine_wall
+		position = 1
+		required_missions = {  }
+		trigger = {
+			NOT = { unrest = -4 }
+			share_of_starting_income = 1.2
+		}
+		effect = {
+			add_country_modifier = { 
+				name = NHE_growing_immigration
+				duration = 7300
+			}
+		}
+	}
+	
+	NHE_grow_the_great_city = {
+		icon = mission_colonial
+		position = 2
+		required_missions = { NHE_prosperous_living genwhk_develop_home_isle }
+		trigger = {
+			1188 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 35
+				architecture = 100
+			}
+			1191 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 0.25
+			1191 = {
+				add_province_modifier = { 
+					name = NHE_mountain_development
+					duration = -1  
+				}
+			}
+		}
+	}
+	
+	NHE_pincers_trade_centre = {
+		icon = mission_to_the_south_china_sea
+		position = 3
+		required_missions = { NHE_grow_the_great_city genwhk_construction_boom }
+		trigger = {
+			new_heritage_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				development = 20
+			}
+			1188 = {
+				province_has_center_of_trade_of_level = 3
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+		}
+	}
+}
+
+nhe_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = NHE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	NHE_outperform_khanoka = {
+		icon = mission_raid_christian_trade
+		position = 2
+		required_missions = { genwhk_basic_professionalism }
+		trigger = {
+			army_strength = {
+				who = KHN
+				value = 1.2
+			}
+		}
+		effect = {
+			khanoka_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	NHE_fall_of_khanoka = {
+		icon = Burn_Wooden_Wall
+		position = 3
+		required_missions = { NHE_outperform_khanoka }
+		provinces_to_highlight = {
+			area = khanoka_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			khanoka_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			kei_pi_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

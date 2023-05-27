@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = pirate_republic_reform
+government_rank = 1
+primary_culture = skull_culture
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1126 #Sanyangkkun
+
+1928.7.29 = {
+	monarch = {
+		name = "Xixue"
+		dynasty = "Fei"
+		birth_date = 1903.10.12
+		death_date = 1936.9.18
+		adm = 5
+		dip = 4
+		mil = 6
+	}
+}
+
+2168.9.26 = {
+	monarch = {
+		name = "Khnum"
+		dynasty = "Essam"
+		birth_date = 2116.9.26
+		adm = 2
+		dip = 2
+		mil = 3
+		culture = alkharidian
+	}
+}

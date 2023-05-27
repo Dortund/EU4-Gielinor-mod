@@ -1,0 +1,20 @@
+#902-Llyfrgell
+owner = IOR
+controller = IOR
+add_core = IOR
+add_core = THN
+tribal_owner = ---
+culture = trahaearn
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = magic_supplies
+
+is_city = yes

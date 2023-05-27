@@ -1,0 +1,20 @@
+#1389-
+owner = EVR
+controller = EVR
+add_core = EVR
+add_core = ITH
+tribal_owner = ---
+culture = ithell
+religion = seren
+
+discovered_by = elventechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = bones
+
+is_city = yes

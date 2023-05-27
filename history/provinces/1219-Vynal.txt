@@ -1,0 +1,19 @@
+#1218-Tavi
+owner = TVV
+controller = TVV
+add_core = TVV
+tribal_owner = ---
+culture = siren
+religion = byakko
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = manufactured_goods
+
+is_city = yes
