@@ -1,13 +1,13 @@
 ######################################################################
-# Suzako Rebels
+# suzaku Rebels
 ######################################################################
-suzako_rebels = {
+suzaku_rebels = {
 
 	color = { 230 175 175 }
 
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = suzako
+	religion = suzaku
 	defection = religion			# Defects to countries of their religion
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -45,7 +45,7 @@ suzako_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = suzako }
+			NOT = { religion = suzaku }
 		}
 		modifier = {
 			factor = 0.001
@@ -90,21 +90,21 @@ suzako_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = suzako
-			owner = { religion = suzako }
+			religion = suzaku
+			owner = { religion = suzaku }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = suzako }
+			NOT = { religion = suzaku }
 			any_neighbor_province = {
-	 			religion = suzako
+	 			religion = suzaku
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = suzako
+			religion = suzaku
 		}
 		modifier = {
 			factor = 1.5
@@ -138,9 +138,9 @@ suzako_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = suzako
+						religion = suzaku
 						is_reformation_center = yes
-						owner = { religion = suzako }
+						owner = { religion = suzaku }
 					}
 				}
 				add_province_modifier = {
@@ -150,11 +150,11 @@ suzako_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = suzako }
+					NOT = { religion = suzaku }
 					is_reformation_center = no
-					NOT = { owner = { religion = suzako } }
+					NOT = { owner = { religion = suzaku } }
 				}
-				change_religion = suzako
+				change_religion = suzaku
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -174,7 +174,7 @@ suzako_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = wushanko_guardian_group
-			dominant_religion = suzako
+			dominant_religion = suzaku
 		}
 	}
 	
@@ -184,7 +184,7 @@ suzako_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "suzako_rebels_demand"
+	demands_description = "suzaku_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -218,7 +218,7 @@ suzako_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = suzako
+				religion = suzaku
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -228,16 +228,16 @@ suzako_rebels = {
 		
 		else_if = {
 			limit = {
-				NOT = { religion = suzako }
-				dominant_religion = suzako
+				NOT = { religion = suzaku }
+				dominant_religion = suzaku
 			}
-			change_religion = suzako
+			change_religion = suzaku
 			force_converted = yes
 		}
 		else = { add_stability = -1 } #Should probably never get here
 		if = {
 			limit = {
-				religion = suzako
+				religion = suzaku
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

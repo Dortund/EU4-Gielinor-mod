@@ -120,7 +120,7 @@ genwhk_missions_2 = {
 						religion = byakko
 						religion = genbu
 						religion = seiryu
-						religion = suzako
+						religion = suzaku
 						religion = birman
 						religion = hanalan
 					}

@@ -726,9 +726,9 @@ age_of_divination = {
 				amount = 10
 			}
 		}
-		obj_warriors_of_suzako = {
+		obj_warriors_of_suzaku = {
 			allow = {
-				religion = suzako
+				religion = suzaku
 			}
 			has_global_modifier_value = {
 				which = discipline
@@ -768,7 +768,7 @@ age_of_divination = {
 						religion = ranul
 						religion = seiryu
 						religion = genbu
-						religion = suzako
+						religion = suzaku
 						religion = byakko
 						religion_group = nonintervention_group
 					}

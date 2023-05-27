@@ -839,7 +839,7 @@ That's not all - other parts of the world have received new missions, and there'
 ## The penalty to votes to be Khagan for being a small country/heretic has been reduced.
 ## Unfortunately, I can't work out how to lessen the "weak Khagan" penalty for trying to pass reforms, so you'll have to expand a fair bit first.
 
-# The Wushanko Guardian religions (Byakko, Genbu, Seiryu and Suzako) now use the Church Aspects mechanic.
+# The Wushanko Guardian religions (Byakko, Genbu, Seiryu and suzaku) now use the Church Aspects mechanic.
 ## Each religion has 8 aspects - 2 are shared with all Wushanko faiths, 3 shared with one other, and 3 are unique to the faith.
 
 # Hanalan and Birman now use a similar mechanic to Ralos/Ranul, though they grant temporary modifiers instead of permanent boosts.
@@ -864,7 +864,7 @@ That's not all - other parts of the world have received new missions, and there'
 #######
 
 # Wushanko Guardian formables - if you're of Wushanko culture you'll have the option to form these depending on your religion.
-## Fenisento (Suzako)
+## Fenisento (suzaku)
 ## Hebikatochi (Genbu)
 ## Konjinja (Seiryu)
 ## Torakoku (Byakko)

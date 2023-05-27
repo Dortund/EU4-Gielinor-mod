@@ -100,7 +100,7 @@ harmonized_celestial = { #Birman; Hanalan; Ralos; Ranul
 	religion = yes
 }
 
-harmonized_wushanko = { #Byakko; Genbu; Seiryu; Suzako
+harmonized_wushanko = { #Byakko; Genbu; Seiryu; suzaku
 	global_ship_trade_power = 0.2
 	religion = yes
 }
