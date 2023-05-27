@@ -9,7 +9,7 @@ tags={
 	"Alternative History"
 	"Total Conversion"
 }
-name="Runescape Mod: Gielinor Universalis CUSTOM"
+name="Runescape Mod: Gielinor Universalis"
 picture="gielunibanner.png"
 replace_path="common/bookmarks"
 replace_path="common/country_colors"
@@ -31,3 +31,4 @@ replace_path="history/provinces"
 replace_path="history/wars"
 replace_path="gfx/loadingscreens"
 supported_version="1.35.*"
+remote_file_id="2783633869"

@@ -170,17 +170,15 @@ country_event = {
 		NOT = { has_ruler_flag = KDR_ready_to_split_ardougne }
 		has_country_flag = KDR_lathas_and_tyras
 		any_province = {
-			limit = {
-				country_or_subject_holds = ROOT
-				area = west_ardougne_area
-			}
+			area = west_ardougne_area
+			country_or_subject_holds = ROOT
 		}
 	}
 	
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = KDR_lathas_and_tyras
-			all_province = {
+			every_province = {
 				limit = {
 					country_or_subject_holds = ROOT
 					area = west_ardougne_area

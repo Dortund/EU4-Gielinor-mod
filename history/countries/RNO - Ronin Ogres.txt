@@ -6,11 +6,11 @@ religion = bandos
 technology_group = wushankotechgroup
 capital = 1216 #Black Stone Fortress
 
-1901.11.24 = {
+1909.11.24 = {
 	monarch = {
 		name = "Grunther"
 		dynasty = "Ronin"
-		birth_date = 1902.7.18
+		birth_date = 1891.7.18
 		death_date = 1954.12.4
 		adm = 2
 		dip = 3

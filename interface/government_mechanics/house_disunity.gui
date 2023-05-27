@@ -20,7 +20,7 @@ guiTypes = {
 		}
 
 		guiButtonType = {
-			name = "house_disunity_government_interaction_button"
+			name = "government_interaction_button"
 			quadTextureSprite = "GFX_house_disunity_decrease_button"
 			position = { x = 0 y = 30 }
 			buttonFont = "vic_18"

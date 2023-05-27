@@ -22,15 +22,11 @@ country_event = {
 		388 = { is_empty = no }
 		389 = { is_empty = yes }
 		390 = { is_empty = yes }
-		random_country = {
-			limit = {
-				OR = {
-					owns_core_province = 385
-					owns_core_province = 386
-					owns_core_province = 387
-					owns_core_province = 388
-				}
-			}
+		OR = {
+			owns_core_province = 385
+			owns_core_province = 386
+			owns_core_province = 387
+			owns_core_province = 388
 		}
 	}
 

@@ -530,6 +530,38 @@ EVR_open_panic = {
 }
 
 #############
+#Fremennik Generic
+#############
+
+genfremmy_inspiring_buildings = {
+	global_institution_spread = 0.2
+}
+genfremmy_ease_of_taxation = {
+	global_tax_modifier = 0.1
+ 	inflation_reduction = 0.05
+}
+genfremmy_diplomatic_fleet = {
+	global_ship_recruit_speed = -0.15
+	naval_maintenance_modifier = -0.1
+}
+genfremmy_merchant_navy = {
+	ship_trade_power_modifier = 0.25
+}
+genfremmy_coloniser_boom = {
+	colony_cost_modifier = -0.25
+	global_colonial_growth = 10
+}
+genfremmy_sagas_of_war = {
+	idea_cost = -0.05
+	mil_tech_cost_modifier = -0.1
+}
+genfremmy_grand_invasion_preparation = {
+ 	can_chain_claim = yes
+ 	fabricate_claims_cost = -0.2
+}
+
+
+#############
 #Gnome Empire
 #############
 

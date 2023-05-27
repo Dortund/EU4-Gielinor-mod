@@ -259,10 +259,6 @@ country_event = {
 		days = 1
 	}
 	
-	hidden_effect = {
-		
-	}
-	
 	option = {
 		name = flavor_gun.4.a #Runecrafting is our future - we shall not be dragged back!
 		trigger = {

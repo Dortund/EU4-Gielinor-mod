@@ -13,10 +13,6 @@ country_event = {
 		
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 3
-	}
 	
 	option = {
 		name = flavor_khn.1.a # Let us follow the God of Order!

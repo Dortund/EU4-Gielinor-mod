@@ -80,7 +80,6 @@ country_event = {
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			195 = {
@@ -111,8 +110,10 @@ country_event = {
 				}
 			}
 			PHI = {
-				build_to_forcelimit = {
-					infantry = 0.5
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+					}
 				}
 			}
 		}

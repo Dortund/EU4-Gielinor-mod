@@ -1,5 +1,3 @@
-	### Purple Phoenix Mission Icons ###
-
 spriteTypes = {
 	spriteType = {
 		name = "mission_adventurer"
@@ -10,8 +8,40 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_air_rune.dds"
 	}
 	spriteType = {
+		name = "mission_coins"
+		texturefile = "gfx//interface//missions//mission_coins.dds"
+	}
+	spriteType = {
+		name = "mission_construction_house"
+		texturefile = "gfx//interface//missions//mission_construction_house.dds"
+	}
+	spriteType = {
+		name = "mission_dungeoneering_thok"
+		texturefile = "gfx//interface//missions//mission_dungeoneering_thok.dds"
+	}
+	spriteType = {
+		name = "mission_gold_heap"
+		texturefile = "gfx//interface//missions//mission_gold_heap.dds"
+	}
+	spriteType = {
 		name = "mission_grand_ship"
 		texturefile = "gfx//interface//missions//mission_grand_ship.dds"
+	}
+	spriteType = {
+		name = "mission_icy_cliff"
+		texturefile = "gfx//interface//missions//mission_icy_cliff.dds"
+	}
+	spriteType = {
+		name = "mission_mining"
+		texturefile = "gfx//interface//missions//mission_mining.dds"
+	}
+	spriteType = {
+		name = "mission_mountain_camp"
+		texturefile = "gfx//interface//missions//mission_mountain_camp.dds"
+	}
+	spriteType = {
+		name = "mission_v_statue"
+		texturefile = "gfx//interface//missions//mission_v_statue.dds"
 	}
 	
 	##################APE
@@ -185,6 +215,12 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//CLS//mission_sinclair_relations.dds"
 	}
 	
+	##################ETC
+	spriteType = {
+		name = "mission_balmung"
+		texturefile = "gfx//interface//missions//ETC//mission_balmung.dds"
+	}
+	
 	##################EVR
 	spriteType = {
 		name = "mission_coastal_warfare"
@@ -243,6 +279,12 @@ spriteTypes = {
 	spriteType = {
 		name = "mission_the_grand_tree"
 		texturefile = "gfx//interface//missions//GNE//mission_the_grand_tree.dds"
+	}
+	
+	##################GUN
+	spriteType = {
+		name = "mission_gunnarsgrunn"
+		texturefile = "gfx//interface//missions//GUN//mission_gunnarsgrunn.dds"
 	}
 	
 	##################IOR
@@ -449,6 +491,20 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//MWL//mission_zarosian_secrets.dds"
 	}
 	
+	##################NZS
+	spriteType = {
+		name = "mission_amenities_of_neitiznot"
+		texturefile = "gfx//interface//missions//NZS//mission_amenities_of_neitiznot.dds"
+	}
+	spriteType = {
+		name = "mission_follow_the_arctic_pine"
+		texturefile = "gfx//interface//missions//NZS//mission_follow_the_arctic_pine.dds"
+	}
+	spriteType = {
+		name = "mission_yak_farming"
+		texturefile = "gfx//interface//missions//NZS//mission_yak_farming.dds"
+	}
+	
 	##################REL
 	spriteType = {
 		name = "mission_daemonheim_base_camp"
@@ -467,6 +523,14 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//REL//mission_dwarven_diplomacy.dds"
 	}
 	spriteType = {
+		name = "mission_fremennik_family"
+		texturefile = "gfx//interface//missions//REL//mission_fremennik_family.dds"
+	}
+	spriteType = {
+		name = "mission_fremennik_voyages"
+		texturefile = "gfx//interface//missions//REL//mission_fremennik_voyages.dds"
+	}
+	spriteType = {
 		name = "mission_scout_zeah"
 		texturefile = "gfx//interface//missions//REL//mission_scout_zeah.dds"
 	}
@@ -477,6 +541,10 @@ spriteTypes = {
 	spriteType = {
 		name = "mission_slayer_dungeon"
 		texturefile = "gfx//interface//missions//REL//mission_slayer_dungeon.dds"
+	}
+	spriteType = {
+		name = "mission_smite_the_basilisks"
+		texturefile = "gfx//interface//missions//REL//mission_smite_the_basilisks.dds"
 	}
 	spriteType = {
 		name = "mission_to_the_new_world"

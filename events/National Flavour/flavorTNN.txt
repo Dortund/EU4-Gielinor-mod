@@ -12,10 +12,6 @@ country_event = {
 	desc = flavor_tnn.1.d #Nestled behind the Galarpos Mountains, Tirannwn has been safe from enemy invasions since the Third Age. Outside of the steady flow of emigrants to Baxtorian's kingdom and limited trade, Tirannwn is increasingly cut off from the outside world.
 	picture = CITY_VIEW_eventPicture
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
 	
 	option = {
 		name = flavor_tnn.1.a

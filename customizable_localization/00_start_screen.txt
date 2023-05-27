@@ -123,7 +123,15 @@ defined_text = {
 			}
 		}
     }
-	
+	text = {
+        localisation_key = string_start_title_fremennik
+        trigger = {
+			culture_group = fremennik_group
+			capital_scope = {
+				region = fremennik_region
+			}
+		}
+    }
 	
 
 	
@@ -373,12 +381,15 @@ defined_text = {
 		}
     }
 	
-	
-	
-	
-
-	
-	
+	text = {
+        localisation_key = string_start_fremennik
+        trigger = {
+			culture_group = fremennik_group
+			capital_scope = {
+				region = fremennik_region
+			}
+		}
+    }
 	
 	###Regions
 	text = { # North India
@@ -470,9 +481,39 @@ defined_text = {
         }
     }
 	####Menaphite:
+	text = {
+        localisation_key = string_start_religion_menaphite
+        trigger = {
+			religion = menaphite
+        }
+    }
 	####Nonintervention:
+	text = {
+        localisation_key = string_start_religion_v
+        trigger = {
+			religion = v
+        }
+    }
 	####Order:
+	text = {
+        localisation_key = string_start_religion_saradomin
+        trigger = {
+			religion = saradomin
+        }
+    }
+	text = {
+        localisation_key = string_start_religion_armadyl
+        trigger = {
+			religion = armadyl
+        }
+    }
 	####Transcendent:
+	text = {
+        localisation_key = string_start_religion_dark_lord
+        trigger = {
+			religion = dark_lord
+        }
+    }
 	text = {
         localisation_key = string_start_religion_seren
         trigger = {
@@ -497,6 +538,12 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+        localisation_key = string_start_religion_zaros
+        trigger = {
+			religion = zaros
+        }
+    }
 	####Elder God:
 	####Autocratic:
 	####Hedonistic:
@@ -518,31 +565,8 @@ defined_text = {
 	####Celestial:
 	####Wushanko Guardian:
 
-	
-	
-	
-	#Catholics (Papacy & The Reformation)
-	text = {
-        localisation_key = string_start_religion_catholic
-        trigger = {
-			religion = saradomin
-        }
-    }
-	#Protestant (The Reformation)
-	text = {
-        localisation_key = string_start_religion_protestant
-        trigger = {
-			religion = armadyl
-        }
-    }
 
-	#Coptic
-	text = {
-        localisation_key = string_start_religion_coptic
-        trigger = {
-			religion = zaros
-        }
-    }
+
 	#Eastern - Buddhists
 	text = {
         localisation_key = string_start_religion_buddhist_theravada
@@ -563,13 +587,6 @@ defined_text = {
         }
     }
 
-	#Shinto
-	text = {
-        localisation_key = string_start_religion_shinto
-        trigger = {
-			religion = seren
-        }
-    }
 	#Hindu
 	text = {
         localisation_key = string_start_religion_hindu
@@ -591,13 +608,6 @@ defined_text = {
 			religion = bandos
         }
     }
-	#Fetishist
-	text = {
-        localisation_key = string_start_religion_tengri
-        trigger = {
-			religion = v
-        }
-    }
 	#Inti
 	text = {
         localisation_key = string_start_religion_inti
@@ -617,13 +627,6 @@ defined_text = {
         localisation_key = string_start_religion_mayan
         trigger = {
 			religion = xeric
-        }
-    }
-	#Zoroastrianism
-	text = {
-        localisation_key = string_start_religion_zoroastrian
-        trigger = {
-			religion = zoroastrian
         }
     }
 	#Norse
@@ -732,14 +735,20 @@ defined_text = {
 	text = {
         localisation_key = string_church_power_info #Has to end with \n
         trigger = {
-			religion = armadyl
+			OR = {
+				religion = armadyl
+				religion_group = wushanko_guardian_group
+			}
 			has_dlc = "Common Sense"
         }
     }
 	text = {
         localisation_key = string_church_power_info_no #\n
         trigger = {
-			religion = armadyl
+			OR = {
+				religion = armadyl
+				religion_group = wushanko_guardian_group
+			}
 			NOT = { has_dlc = "Common Sense" }
         }
     }
@@ -772,14 +781,20 @@ defined_text = {
 	text = {
         localisation_key = string_blessings_info #Has to end with \n
         trigger = {
-			religion = zaros
+			OR = {
+				religion = dark_lord
+				religion = zaros
+			}
 			has_dlc = "Rights of Man"
         }
     }
 	text = {
         localisation_key = string_blessings_info_no #\n
         trigger = {
-			religion = zaros
+			OR = {
+				religion = dark_lord
+				religion = zaros
+			}
 			NOT = { has_dlc = "Rights of Man" }
         }
     }
@@ -853,14 +868,20 @@ defined_text = {
 	text = {
         localisation_key = string_deities_info #Has to end with \n
         trigger = {
-			religion = menaphite
+			OR = {
+				religion = menaphite
+				religion = northernpantheon
+			}
 			has_dlc = "Wealth of Nations"
         }
     }
 	text = {
         localisation_key = string_deities_info_no #\n
         trigger = {
-			religion = menaphite
+			OR = {
+				religion = menaphite
+				religion = northernpantheon
+			}
 			NOT = { has_dlc = "Wealth of Nations" }
         }
     }

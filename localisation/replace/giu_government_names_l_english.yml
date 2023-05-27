@@ -26,6 +26,15 @@
  PRINCE:0 "Prince"
  PRINCESS:0 "Princess"
  
+ DRUIDIC_VILLAGE:0 "Druidic Village"
+ DRUIDIC_NATION:0 "Druidic Nation"
+ DRUIDIC_EMPIRE:0 "Druidic Empire"
+ HEAD_DRUID:0 "Head Druid"
+ ARCH_DRUID:0 "Arch Druid"
+ HEAD_DRUIDESS:0 "Head Druidess"
+ ARCH_DRUIDESS:0 "Arch Druidess"
+ APPRENTICE:0 "Apprentice"
+ 
  KHANATE:0 "Khanate"
  KHAGANATE:0 "Khaganate"
  
@@ -36,6 +45,7 @@
  MAYOR:0 "Mayor"
 
  HOLY_ISLAND:0 "Holy Island"
+ BLESSED_EMPIRE:0 "Blessed Empire"
 
  REGIME:0 "Regime"
 
@@ -49,7 +59,11 @@
  REALM:0 "Realm"
 
  CITY:0 "City"
+ GREAT_CITY:0 "Great City"
  GOLDEN_CITY:0 "Golden City"
+ 
+ ELDER:0 "Elder"
+ GRAND_ELDER:0 "Grand Elder"
  
  METROPOLIS:0 "Metropolis"
  DIRECTOR:0 "Director"
@@ -73,3 +87,15 @@
  
  HIGH_PRIEST:0 "High Priest"
  HIGH_PRIESTESS:0 "High Priestess"
+ 
+ COUNT_CONSORT:0 "Count-Consort"
+ LORD_CONSORT:0 "Lord-Consort"
+ COUNTESS_CONSORT:0 "Countess-Consort"
+ LADY_CONSORT:0 "Lady-Consort"
+ 
+ CHIEFTAIN:0 "Chieftain"
+ GRAND_CHIEFTAIN:0 "Grand Chieftain"
+ CHIEFTESS:0 "Chieftess"
+ GRAND_CHIEFTESS:0 "Grand Chieftess"
+ FREMENNIK_PROVINCE:0 "Fremennik Province"
+ 

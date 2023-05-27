@@ -263,26 +263,6 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 36
-		modifier = {
-			factor = 1.5
-			cabbage = 1
-		}
-		modifier = {
-			factor = 1.5
-			cabbage = 2
-		}
-		modifier = {
-			factor = 1.5
-			cabbage = 3
-		}
-		modifier = {
-			factor = 1.5
-			cabbage = 4
-		}
-	}
-	
 	option = {
 		name = brassicaprime_events.13.a #Let them grow cabbages!
 		
@@ -324,21 +304,3 @@ country_event = {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

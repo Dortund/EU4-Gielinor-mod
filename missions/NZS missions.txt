@@ -1,5 +1,5 @@
-neitiznot_missions_2 = {
-	slot = 2
+neitiznot_missions_1 = {
+	slot = 1
 	generic = no
 	ai = yes
 	potential = {
@@ -9,7 +9,7 @@ neitiznot_missions_2 = {
 	has_country_shield = yes
 	
 	NZS_amenities_of_neitiznot = {
-		icon = mission_alliances
+		icon = mission_amenities_of_neitiznot
 		required_missions = { }
 		trigger = {
 			385 = {
@@ -27,30 +27,36 @@ neitiznot_missions_2 = {
 			add_treasury = -100
 		}
 	}
-}
-
-neitiznot_missions_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		tag = NZS
-		NOT = { map_setup = map_setup_random }
+	NZS_yak_farming = {
+		icon = mission_yak_farming
+		required_missions = { NZS_amenities_of_neitiznot }
+		trigger = {
+			385 = {
+				is_core = ROOT
+				OR = {
+					has_building = farm_estate
+					base_production = 7
+				}
+			}
+		}
+		effect = {
+			385 = {
+				add_base_production = 1
+			}
+			add_years_of_income = 0.5
+		}
 	}
-	has_country_shield = yes
-	
 	NZS_follow_the_arctic_pine = {
-		icon = mission_alliances
-		required_missions = { NZS_amenities_of_neitiznot NZS_yak_farming }
-		position = 2
+		icon = mission_follow_the_arctic_pine
+		required_missions = { NZS_yak_farming }
 		trigger = {
 			OR = {
 				owns_core_province = 388
 				AND = {
-				treasury = 250
-				adm_power = 50
-				388 = {
-					is_empty = yes
+					treasury = 250
+					adm_power = 50
+					388 = {
+						is_empty = yes
 					}
 				}
 			}
@@ -59,7 +65,7 @@ neitiznot_missions_3 = {
 			if = {
 				limit = {
 					owns_core_province = 388
-					}
+				}
 				add_adm_power = 50
 				388 = {
 					change_trade_goods = runite
@@ -74,37 +80,6 @@ neitiznot_missions_3 = {
 					change_trade_goods = runite
 				}
 			}
-		}
-	}
-}
-
-neitiznot_missions_4 = {
-	slot = 4
-	generic = no
-	ai = yes
-	potential = {
-		tag = NZS
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	NZS_yak_farming = {
-		icon = mission_alliances
-		required_missions = { }
-		trigger = {
-			385 = {
-				is_core = ROOT
-				OR = {
-					has_building = farm_estate
-					base_production = 7
-				}
-			}
-		}
-		effect = {
-			385 = {
-				add_base_production = 1
-			}
-			add_treasury = 100
 		}
 	}
 }

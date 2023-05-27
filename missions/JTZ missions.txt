@@ -1,5 +1,5 @@
-jatizso_missions_2 = {
-	slot = 2
+jatizso_missions_1 = {
+	slot = 1
 	generic = no
 	ai = yes
 	potential = {
@@ -9,80 +9,22 @@ jatizso_missions_2 = {
 	has_country_shield = yes
 	
 	JTZ_grow_the_economy = {
-		icon = mission_alliances
+		icon = mission_gold_heap
 		required_missions = { }
 		trigger = {
 			386 = {
 				base_tax = 5
 				is_core = ROOT
 			}
-			share_of_starting_income = 15
+			share_of_starting_income = 1.5
 		}
 		effect = {
 			add_years_of_income = 1
 		}
 	}
-}
-
-jatizso_missions_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		tag = JTZ
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	JTZ_northward_expansion = {
-		icon = mission_alliances
-		required_missions = { JTZ_grow_the_economy JTZ_exploit_the_mines }
-		position = 2
-		trigger = {
-			OR = {
-				owns_core_province = 387
-				AND = {
-				treasury = 250
-				adm_power = 50
-				387 = {
-					is_empty = yes
-					}
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					owns_core_province = 387
-					}
-				add_adm_power = 50
-			}
-			else = {
-				add_treasury = -250
-				add_adm_power = -50
-				387 = {
-					add_core = ROOT
-					cede_province = ROOT
-					change_trade_goods = basic_ores
-					}
-			}
-		}
-	}
-}
-
-jatizso_missions_4 = {
-	slot = 4
-	generic = no
-	ai = yes
-	potential = {
-		tag = JTZ
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
 	JTZ_exploit_the_mines = {
-		icon = mission_alliances
-		required_missions = { }
+		icon = mission_mining
+		required_missions = { JTZ_grow_the_economy }
 		trigger = {
 			386 = {
 				base_production = 5
@@ -99,6 +41,39 @@ jatizso_missions_4 = {
 				add_province_modifier = {
 					name = "JTZ_productive_mine"
 					duration = 7300
+				}
+			}
+		}
+	}
+	JTZ_northward_expansion = {
+		icon = mission_icy_cliff
+		required_missions = { JTZ_exploit_the_mines }
+		trigger = {
+			OR = {
+				owns_core_province = 387
+				AND = {
+					treasury = 250
+					adm_power = 50
+					387 = {
+						is_empty = yes
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 387
+				}
+				add_adm_power = 50
+			}
+			else = {
+				add_treasury = -250
+				add_adm_power = -50
+				387 = {
+					add_core = ROOT
+					cede_province = ROOT
+					change_trade_goods = basic_ores
 				}
 			}
 		}

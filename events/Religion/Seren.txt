@@ -1009,9 +1009,9 @@ country_event = {
 
 #RESULT: Stay put
 country_event = {
-	id = seren_events.105
-	title = seren_events.105.t
-	desc = seren_events.105.d
+	id = seren_events.206
+	title = seren_events.206.t
+	desc = seren_events.206.d
 	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
 	
 	trigger = {
@@ -1034,7 +1034,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.105.a" #A prosperous time lies ahead.
+		name = "seren_events.206.a" #A prosperous time lies ahead.
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
@@ -1051,9 +1051,9 @@ country_event = {
 
 #RESULT: Isolation
 country_event = {
-	id = seren_events.106
-	title = seren_events.106.t
-	desc = seren_events.106.d
+	id = seren_events.207
+	title = seren_events.207.t
+	desc = seren_events.207.d
 	picture = SEREN_INCIDENT_DECLINE_OF_CLAN_ELDERS_eventPicture
 	
 	trigger = {
@@ -1070,7 +1070,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.106.a" #
+		name = "seren_events.207.a" #
 		
 		if = {
 			limit = { NOT = { religion = seren } }
@@ -1909,7 +1909,7 @@ country_event = {
 	
 }
 
-RESULT: Isolation
+#RESULT: Isolation
 country_event = {
 	id = seren_events.310
 	title = seren_events.310.t

@@ -102,22 +102,17 @@ country_event = {
 	picture = DEEP_SEA_FISHING_eventPicture
 
 	fire_only_once = yes
-	
 	major = yes
 
 	trigger = {
-		622 = {
-			culture = barbarian
-			owner = ROOT
-			is_core = ROOT
-		}
+		owns_core_province = 622
+		622 = { culture = barbarian	}
 		absolutism = 40
 		NOT = { has_global_flag = barbarian_fishing }
 	}
 	mean_time_to_happen = {
 		months = 1
 	}
-	
 	option = {
 		name = giu_prices.3.a #These fish are good for nothing but worthless caviar!
 		change_price = {
@@ -171,7 +166,6 @@ country_event = {
 	}
 }
 
-# 
 country_event = {
 	id = giu_prices.5
 	title = giu_prices.5.t #The Charge Pack
@@ -315,8 +309,139 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = giu_prices.9
+	title = giu_prices.9.t #Divine Locations
+	desc = giu_prices.9.d #Among divine energy's many uses is the ability to create temporary plentiful sources of raw materials. Although such a method cannot be used to create bulk amounts of items, nonetheless enough adventurers are engaging in the action to undermine the profits of Gielinor's gatherers.
+	picture = DIVINE_WISPS_eventPicture
 
+	fire_only_once = yes
+	
+	major = yes
 
+	trigger = {
+		divine_energy = 2
+		absolutism = 20
+		NOT = { has_global_flag = divine_locations }
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = giu_prices.9.a #Looks like divine energy is becoming even more valuable.
+		change_price = {
+			trade_goods = divine_energy
+			key = DIV_LOCATIONS
+			value = 0.1
+			duration = -1
+		}
+		change_price = {
+			trade_goods = hunter_creatures
+			key = DIV_LOCATIONS
+			value = -0.1
+			duration = -1
+		}
+		change_price = {
+			trade_goods = herblore_supplies
+			key = DIV_LOCATIONS
+			value = -0.1
+			duration = -1
+		}
+		change_price = {
+			trade_goods = fishing_spot
+			key = DIV_LOCATIONS
+			value = -0.1
+			duration = -1
+		}
+		change_price = {
+			trade_goods = advanced_logs
+			key = DIV_LOCATIONS
+			value = -0.1
+			duration = -1
+		}
+		add_years_of_income = 0.5
+		set_global_flag = divine_locations
+	}
+}
 
+country_event = {
+	id = giu_prices.10
+	title = giu_prices.10.t #Supplies for the Brave
+	desc = giu_prices.10.d #The average citizen needs only a modest amount of food and few potions - but for adventurers, constantly in harm's way, demand is consistently high. With growing numbers of adventurers in Gielinor, fish merchants and herbalists in particular have found their wares are now more valuable than ever.
+	picture = TREASURE_CHESTS_eventPicture
 
+	fire_only_once = yes
+	
+	major = yes
 
+	trigger = {
+		absolutism = 30
+		OR = {
+			fishing_spot = 2
+			herblore_supplies = 2
+		}
+		NOT = { has_global_flag = adventurer_supplies }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = giu_prices.10.a #Be careful drinking those potions! You don't want to be overloaded...
+		change_price = {
+			trade_goods = herblore_supplies
+			key = SUPPLIES_FOR_THE_BRAVE
+			value = 0.4
+			duration = -1
+		}
+		change_price = {
+			trade_goods = fishing_spot
+			key = SUPPLIES_FOR_THE_BRAVE
+			value = 0.25
+			duration = -1
+		}
+		add_years_of_income = 0.5
+		add_prestige = 25
+		add_absolutism = 5
+		set_global_flag = adventurer_supplies
+	}
+}
+
+country_event = {
+	id = giu_prices.11
+	title = giu_prices.11.t #Price Confusion!
+	desc = giu_prices.11.d #The first Grand Exchange was intended to facilitate trade of all kinds of items - but with two rival Grand Exchanges elsewhere in Gielinor, subject to differing taxes, tariffs and trade rules, trade has become more confusing than ever.
+	picture = MISTHALIN_GRAND_EXCHANGE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		current_age = age_of_divination
+		has_reform = grand_exchange_reform
+		calc_true_if = {
+			all_country = {
+				has_reform = grand_exchange_reform
+			}
+			amount = 3
+		}
+		NOT = { has_global_flag = panic_sell_wands }
+	}
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = giu_prices.11.a #Panic sell wands!
+		change_price = {
+			trade_goods = rare_loot
+			key = EXCHANGE_CONFUSION
+			value = -0.5
+			duration = 9125
+		}
+		add_years_of_income = -0.25
+		set_global_flag = panic_sell_wands
+	}
+}

@@ -11,7 +11,7 @@ age_of_mortals = {
 	objectives = {
 		obj_stable_nation = {
 			stability = 3
-			average_unrest = 0
+			NOT = { average_unrest = 0 }
 		}
 		obj_grow_by_50_development = {
 			grown_by_development = 50
@@ -27,10 +27,10 @@ age_of_mortals = {
 			}
 		}
 		obj_trusting_allies = {
-				num_of_allies = 2
-				any_ally = {
-					trust = { who = ROOT value = 75 }
-					}
+			num_of_allies = 2
+			any_ally = {
+				trust = { who = ROOT value = 75 }
+			}
 		}
 		obj_three_vassals = {
 			vassal = 3
@@ -49,7 +49,8 @@ age_of_mortals = {
 	
 	abilities = {
 		
-		ab_chain_of_claims = {
+		ab_chain_of_claims = 
+		{
 			modifier = {
 				can_chain_claim = yes
 			}
@@ -355,11 +356,10 @@ age_of_adventurers = {
 		increase_autonomy_command = -2
 		debase_currency = -1
 		execute_rebel_acceptance_command = -10
-		seat_in_parliament = -3
+		automatic_seat_in_parliament = -2
+		manual_seat_in_parliament = -2
 		war_exhaustion = -1
 	}
-	
-	
 	
 	objectives = {
 		obj_90_adventurers = {
@@ -542,10 +542,10 @@ age_of_divination = {
 		increase_autonomy_command = -2
 		debase_currency = -1
 		execute_rebel_acceptance_command = -10
-		seat_in_parliament = -3
+		automatic_seat_in_parliament = -2
+		manual_seat_in_parliament = -2
 		war_exhaustion = -1
 	}
-	
 	
 	objectives = {
 	
@@ -561,7 +561,7 @@ age_of_divination = {
 				religion = vampyric
 				}
 			calc_true_if = {
-				all_owned_province = {
+				every_owned_province = {
 					region = misthalin_region
 					culture_group = vampyre_group
 				}
@@ -573,10 +573,7 @@ age_of_divination = {
 				religion = saradomin
 				}
 			OR = {
-				any_country = {
-					tag = ENT
-					is_great_power = yes
-				}
+				ENT = { is_great_power = yes }
 				is_papal_controller = yes
 			}
 		}
@@ -637,24 +634,17 @@ age_of_divination = {
 			allow = {
 				religion = seren
 				}
-			NOT = {
-				any_province = {
-					religion = darklord
-				}
+			every_province = {
+				NOT = { religion = darklord }
 			}
 		}
 		obj_builders_of_gielinor = {
 			allow = {
 				religion = ful
 				}
-			NOT = {
-				any_province = {
-					NOT = { development = 15 }
-				}
+			every_owned_province = {
+				development = 15
 			}
-			#every_owned_province = {
-			#	development = 15
-			#}
 		}
 		obj_control_the_stone = {
 			allow = {
@@ -726,7 +716,7 @@ age_of_divination = {
 				religion = genbu
 			}
 			calc_true_if = {
-				all_owned_province = {
+				every_owned_province = {
 					fort_level = 6
 				}
 				amount = 10

@@ -13,10 +13,6 @@ country_event = {
 	picture = JALDRAOCHT_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
 	
 	option = {
 		name = flavor_mwl.1.a #We should make room for the celebration of Seren's family.

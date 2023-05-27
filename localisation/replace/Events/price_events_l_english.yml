@@ -38,3 +38,18 @@
  giu_prices.8.d:0 "The God of the Cabbages has spread his leafy goodness throughout this world with ourselves as his humble servants. The world is beginning to see the true value of cabbages!"
  giu_prices.8.a:0 "Deliciousness is power."
  CABBAGE_TRIUMPH:0 "Triumph of Brassica Prime"
+ 
+ giu_prices.9.t:0 "Divine Locations"
+ giu_prices.9.d:0 "Among divine energy's many uses is the ability to create temporary plentiful sources of raw materials. Although such a method cannot be used to create bulk amounts of items, nonetheless enough adventurers are engaging in the action to undermine the profits of Gielinor's gatherers."
+ giu_prices.9.a:0 "Looks like divine energy is becoming even more valuable."
+ DIV_LOCATIONS:0 "Divine Locations"
+ 
+ giu_prices.10.t:0 "Supplies for the Brave"
+ giu_prices.10.d:0 "The average citizen needs only a modest amount of food and few potions - but for adventurers, constantly in harm's way, demand is consistently high. With growing numbers of adventurers in Gielinor, fish merchants and herbalists in particular have found their wares are now more valuable than ever."
+ giu_prices.10.a:0 "Be careful drinking those potions! You don't want to be overloaded..."
+ SUPPLIES_FOR_THE_BRAVE:0 "Supplies for the Brave"
+ 
+ giu_prices.11.t:0 "Price Confusion!"
+ giu_prices.11.d:0 "The first Grand Exchange was intended to facilitate trade of all kinds of items - but with two rival Grand Exchanges elsewhere in Gielinor, subject to differing taxes, tariffs and trade rules, trade has become more confusing than ever."
+ giu_prices.11.a:0 "Panic sell wands!"
+ EXCHANGE_CONFUSION:0 "Panic sell wands"

@@ -72,26 +72,6 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 30
-		modifier = {
-			factor = 1.2
-			isolationism = 1
-		}
-		modifier = {
-			factor = 1.2
-			isolationism = 2
-		}
-		modifier = {
-			factor = 1.2
-			isolationism = 3
-		}
-		modifier = {
-			factor = 1.2
-			isolationism = 4
-		}
-	}
-	
 	immediate = {
 		hidden_effect = {
 			EVR = {
@@ -101,7 +81,7 @@ country_event = {
 				}
 			}
 		}
-		remove_country_flag = cda_replacing_elves_flag
+		clr_country_flag = cda_replacing_elves_flag
 	}
 	
 	option = {
@@ -233,26 +213,6 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 30
-		modifier = {
-			factor = 1.1
-			isolationism = 1
-		}
-		modifier = {
-			factor = 1.1
-			isolationism = 2
-		}
-		modifier = {
-			factor = 1.1
-			isolationism = 3
-		}
-		modifier = {
-			factor = 1.1
-			isolationism = 4
-		}
-	}
-	
 	immediate = {
 		hidden_effect = {
 			EVR = {
@@ -262,7 +222,7 @@ country_event = {
 				}
 			}
 		}
-		remove_country_flag = cda_replacing_elves_flag
+		clr_country_flag = cda_replacing_elves_flag
 	}
 	
 	option = {
@@ -324,26 +284,6 @@ country_event = {
 		OR = {
 			owns_core_province = 257
 			owns_core_province = 322
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 200
-		modifier = {
-			factor = 0.8
-			isolationism = 1
-		}
-		modifier = {
-			factor = 0.8
-			isolationism = 2
-		}
-		modifier = {
-			factor = 0.8
-			isolationism = 3
-		}
-		modifier = {
-			factor = 0.8
-			isolationism = 4
 		}
 	}
 	

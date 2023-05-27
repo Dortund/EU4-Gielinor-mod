@@ -433,7 +433,7 @@ country_event = {
 	picture = ELDER_GOD_WARS_eventPicture
 	
 	trigger = {
-		has_global_flag = {
+		had_global_flag = {
 			flag = elder_god_wars_flag
 			days = 365
 		}

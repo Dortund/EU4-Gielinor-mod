@@ -1,7 +1,7 @@
 country_decisions = {
 	lucien_religion = {
 		potential = {
-			tag = LCI
+			is_tag = LCI
 			OR = {
 				any_owned_province = {
 					has_province_modifier = artefact_stone_of_jas

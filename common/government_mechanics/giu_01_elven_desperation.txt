@@ -31,7 +31,7 @@ elven_desperation_mechanic = {
 	
 	interactions = {
 		elven_desperation_last_stand = {
-			# gui = elven_desperation_gov_mech # Removed due to the gui not working properly
+			gui = elven_desperation_gov_mech
 			cost_type = elven_desperation_power_1
 			center = no
 			trigger = {

@@ -27,10 +27,6 @@ country_event = {
 	}
 	picture = ELVEN_RESISTANCE_LLETYA_eventPicture
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
 	
 	option = {
 		name = flavor_evr.a #We are seven clans united!
@@ -274,7 +270,7 @@ country_event = {
 	desc = flavor_evr.10.d #Once whispers, voices from the Underground Pass have grown. In time these voices became visions. Visions of human armies, wasted by some unseen hand. Join us...
 	picture = IBAN_LAIR_eventPicture
 	fire_only_once = yes
-	is_major = yes
+	major = yes
 	
 	trigger = {
 		tag = EVR
@@ -339,7 +335,7 @@ country_event = {
 	picture = IBAN_LAIR_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	is_major = yes
+	major = yes
 
 	mean_time_to_happen = {
 		days = 1

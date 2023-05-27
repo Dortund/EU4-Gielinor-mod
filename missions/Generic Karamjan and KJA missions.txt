@@ -612,7 +612,7 @@ karamja_missions_3 = {
 			227 = {
 				owned_by = ROOT
 				has_building = grand_shipyard
-			 	province_has_center_of_trade_of_level = 2
+			 	has_center_of_trade_of_level = 2
 				base_production = 10
 			}
 		}

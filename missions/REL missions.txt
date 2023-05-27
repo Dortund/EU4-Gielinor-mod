@@ -99,7 +99,7 @@ rellekka_missions_2 = {
 	has_country_shield = yes
 	
 	REL_fremennik_family = {
-		icon = mission_alliances
+		icon = mission_fremennik_family
 		required_missions = { REL_dwarven_diplomacy }
 		position = 2
 		trigger = {
@@ -120,7 +120,7 @@ rellekka_missions_2 = {
 	}
 	
 	REL_fremennik_voyages = {
-		icon = mission_protect_white_sea_trade
+		icon = mission_fremennik_voyages
 		required_missions = { REL_longship_culture REL_fremennik_family }
 		position = 4
 		trigger = {
@@ -451,7 +451,7 @@ rellekka_missions_5 = {
 		}
 	}
 	REL_smite_the_basilisks = {
-		icon = danubian_power
+		icon = mission_smite_the_basilisks
 		position = 6
 		required_missions = { REL_path_of_the_hunter }
 		trigger = {

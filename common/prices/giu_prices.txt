@@ -6,6 +6,7 @@
 
 advanced_logs = {
 	base_price = 3
+	#-10%: Divine Locations
 }
 
 advanced_ores = {
@@ -27,12 +28,15 @@ cabbage = {
 
 divine_energy = {
 	base_price = 10
+	#+10%: Divine Locations
 	#+10%: Invention institution
 }
 
 fishing_spot = {
 	base_price = 2
+	#+25%: Increasing number of adventurers
 	#+10%: Barbarian Outpost is Barbarian culture with 40+ adventurer rating
+	#-10%: Divine Locations
 }
 
 flax = {
@@ -53,10 +57,13 @@ grains = {
 
 herblore_supplies = {
 	base_price = 2.5
+	#+40%: Increasing number of adventurers
+	#-10%: Divine Locations
 }
 
 hunter_creatures = {
 	base_price = 2
+	#-10%: Divine Locations
 }
 
 lesser_loot = {
@@ -90,6 +97,7 @@ naval_goods = {
 
 rare_loot = {
 	base_price = 5
+	#-50% (for 25 years): At least 3 nations have Grand Exchanges in the Sixth Age
 }
 
 runes = {

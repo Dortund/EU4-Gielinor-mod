@@ -100,7 +100,6 @@ country_event = {
 	
 	option = {
 		name = flavor_enk.1.a #I want to see what Enkhara's next steps are.
-
 		switch_tag = ENK
 		ai_chance = {
 			factor = 0
@@ -109,10 +108,11 @@ country_event = {
 	option = {
 		name = flavor_enk.1.b #Let's see what Akthanakos is up to.
 		trigger = {
+			exists = AKO
 			90 = {
 				OR = {
 					is_empty = yes
-					owner = AKO
+					owned_by = AKO
 				}
 			}
 		}
@@ -123,7 +123,6 @@ country_event = {
 	}
 	option = {
 		name = flavor_enk.1.c #The struggles of Mahjarrat are for themselves to worry about.
-
 		ai_chance = {
 			factor = 5
 		}

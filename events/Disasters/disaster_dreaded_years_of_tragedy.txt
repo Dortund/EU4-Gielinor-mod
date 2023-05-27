@@ -58,25 +58,23 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		has_disaster = dreaded_years_of_tragedy
 		OR = {
 			tag = KDR
 			tag = ADO
 		}
-		has_disaster = dreaded_years_of_tragedy
 		OR = {
 			religion = zamorak
-			capital_scope = { controller = REB }
+			capital_scope = {
+				has_rebel_faction = zamorak_rebels
+			}
 		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
 	}
 	
 	immediate = {
-		set_country_flag = kdr_dreaded_years_end
-		end_disaster = dreaded_years_of_tragedy
 		hidden_effect = {
+			set_country_flag = kdr_dreaded_years_end
+			end_disaster = dreaded_years_of_tragedy
 			every_owned_province = {
 			 	remove_province_modifier = KDR_invisible_children
 			}
@@ -115,36 +113,28 @@ country_event = {
 			tag = ADO
 		}
 		has_disaster = dreaded_years_of_tragedy
-		AND = {
-			any_owned_province = {
-				limit = {
-					AND = {
-						base_tax = 3
-						base_production = 3
-						base_manpower = 3
-						NOT = {
-							area = west_ardougne_area
-							area = east_ardougne_area
-						}
-					}
+		any_owned_province = {
+			base_tax = 3
+			base_production = 3
+			base_manpower = 3
+			NOT = {
+				OR = {
+					area = west_ardougne_area
+					area = east_ardougne_area
 				}
 			}
 		}
-	}
-
-	mean_time_to_happen = {
-		months = 9
 	}
 	
 	option = {
 		name = dreaded_years_of_tragedy.3.a #It is the Zamorakians who should burn.
 		random_owned_province = {
 			limit = {
-				AND = {
-					base_tax = 3
-					base_production = 3
-					base_manpower = 3
-					NOT = {
+				base_tax = 3
+				base_production = 3
+				base_manpower = 3
+				NOT = {
+					OR = {
 						area = west_ardougne_area
 						area = east_ardougne_area
 					}
@@ -171,25 +161,17 @@ country_event = {
 			tag = ADO
 		}
 		has_disaster = dreaded_years_of_tragedy
-		AND = {
-			any_owned_province = {
-				limit = {
-					AND = {
-						base_tax = 3
-						base_production = 3
-						base_manpower = 3
-						NOT = {
-							area = west_ardougne_area
-							area = east_ardougne_area
-						}
-					}
+		any_owned_province = {
+			base_tax = 3
+			base_production = 3
+			base_manpower = 3
+			NOT = {
+				OR = {
+					area = west_ardougne_area
+					area = east_ardougne_area
 				}
 			}
 		}
-	}
-
-	mean_time_to_happen = {
-		months = 9
 	}
 	
 	option = {
@@ -228,10 +210,6 @@ country_event = {
 			tag = ADO
 		}
 		has_disaster = dreaded_years_of_tragedy
-	}
-
-	mean_time_to_happen = {
-		months = 9
 	}
 	
 	option = {

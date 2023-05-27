@@ -30,19 +30,19 @@ country_event = {
 	
 	option = {
 		name = zulrah_events.1.a #Sacrifice our wealth for the Serpent!
-		all_owned_province = {
+		every_owned_province = {
 			add_base_tax = -1
 		}
 	}
 	option = {
 		name = zulrah_events.1.b #Sacrifice our production for the Serpent!
-		all_owned_province = {
+		every_owned_province = {
 			add_base_production = -1
 		}
 	}
 	option = {
 		name = zulrah_events.1.c #Sacrifice our manpower for the Serpent!
-		all_owned_province = {
+		every_owned_province = {
 			add_base_manpower = -1
 		}
 	}

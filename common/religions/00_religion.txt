@@ -942,7 +942,7 @@ nonintervention_group = {
 		uses_karma = yes
 		misguided_heretic = yes
 				
-		heretic = { SOLAK }
+		heretic = { SOLAK KAMI }
 	}
 
 	v = {
@@ -1237,13 +1237,13 @@ order_group = {
 			law_of_integrity_aspect
 			law_of_equality_aspect
 			common_law_aspect
+			edict_of_invention_aspect
+			golem_guardians_aspect
 			religious_freedom_aspect
 			rehabilitative_justice_aspect
 			legal_representation_aspect
 			anti_war_ethos_aspect
 			wisdom_shall_bring_peace_aspect
-			corporealists_aspect
-			incorporealists_aspect
 		}
 		aspects_name = ARMADYL_ASPECTS
 		

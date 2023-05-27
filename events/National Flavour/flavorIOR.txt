@@ -13,10 +13,6 @@ country_event = {
 	picture = TIRANNWN_TEMPLE_LIGHT_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
 	
 	option = {
 		name = flavor_ior.1.a #We will break through eventually.
@@ -36,10 +32,6 @@ country_event = {
 	picture = TIRANNWN_PRIFDDINAS_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
 	
 	option = {
 		name = flavor_ior.2.a #We will find a way.
@@ -59,10 +51,6 @@ country_event = {
 	picture = TIRANNWN_PRIFDDINAS_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
 	
 	option = {
 		name = flavor_ior.3.a #The resistance shall be crushed!
@@ -116,10 +104,6 @@ country_event = {
 	picture = CAMELOT_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		days = 5
-	}
 	
 	option = {
 		name = flavor_ior.5.a #Let's ally with [KDR.Monarch.GetName]!
@@ -156,10 +140,6 @@ country_event = {
 	picture = IORWERTH_PLAGUE_CITY_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
 	
 	option = {
 		name = flavor_ior.6.a #For the Dark Lord!
@@ -438,7 +418,7 @@ country_event = {
 	desc = flavor_ior.15.d #Strange news emerges from our excavation for the Temple of Light. Large numbers of miners have vanished or been killed. Deadly shadows and dark beasts have been spotted - hostile to anything that approaches. It seems to free the Dark Lord, we must push through the monsters it manifested...
 	picture = IBAN_LAIR_eventPicture
 	fire_only_once = yes
-	is_major = yes
+	major = yes
 	
 	trigger = {
 		tag = IOR
@@ -498,7 +478,7 @@ country_event = {
 	picture = DARK_LORD_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	is_major = yes
+	major = yes
 
 	mean_time_to_happen = {
 		days = 1

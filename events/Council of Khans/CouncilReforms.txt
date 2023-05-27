@@ -32,7 +32,9 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				will_back_next_reform = no
+				NOT = {
+					will_back_reform = khanreform_revoke_khan_privileges
+				}
 			}			
 			
 		}
@@ -47,7 +49,7 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				will_back_next_reform = yes
+				will_back_reform = khanreform_revoke_khan_privileges
 			}			
 			
 		}

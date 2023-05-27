@@ -13,14 +13,14 @@ guiTypes = {
 
 		# Frame
 		iconType = {
-			name = "government_power_bar"
+			name = "government_power_bar_frame"
 			spriteType = "GFX_elven_desperation_frame"
 			position = { x = 0 y = 0 }
 			alwaystransparent = yes
 		}
 		
 		guiButtonType = {
-			name = "elven_desperation_government_interaction_button"
+			name = "government_interaction_button"
 			quadTextureSprite = "GFX_elven_desperation_last_stand_button"
 			position = { x = 0 y = 30 }
 			buttonFont = "vic_18"

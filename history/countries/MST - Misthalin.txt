@@ -40,6 +40,9 @@ historical_friend = KDS
 		dip = 3
 		mil = 5
 	}
+}
+
+1943.6.27 = {
 	heir = {
 		name = "Lowell"
 		dynasty = "Remanis"

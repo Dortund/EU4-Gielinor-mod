@@ -13,10 +13,6 @@ country_event = {
 	
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 3
-	}
 	
 	option = {
 		name = flavor_mst.1.a #Alright, but this better be their only demand.
@@ -883,10 +879,6 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	
-	mean_time_to_happen = {
-		months = 2
-	}
-	
 	immediate = {
 		set_global_flag = NMD_nomad_travels
 		if = {
@@ -1066,7 +1058,7 @@ country_event = {
 				mil = 6
 				age = 35
 			}
-			clear_scipted_personalities = yes
+			clear_scripted_personalities = yes
 			add_ruler_personality = immortal_personality
 		}
 	}
@@ -1283,7 +1275,7 @@ country_event = {
 				mil = 6
 				age = 35
 			}
-			clear_scipted_personalities = yes
+			clear_scripted_personalities = yes
 			add_ruler_personality = immortal_personality
 		}
 	}
@@ -1310,7 +1302,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		owns_province = 20
+		owns = 20
 		current_age = age_of_divination
 		NOT = { exists = WBA }
 		NOT = { exists = WBB }
@@ -1545,7 +1537,6 @@ country_event = {
 	}
 	
 	fire_only_once = yes
-	is_triggered_only = yes
 
 	trigger = {
 		is_year = 2070
@@ -1662,7 +1653,6 @@ country_event = {
 	}
 	
 	fire_only_once = yes
-	is_triggered_only = yes
 
 	trigger = {
 		had_country_flag = {
@@ -1736,12 +1726,11 @@ country_event = {
 	}
 	
 	fire_only_once = yes
-	is_triggered_only = yes
 
 	trigger = {
 		had_country_flag = {
 			flag = MST_burning_of_wizards_tower
-			months = 6
+			days = 180
 		}
 	}
 	
@@ -1756,7 +1745,7 @@ country_event = {
 		}
 		country_event = {
 			id = flavor_mst.26
-			months = 1
+			days = 30
 		}
 	}
 	option = {
@@ -1780,7 +1769,7 @@ country_event = {
 		}
 		country_event = {
 			id = flavor_mst.26
-			months = 1
+			days = 30
 		}
 	}
 	option = {

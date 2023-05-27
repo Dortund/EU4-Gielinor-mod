@@ -1,7 +1,8 @@
 government = tribal
 add_government_reform = runecrafting_crusader
 government_rank = 1
-primary_culture = barbarian
+primary_culture = mountaintribe
+add_accepted_culture = barbarian
 religion = v
 secondary_religion = guthix
 technology_group = fremenniktechgroup

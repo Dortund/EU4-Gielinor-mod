@@ -93,10 +93,6 @@ country_event = {
 		NOT = { exists = IBN }
 		NOT = { has_global_flag = temple_of_shadow_flag }
 	}
-
-	mean_time_to_happen = {
-		months = 12
-	}
 	
 	immediate = {
 		hidden_effect = {

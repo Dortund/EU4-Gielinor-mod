@@ -173,7 +173,7 @@ zemouregal_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			kings_road_area = {
+			east_road_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}

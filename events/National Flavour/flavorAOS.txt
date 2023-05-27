@@ -109,10 +109,10 @@ country_event = {
 					province_id = 773
 					province_id = 1390
 				}
-				add_province_modifier = { 
-					name = AOS_poison_waste
-					duration = -1  
-				}
+			}
+			add_province_modifier = {
+				name = AOS_poison_waste
+				duration = -1  
 			}
 		}
 	}
@@ -124,6 +124,9 @@ country_event = {
 	desc = flavor_aos.5.d #Refugees from [Root.GetName] along with those from other realms have found their way to southern Tirannwn, where they encountered a monstrous snake! In exchange for letting them live, they now provide live sacrifices to the snake and consider it their god.
 	picture = ZULRAH_eventPicture
 	
+	fire_only_once = yes
+	major = yes
+	
 	trigger = {
 		OR = {
 			tag = AOS
@@ -131,12 +134,8 @@ country_event = {
 				NOT = {
 					exists = AOS
 				}
-				random_country = {
-					limit = {
-						capital_scope = {
-							region = tirannwn_region
-						}
-					}	
+				capital_scope = {
+					region = tirannwn_region
 				}
 			}
 		}

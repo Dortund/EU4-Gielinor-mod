@@ -4,9 +4,61 @@
 ##########################################################################################################################################
 ##########################################################################################################################################
 
+#Beta 1.6.1 patch notes (Jatizso)
+
+Here's a smaller patch to fling together some code fixes and add some little improvements for minor Fremennik realms.
+
+#######################
+# National Flavour
+#######################
+
+# New mission tree for generic Fremmenik nations (not Rellekka, Aesagrun or Moonclan; Gunnar will eventually not use these but for now has access to some). Consists of 15 missions.
+
+# Jatizso
+## Existing missions have been moved around to accommodate generic Fremennik missions.
+
+# Neitiznot
+## Existing missions have been moved around to accommodate generic Fremennik missions.
+
+#######################
+# Events
+#######################
+
+# Three new price events that may turn up later in the game
+
+#######################
+# Localisation
+#######################
+
+# Added startup text for Fremmenik-culture nations in the Fremennik region
+# Added startup text for Armadyl, Dark Lord, Menaphite, Saradomin, V, Zaros religions
+# Added government/leader names for Druidic States/Order, Obsidian Caste, Rellekka
+
+#######################
+# Bugfixes
+#######################
+
+# Fixed Stable Nation age objective
+# Fixed Armadyl not having access to the Edict of Invention and Golem Guardians aspects
+# Fixed GUI for House Disunity and Elven Desperation
+# Corrected code for Gnome Empire events
+# Corrected code for Gunnar events
+# Fixed Arposandra's Poison Waste event so it actually creates the province modifier
+# Fixed old code for Council of Khans events
+# Fixed Dreaded Years of Tragedy disaster code
+# Fixed Rise of the Adventurers disaster code conflicting with old Court and Country code
+# Fixed Seren's Decline of Clan Elders incident code
+# Fixed Elder God Wars event code
+# Fixed price event code
+# Miscellaneous other event fixes
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
 #Beta 1.6.0 patch notes (Elven Resistance)
 
-This patch brings the mod up to EU4 version 1.35 while also adding depth for Tirannwn, with some content for Kourend and Misthalin as well.
+#This patch brings the mod up to EU4 version 1.35 while also adding depth for Tirannwn, with some content for Kourend and Misthalin as well.
 
 #######################
 # Map Changes

@@ -3,131 +3,9 @@
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
 
-boss_nation_name = {
-	rank = {
-		1 = LAIR
-		2 = REALM
-		3 = EMPIRE
-	}
-
-	ruler_male = {
-		1 = BOSS
-		2 = BOSS
-		3 = SUPERBOSS
-	}
-
-	ruler_female = {
-		1 = BOSS
-		2 = BOSS
-		3 = SUPERBOSS
-	}
-	trigger = {
-		OR = {
-			has_reform = boss_nation
-			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
-		}
-		NOT = { tag = BWS }
-		NOT = { tag = ZUA }
-	}
-}
-
-kharidian_generic_name = {
-	rank = {
-		1 = PRINCIPALITY
-		2 = EMIRATE
-		3 = SULTANATE
-	}
-
-	ruler_male = {
-		1 = PRINCE
-		2 = EMIR
-		3 = SULTAN
-	}
-
-	ruler_female = {
-		1 = PRINCESS
-		2 = EMIRA
-		3 = SULTANA
-	}
-	
-	consort_male = {
-		1 = PRINCE_CONSORT
-		2 = EMIR_CONSORT
-		3 = SULTAN_CONSORT
-	}
-	
-	consort_female = {
-		1 = CONSORT
-		2 = EMIRA
-		3 = SULTANA
-	}
-	
-	heir_male = {
-		1 = HEIR
-		2 = HEIR
-		3 = SHAHZADE
-	}
-	
-	heir_female = {
-		1 = HEIR_fem
-		2 = HEIR_fem
-		3 = SHAHZADE
-	}
-
-	trigger = {
-		government = monarchy
-		culture_group = kharidian_group
-	}
-}
-
-zul_andra_name = {
-	rank = {
-		1 = VILLAGE
-		2 = KINGDOM
-		3 = EMPIRE
-	}
-
-	ruler_male = {
-		1 = HIGH_PRIEST
-		2 = HIGH_PRIEST
-		3 = HIGH_PRIEST
-	}
-
-	ruler_female = {
-		1 = HIGH_PRIESTESS
-		2 = HIGH_PRIESTESS
-		3 = HIGH_PRIESTESS
-	}
-	trigger = {
-		tag = ZUA
-	}
-}
-
-mahjarrat_realm = {
-	rank = {
-		1 = LORDSHIP
-		2 = KINGDOM
-		3 = EMPIRE
-	}
-
-	ruler_male = {
-		1 = LORD
-		2 = LORD
-		3 = LORD
-	}
-
-	ruler_female = {
-		1 = LADY
-		2 = LADY
-		3 = LADY
-	}
-	trigger = {
-		ruler_culture = mahjarrat
-	}
-}
-
-
+####################################
+# Tag-specific (this needs to come first!)
+####################################
 
 BTH_principality = {
 	rank = {
@@ -172,6 +50,18 @@ DYN_kingdom = {
 		2 = COUNTESS
 		3 = LADY
 	}
+	
+	consort_male = {
+		1 = COUNT_CONSORT
+		2 = COUNT_CONSORT
+		3 = LORD_CONSORT
+	}
+
+	consort_female = {
+		1 = COUNTESS_CONSORT
+		2 = COUNTESS_CONSORT
+		3 = LADY_CONSORT
+	}
 
 	trigger = {
 		government = monarchy
@@ -179,36 +69,11 @@ DYN_kingdom = {
 	}
 }
 
-goblin_kingdom = {
+general_khazard = {
 	rank = {
-		1 = VILLAGE
-		2 = KINGDOM
-		3 = EMPIRE
-	}
-
-	ruler_male = {
-		1 = GENERAL
-		2 = GENERAL
-		3 = MARSHAL
-	}
-
-	ruler_female = {
-		1 = GENERAL
-		2 = GENERAL
-		3 = MARSHAL
-	}
-
-	trigger = {
-		government = monarchy
-		culture_group = goblin_group
-	}
-}
-
-goblin_tribe = {
-	rank = {
-		1 = TRIBE
-		2 = TRIBAL_KINGDOM
-		3 = TRIBAL_EMPIRE
+		1 = REGIME
+		2 = REGIME
+		3 = REGIME
 	}
 
 	ruler_male = {
@@ -224,8 +89,7 @@ goblin_tribe = {
 	}
 
 	trigger = {
-		government = tribal
-		culture_group = goblin_group
+		tag = KZD
 	}
 }
 
@@ -309,40 +173,6 @@ CDA_kingdom_of_baxtorian = {
 	}
 }
 
-elven_clans = {
-	rank = {
-		1 = MINOR_CLAN
-		2 = CLAN
-		3 = MAJOR_CLAN
-	}
-
-	ruler_male = {
-		1 = LORD
-		2 = LORD
-		3 = LORD
-	}
-
-	ruler_female = {
-		1 = LADY
-		2 = LADY
-		3 = LADY
-	}
-
-	trigger = {
-		OR = {
-			tag = AML
-			tag = CDA
-			tag = CRW
-			tag = CYW
-			tag = HEF
-			tag = IOR
-			tag = ITH
-			tag = MIY
-			tag = THN
-		}
-	}
-}
-
 EVR_government_name = {
 	rank = {
 		1 = UNITED_CLANS
@@ -392,6 +222,31 @@ LNC_kingdom = {
 	}
 }
 
+moon_clan_magocracy = {
+	rank = {
+		1 = REALM
+		2 = REALM
+		3 = REALM
+	}
+
+	ruler_male = {
+		1 = ONEIROMANCER
+		2 = ONEIROMANCER
+		3 = ONEIROMANCER
+	}
+
+	ruler_female = {
+		1 = ONEIROMANCER
+		2 = ONEIROMANCER
+		3 = ONEIROMANCER
+	}
+
+	trigger = {
+		tag = MOO
+		has_reform = magiocracy
+	}
+}
+
 MPS_government_name = {
 	rank = {
 		1 = CITY
@@ -414,6 +269,30 @@ MPS_government_name = {
 	trigger = {
 		government = monarchy
 		tag = MPS
+	}
+}
+
+
+zul_andra_name = {
+	rank = {
+		1 = VILLAGE
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = HIGH_PRIEST
+		2 = HIGH_PRIEST
+		3 = HIGH_PRIEST
+	}
+
+	ruler_female = {
+		1 = HIGH_PRIESTESS
+		2 = HIGH_PRIESTESS
+		3 = HIGH_PRIESTESS
+	}
+	trigger = {
+		tag = ZUA
 	}
 }
 
@@ -492,6 +371,31 @@ HMY_government_name = {
 	}
 }
 
+REL_chiefs = {
+	rank = {
+		1 = FREMENNIK_PROVINCE
+		2 = FREMENNIK_PROVINCE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = CHIEF
+		2 = CHIEFTAIN
+		3 = GRAND_CHIEFTAIN
+	}
+
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = CHIEFTESS
+		3 = GRAND_CHIEFTESS
+	}
+
+	trigger = {
+		government = monarchy
+		tag = REL
+	}
+}
+
 NTZ_burghers = {
 	rank = {
 		1 = DUCHY
@@ -516,6 +420,264 @@ NTZ_burghers = {
 		tag = NTZ
 	}
 }
+
+####################################
+# Medium priority (not tag-specific, but should override broader categories)
+####################################
+
+elven_clans = {
+	rank = {
+		1 = MINOR_CLAN
+		2 = CLAN
+		3 = MAJOR_CLAN
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+
+	trigger = {
+		OR = {
+			tag = AML
+			tag = CDA
+			tag = CRW
+			tag = CYW
+			tag = HEF
+			tag = IOR
+			tag = ITH
+			tag = MIY
+			tag = THN
+		}
+	}
+}
+
+kharidian_generic_name = {
+	rank = {
+		1 = PRINCIPALITY
+		2 = EMIRATE
+		3 = SULTANATE
+	}
+
+	ruler_male = {
+		1 = PRINCE
+		2 = EMIR
+		3 = SULTAN
+	}
+
+	ruler_female = {
+		1 = PRINCESS
+		2 = EMIRA
+		3 = SULTANA
+	}
+	
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = EMIR_CONSORT
+		3 = SULTAN_CONSORT
+	}
+	
+	consort_female = {
+		1 = CONSORT
+		2 = EMIRA
+		3 = SULTANA
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = SHAHZADE
+	}
+	
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = kharidian_group
+	}
+}
+
+mahjarrat_realm = {
+	rank = {
+		1 = LORDSHIP
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+	trigger = {
+		ruler_culture = mahjarrat
+	}
+}
+
+####################################
+# General
+####################################
+
+boss_nation_name = {
+	rank = {
+		1 = LAIR
+		2 = REALM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = BOSS
+		2 = BOSS
+		3 = SUPERBOSS
+	}
+
+	ruler_female = {
+		1 = BOSS
+		2 = BOSS
+		3 = SUPERBOSS
+	}
+	trigger = {
+		OR = {
+			has_reform = boss_nation
+			has_reform = island_boss_nation
+			has_reform = quidamortem_boss_nation
+		}
+		NOT = { tag = BWS }
+		NOT = { tag = ZUA }
+	}
+}
+
+druid_state = {
+	rank = {
+		1 = DRUIDIC_VILLAGE
+		2 = DRUIDIC_NATION
+		3 = DRUIDIC_EMPIRE
+	}
+
+	ruler_male = {
+		1 = HEAD_DRUID
+		2 = HEAD_DRUID
+		3 = ARCH_DRUID
+	}
+
+	ruler_female = {
+		1 = HEAD_DRUIDESS
+		2 = HEAD_DRUIDESS
+		3 = ARCH_DRUIDESS
+	}
+	
+    heir_male = {
+        1 = APPRENTICE
+		2 = APPRENTICE
+		3 = APPRENTICE
+    }
+    
+    heir_female = {
+        1 = APPRENTICE
+		2 = APPRENTICE
+		3 = APPRENTICE
+    }
+
+	trigger = {
+		OR = {
+			has_reform = druidic_state
+			has_reform = druidic_order
+		}
+	}
+}
+
+goblin_kingdom = {
+	rank = {
+		1 = VILLAGE
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = MARSHAL
+	}
+
+	ruler_female = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = MARSHAL
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = goblin_group
+	}
+}
+
+goblin_tribe = {
+	rank = {
+		1 = TRIBE
+		2 = TRIBAL_KINGDOM
+		3 = TRIBAL_EMPIRE
+	}
+
+	ruler_male = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	ruler_female = {
+		1 = GENERAL
+		2 = GENERAL
+		3 = GENERAL
+	}
+
+	trigger = {
+		government = tribal
+		culture_group = goblin_group
+	}
+}
+
+obsidian_caste_name = {
+	rank = {
+		1 = CITY
+		2 = GREAT_CITY
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = ELDER
+		2 = ELDER
+		3 = GRAND_ELDER
+	}
+
+	ruler_female = {
+		1 = ELDER
+		2 = ELDER
+		3 = GRAND_ELDER
+	}
+
+	trigger = {
+		has_reform = obsidian_caste
+	}
+}
+
+
 
 fremennik_monarchy = {
 	rank = {
@@ -629,7 +791,7 @@ entranan_high_priesthood = {
 	rank = {
 		1 = HOLY_ISLAND
 		2 = HOLY_ISLAND
-		3 = HOLY_ISLAND
+		3 = BLESSED_EMPIRE
 	}
 
 	ruler_male = {
@@ -649,29 +811,7 @@ entranan_high_priesthood = {
 	}
 }
 
-general_khazard = {
-	rank = {
-		1 = REGIME
-		2 = REGIME
-		3 = REGIME
-	}
 
-	ruler_male = {
-		1 = GENERAL
-		2 = GENERAL
-		3 = GENERAL
-	}
-
-	ruler_female = {
-		1 = GENERAL
-		2 = GENERAL
-		3 = GENERAL
-	}
-
-	trigger = {
-		tag = KZD
-	}
-}
 
 shamanic_theocracy = {
 	rank = {
@@ -694,31 +834,6 @@ shamanic_theocracy = {
 
 	trigger = {
 		has_reform = shamanic_theocracy
-	}
-}
-
-moon_clan_magocracy = {
-	rank = {
-		1 = REALM
-		2 = REALM
-		3 = REALM
-	}
-
-	ruler_male = {
-		1 = ONEIROMANCER
-		2 = ONEIROMANCER
-		3 = ONEIROMANCER
-	}
-
-	ruler_female = {
-		1 = ONEIROMANCER
-		2 = ONEIROMANCER
-		3 = ONEIROMANCER
-	}
-
-	trigger = {
-		tag = MOO
-		has_reform = magiocracy
 	}
 }
 
@@ -748,9 +863,3 @@ wushanko_khanate = {
 		}
 	}
 }
-
-
-
-
-
-

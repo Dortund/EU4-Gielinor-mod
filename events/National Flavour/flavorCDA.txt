@@ -118,10 +118,6 @@ country_event = {
 	picture = GNOME_GRAND_TREE_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		days = 1
-	}
 	
 	option = {
 		name = flavor_cda.2.a #Trifling gnomes!
@@ -209,7 +205,7 @@ country_event = {
 		trigger = {
 			religion = bandos
 		}
-		any_owned_province = {
+		random_owned_province = {
 			limit = {
 				region = kandarin_region
 				culture_group = elven_group
@@ -225,7 +221,7 @@ country_event = {
 			NOT = { religion = bandos }
 		}
 		add_mil_power = -100
-		any_owned_province = {
+		random_owned_province = {
 			limit = {
 				region = kandarin_region
 				culture_group = elven_group
@@ -245,7 +241,7 @@ country_event = {
 		trigger = {
 			NOT = { religion = bandos }
 		}
-		any_owned_province = {
+		random_owned_province = {
 			limit = {
 				region = kandarin_region
 				culture_group = elven_group

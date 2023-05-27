@@ -30,9 +30,6 @@ country_event = {
 			872 = { is_empty = yes }
 		}
 	}
-	mean_time_to_happen = {
-		months = 6
-	}
 
 	immediate = {
 		hidden_effect = {
@@ -118,10 +115,6 @@ country_event = {
 		tag = CDR
 		absolutism = 50
 		owns_core_province = 59
-	}
-	
-	mean_time_to_happen = {
-		days = 30
 	}
 	
 	option = {

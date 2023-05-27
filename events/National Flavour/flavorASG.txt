@@ -474,14 +474,17 @@ country_event = {
 				duration = 7300
 			}
 		}
-		elseif = {
+		if = {
 			limit = { religion_group = nonintervention_group }
 			add_country_modifier = { 
 				name = ASG_void_knight_recruitment_nonintervention
 				duration = 7300
 			}
 		}
-		else = {
+		if = {
+			limit = {
+				NOT = { religion_group = nonintervention_group }
+			}
 			add_country_modifier = { 
 				name = ASG_void_knight_recruitment_other
 				duration = 7300

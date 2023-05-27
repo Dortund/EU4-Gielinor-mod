@@ -301,7 +301,24 @@
  desc_EVR_destruction_of_the_dark_lord:0 "With the Dark Lord destroyed for good, converting the few who cling to such heresy will take no time at all."
  EVR_open_panic:0 "Open Panic"
  desc_EVR_open_panic:0 "The revival of the Dark Lord terrifies our people."
+ 
+# Fremennik Generic
 
+ genfremmy_inspiring_buildings:0 "Inspiring Buildings"
+ desc_genfremmy_inspiring_buildings:0 "Our new sturdy log buildings are a comfortable place to speak and sing about the events of the world."
+ genfremmy_ease_of_taxation:0 "Ease of Taxation"
+ desc_genfremmy_ease_of_taxation:0 "Minimising the strife within our realm has made our subjects more amenable to higher taxes."
+ genfremmy_diplomatic_fleet:0 "Diplomatic Fleet"
+ desc_genfremmy_diplomatic_fleet:0 "Tying the bonds of friendship between the Fremennik requires a strong navy to escort our diplomats."
+ genfremmy_merchant_navy:0 "Merchant Navy"
+ desc_genfremmy_merchant_navy:0 "Our merchants greatly appreciate the protection our growing fleet offers."
+ genfremmy_coloniser_boom:0 "Coloniser Boom"
+ desc_genfremmy_coloniser_boom:0 "Increasing numbers of Fremennik are inspired to settle strange new lands far away, so that they may bring home their riches."
+ genfremmy_sagas_of_war:0 "Sagas of War"
+ desc_genfremmy_sagas_of_war:0 "Bards sing of our victories, weaving the new successes into an old canon of legends."
+ genfremmy_grand_invasion_preparation:0 "Grand Invasion Preparation"
+ desc_genfremmy_grand_invasion_preparation:0 "There is reason to justify our conquests practically anywhere in Gielinor, considering just how many humans claim descent from the Fremennik."
+ 
 # Gnome Empire
 
  GNE_tree_gnome_village_rebels:0 "Tree Gnome Village Rebels"
