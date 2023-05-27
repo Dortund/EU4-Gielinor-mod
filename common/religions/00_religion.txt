@@ -2952,7 +2952,11 @@ wushanko_guardian_group = {
 			light_of_summer_aspect
 			strength_of_fire_aspect
 		}
+<<<<<<< HEAD
 		aspects_name = SUZAKU_ASPECTS
+=======
+		aspects_name = suzaku_ASPECTS
+>>>>>>> cfbbdf9 (Fixed a lot of typos where 'suzaku' religion was referred to as 'suzako'.)
 		heretic = { ASSASSINATION_CULT }
 	}
 
