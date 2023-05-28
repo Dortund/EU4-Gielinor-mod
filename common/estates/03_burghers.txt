@@ -21,10 +21,11 @@ estate_burghers =
 		NOT = { government = native }
 		NOT = { has_reform = siberian_tribe }
 		NOT = { has_reform = cloistered_order }
-		OR = {
-			NOT = { has_reform = celestial_empire }
-			has_dlc = "Mandate of Heaven"
-		}
+		# Gielinor
+		#OR = {
+		#	NOT = { has_reform = celestial_empire }
+		#	has_dlc = "Mandate of Heaven"
+		#}
 		is_nomad = no
 		is_colonial_nation = no
 		NOT = { has_reform = revolutionary_empire_reform }
@@ -150,13 +151,15 @@ estate_burghers =
 		}
 		loyalty = -20
 	}
+
+	# Gielinor
 	#Custom Names
-	custom_name = {
-		desc = estate_merchant_guilds
-		trigger = {
-			NOT = { religion_group = christian } #Diversify a bit more.
-		}
-	}
+	#custom_name = {
+	#	desc = estate_merchant_guilds
+	#	trigger = {
+	#		NOT = { religion_group = christian } #Diversify a bit more.
+	#	}
+	#}
 
 	color = { 35 35 150 }
 

@@ -5,7 +5,8 @@ estate_jains = {
 	
 	trigger = {	
 		has_dlc = "Dharma"
-		technology_group = indian
+		# Gielinor
+		#technology_group = indian
 		NOT = { has_government_attribute = is_merchant_republic }
 		NOT = { has_reform = trading_city }
 		NOT = { is_revolutionary_republic_trigger = yes }
@@ -42,13 +43,14 @@ estate_jains = {
 			factor = 0.1
 			NOT = { development = 5 }
 		}
-		modifier = {
-			factor = 0.1
-			NOT = { religion_group = dharmic }
-			NOT = { religion = buddhism }
-			NOT = { religion = vajrayana }
-			NOT = { religion = mahayana }
-		}
+		# Gielinor
+		#modifier = {
+		#	factor = 0.1
+		#	NOT = { religion_group = dharmic }
+		#	NOT = { religion = buddhism }
+		#	NOT = { religion = vajrayana }
+		#	NOT = { religion = mahayana }
+		#}
 		modifier = {
 			factor = 0.5
 			OR = {

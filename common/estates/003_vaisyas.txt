@@ -5,8 +5,9 @@ estate_vaisyas = {
 	#Replaces Burghers
 	trigger = {	
 		has_dlc = "Dharma"
-		technology_group = indian
-		religion = hinduism
+		# Gielinor
+		#technology_group = indian
+		#religion = hinduism
 		NOT = { has_government_attribute = is_merchant_republic }
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = veche_republic }
@@ -15,10 +16,11 @@ estate_vaisyas = {
 		NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }
 		NOT = { has_reform = siberian_tribe }
-		OR = {
-			NOT = { has_reform = celestial_empire }
-			has_dlc = "Mandate of Heaven"
-		}
+		# Gielinor
+		#OR = {
+		#	NOT = { has_reform = celestial_empire }
+		#	has_dlc = "Mandate of Heaven"
+		#}
 		is_nomad = no
 		is_colonial_nation = no
 		NOT = { has_reform = revolutionary_empire_reform }
@@ -46,14 +48,15 @@ estate_vaisyas = {
 			factor = 0.1
 			NOT = { development = 5 }
 		}
-		modifier = {
-			factor = 0.1
-			NOT = { religion_group = dharmic }
-		}
-		modifier = {
-			factor = 2
-			religion = hinduism
-		}
+		# Gielinor
+		#modifier = {
+		#	factor = 0.1
+		#	NOT = { religion_group = dharmic }
+		#}
+		#modifier = {
+		#	factor = 2
+		#	religion = hinduism
+		#}
 		modifier = {
 			factor = 0.5
 			OR = {

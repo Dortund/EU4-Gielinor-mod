@@ -22,21 +22,22 @@ estate_nobles =
 		NOT = { has_reform = peasants_republic }
 		NOT = { has_reform = american_republic }
 		NOT = { has_reform = federal_republic }
-		if = {
-			limit = {
-				NOT = { religion_group = muslim }
-				NOT = { religion = sikhism }
-				NOT = { religion = buddhism }
-				NOT = { religion = vajrayana }
-				NOT = { religion = mahayana }
-			}
-			NOT = { has_estate = estate_maratha }
-			NOT = { has_estate = estate_rajput }
-		}
-		OR = {
-			NOT = { has_reform = celestial_empire }
-			has_dlc = "Mandate of Heaven"
-		}
+		# Gielinor
+		#if = {
+		#	limit = {
+		#		NOT = { religion_group = muslim }
+		#		NOT = { religion = sikhism }
+		#		NOT = { religion = buddhism }
+		#		NOT = { religion = vajrayana }
+		#		NOT = { religion = mahayana }
+		#	}
+		##	NOT = { has_estate = estate_maratha }
+		#	NOT = { has_estate = estate_rajput }
+		#}
+		#OR = {
+		#	NOT = { has_reform = celestial_empire }
+		#	has_dlc = "Mandate of Heaven"
+		#}
 		is_nomad = no
 		is_colonial_nation = no
 		OR = {
@@ -99,13 +100,15 @@ estate_nobles =
 
 	# Influence modifiers
 	base_influence = 10
-	influence_modifier = {
-		desc = EST_VAL_EASTERN_TECH
-		trigger = {
-			technology_group = eastern
-		}	
-		influence = 5
-	}
+
+	# Gielinor
+	#influence_modifier = {
+	#	desc = EST_VAL_EASTERN_TECH
+	#	trigger = {
+	#		technology_group = eastern
+	#	}	
+	#	influence = 5
+	#}
 	
 	# Influence modifiers from Events:
 	influence_modifier = {
