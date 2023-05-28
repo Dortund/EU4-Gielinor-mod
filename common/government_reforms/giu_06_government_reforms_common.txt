@@ -121,6 +121,14 @@ amphibious_specialization_reform = {
 		}
 	}
 	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Domination"
+				has_dlc = "Golden Century"
+				has_dlc = "Rule Britannia"
+				has_dlc = "Lions of the North"
+			}
+		}
 		custom_attributes = {
 			marine_buff = yes	#Marines -20% Manpower Usage
 		}

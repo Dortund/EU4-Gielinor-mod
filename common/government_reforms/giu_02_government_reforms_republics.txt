@@ -46,16 +46,28 @@ consortium_republic = {
 	boost_income = yes
 	duration = 4
 	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
 		can_use_trade_post = yes
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
 		can_form_trade_league = yes
-		trade_city_reform = dwarven_outpost
+		trade_city_reform = dwarven_outpost # For trade cities this is their fallback government if they get more than 1 provinces
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
 		can_use_trade_post = yes
 		can_form_trade_league = yes
-		trade_city_reform = dwarven_outpost
+		trade_city_reform = dwarven_outpost # For trade cities this is their fallback government if they get more than 1 provinces
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -91,9 +103,30 @@ dwarven_outpost = {
 		enables_aristocratic_idea_group = no
 		blocked_call_diet = yes
 	}
-	can_use_trade_post = yes
-	can_form_trade_league = yes
-	trade_city_reform = merchants_reform # For trade cities this is their fallback government if they get more than 1 provinces
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = merchants_reform # For trade cities this is their fallback government if they get more than 1 provinces
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = merchants_reform # For trade cities this is their fallback government if they get more than 1 provinces
+	}
 	duration = 4
 }
 
@@ -112,7 +145,12 @@ federal_republic = {
 		governing_capacity = 150
 		global_unrest = -1
 	}
-	has_parliament = yes
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
@@ -209,7 +247,7 @@ magiocracy = {
 			primary_culture = dimnes
 			primary_culture = moonclan
 			primary_culture = ouranian
-			primary_culture = scarabite
+			primary_culture = scabarite
 			tag = SSY
 		}
 	}
@@ -225,7 +263,11 @@ magiocracy = {
 	ai = {
 		factor = 2
 	}
-	has_meritocracy = yes
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+		factions = {}
+	}
 }
 
 merchants_reform = {
@@ -252,16 +294,28 @@ merchants_reform = {
 		mr_guilds
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
 		can_use_trade_post = yes
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
 		can_form_trade_league = yes
-		trade_city_reform = trading_city_reform
+		trade_city_reform = trading_city_reform # For trade cities this is their fallback government if they get more than 1 provinces
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
 		can_use_trade_post = yes
 		can_form_trade_league = yes
-		trade_city_reform = trading_city_reform
+		trade_city_reform = trading_city_reform # For trade cities this is their fallback government if they get more than 1 provinces
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -468,7 +522,11 @@ sirenic_republic = {
 	ai = {
 		factor = 2
 	}
-	has_meritocracy = yes
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+		factions = {}
+	}
 }
 
 tirannwn_republic = {
@@ -607,9 +665,30 @@ trading_city_reform = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 	}
-	can_use_trade_post = yes
-	can_form_trade_league = yes
-	trade_city_reform = merchants_reform # For trade cities this is their fallback government if they get more than 1 provinces
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = merchant_republic # For trade cities this is their fallback government if they get more than 1 provinces
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = merchant_republic # For trade cities this is their fallback government if they get more than 1 provinces
+	}
 	duration = 4
 }
 
@@ -639,10 +718,8 @@ evr_civil_war_governance_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 	}
-	conditional = {
-		government_abilities = {
-			elven_desperation_mechanic
-		}
+	government_abilities = {
+		elven_desperation_mechanic
 	}
 	ai = {
 		factor = 100
@@ -908,6 +985,9 @@ parliamentary_republic_reform = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
 		has_parliament = yes
 	}
 	custom_attributes = {

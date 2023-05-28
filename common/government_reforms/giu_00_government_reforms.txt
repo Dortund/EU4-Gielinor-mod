@@ -118,9 +118,14 @@ consortium_monarchy_legacy = {
 		stability_cost_modifier = -0.2
 	}
 
-	can_use_trade_post = yes
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		can_use_trade_post = yes
+		trade_city_reform = dwarven_outpost_legacy
+	}
 	can_form_trade_league = yes
-	trade_city_reform = dwarven_outpost_legacy
 	
 	custom_attributes = {
 		is_merchant_republic = yes
@@ -219,16 +224,22 @@ feldip_government_legacy = {
 		defensiveness = 0.1
 		max_absolutism = -20
 	}
-	states_general_mechanic = {
-		ogres = {
-			female_advisor_chance = -10
-		 	cavalry_power = 0.10
-			harsh_treatment_cost = -0.2
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
 		}
-		ogresses = {
-			female_advisor_chance = 10
-			leader_land_shock = 1
-		 	development_cost = -0.05
+
+		states_general_mechanic = {
+			ogres = {
+				female_advisor_chance = -10
+				cavalry_power = 0.10
+				harsh_treatment_cost = -0.2
+			}
+			ogresses = {
+				female_advisor_chance = 10
+				leader_land_shock = 1
+				development_cost = -0.05
+			}
 		}
 	}
 }
@@ -280,7 +291,12 @@ kandarin_monarchy_legacy = {
 		tolerance_heretic = 1
 		tolerance_heathen = 1
 	}
-	has_parliament = yes
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
 	custom_attributes = {
 		blocked_call_diet = yes
 	}
@@ -319,8 +335,6 @@ kourend_monarchy_legacy = {
 		core_creation = 0.5
 		ae_impact = 0.5
 		stability_cost_modifier = 0.5
-	}
-	conditional = {
 	}
 	factions = {
 		arceuus_faction
@@ -578,9 +592,30 @@ consortium_republic_legacy = {
 		stability_cost_modifier = 0.25
 	}
 
-	can_use_trade_post = yes
-	can_form_trade_league = yes
-	trade_city_reform = dwarven_outpost_legacy
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = dwarven_outpost_legacy # For trade cities this is their fallback government if they get more than 1 provinces
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = dwarven_outpost_legacy # For trade cities this is their fallback government if they get more than 1 provinces
+	}
 	
 	custom_attributes = {
 		is_merchant_republic = yes
@@ -613,9 +648,30 @@ dwarven_outpost_legacy = {
 		production_efficiency = 0.1
 	 	trade_goods_size_modifier = 0.1
 	}
-	can_use_trade_post = yes
-	can_form_trade_league = yes
-	trade_city_reform = merchant_republic # For trade cities this is their fallback government if they get more than 1 provinces
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = merchant_republic # For trade cities this is their fallback government if they get more than 1 provinces
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = merchant_republic # For trade cities this is their fallback government if they get more than 1 provinces
+	}
 	ai = {
 		factor = 0
 	}
@@ -640,7 +696,12 @@ federal_republic_legacy = {
 		governing_capacity = 150
 		global_unrest = -1
 	}
-	has_parliament = yes
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
 	ai = {
 		factor = 0
 	}
@@ -726,7 +787,10 @@ magiocracy_legacy = {
 	ai = {
 		factor = 0
 	}
-	has_meritocracy = yes
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+	}
 }
 
 merchant_republic = {
@@ -960,7 +1024,10 @@ sirenic_republic_legacy = {
 	ai = {
 		factor = 0
 	}
-	has_meritocracy = yes
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+	}
 }
 
 tirannwn_republic_legacy = {
@@ -1069,9 +1136,30 @@ trading_city_legacy = {
 		global_trade_power = 0.1
 		max_absolutism = -20
 	}
-	can_use_trade_post = yes
-	can_form_trade_league = yes
-	trade_city_reform = merchant_republic # For trade cities this is their fallback government if they get more than 1 provinces
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = merchant_republic # For trade cities this is their fallback government if they get more than 1 provinces
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = merchant_republic # For trade cities this is their fallback government if they get more than 1 provinces
+	}
 	ai = {
 		factor = 0
 	}
@@ -1458,6 +1546,10 @@ apostocracy_legacy = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+
 		has_devotion = yes
 	}
 
@@ -1494,6 +1586,10 @@ bardic_order_legacy = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+
 		has_devotion = yes
 	}
 
@@ -1590,6 +1686,10 @@ druidic_order_government = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+
 		has_devotion = yes
 	}
 
@@ -1732,6 +1832,10 @@ monastic_order_government = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+
 		has_devotion = yes
 	}
 
@@ -1765,6 +1869,10 @@ shamanic_theocracy_legacy = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+
 		has_devotion = yes
 	}
 

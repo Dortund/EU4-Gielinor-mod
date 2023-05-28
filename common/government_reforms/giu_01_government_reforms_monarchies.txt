@@ -65,16 +65,28 @@ consortium_monarchy = {
 	boost_income = yes
 	duration = 4
 	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
 		can_use_trade_post = yes
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
 		can_form_trade_league = yes
-		trade_city_reform = dwarven_outpost
+		trade_city_reform = dwarven_outpost # For trade cities this is their fallback government if they get more than 1 provinces
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
 		can_use_trade_post = yes
 		can_form_trade_league = yes
-		trade_city_reform = dwarven_outpost
+		trade_city_reform = dwarven_outpost # For trade cities this is their fallback government if they get more than 1 provinces
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -211,16 +223,22 @@ feldip_government = {
 	heir = no
 	duration = 4
 	has_term_election = yes
-	states_general_mechanic = {
-		ogres = {
-			female_advisor_chance = -10
-		 	cavalry_power = 0.10
-			harsh_treatment_cost = -0.2
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
 		}
-		ogresses = {
-			female_advisor_chance = 10
-			leader_land_shock = 1
-		 	development_cost = -0.05
+		
+		states_general_mechanic = {
+			ogres = {
+				female_advisor_chance = -10
+				cavalry_power = 0.10
+				harsh_treatment_cost = -0.2
+			}
+			ogresses = {
+				female_advisor_chance = 10
+				leader_land_shock = 1
+				development_cost = -0.05
+			}
 		}
 	}
 	custom_attributes = {
@@ -283,7 +301,12 @@ kandarin_monarchy = {
 		tolerance_heretic = 1
 		tolerance_heathen = 1
 	}
-	has_parliament = yes
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
 
 	custom_attributes = {
 		blocked_call_diet = yes
@@ -341,10 +364,8 @@ kourend_monarchy = {
 		diplomatic_upkeep = 1
 		num_accepted_cultures = 1
 	}
-	conditional = {
-		government_abilities = {
-			house_disunity_mechanic
-		}
+	government_abilities = {
+		house_disunity_mechanic
 	}
 	
 	ai = {
@@ -789,10 +810,8 @@ ior_civil_war_focus_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 	}
-	conditional = {
-		government_abilities = {
-			elven_desperation_mechanic
-		}
+	government_abilities = {
+		elven_desperation_mechanic
 	}
 	ai = {
 		factor = 100
@@ -1360,6 +1379,9 @@ constitutional_monarchy_reform = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
 		has_parliament = yes
 	}
 	custom_attributes = {
