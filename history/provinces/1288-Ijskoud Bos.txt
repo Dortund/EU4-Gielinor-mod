@@ -1,5 +1,4 @@
 #1288 - Ijskoud
-
 culture = icelord
 religion = wen
 

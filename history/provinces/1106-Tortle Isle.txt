@@ -18,8 +18,6 @@ base_manpower = 1
 
 trade_goods = fruit
 
-is_city = yes
-
 native_size = 2
 native_ferocity = 1
 native_hostileness = 1

@@ -12,8 +12,6 @@ base_manpower = 1
 
 trade_goods = livestock_farm
 
-is_city = yes
-
 center_of_trade = 1
 
 1931.1.3 = {

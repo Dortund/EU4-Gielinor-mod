@@ -19,8 +19,6 @@ base_manpower = 1
 trade_goods = fruit
 latent_trade_goods = { divine_energy }
 
-is_city = yes
-
 native_size = 2
 native_ferocity = 1
 native_hostileness = 1

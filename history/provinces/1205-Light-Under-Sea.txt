@@ -10,5 +10,3 @@ base_manpower = 1
 
 trade_goods = fishing_spot
 latent_trade_goods = { divine_energy }
-
-is_city = yes

@@ -15,8 +15,6 @@ base_manpower = 1
 trade_goods = bones
 latent_trade_goods = { rare_loot }
 
-is_city = yes
-
 add_province_triggered_modifier = wildy_border_level_one
 add_province_triggered_modifier = wildy_border_level_two
 add_province_triggered_modifier = wildy_border_level_three

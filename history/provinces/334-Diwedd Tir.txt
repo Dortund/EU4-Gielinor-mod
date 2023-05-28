@@ -13,8 +13,6 @@ base_manpower = 2
 trade_goods = fishing_spot
 latent_trade_goods = { rare_loot }
 
-is_city = yes
-
 2103.11.13 = {
 	owner = ZUA
 	controller = ZUA

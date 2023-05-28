@@ -13,8 +13,6 @@ base_manpower = 2
 
 trade_goods = bones
 
-is_city = yes
-
 2165.11.1 = {
 	owner = IBN
 	controller = IBN

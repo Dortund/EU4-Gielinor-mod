@@ -1,4 +1,7 @@
 #963-Chaotic Wastes
+owner = ROG
+controller = ROG
+add_core = ROG
 culture = rogue
 religion = zamorak
 

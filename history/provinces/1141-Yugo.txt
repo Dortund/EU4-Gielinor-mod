@@ -17,8 +17,6 @@ base_manpower = 1
 
 trade_goods = hunter_creatures
 
-is_city = yes
-
 native_size = 2
 native_ferocity = 2
 native_hostileness = 2

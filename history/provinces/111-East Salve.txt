@@ -18,8 +18,6 @@ fort_15th = yes
 
 trade_goods = herblore_supplies
 
-is_city = yes
-
 2023.6.29 = {
 	owner = CFS
 	controller = CFS

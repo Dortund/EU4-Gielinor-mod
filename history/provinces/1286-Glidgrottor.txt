@@ -1,5 +1,4 @@
 #1286 - Glidgrottor
-
 culture = achuliasip
 religion = northern_pantheon
 

@@ -17,5 +17,3 @@ base_production = 3
 base_manpower = 2
 
 trade_goods = advanced_ores
-
-is_city = yes

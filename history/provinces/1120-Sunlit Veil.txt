@@ -18,8 +18,6 @@ base_manpower = 1
 
 trade_goods = basic_ores
 
-is_city = yes
-
 native_size = 5
 native_ferocity = 3
 native_hostileness = 2

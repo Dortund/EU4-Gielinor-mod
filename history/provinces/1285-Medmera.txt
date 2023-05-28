@@ -1,5 +1,4 @@
 #1285 - Medmera
-
 culture = achuliasip
 religion = northern_pantheon
 

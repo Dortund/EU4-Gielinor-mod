@@ -9,5 +9,3 @@ base_production = 1
 base_manpower = 1
 
 trade_goods = gemstones
-
-is_city = yes
