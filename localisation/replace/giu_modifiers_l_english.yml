@@ -153,7 +153,7 @@
  ASG_void_knight_recruitment_other:0 "Void Knight Recruitment"
  desc_ASG_void_knight_recruitment_other:0 "Guided by Dracs Melrose, the Void Knights are attracting many recruits which to some extent are willing to fight for us."
  ASG_retreat_of_the_temple_knights:0 "Retreat of the Temple Knights"
- desc_retreat_of_the_temple_knights:0 "The ancient order of the Temple Knights refuses to serve rulers of a heathen faith."
+ desc_ASG_retreat_of_the_temple_knights:0 "The ancient order of the Temple Knights refuses to serve rulers of a heathen faith."
  ASG_one_faith_crusade:0 "One Faith Crusade"
  desc_ASG_one_faith_crusade:0 "In the aftermath of the burning of Wizards' Tower based on religious tensions, we have realised the need to more aggressively promote our faith."
  ASG_exile_of_the_kinshra:0 "Exile of the Kinshra"
