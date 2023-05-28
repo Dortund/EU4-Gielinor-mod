@@ -2,24 +2,24 @@
 # Events for Bedabins
 ########################################
 
-namespace = flavor_bdb
+namespace = flavor_bds
 normal_or_historical_nations = yes
 
 country_event = {
-	id = flavor_bdb.1
-	title = flavor_bdb.1.t #Devastation of the Desert Monkeys
-	desc = flavor_bdb.1.d #Monsters have struck upon the monkeys of the Kharidian Desert, with devastating consequences. Apmeken's chosen have been seemingly obliterated by the combined might of Leeuni, Ayuni and Eruni.
+	id = flavor_bds.1
+	title = flavor_bds.1.t #Devastation of the Desert Monkeys
+	desc = flavor_bds.1.d #Monsters have struck upon the monkeys of the Kharidian Desert, with devastating consequences. Apmeken's chosen have been seemingly obliterated by the combined might of Leeuni, Ayuni and Eruni.
 	picture = NEW_APEMEKEN_DESERT_MONKEYS_eventPicture
 	
 	trigger = {
 		OR = {
-			tag = BDB
+			tag = BDS
 			AND = {
-				NOT = { exists = BDB }
+				NOT = { exists = BDS }
 				tag = SOP
 			}
 			AND = {
-				NOT = { exists = BDB }
+				NOT = { exists = BDS }
 				NOT = { exists = SOP }
 				owns_core_province = 81
 			}
@@ -34,7 +34,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_bdb.1.a #This is a sad day for the allies of Apmeken.
+		name = flavor_bds.1.a #This is a sad day for the allies of Apmeken.
 		add_dip_power = -25
 		hidden_effect = {
 			if = {

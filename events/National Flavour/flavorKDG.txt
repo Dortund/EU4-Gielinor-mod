@@ -24,13 +24,12 @@ country_event = {
 	mean_time_to_happen = {
 		months = 2
 	}
-	
-	option = {
-		name = flavor_kdg.1.a #It is not the mountain we conquer, but ourselves.
+
+	immediate = {
 		52 = {
 			add_core = UWF
 			cede_province = UWF
-			change_culture = kdgda
+			change_culture = kelda
 			change_religion = guthix
 			add_institution_embracement = {
 				which = reconstruction
@@ -41,34 +40,19 @@ country_event = {
 				value = 100
 			}
 			change_trade_goods = iron
-		}
-		UWF = {
 			discover_country = KDG
-			}
-		discover_country = UWF
+		}
+		capital_scope = {
+			discover_country = UWF
+		}
+	}
+	
+	option = {
+		name = flavor_kdg.1.a #It is not the mountain we conquer, but ourselves.
 	}
 	
 	option = {
 		name = flavor_kdg.1.b #I'm joining the colony!
 		switch_tag = UWF
-		52 = {
-			add_core = UWF
-			cede_province = UWF
-			change_culture = kdgda
-			change_religion = guthix
-			add_institution_embracement = {
-				which = reconstruction
-				value = 100
-			}
-			add_institution_embracement = {
-				which = architecture
-				value = 100
-			}
-			change_trade_goods = iron
-		}
-		UWF = {
-			discover_country = KDG
-			}
-		discover_country = UWF
 	}
 }

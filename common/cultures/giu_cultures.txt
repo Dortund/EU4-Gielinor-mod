@@ -512,7 +512,7 @@ kharidian_group	= {
 		}
 	}
 	bedabin = {
-		primary = BDB
+		primary = BDS
 	}
 	midkharidian = {
 		primary = PVC

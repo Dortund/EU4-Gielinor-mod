@@ -35,10 +35,12 @@ country_event = {
 				change_province_name = "Desert Mining Camp"
 			}
 			DMC = {
-				build_to_forcelimit = {
-					infantry = 0.5
-					cavalry = 0.2
-					artillery = 0.3
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
 				}
 				define_ruler = {
 					name = "Siad"

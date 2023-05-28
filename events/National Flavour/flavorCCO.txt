@@ -32,13 +32,31 @@ country_event = {
 				}
 				CCO = {
 					add_truce_with = ROOT
-					build_to_forcelimit = {
-						heavy_ship = 0.3
-						light_ship = 0.2
-						transport = 0.5
-						infantry = 0.5
-						cavalry = 0.2
-						artillery = 0.3
+					random_owned_province = {
+						limit = {
+							has_port = yes
+						}
+						build_to_forcelimit = {
+							heavy_ship = 0.3
+							light_ship = 0.2
+							transport = 0.5
+						}
+					}
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.5
+							cavalry = 0.2
+							artillery = 0.3
+						}
+					}
+					define_ruler = {
+						name = "Tick"
+						dynasty = "Tock"
+						adm = 3
+						dip = 4
+						mil = 2
+						age = 40
+						claim = 100
 					}
 				}
 			}
@@ -51,33 +69,16 @@ country_event = {
 	
 	option = {
 		name = flavor_cco.1.a #Let's join the Corsairs!
-		hidden_effect = {
-			317 = {
-				cede_province = CCO
-				add_core = CCO
-				remove_core = ROOT
-				change_province_name = "Corsair Cove"
-			}
-			CCO = {
-				add_truce_with = ROOT
-				build_to_forcelimit = {
-					heavy_ship = 0.3
-					light_ship = 0.2
-					transport = 0.5
-					infantry = 0.5
-					cavalry = 0.2
-					artillery = 0.3
-				}
-				define_ruler = {
-					name = "Tick"
-					dynasty = "Tock"
-					adm = 3
-					dip = 4
-					mil = 2
-					age = 40
-					claim = 100
-				}
-			}
+		317 = {
+			cede_province = CCO
+			add_core = CCO
+			remove_core = ROOT
+			change_province_name = "Corsair Cove"
+		}
+		add_years_of_income = 2.5
+		add_country_modifier = {
+			name = CCO_corsair_banking
+			duration = 7300
 		}
 		switch_tag = CCO
 		ai_chance = {
@@ -92,28 +93,7 @@ country_event = {
 			remove_core = ROOT
 			change_province_name = "Corsair Cove"
 		}
-		hidden_effect = {
-			CCO = {
-				add_truce_with = ROOT
-				build_to_forcelimit = {
-					heavy_ship = 0.3
-					light_ship = 0.2
-					transport = 0.5
-					infantry = 0.5
-					cavalry = 0.2
-					artillery = 0.3
-				}
-				define_ruler = {
-					name = "Tick"
-					dynasty = "Tock"
-					adm = 3
-					dip = 4
-					mil = 2
-					age = 40
-					claim = 100
-				}
-			}
-		}
+
 		add_years_of_income = 2.5
 		add_country_modifier = {
 			name = CCO_corsair_banking

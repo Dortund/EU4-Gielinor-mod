@@ -39,10 +39,12 @@ country_event = {
 				change_religion = zamorak
 			}
 			ENK = {
-				build_to_forcelimit = {
-					infantry = 0.5
-					cavalry = 0.2
-					artillery = 0.3
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
 				}
 				define_ruler = {
 					name = "Enkhara"
@@ -72,10 +74,12 @@ country_event = {
 					change_religion = zaros
 				}
 				AKO = {
-					build_to_forcelimit = {
-						infantry = 0.5
-						cavalry = 0.2
-						artillery = 0.3
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.5
+							cavalry = 0.2
+							artillery = 0.3
+						}
 					}
 					define_ruler = {
 						name = "Akthanakos"

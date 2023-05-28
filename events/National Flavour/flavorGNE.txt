@@ -466,7 +466,10 @@ country_event = {
 					area = kandarin_corner_area
 				}
 			}
-			add_province_modifier = GNE_tree_gnome_village_rebels
+			add_province_modifier = {
+				name = GNE_tree_gnome_village_rebels
+				duration = 7300
+			}
 		}
 	}
 }
@@ -764,7 +767,11 @@ country_event = {
 			factor = 0.1
 		}
 		CDA = {
-			add_country_modifier = CDA_gnomish_assistance
+			add_country_modifier = {
+				name = CDA_gnomish_assistance
+				# TODO currently duration is a placeholder value, as it was not defined before, but was needed to fix the event.
+				duration = 3650
+			}
 			country_event = {
 				id = flavor_cda.4
 				days = 1
