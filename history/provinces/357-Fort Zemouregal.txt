@@ -2,7 +2,6 @@
 owner = ZMG
 controller = ZMG
 add_core = ZMG
-tribal_owner = ---
 culture = zombie
 religion = zamorak
 

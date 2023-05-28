@@ -1,6 +1,5 @@
 #88-Wahah
 
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 trade_goods = advanced_ores

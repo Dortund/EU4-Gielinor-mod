@@ -2,7 +2,6 @@
 owner = SNG
 controller = SNG
 add_core = SNG
-tribal_owner = ---
 culture = north_asgarn
 religion = guthix
 

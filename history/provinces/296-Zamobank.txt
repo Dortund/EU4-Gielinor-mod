@@ -2,7 +2,6 @@
 owner = IDI
 controller = IDI
 add_core = IDI
-tribal_owner = ---
 culture = ouranian
 religion = zamorak
 

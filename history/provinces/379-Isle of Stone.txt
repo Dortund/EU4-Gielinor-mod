@@ -2,7 +2,6 @@
 owner = BSL
 controller = BSL
 add_core = BSL
-tribal_owner = ---
 culture = basilisk
 religion = godless
 

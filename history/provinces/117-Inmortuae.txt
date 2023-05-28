@@ -2,7 +2,6 @@
 owner = LNC
 controller = LNC
 add_core = LNC
-tribal_owner = ---
 culture = north_coaster
 religion = saradomin
 

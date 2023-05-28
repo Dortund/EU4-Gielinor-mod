@@ -2,7 +2,6 @@
 owner = MRT
 controller = MRT
 add_core = MRT
-tribal_owner = ---
 culture = north_coaster
 religion = saradomin
 

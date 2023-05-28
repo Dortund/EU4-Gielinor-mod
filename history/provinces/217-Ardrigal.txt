@@ -2,7 +2,6 @@
 owner = GLU
 controller = GLU
 add_core = GLU
-tribal_owner = ---
 culture = jogre
 religion = bandos
 

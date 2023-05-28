@@ -2,7 +2,6 @@
 owner = SKU
 controller = SKU
 add_core = SKU
-tribal_owner = ---
 culture = skull_culture
 religion = seiryu
 

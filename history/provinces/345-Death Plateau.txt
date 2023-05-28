@@ -1,6 +1,5 @@
 #345-Death Plateau
 
-tribal_owner = ---
 culture = mountaintroll
 religion = bandos
 

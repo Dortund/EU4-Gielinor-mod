@@ -1,6 +1,5 @@
 #324-Arandar
 
-tribal_owner = ---
 culture = trahaearn
 religion = seren
 

@@ -2,7 +2,6 @@
 
 culture = bedabin
 religion = menaphite
-tribal_owner = ---
 trade_goods = advanced_ores
 
 discovered_by = centraltechgroup

@@ -2,7 +2,6 @@
 owner = WAT
 controller = WAT
 add_core = WAT
-tribal_owner = ---
 culture = dagannoth
 religion = godless
 

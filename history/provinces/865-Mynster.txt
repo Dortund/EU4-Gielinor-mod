@@ -2,7 +2,6 @@
 owner = VRZ
 controller = VRZ
 add_core = VRZ
-tribal_owner = ---
 culture = north_asgarn
 religion = saradomin
 

@@ -2,7 +2,6 @@
 owner = ULJ
 controller = ULJ
 add_core = ULJ
-tribal_owner = ---
 culture = rellekkan
 religion = v
 

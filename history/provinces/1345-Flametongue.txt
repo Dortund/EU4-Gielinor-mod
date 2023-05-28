@@ -1,7 +1,6 @@
 #189-Safeursa
 culture = chromaticdragon
 religion = jas
-tribal_owner = ---
 
 discovered_by = morytaniantechgroup
 discovered_by = northerntechgroup

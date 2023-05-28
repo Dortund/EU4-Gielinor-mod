@@ -2,7 +2,6 @@
 owner = CNC
 controller = CNC
 add_core = CNC
-tribal_owner = ---
 culture = mountaintroll
 religion = bandos
 

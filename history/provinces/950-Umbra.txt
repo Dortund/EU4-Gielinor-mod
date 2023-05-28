@@ -2,7 +2,6 @@
 owner = BDR
 controller = BDR
 add_core = BDR
-tribal_owner = ---
 culture = meiyer
 religion = saradomin
 

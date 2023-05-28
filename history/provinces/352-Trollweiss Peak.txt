@@ -1,5 +1,4 @@
 #352-Trollweiss Peak
-tribal_owner = ---
 culture = icetroll
 religion = bandos
 

@@ -1,6 +1,5 @@
 #1125 - Hwayag
 
-tribal_owner = ---
 culture = skull_culture
 religion = seiryu
 

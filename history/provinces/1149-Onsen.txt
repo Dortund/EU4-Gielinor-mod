@@ -2,7 +2,6 @@
 owner = RGI
 controller = RGI
 add_core = RGI
-tribal_owner = ---
 culture = river_giant
 religion = bandos
 

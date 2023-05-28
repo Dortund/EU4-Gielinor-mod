@@ -1,7 +1,6 @@
 #176-Forgotten Cemetery
 culture = ghost
 religion = zamorak
-tribal_owner = ---
 hre = no
 
 discovered_by = northerntechgroup

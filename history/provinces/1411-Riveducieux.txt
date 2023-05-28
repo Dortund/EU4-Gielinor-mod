@@ -2,7 +2,6 @@
 owner = HUZ
 controller = HUZ
 add_core = HUZ
-tribal_owner = ---
 culture = huzamogaarb
 religion = bandos
 

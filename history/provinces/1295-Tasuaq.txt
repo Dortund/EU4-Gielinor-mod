@@ -4,7 +4,6 @@ controller = TSQ
 add_core = TSQ
 culture = tasuaq
 religion = northern_pantheon
-tribal_owner = ---
 
 hre = no
 

@@ -2,7 +2,6 @@
 owner = KTR
 controller = KTR
 add_core = KTR
-tribal_owner = ---
 culture = rellekkan
 religion = northern_pantheon
 

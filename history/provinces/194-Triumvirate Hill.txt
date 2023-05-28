@@ -1,7 +1,6 @@
 #194-Triumvirate Hill
 culture = avernic
 religion = zamorak
-tribal_owner = ---
 
 hre = no
 

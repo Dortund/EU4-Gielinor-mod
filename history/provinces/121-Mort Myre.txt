@@ -2,7 +2,6 @@
 owner = MYN
 controller = MYN
 add_core = MYN
-tribal_owner = ---
 culture = north_coaster
 religion = saradomin
 

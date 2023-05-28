@@ -1,7 +1,6 @@
 #163 - Dareeyak
 culture = ghost
 religion = saradomin
-tribal_owner = ---
 
 discovered_by = dwarventechgroup
 discovered_by = northerntechgroup

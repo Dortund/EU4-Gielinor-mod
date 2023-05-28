@@ -2,7 +2,6 @@
 owner = BBM
 controller = BBM
 add_core = BBM
-tribal_owner = ---
 culture = loop_culture
 religion = zaros
 

@@ -2,7 +2,6 @@
 owner = BAA
 controller = BAA
 add_core = BAA
-tribal_owner = ---
 culture = baalal
 religion = xeric
 

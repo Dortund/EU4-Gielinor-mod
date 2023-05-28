@@ -1,6 +1,5 @@
 #788-Dawahi
 
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 

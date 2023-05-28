@@ -1,7 +1,6 @@
 #1302-Polar Bear Isle
 culture = icelord
 religion = wen
-tribal_owner = ---
 
 hre = no
 

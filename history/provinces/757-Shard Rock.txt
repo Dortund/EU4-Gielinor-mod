@@ -1,6 +1,5 @@
 #757-Shard Rock
 
-tribal_owner = ---
 culture = ghost
 religion = armadyl
 

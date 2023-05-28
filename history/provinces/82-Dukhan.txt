@@ -2,7 +2,6 @@
 
 culture = jaldraochtite
 religion = menaphite
-tribal_owner = ---
 trade_goods = lesser_loot
 
 discovered_by = kharidtechgroup

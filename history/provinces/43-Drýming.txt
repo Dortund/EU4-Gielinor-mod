@@ -2,7 +2,6 @@
 owner = DYS
 controller = DYS
 add_core = DYS
-tribal_owner = ---
 culture = north_asgarn
 religion = saradomin
 

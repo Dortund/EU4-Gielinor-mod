@@ -1,6 +1,5 @@
 #93 - Ullek
 
-tribal_owner = ---
 culture = ghost
 religion = menaphite
 

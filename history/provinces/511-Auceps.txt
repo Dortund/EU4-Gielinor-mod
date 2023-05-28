@@ -1,5 +1,4 @@
 #511 - Auceps
-tribal_owner = ---
 culture = centralis
 religion = ralos
 

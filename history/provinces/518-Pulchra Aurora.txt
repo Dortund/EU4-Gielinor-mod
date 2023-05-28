@@ -1,5 +1,4 @@
 #518 - Pulchra Aurora
-tribal_owner = ---
 culture = fortis
 religion = ralos
 

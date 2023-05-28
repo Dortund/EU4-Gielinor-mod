@@ -1,5 +1,4 @@
 #1221-Kamone
-tribal_owner = ---
 culture = shi
 religion = byakko
 

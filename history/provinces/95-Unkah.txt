@@ -1,6 +1,5 @@
 #95-Unkah
 
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 trade_goods = fishing_spot

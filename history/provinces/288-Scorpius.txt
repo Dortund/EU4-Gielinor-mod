@@ -2,7 +2,6 @@
 owner = RKS
 controller = RKS
 add_core = RKS
-tribal_owner = ---
 culture = rekeshuun
 religion = bandos
 

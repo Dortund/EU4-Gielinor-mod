@@ -1,5 +1,4 @@
 #503 - Rebel Rift
-tribal_owner = ---
 culture = fortis
 religion = ranul
 

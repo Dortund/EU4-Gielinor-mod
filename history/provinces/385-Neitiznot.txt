@@ -1,5 +1,4 @@
 #385-Neitiznot
-tribal_owner = ---
 culture = icetroll
 religion = bandos
 

@@ -1,5 +1,4 @@
 #358-Ghorrock
-tribal_owner = ---
 culture = metaldragon
 religion = zamorak
 

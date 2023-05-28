@@ -2,7 +2,6 @@
 owner = CGI
 controller = CGI
 add_core = CGI
-tribal_owner = ---
 culture = cave_giant
 religion = bandos
 

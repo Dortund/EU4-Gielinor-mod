@@ -1,6 +1,5 @@
 #1166-Tondeirukame
 
-tribal_owner = ---
 culture = eastern_exile
 religion = suzaku
 

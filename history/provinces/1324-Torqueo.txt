@@ -1,7 +1,6 @@
 #1324 - Torqueo
 culture = chthonian
 religion = zamorak
-tribal_owner = ---
 
 discovered_by = DMH
 

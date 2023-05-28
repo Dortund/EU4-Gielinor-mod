@@ -2,7 +2,6 @@
 owner = KUU
 controller = KUU
 add_core = KUU
-tribal_owner = ---
 culture = kahlith
 religion = ful
 

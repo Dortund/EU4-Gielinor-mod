@@ -1,7 +1,6 @@
 #205-Ash Volcano
 culture = zygomite
 religion = godless
-tribal_owner = ---
 
 hre = no
 

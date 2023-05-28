@@ -2,7 +2,6 @@
 owner = LOV
 controller = LOV
 add_core = LOV
-tribal_owner = ---
 culture = lovakengj
 religion = guthix
 

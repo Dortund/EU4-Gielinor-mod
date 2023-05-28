@@ -2,7 +2,6 @@
 owner = TBW
 controller = TBW
 add_core = TBW
-tribal_owner = ---
 culture = taibwo
 religion = karamjan
 

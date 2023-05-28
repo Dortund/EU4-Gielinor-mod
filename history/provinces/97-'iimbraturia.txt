@@ -2,7 +2,6 @@
 owner = MPS
 controller = MPS
 add_core = MPS
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 

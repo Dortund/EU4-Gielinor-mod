@@ -1,5 +1,4 @@
 #973-Here Be Ice
-tribal_owner = ---
 culture = icelord
 religion = godless
 

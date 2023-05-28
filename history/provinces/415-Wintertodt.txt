@@ -2,7 +2,6 @@
 owner = WTD
 controller = WTD
 add_core = WTD
-tribal_owner = ---
 culture = icelord
 religion = wen
 

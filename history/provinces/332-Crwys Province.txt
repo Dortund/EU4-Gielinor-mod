@@ -3,7 +3,6 @@ owner = EVR
 controller = EVR
 add_core = EVR
 add_core = CRW
-tribal_owner = ---
 culture = crwys
 religion = seren
 

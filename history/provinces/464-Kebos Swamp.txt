@@ -2,7 +2,6 @@
 owner = LCT
 controller = LCT
 add_core = LCT
-tribal_owner = ---
 culture = molch
 religion = xeric
 

@@ -1,6 +1,5 @@
 #756-Lost Sands
 
-tribal_owner = ---
 culture = ghost
 religion = bandos
 

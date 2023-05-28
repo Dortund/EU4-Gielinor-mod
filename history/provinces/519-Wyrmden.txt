@@ -2,7 +2,6 @@
 owner = WYM
 controller = WYM
 add_core = WYM
-tribal_owner = ---
 culture = wyrm
 religion = jas
 

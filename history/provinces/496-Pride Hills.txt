@@ -1,5 +1,4 @@
 #496 - Pride Hills
-tribal_owner = ---
 culture = centralis
 religion = ralos
 

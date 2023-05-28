@@ -2,7 +2,6 @@
 owner = VYV
 controller = VYV
 add_core = VYV
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

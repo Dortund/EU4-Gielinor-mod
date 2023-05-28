@@ -1,7 +1,6 @@
 #1303 - Buried Shrine
 culture = icelord
 religion = wen
-tribal_owner = ---
 
 hre = no
 

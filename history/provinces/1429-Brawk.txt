@@ -2,7 +2,6 @@
 owner = KBS
 controller = KBS
 add_core = KBS
-tribal_owner = ---
 culture = kebos_culture
 religion = xeric
 

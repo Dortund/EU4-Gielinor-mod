@@ -2,7 +2,6 @@
 owner = SGR
 controller = SGR
 add_core = SGR
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

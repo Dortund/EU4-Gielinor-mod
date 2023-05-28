@@ -2,7 +2,6 @@
 owner = SSY
 controller = SSY
 add_core = SSY
-tribal_owner = ---
 culture = scythe_culture
 religion = genbu
 

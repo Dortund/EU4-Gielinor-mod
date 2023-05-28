@@ -1,6 +1,5 @@
 #866 - Yamuru Algharb
 
-tribal_owner = ---
 culture = bedabin
 religion = menaphite
 trade_goods = livestock_farm

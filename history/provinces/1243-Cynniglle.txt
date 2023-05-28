@@ -2,7 +2,6 @@
 owner = SLK
 controller = SLK
 add_core = SLK
-tribal_owner = ---
 culture = ent
 religion = guthix
 

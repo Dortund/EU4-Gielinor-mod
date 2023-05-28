@@ -3,7 +3,6 @@ owner = MYT
 controller = MYT
 add_core = MYT
 add_core = SLP
-tribal_owner = ---
 culture = slepe
 religion = zamorak
 

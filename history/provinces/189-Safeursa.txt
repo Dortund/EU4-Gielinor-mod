@@ -1,5 +1,4 @@
 #189-Safeursa
-tribal_owner = ---
 culture = corrupt_bear
 religion = zamorak
 

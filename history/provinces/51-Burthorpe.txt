@@ -2,7 +2,6 @@
 owner = BTH
 controller = BTH
 add_core = BTH
-tribal_owner = ---
 culture = burthorpian
 religion = saradomin
 

@@ -2,7 +2,6 @@
 owner = CYN
 controller = CYN
 add_core = CYN
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

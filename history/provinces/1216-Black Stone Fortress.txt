@@ -2,7 +2,6 @@
 owner = RNO
 controller = RNO
 add_core = RNO
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

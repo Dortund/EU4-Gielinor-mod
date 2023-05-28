@@ -2,7 +2,6 @@
 owner = CLY
 controller = CLY
 add_core = CLY
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

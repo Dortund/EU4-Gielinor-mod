@@ -4,7 +4,6 @@ controller = AHS
 add_core = AHS
 culture = achuliasip
 religion = northern_pantheon
-tribal_owner = ---
 
 hre = no
 

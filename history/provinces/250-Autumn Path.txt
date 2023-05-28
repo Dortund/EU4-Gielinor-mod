@@ -2,7 +2,6 @@
 owner = SIN
 controller = SIN
 add_core = SIN
-tribal_owner = ---
 culture = seer
 religion = guthix
 

@@ -2,7 +2,6 @@
 owner = HOS
 controller = HOS
 add_core = HOS
-tribal_owner = ---
 culture = hosidius
 religion = saradomin
 

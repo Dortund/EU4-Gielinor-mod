@@ -1,7 +1,6 @@
 #1236 - Byrlltide
 culture = infernal
 religion = zamorak
-tribal_owner = ---
 
 discovered_by = centraltechgroup
 discovered_by = morytaniantechgroup

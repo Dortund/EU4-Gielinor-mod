@@ -3,7 +3,6 @@ owner = OBP
 controller = OBP
 add_core = OBP
 add_core = TGU
-tribal_owner = ---
 culture = sea_orphan
 religion = byakko
 

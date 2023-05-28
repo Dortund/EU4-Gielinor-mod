@@ -1,5 +1,4 @@
 #969-Trollweiss Meadow
-tribal_owner = ---
 culture = icetroll
 religion = bandos
 

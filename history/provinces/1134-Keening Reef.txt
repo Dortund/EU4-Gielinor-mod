@@ -1,6 +1,5 @@
 #1134 - Keening Reef
 
-tribal_owner = ---
 culture = living_rock
 religion = godless
 

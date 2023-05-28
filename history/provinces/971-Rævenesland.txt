@@ -2,7 +2,6 @@
 owner = RVL
 controller = RVL
 add_core = RVL
-tribal_owner = ---
 culture = barbarian
 religion = guthix
 

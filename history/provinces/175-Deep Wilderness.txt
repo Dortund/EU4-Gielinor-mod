@@ -1,7 +1,6 @@
 #175-Deep Wilderness
 culture = chaos_dwarf
 religion = zamorak
-tribal_owner = ---
 hre = no
 
 discovered_by = northerntechgroup

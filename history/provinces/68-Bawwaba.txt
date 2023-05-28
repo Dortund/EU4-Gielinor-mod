@@ -2,7 +2,6 @@
 
 culture = bedabin
 religion = menaphite
-tribal_owner = ---
 
 discovered_by = centraltechgroup
 discovered_by = kharidtechgroup

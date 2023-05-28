@@ -1,5 +1,4 @@
 #1223-Tsuru
-tribal_owner = ---
 culture = shi
 religion = genbu
 

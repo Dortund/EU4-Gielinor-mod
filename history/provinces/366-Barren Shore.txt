@@ -2,7 +2,6 @@
 owner = BAO
 controller = BAO
 add_core = BAO
-tribal_owner = ---
 culture = barbarian
 religion = v
 

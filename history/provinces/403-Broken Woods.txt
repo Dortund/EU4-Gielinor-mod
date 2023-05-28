@@ -2,7 +2,6 @@
 owner = SWM
 controller = SWM
 add_core = SWM
-tribal_owner = ---
 culture = shayzien
 religion = zamorak
 

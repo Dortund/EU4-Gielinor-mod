@@ -2,7 +2,6 @@
 owner = TST
 controller = TST
 add_core = TST
-tribal_owner = ---
 culture = mountaintroll
 religion = bandos
 

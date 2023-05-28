@@ -1,6 +1,5 @@
 #90-Akthanakos Isle
 
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 trade_goods = livestock_farm

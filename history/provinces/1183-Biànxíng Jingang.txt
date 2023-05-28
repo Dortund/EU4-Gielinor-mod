@@ -1,6 +1,5 @@
 #1183-Biànxíng Jingang
 
-tribal_owner = ---
 culture = pincers_culture
 religion = suzaku
 

@@ -1,5 +1,4 @@
 #1225-Washi
-tribal_owner = ---
 culture = shi
 religion = seiryu
 

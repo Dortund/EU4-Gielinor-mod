@@ -2,7 +2,6 @@
 owner = HNT
 controller = HNT
 add_core = HNT
-tribal_owner = ---
 culture = skull_culture
 religion = seiryu
 

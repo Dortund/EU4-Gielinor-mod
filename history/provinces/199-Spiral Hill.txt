@@ -2,7 +2,6 @@
 owner = MRF
 controller = MRF
 add_core = MRF
-tribal_owner = ---
 culture = mermaid
 religion = godless
 

@@ -7,7 +7,6 @@ discovered_by = MRT
 discovered_by = MSH
 discovered_by = PPH
 discovered_by = morytaniantechgroup
-tribal_owner = ---
 
 hre = no
 

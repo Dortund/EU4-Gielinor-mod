@@ -2,7 +2,6 @@
 owner = REL
 controller = REL
 add_core = REL
-tribal_owner = ---
 culture = barbarian
 religion = guthix
 

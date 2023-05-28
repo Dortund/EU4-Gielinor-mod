@@ -2,7 +2,6 @@
 owner = CTH
 controller = CTH
 add_core = CTH
-tribal_owner = ---
 culture = catherbian
 religion = saradomin
 

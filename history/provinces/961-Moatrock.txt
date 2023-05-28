@@ -1,5 +1,4 @@
 #961-Moatrock
-tribal_owner = ---
 culture = skeleton
 religion = zamorak
 

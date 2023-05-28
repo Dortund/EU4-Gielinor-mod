@@ -2,7 +2,6 @@
 owner = SRI
 controller = SRI
 add_core = SRI
-tribal_owner = ---
 culture = eastern_exile
 religion = seiryu
 

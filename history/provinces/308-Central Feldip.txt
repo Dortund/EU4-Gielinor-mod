@@ -2,7 +2,6 @@
 owner = GUT
 controller = GUT
 add_core = GUT
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

@@ -2,7 +2,6 @@
 owner = CLS
 controller = CLS
 add_core = CLS
-tribal_owner = ---
 culture = catherbian
 religion = saradomin
 

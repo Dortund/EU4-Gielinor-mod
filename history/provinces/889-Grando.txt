@@ -2,7 +2,6 @@
 owner = VAR
 controller = VAR
 add_core = VAR
-tribal_owner = ---
 culture = centralis
 religion = ranul
 

@@ -2,7 +2,6 @@
 owner = EKE
 controller = EKE
 add_core = EKE
-tribal_owner = ---
 culture = ekeleshuun
 religion = bandos
 

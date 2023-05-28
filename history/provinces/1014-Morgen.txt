@@ -2,7 +2,6 @@
 owner = RBR
 controller = RBR
 add_core = RBR
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

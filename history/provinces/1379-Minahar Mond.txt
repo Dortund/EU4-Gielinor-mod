@@ -2,7 +2,6 @@
 owner = THO
 controller = THO
 add_core = THO
-tribal_owner = ---
 culture = thorobshuun
 religion = bandos
 

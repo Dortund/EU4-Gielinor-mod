@@ -1,5 +1,4 @@
 #153 - Shadowloop
-tribal_owner = ---
 culture = rogue
 religion = zamorak
 

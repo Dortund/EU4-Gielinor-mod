@@ -1,6 +1,5 @@
 #856-Gharbaan
 
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 

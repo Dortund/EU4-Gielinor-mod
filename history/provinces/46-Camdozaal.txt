@@ -2,7 +2,6 @@
 owner = CDZ
 controller = CDZ
 add_core = CDZ
-tribal_owner = ---
 culture = imcando
 religion = saradomin
 

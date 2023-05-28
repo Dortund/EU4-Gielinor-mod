@@ -2,7 +2,6 @@
 
 culture = alkharidian
 religion = saradomin
-tribal_owner = ---
 
 discovered_by = centraltechgroup
 discovered_by = morytaniantechgroup

@@ -1,5 +1,4 @@
 #483 - Mount Desperation
-tribal_owner = ---
 culture = skeleton
 religion = ranul
 

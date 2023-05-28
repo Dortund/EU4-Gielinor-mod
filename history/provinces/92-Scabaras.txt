@@ -2,7 +2,6 @@
 owner = SBI
 controller = SBI
 add_core = SBI
-tribal_owner = ---
 culture = scabarite
 religion = menaphite
 

@@ -2,7 +2,6 @@
 owner = SDE
 controller = SDE
 add_core = SDE
-tribal_owner = ---
 culture = north_asgarn
 religion = saradomin
 

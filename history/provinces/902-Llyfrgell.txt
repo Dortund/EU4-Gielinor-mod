@@ -3,7 +3,6 @@ owner = IOR
 controller = IOR
 add_core = IOR
 add_core = THN
-tribal_owner = ---
 culture = trahaearn
 religion = seren
 

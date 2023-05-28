@@ -1,6 +1,5 @@
 #1141-Yugo
 
-tribal_owner = ---
 culture = hook_culture
 religion = genbu
 

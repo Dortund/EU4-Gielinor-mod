@@ -1,5 +1,4 @@
 #966-Wolfpit
-tribal_owner = ---
 culture = ice_giant
 religion = godless
 

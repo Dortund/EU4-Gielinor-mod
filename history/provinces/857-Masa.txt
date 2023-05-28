@@ -1,6 +1,5 @@
 #857-Masa
 
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 

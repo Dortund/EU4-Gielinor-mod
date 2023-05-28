@@ -1,6 +1,5 @@
 #89 - Tamsah
 
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 

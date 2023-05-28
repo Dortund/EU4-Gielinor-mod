@@ -1,5 +1,4 @@
 #870-Sticky Swamp
-tribal_owner = ---
 culture = zygomite
 religion = godless
 

@@ -1,5 +1,4 @@
 #1247 - Ceodenwych
-tribal_owner = ---
 culture = ent
 religion = guthix
 

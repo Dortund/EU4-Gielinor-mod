@@ -2,7 +2,6 @@
 owner = BMU
 controller = BMU
 add_core = BMU
-tribal_owner = ---
 culture = bowl_culture
 religion = suzaku
 

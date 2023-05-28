@@ -3,7 +3,6 @@ owner = MKM
 controller = MKM
 add_core = MKM
 add_core = PLI
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

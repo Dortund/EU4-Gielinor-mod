@@ -1,6 +1,5 @@
 #923-Cloëdig
 
-tribal_owner = ---
 culture = ghost
 religion = armadyl
 

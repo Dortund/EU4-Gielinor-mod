@@ -4,7 +4,6 @@ controller = ILD
 add_core = ILD
 culture = icelord
 religion = wen
-tribal_owner = ---
 
 hre = no
 

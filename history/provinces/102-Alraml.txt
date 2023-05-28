@@ -2,7 +2,6 @@
 owner = SOP
 controller = SOP
 add_core = SOP
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 

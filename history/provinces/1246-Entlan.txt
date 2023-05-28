@@ -1,5 +1,4 @@
 #1246 - Entlan
-tribal_owner = ---
 culture = ent
 religion = guthix
 

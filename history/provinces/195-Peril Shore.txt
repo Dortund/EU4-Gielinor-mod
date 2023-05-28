@@ -1,7 +1,6 @@
 #195-Peril Shore
 culture = skeleton
 religion = zamorak
-tribal_owner = ---
 
 hre = no
 

@@ -2,7 +2,6 @@
 owner = FLB
 controller = FLB
 add_core = FLB
-tribal_owner = ---
 culture = bowl_culture
 religion = suzaku
 

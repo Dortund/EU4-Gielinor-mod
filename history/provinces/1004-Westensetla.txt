@@ -2,7 +2,6 @@
 owner = WST
 controller = WST
 add_core = WST
-tribal_owner = ---
 culture = burthorpian
 religion = saradomin
 

@@ -2,7 +2,6 @@
 owner = MYT
 controller = MYT
 add_core = MYT
-tribal_owner = ---
 culture = trueborn_vampyre
 religion = vampyric
 

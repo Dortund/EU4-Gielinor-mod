@@ -2,7 +2,6 @@
 owner = YUR
 controller = YUR
 add_core = YUR
-tribal_owner = ---
 culture = yurkolgokh
 religion = bandos
 

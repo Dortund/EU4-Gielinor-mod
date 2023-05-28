@@ -1,5 +1,4 @@
 #334 - Diwedd Tir
-tribal_owner = ---
 culture = amlodd
 religion = seren
 

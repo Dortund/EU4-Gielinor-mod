@@ -2,7 +2,6 @@
 owner = DGK
 controller = DGK
 add_core = DGK
-tribal_owner = ---
 culture = drogokishuun
 religion = bandos
 

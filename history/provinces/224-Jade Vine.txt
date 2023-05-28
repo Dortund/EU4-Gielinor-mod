@@ -3,7 +3,6 @@ owner = KLU
 controller = KLU
 add_core = KLU
 add_core = SHI
-tribal_owner = ---
 culture = shilo
 religion = karamjan
 

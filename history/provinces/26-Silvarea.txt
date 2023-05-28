@@ -2,7 +2,6 @@
 owner = MST
 controller = MST
 add_core = MST
-tribal_owner = ---
 culture = silvarean
 religion = saradomin
 

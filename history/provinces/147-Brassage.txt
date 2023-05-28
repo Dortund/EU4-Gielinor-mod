@@ -1,5 +1,4 @@
 #147 - Brassage
-tribal_owner = ---
 culture = mos_le_harmless_monkey
 religion = marimbo
 

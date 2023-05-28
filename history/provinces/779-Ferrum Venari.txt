@@ -1,5 +1,4 @@
 #779 - Ferrum Venari
-tribal_owner = ---
 culture = seatroll
 religion = bandos
 

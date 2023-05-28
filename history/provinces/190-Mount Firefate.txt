@@ -2,7 +2,6 @@
 owner = ROG
 controller = ROG
 add_core = ROG
-tribal_owner = ---
 culture = rogue
 religion = zamorak
 

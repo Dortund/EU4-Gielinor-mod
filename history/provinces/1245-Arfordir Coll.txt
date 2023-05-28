@@ -1,5 +1,4 @@
 #1245 - Arfordir Coll
-tribal_owner = ---
 culture = fairy
 religion = guthix
 

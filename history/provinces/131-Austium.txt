@@ -3,7 +3,6 @@ owner = DES
 controller = DES
 add_core = DES
 add_core = SLP
-tribal_owner = ---
 culture = slepe
 religion = zamorak
 

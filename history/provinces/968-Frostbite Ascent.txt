@@ -2,7 +2,6 @@
 owner = WSS
 controller = WSS
 add_core = WSS
-tribal_owner = ---
 culture = icetroll
 religion = bandos
 

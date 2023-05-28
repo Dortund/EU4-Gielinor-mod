@@ -2,7 +2,6 @@
 owner = DES
 controller = DES
 add_core = DES
-tribal_owner = ---
 culture = canifian
 religion = zamorak
 

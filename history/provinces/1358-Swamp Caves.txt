@@ -1,5 +1,4 @@
 #1358 - Swamp Caves
-tribal_owner = ---
 culture = dorgeshuun
 religion = godless
 

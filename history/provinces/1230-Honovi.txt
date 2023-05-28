@@ -1,5 +1,4 @@
 #1230-Honovi
-tribal_owner = ---
 culture = shi
 religion = genbu
 

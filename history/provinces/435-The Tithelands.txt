@@ -3,7 +3,6 @@ owner = HHB
 controller = HHB
 add_core = HHB
 add_core = HOS
-tribal_owner = ---
 culture = hosidius
 religion = zamorak
 

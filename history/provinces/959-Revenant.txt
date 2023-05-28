@@ -1,5 +1,4 @@
 #959-Revenant
-tribal_owner = ---
 culture = ghost
 religion = zamorak
 

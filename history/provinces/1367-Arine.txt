@@ -1,6 +1,5 @@
 #1367-Arine
 
-tribal_owner = ---
 culture = midkharidian
 religion = menaphite
 

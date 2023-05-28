@@ -2,7 +2,6 @@
 owner = CDG
 controller = CDG
 add_core = CDG
-tribal_owner = ---
 culture = cloud_giant
 religion = bandos
 

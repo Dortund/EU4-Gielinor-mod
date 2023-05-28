@@ -1,5 +1,4 @@
 #491 - Tempestus
-tribal_owner = ---
 culture = cloud_giant
 religion = bandos
 

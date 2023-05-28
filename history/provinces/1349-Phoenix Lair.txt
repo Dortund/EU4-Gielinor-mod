@@ -2,7 +2,6 @@
 owner = PXL
 controller = PXL
 add_core = PXL
-tribal_owner = ---
 culture = reborn_warrior
 religion = guthix
 

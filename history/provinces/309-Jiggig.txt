@@ -2,7 +2,6 @@
 owner = NAR
 controller = NAR
 add_core = NAR
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

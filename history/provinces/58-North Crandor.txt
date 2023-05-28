@@ -2,7 +2,6 @@
 owner = CDR
 controller = CDR
 add_core = CDR
-tribal_owner = ---
 culture = crandorian
 religion = saradomin
 

@@ -2,7 +2,6 @@
 owner = MNT
 controller = MNT
 add_core = MNT
-tribal_owner = ---
 culture = mountaintribe
 religion = northern_pantheon
 

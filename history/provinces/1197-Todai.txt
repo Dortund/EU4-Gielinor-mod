@@ -2,7 +2,6 @@
 owner = YMD
 controller = YMD
 add_core = YMD
-tribal_owner = ---
 culture = pincers_culture
 religion = suzaku
 

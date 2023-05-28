@@ -2,7 +2,6 @@
 owner = BZR
 controller = BZR
 add_core = BZR
-tribal_owner = ---
 culture = berserker
 religion = zamorak
 

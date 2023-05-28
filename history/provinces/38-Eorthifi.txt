@@ -3,7 +3,6 @@ owner = DBS
 controller = DBS
 add_core = DBS
 add_core = CLY
-tribal_owner = ---
 culture = north_asgarn
 religion = saradomin
 

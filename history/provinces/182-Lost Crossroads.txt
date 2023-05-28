@@ -2,7 +2,6 @@
 owner = ANK
 controller = ANK
 add_core = ANK
-tribal_owner = ---
 culture = giant_spider
 religion = zamorak
 

@@ -1,5 +1,4 @@
 #978 - North Bo
-tribal_owner = ---
 culture = gorilla
 religion = marimbo
 owner = BOI

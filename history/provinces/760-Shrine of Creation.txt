@@ -1,6 +1,5 @@
 #760-Shrine of Creation
 
-tribal_owner = ---
 culture = ghost
 religion = armadyl
 

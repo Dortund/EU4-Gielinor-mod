@@ -2,7 +2,6 @@
 owner = PUR
 controller = PUR
 add_core = PUR
-tribal_owner = ---
 culture = scythe_culture
 religion = genbu
 

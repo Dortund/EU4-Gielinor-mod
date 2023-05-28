@@ -2,7 +2,6 @@
 owner = NDH
 controller = NDH
 add_core = NDH
-tribal_owner = ---
 culture = midkharidian
 religion = menaphite
 

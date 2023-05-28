@@ -2,7 +2,6 @@
 owner = TNO
 controller = TNO
 add_core = TNO
-tribal_owner = ---
 culture = bowl_culture
 religion = suzaku
 

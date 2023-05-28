@@ -2,7 +2,6 @@
 owner = STR
 controller = STR
 add_core = STR
-tribal_owner = ---
 culture = seatroll
 religion = bandos
 

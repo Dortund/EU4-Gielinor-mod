@@ -1,5 +1,4 @@
 #386-Kobberøy
-tribal_owner = ---
 culture = icetroll
 religion = bandos
 

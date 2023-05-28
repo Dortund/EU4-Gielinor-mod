@@ -2,7 +2,6 @@
 owner = HRS
 controller = HRS
 add_core = HRS
-tribal_owner = ---
 culture = shayzien
 religion = zamorak
 

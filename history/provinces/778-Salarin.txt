@@ -2,7 +2,6 @@
 owner = KZD
 controller = KZD
 add_core = KZD
-tribal_owner = ---
 culture = yanillian
 religion = zamorak
 

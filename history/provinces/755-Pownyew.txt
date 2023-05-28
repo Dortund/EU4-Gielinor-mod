@@ -1,6 +1,5 @@
 #755-Pownyew
 
-tribal_owner = ---
 culture = ghost
 religion = bandos
 

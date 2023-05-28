@@ -4,7 +4,6 @@ controller = PLG
 add_core = PLG
 culture = penguin
 religion = godless
-tribal_owner = ---
 
 hre = no
 

@@ -2,7 +2,6 @@
 owner = GTT
 controller = GTT
 add_core = GTT
-tribal_owner = ---
 culture = bowl_culture
 religion = suzaku
 

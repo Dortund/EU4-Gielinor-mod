@@ -2,7 +2,6 @@
 owner = BRD
 controller = BRD
 add_core = BRD
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

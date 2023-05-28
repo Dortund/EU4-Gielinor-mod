@@ -1,5 +1,4 @@
 #1226-Hayabusa
-tribal_owner = ---
 culture = shi
 religion = suzaku
 

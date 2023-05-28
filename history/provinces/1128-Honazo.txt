@@ -2,7 +2,6 @@
 owner = HNZ
 controller = HNZ
 add_core = HNZ
-tribal_owner = ---
 culture = hook_culture
 religion = genbu
 

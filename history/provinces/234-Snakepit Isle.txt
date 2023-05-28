@@ -1,7 +1,6 @@
 #234 - Snakepit Isle
 culture = atoll_monkey
 religion = marimbo
-tribal_owner = ---
 
 discovered_by = monkeytechgroup
 

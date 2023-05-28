@@ -1,7 +1,6 @@
 #170-Daemonbank
 culture = chromaticdragon
 religion = jas
-tribal_owner = ---
 
 discovered_by = centraltechgroup
 discovered_by = morytaniantechgroup

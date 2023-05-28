@@ -2,7 +2,6 @@
 owner = JNG
 controller = JNG
 add_core = JNG
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

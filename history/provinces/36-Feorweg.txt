@@ -2,7 +2,6 @@
 owner = FRW
 controller = FRW
 add_core = FRW
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

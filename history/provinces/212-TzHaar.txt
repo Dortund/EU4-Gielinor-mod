@@ -2,7 +2,6 @@
 owner = TZH
 controller = TZH
 add_core = TZH
-tribal_owner = ---
 culture = tzhaar
 religion = ful
 

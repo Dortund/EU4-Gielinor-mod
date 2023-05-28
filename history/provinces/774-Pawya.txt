@@ -3,7 +3,6 @@ owner = EVR
 controller = EVR
 add_core = EVR
 add_core = MIY
-tribal_owner = ---
 culture = meilyr
 religion = seren
 

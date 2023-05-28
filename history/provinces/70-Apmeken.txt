@@ -2,7 +2,6 @@
 owner = BDS
 controller = BDS
 add_core = BDS
-tribal_owner = ---
 culture = bedabin
 religion = menaphite
 trade_goods = fruit

@@ -1,6 +1,5 @@
 #338 - Well of Voyage
 
-tribal_owner = ---
 culture = meilyr
 religion = seren
 

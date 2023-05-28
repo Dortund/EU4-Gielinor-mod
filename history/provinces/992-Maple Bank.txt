@@ -2,7 +2,6 @@
 owner = ERB
 controller = ERB
 add_core = ERB
-tribal_owner = ---
 culture = seer
 religion = armadyl
 

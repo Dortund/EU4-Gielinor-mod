@@ -2,7 +2,6 @@
 owner = OKJ
 controller = OKJ
 add_core = OKJ
-tribal_owner = ---
 culture = hill_giant
 religion = bandos
 

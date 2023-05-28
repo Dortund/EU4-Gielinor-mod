@@ -2,7 +2,6 @@
 owner = BWS
 controller = BWS
 add_core = BWS
-tribal_owner = ---
 culture = wight
 religion = zaros
 

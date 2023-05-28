@@ -1,5 +1,4 @@
 #484 - Custodia's End
-tribal_owner = ---
 culture = aldarin
 religion = ranul
 

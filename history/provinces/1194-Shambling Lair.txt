@@ -2,7 +2,6 @@
 owner = SBL
 controller = SBL
 add_core = SBL
-tribal_owner = ---
 culture = pincers_culture
 religion = suzaku
 

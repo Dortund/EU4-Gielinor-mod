@@ -1,6 +1,5 @@
 #391 - Pirates' Cove
 
-tribal_owner = ---
 culture = moss_giant
 religion = guthix
 

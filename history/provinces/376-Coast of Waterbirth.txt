@@ -1,5 +1,4 @@
 #376 - Coast of Waterbirth
-tribal_owner = ---
 culture = dagannoth
 religion = godless
 

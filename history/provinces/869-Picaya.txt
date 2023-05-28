@@ -1,5 +1,4 @@
 #869 - Picaya
-tribal_owner = ---
 culture = chromaticdragon
 religion = jas
 hre = no

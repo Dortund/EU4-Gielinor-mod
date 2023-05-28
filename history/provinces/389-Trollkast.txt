@@ -1,5 +1,4 @@
 #389-Trollkast
-tribal_owner = ---
 culture = icetroll
 religion = bandos
 

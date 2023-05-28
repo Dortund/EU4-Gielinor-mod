@@ -1,5 +1,4 @@
 #146 - Tanière
-tribal_owner = ---
 culture = mwanu
 religion = xautak
 

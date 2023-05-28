@@ -1,6 +1,5 @@
 #87-Jaleustrophos
 
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 trade_goods = lesser_loot

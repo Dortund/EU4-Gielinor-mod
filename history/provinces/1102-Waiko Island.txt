@@ -2,7 +2,6 @@
 owner = WKO
 controller = WKO
 add_core = WKO
-tribal_owner = ---
 culture = arc_culture
 religion = seiryu
 

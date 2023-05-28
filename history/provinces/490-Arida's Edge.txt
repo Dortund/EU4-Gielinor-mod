@@ -1,5 +1,4 @@
 #490 - Arida's Edge
-tribal_owner = ---
 culture = aldarin
 religion = ralos
 

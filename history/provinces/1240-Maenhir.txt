@@ -1,5 +1,4 @@
 #1240 - Maenhir
-tribal_owner = ---
 culture = fairy
 religion = guthix
 

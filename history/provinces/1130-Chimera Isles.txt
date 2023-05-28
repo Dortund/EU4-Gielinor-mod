@@ -2,7 +2,6 @@
 owner = GLK
 controller = GLK
 add_core = GLK
-tribal_owner = ---
 culture = eastern_exile
 religion = suzaku
 

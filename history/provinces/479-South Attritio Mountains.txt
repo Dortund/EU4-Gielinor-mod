@@ -1,5 +1,4 @@
 #479 - South Attritio Mountains
-tribal_owner = ---
 culture = cloud_giant
 religion = bandos
 

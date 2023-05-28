@@ -1,7 +1,6 @@
 #210 - Lobster Shores
 culture = northkaramjan
 religion = karamjan
-tribal_owner = ---
 
 discovered_by = centraltechgroup
 discovered_by = karamjantechgroup

@@ -1,7 +1,6 @@
 #1380-
 culture = seatroll
 religion = bandos
-tribal_owner = ---
 
 discovered_by = fremenniktechgroup
 discovered_by = bandostechgroup

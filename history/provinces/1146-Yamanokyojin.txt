@@ -2,7 +2,6 @@
 owner = HRN
 controller = HRN
 add_core = HRN
-tribal_owner = ---
 culture = scythe_culture
 religion = genbu
 

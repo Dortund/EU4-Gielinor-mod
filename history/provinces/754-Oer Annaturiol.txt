@@ -1,6 +1,5 @@
 #754-Oer Annaturiol
 
-tribal_owner = ---
 culture = fiend
 religion = zamorak
 

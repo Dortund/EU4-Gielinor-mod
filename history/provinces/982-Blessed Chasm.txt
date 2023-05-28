@@ -1,6 +1,5 @@
 #982-Blessed Chasm
 
-tribal_owner = ---
 culture = hefin
 religion = seren
 

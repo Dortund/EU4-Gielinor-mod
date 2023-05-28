@@ -1,5 +1,4 @@
 #956-Desolate Hills
-tribal_owner = ---
 culture = rogue
 religion = zamorak
 

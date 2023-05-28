@@ -2,7 +2,6 @@
 owner = KPH
 controller = KPH
 add_core = KPH
-tribal_owner = ---
 culture = kalphite
 religion = menaphite
 trade_goods = herblore_supplies

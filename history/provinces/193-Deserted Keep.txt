@@ -1,7 +1,6 @@
 #193-Deserted Keep
 culture = avernic
 religion = zamorak
-tribal_owner = ---
 
 hre = no
 

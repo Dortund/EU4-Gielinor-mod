@@ -1,5 +1,4 @@
 #1344 - Bloodsplatter Isle
-tribal_owner = ---
 culture = mwanu
 religion = xautak
 

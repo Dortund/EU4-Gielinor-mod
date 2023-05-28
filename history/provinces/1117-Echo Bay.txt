@@ -2,7 +2,6 @@
 owner = ECB
 controller = ECB
 add_core = ECB
-tribal_owner = ---
 culture = skull_culture
 religion = seiryu
 

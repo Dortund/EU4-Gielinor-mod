@@ -2,7 +2,6 @@
 owner = SSH
 controller = SSH
 add_core = SSH
-tribal_owner = ---
 culture = siren
 religion = seiryu
 

@@ -2,7 +2,6 @@
 owner = TKK
 controller = TKK
 add_core = TKK
-tribal_owner = ---
 culture = bowl_culture
 religion = suzaku
 

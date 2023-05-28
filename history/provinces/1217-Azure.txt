@@ -1,5 +1,4 @@
 #1217-Azure
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

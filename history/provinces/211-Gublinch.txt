@@ -1,7 +1,6 @@
 #211 - Gublinch
 culture = northkaramjan
 religion = karamjan
-tribal_owner = ---
 
 discovered_by = karamjantechgroup
 discovered_by = bandostechgroup

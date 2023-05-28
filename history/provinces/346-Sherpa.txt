@@ -1,5 +1,4 @@
 #346-Sherpa
-tribal_owner = ---
 culture = burthorpian
 religion = saradomin
 

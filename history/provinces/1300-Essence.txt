@@ -1,7 +1,6 @@
 #1300 - Essence
 culture = icelord
 religion = wen
-tribal_owner = ---
 
 hre = no
 

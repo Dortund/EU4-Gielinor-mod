@@ -2,7 +2,6 @@
 owner = PPH
 controller = PPH
 add_core = PPH
-tribal_owner = ---
 culture = north_coaster
 religion = saradomin
 

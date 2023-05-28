@@ -2,7 +2,6 @@
 owner = PVC
 controller = PVC
 add_core = PVC
-tribal_owner = ---
 culture = midkharidian
 religion = menaphite
 

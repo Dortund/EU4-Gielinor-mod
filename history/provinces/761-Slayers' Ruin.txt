@@ -1,6 +1,5 @@
 #761-Slayers' Ruin
 
-tribal_owner = ---
 culture = ghost
 religion = bandos
 

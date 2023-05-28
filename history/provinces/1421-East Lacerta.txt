@@ -3,7 +3,6 @@ owner = SYZ
 controller = SYZ
 add_core = SYZ
 add_core = MOH
-tribal_owner = ---
 culture = molch
 religion = xeric
 

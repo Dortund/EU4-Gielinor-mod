@@ -1,5 +1,4 @@
 #1241 - Winwydden
-tribal_owner = ---
 culture = ent
 religion = guthix
 

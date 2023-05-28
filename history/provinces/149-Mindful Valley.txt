@@ -1,5 +1,4 @@
 #149 - Mindful Valley
-tribal_owner = ---
 culture = dimnes
 religion = zamorak
 

@@ -2,7 +2,6 @@
 owner = QMT
 controller = QMT
 add_core = QMT
-tribal_owner = ---
 culture = quidamortem
 religion = xeric
 

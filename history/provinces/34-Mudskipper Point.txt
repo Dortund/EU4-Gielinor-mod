@@ -2,7 +2,6 @@
 owner = MKM
 controller = MKM
 add_core = MKM
-tribal_owner = ---
 culture = mogre
 religion = bandos
 

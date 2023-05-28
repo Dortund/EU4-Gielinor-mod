@@ -2,7 +2,6 @@
 owner = SGK
 controller = SGK
 add_core = SGK
-tribal_owner = ---
 culture = saragorgok
 religion = bandos
 

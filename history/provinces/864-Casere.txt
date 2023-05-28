@@ -2,7 +2,6 @@
 owner = CSE
 controller = CSE
 add_core = CSE
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

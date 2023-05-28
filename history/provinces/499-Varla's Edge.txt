@@ -1,7 +1,6 @@
 #499 - Varla's Edge
 culture = centralis
 religion = ranul
-tribal_owner = ---
 
 discovered_by = zeantechgroup
 

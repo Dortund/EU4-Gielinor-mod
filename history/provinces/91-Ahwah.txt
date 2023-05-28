@@ -1,5 +1,4 @@
 #91 - Ahwah
-tribal_owner = ---
 culture = scabarite
 religion = menaphite
 

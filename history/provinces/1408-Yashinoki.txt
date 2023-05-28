@@ -1,5 +1,4 @@
 #1408-Yashinoki
-tribal_owner = ---
 culture = shi
 religion = byakko
 

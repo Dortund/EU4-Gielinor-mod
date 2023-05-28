@@ -2,7 +2,6 @@
 owner = SEE
 controller = SEE
 add_core = SEE
-tribal_owner = ---
 culture = seer
 religion = guthix
 

@@ -1,6 +1,5 @@
 #762-Shrine of Destruction
 
-tribal_owner = ---
 culture = ghost
 religion = bandos
 

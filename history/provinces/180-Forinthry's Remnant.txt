@@ -1,7 +1,6 @@
 #180-Forinthry's Remnant
 culture = moss_giant
 religion = guthix
-tribal_owner = ---
 hre = no
 
 discovered_by = northerntechgroup

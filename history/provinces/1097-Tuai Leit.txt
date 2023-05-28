@@ -2,7 +2,6 @@
 owner = TUL
 controller = TUL
 add_core = TUL
-tribal_owner = ---
 culture = siren
 religion = seiryu
 

@@ -1,6 +1,5 @@
 #1175-Kokai
 
-tribal_owner = ---
 culture = eastern_exile
 religion = suzaku
 

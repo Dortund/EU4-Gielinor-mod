@@ -1,6 +1,5 @@
 #985-Mythic Isle
 
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

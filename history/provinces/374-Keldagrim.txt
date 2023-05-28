@@ -2,7 +2,6 @@
 owner = KDG
 controller = KDG
 add_core = KDG
-tribal_owner = ---
 culture = kelda
 religion = guthix
 

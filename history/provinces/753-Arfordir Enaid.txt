@@ -1,6 +1,5 @@
 #753-Arfordir Enaid
 
-tribal_owner = ---
 culture = ghost
 religion = armadyl
 

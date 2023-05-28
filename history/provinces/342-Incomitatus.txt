@@ -1,5 +1,4 @@
 #342-Incomitatus
-tribal_owner = ---
 culture = cavegnome
 religion = guthix
 

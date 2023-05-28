@@ -2,7 +2,6 @@
 owner = GSH
 controller = GSH
 add_core = GSH
-tribal_owner = ---
 culture = arc_culture
 religion = seiryu
 

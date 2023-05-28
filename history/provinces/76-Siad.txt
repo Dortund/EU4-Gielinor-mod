@@ -2,7 +2,6 @@
 
 culture = midkharidian
 religion = menaphite
-tribal_owner = ---
 trade_goods = hunter_creatures
 
 discovered_by = centraltechgroup

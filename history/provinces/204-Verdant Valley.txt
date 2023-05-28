@@ -1,7 +1,6 @@
 #204-Verdant Valley
 culture = zygomite
 religion = godless
-tribal_owner = ---
 
 hre = no
 

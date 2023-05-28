@@ -2,7 +2,6 @@
 owner = ANM
 controller = ANM
 add_core = ANM
-tribal_owner = ---
 culture = north_asgarn
 religion = saradomin
 

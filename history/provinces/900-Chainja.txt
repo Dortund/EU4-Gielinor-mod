@@ -1,5 +1,4 @@
 #900-Chainja
-tribal_owner = ---
 culture = mos_le_harmless_monkey
 religion = marimbo
 

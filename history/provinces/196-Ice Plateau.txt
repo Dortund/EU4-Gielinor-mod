@@ -1,7 +1,6 @@
 #196-Ice Plateau
 culture = ice_giant
 religion = godless
-tribal_owner = ---
 
 hre = no
 

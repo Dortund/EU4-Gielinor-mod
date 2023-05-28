@@ -1,6 +1,5 @@
 #981-Bwystfil Tywyll
 
-tribal_owner = ---
 culture = hefin
 religion = seren
 

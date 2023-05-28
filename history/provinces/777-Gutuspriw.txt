@@ -4,7 +4,6 @@ controller = GNE
 add_core = GNE
 culture = treegnome
 religion = guthix
-tribal_owner = ---
 
 discovered_by = bandostechgroup
 discovered_by = elventechgroup

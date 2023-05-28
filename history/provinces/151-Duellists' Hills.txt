@@ -1,7 +1,6 @@
 #151 - Duellists' Hills
 culture = rogue
 religion = zamorak
-tribal_owner = ---
 
 discovered_by = centraltechgroup
 discovered_by = dwarventechgroup

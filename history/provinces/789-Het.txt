@@ -1,6 +1,5 @@
 #789 - Het
 
-tribal_owner = ---
 culture = alkharidian
 religion = menaphite
 trade_goods = lesser_loot

@@ -2,7 +2,6 @@
 owner = ETC
 controller = ETC
 add_core = ETC
-tribal_owner = ---
 culture = miscellanean
 religion = v
 

@@ -1,5 +1,4 @@
 #517 - Ripam Provisus
-tribal_owner = ---
 culture = imcando
 religion = saradomin
 

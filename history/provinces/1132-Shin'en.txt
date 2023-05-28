@@ -2,7 +2,6 @@
 owner = FMG
 controller = FMG
 add_core = FMG
-tribal_owner = ---
 culture = hook_culture
 religion = genbu
 

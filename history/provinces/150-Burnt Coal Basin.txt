@@ -1,7 +1,6 @@
 #150 - Burnt Coal Basin
 culture = skeleton
 religion = zamorak
-tribal_owner = ---
 
 discovered_by = centraltechgroup
 discovered_by = dwarventechgroup

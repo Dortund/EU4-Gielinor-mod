@@ -2,7 +2,6 @@
 owner = IKO
 controller = IKO
 add_core = IKO
-tribal_owner = ---
 culture = catherbian
 religion = armadyl
 

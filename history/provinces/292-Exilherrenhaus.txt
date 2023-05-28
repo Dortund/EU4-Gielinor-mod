@@ -2,7 +2,6 @@
 owner = YLE
 controller = YLE
 add_core = YLE
-tribal_owner = ---
 culture = yanillian
 religion = saradomin
 

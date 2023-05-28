@@ -1,5 +1,4 @@
 #1227-Sea Monster Shores
-tribal_owner = ---
 culture = shi
 religion = suzaku
 

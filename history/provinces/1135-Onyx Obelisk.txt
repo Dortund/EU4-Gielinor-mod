@@ -2,7 +2,6 @@
 owner = BZL
 controller = BZL
 add_core = BZL
-tribal_owner = ---
 culture = eastern_exile
 religion = suzaku
 

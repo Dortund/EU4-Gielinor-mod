@@ -2,7 +2,6 @@
 owner = AZA
 controller = AZA
 add_core = AZA
-tribal_owner = ---
 culture = imcando
 religion = saradomin
 

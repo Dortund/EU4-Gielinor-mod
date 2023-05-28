@@ -2,7 +2,6 @@
 owner = NHE
 controller = NHE
 add_core = NHE
-tribal_owner = ---
 culture = siren
 religion = suzaku
 

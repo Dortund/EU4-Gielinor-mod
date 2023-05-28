@@ -2,7 +2,6 @@
 owner = IOA
 controller = IOA
 add_core = IOA
-tribal_owner = ---
 culture = shield_culture
 religion = byakko
 

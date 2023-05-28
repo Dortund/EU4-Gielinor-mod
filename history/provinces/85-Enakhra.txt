@@ -1,6 +1,5 @@
 #85 - Enakhra
 
-tribal_owner = ---
 culture = jaldraochtite
 religion = zamorak
 trade_goods = basic_ores

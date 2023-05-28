@@ -3,7 +3,6 @@ owner = EVR
 controller = EVR
 add_core = EVR
 add_core = AML
-tribal_owner = ---
 culture = amlodd
 religion = seren
 

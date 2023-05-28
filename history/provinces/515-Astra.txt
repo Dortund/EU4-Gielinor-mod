@@ -1,5 +1,4 @@
 #515 - Astra
-tribal_owner = ---
 culture = imcando
 religion = saradomin
 

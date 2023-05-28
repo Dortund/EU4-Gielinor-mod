@@ -1,7 +1,6 @@
 #279 - Falconwood
 culture = seatroll
 religion = bandos
-tribal_owner = ---
 
 discovered_by = fremenniktechgroup
 discovered_by = bandostechgroup

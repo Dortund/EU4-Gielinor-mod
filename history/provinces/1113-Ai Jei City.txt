@@ -2,7 +2,6 @@
 owner = AIJ
 controller = AIJ
 add_core = AIJ
-tribal_owner = ---
 culture = skull_culture
 religion = seiryu
 

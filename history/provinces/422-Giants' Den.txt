@@ -2,7 +2,6 @@
 owner = GDE
 controller = GDE
 add_core = GDE
-tribal_owner = ---
 culture = hill_giant
 religion = bandos
 

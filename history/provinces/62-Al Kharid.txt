@@ -2,7 +2,6 @@
 
 culture = alkharidian
 religion = menaphite
-tribal_owner = ---
 
 trade_goods = manufactured_goods
 

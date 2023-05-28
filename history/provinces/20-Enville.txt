@@ -2,7 +2,6 @@
 owner = ENV
 controller = ENV
 add_core = ENV
-tribal_owner = ---
 culture = avarrockan
 religion = zamorak
 

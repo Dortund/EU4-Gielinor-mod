@@ -2,7 +2,6 @@
 owner = CWS
 controller = CWS
 add_core = CWS
-tribal_owner = ---
 culture = lummer
 religion = zamorak
 

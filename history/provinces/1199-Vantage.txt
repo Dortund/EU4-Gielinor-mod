@@ -2,7 +2,6 @@
 owner = YON
 controller = YON
 add_core = YON
-tribal_owner = ---
 culture = loop_culture
 religion = zaros
 

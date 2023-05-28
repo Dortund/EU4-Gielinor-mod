@@ -2,7 +2,6 @@
 owner = PCL
 controller = PCL
 add_core = PCL
-tribal_owner = ---
 culture = piscarilius
 religion = saradomin
 

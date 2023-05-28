@@ -1,5 +1,4 @@
 #1015-East Ranul Forest
-tribal_owner = ---
 culture = avernic
 religion = zamorak
 

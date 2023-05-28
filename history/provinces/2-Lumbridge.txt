@@ -2,7 +2,6 @@
 owner = NGU
 controller = NGU
 add_core = NGU
-tribal_owner = ---
 culture = narogoshuun
 religion = bandos
 

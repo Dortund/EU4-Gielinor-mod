@@ -2,7 +2,6 @@
 owner = SHI
 controller = SHI
 add_core = SHI
-tribal_owner = ---
 culture = shilo
 religion = karamjan
 

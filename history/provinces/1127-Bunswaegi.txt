@@ -1,6 +1,5 @@
 #1127 - Bunswaegi
 
-tribal_owner = ---
 culture = skull_culture
 religion = seiryu
 

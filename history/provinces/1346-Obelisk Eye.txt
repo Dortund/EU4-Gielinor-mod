@@ -1,6 +1,5 @@
 #1346-Obelisk Eye
 
-tribal_owner = ---
 culture = ghost
 religion = armadyl
 

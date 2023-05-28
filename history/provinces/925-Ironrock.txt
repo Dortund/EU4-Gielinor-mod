@@ -1,6 +1,5 @@
 #925-Ironrock
 
-tribal_owner = ---
 culture = ghost
 religion = bandos
 trade_goods = bones

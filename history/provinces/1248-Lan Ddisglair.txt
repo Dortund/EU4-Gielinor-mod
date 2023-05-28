@@ -1,5 +1,4 @@
 #1248 - Lan Ddisglair
-tribal_owner = ---
 culture = fairy
 religion = guthix
 

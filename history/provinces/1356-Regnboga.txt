@@ -2,7 +2,6 @@
 owner = CPT
 controller = CPT
 add_core = CPT
-tribal_owner = ---
 culture = avarrockan
 religion = saradomin
 

@@ -2,7 +2,6 @@
 owner = KOU
 controller = KOU
 add_core = KOU
-tribal_owner = ---
 culture = hosidius
 religion = saradomin
 

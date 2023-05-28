@@ -1,6 +1,5 @@
 #1129 - Playful Bay
 
-tribal_owner = ---
 culture = siren
 religion = genbu
 

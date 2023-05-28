@@ -2,7 +2,6 @@
 owner = PIN
 controller = PIN
 add_core = PIN
-tribal_owner = ---
 culture = wushanko_pirate
 religion = suzaku
 

@@ -2,7 +2,6 @@
 owner = CSI
 controller = CSI
 add_core = CSI
-tribal_owner = ---
 culture = bowl_culture
 religion = suzaku
 

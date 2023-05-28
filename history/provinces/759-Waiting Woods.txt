@@ -1,6 +1,5 @@
 #759-Waiting Woods
 
-tribal_owner = ---
 culture = ghost
 religion = bandos
 

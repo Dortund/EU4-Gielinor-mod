@@ -1,5 +1,4 @@
 #1244 - Mwsogl
-tribal_owner = ---
 culture = living_rock
 religion = guthix
 

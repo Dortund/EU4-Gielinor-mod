@@ -1,5 +1,4 @@
 #952-Wyvern Ascent
-tribal_owner = ---
 culture = zygomite
 religion = godless
 

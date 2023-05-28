@@ -2,7 +2,6 @@
 owner = CYC
 controller = CYC
 add_core = CYC
-tribal_owner = ---
 culture = cyclops
 religion = birman
 

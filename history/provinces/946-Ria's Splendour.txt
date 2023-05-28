@@ -2,7 +2,6 @@
 owner = HRW
 controller = HRW
 add_core = HRW
-tribal_owner = ---
 culture = taverlian
 religion = guthix
 

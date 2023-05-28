@@ -1,5 +1,4 @@
 #1357 - 
-tribal_owner = ---
 culture = dorgeshuun
 religion = godless
 

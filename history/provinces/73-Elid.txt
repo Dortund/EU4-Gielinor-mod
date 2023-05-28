@@ -3,7 +3,6 @@
 culture = bedabin
 religion = menaphite
 trade_goods = livestock_farm
-tribal_owner = ---
 
 discovered_by = centraltechgroup
 discovered_by = kharidtechgroup

@@ -2,7 +2,6 @@
 owner = KBD
 controller = KBD
 add_core = KBD
-tribal_owner = ---
 culture = chromaticdragon
 religion = zaros
 hre = no

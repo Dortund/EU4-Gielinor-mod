@@ -1,7 +1,6 @@
 #200-House on the Hill
 culture = zygomite
 religion = godless
-tribal_owner = ---
 
 hre = no
 

@@ -2,7 +2,6 @@
 owner = LCI
 controller = LCI
 add_core = LCI
-tribal_owner = ---
 culture = undeadtroll
 religion = zamorak
 

@@ -1,5 +1,4 @@
 #887-Vita Nova
-tribal_owner = ---
 culture = centralis
 religion = ralos
 

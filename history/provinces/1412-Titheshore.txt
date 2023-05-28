@@ -2,7 +2,6 @@
 owner = HHB
 controller = HHB
 add_core = HHB
-tribal_owner = ---
 culture = hobgoblin
 religion = bandos
 

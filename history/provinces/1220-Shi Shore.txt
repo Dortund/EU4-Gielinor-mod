@@ -1,5 +1,4 @@
 #1220-Shi Shore
-tribal_owner = ---
 culture = shi
 religion = byakko
 

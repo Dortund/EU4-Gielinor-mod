@@ -1,5 +1,4 @@
 #962-Empty Coast
-tribal_owner = ---
 culture = giant_spider
 religion = zamorak
 

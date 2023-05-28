@@ -2,7 +2,6 @@
 owner = BSP
 controller = BSP
 add_core = BSP
-tribal_owner = ---
 culture = hobgoblin
 religion = bandos
 

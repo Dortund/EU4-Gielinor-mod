@@ -1,5 +1,4 @@
 #477 - Chasm Caverns
-tribal_owner = ---
 culture = molch
 religion = xeric
 

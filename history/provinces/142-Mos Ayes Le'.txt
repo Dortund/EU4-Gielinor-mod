@@ -2,7 +2,6 @@
 owner = MSH
 controller = MSH
 add_core = MSH
-tribal_owner = ---
 culture = harmlean
 religion = godless
 

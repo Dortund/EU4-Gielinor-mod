@@ -2,7 +2,6 @@
 owner = TSS
 controller = TSS
 add_core = TSS
-tribal_owner = ---
 culture = skull_culture
 religion = seiryu
 

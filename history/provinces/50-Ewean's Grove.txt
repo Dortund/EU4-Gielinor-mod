@@ -2,7 +2,6 @@
 owner = TAV
 controller = TAV
 add_core = TAV
-tribal_owner = ---
 culture = taverlian
 religion = guthix
 

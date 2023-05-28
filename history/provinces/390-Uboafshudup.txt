@@ -1,5 +1,4 @@
 #390-Uboafshudup
-tribal_owner = ---
 culture = icetroll
 religion = bandos
 

@@ -1,7 +1,6 @@
 #166 - Carrallanger
 culture = zombie
 religion = zamorak
-tribal_owner = ---
 
 discovered_by = morytaniantechgroup
 discovered_by = northerntechgroup

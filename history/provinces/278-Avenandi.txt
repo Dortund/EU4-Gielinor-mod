@@ -1,7 +1,6 @@
 #278 - Avenandi
 culture = rivertroll
 religion = bandos
-tribal_owner = ---
 
 discovered_by = fremenniktechgroup
 discovered_by = bandostechgroup

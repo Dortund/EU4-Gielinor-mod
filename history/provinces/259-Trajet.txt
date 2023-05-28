@@ -2,7 +2,6 @@
 owner = TJT
 controller = TJT
 add_core = TJT
-tribal_owner = ---
 culture = catherbian
 religion = armadyl
 

@@ -1,5 +1,4 @@
 #482 - Outlaw Overlook
-tribal_owner = ---
 culture = aldarin
 religion = ranul
 

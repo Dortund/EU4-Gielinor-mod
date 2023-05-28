@@ -2,7 +2,6 @@
 owner = MOC
 controller = MOC
 add_core = MOC
-tribal_owner = ---
 culture = molch
 religion = xeric
 

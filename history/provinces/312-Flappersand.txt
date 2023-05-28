@@ -2,7 +2,6 @@
 owner = OOG
 controller = OOG
 add_core = OOG
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

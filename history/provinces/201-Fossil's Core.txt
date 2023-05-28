@@ -1,7 +1,6 @@
 #201-Fossil's Core
 culture = zygomite
 religion = godless
-tribal_owner = ---
 
 hre = no
 

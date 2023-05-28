@@ -2,7 +2,6 @@
 owner = HZL
 controller = HZL
 add_core = HZL
-tribal_owner = ---
 culture = ouranian
 religion = zamorak
 

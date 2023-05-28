@@ -2,7 +2,6 @@
 owner = GNE
 controller = GNE
 add_core = GNE
-tribal_owner = ---
 culture = treegnome
 religion = guthix
 

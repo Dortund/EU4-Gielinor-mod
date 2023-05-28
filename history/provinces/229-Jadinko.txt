@@ -2,7 +2,6 @@
 owner = KZI
 controller = KZI
 add_core = KZI
-tribal_owner = ---
 culture = jadinko
 religion = karamjan
 

@@ -1,6 +1,5 @@
 #1181-Hole in the World
 
-tribal_owner = ---
 culture = pincers_culture
 religion = suzaku
 

@@ -2,7 +2,6 @@
 owner = YMD
 controller = YMD
 add_core = YMD
-tribal_owner = ---
 culture = siren
 religion = suzaku
 

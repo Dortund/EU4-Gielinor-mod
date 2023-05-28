@@ -1,5 +1,4 @@
 #958-Lavabridge
-tribal_owner = ---
 culture = chaos_dwarf
 religion = zamorak
 

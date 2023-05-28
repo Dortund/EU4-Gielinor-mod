@@ -2,7 +2,6 @@
 owner = IOR
 controller = IOR
 add_core = IOR
-tribal_owner = ---
 culture = meilyr
 religion = seren
 

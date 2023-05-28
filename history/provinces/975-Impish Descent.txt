@@ -1,5 +1,4 @@
 #210 - Impish Descent
-tribal_owner = ---
 culture = fire_imp
 religion = zamorak
 

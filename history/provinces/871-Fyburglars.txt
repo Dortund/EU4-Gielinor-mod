@@ -1,5 +1,4 @@
 #871 - Fyburglars
-tribal_owner = ---
 culture = northkaramjan
 religion = karamjan
 

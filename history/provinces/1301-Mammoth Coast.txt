@@ -1,7 +1,6 @@
 #1301 - Mammoth Coast
 culture = icelord
 religion = wen
-tribal_owner = ---
 
 hre = no
 

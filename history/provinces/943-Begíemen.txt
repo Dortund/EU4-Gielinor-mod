@@ -2,7 +2,6 @@
 owner = PLI
 controller = PLI
 add_core = PLI
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

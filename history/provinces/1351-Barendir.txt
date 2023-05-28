@@ -1,5 +1,4 @@
 #1351-Barendir
-tribal_owner = ---
 culture = mountaintroll
 religion = bandos
 

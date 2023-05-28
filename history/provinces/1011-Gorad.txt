@@ -2,7 +2,6 @@
 owner = GOR
 controller = GOR
 add_core = GOR
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

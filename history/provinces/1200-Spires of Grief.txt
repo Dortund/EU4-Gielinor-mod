@@ -2,7 +2,6 @@
 owner = SPG
 controller = SPG
 add_core = SPG
-tribal_owner = ---
 culture = loop_culture
 religion = byakko
 

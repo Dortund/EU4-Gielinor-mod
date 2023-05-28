@@ -1,7 +1,6 @@
 #181-Dangerous Approach
 culture = giant_spider
 religion = zamorak
-tribal_owner = ---
 hre = no
 
 discovered_by = northerntechgroup

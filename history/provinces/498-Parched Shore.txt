@@ -1,5 +1,4 @@
 #498 - Parched Shore
-tribal_owner = ---
 culture = centralis
 religion = ralos
 

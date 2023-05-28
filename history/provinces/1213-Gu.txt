@@ -2,7 +2,6 @@
 owner = TGU
 controller = TGU
 add_core = TGU
-tribal_owner = ---
 culture = shield_culture
 religion = byakko
 

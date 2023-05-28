@@ -2,7 +2,6 @@
 owner = DYN
 controller = DYN
 add_core = DYN
-tribal_owner = ---
 culture = draynor
 religion = zamorak
 

@@ -2,7 +2,6 @@
 owner = CSN
 controller = CSN
 add_core = CSN
-tribal_owner = ---
 culture = north_asgarn
 religion = saradomin
 

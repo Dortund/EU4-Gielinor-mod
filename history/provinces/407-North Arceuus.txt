@@ -2,7 +2,6 @@
 owner = AUU
 controller = AUU
 add_core = AUU
-tribal_owner = ---
 culture = arceuus
 religion = saradomin
 

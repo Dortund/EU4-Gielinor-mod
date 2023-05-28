@@ -1,5 +1,4 @@
 #388-Arktiskfuru
-tribal_owner = ---
 culture = icetroll
 religion = bandos
 

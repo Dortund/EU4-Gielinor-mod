@@ -1,7 +1,6 @@
 #169 - Salamander Pass
 culture = hill_giant
 religion = bandos
-tribal_owner = ---
 
 discovered_by = morytaniantechgroup
 discovered_by = northerntechgroup

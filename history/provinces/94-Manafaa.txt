@@ -1,6 +1,5 @@
 #94-Manafaa
 
-tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 trade_goods = herblore_supplies

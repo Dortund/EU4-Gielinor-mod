@@ -1,5 +1,4 @@
 #494 - Transitus
-tribal_owner = ---
 culture = centralis
 religion = ralos
 

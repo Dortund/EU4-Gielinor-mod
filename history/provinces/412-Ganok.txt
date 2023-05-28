@@ -1,7 +1,6 @@
 #412-Ganok
 culture = ice_giant
 religion = zaros
-tribal_owner = ---
 
 discovered_by = zeantechgroup
 

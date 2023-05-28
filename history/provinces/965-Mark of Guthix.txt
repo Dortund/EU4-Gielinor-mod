@@ -1,5 +1,4 @@
 #965-Mark of Guthix
-tribal_owner = ---
 culture = fire_giant
 religion = guthix
 

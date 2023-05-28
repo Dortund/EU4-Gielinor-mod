@@ -1,5 +1,4 @@
 #500 - Arcanum Oasis
-tribal_owner = ---
 culture = centralis
 religion = ranul
 

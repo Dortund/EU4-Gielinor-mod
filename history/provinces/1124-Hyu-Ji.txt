@@ -2,7 +2,6 @@
 owner = HUJ
 controller = HUJ
 add_core = HUJ
-tribal_owner = ---
 culture = sea_orphan
 religion = seiryu
 

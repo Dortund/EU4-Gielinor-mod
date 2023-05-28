@@ -1,6 +1,5 @@
 #538 - Temple of Light
 
-tribal_owner = ---
 culture = hefin
 religion = seren
 

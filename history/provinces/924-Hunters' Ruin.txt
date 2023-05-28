@@ -1,6 +1,5 @@
 #924-Hunters' Ruin
 
-tribal_owner = ---
 culture = ghost
 religion = armadyl
 

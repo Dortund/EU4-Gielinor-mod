@@ -2,7 +2,6 @@
 owner = DLO
 controller = DLO
 add_core = DLO
-tribal_owner = ---
 culture = pincers_culture
 religion = suzaku
 

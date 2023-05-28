@@ -2,7 +2,6 @@
 
 culture = taverlian
 religion = guthix
-tribal_owner = ---
 
 discovered_by = centraltechgroup
 discovered_by = dwarventechgroup

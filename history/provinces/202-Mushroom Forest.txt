@@ -1,7 +1,6 @@
 #202-Mushroom Forest
 culture = zygomite
 religion = godless
-tribal_owner = ---
 
 hre = no
 

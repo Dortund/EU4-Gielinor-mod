@@ -1,7 +1,6 @@
 #172-Bone Yard
 culture = skeleton
 religion = zamorak
-tribal_owner = ---
 
 discovered_by = morytaniantechgroup
 discovered_by = northerntechgroup

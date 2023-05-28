@@ -1,7 +1,6 @@
 #186-Charmed Shore
 culture = giant_spider
 religion = zamorak
-tribal_owner = ---
 
 discovered_by = morytaniantechgroup
 discovered_by = northerntechgroup

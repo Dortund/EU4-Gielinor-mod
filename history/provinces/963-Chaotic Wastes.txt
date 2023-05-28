@@ -1,5 +1,4 @@
 #963-Chaotic Wastes
-tribal_owner = ---
 culture = rogue
 religion = zamorak
 

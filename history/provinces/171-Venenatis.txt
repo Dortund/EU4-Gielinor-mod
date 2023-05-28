@@ -2,7 +2,6 @@
 owner = VNN
 controller = VNN
 add_core = VNN
-tribal_owner = ---
 culture = giant_spider
 religion = zamorak
 

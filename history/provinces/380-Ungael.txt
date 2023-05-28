@@ -2,7 +2,6 @@
 owner = UNG
 controller = UNG
 add_core = UNG
-tribal_owner = ---
 culture = undeaddragon
 religion = godless
 

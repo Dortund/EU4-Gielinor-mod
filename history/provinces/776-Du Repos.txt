@@ -2,7 +2,6 @@
 owner = MNR
 controller = MNR
 add_core = MNR
-tribal_owner = ---
 culture = catherbian
 religion = armadyl
 

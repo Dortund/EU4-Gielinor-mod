@@ -1,5 +1,4 @@
 #955-Newlight
-tribal_owner = ---
 culture = mermaid
 religion = godless
 

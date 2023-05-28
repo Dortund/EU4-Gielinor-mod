@@ -2,7 +2,6 @@
 owner = DWI
 controller = DWI
 add_core = DWI
-tribal_owner = ---
 culture = dimnes
 religion = zamorak
 

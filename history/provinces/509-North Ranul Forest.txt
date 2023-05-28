@@ -1,5 +1,4 @@
 #510-South Ranul Forest
-tribal_owner = ---
 culture = centralis
 religion = ranul
 

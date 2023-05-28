@@ -2,7 +2,6 @@
 owner = AHH
 controller = AHH
 add_core = AHH
-tribal_owner = ---
 culture = pincers_culture
 religion = suzaku
 

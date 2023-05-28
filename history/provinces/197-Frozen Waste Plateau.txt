@@ -2,7 +2,6 @@
 owner = LCI
 controller = LCI
 add_core = LCI
-tribal_owner = ---
 culture = ice_giant
 religion = godless
 

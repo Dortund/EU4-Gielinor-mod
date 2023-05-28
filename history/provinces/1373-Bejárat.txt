@@ -4,7 +4,6 @@ controller = CFS
 add_core = CFS
 culture = ghoul
 religion = zamorak
-tribal_owner = ---
 
 discovered_by = BDI
 discovered_by = LNC

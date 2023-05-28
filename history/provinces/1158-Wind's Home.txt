@@ -2,7 +2,6 @@
 owner = WDH
 controller = WDH
 add_core = WDH
-tribal_owner = ---
 culture = siren
 religion = genbu
 

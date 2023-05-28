@@ -1,5 +1,4 @@
 #1229-Colossi Rise
-tribal_owner = ---
 culture = shi
 religion = suzaku
 

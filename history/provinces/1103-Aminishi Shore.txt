@@ -2,7 +2,6 @@
 owner = AMS
 controller = AMS
 add_core = AMS
-tribal_owner = ---
 culture = arc_culture
 religion = seiryu
 

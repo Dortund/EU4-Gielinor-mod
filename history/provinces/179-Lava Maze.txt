@@ -1,7 +1,6 @@
 #179-Lava Maze
 culture = skeleton
 religion = zamorak
-tribal_owner = ---
 hre = no
 
 discovered_by = northerntechgroup

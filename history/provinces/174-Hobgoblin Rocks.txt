@@ -1,7 +1,6 @@
 #174-Hobgoblin Rocks
 culture = hobgoblin
 religion = bandos
-tribal_owner = ---
 hre = no
 
 discovered_by = northerntechgroup

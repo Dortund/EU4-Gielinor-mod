@@ -1,5 +1,4 @@
 #954-Daemonrest
-tribal_owner = ---
 culture = mermaid
 religion = godless
 

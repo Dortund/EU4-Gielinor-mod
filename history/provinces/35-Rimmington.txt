@@ -2,7 +2,6 @@
 owner = RIM
 controller = RIM
 add_core = RIM
-tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
 

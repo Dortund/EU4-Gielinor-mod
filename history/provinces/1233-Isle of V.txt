@@ -1,6 +1,5 @@
 #1233 - Isle of V
 
-tribal_owner = ---
 religion = v
 
 hre = no

@@ -3,7 +3,6 @@ owner = SWM
 controller = SWM
 add_core = SWM
 add_core = MOC
-tribal_owner = ---
 culture = molch
 religion = xeric
 

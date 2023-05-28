@@ -1,5 +1,4 @@
 #1228-Kami-Shima Nexus
-tribal_owner = ---
 culture = shi
 religion = godless
 

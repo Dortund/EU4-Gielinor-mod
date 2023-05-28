@@ -1,6 +1,5 @@
 #1159 - Island of Clear Eyes
 
-tribal_owner = ---
 culture = scythe_culture
 religion = genbu
 

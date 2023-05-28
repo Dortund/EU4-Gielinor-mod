@@ -1,5 +1,4 @@
 #787 - Almistaba
-tribal_owner = ---
 culture = midkharidian
 religion = menaphite
 

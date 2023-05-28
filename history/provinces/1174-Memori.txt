@@ -1,6 +1,5 @@
 #1174-Memori
 
-tribal_owner = ---
 culture = eastern_exile
 religion = suzaku
 

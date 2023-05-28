@@ -2,7 +2,6 @@
 owner = RTK
 controller = RTK
 add_core = RTK
-tribal_owner = ---
 culture = taibwo
 religion = karamjan
 

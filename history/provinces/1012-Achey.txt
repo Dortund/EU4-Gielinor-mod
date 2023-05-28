@@ -2,7 +2,6 @@
 owner = ULW
 controller = ULW
 add_core = ULW
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

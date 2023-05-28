@@ -2,7 +2,6 @@
 owner = HMY
 controller = HMY
 add_core = HMY
-tribal_owner = ---
 culture = entranan
 religion = saradomin
 

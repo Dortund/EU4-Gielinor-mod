@@ -2,7 +2,6 @@
 owner = HOR
 controller = HOR
 add_core = HOR
-tribal_owner = ---
 culture = horogothgar
 religion = bandos
 

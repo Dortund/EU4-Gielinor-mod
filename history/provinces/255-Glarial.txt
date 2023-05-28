@@ -2,7 +2,6 @@
 owner = CDA
 controller = CDA
 add_core = CDA
-tribal_owner = ---
 culture = cadarn
 religion = seren
 

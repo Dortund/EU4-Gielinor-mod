@@ -2,7 +2,6 @@
 owner = WHM
 controller = WHM
 add_core = WHM
-tribal_owner = ---
 culture = arc_culture
 religion = seiryu
 

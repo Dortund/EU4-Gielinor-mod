@@ -3,7 +3,6 @@ owner = EVR
 controller = EVR
 add_core = EVR
 add_core = ITH
-tribal_owner = ---
 culture = ithell
 religion = seren
 

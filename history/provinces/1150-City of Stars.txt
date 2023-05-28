@@ -2,7 +2,6 @@
 owner = RTM
 controller = RTM
 add_core = RTM
-tribal_owner = ---
 culture = scythe_culture
 religion = genbu
 

@@ -4,7 +4,6 @@ controller = ILD
 add_core = ILD
 culture = chaos_dwarf
 religion = xautak
-tribal_owner = ---
 
 hre = no
 

@@ -1,7 +1,6 @@
 #203-Tar Swamp
 culture = zygomite
 religion = godless
-tribal_owner = ---
 
 hre = no
 

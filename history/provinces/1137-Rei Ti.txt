@@ -2,7 +2,6 @@
 owner = RTI
 controller = RTI
 add_core = RTI
-tribal_owner = ---
 culture = hook_culture
 religion = genbu
 

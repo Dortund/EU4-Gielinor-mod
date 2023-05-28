@@ -1,5 +1,4 @@
 #967-Hvile (Jhallan's cave)
-tribal_owner = ---
 culture = icetroll
 religion = bandos
 

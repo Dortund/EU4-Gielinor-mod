@@ -2,7 +2,6 @@
 owner = SYZ
 controller = SYZ
 add_core = SYZ
-tribal_owner = ---
 culture = shayzien
 religion = zamorak
 

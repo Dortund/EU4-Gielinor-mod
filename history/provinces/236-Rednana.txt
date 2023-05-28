@@ -2,7 +2,6 @@
 owner = RDN
 controller = RDN
 add_core = RDN
-tribal_owner = ---
 culture = atoll_monkey
 religion = marimbo
 

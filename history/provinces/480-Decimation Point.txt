@@ -1,5 +1,4 @@
 #480 - Decimation Point
-tribal_owner = ---
 culture = skeleton
 religion = ranul
 

@@ -2,7 +2,6 @@
 owner = DSK
 controller = DSK
 add_core = DSK
-tribal_owner = ---
 culture = dorgeshuun
 religion = godless
 

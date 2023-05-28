@@ -1,5 +1,4 @@
 #481 - Mount Miser
-tribal_owner = ---
 culture = skeleton
 religion = ranul
 

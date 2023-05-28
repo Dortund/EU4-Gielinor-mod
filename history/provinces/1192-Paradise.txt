@@ -1,6 +1,5 @@
 #1192 - Paradise
 
-tribal_owner = ---
 culture = siren
 religion = suzaku
 

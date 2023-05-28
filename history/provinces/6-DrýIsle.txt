@@ -3,7 +3,6 @@ owner = GGS
 controller = GGS
 add_core = GGS
 add_core = DYN
-tribal_owner = ---
 culture = draynor
 religion = saradomin
 

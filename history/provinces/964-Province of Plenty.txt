@@ -1,5 +1,4 @@
 #964-Province of Plenty
-tribal_owner = ---
 culture = avernic
 religion = zamorak
 

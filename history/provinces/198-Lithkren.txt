@@ -2,7 +2,6 @@
 owner = LHK
 controller = LHK
 add_core = LHK
-tribal_owner = ---
 culture = metaldragon
 religion = jas
 

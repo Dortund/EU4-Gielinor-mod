@@ -1,5 +1,4 @@
 #1405 - Mort Ridge Caves
-tribal_owner = ---
 culture = skeleton
 religion = zamorak
 

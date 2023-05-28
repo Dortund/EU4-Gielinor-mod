@@ -2,7 +2,6 @@
 owner = KEP
 controller = KEP
 add_core = KEP
-tribal_owner = ---
 culture = bowl_culture
 religion = suzaku
 

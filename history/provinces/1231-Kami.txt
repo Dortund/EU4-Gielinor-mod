@@ -1,5 +1,4 @@
 #1231-Kami
-tribal_owner = ---
 culture = shi
 religion = seiryu
 

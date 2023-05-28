@@ -2,7 +2,6 @@
 owner = CDU
 controller = CDU
 add_core = CDU
-tribal_owner = ---
 culture = taverlian
 religion = zamorak
 

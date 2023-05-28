@@ -2,7 +2,6 @@
 owner = VET
 controller = VET
 add_core = VET
-tribal_owner = ---
 culture = skeleton
 religion = zamorak
 

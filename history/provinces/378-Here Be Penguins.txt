@@ -1,5 +1,4 @@
 #378 - Here Be Penguins
-tribal_owner = ---
 culture = icelord
 religion = godless
 

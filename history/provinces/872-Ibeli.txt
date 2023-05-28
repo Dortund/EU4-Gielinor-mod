@@ -1,5 +1,4 @@
 #872 - Ibeli
-tribal_owner = ---
 culture = northkaramjan
 religion = karamjan
 

@@ -2,7 +2,6 @@
 owner = RNN
 controller = RNN
 add_core = RNN
-tribal_owner = ---
 culture = dimnes
 religion = zamorak
 

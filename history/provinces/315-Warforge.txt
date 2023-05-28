@@ -1,6 +1,5 @@
 #315-Warforge!
 
-tribal_owner = ---
 culture = ogre
 religion = bandos
 

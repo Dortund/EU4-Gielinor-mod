@@ -3,7 +3,6 @@ owner = GLU
 controller = GLU
 add_core = GLU
 add_core = TBW
-tribal_owner = ---
 culture = taibwo
 religion = karamjan
 
