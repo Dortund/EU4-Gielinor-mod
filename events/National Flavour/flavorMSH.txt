@@ -108,7 +108,7 @@ country_event = {
 					value = 100
 				}
 			}
-			PHI = {
+			TYS = {
 				capital_scope = {
 					build_to_forcelimit = {
 						infantry = 0.5

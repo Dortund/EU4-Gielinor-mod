@@ -22,6 +22,11 @@ CDA_depleted_armies = {
 	defensiveness = -0.20
 }
 
+# TODO This modifier gets used, but is undefined. It needs some actual values to modify.
+CDA_gnomish_assistance = {
+
+}
+
 #####################################
 #Brink of Extinction
 #####################################
