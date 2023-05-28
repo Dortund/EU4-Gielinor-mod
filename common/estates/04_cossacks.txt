@@ -9,6 +9,8 @@ estate_cossacks = {
 	#independence_tech_group = nomad_group
 
 	province_independence_weight = {
+		always = no
+
 		factor = 1
 		modifier = {
 			factor = 2

@@ -4,6 +4,8 @@ estate_brahmins = {
 	# If true, country will get estate
 	#This replaces Church Estate for Dharmic Group and replaces Dhimmi Estate for Muslim Group.
 	trigger = {
+		always = no
+
 		has_dlc = "Dharma"
 		# Gielinor
 		#OR = {

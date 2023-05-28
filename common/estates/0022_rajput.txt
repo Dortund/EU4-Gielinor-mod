@@ -5,6 +5,8 @@ estate_rajput = {
 
 	# If true, country will get estate
 	trigger = {
+		always = no
+
 		has_dlc = "Dharma"
 		# Gielinor
 		#technology_group = indian
