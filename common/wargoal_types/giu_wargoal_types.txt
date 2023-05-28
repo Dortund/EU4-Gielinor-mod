@@ -120,5 +120,12 @@ goal_unify_asgarnia = {
 			po_demand_provinces
 		}
 	}
+
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1.25
+		peace_cost_factor = 0.5
+	}
+
 	war_name = UNIFY_ASGARNIA_WAR_NAME
 }

@@ -4,6 +4,7 @@ incident_tirannwn_civil_war = {
 	variable_initial = 0
 
 	potential = {
+		has_dlc = "Mandate of Heaven"
 		religion = seren
 	}
 
@@ -39,6 +40,7 @@ incident_decline_of_clan_elders = {
 	variable_initial = 0
 
 	potential = {
+		has_dlc = "Mandate of Heaven"
 		religion = seren
 	}
 	
@@ -70,6 +72,7 @@ incident_runecrafters = {
 	variable_initial = 0
 
 	potential = {
+		has_dlc = "Mandate of Heaven"
 		religion = seren
 	}
 
@@ -103,6 +106,7 @@ incident_kandarin_relations = {
 	variable_initial = 0
 
 	potential = {
+		has_dlc = "Mandate of Heaven"
 		religion = seren
 	}
 
@@ -139,6 +143,7 @@ incident_zeah_diplomacy = {
 	variable_initial = 0
 
 	potential = {
+		has_dlc = "Mandate of Heaven"
 		religion = seren
 	}
 
@@ -183,6 +188,7 @@ incident_restoration_of_prifddinas = {
 	variable_initial = 0
 
 	potential = {
+		has_dlc = "Mandate of Heaven"
 		religion = seren
 	}
 
@@ -224,11 +230,12 @@ incident_rebirth_of_seren = {
 	variable_initial = 0
 
 	potential = {
+		has_dlc = "Mandate of Heaven"
 		religion = seren
 	}
 
 	trigger = {
-		is_incident_happened = incident_rebirth_of_prifddinas
+		is_incident_happened = incident_restoration_of_prifddinas
 		current_age = age_of_divination
 		has_global_flag = KDR_world_gate_revealed
 		NOT = {
@@ -263,11 +270,12 @@ incident_serens_new_path = {
 	variable_initial = 0
 
 	potential = {
+		has_dlc = "Mandate of Heaven"
 		religion = seren
 	}
 
 	trigger = {
-		is_incident_happened = incident_restoration_of_seren
+		is_incident_happened = incident_rebirth_of_seren
 		current_age = age_of_divination
 		has_global_flag = end_of_elder_god_wars_flag
 		custom_trigger_tooltip = {

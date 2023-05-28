@@ -2520,7 +2520,7 @@ spawn_rebels_from_unhappy_estate = {
 					birman =     	 	 { PREV = { spawn_rebels = { type = birman_rebels size = $size$ as_if_faction = yes } } }
 					brassicaprime =  	 { PREV = { spawn_rebels = { type = brassicaprime_rebels size = $size$ as_if_faction = yes } } }
 					byakko =  			 { PREV = { spawn_rebels = { type = byakko_rebels size = $size$ as_if_faction = yes } } }
-					darklord =  		 { PREV = { spawn_rebels = { type = darklord_rebels size = $size$ as_if_faction = yes } } }
+					dark_lord =  		 { PREV = { spawn_rebels = { type = dark_lord_rebels size = $size$ as_if_faction = yes } } }
 					ful =  				 { PREV = { spawn_rebels = { type = ful_rebels size = $size$ as_if_faction = yes } } }
 					genbu =  	 		 { PREV = { spawn_rebels = { type = genbu_rebels size = $size$ as_if_faction = yes } } }
 					godless =  			 { PREV = { spawn_rebels = { type = godless_rebels size = $size$ as_if_faction = yes } } }
