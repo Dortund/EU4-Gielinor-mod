@@ -116,31 +116,6 @@ declarewar = {
 	#		}
 	#	}
 	#}
-	effect = {
-		if = {
-			limit = { 
-				has_country_flag = nor_norwegian_independence_modifier
-				FROM = { tag = DAN }
-			}
-			add_country_modifier = {
-				name = nor_norwegian_independence_war_mod
-				duration = -1
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = teu_joined_the_hre
-				tag = TEU
-				is_part_of_hre = yes
-				FROM = { is_part_of_hre = yes }
-			}
-			clr_country_flag = teu_joined_the_hre
-			country_event = {
-				id = flavor_teu.33
-				days = 10
-			}
-		}
-	}
 }
 
 allianceaction = {
@@ -234,6 +209,8 @@ allianceaction = {
 			}
 		}
 	}
+
+	# Gielinor
 	condition = {
 		potential = {
 			OR = {
@@ -296,26 +273,27 @@ allianceaction = {
 	}
 }
 
-enforce_peace = {
+# Not used by Gielinor mod
+#enforce_peace = {
 	#do this before the peace is enforced, or there is no war enemy country
-	pre_effect = {
-		if = {
-			limit = {
-				has_country_modifier = liv_protector_of_the_catholics
-				FROM = {
-					any_war_enemy_country = {
-						religion = catholic
-						is_in_war = {
-							defender_leader = THIS
-							attacker_leader = FROM
-						}
-					}
-				}
-			}
-			add_papal_influence = 25
-		}
-	}
-}
+#	pre_effect = {
+#		if = {
+#			limit = {
+#				has_country_modifier = liv_protector_of_the_catholics
+#				FROM = {
+#					any_war_enemy_country = {
+#						religion = catholic
+#						is_in_war = {
+#							defender_leader = THIS
+#							attacker_leader = FROM
+#						}
+#					}
+#				}
+#			}
+#			add_papal_influence = 25
+#		}
+#	}
+#}
 
 royal_marriage = {
 	condition = {
