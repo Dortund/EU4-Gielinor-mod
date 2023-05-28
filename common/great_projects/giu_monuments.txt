@@ -5461,7 +5461,9 @@ great_project_halls_of_reckoning = {
 	build_trigger = {
 		OR = {
 			is_part_of_hre = yes
-			tag = KHG
+			owner = {
+				tag = KHG
+			}
 		}
 	}
 
@@ -5474,14 +5476,18 @@ great_project_halls_of_reckoning = {
 	can_use_modifiers_trigger = {
 		OR = {
 			is_part_of_hre = yes
-			tag = KHG
+			owner = {
+				tag = KHG
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
 		OR = {
 			is_part_of_hre = yes
-			tag = KHG
+			owner = {
+				tag = KHG
+			}
 		}
 	}
 	

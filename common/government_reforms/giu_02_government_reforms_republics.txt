@@ -256,12 +256,12 @@ merchants_reform = {
 	}
 	conditional = {
 		can_form_trade_league = yes
-		trade_city_reform = trading_city
+		trade_city_reform = trading_city_reform
 	}
 	conditional = {
 		can_use_trade_post = yes
 		can_form_trade_league = yes
-		trade_city_reform = trading_city
+		trade_city_reform = trading_city_reform
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -582,11 +582,11 @@ town_council_reform = {
 	duration = 4
 }
 
-trading_city = {
+trading_city_reform = {
 	icon = "icon_trade_city"
 	allow_normal_conversion = no
 	potential = {
-		has_reform = trading_city
+		has_reform = trading_city_reform
 	}
 	valid_for_nation_designer = no
 	legacy_equivalent = trading_city_legacy
