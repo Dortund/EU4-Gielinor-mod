@@ -4,9 +4,229 @@
 ##########################################################################################################################################
 ##########################################################################################################################################
 
+# Beta 1.6.2 patch notes (Made by Dortund)
+
+# This patch contains a plethora of bugfixes.
+
+## Major
+# These fixes allow the event chains and interactions with the Elder artefacts to work now
+# Progress can now be made to the final age by fixing the discovery of Guthix' cave
+# Fixed many problems with Seren religion and incidents. This should definiatly improve the experience playing with it
+
+## Minor
+Lots of small bugs fixed that improve missions and national flavor events
+
+#######################
+# Ages
+#######################
+
+# The Age of Mortals' ability Chain of Claims now gives the intendend +1 attack bonus in capital terrain
+# The Age of Divination religion specific objective for the Vampyric religion 
+# The Age of Divination religion specific objective for the Saradomin religion now correctly checks if Entrana is a great power
+# The Age of Divination religion specific objective for the Seren religion now correctly checks if no provinces of the Dark Lord religion exist
+# The Age of Divination religion specific objective for the Ful religion now correctly checks if all owned provinces have at least 15 development
+# The Age of Divination religion specific objective for the Genbu religion now correctly checks that the country has at least 10 forts of level 6
+# The Age of Divination religion specific objective for the Suzaku religion now actually shows when playing as a Suzaku country
+# The the fixes to the Age of Divination objectives, all objectives are now actually shown in the Age view
+
+#######################
+# Cultures
+#######################
+
+# The Bedabin culture now has the correct tag set as having it as a primary culture
+# The Lizardman culture group now uses the intended South America GFX
+# The Ogre culture group now uses the intended South America GFX
+# The Ork culture group now uses the intended South America GFX
+# The Goebie culture group now uses the intended South American GFX
+# The Metal Dragon culture now has the correct country tag set as having it as a primary culture
+
+#######################
+# Decisions
+#######################
+
+# The decicsion to convert when the Council of Khans as a fixed faith now has the AI correctly evaluate its opinion of the emporer
+# Fixed many problems with the Elder Artefacts decissions.
+	# You should now be able to get all other decisions other then the one to raid the temple of Ikov
+	# Fixed the highlighting of the relevant provinces
+	# The province modifier for the Temple of Ikove is now properly removed after the raid. Making it impossible to execute the decision again
+	# The triggers had a slight performance boost. Probably not noticable in game though
+# The decicsion to form the Forinthry nation now correctly checks that all of the Forinthry region is owned by the tag
+# The decicsion to form the Grand Ouranian nation now correctly checks which tag is taking the decission
+# A lot of fixes related the Gunnar and destroying/repairing runecrafting altars
+	# The decision for Gunnar to crush runecrafting altars now correctly checks if a runes producing province is controlled, so it should now be possible to actually take the decision.
+	# The decision now only destroys one alter at a time. So if you have multiple alters under your control, you can get the military mana for each one of them
+	# The destroyed altar modifier now correctly stays after the province is conquered
+	# The decision to restore the runecrafting alters ruined by Gunnar should now also actually be available to all other nations
+# A few fixes related to Guthix' Cave
+	# The province now gets highlighted correctly
+	# It should now be possible to take the decision to open up the caves
+	# The controller of the province containing the cave now correctly changes ownership
+	# The global flag that Guthix has been found gets now correctly set. This means that events relying on the take will now be able to work correctly
+# The decision to form the Hebikatochi nation now actually changes the country into the nation
+# The decision to ascent to godhood for Lucien should now only be visible and available to Lucien
+# The decision for Tyras to explore now correctly adds The Elven Resistance as a historical friend
+# The decision for Weiss to retreat now correctly checks who controls the capital. This means it should now be possible to actually take the decision
+
+#######################
+# Disasters
+#######################
+
+# Fixed a broken else_if in the Kinshra White Knight disaster. This should mean it now be started correctly
+# For the Brink of Exctinction disaster for Tzhaar, failing to prevent extinction now changes the primary culture to tokhaar
+# For the Elven civil war disaster, if Cadarn choses to support the Elven Resistance, the Elven Resistance now correctly gains desperation
+
+#######################
+# Government
+#######################
+
+# Correctly marked severals legacy governments as legacy.
+# Fixed incorrect instances of the code referring to the trading_city_reform as trading_city
+# For monarchies, fixed the reference to the play_the_villain_reform
+# Removed duplicate definition of basic_reform attribute for monarchies
+
+#######################
+# Great Projects
+#######################
+
+# Great project Halls of Reckoning can now be correctly upgraded if the owner is Khaganate
+
+#######################
+# History
+#######################
+
+# The Gnome Empire should now correctly start with a ruler with the Well Advised trait
+# Kourend should now start with about 50 House Disunity, as is intended
+
+#######################
+# Ideas
+#######################
+
+# Fixed the definition of the Runes at the Ready national idea of Corsair Cove
+# Fixed the definition of the Goldrune national idea of Camdozaal
+# Fixed the definition of the starting national ideas of Storm Riders
+
+#######################
+# Institutions
+#######################
+
+# Removed penalty attributes, as these attributes are deprecated
+# The Reconstruction institution is now correctly present in Dorgesh-Kaan at the start of the game
+# The tooltip for the spreading of the Quests institution due to neighbouring provinces having the institution now correctly mentions it being due to Quests being present, and not due to Runecrafting being present
+
+#######################
+# Institutions
+#######################
+
+# Fixed localisation for Ferox Enclave spawn event
+# Fixed localisation for Gnome Empire Secessionist Pressures event
+# Fixed localisation for Morytania Grow The Vassals mission
+# Fixed localisation for Grow By 50 Development age objective
+# Added localisation for Victory Over The Salve age objective
+# Fixed localisation in Become Subject House war goal
+# Fixed localisation for reatreat_of_the_temple_knights modifier
+# Fixed localisation for Carnilleus' mission Saradomist Mission
+# Added localisation for province modifiers related to Brassican
+# Fixed localisation for Rebirth of Seren incident
+# Fixed localisation for Bastion of Ralos aspect
+# Added localisation for Brassican harmonized modifiers
+
+#######################
+# Events general
+#######################
+
+# Wilderness
+## The option to just let the zombies win for one of the events, now correctly changes the targeted province's culture to Zombie
+## Fixed localisation for the Wilderness Bandit Invastion event
+
+#######################
+# Nation flavor events
+#######################
+
+# The culture of the province spawning in Zul-Andra event now correctly has the culture set to Cave Gnome
+# For Asgarnia events that spawned additional army, that army is now actually spawned
+# Fixed localisation and tag refernces for the Bedabin nation. This means you should be able to get the Devastation of the Desert Monkeys event now when playing as Bedabin
+# Fixed spawning of additional army for the Corsair Cove when spawning the country
+# Brimhaven now spawns with intended additional units
+# Fixed region check when spawning the Ferox Enclave
+# Fixed localisation for event when spawning the Ferox Enclave
+# Fixed setting a province modifier for the Gnome Empire for two of their events
+# Serenite countries in the Tirannwn region, and all countries in the Asgarnia culture group now also correctly get an event when Gunnar spawns
+# Fixed the discovery of capitals of Jatizso/Neitiznot and the spawned trolls in Uboafshudup
+# When Unterwulf is spawned, the province's culture is now correctly set to Kelda
+# When Unterwulf is spawned, discovery of the capitals of Keldagrim and Unterwulf now happens successfully
+# The event A City Divided for Kandarin should now correctly check if the right provinces are available
+# Kandarin should now be able to get the events detailing the success or failure of Clan Iorwerth
+# Fixed the discovery of capitals of Jatizso/Neitiznot and Relekka when the previous two spawn
+# Spawn event for Wilderness Bandits now also correctly triggers for those with a capital in Forinthry region
+
+#######################
+# Missions
+#######################
+
+# Acheron mission Dominate the Isle now correctly checks for the total development of the country
+# Crandor mission Dragon Slayer had it's missing icon fixed
+# Carnilleus mission Take Catherby now correctly checks if the province is held by country or non sovereign subject
+# Carnilleus mission Forsee This now correctly checks if the province is held by country or non sovereign subject
+# Carnilleus mission Trajetory now correctly checks if the province is held by country or non sovereign subject
+# Fremenik mission Fremennik Riches now correctly check if any owned province has a level 3 center of trade
+# (Generic) Karamjan mission Shipyard Expansion now correctly checks that the province has a level 2 center of trade
+# (Generic) Karamjan mission Fate of the Tzhaar now correctly checks if the province is held by country or non sovereign subject
+# (Generic) Karamjan mission Fate of the Tzhaar now has highlighting
+# (Generic) Wushanko mission Dismantle the Council now correctly checks for total development
+# Iorweth had province highlighting fixed for three missions
+# Misthalin mission Annex Draynor had its highlighting fixed
+# Misthalin mission Reinforce Paterdomus had it's upgrade effect correctly executed if the Leviathatn DLC is not owned
+# Morytania mission Take Back Mort Myre now correctly checks if the area is held by country or non sovereign subject
+# Morytania mission Grow the Vassals now correctly checks for the development of vassals
+# Morytania mission Renew the Vyrewatch Corps now checks that all owned province are within the Vampyre culture group
+# Tzhaar mission Fate of the Kiln now correctly adds loyalty to the Gaal estate
+# Zemouregal mission Invade Varrock now correctly also give a permanent claim on the Kings Road area
+
+#######################
+# Religion
+#######################
+
+# General
+## Commented out unnessecary defines for 'can_form_personal_union' and 'defender_of_faith'. This should not impact the game experience
+
+# Bandos
+## The Bandos Cower strategy should now be unlockable for non Goblin cultures
+## The Bandos Geomancer strategy should now be unlockable for non Hobgobline cultures
+
+# Dark Lord
+## Fixed problem where Dark Lord rebels where not correctly defined. So now they probably actually are capable of spawning
+
+# Brassica Prime
+## The autocratic religion group now has the correct harmonized_modifier set
+## The event for countries following Brassica that allows the spawning of cabbages received some fixes:
+	# It now correctly is albe to identify viable provinces to spawn cabbages in
+	# Event now has as MTTH, as nothing seemed to be triggering it otherwise
+	# Added localisation for the various province modifiers that could be added by the event
+	# Event now has a goto option to show the province in question
+	
+# Seren
+## Fixed a LOT of references to incidents in the events. This means progress towards certain outcomes for incidents should now be correctly made
+## Added checks for Mandate of Heaven DLC, this should hopefully prevent some instabilities
+## The Rebirth of Seren incident now correctly checks if the Restoration of Prifddinas incident has been completed
+## The Serens New path incident now correctly checks if the Rebirth of Seren incident has been completed
+
+#######################
+# Misc.
+#######################
+
+# 'suzaku' was incorrectly referenced by the code in many places by 'suzako'. This has been fixed. This should solve a lot of problems with rebels, religion
+# Added defender definition to the war goal to unify asgarnia. This should see you have the same bonuses as the attacker when making a peace deal
+# Fixed a problem with the start screen for Seren religions. This should not impact the game experience
+# For a lot of events, additional army was spawned for a country. This should now actually be spawned, so expect some stronger starts for a lot of nations entering the world
+# Removed MTTH for many is_triggered_only events, as they were all manually triggered. This resolves some errors in the error.log
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
 #Beta 1.6.1 patch notes (Jatizso)
 
-Here's a smaller patch to fling together some code fixes and add some little improvements for minor Fremennik realms.
+#Here's a smaller patch to fling together some code fixes and add some little improvements for minor Fremennik realms.
 
 #######################
 # National Flavour
