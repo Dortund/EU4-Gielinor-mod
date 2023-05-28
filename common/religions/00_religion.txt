@@ -3,7 +3,7 @@
 # Uses all 'modifiers' possible thats exported as a Modifier.
 
 chaos_group = {
-	can_form_personal_unions = no
+	#can_form_personal_unions = no
 	defender_of_faith = yes
 	flags_with_emblem_percentage = 33 # default == 0 #this is used for client states/custom nations so they use appropriate icons
 	flag_emblem_index_range = { 1 57 }
@@ -652,8 +652,8 @@ chaos_group = {
 }
 
 karamjan_group = {
-	can_form_personal_unions = no
-	defender_of_faith = no
+	#can_form_personal_unions = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 }
 	
@@ -686,7 +686,7 @@ karamjan_group = {
 
 menaphite_group = {
 	can_form_personal_unions = yes
-	defender_of_faith = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 }
 	
@@ -718,7 +718,7 @@ menaphite_group = {
 
 nonintervention_group = {
 	can_form_personal_unions = yes
-	defender_of_faith = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 }
 	
@@ -1009,7 +1009,7 @@ nonintervention_group = {
 }
 
 order_group = {
-	can_form_personal_unions = no
+	#can_form_personal_unions = no
 	defender_of_faith = yes
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 }
@@ -1255,7 +1255,7 @@ order_group = {
 
 transcendent_group = {
 	defender_of_faith = yes
-	can_form_personal_unions = no
+	#can_form_personal_unions = no
 	
 	center_of_religion = 269 #World Gate
 
@@ -1355,8 +1355,8 @@ transcendent_group = {
 }
 
 elder_god_group = {
-	defender_of_faith = no
-	can_form_personal_unions = no
+	#defender_of_faith = no
+	#can_form_personal_unions = no
 	
 	center_of_religion = 86 #Nardah
 
@@ -1449,7 +1449,7 @@ elder_god_group = {
 }
 
 autocratic_group = {
-	can_form_personal_unions = no
+	#can_form_personal_unions = no
 	defender_of_faith = yes
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 } 
@@ -1564,13 +1564,13 @@ autocratic_group = {
 		heretic = { CHARCOAL }
 	}
 	
-	harmonized_modifier = harmonized_autocracy
+	harmonized_modifier = harmonized_autocratic
 	crusade_name = CRUSADE
 }
 
 hedonistic_group = {
-	defender_of_faith = no
-	can_form_personal_unions = no
+	#defender_of_faith = no
+	#can_form_personal_unions = no
 	
 	center_of_religion = 9 #Milllane
 
@@ -1630,8 +1630,8 @@ hedonistic_group = {
 }
 
 horror_group = {
-	can_form_personal_unions = no
-	defender_of_faith = no
+	#can_form_personal_unions = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 } 
 	
@@ -1665,8 +1665,8 @@ horror_group = {
 }
 
 celestial_group = {
-	can_form_personal_unions = no
-	defender_of_faith = no
+	#can_form_personal_unions = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 } 
 	
@@ -1828,8 +1828,8 @@ celestial_group = {
 }
 
 wushanko_guardian_group = {
-	can_form_personal_unions = no
-	defender_of_faith = no
+	#can_form_personal_unions = no
+	#defender_of_faith = no
 	
 	center_of_religion = 1228 #Kami-Shima Nexus
 

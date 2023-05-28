@@ -1102,7 +1102,7 @@
  internal_investment_aspect:0 "§YInternal Investment§!"
  desc_internal_investment_aspect:0 "Live life to the fullest and achieve our goals! Build a greater realm so that more shall come to follow Ralos and Ranul!"
  bastion_of_ralos_aspect:0 "§YBastion of Ralos§!"
- desc_bastion_of_ralos:0 "The world has not always been kind to our followers, and we must shield ourselves from their relentless negativity against us. Let us protect our trade so only those who are worthy of our time will enter our ports."
+ desc_bastion_of_ralos_aspect:0 "The world has not always been kind to our followers, and we must shield ourselves from their relentless negativity against us. Let us protect our trade so only those who are worthy of our time will enter our ports."
  ralos_bastion_of_ralos_tooltip:0 "Gain §G1§! Mercantilism and the §YMerchant Guilds§! estate gains §G5§! loyalty."
  joy_of_the_new_aspect:0 "§YJoy of the New§!"
  desc_joy_of_the_new_aspect:0 "A new heir is a blessing upon all our people!"
