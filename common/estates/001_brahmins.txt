@@ -155,6 +155,15 @@ estate_brahmins = {
 		estate_brahmins_monopoly_of_incense
 		estate_brahmins_monopoly_of_wool
 		estate_brahmins_statutory_rights
+		estate_brahmins_religious_diplomats
+		estate_brahmins_one_faith_one_culture
+		estate_brahmins_administrative_privileges
+		estate_brahmins_development_of_temples
+		estate_brahmins_expand_the_theology
+		estate_brahmins_clerical_education
+		estate_brahmins_legitimacy_of_rule
+		estate_brahmins_institutionalized_brahimns
+		estate_brahmins_donation_right
 	}
 
 	agendas = {

@@ -333,8 +333,8 @@
  kharidtech_14_cavalryDESCR:0 "The Ugthanki, once first ridden, would soon be used by bandits to make their raids hit harder and faster. Similar tactics could be useful in battle to minimise casualties."
  kharidtech_23_cavalry:0 "Scabarite Riders"
  kharidtech_23_cavalryDESCR:0 "The Scabarites have a close relationship to their beetle cavalry. Even underground in tight spaces they can organise and swarm enemies with ease."
- kharidtech_27_cavalry:0 "Carpet Squadron"
- kharidtech_27_cavalryDESCR:0 "Reputations of flying carpets have waxed and waned over the years in Kharid - sometimes they have been popular as a transport method, and sometimes they have been widely outlawed. Yet their potential in combat has not yet been truly tested..."
+ kharidtech_28_cavalry:0 "Carpet Squadron"
+ kharidtech_28_cavalryDESCR:0 "Reputations of flying carpets have waxed and waned over the years in Kharid - sometimes they have been popular as a transport method, and sometimes they have been widely outlawed. Yet their potential in combat has not yet been truly tested..."
 
 
  monkeytech_1_infantry:0 "Monkey Rabble"
@@ -466,8 +466,8 @@
  
  zeantech_1_infantry:0 "Zean Warriors"
  zeantech_1_infantryDESCR:0 "The original human and dwarven settlers of Zeah came to flee a war, and their descendents were little-prepared when war started from within. Since the time of Xeric, all realms of Zeah are sure to keep a well-trained force ready in case of such devastation repeating itself."
- zeantech_6_infantry:0 "Zean Strikers"
- zeantech_6_infantryDESCR:0 "The continent of Zeah's relatively low population density has encouraged the use of more mobile infantry tactics."
+ zeantech_5_infantry:0 "Zean Strikers"
+ zeantech_5_infantryDESCR:0 "The continent of Zeah's relatively low population density has encouraged the use of more mobile infantry tactics."
  zeantech_9_infantry:0 "Zean Regiment"
  zeantech_9_infantryDESCR:0 "Kourend's civil war would drive significant changes in how its militaries were comprised. For one, houses aside from Shayzien necessarily had to develop their own armed forces. For another, forces had to be retrained to be able to fight fellow humans and dwarves after years of predominantly fighting lizardmen."
  zeantech_12_infantry:0 "Arceuus Mages"
