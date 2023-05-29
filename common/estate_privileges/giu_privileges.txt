@@ -111,6 +111,10 @@ estate_burghers_kharidian_colonies = {
 	}
 	benefits = {
 	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_burghers_kharidian_colonies
+	}
 	ai_will_do = {
 		factor = 5
 		modifier = {
@@ -186,6 +190,10 @@ estate_burghers_varlamore_colonies = {
 	penalties = {
 	}
 	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_burghers_varlamore_colonies
 	}
 	ai_will_do = {
 		factor = 5
