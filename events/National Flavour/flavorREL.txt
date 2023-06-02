@@ -25,9 +25,8 @@ country_event = {
 	mean_time_to_happen = {
 		months = 2
 	}
-	
-	option = {
-		name = flavor_rel.1.a
+
+	immediate = {
 		385 = {
 			add_core = NZS
 			cede_province = NZS
@@ -42,10 +41,10 @@ country_event = {
 				value = 100
 			}
 			change_trade_goods = livestock_farm
-		}
-		NZS = {
 			discover_country = REL
 			discover_country = JTZ
+		}
+		NZS = {
 			385 = {
 				build_to_forcelimit = {
 					infantry = 0.5
@@ -68,10 +67,10 @@ country_event = {
 				value = 100
 			}
 			change_trade_goods = advanced_ores
-		}
-		JTZ = {
 			discover_country = REL
 			discover_country = NZS
+		}
+		JTZ = {
 			386 = {
 				build_to_forcelimit = {
 					infantry = 0.5
@@ -80,120 +79,22 @@ country_event = {
 				}
 			}
 		}
+	}
+	
+	option = {
+		name = flavor_rel.1.a
+		
 		switch_tag = JTZ
 	}
 	
 	option = {
 		name = flavor_rel.1.b
-		385 = {
-			add_core = NZS
-			cede_province = NZS
-			change_culture = rellekkan
-			change_religion = v
-			add_institution_embracement = {
-				which = reconstruction
-				value = 100
-			}
-			add_institution_embracement = {
-				which = architecture
-				value = 100
-			}
-			change_trade_goods = livestock_farm
-		}
-		NZS = {
-			discover_country = REL
-			discover_country = JTZ
-				385 = {
-					build_to_forcelimit = {
-						infantry = 0.5
-						cavalry = 0.2
-						artillery = 0.3
-					}
-				}
-			}
-		386 = {
-			add_core = JTZ
-			cede_province = JTZ
-			change_culture = rellekkan
-			change_religion = v
-			add_institution_embracement = {
-				which = reconstruction
-				value = 100
-			}
-			add_institution_embracement = {
-				which = architecture
-				value = 100
-			}
-			change_trade_goods = advanced_ores
-		}
-		JTZ = {
-			discover_country = REL
-			discover_country = NZS
-			386 = {
-				build_to_forcelimit = {
-					infantry = 0.5
-					cavalry = 0.2
-					artillery = 0.3
-				}
-			}
-		}
+		
 		switch_tag = NZS
 	}
 
 	option = {
 		name = flavor_rel.1.c
-		385 = {
-			add_core = NZS
-			cede_province = NZS
-			change_culture = rellekkan
-			change_religion = v
-			add_institution_embracement = {
-				which = reconstruction
-				value = 100
-			}
-			add_institution_embracement = {
-				which = architecture
-				value = 100
-			}
-			change_trade_goods = livestock_farm
-		}
-		NZS = {
-			discover_country = REL
-			discover_country = JTZ
-				385 = {
-					build_to_forcelimit = {
-						infantry = 0.5
-						cavalry = 0.2
-						artillery = 0.3
-					}
-				}
-			}
-		386 = {
-			add_core = JTZ
-			cede_province = JTZ
-			change_culture = rellekkan
-			change_religion = v
-			add_institution_embracement = {
-				which = reconstruction
-				value = 100
-			}
-			add_institution_embracement = {
-				which = architecture
-				value = 100
-			}
-			change_trade_goods = advanced_ores
-		}
-		JTZ = {
-			discover_country = REL
-			discover_country = NZS
-				386 = {
-					build_to_forcelimit = {
-						infantry = 0.5
-						cavalry = 0.2
-						artillery = 0.3
-					}
-				}
-			}
 	}
 }
 

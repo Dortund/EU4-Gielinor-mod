@@ -1619,7 +1619,7 @@ CCO_ideas = {
 	CCO_bank_cannon = {
 		inflation_reduction = 0.1
 	}
-	CCO_runes_at_the_ready {
+	CCO_runes_at_the_ready = {
 		fire_damage = 0.1
 	}
 	CCO_curses = {
@@ -1791,7 +1791,7 @@ CDZ_ideas = {
 	CDZ_warforged_bronze = {
 		global_regiment_cost = -0.10
 	}
-	CDZ_goldrune {
+	CDZ_goldrune = {
 		global_tax_modifier = 0.1
 	}
 	CDZ_superheat_item = {
@@ -10123,7 +10123,7 @@ SPG_ideas = {
 SRI_ideas = {
 	start = {
 		monarch_diplomatic_power = 1
-		naval_attrition = -0.l
+		naval_attrition = -0.1
 	}
 
 	bonus = {

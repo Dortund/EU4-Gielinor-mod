@@ -1043,10 +1043,12 @@ country_event = {
 			}
 		}
 		NMD = {
-			build_to_forcelimit = {
-				infantry = 0.5
-				cavalry = 0.2
-				artillery = 0.3
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
 			}
 			define_ruler = {
 				culture = avarrockan
@@ -1260,10 +1262,12 @@ country_event = {
 			}
 		}
 		NMD = {
-			build_to_forcelimit = {
-				infantry = 0.5
-				cavalry = 0.2
-				artillery = 0.3
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
 			}
 			define_ruler = {
 				culture = avarrockan
@@ -1452,40 +1456,48 @@ country_event = {
 			}
 		}
 		WBA = {
-			build_to_forcelimit = {
-				infantry = 0.5
-				cavalry = 0.2
-				artillery = 0.3
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
 			}
 			add_historical_rival = WBB
 			add_historical_rival = WBS
 			add_historical_rival = WBZ
 		}
 		WBB = {
-			build_to_forcelimit = {
-				infantry = 0.5
-				cavalry = 0.2
-				artillery = 0.3
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
 			}
 			add_historical_rival = WBA
 			add_historical_rival = WBS
 			add_historical_rival = WBZ
 		}
 		WBS = {
-			build_to_forcelimit = {
-				infantry = 0.5
-				cavalry = 0.2
-				artillery = 0.3
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
 			}
 			add_historical_rival = WBA
 			add_historical_rival = WBB
 			add_historical_rival = WBZ
 		}
 		WBZ = {
-			build_to_forcelimit = {
-				infantry = 0.5
-				cavalry = 0.2
-				artillery = 0.3
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
 			}
 			add_historical_rival = WBA
 			add_historical_rival = WBB
@@ -1809,10 +1821,6 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	major = yes
-	
-	mean_time_to_happen = {
-		months = 2
-	}
 	
 	immediate = {
 		hidden_effect = {

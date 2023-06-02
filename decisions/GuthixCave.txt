@@ -7,22 +7,16 @@ country_decisions = {
 			any_province = { has_province_modifier = cave_of_guthix }
 		}
 		provinces_to_highlight = {
-			any_province = {
-				limit = {
-					has_province_modifier = cave_of_guthix
-				}
-			}
+			has_province_modifier = cave_of_guthix
 		}
 		allow = {
 			absolutism = 100
 			NOT = { religion = guthix }
 			is_free_or_tributary_trigger = yes
 			any_province = {
-				limit = {
-					OR = {
-						controlled_by = ROOT
-						owned_by = ROOT
-					}
+				OR = {
+					controlled_by = ROOT
+					owned_by = ROOT
 				}
 				has_province_modifier = cave_of_guthix
 			}
@@ -36,7 +30,7 @@ country_decisions = {
 				remove_province_modifier = cave_of_guthix
 				cede_province = CGU
 				add_core = CGU
-				change_controller = automaton
+				change_controller = CGU
 				change_religion = guthix
 			}
 			CGU = {
@@ -48,7 +42,7 @@ country_decisions = {
 					}
 				}
 			}
-			set_global_tag = guthix_found
+			set_global_flag = guthix_found
 		}
 		ai_will_do = {
 			factor = 1

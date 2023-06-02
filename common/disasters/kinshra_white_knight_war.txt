@@ -33,7 +33,7 @@ kinshra_white_knight_war = {
 				}
 			}
 		}
-		elseif = {
+		else_if = {
 			limit = {
 				OR = {
 					has_country_flag = ASG_white_falador_black_fortress

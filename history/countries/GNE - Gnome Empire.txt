@@ -19,7 +19,7 @@ historical_friend = TNN
 		mil = 6
 	}
 	clear_scripted_personalities = yes
-	add_ruler_personality = well_advised
+	add_ruler_personality = well_advised_personality
 	heir = {
 		name = "Argenthorg"
 		dynasty = "Shareen"

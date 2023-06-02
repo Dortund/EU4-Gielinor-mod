@@ -51,7 +51,11 @@ historical_rival = MOH
 		dip = 1
 		mil = 3
 	}
-	add_militarised_society = 50
+	add_government_power = {
+		mechanic_type = house_disunity_mechanic
+		power_type = kourend_disunity_power_1
+		value = 50
+	}
 }
 1909.2.18 = {
 	monarch = {

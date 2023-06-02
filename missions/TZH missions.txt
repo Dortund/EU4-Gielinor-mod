@@ -106,7 +106,7 @@ tzhaar_missions_1 = {
 				 	has_estate = estate_tzh_gaal
 				}
 				add_estate_loyalty = {
-					estate = estate_gaal
+					estate = estate_tzh_gaal
 					loyalty = 20
 				}
 			}

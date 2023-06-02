@@ -70,13 +70,15 @@ country_event = {
 				}
 			}
 			BHV = {
-				build_to_forcelimit = {
-					heavy_ship = 0.3
-					light_ship = 0.2
-					transport = 0.5
-					infantry = 0.5
-					cavalry = 0.2
-					artillery = 0.3
+				capital_scope = {
+					build_to_forcelimit = {
+						heavy_ship = 0.3
+						light_ship = 0.2
+						transport = 0.5
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
 				}
 			}
 			MSH = {

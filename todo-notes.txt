@@ -1,0 +1,7 @@
+- The global flag 'GUN_end_of_crusades_flag' is never set, yet it is used by a lot of events.
+- The country modifier 'CDA_gnomish_assistance' gets (incorrectly) set at some places, but it a the modifier is not defined.
+- There is a 50/50 chance that Zeah is spelled ZeaH or ZeaN throughout the mod. This causes a lot of inconsistensies and confusion when referring to any object related to the area (like Seren's incidents)
+- It appears that the harmonisation effects for the brassicaprime religion are not being applied for some unknown reason
+- Can't find any localisation for 'council_reforms' events.
+- Boats are taking strange paths when sailing close to the edge of the water
+- Estate agendas appear to be broken

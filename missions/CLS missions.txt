@@ -26,7 +26,7 @@ carnilleus_missions_1 = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "CLS_saradominist_mission"
+				name = CLS_saradominist_mission
 				duration = 3650
 			}
 		}
@@ -152,8 +152,8 @@ carnilleus_missions_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			country_or_non_sovereign_subject_holds = 247
-			247 = { 
+			247 = {
+				country_or_non_sovereign_subject_holds = ROOT
 				OR = {
 					has_building = marketplace
 					has_building = trade_depot
@@ -224,14 +224,14 @@ carnilleus_missions_4 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			country_or_non_sovereign_subject_holds = 249
 			249 = {
-					OR = {
-						has_building = temple
-						has_building = cathedral
-					}
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					has_building = temple
+					has_building = cathedral
 				}
 			}
+		}
 		effect = {
 			every_province = {
 				limit = {
@@ -266,15 +266,15 @@ carnilleus_missions_5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			country_or_non_sovereign_subject_holds = 259
 			259 = {
-					OR = {
-						base_tax = 5
-						base_production = 5
-						base_manpower = 5
-					}
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					base_tax = 5
+					base_production = 5
+					base_manpower = 5
 				}
 			}
+		}
 		effect = {
 			every_province = {
 				limit = {

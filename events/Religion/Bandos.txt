@@ -13,7 +13,7 @@ country_event = {
 
 	trigger = {
 		religion = bandos
-		NOT = { has_adopted_cult = cover_strategy }
+		NOT = { has_adopted_cult = cower_strategy }
 		NOT = { has_country_flag = goblin_strats }
 		OR = {
 			accepted_culture = drogokishuun

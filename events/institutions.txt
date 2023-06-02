@@ -820,7 +820,7 @@ country_event = {
 
 #Travelling Runecrafters
 country_event = {
-	id = flavor_gun.1
+	id = institution_events.302
 	title = institution_events.302.t
 	desc = institution_events.302.d #For centuries, it was assumed that crafting new runes was impossible for mortals, but new travelling runecrafters inform us they know the secret and are willing to spread it. However, they also inform us that they have enemies - others who view Runecrafting as an affront to the Gods. To accept this help could mark as a future target, though the potential benefits are enormous...
 	picture = RUNECRAFTING_eventPicture
@@ -841,13 +841,15 @@ country_event = {
 				}
 			}
 			AND = {
-				region = tirannwn_region
+				capital_scope = {
+					region = tirannwn_region
+				}
 				religion = seren
 				NOT = { isolationism = 2 }
 			}
 		}
 		OR = {
-			culture_group = asgarnia_group
+			culture_group = asgarnian_group
 			culture_group = misthalin_group
 			culture_group = kandarin_group
 			culture_group = elven_group
@@ -958,13 +960,15 @@ country_event = {
 				}
 			}
 			AND = {
-				region = tirannwn_region
+				capital_scope = {
+					region = tirannwn_region
+				}
 				religion = seren
 				NOT = { isolationism = 2 }
 			}
 		}
 		OR = {
-			culture_group = asgarnia_group
+			culture_group = asgarnian_group
 			culture_group = misthalin_group
 			culture_group = kandarin_group
 			culture_group = elven_group
@@ -1089,13 +1093,15 @@ country_event = {
 				}
 			}
 			AND = {
-				region = tirannwn_region
+				capital_scope = {
+					region = tirannwn_region
+				}
 				religion = seren
 				NOT = { isolationism = 2 }
 			}
 		}
 		OR = {
-			culture_group = asgarnia_group
+			culture_group = asgarnian_group
 			culture_group = misthalin_group
 			culture_group = kandarin_group
 			culture_group = elven_group

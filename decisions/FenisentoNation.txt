@@ -6,7 +6,7 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			NOT = { has_country_flag = formed_fenisento_flag }
 			was_never_end_game_tag_trigger = yes
-			religion = suzako
+			religion = suzaku
 			capital_scope = {
 				continent = wushanko_isles_continent
 			}
@@ -53,7 +53,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			religion = suzako
+			religion = suzaku
 			owns_core_province = 1160	# Crescent Isle
 			owns_core_province = 1162	# Haibisukasu
 			owns_core_province = 1163	# Glittercaves

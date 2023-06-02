@@ -423,8 +423,8 @@ country_event = {
 				has_active_triggered_province_modifier = wildy_border_level_nine
 				NOT = { culture = zombie }
 			}
+			change_culture = zombie
 		}
-		change_culture = zombie
 		add_prestige = -25
 	}
 }
@@ -589,8 +589,8 @@ country_event = {
 
 country_event = {
 	id = wildernessborder.309
-	title = wildernessborder209.t # Wilderness Bandit Invasion
-	desc = wildernessborder209.d # Bandits frequently come from the Wilderness to raid whichever cities they can reach. If well-led, they can be a threat, but we should be able to handle them.
+	title = wildernessborder.309.t # Wilderness Bandit Invasion
+	desc = wildernessborder.309.d # Bandits frequently come from the Wilderness to raid whichever cities they can reach. If well-led, they can be a threat, but we should be able to handle them.
 	picture = WARBANDS_eventPicture
 	
 	trigger = {
@@ -604,7 +604,7 @@ country_event = {
 	}
 	
 	option = {
-		name = wildernessborder209.a #We must deal with this!
+		name = wildernessborder.309.a #We must deal with this!
 		random_owned_province = {
 			limit = { has_active_triggered_province_modifier = wildy_border_level_nine }
 			spawn_rebels = {

@@ -167,10 +167,6 @@ country_event = {
 	
 	is_triggered_only = yes
 	major = yes
-
-	mean_time_to_happen = {
-		days = 30
-	}
 	
 	option = {
 		name = tirannwn_civil_war.3.a #Bring everything we can and let us lead this rebellion!
@@ -186,7 +182,11 @@ country_event = {
 		}
 		add_government_reform = unstable_monarchy
 		hidden_effect = {
-			add_militarised_society = 25
+			add_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = 25
+			}
 		}
 		create_alliance = EVR
 		switch_tag = EVR
@@ -217,7 +217,11 @@ country_event = {
 		}
 		add_government_reform = unstable_monarchy
 		hidden_effect = {
-			add_militarised_society = 25
+			add_government_power = {
+				mechanic_type = elven_desperation_mechanic
+				power_type = elven_desperation_power_1
+				value = 25
+			}
 		}
 		create_alliance = EVR
 		add_prestige = 50
@@ -320,10 +324,6 @@ country_event = {
 	picture = BAD_WITH_MONARCH_eventPicture
 	
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		days = 36
-	}
 	
 	option = {
 		name = tirannwn_civil_war.7.a #The people have spoken. We cannot hold onto this alliance much longer.
@@ -386,7 +386,11 @@ country_event = {
 			factor = 0.1
 		}
 		CDA = {
-			add_country_modifier = CDA_gnomish_assistance
+			add_country_modifier = {
+				name = CDA_gnomish_assistance
+				# TODO currently duration is a placeholder value, as it was not defined before, but was needed to fix the event.
+				duration = 3650
+			}
 			country_event = {
 				id = tirannwn_civil_war.10
 				days = 1

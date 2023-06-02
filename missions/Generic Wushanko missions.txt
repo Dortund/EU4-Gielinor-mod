@@ -120,7 +120,7 @@ genwhk_missions_2 = {
 						religion = byakko
 						religion = genbu
 						religion = seiryu
-						religion = suzako
+						religion = suzaku
 						religion = birman
 						religion = hanalan
 					}
@@ -471,7 +471,7 @@ genwhk_missions_3_nokhan = {
 		required_missions = { genwhk_embargo_the_khagan }
 		position = 5
 		trigger = {
-			development = 150
+			total_development = 150
 			NOT = { hre_size = 1 }
 		}
 		effect = {

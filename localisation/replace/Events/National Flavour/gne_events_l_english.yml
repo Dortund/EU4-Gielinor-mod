@@ -38,9 +38,9 @@
  flavor_gne.9.d:0 "With the passing of our greatest King, succession has fallen to $MONARCH$. This succession was uncontested."
  flavor_gne.9.a:0 "Long live $MONARCH$!"
  
- flavor_gne10.t:0 "Secessionist Pressures"
- flavor_gne10.d:0 "The population of our southern provinces have decided that the time for greater autonomy has come. Soon this crisis will reach boiling point, and we will have to either be heavy-handed or split the empire. Neither is desirable."
- flavor_gne10.a:0 "We'll deal with these secessionists in due time."
+ flavor_gne.10.t:0 "Secessionist Pressures"
+ flavor_gne.10.d:0 "The population of our southern provinces have decided that the time for greater autonomy has come. Soon this crisis will reach boiling point, and we will have to either be heavy-handed or split the empire. Neither is desirable."
+ flavor_gne.10.a:0 "We'll deal with these secessionists in due time."
  
  flavor_gne.11.t:0 "Bolrie's Advisor"
  flavor_gne.11.d:0 "When Bolrie rose to power, he also took a personal advisor with him. This advisor recommends that in the face of dangerous humans, gnomes would do well to band together. He suggests seeking stronger ties with the estranged city of Arposandra."

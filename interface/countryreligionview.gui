@@ -3168,7 +3168,7 @@ guiTypes = {
 	}
 	
 	windowType = {
-		name = "countryreligionview_aspectitem_suzako"
+		name = "countryreligionview_aspectitem_suzaku"
 		backGround =""
 		position = { x=10 y=-20 }	
 		size = { x=50 y=46 }

@@ -49,8 +49,7 @@ age_of_mortals = {
 	
 	abilities = {
 		
-		ab_chain_of_claims = 
-		{
+		ab_chain_of_claims = {
 			modifier = {
 				can_chain_claim = yes
 			}
@@ -68,7 +67,7 @@ age_of_mortals = {
 		}
 		ab_attack_bonus_in_capital_terrain = {
 			modifier = {
-				attack_bonus_in_capital_terrain = yes
+				attack_bonus_in_capital_terrain = 1
 			}
 			ai_will_do = {
 				factor = 10
@@ -561,7 +560,7 @@ age_of_divination = {
 				religion = vampyric
 				}
 			calc_true_if = {
-				every_owned_province = {
+				all_owned_province = {
 					region = misthalin_region
 					culture_group = vampyre_group
 				}
@@ -573,7 +572,10 @@ age_of_divination = {
 				religion = saradomin
 				}
 			OR = {
-				ENT = { is_great_power = yes }
+				any_country = {
+					tag = ENT
+					is_great_power = yes
+				}
 				is_papal_controller = yes
 			}
 		}
@@ -614,7 +616,7 @@ age_of_divination = {
 		}
 		obj_dark_lord_triumphant = {
 			allow = {
-				religion = darklord
+				religion = dark_lord
 				}
 			num_of_active_blessings = 5
 		}
@@ -634,15 +636,17 @@ age_of_divination = {
 			allow = {
 				religion = seren
 				}
-			every_province = {
-				NOT = { religion = darklord }
+			NOT = {
+				any_province = {
+					religion = dark_lord
+				}
 			}
 		}
 		obj_builders_of_gielinor = {
 			allow = {
 				religion = ful
 				}
-			every_owned_province = {
+			all_owned_province = {
 				development = 15
 			}
 		}
@@ -716,15 +720,15 @@ age_of_divination = {
 				religion = genbu
 			}
 			calc_true_if = {
-				every_owned_province = {
+				all_owned_province = {
 					fort_level = 6
 				}
 				amount = 10
 			}
 		}
-		obj_warriors_of_suzako = {
+		obj_warriors_of_suzaku = {
 			allow = {
-				religion = suzako
+				religion = suzaku
 			}
 			has_global_modifier_value = {
 				which = discipline
@@ -742,30 +746,32 @@ age_of_divination = {
 		obj_convert_100_provinces = {
 			allow = {
 				NOT = {
-					religion = zamorak
-					religion = vampyric
-					religion = saradomin
-					religion = armadyl
-					religion = karamjan
-					religion = brassicaprime
-					religion = marimbo
-					religion = zaros
-					religion = darklord
-					religion = bandos
-					religion = menaphite
-					religion = seren
-					religion = ful
-					religion = jas
-					religion = xeric
-					religion = zulrah
-					religion = xautak
-					religion = ralos
-					religion = ranul
-					religion = seiryu
-					religion = genbu
-					religion = suzako
-					religion = byakko
-					religion_group = nonintervention_group
+					OR = {
+						religion = zamorak
+						religion = vampyric
+						religion = saradomin
+						religion = armadyl
+						religion = karamjan
+						religion = brassicaprime
+						religion = marimbo
+						religion = zaros
+						religion = dark_lord
+						religion = bandos
+						religion = menaphite
+						religion = seren
+						religion = ful
+						religion = jas
+						religion = xeric
+						religion = zulrah
+						religion = xautak
+						religion = ralos
+						religion = ranul
+						religion = seiryu
+						religion = genbu
+						religion = suzaku
+						religion = byakko
+						religion_group = nonintervention_group
+					}
 				}
 			}
 			custom_trigger_tooltip = {

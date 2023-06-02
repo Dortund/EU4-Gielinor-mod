@@ -339,7 +339,7 @@ country_event = {
 			}
 			change_culture = tokhaar
 		}
-		change_culture = tokhaar
+		change_primary_culture = tokhaar
 	 	kill_ruler = yes
 		add_country_modifier = {
 			name = "TZH_extinction_of_the_tzhaar"

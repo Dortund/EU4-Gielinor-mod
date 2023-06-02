@@ -153,7 +153,7 @@
  ASG_void_knight_recruitment_other:0 "Void Knight Recruitment"
  desc_ASG_void_knight_recruitment_other:0 "Guided by Dracs Melrose, the Void Knights are attracting many recruits which to some extent are willing to fight for us."
  ASG_retreat_of_the_temple_knights:0 "Retreat of the Temple Knights"
- desc_retreat_of_the_temple_knights:0 "The ancient order of the Temple Knights refuses to serve rulers of a heathen faith."
+ desc_ASG_retreat_of_the_temple_knights:0 "The ancient order of the Temple Knights refuses to serve rulers of a heathen faith."
  ASG_one_faith_crusade:0 "One Faith Crusade"
  desc_ASG_one_faith_crusade:0 "In the aftermath of the burning of Wizards' Tower based on religious tensions, we have realised the need to more aggressively promote our faith."
  ASG_exile_of_the_kinshra:0 "Exile of the Kinshra"
@@ -234,7 +234,7 @@
  CLS_naval_ambitions:0 "Naval Ambitions"
  desc_CLS_naval_ambitions:0 "The importance of developing a good navy has grown to ensure we can circumvent strong foes in Kandarin and defend against those from elsewhere."
  CLS_saradominist_mission:0 "Saradominist Mission"
- desc_CLS_saradomist_mission:0 "With the support of Entrana, we can begin to transform Kandarin from a chaotic mess of faiths into a new bastion of the Church of Saradomin."
+ desc_CLS_saradominist_mission:0 "With the support of Entrana, we can begin to transform Kandarin from a chaotic mess of faiths into a new bastion of the Church of Saradomin."
 
 # Donblas
  
@@ -872,6 +872,17 @@
  desc_armadyl_loyal_converts:0 "Armadyl has made accommodations for the former followers of Seren who wish to join his faith, making our conversion efforts exceptionally easy."
  armadyl_wings_of_armadyl_modifier:0 "The Wings of Armadyl"
  desc_armadyl_wings_of_armadyl_modifier:0 "Armadyl has taken us under his wing, but we will never forget the good and ill that came from our time following Seren."
+
+ # Brassican
+
+ brassica_sacred_cabbages:0 "Sacred Cabbages"
+ desc_brassica_sacred_cabbages:0 "Glorious cabbages!"
+ brassica_refused_cabbages:0 "Refused Cabbages"
+ desc_brassica_refused_cabbages:0 "Yuck, I don't like cabbage."
+ brassica_destroyed_cabbages:0 "Destroyed Cabbages"
+ desc_brassica_destroyed_cabbages:0 "Cleanse these abonimations with fire!"
+ brassica_protected_cabbages:0 "Protected Cabbages"
+ desc_brassica_protected_cabbages:0 "A scarecrow a day keeps the evil away."
 
  # Godless
  

@@ -15,7 +15,7 @@
 #######################################
 
 reconstruction = {
-	penalty = 0.5
+
 	bonus = {
 		production_efficiency = 0.05
 	}
@@ -28,13 +28,15 @@ reconstruction = {
 		OR = {
 			owner = {
 				NOT = {
-					technology_group = bandostechgroup
-					technology_group = karamjantechgroup
-					culture_group = troll_group
+					OR = {
+						technology_group = bandostechgroup
+						technology_group = karamjantechgroup
+						culture_group = troll_group
+					}
 				}
 			}
 			culture_group = tzhaar_group
-			tag = DSK
+			owned_by = DSK
 			is_year = 2000
 		}
 	}
@@ -159,7 +161,6 @@ reconstruction = {
 #######################################
 
 architecture = {
-	penalty = 0.5
 
 	bonus = {
 		development_cost = -0.05
@@ -387,7 +388,6 @@ architecture = {
 #######################################
 
 runecrafting = {
-	penalty = 0.5
 
 	bonus = {
 		fire_damage = 0.05
@@ -604,7 +604,6 @@ runecrafting = {
 #######################################
 
 statehood = {
-	penalty = 0.5
 
 	bonus = {
 		reform_progress_growth = 0.1
@@ -879,7 +878,6 @@ statehood = {
 #######################################
 
 exploration = {
-	penalty = 0.5
 
 	bonus = {
 		global_colonial_growth = 10
@@ -1077,7 +1075,6 @@ exploration = {
 #######################################
 
 quests = {
-	penalty = 0.5
 
 	bonus = {
 		max_absolutism = 10
@@ -1180,7 +1177,7 @@ quests = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = tooltip_any_neighbor_has_embraced_runecrafting
+				tooltip = tooltip_any_neighbor_has_embraced_quests
 				any_neighbor_province = {
 					NOT = { owned_by = ROOT }
 					quests = 100
@@ -1292,7 +1289,6 @@ quests = {
 #######################################
 
 invention = {
-	penalty = 0.5
 
 	bonus = {
 		innovativeness_gain = 1

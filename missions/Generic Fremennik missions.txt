@@ -99,7 +99,9 @@ genfremmy_missions_2 = {
 		position = 5
 		trigger = {
 			treasury = 2000
-			has_center_of_trade_of_level = 3
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 3
+			}
 			share_of_starting_income = 10
 		}
 		effect = {
