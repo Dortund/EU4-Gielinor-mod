@@ -52,6 +52,7 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	
+	# TODO If you annex the cave too quick, the event might not spawn, and the flag will never be set
 	trigger = {
 		NOT = { has_global_flag = death_of_guthix }
 		NOT = { religion_group = nonintervention_group }
@@ -86,9 +87,10 @@ country_event = {
 	
 	trigger = {
 		religion_group = nonintervention_group
+		NOT = { tag = CGU }
 		any_owned_province = {
 			is_core = CGU
-		}
+		} 
 		NOT = { has_global_flag = death_of_guthix }
 	}
 
