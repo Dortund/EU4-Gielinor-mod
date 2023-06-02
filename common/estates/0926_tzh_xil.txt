@@ -114,7 +114,7 @@ estate_tzh_xil =
 	agendas = {
 		estate_tzh_xil_hire_advisor
 		estate_tzh_xil_fire_advisor
-		estate_tzh_ket_condottieri_rivals
+		estate_tzh_xil_condottieri_rivals
 		estate_tzh_xil_increase_trade_power_in_X
 		estate_tzh_xil_recover_abysmal_prestige
 		estate_tzh_xil_improve_prestige

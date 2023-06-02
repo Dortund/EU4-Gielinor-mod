@@ -120,7 +120,7 @@ sbi_missions_3 = {
 			OR = {
 				owns_core_province = 91
 				AND = {
-					93 = { is_empty = yes }
+					91 = { is_empty = yes }
 					adm_power = 150
 				}
 			}

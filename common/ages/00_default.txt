@@ -888,8 +888,10 @@ age_of_divination = {
 		}
 		ab_cleansing_of_menaphos = {
 			allow = {
-				tag = MPS
-				tag = KEM
+				OR = {
+					tag = MPS
+					tag = KEM
+				}
 			}
 			modifier = {
 				yearly_corruption = -0.25
