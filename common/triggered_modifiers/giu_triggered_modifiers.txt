@@ -153,7 +153,7 @@ guthix_rest_place_knowledge = {
 				has_global_flag = jas_stone_taken
 				has_global_flag = armadyl_staff_taken
 			}
-		has_global_flag = guthix_rest_revealed
+			has_global_flag = guthix_rest_revealed
 		}
 		NOT = { has_global_flag = death_of_guthix }
 		NOT = { has_global_flag = guthix_found }
