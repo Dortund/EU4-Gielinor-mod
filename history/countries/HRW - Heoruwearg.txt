@@ -3,6 +3,7 @@ add_government_reform = clan_monarchy
 government_rank = 1
 primary_culture = taverlian
 religion = guthix
+religious_school = druidic_school
 technology_group = centraltechgroup
 capital = 946
 

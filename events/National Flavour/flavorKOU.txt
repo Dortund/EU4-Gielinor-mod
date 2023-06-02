@@ -101,10 +101,12 @@ country_event = {
 			
 			}
 			RRF = {
-				build_to_forcelimit = {
-					infantry = 0.5
-					cavalry = 0.2
-					artillery = 0.3
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
 				}
 				add_adm_power = 100
 				add_dip_power = 100

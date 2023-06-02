@@ -54,7 +54,7 @@ country_decisions = {
 						days = 1
 					}
 				}
-				add_historic_friend = EVR
+				add_historical_friend = EVR
 			}
 		}
 		ai_will_do = {

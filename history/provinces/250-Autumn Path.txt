@@ -23,6 +23,18 @@ trade_goods = livestock_farm
 
 is_city = yes
 
+2042.3.15 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2049.9.29 = {
+	owner = SIN
+	controller = SIN
+	remove_core = GUN
+}
+
 2062.2.27 = {
 	owner = ADO
 	controller = ADO

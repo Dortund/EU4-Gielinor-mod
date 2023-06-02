@@ -3,6 +3,7 @@ add_government_reform = noble_kingdom
 government_rank = 2
 primary_culture = rellekkan
 religion = v
+religious_school = defender_school
 secondary_religion = guthix
 technology_group = fremenniktechgroup
 capital = 385 #Neitiznot

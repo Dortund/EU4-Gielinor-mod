@@ -19,5 +19,12 @@ historical_idea_groups = {
 
 monarch_names = {
 	# "Sliske #0" = 500 # Commented out to allow for revival event
-	# "Linza #0" = -1
+	"Ahrim #0" = 5
+	"Dharok #0" = 5
+	"Guthan #0" = 5
+	"Karil #0" = 5
+	"Torag #0" = 5
+	"Verac #0" = 5
+	"Akrisae #0" = 1
+	"Linza #0" = -1
 }

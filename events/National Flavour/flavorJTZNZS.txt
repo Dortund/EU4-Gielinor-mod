@@ -33,10 +33,8 @@ country_event = {
 	mean_time_to_happen = {
 		months = 2
 	}
-	
-	option = {
-		name = flavor_jtznzs.1.a #You know what? I'm joining the trolls.
-		switch_tag = UBS
+
+	immediate = {
 		389 = {
 			add_core = UBS
 			cede_province = UBS
@@ -51,6 +49,8 @@ country_event = {
 			add_base_tax = 2
 			add_base_production = 2
 			add_base_manpower = 4
+			discover_country = JTZ
+			discover_country = NZS
 		}
 		390 = {
 			add_core = UBS
@@ -66,48 +66,17 @@ country_event = {
 			add_base_tax = 2
 			add_base_production = 2
 			add_base_manpower = 4
-		}
-		UBS = {
 			discover_country = JTZ
 			discover_country = NZS
 		}
 	}
+	
+	option = {
+		name = flavor_jtznzs.1.a #You know what? I'm joining the trolls.
+		switch_tag = UBS
+	}
 
 	option = {
-		name = flavor_flavor_jtznzs.1.b #We will have to deal with this.
-		389 = {
-			add_core = UBS
-			cede_province = UBS
-			add_institution_embracement = {
-				which = reconstruction
-				value = 100
-			}
-			add_institution_embracement = {
-				which = architecture
-				value = 100
-			}
-			add_base_tax = 2
-			add_base_production = 2
-			add_base_manpower = 4
-		}
-		390 = {
-			add_core = UBS
-			cede_province = UBS
-			add_institution_embracement = {
-				which = reconstruction
-				value = 100
-			}
-			add_institution_embracement = {
-				which = architecture
-				value = 100
-			}
-			add_base_tax = 2
-			add_base_production = 2
-			add_base_manpower = 4
-		}
-		UBS = {
-			discover_country = JTZ
-			discover_country = NZS
-		}
+		name = flavor_jtznzs.1.b #We will have to deal with this.
 	}
 }

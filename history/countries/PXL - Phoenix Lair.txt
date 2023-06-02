@@ -4,6 +4,7 @@ government_rank = 1
 primary_culture = phoenix
 add_accepted_culture = reborn_warrior
 religion = guthix
+religious_school = guardian_school
 technology_group = kandarintechgroup
 capital = 1349 #Phoenix Lair
 

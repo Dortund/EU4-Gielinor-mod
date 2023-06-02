@@ -17,4 +17,16 @@ historical_idea_groups = {
 
 monarch_names = {
 	# "Bilrach #0" = 100 # Commented out to allow for revival event
+	"Andelus #0" = 1
+	"Kavel #0" = 1
+	"Lesk #0" = 1
+	"Morvas #0" = 1
+	"Orin #0" = 1
+	"Peleas #0" = 1
+	"Salen #0" = 1
+	"Taevas #0" = 1
+		
+	"Alia #0" = -1
+	"Sarrus #0" = -1
+	"Shianna #0" = -1
 }

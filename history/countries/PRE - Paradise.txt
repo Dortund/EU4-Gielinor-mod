@@ -3,6 +3,7 @@ add_government_reform = sirenic_republic
 government_rank = 2
 primary_culture = siren
 religion = godless
+religious_school = monstrous_school
 technology_group = wushankotechgroup
 capital = 1192 #Paradise
 

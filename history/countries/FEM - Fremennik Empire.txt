@@ -3,6 +3,7 @@ add_government_reform = noble_kingdom
 government_rank = 3
 primary_culture = rellekkan
 religion = v
+religious_school = defender_school
 secondary_religion = godless
 technology_group = fremenniktechgroup
 capital = 368 #Rellekka

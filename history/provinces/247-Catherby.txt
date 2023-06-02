@@ -29,6 +29,18 @@ is_city = yes
 
 center_of_trade = 2
 
+2042.3.15 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2049.9.29 = {
+	owner = CTH
+	controller = CTH
+	remove_core = GUN
+}
+
 2062.2.27 = {
 	owner = ADO
 	controller = ADO

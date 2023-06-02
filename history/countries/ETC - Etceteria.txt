@@ -3,6 +3,7 @@ add_government_reform = miscellanean_monarchy
 government_rank = 2
 primary_culture = miscellanean
 religion = v
+religious_school = defender_school
 secondary_religion = guthix
 technology_group = fremenniktechgroup
 capital = 384 #Etceteria

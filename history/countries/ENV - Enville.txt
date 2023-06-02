@@ -28,6 +28,9 @@ capital = 20 #Enville
 		dip = 4
 		mil = 6
 	}
+}
+
+1925.12.1 = {
 	heir = {
 		name = "Varmen"
 		dynasty = "Doar"

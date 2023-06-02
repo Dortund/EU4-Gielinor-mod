@@ -49,8 +49,7 @@ age_of_mortals = {
 	
 	abilities = {
 		
-		ab_chain_of_claims = 
-		{
+		ab_chain_of_claims = {
 			modifier = {
 				can_chain_claim = yes
 			}
@@ -68,7 +67,7 @@ age_of_mortals = {
 		}
 		ab_attack_bonus_in_capital_terrain = {
 			modifier = {
-				attack_bonus_in_capital_terrain = yes
+				attack_bonus_in_capital_terrain = 1
 			}
 			ai_will_do = {
 				factor = 10
@@ -559,9 +558,9 @@ age_of_divination = {
 		obj_victory_over_the_salve = {
 			allow = {
 				religion = vampyric
-				}
+			}
 			calc_true_if = {
-				every_owned_province = {
+				all_owned_province = {
 					region = misthalin_region
 					culture_group = vampyre_group
 				}
@@ -573,14 +572,17 @@ age_of_divination = {
 				religion = saradomin
 				}
 			OR = {
-				ENT = { is_great_power = yes }
+				any_country = {
+					tag = ENT
+					is_great_power = yes
+				}
 				is_papal_controller = yes
 			}
 		}
 		obj_return_of_armadyl = {
 			allow = {
 				religion = armadyl
-				}
+			}
 			calc_true_if = {
 				all_country = {
 					religion = armadyl
@@ -591,67 +593,75 @@ age_of_divination = {
 		obj_join_the_godless = {
 			allow = {
 				religion_group = nonintervention_group
-				}
+			}
 			religion = godless
 		}
 		obj_unite_karamja = {
 			allow = {
 				religion = karamjan
-				}
+			}
 			tag = KJA
 		}
 		obj_world_of_good_taste = {
 			allow = {
 				religion = brassicaprime
-				}
+			}
 			num_of_harmonized = 3
 		}
 		obj_direct_fate = {
 			allow = {
 				religion = zaros
-				}
+			}
 			num_of_active_blessings = 5
 		}
 		obj_dark_lord_triumphant = {
 			allow = {
-				religion = darklord
-				}
+				religion = dark_lord
+			}
 			num_of_active_blessings = 5
 		}
 		obj_take_on_the_world = {
 			allow = {
 				religion = bandos
-				}
-		 	any_country = {coalition_target = ROOT }
+			}
+		 	any_country = { coalition_target = ROOT }
 		}
 		obj_kharidian_empire = {
 			allow = {
 				religion = menaphite
-				}
+			}
 			tag = KEM
 		}
 		obj_crystal_cleansing = {
 			allow = {
 				religion = seren
-				}
-			every_province = {
-				NOT = { religion = darklord }
 			}
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 8
+			}
+			religious_unity = 1
 		}
 		obj_builders_of_gielinor = {
 			allow = {
 				religion = ful
+			}
+			calc_true_if = {
+				all_owned_province = {
+					development = 25
 				}
-			every_owned_province = {
-				development = 15
+				amount = 10
 			}
 		}
 		obj_control_the_stone = {
 			allow = {
 				religion = jas
+			}
+			OR = {
+				capital_scope = {
+					has_province_modifier = artefact_stone_of_jas
 				}
-			capital_scope = {
-				has_province_modifier = artefact_stone_of_jas
+				has_global_flag = stone_of_jas_destroyed_flag
 			}
 		}
 		obj_xerician_empire = {
@@ -663,7 +673,7 @@ age_of_divination = {
 		obj_zulrahs_kin = {
 			allow = {
 				religion = zulrah
-				}
+			}
 			karuulm_area = {
 				religion = zulrah
 			}
@@ -671,19 +681,19 @@ age_of_divination = {
 		obj_time_to_party = {
 			allow = {
 				religion = marimbo
-				}
+			}
 			full_idea_group = humanist_ideas
 		}	
 		obj_true_horror_of_the_deep = {
 			allow = {
 				religion = xautak
-				}
+			}
 			is_hegemon = yes
 		}	
 		obj_light_needs_shadow = {
 			allow = {
 				religion = ralos
-				}
+			}
 			calc_true_if = {
 				all_country = {
 					religion = ranul
@@ -703,12 +713,11 @@ age_of_divination = {
 			}
 		}
 		
-		
 		obj_seiryu_purity = {
 			allow = {
 				religion = seiryu
 			}
-			average_unrest = 0
+			NOT = { average_unrest = 0 }
 			religious_unity = 1
 		}
 		obj_turtler = {
@@ -716,15 +725,15 @@ age_of_divination = {
 				religion = genbu
 			}
 			calc_true_if = {
-				every_owned_province = {
+				all_owned_province = {
 					fort_level = 6
 				}
 				amount = 10
 			}
 		}
-		obj_warriors_of_suzako = {
+		obj_warriors_of_suzaku = {
 			allow = {
-				religion = suzako
+				religion = suzaku
 			}
 			has_global_modifier_value = {
 				which = discipline
@@ -742,30 +751,32 @@ age_of_divination = {
 		obj_convert_100_provinces = {
 			allow = {
 				NOT = {
-					religion = zamorak
-					religion = vampyric
-					religion = saradomin
-					religion = armadyl
-					religion = karamjan
-					religion = brassicaprime
-					religion = marimbo
-					religion = zaros
-					religion = darklord
-					religion = bandos
-					religion = menaphite
-					religion = seren
-					religion = ful
-					religion = jas
-					religion = xeric
-					religion = zulrah
-					religion = xautak
-					religion = ralos
-					religion = ranul
-					religion = seiryu
-					religion = genbu
-					religion = suzako
-					religion = byakko
-					religion_group = nonintervention_group
+					OR = {
+						religion = zamorak
+						religion = vampyric
+						religion = saradomin
+						religion = armadyl
+						religion = karamjan
+						religion = brassicaprime
+						religion = marimbo
+						religion = zaros
+						religion = dark_lord
+						religion = bandos
+						religion = menaphite
+						religion = seren
+						religion = ful
+						religion = jas
+						religion = xeric
+						religion = zulrah
+						religion = xautak
+						religion = ralos
+						religion = ranul
+						religion = seiryu
+						religion = genbu
+						religion = suzaku
+						religion = byakko
+						religion_group = nonintervention_group
+					}
 				}
 			}
 			custom_trigger_tooltip = {
@@ -780,7 +791,10 @@ age_of_divination = {
 			innovativeness = 20
 		}
 		obj_own_emperor = {
-			government_rank = 3
+			OR = {
+				is_emperor = yes
+				government_rank = 3
+			}
 		}
 		obj_huge_capital = {
 			capital_scope = {
@@ -797,8 +811,6 @@ age_of_divination = {
 			has_parliament = yes
 		}
 	}
-	
-
 
 	abilities = {
 		ab_force_march = {
@@ -882,8 +894,10 @@ age_of_divination = {
 		}
 		ab_cleansing_of_menaphos = {
 			allow = {
-				tag = MPS
-				tag = KEM
+				OR = {
+					tag = MPS
+					tag = KEM
+				}
 			}
 			modifier = {
 				yearly_corruption = -0.25

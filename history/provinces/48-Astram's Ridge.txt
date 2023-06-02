@@ -38,3 +38,16 @@ add_province_triggered_modifier = wildy_border_level_nine
 	controller = ASG
 	add_core = ASG
 }
+
+2047.7.3 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	remove_core = SNG
+}
+
+2059.11.28 = {
+	owner = ASG
+	controller = ASG
+	remove_core = GUN
+}

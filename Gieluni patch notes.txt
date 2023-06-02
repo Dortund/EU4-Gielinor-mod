@@ -4,9 +4,117 @@
 ##########################################################################################################################################
 ##########################################################################################################################################
 
+#Beta 1.6.2 patch notes (Neitiznot)
+
+# Turns out a whole lot of extra bugs haven't been fixed yet, so here's another bugfixing pass - along with an expansion for religions in the Nonintervention group!
+# Special thanks to Dortund for a huge number of bug fixes!
+
+#######################
+# National Flavour
+#######################
+
+# Localised national ideas for Burgh de Rott, Gunnar, Saranthium, Troll Stronghold, Unterwulf, Zarosian Empire
+
+# Arposandra
+## Anima Manipulation national idea no longer has penalties, but only has -10% build cost instead of -25%
+### This is because the diplomatic consequences for Arposandra's direction are now modelled by their Exploitative school in the Guthixian faith.
+
+# Jatizso
+## Added 2 extra missions
+
+# Neitiznot
+## Added 2 extra missions
+
+# Zarosian Empire
+## Now only needs Lassar rather than the whole of Asgarnia to be formed. Still needs the entire Misthalin region.
+
+#######################
+# Religions
+#######################
+
+# Guthix
+## Corrected instances of Balance still being labelled as "Karma"
+## New icons for Balance
+## Now has six religious schools.
+
+# Godless
+## Now has access to a reskinned version of Sikhism's Guru mechanic. Every 50 years (until the Quests institution) a new Adaptation will be developed
+## Godless schools have been nerfed somewhat to balance this new mechanic.
+## Godless schools have had their images adjusted for easier identification
+
+# Northern Pantheon
+## May invite scholars of many of Guthixian, Godless and V's religious schools (though not all). The Northern Pantheon, however, has no religious schools of its own.
+
+# V
+## Now has three religious schools, and can invite scholars from Godless and V religious schools.
+
+# Wushanko Group
+## Added descriptions for aspects of faith
+
+#######################
+# Governments
+#######################
+
+# Druidic State/Druidic Order - Now offers Balance decay instead of a flat Balance increase
+
+#######################
+# Institutions
+#######################
+
+# Architecture spawning changed from requiring a Workshop to requiring three buildings in a province, something that is far easier to achieve in 4A 1950.
+
+#######################
+# Map
+#######################
+
+# Kandarin province Donjon d'évasion renamed to Zanash in accordance with lore
+# Gunnar now appears on the map in certain years on the historical start.
+
+#######################
+# Localisation
+#######################
+
+# Added startup text for the Godless, Guthixian and Northern Pantheon religions.
+
+#######################
+# Bugfixes
+#######################
+
+# Fixed bad startup text code for the Serenist faith
+# Removed old code referring to old institution penalty costs
+# Fixed Age of Mortals capital attack bonus
+# Fixed crash from picking Suzaku aspects of faith
+# Fixed Karamjan Shipyard Expansion mission not properly requiring a level 2 centre of trade
+# Sixth Age age objectives and bonuses are now functional
+# Fixed Zemouregal missions not giving permanent claims on the King's Road area
+# Fixed Lumshire's town being graphically in the middle of Lumbridge Swamp
+# Fixed bad code in the decisions involving forming Forinthry, forming Grand Ourania, Guthix's Cave, Lucien's religion, entering Tirannwn as Tyras, retreating north as Weiss, crushing runecrafting altars as Gunnar and ones involving Elder Artefacts
+
+## Extra fixes from Dortund (summarised here as there's so many!):
+# Code fixes for cultures, governments, monuments, national ideas, institutions, religion, scripted estate triggers
+# Decision code fixes for Elder Artefacts, Fenisento, Gunnar altar-crushing, Guthix Cave, Hebikatochi, 
+# Event code fixes for Wilderness Border, Elder God Wars, Bandos, Brassica Prime, Seren, Elder Discovery, Brink of Extinction, Kinshra-White Knight War, 
+## National flavour event code fixes for Arposandra, Asgarnia, Corsair Cove, Crandor, Enakhra, Ferox Enclave, Glough, Gnome Empire, Gunnar, Jatizso/Neitiznot, Keldagrim, Kandarin, Kourend, Mage Arena, Moon Clan, Mos le' Harmless, Misthalin, Pescaling, Pollnivneach, Rellekka, Tempoross, Void Pests, Wilderness Bandits
+# Interface code fixes for Suzaku
+# Mission code fixes for Acheron, Carnilleus, Karamja, Wushanko, Iorwerth, Misthalin, Morytania, Troll Stronghold, TzHaar, 
+# Event localisation fixes for Bedabins, Ferox Enclave, Glouphrie Dictatorship disaster
+# Mission localisation fixes for Morytania
+# Further localisation fixes for wargoal peace offers, decisions, religion (especially Brassica Prime)
+
+#######################
+# Miscellaneous
+#######################
+
+# Improved Great Kourend house flags/faction icons, especially Hosidius
+# New images for faction influence change for mod-unique factions
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
 #Beta 1.6.1 patch notes (Jatizso)
 
-Here's a smaller patch to fling together some code fixes and add some little improvements for minor Fremennik realms.
+# Here's a smaller patch to fling together some code fixes and add some little improvements for minor Fremennik realms.
 
 #######################
 # National Flavour

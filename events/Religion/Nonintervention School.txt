@@ -1,0 +1,352 @@
+########################################
+# Godless School
+########################################
+
+namespace = nonintervention_school_events
+
+country_event = {
+	id = nonintervention_school_events.1
+	title = nonintervention_school_events.1.t
+	desc = {
+		trigger = {
+			religion = godless
+		}
+		desc = nonintervention_school_events.1.da #To not follow a God is to decide one of many different paths for ourselves. Let us decide our guiding philosophy!
+	}
+	desc = {
+		trigger = {
+			religion = guthix
+		}
+		desc = nonintervention_school_events.1.db #Many Guthixians spent the God Wars isolated from the rest of the world, creating unique distinct traditions in the following of Guthix. Which path should we follow?
+	}
+	desc = {
+		trigger = {
+			religion = v
+		}
+		desc = nonintervention_school_events.1.dc #Legends become myth, and myths never quite stay the same way from one village to the next. There are many ways to interpret V - which shall we choose?
+	}
+	picture = {
+		trigger = { religion = godless }
+		picture = GODLESS_HOLSTEIN_eventPicture
+	}
+	picture = {
+		trigger = { religion = guthix }
+		picture = GUTHIX_BUTTERFLY_eventPicture
+	}
+	picture = {
+		trigger = { religion = v }
+		picture = V_CHAMPION_eventPicture
+	}
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion_group = nonintervention_group
+		NOT = { religion = northern_pantheon }
+		has_religious_school = no
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = nonintervention_school_events.1.a #Gives the AI an appropriate school. Godless defaults to ambivalence; Guthix defaults to guardian; V defaults to defender
+		trigger = {
+			ai = yes
+		}
+		if = { #Godless, Monstrous
+			limit = {
+				religion = godless
+				OR = {
+					has_reform = boss_nation
+				 	have_had_reform = boss_nation
+					has_reform = island_boss_nation
+					have_had_reform = island_boss_nation
+					has_reform = quidamortem_boss_nation
+					have_had_reform = quidamortem_boss_nation
+				}
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = monstrous_school
+			}
+		}
+		else_if = { #Godless, Evasive
+			limit = {
+				religion = godless
+				primary_culture = dorgeshuun
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = evasive_school
+			}
+		}
+		else_if = { #Godless, Humanist
+			limit = {
+				religion = godless
+				has_idea_group = humanist_ideas
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = humanist_school
+			}
+		}
+		else_if = { #Godless, Antitheist
+			limit = {
+				religion = godless
+				OR = {
+					has_idea_group = religious_ideas
+					culture_group = penguin_group
+				}
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = antitheist_school
+			}
+		}
+		else_if = { #Godless, Ambivalence
+			limit = {
+				religion = godless
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = ambivalence_school
+			}
+		}
+		else_if = { #Guthix, Dwarven
+			limit = {
+				religion = guthix
+				culture_group = dwarven_group
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = dwarven_school
+			}
+		}
+		else_if = { #Guthix, Fairy
+			limit = {
+				religion = guthix
+				culture_group = fairy_group
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = fairy_school
+			}
+		}
+		else_if = { #Guthix, Gnomish
+			limit = {
+				religion = guthix
+				primary_culture = treegnome
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = gnomish_school
+			}
+		}
+		else_if = { #Guthix, Exploitative
+			limit = {
+				religion = guthix
+				OR = {
+					primary_culture = cavegnome
+					total_development = 1000
+				}
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = exploitative_school
+			}
+		}
+		else_if = { #Guthix, Druidic
+			limit = {
+				religion = guthix
+				OR = {
+					has_reform = druidic_state
+					has_reform = druidic_order
+					culture_group = kandarin_group
+					culture_group = karamjan_group
+					culture_group = ogre_group
+					primary_culture = alkharidian
+				}
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = exploitative_school
+			}
+		}
+		else_if = { #Guthix, Guardian
+			limit = {
+				religion = guthix
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = guardian_school
+			}
+		}
+		else_if = { #V, Runecrafter
+			limit = {
+				religion = v
+				OR = {
+					has_reform = magiocracy
+					primary_culture = moonclan
+					tag = MOO
+				}
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = runecrafter_school
+			}
+		}
+		else_if = { #V, Warrior
+			limit = {
+				religion = v
+				OR = {
+					primary_culture = mountaintribe
+					tag = GUN
+					tag = MNT
+					AND = {
+						primary_culture = barbarian
+						NOT = { tag = AES }
+						NOT = { tag = BAO }
+					}
+				}
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = warrior_school
+			}
+		}
+		else = { #V, Defender
+			set_religious_school = {
+				group = nonintervention_group
+				school = defender_school
+			}
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.b #Godless - Antitheist
+		trigger = {
+			religion = godless
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = antitheist_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.c #Godless - Humanist
+		trigger = {
+			religion = godless
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = humanist_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.d #Godless - Ambivalence
+		trigger = {
+			religion = godless
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = ambivalence_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.e #Guthix - Cultural
+		trigger = {
+			religion = guthix
+			OR = {
+				culture_group = dwarven_group
+				culture_group = fairy_group
+				culture_group = gnome_group
+			}
+		}
+		if = {
+			limit = {
+				religion = guthix
+				culture_group = dwarven_group
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = dwarven_school
+			}
+		}
+		else_if = {
+			limit = {
+				religion = guthix
+				culture_group = fairy_group
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = fairy_school
+			}
+		}
+		else_if = {
+			limit = {
+				religion = guthix
+				culture_group = gnome_group
+			}
+			set_religious_school = {
+				group = nonintervention_group
+				school = gnomish_school
+			}
+		}	
+	}
+	option = {
+		name = nonintervention_school_events.1.f #Guthix - Druidic
+		trigger = {
+			religion = guthix
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = druidic_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.g #Guthix - Guardian
+		trigger = {
+			religion = guthix
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = guardian_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.h #V - Defender
+		trigger = {
+			religion = v
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = defender_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.i #V - Runecrafter
+		trigger = {
+			religion = v
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = runecrafter_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.j #V - Warrior
+		trigger = {
+			religion = v
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = warrior_school
+		}
+	}
+}

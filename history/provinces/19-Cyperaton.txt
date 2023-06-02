@@ -32,7 +32,7 @@ center_of_trade = 1
 	add_core = MST
 }
 
-2058.9.21 = {
+2054.10.19 = {
 	owner = GUN
 	controller = GUN
 	add_core = GUN
@@ -41,7 +41,7 @@ center_of_trade = 1
  	change_province_name = "Gunnarsgrunn"
 }
 
-2063.9.21 = {
+2071.3.17 = {
 	owner = MST
 	controller = MST
 }

@@ -127,8 +127,8 @@ spriteTypes = {
 	}
 	spriteType =
 	{
-		name = "GFX_alert_pick_church_aspect_suzako"
-		texturefile = "gfx\\interface\\alert_pick_church_aspect_suzako.dds"
+		name = "GFX_alert_pick_church_aspect_suzaku"
+		texturefile = "gfx\\interface\\alert_pick_church_aspect_suzaku.dds"
 		alwaystransparent = yes
 	}
 }

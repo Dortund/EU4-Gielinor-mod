@@ -1,5 +1,4 @@
 monarchy = {
-	basic_reform = monarchy_mechanic
 	reform_levels = {
 		feudalism_vs_autocracy = {
 			reforms = {
@@ -491,7 +490,7 @@ theocracy = {
 		bardic_order_legacy
 		cloistered_order_legacy
 		cult_of_reason_legacy
-		druidic_order_legacy
+		#druidic_order_legacy
 		druidic_state_legacy
 		frontier_theocracy_legacy
 		guthixian_cave_legacy
@@ -591,7 +590,7 @@ theocracy = {
 			reforms = {
 				combat_heresy_reform
 				expel_heathens_reform
-				play_the_villain
+				play_the_villain_reform
 				prevent_god_war_reform
 				safeguard_holy_sites_reform
 				pursuit_of_knowledge_reform

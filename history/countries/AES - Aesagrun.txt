@@ -3,6 +3,7 @@ add_government_reform = settled_tribe
 government_rank = 1
 primary_culture = barbarian
 religion = v
+religious_school = defender_school
 secondary_religion = saradomin
 technology_group = zeantechgroup
 capital = 1420 #Aesagrun

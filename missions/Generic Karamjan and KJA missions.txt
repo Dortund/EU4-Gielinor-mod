@@ -612,7 +612,7 @@ karamja_missions_3 = {
 			227 = {
 				owned_by = ROOT
 				has_building = grand_shipyard
-			 	has_center_of_trade_of_level = 2
+			 	province_has_center_of_trade_of_level = 2
 				base_production = 10
 			}
 		}
@@ -715,7 +715,8 @@ karamja_missions_4 = {
 		position = 5
 		trigger = {
 			musa_area = {
-				owns_or_non_sovereign_subject_of = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
 			}
 		}
 		effect = {

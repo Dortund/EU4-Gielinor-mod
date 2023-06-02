@@ -84,8 +84,10 @@ country_event = {
 	desc = guthixcave.3.d #Our forces are confused as to why we are occupying the Cave of Guthix. Aren't we trying to stop the Gods from returning to Gielinor?
 	picture = CAVE_OF_GUTHIX_eventPicture
 	
+	#Note from Dortund: "If you annex the cave too quick, the event might not spawn, and the flag will never be set"
 	trigger = {
 		religion_group = nonintervention_group
+		NOT = { tag = CGU }
 		any_owned_province = {
 			is_core = CGU
 		}

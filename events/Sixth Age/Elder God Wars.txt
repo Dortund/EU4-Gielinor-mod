@@ -358,10 +358,6 @@ country_event = {
 	}
 	picture = ELDER_GOD_WARS_eventPicture
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 12
-	}
 	
 	immediate = {
 		set_global_flag = elder_god_wars_flag
@@ -505,10 +501,6 @@ country_event = {
 	}
 	picture = SEREN_RECONSTRUCTED_eventPicture
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
 	
 	immediate = {
 		set_global_flag = end_of_elder_god_wars_flag

@@ -543,6 +543,18 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GODLESS_HOLSTEIN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/GODLESS_HOLSTEIN_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GUTHIX_BUTTERFLY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/GUTHIX_BUTTERFLY_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
 		name = "SEREN_CATHEDRAL_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_CATHEDRAL_eventPicture.dds"
 		alwaystransparent = yes
@@ -623,6 +635,12 @@ spriteTypes = {
 	spriteType = {
 		name = "TUSKA_BEAST_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_religion/TUSKA_BEAST_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "V_CHAMPION_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/V_CHAMPION_eventPicture.dds"
 		alwaystransparent = yes
 	}
 	

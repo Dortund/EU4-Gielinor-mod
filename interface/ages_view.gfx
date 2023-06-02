@@ -357,7 +357,22 @@ spriteTypes = {
 		name = "GFX_obj_shadow_needs_light"
 		texturefile = "gfx/interface/ages/obj_shadow_needs_light.dds"
 	}	
-		
+	spriteType = {
+		name = "GFX_obj_reefs_of_byakko"
+		texturefile = "gfx/interface/ages/obj_reefs_of_byakko.dds"
+	}	
+	spriteType = {
+		name = "GFX_obj_turtler"
+		texturefile = "gfx/interface/ages/obj_turtler.dds"
+	}	
+	spriteType = {
+		name = "GFX_obj_seiryu_purity"
+		texturefile = "gfx/interface/ages/obj_seiryu_purity.dds"
+	}	
+	spriteType = {
+		name = "GFX_obj_warriors_of_suzaku"
+		texturefile = "gfx/interface/ages/obj_warriors_of_suzaku.dds"
+	}	
 
 	# Age of Discovery Objectives
 	spriteType = {

@@ -28,3 +28,15 @@ is_city = yes
 	culture = dimnes
 	religion = zamorak
 }
+
+2049.9.29 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2062.1.29 = {
+	owner = ASG
+	controller = ASG
+	remove_core = GUN
+}

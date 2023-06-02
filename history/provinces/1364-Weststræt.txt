@@ -1,4 +1,4 @@
-#1364-
+#1364-Weststraet
 owner = DWI
 controller = DWI
 add_core = DWI
@@ -35,4 +35,16 @@ is_city = yes
 	remove_core = DWI
 	culture = north_asgarn
 	religion = saradomin
+}
+
+2049.9.29 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2059.11.28 = {
+	owner = ASG
+	controller = ASG
+	remove_core = GUN
 }

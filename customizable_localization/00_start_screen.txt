@@ -489,6 +489,24 @@ defined_text = {
     }
 	####Nonintervention:
 	text = {
+        localisation_key = string_start_religion_godless
+        trigger = {
+			religion = godless
+        }
+    }
+	text = {
+        localisation_key = string_start_religion_guthix
+        trigger = {
+			religion = guthix
+        }
+    }
+	text = {
+        localisation_key = string_start_religion_northernpantheon
+        trigger = {
+			religion = northernpantheon
+        }
+    }
+	text = {
         localisation_key = string_start_religion_v
         trigger = {
 			religion = v
@@ -520,22 +538,18 @@ defined_text = {
 			religion = seren
         }
     }
-	defined_text = {
-		name = start_seren_isolationism
-		random = no
-		text = {
-			localisation_key = string_isolationism_info #Has to end with \n
-			trigger = {
-				religion = seren
-				has_dlc = "Mandate of Heaven"
-			}
+	text = {
+		localisation_key = string_isolationism_info #Has to end with \n
+		trigger = {
+			religion = seren
+			has_dlc = "Mandate of Heaven"
 		}
-		text = {
-			localisation_key = string_isolationism_info_no #\n
-			trigger = {
-				religion = seren
-				NOT = { has_dlc = "Mandate of Heaven" }
-			}
+	}
+	text = {
+		localisation_key = string_isolationism_info_no #\n
+		trigger = {
+			religion = seren
+			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 	}
 	text = {
@@ -566,26 +580,6 @@ defined_text = {
 	####Wushanko Guardian:
 
 
-
-	#Eastern - Buddhists
-	text = {
-        localisation_key = string_start_religion_buddhist_theravada
-        trigger = {
-			religion = guthix
-        }
-    }
-	text = {
-        localisation_key = string_start_religion_buddhist_mahayana
-        trigger = {
-			religion = mahayana
-        }
-    }
-	text = {
-        localisation_key = string_start_religion_buddhist_vajrayana
-        trigger = {
-			religion = vajrayana
-        }
-    }
 
 	#Hindu
 	text = {
@@ -666,7 +660,7 @@ defined_text = {
 	text = {
         localisation_key = string_muslim_school #Has to end with \n
         trigger = {
-			religion = godless
+			religious_group = nonintervention_group
 			has_dlc = "Cradle of Civilization"
         }
     }

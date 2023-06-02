@@ -42,8 +42,10 @@ country_event = {
 	trigger = {
 		has_country_modifier = staff_of_armadyl_knowledge
 		NOT = {
-			tag = IKO
-			has_country_flag = knowledge_staff_of_armadyl
+			OR = {
+				tag = IKO
+				has_country_flag = knowledge_staff_of_armadyl
+			}
 		}
 	}
 
@@ -124,7 +126,7 @@ country_event = {
 	option = {
 		name = elderdiscovery.4.a #The race is on to extract the stone!
 		trigger = {
-			NOT = { religion = Guthix }
+			NOT = { religion = guthix }
 		}
 		add_prestige = 50
 		set_global_flag = temple_of_guthix_revealed
@@ -133,7 +135,7 @@ country_event = {
 	option = {
 		name = elderdiscovery.4.b #Keep the stone safe!
 		trigger = {
-			religion = Guthix
+			religion = guthix
 		}
 		add_prestige = 50
 		set_global_flag = temple_of_guthix_revealed

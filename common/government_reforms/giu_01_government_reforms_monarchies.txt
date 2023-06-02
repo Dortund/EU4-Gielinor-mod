@@ -652,6 +652,11 @@ vampyre_kingdom = {
 		global_manpower_modifier = 0.10
 		tolerance_heretic = 2
 	}
+	conditional = {
+		government_abilities = {
+			#blood_power_mechanic - coming in later patch
+		}
+	}
 	custom_attributes = {
 		locked_government_type = yes
 	}

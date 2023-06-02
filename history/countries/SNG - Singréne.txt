@@ -3,6 +3,7 @@ add_government_reform = clan_monarchy
 government_rank = 1
 primary_culture = north_asgarn
 religion = guthix
+religious_school = druidic_school
 technology_group = centraltechgroup
 capital = 48 #Astram's Ridge
 national_focus = ADM

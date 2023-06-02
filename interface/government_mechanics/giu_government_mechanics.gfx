@@ -1,6 +1,26 @@
 spriteTypes = {
 	#### All of these is related to "game/common/government_mechanics"
 	
+	### BLOOD POWER ###
+	
+	spriteType = {
+		name = "GFX_blood_power_frame"
+		texturefile = "gfx/interface/government_mechanics/blood_power/blood_power_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_blood_power_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/blood_power/blood_power_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/blood_power/blood_power_progress_bar_empty.dds"
+		size = { x = 260 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	
 	### ELVEN DESPERATION ###
 
 	spriteType = {

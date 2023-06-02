@@ -62,7 +62,6 @@ country_event = {
 	desc = flavor_msh.3.d #Some pirates have run themselves aground on the north coast of the Wilderness. Unable to fix up their ship, they've established an impromptu colony.
 	picture = PIRATE_BATTLE_eventPicture
 	
-	is_triggered_only = yes
 	fire_only_once = yes
 	major = yes
 	
@@ -129,7 +128,6 @@ country_event = {
 	}
 	option = {
 		name = flavor_msh.3.b #Alright. Do you have any useful news?
-		
 	}
 }
 
@@ -256,11 +254,13 @@ country_event = {
 					group = nonintervention_group
 					school = ambivalence_school
 				}
-				build_to_forcelimit = {
-					light_ship = 0.5
-					transport = 0.2
-					infantry = 0.5
-					artillery = 0.3
+				capital_scope = {
+					build_to_forcelimit = {
+						light_ship = 0.5
+						transport = 0.2
+						infantry = 0.5
+						artillery = 0.3
+					}
 				}
 				add_historical_friend = MSH
 				define_ruler = {
@@ -273,10 +273,6 @@ country_event = {
 				}
 			}
 		}
-	}
-	
-	mean_time_to_happen = {
-		days = 15
 	}
 	
 	option = {

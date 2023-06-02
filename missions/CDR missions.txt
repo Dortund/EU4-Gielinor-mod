@@ -396,7 +396,7 @@ crandorian_bonus_missions_5 = {
 	has_country_shield = yes
 	
 	CDR_dragon_slayer = {
-		icon = mission_burn_wooden_wall
+		icon = mission_war_chest
 		required_missions = { CDR_adventurers_of_crandor }
 		position = 5
 		trigger = {

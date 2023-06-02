@@ -41,6 +41,19 @@ add_province_triggered_modifier = wildy_border_level_nine
 	add_core = MST
 }
 
+2054.10.19 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	remove_core = ENV
+}
+
+2062.11.4 = {
+	owner = MST
+	controller = MST
+	remove_core = GUN
+}
+
 2079.9.23 = {
  	change_province_name = "Ghost Town"
 }

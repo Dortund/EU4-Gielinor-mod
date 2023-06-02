@@ -3,6 +3,7 @@ add_government_reform = noble_kingdom
 government_rank = 2
 primary_culture = treegnome
 religion = guthix
+religious_school = guardian_school
 technology_group = gnometechgroup
 capital = 272 #Ta Quir Priw
 national_focus = DIP

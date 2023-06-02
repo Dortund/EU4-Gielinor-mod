@@ -3,6 +3,7 @@ add_government_reform = pirate_republic_reform
 government_rank = 1
 primary_culture = northernraider
 religion = v
+religious_school = defender_school
 secondary_religion = godless
 technology_group = fremenniktechgroup
 capital = 391 #Pirates' Cove

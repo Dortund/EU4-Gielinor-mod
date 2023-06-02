@@ -497,6 +497,10 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//NZS//mission_amenities_of_neitiznot.dds"
 	}
 	spriteType = {
+		name = "mission_expand_the_rope_monopoly"
+		texturefile = "gfx//interface//missions//NZS//mission_expand_the_rope_monopoly.dds"
+	}
+	spriteType = {
 		name = "mission_follow_the_arctic_pine"
 		texturefile = "gfx//interface//missions//NZS//mission_follow_the_arctic_pine.dds"
 	}

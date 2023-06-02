@@ -26,3 +26,16 @@ is_city = yes
 	controller = ASG
 	add_core = ASG
 }
+
+2049.9.29 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	remove_core = ANM
+}
+
+2059.11.28 = {
+	owner = ASG
+	controller = ASG
+	remove_core = GUN
+}

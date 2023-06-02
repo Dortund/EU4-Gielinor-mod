@@ -3,7 +3,7 @@
 # Uses all 'modifiers' possible thats exported as a Modifier.
 
 chaos_group = {
-	can_form_personal_unions = no
+	#can_form_personal_unions = no
 	defender_of_faith = yes
 	flags_with_emblem_percentage = 33 # default == 0 #this is used for client states/custom nations so they use appropriate icons
 	flag_emblem_index_range = { 1 57 }
@@ -652,8 +652,8 @@ chaos_group = {
 }
 
 karamjan_group = {
-	can_form_personal_unions = no
-	defender_of_faith = no
+	#can_form_personal_unions = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 }
 	
@@ -686,7 +686,7 @@ karamjan_group = {
 
 menaphite_group = {
 	can_form_personal_unions = yes
-	defender_of_faith = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 }
 	
@@ -718,81 +718,141 @@ menaphite_group = {
 
 nonintervention_group = {
 	can_form_personal_unions = yes
-	defender_of_faith = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 }
 	
 	center_of_religion = 49 #Taverley
 
 	religious_schools = {
+		###############
+		# Godless Schools
+		###############
 		ambivalence_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
-				religion = godless
+				OR = {
+					AND = {
+						OR = {
+							religion = godless
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_ambivalence_school
+					has_country_flag = privilege_can_always_invite_ambivalence_school
+				}
 			}
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
 				if = {
 					limit = {
-						religion = godless
+						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
+					adm_power_cost = 50
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_ambivalence_school }
+						NOT = { has_country_flag = privilege_can_always_invite_ambivalence_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = ambivalence_scholar_modifier }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
-				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
 			}
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = ambivalence_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
-
-			# If you don't set this it will expand on_invite_scholar effect which might be super big
 			invite_scholar_modifier_display = ambivalence_scholar_modifier
 
 			picture = "GFX_icon_godless_school_ambivalence"
 
-			# religion_sub_modifier = no is possible, will hide icon in religious screen
 			merchants = 1
-			tolerance_heretic = 1
-			tolerance_heathen = 1
+			global_missionary_strength = -0.01
 		}
 		antitheist_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
-				religion = godless
+				OR = {
+					AND = {
+						OR = {
+							religion = godless
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_antitheist_school
+					has_country_flag = privilege_can_always_invite_antitheist_school
+				}
 			}
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
 				if = {
 					limit = {
-						religion = godless
+						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
+					adm_power_cost = 50
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_antitheist_school }
+						NOT = { has_country_flag = privilege_can_always_invite_antitheist_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = antitheist_scholar_modifier }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
-				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
 			}
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = antitheist_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -801,37 +861,68 @@ nonintervention_group = {
 			picture = "GFX_icon_godless_school_antitheist"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			global_missionary_strength = 0.015
-			innovativeness_gain = 0.5
+			global_missionary_strength = 0.01
+			innovativeness_gain = 0.25
 		}
 		evasive_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
-				religion = godless
+				OR = {
+					AND = {
+						OR = {
+							religion = godless
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_evasive_school
+					has_country_flag = privilege_can_always_invite_evasive_school
+				}
 			}
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
 				if = {
 					limit = {
-						religion = godless
+						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
+					adm_power_cost = 50
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_evasive_school }
+						NOT = { has_country_flag = privilege_can_always_invite_evasive_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = evasive_scholar_modifier }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
-				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
 			}
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = evasive_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -841,36 +932,67 @@ nonintervention_group = {
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
 			defensiveness = 0.1
-			technology_cost = -0.05
+			technology_cost = -0.025
 		}
 		humanist_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
-				religion = godless
+				OR = {
+					AND = {
+						OR = {
+							religion = godless
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_humanist_school
+					has_country_flag = privilege_can_always_invite_humanist_school
+				}
 			}
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
 				if = {
 					limit = {
-						religion = godless
+						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
+					adm_power_cost = 50
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_humanist_school }
+						NOT = { has_country_flag = privilege_can_always_invite_humanist_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = humanist_scholar_modifier }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
-				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
 			}
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = humanist_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -881,36 +1003,66 @@ nonintervention_group = {
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
 			tolerance_heretic = 1
 			tolerance_heathen = 1
-			num_accepted_cultures = 1
 		}
 		monstrous_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
-				religion = godless
+				OR = {
+					AND = {
+						OR = {
+							religion = godless
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_monstrous_school
+					has_country_flag = privilege_can_always_invite_monstrous_school
+				}
 			}
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
 				if = {
 					limit = {
-						religion = godless
+						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
+					adm_power_cost = 50
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_monstrous_school }
+						NOT = { has_country_flag = privilege_can_always_invite_monstrous_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = monstrous_scholar_modifier }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
-				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
 			}
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = monstrous_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -919,8 +1071,626 @@ nonintervention_group = {
 			picture = "GFX_icon_godless_school_monstrous"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			global_manpower_modifier = 0.1
-			global_sailors_modifier = 0.1
+			global_manpower_modifier = 0.05
+			global_sailors_modifier = 0.05
+		}
+		###############
+		# Guthixian Schools
+		###############
+		druidic_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						OR = {
+							religion = guthix
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_druidic_school
+					has_country_flag = privilege_can_always_invite_druidic_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_druidic_school }
+						NOT = { has_country_flag = privilege_can_always_invite_druidic_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = druidic_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = druidic_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = druidic_scholar_modifier
+
+			picture = "GFX_icon_guthix_school_druidic"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			global_prosperity_growth = 0.1
+		}
+		dwarven_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						OR = {
+							religion = guthix
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_dwarven_school
+					has_country_flag = privilege_can_always_invite_dwarven_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_dwarven_school }
+						NOT = { has_country_flag = privilege_can_always_invite_dwarven_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = dwarven_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = dwarven_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = dwarven_scholar_modifier
+
+			picture = "GFX_icon_guthix_school_dwarven"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			trade_efficiency = 0.1
+		}
+		exploitative_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						OR = {
+							religion = guthix
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_exploitative_school
+					has_country_flag = privilege_can_always_invite_exploitative_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_exploitative_school }
+						NOT = { has_country_flag = privilege_can_always_invite_exploitative_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = exploitative_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = exploitative_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = exploitative_scholar_modifier
+
+			picture = "GFX_icon_guthix_school_exploitative"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			free_concentrate_development = yes
+		}
+		fairy_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						OR = {
+							religion = guthix
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_fairy_school
+					has_country_flag = privilege_can_always_invite_fairy_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_fairy_school }
+						NOT = { has_country_flag = privilege_can_always_invite_fairy_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = fairy_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = fairy_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = fairy_scholar_modifier
+
+			picture = "GFX_icon_guthix_school_fairy"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			global_monthly_devastation = -0.05
+		}
+		gnomish_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						OR = {
+							religion = guthix
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_gnomish_school
+					has_country_flag = privilege_can_always_invite_gnomish_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_gnomish_school }
+						NOT = { has_country_flag = privilege_can_always_invite_gnomish_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = gnomish_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = gnomish_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = gnomish_scholar_modifier
+
+			picture = "GFX_icon_guthix_school_gnomish"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			range = 0.2
+		}
+		guardian_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						OR = {
+							religion = guthix
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_guardian_school
+					has_country_flag = privilege_can_always_invite_guardian_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_guardian_school }
+						NOT = { has_country_flag = privilege_can_always_invite_guardian_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = guardian_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = guardian_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = guardian_scholar_modifier
+
+			picture = "GFX_icon_guthix_school_guardian"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			leader_land_fire = 1
+		}
+		###############
+		# V Schools
+		###############
+		defender_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						OR = {
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_defender_school
+					has_country_flag = privilege_can_always_invite_defender_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_defender_school }
+						NOT = { has_country_flag = privilege_can_always_invite_defender_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = defender_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = defender_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = defender_scholar_modifier
+
+			picture = "GFX_icon_v_school_defender"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			fort_maintenance_modifier = -0.2
+		}
+		runecrafter_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						religion = v
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_runecrafter_school
+					has_country_flag = privilege_can_always_invite_runecrafter_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_runecrafter_school }
+						NOT = { has_country_flag = privilege_can_always_invite_runecrafter_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = runecrafter_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = runecrafter_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = runecrafter_scholar_modifier
+
+			picture = "GFX_icon_v_school_runecrafter"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			fire_damage = 0.1
+		}
+		warrior_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						OR = {
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_warrior_school
+					has_country_flag = privilege_can_always_invite_warrior_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_warrior_school }
+						NOT = { has_country_flag = privilege_can_always_invite_warrior_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = warrior_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = warrior_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = warrior_scholar_modifier
+
+			picture = "GFX_icon_v_school_warrior"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			shock_damage = 0.1
 		}
 	}
 	guthix = {
@@ -941,8 +1711,8 @@ nonintervention_group = {
 		}
 		uses_karma = yes
 		misguided_heretic = yes
-				
-		heretic = { SOLAK KAMI }
+		
+		heretic = { SOLAK KAMI OCELLUS }
 	}
 
 	v = {
@@ -981,6 +1751,203 @@ nonintervention_group = {
 			local_missionary_strength = -0.02
 		}
 		heretic = { VORAGO }
+		
+		gurus = {
+			reconstruction_adaptation = {
+				trigger = {
+					always = yes
+				}
+				chance = {
+					factor = 1000
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+				teachings = {
+					fresh_governance_teaching = {
+						type = ADM
+						cost = 50
+
+						reform_progress_growth = 0.05
+					}
+					post_edicts_teaching = {
+						type = DIP
+						cost = 50
+
+						tolerance_heretic = 1
+					}
+					age_without_gods_teaching = {
+						type = MIL
+						cost = 50
+
+						warscore_cost_vs_other_religion = -0.05
+					}
+				}
+			}
+			architecture_adaptation = {
+				trigger = {
+					is_year = 1950
+					is_month = 1
+				}
+				chance = {
+					factor = 1000
+				}
+				modifier = {
+					country_diplomatic_power = 1
+				}
+				teachings = {
+					secular_tithe_teaching = {
+						type = ADM
+						cost = 50
+
+						global_tax_modifier = 0.05
+					}
+					civil_constructions_teaching = {
+						type = DIP
+						cost = 50
+
+						build_cost = -0.05
+					}
+					siege_science_teaching = {
+						type = MIL
+						cost = 50
+
+						siege_ability = 0.05
+					}
+				}
+			}
+			runecrafting_adaptation = {
+				trigger = {
+					is_year = 2000
+					is_month = 1
+				}
+				chance = {
+					factor = 1000
+				}
+				modifier = {
+					country_military_power = 1
+				}
+				teachings = {
+					rune_research_teaching = {
+						type = ADM
+						cost = 50
+
+						technology_cost = -0.025
+					}
+					crusade_mediation_teaching = {
+						type = DIP
+						cost = 50
+
+						diplomatic_reputation = 1
+					}
+					practical_studies_teaching = {
+						type = MIL
+						cost = 50
+
+						fire_damage = 0.05
+					}
+				}
+			}
+			nationhood_adaptation = {
+				trigger = {
+					is_year = 2050
+					is_month = 1
+				}
+				chance = {
+					factor = 1000
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+				teachings = {
+					state_antitheism_teaching = {
+						type = ADM
+						cost = 50
+
+						global_missionary_strength = 0.02
+						tolerance_heathen = -2
+						relation_with_heathens = -10
+					}
+					multiethnic_state_teaching = {
+						type = DIP
+						cost = 50
+
+						num_accepted_cultures = 1
+						culture_conversion_cost = 0.1
+					}
+					national_fervour_teaching = {
+						type = MIL
+						cost = 50
+
+					 	war_exhaustion = -0.02
+					}
+				}
+			}
+			exploration_adaptation = {
+				trigger = {
+					is_year = 2100
+					is_month = 1
+				}
+				chance = {
+					factor = 1000
+				}
+				modifier = {
+					country_diplomatic_power = 1
+				}
+				teachings = {
+					safe_havens_teaching = {
+						type = ADM
+						cost = 50
+						
+						global_colonial_growth = 10
+					}
+					anti_missionary_edict_teaching = {
+						type = DIP
+						cost = 50
+
+						relation_with_heathens = 10
+					}
+					charter_privateering_teaching = {
+						type = MIL
+						cost = 50
+
+					 	privateer_efficiency = 0.15
+					}
+				}
+			}
+			quests_adaptation = {
+				trigger = {
+					is_year = 2150
+					is_month = 1
+				}
+				chance = {
+					factor = 1000
+				}
+				modifier = {
+					country_military_power = 1
+				}
+				teachings = {
+					adventurer_recruitment_teaching = {
+						type = ADM
+						cost = 50
+						
+						yearly_absolutism = 0.1
+					}
+					subversion_teaching = {
+						type = DIP
+						cost = 50
+
+						spy_offence = 0.1
+					}
+					manipulation_teaching = {
+						type = MIL
+						cost = 50
+
+				 	 	rebel_support_efficiency = 0.25
+					}
+				}
+			}
+		}
 	}
 	
 	northern_pantheon = {
@@ -1009,7 +1976,7 @@ nonintervention_group = {
 }
 
 order_group = {
-	can_form_personal_unions = no
+	#can_form_personal_unions = no
 	defender_of_faith = yes
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 }
@@ -1255,7 +2222,7 @@ order_group = {
 
 transcendent_group = {
 	defender_of_faith = yes
-	can_form_personal_unions = no
+	#can_form_personal_unions = no
 	
 	center_of_religion = 269 #World Gate
 
@@ -1355,8 +2322,8 @@ transcendent_group = {
 }
 
 elder_god_group = {
-	defender_of_faith = no
-	can_form_personal_unions = no
+	#defender_of_faith = no
+	#can_form_personal_unions = no
 	
 	center_of_religion = 86 #Nardah
 
@@ -1449,7 +2416,7 @@ elder_god_group = {
 }
 
 autocratic_group = {
-	can_form_personal_unions = no
+	#can_form_personal_unions = no
 	defender_of_faith = yes
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 } 
@@ -1564,13 +2531,13 @@ autocratic_group = {
 		heretic = { CHARCOAL }
 	}
 	
-	harmonized_modifier = harmonized_autocracy
+	harmonized_modifier = harmonized_autocratic
 	crusade_name = CRUSADE
 }
 
 hedonistic_group = {
-	defender_of_faith = no
-	can_form_personal_unions = no
+	#defender_of_faith = no
+	#can_form_personal_unions = no
 	
 	center_of_religion = 9 #Milllane
 
@@ -1630,8 +2597,8 @@ hedonistic_group = {
 }
 
 horror_group = {
-	can_form_personal_unions = no
-	defender_of_faith = no
+	#can_form_personal_unions = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 } 
 	
@@ -1665,8 +2632,8 @@ horror_group = {
 }
 
 celestial_group = {
-	can_form_personal_unions = no
-	defender_of_faith = no
+	#can_form_personal_unions = no
+	#defender_of_faith = no
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 } 
 	
@@ -1828,8 +2795,8 @@ celestial_group = {
 }
 
 wushanko_guardian_group = {
-	can_form_personal_unions = no
-	defender_of_faith = no
+	#can_form_personal_unions = no
+	#defender_of_faith = no
 	
 	center_of_religion = 1228 #Kami-Shima Nexus
 
@@ -1859,7 +2826,7 @@ wushanko_guardian_group = {
 		
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		aspects = {
-			mansions_of_the_stars_aspect
+			mansions_of_the_moon_aspect
 			protect_against_the_gods_aspect
 			ground_warfare_aspect
 			safe_lairs_aspect
@@ -1897,7 +2864,7 @@ wushanko_guardian_group = {
 		
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		aspects = {
-			mansions_of_the_stars_aspect
+			mansions_of_the_moon_aspect
 			protect_against_the_gods_aspect
 			ground_warfare_aspect
 			longevity_of_the_snake_aspect
@@ -1936,7 +2903,7 @@ wushanko_guardian_group = {
 		
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		aspects = {
-			mansions_of_the_stars_aspect
+			mansions_of_the_moon_aspect
 			protect_against_the_gods_aspect
 			flying_combat_aspect
 			longevity_of_the_snake_aspect
@@ -1976,7 +2943,7 @@ wushanko_guardian_group = {
 		
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		aspects = {
-			mansions_of_the_stars_aspect
+			mansions_of_the_moon_aspect
 			protect_against_the_gods_aspect
 			flying_combat_aspect
 			safe_lairs_aspect
@@ -1985,7 +2952,7 @@ wushanko_guardian_group = {
 			light_of_summer_aspect
 			strength_of_fire_aspect
 		}
-		aspects_name = SUZAKO_ASPECTS
+		aspects_name = SUZAKU_ASPECTS
 		heretic = { ASSASSINATION_CULT }
 	}
 

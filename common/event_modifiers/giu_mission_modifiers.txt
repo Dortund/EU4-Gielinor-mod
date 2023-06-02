@@ -705,6 +705,13 @@ JTZ_productive_mine = {
 	trade_goods_size_modifier = 0.25
 }
 
+#National
+
+JTZ_glory_for_the_house_of_jatizso = {
+	prestige = 1
+	global_tax_modifier = 0.1
+}
+
 #############
 #Kandarin
 #############
@@ -984,6 +991,17 @@ MYT_vyrewatch_innovation = {
 MYT_pirate_mercenaries = {
 	may_perform_slave_raid = yes
  	light_ship_cost = -0.2
+}
+
+#############
+#Neitiznot
+#############
+
+# National
+
+NZS_peace_in_the_isles = {
+	global_own_trade_power = 0.2
+	global_trade_power = 0.1
 }
 
 #############

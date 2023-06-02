@@ -544,9 +544,7 @@ AOS_ideas = {
 		global_institution_spread = 0.1
 	}
 	AOS_anima_manipulation = {
-		tolerance_own = -2
-		monthly_karma = -0.5
-		build_cost = -0.25
+		build_cost = -0.1
 	}
 	AOS_warped_creatures = {
 		cavalry_cost = -0.15
@@ -1619,7 +1617,7 @@ CCO_ideas = {
 	CCO_bank_cannon = {
 		inflation_reduction = 0.1
 	}
-	CCO_runes_at_the_ready {
+	CCO_runes_at_the_ready = {
 		fire_damage = 0.1
 	}
 	CCO_curses = {
@@ -1791,7 +1789,7 @@ CDZ_ideas = {
 	CDZ_warforged_bronze = {
 		global_regiment_cost = -0.10
 	}
-	CDZ_goldrune {
+	CDZ_goldrune = {
 		global_tax_modifier = 0.1
 	}
 	CDZ_superheat_item = {
@@ -2713,6 +2711,8 @@ DES_ideas = {
 	
 	DES_right_of_conquest = {
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
 	}
 	DES_haunted_woods = {
 		hostile_attrition = 1
@@ -10123,7 +10123,7 @@ SPG_ideas = {
 SRI_ideas = {
 	start = {
 		monarch_diplomatic_power = 1
-		naval_attrition = -0.l
+		naval_attrition = -0.1
 	}
 
 	bonus = {
@@ -12838,7 +12838,7 @@ ZAR_ideas = {
 	}
 
 	bonus = {
-		global_autonomy = -0.15
+		global_autonomy = -0.1
 	}
 	
 	trigger = {

@@ -36,13 +36,15 @@ country_event = {
 							}
 						}
 						AND = {
-							region = tirannwn_region
+							capital_scope = {
+								region = tirannwn_region
+							}
 							religion = seren
 							NOT = { isolationism = 2 }
 						}
 					}
 					OR = {
-						culture_group = asgarnia_group
+						culture_group = asgarnian_group
 						culture_group = misthalin_group
 						culture_group = kandarin_group
 						culture_group = elven_group
@@ -144,10 +146,12 @@ country_event = {
 				change_province_name = "Myths' Guild"
 			}
 			MYG = {
-				build_to_forcelimit = {
-					infantry = 0.5
-					cavalry = 0.2
-					artillery = 0.3
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
 				}
 				define_ruler = {
 					name = "Uhld"
@@ -710,10 +714,12 @@ country_event = {
 					exists = TPS
 				}
 				TPS = {
-					build_to_forcelimit = {
-						infantry = 0.7
-						cavalry = 0.1
-						artillery = 0.2
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.7
+							cavalry = 0.1
+							artillery = 0.2
+						}
 					}
 					add_truce_with = ROOT
 				}

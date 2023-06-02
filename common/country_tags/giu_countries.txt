@@ -12,9 +12,9 @@ MST	= "countries/MST - Misthalin.txt"
 NGU = "countries/NGU - Narogoshuun.txt"
 NVA = "countries/NVA - New Varrock.txt"
 OKJ = "countries/OKJ - Okraj.txt"
-SRT = "countries/SRT - Saranthium.txt"					#NL
+SRT = "countries/SRT - Saranthium.txt"
 YUR = "countries/YUR - Yurkolgokh.txt"
-ZAR = "countries/ZAR - Zarosian Empire.txt"				#NL
+ZAR = "countries/ZAR - Zarosian Empire.txt"
 
 #Asgarnia
 ANM = "countries/ANM - Anmas.txt"
@@ -45,7 +45,7 @@ RNN = "countries/RNN - Rennard.txt"						#NL
 SDE = "countries/SDE - Sonde.txt"
 SNG = "countries/SNG - Singréne.txt"
 TAV = "countries/TAV - Taverley.txt"
-UWF = "countries/UWF - Unterwulf.txt"					#NL
+UWF = "countries/UWF - Unterwulf.txt"
 URV = "countries/URV - Urval Order.txt"
 VRZ = "countries/VRZ - Varze.txt"
 VYV = "countries/VYV - Vyvin.txt"
@@ -71,9 +71,9 @@ TMP = "countries/TMP - Tempoross.txt"
 
 #Morytania
 BWS = "countries/BWS - Barrows.txt"
-BDR = "countries/BDR - Burgh de Rott.txt"				#NL
+BDR = "countries/BDR - Burgh de Rott.txt"
 CFS = "countries/CFS - Canem.txt"
-DES = "countries/DES - Dessous.txt"						#NL
+DES = "countries/DES - Dessous.txt"
 HVL = "countries/HVL - Hallowvale.txt"
 LNC = "countries/LNC - Lordship of the North Coast.txt"
 MYN = "countries/MYN - Myreton.txt"
@@ -111,7 +111,7 @@ HMY = "countries/HMY - Harmony.txt"
 LHK = "countries/LHK - Lithkren.txt"					#NL
 MRF = "countries/MRF - Merfolk.txt"						#NL
 MSH = "countries/MSH - Mos Le' Harmless.txt"
-MWU = "countries/MWU - Mwanu.txt"						#NL
+MWU = "countries/MWU - Mwanu.txt"
 
 #Karamja
 BHV = "countries/BHV - Brimhaven.txt"
@@ -206,7 +206,7 @@ ZUA = "countries/ZUA - Zul-Andra.txt"
 DPL = "countries/DPL - Death Plateau.txt"				#NL
 KDG = "countries/KDG - Keldagrim.txt"
 LCI = "countries/LCI - Lucien.txt"
-TST = "countries/TST - Troll Stronghold.txt"			#NL
+TST = "countries/TST - Troll Stronghold.txt"
 WSS = "countries/WSS - Weiss.txt"						#NL
 ZMG = "countries/ZMG - Zemouregal.txt"
 
@@ -214,7 +214,7 @@ ZMG = "countries/ZMG - Zemouregal.txt"
 BAO = "countries/BAO - Barbarian Outpost.txt"
 ETC = "countries/ETC - Etceteria.txt"
 FEM = "countries/FEM - Fremennik Empire.txt"
-GUN = "countries/GUN - Gunnar.txt"						#NL
+GUN = "countries/GUN - Gunnar.txt"
 JTZ = "countries/JTZ - Jatizso.txt"
 KTR = "countries/KTR - Kyattreach.txt"
 MNT = "countries/MNT - Mountain Tribe.txt"

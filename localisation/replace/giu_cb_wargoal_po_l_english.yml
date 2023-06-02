@@ -1,7 +1,7 @@
 ﻿l_english:
  CB_ALLOWED_po_become_subject_house:0 "Become House Subject"
  PEACE_po_become_subject_house:0 "Become House Subject"
- po_become_subject_house_desc:0 "§Y[From.TAG.GetName]§! will become subject to [Root.TAG.GetName] once more."
+ po_become_subject_house_desc:0 "§Y[From.GetName]§! will become subject to [Root.GetName] once more."
  cb_restore_kourend_house:0 "Restore Independent House"
  cb_restore_kourend_house_desc:0 "They have broken free of their rightful place!"
  DISLOYAL_HOUSE_WAR_NAME:0 "War of Kourendite Cohesion"

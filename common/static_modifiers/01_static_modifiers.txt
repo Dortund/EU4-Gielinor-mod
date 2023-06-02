@@ -256,8 +256,10 @@ low_harmony = {
 }
 
 ########################################
-# Religious Schools (Used for the Godless)
+# Religious Schools (Used for Nonintervention Group)
 ########################################
+
+# Godless
 
 ambivalence_scholar_modifier = {
 	religion_sub_modifier = yes # Will make icon placed next to religion modifier
@@ -265,8 +267,7 @@ ambivalence_scholar_modifier = {
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	merchants = 1
-	tolerance_heretic = 1
-	tolerance_heathen = 1
+	global_missionary_strength = -0.01
 }
 
 antitheist_scholar_modifier = {
@@ -274,8 +275,8 @@ antitheist_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	global_missionary_strength = 0.015
-	innovativeness_gain = 0.5
+	global_missionary_strength = 0.01
+	innovativeness_gain = 0.25
 }
 
 evasive_scholar_modifier = {
@@ -284,7 +285,7 @@ evasive_scholar_modifier = {
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	defensiveness = 0.1
-	technology_cost = -0.05
+	technology_cost = -0.025
 }
 
 humanist_scholar_modifier = {
@@ -294,7 +295,6 @@ humanist_scholar_modifier = {
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	tolerance_heretic = 1
 	tolerance_heathen = 1
-	num_accepted_cultures = 1
 }
 
 monstrous_scholar_modifier = {
@@ -302,8 +302,84 @@ monstrous_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	global_manpower_modifier = 0.1
-	global_sailors_modifier = 0.1
+	global_manpower_modifier = 0.05
+	global_sailors_modifier = 0.05
+}
+
+# Guthix
+
+druidic_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_prosperity_growth = 0.1
+}
+
+dwarven_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	trade_efficiency = 0.1
+}
+
+exploitative_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	free_concentrate_development = yes
+}
+
+fairy_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_monthly_devastation = -0.05
+}
+
+gnomish_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	range = 0.2
+}
+
+guardian_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	leader_land_fire = 1
+}
+
+# V
+
+defender_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	fort_maintenance_modifier = -0.2
+}
+
+runecrafter_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	fire_damage = 0.1
+}
+
+warrior_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	shock_damage = 0.1
 }
 
 ########################################

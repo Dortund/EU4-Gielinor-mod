@@ -191,8 +191,8 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_suzako_aspects_icon"
-		texturefile = "gfx/interface/suzako_aspects_icon.dds"
+		name = "GFX_suzaku_aspects_icon"
+		texturefile = "gfx/interface/suzaku_aspects_icon.dds"
 	}
 	
 	spriteType = {
@@ -457,6 +457,45 @@ spriteTypes = {
 		name = "GFX_icon_godless_school_monstrous"
 		texturefile = "gfx/interface/icon_godless_school_monstrous.dds"
 	}
+
+	spriteType = {
+		name = "GFX_icon_guthix_school_druidic"
+		texturefile = "gfx/interface/icon_guthix_school_druidic.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_guthix_school_dwarven"
+		texturefile = "gfx/interface/icon_guthix_school_dwarven.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_guthix_school_exploitative"
+		texturefile = "gfx/interface/icon_guthix_school_exploitative.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_guthix_school_fairy"
+		texturefile = "gfx/interface/icon_guthix_school_fairy.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_guthix_school_gnomish"
+		texturefile = "gfx/interface/icon_guthix_school_gnomish.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_guthix_school_guardian"
+		texturefile = "gfx/interface/icon_guthix_school_guardian.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_v_school_defender"
+		texturefile = "gfx/interface/icon_v_school_defender.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_v_school_runecrafter"
+		texturefile = "gfx/interface/icon_v_school_runecrafter.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_v_school_warrior"
+		texturefile = "gfx/interface/icon_v_school_warrior.dds"
+	}
+
 
 	spriteType = {
 		name = "GFX_icon_muslim_school_hanafi"

@@ -3,15 +3,15 @@ add_government_reform = noble_kingdom
 government_rank = 2
 primary_culture = rellekkan
 religion = v
+religious_school = defender_school
 secondary_religion = guthix
 technology_group = fremenniktechgroup
 capital = 368 #Rellekka
-national_focus = DIP
 historical_friend = ETC
 historical_friend = JTZ
 historical_friend = KDG
 historical_friend = MCE
-historical_friend = NTZ
+historical_friend = NZS
 
 1913.9.11 = {
 	monarch = {

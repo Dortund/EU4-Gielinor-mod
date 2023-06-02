@@ -4,9 +4,10 @@ government_rank = 1
 primary_culture = mountaintribe
 add_accepted_culture = barbarian
 religion = v
-secondary_religion = guthix
+religious_school = warrior_school
+secondary_religion = northern_pantheon
 technology_group = fremenniktechgroup
-capital = 367 #Fossegrimen
+capital = 369 #near Mountain Camp
 national_focus = MIL
 
 2042.3.15 = {
@@ -20,4 +21,12 @@ national_focus = MIL
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = tactical_genius_personality
+}
+
+2044.2.15 = {
+	capital = 946
+}
+
+2054.10.19 = {
+	capital = 19
 }

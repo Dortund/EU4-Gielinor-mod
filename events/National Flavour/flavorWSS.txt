@@ -1,0 +1,45 @@
+########################################
+# Events for Weiss
+########################################
+
+namespace = flavor_wss
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_wss.1
+	title = flavor_wss.1.t #Northern Retreat
+	desc = flavor_wss.1.d #We beat up too much in recent war. We go more north so we safe while we become strong again.
+	picture = BANDOS_TROLLS_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_wss.1.a #North we go!
+		capital_scope = {
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		359 = {
+			cede_province = WSS
+			add_core = WSS
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			change_culture = icetroll
+			change_religion = ROOT
+			move_capital_effect = yes
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}

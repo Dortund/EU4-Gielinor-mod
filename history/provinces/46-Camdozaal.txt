@@ -22,7 +22,7 @@ trade_goods = advanced_ores
 
 is_city = yes
 
-2057.9.29 = {
+2049.9.29 = {
 	owner = GUN
 	controller = GUN
 	add_core = GUN
@@ -31,12 +31,16 @@ is_city = yes
 	base_manpower = 1
 	culture = barbarian
 	religion = v
+	remove_core = CDZ
+}
+
+2062.1.29 = {
+	owner = ASG
+	controller = ASG
+	remove_core = GUN
 }
 
 2062.9.29 = {
-	owner = ASG
-	controller = ASG
-	add_core = ASG
 	culture = kelda
 	religion = guthix
 }

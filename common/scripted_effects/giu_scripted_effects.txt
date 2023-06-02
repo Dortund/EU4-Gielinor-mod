@@ -1,0 +1,43 @@
+clear_religious_scholar_modifiers_effect = {
+	remove_country_modifier = ambivalence_scholar_modifier
+	remove_country_modifier = antitheist_scholar_modifier
+	remove_country_modifier = evasive_scholar_modifier
+	remove_country_modifier = humanist_scholar_modifier
+	remove_country_modifier = monstrous_scholar_modifier
+	remove_country_modifier = druidic_scholar_modifier
+	remove_country_modifier = dwarven_scholar_modifier
+	remove_country_modifier = exploitative_scholar_modifier
+	remove_country_modifier = fairy_scholar_modifier
+	remove_country_modifier = gnomish_scholar_modifier
+	remove_country_modifier = guardian_scholar_modifier
+	remove_country_modifier = defender_scholar_modifier
+	remove_country_modifier = runecrafter_scholar_modifier
+	remove_country_modifier = warrior_scholar_modifier
+}
+
+giu_initialize_schools_effect = { #Used in on_startup on_action
+	if = {
+		limit = { NOT = { has_global_flag = schools_initiated } }
+		set_global_flag = schools_initiated
+		random_country = { #V - Bad Runecrafter-Warrior Relations
+			limit = {
+				religious_school = {
+					group = nonintervention_group
+					school = runecrafter_school
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = warrior_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = -1
+				}
+			}
+		}
+	}
+}

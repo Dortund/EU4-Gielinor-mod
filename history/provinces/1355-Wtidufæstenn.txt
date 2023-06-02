@@ -27,3 +27,16 @@ is_city = yes
 	controller = MST
 	add_core = MST
 }
+
+2054.10.19 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	remove_core = ENV
+}
+
+2062.11.4 = {
+	owner = MST
+	controller = MST
+	remove_core = GUN
+}

@@ -35,3 +35,15 @@ add_province_triggered_modifier = religious_center
 	controller = ASG
 	add_core = ASG
 }
+
+2044.2.15 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2059.11.28 = {
+	owner = ASG
+	controller = ASG
+	remove_core = GUN
+}

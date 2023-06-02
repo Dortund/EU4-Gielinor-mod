@@ -195,7 +195,7 @@ genacheron_missions_3 = {
 		required_missions = { genacheron_institutional_advancement genacheron_external_allies genacheron_bossslayer }
 		position = 6
 		trigger = {
-			development = 75
+			total_development = 75
 		}
 		effect = {
 			add_country_modifier = {

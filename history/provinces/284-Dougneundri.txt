@@ -34,5 +34,4 @@ is_city = yes
 	add_core = KZD
 	remove_core = GNE
 	culture = ouranian
-	
 }

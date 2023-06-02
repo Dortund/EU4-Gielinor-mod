@@ -51,7 +51,6 @@ historical_rival = MOH
 		dip = 1
 		mil = 3
 	}
-	add_militarised_society = 50
 }
 1909.2.18 = {
 	monarch = {

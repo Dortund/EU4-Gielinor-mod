@@ -3,6 +3,7 @@ add_government_reform = frontier_theocracy
 government_rank = 2
 primary_culture = hosidius
 religion = guthix
+religious_school = druidic_school
 technology_group = zeantechgroup
 capital = 460
 

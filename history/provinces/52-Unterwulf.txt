@@ -38,3 +38,14 @@ center_of_trade = 1
 	fort_15th = yes
 }
 
+2043.9.7 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2049.9.29 = {
+	owner = UWF
+	controller = UWF
+	remove_core = GUN
+}

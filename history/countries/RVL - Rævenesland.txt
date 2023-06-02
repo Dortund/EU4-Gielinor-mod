@@ -3,6 +3,7 @@ add_government_reform = noble_kingdom
 government_rank = 1
 primary_culture = barbarian
 religion = v
+religious_school = warrior_school
 secondary_religion = northern_pantheon
 technology_group = fremenniktechgroup
 capital = 971 #Raevenesland

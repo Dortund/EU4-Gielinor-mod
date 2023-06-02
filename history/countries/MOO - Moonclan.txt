@@ -3,6 +3,7 @@ add_government_reform = magiocracy
 government_rank = 2
 primary_culture = moonclan
 religion = v
+religious_school = runecrafter_school
 secondary_religion = guthix
 technology_group = fremenniktechgroup
 capital = 393 #Moonclan Town

@@ -24,7 +24,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				region = misthalin_region
-				region = asgarnia_region
+				province_id = 46 # Lassar
 				province_id = 64 # Arina
 				province_id = 112 # Viggora's Folly
 				province_id = 113 # Canifis
@@ -42,21 +42,18 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-				misthalin_region = {
-					type = all
-					owned_by = ROOT
-				}
-				asgarnia_region = {
-					type = all
-					owned_by = ROOT
-				}
-				owns_core_province = 64		# Arina
-				owns_core_province = 112	# Viggora's Folly
-				owns_core_province = 113	# Canifis
-				owns_core_province = 163 # Dareeyak
-				owns_core_province = 166 # Carrallangar
-				owns_core_province = 188 # Annakarl
-				owns_core_province = 358 # Ghorrock
+			misthalin_region = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 46	 # Lassar
+			owns_core_province = 64	 # Arina
+			owns_core_province = 112 # Viggora's Folly
+			owns_core_province = 113 # Canifis
+			owns_core_province = 163 # Dareeyak
+			owns_core_province = 166 # Carrallangar
+			owns_core_province = 188 # Annakarl
+			owns_core_province = 358 # Ghorrock
 		}
 		effect = {
 			23 = {
@@ -105,5 +102,4 @@ country_decisions = {
 		}
 		ai_importance = 600
 	}
-
 }

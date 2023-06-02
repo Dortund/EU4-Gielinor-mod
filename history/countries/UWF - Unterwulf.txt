@@ -3,6 +3,7 @@ add_government_reform = plutocracy_reform
 government_rank = 1
 primary_culture = kelda
 religion = guthix
+religious_school = dwarven_school
 technology_group = dwarventechgroup
 capital = 52 #Unterwulf
 national_focus = ADM

@@ -1,5 +1,12 @@
 ﻿l_english:
 
+############### Blood Power
+
+ ability_blood_power_mechanic:0 "Blood Power"
+ blood_power_mechanic:0 "Blood Power"
+ blood_power_power_1:0 "Blood Power"
+ monthly_blood_power_power_1:0 "Monthly Blood Power"
+
 ############### Elven Desperation
 
  ability_elven_desperation_mechanic:0 "Civil War Desperation"

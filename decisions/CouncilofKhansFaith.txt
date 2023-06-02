@@ -16,9 +16,11 @@ country_decisions = {
 			factor = 2
 			modifier = {
 				factor = 0
-				has_opinion = {
-					who = emperor
-					NOT = { value = 100 }
+				NOT = {
+					has_opinion = {
+						who = emperor
+						value = 100
+					}
 				}
 			}
 			modifier = {

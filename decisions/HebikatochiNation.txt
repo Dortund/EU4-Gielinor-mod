@@ -65,7 +65,7 @@ country_decisions = {
 			owns_core_province = 1156	# Han Lun
 		}
 		effect = {
-			change_tag = HBK
+			change_tag = HKT
 			swap_non_generic_missions = yes
 			1148 = {
 				move_capital_effect = yes

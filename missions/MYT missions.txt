@@ -117,7 +117,10 @@ morytania_missions_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_or_non_sovereign_subject_of = mort_myre_area
+			mort_myre_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -133,7 +136,7 @@ morytania_missions_3 = {
 		trigger = {
 			calc_true_if = {
 				all_subject_country = {
-					development = 35
+					total_development = 35
 				}
 				amount = 2
 			}
@@ -248,12 +251,12 @@ morytania_missions_5 = {
 			has_idea = MYT_vyrewatch
 			calc_true_if = {
 				all_owned_province = {
-					culture = vampyre
+					culture_group = vampyre_group
 					has_building = training_fields
-					}
-				amount = 3
 				}
+				amount = 3
 			}
+		}
 		effect = {
 			add_country_modifier = {
 				name = "MYT_vyrewatch_innovation"

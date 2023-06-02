@@ -18,25 +18,14 @@ country_decisions = {
 			OR = {
 				NOT = { manpower_percentage = 0.1 }
 				capital_scope = {
-					NOT = { controller = ROOT }
+					NOT = { controlled_by = ROOT }
 				}
 			}
 		}
 		effect = {
-			capital_scope = {
-				add_base_tax = -1
-				add_base_production = -1
-				add_base_manpower = -1
-			}
-			359 = {
-				cede_province = WSS
-				add_core = WSS
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-				change_culture = icetroll
-				change_religion = ROOT
-				move_capital_effect = yes
+			country_event = { 
+				id = flavor_wss.1
+				days = 1
 			}
 		}
 		ai_will_do = {

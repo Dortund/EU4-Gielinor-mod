@@ -1,0 +1,145 @@
+
+#Any religious Scholar?
+#Country Scope
+has_religious_scholars_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_religious_scholars_trigger_tooltip
+		OR = {
+			has_country_modifier = ambivalence_scholar_modifier
+			has_country_modifier = antitheist_scholar_modifier
+			has_country_modifier = evasive_scholar_modifier
+			has_country_modifier = humanist_scholar_modifier
+			has_country_modifier = monstrous_scholar_modifier
+			
+			has_country_modifier = druidic_scholar_modifier
+			has_country_modifier = dwarven_scholar_modifier
+			has_country_modifier = exploitative_scholar_modifier
+			has_country_modifier = fairy_scholar_modifier
+			has_country_modifier = gnomish_scholar_modifier
+			has_country_modifier = guardian_scholar_modifier
+			
+			has_country_modifier = defender_scholar_modifier
+			has_country_modifier = runecrafter_scholar_modifier
+			has_country_modifier = warrior_scholar_modifier
+		}
+	}
+}
+
+#Scholars from where?
+#Country Scope
+scholar_from_our_school_trigger = {
+	has_country_modifier = $school$_scholar_modifier
+	ROOT = {
+		religious_school = {
+			group = nonintervention_group
+			school = $school$_school
+		}
+	}
+}
+our_scholar_matches_their_school_trigger = {
+	PREV = { has_country_modifier = $school$_scholar_modifier }
+	religious_school = {
+		group = nonintervention_group
+		school = $school$_school
+	}
+}
+
+#Uses one of the Shia schools:
+#Country
+has_godless_school_trigger = {
+	OR = {
+		religious_school = {
+			group = nonintervention_group
+			school = ambivalence_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = antitheist_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = evasive_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = humanist_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = monstrous_school
+		}
+	}
+}
+#Uses one of the Guthix schools:
+#Country
+has_guthix_school_trigger = {
+	OR = {
+		religious_school = {
+			group = nonintervention_group
+			school = druidic_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = dwarven_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = exploitative_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = fairy_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = gnomish_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = guardian_school
+		}
+	}
+}
+#Uses one of the Sunni schools:
+#Country
+has_v_school_trigger = {
+	OR = {
+		religious_school = {
+			group = nonintervention_group
+			school = defender_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = runecrafter_school
+		}
+		religious_school = {
+			group = nonintervention_group
+			school = warrior_school
+		}
+	}
+}
+
+#Country Scope
+hidden_progressive_opinion_for_scholar_trigger = { #Used to pick best fit to invite scholar.
+	hidden_trigger = {
+		reverse_has_opinion = { who = FROM value = -50 }
+		reverse_has_opinion = { who = FROM value = -25 }
+		reverse_has_opinion = { who = FROM value = 0 }
+		reverse_has_opinion = { who = FROM value = 25 }
+		reverse_has_opinion = { who = FROM value = 50 }
+		reverse_has_opinion = { who = FROM value = 75 }
+		reverse_has_opinion = { who = FROM value = 100 }
+		reverse_has_opinion = { who = FROM value = 125 }
+	}
+}
+
+knows_of_scholar_country_capital_trigger = { #Must know from scope to use this - Currently used only for religious scholars in religion file.
+	FROM = {
+		exists = yes
+		capital_scope = {
+			ROOT = {
+				has_discovered = PREV
+			}
+		}
+	}
+}

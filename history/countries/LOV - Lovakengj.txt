@@ -3,6 +3,7 @@ add_government_reform = kourend_house
 government_rank = 1
 primary_culture = lovakengj
 religion = guthix
+religious_school = dwarven_school
 technology_group = zeantechgroup
 capital = 419 #Lovakengj
 national_focus = MIL

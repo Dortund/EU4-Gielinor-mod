@@ -512,7 +512,7 @@ kharidian_group	= {
 		}
 	}
 	bedabin = {
-		primary = BDB
+		primary = BDS
 	}
 	midkharidian = {
 		primary = PVC
@@ -556,7 +556,7 @@ kharidian_group	= {
 }
 
 lizardman_group	= {
-	graphical_culture = southamericangfx
+	graphical_culture = southamericagfx
 
 	molch = { #Swamp
 		country = { monarch_lifespan = -0.15 }
@@ -654,7 +654,7 @@ monkey_group	= {
 
 
 ogre_group	= {
-	graphical_culture = southamericangfx
+	graphical_culture = southamericagfx
 
 	ogre = {
 		primary = FEL
@@ -2178,7 +2178,8 @@ pirate_group	= {
 		primary = MLH
 		
 		dynasty_names = {
-			"Braindeath"
+			Braindeath Bentley Bloodsplatter Boppin Burns Donnie Jones "La'Fiette" Monti
+			Morgan Sails Seagull Teach Tock Toebeard
 		}
 	}
 	northernraider = {
@@ -2979,7 +2980,7 @@ dragonkin_group	= {
 	}
 	metaldragon = {
 		country = { monarch_lifespan = 5 }
-		primary = LTH
+		primary = LHK
 		dynasty_names = {
 			"Bronze Dragon" "Iron Dragon" "Steel Dragon"
 			"Mithril Dragon" "Adamant Dragon" "Rune Dragon"
@@ -3320,7 +3321,7 @@ jadinko_group = {
 }
 
 ork_group = {
-	graphical_culture = southamericangfx
+	graphical_culture = southamericagfx
 
 	ork = {
 	}
@@ -3423,7 +3424,7 @@ airut_group = {
 }
 
 goebie_group = {
-	graphical_culture = southamericangfx
+	graphical_culture = southamericagfx
 
 	goebie = {
 		dynasty_names = {

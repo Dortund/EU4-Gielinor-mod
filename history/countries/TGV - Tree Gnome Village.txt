@@ -3,6 +3,7 @@ add_government_reform = noble_kingdom
 government_rank = 2
 primary_culture = treegnome
 religion = guthix
+religious_school = gnomish_school
 technology_group = gnometechgroup
 capital = 286 #Priw Gnomo Andralo
 national_focus = DIP

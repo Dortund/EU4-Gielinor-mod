@@ -3,6 +3,7 @@ add_government_reform = boss_nation
 government_rank = 1
 primary_culture = ent
 religion = guthix
+religious_school = guardian_school
 technology_group = elventechgroup
 capital = 1243 #Cynniglle
 

@@ -3,6 +3,7 @@ add_government_reform = noble_kingdom
 government_rank = 2
 primary_culture = cavegnome
 religion = guthix
+religious_school = exploitative_school
 technology_group = gnometechgroup
 capital = 341 #Arposandra
 national_focus = MIL

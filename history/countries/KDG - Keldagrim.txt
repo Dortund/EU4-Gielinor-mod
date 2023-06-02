@@ -3,6 +3,7 @@ add_government_reform = consortium_republic
 government_rank = 2
 primary_culture = kelda
 religion = guthix
+religious_school = dwarven_school
 technology_group = dwarventechgroup
 capital = 374 #Keldagrim
 national_focus = DIP

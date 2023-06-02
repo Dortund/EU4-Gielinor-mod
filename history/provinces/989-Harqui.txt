@@ -22,6 +22,21 @@ trade_goods = magic_supplies
 
 is_city = yes
 
+1958.7.23 = {
+	owner = TGV
+	controller = TGV
+	add_core = TGV
+	remove_core = GNE
+}
+
+2039.3.21 = {
+	owner = KZD
+	controller = KZD
+	add_core = KZD
+	remove_core = GNE
+	culture = ouranian
+}
+
 2149.5.26 = {
 	owner = TYS
 	controller = TYS
