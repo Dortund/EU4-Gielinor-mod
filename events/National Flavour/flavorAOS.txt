@@ -48,6 +48,8 @@ country_event = {
 	title = flavor_aos.3.t #The Poison Waste
 	desc = flavor_aos.3.d #All our magical experiments in Arposandra create waste, and it needs to go somewhere. The deep swamps of southern Tirannwn seem as good a place as any, but lately our waste is having a very strange effect on the ecosystem...
 	picture = MORYTANIA_SWAMP_eventPicture
+
+	fire_only_once = yes
 	
 	trigger = {
 		tag = AOS
