@@ -1846,62 +1846,6 @@ scaled_estate_burghers_negative_land_share_effect = {
 	scaled_estate_land_share_reduce_effect = { estate = estate_burghers }
 }
 
-scaled_estate_rajput_land_share_effect = {
-	scaled_estate_land_share_add_effect = { estate = estate_rajput }
-}
-
-scaled_estate_rajput_negative_land_share_effect = {
-	scaled_estate_land_share_reduce_effect = { estate = estate_rajput }
-}
-
-scaled_estate_maratha_land_share_effect = {
-	scaled_estate_land_share_add_effect = { estate = estate_maratha }
-}
-
-scaled_estate_maratha_negative_land_share_effect = {
-	scaled_estate_land_share_reduce_effect = { estate = estate_maratha }
-}
-
-scaled_estate_brahmins_land_share_effect = {
-	scaled_estate_land_share_add_effect = { estate = estate_brahmins }
-}
-
-scaled_estate_brahmins_negative_land_share_effect = {
-	scaled_estate_land_share_reduce_effect = { estate = estate_brahmins }
-}
-
-scaled_estate_vaisyas_land_share_effect = {
-	scaled_estate_land_share_add_effect = { estate = estate_vaisyas }
-}
-
-scaled_estate_vaisyas_negative_land_share_effect = {
-	scaled_estate_land_share_reduce_effect = { estate = estate_vaisyas }
-}
-
-scaled_estate_dhimmi_land_share_effect = {
-	scaled_estate_land_share_add_effect = { estate = estate_dhimmi }
-}
-
-scaled_estate_dhimmi_negative_land_share_effect = {
-	scaled_estate_land_share_reduce_effect = { estate = estate_dhimmi }
-}
-
-scaled_estate_cossacks_land_share_effect = {
-	scaled_estate_land_share_add_effect = { estate = estate_cossacks }
-}
-
-scaled_estate_cossacks = {
-	scaled_estate_land_share_reduce_effect = { estate = estate_cossacks }
-}
-
-scaled_estate_jains_land_share_effect = {
-	scaled_estate_land_share_add_effect = { estate = estate_jains }
-}
-
-scaled_estate_jains = {
-	scaled_estate_land_share_reduce_effect = { estate = estate_jains }
-}
-
 scaled_estate_nomadic_tribes_land_share_effect = {
 	scaled_estate_land_share_add_effect = { estate = estate_nomadic_tribes }
 }
@@ -1910,20 +1854,48 @@ scaled_estate_nomadic_tribes = {
 	scaled_estate_land_share_reduce_effect = { estate = estate_nomadic_tribes }
 }
 
-scaled_estate_janissaries_land_share_effect = {
-	scaled_estate_land_share_add_effect = { estate = estate_janissaries }
+scaled_estate_tzh_hur_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_tzh_hur }
 }
 
-scaled_estate_janissaries = {
-	scaled_estate_land_share_reduce_effect = { estate = estate_janissaries }
+scaled_estate_tzh_hur_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_hur }
 }
 
-scaled_estate_eunuchs_land_share_effect = {
-	scaled_estate_land_share_add_effect = { estate = estate_eunuchs }
+
+scaled_estate_tzh_ket_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_tzh_ket }
 }
 
-scaled_estate_eunuchs = {
-	scaled_estate_land_share_reduce_effect = { estate = estate_eunuchs }
+scaled_estate_tzh_ket_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_ket }
+}
+
+
+scaled_estate_tzh_mej_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_tzh_mej }
+}
+
+scaled_estate_tzh_mej_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_mej }
+}
+
+
+scaled_estate_tzh_xil_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_tzh_xil }
+}
+
+scaled_estate_tzh_xil_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_xil }
+}
+
+
+scaled_estate_tzh_gaal_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_tzh_gaal }
+}
+
+scaled_estate_tzh_gaal_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_gaal }
 }
 
 #Based on those above, but you can choose which estate you use
