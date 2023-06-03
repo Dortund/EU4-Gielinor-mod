@@ -29,7 +29,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = flavor_evr.a #We are seven clans united!
+		name = flavor_evr.1.a #We are seven clans united!
 		random_owned_province = {
 			limit = {
 				region = tirannwn_region
