@@ -284,7 +284,7 @@ country_event = {
 	trigger = {
 		tag = EVR
 		538 = { is_empty = yes }
-		owns_core_province = 538
+		owns_core_province = 338
 		owns_core_province = 982
 	}
 
