@@ -34,9 +34,12 @@ brink_of_extinction = {
 	}
 	
 	can_stop = {
-		has_great_project = {
-			type = great_project_elder_kiln
-			tier = 3
+		212 = {
+			owned_by = ROOT
+			has_great_project = {
+				type = great_project_elder_kiln
+				tier = 3
+			} 
 		}
 	}
 	
