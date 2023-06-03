@@ -235,6 +235,125 @@ reduce_estate_burghers_loyalty_effect = {
 	}
 }
 
+# Tzhaar-Hur
+add_estate_tzh_hur_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_hur
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_hur
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_tzh_hur_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_hur
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_hur
+			loyalty = -10
+		}
+	}
+}
+
+# Tzhaar-Ket
+add_estate_tzh_ket_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_ket
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_ket
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_tzh_ket_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_ket
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_ket
+			loyalty = -10
+		}
+	}
+}
+
+# Tzhaar-Mej
+add_estate_tzh_mej_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_mej
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_mej
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_tzh_mej_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_mej
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_mej
+			loyalty = -10
+		}
+	}
+}
+
+# Tzhaar-Xil
+add_estate_tzh_xil_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_xil
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_xil
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_tzh_xil_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_xil
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_xil
+			loyalty = -10
+		}
+	}
+}
+
+# Tzhaar-Gaal
+add_estate_tzh_gaal_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_gaal
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_gaal
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_tzh_gaal_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_tzh_gaal
+		}
+		add_estate_loyalty = {
+			estate = estate_tzh_gaal
+			loyalty = -10
+		}
+	}
+}
 
 #Estate Privilege on_action effects
 
@@ -933,9 +1052,7 @@ on_province_tax_building_built_estate_privileges_effect = {
 		limit = {
 			FROM = {
 				OR = {
-					religion = buddhism
-					religion = mahayana
-					religion = vajrayana
+					religion = guthix
 				}
 				has_estate_privilege = estate_church_karma_temples
 			}
@@ -955,7 +1072,7 @@ on_province_tax_building_built_estate_privileges_effect = {
 	if = {
 		limit = {
 			FROM = {
-				religion = catholic
+				religion = saradomin
 				has_estate_privilege = estate_church_influence_temples
 			}
 		}
