@@ -11,8 +11,7 @@ bandosian_horde = {
 		religion = bandos
 		NOT = { has_reform = boss_nation }
 	}
-	legacy_equivalent = bandosian_horde_legacy
-	nomad = yes
+		nomad = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 60
 
@@ -41,8 +40,7 @@ boss_nation = {
 	potential = {
 		has_reform = boss_nation
 	}
-	legacy_equivalent = boss_nation_legacy
-	fixed_rank = 1
+		fixed_rank = 1
 	valid_for_nation_designer = no
 	nomad = yes
 	allow_convert = no
@@ -87,8 +85,7 @@ cloud_giant_tribe = {
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
-	legacy_equivalent = cloud_giant_tribe_legacy
-	modifiers = {
+		modifiers = {
 		global_tax_modifier = 0.1
 		shock_damage = 0.1
 	}
@@ -103,8 +100,7 @@ feldip_tribe = {
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
-	legacy_equivalent = feldip_tribe_legacy
-	modifiers = {
+		modifiers = {
 		shock_damage = 0.10
 		war_exhaustion = -0.05
 		land_maintenance_modifier = -0.10
@@ -122,8 +118,7 @@ goblin_empire = {
 		religion = bandos
 		has_reform = goblin_empire
 	}
-	legacy_equivalent = goblin_empire_legacy
-	fixed_rank = 3
+		fixed_rank = 3
 	nomad = yes
 	valid_for_nation_designer = no
 	nation_designer_cost = 150
@@ -154,8 +149,7 @@ island_boss_nation = {
 	potential = {
 		has_reform = island_boss_nation
 	}
-	legacy_equivalent = boss_nation_legacy
-	fixed_rank = 1
+		fixed_rank = 1
 	valid_for_nation_designer = no
 	nomad = yes
 	allow_convert = no
@@ -202,8 +196,7 @@ kharidian_tribe = {
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	legacy_equivalent = kharidian_tribe_legacy
-	native_mechanic = no
+		native_mechanic = no
 	fixed_rank = 1
 	lock_level_when_selected = yes
 	modifiers = {
@@ -221,8 +214,7 @@ migratory_tribe = {
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = -10
-	legacy_equivalent = migratory_tribe_legacy
-	native_mechanic = yes
+		native_mechanic = yes
 	allow_migration = yes
 	fixed_rank = 1
 	lock_level_when_selected = yes
@@ -239,8 +231,7 @@ mogre_horde = {
 		tag = MKM
 		NOT = { has_reform = boss_nation }
 	}
-	legacy_equivalent = mogre_horde_legacy
-	nomad = yes
+		nomad = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 60
 
@@ -269,8 +260,7 @@ quidamortem_boss_nation = {
 	potential = {
 		has_reform = quidamortem_boss_nation
 	}
-	legacy_equivalent = quidamortem_boss_nation_legacy
-	fixed_rank = 1
+		fixed_rank = 1
 	valid_for_nation_designer = no
 	nomad = yes
 	allow_convert = no
@@ -309,8 +299,7 @@ runecrafting_crusader = {
 	potential = {
 		has_reform = runecrafting_crusader
 	}
-	legacy_equivalent = runecrafting_crusader_legacy
-	nomad = yes
+		nomad = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 200
 
@@ -337,8 +326,7 @@ settled_tribe = {
 	allow_normal_conversion = no
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	legacy_equivalent = settled_tribe_legacy
-	native_mechanic = no
+		native_mechanic = no
 	fixed_rank = 1
 	lock_level_when_selected = yes
 	modifiers = {
@@ -357,8 +345,7 @@ troll_tribe = {
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	legacy_equivalent = troll_tribe_legacy
-	modifiers = {
+		modifiers = {
 		global_institution_spread = -0.15
 		technology_cost = 0.05
 		shock_damage = 0.2
@@ -373,8 +360,7 @@ unleashed_horde = {
 	potential = {
 		has_reform = unleashed_horde
 	}
-	legacy_equivalent = unleashed_horde_legacy
-	nomad = yes
+		nomad = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 75
 
@@ -402,8 +388,7 @@ warband = {
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 75
-	legacy_equivalent = warband_legacy
-	nomad = yes
+		nomad = yes
 	native_mechanic = no
 	allow_migration = yes
 	fixed_rank = 1

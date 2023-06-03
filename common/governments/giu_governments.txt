@@ -141,32 +141,6 @@ monarchy = {
 
 	basic_reform = monarchy_mechanic
 
-	legacy_government = {
-		despotic_monarchy
-		clan_monarchy_legacy
-		consortium_monarchy_legacy
-		exile_clan_legacy
-		great_khanate_legacy
-		fateful_kingdom_legacy
-		feldip_government_legacy
-		horde_kingdom_legacy
-		kandarin_monarchy_legacy
-		khanate_legacy
-		kourend_monarchy_legacy
-		kourend_reformed_monarchy_legacy
-		kourend_house_legacy
-		kourend_independent_house_legacy
-		mahjarrat_autocracy_legacy
-		miscellanean_monarchy_legacy
-		new_world_kingdom_legacy
-		noble_kingdom_legacy
-		principality_burthorpe_legacy
-		shining_kingdom_legacy
-		unstable_monarchy_legacy
-		elven_aristocracy_legacy
-		vampyre_kingdom_legacy
-	}
-
 	# Each group of exclusive reforms are mutually exclusive to each other
 
 	#Flavor
@@ -194,26 +168,7 @@ republic = {
 	basic_reform = republic_mechanic
 
 	color = { 65 155 220 }
-	legacy_government = {
-		chalkeocracy_legacy
-		consortium_republic_legacy
-		dwarven_outpost_legacy
-		federal_republic_legacy
-		imperial_city
-		kourend_council_legacy
-		magiocracy_legacy
-		merchant_republic
-		military_dictatorship
-		obsidian_caste_legacy
-		pirate_republic
-		political_dynasties_legacy
-		rogue_republic_legacy
-		sirenic_republic_legacy
-		tirannwn_republic_legacy
-		tirannwn_resistance_legacy
-		town_council_reform_legacy
-		trading_city_legacy
-	}
+	
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
 			reforms = {
@@ -457,22 +412,6 @@ tribal = {
 			}
 		}
 	}
-	legacy_government = {
-		bandosian_horde_legacy
-		boss_nation_legacy
-		cloud_giant_tribe_legacy
-		feldip_tribe_legacy
-		goblin_empire_legacy
-		kharidian_tribe_legacy
-		migratory_tribe_legacy
-		mogre_horde_legacy
-		quidamortem_boss_nation_legacy
-		runecrafting_crusader_legacy
-		settled_tribe_legacy
-		troll_tribe_legacy
-		unleashed_horde_legacy
-		warband_legacy
-	}
 	
 	#Flavor
 	exclusive_reforms = {
@@ -485,19 +424,6 @@ theocracy = {
 	color = { 75 170 75 }
 	basic_reform = theocracy_mechanic
 
-	legacy_government = {
-		apostocracy_legacy
-		bardic_order_legacy
-		cloistered_order_legacy
-		cult_of_reason_legacy
-		#druidic_order_legacy
-		druidic_state_legacy
-		frontier_theocracy_legacy
-		guthixian_cave_legacy
-		monastic_order_government
-		shamanic_theocracy_legacy
-		theocratic_government_reform_legacy
-	}
 	reform_levels = {
 		theocratic_leadership = {
 			reforms = {
