@@ -1,0 +1,4 @@
+tutorial = {
+	index = 1
+	category = 1
+}
