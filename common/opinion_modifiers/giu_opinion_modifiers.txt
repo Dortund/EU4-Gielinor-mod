@@ -280,7 +280,7 @@ mst_also_against_misthalin = {
 }
 mst_asgarnian_traitor = {
 	opinion = -100
-	yearly_declay = 3
+	yearly_decay = 3
 }
 
 #Mos le'Harmless
