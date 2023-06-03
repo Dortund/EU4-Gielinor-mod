@@ -1057,7 +1057,7 @@ estate_church_for_the_faith = {
 			has_dlc = "Emperor"
 			has_dlc = "Lions of the North"
 		}
-		NOT = { religion = confucianism }
+		NOT = { religion = brassicaprime }
 		OR = {
 			has_country_flag = improved_expansionist_zealotry
 			any_known_country = {
@@ -1074,7 +1074,6 @@ estate_church_for_the_faith = {
 				NOT = { religion = root }
 			}
 		}
-		NOT = { has_estate_privilege = estate_church_inwards_perfection }
 	}
 	on_granted = {
 		if = {
@@ -1154,14 +1153,6 @@ estate_church_for_the_faith = {
 	}
 	penalties = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 0
 	}
@@ -1186,105 +1177,10 @@ estate_church_statutory_rights = {
 	}
 	benefits = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 0
 	}
 	cooldown_years = 20
-}
-
-estate_church_brahmins_at_court = {
-	icon = privilege_seek_support_of_brahmins
-	can_select = {
-		if = {
-			limit = {
-				has_mission = mnd_khm_religion
-			}
-			mission_completed = mnd_khm_religion
-		}
-		else_if = {
-			limit = {
-				has_mission = mnd_khm_religion
-			}
-			mission_completed = mnd_siam_devaraja
-		}
-		else = {
-			has_estate_privilege = estate_church_brahmins_at_court
-		}
-		religion_group = eastern
-	}
-	is_valid = {
-		religion_group = eastern
-		OR = {
-			has_mission = mnd_khm_religion
-			has_mission = mnd_siam_devaraja
-			has_estate_privilege = estate_church_brahmins_at_court
-		}
-	}
-	on_granted = {
-		custom_tooltip = estate_brahmins_guaranteed_autonomy_effect_tooltip
-	}
-	on_granted_province = {
-		if = {
-			limit = {
-				religion_group = dharmic
-			}
-			add_province_modifier = {
-				name = estate_brahmins_guaranteed_autonomy_mod
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-			}
-			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-		}
-	}
-	on_revoked = {
-		custom_tooltip = estate_brahmins_guaranteed_autonomy_revoke_effect_tooltip
-	}
-	on_revoked_province = {
-		if = {
-			limit = {
-				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-			}
-			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-		}
-	}
-	on_invalid = {
-		custom_tooltip = estate_brahmins_guaranteed_autonomy_revoke_effect_tooltip
-	}
-	on_invalid_province = {
-		if = {
-			limit = {
-				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-			}
-			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-		}
-	}
-	penalties = {
-	}
-	benefits = {
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
-	ai_will_do = {
-		factor = 1000
-	}
 }
 
 estate_church_karma_temples = {
@@ -1326,14 +1222,6 @@ estate_church_karma_temples = {
 	}
 	benefits = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 10
 	}
@@ -1360,84 +1248,6 @@ estate_church_influence_temples = {
 	}
 	ai_will_do = {
 		factor = 10
-	}
-}
-
-estate_church_lao_animism = {
-	icon = privilege_tolerance_heathen
-	loyalty = -0.05
-	influence = 0.6
-	can_select = {
-		primary_culture = lao
-		religion_group = eastern
-	}
-	is_valid = {
-		OR = {
-			has_estate_privilege = estate_church_lao_animism
-			AND = {
-				religion_group = eastern
-				primary_culture = lao
-			}
-		}
-	}
-	on_granted = {
-		custom_tooltip = estate_church_lao_animism_effect_tooltip
-	}
-	on_granted_province = {
-		if = {
-			limit = {
-				religion = animism
-			}
-			add_province_modifier = {
-				name = estate_church_lao_animism_mod
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				has_province_modifier = estate_church_lao_animism_mod
-			}
-			remove_province_modifier = estate_church_lao_animism_mod
-		}
-	}
-	on_revoked = {
-		custom_tooltip = estate_church_lao_animism_revoke_effect_tooltip
-	}
-	on_revoked_province = {
-		if = {
-			limit = {
-				has_province_modifier = estate_church_lao_animism_mod
-			}
-			remove_province_modifier = estate_church_lao_animism_mod
-		}
-	}
-	on_invalid = {
-		custom_tooltip = estate_church_lao_animism_revoke_effect_tooltip
-	}
-	on_invalid_province = {
-		if = {
-			limit = {
-				has_province_modifier = estate_church_lao_animism_mod
-			}
-			remove_province_modifier = estate_church_lao_animism_mod
-		}
-	}
-	penalties = {
-		tolerance_own = -2
-	}
-	benefits = {
-		tolerance_heathen = 5
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
-	ai_will_do = {
-		factor = 1000
 	}
 }
 
@@ -1477,14 +1287,6 @@ estate_church_religious_diplomats = {
 			church_influence_modifier = -0.15
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 0	#The privilege is a little bit too niche to be really usable for the AI
 	}
@@ -1605,14 +1407,6 @@ estate_church_one_faith_one_culture = {
 			church_influence_modifier = -0.2
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	cooldown_years = 15
 	ai_will_do = {
 		factor = 10
@@ -1626,11 +1420,11 @@ estate_church_one_faith_one_culture = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = confucianism }
+			NOT = { religion = brassicaprime }
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = confucianism }
+			NOT = { religion = brassicaprime }
 		}
 		modifier = {
 			factor = 100
@@ -1654,7 +1448,7 @@ estate_church_heir_shrine = {
 	influence = 0.1
 	loyalty = 0
 	is_valid = {
-		religion = shamanism
+		religion = bandos
 		has_dlc = "Rights of Man"
 		NOT = { has_country_flag = heir_cult_through_missions }
 		has_government_attribute = heir
@@ -1706,7 +1500,7 @@ estate_church_embrace_singluar_cult = {
 	influence = 0.1
 	loyalty = 0
 	is_valid = {
-		religion = shamanism
+		religion = bandos
 		has_dlc = "Rights of Man"
 	}
 	can_select = {
@@ -1750,7 +1544,7 @@ estate_church_flexible_cults = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	influence = 0.05
 	is_valid = {
-		religion = shamanism
+		religion = bandos
 		has_dlc = "Rights of Man"
 		NOT = { has_country_flag = enabled_cult_switching_mission }
 	}
@@ -1791,7 +1585,7 @@ estate_church_scholar_connections = {
 	loyalty = 0
 	is_valid = {
 		NOT = { has_country_flag = enabled_baseline_invite_scholar_no_priv }
-		religion_group = muslim
+		religion_group = nonintervention_group
 		has_dlc = "Cradle of Civilization"
 	}
 	can_select = {
@@ -1809,14 +1603,6 @@ estate_church_scholar_connections = {
 	}
 	benefits = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 15
 		modifier = {
@@ -1834,7 +1620,7 @@ estate_church_integrated_school = {
 	influence = 0.05
 	loyalty = 0
 	is_valid = {
-		religion_group = muslim
+		religion_group = nonintervention_group
 		has_dlc = "Cradle of Civilization"
 	}
 	can_select = {
@@ -1852,303 +1638,12 @@ estate_church_integrated_school = {
 	}
 	benefits = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 15
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
 		}
-	}
-}
-
-#Mission tree rewards
-estate_church_yakobs_churches = {
-	icon = privilege_recruit_inouisitor
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.1
-	loyalty = 0.1
-	is_valid = {
-		has_unlocked_estate_privilege = { estate_privilege = estate_church_yakobs_churches }
-		religion_group = christian
-	}
-	can_select = {
-		religion_group = christian
-	}
-	on_granted = {
-	}
-	on_revoked = {
-	}
-	penalties = {
-		global_tax_modifier = -0.1
-	}
-	benefits = {
-		tolerance_own = 1
-		global_missionary_strength = 0.01
-		monthly_reform_progress_modifier = 0.25
-	}
-	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0.5
-			current_age = age_of_discovery
-		}
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
-		}
-		modifier = {
-			factor = 2
-			NOT = { dominant_religion = ROOT }
-		}
-		modifier = {
-			factor = 1000
-			has_mission = eth_reform_the_negusa_government
-			NOT = { mission_completed = eth_reform_the_negusa_government }
-		}
-	}
-}
-
-estate_church_anti_heresy_act = {
-	icon = privilege_recruit_inouisitor
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	loyalty = 0.05
-	influence = 0.05
-	is_valid = {
-		has_unlocked_estate_privilege = { estate_privilege = estate_church_anti_heresy_act }
-	}
-	can_select = {
-		religion_group = christian
-		NOT = { religion = orthodox }
-		NOT = { religion = coptic }
-		any_owned_province = {
-			religion_group = ROOT
-			NOT = { religion = ROOT }
-		}
-	}
-	on_granted = {
-		if = {
-			limit = { has_estate_privilege = estate_burghers_orthodox_tolerance }
-			remove_estate_privilege = estate_burghers_orthodox_tolerance
-			add_estate_loyalty = {
-				estate = estate_burghers
-				loyalty = -20
-			}
-		}
-		else = {
-			custom_tooltip = has_no_effects_on_granted
-		}
-	}
-	penalties = {
-		burghers_loyalty_modifier = -0.1
-	}
-	benefits = {
-		global_heretic_missionary_strength = 0.02
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
-#Livonian starting privileges
-estate_church_lands_of_riga = {
-	icon = privilege_devotion_red
-	max_absolutism = -20
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 4 } }
-	influence = 0.05
-	land_share = 6
-	loyalty = 0.25
-	is_valid = {
-		has_dlc = "Lions of the North"
-		has_estate_privilege = estate_church_lands_of_riga
-	}
-	can_revoke = {
-		owns_core_province = 37
-		owns_core_province = 4241
-		if = {
-			limit = { has_mission = liv_handle_riga }
-			mission_completed = liv_handle_riga
-		}
-		NOT = { has_estate_privilege = estate_church_bishopric_of_dorpat }
-		NOT = { has_estate_privilege = estate_church_bishopric_of_osel_wiek }
-		NOT = { has_estate_privilege = estate_church_bishopric_of_courland }
-		NOT = { has_estate_privilege = estate_church_bishopric_of_reval }
-	}
-	on_revoked = {
-	}
-	penalties = {
-		global_autonomy = 0.05
-		global_manpower_modifier = -0.1
-	}
-	modifier_by_land_ownership = {
-	}
-	mechanics = {
-		exempt_from_seize_land
-	}
-	on_granted = {
-	}
-	ai_will_do = {
-		factor = -300
-	}
-}
-estate_church_bishopric_of_dorpat = {
-	icon = privilege_devotion_green
-	max_absolutism = -20
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 4 } }
-	influence = 0.06
-	land_share = 1
-	loyalty = 0
-	is_valid = {
-		has_dlc = "Lions of the North"
-		has_estate_privilege = estate_church_bishopric_of_dorpat
-	}
-	can_revoke = {
-	}
-	on_revoked = {
-	}
-	penalties = {
-		global_tax_modifier = -0.2
-	}
-	modifier_by_land_ownership = {
-	}
-	mechanics = {
-		exempt_from_seize_land
-	}
-	on_granted = {
-	}
-	ai_will_do = {
-		factor = -300
-	}
-}
-estate_church_bishopric_of_osel_wiek = {
-	icon = privilege_devotion_yellow
-	max_absolutism = -20
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 4 } }
-	influence = 0.06
-	land_share = 1
-	loyalty = 0
-	is_valid = {
-		has_dlc = "Lions of the North"
-		has_estate_privilege = estate_church_bishopric_of_osel_wiek
-	}
-	can_revoke = {
-	}
-	on_revoked = {
-	}
-	penalties = {
-		global_sailors_modifier = -0.15
-	}
-	modifier_by_land_ownership = {
-	}
-	mechanics = {
-		exempt_from_seize_land
-	}
-	on_granted = {
-	}
-	ai_will_do = {
-		factor = -300
-	}
-}
-estate_church_bishopric_of_courland = {
-	icon = privilege_devotion_purple
-	max_absolutism = -20
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 4 } }
-	influence = 0.05
-	land_share = 1
-	loyalty = 0
-	is_valid = {
-		has_dlc = "Lions of the North"
-		has_estate_privilege = estate_church_bishopric_of_courland
-	}
-	can_revoke = {
-	}
-	on_revoked = {
-	}
-	penalties = {
-		fort_maintenance_modifier = 0.1
-	}
-	modifier_by_land_ownership = {
-	}
-	mechanics = {
-		exempt_from_seize_land
-	}
-	on_granted = {
-	}
-	ai_will_do = {
-		factor = -300
-	}
-}
-estate_church_bishopric_of_reval = {
-	icon = privilege_devotion_blue
-	max_absolutism = -20
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 4 } }
-	influence = 0.05
-	land_share = 1
-	loyalty = 0
-	is_valid = {
-		has_dlc = "Lions of the North"
-		has_estate_privilege = estate_church_bishopric_of_reval
-	}
-	can_revoke = {
-	}
-	on_revoked = {
-	}
-	penalties = {
-		global_prov_trade_power_modifier = -0.15
-	}
-	modifier_by_land_ownership = {
-	}
-	mechanics = {
-		exempt_from_seize_land
-	}
-	on_granted = {
-	}
-	ai_will_do = {
-		factor = -300
-	}
-}
-
-estate_church_japanese_christian_communities_privilege = {
-	icon = estate_church_japanese_christian_communities_privilege
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	loyalty = 0.05
-	influence = 0.05
-	is_valid = {
-		OR = { 
-			has_estate_privilege = estate_church_japanese_christian_communities_privilege 
-			has_country_flag = significant_christian_presence_flag
-		}
-	}
-	can_select = {
-		OR = { 
-			has_estate_privilege = estate_church_japanese_christian_communities_privilege 
-			custom_trigger_tooltip = {
-				tooltip = generic_tt_has_access_to_this_privilege_tt
-				has_country_flag = significant_christian_presence_flag
-			}
-		}
-	}
-	on_granted = {
-	}
-	penalties = {
-	}
-	benefits = {
-		tolerance_heathen = 1 
-		tolerance_heretic = 1 
-		tolerance_own = 1 
-	}
-	ai_will_do = {
-		factor = 1
 	}
 }
 
@@ -2206,175 +1701,11 @@ estate_church_development_of_temples = {
 	mechanics = {
 		no_estate_crownland_loss_from_developing
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 0
 	}
 }
-estate_church_expand_the_theology = {
-	icon = privilege_missionary
-	loyalty = 0.0
-	influence = 0.05
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	is_valid = {
-		has_dlc = "Domination"
-	}
-	can_select = {
-		if = {
-			limit = { has_estate = estate_brahmins }
-			NOT = { has_estate_privilege = estate_brahmins_expand_the_theology }
-		}
-	}
-	on_granted = {
-		enable_estate_action = {
-			estate_action = RECRUIT_MINISTER_CHURCH
-		}
-		custom_tooltip = empty_text
-		enable_estate_action = {
-			estate_action = RECRUIT_INQUISITOR_CHURCH
-		}
-	}
-	on_revoked = {
-		disable_estate_action = {
-			estate_action = RECRUIT_MINISTER_CHURCH
-		}
-		custom_tooltip = empty_text
-		disable_estate_action = {
-			estate_action = RECRUIT_INQUISITOR_CHURCH
-		}
-	}
-	on_invalid = {
-		disable_estate_action = {
-			estate_action = RECRUIT_MINISTER_CHURCH
-		}
-		disable_estate_action = {
-			estate_action = RECRUIT_INQUISITOR_CHURCH
-		}
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
-	ai_will_do = {
-		factor = 0
-	}
-}
-estate_church_clerical_education = {
-	icon = privilege_technology
-	loyalty = 0.0
-	influence = 0.05
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	is_valid = {
-		has_dlc = "Domination"
-	}
-	can_select = {
-		if = {
-			limit = { has_estate = estate_brahmins }
-			NOT = { has_estate_privilege = estate_brahmins_clerical_education }
-		}
-		if = {
-			limit = { has_estate = estate_dhimmi }
-			NOT = { has_estate_privilege = estate_dhimmi_dhimmi_education }
-		}
-	}
-	on_granted = {
-		scaling_with_influence_privilege_tooltip = {
-			estate_privilege = estate_church_clerical_education
-		}
-	}
-	on_revoked = {
-		scaling_with_influence_privilege_tooltip = {
-			estate_privilege = estate_church_clerical_education
-		}
-	}
-	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
-		trigger = {
-			NOT = {
-				estate_loyalty = {
-					estate = estate_church
-					loyalty = 30
-				}
-			}
-		}
-		modifier = {
-			reform_progress_growth = -0.25
-		}
-	}
-	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
-		trigger = {
-			estate_loyalty = {
-				estate = estate_church
-				loyalty = 30
-			}
-			NOT = {
-				estate_loyalty = {
-					estate = estate_church
-					loyalty = 60
-				}
-			}
-		}
-		modifier = {
-			reform_progress_growth = 0.1
-		}
-	}
-	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
-		trigger = {
-			estate_loyalty = {
-				estate = estate_church
-				loyalty = 60
-			}
-		}
-		modifier = {
-			reform_progress_growth = 0.25
-		}
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
-	ai_will_do = {
-		factor = 5
-		modifier = {
-			factor = 0
-			NOT = {
-				estate_loyalty = {
-					estate = estate_church
-					loyalty = 30
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				estate_influence = {
-					estate = estate_church
-					influence = 50
-				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
-		}
-	}
-}
+
 estate_church_religious_delegation = {
 	icon = privilege_tolerance_own
 	loyalty = 0.0
@@ -2399,14 +1730,6 @@ estate_church_religious_delegation = {
 			estate_action = RELIGIOUS_DELEGATION_CHURCH
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 10
 		modifier = {
@@ -2439,14 +1762,6 @@ estate_church_institutionalized_clergy = {
 			estate_action = SEEK_SUPPORT_OF_CLERGY_CHURCH
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -2497,14 +1812,6 @@ estate_church_donation_right = {
 			estate_action = MAKE_GENEROUS_DONATION_CHURCH
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
 	ai_will_do = {
 		factor = 10
 		modifier = {
