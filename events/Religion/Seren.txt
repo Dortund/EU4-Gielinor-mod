@@ -2262,12 +2262,7 @@ country_event = {
 			incident = incident_kandarin_relations
 			value = 2
 		}
-		hidden_effect = {
-			country_event = {
-				id = seren_events.403
-				days = 1095
-			}
-		}
+		set_country_flag = end_of_kandarin_relations_chain
 	}
 	
 	option = {
@@ -2306,7 +2301,7 @@ country_event = {
 	
 	
 	option = {
-		name = "seren_events.403.a" #
+		name = seren_events.403.a
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
@@ -2349,7 +2344,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.404.a" #A prosperous time lies ahead.
+		name = seren_events.404.a #A prosperous time lies ahead.
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
@@ -2386,7 +2381,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.405.a" #
+		name = seren_events.405.a #
 		
 		if = {
 			limit = { NOT = { religion = seren } }
