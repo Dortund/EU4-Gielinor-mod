@@ -52,7 +52,7 @@ country_event = {
 		custom_tooltip = seren_incident_tirannwn_civil_war.tt
 		custom_tooltip = seren_events.open.tt
 		add_country_modifier = {
-			name = "seren_outside_assistance"
+			name = seren_outside_assistance
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -75,7 +75,7 @@ country_event = {
 		custom_tooltip = seren_incident_tirannwn_civil_war.tt
 		custom_tooltip = seren_events.isolation.tt
 		add_country_modifier = {
-			name = "seren_insular_assistance"
+			name = seren_insular_assistance
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -186,7 +186,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = "CDA_abandonment_of_the_elves"
+			name = CDA_abandonment_of_the_elves
 			duration = 7300
 		}
 		add_prestige = -25
@@ -271,7 +271,7 @@ country_event = {
 		name = seren_events.101.a #We should support the free movement of elves!
 	custom_tooltip = seren_events.open.tt
 		add_country_modifier = {
-			name = "seren_free_elf_movement"
+			name = seren_free_elf_movement
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -290,7 +290,7 @@ country_event = {
 		name = seren_events.101.b #We need to more tightly control the movement of elves.
 		custom_tooltip = seren_events.isolation.tt
 		add_country_modifier = {
-			name = "seren_closed_elf_movement"
+			name = seren_closed_elf_movement
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -320,7 +320,7 @@ country_event = {
 		name = seren_events.102.a #Open the trade routes!
 		custom_tooltip = seren_events.open.tt
 		add_country_modifier = {
-			name = "seren_open_trade"
+			name = seren_open_trade
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -339,7 +339,7 @@ country_event = {
 		custom_tooltip = seren_events.isolation.tt
 		add_mercantilism = 1
 		add_country_modifier = {
-			name = "seren_closed_trade"
+			name = seren_closed_trade
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -374,7 +374,7 @@ country_event = {
 			value = 1
 		}
 		add_country_modifier = {
-			name = "seren_contemplating_the_dark_lord"
+			name = seren_contemplating_the_dark_lord
 			duration = 3650
 		}
 		add_opinion = {
@@ -399,7 +399,7 @@ country_event = {
 			value = 2
 		}
 		add_country_modifier = {
-			name = "seren_anything_but_the_dark_lord"
+			name = seren_anything_but_the_dark_lord
 			duration = 3650
 		}
 		set_country_flag = end_of_tirannwn_civil_war_chain
@@ -416,7 +416,7 @@ country_event = {
 			value = 4
 		}
 		add_country_modifier = {
-			name = "seren_only_seren_guides_us"
+			name = seren_only_seren_guides_us
 			duration = 3650
 		}
 		set_country_flag = end_of_tirannwn_civil_war_chain
@@ -450,7 +450,7 @@ country_event = {
 	
 	
 	option = {
-		name = "seren_events.104.a" #
+		name = seren_events.104.a #
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
@@ -493,7 +493,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.105.a" #A prosperous time lies ahead.
+		name = seren_events.105.a #A prosperous time lies ahead.
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
@@ -530,7 +530,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.106.a" #
+		name = seren_events.106.a #
 		
 		if = {
 			limit = { NOT = { religion = seren } }
@@ -571,7 +571,7 @@ country_event = {
 		custom_tooltip = seren_incident_decline_of_clan_elders.tt
 		custom_tooltip = seren_events.open.tt
 		add_country_modifier = {
-			name = "seren_new_leadership"
+			name = seren_new_leadership
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -591,7 +591,7 @@ country_event = {
 		custom_tooltip = seren_incident_decline_of_clan_elders.tt
 		custom_tooltip = seren_events.isolation.tt
 		add_country_modifier = {
-			name = "seren_traditional_leadership"
+			name = seren_traditional_leadership
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -685,7 +685,7 @@ country_event = {
 		name = seren_events.202.a #We shall find new guidance among the best of all peoples!
 		custom_tooltip = seren_events.much.openness.tt
 		add_country_modifier = {
-			name = "seren_guidance_of_the_world"
+			name = seren_guidance_of_the_world
 			duration = 7300
 		}
 		hidden_effect = {
@@ -750,7 +750,7 @@ country_event = {
 			value = 3
 		}
 		add_country_modifier = {
-			name = "seren_faith_and_stability"
+			name = seren_faith_and_stability
 			duration = 7300
 		}
 		
@@ -791,7 +791,7 @@ country_event = {
 		name = seren_events.203.b #Who even are these people?
 		custom_tooltip = seren_events.isolation.tt
 		add_country_modifier = {
-			name = "seren_clan_nepotism"
+			name = seren_clan_nepotism
 			duration = 3650
 		}
 		
@@ -953,7 +953,7 @@ country_event = {
 		}
 		add_dip_power = -25
 		add_country_modifier = {
-			name = "seren_harsher_leadership"
+			name = seren_harsher_leadership
 			duration = 7300
 		}
 		
@@ -992,7 +992,7 @@ country_event = {
 	
 	
 	option = {
-		name = "seren_events.205.a" #
+		name = seren_events.205.a #
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
@@ -1035,7 +1035,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.206.a" #A prosperous time lies ahead.
+		name = seren_events.206.a #A prosperous time lies ahead.
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
@@ -1071,7 +1071,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.207.a" #
+		name = seren_events.207.a #
 		
 		if = {
 			limit = { NOT = { religion = seren } }
@@ -1124,7 +1124,7 @@ country_event = {
 			custom_tooltip = seren_crusader_vulnerability_plus3_tooltip
 		}
 		add_country_modifier = {
-			name = "seren_expansion_of_runecrafting"
+			name = seren_expansion_of_runecrafting
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -1157,7 +1157,7 @@ country_event = {
 			custom_tooltip = seren_crusader_vulnerability_minus1_tooltip
 		}
 		add_country_modifier = {
-			name = "seren_traditional_magics"
+			name = seren_traditional_magics
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -1425,7 +1425,7 @@ country_event = {
 		trigger = {
 			owns_core_province = 538
 		}
-		desc = "seren_events.303.da" #Runes may only be created at sites of great runic power - and we possess one of the most powerful at the Temple of Light. Collaboration with runecrafters could be a great boon for our magical abilities, but also give the world information on that province we may prefer they don't have.
+		desc = seren_events.303.da #Runes may only be created at sites of great runic power - and we possess one of the most powerful at the Temple of Light. Collaboration with runecrafters could be a great boon for our magical abilities, but also give the world information on that province we may prefer they don't have.
 	}
 	desc = { #Occupied during the Civil War, but not by a Civil War enemy
 		trigger = {
@@ -1443,7 +1443,7 @@ country_event = {
 				religion = dark_lord
 			}
 		}
-		desc = "seren_events.303.db" #Hidden in the Galarpos Mountains is the powerful Death Altar, one of Gielinor's greatest concentrations of runic energy. Due to its power we cannot afford to let the enemies of Seren take it, but unfortunately it has fallen into a third party. Perhaps we should seek outside assistance in handling this situation?
+		desc = seren_events.303.db #Hidden in the Galarpos Mountains is the powerful Death Altar, one of Gielinor's greatest concentrations of runic energy. Due to its power we cannot afford to let the enemies of Seren take it, but unfortunately it has fallen into a third party. Perhaps we should seek outside assistance in handling this situation?
 	}
 	desc = { #Occupied by a Civil War enemy
 		trigger = {
@@ -1461,7 +1461,7 @@ country_event = {
 				}
 			}
 		}
-		desc = "seren_events.303.dc" #Runic power comes in many forms - few more powerful than the Death Altar under the Galarpos Mountains. But now, the altar has fallen to the enemies of Seren - should we get outside help to take it back?
+		desc = seren_events.303.dc #Runic power comes in many forms - few more powerful than the Death Altar under the Galarpos Mountains. But now, the altar has fallen to the enemies of Seren - should we get outside help to take it back?
 	}
 	desc = { #Occupied not during the Civil War by another country
 		trigger = {
@@ -1481,7 +1481,7 @@ country_event = {
 				}
 			}
 		}
-		desc = "seren_events.303.de" #Runic power comes in many forms - few more powerful than the Death Altar under the Galarpos Mountains. This is perhaps why another nation has taken control of the Temple of Light. How should we respond to this?
+		desc = seren_events.303.de #Runic power comes in many forms - few more powerful than the Death Altar under the Galarpos Mountains. This is perhaps why another nation has taken control of the Temple of Light. How should we respond to this?
 	}
 	desc = { #Empty, not during the Civil War
 		trigger = {
@@ -1494,7 +1494,7 @@ country_event = {
 				}
 			}
 		}
-		desc = "seren_events.303.df" #Hidden away under the Galarpos Mountains is the Temple of Light, home to the Death Runecrafting Altar. For the time being it is under no-one's control so no-one can abuse its power, though we could consider how we could learn more about it with the involvement of outside powers.
+		desc = seren_events.303.df #Hidden away under the Galarpos Mountains is the Temple of Light, home to the Death Runecrafting Altar. For the time being it is under no-one's control so no-one can abuse its power, though we could consider how we could learn more about it with the involvement of outside powers.
 	}
 	desc = { #Empty, during the civil war
 		trigger = {
@@ -1505,7 +1505,7 @@ country_event = {
 				religion = dark_lord
 			}
 		}
-		desc = "seren_events.303.dg" #Hidden away under the Galarpos Mountains is the Temple of Light, home to the Death Runecrafting Altar. We cannot let the enemies of Seren get hold of this power - but perhaps by working with a third party we can reinforce its safeguards?
+		desc = seren_events.303.dg #Hidden away under the Galarpos Mountains is the Temple of Light, home to the Death Runecrafting Altar. We cannot let the enemies of Seren get hold of this power - but perhaps by working with a third party we can reinforce its safeguards?
 	}
 
 	picture = SEREN_INCIDENT_RUNECRAFTERS_eventPicture
@@ -1851,7 +1851,7 @@ country_event = {
 	
 	
 	option = {
-		name = "seren_events.308.a" #
+		name = seren_events.308.a #
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
@@ -1894,7 +1894,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.309.a" #A prosperous time lies ahead.
+		name = seren_events.309.a #A prosperous time lies ahead.
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
@@ -1931,7 +1931,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.310.a" #
+		name = seren_events.310.a #
 		
 		if = {
 			limit = { NOT = { religion = seren } }
@@ -1972,7 +1972,7 @@ country_event = {
 		custom_tooltip = seren_events.open.tt
 		
 		add_country_modifier = {
-			name = "seren_age_of_collaboration"
+			name = seren_age_of_collaboration
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -1993,7 +1993,7 @@ country_event = {
 		custom_tooltip = seren_events.open.tt
 		
 		add_country_modifier = {
-			name = "seren_age_of_competition"
+			name = seren_age_of_competition
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -2013,7 +2013,7 @@ country_event = {
 		custom_tooltip = seren_events.isolation.tt
 		
 		add_country_modifier = {
-			name = "seren_age_of_isolation"
+			name = seren_age_of_isolation
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -2043,7 +2043,7 @@ country_event = {
 		custom_tooltip = seren_events.open.tt
 		add_dip_power = 10
 		add_country_modifier = {
-			name = "seren_open_border_policy"
+			name = seren_open_border_policy
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -2098,7 +2098,7 @@ country_event = {
 		custom_tooltip = seren_events.isolation.tt
 		add_adm_power = 10
 		add_country_modifier = {
-			name = "seren_closed_border_policy"
+			name = seren_closed_border_policy
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -2420,7 +2420,7 @@ country_event = {
 		custom_tooltip = seren_incident_zean_diplomacy.tt
 		custom_tooltip = seren_events.open.tt
 		add_country_modifier = {
-			name = "seren_zean_traders"
+			name = seren_zean_traders
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -2439,7 +2439,7 @@ country_event = {
 		custom_tooltip = seren_incident_zean_diplomacy.tt
 		custom_tooltip = seren_events.isolation.tt
 		add_country_modifier = {
-			name = "seren_zean_caution"
+			name = seren_zean_caution
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -2473,7 +2473,7 @@ country_event = {
 		custom_tooltip = seren_events.open.tt
 		add_years_of_income = -0.5
 		add_country_modifier = {
-			name = "seren_zean_shipbuilding_methods"
+			name = seren_zean_shipbuilding_methods
 			duration = 7300
 		}
 		add_incident_variable_value = {
@@ -2683,7 +2683,7 @@ country_event = {
 		}
 		random_owned_province = {
 			add_province_modifier = {
-				name = "seren_ralos_cultivation"
+				name = seren_ralos_cultivation
 				duration = 7300
 			}
 			change_religion = ralos
@@ -2701,7 +2701,7 @@ country_event = {
 			has_global_flag = seren_is_ralos_flag
 		}
 		add_country_modifier = {
-			name = "seren_ralos_tolerance"
+			name = seren_ralos_tolerance
 			duration = 3650
 		}
 		reverse_add_opinion = {
@@ -2726,7 +2726,7 @@ country_event = {
 			has_global_flag = seren_ralos_ideology_flag
 		}
 		add_country_modifier = {
-			name = "seren_ralos_minor_tolerance"
+			name = seren_ralos_minor_tolerance
 			duration = 3650
 		}
 		reverse_add_opinion = {
@@ -2754,7 +2754,7 @@ country_event = {
 	option = {
 		name = seren_events.504.a #Maybe there is a Seren tie after all?
 		add_country_modifier = {
-			name = "seren_ralos_possible_link"
+			name = seren_ralos_possible_link
 			duration = 3650
 		}
 	}
@@ -2821,7 +2821,7 @@ country_event = {
 	
 	
 	option = {
-		name = "seren_events.506.a" #
+		name = seren_events.506.a #
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
@@ -2864,7 +2864,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.507.a" #
+		name = seren_events.507.a #
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
@@ -2901,7 +2901,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.508.a" #
+		name = seren_events.508.a #
 		
 		if = {
 			limit = { NOT = { religion = seren } }
@@ -2954,7 +2954,7 @@ country_event = {
 		custom_tooltip = seren_incident_restoration_of_prifddinas.tt
 		custom_tooltip = seren_events.open.tt
 		add_country_modifier = {
-			name = "seren_opening_of_prifddinas"
+			name = seren_opening_of_prifddinas
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -2976,7 +2976,7 @@ country_event = {
 		custom_tooltip = seren_incident_restoration_of_prifddinas.tt
 		custom_tooltip = seren_events.isolation.tt
 		add_country_modifier = {
-			name = "seren_restrictions_in_prifddinas"
+			name = seren_restrictions_in_prifddinas
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -2998,7 +2998,7 @@ country_event = {
 		custom_tooltip = seren_incident_restoration_of_prifddinas.tt
 		custom_tooltip = seren_events.much.isolation.tt
 		add_country_modifier = {
-			name = "seren_strict_prifddinas_closure"
+			name = seren_strict_prifddinas_closure
 			duration = 3650
 		}
 		add_incident_variable_value = {
@@ -3313,7 +3313,7 @@ country_event = {
 		name = seren_events.603.a #Let the pilgrims pass!
 		custom_tooltip = seren_events.open.tt
 		add_country_modifier = {
-			name = "seren_prifddinas_pilgrims"
+			name = seren_prifddinas_pilgrims
 			duration = 9125
 		}
 		add_incident_variable_value = {
@@ -3331,7 +3331,7 @@ country_event = {
 		name = seren_events.603.b #Restrict the pilgrimages.
 		custom_tooltip = seren_events.isolation.tt
 		add_country_modifier = {
-			name = "seren_restricted_prifddinas_pilgrims"
+			name = seren_restricted_prifddinas_pilgrims
 			duration = 9125
 		}
 		add_incident_variable_value = {
@@ -3439,7 +3439,7 @@ country_event = {
 	
 	
 	option = {
-		name = "seren_events.605.a" #
+		name = seren_events.605.a #
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
@@ -3493,7 +3493,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.606.a" #
+		name = seren_events.606.a #
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
@@ -3541,7 +3541,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.607.a" #
+		name = seren_events.607.a #
 		
 		if = {
 			limit = { NOT = { religion = seren } }
@@ -3604,7 +3604,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = "seren_rejoice_in_rebirth"
+			name = seren_rejoice_in_rebirth
 			duration = 3650
 		}
 		hidden_effect = {
@@ -3633,7 +3633,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = "seren_stealth_seren_mission"
+			name = seren_stealth_seren_mission
 			duration = 3650
 		}
 		hidden_effect = {
@@ -3662,7 +3662,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = "seren_skepticism_for_rebirth"
+			name = seren_skepticism_for_rebirth
 			duration = 3650
 		}
 		hidden_effect = {
@@ -3686,7 +3686,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = "seren_glory_to_the_reborn_goddess"
+			name = seren_glory_to_the_reborn_goddess
 			duration = 3650
 		}
 		hidden_effect = {
@@ -3710,7 +3710,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = "seren_not_our_seren"
+			name = seren_not_our_seren
 			duration = 3650
 		}
 		hidden_effect = {
@@ -3776,7 +3776,7 @@ country_event = {
 		name = seren_events.701.b #We fought to stop the Dark Lord, not strengthen it!
 		custom_tooltip = seren_events.isolation.tt
 		add_incident_variable_value = {
-			incident = incident_restoration_of_prifddinas
+			incident = incident_rebirth_of_seren
 			value = 3
 		}
 		custom_tooltip = seren_rebirth_support_minus2_tooltip
@@ -3821,7 +3821,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = "seren_dark_lord_returns"
+			name = seren_dark_lord_returns
 			duration = 9125
 		}
 		random_owned_province = {
@@ -3854,7 +3854,7 @@ country_event = {
 		}
 		custom_tooltip = seren_rebirth_support_plus3_tooltip
 		add_country_modifier = {
-			name = "seren_lore_of_zaros"
+			name = seren_lore_of_zaros
 			duration = 3650
 		}
 		hidden_effect = {
@@ -3879,7 +3879,7 @@ country_event = {
 		}
 		custom_tooltip = seren_rebirth_support_minus3_tooltip
 		add_country_modifier = {
-			name = "seren_lore_of_zaros"
+			name = seren_lore_of_zaros
 			duration = 3650
 		}
 		hidden_effect = {
@@ -3899,12 +3899,12 @@ country_event = {
 		name = seren_events.702.c #Seren's light needs no help.
 		custom_tooltip = seren_events.isolation.tt
 		add_incident_variable_value = {
-			incident = incident_restoration_of_prifddinas
+			incident = incident_rebirth_of_seren
 			value = 3
 		}
 		custom_tooltip = seren_rebirth_support_plus3_tooltip
 		add_country_modifier = {
-			name = "seren_defiance_of_zaros"
+			name = seren_defiance_of_zaros
 			duration = 3650
 		}
 		hidden_effect = {
@@ -3924,12 +3924,12 @@ country_event = {
 		name = seren_events.702.e #The situation is bad enough already; we do not need the Zarosians!
 		custom_tooltip = seren_events.isolation.tt
 		add_incident_variable_value = {
-			incident = incident_restoration_of_prifddinas
+			incident = incident_rebirth_of_seren
 			value = 3
 		}
 		custom_tooltip = seren_rebirth_support_minus2_tooltip
 		add_country_modifier = {
-			name = "seren_godless_inclinations"
+			name = seren_godless_inclinations
 			duration = 3650
 		}
 		hidden_effect = {
@@ -4286,8 +4286,8 @@ country_event = {
 	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_restoration_of_prifddinas
-		has_country_flag = end_of_restoration_of_prifddinas_chain
+		is_incident_active = incident_rebirth_of_seren
+		has_country_flag = end_of_rebirth_of_seren_chain
 		OR = {
 			AND = {
 				NOT = { has_country_flag = seren_quick_restoration_chain }
@@ -4321,18 +4321,18 @@ country_event = {
 		months = 12
 	}
 	option = {
-		name = "seren_events.707.a" #Praise Seren!
+		name = seren_events.707.a #Praise Seren!
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
-			end_incident = incident_restoration_of_prifddinas
+			end_incident = incident_rebirth_of_seren
 		}
 		else = {
 			add_isolationism = -1
-			end_incident = incident_restoration_of_prifddinas
+			end_incident = incident_rebirth_of_seren
 		}
 		add_country_modifier = {
-			name = "seren_a_goddess_restored"
+			name = seren_a_goddess_restored
 			duration = -1
 		}
 		clr_country_flag = active_incident_flag
@@ -4350,8 +4350,8 @@ country_event = {
 	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_restoration_of_prifddinas
-		has_country_flag = end_of_restoration_of_prifddinas_chain
+		is_incident_active = incident_rebirth_of_seren
+		has_country_flag = end_of_rebirth_of_seren_chain
 		OR = {
 			AND = {
 				NOT = { has_country_flag = seren_quick_restoration_chain }
@@ -4393,18 +4393,18 @@ country_event = {
 		months = 12
 	}
 	option = {
-		name = "seren_events.708.a" #Praise Seren!
+		name = seren_events.708.a #Praise Seren!
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
-				end_incident = incident_restoration_of_prifddinas
+				end_incident = incident_rebirth_of_seren
 			}
 			else = {
-				end_incident = incident_restoration_of_prifddinas
+				end_incident = incident_rebirth_of_seren
 			}
 		}
 		add_country_modifier = {
-			name = "seren_a_goddess_restored"
+			name = seren_a_goddess_restored
 			duration = -1
 		}
 		clr_country_flag = active_incident_flag
@@ -4420,8 +4420,8 @@ country_event = {
 	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_restoration_of_prifddinas
-		has_country_flag = end_of_restoration_of_prifddinas_chain
+		is_incident_active = incident_rebirth_of_seren
+		has_country_flag = end_of_rebirth_of_seren_chain
 		OR = {
 			AND = {
 				NOT = { has_country_flag = seren_quick_restoration_chain }
@@ -4453,21 +4453,21 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.709.a" #
+		name = seren_events.709.a #
 		
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
 				add_isolationism = 1
-				end_incident = incident_restoration_of_prifddinas
+				end_incident = incident_rebirth_of_seren
 			}
 			else = {
 				add_isolationism = 1
-				end_incident = incident_restoration_of_prifddinas
+				end_incident = incident_rebirth_of_seren
 			}
 		}
 		add_country_modifier = {
-			name = "seren_a_goddess_restored"
+			name = seren_a_goddess_restored
 			duration = -1
 		}
 		clr_country_flag = active_incident_flag
@@ -4483,8 +4483,8 @@ country_event = {
 	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_restoration_of_prifddinas
-		has_country_flag = end_of_restoration_of_prifddinas_chain
+		is_incident_active = incident_rebirth_of_seren
+		has_country_flag = end_of_rebirth_of_seren_chain
 		OR = {
 			AND = {
 				NOT = { has_country_flag = seren_quick_restoration_chain }
@@ -4522,18 +4522,18 @@ country_event = {
 		months = 12
 	}
 	option = {
-		name = "seren_events.710.a" #Praise the real Seren!
+		name = seren_events.710.a #Praise the real Seren!
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
-			end_incident = incident_restoration_of_prifddinas
+			end_incident = incident_rebirth_of_seren
 		}
 		else = {
 			add_isolationism = -1
-			end_incident = incident_restoration_of_prifddinas
+			end_incident = incident_rebirth_of_seren
 		}
 		add_country_modifier = {
-			name = "seren_false_restoration"
+			name = seren_false_restoration
 			duration = -1
 		}
 		clr_country_flag = active_incident_flag
@@ -4551,8 +4551,8 @@ country_event = {
 	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_restoration_of_prifddinas
-		has_country_flag = end_of_restoration_of_prifddinas_chain
+		is_incident_active = incident_rebirth_of_seren
+		has_country_flag = end_of_rebirth_of_seren_chain
 		OR = {
 			AND = {
 				NOT = { has_country_flag = seren_quick_restoration_chain }
@@ -4598,18 +4598,18 @@ country_event = {
 		months = 12
 	}
 	option = {
-		name = "seren_events.711.a" #Praise Seren?
+		name = seren_events.711.a #Praise Seren?
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
-				end_incident = incident_restoration_of_prifddinas
+				end_incident = incident_rebirth_of_seren
 			}
 			else = {
-				end_incident = incident_restoration_of_prifddinas
+				end_incident = incident_rebirth_of_seren
 			}
 		}
 		add_country_modifier = {
-			name = "seren_false_restoration"
+			name = seren_false_restoration
 			duration = -1
 		}
 		clr_country_flag = active_incident_flag
@@ -4625,8 +4625,8 @@ country_event = {
 	picture = SEREN_INCIDENT_PRIF_RESTORATION_eventPicture
 	
 	trigger = {
-		is_incident_active = incident_restoration_of_prifddinas
-		has_country_flag = end_of_restoration_of_prifddinas_chain
+		is_incident_active = incident_rebirth_of_seren
+		has_country_flag = end_of_rebirth_of_seren_chain
 		OR = {
 			AND = {
 				NOT = { has_country_flag = seren_quick_restoration_chain }
@@ -4662,21 +4662,21 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.712.a" #Hail to Seren's memory!
+		name = seren_events.712.a #Hail to Seren's memory!
 		
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
 				add_isolationism = 1
-				end_incident = incident_restoration_of_prifddinas
+				end_incident = incident_rebirth_of_seren
 			}
 			else = {
 				add_isolationism = 1
-				end_incident = incident_restoration_of_prifddinas
+				end_incident = incident_rebirth_of_seren
 			}
 		}
 		add_country_modifier = {
-			name = "seren_false_restoration"
+			name = seren_false_restoration
 			duration = -1
 		}
 		clr_country_flag = active_incident_flag
@@ -4708,7 +4708,7 @@ country_event = {
 			value = 1
 		}
 		add_country_modifier = {
-			name = "seren_turning_from_seren"
+			name = seren_turning_from_seren
 			duration = 7300
 		}
 		country_event = {
@@ -4725,7 +4725,7 @@ country_event = {
 			value = 2
 		}
 		add_country_modifier = {
-			name = "seren_excusing_seren"
+			name = seren_excusing_seren
 			duration = 7300
 		}
 		hidden_effect = {
@@ -4752,7 +4752,7 @@ country_event = {
 			value = 3
 		}
 		add_country_modifier = {
-			name = "seren_denying_the_false_goddess"
+			name = seren_denying_the_false_goddess
 			duration = 7300
 		}
 		hidden_effect = {
@@ -4771,7 +4771,7 @@ country_event = {
 			value = 3
 		}
 		add_country_modifier = {
-			name = "seren_steadfast_faith"
+			name = seren_steadfast_faith
 			duration = 7300
 		}
 		hidden_effect = {
@@ -4799,11 +4799,11 @@ country_event = {
 			change_religion = armadyl
 		}
 		add_country_modifier = {
-			name = "armadyl_loyal_converts"
+			name = armadyl_loyal_converts
 			duration = 3650
 		}
 		add_country_modifier = {
-			name = "armadyl_wings_of_armadyl_modifier"
+			name = armadyl_wings_of_armadyl_modifier
 			duration = -1
 		}
 	}
@@ -4815,7 +4815,7 @@ country_event = {
 			change_religion = godless
 		}
 		add_country_modifier = {
-			name = "godless_forget_the_faith"
+			name = godless_forget_the_faith
 			duration = 3650
 		}
 	}
@@ -4889,7 +4889,7 @@ country_event = {
 		name = seren_events.803.a #The Elder Gods are to be celebrated, not demonised!
 		custom_tooltip = seren_events.open.tt
 		add_incident_variable_value = {
-			incident = incident_rebirth_of_seren
+			incident = incident_serens_new_path
 			value = 1
 		}
 		random_list = {
@@ -4967,7 +4967,7 @@ country_event = {
 	
 	
 	option = {
-		name = "seren_events.804.a"
+		name = seren_events.804.a
 		if = {
 			limit = { NOT = { religion = seren } }
 			add_isolationism = -1
@@ -5010,7 +5010,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.805.a"
+		name = seren_events.805.a
 		if = {
 			limit = { NOT = { religion = seren } }
 			hidden_effect = {
@@ -5047,7 +5047,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "seren_events.806.a"
+		name = seren_events.806.a
 		
 		if = {
 			limit = { NOT = { religion = seren } }
