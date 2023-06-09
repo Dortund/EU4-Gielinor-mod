@@ -128,17 +128,13 @@ country_event = {
 				has_estate = estate_church
 				NOT = {	num_of_estate_privileges = { estate = estate_church value = 4 } }
 			}
-			AND = {
-				religion = hinduism
-				has_estate = estate_brahmins
-				NOT = {	num_of_estate_privileges = { estate = estate_brahmins	value = 4 } }
-			}
 		}
 		NOT = {
-            has_estate_privilege = estate_brahmins_statutory_rights
-            has_estate_privilege = estate_nobles_statutory_rights
-            has_estate_privilege = estate_burghers_statutory_rights
-            has_estate_privilege = estate_church_statutory_rights
+			OR = {
+				has_estate_privilege = estate_nobles_statutory_rights
+				has_estate_privilege = estate_burghers_statutory_rights
+				has_estate_privilege = estate_church_statutory_rights
+			}
         }
 	}
 
@@ -166,13 +162,6 @@ country_event = {
 		name = estate_privileges_and_agendas_events.2.a
 		custom_tooltip = seize_land_unavailable_from_privilege
 		if = {
-			limit = {
-				religion = hinduism
-				has_estate = estate_brahmins
-			}
-			set_estate_privilege = estate_brahmins_statutory_rights
-		}
-		else_if = {
 			limit = {
 				government = monarchy
 			}
@@ -210,21 +199,19 @@ country_event = {
 			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
 			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
 			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
 		}
 	}
 
 	after = {
-		clr_country_flag = estate_brahmins_present_agenda
 		clr_country_flag = estate_church_present_agenda
-		clr_country_flag = estate_maratha_present_agenda
 		clr_country_flag = estate_nobles_present_agenda
 		clr_country_flag = estate_burghers_present_agenda
-		clr_country_flag = estate_vaisyas_present_agenda
-		clr_country_flag = estate_cossacks_present_agenda
 		clr_country_flag = estate_nomadic_tribes_present_agenda
-		clr_country_flag = estate_dhimmi_present_agenda
-		clr_country_flag = estate_jains_present_agenda
-		clr_country_flag = estate_rajput_present_agenda
 		
 		clr_country_flag = estate_tzh_hur_present_agenda
 		clr_country_flag = estate_tzh_ket_present_agenda
@@ -233,53 +220,6 @@ country_event = {
 		clr_country_flag = estate_tzh_gaal_present_agenda
 		
 		clear_estate_agenda_cache = ROOT
-	}
-
-	option = {
-		name = estate_privileges_and_agendas_events.3.a
-		trigger = { has_country_flag = estate_brahmins_present_agenda }
-		start_estate_agenda = estate_brahmins
-		goto = estate_brahmins
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				NOT = {
-					estate_loyalty = {
-						loyalty = 30
-						estate = estate_brahmins
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					estate_loyalty = {
-						loyalty = 20
-						estate = estate_brahmins
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				estate_influence = {
-					influence = 70
-					estate = estate_brahmins
-				}
-			}
-			modifier = {
-				factor = 2
-				is_absolutism_active = yes
-				num_of_estate_privileges = {
-					estate = estate_brahmins
-					value = 1
-				}
-				estate_loyalty = {
-					estate = estate_brahmins
-					higher_than_influence = no
-				}
-			}
-		}
 	}
 
 	option = {
@@ -323,100 +263,6 @@ country_event = {
 				}
 				estate_loyalty = {
 					estate = estate_church
-					higher_than_influence = no
-				}
-			}
-		}
-	}
-
-	option = {
-		name = estate_privileges_and_agendas_events.3.c
-		trigger = { has_country_flag = estate_maratha_present_agenda }
-		start_estate_agenda = estate_maratha
-		goto = estate_maratha
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				NOT = {
-					estate_loyalty = {
-						loyalty = 30
-						estate = estate_maratha
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					estate_loyalty = {
-						loyalty = 20
-						estate = estate_maratha
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				estate_influence = {
-					influence = 70
-					estate = estate_maratha
-				}
-			}
-			modifier = {
-				factor = 2
-				is_absolutism_active = yes
-				num_of_estate_privileges = {
-					estate = estate_maratha
-					value = 1
-				}
-				estate_loyalty = {
-					estate = estate_maratha
-					higher_than_influence = no
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = estate_privileges_and_agendas_events.3.k
-		trigger = { has_country_flag = estate_rajput_present_agenda }
-		start_estate_agenda = estate_rajput
-		goto = estate_rajput
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				NOT = {
-					estate_loyalty = {
-						loyalty = 30
-						estate = estate_rajput
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					estate_loyalty = {
-						loyalty = 20
-						estate = estate_rajput
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				estate_influence = {
-					influence = 70
-					estate = estate_rajput
-				}
-			}
-			modifier = {
-				factor = 2
-				is_absolutism_active = yes
-				num_of_estate_privileges = {
-					estate = estate_rajput
-					value = 1
-				}
-				estate_loyalty = {
-					estate = estate_rajput
 					higher_than_influence = no
 				}
 			}
@@ -516,147 +362,6 @@ country_event = {
 			}
 		}
 	}
-	
-	option = {
-		name = estate_privileges_and_agendas_events.3.j
-		trigger = { has_country_flag = estate_jains_present_agenda }
-		start_estate_agenda = estate_jains
-		goto = estate_jains
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				NOT = {
-					estate_loyalty = {
-						loyalty = 30
-						estate = estate_jains
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					estate_loyalty = {
-						loyalty = 20
-						estate = estate_jains
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				estate_influence = {
-					influence = 70
-					estate = estate_jains
-				}
-			}
-			modifier = {
-				factor = 2
-				is_absolutism_active = yes
-				num_of_estate_privileges = {
-					estate = estate_jains
-					value = 1
-				}
-				estate_loyalty = {
-					estate = estate_jains
-					higher_than_influence = no
-				}
-			}
-		}
-	}
-
-	option = {
-		name = estate_privileges_and_agendas_events.3.f
-		trigger = { has_country_flag = estate_vaisyas_present_agenda }
-		start_estate_agenda = estate_vaisyas
-		goto = estate_vaisyas
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				NOT = {
-					estate_loyalty = {
-						loyalty = 30
-						estate = estate_vaisyas
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					estate_loyalty = {
-						loyalty = 20
-						estate = estate_vaisyas
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				estate_influence = {
-					influence = 70
-					estate = estate_vaisyas
-				}
-			}
-			modifier = {
-				factor = 2
-				is_absolutism_active = yes
-				num_of_estate_privileges = {
-					estate = estate_vaisyas
-					value = 1
-				}
-				estate_loyalty = {
-					estate = estate_vaisyas
-					higher_than_influence = no
-				}
-			}
-		}
-	}
-
-	option = {
-		name = estate_privileges_and_agendas_events.3.g
-		trigger = { has_country_flag = estate_cossacks_present_agenda }
-		start_estate_agenda = estate_cossacks
-		goto = estate_cossacks
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				NOT = {
-					estate_loyalty = {
-						loyalty = 30
-						estate = estate_cossacks
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					estate_loyalty = {
-						loyalty = 20
-						estate = estate_cossacks
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				estate_influence = {
-					influence = 70
-					estate = estate_cossacks
-				}
-			}
-			modifier = {
-				factor = 2
-				is_absolutism_active = yes
-				num_of_estate_privileges = {
-					estate = estate_cossacks
-					value = 1
-				}
-				estate_loyalty = {
-					estate = estate_cossacks
-					higher_than_influence = no
-				}
-			}
-		}
-	}
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.h
@@ -705,52 +410,6 @@ country_event = {
 		}
 	}
 
-	option = {
-		name = estate_privileges_and_agendas_events.3.i
-		trigger = { has_country_flag = estate_dhimmi_present_agenda }
-		start_estate_agenda = estate_dhimmi
-		goto = estate_dhimmi
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1.5
-				NOT = {
-					estate_loyalty = {
-						loyalty = 30
-						estate = estate_dhimmi
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					estate_loyalty = {
-						loyalty = 20
-						estate = estate_dhimmi
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				estate_influence = {
-					influence = 70
-					estate = estate_dhimmi
-				}
-			}
-			modifier = {
-				factor = 2
-				is_absolutism_active = yes
-				num_of_estate_privileges = {
-					estate = estate_dhimmi
-					value = 1
-				}
-				estate_loyalty = {
-					estate = estate_dhimmi
-					higher_than_influence = no
-				}
-			}
-		}
-	}
 	# New estates
 	option = {
 		name = estate_privileges_and_agendas_events.3.tzh.1
@@ -996,7 +655,6 @@ country_event = {
 	trigger = {
 		OR = {
 			has_estate_privilege = estate_nobles_supremacy_over_crown
-			has_estate_privilege = estate_brahmins_supremacy_over_crown
 		}
 		NOT = { has_any_active_estate_agenda = yes }
 	}
@@ -1043,6 +701,216 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 1
+		}
+	}
+}
+
+#Distribute manually land
+country_event = {
+	id = estate_privileges_and_agendas_events.6
+	title = estate_privileges_and_agendas_events.6.t
+	desc = estate_privileges_and_agendas_events.6.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	#Everybody gets the equal amount
+	option = {
+		name = estate_privileges_and_agendas_events.6.a
+		custom_tooltip = ESTATES_SALE_OF_TITLES_DESC
+		give_estate_land_share_gigantic = { estate = all }
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 10
+			short = yes
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	#Grant church land
+	option = {
+		name = estate_privileges_and_agendas_events.6.b
+		trigger = { has_estate = estate_church }
+		give_estate_land_share_gigantic = { estate = estate_church }
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+			short = yes
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	#Grant burghers land
+	option = {
+		name = estate_privileges_and_agendas_events.6.c
+		trigger = { has_estate = estate_burghers }
+		give_estate_land_share_gigantic = { estate = estate_burghers }
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+			short = yes
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	#Grant nobles land
+	option = {
+		name = estate_privileges_and_agendas_events.6.d
+		trigger = { has_estate = estate_nobles }
+		give_estate_land_share_gigantic = { estate = estate_nobles }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+			short = yes
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	#Grant tribes land
+	option = {
+		name = estate_privileges_and_agendas_events.6.g
+		trigger = { has_estate = estate_nomadic_tribes }
+		give_estate_land_share_gigantic = { estate = estate_nomadic_tribes }
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+			short = yes
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Seize crownland
+country_event = {
+	id = estate_privileges_and_agendas_events.7
+	title = estate_privileges_and_agendas_events.7.t
+	desc = estate_privileges_and_agendas_events.7.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+
+	#Seize from everyone
+	option = {
+		name = estate_privileges_and_agendas_events.7.a
+        custom_tooltip = ESTATES_SEIZE_LAND_DESC
+        take_estate_land_share_massive = { estate = all }
+		custom_tooltip = SEPERATOR_TOOLTIP
+
+		if = {
+			limit = {
+				has_government_attribute = seizing_land_loyalty
+			}
+			add_estate_loyalty = {
+				estate = all
+				loyalty = -15
+				short = yes
+			}
+		}
+		else = {
+			add_estate_loyalty = {
+				estate = all
+				loyalty = -20
+				short = yes
+			}
+		}
+		custom_tooltip = ESTATES_SEIZE_LAND_EXCEPTION_DESC
+		re_add_loyalty_from_seized_land = yes
+		if = {
+			limit = { NOT = { has_government_attribute = seizing_land_no_rebels } }
+			custom_tooltip = seize_land_rebels_tt
+		}
+		if = {
+			limit = {
+				NOT = {
+					estate_loyalty = {
+						estate = all
+						loyalty = 50
+					}
+				}
+				estate_loyalty = {
+					estate = all
+					loyalty = 30
+				}
+			}
+		}
+		else_if = { 
+			limit = {
+				NOT = {
+					estate_loyalty = {
+						estate = all
+						loyalty = 30
+					}
+				}
+				estate_influence = {
+					estate = all
+					influence = 1
+				}				
+			}
+			spawn_rebels_seize_land_switch = yes
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	#Seize from church
+	option = {
+		name = estate_privileges_and_agendas_events.7.b
+		trigger = {
+			has_estate = estate_church
+			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_church } }
+		}
+		seize_land_estate_effect = { estate = estate_church }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	#Seize from burghers
+	option = {
+		name = estate_privileges_and_agendas_events.7.c
+		trigger = {
+			has_estate = estate_burghers
+			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_burghers } }
+		}
+		seize_land_estate_effect = { estate = estate_burghers }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	#Seize from nobles
+	option = {
+		name = estate_privileges_and_agendas_events.7.d
+		trigger = {
+			has_estate = estate_nobles
+			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nobles } }
+		}
+		seize_land_estate_effect = { estate = estate_nobles }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	#Seize from tribes
+	option = {
+		name = estate_privileges_and_agendas_events.7.g
+		trigger = {
+			has_estate = estate_nomadic_tribes
+			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nomadic_tribes } }
+		}
+		seize_land_estate_effect = { estate = estate_nomadic_tribes }
+		ai_chance = {
+			factor = 0
 		}
 	}
 }

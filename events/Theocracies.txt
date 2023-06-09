@@ -160,26 +160,6 @@ country_event = {
 				loyalty = 10
 			}
 		}
-		else_if = {
-			limit = {
-				has_estate = estate_maratha
-				religion = hinduism
-			}
-			add_estate_loyalty = {
-				estate = estate_maratha
-				loyalty = 10
-			}
-		}
-		else_if = {
-			limit = {
-				has_estate = estate_rajput
-				religion = hinduism
-			}
-			add_estate_loyalty = {
-				estate = estate_rajput
-				loyalty = 10
-			}
-		}
 		if = {
 			limit = {
 				has_estate = estate_church
@@ -189,16 +169,6 @@ country_event = {
 				loyalty = -10
 			}
 		}
-		else_if = {
-			limit = {
-				has_estate = estate_brahmins
-				religion = hinduism
-			}
-			add_estate_loyalty = {
-				estate = estate_brahmins
-				loyalty = -10
-			}
-		}		
 		set_country_flag = theo_foreign_noble_flag # USED IN DEVOTION.TXT
 		random_neighbor_country = { 
 			limit = {
@@ -231,32 +201,12 @@ country_event = {
 				loyalty = 15
 			}
 		}
-		else_if = {
-			limit = {
-				has_estate = estate_vaisyas
-				religion = hinduism
-			}
-			add_estate_loyalty = {
-				estate = estate_vaisyas
-				loyalty = 15
-			}
-		}
 		if = {
 			limit = {
 				has_estate = estate_church
 			}
 			add_estate_loyalty = {
 				estate = estate_church
-				loyalty = -15
-			}
-		}
-		else_if = {
-			limit = {
-				has_estate = estate_brahmins
-				religion = hinduism
-			}
-			add_estate_loyalty = {
-				estate = estate_brahmins
 				loyalty = -15
 			}
 		}
@@ -296,32 +246,12 @@ country_event = {
 				loyalty = 15
 			}
 		}
-		else_if = {
-			limit = {
-				has_estate = estate_brahmins
-				religion = hinduism
-			}
-			add_estate_loyalty = {
-				estate = estate_brahmins
-				loyalty = 15
-			}
-		}
 		if = {
 			limit = {
 				has_estate = estate_burghers
 			}
 			add_estate_loyalty = {
 				estate = estate_burghers
-				loyalty = -15
-			}
-		}
-		else_if = {
-			limit = {
-				has_estate = estate_vaisyas
-				religion = hinduism
-			}
-			add_estate_loyalty = {
-				estate = estate_vaisyas
 				loyalty = -15
 			}
 		}

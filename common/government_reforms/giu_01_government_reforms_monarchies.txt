@@ -7,7 +7,6 @@
 autocracy_reform = {
 	icon = "icon_autocracy"
 	allow_normal_conversion = yes
-	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
@@ -31,8 +30,7 @@ clan_monarchy = {
 		}
 		has_reform = clan_monarchy
 	}
-	legacy_equivalent = clan_monarchy_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	fixed_rank = 1
 	modifiers = {
@@ -58,23 +56,34 @@ consortium_monarchy = {
 	valid_for_nation_designer = yes
 	start_territory_to_estates = 0.5
 	nation_designer_cost = 40
-	legacy_equivalent = consortium_monarchy_legacy
-	potential = {
+		potential = {
 		tag = KDG
 	}
 	boost_income = yes
 	duration = 4
 	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
 		can_use_trade_post = yes
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
 		can_form_trade_league = yes
-		trade_city_reform = dwarven_outpost
+		trade_city_reform = dwarven_outpost # For trade cities this is their fallback government if they get more than 1 provinces
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
 		can_use_trade_post = yes
 		can_form_trade_league = yes
-		trade_city_reform = dwarven_outpost
+		trade_city_reform = dwarven_outpost # For trade cities this is their fallback government if they get more than 1 provinces
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -97,8 +106,7 @@ elven_aristocracy = {
 			NOT = { map_setup = map_setup_random }
 		}
 	}
-	legacy_equivalent = elven_aristocracy_legacy
-	allow_force_tributary = no
+		allow_force_tributary = no
 	valid_for_nation_designer = no
 	fixed_rank = 2
 	start_territory_to_estates = 0.25
@@ -114,8 +122,7 @@ elven_aristocracy = {
 exile_clan = {
 	icon = "icon_exile_clan"
 	allow_normal_conversion = no
-	legacy_equivalent = exile_clan_legacy
-	lock_level_when_selected = yes
+		lock_level_when_selected = yes
 	modifiers = {
 		legitimacy = -0.5
 		max_absolutism = -50
@@ -174,8 +181,7 @@ fateful_kingdom = {
 			}
 		}
 	}
-	legacy_equivalent = fateful_kingdom_legacy
-	allow_force_tributary = no
+		allow_force_tributary = no
 	valid_for_nation_designer = no
 	start_territory_to_estates = 0.25
 
@@ -200,8 +206,7 @@ feldip_government = {
 			NOT = { map_setup = map_setup_random }
 		}
 	}
-	legacy_equivalent = feldip_government_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	modifiers = {
 		defensiveness = 0.1
@@ -211,16 +216,22 @@ feldip_government = {
 	heir = no
 	duration = 4
 	has_term_election = yes
-	states_general_mechanic = {
-		ogres = {
-			female_advisor_chance = -10
-		 	cavalry_power = 0.10
-			harsh_treatment_cost = -0.2
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
 		}
-		ogresses = {
-			female_advisor_chance = 10
-			leader_land_shock = 1
-		 	development_cost = -0.05
+		
+		states_general_mechanic = {
+			ogres = {
+				female_advisor_chance = -10
+				cavalry_power = 0.10
+				harsh_treatment_cost = -0.2
+			}
+			ogresses = {
+				female_advisor_chance = 10
+				leader_land_shock = 1
+				development_cost = -0.05
+			}
 		}
 	}
 	custom_attributes = {
@@ -233,8 +244,7 @@ great_khanate = {
 	potential = {
 		have_had_reform = great_khanate
 	}
-	legacy_equivalent = khanate_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 75
 	fixed_rank = 2
 	modifiers = {
@@ -252,8 +262,7 @@ great_khanate = {
 horde_kingdom = {
 	icon = "icon_horde_kingdom"
 	potential = { has_reform = horde_kingdom }
-	legacy_equivalent = horde_kingdom_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 75
 	modifiers = {
 		land_maintenance_modifier = -0.05
@@ -274,8 +283,7 @@ kandarin_monarchy = {
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 15
-	legacy_equivalent = kandarin_monarchy_legacy
-	start_territory_to_estates = 0.3
+		start_territory_to_estates = 0.3
 	modifiers = {
 		governing_capacity = 100
 	 	min_autonomy_in_territories = 0.1
@@ -283,7 +291,12 @@ kandarin_monarchy = {
 		tolerance_heretic = 1
 		tolerance_heathen = 1
 	}
-	has_parliament = yes
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
 
 	custom_attributes = {
 		blocked_call_diet = yes
@@ -298,8 +311,7 @@ khanate = {
 			culture_group = cyclops_group
 		}
 	}
-	legacy_equivalent = khanate_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
 		governing_capacity = -100
@@ -323,8 +335,7 @@ kourend_monarchy = {
 			have_had_reform = kourend_monarchy
 		}
 	}
-	legacy_equivalent = kourend_monarchy_legacy
-	allow_force_tributary = no
+		allow_force_tributary = no
 	valid_for_nation_designer = no
 	factions = {
 		arceuus_faction
@@ -341,10 +352,8 @@ kourend_monarchy = {
 		diplomatic_upkeep = 1
 		num_accepted_cultures = 1
 	}
-	conditional = {
-		government_abilities = {
-			house_disunity_mechanic
-		}
+	government_abilities = {
+		house_disunity_mechanic
 	}
 	
 	ai = {
@@ -367,8 +376,7 @@ kourend_reformed_monarchy = {
 			have_had_reform = kourend_reformed_monarchy
 		}
 	}
-	legacy_equivalent = kourend_reformed_monarchy_legacy
-	allow_force_tributary = no
+		allow_force_tributary = no
 	valid_for_nation_designer = no
 	factions = {
 		arceuus_faction
@@ -409,8 +417,7 @@ kourend_house = {
 			NOT = { map_setup = map_setup_random }
 		}
 	}
-	legacy_equivalent = kourend_house_legacy
-	allow_force_tributary = no
+		allow_force_tributary = no
 	valid_for_nation_designer = no
 	fixed_rank = 1
 	start_territory_to_estates = 0.25
@@ -447,8 +454,7 @@ kourend_independent_house = {
 			NOT = { map_setup = map_setup_random }
 		}
 	}
-	legacy_equivalent = kourend_independent_house_legacy
-	allow_force_tributary = no
+		allow_force_tributary = no
 	valid_for_nation_designer = no
 	fixed_rank = 1
 	start_territory_to_estates = 0.25
@@ -479,8 +485,7 @@ mahjarrat_autocracy = {
 			}
 		}
 	}
-	legacy_equivalent = mahjarrat_autocracy_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
 	 	free_leader_pool = 1
@@ -507,8 +512,7 @@ miscellanean_monarchy = {
 			NOT = { map_setup = map_setup_random }
 		}
 	}
-	legacy_equivalent = miscellanean_monarchy_legacy
-	allow_force_tributary = no
+		allow_force_tributary = no
 	valid_for_nation_designer = no
 
 	start_territory_to_estates = 0.25
@@ -532,8 +536,7 @@ miscellanean_monarchy = {
 new_world_kingdom = {
 	icon = "icon_new_world_kingdom"
 	allow_normal_conversion = no
-	legacy_equivalent = new_world_kingdom_legacy
-	potential = {
+		potential = {
 		is_former_colonial_nation = yes
 	}
 	valid_for_nation_designer = yes
@@ -553,8 +556,7 @@ new_world_kingdom = {
 noble_kingdom = {
 	icon = "icon_noble_kingdom"
 	allow_normal_conversion = yes
-	legacy_equivalent = noble_kingdom_legacy
-	allow_force_tributary = no
+		allow_force_tributary = no
 	valid_for_nation_designer = yes
 
 	start_territory_to_estates = 0.4
@@ -576,8 +578,7 @@ principality_burthorpe = {
 			NOT = { map_setup = map_setup_random }
 		}
 	}
-	legacy_equivalent = principality_burthorpe_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	fixed_rank = 1
 	modifiers = {
@@ -597,8 +598,7 @@ shining_kingdom = {
 			NOT = { map_setup = map_setup_random }
 		}
 	}
-	legacy_equivalent = shining_kingdom_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 50
 	modifiers = {
 		governing_capacity = 100
@@ -617,8 +617,7 @@ unstable_monarchy = {
 	potential = { has_reform = unstable_monarchy }
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
-	legacy_equivalent = unstable_monarchy_legacy
-
+	
 	modifiers = {
 		province_warscore_cost = 0.25
 		stability_cost_modifier = 0.5
@@ -639,8 +638,7 @@ vampyre_kingdom = {
 			has_country_flag = DYN_vampyre_leadership
 		}
 	}
-	legacy_equivalent = vampyre_kingdom_legacy
-	lock_level_when_selected = yes
+		lock_level_when_selected = yes
 	allow_force_tributary = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
@@ -652,11 +650,11 @@ vampyre_kingdom = {
 		global_manpower_modifier = 0.10
 		tolerance_heretic = 2
 	}
-	conditional = {
-		government_abilities = {
-			#blood_power_mechanic - coming in later patch
-		}
-	}
+	#conditional = {
+	#	government_abilities = {
+	#		#blood_power_mechanic - coming in later patch
+	#	}
+	#}
 	custom_attributes = {
 		locked_government_type = yes
 	}
@@ -789,10 +787,8 @@ ior_civil_war_focus_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 	}
-	conditional = {
-		government_abilities = {
-			elven_desperation_mechanic
-		}
+	government_abilities = {
+		elven_desperation_mechanic
 	}
 	ai = {
 		factor = 100
@@ -1360,6 +1356,9 @@ constitutional_monarchy_reform = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
 		has_parliament = yes
 	}
 	custom_attributes = {

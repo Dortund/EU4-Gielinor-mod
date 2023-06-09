@@ -15,8 +15,7 @@ apostocracy = {
 	valid_for_nation_designer = no
 	icon = "icon_apostocracy"
 	allow_normal_conversion = yes
-	legacy_equivalent = apostocracy_legacy
-	papacy = yes
+		papacy = yes
 	allow_convert = no
 	lock_level_when_selected = yes
 	fixed_rank = 2
@@ -48,8 +47,7 @@ bardic_order = {
 	nation_designer_cost = 10
 	icon = "icon_bardic_order"
 	allow_normal_conversion = yes
-	legacy_equivalent = bardic_order_legacy
-	monastic = yes
+		monastic = yes
 }
 
 cloistered_order = {
@@ -62,8 +60,7 @@ cloistered_order = {
 	}
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
-	legacy_equivalent = cloistered_order_legacy
-	icon = "icon_cloistered_order"
+		icon = "icon_cloistered_order"
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
@@ -86,8 +83,7 @@ cult_of_reason = {
 		religion = godless
 	}
 	allow_normal_conversion = yes
-	legacy_equivalent = cult_of_reason_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
 		 idea_cost = -0.1
@@ -111,8 +107,7 @@ druidic_order = {
 	nation_designer_cost = 10
 	icon = "icon_druidic_order"
 	allow_normal_conversion = yes
-	legacy_equivalent = monastic_order_government
-	monastic = yes
+		monastic = yes
 	fixed_rank = 1
 }
 
@@ -128,8 +123,7 @@ druidic_state = {
 		}
 	}
 	allow_normal_conversion = yes
-	legacy_equivalent = druidic_state_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
 		monthly_fervor_increase = 1
@@ -144,8 +138,7 @@ frontier_theocracy = {
 		is_former_colonial_nation = yes
 	}
 	allow_normal_conversion = no
-	legacy_equivalent = frontier_theocracy_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	modifiers = {
 	 	global_colonial_growth = 30
@@ -160,8 +153,7 @@ guthixian_cave = {
 		religion = guthix
 	}
 	allow_normal_conversion = no
-	legacy_equivalent = guthixian_cave_legacy
-	lock_level_when_selected = yes
+		lock_level_when_selected = yes
 	valid_for_nation_designer = no
 	modifiers = {
 		can_not_declare_war = yes
@@ -204,8 +196,7 @@ monastic_order_reform = {
 	nation_designer_cost = 10
 	icon = "icon_monastic_order"
 	allow_normal_conversion = yes
-	legacy_equivalent = monastic_order_government
-	monastic = yes
+		monastic = yes
 	fixed_rank = 1
 }
 
@@ -228,8 +219,7 @@ shamanic_theocracy = {
 	nation_designer_cost = 10
 	icon = "icon_shamanic_theocracy"
 	allow_normal_conversion = yes
-	legacy_equivalent = shamanic_theocracy_legacy
-	monastic = yes
+		monastic = yes
 }
 
 theocratic_government_reform = {
@@ -239,8 +229,7 @@ theocratic_government_reform = {
 		NOT = { tag = CGU }
 	}
 	allow_normal_conversion = yes
-	legacy_equivalent = theocratic_government_reform_legacy
-	valid_for_nation_designer = yes
+		valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
 		global_tax_modifier = 0.05
@@ -615,6 +604,9 @@ regionally_elected_commanders = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
 		has_parliament = yes
 	}
 	custom_attributes = {
@@ -649,6 +641,9 @@ theocratic_democracy_reform = {
 	}
 
 	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
 		has_parliament = yes
 	}
 	custom_attributes = {
@@ -957,4 +952,3 @@ secret_church_reform = {
 		factor = 4
 	}
 }
-

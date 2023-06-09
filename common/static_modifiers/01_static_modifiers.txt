@@ -151,11 +151,7 @@ army_tradition = {
 	temples_influence = 0.1
 	mr_aristocrats_influence = 0.1
 	rr_girondists_influence = 0.1
-	monthly_militarized_society = 0.1
 	nobles_loyalty_modifier = 0.05
-	maratha_loyalty_modifier = 0.05
-	rajput_loyalty_modifier = 0.05
-	janissaries_loyalty_modifier = 0.05
 	allowed_tercio_fraction = 0.1
 	allowed_samurai_fraction = 0.1
 }
@@ -170,7 +166,6 @@ navy_tradition = {
 	blockade_efficiency = 1
 	sailors_recovery_speed = 0.2
 	burghers_loyalty_modifier = 0.05
-	vaisyas_loyalty_modifier = 0.05
 	allowed_geobukseon_fraction = 0.5
 	allowed_galleass_fraction = 0.5
 }

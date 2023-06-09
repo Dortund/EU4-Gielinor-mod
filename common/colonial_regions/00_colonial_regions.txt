@@ -9,10 +9,10 @@ colonial_kourend = {
 	native_hostileness = 4
 	
 	trade_goods = {
-		fur = 10
-		fish = 3
-		naval_supplies = 2
-		gold = 2
+		hunter_creatures = 10
+		fishing_spot = 3
+		magic_supplies = 2
+		advanced_ores = 2
 	}
 
 	provinces = {
@@ -40,10 +40,10 @@ colonial_kebos = {
 	native_hostileness = 4
 	
 	trade_goods = {
-		fur = 10
-		fish = 3
-		naval_supplies = 2
-		gold = 2
+		hunter_creatures = 10
+		fishing_spot = 3
+		magic_supplies = 2
+		advanced_ores = 2
 	}
 
 	provinces = {
@@ -68,10 +68,10 @@ colonial_varlamore = {
 	native_hostileness = 4
 	
 	trade_goods = {
-		fur = 10
-		fish = 3
-		naval_supplies = 2
-		gold = 2
+		hunter_creatures = 10
+		fishing_spot = 3
+		magic_supplies = 2
+		advanced_ores = 2
 	}
 
 	provinces = {
