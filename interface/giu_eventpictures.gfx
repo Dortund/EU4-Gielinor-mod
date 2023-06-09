@@ -17,12 +17,6 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "ARCHITECTURE_eventPicture"
-		texturefile = "gfx/event_pictures/event_pictures_disasters/ARCHITECTURE_eventPicture.dds"
-		alwaystransparent = yes
-	}
-	
-	spriteType = {
 		name = "DREADED_YEARS_OF_TRAGEDY_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_disasters/DREADED_YEARS_OF_TRAGEDY_eventPicture.dds"
 		alwaystransparent = yes
@@ -429,6 +423,12 @@ spriteTypes = {
 ##########################
 	#Prices/Institutions
 ##########################
+
+	spriteType = {
+		name = "ARCHITECTURE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/ARCHITECTURE_eventPicture.dds"
+		alwaystransparent = yes
+	}
 
 	spriteType = {
 		name = "CANNON_eventPicture"

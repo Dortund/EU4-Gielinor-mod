@@ -20,7 +20,7 @@ protect_against_the_gods_aspect = { #all four
 	}
 }
 
-mansions_of_the_stars_aspect = { #all four
+mansions_of_the_moon_aspect = { #all four
 	cost = 100
 	modifier = {
 		build_time = -0.15
