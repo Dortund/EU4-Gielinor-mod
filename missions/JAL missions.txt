@@ -289,8 +289,8 @@ jal_missions_4 = {
 		required_missions = { JAL_greener_shores }
 		provinces_to_highlight = {
 			OR = {
-				id = 2
-				id = 11
+				province_id = 2
+				province_id = 11
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -336,8 +336,8 @@ jal_missions_4 = {
 		required_missions = { JAL_lum_control JAL_armies_of_zaros }
 		provinces_to_highlight = {
 			OR = {
-				id = 63
-				id = 1003
+				province_id = 63
+				province_id = 1003
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
