@@ -1,0 +1,22 @@
+﻿l_english:
+ flavor_ndh.1.t:0 "The Priest of Saradomin"
+ flavor_ndh.1.d:0 "Legends of the Menaphite Pantheon are slipping into legend and myth. The spiritual side of Nardah is fading. But now, a priest of Saradomin has arrived to our town to spread the good news of his lord's power - including the incredible ability to block projectiles with faith alone."
+ flavor_ndh.1.a:0 "Saradomin has the answer!"
+ flavor_ndh.1.b:0 "Let's keep to the old ways."
+ 
+ flavor_ndh.2.t:0 "Priest found dead!"
+ flavor_ndh.2.d:0 "A [Root.Religion.GetName] priest has been found dead in the River Elid - and to make matters worse, the well at Nardah has dried up!"
+ flavor_ndh.2.a:0 "Someone from Pollnivneach can provide us with water."
+ flavor_ndh.2.b:0 "We are being punished for the neglect of the priest."
+ NDH_spirits_of_elid_tooltip:0 "This modifier can be removed with the §YInvestigate Nardah's Curse§! decision."
+ 
+ flavor_ndh.3.t:0 "Nardah Well Mysteriously Refills!"
+ flavor_ndh.3.d:0 "The crisis at Nardah's well has mysteriously ended. Many suspect this is due to our people's renewed faith in the Menaphite Pantheon."
+ flavor_ndh.3.a:0 "We shall not forsake Elidinis again!"
+ 
+ flavor_ndh.4.t:0 "Spirits of the Elid"
+ flavor_ndh.4.d:0 "An adventurer we recruited discovered the truth about the dried up well - by forsaking the ways of Elidinis, the Elid's guardian spirits were angered and dried up our well in response."
+ flavor_ndh.4.a:0 "We should convert back to the Menaphite Pantheon and end this."
+ flavor_ndh.4.b:0 "I will not accept this heathen faith!"
+ NDH_refuse_to_convert_tooltip:0 "The Nardah well will continue to be cursed unless you decide to convert back to the Menaphite Pantheon."
+ 

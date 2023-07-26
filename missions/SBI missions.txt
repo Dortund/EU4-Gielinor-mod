@@ -8,10 +8,27 @@ sbi_missions_2 = {
 	}
 	has_country_shield = yes
 	
-	SBI_faith_of_scabaras = {
-		icon = mission_alliances
-		position = 2
+	SBI_policy_of_isolation = {
+		icon = mission_policy_of_isolation
+		position = 1
 		required_missions = {  }
+		trigger = {
+			has_global_modifier_value = {
+				which = global_spy_defence
+				value = 0.15
+			}
+			NOT = { num_of_allies = 1 }
+		}
+		effect = {
+			add_years_of_income = 0.5
+			add_adm_power = 15
+		}
+	}
+	
+	SBI_faith_of_scabaras = {
+		icon = mission_faith_of_scabaras
+		position = 2
+		required_missions = { SBI_policy_of_isolation }
 		trigger = {
 			religion = menaphite
 			has_personal_deity = scabaras
@@ -27,10 +44,9 @@ sbi_missions_2 = {
 			}
 		}
 	}
-	
 	SBI_scabarite_science = {
-		icon = mission_alliances
-		position = 3
+		icon = mission_scabarite_science
+		position = 4
 		required_missions = { SBI_faith_of_scabaras }
 		trigger = {
 			innovativeness = 10
@@ -40,6 +56,24 @@ sbi_missions_2 = {
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 2
+			}
+		}
+	}
+	SBI_scabarite_philosophy = {
+		icon = mission_scabarite_philosophy
+		position = 5
+		required_missions = { SBI_scabarite_science SBI_development_of_ullek }
+		trigger = {
+			has_global_modifier_value = {
+				which = reform_progress_growth
+				value = 0.6
+			}
+		}
+		effect = {
+			add_prestige = 25
+			change_government_reform_progress = 100
+			69 = {
+				add_core = SBI
 			}
 		}
 	}
@@ -56,7 +90,7 @@ sbi_missions_3 = {
 	has_country_shield = yes
 	
 	SBI_tunnels_of_ullek = {
-		icon = mission_alliances
+		icon = mission_tunnels_of_ullek
 		position = 3
 		required_missions = { SBI_faith_of_scabaras SBI_scabarite_mage_training }
 		trigger = {
@@ -91,7 +125,7 @@ sbi_missions_3 = {
 	}
 	
 	SBI_development_of_ullek = {
-		icon = mission_alliances
+		icon = mission_development_of_ullek
 		position = 4
 		required_missions = { SBI_tunnels_of_ullek }
 		trigger = {
@@ -103,6 +137,7 @@ sbi_missions_3 = {
 		}
 		effect = {
 			93 = {
+				move_capital_effect = yes
 				add_province_modifier = { 
 					name = SBI_reconstruction_of_ullek
 					duration = 7300
@@ -110,9 +145,8 @@ sbi_missions_3 = {
 			}
 		}
 	}
-	
 	SBI_swamps_of_ullek = {
-		icon = mission_alliances
+		icon = mission_swamps_of_ullek
 		position = 5
 		required_missions = { SBI_development_of_ullek }
 		trigger = {
@@ -134,10 +168,74 @@ sbi_missions_3 = {
 			}
 			else = {
 				91 = {
-					add_core = ROOT
-					cede_province = ROOT
+					add_siberian_construction = 400
 				}
 				add_adm_power = -150
+			}
+		}
+	}
+	SBI_fate_of_the_kalphites = {
+		icon = mission_fate_of_the_kalphites
+		position = 6
+		required_missions = { SBI_scabarite_philosophy SBI_swamps_of_ullek }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 69
+		}
+		effect = {
+			country_event = {
+				id = flavor_sbi.1
+				days = 1
+			}
+		}
+	}
+	SBI_reopening_diplomacy = {
+		icon = mission_glory_of_the_pantheon
+		position = 7
+		required_missions = { SBI_fate_of_the_kalphites }
+		trigger = {
+			102 = {
+				religion = menaphite
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_jaltevas
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_jaltevas
+							tier = 3
+						}
+					}
+				}
+				else = {
+					owned_by = ROOT
+					is_core = ROOT
+					development = 25
+					num_of_buildings_in_province = 3
+				}
+			}
+			absolutism = 15
+			custom_trigger_tooltip = {
+				tooltip = building_alliances.tooltip
+				num_of_allies = 2
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = SBI_reintegration_of_the_scabarites
+				duration = -1
 			}
 		}
 	}
@@ -154,7 +252,7 @@ sbi_missions_4 = {
 	has_country_shield = yes
 	
 	SBI_scarab_riders = {
-		icon = mission_alliances
+		icon = mission_scarab_riders
 		position = 1
 		required_missions = {  }
 		trigger = {
@@ -170,17 +268,91 @@ sbi_missions_4 = {
 			add_army_professionalism = 0.05
 		}
 	}
-	
 	SBI_scabarite_mage_training = {
-		icon = mission_alliances
+		icon = mission_scabarite_mage_training
 		position = 2
 		required_missions = { SBI_scarab_riders }
 		trigger = {
-			mil_tech = 12
+			has_institution = runecrafting
 		 	army_professionalism = 0.5
 		}
 		effect = {
 			add_mil_power = 50
+		}
+	}
+	SBI_train_a_champion = {
+		icon = mission_expand_the_training_ground
+		position = 3
+		required_missions = { SBI_scabarite_mage_training }
+		trigger = {
+			has_commanding_three_star = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = SBI_glory_of_the_champion
+				duration = 9125
+			}
+		}
+	}
+	SBI_catacombs_of_ullek = {
+		icon = mission_catacombs_of_ullek
+		position = 5
+		required_missions = { SBI_development_of_ullek SBI_train_a_champion }
+		trigger = {
+			93 = {
+				owned_by = ROOT
+				is_core = ROOT
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_ullek
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_ullek
+							tier = 3
+						}
+					}
+				}
+				else = {
+					development = 35
+					num_of_buildings_in_province = 5
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			93 = {
+				add_province_modifier = {
+					name = SBI_catacombs_of_ullek_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	SBI_sea_defences = {
+		icon = mission_night_port
+		position = 6
+		required_missions = { SBI_swamps_of_ullek SBI_catacombs_of_ullek }
+		trigger = {
+			91 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_building = naval_battery
+				base_production = 10
+			}
+			navy_size_percentage = 0.9
+		}
+		effect = {
+			91 = {
+				add_province_modifier = {
+					name = SBI_untouchable_ullek
+					duration = -1
+				}
+			}
 		}
 	}
 }

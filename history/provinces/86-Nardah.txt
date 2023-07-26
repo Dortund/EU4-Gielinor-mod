@@ -23,3 +23,11 @@ trade_goods = herblore_supplies
 is_city = yes
 
 center_of_trade = 1
+
+2169.1.1 = {
+	religion = saradomin
+}
+
+2173.12.5 = {
+	religion = menaphite
+}

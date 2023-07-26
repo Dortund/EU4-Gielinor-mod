@@ -1,0 +1,478 @@
+jal_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = JAL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	JAL_camp_constructions = {
+		icon = mission_camp_constructions
+		position = 1
+		required_missions = {  }
+		trigger = {
+			capital_scope = {
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+				base_tax = 4
+				base_manpower = 4
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = JAL_permanent_camp
+					duration = 9125
+				}
+			}
+		}
+	}
+	JAL_sustained_income = {
+		icon = mission_coins
+		position = 2
+		required_missions = { JAL_camp_constructions }
+		trigger = {
+			share_of_starting_income = 2
+		}
+		effect = {
+			add_adm_power = 50
+		}
+	}
+	JAL_ancient_rituals = {
+		icon = mission_ancient_rituals
+		position = 3
+		required_missions = { JAL_sustained_income }
+		trigger = {
+			religion = zaros
+			has_institution = runecrafting
+			OR = {
+				temple = 2
+				cathedral = 2
+			}
+			theologian = 2
+		}
+		effect = {
+			add_prestige = 25
+			ice_path_area = {
+				discover_country = ROOT
+			}
+			dessous_area = {
+				discover_country = ROOT
+			}
+			baxtoria_area = {
+				discover_country = ROOT
+			}
+		}
+	}
+	JAL_desert_treasure = {
+		icon = mission_desert_treasure
+		position = 5
+		required_missions = { JAL_ancient_rituals }
+		trigger = {
+			religion = zaros
+			OR = {
+				AND = {
+					has_institution = exploration
+					absolutism = 80
+					mission_completed = JAL_growing_trade
+				}
+				AND = {
+					82 = { units_in_province = ROOT }
+					845 = { units_in_province = ROOT }
+					351 = { units_in_province = ROOT }
+					258 = { units_in_province = ROOT }
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_jal.1
+				days = 30
+			}
+		}
+	}
+}
+
+jal_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = JAL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	JAL_bedabin_diplomacy = {
+		icon = mission_bedabin_diplomacy
+		position = 1
+		required_missions = {  }
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						exists = BDS
+					}
+					army_size = 10
+				}
+			 	alliance_with = BDS
+				AND = {
+					is_rival = BDS
+					army_size = BDS
+				}
+				BDS = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = JAL_pineapple_supplies
+				duration = 7300
+			}
+		}
+	}
+	JAL_sea_presence = {
+		icon = mission_kharidian_port
+		position = 2
+		required_missions = { JAL_bedabin_diplomacy }
+		trigger = {
+			navy_size_percentage = 0.9
+			NOT = { is_in_deficit = yes }
+		}
+		effect = {
+			add_country_modifier = {
+				name = JAL_bandit_sailors
+				duration = 7300
+			}
+		}
+	}
+	JAL_growing_trade = {
+		icon = mission_grand_ship
+		position = 3
+		required_missions = { JAL_sea_presence }
+		trigger = {
+			81 = {
+				trade_share = {
+					country = ROOT
+					share = 20
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+		}
+	}
+	JAL_wealth_of_the_lum = {
+		icon = mission_lum_trade
+		position = 5
+		required_missions = { JAL_growing_trade JAL_lum_control }
+		trigger = {
+			2 = {
+				is_strongest_trade_power = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = jal_prosperity_in_misthalin_tooltip
+				any_owned_province = {
+					region = misthalin_region
+					is_prosperous = yes
+				}
+			}
+		}
+		effect = {
+			south_lum_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	JAL_return_of_senntisten = {
+		icon = mission_return_of_senntisten
+		position = 6
+		required_missions = { JAL_desert_treasure JAL_the_siege_of_al_kharid }
+		provinces_to_highlight = {
+			area = saranthium_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			saranthium_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = jal_may_form_snt_tooltip
+			23 = {
+				change_religion = zaros
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+}
+
+jal_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = JAL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	JAL_bandit_army = {
+		icon = mission_bandit_army
+		position = 1
+		required_missions = {  }
+		trigger = {
+			army_size_percentage = 0.9
+			cavalry_fraction = 0.3
+			NOT = {	is_in_deficit = yes }
+		}
+		effect = {
+			every_country = {
+				limit = {
+					capital_scope = {
+						region = kharidian_desert_region
+					}
+					religion = menaphite
+				}
+				reverse_add_casus_belli = {
+					target = JAL
+					type = cb_trade_conflict
+					months = 180
+				}
+			}
+		}
+	}
+	JAL_greener_shores = {
+		icon = mission_adventurer_training
+		position = 3
+		required_missions = { JAL_sea_presence JAL_conduct_raids }
+		provinces_to_highlight = {
+			area = tutorial_island_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			tutorial_island_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			lumbridge_swamp_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	JAL_lum_control = {
+		icon = mission_settle_the_south
+		position = 4
+		required_missions = { JAL_greener_shores }
+		provinces_to_highlight = {
+			OR = {
+				id = 2
+				id = 11
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2 = { country_or_non_sovereign_subject_holds = ROOT }
+			11 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = ALK
+				}
+				add_casus_belli = {
+					target = ALK
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+			else_if = {
+				limit = {
+					exists = KDS
+				}
+				add_casus_belli = {
+					target = KDS
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+			else = {
+				al_kharid_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	JAL_the_siege_of_al_kharid = {
+		icon = mission_settle_al_kharid
+		position = 5
+		required_missions = { JAL_lum_control JAL_armies_of_zaros }
+		provinces_to_highlight = {
+			OR = {
+				id = 63
+				id = 1003
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			61 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			62 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			1003 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			65 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			1395 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			63 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			64 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			789 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			66 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			67 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}			
+		}
+		effect = {
+			kings_road_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			saranthium_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+jal_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = JAL
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	JAL_conduct_raids = {
+		icon = mission_raid_a_rival
+		position = 2
+		required_missions = { JAL_bandit_army }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = jal_looted_three_provinces_tooltip
+				calc_true_if = {
+					all_province = {
+						owner = {
+							war_with = JAL
+						}
+						is_looted = yes
+					}
+					amount = 3
+				}
+			}
+		}
+		effect = {
+			tutorial_island_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	JAL_armies_of_zaros = {
+		icon = mission_armies_of_zaros
+		position = 4
+		required_missions = { JAL_conduct_raids }
+		trigger = {
+			army_professionalism = 0.25
+			army_size = 15
+		}
+		effect = {
+			add_country_modifier = {
+				name = JAL_new_zarosian_army
+				duration = 9125
+			}
+		}
+	}
+}

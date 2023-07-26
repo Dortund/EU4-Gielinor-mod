@@ -8,13 +8,6 @@ technology_group = northerntechgroup
 capital = 1290 #Imcandoria City
 historical_rival = FRG
 
-every_country = {
-	add_opinion = {
-		who = ROOT
-		modifier = boss_tag_opinion
-	}
-}
-
 1899.3.12 = {
 	monarch = {
 		name = "Zarraoth"

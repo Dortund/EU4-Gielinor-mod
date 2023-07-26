@@ -4,6 +4,108 @@
 ##########################################################################################################################################
 ##########################################################################################################################################
 
+#Beta 1.7.0 patch notes (Jaldraocht)
+
+# The seemingly impossible dream of reforming the Zarosian Empire has become a little more likely as Jaldraocht can now take steps to rebuild Senntisten, and from there, try to make the Empire anew. It won't be easy, however...
+# Featuring even more of Dortund's bug fixes!
+
+#######################
+# Map
+#######################
+
+# Moved Venenatis and renamed some Forinthry provinces in accordance with changes to OSRS' Wilderness bosses
+
+#######################
+# Government
+#######################
+
+# Boss nations' opinion penalties with other nations are now tied to the government form, rather than the country.
+
+#######################
+# National Flavour
+#######################
+
+# New startup screen text for Jaldraocht, Kharidians, Menaphos and generic Kharidian Desert nations
+# Localised national ideas for Berserkers, Callisto, Lithkren, Kharidian Empire, Merfolk, Scorpia, Venenatis
+# New generic Kharidian mission tree for all Kharidian-culture countries without a tree of their own; contains 15 missions
+
+# New Nation: Senntisten. Formable by non-Wushanko-culture Zarosians who have the Saranthium area controlled, and either 200 development, or playing as Jaldraocht with sufficient mission tree progress.
+## This nation is designed as a mid-way between starting Zarosian nations and the Zarosian Empire. Resurgentia is the Wushanko-culture equivalent.
+## If you free Azzanadra, he can lead your nation with the unique Reformed Zarosian Theocracy government form.
+## Has 22 missions, shared with the Zarosian Empire
+
+# Canem
+## Added new decision to found the village of Canifis, also renaming the nation to Canifis
+
+# Jaldraocht
+## National idea Last Zarosians now provides Republican Tradition, so it's actually useful for their government form
+## New mission tree with 15 missions, leading you towards forming Senntisten
+
+# Kharidian Empire
+## Now requires 50 Kharidian provinces and specific cities to form, rather than the entire Kharidian region.
+
+# Kharidians/Al Kharid
+## Added images for all existing Kharidian/Al Kharid missions
+## Depopulation of the Plateau event now gives you an option to have fewer penalties, but change the province's culture to Hill Giant - so long as you haven't already given it to the Saradominists.
+## New flavour event for the corruption of the Duel Arena
+## 5 additional missions for Al Kharid.
+
+# King Black Dragon
+## Now follows Godless (Evasive School) instead of Zaros, reflecting his neutrality in the wake of the Zaros-Zamorak split in the fear it would destroy the dragons and dragon riders.
+
+# Menaphos
+## Added images for all existing Menaphite missions
+## Added 6 additional missions. The tree is by no means complete yet.
+
+# Misthalin
+## Rearranged mission tree somewhat, and added In Aid of the Myreque mission. Unlocks the unique Burgh de Rott Rambler mercenaries, which are cheaper and take less land attrition.
+
+# Nardah
+## Now is Saradominist on the 169 5th age bookmark, to reflect the events just before the Spirits of the Elid quest
+## Added Spirits of the Elid events
+
+# Scabarites
+## Added 7 more missions, for a total of 14.
+## Added icons for missions
+
+# Zarosian Empire
+## Formation no longer changes primary culture, and no longer renames Viggora's Folly to Viggora's Fortress (he was a traitor to Zaros, after all)
+## Traditions now grants +1 diplomat instead of +2 diplomatic reputation.
+## 21 new missions! Also carries over Senntisten missions, for a total mission tree of 43 missions!
+
+# Zemouregal
+## Missions slightly adjusted to account for moving of Venenatis
+
+#######################
+# Bugfixes
+#######################
+
+# Dortund brings yet another batch of fixes to the mod!
+
+# Fixed Mansions of the Moon Wushanko aspect
+# Fixed bad code in Bandosian Battle Strategies
+# Fixed bad code in Serenist Incidents
+# "Traitor to Asgarnia" opinion modifier code fixed
+# Fixed Suzaku rebels referring to misspelt "Suzako"
+# GOTO functionality added to "Cadarn Elves Join the Resistance!" event
+# Fixed provinces needed to trigger the Temple of Shadow spawn
+# Significant fixes to Seren events
+# Fixed outdated code in Institution events
+# Fixed code for Architecture event image
+# Fixed Ferox Enclave's adjective
+# Fixed some strait crossings using incorrect provinces
+# Correctly added Lost Mines to the Eastern Runescape continent
+
+#######################
+# Miscellaneous
+#######################
+
+# Added some more mercenary companies
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
 #Beta 1.6.2 patch notes (Neitiznot)
 
 # Turns out a whole lot of extra bugs haven't been fixed yet, so here's another bugfixing pass - along with an expansion for religions in the Nonintervention group!

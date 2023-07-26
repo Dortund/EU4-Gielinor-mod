@@ -1,0 +1,426 @@
+# For nations in the Fremennik region of Fremennik culture except Gunnar, Rellekka and the Moonclan.
+
+genkharid_missions_2 = {
+	slot = 2
+	generic = yes
+	ai = yes
+	potential = {
+		culture_group = kharidian_group
+		religion = menaphite
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	genkharid_faith_of_the_pantheon = {
+		icon = mission_faith_of_the_pantheon
+		required_missions = {  }
+		position = 1
+		trigger = {
+			OR = {
+				temple = 1
+				cathedral = 1
+			}
+			if = {
+				limit = {
+					religion = menaphite
+				}
+				prestige = 50
+				OR = {
+					legitimacy = 100
+					republican_tradition = 100
+					devotion = 100
+					horde_unity = 100
+					meritocracy = 100
+				}
+			}
+			else = {
+				religious_unity = 1
+				custom_trigger_tooltip = {
+					tooltip = obj_convert_10_provinces_tooltip
+					check_variable = { which = num_converted_religion value = 10 }
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 0.25
+		}
+	}
+	genkharid_accumulate_wealth = {
+		icon = mission_coins
+		required_missions = { genkharid_faith_of_the_pantheon }
+		position = 2
+		trigger = {
+			treasury = 250
+			share_of_starting_income = 2
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = genkharid_capital_wealth
+					duration = 9125
+				}
+			}
+		}
+	}
+	genkharid_strong_capital = {
+		icon = mission_great_kharidian_city
+		required_missions = { genkharid_accumulate_wealth }
+		position = 3
+		trigger = {
+			capital_scope = {
+				num_of_times_improved_by_owner = 10
+				num_of_buildings_in_province = 3
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+		}
+	}
+	genkharid_glory_of_the_pantheon = {
+		icon = mission_glory_of_the_pantheon
+		required_missions = { genkharid_strong_capital }
+		position = 4
+		trigger = {
+			if = {
+				limit = {
+					religion = menaphite
+				}
+				calc_true_if = {
+					all_owned_province = {
+						religion = menaphite
+						NOT = { region = kharidian_desert_region }
+					}
+					amount = 10
+				}
+			}
+			else = {
+				religious_unity = 1
+				custom_trigger_tooltip = {
+					tooltip = obj_convert_25_provinces_tooltip
+					check_variable = { which = num_converted_religion value = 25 }
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 100			
+		}
+	}
+	genkharid_monuments_of_kharid = {
+		icon = mission_jalkabir
+		required_missions = { genkharid_glory_of_the_pantheon }
+		position = 5
+		trigger = {
+			if = {
+				limit = {
+					AND = {
+						has_dlc = "Leviathan"
+						religion = menaphite
+					}
+				}
+				OR = {
+					has_great_project = {
+						type = great_project_duel_arena
+						tier = 2
+					}
+					has_great_project = {
+						type = great_project_duel_arena
+						tier = 3
+					}
+					has_great_project = {
+						type = great_project_jalkabir
+						tier = 2
+					}
+					has_great_project = {
+						type = great_project_jalkabir
+						tier = 3
+					}
+					has_great_project = {
+						type = great_project_jaltevas
+						tier = 2
+					}
+					has_great_project = {
+						type = great_project_jaltevas
+						tier = 3
+					}
+					has_great_project = {
+						type = great_project_mastaba_of_senliten
+						tier = 2
+					}
+					has_great_project = {
+						type = great_project_mastaba_of_senliten
+						tier = 3
+					}
+					has_great_project = {
+						type = great_project_ullek
+						tier = 2
+					}
+					has_great_project = {
+						type = great_project_ullek
+						tier = 3
+					}					
+				}
+			}
+			else = {
+				OR = {
+					64 = {
+						owned_by = ROOT
+						is_core = ROOT
+						num_of_times_improved_by_owner = 5
+						num_of_buildings_in_province = 5
+					}
+					80 = {
+						owned_by = ROOT
+						is_core = ROOT
+						num_of_times_improved_by_owner = 5
+						num_of_buildings_in_province = 5
+					}
+					93 = {
+						owned_by = ROOT
+						is_core = ROOT
+						num_of_times_improved_by_owner = 5
+						num_of_buildings_in_province = 5
+					}
+					100 = {
+						owned_by = ROOT
+						is_core = ROOT
+						num_of_times_improved_by_owner = 5
+						num_of_buildings_in_province = 5
+					}
+					102 = {
+						owned_by = ROOT
+						is_core = ROOT
+						num_of_times_improved_by_owner = 5
+						num_of_buildings_in_province = 5
+					}
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			add_country_modifier = {
+				name = genkharid_glory_of_the_monuments
+				duration = 9125
+			}
+		}
+	}
+}
+
+genkharid_missions_3 = {
+	slot = 3
+	generic = yes
+	ai = yes
+	potential = {
+		culture_group = kharidian_group
+		religion = menaphite
+		NOT = { map_setup = map_setup_random }
+	}
+	genkharid_friends_in_the_desert = {
+		icon = mission_kharidian_diplomacy
+		required_missions = {  }
+		position = 1
+		trigger = {
+			any_ally = {
+				culture_group = kharidian_group
+				trust = { who = ROOT value = 65 }
+			}
+		}
+		effect = {
+			add_dip_power = 25
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 15
+			}
+		}
+	}
+	genkharid_new_settlements = {
+		icon = mission_camp_constructions
+		required_missions = { genkharid_friends_in_the_desert }
+		position = 2
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					NOT = { nationalism = 1 }
+					is_core = ROOT
+				}
+				amount = 4
+			}
+			grown_by_development = 15
+		}
+		effect = {
+			add_country_modifier = {
+				name = genkharid_building_boom
+				duration = 9125
+			}
+		}
+	}
+	genkharid_regional_trade = {
+		icon = mission_expand_our_trade_power
+		required_missions = { genkharid_new_settlements }
+		position = 3
+		trigger = {
+			capital_scope = {
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+			add_dip_power = 50
+		}
+	}
+	genkharid_shipbuilders_of_kharid = {
+		icon = mission_kharidian_port
+		required_missions = { genkharid_regional_trade }
+		position = 4
+		trigger = {
+			OR = {
+				dock = 3
+				drydock = 3
+				shipyard = 3
+				grand_shipyard = 3
+			}
+			navy_size_percentage = 0.8
+		}
+		effect = {
+			add_country_modifier = {
+				name = genkharid_traders_of_the_eastern_sea
+				duration = 9125
+			}
+		}
+	}
+	genkharid_riches_of_wushanko = {
+		icon = mission_journey_to_wushanko
+		required_missions = { genkharid_shipbuilders_of_kharid }
+		position = 5
+		trigger = {
+			OR = {
+				1101 = {
+					is_strongest_trade_power = ROOT
+				}
+				1156 = {
+					is_strongest_trade_power = ROOT
+				}
+				1188 = {
+					is_strongest_trade_power = ROOT
+				}
+				1202 = {
+					is_strongest_trade_power = ROOT
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 1.5
+			add_mercantilism = 5
+		}
+	}
+}
+
+genkharid_missions_4 = {
+	slot = 4
+	generic = yes
+	ai = yes
+	potential = {
+		culture_group = kharidian_group
+		religion = menaphite
+		NOT = { map_setup = map_setup_random }
+	}
+	genkharid_defend_ourselves = {
+		icon = mission_worthy_army
+		required_missions = {  }
+		position = 1
+		trigger = {
+			army_size_percentage = 0.8
+			employed_advisor = {
+				category = MIL
+			}
+			NOT = { is_in_deficit = yes }
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+	genkharid_raid_a_rival = {
+		icon = mission_raid_a_rival
+		required_missions = { genkharid_defend_ourselves }
+		position = 2
+		trigger = {
+			num_of_war_reparations = 2
+		}
+		effect = {
+			add_years_of_income = 1
+		}
+	}
+	genkharid_subject_cities = {
+		icon = mission_settle_al_kharid
+		required_missions = { genkharid_raid_a_rival }
+		position = 3
+		trigger = {
+		 	num_of_subjects = 3
+			NOT = {
+				any_subject_country = {
+					liberty_desire = 25
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = genkharid_integration_of_the_cities
+				duration = 9125
+			}
+		}
+	}
+	genkharid_professionalism = {
+		icon = mission_professional_brothers
+		required_missions = { genkharid_subject_cities }
+		position = 4
+		trigger = {
+		 	army_professionalism = 0.75
+			OR = {
+				has_global_modifier_value = {
+					which = land_morale
+					value = 0.5
+				}
+				has_global_modifier_value = {
+					which = discipline
+					value = 0.2
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = genkharid_drive_to_unify
+				duration = 7300
+			}
+		}
+	}
+	genkharid_kharidian_unity = {
+		icon = mission_kharidian_unity
+		required_missions = { genkharid_professionalism }
+		position = 5
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 35
+				region = kharidian_desert_region
+				is_core = root
+			}
+		}
+		effect = {
+			add_prestige = 50
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			kharidian_desert_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

@@ -51,6 +51,9 @@ boss_nation = {
 		can_not_build_missionaries = yes
 		can_not_build_colonies = yes
 		can_not_send_merchants = yes
+		relation_with_same_religion = -200
+		relation_with_heretics = -200
+	 	relation_with_heathens = -200
 		
 	 	liberty_desire = 1000
 		governing_capacity_modifier = -0.98
@@ -164,6 +167,9 @@ island_boss_nation = {
 		can_not_build_missionaries = yes
 		can_not_build_colonies = yes
 		can_not_send_merchants = yes
+		relation_with_same_religion = -200
+		relation_with_heretics = -200
+	 	relation_with_heathens = -200
 		
 	 	liberty_desire = 1000
 		governing_capacity_modifier = -0.98
@@ -279,6 +285,8 @@ quidamortem_boss_nation = {
 		can_not_build_missionaries = yes
 		can_not_build_colonies = yes
 		can_not_send_merchants = yes
+		relation_with_heretics = -200
+	 	relation_with_heathens = -200
 		
 	 	liberty_desire = 1000
 		governing_capacity_modifier = -0.98

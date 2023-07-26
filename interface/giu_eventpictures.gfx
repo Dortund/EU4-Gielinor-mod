@@ -17,12 +17,6 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "ARCHITECTURE_eventPicture"
-		texturefile = "gfx/event_pictures/event_pictures_disasters/ARCHITECTURE_eventPicture.dds"
-		alwaystransparent = yes
-	}
-	
-	spriteType = {
 		name = "DREADED_YEARS_OF_TRAGEDY_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_disasters/DREADED_YEARS_OF_TRAGEDY_eventPicture.dds"
 		alwaystransparent = yes
@@ -93,6 +87,12 @@ spriteTypes = {
 	spriteType = {
 		name = "CAMELOT_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_national_flavour/CAMELOT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "DAEMONHEIM_BILRACH_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/DAEMONHEIM_BILRACH_eventPicture.dds"
 		alwaystransparent = yes
 	}
 
@@ -183,6 +183,18 @@ spriteTypes = {
 	spriteType = {
 		name = "JALDRAOCHT_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_national_flavour/JALDRAOCHT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "JALDRAOCHT_AZZANADRA_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/JALDRAOCHT_AZZANADRA_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "KALPHITE_QUEEN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/KALPHITE_QUEEN_eventPicture.dds"
 		alwaystransparent = yes
 	}
 	
@@ -431,6 +443,12 @@ spriteTypes = {
 ##########################
 
 	spriteType = {
+		name = "ARCHITECTURE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/ARCHITECTURE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
 		name = "CANNON_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_prices_institutions/CANNON_eventPicture.dds"
 		alwaystransparent = yes
@@ -555,6 +573,12 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "SARADOMIN_MISSIONARY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/SARADOMIN_MISSIONARY_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
 		name = "SEREN_CATHEDRAL_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_religion/SEREN_CATHEDRAL_eventPicture.dds"
 		alwaystransparent = yes
@@ -659,6 +683,12 @@ spriteTypes = {
 	spriteType = {
 		name = "XERIC_XAMPHUR_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_religion/XERIC_XAMPHUR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ZAROS_SENNTISTEN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/ZAROS_SENNTISTEN_eventPicture.dds"
 		alwaystransparent = yes
 	}
 	

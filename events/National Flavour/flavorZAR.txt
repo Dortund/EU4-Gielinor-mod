@@ -1,0 +1,193 @@
+########################################
+# Events for Zarosian Empire
+########################################
+
+namespace = flavor_zar
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_zar.1
+	title = flavor_zar.1.t #The Fate of Bilrach
+	desc = flavor_zar.1.d #Bilrach, traitor to Zaros, attempted to dig deep under Daemonheim to contact his false god Zamorak. We have now captured him - what should his fate be?
+	picture = DAEMONHEIM_BILRACH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_zar.1.a #Execute him.
+		set_global_flag = flag_death_of_bilrach
+		add_mil_power = 50
+	}
+	option = {
+		name = flavor_zar.1.b #Imprison him.
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = flavor_zar.2
+	title = flavor_zar.2.t #The Goddess of Crystal
+	desc = flavor_zar.2.d #From the safety of the shadow realm, our spies examine a meeting of Serenist worship. The average follower sees her as the saviour of the elves, but little more besides. They know not of her true power - and perhaps it is best left that way.
+	picture = SEREN_PEWS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_zar.2.a #We would be strengthened by introducing Serenist ideas into our own lands.
+		random_owned_province = {
+			limit = {
+				NOT = { religion = seren }
+			}
+			change_religion = seren
+			add_province_modifier = {
+				name = ZAR_local_serenist_tolerance
+				duration = 9125
+			}
+		}
+		add_country_modifier = {
+			name = ZAR_light_and_shadow
+			duration = 9125
+		}
+	}
+	option = {
+		name = flavor_zar.2.b #No-one can stand in the God of Fate's way - not even family.
+		add_country_modifier = {
+			name = ZAR_reject_the_light
+			duration = 9125
+		}
+	}
+}
+
+country_event = {
+	id = flavor_zar.3
+	title = flavor_zar.3.t #The Shadow of Seren
+	desc = flavor_zar.3.d #Reaching Tirannwn, it became evident that whatever we thought of Seren's followers was incorrect. Instead, we have found worshippers of a fragment of Seren's being known as the Dark Lord, obsessed with causing death. Such followers may be susceptible to Zaros' teachings - but does not Zaros' kin deserve better than for her worship to be warped?
+	picture = DARK_LORD_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_zar.3.a #We must take in what few true of Seren we can as a bulwark against this bizarre Dark Lord.
+		random_owned_province = {
+			limit = {
+				NOT = { religion = seren }
+			}
+			change_religion = seren
+			add_province_modifier = {
+				name = ZAR_local_serenist_tolerance
+				duration = 9125
+			}
+		}
+		add_country_modifier = {
+			name = ZAR_light_and_shadow
+			duration = 9125
+		}
+	}
+	option = {
+		name = flavor_zar.3.b #The Dark Lord is a better facet of Seren, we should let this practice be.
+		add_dip_power = 25
+		every_country = {
+			limit = {
+				religion = dark_lord
+			}
+			add_opinion = {
+				who = ZAR
+				modifier = zar_respected_the_dark_lord
+			}
+		}
+	}
+	option = {
+		name = flavor_zar.3.c #Tell them about the ways of Zaros.
+		add_dip_power = 10
+		random_known_country = {
+			limit = {
+				religion = dark_lord
+			}
+			country_event = {
+				id = flavor_zar.4
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_zar.4
+	title = flavor_zar.4.t #The Other Dark Lord
+	desc = flavor_zar.4.d #Priests from a distant land have arrived in [Root.Capital.GetName], speaking of the God Zaros, God of Fate and Shadow, who has a strong connection to Seren. The more we hear of Zaros, the more he seems to resemble the Dark Lord...
+	picture = ZAROS_SENNTISTEN_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_zar.4.a #Truly, the Dark Lord was just a stepping-stone to following Zaros.
+		change_religion = zaros
+		capital_scope = {
+			change_religion = zaros
+		}
+		add_country_modifier = {
+			name = ZAR_maturation_of_the_dark_lord
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_zar.4.b #Zaros is distinct from the Dark Lord, but a worthwhile complement.
+		add_dip_power = 25
+		random_owned_province = {
+			limit = {
+				NOT = { religion = zaros }
+			}
+			change_religion = zaros
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = {
+		name = flavor_zar.4.c #What nonsense is this?!
+		add_country_modifier = {
+			name = ZAR_rejection_of_zaros
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_zar.5
+	title = flavor_zar.5.t #The Sorrow of Seren
+	desc = flavor_zar.5.d #It appears the fate of the Serenists is even more dire than the fate of the Zarosian church once was. No realm survives that follows the crystalline goddess.
+	picture = SEREN_CATHEDRAL_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_zar.5.a #We should lay claim to the crystal city as the most worthy successors.
+		prifddinas_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+	option = {
+		name = flavor_zar.5.b #Let us mourn the lost Goddess.
+		add_dip_power = 50		
+	}
+}
+
+
+
+
+

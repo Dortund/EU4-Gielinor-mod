@@ -3,6 +3,8 @@
  MPS_imperial_district_mission_desc:0 "The Imperial District requests that we prove our shrewd leadership of Menaphos."
  MPS_soul_altar_title:0 "Soul Altar"
  MPS_soul_altar_desc:0 "Mages say there is a strong magical presence to the west of Menaphos. We need to assert control of this land before someone else does."
+ MPS_grand_library_refurbishment_title:0 "Grand Library Refurbishment"
+ MPS_grand_library_refurbishment_desc:0 "Knowledge grows and changes over the years. The Grand Library of Menaphos must take on new works if it is to keep its status as Gielinor's greatest depository of books."
  
  MPS_worker_district_mission_title:0 "Worker District"
  MPS_worker_district_mission_desc:0 "Let us put our workers to great use in and beyond our great capital!"
@@ -11,10 +13,21 @@
  
  MPS_merchant_district_mission_title:0 "Merchant District"
  MPS_merchant_district_mission_desc:0 "Our merchants want assurances that we can actually dominate our local trade before they can risk moving beyond."
+ MPS_self_sufficiency_title:0 "Self Sufficiency"
+ MPS_self_sufficiency_desc:0 "The Kharidian Desert is hardly the optimal place to grow crops, so we have instead relied heavily on imports from Wushanko and elsewhere. This position is unsustainable. With new technologies, we can attempt to grow more food domestically."
+ MPS_menaphite_trade_routes_title:0 "Menaphite Trade Routes"
+ MPS_menaphite_trade_routes_desc:0 "As the greatest power in the Kharidian Desert, it is only fair our influence on trade is similarly dominant."
  
  MPS_port_district_mission_title:0 "Port District"
- MPS_port_district_mission_desc:0 "Menaphos' true strength is exerted on the seas, so we must have an adequate navy."
+ MPS_port_district_mission_desc:0 "Menaphos' true strength is projected on the seas, so we must have an adequate navy."
+ MPS_wushanko_entrepot_title:0 "Wushanko Entrepot"
+ MPS_wushanko_entrepot_desc:0 "Wushanko is uniquely home to valuable trade goods like bamboo and gunpowder. We are well-positioned to bring these goods westward to sell at an enormous profit."
  
- MPS_royal_menaphite_army_title:0 "Royal Menaphite Army"
+ MPS_royal_menaphite_army_title:0 "The Menaphite Guard"
  MPS_royal_menaphite_army_desc:0 "As the most prosperous city in Kharid, it is only fair that we have the greatest military to defend it."
+ MPS_allies_of_the_arc_title:0 "Allies of the Arc"
+ MPS_allies_of_the_arc_desc:0 "We should take a more direct role in the Arc to secure our trade routes there."
+ MPS_gunpowder_diplomacy_title:0 "Gunpowder Diplomacy"
+ MPS_gunpowder_diplomacy_desc:0 "A powerful explosive is produced in the islands of The Skull. Trade is insufficient - we must directly control this substance so we may blast apart our enemies!"
+ 
  

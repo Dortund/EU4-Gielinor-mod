@@ -146,7 +146,41 @@ misthalin_missions_1 = {
 			add_adm_power = 50
 			set_country_flag = MST_adventurer_training_flag
 		}
-	}	
+	}
+	MST_runecrafting_guild = {
+		icon = mission_air_rune
+		position = 6
+		required_missions = { MST_adventurer_training }
+		provinces_to_highlight = {
+			province_id = 6
+		}
+		trigger = {
+			has_institution = exploration
+			innovativeness = 40
+			6 = {
+				owned_by = ROOT
+				is_core = ROOT
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					has_great_project = {
+						type = great_project_wizards_tower
+						tier = 3
+					}
+				}
+				else = {
+					development = 35
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MST_rise_of_the_runecrafting_guild
+				duration = 9125
+			}
+		}
+	}
 }
 
 misthalin_missions_2 = {
@@ -236,40 +270,6 @@ misthalin_missions_2 = {
 				ENV = { 
 					override_country_name = EDGEVILLE
 				}		
-			}
-		}
-	}
-	MST_runecrafting_guild = {
-		icon = mission_air_rune
-		position = 6
-		required_missions = { MST_adventurer_training }
-		provinces_to_highlight = {
-			province_id = 6
-		}
-		trigger = {
-			has_institution = exploration
-			innovativeness = 40
-			6 = {
-				owned_by = ROOT
-				is_core = ROOT
-				if = {
-					limit = {
-						has_dlc = "Leviathan"
-					}
-					has_great_project = {
-						type = great_project_wizards_tower
-						tier = 3
-					}
-				}
-				else = {
-					development = 35
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = MST_rise_of_the_runecrafting_guild
-				duration = 9125
 			}
 		}
 	}
@@ -515,6 +515,86 @@ misthalin_missions_3 = {
 			}
 		}
 	}
+	MST_into_the_wilderness = {
+		icon = mission_into_the_wilderness
+		position = 7
+		required_missions = { MST_combat_market }
+		trigger = {
+			is_at_war = no
+			absolutism = 75
+			OR = {
+				owns_core_province = 154
+				AND = {
+					154 = {
+						is_empty = yes				
+					}
+					treasury = 100
+					adm_power = 50
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					154 = {
+						is_empty = yes 
+					}
+				}
+				add_treasury = -100
+				add_adm_power = -50
+				154 = {
+					add_siberian_construction = 200
+				}
+			}
+			else = {
+				154 = {
+					add_permanent_claim = MST
+				}
+				add_mil_power = 50
+			}
+		}
+	}
+	MST_fort_forinthry = {
+		icon = mission_fort_forinthry
+		position = 8
+		required_missions = { MST_into_the_wilderness }
+		trigger = {
+			154 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 15
+				fort_level = 6
+				has_building = cathedral
+				has_building = town_hall
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		effect = {
+			154 = {
+				change_province_name = "Fort Forinthry"
+				add_province_modifier = {
+					name = MST_strategic_outpost
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = {
+					is_empty = yes
+					OR = {
+						area = dying_woods_area
+						area = chaos_tunnels_area
+					}
+				}
+				add_province_modifier = {
+					name = MST_new_duchy_lands
+					duration = -1
+				}
+			}
+		}
+	}
 }
 misthalin_missions_4 = {
 	slot = 4
@@ -617,177 +697,94 @@ misthalin_missions_4 = {
 			add_adm_power = 50
 		}
 	}
-	MST_beacon_network = {
-		icon = mission_beacon_network
+	MST_saranthium_investigations = {
+		icon = mission_saranthium_investigations
 		position = 5
-		required_missions = { MST_human_realm MST_saranthium_investigations }
-		trigger = {
-			has_idea = MST_beacons
-			owns_core_province = 16
-			owns_core_province = 17
-			owns_core_province = 20
-			owns_core_province = 24
-			owns_core_province = 25
-			owns_core_province = 26
-			owns_core_province = 27
-		}
-		effect = {
-			add_dip_power = 50
-			16 = {
-				add_province_modifier = {
-					name = "MST_beacon_network_province"
-					duration = 7300
-				}
-			}
-			17 = {
-				add_province_modifier = {
-					name = "MST_beacon_network_province"
-					duration = 7300
-				}
-			}
-			20 = {
-				add_province_modifier = {
-					name = "MST_beacon_network_province"
-					duration = 7300
-				}
-			}
-			24 = {
-				add_province_modifier = {
-					name = "MST_beacon_network_province"
-					duration = 7300
-				}
-			}
-			25 = {
-				add_province_modifier = {
-					name = "MST_beacon_network_province"
-					duration = 7300
-				}
-			}
-			26 = {
-				add_province_modifier = {
-					name = "MST_beacon_network_province"
-					duration = 7300
-				}
-			}
-			27 = {
-				add_province_modifier = {
-					name = "MST_beacon_network_province"
-					duration = 7300
-				}
-			}			
-		}
-	}
-	MST_river_of_blood = {
-		icon = mission_river_of_blood
-		position = 6
-		required_missions = { 
-			MST_beacon_network
+		required_missions = { MST_bank_of_varrock_mission MST_human_realm MST_reinforce_paterdomus }
+		provinces_to_highlight = {
+			province_id = 21
+			province_id = 22
+			province_id = 23
+			province_id = 790
 		}
 		trigger = {
 			OR = {
-					MYT = { humiliated_by = ROOT }
-					AND = {
-						is_great_power = yes
-						MYT = { is_great_power = no }
-					}
-					NOT = { exists = MYT }
+				21 = {
+					owned_by = ROOT
+					development = 12
+					has_building = university
+				}
+				22 = {
+					owned_by = ROOT
+					development = 12
+					has_building = university
+				}
+				23 = {
+					owned_by = ROOT
+					development = 12
+					has_building = university
+				}
 			}
 		}
 		effect = {
-			add_mil_power = 100
-			canifis_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			mort_myre_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			change_innovativeness = 2
 		}
 	}
-	MST_into_the_wilderness = {
-		icon = mission_into_the_wilderness
-		position = 7
-		required_missions = { MST_combat_market MST_river_of_blood }
+	MST_fossil_research = {
+		icon = mission_fossil_research
+		position = 6
+		required_missions = { MST_saranthium_investigations }
 		trigger = {
 			is_at_war = no
-			absolutism = 75
-			OR = {
-				owns_core_province = 154
-				AND = {
-					154 = {
-						is_empty = yes				
-					}
-					treasury = 100
-					adm_power = 50
-				}
+			innovativeness = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = "MST_fossil_research_modifier"
+				duration = 3650
+			}
+			create_explorer = {
+				tradition = 60
+			}
+		}
+	}
+	
+	MST_fossil_island_discovery = {
+		icon = mission_fossil_island_discovery
+		position = 7
+		required_missions = { MST_fossil_research }
+		trigger = {
+			is_at_war = no
+			absolutism = 50
+			201 = {
+				has_discovered = MST
+			}
+			outer_fossil_isles_area = {
+				has_discovered = MST
+			}
+			west_fossil_island_area = {
+				has_discovered = MST
+			}
+			east_fossil_island_area = {
+				has_discovered = MST
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					154 = {
+					201 = {
 						is_empty = yes 
 					}
 				}
-				add_treasury = -100
-				add_adm_power = -50
-				154 = {
+				201 = {
 					add_siberian_construction = 200
 				}
 			}
 			else = {
-				154 = {
+				201 = {
 					add_permanent_claim = MST
 				}
-				add_mil_power = 50
-			}
-		}
-	}
-	MST_fort_forinthry = {
-		icon = mission_fort_forinthry
-		position = 8
-		required_missions = { MST_into_the_wilderness }
-		trigger = {
-			154 = {
-				owned_by = ROOT
-				is_core = ROOT
-				development = 15
-				fort_level = 6
-				has_building = cathedral
-				has_building = town_hall
-				OR = {
-					has_building = workshop
-					has_building = counting_house
-				}
-			}
-		}
-		effect = {
-			154 = {
-				change_province_name = "Fort Forinthry"
-				add_province_modifier = {
-					name = MST_strategic_outpost
-					duration = -1
-				}
-			}
-			every_province = {
-				limit = {
-					is_empty = yes
-					OR = {
-						area = dying_woods_area
-						area = chaos_tunnels_area
-					}
-				}
-				add_province_modifier = {
-					name = MST_new_duchy_lands
-					duration = -1
-				}
+				add_dip_power = 50
 			}
 		}
 	}
@@ -836,7 +833,7 @@ misthalin_missions_5 = {
 	}
 	MST_oust_the_drogokishuun = {
 		icon = mission_oust_the_drogokishuun
-		position = 2
+		position = 3
 		required_missions = { MST_misthalin_army }
 		provinces_to_highlight = {
 			OR = {
@@ -863,7 +860,7 @@ misthalin_missions_5 = {
 	}
 	MST_reinforce_paterdomus = {
 		icon = mission_reinforce_paterdomus
-		position = 3
+		position = 4
 		required_missions = { MST_oust_the_drogokishuun }
 		provinces_to_highlight = {
 			province_id = 27
@@ -889,94 +886,142 @@ misthalin_missions_5 = {
 			}
 		}
 	}
-	MST_saranthium_investigations = {
-		icon = mission_saranthium_investigations
-		position = 4
+	MST_beacon_network = {
+		icon = mission_beacon_network
+		position = 5
 		required_missions = { MST_reinforce_paterdomus }
 		provinces_to_highlight = {
-			province_id = 21
-			province_id = 22
-			province_id = 23
-			province_id = 790
-		}
-		trigger = {
 			OR = {
-				21 = {
-					owned_by = ROOT
-					development = 12
-					has_building = university
-				}
-				22 = {
-					owned_by = ROOT
-					development = 12
-					has_building = university
-				}
-				23 = {
-					owned_by = ROOT
-					development = 12
-					has_building = university
-				}
+				province_id = 1401
+				province_id = 17
+				province_id = 20
+				province_id = 24
+				province_id = 25
+				province_id = 26
+				province_id = 27
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		effect = {
-			change_innovativeness = 2
-		}
-	}
-	MST_fossil_research = {
-		icon = mission_fossil_research
-		position = 5
-		required_missions = { MST_saranthium_investigations }
 		trigger = {
-			is_at_war = no
-			innovativeness = 10
+			has_idea = MST_beacons
+			owns_core_province = 1401
+			owns_core_province = 17
+			owns_core_province = 20
+			owns_core_province = 24
+			owns_core_province = 25
+			owns_core_province = 26
+			owns_core_province = 27
 		}
 		effect = {
-			add_country_modifier = {
-				name = "MST_fossil_research_modifier"
-				duration = 3650
+			add_dip_power = 50
+			1401 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 9125
+				}
 			}
-			create_explorer = {
-				tradition = 60
+			17 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 9125
+				}
 			}
+			20 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 9125
+				}
+			}
+			24 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 9125
+				}
+			}
+			25 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 9125
+				}
+			}
+			26 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 9125
+				}
+			}
+			27 = {
+				add_province_modifier = {
+					name = "MST_beacon_network_province"
+					duration = 9125
+				}
+			}			
 		}
 	}
-	
-	MST_fossil_island_discovery = {
-		icon = mission_fossil_island_discovery
+	MST_in_aid_of_the_myreque = {
+		icon = mission_in_aid_of_the_myreque
 		position = 6
-		required_missions = { MST_fossil_research }
+		required_missions = { MST_beacon_network }
 		trigger = {
-			is_at_war = no
-			absolutism = 50
-			201 = {
-				has_discovered = MST
+			absolutism = 60
+			morytania_region = {
+				type = all
+				has_discovered = ROOT
 			}
-			outer_fossil_isles_area = {
-				has_discovered = MST
-			}
-			west_fossil_island_area = {
-				has_discovered = MST
-			}
-			east_fossil_island_area = {
-				has_discovered = MST
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					201 = {
-						is_empty = yes 
+			OR = {
+				any_ally = {
+					capital_scope = {
+						region = morytania_region
 					}
 				}
-				201 = {
-					add_siberian_construction = 200
+				calc_true_if = {
+					all_owned_province  = {
+						region = morytania_region
+					}
+					amount = 5
+				}
+				has_spy_network_in = {
+					who = MYT
+					value = 25
 				}
 			}
-			else = {
-				201 = {
-					add_permanent_claim = MST
+		}
+		effect = {
+			country_event = {
+				id = flavor_mst.28
+				days = 1
+			}
+		}
+	}
+	MST_river_of_blood = {
+		icon = mission_river_of_blood
+		position = 7
+		required_missions = { MST_in_aid_of_the_myreque }
+		trigger = {
+			OR = {
+				MYT = { humiliated_by = ROOT }
+				AND = {
+					is_great_power = yes
+					MYT = { is_great_power = no }
 				}
-				add_dip_power = 50
+				NOT = { exists = MYT }
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			canifis_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			mort_myre_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}

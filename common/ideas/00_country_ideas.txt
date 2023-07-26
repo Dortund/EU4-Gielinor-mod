@@ -1563,8 +1563,8 @@ BZR_ideas = {
 	
 	BZR_berserking = {
 		shock_damage_received = 0.1
-		fire_damage_received = 0.1
-		discipline = 0.1
+		fire_damage_received = 0.05
+		discipline = 0.075
 	}
 	BZR_life_in_the_wilderness = {
 		land_attrition = -0.1
@@ -2398,11 +2398,10 @@ CST_ideas = {
 	start = {
 		shock_damage_received = -0.1
 		fire_damage_received = -0.1
-		land_forcelimit_modifier = -0.25
 	}
 
 	bonus = {
-		hostile_attrition = 1
+		leader_land_shock = 1
 	}
 	
 	trigger = {
@@ -2421,17 +2420,17 @@ CST_ideas = {
 	CST_determined_predator = {
 		land_morale = 0.1
 	}
-	CST_cursed_might = {
-		discipline = 0.05
-	}
 	CST_top_of_the_food_chain = {
 		horde_unity = 1
 	}
-	CST_bear_arms = {
-		shock_damage = 0.1
+	CST_bear_traps = {
+		hostile_attrition = 1
 	}
 	CST_coconut_tribute = {
 		trade_range_modifier = 0.25
+	}
+	CST_artios_succession = {
+		heir_chance = 0.5
 	}
 }
 
@@ -5618,9 +5617,11 @@ JAL_ideas = {
 		land_morale = 0.10
 	}
 	JAL_last_zarosians = {
+		republican_tradition = 0.3
 		horde_unity = 1
 		legitimacy = 1
 		devotion = 1
+		meritocracy = 1
 	}
 	JAL_banditry = {
 		loot_amount = 0.25
@@ -7207,6 +7208,7 @@ MRF_ideas = {
 	free = yes		#will be added at load.
 	
 	MRF_water_dwellers = {
+		global_sailors_modifier = 0.2
 		allowed_marine_fraction = 0.25
 	}
 	MRF_drift_nets = {
@@ -9018,7 +9020,6 @@ RGI_ideas = {
 }
 
 #Rimmington ideas
-
 RIM_ideas = {
 	start = {
 		global_tax_modifier = 0.1
@@ -10031,6 +10032,52 @@ SNG_ideas = {
 	SNG_tower_of_miazrqa = {
 		yearly_corruption = 0.01
 		global_spy_defence = 0.25
+	}
+}
+
+#Senntisten ideas
+SNT_ideas = {
+	start = {
+		tolerance_own = 2
+		free_concentrate_development = yes
+	}
+
+	bonus = {
+		core_creation = -0.15
+	}
+	
+	trigger = {
+		OR = {
+			tag = SNT
+		}
+	}
+	free = yes		#will be added at load.
+	
+	SNT_restore_the_temple = {
+		build_cost = -0.1
+		great_project_upgrade_cost = -0.1
+	}
+	SNT_sanitation = {
+		development_cost = -0.1
+	}
+	SNT_the_empty_throne = {
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	SNT_inquisition = {
+		global_missionary_strength = 0.01
+	}
+	SNT_colosseum = {
+		drill_gain_modifier = 0.25
+	}
+	SNT_senntisten_asylum = {
+		harsh_treatment_cost = -0.2
+	}
+	SNT_ancient_shadows = {
+		hostile_attrition = 1
 	}
 }
 
@@ -11871,11 +11918,8 @@ VNN_ideas = {
 	VNN_magic_resistance = {
 		fire_damage_received = -0.1
 	}
-	VNN_hidden_lair = {
-		global_spy_defence = 0.2
-	}
-	VNN_blessed_connection = {
-		yearly_patriarch_authority = 0.02
+	VNN_energy_draining = {
+		leader_land_manuever = 1
 	}
 	VNN_backstab = {
 		rival_change_cost = -0.5
@@ -11886,8 +11930,12 @@ VNN_ideas = {
 	VNN_snapdragon_hoarder = {
 		recover_army_morale_speed = 0.05
 	}
+	VNN_blessed_connection = {
+		yearly_patriarch_authority = 0.02
+	}
 	VNN_last_of_the_line = {
 		prestige = 1
+		heir_chance = 0.5
 	}
 }
 
@@ -12834,7 +12882,7 @@ YUR_ideas = {
 ZAR_ideas = {
 	start = {
 		global_missionary_strength = 0.03
-		diplomatic_reputation = 2
+		diplomats = 1
 	}
 
 	bonus = {

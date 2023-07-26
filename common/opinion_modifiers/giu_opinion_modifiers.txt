@@ -280,7 +280,7 @@ mst_also_against_misthalin = {
 }
 mst_asgarnian_traitor = {
 	opinion = -100
-	yearly_declay = 3
+	yearly_decay = 3
 }
 
 #Mos le'Harmless
@@ -290,4 +290,9 @@ msh_fellow_pirates = {
 	yearly_decay = 1
 }
 
+#Zarosian Empire
 
+zar_respected_the_dark_lord = {
+	opinion = 100
+	yearly_decay = 1
+}

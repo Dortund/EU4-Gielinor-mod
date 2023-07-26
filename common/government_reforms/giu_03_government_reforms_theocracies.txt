@@ -209,6 +209,34 @@ monastic_order_reform = {
 	fixed_rank = 1
 }
 
+restored_zarosian_theocracy = {
+	icon = "icon_restored_zarosian_theocracy"
+	lock_level_when_selected = yes
+	potential = {
+		religion = zaros
+		OR = {
+			have_had_reform = restored_zarosian_theocracy
+			AND = {
+				ruler_culture = mahjarrat
+				NOT = { map_setup = map_setup_random }
+			}
+		}
+	}
+	legacy_equivalent = theocratic_government_reform_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+	 	missionaries = 1
+		church_loyalty_modifier = 0.1
+		church_privilege_slots = 1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	queen = no
+	heir = no
+}
+
 shamanic_theocracy = {
 	potential = {
 		NOT = { tag = ENT }

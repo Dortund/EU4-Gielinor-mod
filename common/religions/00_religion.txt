@@ -1931,7 +1931,7 @@ nonintervention_group = {
 						type = ADM
 						cost = 50
 						
-						yearly_absolutism = 0.1
+						yearly_absolutism = 1
 					}
 					subversion_teaching = {
 						type = DIP

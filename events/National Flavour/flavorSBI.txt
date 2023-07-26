@@ -1,0 +1,22 @@
+########################################
+# Events for Scabarites
+########################################
+
+namespace = flavor_sbi
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_sbi.1
+	title = flavor_sbi.1.t #Taming of the Kalphites
+	picture = KALPHITE_QUEEN_eventPicture
+	desc = flavor_sbi.1.d #Under the control of the Scabarites, the rage of the Kalphites seems to have subsided, and become more manageable. Perhaps their strength is usable now - against the enemies of Scabaras?
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_sbi.1.a #Excellent.
+		custom_tooltip = sbi_kalphite_swarm_tooltip
+		set_country_flag = SBI_kalphite_swarm_flag
+	}
+}

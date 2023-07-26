@@ -528,6 +528,27 @@ mahjarrat_realm = {
 	}
 	trigger = {
 		ruler_culture = mahjarrat
+		NOT = { tag = KZD }
+		NOT = { has_reform = restored_zarosian_theocracy }
+	}
+}
+
+restored_zarosian_theocracy = {
+
+	ruler_male = {
+		1 = PONTIFEX_MINIMUS
+		2 = PONTIFEX
+		3 = PONTIFEX_MAXIMUS
+	}
+
+	ruler_female = {
+		1 = PONTIFEX_MINIMUS
+		2 = PONTIFEX
+		3 = PONTIFEX_MAXIMUS
+	}
+
+	trigger = {
+		has_reform = restored_zarosian_theocracy
 	}
 }
 

@@ -1,4 +1,4 @@
-#962-Empty Coast
+#171-Plain of Spiders
 tribal_owner = ---
 culture = giant_spider
 religion = zamorak
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 
-trade_goods = fishing_spot
+trade_goods = herblore_supplies
 
 native_size = 10
 native_ferocity = 10

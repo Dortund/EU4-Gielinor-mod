@@ -1,0 +1,78 @@
+########################################
+# Events for Jaldraocht
+########################################
+
+namespace = flavor_jal
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_jal.1
+	title = flavor_jal.1.t #The Prisoner of Jaldraocht
+	desc = flavor_jal.1.d #The four diamonds of Jaldraocht have been retrieved. And with them, the way into Azzanadra's prison is opened, where the most faithful of Zaros' servants is freed. He has vowed to reward us for our loyalty to the Empty Lord, though he has elected to keep to the shadows rather than to directly lead us... for the time being.
+	picture = JALDRAOCHT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ruler_culture = mahjarrat
+					NOT = { tag = JAL }
+					NOT = { tag = ZAR }
+				}
+				country_event = {
+					id = flavor_jal.2
+					days = 120
+					random = 30
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_jal.1.a #Azzanadra is free!
+		add_country_modifier = {
+			name = JAL_freedom_of_azzanadra
+			duration = 3650
+		}
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+		set_global_flag = JAL_free_azzanadra_flag
+	}
+}
+
+
+
+country_event = {
+	id = flavor_jal.2
+	title = flavor_jal.2.t #An Old Mahjarrat Returns
+	desc = {
+		trigger = {
+			religion = zaros
+		}
+		desc = flavor_jal.2.da #We have received word that Pontifex Maximus Azzanadra has been freed from his prison after thousands of years as a captive! He seems to be laying low for the time being, but soon he will bring his might and that of Zaros to the world that has forgotten the Empty Lord.
+	}
+	desc = {
+		trigger = {
+			religion = zamorak
+		}
+		desc = flavor_jal.2.db #It appears some fool has gone and freed the Zarosian Mahjarrat Azzanadra from his prison in Jaldraocht. We don't know where he's gone or what he's planning, but no doubt he will try to revive his dead faith.
+	}
+	desc = {
+		trigger = {
+			NOT = { religion = zamorak }
+			NOT = { religion = zaros }
+		}
+		desc = flavor_jal.2.dc #Azzanadra, faithful follower of Zaros, has been released from his pyramid prison. Whereever he is now, he is most likely attempting to rebuild the church of Zaros.
+	}
+	picture = JALDRAOCHT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_jal.2.a #The world of the Mahjarrat has become more complex.
+	}
+}

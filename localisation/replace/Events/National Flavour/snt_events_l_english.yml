@@ -1,0 +1,28 @@
+﻿l_english:
+ flavor_snt.1.t:0 "Azzanadra Deems Us Worthy"
+ flavor_snt.1.d:0 "Since Azzanadra was released from the prison of Jaldraocht, he has wandered without fixed abode. However, with the restoration of the City of Senntisten, Azzanadra has seen it fit to step out of the shadows and offer his leadership."
+ flavor_snt.1.a:0 "Lead us, Pontifex!"
+ JAL_fixed_azzanadra_rule:0 "Azzanadra cannot be killed by conventional means, and will indefinitely be our leader so long as we keep the §YRestored Zarosian Theocracy§! government."
+ flavor_snt.1.b:0 "We did this without Azzanadra's help. We do not need his leadership now."
+ 
+ flavor_snt.2.t:0 "The Imprisonment of Akthanakos"
+ flavor_snt.2.d:0 "Our spies in the Kharidian Desert have come to a startling conclusion: The Zarosian Mahjarrat Akthanakos has been kept prisoner by the Zamorakian Mahjarrat Enkhara! With the help of fellow Zarosian Wahisietel, we have broken into Enkhara's temple and freed him."
+ flavor_snt.2.a:0 "Forget Zaros! I want to join Enkhara!"
+ flavor_snt.2.b:0 "I'd rather stick with Akthanakos than carry on with Senntisten."
+ flavor_snt.2.c:0 "You cannot fight fate, Enkhara."
+ 
+ flavor_snt.3.t:0 "Legacy of Jaldraocht"
+ flavor_snt.3.d:0 "Resorting to banditry to survive, the descendants of the Zarosian Empire at Jaldraocht have done the unthinkable and restored the city of Senntisten."
+ flavor_snt.3.a:0 "The people of Jaldraocht shall be forever honoured in our realm."
+ 
+ flavor_snt.4.t:0 "Meeting of the Mahjarrat"
+ flavor_snt.4.da:0 "Mahjarrat loyal to Zaros have met in [Root.GetCapitalName] to discuss how they can further our efforts to rebuild the Zarosian Empire of old. Soon enough, this breaks down into veiled insults, questions about what Wahisietel has been up to all this time, and other irrelevant topics. How should we break this impasse?"
+ flavor_snt.4.db:0 "The losses of Zarosian Mahjarrat have been disheartening to our cause, but to honour them we have held a meeting to discuss the rebuilding of the Zarosian Empire, with consideration of what ideas they may have promoted."
+ flavor_snt.4.a:0 "Akthanakos' suggestion seems most appropriate."
+ flavor_snt.4.b:0 "Azzanadra's path shall guide us."
+ flavor_snt.4.c:0 "Yes, Sliske, I know you're there, and I already know what you're thinking."
+ flavor_snt.4.e:0 "Wahisietel's ideas are wise."
+ flavor_snt.4.f:0 "They would demand vengeance!"
+ flavor_snt.4.g:0 "Perhaps consulting Mahjarrat was a bad idea."
+ 
+ 

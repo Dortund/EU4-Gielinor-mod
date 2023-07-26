@@ -228,7 +228,7 @@ incident_rebirth_of_seren = {
 	}
 
 	trigger = {
-		is_incident_happened = incident_rebirth_of_prifddinas
+		is_incident_happened = incident_restoration_of_prifddinas
 		current_age = age_of_divination
 		has_global_flag = KDR_world_gate_revealed
 		NOT = {
@@ -267,7 +267,7 @@ incident_serens_new_path = {
 	}
 
 	trigger = {
-		is_incident_happened = incident_restoration_of_seren
+		is_incident_happened = incident_rebirth_of_seren
 		current_age = age_of_divination
 		has_global_flag = end_of_elder_god_wars_flag
 		custom_trigger_tooltip = {

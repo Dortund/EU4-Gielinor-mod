@@ -288,12 +288,12 @@ karamjan_group	= {
 		primary = KZI
 	}
 	dynasty_names = {
-		"Devere" "Doc" "Paramaya" "Rei" "Salika" "Senay" "Shakaya" "Tojalon"
+		"Blinyo" "Devere" "Doc" "Paramaya" "Rei" "Salika" "Senay" "Shakaya" "Tojalon"
 	}
 	male_names = {
 		Bervirius Danthalas Duradel Gabooty Fanellaman Fernahei Hajedy Ibeli
 		Irvig Jagbakoba Kaleb Karaday Kedoaba Kedenda Lapalok Lubufu Luthas Mambo
-		Murcaily Mosol Ranalph Rionasta Safta San Saniboch Seravel Sharimika
+		Murcaily Mosol Ranalph Renlobo Rionasta Safta San Saniboch Seravel Sharimika
 		Timfraku Tamayu Tiadeche Tinsay Trufitus Ungadulu Vigroy Yanni Yohnus Zadimus
 	}
 	female_names = {
@@ -1240,10 +1240,10 @@ undead_group	= {
 			"the Skeleton"
 		}
 		male_names = {
-			Ulfric "Vet'ion"
+			"Calvar'ion" Ulfric "Vet'ion"
 		}
 		female_names = {
-			"Vet'tia"
+			"Calvar'ia" "Vet'tia"
 		}
 	}
 	zombie = {
@@ -2892,7 +2892,7 @@ beast_group	= {
 			Araxxor
 		}
 		female_names = {
-			Araxxi Eek Infinity Kalrag Sarachnis Spiral Spyndra Squeak Venenatis
+			Araxxi Eek Infinity Kalrag Sarachnis Spindel Spiral Spyndra Squeak Venenatis
 		}
 	}
 	corrupt_bear = {
@@ -2902,10 +2902,10 @@ beast_group	= {
 			"the Bear"
 		}
 		male_names = {
-			Callisto Teddy
+			Artien Callisto Teddy
 		}
 		female_names = {
-			Callista
+			Artio Callista
 		}
 	}
 	cursed_scorpion = {

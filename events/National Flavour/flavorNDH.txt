@@ -1,0 +1,164 @@
+########################################
+# Events for Nardah
+########################################
+
+namespace = flavor_ndh
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_ndh.1 
+	title = flavor_ndh.1.t #The Priest of Saradomin
+	desc = flavor_ndh.1.d #Legends of the Menaphite Pantheon are slipping into legend and myth. The spiritual side of Nardah is fading. But now, a priest of Saradomin has arrived to our town to spread the good news of his lord's power - including the incredible ability to block projectiles with faith alone.
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = NDH
+		owns_core_province = 86
+		religion = menaphite
+		86 = { religion = menaphite }
+		NOT = { has_country_flag = NDH_spirits_of_the_elid_start }
+		has_institution = quests
+	}
+	
+	mean_time_to_happen = {
+		days = 120
+	}
+	
+	option = {
+		name = flavor_ndh.1.a #Saradomin has the answer!
+		change_religion = saradomin
+		86 = {
+			change_religion = saradomin
+		}
+		add_country_modifier = {
+			name = NDH_protect_from_missiles
+			duration = 3650
+		}
+		set_country_flag = NDH_spirits_of_the_elid_start
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_ndh.1.b #Let's keep to the old ways.
+		add_prestige = 10
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_ndh.2 
+	title = flavor_ndh.2.t #Priest found dead!
+	desc = flavor_ndh.2.d #A [Root.Religion.GetName] priest has been found dead in the River Elid - and to make matters worse, the well at Nardah has dried up!
+	picture = ALKHARID_CITY_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = NDH
+		owns_core_province = 86
+		NOT = { religion = menaphite }
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	immediate = {
+		set_country_flag = NDH_spirits_of_the_elid_start
+	}
+	
+	option = {
+		name = flavor_ndh.2.a #Someone from Pollnivneach can provide us with water.
+		add_years_of_income = -0.2
+		86 = {
+			add_province_modifier = {
+				name = NDH_mitigated_dried_well
+				duration = -1
+			}
+		}
+		custom_tooltip = NDH_spirits_of_elid_tooltip
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_ndh.2.b #We are being punished for the neglect of the priest.
+		86 = {
+			add_province_modifier = {
+				name = NDH_dried_well
+				duration = -1
+			}
+		}
+		custom_tooltip = NDH_spirits_of_elid_tooltip
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_ndh.3
+	title = flavor_ndh.3.t #Nardah Well Mysteriously Refills!
+	desc = flavor_ndh.3.d #The crisis at Nardah's well has mysteriously ended. Many suspect this is due to our people's renewed faith in the Menaphite Pantheon.
+	picture = ALKHARID_CITY_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		owns_core_province = 86
+		86 = {
+			OR = {
+				has_province_modifier = NDH_mitigated_dried_well
+				has_province_modifier = NDH_dried_well
+			}
+		}
+		religion = menaphite
+		NOT = { has_country_flag = ndh_end_of_spirits_of_elid_flag }
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = flavor_ndh.3.a #We shall not forsake Elidinis again!
+		86 = {
+			remove_province_modifier = NDH_mitigated_dried_well
+			remove_province_modifier = NDH_dried_well
+		}
+		set_country_flag = ndh_end_of_spirits_of_elid_flag
+	}
+}
+
+country_event = {
+	id = flavor_ndh.4
+	title = flavor_ndh.4.t #Spirits of the Elid
+	desc = flavor_ndh.4.d #An adventurer we recruited discovered the truth about the dried up well - by forsaking the ways of Elidinis, the Elid's guardian spirits were angered and dried up our well in response.
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_ndh.4.a #We should convert back to the Menaphite Pantheon and end this.
+		change_religion = menaphite
+		86 = { change_religion = menaphite }
+		change_personal_deity = elidinis
+		set_country_flag = ndh_end_of_spirits_of_elid_flag
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_ndh.4.b #I will not accept this heathen faith!
+		custom_tooltip = NDH_refuse_to_convert_tooltip
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

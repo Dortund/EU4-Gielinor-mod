@@ -21,13 +21,6 @@ historical_rival = REL
 	}
 }
 
-every_country = {
-	add_opinion = {
-		who = ROOT
-		modifier = boss_tag_opinion
-	}
-}
-
 2134.12.9 = {
 	monarch = {
 		name = "Great Dagannoth"

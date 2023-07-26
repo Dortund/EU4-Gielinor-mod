@@ -12,7 +12,7 @@ kharidian_missions_1 = {
 	has_country_shield = yes
 	
 	KDS_religious_tolerance = {
-		icon = mission_alliances
+		icon = mission_throne_of_saradomin
 		required_missions = { KDS_misthalanian_relations }
 		position = 2
 		trigger = {
@@ -43,7 +43,7 @@ kharidian_missions_2 = {
 	has_country_shield = yes
 	
 	KDS_misthalanian_relations = {
-		icon = mission_alliances
+		icon = mission_misthalin_army
 		required_missions = {  }
 		trigger = {
 			OR = {
@@ -64,7 +64,7 @@ kharidian_missions_2 = {
 	}
 	
 	KDS_expand_our_trade_power = {
-		icon = mission_alliances
+		icon = mission_expand_our_trade_power
 		required_missions = { KDS_misthalanian_relations }
 		trigger = {
 			63 = {
@@ -91,24 +91,24 @@ kharidian_missions_3 = {
 	has_country_shield = yes
 	
 	KDS_settle_al_kharid = {
-		icon = mission_alliances
+		icon = mission_settle_al_kharid
 		required_missions = {  }
 		trigger = {
 			OR = {
 				owns_core_province = 62
 				AND = {
-				treasury = 100
-				adm_power = 50
-				adm_tech = 6
-				62 = {
-					is_empty = yes
+					treasury = 100
+					adm_power = 50
+					adm_tech = 6
+					62 = {
+						is_empty = yes
 					}
 				}
 			}
 		}
 		provinces_to_highlight = {
 			province_id = 62
-			}
+		}
 		effect = {
 			if = {
 				limit = {
@@ -131,7 +131,7 @@ kharidian_missions_3 = {
 	}
 	
 	KDS_rusum_pass = {
-		icon = mission_alliances
+		icon = mission_rusum_pass
 		required_missions = { KDS_settle_al_kharid }
 		trigger = {
 			AND = {
@@ -197,7 +197,7 @@ kharidian_missions_4 = {
 	has_country_shield = yes
 	
 	KDS_hets_land = {
-		icon = mission_alliances
+		icon = mission_hets_land
 		required_missions = { }
 		trigger = {
 			OR = {
@@ -238,7 +238,7 @@ kharidian_missions_4 = {
 	}
 	
 	KDS_scimitar_manufacture = {
-		icon = mission_alliances
+		icon = mission_combat_market
 		position = 2
 		required_missions = { KDS_worthy_army KDS_hets_land KDS_settle_al_kharid }
 		trigger = {
@@ -277,7 +277,7 @@ kharidian_missions_5 = {
 	has_country_shield = yes
 	
 	KDS_worthy_army = {
-		icon = mission_alliances
+		icon = mission_worthy_army
 		required_missions = {  }
 		trigger = {
 			army_size = 8
@@ -288,12 +288,15 @@ kharidian_missions_5 = {
 	}
 	
 	KDS_professional_brothers = {
-		icon = mission_alliances
+		icon = mission_professional_brothers
 		required_missions = { KDS_worthy_army }
 		trigger = {
 			army_professionalism = 0.1
-			land_morale = 3.5
+			has_global_modifier_value = {
+				which = land_morale
+				value = 0.2
 			}
+		}
 		effect = {
 			add_prestige = 10
 			add_mil_power = 50
@@ -315,8 +318,8 @@ alkharidian_missions_1 = {
 	}
 	has_country_shield = yes
 	
-	ALK_encourage_saradomist_immigration = {
-		icon = mission_alliances
+	ALK_saradominist_immigration = {
+		icon = mission_encourage_saradominist_immigration
 		required_missions = { KDS_religious_tolerance KDS_expand_our_trade_power }
 		trigger = {
 			any_ally = {
@@ -343,8 +346,8 @@ alkharidian_missions_1 = {
 	}
 	
 	ALK_abbey_of_st_elspeth = {
-		icon = mission_alliances
-		required_missions = { ALK_encourage_saradomist_immigration }
+		icon = mission_abbey_of_st_elspeth
+		required_missions = { ALK_saradominist_immigration }
 		trigger = {
 			63 = {
 				has_building = cathedral
@@ -356,6 +359,7 @@ alkharidian_missions_1 = {
 		effect = {
 			63 = {
 				change_province_name = "Citharede Abbey"
+				change_culture = alkharidian
 				change_religion = saradomin
 				add_base_tax = 2
 				add_base_production = 1
@@ -367,36 +371,27 @@ alkharidian_missions_1 = {
 			}
 		}
 	}
-}
-
-alkharidian_missions_2 = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		tag = ALK
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
 	
-	ALK_pollnivneach_trade = {
-		icon = mission_alliances
-		required_missions = { KDS_expand_our_trade_power }
+	ALK_the_power_of_runecrafting = {
+		icon = mission_the_power_of_runecrafting
+		required_missions = {  }
+		position = 5
 		trigger = {
-			75 = {
-				is_strongest_trade_power = ROOT
-			}
+			has_institution = runecrafting
+			owns_core_province = 66
+			runes = 1
 		}
 		effect = {
-			add_mercantilism = 2
-			95 = { add_permanent_claim = ROOT }
+			country_event = { 
+				id = flavor_alk.5
+				days = 1
+			}
 		}
 	}
-	
 	ALK_banks_of_the_salve = {
-		icon = mission_alliances
-		position = 6
-		required_missions = { ALK_pollnivneach_trade }
+		icon = mission_banks_of_the_salve
+		position = 7
+		required_missions = { ALK_the_power_of_runecrafting }
 		trigger = {
 			owns_core_province = 66
 			absolutism = 90
@@ -424,6 +419,54 @@ alkharidian_missions_2 = {
 			}
 		}
 	}
+	
+}
+
+alkharidian_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ALK
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ALK_pollnivneach_trade = {
+		icon = mission_pollnivneach_trade
+		position = 3
+		required_missions = { KDS_expand_our_trade_power }
+		trigger = {
+			75 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			95 = { add_permanent_claim = ROOT }
+		}
+	}
+	
+	ALK_traders_of_menaphos = {
+		icon = mission_traders_of_menaphos
+		position = 5
+		required_missions = { ALK_pollnivneach_trade ALK_menaphite_relations }
+		trigger = {
+			100 = {
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
+			}
+			OR = {
+				trade_depot = 2
+				stock_exchange = 2
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+		}
+	}
 }
 
 alkharidian_missions_3 = {
@@ -437,7 +480,7 @@ alkharidian_missions_3 = {
 	has_country_shield = yes
 	
 	ALK_kharidian_port = {
-		icon = mission_alliances
+		icon = mission_kharidian_port
 		required_missions = { KDS_expand_our_trade_power KDS_rusum_pass }
 		trigger = {
 			62 = {
@@ -459,7 +502,7 @@ alkharidian_missions_3 = {
 		}
 	}
 	ALK_menaphite_relations = {
-		icon = mission_alliances
+		icon = mission_menaphite_relations
 		required_missions = { ALK_kharidian_port }
 		trigger = {
 			total_development = 50
@@ -483,10 +526,14 @@ alkharidian_missions_3 = {
 	}
 	
 	ALK_spies_of_al_kharid = {
-		icon = mission_alliances
+		icon = mission_spies_of_al_kharid
 		required_missions = { ALK_menaphite_relations }
 		trigger = {
 			advisor = spymaster
+			has_global_modifier_value = {
+				which = spy_offence
+				value = 0.6
+			}
 			any_rival_country = {
 				has_spy_network_from = {
 					who = ROOT
@@ -498,6 +545,78 @@ alkharidian_missions_3 = {
 			add_country_modifier = {
 				name = "ALK_agenda_of_espionage"
 				duration = 3650
+			}
+		}
+	}
+	
+	ALK_al_kharid_ascendant = {
+		icon = mission_al_kharid_ascendant
+		required_missions = { ALK_traders_of_menaphos ALK_spies_of_al_kharid }
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { exists = MPS }
+					menaphos_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+					elid_isles_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				AND = {
+					exists = MPS
+					army_size = MPS
+					total_development = MPS
+				}	
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						menaphos_area = {
+							type = all
+							owned_by = ROOT
+							is_core = ROOT
+						}
+						elid_isles_area = {
+							type = all
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+				}
+				add_mil_power = 100
+				100 = {
+					add_base_tax = -3
+					add_base_production = -3
+					add_base_manpower = -3
+				}
+				capital_scope = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+			else = {
+				menaphos_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				elid_isles_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -514,7 +633,7 @@ alkharidian_missions_4 = {
 	has_country_shield = yes
 	
 	ALK_local_metal_source = {
-		icon = mission_alliances
+		icon = mission_mining
 		required_missions = { KDS_rusum_pass KDS_scimitar_manufacture }
 		trigger = {
 			OR = {
@@ -586,6 +705,25 @@ alkharidian_missions_4 = {
 			}
 		}
 	}
+	ALK_terror_of_tempoross = {
+		icon = mission_terror_of_tempoross
+		required_missions = { ALK_kharidian_port }
+		trigger = {
+			has_institution = exploration
+			NOT = { exists = TMP }
+			owns_core_province = 1000
+		}
+		provinces_to_highlight = {
+			province_id = 1000
+		}
+		effect = {
+			add_country_modifier = {
+				name = ALK_defeat_of_tempoross
+				duration = 9125
+			}
+		}
+	}
+	
 }
 
 alkharidian_missions_5 = {
@@ -599,7 +737,7 @@ alkharidian_missions_5 = {
 	has_country_shield = yes
 	
 	ALK_expand_the_training_grounds = {
-		icon = mission_alliances
+		icon = mission_expand_the_training_ground
 		required_missions = { KDS_scimitar_manufacture KDS_professional_brothers }
 		position = 3
 		trigger = {
@@ -622,11 +760,11 @@ alkharidian_missions_5 = {
 			if = {
 				limit = {
 					owns_core_province = 64
-					}
+				}
 				64 = {
 					add_base_manpower = 2
-					}
 				}
+			}
 			else = {
 				add_treasury = -200
 				add_mil_power = -50
@@ -636,6 +774,49 @@ alkharidian_missions_5 = {
 					change_trade_goods = lesser_loot
 				}
 			}
+		}
+	}
+	ALK_duel_arena_mission = {
+		icon = mission_duel_arena
+		required_missions = { ALK_local_metal_source ALK_expand_the_training_grounds }
+		trigger = {
+			64 = {
+				owned_by = ROOT
+				is_core = ROOT
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_duel_arena
+							tier = 1
+						}
+						has_great_project = {
+							type = great_project_duel_arena
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_duel_arena
+							tier = 3
+						}
+					}
+				}
+				else = {
+					development = 12
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 64
+		}
+		effect = {
+			add_army_tradition = 15
+			add_mil_power = 50
 		}
 	}
 }

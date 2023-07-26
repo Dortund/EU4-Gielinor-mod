@@ -80,10 +80,23 @@
  desc_ALK_green_training:0 "The Guthixian green wizards have been invited to aid the efforts of the Magic Training Arena."
  ALK_grey_training:0 "Grey Training"
  desc_ALK_grey_training:0 "The Magic Training Arena is ran by the efforts of Al Kharid's own wizards, without outside assistance."
+
  ALK_merchant_fleet:0 "Merchant Fleet"
  desc_ALK_merchant_fleet:0 "The growing Al Kharidian merchant fleet is carving out an increasingly strong share of regional trade."
  ALK_agenda_of_espionage:0 "Agenda of Espionage"
  desc_ALK_agenda_of_espionage:0 "Our recent policies have greatly encouraged development of the art of subterfuge."
+ ALK_telekinetic_grab:0 "Telekinetic Grab"
+ desc_ALK_telekinetic_grab:0 "Treasures previously beyond our reach no longer are - except for a blasted ruby ring beneath Varrock."
+ ALK_bones_to_peaches:0 "Bones to Peaches"
+ desc_ALK_bones_to_peaches:0 "Bones are usually for burying - but with this incredible spell, they can be converted entirely into delicious peaches."
+ ALK_enchantment_spells:0 "Enchantment Spells"
+ desc_ALK_enchantment_spells:0 "Cosmic magic brings out the full potential of jewellery."
+ ALK_alchemy_spells:0 "Alchemy Spells"
+ desc_ALK_alchemy_spells:0 "Junk can be converted into virtually free money with the help of some nature and fire runes."
+ ALK_corrupt_duels:0 "Corrupt Duels"
+ desc_ALK_corrupt_duels:0 "The Duel Arena has been overrun by gambling and match-fixing - secretly allowed to continue in exchange for a cut of proceeds."
+ ALK_defeat_of_tempoross:0 "Defeat of Tempoross"
+ desc_ALK_defeat_of_tempoross:0 "With Tempoross defeated for good, our traders in the Unquiet Ocean feel much safer."
 
 # Arposandra
 
@@ -386,6 +399,20 @@
  IOR_terror_of_the_dark_lord:0 "Terror of the Dark Lord"
  desc_IOR_terror_of_the_dark_lord:0 "Who can resist the power of the Dark Lord?"
 
+# Jaldraocht
+
+ JAL_permanent_camp:0 "Permanent Camp"
+ desc_JAL_permanent_camp:0 "The addition of permanent structures to our main camp has given our people a sense of stability."
+
+ JAL_pineapple_supplies:0 "Pineapple Supplies"
+ desc_JAL_pineapple_supplies:0 "Delicious Bedabin ambrosia is flowing into our nation."
+ JAL_bandit_sailors:0 "Bandit Sailors"
+ desc_JAL_bandit_sailors:0 "Our quick hit-and-run strategies can be brought from land to naval warfare."
+ JAL_freedom_of_azzanadra:0 "Freedom of Azzanadra"
+ desc_JAL_freedom_of_azzanadra:0 "With Azzanadra freed from the prison of Jaldraocht, the future of the Zarosian faith seems stronger than ever."
+ JAL_new_zarosian_army:0 "New Zarosian Army"
+ desc_JAL_new_zarosian_army:0 "Our newly-organised forces inspire our people as the true successors to the Zarosian Empire's army."
+
 # Jatizso
 
  JTZ_productive_mine:0 "Productive Mine"
@@ -450,6 +477,22 @@
  KJA_tales_of_the_idols:0 "Tales of the Idols"
  desc_KJA_tales_of_the_idols:0 "An ancient transcript of the legend of Gara-Dul has renewed interest in the history of the Karamjan Trinity."
 
+# Kharid Generic
+
+ genkharid_capital_wealth:0 "Capital Wealth"
+ desc_genkharid_capital_wealth:0 "The wealth of our capital has inspired greater levels of investment."
+
+ genkharid_glory_of_the_monuments:0 "Glory of the Monuments"
+ desc_genkharid_glory_of_the_monuments:0 "The renewed monuments of Kharid inspire our people and inspire envy elsewhere in Gielinor."
+ genkharid_building_boom:0 "Building Boom"
+ desc_genkharid_building_boom:0 "New settlements have inspired a boom of construction projects."
+ genkharid_traders_of_the_eastern_sea:0 "Traders of the Eastern Sea"
+ desc_genkharid_traders_of_the_eastern_sea:0 "Lucrative trade opportunities in the Wushanko Isles seem more within our grasp than ever before."
+ genkharid_integration_of_the_cities:0 "Integration of the Cities"
+ desc_genkharid_integration_of_the_cities:0 "Rather than a loose assortment of independent cities, we should unite our subjects under our direct rule."
+ genkharid_drive_to_unify:0 "Drive to Unify"
+ desc_genkharid_drive_to_unify:0 "Our powerful army has the means to unite the Kharidian Desert under one banner."
+
 # Kharidians
 
  KDS_toll_gate:0 "Toll Gate"
@@ -486,6 +529,15 @@
  
  MPS_trade_monopoly:0 "Trade Monopoly"
  desc_MPS_trade_monopoly:0 "Efforts to aid the Merchant District of Menaphos has resulted in the city exerting a huge amount of trade pressure over the region."
+ MPS_menaphos_library_modifier:0 "Refurbished Grand Library"
+ desc_MPS_menaphos_library_modifier:0 "The Grand Library of Menaphos has been renewed with Gielinor's greatest texts."
+ 
+ MPS_self_sufficiency_policy:0 "Self-Sufficiency Policy"
+ desc_MPS_self_sufficiency_policy:0 "Growing Menaphos' development has reduced our need for foreign goods and vulnerability to foreign espionage."
+ MPS_between_west_and_east:0 "Between West and East"
+ desc_MPS_between_west_and_east:0 "Menaphos's crucial location between the Unquiet Ocean and Eastern Sea gives us a unique diplomatic advantage."
+ MPS_skull_gunpowder_supplies:0 "Skull Gunpowder Supplies"
+ desc_MPS_skull_gunpowder_supplies:0 "With a supply of gunpowder under our direct control, we can blow apart the walls of our enemies with ease."
  
 # Miscellania
 
@@ -561,6 +613,16 @@
  MYT_descendants_of_hallowvale:0 "Descendants of Hallowvale"
  desc_MYT_descendants_of_hallowvale:0 "The residents of Meiyerditch are extremely loyal to their Saradominist faith and will be exceptionally hard to convert."
 
+# Nardah
+
+ NDH_dried_well:0 "Dried Well"
+ desc_NDH_dried_well:0 "The mysterious drying up of Nardah's well threatens to leave the town uninhabitable."
+ NDH_mitigated_dried_well:0 "Mitigated Dried Well"
+ desc_NDH_mitigated_dried_well:0 "Nardah's well has mysteriously dried up, so all financial resources in the town have been diverted into obtaining an alternative source of water from Pollnivneach."
+
+ NDH_protect_from_missiles:0 "Protect from Missiles"
+ desc_NDH_protect_from_missiles:0 "A Saradominist priest has told us of his god's ability to defend against ranged attacks."
+
 # Neitiznot
 
  NZS_peace_in_the_isles:0 "Peace in the Isles"
@@ -608,9 +670,52 @@
  
  SBI_reconstruction_of_ullek:0 "Reconstruction of Ullek"
  desc_SBI_reconstruction_of_ullek:0 "Once among the greatest of Kharid's cities, Ullek was left in ruins by Zamorak's minions during the Third Age. But some of the ruins are still livable, and can be easily adapted into new dwellings."
+ SBI_catacombs_of_ullek_modifier:0 "Catacombs of Ullek"
+ desc_SBI_catacombs_of_ullek_modifier:0 "The excavated Catacombs of Ullek are filled with ancient wealth - and ancient traps for our enemies."
+ SBI_untouchable_ullek:0 "Untouchable Ullek"
+ desc_SBI_untouchable_ullek:0 "The already treacherous coast of Ullek has been reinforced to be near-impossible to take by sea."
+
  SBI_by_scabaras_hand:0 "By Scabaras' Hand"
  desc_SBI_by_scabaras_hand:0 "It shall be done."
+ SBI_glory_of_the_champion:0 "Glory of the Champion"
+ desc_SBI_glory_of_the_champion:0 "The inspiration of a new Champion of the Scabarites has encouraged others to participate in shoring up our defences."
+ SBI_reintegration_of_the_scabarites:0 "Reintegration of the Scabarites"
+ desc_SBI_reintegration_of_the_scabarites:0 "Previously shunned by others in the Kharidian Desert, the Scabarites have proven themselves worthy of their respect - and at least somewhat adjusted their isolationist stance."
+ 
+# Senntisten
 
+ SNT_fort_of_kharid_et_modifier:0 "Kharid-Et"
+ desc_SNT_fort_of_kharid_et_modifier:0 "The fort at Kharid-Et was once guarded the frontier of the Zarosian Empire from the Kharidian Empire. Now restored, the fort should hold firm once more."
+ SNT_lost_mineral_wealth:0 "Lost Mineral Wealth"
+ desc_SNT_lost_mineral_wealth:0 "With the buried ruins of Lassar uncovered, its rich mineral veins have also been uncovered."
+ SNT_excavation_of_senntisten:0 "Excavation of Senntisten"
+ desc_SNT_excavation_of_senntisten:0 "The buried portions of old Senntisten are surprisingly intact and can be easily repurposed to our present needs."
+
+ SNT_honoured_people_of_jaldraocht:0 "Honoured People of Jaldraocht"
+ desc_SNT_honoured_people_of_jaldraocht:0 "For their role in the restoration of Senntisten, the people of Jaldraocht shall forever be honoured in our realm."
+ SNT_ages_of_loyalty:0 "Ages of Loyalty"
+ desc_SNT_ages_of_loyalty:0 "We draw on the people of Jaldraocht's unflinching loyalty to Zaros to serve as an example to all our people."
+ SNT_defences_of_jaldraocht_pyramid:0 "Defences of Jaldraocht Pyramid"
+ desc_SNT_defences_of_jaldraocht_pyramid:0 "Our relentless search of Jaldraocht Pyramid has revealed new insights into the magicks that bounded Azzanadra, and how we may weaponise them for our own use."
+ SNT_vengeance_for_the_fallen:0 "Vengeance for the Fallen"
+ desc_SNT_vengeance_for_the_fallen:0 "The murderers of the Mahjarrat shall be made to pay!"
+ SNT_alternative_thinking:0 "Alternative Thinking"
+ desc_SNT_alternative_thinking:0 "It is said, never meet your heroes. Our Zarosian Mahjarrat allies have proven themselves incapable of making a good decision on the further rebuilding of the Zarosian Empire."
+ SNT_army_of_wights:0 "Army of Wights"
+ desc_SNT_army_of_wights:0 "Sliske has decided that there's no problem that can't be solved by throwing hordes of the undead at it."
+ SNT_pontifexs_crusade:0 "Pontifex's Crusade"
+ desc_SNT_pontifexs_crusade:0 "Following the guidance of Azzanadra, we are to embark on a crusade to help rebuild the Zarosian Empire!"
+ SNT_camel_warrior_forces:0 "Camel Warrior Forces"
+ desc_SNT_camel_warrior_forces:0 "Akthanakos has brought his powerful spellcasting Camel Warriors to serve our interests."
+ SNT_revive_the_mahjarrat_lore:0 "Revive the Mahjarrat Lore"
+ desc_SNT_revive_the_mahjarrat_lore:0 "Wahisietel argues knowledge is more important than belief."
+ SRT_zarosian_fervour:0 "Zarosian Fervour"
+ desc_SRT_zarosian_fervour:0 "With the Temple at Senntisten restored, our proselytisation efforts are more organised."
+ SNT_victory_over_the_beasts:0 "Victory Over the Beasts"
+ desc_SNT_victory_over_the_beasts:0 "No mere beast will stand in the way of the restoration of the Zarosian Empire!"
+ SNT_ghorrock_landing:0 "Ghorrock Landing"
+ desc_SNT_ghorrock_landing:0 "Our people are determined to take the fortress of Ghorrock."
+ 
 # Tirannwn 
  
  TNN_construction_boom:0 "Construction Boom"
@@ -733,6 +838,37 @@
  desc_TZH_rejection_of_the_gaal:0 "The Ga'al have been rejected from inclusion in TzHaar society."
  TZH_extinction_of_the_tzhaar:0 "Extinction of the TzHaar"
  desc_TZH_extinction_of_the_tzhaar:0 "The isolationist TokHaar have supplanted the TzHaar."
+ 
+# Zarosian Empire
+ ZAR_redevelopment_efforts:0 "Redevelopment Efforts"
+ desc_ZAR_redevelopment_efforts:0 "Zaros' power shall gradually reverse the damage to Forinthry by the pretender Zamorak."
+ ZAR_outpost_of_zaros:0 "Outpost of Zaros"
+ desc_ZAR_outpost_of_zaros:0 "This city projects Zaros' mighty power far from Senntisten."
+ ZAR_local_serenist_tolerance:0 "Local Serenist Tolerance"
+ desc_ZAR_local_serenist_tolerance:0 "We have graciously allowed followers of Seren in this province to practice their faith undisturbed - for now."
+ ZAR_forinthry_fortress:0 "Forinthry Fortress"
+ desc_ZAR_forinthry_fortress:0 "This city has a key fortress defending Zaros' territory from threats internal and external."
+
+ ZAR_eastward_journey:0 "Eastward Journey"
+ desc_ZAR_eastward_journey:0 "Tales of Zarosians hidden across Gielinor have inspired us to reach further afield."
+ ZAR_crush_the_saradominists:0 "Crush the Saradominists"
+ desc_ZAR_crush_the_saradominists:0 "Our plot to foil the Temple Knights was foiled - so we shall respond with vengeance!"
+ ZAR_conversion_of_the_temple_knights:0 "Conversion of the Temple Knights"
+ desc_ZAR_conversion_of_the_temple_knights:0 "The supposedly Saradominist Temple Knights secretly served a Zarosian master. They will be of great aid in our further conversion efforts."
+ ZAR_power_of_freneskae:0 "Power of Freneskae"
+ desc_ZAR_power_of_freneskae:0 "We have a secured a route to this devastated world, and the power that lies within."
+ ZAR_light_and_shadow:0 "Light and Shadow"
+ desc_ZAR_light_and_shadow:0 "The power of Seren and Zaros are drawn to each other - and perhaps strengthen one another."
+ ZAR_reject_the_light:0 "Reject the Light"
+ desc_ZAR_reject_the_light:0 "Familial bonds cannot distract from Zaros' mission."
+ ZAR_maturation_of_the_dark_lord:0 "Maturation of the Dark Lord"
+ desc_ZAR_maturation_of_the_dark_lord:0 "We finally see that the worship of Zaros was the destiny of those who followed the Dark Lord."
+ ZAR_rejection_of_zaros:0 "Rejection of Zaros"
+ desc_ZAR_rejection_of_zaros:0 "This pretender Zaros is trying to steal our worship of Seren! We must defy this."
+ ZAR_conquest_of_kharid:0 "Conquest of Kharid"
+ desc_ZAR_conquest_of_kharid:0 "The Menaphites have finally been shown the power of Zaros, and may resist our influence no longer."
+ ZAR_age_of_zaros_modifier:0 "Age of Zaros"
+ desc_ZAR_age_of_zaros_modifier:0 "The Empty Lord's presence in Gielinor is the strongest it has been since the Second Age. May he continue to guide mortals to their best paths forever more."
 
 # Zemouregal
 

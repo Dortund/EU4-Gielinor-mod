@@ -37,8 +37,33 @@ country_event = {
 			add_base_manpower = -1
 			add_province_modifier = {
 				name = "ALK_depop_plateau"
-				duration = 3650
+				duration = 9125
 			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_alk.1.b #We could mitigate this issue with concessions to the local hill giants.
+		trigger = {
+			NOT = {
+				mission_completed = ALK_abbey_of_st_elspeth
+			}
+		}
+		62 = {
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		63 = {
+			add_base_tax = -1
+			add_base_production = -1
+			change_culture = hill_giant
+			change_religion = bandos
+		}
+		ai_chance = {
+			factor = 2
 		}
 	}
 }
@@ -191,6 +216,92 @@ country_event = {
 	option = {
 		name = flavor_alk.4.b #We cannot afford this.
 		add_prestige = -5
+	}
+}
+
+country_event = {
+	id = flavor_alk.5
+	title = flavor_alk.5.t #Magical Specialities
+	desc = flavor_alk.5.d #The study of four types of magic has been advanced in our city. But which one should we emphasise?
+	picture = RUNECRAFTING_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_alk.5.a #Telekinesis!
+		add_country_modifier = {
+			name = ALK_telekinetic_grab
+			duration = 3650
+		}
+	}
+	option = {
+		name = flavor_alk.5.b #Bones Conversion!
+		add_country_modifier = {
+			name = ALK_bones_to_peaches
+			duration = 3650
+		}
+	}
+	option = {
+		name = flavor_alk.5.c #Enchanting!
+		add_country_modifier = {
+			name = ALK_enchantment_spells
+			duration = 3650
+		}
+	}
+	option = {
+		name = flavor_alk.5.e #Alchemy!
+		add_country_modifier = {
+			name = ALK_alchemy_spells
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = flavor_alk.6
+	title = flavor_alk.6.t #Corruption of the Duel Arena
+	desc = flavor_alk.6.d #Something suspicious is happening at the Duel Arena. Once a place of honourable combat, increasingly the grounds are overrun by gamblers - and match-fixers. Now known under the derogatory nickname of the Sand Casino, the Duel Arena has brought shame upon [Root.GetName].
+	picture = ALKHARID_CITY_eventPicture
+	
+	trigger = {
+		64 = {
+			OR = {
+				has_great_project = {
+					type = great_project_duel_arena
+					tier = 1
+				}
+				has_great_project = {
+					type = great_project_duel_arena
+					tier = 2
+				}
+				has_great_project = {
+					type = great_project_duel_arena
+					tier = 3
+				}
+			}
+		}
+		has_institution = quests
+		absolutism = 50
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = flavor_alk.4.a #We must step up our efforts to crush this corruption!
+		add_mil_power = -25
+		add_years_of_income = -0.1
+	}
+	option = {
+		name = flavor_alk.4.b #This can continue so long as we get a cut.
+		add_country_modifier = {
+			name = ALK_corrupt_duels
+			duration = 9125
+		}
 	}
 }
 

@@ -7,10 +7,3 @@ religion = dark_lord
 technology_group = elventechgroup
 capital = 339 #Underground Pass
 national_focus = MIL
-
-every_country = {
-	add_opinion = {
-		who = ROOT
-		modifier = boss_tag_opinion
-	}
-}

@@ -25,7 +25,7 @@ country_decisions = {
 			OR = {
 				region = misthalin_region
 				province_id = 46 # Lassar
-				province_id = 64 # Arina
+				province_id = 63 # Kharid-Et
 				province_id = 112 # Viggora's Folly
 				province_id = 113 # Canifis
 				province_id = 163 # Dareeyak
@@ -46,8 +46,8 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
-			owns_core_province = 46	 # Lassar
-			owns_core_province = 64	 # Arina
+			owns_core_province = 46  # Lassar
+			owns_core_province = 63  # Kharid-Et
 			owns_core_province = 112 # Viggora's Folly
 			owns_core_province = 113 # Canifis
 			owns_core_province = 163 # Dareeyak
@@ -56,6 +56,26 @@ country_decisions = {
 			owns_core_province = 358 # Ghorrock
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { tag = SNT }
+					}
+					complete_mission = SNT_reconstruction_of_senntisten
+					complete_mission = SNT_the_pass_of_silvarea
+					complete_mission = SNT_rebuild_kharyrll
+					complete_mission = SNT_coastal_expansion
+					complete_mission = SNT_route_to_ghorrock
+					complete_mission = SNT_traitors_to_zaros
+					complete_mission = SNT_spirits_of_dareeyak
+					complete_mission = SNT_fall_of_varrock
+					complete_mission = SNT_reinstate_paddewwa
+					complete_mission = SNT_capture_lassar
+					complete_mission = SNT_forinthry_expedition
+					complete_mission = SNT_demonic_reposession
+					complete_mission = SNT_beasts_of_the_wilderness
+				}
+			}
 			23 = {
 				move_capital_effect = yes
 				change_province_name = "Senntisten"
@@ -75,12 +95,6 @@ country_decisions = {
 			}
 			set_country_flag = formed_zaros_empire_flag
 			if = {
-				limit = {
-					NOT = { primary_culture = silvarean }
-				}
-				change_primary_culture = silvarean
-			}
-			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
@@ -89,9 +103,6 @@ country_decisions = {
 			}
 			46 = {
 				change_province_name = "Lassar"
-			}
-			112 = {
-				change_province_name = "Viggora's Fortress"
 			}
 			113 = {
 				change_province_name = "Kharyrll"

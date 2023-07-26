@@ -14,6 +14,7 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { exists = RSG }
+			NOT = { tag = SNT }
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no

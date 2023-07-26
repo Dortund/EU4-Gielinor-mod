@@ -1,0 +1,1691 @@
+snt_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SNT
+			tag = ZAR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	SNT_the_temple_at_senntisten = {
+		icon = mission_the_temple_at_senntisten
+		position = 2
+		required_missions = { SNT_reconstruction_of_senntisten }
+		trigger = {
+			23 = {
+				owned_by = ROOT
+				is_core = ROOT
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_temple_at_senntisten
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_temple_at_senntisten
+							tier = 3
+						}
+					}
+				}
+				else = {
+					development = 40
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = SRT_zarosian_fervour
+				duration = 7300
+			}
+		}
+	}
+	
+	SNT_fateful_jurisprudence = {
+		icon = mission_fateful_jurisprudence
+		position = 4
+		required_missions = { SNT_the_temple_at_senntisten }
+		trigger = {
+			has_institution = statehood
+			OR = {
+				courthouse = 5
+				town_hall = 5
+			}
+			stability = 3
+		}
+		effect = {
+			change_government_reform_progress = 100
+		}
+	}
+
+	SNT_senntisten_excavations = {
+		icon = mission_senntisten_excavations
+		position = 6
+		required_missions = { SNT_fateful_jurisprudence SNT_secrets_of_the_pyramid }
+		trigger = {
+			development_in_provinces = {
+				value = 75
+				area = saranthium_area
+			}
+			university = 5
+			23 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			23 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				add_province_modifier = {
+					name = SNT_excavation_of_senntisten
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+
+
+snt_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SNT
+			tag = ZAR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	SNT_tales_of_jaldraocht = {
+		icon = mission_ancient_rituals
+		position = 3
+		required_missions = { SNT_fort_of_kharid_et }
+		trigger = {
+			if = {
+				limit = {
+					has_global_flag = JAL_free_azzanadra_flag
+				}
+				81 = {
+					owned_by = ROOT
+					is_core = ROOT
+					development = 20
+					num_of_buildings_in_province = 4
+					has_owner_accepted_culture = yes
+				}
+				84 = {
+					owned_by = ROOT
+					is_core = ROOT
+					development = 10
+					num_of_buildings_in_province = 2
+					has_owner_accepted_culture = yes
+				}
+			}
+			else = {
+				owns_core_province = 81
+				owns_core_province = 84
+				OR = {
+					temple = 5
+					cathedral = 5
+				}
+				theologian = 3
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = JAL_free_azzanadra_flag
+				}
+				add_country_modifier = {
+					name = SNT_ages_of_loyalty
+					duration = 7300
+				}
+				if = {
+					limit = {
+						866 = {
+							is_empty = yes
+						}
+					}
+					866 = {
+						add_siberian_construction = 400
+					}
+				}
+				else = {
+					81 = {
+						add_base_tax = 1
+						add_base_production = 1
+					}
+				}
+			}
+			else = {
+				add_prestige = 25
+				ice_path_area = {
+					discover_country = ROOT
+				}
+				dessous_area = {
+					discover_country = ROOT
+				}
+				baxtoria_area = {
+					discover_country = ROOT
+				}
+			}
+		}
+	}
+	SNT_secrets_of_the_pyramid = {
+		icon = mission_desert_treasure
+		position = 5
+		required_missions = { SNT_tales_of_jaldraocht }
+		trigger = {
+			if = {
+				limit = {
+					has_global_flag = JAL_free_azzanadra_flag
+				}
+				84 = {
+					fort_level = 4
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 20
+					}
+				}
+			}
+			else = {
+				OR = {
+					AND = {
+						has_institution = quests
+						absolutism = 80
+					}
+					AND = {
+						82 = { units_in_province = ROOT }
+						845 = { units_in_province = ROOT }
+						351 = { units_in_province = ROOT }
+						258 = { units_in_province = ROOT }
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = JAL_free_azzanadra_flag
+				}
+				add_country_modifier = {
+					name = SNT_defences_of_jaldraocht_pyramid
+					duration = 7300
+				}
+			}
+			else = {
+				country_event = {
+					id = flavor_jal.1
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+snt_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SNT
+			tag = ZAR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	SNT_reconstruction_of_senntisten = {
+		icon = mission_return_of_senntisten
+		position = 1
+		required_missions = {  }
+		trigger = {
+			23 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+				development = 25
+				num_of_buildings_in_province = 3
+			}
+		}
+		effect = {
+			kings_road_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			silvarea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			al_kharid_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	SNT_fort_of_kharid_et = {
+		icon = mission_fort_of_kharid_et
+		position = 2
+		required_missions = { SNT_reconstruction_of_senntisten }
+		trigger = {
+			63 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+				fort_level = 4
+			}
+		}
+		effect = {
+			add_mil_power = 25
+			63 = {
+				change_province_name = "Kharid-Et"
+				add_base_manpower = 3
+				add_province_modifier = {
+					name = SNT_fort_of_kharid_et_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	SNT_spies_of_kharid = {
+		icon = mission_spies_of_kharid
+		position = 4
+		required_missions = { SNT_fort_of_kharid_et }
+		trigger = {
+			has_global_modifier_value = {
+				which = spy_offence
+				value = 0.75
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				region = kharidian_desert_region
+				is_core = root
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = zaros
+					NOT = { has_global_flag = enkhara_revealed_flag }
+				}
+				country_event = {
+					id = flavor_snt.2
+					days = 30
+				}
+			}
+			else = {
+				add_dip_power = 100
+			}
+		}
+	}
+	SNT_mahjarrat_of_zaros = {
+		icon = mission_mahjarrat_of_zaros
+		position = 6
+		required_missions = { SNT_secrets_of_the_pyramid SNT_spies_of_kharid SNT_secrets_of_sliske }
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					religion = zaros
+				}
+				amount = 40
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_snt.4
+				days = 1
+			}
+		}
+	}
+}
+
+snt_missions_4a = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SNT
+			tag = ZAR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	SNT_the_pass_of_silvarea = {
+		icon = mission_reinforce_paterdomus
+		position = 2
+		required_missions = { SNT_reconstruction_of_senntisten }
+		provinces_to_highlight = {
+			area = silvarea_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			silvarea_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			canifis_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	SNT_rebuild_kharyrll = {
+		icon = mission_establish_canifis
+		position = 3
+		required_missions = { SNT_the_pass_of_silvarea }
+		provinces_to_highlight = {
+			area = canifis_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			canifis_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			113 = {
+				change_province_name = "Kharyrll"
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			lordship_of_the_north_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	SNT_coastal_expansion = {
+		icon = mission_viggoras_folly
+		position = 4
+		required_missions = { SNT_rebuild_kharyrll }
+		provinces_to_highlight = {
+			area = lordship_of_the_north_coast_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			lordship_of_the_north_coast_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			add_yearly_sailors = 0.5
+			127 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	SNT_secrets_of_sliske = {
+		icon = mission_secrets_of_sliske
+		position = 5
+		required_missions = { SNT_coastal_expansion }
+		provinces_to_highlight = {
+			province_id = 127
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 127
+		}
+		effect = {
+			random_list = {
+				20 = {
+					define_general = {
+						name = Ahrim the Blighted
+						shock = 2
+						fire = 6
+						manuever = 2
+						siege = 3
+						trait = ruthless_personality
+					}
+				}
+				20 = {
+					define_general = {
+						name = Dharok the Wretched
+						shock = 6
+						fire = 2
+						manuever = 2
+						siege = 3
+						trait = glory_seeker_personality
+					}
+				}
+				20 = {
+					define_general = {
+						name = Guthan the Infested
+						shock = 4
+						fire = 3
+						manuever = 3
+						siege = 2
+						trait = battlefield_medic_personality
+					}
+				}
+				20 = {
+					define_general = {
+						name = Karil the Tainted
+						shock = 1
+						fire = 5
+						manuever = 3
+						siege = 4
+						trait = cannoneer_personality
+					}
+				}
+				20 = {
+					define_general = {
+						name = Torag the Corrupted
+						shock = 3
+						fire = 1
+						manuever = 4
+						siege = 2
+						trait = defensive_planner_personality
+					}
+				}
+				20 = {
+					define_general = {
+						name = Verac the Defiled
+						shock = 5
+						fire = 2
+						manuever = 2
+						siege = 4
+						trait = siege_specialist_personality
+					}
+				}
+			}
+		}
+	}
+}
+
+zar_missions_4a = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZAR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	ZAR_sliskes_supplies = {
+		icon = mission_reinforce_paterdomus
+		position = 6
+		required_missions = { SNT_secrets_of_sliske SNT_forinthry_expedition }
+		provinces_to_highlight = {
+			area = haranu_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_tag = RSG
+						culture_group = wushanko_group
+					}
+				}
+				haranu_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					religion = zaros
+				}
+			}
+			else = {
+				haranu_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ZAR_eastward_journey
+				duration = 7300
+			}
+		}
+	}
+}
+
+snt_missions_4b = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SNT
+			tag = ZAR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	SNT_route_to_ghorrock = {
+		icon = mission_route_to_ghorrock
+		position = 7
+		required_missions = { SNT_demonic_reposession }
+		trigger = {
+			191 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+				development = 15
+				OR = {
+					has_building = dock
+					has_building = drydock
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			ghorrock_area = {
+				has_discovered = ROOT
+			}
+			num_of_heavy_ship = 15
+			if = {
+				limit = {
+					358 = {
+						is_empty = yes
+					}
+				}
+				treasury = 250
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					358 = {
+						is_empty = yes
+					}
+				}
+				358 = {
+					add_siberian_construction = 50
+				}
+			 	add_treasury = -250
+			}
+			else = {
+				ghorrock_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				add_country_modifier = {
+					name = SNT_ghorrock_landing
+					duration = 3650
+				}
+			}
+			ritual_site_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	SNT_traitors_to_zaros = {
+		icon = mission_traitors_to_zaros
+		position = 8
+		required_missions = { SNT_route_to_ghorrock SNT_beasts_of_the_wilderness }
+		provinces_to_highlight = {
+			province_id = 355
+			province_id = 177
+			province_id = 167
+			province_id = 168
+		}
+		trigger = {
+			owns_core_province = 355
+			owns_core_province = 177
+			owns_core_province = 167
+			owns_core_province = 168
+			if = {
+				limit = {
+					176 = {
+						is_empty = yes
+					}
+				}
+				adm_power = 100
+			}
+			if = {
+				limit = {
+					166 = {
+						is_empty = yes
+					}
+				}
+				treasury = 250
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					176 = {
+						is_empty = yes
+					}
+				}
+				add_adm_power = -100
+				176 = {
+					add_siberian_construction = 50
+				}
+			}
+			else = {
+				add_mil_power = 50
+			}
+			if = {
+				limit = {
+					166 = {
+						is_empty = yes
+					}
+				}
+				add_treasury = -250
+				166 = {
+					add_siberian_construction = 50
+				}
+			}
+			else = {
+				add_prestige = 25
+			}
+		}
+	}	
+	SNT_spirits_of_dareeyak = {
+		icon = mission_spirits_of_dareeyak
+		position = 9
+		required_missions = { SNT_traitors_to_zaros }
+		provinces_to_highlight = {
+			province_id = 163
+		}
+		trigger = {
+			development_in_provinces = {
+				value = 125
+				region = forinthry_region
+			}
+			owns_core_province = 176
+			if = {
+				limit = {
+					163 = {
+						is_empty = yes
+					}
+				}
+				mil_power = 100
+			}
+			else = {
+				owns_core_province = 163
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					163 = {
+						is_empty = yes
+					}
+				}
+				add_mil_power = -100
+				163 = {
+					add_siberian_construction = 50
+				}
+			}
+			else = {
+				add_adm_power = 50
+			}
+		}
+	}
+}
+
+snt_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SNT
+			tag = ZAR
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	SNT_fall_of_varrock = {
+		icon = mission_integration_of_edgeville
+		position = 2
+		required_missions = { SNT_reconstruction_of_senntisten }
+		provinces_to_highlight = {
+			area = varrock_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			varrock_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			add_prestige = 25
+			north_lum_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			edgeville_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	SNT_reinstate_paddewwa = {
+		icon = mission_reinstate_paddewwa
+		position = 3
+		required_missions = { SNT_fall_of_varrock }
+		provinces_to_highlight = {
+			area = edgeville_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			edgeville_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			20 = {
+				change_province_name = "Paddewwa"
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			asgarnian_borderlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			ice_mountain_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	SNT_capture_lassar = {
+		icon = mission_capture_lassar
+		position = 4
+		required_missions = { SNT_reinstate_paddewwa }
+		provinces_to_highlight = {
+			area = ice_mountain_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ice_mountain_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			46 = {
+				change_province_name = "Lassar"
+				add_province_modifier = {
+					name = SNT_lost_mineral_wealth
+					duration = 9125
+				}
+			}
+		}
+	}
+	SNT_forinthry_expedition = {
+		icon = mission_grand_ship
+		position = 5
+		required_missions = { SNT_coastal_expansion SNT_capture_lassar }
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						region = forinthry_region
+						region = morytania_region
+						region = fremennik_region
+						region = troll_country_region
+					}
+					OR = {
+						has_building = shipyard
+						has_building = grand_shipyard
+						has_building = dock
+						has_building = drydock
+					}
+				}
+				amount = 5
+			}
+			num_of_heavy_ship = 10
+			navy_size_percentage = 0.9
+		}
+		effect = {
+			unforgiving_shores_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			demonic_plains_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	SNT_demonic_reposession = {
+		icon = mission_demonic_repossession
+		position = 6
+		provinces_to_highlight = {
+			province_id = 188
+		}
+		required_missions = { SNT_forinthry_expedition }
+		trigger = {
+			188 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+				development = 15
+				has_building = cathedral
+			}
+		}
+		effect = {
+			spider_woods_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					185 = {
+						is_empty = yes
+					}
+				}
+				185 = {
+				 	add_siberian_construction = 50
+				}
+			}
+			else = {
+				add_mil_power = 50
+			}
+		}
+	}
+	SNT_beasts_of_the_wilderness = {
+		icon = mission_beasts_of_the_wilderness
+		position = 7
+		required_missions = { SNT_demonic_reposession }
+		provinces_to_highlight = {
+			province_id = 962
+			province_id = 184
+			province_id = 187
+			province_id = 192
+		}
+		trigger = {
+			owns_core_province = 962
+			owns_core_province = 184
+			owns_core_province = 187
+			owns_core_province = 192
+		}
+		effect = {
+			add_country_modifier = {
+				name = SNT_victory_over_the_beasts
+				duration = 3650
+			}
+			if = {
+				limit = {
+					172 = {
+						is_empty = yes
+					}
+				}
+				172 = {
+				 	add_siberian_construction = 50
+				}
+			}
+			else = {
+				add_mil_power = 50
+			}
+			heart_of_the_wilderness_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+######################
+# Zarosian Empire Missions (except 4a Sliske's Supplies)
+######################
+
+zar_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZAR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ZAR_misthalanian_conversion = {
+		icon = mission_misthalanian_conversion
+		position = 7
+		required_missions = { SNT_senntisten_excavations }
+		provinces_to_highlight = {
+			region = misthalin_region
+			NOT = { religion = ROOT }
+		}
+		trigger = {
+			misthalin_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+	ZAR_conquest_of_asgarnia = {
+		icon = mission_expand_the_realm
+		position = 8
+		required_missions = { ZAR_misthalanian_conversion ZAR_attack_asgarnia }
+		provinces_to_highlight = {
+			region = asgarnia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			asgarnia_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = asg_revealed_zarosian_plot
+				}
+				add_country_modifier = {
+					name = ZAR_crush_the_saradominists
+					duration = 7300
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = ZAR_conversion_of_the_temple_knights
+					duration = 7300
+				}
+			}
+		}
+	}
+	ZAR_conversion_of_asgarnia = {
+		icon = mission_conversion_of_asgarnia
+		position = 9
+		required_missions = { ZAR_conquest_of_asgarnia }
+		provinces_to_highlight = {
+			region = asgarnia_region
+			NOT = { religion = ROOT }
+		}
+		trigger = {
+			asgarnia_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+	ZAR_defeat_menaphos = {
+		icon = mission_jalkabir
+		position = 10
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				area = menaphos_area
+				area = elid_isles_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			NOT = { exists = MPS }
+			menaphos_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			elid_isles_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			kharidian_desert_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ZAR_end_kharid = {
+		icon = mission_kharidian_unity
+		position = 11
+		required_missions = { ZAR_defeat_menaphos }
+		provinces_to_highlight = {
+			region = kharidian_desert_region
+			NOT = { religion = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				region = kharidian_desert_region
+				is_city = yes
+				religion = zaros
+			}	
+		}
+		effect = {
+			add_country_modifier = {
+				name = ZAR_conquest_of_kharid
+				duration = -1
+			}
+		}
+	}
+}
+
+zar_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZAR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ZAR_attack_asgarnia = {
+		icon = mission_attack_asgarnia
+		position = 7
+		required_missions = { SNT_senntisten_excavations SNT_mahjarrat_of_zaros }
+		provinces_to_highlight = {
+			region = asgarnia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = asgarnia_region
+				is_city = yes
+			}	
+		}
+		effect = {
+			asgarnia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ZAR_unquiet_ports = {
+		icon = mission_fall_of_sarim
+		position = 8
+		required_missions = { ZAR_attack_asgarnia }
+		provinces_to_highlight = {
+			OR = {
+				region = misthalin_region
+				region = asgarnia_region
+				region = kandarin_region
+				region = karamja_region
+			}
+			has_port = yes
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					owned_by = ROOT
+					has_port = yes
+					OR = {
+						region = misthalin_region
+						region = asgarnia_region
+						region = kandarin_region
+						region = karamja_region
+					}
+				}
+				amount = 15
+			}
+			grand_shipyard = 5
+			navy_size = 100
+		}
+		effect = {
+			add_navy_tradition = 10
+			add_dip_power = 50
+		}
+	}
+	
+	ZAR_sister_of_zaros = {
+		icon = mission_council_of_gielinor
+		position = 9
+		required_missions = { ZAR_unquiet_ports }
+		trigger = {
+			325 = { has_discovered = ROOT }
+			if = {
+				limit = {
+					any_country = {
+						religion = seren
+					}
+				}
+				any_country = {
+					religion = seren
+					has_discovered = ROOT
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						religion = dark_lord
+					}
+				}
+				any_country = {
+					religion = dark_lord
+					has_discovered = ROOT
+				}
+			}
+			else = {
+				tirannwn_region = {
+					type = all
+					has_discovered = ROOT
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						religion = seren
+					}
+				}
+				country_event = {
+					id = flavor_zar.2
+					days = 1
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						religion = dark_lord
+					}
+				}
+				country_event = {
+					id = flavor_zar.3
+					days = 1
+				}
+			}
+			else = {
+				country_event = {
+					id = flavor_zar.5
+					days = 1
+				}
+			}
+		}
+	}
+	
+	ZAR_the_queen_of_dragons = {
+		icon = mission_the_queen_of_dragons
+		position = 10
+		required_missions = { ZAR_conversion_of_asgarnia ZAR_recruit_shakorexis }
+		trigger = {
+			absolutism = 85
+			owns_core_province = 1365
+			
+		}
+		effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						culture_group = dragonkin_group
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = dragonkin_group
+					}
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 5
+				}
+			}
+			else = {
+				1365 = {
+					change_culture = chromaticdragon
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 5
+				}
+			}
+		}
+	}
+	
+}
+
+
+zar_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZAR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ZAR_closing_the_loop = {
+		icon = mission_closing_the_loop
+		position = 7
+		required_missions = { ZAR_sliskes_supplies }
+		provinces_to_highlight = {
+			region = loop_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						was_tag = RSG
+						culture_group = wushanko_group
+					}
+				}
+				development_in_provinces = {
+					value = 100
+					region = loop_region
+				}
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					region = loop_region
+					is_city = yes
+					religion = zaros
+				}
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					region = loop_region
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				add_province_modifier = {
+					name = ZAR_outpost_of_zaros
+					duration = -1
+				}
+			}
+		}
+	}
+	ZAR_purple_colour_of_wealth = {
+		icon = mission_purple_colour_of_wealth
+		position = 8
+		required_missions = { ZAR_attack_asgarnia ZAR_closing_the_loop }
+		trigger = {
+			33 = {
+				highest_value_trade_node = yes
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			add_years_of_income = 1
+		}
+	}
+	ZAR_recruit_shakorexis = {
+		icon = mission_recruit_shakorexis
+		position = 9
+		required_missions = { SNT_traitors_to_zaros }
+		provinces_to_highlight = {
+			province_id = 960
+		}
+		trigger = {
+			NOT = {
+				exists = KBD
+			}
+			960 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+				has_building = cathedral
+			}
+		}
+		effect = {
+			define_general = {
+				name = "King Black Dragon"
+				shock = 4
+				fire = 6
+				manuever = 5
+				siege = 3
+				trait = siege_specialist_personality
+			}
+		}
+	}
+	ZAR_the_power_of_daemonheim = {
+		icon = mission_shores_of_daemonheim
+		position = 10
+		required_missions = { SNT_spirits_of_dareeyak }
+		provinces_to_highlight = {
+			area = dungeons_of_daemonheim_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			NOT = { exists = DMH }
+			dungeons_of_daemonheim_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = flag_death_of_bilrach
+					}
+				}
+				country_event = {
+					id = flavor_zar.1
+					days = 30
+				}
+			}
+			else = {
+				add_prestige = 25
+			}
+		}
+	}
+	
+	ZAR_tales_of_the_dragon_riders = {
+		icon = mission_tales_of_the_dragon_riders
+		position = 11
+		required_missions = { ZAR_the_queen_of_dragons ZAR_the_power_of_daemonheim }
+		trigger = {
+			innovativeness = 25
+			owns_core_province = 51
+			owns_core_province = 1324
+		}
+		effect = {
+			add_adm_power = 50
+			define_general = {
+				name = "Vindicta"
+				female = yes
+				shock = 6
+				fire = 3
+				manuever = 6
+				siege = 3
+				trait = born_to_the_saddle_personality
+			}
+		}
+	}
+	
+	ZAR_age_of_zaros = {
+		icon = mission_age_of_zaros
+		position = 12
+		required_missions = { ZAR_end_kharid ZAR_tales_of_the_dragon_riders ZAR_unite_forinthry ZAR_control_the_world_gate }
+		trigger = {
+			religion = zaros
+			total_development = 2000
+		}
+		effect = {
+			add_prestige = 100
+			add_country_modifier = {
+				name = ZAR_age_of_zaros_modifier
+				duration = -1
+			}
+		}
+	}
+	
+}
+
+zar_missions_4b = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZAR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	ZAR_rebuilding_forinthry = {
+		icon = mission_rebuilding_forinthry
+		position = 10
+		required_missions = { SNT_spirits_of_dareeyak }
+		provinces_to_highlight = {
+			region = forinthry_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = forinthry_region
+				is_city = yes
+			}
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					region = forinthry_region
+				}
+				add_province_modifier = {
+					name = ZAR_redevelopment_efforts
+					duration = 9125
+				}
+			}
+		}
+	}
+	ZAR_unite_forinthry = {
+		icon = mission_unite_forinthry
+		position = 11
+		required_missions = { ZAR_the_power_of_daemonheim ZAR_rebuilding_forinthry }
+		provinces_to_highlight = {
+			region = forinthry_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			forinthry_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zaros
+			}
+		}
+		effect = {
+			163 = {
+				add_province_modifier = {
+					name = ZAR_forinthry_fortress
+					duration = -1
+				}
+			}
+			166 = {
+				add_province_modifier = {
+					name = ZAR_forinthry_fortress
+					duration = -1
+				}
+			}
+			188 = {
+				add_province_modifier = {
+					name = ZAR_forinthry_fortress
+					duration = -1
+				}
+			}
+			358 = {
+				add_province_modifier = {
+					name = ZAR_forinthry_fortress
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+zar_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ZAR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	ZAR_free_nex = {
+		icon = mission_free_nex
+		position = 9
+		required_missions = { SNT_traitors_to_zaros }
+		provinces_to_highlight = {
+			province_id = 354
+		}
+		trigger = {
+			354 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_great_project = {
+						type = great_project_temple_of_lost_ancients
+						tier = 2
+					}
+					has_great_project = {
+						type = great_project_temple_of_lost_ancients
+						tier = 3
+					}
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			add_army_tradition = 10
+			define_general = {
+				name = "Nex"
+				female = yes
+				shock = 6
+				fire = 6
+				manuever = 6
+				siege = 2
+				trait = ruthless_personality
+			}
+		}
+	}
+	ZAR_find_char = {
+		icon = mission_find_char
+		position = 10
+		required_missions = { ZAR_free_nex }
+		provinces_to_highlight = {
+			province_id = 1379
+		}
+		trigger = {
+			absolutism = 75
+			OR = {
+				354 = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				354 = {
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 25
+					}
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			add_army_tradition = 10
+			define_general = {
+				name = "Char"
+				female = yes
+				shock = 4
+				fire = 6
+				manuever = 3
+				siege = 4
+				trait = siege_specialist_personality
+			}
+		}
+	}
+	ZAR_control_the_world_gate = {
+		icon = mission_shadows_of_the_world_gate
+		position = 11
+		required_missions = { ZAR_find_char }
+		provinces_to_highlight = {
+			province_id = 269
+		}
+		trigger = {
+			current_age = age_of_divination
+			owns_core_province = 269
+			absolutism = 80
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ZAR_power_of_freneskae"
+				duration = 9125
+			}
+		}
+	}
+}

@@ -19,7 +19,9 @@ national_focus = MIL
 }
 
 2023.6.29 = {
-	set_capital = 118
+	set_capital = 113
+	override_country_name = CANIFIS
+	set_country_flag = CFS_founded_canifis_flag
 	monarch = {
 		name = "Malak"
 		dynasty = "Vitur"

@@ -1,9 +1,9 @@
-#184-Vet'ion
-owner = VET
-controller = VET
-add_core = VET
+#962-Silk Chasm
+owner = VNN
+controller = VNN
+add_core = VNN
 tribal_owner = ---
-culture = skeleton
+culture = giant_spider
 religion = zamorak
 
 discovered_by = morytaniantechgroup
@@ -12,10 +12,10 @@ discovered_by = northerntechgroup
 hre = no
 
 base_tax = 2
-base_production = 1
-base_manpower = 2
+base_production = 3
+base_manpower = 8
 
-trade_goods = bones
+trade_goods = herblore_supplies
 latent_trade_goods = { rare_loot }
 
 native_size = 10

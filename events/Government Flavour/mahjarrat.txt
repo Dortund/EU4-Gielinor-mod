@@ -77,6 +77,12 @@ country_event = {
 				NOT = { has_global_flag = flag_death_of_zemouregal }
 				NOT = { has_ruler = "Zemouregal"}
 			}
+			AND = {
+				has_country_flag = SNT_rule_by_azzanadra
+				has_reform = restored_zarosian_theocracy
+				NOT = { has_global_flag = flag_death_of_azzanadra }
+				NOT = { has_ruler = "Azzanadra" }
+			}
 		}
 	}
 
@@ -110,7 +116,7 @@ country_event = {
 				add_ruler_personality = immortal_personality
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					tag = BWS
@@ -134,7 +140,7 @@ country_event = {
 				add_ruler_personality = immortal_personality
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					tag = DMH
@@ -158,7 +164,7 @@ country_event = {
 				add_ruler_personality = immortal_personality
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					tag = ENK
@@ -182,7 +188,7 @@ country_event = {
 				add_ruler_personality = immortal_personality
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					tag = HZL
@@ -206,7 +212,7 @@ country_event = {
 				add_ruler_personality = immortal_personality
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					tag = KZD
@@ -230,7 +236,7 @@ country_event = {
 				add_ruler_personality = immortal_personality
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					tag = LCI
@@ -254,7 +260,7 @@ country_event = {
 				add_ruler_personality = immortal_personality
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					tag = ZMG
@@ -276,6 +282,29 @@ country_event = {
 				}
 				clear_scripted_personalities = yes
 				add_ruler_personality = immortal_personality
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = SNT_rule_by_azzanadra
+				has_reform = restored_zarosian_theocracy
+			}
+			custom_tooltip = mahjarrat_events_azzanadra_revived
+			hidden_effect = {
+				define_ruler = {
+					name = "Azzanadra"
+					dynasty = "of the Mahjarrat"
+					adm = 5
+					dip = 5
+					mil = 4
+					male = yes
+					age = 2000
+					claim = 100
+					culture = mahjarrat
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+				add_ruler_personality = zealot_personality
 			}
 		}
 	}

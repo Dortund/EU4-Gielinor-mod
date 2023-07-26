@@ -1,4 +1,4 @@
-#187-Callisto
+#187-Callisto's Den
 owner = CST
 controller = CST
 add_core = CST

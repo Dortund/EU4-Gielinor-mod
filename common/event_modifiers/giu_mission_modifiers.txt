@@ -84,7 +84,7 @@ ALK_citharede = {
 
 ALK_blue_training = {
 	prestige = 0.5
-	local_tax_modifier = 0.1
+	local_tax_modifier = 0.15
 	local_missionary_strength = -0.02
 }
 ALK_red_training = {
@@ -94,7 +94,7 @@ ALK_red_training = {
 }
 ALK_green_training = {
 	prestige = 0.5
- 	local_governing_cost = -0.25
+ 	local_governing_cost = -0.5
 	local_missionary_strength = -0.02
 }
 ALK_grey_training = {
@@ -110,6 +110,29 @@ ALK_merchant_fleet = {
 ALK_agenda_of_espionage = {
 	spy_offence = 0.25
 }
+
+ALK_telekinetic_grab = {
+ 	loot_amount = 1
+}
+ALK_bones_to_peaches = {
+	land_attrition = -0.1
+}
+ALK_enchantment_spells = {
+	prestige = 1
+}
+ALK_alchemy_spells = {
+	global_tax_modifier = 0.15
+}
+ALK_corrupt_duels = {
+	global_tax_modifier = 0.2
+	yearly_corruption = 0.1
+}
+ALK_defeat_of_tempoross = {
+	prestige = 0.5
+	global_ship_trade_power = 0.2
+}
+
+
 
 #############
 #Arposandra
@@ -696,6 +719,33 @@ IOR_terror_of_the_dark_lord = {
 }
 
 #############
+#Jaldraocht
+#############
+
+#Local
+
+JAL_permanent_camp = {
+	local_tax_modifier = 0.1
+	province_trade_power_modifier = 0.25
+}
+
+#National
+
+JAL_pineapple_supplies = {
+	global_unrest = -1
+}
+JAL_bandit_sailors = {
+	regiment_disembark_speed = 0.25
+	may_perform_slave_raid = yes
+}
+JAL_freedom_of_azzanadra = {
+	tolerance_own = 1
+}
+JAL_new_zarosian_army = {
+	warscore_cost_vs_other_religion = -0.25
+}
+
+#############
 #Jatizso
 #############
 
@@ -816,6 +866,39 @@ KJA_unquiet_ocean_trade_monopoly = {
  	trade_efficiency = 0.1
 }
 
+#############
+#Kharidian Generic
+#############
+
+#Local
+
+genkharid_capital_wealth = {
+	local_development_cost_modifier = -0.1
+	local_build_cost = -0.15
+}
+
+#National
+
+genkharid_glory_of_the_monuments = {
+	prestige = 1
+	global_missionary_strength = 0.02
+}
+
+genkharid_building_boom = {
+	build_cost = -0.1
+	build_time = -0.2
+}
+genkharid_traders_of_the_eastern_sea = {
+	ship_trade_power_modifier = 0.25
+	trade_range_modifier = 0.25
+}
+genkharid_integration_of_the_cities = {
+	diplomatic_annexation_cost = -0.2
+}
+genkharid_drive_to_unify = {
+	province_warscore_cost = -0.1
+	ae_impact = -0.1
+}
 
 #############
 #Kharidians
@@ -894,6 +977,22 @@ MWL_age_of_the_dark_lord = {
 
 MPS_trade_monopoly = {
 	province_trade_power_value = 1
+}
+
+#National
+MPS_self_sufficiency_policy = {
+	global_spy_defence = 0.1
+	global_own_trade_power = 0.15
+}
+MPS_between_west_and_east = {
+ 	trade_efficiency = 0.1
+	diplomatic_reputation = 1
+}
+MPS_skull_gunpowder_supplies = {
+	siege_ability = 0.1
+}
+MPS_menaphos_library_modifier = {
+	local_institution_spread = 0.25
 }
 
 #############
@@ -994,6 +1093,32 @@ MYT_pirate_mercenaries = {
 }
 
 #############
+#Nardah
+#############
+
+#Local
+NDH_dried_well = {
+	local_production_efficiency = -0.5
+	local_build_cost = 0.5
+	local_development_cost = 1
+	local_manpower_modifier = -0.5
+}
+NDH_mitigated_dried_well = {
+	local_tax_modifier = -1
+	local_production_efficiency = -0.15
+	local_build_cost = 0.15
+	local_development_cost = 0.25
+	local_manpower_modifier = -0.15
+}
+
+#National
+
+NDH_protect_from_missiles = {
+	global_missionary_strength = 0.02
+	fire_damage_received = -0.1
+}
+
+#############
 #Neitiznot
 #############
 
@@ -1091,11 +1216,90 @@ SBI_reconstruction_of_ullek = {
 	local_build_cost = -0.25
 	local_build_time = -0.25
 }
+SBI_catacombs_of_ullek_modifier = {
+	local_tax_modifier = 0.5
+	max_attrition = 1
+	local_hostile_attrition = 1
+}
+SBI_untouchable_ullek = {
+	blockade_force_required = 2
+	hostile_disembark_speed = 0.5
+	hostile_fleet_attrition = 1
+}
 
 #National
-
 SBI_by_scabaras_hand = {
 	tolerance_own = 1
+}
+SBI_glory_of_the_champion = {
+	defensiveness = 0.15
+	hostile_attrition = 1
+}
+SBI_reintegration_of_the_scabarites = {
+ 	relation_with_same_religion = 25
+	reverse_relation_with_same_religion = 25
+}
+
+#############
+#Senntisten
+#############
+
+#Local
+SNT_fort_of_kharid_et_modifier = {
+	local_defensiveness = 0.25
+	local_garrison_size = 0.25
+	local_fort_maintenance_modifier = -0.5
+}
+SNT_lost_mineral_wealth = {
+	trade_goods_size_modifier = 1
+}
+SNT_excavation_of_senntisten = {
+	allowed_num_of_buildings = 1
+ 	local_development_cost_modifier = -0.2
+}
+
+#National
+SNT_honoured_people_of_jaldraocht = {
+	num_accepted_cultures = 1
+}
+SNT_ages_of_loyalty = {
+	tolerance_own = 1
+}
+SNT_defences_of_jaldraocht_pyramid = {
+	defensiveness = 0.1
+	siege_ability = 0.1
+}
+SNT_vengeance_for_the_fallen = {
+	land_morale = 0.2
+	naval_morale = 0.2
+}
+SNT_alternative_thinking = {
+	idea_cost = -0.1
+}
+SNT_army_of_wights = {
+	manpower_recovery_speed = 0.15
+}
+SNT_pontifexs_crusade = {
+	warscore_cost_vs_other_religion = -0.25
+}
+SNT_camel_warrior_forces = {
+	cavalry_fire = 1
+}
+SNT_revive_the_mahjarrat_lore = {
+	technology_cost = -0.05
+	prestige_decay = -0.01
+}
+SRT_zarosian_fervour = {
+	global_missionary_strength = 0.01
+ 	missionary_maintenance_cost = -0.25
+}
+SNT_victory_over_the_beasts = {
+	army_tradition = 1
+	prestige_decay = -0.01
+}
+SNT_ghorrock_landing = {
+	regiment_disembark_speed = 0.2
+	naval_attrition = -0.1
 }
 
 #############
@@ -1325,7 +1529,7 @@ TZH_tzhaar_ket_reinforcement = {
 	garrison_growth = 0.1
 }
 
-#Nation
+#National
 TZH_influx_of_runes = {
 	technology_cost = -0.05
  	global_regiment_cost = -0.1
@@ -1336,6 +1540,73 @@ TZH_defended_home_trade = {
 }
 TZH_strength_of_the_tzhaar_ket = {
 	infantry_power = 0.1
+}
+
+#############
+#Zarosian Empire
+#############
+
+#Local
+ZAR_redevelopment_efforts = {
+	local_development_cost_modifier = -0.1
+ 	local_build_cost = -0.05
+}
+ZAR_outpost_of_zaros = {
+	local_development_cost = -0.1
+	statewide_governing_cost = -0.25
+}
+ZAR_local_serenist_tolerance = {
+	local_missionary_strength = -0.1
+	local_religious_unity_contribution = -1
+	local_unrest = -5
+}
+ZAR_forinthry_fortress = {
+	local_development_cost_modifier = -0.15
+ 	local_fort_maintenance_modifier = -0.25
+	local_defensiveness = 0.2
+}
+
+#National
+
+ZAR_eastward_journey = {
+ 	cb_on_overseas = yes
+	range = 0.25
+}
+ZAR_crush_the_saradominists = {
+	harsh_treatment_cost = -0.25
+}
+ZAR_conversion_of_the_temple_knights = {
+	global_heathen_missionary_strength = 0.015
+}
+ZAR_power_of_freneskae = {
+	fire_damage = 0.05
+	warscore_cost_vs_other_religion = -0.2
+}
+ZAR_light_and_shadow = {
+	tolerance_heretic = 2
+ 	global_heretic_missionary_strength = -0.05
+	monthly_reform_progress_modifier = 0.1
+	relation_with_heretics = 10
+}
+ZAR_reject_the_light = {
+	tolerance_heretic = -2
+	global_heretic_missionary_strength = 0.015
+}
+ZAR_maturation_of_the_dark_lord = {
+	global_heretic_missionary_strength = 0.1
+	religious_unity = 0.25
+}
+ZAR_rejection_of_zaros = {
+	stability_cost_modifier = -0.1
+	relation_with_heretics = -50
+}
+ZAR_conquest_of_kharid = {
+	culture_conversion_cost = -0.1
+}
+ZAR_age_of_zaros_modifier = {
+ 	governing_capacity_modifier = 0.15
+	global_missionary_strength = 0.02
+	spy_action_cost_modifier = -0.25
 }
 
 #############

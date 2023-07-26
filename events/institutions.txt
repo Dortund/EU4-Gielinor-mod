@@ -65,7 +65,6 @@ country_event = {
 			}
 			add_reform_progress_medium_effect = yes
 		}
-		custom_tooltip = institution_events.2.a.tt
 		FROM = {
 			add_permanent_province_modifier = {
 				name = "birthplace_of_architecture"
@@ -128,7 +127,6 @@ country_event = {
 
 	option = {
 		name = institution_events.2.a
-		custom_tooltip = institution_events.2.a.tt
 	}
 }
 
@@ -152,7 +150,6 @@ country_event = {
 
 	option = {
 		name = institution_events.2.a
-		custom_tooltip = institution_events.2.a.tt
 	}
 }
 
@@ -225,7 +222,6 @@ country_event = {
 			}
 			add_reform_progress_medium_effect = yes
 		}
-		custom_tooltip = institution_events.3.a.tt
 		FROM = {
 			add_permanent_province_modifier = {
 				name = "birthplace_of_runecrafting"
@@ -276,7 +272,6 @@ country_event = {
 
 	option = {
 		name = institution_events.3.a
-		custom_tooltip = institution_events.3.a.tt
 	}
 }
 
@@ -300,7 +295,6 @@ country_event = {
 
 	option = {
 		name = institution_events.3.a
-		custom_tooltip = institution_events.3.a.tt
 	}
 }
 
@@ -353,7 +347,6 @@ country_event = {
 			}
 			add_reform_progress_medium_effect = yes
 		}
-		custom_tooltip = institution_events.4.a.tt
 		FROM = {
 			add_permanent_province_modifier = {
 				name = "birthplace_of_statehood"
@@ -412,7 +405,6 @@ country_event = {
 
 	option = {
 		name = institution_events.4.a
-		custom_tooltip = institution_events.4.a.tt
 	}
 }
 
@@ -436,7 +428,6 @@ country_event = {
 
 	option = {
 		name = institution_events.4.a
-		custom_tooltip = institution_events.4.a.tt
 	}
 }
 
@@ -479,7 +470,6 @@ country_event = {
 			}
 			add_reform_progress_medium_effect = yes
 		}
-		custom_tooltip = institution_events.5.a.tt
 		FROM = {
 			add_permanent_province_modifier = {
 				name = "birthplace_of_exploration"
@@ -527,7 +517,6 @@ country_event = {
 
 	option = {
 		name = institution_events.5.a
-		custom_tooltip = institution_events.5.a.tt
 	}
 }
 
@@ -551,7 +540,6 @@ country_event = {
 
 	option = {
 		name = institution_events.5.a
-		custom_tooltip = institution_events.5.a.tt
 	}
 }
 
@@ -602,7 +590,6 @@ country_event = {
 			}
 			add_reform_progress_medium_effect = yes
 		}
-		custom_tooltip = institution_events.6.a.tt
 		FROM = {
 			add_permanent_province_modifier = {
 				name = "birthplace_of_quests"
@@ -658,7 +645,6 @@ country_event = {
 
 	option = {
 		name = institution_events.6.a
-		custom_tooltip = institution_events.6.a.tt
 	}
 }
 
@@ -682,7 +668,6 @@ country_event = {
 
 	option = {
 		name = institution_events.6.a
-		custom_tooltip = institution_events.6.a.tt
 	}
 }
 
@@ -727,7 +712,6 @@ country_event = {
 			}
 			add_reform_progress_medium_effect = yes
 		}
-		custom_tooltip = institution_events.7.a.tt
 		FROM = {
 			add_permanent_province_modifier = {
 				name = "birthplace_of_invention"
@@ -776,7 +760,6 @@ country_event = {
 
 	option = {
 		name = institution_events.7.a
-		custom_tooltip = institution_events.7.a.tt
 	}
 }
 
@@ -800,7 +783,6 @@ country_event = {
 
 	option = {
 		name = institution_events.7.a
-		custom_tooltip = institution_events.7.a.tt
 	}
 }
 
@@ -839,15 +821,15 @@ country_event = {
 					region = kandarin_region
 					region = kharidian_desert_region
 				}
-			}
-			AND = {
-				region = tirannwn_region
-				religion = seren
-				NOT = { isolationism = 2 }
+				AND = {
+					region = tirannwn_region
+					religion = seren
+					ROOT = { NOT = { isolationism = 2 } }
+				}
 			}
 		}
 		OR = {
-			culture_group = asgarnia_group
+			culture_group = asgarnian_group
 			culture_group = misthalin_group
 			culture_group = kandarin_group
 			culture_group = elven_group
@@ -956,15 +938,15 @@ country_event = {
 					region = kandarin_region
 					region = kharidian_desert_region
 				}
-			}
-			AND = {
-				region = tirannwn_region
-				religion = seren
-				NOT = { isolationism = 2 }
+				AND = {
+					region = tirannwn_region
+					religion = seren
+					ROOT = { NOT = { isolationism = 2 } }
+				}
 			}
 		}
 		OR = {
-			culture_group = asgarnia_group
+			culture_group = asgarnian_group
 			culture_group = misthalin_group
 			culture_group = kandarin_group
 			culture_group = elven_group
@@ -1087,15 +1069,15 @@ country_event = {
 					region = kandarin_region
 					region = kharidian_desert_region
 				}
-			}
-			AND = {
-				region = tirannwn_region
-				religion = seren
-				NOT = { isolationism = 2 }
+				AND = {
+					region = tirannwn_region
+					religion = seren
+					ROOT = { NOT = { isolationism = 2 } }
+				}
 			}
 		}
 		OR = {
-			culture_group = asgarnia_group
+			culture_group = asgarnian_group
 			culture_group = misthalin_group
 			culture_group = kandarin_group
 			culture_group = elven_group
@@ -1193,5 +1175,3 @@ country_event = {
 		}
 	}
 }
-
-

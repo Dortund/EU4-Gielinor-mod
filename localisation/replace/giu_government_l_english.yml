@@ -275,6 +275,8 @@
  frontier_theocracy_desc:0 "Escaping the religious strife of the Gielinor mainland, this former colony now defines itself as a safe bastion for the true faith."
  guthixian_cave:0 "Guthixian Cave"
  guthixian_cave_desc:0 "This realm exists to guard the God Guthix from would-be invaders, with help from an army of automatons."
+ restored_zarosian_theocracy:0 "Restored Zarosian Theocracy"
+ restored_zarosian_theocracy_desc:0 "This nation recreates the strictly hierarchical structure of the Zarosian church in the Second Age."
  shamanic_theocracy:0 "Shamanic Theocracy"
  shamanic_theocracy_desc:0 "This realm is ruled by powerful shamans who wield spectacular divine powers."
  theocratic_government_reform:0 "Theocratic Government"

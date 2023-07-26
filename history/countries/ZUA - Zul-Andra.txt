@@ -19,13 +19,6 @@ national_focus = MIL
 	}
 }
 
-every_country = {
-	add_opinion = {
-		who = ROOT
-		modifier = boss_tag_opinion
-	}
-}
-
 2145.11.13 = {
 	monarch = {
 		name = "Harcinqa II"

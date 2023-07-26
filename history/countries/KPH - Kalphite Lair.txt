@@ -29,10 +29,3 @@ capital = 69 #Kalphite
 		female = yes
 	}
 }
-
-every_country = {
-	add_opinion = {
-		who = ROOT
-		modifier = boss_tag_opinion
-	}
-}

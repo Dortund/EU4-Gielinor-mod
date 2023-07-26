@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = giant_spider
 religion = zamorak
 technology_group = northerntechgroup
-capital = 171 #Venenatis
+capital = 962 #Silk Chasm
 national_focus = MIL
 
 15.11.25 = {
@@ -19,11 +19,4 @@ national_focus = MIL
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = immortal_personality
-}
-
-every_country = {
-	add_opinion = {
-		who = ROOT
-		modifier = boss_tag_opinion
-	}
 }

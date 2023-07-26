@@ -1,0 +1,7 @@
+government = theocracy
+add_government_reform = theocratic_government_reform
+government_rank = 2
+primary_culture = silvarean
+religion = zaros
+technology_group = centraltechgroup
+capital = 23 #Senntisten

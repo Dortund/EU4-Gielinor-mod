@@ -36,10 +36,16 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-				kharidian_desert_region = {
-					type = all
-					owned_by = ROOT
-				}
+			owns_core_province = 62
+			owns_core_province = 75
+			owns_core_province = 86
+			owns_core_province = 100
+			owns_core_province = 101
+			num_of_owned_provinces_with = {
+				value = 50
+				region = kharidian_desert_region
+				is_core = root
+			}
 		}
 		effect = {
 			100 = {

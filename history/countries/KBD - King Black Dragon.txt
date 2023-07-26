@@ -2,7 +2,8 @@ government = tribal
 add_government_reform = boss_nation
 government_rank = 1
 primary_culture = chromaticdragon
-religion = zaros
+religion = godless
+religious_school = evasive_school
 technology_group = northerntechgroup
 capital = 960 #Shakorexis
 national_focus = MIL
@@ -19,11 +20,4 @@ national_focus = MIL
 	clear_scripted_personalities = yes
 	add_ruler_personality = immortal_personality	
 	add_ruler_personality = bold_fighter_personality
-}
-
-every_country = {
-	add_opinion = {
-		who = ROOT
-		modifier = boss_tag_opinion
-	}
 }

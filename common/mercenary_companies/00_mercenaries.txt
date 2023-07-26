@@ -1,15 +1,55 @@
 ##################################
+# Misthalin
+##################################
+
+merc_burgh_de_rott_ramblers = {
+    regiments_per_development = 0.05
+	cost_modifier = 0.75
+    home_province = 27 #Paterdomus
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_country_flag = MST_mercenary_protocol_flag
+	}
+	modifier = {
+	 	land_attrition = -0.1
+	}
+}
+
+##################################
 # Asgarnia
 ##################################
 
+merc_clanless_sellswords = {
+    regiments_per_development = 0.05
+    home_province = 988
+	cavalry_weight = 0.3
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		NOT = { exists = ASG }
+		OR = {
+			current_age = age_of_mortals
+			current_age = age_of_humans
+		}
+		capital_scope = {
+			region = asgarnia_region
+		}
+	}
+	modifier = { 
+		morale_damage_received = -0.1
+		reinforce_speed = -0.10
+	}
+}
+
 merc_crandorian_adventurer_clan = {
-    regiments_per_development = 0.07
+    regiments_per_development = 0.05
     home_province = 60 #South Crandor
 	cavalry_weight = 0.1
-	cavalry_cap = 2
 	artillery_weight = 0.2
 	sprites = { westerngfx_sprite_pack }
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		OR = {
 			current_age = age_of_adventurers
 			current_age = age_of_divination
@@ -36,6 +76,7 @@ merc_elite_dryming_mercenaries = {
 	artillery_weight = 0.3
 	sprites = { westerngfx_sprite_pack }
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		OR = {
 			current_age = age_of_adventurers
 			current_age = age_of_divination
@@ -53,13 +94,32 @@ merc_elite_dryming_mercenaries = {
 # Kharid
 ##################################
 
+merc_midkharidian_sellswords = {
+    regiments_per_development = 0.05
+	cavalry_weight = 0.4
+    home_province = 71
+	sprites = { muslimgfx_sprite_pack }
+	cost_modifier = -0.2
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		capital_scope = {
+			region = kharidian_desert_region
+		}
+	}
+	modifier = { 
+	 	land_morale = -0.05
+	}
+}
+
+
 merc_menaphite_thugs = {
-    regiments_per_development = 0.1
+    regiments_per_development = 0.07
 	cavalry_weight = 0.3
 	cavalry_cap = 6
     home_province = 83
 	sprites = { muslimgfx_sprite_pack }
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		OR = {
 			current_age = age_of_adventurers
 			current_age = age_of_divination
@@ -74,12 +134,13 @@ merc_menaphite_thugs = {
 }
 
 merc_pollnivnian_bandits = {
-    regiments_per_development = 0.1
+    regiments_per_development = 0.07
 	cavalry_weight = 0.3
 	cavalry_cap = 6
     home_province = 75 #Pollnivneach
 	sprites = { muslimgfx_sprite_pack }
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		OR = {
 			current_age = age_of_adventurers
 			current_age = age_of_divination
@@ -93,16 +154,57 @@ merc_pollnivnian_bandits = {
 	}
 }
 
+merc_tamed_kalphites = {
+    regiments_per_development = 0.07
+	cost_modifier = 0.9
+	cavalry_weight = 1
+    home_province = 69 #Kalphite
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_country_flag = SBI_kalphite_swarm_flag
+	}
+	modifier = { 
+		cav_to_inf_ratio = 1
+		cavalry_shock = 1
+	}
+}
+
+##################################
+# Morytania
+##################################
+
+merc_werewolf_infiltrators = {
+    regiments_per_development = 0.07
+    home_province = 115 #Cave Canem
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = {
+			current_age = age_of_humans
+			current_age = age_of_adventurers
+		}
+		religion_group = chaos_group
+		capital_scope = {
+			region = morytania_region
+		}
+	}
+	modifier = { 
+	 	manpower_recovery_speed = -0.15
+		movement_speed = 0.15
+	}
+}
 
 ##################################
 # Forinthry
 ##################################
 
 merc_wilderness_rogues = {
-    regiments_per_development = 0.1
+    regiments_per_development = 0.07
     home_province = 191 #Rogues' Castle
 	sprites = { westerngfx_sprite_pack }
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		capital_scope = {
 			region = forinthry_region
 		}
@@ -113,11 +215,12 @@ merc_wilderness_rogues = {
 }
 
 merc_pkers = {
-    regiments_per_development = 0.05
+    regiments_per_development = 0.04
     home_province = 159 #Ferox
 	artillery_weight = 0.3
 	sprites = { westerngfx_sprite_pack }
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		OR = {
 			current_age = age_of_adventurers
 			current_age = age_of_divination
@@ -136,6 +239,212 @@ merc_pkers = {
 	}
 }
 
+merc_forgotten_daemonheim_band = {
+    regiments_per_development = 0.05
+	artillery_weight = 0.3
+    home_province = 1322 #Adorno
+	sprites = { westerngfx_sprite_pack }
+	cost_modifier = 1.25
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		capital_scope = {
+			region = forinthry_region
+		}
+	}
+	modifier = { 
+	 	fire_damage = 0.1
+	}
+}
+
+##################################
+# Kandarin
+##################################
+
+merc_ouranian_mercenary_axemen = {
+    regiments_per_development = 0.04
+    home_province = 1383
+	sprites = { westerngfx_sprite_pack }
+	cost_modifier = 1.15
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		religion_group = chaos_group
+		capital_scope = {
+			OR = {
+				region = forinthry_region
+				region = kandarin_region
+				region = misthalin_region
+				region = asgarnia_region
+				region = troll_country_region
+			}
+		}
+	}
+	modifier = { 
+	 	shock_damage = 0.1
+	}
+}
+
+merc_ouranian_mercenary_mages = {
+    regiments_per_development = 0.04
+    home_province = 1383
+	sprites = { westerngfx_sprite_pack }
+	cost_modifier = 1.25
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		religion_group = chaos_group
+		capital_scope = {
+			OR = {
+				region = forinthry_region
+				region = kandarin_region
+				region = misthalin_region
+				region = asgarnia_region
+				region = troll_country_region
+			}
+		}
+	}
+	modifier = { 
+	 	fire_damage = 0.1
+	}
+}
+
+##################################
+# Fremennik Province
+##################################
+
+merc_barbarian_berserkers = {
+    regiments_per_development = 0.05
+    home_province = 1392
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		culture_group = fremennik_group
+		capital_scope = {
+			region = fremennik_region
+		}
+		OR = {
+			current_age = age_of_mortals
+			current_age = age_of_humans
+		}
+	}
+	modifier = { 
+	 	shock_damage = 0.15
+		shock_damage_received = 0.1
+		fire_damage_received = 0.1
+	}
+}
+
+##################################
+# Feldip Hills
+##################################
+
+merc_ogre_chompy_hunters = {
+    regiments_per_development = 0.05
+	artillery_weight = 0.2
+    home_province = 1009 #Chomper
+	sprites = { southamericagfx_sprite_pack }
+	cost_modifier = 1.1
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = {
+			culture_group = ogre_group
+			accepted_culture = ogre
+		}
+		capital_scope = {
+			OR = {
+				region = feldip_hills_region
+				region = kandarin_region
+			}
+		}
+	}
+	modifier = { 
+	 	land_attrition = -0.1
+	}
+}
+
+merc_dwarves_of_arms = {
+    regiments_per_development = 0.07
+	cavalry_weight = 0.1
+	artillery_weight = 0.3
+    home_province = 315 #Warforge
+	sprites = { westerngfx_sprite_pack }
+	cost_modifier = 1.25
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_institution = quests
+		NOT = { has_institution = invention }
+		capital_scope = {
+			OR = {
+				region = feldip_hills_region
+				region = kandarin_region
+				region = tirannwn_region
+				region = southern_isles_region
+			}
+		}
+	}
+	modifier = { 
+	 	shock_damage = 0.1
+		shock_damage_received = -0.1
+	}
+}
+
+merc_elves_of_arms = {
+    regiments_per_development = 0.05
+	cavalry_weight = 0.1
+	artillery_weight = 0.3
+    home_province = 315 #Warforge
+	sprites = { westerngfx_sprite_pack }
+	cost_modifier = 1.25
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_institution = quests
+		NOT = { has_institution = invention }
+		capital_scope = {
+			OR = {
+				region = feldip_hills_region
+				region = kandarin_region
+				region = tirannwn_region
+				region = southern_isles_region
+			}
+		}
+	}
+	modifier = { 
+	 	fire_damage = 0.1
+		shock_damage_received = -0.1
+	}
+}
+
+merc_goblins_of_arms = {
+    regiments_per_development = 0.09
+	cavalry_weight = 0.1
+	artillery_weight = 0.3
+    home_province = 315 #Warforge
+	sprites = { westerngfx_sprite_pack }
+	cost_modifier = 1.1
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_institution = quests
+		NOT = { has_institution = invention }
+		capital_scope = {
+			OR = {
+				region = feldip_hills_region
+				region = kandarin_region
+				region = tirannwn_region
+				region = southern_isles_region
+			}
+		}
+	}
+	modifier = { 
+	 	fire_damage = 0.05
+	}
+}
+
 ##################################
 # Kourend
 ##################################
@@ -145,7 +454,9 @@ merc_kourend_necromancers = {
     home_province = 932 #Rugged Woods
 	sprites = { westerngfx_sprite_pack }
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		NOT = { exists = HRS }
+		NOT = { exists = SWM }
 		capital_scope = {
 			region = kourend_region
 		}
@@ -156,15 +467,76 @@ merc_kourend_necromancers = {
 }
 
 ##################################
+# Kebos
+##################################
+
+merc_xerician_troll_converts = {
+    regiments_per_development = 0.05
+	artillery_weight = 0.2
+    home_province = 469 #Xeric's Claw
+	sprites = { westerngfx_sprite_pack }
+    cost_modifier = 1.05
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		religion = xeric
+		capital_scope = {
+			superregion =  zeah_superregion
+		}
+	}
+	modifier = { 
+		shock_damage = 0.1
+	 	fire_damage = 0.05
+		fire_damage_received = 0.05
+		shock_damage_received = 0.05
+	}
+}
+
+##################################
 # Wushanko
 ##################################
 
+merc_getsugasan_warriors = {
+    regiments_per_development = 0.05
+    home_province = 1161
+	sprites = { chinesegfx_sprite_pack }
+    cost_modifier = 1.1
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		capital_scope = {
+			superregion =  wushanko_isles_superregion
+		}
+	}
+	modifier = { 
+	 	infantry_power = 0.05
+	}
+}
+
+merc_hanto_sellsword = {
+    regiments_per_development = 0.07
+    home_province = 1119
+	sprites = { chinesegfx_sprite_pack }
+	cost_modifier = 1.25
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		exists = HNT
+		NOT = { war_with = HNT }
+		capital_scope = {
+			superregion =  wushanko_isles_superregion
+		}
+	}
+	modifier = { 
+	 	shock_damage = 0.15
+		movement_speed = -0.1
+	}
+}
+
 merc_death_lotus_mercenaries = {
-    regiments_per_development = 0.04
+    regiments_per_development = 0.035
     home_province = 1193 #Death Lotus headquarters
 	sprites = { chinesegfx_sprite_pack }
     cost_modifier = 1.2
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		exists = DLO
 		NOT = { war_with = DLO }
 		capital_scope = {
@@ -177,11 +549,12 @@ merc_death_lotus_mercenaries = {
 }
 
 merc_lost_men = {
-    regiments_per_development = 0.1
+    regiments_per_development = 0.07
     home_province = 1174 #Memori
 	sprites = { chinesegfx_sprite_pack }
     cost_modifier = 1.5
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		OR = {
 			current_age = age_of_adventurers
 			current_age = age_of_divination
@@ -197,10 +570,11 @@ merc_lost_men = {
 }
 
 merc_the_skulls = {
-    regiments_per_development = 0.1
+    regiments_per_development = 0.07
     home_province = 1126 #Sanyangkkun
 	sprites = { chinesegfx_sprite_pack }
     trigger = {
+		is_allowed_to_recruit_mercenaries = yes
 		NOT = { exists = SKU }
 		OR = {
 			current_age = age_of_humans

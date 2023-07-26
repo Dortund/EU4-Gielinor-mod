@@ -190,6 +190,13 @@ country_event = {
 				}
 				set_global_flag = flag_death_of_zemouregal
 			}
+			if = {
+				limit = {
+					has_country_flag = SNT_rule_by_azzanadra
+					has_ruler = "Azzanadra"
+				}
+				set_global_flag = flag_death_of_azzanadra
+			}
 		}
 		kill_ruler = yes
 	}

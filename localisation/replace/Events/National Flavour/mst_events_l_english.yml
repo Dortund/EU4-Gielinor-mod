@@ -140,3 +140,8 @@
  flavor_mst.27.b:0 "We are not about to squander our potential!"
  mst_potential_asgarnian_coalition_tooltip:0 "§RWarning:§! This option will lead to the §ROverbearing Misthalin§! disaster, where you will likely face an §RAsgarnian coalition!§!"
  
+ flavor_mst.28.t:0 "The Mercenary Protocol"
+ flavor_mst.28.d:0 "Although the Edicts of Guthix call upon us not to directly intervene in Morytania, we can instead call upon the people of Misthalin and neighbouring nations to aid the fight against Drakan on their own terms. These mercenaries can escort the oppressed out of Morytania and free the human settlements from blood tithing."
+ flavor_mst.28.a:0 "Let the evils of Morytania tremble before us!"
+ mst_mercenary_protocol_tooltip:0 "As long as any nation is in the §YVampyric§! culture group or follows the §YVampyric§! religion, you may hire the unique §YBurgh de Rott Rambler§! mercenaries."
+ 

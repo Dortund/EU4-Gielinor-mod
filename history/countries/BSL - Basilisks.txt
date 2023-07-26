@@ -9,13 +9,6 @@ capital = 379 #Isle of Stone
 national_focus = MIL
 historical_rival = REL
 
-every_country = {
-	add_opinion = {
-		who = ROOT
-		modifier = boss_tag_opinion
-	}
-}
-
 1.1.1 = {
 	monarch = {
 		name = "The Jormungand"

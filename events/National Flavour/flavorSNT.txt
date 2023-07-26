@@ -1,0 +1,343 @@
+########################################
+# Events for Senntisten
+########################################
+
+namespace = flavor_snt
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_snt.1
+	title = flavor_snt.1.t #Azzanadra Deems Us Worthy
+	desc = flavor_snt.1.d #Since Azzanadra was released from the prison of Jaldraocht, he has wandered without fixed abode. However, with the restoration of the City of Senntisten, Azzanadra has seen it fit to step out of the shadows and offer his leadership.
+	picture = JALDRAOCHT_AZZANADRA_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			AND = {
+				tag = SNT
+				NOT = { exists = ZAR }
+			}
+			tag = ZAR
+		}
+		has_global_flag = JAL_free_azzanadra_flag
+	}
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 1.5
+			NOT = { stability = 0 }
+		}
+	}
+	
+	option = {
+		name = flavor_snt.1.a #Lead us, Pontifex!
+		add_government_reform = restored_zarosian_theocracy
+		define_ruler = {
+			name = "Azzanadra"
+			dynasty = "of the Mahjarrat"
+			adm = 5
+			dip = 5
+			mil = 4
+			male = yes
+			age = 2000
+			claim = 100
+			culture = mahjarrat
+		}
+		clear_scripted_personalities = yes
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = zealot_personality
+		set_country_flag = SNT_rule_by_azzanadra
+		custom_tooltip = JAL_fixed_azzanadra_rule
+	}
+	option = {
+		name = flavor_snt.1.b #We did this without Azzanadra's help. We do not need his leadership now.
+		add_stability_or_adm_power = yes
+	}
+}
+
+country_event = {
+	id = flavor_snt.2
+	title = flavor_snt.2.t #The Imprisonment of Akthanakos
+	desc = flavor_snt.2.d #Our spies in the Kharidian Desert have come to a startling conclusion: The Zarosian Mahjarrat Akthanakos has been kept prisoner by the Zamorakian Mahjarrat Enkhara! With the help of fellow Zarosian Wahisietel, we have broken into Enkhara's temple and freed him.
+	picture = ENAKHRA_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = enkhara_revealed_flag
+		hidden_effect = {
+			85 = {
+				cede_province = ENK
+				add_core = ENK
+				add_base_production = 1
+				add_base_manpower = 1
+				change_culture = skeleton
+				change_religion = zamorak
+			}
+			ENK = {
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+				define_ruler = {
+					name = "Enkhara"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					adm = 3
+					dip = 2
+					mil = 4
+					age = 1000
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+			if = {
+				limit = {
+					90 = {
+						is_empty = yes
+					}
+				}
+				90 = {
+					cede_province = AKO
+					add_core = AKO
+					add_base_production = 1
+					add_base_manpower = 1
+					change_culture = camelwarrior
+					change_religion = zaros
+				}
+				AKO = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.5
+							cavalry = 0.2
+							artillery = 0.3
+						}
+					}
+					define_ruler = {
+						name = "Akthanakos"
+						dynasty = "of the Mahjarrat"
+						culture = mahjarrat
+						adm = 2
+						dip = 2
+						mil = 5
+						age = 1000
+						claim = 100
+					}
+					clear_scripted_personalities = yes
+					add_ruler_personality = immortal_personality
+					add_historical_friend = SNT
+				}
+			}
+			add_historical_friend = AKO			
+		}
+	}
+	
+	option = {
+		name = flavor_snt.2.a #Forget Zaros! I want to join Enkhara!
+		switch_tag = ENK
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_snt.2.b #I'd rather stick with Akthanakos than carry on with Senntisten.
+		trigger = {
+			exists = AKO
+			90 = {
+				OR = {
+					is_empty = yes
+					owned_by = AKO
+				}
+			}
+		}
+		switch_tag = AKO
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_snt.2.c #You cannot fight fate, Enkhara.
+		add_prestige = 25
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = flavor_snt.3
+	title = flavor_snt.3.t #Legacy of Jaldraocht
+	desc = flavor_snt.3.d #Resorting to banditry to survive, the descendants of the Zarosian Empire at Jaldraocht have done the unthinkable and restored the city of Senntisten.
+	picture = JALDRAOCHT_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = SNT
+		was_tag = JAL
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_snt.3.a #The people of Jaldraocht shall be forever honoured in our realm.
+		add_country_modifier = { 
+			name = SNT_honoured_people_of_jaldraocht
+			duration = -1 
+		}
+		add_accepted_culture = jaldraochtite
+	}
+}
+
+country_event = {
+	id = flavor_snt.4
+	title = flavor_snt.4.t #Meeting of the Mahjarrat
+	desc = {
+		trigger = {
+			NOT = {
+				has_global_flag = flag_death_of_akthanakos
+				OR = {
+					has_global_flag = flag_death_of_sliske
+					current_age = age_of_divination
+				}
+				has_global_flag = flag_death_of_azzanadra
+				has_global_flag = flag_death_of_wahisietel
+			}
+		}
+		desc = flavor_snt.4.da #Mahjarrat loyal to Zaros have met in [Root.GetCapitalName] to discuss how they can further our efforts to rebuild the Zarosian Empire of old. Soon enough, this breaks down into veiled insults, questions about what Wahisietel has been up to all this time, and other irrelevant topics. How should we break this impasse?
+	}
+	desc = {
+		trigger = {
+			AND = {
+				has_global_flag = flag_death_of_akthanakos
+				OR = {
+					has_global_flag = flag_death_of_sliske
+					current_age = age_of_divination
+				}
+				has_global_flag = flag_death_of_azzanadra
+				has_global_flag = flag_death_of_wahisietel
+			}
+		}
+		desc = flavor_snt.4.db #The losses of Zarosian Mahjarrat have been disheartening to our cause, but to honour them we have held a meeting to discuss the rebuilding of the Zarosian Empire, with consideration of what ideas they may have promoted.
+	}
+	picture = JALDRAOCHT_AZZANADRA_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_snt.4.a #Akthanakos' suggestion seems most appropriate.
+		trigger = {
+			NOT = { has_global_flag = flag_death_of_akthanakos }
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					culture = camelwarrior
+				}
+			}
+			random_owned_province = {
+				limit = {
+					culture = camelwarrior
+				}
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_province = {
+					region = kharidian_desert_region
+				}
+			}
+			random_owned_province = {
+				limit = {
+					region = kharidian_desert_region
+				}
+				change_culture = camelwarrior
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		add_country_modifier = {
+			name = SNT_camel_warrior_forces
+			duration = 7300
+		}
+	}
+	option = {
+		name = flavor_snt.4.b #Azzanadra's path shall guide us.
+		trigger = {
+			NOT = { has_global_flag = flag_death_of_azzanadra }
+		}
+		add_country_modifier = {
+			name = SNT_pontifexs_crusade
+			duration = 9125
+		}
+	}
+	option = {
+		name = flavor_snt.4.c #Yes, Sliske, I know you're there, and I already know what you're thinking.
+		trigger = {
+			NOT = { has_global_flag = flag_death_of_sliske }
+			NOT = { current_age = age_of_divination }
+		}
+		random_owned_province = {
+			change_culture = wight
+			add_base_manpower = 3
+		}
+		add_country_modifier = {
+			name = SNT_army_of_wights
+			duration = 9125
+		}
+	}
+	option = {
+		name = flavor_snt.4.e #Wahisietel's ideas are wise.
+		trigger = {
+			NOT = { has_global_flag = flag_death_of_wahisietel }
+		}
+		add_country_modifier = {
+			name = SNT_revive_the_mahjarrat_lore
+			duration = 9125
+		}
+	}
+	option = {
+		name = flavor_snt.4.f #They would demand vengeance!
+		trigger = {
+			AND = {
+				has_global_flag = flag_death_of_akthanakos
+				OR = {
+					has_global_flag = flag_death_of_sliske
+					current_age = age_of_divination
+				}
+				has_global_flag = flag_death_of_azzanadra
+				has_global_flag = flag_death_of_wahisietel
+			}
+		}
+		add_country_modifier = {
+			name = SNT_vengeance_for_the_fallen
+			duration = 9125
+		}
+	}
+	option = {
+		name = flavor_snt.4.g #Perhaps consulting Mahjarrat was a bad idea.
+		add_country_modifier = {
+			name = SNT_alternative_thinking
+			duration = 9125
+		}
+	}
+}
+
+
+
+
+
+
+

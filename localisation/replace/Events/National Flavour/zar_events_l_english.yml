@@ -1,0 +1,29 @@
+﻿l_english:
+ flavor_zar.1.t:0 "The Fate of Bilrach"
+ flavor_zar.1.d:0 "Bilrach, traitor to Zaros, attempted to dig deep under Daemonheim to contact his false god Zamorak. We have now captured him - what should his fate be?"
+ flavor_zar.1.a:0 "Execute him."
+ flavor_zar.1.b:0 "Imprison him."
+ 
+ flavor_zar.2.t:0 "The Goddess of Crystal"
+ flavor_zar.2.d:0 "From the safety of the shadow realm, our spies examine a meeting of Serenist worship. The average follower sees her as the saviour of the elves, but little more besides. They know not of her true power - and perhaps it is best left that way."
+ flavor_zar.2.a:0 "We would be strengthened by introducing Serenist ideas into our own lands."
+ flavor_zar.2.b:0 "No-one can stand in the God of Fate's way - not even family."
+ 
+ flavor_zar.3.t:0 "The Shadow of Seren"
+ flavor_zar.3.d:0 "Reaching Tirannwn, it became evident that whatever we thought of Seren's followers was incorrect. Instead, we have found worshippers of a fragment of Seren's being known as the Dark Lord, obsessed with causing death. Such followers may be susceptible to Zaros' teachings - but does not Zaros' kin deserve better than for her worship to be warped?"
+ flavor_zar.3.a:0 "We must take in what few true of Seren we can as a bulwark against this bizarre Dark Lord."
+ flavor_zar.3.b:0 "The Dark Lord is a better facet of Seren, we should let this practice be."
+ flavor_zar.3.c:0 "Tell them about the ways of Zaros."
+ 
+ flavor_zar.4.t:0 "The Other Dark Lord"
+ flavor_zar.4.d:0 "Priests from a distant land have arrived in [Root.Capital.GetName], speaking of the God Zaros, God of Fate and Shadow, who has a strong connection to Seren. The more we hear of Zaros, the more he seems to resemble the Dark Lord..."
+ flavor_zar.4.a:0 "Truly, the Dark Lord was just a stepping-stone to following Zaros."
+ flavor_zar.4.b:0 "Zaros is distinct from the Dark Lord, but a worthwhile complement."
+ flavor_zar.4.c:0 "What nonsense is this?!"
+ 
+ flavor_zar.5.t:0 "The Sorrow of Seren"
+ flavor_zar.5.d:0 "It appears the fate of the Serenists is even more dire than the fate of the Zarosian church once was. No realm survives that follows the crystalline goddess."
+ flavor_zar.5.a:0 "We should lay claim to the crystal city as the most worthy successors."
+ flavor_zar.5.b:0 "Let us mourn the lost Goddess."
+ 
+ 

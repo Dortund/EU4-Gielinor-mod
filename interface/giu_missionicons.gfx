@@ -20,6 +20,14 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_dungeoneering_thok.dds"
 	}
 	spriteType = {
+		name = "mission_faith_of_the_pantheon"
+		texturefile = "gfx//interface//missions//mission_faith_of_the_pantheon.dds"
+	}
+	spriteType = {
+		name = "mission_glory_of_the_pantheon"
+		texturefile = "gfx//interface//missions//mission_glory_of_the_pantheon.dds"
+	}
+	spriteType = {
 		name = "mission_gold_heap"
 		texturefile = "gfx//interface//missions//mission_gold_heap.dds"
 	}
@@ -28,8 +36,16 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_grand_ship.dds"
 	}
 	spriteType = {
+		name = "mission_great_kharidian_city"
+		texturefile = "gfx//interface//missions//mission_great_kharidian_city.dds"
+	}
+	spriteType = {
 		name = "mission_icy_cliff"
 		texturefile = "gfx//interface//missions//mission_icy_cliff.dds"
+	}
+	spriteType = {
+		name = "mission_kharidian_unity"
+		texturefile = "gfx//interface//missions//mission_kharidian_unity.dds"
 	}
 	spriteType = {
 		name = "mission_mining"
@@ -40,8 +56,77 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_mountain_camp.dds"
 	}
 	spriteType = {
+		name = "mission_night_port"
+		texturefile = "gfx//interface//missions//mission_night_port.dds"
+	}
+	spriteType = {
+		name = "mission_raid_a_rival"
+		texturefile = "gfx//interface//missions//mission_raid_a_rival.dds"
+	}
+	spriteType = {
+		name = "mission_throne_of_saradomin"
+		texturefile = "gfx//interface//missions//mission_throne_of_saradomin.dds"
+	}
+	spriteType = {
 		name = "mission_v_statue"
 		texturefile = "gfx//interface//missions//mission_v_statue.dds"
+	}
+	##################ALK
+	spriteType = {
+		name = "mission_abbey_of_st_elspeth"
+		texturefile = "gfx//interface//missions//ALK//mission_abbey_of_st_elspeth.dds"
+	}
+	spriteType = {
+		name = "mission_al_kharid_ascendant"
+		texturefile = "gfx//interface//missions//ALK//mission_al_kharid_ascendant.dds"
+	}
+	spriteType = {
+		name = "mission_banks_of_the_salve"
+		texturefile = "gfx//interface//missions//ALK//mission_banks_of_the_salve.dds"
+	}
+	spriteType = {
+		name = "mission_duel_arena"
+		texturefile = "gfx//interface//missions//ALK//mission_duel_arena.dds"
+	}
+	spriteType = {
+		name = "mission_encourage_saradominist_immigration"
+		texturefile = "gfx//interface//missions//ALK//mission_encourage_saradominist_immigration.dds"
+	}
+	spriteType = {
+		name = "mission_expand_the_training_ground"
+		texturefile = "gfx//interface//missions//ALK//mission_expand_the_training_ground.dds"
+	}
+	spriteType = {
+		name = "mission_kharidian_people"
+		texturefile = "gfx//interface//missions//ALK//mission_kharidian_people.dds"
+	}
+	spriteType = {
+		name = "mission_kharidian_port"
+		texturefile = "gfx//interface//missions//ALK//mission_kharidian_port.dds"
+	}
+	spriteType = {
+		name = "mission_menaphite_relations"
+		texturefile = "gfx//interface//missions//ALK//mission_menaphite_relations.dds"
+	}
+	spriteType = {
+		name = "mission_pollnivneach_trade"
+		texturefile = "gfx//interface//missions//ALK//mission_pollnivneach_trade.dds"
+	}
+	spriteType = {
+		name = "mission_spies_of_al_kharid"
+		texturefile = "gfx//interface//missions//ALK//mission_spies_of_al_kharid.dds"
+	}
+	spriteType = {
+		name = "mission_terror_of_tempoross"
+		texturefile = "gfx//interface//missions//ALK//mission_terror_of_tempoross.dds"
+	}
+	spriteType = {
+		name = "mission_the_power_of_runecrafting"
+		texturefile = "gfx//interface//missions//ALK//mission_the_power_of_runecrafting.dds"
+	}
+	spriteType = {
+		name = "mission_traders_of_menaphos"
+		texturefile = "gfx//interface//missions//ALK//mission_traders_of_menaphos.dds"
 	}
 	
 	##################APE
@@ -203,6 +288,11 @@ spriteTypes = {
 		name = "mission_tirannwn_civil_war"
 		texturefile = "gfx//interface//missions//CDA//mission_tirannwn_civil_war.dds"
 	}
+	##################CFS
+	spriteType = {
+		name = "mission_establish_canifis"
+		texturefile = "gfx//interface//missions//CFS//mission_establish_canifis.dds"
+	}
 	
 	##################CLS
 	spriteType = {
@@ -313,10 +403,67 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//IOR//mission_take_west_ardougne.dds"
 	}
 	
+	##################JAL
+	
+	spriteType = {
+		name = "mission_ancient_rituals"
+		texturefile = "gfx//interface//missions//JAL//mission_ancient_rituals.dds"
+	}
+	spriteType = {
+		name = "mission_armies_of_zaros"
+		texturefile = "gfx//interface//missions//JAL//mission_armies_of_zaros.dds"
+	}
+	spriteType = {
+		name = "mission_bandit_army"
+		texturefile = "gfx//interface//missions//JAL//mission_bandit_army.dds"
+	}
+	spriteType = {
+		name = "mission_bedabin_diplomacy"
+		texturefile = "gfx//interface//missions//JAL//mission_bedabin_diplomacy.dds"
+	}
+	spriteType = {
+		name = "mission_camp_constructions"
+		texturefile = "gfx//interface//missions//JAL//mission_camp_constructions.dds"
+	}
+	spriteType = {
+		name = "mission_desert_treasure"
+		texturefile = "gfx//interface//missions//JAL//mission_desert_treasure.dds"
+	}
+	spriteType = {
+		name = "mission_return_of_senntisten"
+		texturefile = "gfx//interface//missions//JAL//mission_return_of_senntisten.dds"
+	}
+	
 	##################KDR
 	spriteType = {
 		name = "mission_piscatoris_fishing_colony"
 		texturefile = "gfx//interface//missions//KDR//mission_piscatoris_fishing_colony.dds"
+	}
+	
+	##################KDS
+	spriteType = {
+		name = "mission_expand_our_trade_power"
+		texturefile = "gfx//interface//missions//KDS//mission_expand_our_trade_power.dds"
+	}
+	spriteType = {
+		name = "mission_hets_land"
+		texturefile = "gfx//interface//missions//KDS//mission_hets_land.dds"
+	}
+	spriteType = {
+		name = "mission_professional_brothers"
+		texturefile = "gfx//interface//missions//KDS//mission_professional_brothers.dds"
+	}
+	spriteType = {
+		name = "mission_rusum_pass"
+		texturefile = "gfx//interface//missions//KDS//mission_rusum_pass.dds"
+	}
+	spriteType = {
+		name = "mission_settle_al_kharid"
+		texturefile = "gfx//interface//missions//KDS//mission_settle_al_kharid.dds"
+	}
+	spriteType = {
+		name = "mission_worthy_army"
+		texturefile = "gfx//interface//missions//KDS//mission_worthy_army.dds"
 	}
 	
 	##################KJA
@@ -363,12 +510,52 @@ spriteTypes = {
 	
 	##################MPS
 	spriteType = {
+		name = "mission_allies_of_the_arc"
+		texturefile = "gfx//interface//missions//MPS//mission_allies_of_the_arc.dds"
+	}
+	spriteType = {
 		name = "mission_expand_inland"
 		texturefile = "gfx//interface//missions//MPS//mission_expand_inland.dds"
 	}
 	spriteType = {
+		name = "mission_grand_library_refurbishment"
+		texturefile = "gfx//interface//missions//MPS//mission_grand_library_refurbishment.dds"
+	}
+	spriteType = {
+		name = "mission_gunpowder_diplomacy"
+		texturefile = "gfx//interface//missions//MPS//mission_gunpowder_diplomacy.dds"
+	}
+	spriteType = {
+		name = "mission_imperial_district"
+		texturefile = "gfx//interface//missions//MPS//mission_imperial_district.dds"
+	}
+	spriteType = {
+		name = "mission_jalkabir"
+		texturefile = "gfx//interface//missions//MPS//mission_jalkabir.dds"
+	}
+	spriteType = {
+		name = "mission_merchant_district"
+		texturefile = "gfx//interface//missions//MPS//mission_merchant_district.dds"
+	}
+	spriteType = {
+		name = "mission_port_district"
+		texturefile = "gfx//interface//missions//MPS//mission_port_district.dds"
+	}
+	spriteType = {
+		name = "mission_royal_menaphite_army"
+		texturefile = "gfx//interface//missions//MPS//mission_royal_menaphite_army.dds"
+	}
+	spriteType = {
+		name = "mission_self_sufficiency"
+		texturefile = "gfx//interface//missions//MPS//mission_self_sufficiency.dds"
+	}
+	spriteType = {
 		name = "mission_soul_altar"
 		texturefile = "gfx//interface//missions//MPS//mission_soul_altar.dds"
+	}
+	spriteType = {
+		name = "mission_worker_district"
+		texturefile = "gfx//interface//missions//MPS//mission_worker_district.dds"
 	}
 	
 	##################MST
@@ -415,6 +602,10 @@ spriteTypes = {
 	spriteType = {
 		name = "mission_human_realm"
 		texturefile = "gfx//interface//missions//MST//mission_human_realm.dds"
+	}
+	spriteType = {
+		name = "mission_in_aid_of_the_myreque"
+		texturefile = "gfx//interface//missions//MST//mission_in_aid_of_the_myreque.dds"
 	}
 	spriteType = {
 		name = "mission_integration_of_edgeville"
@@ -553,6 +744,113 @@ spriteTypes = {
 	spriteType = {
 		name = "mission_to_the_new_world"
 		texturefile = "gfx//interface//missions//REL//mission_to_the_new_world.dds"
+	}
+	##################SBI
+	spriteType = {
+		name = "mission_catacombs_of_ullek"
+		texturefile = "gfx//interface//missions//SBI//mission_catacombs_of_ullek.dds"
+	}
+	spriteType = {
+		name = "mission_development_of_ullek"
+		texturefile = "gfx//interface//missions//SBI//mission_development_of_ullek.dds"
+	}
+	spriteType = {
+		name = "mission_faith_of_scabaras"
+		texturefile = "gfx//interface//missions//SBI//mission_faith_of_scabaras.dds"
+	}
+	spriteType = {
+		name = "mission_fate_of_the_kalphites"
+		texturefile = "gfx//interface//missions//SBI//mission_fate_of_the_kalphites.dds"
+	}
+	spriteType = {
+		name = "mission_policy_of_isolation"
+		texturefile = "gfx//interface//missions//SBI//mission_policy_of_isolation.dds"
+	}
+	spriteType = {
+		name = "mission_scarab_riders"
+		texturefile = "gfx//interface//missions//SBI//mission_scarab_riders.dds"
+	}
+	spriteType = {
+		name = "mission_scabarite_mage_training"
+		texturefile = "gfx//interface//missions//SBI//mission_scabarite_mage_training.dds"
+	}
+	spriteType = {
+		name = "mission_scabarite_philosophy"
+		texturefile = "gfx//interface//missions//SBI//mission_scabarite_philosophy.dds"
+	}
+	spriteType = {
+		name = "mission_scabarite_science"
+		texturefile = "gfx//interface//missions//SBI//mission_scabarite_science.dds"
+	}
+	spriteType = {
+		name = "mission_swamps_of_ullek"
+		texturefile = "gfx//interface//missions//SBI//mission_swamps_of_ullek.dds"
+	}
+	spriteType = {
+		name = "mission_tunnels_of_ullek"
+		texturefile = "gfx//interface//missions//SBI//mission_tunnels_of_ullek.dds"
+	}
+	
+	##################SNT
+	spriteType = {
+		name = "mission_beasts_of_the_wilderness"
+		texturefile = "gfx//interface//missions//SNT//mission_beasts_of_the_wilderness.dds"
+	}
+	spriteType = {
+		name = "mission_capture_lassar"
+		texturefile = "gfx//interface//missions//SNT//mission_capture_lassar.dds"
+	}
+	spriteType = {
+		name = "mission_demonic_repossession"
+		texturefile = "gfx//interface//missions//SNT//mission_demonic_repossession.dds"
+	}
+	spriteType = {
+		name = "mission_fateful_jurisprudence"
+		texturefile = "gfx//interface//missions//SNT//mission_fateful_jurisprudence.dds"
+	}
+	spriteType = {
+		name = "mission_fort_of_kharid_et"
+		texturefile = "gfx//interface//missions//SNT//mission_fort_of_kharid_et.dds"
+	}
+	spriteType = {
+		name = "mission_mahjarrat_of_zaros"
+		texturefile = "gfx//interface//missions//SNT//mission_mahjarrat_of_zaros.dds"
+	}
+	spriteType = {
+		name = "mission_reinstate_paddewwa"
+		texturefile = "gfx//interface//missions//SNT//mission_reinstate_paddewwa.dds"
+	}
+	spriteType = {
+		name = "mission_route_to_ghorrock"
+		texturefile = "gfx//interface//missions//SNT//mission_route_to_ghorrock.dds"
+	}
+	spriteType = {
+		name = "mission_secrets_of_sliske"
+		texturefile = "gfx//interface//missions//SNT//mission_secrets_of_sliske.dds"
+	}
+	spriteType = {
+		name = "mission_senntisten_excavations"
+		texturefile = "gfx//interface//missions//SNT//mission_senntisten_excavations.dds"
+	}
+	spriteType = {
+		name = "mission_spies_of_kharid"
+		texturefile = "gfx//interface//missions//SNT//mission_spies_of_kharid.dds"
+	}
+	spriteType = {
+		name = "mission_spirits_of_dareeyak"
+		texturefile = "gfx//interface//missions//SNT//mission_spirits_of_dareeyak.dds"
+	}
+	spriteType = {
+		name = "mission_the_temple_at_senntisten"
+		texturefile = "gfx//interface//missions//SNT//mission_the_temple_at_senntisten.dds"
+	}
+	spriteType = {
+		name = "mission_traitors_to_zaros"
+		texturefile = "gfx//interface//missions//SNT//mission_traitors_to_zaros.dds"
+	}
+	spriteType = {
+		name = "mission_viggoras_folly"
+		texturefile = "gfx//interface//missions//SNT//mission_viggoras_folly.dds"
 	}
 	
 	##################TNN
@@ -721,24 +1019,75 @@ spriteTypes = {
 		name = "mission_earn_entranas_favour"
 		texturefile = "gfx//interface//missions//VRZ//mission_earn_entranas_favour.dds"
 	}
-	
 	spriteType = {
 		name = "mission_expand_the_realm"
 		texturefile = "gfx//interface//missions//VRZ//mission_expand_the_realm.dds"
 	}
-	
 	spriteType = {
 		name = "mission_into_the_wilderness"
 		texturefile = "gfx//interface//missions//VRZ//mission_into_the_wilderness.dds"
 	}
-	
 	spriteType = {
 		name = "mission_faithful_expansion"
 		texturefile = "gfx//interface//missions//VRZ//mission_faithful_expansion.dds"
 	}
-	
 	spriteType = {
 		name = "mission_ice_mountain_monastery"
 		texturefile = "gfx//interface//missions//VRZ//mission_ice_mountain_monastery.dds"
 	}
-}	
+	
+	##################ZAR
+	
+	spriteType = {
+		name = "mission_age_of_zaros"
+		texturefile = "gfx//interface//missions//ZAR//mission_age_of_zaros.dds"
+	}
+	spriteType = {
+		name = "mission_attack_asgarnia"
+		texturefile = "gfx//interface//missions//ZAR//mission_attack_asgarnia.dds"
+	}
+	spriteType = {
+		name = "mission_closing_the_loop"
+		texturefile = "gfx//interface//missions//ZAR//mission_closing_the_loop.dds"
+	}
+	spriteType = {
+		name = "mission_conversion_of_asgarnia"
+		texturefile = "gfx//interface//missions//ZAR//mission_conversion_of_asgarnia.dds"
+	}
+	spriteType = {
+		name = "mission_find_char"
+		texturefile = "gfx//interface//missions//ZAR//mission_find_char.dds"
+	}
+	spriteType = {
+		name = "mission_free_nex"
+		texturefile = "gfx//interface//missions//ZAR//mission_free_nex.dds"
+	}
+	spriteType = {
+		name = "mission_misthalanian_conversion"
+		texturefile = "gfx//interface//missions//ZAR//mission_misthalanian_conversion.dds"
+	}
+	spriteType = {
+		name = "mission_purple_colour_of_wealth"
+		texturefile = "gfx//interface//missions//ZAR//mission_purple_colour_of_wealth.dds"
+	}
+	spriteType = {
+		name = "mission_rebuilding_forinthry"
+		texturefile = "gfx//interface//missions//ZAR//mission_rebuilding_forinthry.dds"
+	}
+	spriteType = {
+		name = "mission_recruit_shakorexis"
+		texturefile = "gfx//interface//missions//ZAR//mission_recruit_shakorexis.dds"
+	}
+	spriteType = {
+		name = "mission_tales_of_the_dragon_riders"
+		texturefile = "gfx//interface//missions//ZAR//mission_tales_of_the_dragon_riders.dds"
+	}
+	spriteType = {
+		name = "mission_the_queen_of_dragons"
+		texturefile = "gfx//interface//missions//ZAR//mission_the_queen_of_dragons.dds"
+	}
+	spriteType = {
+		name = "mission_unite_forinthry"
+		texturefile = "gfx//interface//missions//ZAR//mission_unite_forinthry.dds"
+	}
+}

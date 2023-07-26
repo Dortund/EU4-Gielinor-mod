@@ -1,0 +1,27 @@
+country_decisions = {
+	NDH_investigate_curse = {
+		potential = {
+			has_country_flag = NDH_spirits_of_the_elid_start
+			86 = {
+				OR = {
+					has_province_modifier = NDH_mitigated_dried_well
+					has_province_modifier = NDH_dried_well
+				}
+			}
+		}
+		allow = {
+			owns_core_province = 86
+			absolutism = 25
+		}
+		effect = {
+			country_event = {
+				id = flavor_ndh.4
+				days = 1
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 50
+	}
+}

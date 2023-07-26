@@ -16,6 +16,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { exists = ENK }
+		NOT = { has_global_flag = enkhara_revealed_flag }
 		OR = {
 			owns_core_province = 85
 			AND = {
@@ -29,6 +30,7 @@ country_event = {
 	}
 	
 	immediate = {
+		set_global_flag = enkhara_revealed_flag
 		hidden_effect = {
 			85 = {
 				cede_province = ENK

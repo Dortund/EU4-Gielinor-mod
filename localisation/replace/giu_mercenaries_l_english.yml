@@ -1,21 +1,49 @@
 ﻿l_english:
 
+#Misthalin
+ merc_burgh_de_rott_ramblers:0 "Burgh de Rott Ramblers"
+
 #Asgarnia
+ merc_clanless_sellswords:0 "Clanless Sellswords"
  merc_crandorian_adventurer_clan:0 "Crandorian Adventurer Clan"
  merc_elite_dryming_mercenaries:0 "Elite Drýming Mercenaries"
  
 #Kharid
+ merc_midkharidian_sellswords:0 "Mid-Kharidian Sellswords"
  merc_pollnivnian_bandits:0 "Pollnivnian Bandits"
  merc_menaphite_thugs:0 "Menaphite Thugs"
+ merc_tamed_kalphites:0 "Tamed Kalphites"
+ 
+#Morytania
+ merc_werewolf_infiltrators:0 "Werewolf Infiltrators"
  
 #Forinthry
  merc_wilderness_rogues:0 "Wilderness Rogues"
  merc_pkers:0 "PKers"
+ merc_forgotten_daemonheim_band:0 "Forgotten Daemonheim Band"
+ 
+#Kandarin
+ merc_ouranian_mercenary_axemen:0 "Ouranian Mercenary Axemen"
+ merc_ouranian_mercenary_mages:0 "Ouranian Mercenary Mages"
+ 
+#Fremennik
+ merc_barbarian_berserkers:0 "Barbarian Berserkers"
+ 
+#Feldip Hills
+ merc_ogre_chompy_hunters:0 "Ogre Chompy Hunters"
+ merc_dwarves_of_arms:0 "Dwarves of ARMS"
+ merc_elves_of_arms:0 "Elves of ARMS"
+ merc_goblins_of_arms:0 "Goblins of ARMS"
  
 #Kourend
  merc_kourend_necromancers:0 "Kourend Necromancers"
  
+#Kebos
+ merc_xerician_troll_converts:0 "Xerician Troll Converts"
+ 
 #Wushanko
+ merc_getsugasan_warriors:0 "Getsugasan Warriors"
+ merc_hanto_sellsword:0 "Hanto Sellsword"
  merc_death_lotus_mercenaries:0 "Death Lotus Mercenaries"
  merc_lost_men:0 "Lost Men"
  merc_the_skulls:0 "The Skulls"

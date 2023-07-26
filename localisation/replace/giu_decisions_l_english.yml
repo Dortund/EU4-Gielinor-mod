@@ -37,6 +37,8 @@
  reform_misthalin_desc:0 "Misthalin was once the greatest of human nations, but it has since collapsed. Let us pick up the torn banner of Arrav's people and reforge a new Misthalin!"
  reform_kourend_title:0 "Reform Kourend"
  reform_kourend_desc:0 "The old regime of Great Kourend was fragile, but we can create a new, more centralised state. Let all the peoples of the Five Houses sing Kourend the Magnificent!"
+ senntisten_nation_title:0 "Restore Senntisten"
+ senntisten_nation_desc:0 "Once the capital of the Zarosian Empire, the City of Senntisten was not only destroyed but wiped from the historical records of Saradominists and Zamorakians alike. Let us conquer the land and declare a new Senntisten!"
  urval_order_nation_title:0 "Create the Order of Urval"
  urval_order_nation_desc:0 "Urval the Exile was the founder of the Chaos Druids. Thus far we have followed his initial actions in keeping our actions limited, but as our power grows it may be time to take a more active stance in spreading the good word of Zamorak around the world."
  zaros_empire_nation_title:0 "Restore the Zarosian Empire"
@@ -81,6 +83,9 @@
  capture_the_stone_of_jas_title:0 "Capture the Stone of Jas"
  capture_the_stone_of_jas_desc:0 "If we control the province the Stone of Jas is located in, we can take it back to our capital."
  
+ CFS_found_canifis_title:0 "Found Canifis"
+ CFS_found_canifis_desc:0 "A permanent capital would bring greater prestige to werewolves. There is a curious clearing, surrounded by a seemingly natural moat, to our west, which is an ideal place to build a new settlement."
+ 
  EVR_lost_grove_investigations_title:0 "Search for the Lost Grove"
  EVR_lost_grove_investigations_desc:0 "It is evident the Civil War is not going in our favour. In such a desperate time, we must put our hope in Seren that she can guide us to a safe land so we can rebuild and return."
  EVR_lost_grove_settlement_title:0 "Settle the Lost Grove"
@@ -110,6 +115,9 @@
  
  MWL_corrupt_prifddinas_title:0 "Corrupt Prifddinas"
  MWL_corrupt_prifddinas_desc:0 "Some heretics reverted Prifddinas to crystal. With the Dark Lord's power, we could bring it back..."
+ 
+ NDH_investigate_curse_title:0 "Investigate Nardah's Curse"
+ NDH_investigate_curse_desc:0 "We will need external help to get to the bottom of how Nardah's well dried up."
  
  open_cave_of_guthix_title:0 "Open the Cave of Guthix"
  open_cave_of_guthix_desc:0 "The very best adventurers in the world might be able to open the door to Guthix's resting place."

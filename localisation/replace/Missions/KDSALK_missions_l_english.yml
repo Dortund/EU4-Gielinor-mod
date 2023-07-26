@@ -1,37 +1,62 @@
 ﻿l_english:
  KDS_religious_tolerance_title:0 "Religious Tolerance"
  KDS_religious_tolerance_desc:0 "Nearby Misthalin is a huge Saradomist realm, and our nearest fellow followers of the Menaphite Pantheon are found quite some way into the desert. For the sake of better relations with our closer neighbours, we should take a tolerant approach to their faith."
+
  KDS_misthalanian_relations_title:0 "Misthalanian Relations"
  KDS_misthalanian_relations_desc:0 "Misthalin benefits greatly from our position guarding the northern Kharidian Desert from bandits and other risks from further south. We should seek a more formal alliance."
  KDS_expand_our_trade_power_title:0 "Expand Our Trade Power"
  KDS_expand_our_trade_power_desc:0 "To be taken seriously as a regional power, we need to at the very least have a strong position over our own trade."
+
  KDS_settle_al_kharid_title:0 "Settle Al Kharid"
  KDS_settle_al_kharid_desc:0 "Below the cliffs we settle is a large expanse of flat and stable land, capable of supporting a major city. With the support of Misthalin, or failing that, Menaphos or even our own determination, we can create the city of Al Kharid."
  KDS_rusum_pass_title:0 "Rusum Pass"
  KDS_rusum_pass_desc:0 "There are few points of entry between the region of Misthalin and the Kharidian Desert. If we control those passes, we can raise plenty of extra money by implementing a toll gate."
+
  KDS_hets_land_title:0 "Het's Land"
  KDS_hets_land_desc:0 "Het is the most popular of the Menaphire Pantheon in this region. Once a mortal man who held the passes open, he now represents fitness in all its forms. Het's priests speak of land north of the plateau associated with him - if we were closer to Het spirtually, we might understand how to use that land."
  KDS_scimitar_manufacture_title:0 "Scimitar Manufacture"
  KDS_scimitar_manufacture_desc:0 "Up to this point, we have tended to rely on small-scale artisan crafting or imports for our weaponry. By developing our own permanent forges, we can more easily supply our armies with the armanents they need."
+
  KDS_worthy_army_title:0 "Worthy Army"
  KDS_worthy_army_desc:0 "Our meagre forces cannot hold the Kharidian Passes forever. Let us expand the army to more effectively perform this task."
  KDS_professional_brothers_title:0 "Professional Brothers"
  KDS_professional_brothers_desc:0 "A sense of fraternity shall help tie our forces together, and what better way than to make military service professional rather than conscripted?"
- ALK_encourage_saradomist_immigration_title:0 "Encourage Saradomist Immigration"
- ALK_encourage_saradomist_immigration_desc:0 "If we can present ourselves as the model of a stable, tolerant nation, we can encourage immigration from more unstable Saradomist realms."
+
+
+ ALK_saradominist_immigration_title:0 "Saradominist Migration"
+ ALK_saradominist_immigration_desc:0 "If we can present ourselves as the model of a stable, tolerant nation, we can encourage immigration from more unstable Saradomist realms."
  ALK_abbey_of_st_elspeth_title:0 "Abbey of St. Elspeth"
  ALK_abbey_of_st_elspeth_desc:0 "The growth of Al Kharid has come at the cost of our highlands, but there may be a means of reversing that loss. Saradomist nuns have been searching for a place to call their own, and by offering them part of the highlands, we can begin to repopulate it."
+ ALK_the_power_of_runecrafting_title:0 "The Power of Runecrafting"
+ ALK_the_power_of_runecrafting_desc:0 "The goblins to our west - a constant threat - are overwhelmingly melee combattants. Mages can deal with them with ease, but with a lack of runes or magically trained people, we lack this perhaps perfect defensive option."
+ ALK_banks_of_the_salve_title:0 "Banks of the Salve"
+ ALK_banks_of_the_salve_desc:0 "With our magical capabilities established, we can risk expanding to the dangerous banks of the River Salve."
+
+
  ALK_pollnivneach_trade_title:0 "Pollnivneach Trade"
  ALK_pollnivneach_trade_desc:0 "Central Kharid has great riches for merchants with the skill to find it. We need to secure a piece of this metaphorical pie."
- ALK_banks_of_the_salve_title:0 "Banks of the Salve"
- ALK_banks_of_the_salve_desc:0 "With ourselves established on the River Elid, we can risk expanding to a much more dangerous river - the Salve."
+ ALK_traders_of_menaphos_title:0 "Traders of Menaphos"
+ ALK_traders_of_menaphos_desc:0 "Menaphos is not the dominant force in the Kharidian Desert it once was, and we have an opportunity to put up real competition in trade the complacent city has not yet seen."
+
+
  ALK_kharidian_port_title:0 "Kharidian Port"
  ALK_kharidian_port_desc:0 "We have secured our trade position on land, but now we need to consider our position on the seas. While we may not yet be able to challenge the might of Port Sarim and Menaphos, we may still be able to share in it."
  ALK_menaphite_relations_title:0 "Menaphite Relations"
  ALK_menaphite_relations_desc:0 "Having established ourselves as the new power in the north of the Kharidian Desert, we need to consider our relations further south. Should we seek to befriend or intimidate Menaphos?"
- ALK_local_metal_source_title:0 "Local Metal Source"
- ALK_local_metal_source_desc:0 "As we grow stronger and increasingly independent of the powers which surround us, the supply of strategic resources has become more important than ever. We have located an ore-rich chasm far to the north of Al Kharid, but until this point the high numbers of resident scorpions have made mining operations unfeasible. With sufficient military might, we can take the mine for Al Kharid!"
  ALK_spies_of_al_kharid_title:0 "Spies of Al Kharid"
  ALK_spies_of_al_kharid_desc:0 "Investment in espionage would be an excellent way to undermine our foes."
- ALK_expand_the_training_grounds_title:0 "Expand the Training Ground"
+ ALK_al_kharid_ascendant_title:0 "Al Kharid Ascendant"
+ ALK_al_kharid_ascendant_desc:0 "Al Kharid has grown much over the past years - perhaps strong enough to finally take on the might of Menaphos?"
+
+ ALK_local_metal_source_title:0 "Local Metal Source"
+ ALK_local_metal_source_desc:0 "As we grow stronger and increasingly independent of the powers which surround us, the supply of strategic resources has become more important than ever. We have located an ore-rich chasm far to the north of Al Kharid, but until this point the high numbers of resident scorpions have made mining operations unfeasible. With sufficient military might, we can take the mine for Al Kharid!"
+ ALK_terror_of_tempoross_title:0 "Terror of Tempoross"
+ ALK_terror_of_tempoross_desc:0 "The depths of the sea holds many terrors we may barely comprehend - yet proving our victory over one would be a huge reassurance to our sailors."
+
+ ALK_expand_the_training_grounds_title:0 "Training Grounds"
  ALK_expand_the_training_grounds_desc:0 "The lands of Arina are seemingly empty, but that makes them ideal for military training exercises as there is no risk of harming civilians."
+ ALK_duel_arena_mission_title:0 "Build the Duel Arena"
+ ALK_duel_arena_mission_desc:0 "Old ruins poke through the sands. If we had sufficient funds, we may be able to find exactly what is buried down there."
+
+ 
+ 

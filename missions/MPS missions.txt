@@ -9,7 +9,7 @@ mps_missions_1 = {
 	has_country_shield = yes
 	
 	MPS_imperial_district_mission = {
-		icon = mission_alliances
+		icon = mission_imperial_district
 		position = 1
 		required_missions = {  }
 		trigger = {
@@ -87,6 +87,44 @@ mps_missions_1 = {
 			}
 		}
 	}
+	MPS_grand_library_refurbishment = {
+		icon = mission_grand_library_refurbishment
+		position = 4
+		required_missions = { MPS_soul_altar }
+		trigger = {
+			owns_core_province = 100
+			prestige = 75
+			OR = {
+				full_idea_group = exploration_ideas
+				full_idea_group = humanist_ideas
+				full_idea_group = innovativeness_ideas
+				full_idea_group = religious_ideas
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					100 = {
+						has_building = university
+					}
+				}
+				100 = {
+					add_base_tax = 3
+				}
+			}
+			else = {
+				100 = {
+					add_building = university
+				}
+			}
+			100 = {
+				add_province_modifier = {
+					name = MPS_menaphos_library_modifier
+					duration = -1
+				}
+			}
+		}
+	}
 }
 
 mps_missions_2 = {
@@ -100,7 +138,7 @@ mps_missions_2 = {
 	has_country_shield = yes
 	
 	MPS_worker_district_mission = {
-		icon = mission_alliances
+		icon = mission_worker_district
 		position = 1
 		required_missions = {  }
 		trigger = {
@@ -119,6 +157,7 @@ mps_missions_2 = {
 		icon = mission_expand_inland
 		position = 2
 		required_missions = { MPS_imperial_district_mission MPS_worker_district_mission }
+		provinces_to_highlight = { province_id = 857 }
 		trigger = {
 			owns_core_province = 100
 			has_institution = architecture
@@ -167,7 +206,7 @@ mps_missions_3 = {
 	has_country_shield = yes
 	
 	MPS_merchant_district_mission = {
-		icon = mission_alliances
+		icon = mission_merchant_district
 		position = 1
 		required_missions = {  }
 		trigger = {
@@ -189,6 +228,60 @@ mps_missions_3 = {
 			}
 		}
 	}
+	MPS_self_sufficiency = {
+		icon = mission_self_sufficiency
+		position = 2
+		required_missions = { MPS_merchant_district_mission }
+		trigger = {
+			development_in_provinces = {
+				value = 60
+				area = menaphos_area
+			}
+			development_in_provinces = {
+				value = 30
+				area = elid_isles_area
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MPS_self_sufficiency_policy
+				duration = 9125
+			}
+		}
+	}
+	MPS_menaphite_trade_routes = {
+		icon = mission_kharidian_people
+		position = 3
+		required_missions = { MPS_expand_inland MPS_self_sufficiency }
+		trigger = {
+			100 = {
+				has_most_province_trade_power = ROOT
+			}
+			75 = {
+				trade_share = {
+					country = ROOT
+					share = 35
+				}
+			}
+			62 = {
+				trade_share = {
+					country = ROOT
+					share = 20
+				}
+			}
+			79 = {
+				trade_share = {
+					country = ROOT
+					share = 20
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_years_of_income = 0.5
+		}
+	}
+	
 }
 
 mps_missions_4 = {
@@ -202,7 +295,7 @@ mps_missions_4 = {
 	has_country_shield = yes
 	
 	MPS_port_district_mission = {
-		icon = mission_alliances
+		icon = mission_port_district
 		position = 1
 		required_missions = {  }
 		trigger = {
@@ -212,6 +305,26 @@ mps_missions_4 = {
 		}
 		effect = {
 			add_navy_tradition = 10
+		}
+	}
+	MPS_wushanko_entrepot = {
+		icon = mission_journey_to_wushanko
+		position = 2
+		required_missions = { MPS_merchant_district_mission MPS_port_district_mission }
+		trigger = {
+			num_of_light_ship = 20
+			1101 = {
+				trade_share = {
+					country = ROOT
+					share = 20
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MPS_between_west_and_east
+				duration = 7300
+			}
 		}
 	}
 }
@@ -227,7 +340,7 @@ mps_missions_5 = {
 	has_country_shield = yes
 	
 	MPS_royal_menaphite_army = {
-		icon = mission_alliances
+		icon = mission_royal_menaphite_army
 		position = 1
 		required_missions = {  }
 		trigger = {
@@ -241,11 +354,64 @@ mps_missions_5 = {
 			add_mil_power = 50
 		}
 	}
+	MPS_allies_of_the_arc = {
+		icon = mission_allies_of_the_arc
+		position = 3
+		required_missions = { MPS_wushanko_entrepot MPS_royal_menaphite_army }
+		trigger = {
+			OR = {
+				any_ally = {
+					capital_scope = {
+						region = arc_region
+					}
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				any_subject_country = {
+					capital_scope = {
+						region = arc_region
+					}
+					NOT = { liberty_desire = 25 }
+				}
+				calc_true_if = {
+					all_owned_province = {
+						region = arc_region
+					}
+					amount = 5
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 25
+			ai_jei_area = {
+				limit = {
+					NOT = { is_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	MPS_gunpowder_diplomacy = {
+		icon = mission_gunpowder_diplomacy
+		position = 4
+		required_missions = { MPS_allies_of_the_arc }
+		trigger = {
+			any_owned_province = {
+				trade_goods = gunpowder
+				NOT = { unrest = 0 }
+				base_production = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MPS_skull_gunpowder_supplies
+				duration = 9125
+			}
+		}
+	}	
 }
-
-
-
-
-
 
 

@@ -1036,6 +1036,8 @@ country_event = {
 		NOT = { religion = zaros }
 		has_idea = ASG_temple_knights
 		NOT = { current_age = age_of_divination }
+		NOT = { has_country_flag = asg_temple_knight_secrets }
+		NOT = { has_global_flag = asg_revealed_zarosian_plot }
 		OR = {
 			AND = {
 				religion = saradomin
@@ -1093,6 +1095,8 @@ country_event = {
 	title = flavor_asg.13.t #Temple of the Empty Lord
 	desc = flavor_asg.13.d #[Root.Dip_Advisor.GetName] has done it. [Root.Dip_Advisor.GetName] has discovered an ancient plot running back centuries by the followers of none other than the Empty Lord himself - Zaros. Zarosians have for centuries infiltrated the Temple Knights for unknown ends, but with their plot discovered, it is finally time to eliminate this evil once and for all.
 	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	fire_only_once = yes
 		
 	trigger = {
 		tag = ASG
@@ -1134,6 +1138,12 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 3
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = asg_revealed_zarosian_plot
+		}
 	}
 
 	option = {

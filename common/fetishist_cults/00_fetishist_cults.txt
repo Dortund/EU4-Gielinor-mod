@@ -8,7 +8,7 @@ cower_strategy = {
 
 	allow = {
 		OR = {
-			has_unlocked_cult = cover_strategy
+			has_unlocked_cult = cower_strategy
 			AND = {
 				culture_group = goblin_group
 				NOT = { culture = hobgoblin }
@@ -62,7 +62,7 @@ geomancer_strategy = {
 
 	allow = {
 		OR = {
-			has_unlocked_cult = cover_strategy
+			has_unlocked_cult = geomancer_strategy
 			primary_culture = hobgoblin
 		}
 	}

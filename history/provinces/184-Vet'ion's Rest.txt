@@ -1,9 +1,9 @@
-#171-Venenatis
-owner = VNN
-controller = VNN
-add_core = VNN
+#184-Vet'ion's Rest
+owner = VET
+controller = VET
+add_core = VET
 tribal_owner = ---
-culture = giant_spider
+culture = skeleton
 religion = zamorak
 
 discovered_by = morytaniantechgroup
@@ -12,10 +12,10 @@ discovered_by = northerntechgroup
 hre = no
 
 base_tax = 2
-base_production = 3
-base_manpower = 8
+base_production = 1
+base_manpower = 2
 
-trade_goods = herblore_supplies
+trade_goods = bones
 latent_trade_goods = { rare_loot }
 
 native_size = 10

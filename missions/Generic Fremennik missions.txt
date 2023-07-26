@@ -134,7 +134,7 @@ genfremmy_missions_3 = {
 		trigger = {
 			any_ally = {
 				culture_group = fremennik_group
-				trust = { who = ROOT value = 50 }
+				trust = { who = ROOT value = 60 }
 			}
 		}
 		effect = {

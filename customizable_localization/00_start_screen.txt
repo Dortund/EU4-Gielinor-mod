@@ -84,6 +84,24 @@ defined_text = {
 		}
     }
 	text = {
+        localisation_key = string_start_title_jaldraocht
+        trigger = {
+			tag = JAL
+        }
+    }
+	text = {
+        localisation_key = string_start_title_kharidians
+        trigger = {
+			tag = KDS
+		}
+    }
+	text = {
+        localisation_key = string_start_title_menaphos
+        trigger = {
+			tag = MPS
+		}
+    }
+	text = {
         localisation_key = string_start_title_misthalin
         trigger = {
 			tag = MST
@@ -120,6 +138,20 @@ defined_text = {
 				tag = BOI
 				tag = MRM
 				tag = RDN
+			}
+		}
+    }
+	text = {
+        localisation_key = string_start_title_kharidian_minor
+        trigger = {
+			capital_scope = {
+				region = kharidian_desert_region
+			}
+			culture_group = kharidian_group
+			NOT = {
+				tag = JAL
+				tag = KDS
+				tag = MPS
 			}
 		}
     }
@@ -339,6 +371,24 @@ defined_text = {
 			tag = IOR
         }
     }
+	text = { # Jaldraocht
+        localisation_key = string_start_jaldraocht
+        trigger = {
+			tag = JAL
+        }
+    }
+	text = { # Kharidians
+        localisation_key = string_start_kharidians
+        trigger = {
+			tag = KDS
+        }
+    }
+	text = { # Menaphos
+        localisation_key = string_start_menaphos
+        trigger = {
+			tag = MPS
+        }
+    }
 	text = { # Misthalin
         localisation_key = string_start_misthalin
         trigger = {
@@ -387,6 +437,21 @@ defined_text = {
 			culture_group = fremennik_group
 			capital_scope = {
 				region = fremennik_region
+			}
+		}
+    }
+	
+	text = {
+        localisation_key = string_start_kharidian_minor
+        trigger = {
+			capital_scope = {
+				region = kharidian_desert_region
+			}
+			culture_group = kharidian_group
+			NOT = {
+				tag = JAL
+				tag = KDS
+				tag = MPS
 			}
 		}
     }

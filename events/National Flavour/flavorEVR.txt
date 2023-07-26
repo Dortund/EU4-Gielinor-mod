@@ -27,13 +27,23 @@ country_event = {
 	}
 	picture = ELVEN_RESISTANCE_LLETYA_eventPicture
 	is_triggered_only = yes
+	goto = immigration_target
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					region = tirannwn_region
+				}
+				save_event_target_as = immigration_target
+			}
+		}
+	}
 	
 	option = {
 		name = flavor_evr.a #We are seven clans united!
-		random_owned_province = {
-			limit = {
-				region = tirannwn_region
-			}
+		name = flavor_evr.1.a #We are seven clans united!
+		event_target:immigration_target = {
 			add_base_tax = 2
 			add_base_production = 2
 			add_base_manpower = 2
@@ -275,7 +285,7 @@ country_event = {
 	trigger = {
 		tag = EVR
 		538 = { is_empty = yes }
-		owns_core_province = 538
+		owns_core_province = 338
 		owns_core_province = 982
 	}
 
