@@ -116,47 +116,49 @@ genkharid_missions_2 = {
 						religion = menaphite
 					}
 				}
-				OR = {
-					has_great_project = {
-						type = great_project_duel_arena
-						tier = 2
-					}
-					has_great_project = {
-						type = great_project_duel_arena
-						tier = 3
-					}
-					has_great_project = {
-						type = great_project_jalkabir
-						tier = 2
-					}
-					has_great_project = {
-						type = great_project_jalkabir
-						tier = 3
-					}
-					has_great_project = {
-						type = great_project_jaltevas
-						tier = 2
-					}
-					has_great_project = {
-						type = great_project_jaltevas
-						tier = 3
-					}
-					has_great_project = {
-						type = great_project_mastaba_of_senliten
-						tier = 2
-					}
-					has_great_project = {
-						type = great_project_mastaba_of_senliten
-						tier = 3
-					}
-					has_great_project = {
-						type = great_project_ullek
-						tier = 2
-					}
-					has_great_project = {
-						type = great_project_ullek
-						tier = 3
-					}					
+				any_owned_province = {
+					OR = {
+						has_great_project = {
+							type = great_project_duel_arena
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_duel_arena
+							tier = 3
+						}
+						has_great_project = {
+							type = great_project_jalkabir
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_jalkabir
+							tier = 3
+						}
+						has_great_project = {
+							type = great_project_jaltevas
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_jaltevas
+							tier = 3
+						}
+						has_great_project = {
+							type = great_project_mastaba_of_senliten
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_mastaba_of_senliten
+							tier = 3
+						}
+						has_great_project = {
+							type = great_project_ullek
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_ullek
+							tier = 3
+						}					
+					}	
 				}
 			}
 			else = {
