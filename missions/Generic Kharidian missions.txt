@@ -338,7 +338,7 @@ genkharid_missions_4 = {
 			employed_advisor = {
 				category = MIL
 			}
-			NOT = { is_in_deficit = yes }
+			is_in_deficit = no
 		}
 		effect = {
 			add_mil_power = 50

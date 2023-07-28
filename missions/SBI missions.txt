@@ -261,7 +261,7 @@ sbi_missions_4 = {
 				training_fields = 1
 			}
 			num_of_cavalry = 4
-			NOT = { is_in_deficit = yes }
+			is_in_deficit = no
 		}
 		effect = {
 			add_mil_power = 25

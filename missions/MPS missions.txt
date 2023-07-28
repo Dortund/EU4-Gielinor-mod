@@ -26,7 +26,7 @@ mps_missions_1 = {
 					category = MIL
 				}
 			}
-			NOT = { is_in_deficit = yes }
+			is_in_deficit = no
 		}
 		effect = {
 			add_adm_power = 25
