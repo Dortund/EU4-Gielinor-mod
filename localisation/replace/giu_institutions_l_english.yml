@@ -62,7 +62,7 @@
  desc_birthplace_of_exploration:0 "From this province, a thousand ships shall sail."
  tooltip_any_friendly_coast_border_province_has_embraced_exploration:0 "Adjacent friendly coast province with Exploration present"
  tooltip_any_neighbor_has_embraced_exploration:0 "Neighbouring province has Exploration present"
- tooltip_has_hundred_ships:0 "Port of a nation with at least 100 ships."
+ tooltip_has_fifty_ships:0 "Port of a nation with at least 50 ships."
  tooltip_colonial_overlord_exploration:0 "The overlord of this colonial port or capital province has embraced Exploration"
  tooltip_exploration_embraced:0 "Province owner has embraced Exploration"
  
