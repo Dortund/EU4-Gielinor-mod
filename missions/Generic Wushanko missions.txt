@@ -63,7 +63,7 @@ genwhk_missions_2 = {
 		required_missions = { genwhk_construction_boom }
 		position = 3
 		trigger = {
-			NOT = { is_in_deficit = yes }
+			is_in_deficit = no
 			custom_trigger_tooltip = {
 				tooltip = genwhk_three_level_two_advisors
 				OR = {

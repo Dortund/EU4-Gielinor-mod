@@ -4,6 +4,26 @@
 ##########################################################################################################################################
 ##########################################################################################################################################
 
+#Beta 1.7.0a patch notes 
+
+#######################
+# Bugfixes
+#######################
+
+# Fixed Reformed Zarosian Theocracy not being usable
+
+# Dortund's Fixes
+## Fixed description of "Find Char" mission
+## Fixed generic Kharidian missions Monuments of Kharid and Defend Ourselves
+## Simplified code of missions requesting the nation is not in a deficit
+## Fixed province id references in Jaldraocht missions
+## Barrows Brothers in Senntisten missions now are named properly
+## Fixed Sister of Zaros mission in Zarosian Empire missions
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
 #Beta 1.7.0 patch notes (Jaldraocht)
 
 # The seemingly impossible dream of reforming the Zarosian Empire has become a little more likely as Jaldraocht can now take steps to rebuild Senntisten, and from there, try to make the Empire anew. It won't be easy, however...

@@ -32,7 +32,10 @@ country_event = {
 	
 	option = {
 		name = flavor_snt.1.a #Lead us, Pontifex!
-		add_government_reform = restored_zarosian_theocracy
+		if = {
+			limit = { NOT = { government = theocracy } }
+			change_government_to_theocracy = yes
+		}
 		define_ruler = {
 			name = "Azzanadra"
 			dynasty = "of the Mahjarrat"
@@ -48,6 +51,7 @@ country_event = {
 		add_ruler_personality = immortal_personality
 		add_ruler_personality = zealot_personality
 		set_country_flag = SNT_rule_by_azzanadra
+		add_government_reform = restored_zarosian_theocracy
 		custom_tooltip = JAL_fixed_azzanadra_rule
 	}
 	option = {

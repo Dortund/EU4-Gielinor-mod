@@ -534,7 +534,11 @@ mahjarrat_realm = {
 }
 
 restored_zarosian_theocracy = {
-
+	rank = {
+		1 = HOLY_PRINCIPALITY
+		2 = HOLY_STATE
+		3 = HOLY_EMPIRE
+	}
 	ruler_male = {
 		1 = PONTIFEX_MINIMUS
 		2 = PONTIFEX

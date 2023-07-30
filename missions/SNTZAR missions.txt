@@ -471,7 +471,7 @@ snt_missions_4a = {
 			random_list = {
 				20 = {
 					define_general = {
-						name = Ahrim the Blighted
+						name = "Ahrim the Blighted"
 						shock = 2
 						fire = 6
 						manuever = 2
@@ -481,7 +481,7 @@ snt_missions_4a = {
 				}
 				20 = {
 					define_general = {
-						name = Dharok the Wretched
+						name = "Dharok the Wretched"
 						shock = 6
 						fire = 2
 						manuever = 2
@@ -491,7 +491,7 @@ snt_missions_4a = {
 				}
 				20 = {
 					define_general = {
-						name = Guthan the Infested
+						name = "Guthan the Infested"
 						shock = 4
 						fire = 3
 						manuever = 3
@@ -501,7 +501,7 @@ snt_missions_4a = {
 				}
 				20 = {
 					define_general = {
-						name = Karil the Tainted
+						name = "Karil the Tainted"
 						shock = 1
 						fire = 5
 						manuever = 3
@@ -511,7 +511,7 @@ snt_missions_4a = {
 				}
 				20 = {
 					define_general = {
-						name = Torag the Corrupted
+						name = "Torag the Corrupted"
 						shock = 3
 						fire = 1
 						manuever = 4
@@ -521,7 +521,7 @@ snt_missions_4a = {
 				}
 				20 = {
 					define_general = {
-						name = Verac the Defiled
+						name = "Verac the Defiled"
 						shock = 5
 						fire = 2
 						manuever = 2
@@ -1236,7 +1236,9 @@ zar_missions_2 = {
 				}
 				any_country = {
 					religion = seren
-					has_discovered = ROOT
+					capital_scope = {
+						has_discovered = ROOT
+					}
 				}
 			}
 			else_if = {
@@ -1247,7 +1249,9 @@ zar_missions_2 = {
 				}
 				any_country = {
 					religion = dark_lord
-					has_discovered = ROOT
+					capital_scope = {
+						has_discovered = ROOT
+					}
 				}
 			}
 			else = {

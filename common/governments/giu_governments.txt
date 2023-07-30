@@ -510,6 +510,7 @@ theocracy = {
 				frontier_theocracy
 				guthixian_cave
 				monastic_order_reform
+				restored_zarosian_theocracy
 				shamanic_theocracy
 				theocratic_government_reform
 			}
