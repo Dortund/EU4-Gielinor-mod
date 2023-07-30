@@ -32,7 +32,8 @@ country_event = {
 					continent = west_runescape
 					continent = east_runescape
 				}
-				NOT = { is_island = yes }
+				is_island = no
+				is_wasteland = no
 			}
 			add_permanent_province_modifier = {
 				name = cave_of_guthix
