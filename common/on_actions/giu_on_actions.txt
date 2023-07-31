@@ -29,7 +29,8 @@ on_startup = {
 					continent = west_runescape
 					continent = east_runescape
 				}
-				NOT = { is_island = yes }
+				is_island = no
+				is_wasteland = no
 			}
 			add_province_triggered_modifier = temple_to_guthix
 		}

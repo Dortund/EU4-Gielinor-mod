@@ -157,7 +157,7 @@ genkharid_missions_2 = {
 						has_great_project = {
 							type = great_project_ullek
 							tier = 3
-						}					
+						}
 					}
 				}
 			}

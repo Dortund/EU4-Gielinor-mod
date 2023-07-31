@@ -984,7 +984,7 @@ exploration = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = tooltip_neighbor_port_province_exploration
+				tooltip = tooltip_any_neighbor_has_embraced_exploration
 				has_port = yes
 				any_neighbor_province = {
 					exploration = 100

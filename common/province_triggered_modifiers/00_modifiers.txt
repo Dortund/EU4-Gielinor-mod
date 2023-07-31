@@ -554,16 +554,16 @@ wildy_border_level_one = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
-			NOT = { has_province_modifier = MST_beacon_network_province }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_two }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_three }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 		}
+		NOT = { has_province_modifier = MST_beacon_network_province }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_two }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_three }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 	}
 	local_unrest = 0.2
 	local_missionary_strength = -0.004
@@ -588,15 +588,15 @@ wildy_border_level_two = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
-			NOT = { has_province_modifier = MST_beacon_network_province }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_three }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 		}
+		NOT = { has_province_modifier = MST_beacon_network_province }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_three }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 	}
 	local_unrest = 0.4
 	local_missionary_strength = -0.008
@@ -620,14 +620,14 @@ wildy_border_level_three = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
-			NOT = { has_province_modifier = MST_beacon_network_province }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 		}
+		NOT = { has_province_modifier = MST_beacon_network_province }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 	}
 	local_unrest = 0.6
 	local_missionary_strength = -0.012
@@ -650,13 +650,13 @@ wildy_border_level_four = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
-			NOT = { has_province_modifier = MST_beacon_network_province }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 		}
+		NOT = { has_province_modifier = MST_beacon_network_province }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 	}
 	local_unrest = 0.8
 	local_missionary_strength = -0.016
@@ -678,12 +678,12 @@ wildy_border_level_five = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
-			NOT = { has_province_modifier = MST_beacon_network_province }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 		}
+		NOT = { has_province_modifier = MST_beacon_network_province }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 	}
 	local_unrest = 1
 	local_missionary_strength = -0.020
@@ -704,11 +704,11 @@ wildy_border_level_six = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
-			NOT = { has_province_modifier = MST_beacon_network_province }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 		}
+		NOT = { has_province_modifier = MST_beacon_network_province }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 	}
 	local_unrest = 1.2
 	local_missionary_strength = -0.024
@@ -728,10 +728,10 @@ wildy_border_level_seven = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
-			NOT = { has_province_modifier = MST_beacon_network_province }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 		}
+		NOT = { has_province_modifier = MST_beacon_network_province }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 	}
 	local_unrest = 1.4
 	local_missionary_strength = -0.028
@@ -750,9 +750,9 @@ wildy_border_level_eight = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
-			NOT = { has_province_modifier = MST_beacon_network_province }
-			NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 		}
+		NOT = { has_province_modifier = MST_beacon_network_province }
+		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
 	}
 	local_unrest = 1.6
 	local_missionary_strength = -0.032
@@ -769,8 +769,8 @@ wildy_border_level_nine = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
-			NOT = { has_province_modifier = MST_beacon_network_province }
 		}
+		NOT = { has_province_modifier = MST_beacon_network_province }
 	}
 	local_unrest = 1.8
 	local_missionary_strength = -0.036

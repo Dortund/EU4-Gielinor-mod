@@ -28,7 +28,7 @@ country_decisions = {
 			add_prestige = 50
 			252 = {	remove_province_triggered_modifier = temple_of_ikov_local }
 			capital_scope = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = artefact_staff_of_armadyl
 					duration = -1  
 				}
@@ -74,7 +74,7 @@ country_decisions = {
 				remove_province_triggered_modifier = temple_to_guthix
 			}
 			capital_scope = {
-				add_province_modifier = { 
+				add_permanent_province_modifier = { 
 					name = artefact_stone_of_jas
 					duration = -1  
 				}
@@ -119,7 +119,7 @@ country_decisions = {
 				remove_province_modifier = artefact_staff_of_armadyl
 			}
 			capital_scope = {
-				add_province_modifier = { 
+				add_permanent_province_modifier = { 
 					name = artefact_staff_of_armadyl
 					duration = -1  
 				}
@@ -163,7 +163,7 @@ country_decisions = {
 				remove_province_modifier = artefact_stone_of_jas
 			}
 			capital_scope = {
-				add_province_modifier = { 
+				add_permanent_province_modifier = { 
 					name = artefact_stone_of_jas
 					duration = -1  
 				}
