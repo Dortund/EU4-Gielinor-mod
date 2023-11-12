@@ -1,0 +1,14 @@
+﻿l_english:
+ adventurer_riot_rebels_demand:0 "Weaken State Authority"
+ adventurer_riot_rebels_demand_desc:0 "Sufficiently angered adventurers start riots, firing cannons through the streets and blocking out the skies with their prayers for retribution."
+ adventurer_riot_rebels_title:0 "Adventurer Riot"
+ adventurer_riot_rebels_name:0 "Adventurer Riot"
+ adventurer_riot_rebels_desc:0 "Adventurer Riots can appear by events that sufficiently upset them. If successful they will destabilise your government, but increase the number of adventurers in your realm."
+ adventurer_riot_rebels_army:0 "Adventurer Riot Forces"
+ 
+ dragonkin_raid_rebels_demand:0 "Kill the False User"
+ dragonkin_raid_rebels_demand_desc:0 "The Dragonkin decree that use of the Stone of Jas is not for the unworthy..."
+ dragonkin_raid_rebels_title:0 "Dragonkin Raid"
+ dragonkin_raid_rebels_name:0 "Dragonkin Raid"
+ dragonkin_raid_rebels_desc:0 "Dragonkin Raids aim to kill the users of the Stone of Jas. They are among the most powerful kinds of rebel."
+ dragonkin_raid_rebels_army:0 "Dragonkin Raiders"

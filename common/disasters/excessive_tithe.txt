@@ -1,0 +1,143 @@
+#Excessive Tithe - From Vampyric kingdoms having too little blood power
+
+excessive_tithe = {
+	potential = {
+		has_government_mechanic = blood_power_mechanic
+	}
+
+	can_start = {
+		OR = {
+			AND = {
+				current_age = age_of_mortals
+				NOT = {
+					has_government_power = {
+						mechanic_type = blood_power_mechanic
+						power_type = blood_power_power_1
+						value = 10
+					}
+				}
+			}
+			AND = {
+				current_age = age_of_humans
+				NOT = {
+					has_government_power = {
+						mechanic_type = blood_power_mechanic
+						power_type = blood_power_power_1
+						value = 15
+					}
+				}
+			}
+			AND = {
+				current_age = age_of_adventurers
+				NOT = {
+					has_government_power = {
+						mechanic_type = blood_power_mechanic
+						power_type = blood_power_power_1
+						value = 40
+					}
+				}
+			}
+			AND = {
+				current_age = age_of_divination
+				NOT = {
+					has_government_power = {
+						mechanic_type = blood_power_mechanic
+						power_type = blood_power_power_1
+						value = 50
+					}
+				}
+			}
+		}
+	}
+	
+	can_stop = {
+		OR = {
+			AND = {
+				current_age = age_of_mortals
+				has_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 20
+				}
+			}
+			AND = {
+				current_age = age_of_humans
+				has_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 25
+				}
+			}
+			AND = {
+				current_age = age_of_adventurers
+				has_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 70
+				}
+			}
+			AND = {
+				current_age = age_of_divination
+				has_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 80
+				}
+			}
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 1
+			NOT = {
+				legitimacy = 75
+			}
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = -1
+			stability = 3
+		}
+	}
+
+	can_end = {
+		OR = {
+			has_country_modifier = MYT_compromise_of_efaritay
+			has_government_power = {
+				mechanic_type = blood_power_mechanic
+				power_type = blood_power_power_1
+				value = 90
+			}
+			NOT = { has_government_mechanic = blood_power_mechanic }
+		}
+	}
+
+	modifier = {
+	 	global_unrest = 2
+		legitimacy = -1
+		nobles_loyalty_modifier = -0.1
+		manpower_in_own_culture_provinces = -0.33
+	}
+	
+	on_start = excessive_tithe.1
+	on_end = excessive_tithe.100
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			1000 = 0
+			50 = excessive_tithe.2 #
+			50 = excessive_tithe.3 #
+			50 = excessive_tithe.4 #
+			50 = excessive_tithe.6 #
+		}
+	}
+}

@@ -1,0 +1,23 @@
+#511 - Cor Venationis
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = fortis
+religion = ralos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = hunter_creatures
+
+native_size = 2
+native_ferocity = 5
+native_hostileness = 1
+
+center_of_trade = 1

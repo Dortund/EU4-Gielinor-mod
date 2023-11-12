@@ -1,0 +1,122 @@
+########################################
+# Events for Port Phasmatys
+########################################
+
+namespace = flavor_pph
+normal_or_historical_nations = yes
+
+# Plans of the Necromancer
+country_event = {
+	id = flavor_pph.1
+	title = flavor_pph.1.t
+	desc = flavor_pph.1.d #With the terrifying threat of the Vampyres looming over Port Phasmatys, a necromancer from the Wushanko Isles offers us a solution. Excavating deep under the port, they have uncovered ectoplasm they plan to use to create an energy barrier capable of repelling the Vampyric hordes.
+	picture = MORYTANIA_VYREWATCH_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_country_flag = PPH_plans_of_the_necromancer_flag }
+		tag = PPH
+		exists = MYT
+		MYT = {
+			total_development = 150
+		}
+	 	has_discovered = 140
+		OR = {
+			AND = {
+				war_with = PPH
+				NOT = {
+					war_score_against = {
+						who = PPH
+						value = -25
+					}
+				}
+			}
+			AND = {
+				has_institution = runecrafting
+				NOT = { total_development = 125 }
+				NOT = { absolutism = 10 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	immediate = {
+		set_country_flag = PPH_plans_of_the_necromancer_flag
+	}
+	
+	option = {
+		name = flavor_pph.1.a #I can't see any downsides of this plan!
+		custom_tooltip = PPH_ectofuntus_start_tooltip #Faced with such a powerful barrier, Morytania is likely to call any war against us off - but necromancy always has its price...
+		add_government_reform = ectofuntus_barrier_reform
+		capital_scope = {
+			add_province_triggered_modifier = PPH_necromatic_barriers
+		}
+		MYT = {
+			country_event = { 
+				id = flavor_myt.9
+				days = 1
+			}
+		}
+		ai_chance = { factor = 95 }
+	}
+	option = {
+		name = flavor_pph.1.b #I don't know, messing with necromatic energies sounds dangerous.
+		ai_chance = { factor = 5 }
+	}
+}
+
+# The Cost of Necromancy
+country_event = {
+	id = flavor_pph.2
+	title = flavor_pph.2.t
+	desc = flavor_pph.2.d #The Ectofuntus has had a strange effect on the people of Port Phasmatys - it caused the population to wither away and die, but leaving their souls bound to the world. Worse, the Necromancer who built the Ectofuntus has now used it to seize power!
+	picture = MORYTANIA_VYREWATCH_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = PPH
+		NOT = { has_country_flag = PPH_necrovarus_coup_flag }
+		has_reform = ectofuntus_barrier_reform
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	immediate = {
+		set_country_flag = PPH_necrovarus_coup_flag
+	}
+	
+	option = {
+		name = flavor_pph.2.a #Who could have seen this coming?
+		define_ruler = {
+			name = "Necrovarus"
+			dynasty = "Hanto"
+			age = 60
+			culture = ghost
+			religion = zamorak
+			adm = 2
+			dip = 2
+			mil = 4
+		}
+		add_government_reform = necromantic_dictatorship
+		change_primary_culture = ghost
+		every_owned_province = {
+			limit = {
+				culture = north_coaster
+			}
+			change_culture = ghost
+		}
+		change_country_color = { 
+			color = { 116 206 164 }
+		}
+		hidden_effect = {
+			add_meritocracy = 100
+		}
+	}
+}

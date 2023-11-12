@@ -1,0 +1,5 @@
+#1442 - Uzer Oasis
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup

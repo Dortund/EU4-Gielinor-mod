@@ -1,0 +1,21 @@
+#1455 - Ralos' Rise
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = proudspirian
+religion = ralos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = bones
+
+is_city = yes
+
+add_province_triggered_modifier = religious_center

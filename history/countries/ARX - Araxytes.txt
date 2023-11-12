@@ -1,0 +1,22 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = araxyte
+religion = godless
+religious_school = monstrous_school
+technology_group = morytaniantechgroup
+capital = 131
+
+15.11.25 = {
+	monarch = {
+		name = "Araxxi"
+		dynasty = "the Spider"
+		birth_date = 11.12.27
+		adm = 2
+		dip = 3
+		mil = 6
+		female = yes
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

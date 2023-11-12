@@ -1,0 +1,25 @@
+#524 - Outer Fortis
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = fortis
+religion = ralos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = grains
+
+is_city = yes
+
+2100.1.1 = {
+	base_tax = 4
+	base_production = 3
+	base_manpower = 3
+}

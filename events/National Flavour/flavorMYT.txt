@@ -1,0 +1,512 @@
+########################################
+# Events for Morytania
+########################################
+
+namespace = flavor_myt
+normal_or_historical_nations = yes
+
+#Blisterwood Tree Discovered in Darkmeyer!
+country_event = {
+	id = flavor_myt.1
+	title = flavor_myt.1.t
+	desc = flavor_myt.1.d #Blisterwood Trees are a kind of flailing, unpredictable tree whose wood can be made into weapons which threaten even the strongest vampyres. The species was thought eradicated by the efforts of Lord Lowerniel Drakan and Zamorak during the conquest of Hallowvale - but one has sprouted in Darkmeyer and is resisting all our attempts to kill it.
+	picture = VAMPYRIC_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MYT
+		culture_group = vampyre_group
+		owns_core_province = 139
+		has_institution = statehood
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = flavor_myt.1.a #Take every effort to weaken it.
+		139 = {
+			add_province_triggered_modifier = MYT_blisterwood_tree
+			add_province_triggered_modifier = MYT_the_arboretum
+		}
+		add_treasury = -150
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = flavor_myt.1.b #Use its presence as a threat to vampyres who would defy our rule.
+		139 = {
+			add_province_triggered_modifier = MYT_blisterwood_tree
+		}
+		add_country_modifier = {
+			name = MYT_tree_of_terror
+			duration = 9125
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Vampyric Population Boom
+country_event = {
+	id = flavor_myt.2
+	title = flavor_myt.2.t
+	desc = flavor_myt.2.d #The vampyric population has surged in recent years, and the more vampyres we have, the easier it is to create more. There are concerns that converting so many humans to vampyrism will deplete our blood stores, but on the other hand, fewer potentially rebellious humans to worry about.
+	picture = VAMPYRIC_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { is_in_capital_area = yes }
+					OR = {
+						culture_group = misthalin_group
+						culture_group = wushanko_group
+					}
+				}
+				save_event_target_as = local_vampyric_conversion1
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { is_in_capital_area = yes }
+					OR = {
+						culture_group = misthalin_group
+						culture_group = wushanko_group
+					}
+				}
+				save_event_target_as = local_vampyric_conversion2
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { is_in_capital_area = yes }
+					OR = {
+						culture_group = misthalin_group
+						culture_group = wushanko_group
+					}
+				}
+				save_event_target_as = local_vampyric_conversion3
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_myt.2.a #We need to maximise the numbers of these humanborn vampyres!
+		event_target:local_vampyric_conversion1 = {
+			change_culture = humanborn_vampyre
+		}
+		event_target:local_vampyric_conversion2 = {
+			change_culture = humanborn_vampyre
+		}
+		event_target:local_vampyric_conversion3 = {
+			change_culture = humanborn_vampyre
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = flavor_myt.2.b #Eww, human-born vampyres? No thanks.
+		if = {
+			limit = {
+				has_government_mechanic = blood_power_mechanic
+			}
+			add_government_power = {
+				mechanic_type = blood_power_mechanic
+				power_type = blood_power_power_1
+				value = 5
+			}
+		}
+		else = {
+			add_adm_power = 50
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Damien's Plan
+country_event = {
+	id = flavor_myt.3
+	title = flavor_myt.3.t
+	desc = flavor_myt.3.d #A vampyre noble by the name of Damien Leucurte has a plan to meet blood tithe shortages: Recreate the Sleeper Plague that once afflicted the town of Slepe and tithe the sleeping inhabitants. Victims of the plague can be tithed more heavily than those who remain awake.
+	picture = VAMPYRIC_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MYT
+		culture_group = vampyre_group
+		OR = {
+			absolutism = 35
+			innovativeness = 15
+		}
+		OR = {
+			NOT = { has_reform = vampyre_kingdom }
+			has_disaster = excessive_tithe
+			NOT = {
+				has_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 30
+				}
+			}
+		}
+		slepe_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = flavor_myt.3.a #A wonderful idea! Let us back this plan whole-heartedly!
+		custom_tooltip = MYT_nightmare_risk_tooltip
+		if = {
+			limit = {
+				has_reform = vampyre_kingdom
+			}
+			add_country_modifier = {
+				name = MYT_tithe_the_sleeping
+				duration = 3650
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = MYT_tithe_the_sleeping_alt
+				duration = 3650
+			}
+		}
+		slepe_area = {
+			add_province_modifier = {
+				name = MYT_terror_of_the_sleeper_plague
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			set_country_flag = MYT_new_sleeper_plague_flag
+		}
+		ai_chance = { factor = 20 }
+	}
+	option = {
+		name = flavor_myt.3.b #An impressive solution, but it is likely to draw unwanted attention.
+		custom_tooltip = MYT_nightmare_risk_tooltip
+		if = {
+			limit = {
+				has_reform = vampyre_kingdom
+			}
+			add_country_modifier = {
+				name = MYT_tithe_some_of_the_sleeping
+				duration = 3650
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = MYT_tithe_some_of_the_sleeping_alt
+				duration = 3650
+			}
+		}
+		slepe_area = {
+			add_province_modifier = {
+				name = MYT_mild_terror_of_the_sleeper_plague
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			set_country_flag = MYT_new_sleeper_plague_flag
+		}
+		ai_chance = { factor = 80 }
+	}
+	option = {
+		name = flavor_myt.3.c #We cannot approve this horrific idea.
+		add_prestige = 5
+		ai_chance = { factor = 0 }
+	}
+}
+
+#The Nightmare of Ashihama
+country_event = {
+	id = flavor_myt.4
+	title = flavor_myt.4.t
+	desc = flavor_myt.4.d #A mysterious terror from Wushanko has landed on the shores of Slepe, seemingly drawn by the Sleeper Plague. It appears to draw power by giving nightmares to the local population - and seems impervious to our weaponry.
+	picture = NIGHTMARE_OF_ASHIHAMA_eventPicture
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = MYT
+		owns_core_province = 1404
+		NOT = { exists = NAS }
+		has_country_flag = MYT_new_sleeper_plague_flag
+		has_global_flag = AHH_nightmare_on_the_run
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = flavor_myt.4.a #How was I to know that would happen?
+		1404 = {
+			cede_province = NAS
+			add_core = NAS
+		}
+		hidden_effect = {
+			NAS = {
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.6
+						cavalry = 0.2
+						artillery = 0.2
+					}
+				}
+			}
+		}
+	}
+}
+
+#Missing Blood Tithes!
+country_event = {
+	id = flavor_myt.5
+	title = flavor_myt.5.t
+	desc = flavor_myt.5.d #At the last count, the number of human blood tithes seems to be short. It is quite possible some have escaped our grasp, but to where, we do not know.
+	picture = MORYTANIA_MYREQUE_eventPicture
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = MYT
+		has_reform = vampyre_kingdom
+		NOT = { exists = BDR }
+		OR = {
+			128 = {
+				is_empty = yes
+			}
+			129 = {
+				is_empty = yes
+			}
+			848 = {
+				is_empty = yes
+			}
+			950 = {
+				is_empty = yes
+			}
+		}
+		OR = {
+			has_disaster = excessive_tithe
+			mission_completed = MYT_intensification_of_meiyerditch
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					128 = {
+						is_empty = yes
+					}
+				}
+				128 = {
+					cede_province = BDR
+					add_core = BDR
+				}
+			}
+			if = {
+				limit = {
+					129 = {
+						is_empty = yes
+					}
+				}
+				129 = {
+					cede_province = BDR
+					add_core = BDR
+				}
+			}
+			if = {
+				limit = {
+					848 = {
+						is_empty = yes
+					}
+				}
+				848 = {
+					cede_province = BDR
+					add_core = BDR
+				}
+			}
+			if = {
+				limit = {
+					950 = {
+						is_empty = yes
+					}
+				}
+				950 = {
+					cede_province = BDR
+					add_core = BDR
+				}
+			}
+			BDR = {
+				add_adm_power = 250
+				add_dip_power = 250
+				add_mil_power = 250
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.6
+						cavalry = 0.2
+						artillery = 0.2
+					}
+				}
+			}
+		}
+	}
+	
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = flavor_myt.5.a #We'll just have to tithe the remaining humans more.
+		ai_chance = { factor = 5 }
+	}
+	option = {
+		name = flavor_myt.5.b #Forget vampyres! I'm joining the humans!
+		switch_tag = BDR
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Werewolf Claims
+country_event = {
+	id = flavor_myt.6
+	title = flavor_myt.6.t
+	desc = flavor_myt.6.d #With our conquest of the ruins of Kharyrll, we have an awkward expanse of land to govern. If we delegate it to the werewolves, we can ease the burden of directly controlling it, while placing pressure on those beasts to extract as many blood tithes as possible.
+	picture = CANIFIS_WEREWOLF_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MYT
+		owns_province = 113
+	 	overlord_of = CFS
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = flavor_myt.6.a #Let the werewolves govern the land.
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = canifis_area
+					area = lordship_of_the_north_coast_area
+				}
+			}
+			cede_province = CFS
+		}
+		CFS = {
+			add_liberty_desire = -50
+		}
+		add_country_modifier = {
+			name = MYT_werewolf_delegation
+			duration = 9125
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = flavor_myt.6.b #This land is rightfully ours to command!
+		CFS = {
+			add_liberty_desire = 15
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+#The Lordship of the North Coast Makes an Offer
+country_event = {
+	id = flavor_myt.7
+	title = flavor_myt.7.t
+	desc = flavor_myt.7.d #A pathetic human realm begs our mercy and says we can have all the blood tithes we want so long as we don't kill them.
+	picture = VAMPYRIC_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_myt.7.a #Take them up on this offer.
+		white_peace = LNC
+		create_subject = {
+			subject_type = tributary_state
+			subject = LNC
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = flavor_myt.7.b #No! We are conquerers, not negotiators!
+		ai_chance = { factor = 0 }
+	}
+}
+
+#The Sanguinesti Affliction
+country_event = {
+	id = flavor_myt.8
+	title = flavor_myt.8.t
+	desc = flavor_myt.8.d #A strange curse has befallen the townspeople of Mort'ton. These Afflicted can no longer speak coherently and wander the town aimlessly. The cause of this affliction is unclear, but it is rumoured to have been spawned from the waste of Castle Drakan.
+	picture = VAMPYRIC_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		exists = MYT
+		MYT = {
+			owns_core_province = 140
+		}
+		owns_province = 125
+		current_age = age_of_humans
+	}
+
+	mean_time_to_happen = {
+		months = 270
+	}
+	
+	option = {
+		name = flavor_myt.8.a #Curses!
+		MRT = {
+			change_primary_culture = afflicted
+		}
+		124 = {
+			change_culture = afflicted
+			add_province_triggered_modifier = MYT_sanguinesti_affliction
+		}
+		125 = {
+			change_culture = afflicted
+			add_province_triggered_modifier = MYT_sanguinesti_affliction
+		}
+		126 = {
+			change_culture = afflicted
+			add_province_triggered_modifier = MYT_sanguinesti_affliction
+		}
+		1374 = {
+			change_culture = afflicted
+			add_province_triggered_modifier = MYT_sanguinesti_affliction
+		}
+	}
+}
+
+#The Ectofuntus
+country_event = {
+	id = flavor_myt.9
+	title = flavor_myt.9.t
+	desc = flavor_myt.9.d #A necromancer from the Wushanko Isles has erected a barrier around Port Phasmatys making it seemingly impervious to attack.
+	picture = VAMPYRIC_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_myt.9.a #Fine! Fine. Call our fight off.
+		trigger = {
+		 	war_with = PPH
+		}
+		white_peace = PPH
+		ai_chance = { factor = 95 }
+	}
+	option = {
+		name = flavor_myt.9.b #Do they really think that can stop us?
+		ai_chance = { factor = 5 }
+	}
+}

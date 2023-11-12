@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = tlati
+religion = ranul
+technology_group = zeantechgroup
+capital = 507
+

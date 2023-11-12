@@ -1,0 +1,45 @@
+﻿l_english:
+ flavor_myt.1.t:0 "Blisterwood Tree Discovered in Darkmeyer!"
+ flavor_myt.1.d:0 "Blisterwood Trees are a kind of flailing, unpredictable tree whose wood can be made into weapons which threaten even the strongest vampyres. The species was thought eradicated by the efforts of Lord Lowerniel Drakan and Zamorak during the conquest of Hallowvale - but one has sprouted in Darkmeyer and is resisting all our attempts to kill it."
+ flavor_myt.1.a:0 "Take every effort to weaken it."
+ flavor_myt.1.b:0 "Use its presence as a threat to vampyres who would defy our rule."
+ 
+ flavor_myt.2.t:0 "Vampyric Population Boom"
+ flavor_myt.2.d:0 "The vampyric population has surged in recent years, and the more vampyres we have, the easier it is to create more. There are concerns that converting so many humans to vampyrism will deplete our blood stores, but on the other hand, fewer potentially rebellious humans to worry about."
+ flavor_myt.2.a:0 "We need to maximise the numbers of these humanborn vampyres!"
+ flavor_myt.2.b:0 "Eww, human-born vampyres? No thanks."
+ 
+ flavor_myt.3.t:0 "Damien's Plan"
+ flavor_myt.3.d:0 "A vampyre noble by the name of Damien Leucurte has a plan to meet blood tithe shortages: Recreate the Sleeper Plague that once afflicted the town of Slepe and tithe the sleeping inhabitants. Victims of the plague can be tithed more heavily than those who remain awake."
+ flavor_myt.3.a:0 "A wonderful idea! Let us back this plan whole-heartedly!"
+ flavor_myt.3.b:0 "An impressive solution, but it is likely to draw unwanted attention."
+ flavor_myt.3.c:0 "We cannot approve this horrific idea."
+ MYT_nightmare_risk_tooltip:0 "Manipulating humans in such a manner may have unforseen consequences."
+ 
+ flavor_myt.4.t:0 "The Nightmare of Ashihama"
+ flavor_myt.4.d:0 "A mysterious terror from Wushanko has landed on the shores of Slepe, seemingly drawn by the Sleeper Plague. It appears to draw power by giving nightmares to the local population - and seems impervious to our weaponry."
+ flavor_myt.4.a:0 "How was I to know that would happen?"
+ 
+ flavor_myt.5.t:0 "Missing Blood Tithes!"
+ flavor_myt.5.d:0 "At the last count, the number of human blood tithes seems to be short. It is quite possible some have escaped our grasp, but to where, we do not know."
+ flavor_myt.5.a:0 "We'll just have to tithe the remaining humans more."
+ flavor_myt.5.b:0 "Forget vampyres! I'm joining the humans!"
+ 
+ flavor_myt.6.t:0 "Werewolf Claims"
+ flavor_myt.6.d:0 "With our conquest of the ruins of Kharyrll, we have an awkward expanse of land to govern. If we delegate it to the werewolves, we can ease the burden of directly controlling it, while placing pressure on those beasts to extract as many blood tithes as possible."
+ flavor_myt.6.a:0 "Let the werewolves govern the land."
+ flavor_myt.6.b:0 "This land is rightfully ours to command!"
+ 
+ flavor_myt.7.t:0 "The Lordship of the North Coast Makes an Offer"
+ flavor_myt.7.d:0 "A pathetic human realm begs our mercy and says we can have all the blood tithes we want so long as we don't kill them."
+ flavor_myt.7.a:0 "Take them up on this offer."
+ flavor_myt.7.b:0 "No! We are conquerers, not negotiators!"
+ 
+ flavor_myt.8.t:0 "The Sanguinesti Affliction"
+ flavor_myt.8.d:0 "A strange curse has befallen the townspeople of Mort'ton. These Afflicted can no longer speak coherently and wander the town aimlessly. The cause of this affliction is unclear, but it is rumoured to have been spawned from the waste of Castle Drakan."
+ flavor_myt.8.a:0 "Curses!"
+ 
+ flavor_myt.9.t:0 "The Ectofuntus"
+ flavor_myt.9.d:0 "A necromancer from the Wushanko Isles has erected a barrier around Port Phasmatys making it seemingly impervious to attack."
+ flavor_myt.9.a:0 "Fine! Fine. Call our fight off."
+ flavor_myt.9.b:0 "Do they really think that can stop us?"

@@ -1,0 +1,27 @@
+#482 - Zema-Tal
+owner = SGW
+controller = SGW
+add_core = SGW
+tribal_owner = ---
+culture = strangled
+religion = godless
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 6
+
+trade_goods = logs
+
+native_size = 10
+native_ferocity = 5
+native_hostileness = 5
+
+fort_15th = yes
+
+is_city = yes
+
+center_of_trade = 1

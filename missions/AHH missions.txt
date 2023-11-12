@@ -1,0 +1,81 @@
+# Ashihaman Missions
+# Do not use column 2, 3 or 4 between positions 1 and 6 to prevent overlap with generic Wushanko missions
+
+ahh_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = AHH
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	AHH_reinforce_the_battlements = {
+		icon = mission_reinforce_the_battlements
+		position = 1
+		required_missions = {  }
+		trigger = {
+			army_size_percentage = 0.9
+			any_owned_province = {
+				area = ashihama_area
+				OR = {
+					has_building = naval_battery
+					has_building = coastal_defence
+				}
+			}
+		}
+		effect = {
+			ashihama_area = {
+				limit = {
+				 	owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = AHH_reinforced_battlements_of_ashihama
+					duration = 9125
+				}
+			}
+		}
+	}
+	AHH_the_art_of_totemcraft = {
+		icon = mission_the_art_of_totemcraft
+		position = 2
+		required_missions = { AHH_reinforce_the_battlements genwhk_basic_professionalism }
+		trigger = {
+			any_owned_province = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			 	base_manpower = 8
+			}
+		}
+		effect = {
+			create_general = { tradition = 100 }
+		}
+	}
+	AHH_oust_the_nightmare = {
+		icon = mission_oust_the_nightmare
+		position = 3
+		provinces_to_highlight = {
+			province_id = 1177
+		}
+		required_missions = { AHH_the_art_of_totemcraft }
+		trigger = {
+			owns_core_province = 1177
+			NOT = {
+				any_province = {
+					area = ashihama_area
+					owned_by = NAS
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = AHH_end_of_the_nightmare
+				duration = 9125
+			}
+		}
+	}
+}

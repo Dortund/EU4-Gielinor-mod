@@ -1,0 +1,19 @@
+#485 - Siuaxali
+owner = SGW
+controller = SGW
+add_core = SGW
+tribal_owner = ---
+culture = strangled
+religion = godless
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = runite
+
+is_city = yes

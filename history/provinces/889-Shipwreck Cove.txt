@@ -1,0 +1,25 @@
+#889-Shipwreck Cove
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = proudspirian
+religion = ranul
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+2000.1.1 = {
+	base_tax = 2
+	base_production = 2
+	base_manpower = 2
+}

@@ -1,0 +1,46 @@
+#Drý Isle (Wizard's Tower)
+owner = GGS
+controller = GGS
+add_core = GGS
+add_core = DYN
+tribal_owner = ---
+culture = draynor
+religion = saradomin
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = karamjantechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = logs
+
+is_city = yes
+
+1937.1.4 = {
+	owner = DYN
+	controller = DYN
+	remove_core = GGS
+}
+
+2083.1.28 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+	base_tax = 3
+	base_production = 3
+	base_manpower = 2
+}
+
+2150.1.1 = {
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
+}

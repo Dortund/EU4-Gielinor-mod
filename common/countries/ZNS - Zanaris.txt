@@ -1,0 +1,39 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 100 160 176 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+}
+
+ship_names = {
+}
+
+monarch_names = {
+	"Jinno #0" = 1
+	"Louie #0" = 1
+	"Watto #0" = 1
+	"Rocco #0" = 1
+	
+	"Bub #0" = -1
+	"Chaeldar #0" = -3
+	"Aeryka #0" = -3
+	"Fixit #0" = -1
+	"Nuff #0" = -2
+	"Very Wise #0" = -1
+	"Jukat #0" = -1
+	"Lunderwin #0" = -3
+	"Sunnel #0" = -3
+	"Teelee #0" = -2
+	"Sioncorn #0" = -3
+	"Zoe #0" = -3	
+}

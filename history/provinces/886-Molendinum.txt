@@ -1,0 +1,27 @@
+#886-Molendinum
+owner = CDG
+controller = CDG
+add_core = CDG
+tribal_owner = ---
+culture = cloud_giant
+religion = bandos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+trade_goods = grains
+
+is_city = yes
+
+1943.11.5 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+	culture = tempestite
+	religion = ralos
+}

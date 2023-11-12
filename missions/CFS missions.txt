@@ -1,0 +1,620 @@
+canifis_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = CFS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	CFS_on_the_tail_of_the_aquos = {
+		icon = mission_grand_ship
+		required_missions = { CFS_werewolf_sailors }
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			navy_tradition = 50
+			num_of_colonists = 1
+			has_discovered = 211
+			OR = {
+				any_ally = {
+					capital_scope = {
+						continent = wushanko_isles_continent
+					}
+				}
+				any_owned_province = {
+					continent = wushanko_isles_continent
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = CFS_aquos_colonies
+				duration = 7300
+			}
+		}
+	}
+	CFS_guardian_of_the_aquos = {
+		icon = mission_gunpowder_diplomacy
+		required_missions = { CFS_on_the_tail_of_the_aquos }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				region = arc_region
+				region = skull_region
+				region = hook_region
+				region = scythe_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						region = arc_region
+						region = skull_region
+						region = hook_region
+						region = scythe_region
+					}
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					continent = wushanko_isles_continent
+					NOT = { culture_group = werewolf_group }
+				}
+				change_culture = aquos
+				change_religion = ROOT
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			random_owned_province = {
+				limit = {
+					continent = wushanko_isles_continent
+					NOT = { culture_group = werewolf_group }
+				}
+				change_culture = aquos
+				change_religion = ROOT
+			}
+		}
+	}
+	CFS_empire_of_canifis = {
+		icon = mission_empire_of_canifis
+		required_missions = { CFS_guardian_of_the_aquos CFS_werewolf_freedom }
+		position = 7
+		provinces_to_highlight = {
+			continent = wushanko_isles_continent
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { culture = aquos }
+		}
+		trigger = {
+		 	government_rank = 3
+			calc_true_if = {
+				all_owned_province = {
+					culture = canifian
+				}
+				amount = 15
+			}
+			calc_true_if = {
+				all_owned_province = {
+					continent = wushanko_isles_continent
+					culture = aquos
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = CFS_werewolf_empire
+				duration = -1
+			}
+		}
+	}
+}
+
+canifis_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = CFS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	CFS_festival_of_zamorak = {
+		icon = mission_festival_of_zamorak
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			NOT = { unrest = 1 }
+			OR = {
+				cathedral = 3
+				temple = 3
+			}
+		}
+		effect = {
+			mort_myre_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	CFS_werewolf_sailors = {
+		icon = mission_werewolf_sailors
+		required_missions = { CFS_myre_incursion }
+		position = 3
+		provinces_to_highlight = {
+		}
+		trigger = {
+			navy_size = 10
+			navy_size_percentage = 0.8
+			any_owned_province = {
+				has_port = yes
+				OR = {
+					has_building = dock
+					has_building = drydock
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						has_port = yes
+						NOT = {
+							culture_group = werewolf_group
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_port = yes
+						NOT = {
+							culture_group = werewolf_group
+						}
+					}
+					change_culture = aquos
+					change_religion = ROOT
+					add_base_production = 2
+				}
+			}
+			create_explorer = { tradition = 20 }
+		}
+	}
+	
+	CFS_mahjarrat_contact = {
+		icon = mission_traitors_to_zaros
+		required_missions = { CFS_werewolf_sailors CFS_establishment_of_canifis }
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				any_country = {
+					ruler_culture = mahjarrat
+					religion = PREV
+					has_opinion = {
+						who = PREV
+						value = 150
+					}
+				}
+				NOT = {
+					any_country = {
+						ruler_culture = mahjarrat
+						religion = PREV
+					}
+				}
+			}
+		}
+		effect = {
+			if = { #This one works!
+				limit = {
+					NOT = {
+						any_country = {
+							ruler_culture = mahjarrat
+							religion = PREV
+						}
+					}
+				}
+				country_event = { 
+					id = flavor_cfs.4
+					days = 5
+				}
+			}
+			else = {
+				random_country = {
+					limit = {
+						ruler_culture = mahjarrat
+						religion = PREV
+						has_opinion = {
+							who = PREV
+							value = 150
+						}
+					}
+					country_event = {
+						id = flavor_cfs.1
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	CFS_fate_of_slepe = {
+		icon = mission_fate_of_slepe
+		required_missions = { CFS_werewolf_freedom }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = slepe_area
+				area = eastern_morytania_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			slepe_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			eastern_morytania_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = zamorak
+				}
+				country_event = {
+					id = flavor_cfs.6
+					days = 1
+				}
+			}
+			else = {
+				country_event = {
+					id = flavor_cfs.7
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+canifis_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = CFS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	CFS_lordship_diplomacy = {
+		icon = mission_lordship_diplomacy
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { exists = LNC }
+					owns_core_province = 113
+				}
+				reverse_has_opinion = {
+					who = LNC
+					value = 100			
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 75			
+		}
+	}
+	CFS_myre_incursion = {
+		icon = mission_myre_incursion
+		required_missions = { CFS_festival_of_zamorak CFS_lordship_diplomacy CFS_werewolf_forces }
+		position = 2
+		provinces_to_highlight = {
+			area = mort_myre_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_at_war = no
+			mort_myre_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			canifis_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	CFS_establishment_of_canifis = {
+		icon = mission_establish_canifis
+		required_missions = { CFS_myre_incursion CFS_agility_training }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 113
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 113
+			113 = {
+				culture = ROOT
+				religion = ROOT
+			}
+		}
+		effect = {
+			lordship_of_the_north_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	CFS_crossing_the_salve = {
+		icon = mission_reinforce_paterdomus
+		required_missions = { CFS_establishment_of_canifis }
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				has_spy_network_in = {
+					who = MST
+					value = 75
+				}
+				any_owned_province = {
+					region = misthalin_region
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 25
+			asgarnia_region = {
+				discover_country = ROOT
+			}
+		}
+	}
+	CFS_vampyric_resistance = {
+		icon = mission_river_of_blood
+		required_missions = { CFS_mahjarrat_contact CFS_crossing_the_salve CFS_ruins_of_kharyrll }
+		position = 5
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				is_subject = no
+				overlord = {
+					NOT = {
+						army_strength = {
+							who = PREV
+							value = 2.5
+						}
+					}
+				}
+			}
+			army_size = 20
+			development = 100
+		}
+		effect = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				add_country_modifier = {
+					name = CFS_werewolf_rebellion
+					duration = 9125
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = CFS_free_hunters
+					duration = 9125
+				}
+			}
+		}
+	}
+	CFS_werewolf_freedom = {
+		icon = mission_werewolf_freedom
+		required_missions = { CFS_vampyric_resistance }
+		position = 6
+		provinces_to_highlight = {
+			region = morytania_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_subject = no
+			calc_true_if = {
+				all_owned_province = {
+					region = morytania_region
+				}
+				amount = 20
+			}
+		}
+		effect = {
+			haunted_woods_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			dessous_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			slepe_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_morytania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	CFS_morytanian_dominance = {
+		icon = mission_morytanian_dominance
+		required_missions = { CFS_werewolf_freedom }
+		position = 7
+		provinces_to_highlight = {
+		}
+		trigger = {
+			is_great_power = yes
+			morytania_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = CFS_legacy_of_cave_canem
+				duration = -1
+			}
+		}
+	}
+}
+
+canifis_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = CFS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	CFS_werewolf_forces = {
+		icon = mission_werewolf_forces
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_size_percentage = 1
+			is_in_deficit = no			
+		}
+		effect = {
+			add_country_modifier = {
+				name = CFS_scent_of_fear
+				duration = 9125
+			}
+		}
+	}
+	CFS_agility_training = {
+		icon = mission_agility_training
+		required_missions = { CFS_werewolf_forces }
+		position = 2
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_professionalism = 0.2
+			has_leader_with = {
+				manuever = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = CFS_skullball_practice
+				duration = 9125
+			}
+		}
+	}
+	CFS_ruins_of_kharyrll = {
+		icon = mission_ruins_of_kharyrll
+		required_missions = { CFS_establishment_of_canifis }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 133
+		}
+		trigger = {
+			133 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 20
+				num_of_buildings_in_province = 4
+				province_has_center_of_trade_of_level = 2
+			}
+			OR = {
+				innovativeness = 10
+				absolutism = 20
+			}
+		}
+		effect = {
+			dessous_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	CFS_misthalanian_claim = {
+		icon = mission_misthalanian_claim
+		required_missions = { CFS_werewolf_freedom }
+		position = 7
+		provinces_to_highlight = {
+			region = misthalin_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_subject = no
+			calc_true_if = {
+				all_owned_province = {
+					region = misthalin_region
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			misthalin_region = {
+				limit = {
+					NOT = { area = swamp_caves_area }
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

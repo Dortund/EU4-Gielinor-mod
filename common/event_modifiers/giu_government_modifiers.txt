@@ -1,0 +1,14 @@
+##################################################################################################
+# Government Modifiers
+##################################################################################################
+
+#############
+#Vampyric
+#############
+
+vampyric_tributary_blood = {
+	monthly_blood_power_power_1 = 0.1
+}
+vampyric_enable_sentinel_recruitment = {
+	can_recruit_rajputs = yes
+}

@@ -1,0 +1,227 @@
+########################################
+# Events for Canifis
+########################################
+
+namespace = flavor_cfs
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_cfs.1
+	title = flavor_cfs.1.t #Werewolf Contact
+	desc = flavor_cfs.1.d #A population of werewolves from Morytania have reached out to us seeking co-operation. They have strong warriors and conviction in the true faith, but would benefit from assistance expanding their reach in the region. Aiding the werewolves could pay off with a strong alliance down the road.
+	
+	picture = CANIFIS_WEREWOLF_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_cfs.1.a #We would not turn away true followers of the [Root.Religion.GetName] faith.
+		add_opinion = {
+			who = CFS
+			modifier = cfs_allies_in_faith
+		}
+		add_historical_friend = CFS
+		CFS = {
+			add_historical_friend = ROOT
+		}
+		CFS = {
+			country_event = { 
+				id = flavor_cfs.2
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				alliance_with = MYT
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_cfs.1.b #Tell these dogs that their fight is not ours.
+		add_opinion = {
+			who = CFS
+			modifier = cfs_rejected_support
+		}
+		CFS = {
+			country_event = { 
+				id = flavor_cfs.3
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				alliance_with = MYT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_cfs.2
+	title = flavor_cfs.2.t #Support from the Mahjarrat
+	desc = flavor_cfs.2.d #Our attempts at outreach to the Mahjarrat have paid off, hopefully leading to a strong alliance we can use to strengthen the [Root.Religion.GetName] faith in Morytania.
+	
+	picture = DAEMONHEIM_BILRACH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_cfs.2.a #Excellent.
+		add_country_modifier = {
+			name = CFS_mahjarrat_assistance
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = flavor_cfs.3
+	title = flavor_cfs.3.t #Rejection of the Mahjarrat
+	desc = flavor_cfs.3.d #The pathetic Mahjarrat have refused to aid our cause!
+	
+	picture = DAEMONHEIM_BILRACH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_cfs.3.a #They might as well be heathens!
+	}
+}
+
+country_event = {
+	id = flavor_cfs.4
+	title = flavor_cfs.4.t #Standing Alone
+	desc = flavor_cfs.4.d #There are no Mahjarrat who follow the [Root.Religion.GetName] faith. Perhaps the answer is not to ask for Mahjarrat assistance, but take the power they amassed for ourselves!
+	
+	picture = CANIFIS_WEREWOLF_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_cfs.4.a #We'll build up a base of power ourselves!
+		daemonheim_peninsula_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		dungeons_of_daemonheim_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = flavor_cfs.5
+	title = flavor_cfs.5.t #The Fate of Slepe
+	desc = flavor_cfs.5.d #The village of Slepe was formed by humans who saw the folly of Saradomin's ways and instead joined Lord Zamorak. As fellow Zamorakians, they perhaps should be granted more privileges than the heretical vampyres - and they should repay the favour in turn.
+	
+	picture = MORYTANIA_SWAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_cfs.5.a #Provide them with limited self-governance.
+		create_march = SLP
+		custom_tooltip = cfs_tooltip_support_of_slepe
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = flavor_cfs.5.b #Give them more equal status in our realm.
+		trigger = {
+			NOT = {	accepted_culture = slepe }
+		}
+		add_accepted_culture = slepe
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_cfs.5.c #Let's put this whole Slepe situation to rest.
+		every_owned_province = {
+			limit = {
+				culture = slepe
+			}
+			add_province_modifier = {
+				name = CFS_oppression_of_slepe
+				duration = 3650
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_cfs.6
+	title = flavor_cfs.6.t #The Fate of Slepe
+	desc = flavor_cfs.6.d #Slepe was never really a core part of the realm of Morytania. They follow Zamorak, much like us werewolves once did - and much unlike the views of the Vampyres. Granting them greater autonomy would go a long way to proving our credentials as more fair than the previous Vampyric regime.
+	
+	picture = MORYTANIA_SWAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_cfs.6.a #Provide them with limited self-governance.
+		create_march = SLP
+		custom_tooltip = cfs_tooltip_support_of_slepe_not_zamorak
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = flavor_cfs.6.b #Give them more equal status in our realm.
+		trigger = {
+			NOT = {	accepted_culture = slepe }
+		}
+		add_accepted_culture = slepe
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_cfs.6.c #Let's put this whole Slepe situation to rest.
+		every_owned_province = {
+			limit = {
+				culture = slepe
+			}
+			add_province_modifier = {
+				name = CFS_oppression_of_slepe
+				duration = 3650
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_cfs.7
+	title = flavor_cfs.7.t #Vampyres Seize Control!
+	desc = flavor_cfs.7.d #Not content with us supplying them with our own blood, the vampyres now are taking a more direct role in our governance.
+	
+	picture = VAMPYRIC_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_cfs.7.a #Outrageous!
+		add_liberty_desire = 50
+	}
+}

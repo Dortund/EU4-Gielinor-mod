@@ -1,0 +1,30 @@
+#507 - Tal Teklam
+tribal_owner = ---
+culture = tlati
+religion = ranul
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 3
+
+trade_goods = manufactured_goods
+
+is_city = yes
+
+center_of_trade = 1
+
+2000.1.1 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+}
+
+2100.1.1 = {
+	base_tax = 6
+	base_production = 5
+	base_manpower = 5
+}

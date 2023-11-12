@@ -1,0 +1,35 @@
+########################################
+# Events for Ashihama
+########################################
+
+namespace = flavor_ahh
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_ahh.1
+	title = flavor_ahh.1.t #Defeat of the Nightmare
+	desc = flavor_ahh.1.d #The Nightmare has finally been ousted from Ashihama. Our people breathe a sigh of relief as they can sleep without disturbance. Well, at least, with no more disturbances than the average person.
+	picture = NIGHTMARE_OF_ASHIHAMA_eventPicture
+	
+	trigger = {
+		owns_province = 1177
+		NOT = { exists = NAS }
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = AHH_nightmare_on_the_run
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_ahh.1.a #And stay out!
+		add_prestige = 50
+	}
+}

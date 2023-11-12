@@ -1,0 +1,56 @@
+####################################################
+# Events to replace tradegoods
+####################################################
+
+namespace = culturelocked_tradegoods
+
+# Expansion of Runecrafting
+country_event = {
+	id = culturelocked_tradegoods.1
+	title = culturelocked_tradegoods.1.t #The Lost Art of Camdozaal
+	desc = culturelocked_tradegoods.1.d #With the Imcando population eliminated from the province of Camdozaal, its ancient manufacturing expertise has been lost.
+	picture = CANNON_eventPicture
+
+	trigger = {
+		46 = {
+			owner = ROOT
+			NOT = { culture = imcando }
+			trade_goods = refined_products
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = culturelocked_tradegoods.1.a #I'm sure we'll find something else to sell.
+		46 = {
+			change_trade_goods = advanced_ores
+		}
+	}
+}
+
+country_event = {
+	id = culturelocked_tradegoods.2
+	title = culturelocked_tradegoods.2.t #Rediscovery of the Lost Art of Camdozaal
+	desc = culturelocked_tradegoods.2.d #With the Imcando population restored to Camdozaal, its ancient manufacturing expertise has been recovered!
+	picture = CANNON_eventPicture
+
+	trigger = {
+		46 = {
+			owner = ROOT
+			culture = imcando
+			NOT = { trade_goods = refined_products }
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = culturelocked_tradegoods.2.a #Excellent!
+		46 = {
+			change_trade_goods = refined_products
+		}
+	}
+}

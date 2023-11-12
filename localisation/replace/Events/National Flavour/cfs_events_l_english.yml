@@ -1,0 +1,35 @@
+﻿l_english:
+ flavor_cfs.1.t:0 "Werewolf Contact"
+ flavor_cfs.1.d:0 "A population of werewolves from Morytania have reached out to us seeking co-operation. They have strong warriors and conviction in the true faith, but would benefit from assistance expanding their reach in the region. Aiding the werewolves could pay off with a strong alliance down the road."
+ flavor_cfs.1.a:0 "We would not turn away true followers of the [Root.Religion.GetName] faith."
+ flavor_cfs.1.b:0 "Tell these dogs that their fight is not ours."
+ 
+ flavor_cfs.2.t:0 "Support from the Mahjarrat"
+ flavor_cfs.2.d:0 "Our attempts at outreach to the Mahjarrat have paid off, hopefully leading to a strong alliance we can use to strengthen the [Root.Religion.GetName] faith in Morytania."
+ flavor_cfs.2.a:0 "Excellent."
+ 
+ flavor_cfs.3.t:0 "Rejection of the Mahjarrat"
+ flavor_cfs.3.d:0 "The pathetic Mahjarrat have refused to aid our cause!"
+ flavor_cfs.3.a:0 "They might as well be heathens!"
+ 
+ flavor_cfs.4.t:0 "Standing Alone"
+ flavor_cfs.4.d:0 "There are no Mahjarrat who follow the [Root.Religion.GetName] faith. Perhaps the answer is not to ask for Mahjarrat assistance, but take the power they amassed for ourselves!"
+ flavor_cfs.4.a:0 "We'll build up a base of power ourselves!"
+ 
+ flavor_cfs.5.t:0 "The Fate of Slepe"
+ flavor_cfs.5.d:0 "The village of Slepe was formed by humans who saw the folly of Saradomin's ways and instead joined Lord Zamorak. As fellow Zamorakians, they perhaps should be granted more privileges than the heretical vampyres - and they should repay the favour in turn."
+ flavor_cfs.5.a:0 "Provide them with limited self-governance."
+ cfs_tooltip_support_of_slepe:0 "While Canifis remains Zamorakian and Slepe remains a subject, we will permanently receive §T+1 Missionary§! and §T+1% Missionary Strength§!."
+ flavor_cfs.5.b:0 "Give them more equal status in our realm."
+ flavor_cfs.5.c:0 "Let's put this whole Slepe situation to rest."
+ 
+ flavor_cfs.6.t:0 "The Fate of Slepe"
+ flavor_cfs.6.d:0 "Slepe was never really a core part of the realm of Morytania. They follow Zamorak, much like us werewolves once did - and much unlike the views of the Vampyres. Granting them greater autonomy would go a long way to proving our credentials as more fair than the previous Vampyric regime."
+ flavor_cfs.6.a:0 "Provide them with limited self-governance."
+ cfs_tooltip_support_of_slepe:0 "While Slepe remains a subject, we will permanently receive §T+1 Tolerance of Heretics§! and §T+1 Tolerance of Heathens§!."
+ flavor_cfs.6.b:0 "Give them more equal status in our realm."
+ flavor_cfs.6.c:0 "Let's put this whole Slepe situation to rest."
+ 
+ flavor_cfs.7.t:0 "Vampyres Seize Control!"
+ flavor_cfs.7.d:0 "Not content with us supplying them with our own blood, the vampyres now are taking a more direct role in our governance."
+ flavor_cfs.7.a:0 "Outrageous!"

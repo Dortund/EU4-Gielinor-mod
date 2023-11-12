@@ -1,0 +1,33 @@
+#490 - Auburnvale
+owner = AUB
+controller = AUB
+add_core = AUB
+tribal_owner = ---
+culture = auburnvaler
+religion = ralos
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+trade_goods = advanced_logs
+
+is_city = yes
+
+center_of_trade = 1
+
+fort_15th = yes
+
+native_size = 2
+native_ferocity = 5
+native_hostileness = 1
+
+2000.1.1 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+}

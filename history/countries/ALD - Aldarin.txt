@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 1
+primary_culture = aldarin
+religion = ralos
+technology_group = zeantechgroup
+capital = 488
+
+1913.7.17 = {
+	monarch = {
+		name = "Silvana"
+		dynasty = "Ruspoli"
+		birth_date = 1883.6.19
+		adm = 4
+		dip = 6
+		mil = 0
+		female = yes
+	}
+}

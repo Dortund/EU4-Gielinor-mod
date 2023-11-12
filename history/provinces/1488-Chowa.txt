@@ -1,0 +1,19 @@
+#1488-Chowa
+owner = AHH
+controller = AHH
+add_core = AHH
+tribal_owner = ---
+culture = siren
+religion = suzaku
+
+discovered_by = wushankotechgroup
+
+hre = yes
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = bamboo
+
+is_city = yes

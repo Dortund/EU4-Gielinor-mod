@@ -1,0 +1,840 @@
+namespace = excessive_tithe
+
+########################################
+# Excessive Tithe
+########################################
+
+country_event = {
+	id = excessive_tithe.1
+	title = excessive_tithe.1.t #Blood Supplies Run Dry
+	desc = excessive_tithe.1.d #Vampyres need blood to survive, and plentiful blood to thrive. The realm of [Root.GetName], however, is dangerously low on blood supplies, causing desperate vampyres to excessively drain tithes for any blood they can get. If the situation persists, our tithes will die off, and so shall we!
+	picture = MORYTANIA_VYREWATCH_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = excessive_tithe_start
+	}
+	
+	option = {
+		name = excessive_tithe.1.a #Even nobles must make sacrifices in this time.
+		trigger = {
+			has_estate = estate_nobles
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_country_modifier = {
+			name = excessive_tithe_noble_restrictions
+			duration = 9125
+		}
+		add_stability = -2
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				estate_influence = {
+					estate = estate_nobles
+					influence = 60
+				}
+			}
+		}
+	}
+	option = {
+		name = excessive_tithe.1.b #Feeding the tithes better would provide more blood.
+		trigger = {
+			any_owned_province = {
+				NOT = { culture_group = vampyre_group }
+				NOT = { culture_group = undead_group }
+			}
+		}
+		add_country_modifier = {
+			name = excessive_tithe_tithe_concessions
+			duration = 9125
+		}
+		add_stability = -2
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 5
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 4
+				}
+			}
+		}
+	}
+	option = {
+		name = excessive_tithe.1.c #Our tributaries need to work harder.
+		trigger = {
+			has_subject_of_type = tributary_state
+		}
+		every_subject_country = {
+			add_opinion = {
+				who = PREV
+				modifier = excessive_tithe_took_harsh_tithe
+			}
+		}
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = 5
+		}
+		add_country_modifier = {
+			name = excessive_tithe_tributary_pressure
+			duration = 9125
+		}
+		add_stability = -2
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				num_of_subjects = 5
+			}
+		}
+	}
+	option = {
+		name = excessive_tithe.1.e #The answer to this problem is fresh conquest!
+		add_mil_power = 25
+		add_country_modifier = {
+			name = excessive_tithe_drive_for_conquest
+			duration = 9125
+		}
+		add_stability = -2
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 10
+				dynasty = "Drakan"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = excessive_tithe.2
+	title = excessive_tithe.2.t #Anti-Vampyre Uprising in [local_myreque_uprising.GetName]
+	desc = excessive_tithe.2.d #Sensing what they believe to be our weakness in [local_myreque_uprising.GetName], a local [local_myreque_uprising.Religion.GetName] group is assembling to resist our rule. How should we crush them?
+	picture = MORYTANIA_VYREWATCH_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			is_capital = no
+			is_state = yes
+			OR = {
+				culture_group = misthalin_group
+				culture_group = hallowvale_group
+			}
+			NOT = { religion_group = chaos_group }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					is_state = yes
+					OR = {
+						culture_group = misthalin_group
+						culture_group = hallowvale_group
+					}
+					NOT = { religion_group = chaos_group }
+				}
+				save_event_target_as = local_myreque_uprising
+			}
+		}
+	}
+	
+	option = {		# Let them fight. We will cut them down.
+		name = "excessive_tithe.2.a"
+		event_target:local_myreque_uprising = {
+			spawn_rebels = {
+				size = 2
+				type = religious_rebels
+			}
+		}
+	}
+	option = {		# We don't have time for this! Give them a taste of true Vampyric power!
+		name = "excessive_tithe.2.b"
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = -5
+		}
+	}
+}
+
+country_event = {
+	id = excessive_tithe.3
+	title = excessive_tithe.3.t #Noble Caught with Secret Blood Supply!
+	desc = excessive_tithe.3.d #In a time of limited blood supplies, the prospect of one of our nobles hoarding supplies for themselves reflects badly on our leadership if we allow it to continue - but the nobles won't like us taking from them for any reason.
+	picture = MORYTANIA_VYREWATCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {	#It must be seized!
+		name = "excessive_tithe.3.a"
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+	option = {	#Let this slide.
+		name = "excessive_tithe.3.b"
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_legitimacy = -5
+	}
+}
+
+country_event = {
+	id = excessive_tithe.4
+	title = excessive_tithe.4.t #The Werewolf Plot
+	desc = excessive_tithe.4.d #The River Salve is a barrier to Vampyres crossing into Misthalin and taking blood from its population. However, the Salve does not stop werewolves from taking victims back to Morytania on our behalf - so long as we can pay them for their trouble or pressure them into compliance.
+	picture = MORYTANIA_WEREWOLF_FIGHT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			any_owned_province = {
+				region = misthalin_region
+			}
+		}
+		OR = {
+			any_owned_province = {
+				culture_group = werewolf_group
+			}
+			any_subject_country = {
+				primary_culture = canifian
+			}
+		
+		}
+	}
+	
+	option = {	#Pay the werewolves to take blood tithes for us.
+		name = "excessive_tithe.4.a"
+		add_years_of_income = -0.5
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = 10
+		}
+		hidden_effect = {
+			MST = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = MST_myreque_flag
+						}
+					}
+					country_event = { 
+						id = excessive_tithe.5
+						days = 30
+						random = 15
+					}
+				}
+			}
+		}
+	}
+	option = {	#Threaten the werewolves to give us the tithes!
+		name = "excessive_tithe.4.b"
+		add_mil_power = -25
+		every_subject_country = {
+			limit = {
+				primary_culture = canifian
+			}
+			add_liberty_desire = 10
+		}
+		every_owned_province = {
+			limit = {
+				culture = canifian
+			}
+			add_unrest = 2
+		}
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = 10
+		}
+		hidden_effect = {
+			MST = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = MST_myreque_flag
+						}
+					}
+					country_event = { 
+						id = excessive_tithe.5
+						days = 30
+						random = 15
+					}
+				}
+			}
+		}
+	}
+	option = {	#We can't trust these dogs to do a thing!
+		name = "excessive_tithe.4.c"
+	}
+}
+
+country_event = {
+	id = excessive_tithe.5
+	title = "excessive_tithe.5.t" #Missing Civilians in [local_stolen_civilians.GetName]!
+	desc = "excessive_tithe.5.d" #A number of people have gone missing in [local_stolen_civilians.GetName] with no clear explanation.
+	picture = MORYTANIA_VYREWATCH_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					is_state = yes
+					base_tax = 2
+					culture_group = misthalin_group
+				}
+				save_event_target_as = local_stolen_civilians
+			}		
+		}
+		set_country_flag = MST_myreque_flag
+	}
+	
+	option = {	#This is clearly an internal criminal problem.
+		name = "excessive_tithe.5.a"
+		event_target:local_stolen_civilians = {
+			add_base_tax = -1
+		}
+		add_country_modifier = {
+			name = excessive_tithe_crime_crackdown
+			duration = 3650
+		}
+	}
+	option = {	#It must be the Wilderness!
+		name = "excessive_tithe.5.b"
+		trigger = {
+			any_owned_province = {
+				OR = {
+					has_active_triggered_province_modifier = wildy_border_level_one
+					has_active_triggered_province_modifier = wildy_border_level_two
+					has_active_triggered_province_modifier = wildy_border_level_three
+					has_active_triggered_province_modifier = wildy_border_level_four
+					has_active_triggered_province_modifier = wildy_border_level_five
+					has_active_triggered_province_modifier = wildy_border_level_six
+					has_active_triggered_province_modifier = wildy_border_level_seven
+					has_active_triggered_province_modifier = wildy_border_level_eight
+					has_active_triggered_province_modifier = wildy_border_level_nine
+				}
+			}
+		}
+		event_target:local_stolen_civilians = {
+			add_base_tax = -1
+		}
+		add_mil_power = -25
+		random_empty_neighbor_province = {
+			limit = {
+				region = forinthry_region
+			}
+			change_native_ferocity = -1
+			change_native_hostileness = -1
+		}
+	}
+	option = {	#Perhaps the solution rests in Morytania.
+		name = "excessive_tithe.5.c"
+		trigger = {
+			owns_core_province = 27
+			NOT = {
+				any_owned_province = {
+					region = morytania_region
+				}
+			}
+		}
+		event_target:local_stolen_civilians = {
+			add_base_tax = -1
+		}
+		add_years_of_income = -0.25
+		27 = {
+			add_province_modifier = {
+				name = excessive_tithe_double_reinforcement
+				duration = 7300
+			}
+		}
+	}
+	option = {	#Unfortunately, there is nothing we can do.
+		name = "excessive_tithe.5.e"
+		event_target:local_stolen_civilians = {
+			add_base_tax = -1
+		}
+		add_prestige = -5
+	}
+}
+
+country_event = {
+	id = excessive_tithe.6
+	title = excessive_tithe.6.t #Blood Supplies from Wushanko
+	desc = excessive_tithe.6.d #Pirates from the Wushanko Isles offer to bring us fresh victims to restock our blood supplies, but we would need to pay them.
+	picture = MORYTANIA_VYREWATCH_eventPicture
+
+	is_triggered_only = yes
+	
+	
+	trigger = {
+		any_owned_province = {
+			has_port = yes
+		}
+	}
+	
+	option = {	#Fine, fine, pay them.
+		name = "excessive_tithe.6.a"
+		add_years_of_income = -0.25
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = 5
+		}
+	}
+	option = {	#Buy corpses from overseas? We don't know where they've been!
+		name = "excessive_tithe.6.b"
+	}
+}
+
+country_event = {
+	id = excessive_tithe.7
+	title = excessive_tithe.7.t #Ranis Drakan Slain!
+	desc = excessive_tithe.7.d #Lowerniel Drakan's heir, Ranis, has been killed! Whether by a rival noble or a human resistance is at this time difficult to tell, but it amounts to the greatest loss of the Drakan family in an age.
+	picture = MORYTANIA_VYREWATCH_eventPicture
+	
+	trigger = {
+		tag = MYT
+		OR = {
+			has_disaster = excessive_tithe
+			AND = {
+				has_country_flag = excessive_tithe_finished
+				has_any_disaster = yes
+			}
+		}
+		has_ruler = "Lowerniel"
+		has_heir = "Ranis"
+		MST = {
+			mission_completed = MST_in_aid_of_the_myreque
+		}
+		NOT = { has_country_flag = MYT_end_of_myreque_disaster_chain }
+	}
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {	#They underestimate the power of Lowerniel. Let the plotters overconfidently make their next move - he will then destroy them.
+		name = "excessive_tithe.7.a"
+		kill_heir = {}
+		define_heir = {
+			name = "Vanescula"
+			dynasty = ROOT
+			age = 2000
+			adm = 4
+			dip = 5
+			mil = 4
+			claim = 75
+			female = yes
+		}
+		add_heir_personality = immortal_personality
+		custom_tooltip = excessive_tithe_bait_the_plot_tooltip
+		hidden_effect = {
+			country_event = {
+				id = excessive_tithe.8
+				days = 150
+				random = 35
+			}
+		}
+		ai_chance = { 
+			factor = 40 
+		}
+	}
+	option = {	#The nobles have run rampant for too long! Ranis shall be avenged!
+		name = "excessive_tithe.7.b"
+		kill_heir = {}
+		define_heir = {
+			name = "Vanescula"
+			dynasty = ROOT
+			age = 2000
+			adm = 4
+			dip = 5
+			mil = 4
+			claim = 75
+			female = yes
+		}
+		add_heir_personality = immortal_personality
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = excessive_tithe_revenge_for_ranis
+			influence = -10
+			duration = 7300
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -15
+		}
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = 5
+		}
+		custom_tooltip = excessive_tithe_blame_the_nobles_tooltip
+		hidden_effect = {
+			country_event = {
+				id = excessive_tithe.11
+				days = 500
+				random = 35
+			}
+		}
+		ai_chance = { 
+			factor = 0 
+		}
+	}
+	option = {	#Clearly the humans haven't been put in their place! Ranis shall be avenged!
+		name = "excessive_tithe.7.c"
+		kill_heir = {}
+		define_heir = {
+			name = "Vanescula"
+			dynasty = ROOT
+			age = 2000
+			adm = 4
+			dip = 5
+			mil = 4
+			claim = 75
+			female = yes
+		}
+		add_country_modifier = {
+			name = MYT_revenge_for_ranis_modifier
+			duration = 7300
+		}
+		add_heir_personality = immortal_personality
+		custom_tooltip = excessive_tithe_blame_the_humans_tooltip
+		hidden_effect = {
+			country_event = {
+				id = excessive_tithe.13
+				days = 400
+				random = 35
+			}
+		}
+		ai_chance = { 
+			factor = 0 
+		}
+	}
+}
+
+country_event = {
+	id = excessive_tithe.8
+	title = excessive_tithe.8.t #At the Gates of [Root.Capital.GetName]
+	desc = excessive_tithe.8.d #It appears the plan to stake out Ranis' killers has resulted in a surprising outcome - [Root.Heir.GetName] working with a human resistance group known as the Myreque! But Lowerniel is prepared... What shall their fate be?
+	picture = MORYTANIA_MYREQUE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {	#Hunt them! Like the prey they are!
+		name = "excessive_tithe.8.a"
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = 10
+		}
+		custom_tooltip = excessive_tithe_thrill_of_the_hunt
+		exile_heir_as = MYT_exiled_vanescula
+		hidden_effect = {
+			country_event = {
+				id = excessive_tithe.9
+				days = 150
+				random = 35
+			}
+		}
+		ai_chance = { 
+			factor = 50
+		}
+	}
+	option = {	#Kill them and be done with it.
+		name = "excessive_tithe.8.b"
+		kill_heir = {}
+		set_country_flag = MYT_end_of_myreque_disaster_chain
+		ai_chance = { 
+			factor = 0 
+		}
+	}
+}
+
+country_event = {
+	id = excessive_tithe.9
+	title = excessive_tithe.9.t #Myreque Counterattack Slays Lowerniel!
+	desc = excessive_tithe.9.d #The decision to let the Myreque flee Lowerniel for the thrill of the hunt was perhaps not his most sensible tactic. After a long, gruelling battle, he was killed by his own blade - the Sunspear. And an old plotter returns to take the throne...
+	picture = MORYTANIA_MYREQUE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {	#Why didn't he just kill them?
+		name = "excessive_tithe.9.a"
+		set_heir = MYT_exiled_vanescula
+		kill_ruler = yes
+		hidden_effect = {
+			country_event = {
+				id = excessive_tithe.10
+				days = 60
+				random = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = excessive_tithe.10
+	title = excessive_tithe.10.t #The Return of Queen Efaritay
+	desc = excessive_tithe.10.d #With the death of Lowerniel Drakan, a surprising sight has been spotted in Morytania - an Icyene, or more precisely, Queen Efaritay, former ruler of Hallowvale! She is willing to work on a solution to Morytania's blood shortages in exchange for better treatment of the humans of Morytania.
+	picture = MORYTANIA_SWAMP_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {	#This can finally end the blood shortages!
+		name = "excessive_tithe.10.a"
+		end_disaster = excessive_tithe
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = 10
+		}
+		add_country_modifier = {
+			name = MYT_compromise_of_efaritay
+			duration = -1
+		}
+		set_country_flag = MYT_end_of_myreque_disaster_chain
+		ai_chance = { 
+			factor = 50
+		}
+	}
+	option = {	#She was rightfully conquered, she should stay conquered.
+		name = "excessive_tithe.10.b"
+		add_legitimacy = 10
+		set_country_flag = MYT_end_of_myreque_disaster_chain
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = excessive_tithe.11
+	title = excessive_tithe.11.t #Blisterwood Found in Meiyerditch!
+	desc = excessive_tithe.11.d #It was thought impossible, but it appears that humans have infiltrated Darkmeyer and taken from the accurséd Blisterwood tree - perhaps a result of Lowerniel's recent purge of Vampyric nobles resulting in lax security. We must make a response lest the humans overrun us all!
+	picture = MORYTANIA_MYREQUE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {	#They want war? We shall bring them war!
+		name = "excessive_tithe.11.a"
+		add_legitimacy = 10
+		add_government_power = {
+			mechanic_type = blood_power_mechanic
+			power_type = blood_power_power_1
+			value = 5
+		}
+		add_country_modifier = {
+			name = MYT_reign_of_terror
+			duration = -1
+		}
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				is_state = yes
+				NOT = { religion = vampyric }
+			}
+			spawn_rebels = {
+				size = 3
+				type = religious_rebels
+			}
+		}
+		custom_tooltip = reign_of_terror_tooltip
+		set_country_flag = MYT_end_of_myreque_disaster_chain
+	}
+	option = {	#They are humans; what's the worst they could do?
+		name = "excessive_tithe.11.b"
+		custom_tooltip = ignore_blisterwood_tooltip
+		add_legitimacy = -5
+	}
+}
+
+country_event = {
+	id = excessive_tithe.12
+	title = excessive_tithe.12.t #Coalition of Nobles and Myreque Slay Lowerniel Drakan!
+	desc = excessive_tithe.12.d #Lowerniel Drakan over the centuries had become increasingly insular, ignorng the many significant changed to Morytania, and arrogantly crushing his greatest supporters while emboldening his greatest enemies. The great strategic mind of the Third Age he no longer possessed.
+	picture = MORYTANIA_MYREQUE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {	#Oh well.
+		name = "excessive_tithe.12.a"
+		kill_ruler = yes
+		hidden_effect = {
+			country_event = {
+				id = excessive_tithe.10
+				days = 60
+				random = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = excessive_tithe.13
+	title = excessive_tithe.13.t #Power Struggle!
+	desc = excessive_tithe.13.d #With the human population of Morytania devastated, an uprising of nobles led by [Root.Heir.GetName] has demanded Lowerniel stands down!
+	picture = MORYTANIA_VYREWATCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {	#Fight or the kingdom is lost!
+		name = "excessive_tithe.13.a"
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+				use_heir_as_leader = yes
+			}
+		}
+		set_country_flag = excessive_tithe_power_struggle_flag
+	}
+}
+
+country_event = {
+	id = excessive_tithe.14
+	title = excessive_tithe.14.t #The Fall of Lowerniel
+	desc = excessive_tithe.14.d #Lowerniel Drakan failed to resist his heir's uprising and has fallen.
+	picture = MORYTANIA_SWAMP_eventPicture
+
+	trigger = {
+		tag = MYT
+		has_any_disaster = yes
+		country_flag = excessive_tithe_power_struggle_flag
+		NOT = { has_ruler = "Lowerniel" }
+		NOT = { has_country_flag = MYT_end_of_myreque_disaster_chain }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {	#All hail [Root.Monarch.GetTitle] [Root.Monarch.GetName]!
+		name = "excessive_tithe.14.a"
+		add_legitimacy = 10
+		hidden_effect = {
+			country_event = {
+				id = excessive_tithe.10
+				days = 60
+				random = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = excessive_tithe.15
+	title = excessive_tithe.15.t #The Triumph of Lowerniel
+	desc = excessive_tithe.15.d #Lowerniel Drakan has triumphed over threats to his rule!
+	picture = MORYTANIA_SWAMP_eventPicture
+
+	trigger = {
+		tag = MYT
+		has_any_disaster = yes
+		has_country_flag = excessive_tithe_power_struggle_flag
+		has_ruler = "Lowerniel"
+		NOT = { num_of_rebel_armies = 1 }
+		NOT = { has_country_flag = MYT_end_of_myreque_disaster_chain }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {	#All hail [Root.Monarch.GetTitle] [Root.Monarch.GetName]!
+		name = "excessive_tithe.15.a"
+		add_legitimacy = 10
+		set_country_flag = MYT_end_of_myreque_disaster_chain
+	}
+}
+
+country_event = {
+	id = excessive_tithe.100
+	title = excessive_tithe.100.t #The End of the Blood Crisis
+	desc = {
+		trigger = {
+			NOT = { has_government_mechanic = blood_power_mechanic }
+		}
+		desc = excessive_tithe.100.da #New reforms in [Root.GetName] have made the power of blood irrelevant, ending the fears of excessive tithing.
+	}
+	desc = {
+		trigger = {
+			has_government_mechanic = blood_power_mechanic
+			has_country_modifier = MYT_compromise_of_efaritay
+		}
+		desc = excessive_tithe.100.db #The return of Haemalchemy techniques to [Root.GetName] has ended the blood tithing crisis.
+	}
+	desc = {
+		trigger = {
+			has_government_mechanic = blood_power_mechanic
+			NOT = { has_country_modifier = MYT_compromise_of_efaritay }
+			has_government_power = {
+				mechanic_type = blood_power_mechanic
+				power_type = blood_power_power_1
+				value = 90
+			}
+		}
+		desc = excessive_tithe.100.dc #Fresh sources of blood have ended the crisis in [Root.GetName].
+	}
+	desc = {
+		trigger = {
+			has_government_mechanic = blood_power_mechanic
+			NOT = { has_country_modifier = MYT_compromise_of_efaritay }
+			NOT = {
+				has_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 90
+				}
+			}
+		}
+		desc = excessive_tithe.100.dd #Somehow, in some unforseen way, the blood crisis is over in [Root.GetName]!
+	}
+
+	picture = VAMPYRIC_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = excessive_tithe_finished
+			clr_country_flag = excessive_tithe_start
+			remove_country_modifier = excessive_tithe_noble_restrictions
+			remove_country_modifier = excessive_tithe_tithe_concessions
+			remove_country_modifier = excessive_tithe_tributary_pressure
+			remove_country_modifier = excessive_tithe_drive_for_conquest
+			remove_country_modifier = MYT_revenge_for_ranis_modifier
+			remove_country_modifier = MYT_reign_of_terror
+		}
+	}
+
+	option = {
+		name = excessive_tithe.100.a #Hopefully this won't happen again.
+		add_stability = 2
+	}
+}

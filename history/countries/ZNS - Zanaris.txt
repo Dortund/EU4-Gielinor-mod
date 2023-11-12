@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = noble_kingdom
+government_rank = 2
+primary_culture = fairy
+religion = guthix
+technology_group = centraltechgroup
+capital = 938 #South Lumbridge Swamp

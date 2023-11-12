@@ -1,0 +1,19 @@
+#1454-Hailstorm Mountain
+owner = VAR
+controller = VAR
+add_core = VAR
+tribal_owner = ---
+culture = proudspirian
+religion = ranul
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = hunter_creatures
+
+is_city = yes

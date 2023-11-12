@@ -1,0 +1,1375 @@
+##Gielinor Universalis Patch Notes
+
+# For patches previous to current one
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.7.0b patch notes
+
+#######################
+# Bugfixes
+#######################
+
+# Dortund's Fixes
+## Renamed adventurer and dragonkin raid rebels localisation file
+## Fixed localisation of Khazari trade company
+## Prevented the Cave of Guthix and Temple to Guthix from spawning in a wasteland province
+## Fixed localisation for two Exploration institution spread modifier tooltips
+## Fixed province highlighting for two Senntisten missions
+## Fixed losing Elder artifacts and Guthix's cave province modifier when province changes ownership
+## Fixed scoping of wilderness border province modifiers
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.7.0a patch notes 
+
+#######################
+# Bugfixes
+#######################
+
+# Fixed Reformed Zarosian Theocracy not being usable
+
+# Dortund's Fixes
+## Fixed description of "Find Char" mission
+## Fixed generic Kharidian missions Monuments of Kharid and Defend Ourselves
+## Simplified code of missions requesting the nation is not in a deficit
+## Fixed province id references in Jaldraocht missions
+## Barrows Brothers in Senntisten missions now are named properly
+## Fixed Sister of Zaros mission in Zarosian Empire missions
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.7.0 patch notes (Jaldraocht)
+
+# The seemingly impossible dream of reforming the Zarosian Empire has become a little more likely as Jaldraocht can now take steps to rebuild Senntisten, and from there, try to make the Empire anew. It won't be easy, however...
+# Featuring even more of Dortund's bug fixes!
+
+#######################
+# Map
+#######################
+
+# Moved Venenatis and renamed some Forinthry provinces in accordance with changes to OSRS' Wilderness bosses
+
+#######################
+# Government
+#######################
+
+# Boss nations' opinion penalties with other nations are now tied to the government form, rather than the country.
+
+#######################
+# National Flavour
+#######################
+
+# New startup screen text for Jaldraocht, Kharidians, Menaphos and generic Kharidian Desert nations
+# Localised national ideas for Berserkers, Callisto, Lithkren, Kharidian Empire, Merfolk, Scorpia, Venenatis
+# New generic Kharidian mission tree for all Kharidian-culture countries without a tree of their own; contains 15 missions
+
+# New Nation: Senntisten. Formable by non-Wushanko-culture Zarosians who have the Saranthium area controlled, and either 200 development, or playing as Jaldraocht with sufficient mission tree progress.
+## This nation is designed as a mid-way between starting Zarosian nations and the Zarosian Empire. Resurgentia is the Wushanko-culture equivalent.
+## If you free Azzanadra, he can lead your nation with the unique Reformed Zarosian Theocracy government form.
+## Has 22 missions, shared with the Zarosian Empire
+
+# Canem
+## Added new decision to found the village of Canifis, also renaming the nation to Canifis
+
+# Jaldraocht
+## National idea Last Zarosians now provides Republican Tradition, so it's actually useful for their government form
+## New mission tree with 15 missions, leading you towards forming Senntisten
+
+# Kharidian Empire
+## Now requires 50 Kharidian provinces and specific cities to form, rather than the entire Kharidian region.
+
+# Kharidians/Al Kharid
+## Added images for all existing Kharidian/Al Kharid missions
+## Depopulation of the Plateau event now gives you an option to have fewer penalties, but change the province's culture to Hill Giant - so long as you haven't already given it to the Saradominists.
+## New flavour event for the corruption of the Duel Arena
+## 5 additional missions for Al Kharid.
+
+# King Black Dragon
+## Now follows Godless (Evasive School) instead of Zaros, reflecting his neutrality in the wake of the Zaros-Zamorak split in the fear it would destroy the dragons and dragon riders.
+
+# Menaphos
+## Added images for all existing Menaphite missions
+## Added 6 additional missions. The tree is by no means complete yet.
+
+# Misthalin
+## Rearranged mission tree somewhat, and added In Aid of the Myreque mission. Unlocks the unique Burgh de Rott Rambler mercenaries, which are cheaper and take less land attrition.
+
+# Nardah
+## Now is Saradominist on the 169 5th age bookmark, to reflect the events just before the Spirits of the Elid quest
+## Added Spirits of the Elid events
+
+# Scabarites
+## Added 7 more missions, for a total of 14.
+## Added icons for missions
+
+# Zarosian Empire
+## Formation no longer changes primary culture, and no longer renames Viggora's Folly to Viggora's Fortress (he was a traitor to Zaros, after all)
+## Traditions now grants +1 diplomat instead of +2 diplomatic reputation.
+## 21 new missions! Also carries over Senntisten missions, for a total mission tree of 43 missions!
+
+# Zemouregal
+## Missions slightly adjusted to account for moving of Venenatis
+
+#######################
+# Bugfixes
+#######################
+
+# Dortund brings yet another batch of fixes to the mod!
+
+# Fixed Mansions of the Moon Wushanko aspect
+# Fixed bad code in Bandosian Battle Strategies
+# Fixed bad code in Serenist Incidents
+# "Traitor to Asgarnia" opinion modifier code fixed
+# Fixed Suzaku rebels referring to misspelt "Suzako"
+# GOTO functionality added to "Cadarn Elves Join the Resistance!" event
+# Fixed provinces needed to trigger the Temple of Shadow spawn
+# Significant fixes to Seren events
+# Fixed outdated code in Institution events
+# Fixed code for Architecture event image
+# Fixed Ferox Enclave's adjective
+# Fixed some strait crossings using incorrect provinces
+# Correctly added Lost Mines to the Eastern Runescape continent
+
+#######################
+# Miscellaneous
+#######################
+
+# Added some more mercenary companies
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.6.2 patch notes (Neitiznot)
+
+# Turns out a whole lot of extra bugs haven't been fixed yet, so here's another bugfixing pass - along with an expansion for religions in the Nonintervention group!
+# Special thanks to Dortund for a huge number of bug fixes!
+
+#######################
+# National Flavour
+#######################
+
+# Localised national ideas for Burgh de Rott, Gunnar, Saranthium, Troll Stronghold, Unterwulf, Zarosian Empire
+
+# Arposandra
+## Anima Manipulation national idea no longer has penalties, but only has -10% build cost instead of -25%
+### This is because the diplomatic consequences for Arposandra's direction are now modelled by their Exploitative school in the Guthixian faith.
+
+# Jatizso
+## Added 2 extra missions
+
+# Neitiznot
+## Added 2 extra missions
+
+# Zarosian Empire
+## Now only needs Lassar rather than the whole of Asgarnia to be formed. Still needs the entire Misthalin region.
+
+#######################
+# Religions
+#######################
+
+# Guthix
+## Corrected instances of Balance still being labelled as "Karma"
+## New icons for Balance
+## Now has six religious schools.
+
+# Godless
+## Now has access to a reskinned version of Sikhism's Guru mechanic. Every 50 years (until the Quests institution) a new Adaptation will be developed
+## Godless schools have been nerfed somewhat to balance this new mechanic.
+## Godless schools have had their images adjusted for easier identification
+
+# Northern Pantheon
+## May invite scholars of many of Guthixian, Godless and V's religious schools (though not all). The Northern Pantheon, however, has no religious schools of its own.
+
+# V
+## Now has three religious schools, and can invite scholars from Godless and V religious schools.
+
+# Wushanko Group
+## Added descriptions for aspects of faith
+
+#######################
+# Governments
+#######################
+
+# Druidic State/Druidic Order - Now offers Balance decay instead of a flat Balance increase
+
+#######################
+# Institutions
+#######################
+
+# Architecture spawning changed from requiring a Workshop to requiring three buildings in a province, something that is far easier to achieve in 4A 1950.
+
+#######################
+# Map
+#######################
+
+# Kandarin province Donjon d'évasion renamed to Zanash in accordance with lore
+# Gunnar now appears on the map in certain years on the historical start.
+
+#######################
+# Localisation
+#######################
+
+# Added startup text for the Godless, Guthixian and Northern Pantheon religions.
+
+#######################
+# Bugfixes
+#######################
+
+# Fixed bad startup text code for the Serenist faith
+# Removed old code referring to old institution penalty costs
+# Fixed Age of Mortals capital attack bonus
+# Fixed crash from picking Suzaku aspects of faith
+# Fixed Karamjan Shipyard Expansion mission not properly requiring a level 2 centre of trade
+# Sixth Age age objectives and bonuses are now functional
+# Fixed Zemouregal missions not giving permanent claims on the King's Road area
+# Fixed Lumshire's town being graphically in the middle of Lumbridge Swamp
+# Fixed bad code in the decisions involving forming Forinthry, forming Grand Ourania, Guthix's Cave, Lucien's religion, entering Tirannwn as Tyras, retreating north as Weiss, crushing runecrafting altars as Gunnar and ones involving Elder Artefacts
+
+## Extra fixes from Dortund (summarised here as there's so many!):
+# Code fixes for cultures, governments, monuments, national ideas, institutions, religion, scripted estate triggers
+# Decision code fixes for Elder Artefacts, Fenisento, Gunnar altar-crushing, Guthix Cave, Hebikatochi, 
+# Event code fixes for Wilderness Border, Elder God Wars, Bandos, Brassica Prime, Seren, Elder Discovery, Brink of Extinction, Kinshra-White Knight War, 
+## National flavour event code fixes for Arposandra, Asgarnia, Corsair Cove, Crandor, Enakhra, Ferox Enclave, Glough, Gnome Empire, Gunnar, Jatizso/Neitiznot, Keldagrim, Kandarin, Kourend, Mage Arena, Moon Clan, Mos le' Harmless, Misthalin, Pescaling, Pollnivneach, Rellekka, Tempoross, Void Pests, Wilderness Bandits
+# Interface code fixes for Suzaku
+# Mission code fixes for Acheron, Carnilleus, Karamja, Wushanko, Iorwerth, Misthalin, Morytania, Troll Stronghold, TzHaar, 
+# Event localisation fixes for Bedabins, Ferox Enclave, Glouphrie Dictatorship disaster
+# Mission localisation fixes for Morytania
+# Further localisation fixes for wargoal peace offers, decisions, religion (especially Brassica Prime)
+
+#######################
+# Miscellaneous
+#######################
+
+# Improved Great Kourend house flags/faction icons, especially Hosidius
+# New images for faction influence change for mod-unique factions
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.6.1 patch notes (Jatizso)
+
+# Here's a smaller patch to fling together some code fixes and add some little improvements for minor Fremennik realms.
+
+#######################
+# National Flavour
+#######################
+
+# New mission tree for generic Fremmenik nations (not Rellekka, Aesagrun or Moonclan; Gunnar will eventually not use these but for now has access to some). Consists of 15 missions.
+
+# Jatizso
+## Existing missions have been moved around to accommodate generic Fremennik missions.
+
+# Neitiznot
+## Existing missions have been moved around to accommodate generic Fremennik missions.
+
+#######################
+# Events
+#######################
+
+# Three new price events that may turn up later in the game
+
+#######################
+# Localisation
+#######################
+
+# Added startup text for Fremmenik-culture nations in the Fremennik region
+# Added startup text for Armadyl, Dark Lord, Menaphite, Saradomin, V, Zaros religions
+# Added government/leader names for Druidic States/Order, Obsidian Caste, Rellekka
+
+#######################
+# Bugfixes
+#######################
+
+# Fixed Stable Nation age objective
+# Fixed Armadyl not having access to the Edict of Invention and Golem Guardians aspects
+# Fixed GUI for House Disunity and Elven Desperation
+# Corrected code for Gnome Empire events
+# Corrected code for Gunnar events
+# Fixed Arposandra's Poison Waste event so it actually creates the province modifier
+# Fixed old code for Council of Khans events
+# Fixed Dreaded Years of Tragedy disaster code
+# Fixed Rise of the Adventurers disaster code conflicting with old Court and Country code
+# Fixed Seren's Decline of Clan Elders incident code
+# Fixed Elder God Wars event code
+# Fixed price event code
+# Miscellaneous other event fixes
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.6.0 patch notes (Elven Resistance)
+
+#This patch brings the mod up to EU4 version 1.35 while also adding depth for Tirannwn, with some content for Kourend and Misthalin as well.
+
+#######################
+# Map Changes
+#######################
+
+# There are 38 new provinces, 2 new wastelands, and many key provinces have had their development buffed.
+
+# Misthalin
+## 5 new provinces + 1 wasteland
+
+# Morytania
+## 4 new provinces + 1 wasteland
+## Nations in the Central tech group no longer start with knowledge of Morytanian provinces, except ones that start in Morytania and Mos le' Harmless
+
+# Outer Isles
+## 1 new province in Mos le' Harmless
+
+# Forinthry
+## Doomrock renamed to Grieving Vale
+
+# Southern Isles
+## 1 new province in Ape Atoll
+
+# Shield, Wushanko
+## 1 new province on Kami-shima (makes the island neater)
+
+# Kandarin
+## 2 new provinces and some province border adjustments
+
+# Kourend
+## New nation: Shadowmancers - Zamorakian necromancers found in central Kourend
+## 19 new provinces - aimed at making province density more akin to Kandarin, and improve gameplay in the region
+## Province formerly known as King's Road renamed to Prince's Road, due to new King's Road in Misthalin
+## Province formerly known as Blood Altar renamed to Denssence
+
+# Kebos
+## 5 new provinces - mostly to balance with Kourend's additions
+
+#######################
+# National Flavour
+#######################
+
+# Localised national ideas for Arposandra, Cashien, Crwys, Drogokishuun, Garagorshuun, Horogothgar, Huzamogaarb, Idithuun, Molch, Nar, Rekeshuun, Vyvin and Yurkologh
+
+# Draynor
+## New mission tree, with 4 missions, plus 2-3 extra ones depending on your choice of religion.
+### Taking the Zamorakian path allows you to assign Count Draynor as your leader and take the Vampyric Kingdom government form. You can then also optionally take the vampyric religion.
+### The tree is incomplete and may be revised radically in future.
+
+# Elven Resistance
+## New tier 2 government reform with the new Elven Desperation mechanic.
+### Elven Desperation builds up if you're the weaker faction in the Tirannwn Civil War, or losing a war. It makes you fight more effectively, but hurts your long-term development.
+### This mechanic is intended to slow down the Tirannwn Civil War particularly for the AI
+### Note: There are UI bugs at the moment with government mechanics so I can't get the frame I want working, though functionally it does work as intended
+## Ability to flee to the Lost Grove if sufficiently losing the war
+## Greatly expanded mission tree, with 22 missions - an extra 3 from the Tirannwn mission tree can be unlocked early by fleeing to the Lost Grove.
+
+# Great Kourend
+## Unreformed Kourend Monarchy reworked. As the House Disunity statistic grows, keeping your House subjects in check becomes increasingly difficult.
+### You get a lot of House Disunity from overextension and having too much directly-controlled development, which will lead to a very fast War of Five Houses disaster if you're not careful.
+## Agata IV now starts with 0 ADM, down from 2.
+## New Nobility estate privilege: House Favouritism. Massively limits your governing capacity and is hard to repeal, though does help keep houses loyal.
+
+# Iorwerth
+## Also has Elven Desperation mechanic
+## Ability to flee to the Isle of Souls if sufficiently losing the war
+## Greatly expanded mission tree, with 16 missions - an extra 3 from the Marwolaeth mission tree can be unlocked early by fleeing to the Isle of Souls.
+
+# Marwolaeth
+## 15 new missions - a total of 31 in the combined Iorwerth/Marwoleath mission tree!
+## Now has penalties to heretic/heathens relations in national ideas - but you still get the absurd benefit for Siberian Frontiers for the time being.
+
+# Misthalin
+## Removed starting truce with Asgarnian nations
+## No longer has fixed -100 opinion penalty with Morytanian nations
+## New Nobility estate privilege: Cautious Diplomacy Doctrine. Improves diplomatic reputation at the cost of making fabricating claims harder and disabling the ability to warn other nations.
+### This is mostly as a quick-fix to stop Misthalin repeatedly warning Donblas and stopping Asgarnia from having a chance to form. The AI should repeal it once they have the Runecrafting institution.
+## Mission tree reorganised and given new images
+## 7 new missions
+
+# Tirannwn
+## Tirannwn Republic no longer has tolerance of the true faith (it's already so easy to stack it as Tirannwn)
+## 21 new missions - a total of 43 in the combined Elven Resistance/Tirannwn tree!
+
+# Varlamore
+## Shining Kingdom no longer has penalties to manpower recovery
+
+#######################
+# Governments
+#######################
+
+# Implemented many Military Doctrine government reforms from the base game
+# Boss nation modifiers simplified somewhat; the result should be similar.
+
+#######################
+# Religion
+#######################
+
+# Dark Lord
+## Blessed Chasm Holy Site replaced with Obelisk Eye (middle of Isle of Souls)
+
+# Karamjan
+## Changes to Fervour in the base game have been mirrored here - Fervour bonuses now cost 8 fervour up from 5, but have been buffed.
+## Kharazi: Now also offers -2 global unrest
+## Raharni: Now also offers +15% goods produced
+## Shaika: Now also offers +15% reinforcement speed
+
+# Seren
+## New Incident: Kandarin Relations.
+## New Incident: Zean Diplomacy.
+## New Incident: Restoration of Prifddinas. Event chain is completely different depending on whether or not you are Tirannwn.
+## New Incident: Rebirth of Seren. This Sixth Age-exclusive chain is complex and has many possible outcomes, including bringing Clan Cywir to Gielinor. After the first nation to restore Seren, subsequent Serenist nations get a simplified version of this chain.
+## New Incident: New Path of Seren. This Sixth Age-exclusive chain comes after the new Elder God Wars event chain. Will you stand up for Seren's actions, or turn to Armadyl or the Godless?
+## Overall, there are now 40 events across all incidents, not including the events that end the chain!
+
+#######################
+# Cultures
+#######################
+
+# Implemented all Goblin names from Land of the Goblins to all cultures in the Goblin group (except Dorgeshuun and Hobgoblin)
+
+#######################
+# Monuments
+#######################
+
+# The Soul Obelisk may now be used by followers of the Dark Lord, but no longer can be moved.
+
+#######################
+# Sixth Age
+#######################
+
+# Implemented a very abridged version of the Elder God Wars storyline. This triggers after Tuska falls to Gielinor and Seren is reborn, and its completion is necessary for the last Seren incident.
+
+#######################
+# Bugfixes
+#######################
+
+# Finally fixed the bug that was causing the Cadarn disaster's start flag to tick up indefinitely, so the disaster proceeds properly
+# Fixed bug that made the Bedabins vanish (sort-of, I made a workaround that shouldn't cause any trouble)
+# Fixed incorrect code in Serenist Runecrafting incident
+# Fixed Keldagrim not having access to its Age of Mortals age bonus
+# Fixed Wilderness province modifiers not appearing
+# Fixed some governments that were meant to be locked not being so
+
+#######################
+# Miscellaneous
+#######################
+
+# Updated to patch 1.35
+## Implemented new idea groups and idea group changes to this mod (exploration/expansion still have their colonists tied behind the Exploration institution)
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.5.0d patch notes
+
+# Fixed Fall of Cadarn disaster happening more than once
+
+#######################
+#######################
+
+#Beta 1.5.0c patch notes
+
+# Just removed the Fall of Cadarn flag for the time being as it was causing weird bugs. As a result, you no longer need to suffer the fall of Cadarn for 10 years right now.
+# Localised Mort'ton national ideas
+# Fixed Grand Tree image not appearing in events.
+
+#######################
+#######################
+
+#Beta 1.5.0b patch notes
+
+# Fixed Cadarn flags making it impossible to end the disaster
+
+#######################
+#######################
+
+#Beta 1.5.0a patch notes
+
+# Fixed Cadarn faction not having unique bonuses
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.5.0 patch notes (Cadarn)
+
+This patch has two priorities: Bringing the game up to speed with the AI improvements with some balancing changes, and setting some groundwork for a future Tirannwn update.
+However, there's plenty of new content to dive into - notably including new provinces, nations and government reforms!
+
+#######################
+# Map Changes
+#######################
+
+# Added over 30 new provinces, by region: Misthalin (6), Asgarnia (3), Kharid (3), Morytania (2), Forinthry (1), Outer Isles (1), Southern Isles (1), Kandarin (12), Tirannwn (4), Troll Country (1), Fremennik (5)
+## EU4 patch 1.34 made the AI considerably better at conquest, so this is somewhat of a balancing move to slow down that steamroller.
+## Kandarin additions have favoured the Mahjarrat states, as they were consistently underperforming in test runs.
+# Interior Lumbridge Swamp is now wastelands, hiding four provinces representing the caves beneath - and Dorgesh-Kaan, which is finally playable!
+## Dorgesh-Kaan uniquely has the Evasive school of the Godless religion.
+# Large new wastelands in Mort Myre Swamp, and in the Kharidian Desert
+
+# Central Technology Group no longer starts with knowledge of the lands directly held by Morytania, reflecting canonical knowledge of the region at the game's start date
+# Chaos Altar moved - Runes are now produced in Chaos Point instead of Duellists' Hills. This is to ensure the Dagon'hai begin with the Chaos Altar when they appear.
+# East Salve province in Morytania now starts uncolonised. Any nation owning land in Morytania adjacent to it can settle it for a token ADM cost at ADM tech 15. This is to discourage an early Misthalin invasion.
+
+#######################
+# National Flavour
+#######################
+
+# Fixed many existing missions so they work properly, and to take into account new provinces/areas
+# Localised national ideas for Brerdas, Dorgesh-Kaan, Hefin, Hoshob, Iban, Ithell, Meilyr, Narogoshuun, Pirates' Cove, Rævenesland, Saragorgok, Sea Trolls, Trahaearn, Tyras, Uboafshudup and Zul-Andra
+# Unique startup text for Crailey, Elven Resistance and Iorwerth
+
+# New nations
+## Cyperaton - Noncanonical Misthalin town in the present-day site of Gunnarsgrunn; national ideas built around the Stronghold of Security. As with other noncanonical nations, it's designed to fill a gap in lore while helping to balance the map.
+## Cweornshire - Noncanonical vassal state of Misthalin north-east of Draynor.
+## Dagon'hai - Zamorakian magiocracy appearing in the southern Wilderness after Wizards' Tower burns down. Present in the 2169 start date.
+## Kyattreach - Noncanonical minor Fremennik nation north-east of Rellekka.
+## Mwanu - Migratory tribal nation of Xau-Tak-following Horrors on Mos Le' Harmless.
+## Myreton - Noncanonical attempt by Misthalanians to settle Mort Myre swamp - with worse consequences than even Mortton faced.
+## Okraj - Represents the hill giants near Edgeville before they were driven underground.
+## Phoenix Lair - A boss nation located in far northwestern Kandarin.
+## Ulvejægere - Noncanonical minor Fremennik nation east of Rellekka.
+
+# Cadarn
+## Initial event regarding the Tirannwn Civil War (and whether to help the Resistance) is now reworked as part of the new Civil War Serenist incident. Functionally, it works in pretty much the same way - if you choose to help, you'll suffer penalties.
+## Fall of Cadarn disaster functions slightly differently to account for bugs I've been facing. Now, events to convert provinces only happen once every 180 days on average. There's also a one-off event giving a point of stability.
+
+# Canem
+## Now a tributary of Morytania instead of a march.
+
+# Dark Wizards
+## Gimmian is no longer owned by the Dark Wizards, but by Donblas. To compensate, Dark Wizards now start with Rennard as a vassal.
+
+# Donblas
+## The province Gimmian now starts as part of Donblas instead of the Dark Wizards (as a balancing change to make Donblas succeed more often)
+## Traditions changed - now gives +1 diplomatic relations instead of -10% fort maintenance
+
+# Draynor
+## No longer a vassal of Misthalin at the game's start.
+
+# Gunnar
+## Now has a unique decision to destroy runecrafting altars in occupied provinces in the Age of Humans. This can be reversed by other nations once they have an Adventurer Rating of at least 25.
+## Non-AI Serenists can recruit Gunnar's help to deny the Death Altar from their enemies. But the whispers of the Dark Lord can act in strange ways...
+
+# Kharidians/Al Kharid
+## Provinces awarded by the mission tree now are granted in the form of frontiers, rather than directly. Monarch power and manpower costs for many of these missions have been reduced.
+
+# Menaphos/Sophanem
+## Now start allied with a huge relations bonus with each other, which slowly decays over time. This is because the AI wouldn't stop fighting each other.
+
+# Misthalin
+## Nerfed Misthalin by giving a bunch of provinces to other nations. They're still far more powerful than their neighbours, but shouldn't be so eager to invade Asgarnia right away.
+## Saranthium now has cores on some provinces in eastern Misthalin, so it's easier for a successful enemy of Misthalin to force them to release it.
+## New event concerning the Dagon'hai, taking place after Wizards' Tower burns down. Your religion and choices in that event will influence options available in this one.
+### A Zamorakian Misthalin will get a strong cheap Inquisitor advisor out of this event instead of spawning the Dagon'hai nation.
+## Reworked Overbearing Misthalin disaster. Now, you have more warning before it starts, but when it starts, you will incur huge aggressive expansion penalties on Asgarnian nations usually leading to a nasty coalition.
+
+# Mos Le' Harmless
+## Changed flag; former flag has been adjusted and given to the Mwanu.
+
+# Rellekka
+## 5 new missions - now has a total of 17, up from 12.
+
+# Thorobshuun
+## Migratory History idea now allows the Thorobshuun to chain claims, though now only reduces claim cost by 10% instead of 25%.
+
+#######################
+# Governments
+#######################
+
+# Many new government reforms for EU4 1.34 brought into this mod
+## Monarchy reforms for Legitimation of Power are given different names and icons, but function the same way except that Leviathan (renamed "Prevention of Anarchy") cannot be picked by nations in the Chaos religious group.
+
+# 7 new mod-specific government reforms for the shared Economic tier
+## Absurd Taxation - Jatizso or Kandarin only. +35% tax, +1 global unrest
+## Alchemical Economics - Either Magiocracy government, or at least Age of Adventurers. +25% production efficiency, +10% tax, -10% trade power
+## Armour Trimming - Requires full Espionage ideas. Trade efficiency at the cost of diplomacy and corruption.
+## Expand Titles - Saradominist only (except Entrana). Helps you use curia powers.
+## Grand Exchange - Either Misthalin with Grand Exchange mission, or both full economic and trade ideas. Powerful trade bonuses.
+## No Internal Market - Karuulm only. +10% army morale, -50% domestic trade power, +50% foreign trade power.
+## Subsidised Pilgrimage - Entrana only. +1 totf, +1 diplomatic relations, +25% trade power from ships
+
+# 4 new mod-specific government reforms for the shared Religious tier
+## Corporealists - Armadylean only. +2% missionary strength. Moved from being an aspect of faith.
+## Incorporealists - Armadylean only. -10% idea cost. Moved from being an aspect of faith.
+## Peaceful Contemplation - Only for Armadyl, Saradomin, Guthix, Hanalan and Birman. +2 totf but +20% province warscore cost.
+## Reinstatement of the Pantheon - Northern Pantheon only. -25% force-conversion cost.
+
+# 2 new mod-specific government reforms for Monarchy's Legitimation of Power tier
+## Right of Might - Bandos, Xeric, Tuska or Queen of Ashes only. +1 monarch military power, +1 possible military policy, -0.03 war exhaustion.
+## God Among Mortals - Zulrah, Lucien or Zemouregal only. +1 totf, +1% missionary strength, -25% enforce religion cost.
+
+# 4 new mod-specific government reforms for Theocracy's Education of the State tier
+## Combat Training - Grants +25% drill gain and -5% MIL tech cost
+## Experimental Haven - Must not be Autocratic religious group. -5% idea cost, +50% innovativeness gain.
+## Oral Tradition - Must have Druidic State/Order or Shamanic Theocracy government. +25% true-faith institution spread, +1 leader ADM
+## Tutorials - -2.5% technology cost, +15 max adventurers
+
+# 3 new mod-specific government reforms for Theocracy's Culture and Religion tier
+## Non-Elven Proselytising - Seren only. +2 accepted cultures and +2% heathen missionary strength.
+## Undead Faithful - Lucien or Zemouregal only. -25% culture-convert cost and +10% manpower recovery.
+## Vampyres First - Vampyric religion and culture only. -1 accepted cultures and -20 opinion of other cultures, but +25% manpower in primary culture provinces and -25% own-culture advisor cost.
+
+# Clan Monarchy: Now has -1 diplomatic relations, but +10% army morale (up from 5%) to compensate
+# Vampyre Kingdom: No longer has a diplomatic reputation penalty.
+
+#######################
+# Religion
+#######################
+
+# Armadyl
+## Corporealists/Incorporealists reworked as government reforms. New replacement aspects:
+### Edict of Invention: +50% innovativeness gain
+### Golem Guardians: +10% cavalry combat ability
+
+# Bandos
+## Three new battle strategies for Ork culture:
+### Recordkeeping Strategy: +1 legitimacy/meritocracy, +0.5 republican tradition, +15% reform progress growth
+### Support Strategy: +1 diplomatic relations, +15% favours gain
+### Triangular Formation: +5% discipline
+
+# Celestial Group (Birman, Hanalan, Ralos, Ranul)
+## New Church Aspect icons for all 20 aspects
+
+# Menaphite
+## Apmeken now gives +10% morale of navies instead of -1 national unrest, reflecting her worship by sailors.
+
+# Seren
+## Isolation levels no longer have penalties.
+## Properly implementing Incidents! These event chains work the same way as the Shinto incidents do in the base game. As follows, these are:
+### Civil War - Starts immediately. The initial event is different for the Elven Resistance, Cadarn and other Serenist realms.
+### Decline of Clan Elders - Starts after Civil War incident.
+### Runecrafters - Starts when the Runecrafting institution is enabled. If your nation is particularly open, it can get involved in the mess of the Runecrafting Crusades.
+
+
+#######################
+# Cultures
+#######################
+
+# New culture groups: Airut, Aviantese, Goebie, Icyene, Ork, Renmark (Centaur, Ice Sprite, Yeti)
+# New Ogre Group cultures: Zogre, Fayrg, Raurg, Ourg
+# Other new cultures: Phoenix (beast group); Reborn Warrior (elemental group)
+# Added extra Avernic demon names
+
+#######################
+# Institutions
+#######################
+
+# Runecrafting
+## New events leading up to the Runecrafting Crusades, affecting human nations in the Misthalin, Asgarnia and Kandarin regions (and some in Kharid.)
+## Your choices in these events determines an outcome when Gunnar's Runecrafting Crusades starts - the more you side against him, the more his supporters will try to sabotage your military efforts.
+### This system will probably be expanded on and reworked in future updates.
+
+#######################
+# Elder Artefacts
+#######################
+
+# Owning the Stone of Jas will cause Dragonkin Raids to go after you! If successful, they will take the stone and kill your leader.
+## Mahjarrat leaders will be permanently killed by a successful Dragonkin raid, disabling the event that brings them back.
+## If the Dragonkin take the stone, they can destroy it in the Sixth Age.
+
+#######################
+# Sixth Age
+#######################
+
+# The World Gate appears in the Androundri province in Kandarin, in the Sixth Age if the owner has an Adventurer Rating of 80 or higher.
+## Owning the province gives +0.5 prestige per year.
+
+# New Tuska event chain - after 15 divine energy provinces are uncovered, Airut will soon appear in northwestern Kandarin, and soon after Tuska shall follow.
+## After a major event, the world's Great Powers will have two years to defeat Tuska, by any of them reaching an Adventurer rating of 100.
+## If Tuska is not defeated, all Great Powers will suffer development loss in key cities.
+## Nations following Tuska are immune to the negative effects of this event chain, and will gain significant permanent bonuses if Tuska wins.
+
+#######################
+# Miscellaneous
+#######################
+
+# Updated to EU4 version 1.34
+## Generic national ideas have been largely updated in line with patch changes (e.g. Quantity nerf)
+# Fixed incorrect text for the Tzh-Xil Hire Advisor agenda code
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.4.0 patch notes (Ape Atoll)
+
+This patch completely revamps the Ape Atoll game. The nation starts divided but there's more opportunities once you bring the realm together.
+Up to the north, ambitions of a unified Karamja or a great Cadarn kingdom go further than ever before.
+There's also a huge array of new images for events, governments and more.
+
+#######################
+# National Flavour
+#######################
+
+# Ape Atoll
+## Now a formable, rather than present at the start of the game. The following nations start in the area and can form Ape Atoll:
+### Bo Isles (south-west of Ape Atoll)
+### Bonzara (south coast of Ape Atoll)
+### Marim
+### Rednana (north-west Ape Atoll)
+## Forming Ape Atoll gives you the choice to abandon the Bo Isles (the canonical route) in favour of giving significant development advantages on Ape Atoll, or keeping the provinces.
+## Tweaked national ideas; gives colonial growth instead of ae reduction; new bonuses of land leader manoeuvre and piety acceleration
+## Added new mission tree - 12 missions for nations that can form Ape Atoll, and a further 19 when Ape Atoll is formed for a total of 31.
+### Via mission tree, can create the subject New Apmeken in the Kharidian Desert. New Apmeken may use the Kharidian Colonies estate privilege to acquire more land.
+
+# General
+## Buffed every national idea for provincial trade power and allowed marines, given these bonuses tend to be given in larger quantities than I've given them.
+## Nations with bonuses to Guthixian Balance in national ideas (except Arposandra) now have it changed to yearly balance decay.
+## Localised units for all remaining technology groups
+## Localised national ideas for Akthanakos, Braindeath, Corsair Cove, Enkhara, Enville, Hallowvale, Harmony, Kalphites, Myths' Guild, Nomad, Oo'glog, Scabarites, Siad, Slepe, Sonde, Tempoross and Void Pests
+## Monkey technology group can see more provinces than before, including parts of the Wushanko Isles and the Feldip Hills
+
+# Cadarn/Baxtoria
+## Reduced requirements to form Baxtoria from 25/50 provinces (depending on event choices) to 20/35. Now that I made the Fall of Cadarn disaster tougher in a previous patch, it's a fair enough change!
+## Added 15 extra missions. In total, there are now 16 missions for Cadarn, and an extra 7 for forming Baxtoria.
+
+# Burthorpe
+## Added extra mission
+
+# Elven Resistance
+## Cadarn elves may arrive multiple times to aid the resistance.
+
+# Karamja
+## Province previously entitled "Herblore Habitat" renamed to "Jadinko"; now has unique Jadinko culture.
+## Added 12 extra missions. In total, Karamja now has 24 missions (10 pre-unification, 14 after).
+
+# Kharidian Empire
+## Traditions now includes -20% Great Project upgrade cost instead of -15% build cost. However, the idea Restore the Cities now has a -5% build cost modifier on top of the -10% development cost.
+
+# Morytania
+## Tolerance of heretics in traditions replaced with +100% vassal force limit contribution
+## Meiyerditch provinces now have a modifier making them hard to convert from the Saradominist faith.
+
+# Varze
+## Reworked missions so Varze can use generic Asgarnian missions.
+## Has 6 unique missions, up from 4, including the possibility to gain two Wilderness provinces.
+
+# Void Pests
+## New alternative event to spawn them if someone already owns the appropriate province. If Asgarnia has the Void Knights active, this can lead to the Void Knights' Outpost being established as normal.
+
+#######################
+# Culture
+#######################
+
+# New culture group: Jadinko. Found at the Herblore Habitat in south-east Karamja.
+# New Kharidian culture: Jaldraochtite. Now used by the Jaldraocht nation instead of the Mid-Kharidian culture.
+# New Monkey cultures: Desert Monkey, Undead Monkey.
+
+#######################
+# Governments
+#######################
+
+# All government reforms added prior to this patch now have appropriate images. In all, that's 113 new images!
+
+# Elven factions now have improved images
+# Keldagrim Consortium - Brown Engine/Yellow Fortune no longer affects female advisor chance, in line with changes to OSRS
+# Vampyre Kingdom no longer has a penalty to converting heretics.
+
+# Correctly implemented tier 6 monarchy reform for Armadylean nations: Constitutional Law
+# Correctly implemented tier 6 republican reform: Emergency Powers
+# Tier 7 Republic reform Chaos Principle can now be used by all religions in the Chaos group.
+# Tier 2 Theocracy reform Mission of Balance now offers Balance decay, rather than just positive Balance.
+# Tier 3 Theocracy reform Play the Villain now can be used by followers of Lucien or Zemouregal. It provides more chaos than before and doesn't cause stability hits from war, but increases aggressive expansion penalties.
+# Tier 7 Theocracy reform Manipulate the Gods may only be used in the Sixth Age, but now offers bonuses to improve-relations and aggressive expansion impact.
+
+#######################
+# Religion
+#######################
+
+# General
+## Cleaned up religion icons
+
+# Dark Lord
+## Added Holy Site images
+
+# Karamjan
+## Removed requirement of Karamjan primary culture to create Holy Orders - just need Karamjan religion.
+
+# Marimbo
+## New icons for piety
+## 10 new events to help raise/lower piety.
+
+# Saradomin
+## Fixed images relating to apostocratic influence
+
+# V
+## Bonus from having Vampyric as secondary religion no longer reduces harsh treatment cost, but instead increases vassal income.
+
+# Vampyric
+## Religious unity bonus and missionary strength against heretic penalties removed. Now religion receives +33% income from vassals.
+## New clergy privilege: Zamorakian Co-existence. Makes converting Zamorakian provinces impossible, but also removes their penalties.
+
+# Zaros
+## Added Holy Site images
+
+#######################
+# Great Projects
+#######################
+
+# Two new Kharidian monuments for the Menaphite religion:
+## Mastaba of Senliten - Found in the Mastaba province. Offers up to +1 tolerance of the true faith and +20% manpower in true-faith provinces.
+## Jaltevas - Found in the Alraml province. Offers up to -1% army tradition decay, and +100% local goods produced for the province. Its province can now produce rare goods later in the game.
+
+# Buffed karma decay of the Grand Tree monument
+# Fixed bad code preventing construction of the Castle Wars monument
+# Renamed "Duel Arena" to "Emir's Arena" in line with OSRS changes.
+
+#######################
+# Miscellaneous
+#######################
+
+# You can now pick Expansion and Exploration ideas prior to the Exploration institution, though you will still need it to receive the colonists.
+## However, it is possible to get a colonist via a parliament (e.g. Kandarin Monarchy government) if you have full Expansion/Exploration ideas. I'll keep this as is for now as it's a relatively convoluted way to get a colony.
+# Implemented a temporary fix so some institutions don't spawn too early.
+# Base female advisor chance increased to 50%.
+
+# Added Tombs of Amascut menu to the loading screens
+# Added 80 new event images! Most events added in the mod (though not all) now use one of these new images, drawn from official concept art, wallpapers, and occasionally screenshots.
+# Fixed institution images
+# Replaced images relating to Infantry, Cavalry and Fire damage to a form more suitable for Runescape, while trying to maintain silhouettes of images where possible.
+## Infantry now depicts a melee warrior with runite armour and a rune halberd, as well as a crouching crossbow wielder with blue d'hide armour and a rune crossbow.
+## Cavalry now has its wearer equipping adamant armour and an adamant hasta. The horse has been replaced by a unicorn; the image for cavalry flanking has a black unicorn.
+## Fire damage now has a crossed image of a shortbow and a staff of earth, with colours adjusted to be similar to the vanilla fire damage icon.
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.3.0 patch notes (Acheron)
+
+Whole new portions of the world open up in this update - the Isle of V, Daemonheim, the Lost Grove and Acheron!
+Meanwhile, the Zamorakians of the world bask in their new power - but could an ambitious Mahjarrat betray Zamorak and declare themselves a God?
+And the rise of Adventurers in the world could turn into quite a power struggle! Perhaps we could see some adventurers rioting, bringing along their multicannons?
+
+#######################
+#Map Expansion
+#######################
+
+# 41 new land provinces: Isle of V, Daemonheim, Lost Grove and Acheron!
+# 30 new sea provinces
+
+# New Acheron trade node; North Coast node renamed "Daemonheim" and shifted around somewhat
+# Entire map has been moved southward to accommodate Acheron
+
+# New culture groups: Acheron, Fairy
+# New cultures: Ent (elemental group), Forgotten Warrior (wilderness group)
+
+# 8 new nations:
+## Daemonheim
+## Solak (Boss nation, Lost Grove)
+## Achuliasip (Noncanonical nation in Acheron)
+## Forge of Giants (Acheron)
+## Idol Depths (Boss nation, Acheron)
+## Palingrad (Acheron)
+## Tasuaq (Noncanonical nation in Acheron)
+## Acheron (Formable by Acheron-culture countries if they unify the entire region)
+
+# 14 missions for Acheron-culture countries (Tasuaq and Achuliasip), plus 3 extra for forming Acheron
+# 10 missions for Palingrad culminating in the creation of the iceberg outpost (this is now how Pescaling is unlocked, instead of by random event)
+
+# 3 new Great Projects for Acheron: Forge of Giants, Imcandoria Depths, Palingrad Foundry
+
+#######################
+#Other Map Changes
+#######################
+
+# Changed heightmap and province borders in Varlamore to improve mountain realism
+# Changed rivers, heightmap and terrain texture in Shayzien to at least partially reflect Shayzien rework
+# Corrected some missing ports, so provinces that were previously impossible to core should be fine now.
+# New lake provinces in the Wilderness, Fossil Island, Kandarin and the Isle of Souls. Lava lakes now should appear the correct colour in the terrain map.
+
+#######################
+#National Flavour
+#######################
+
+# Mahjarrat-led countries will now respawn their leaders if they "die". This includes if you form another nation out of a Mahjarrat nation, even if you do something weird like culture-shift and form Asgarnia.
+# Raevenesland now V religion, with Mountain Pantheon as secondary.
+# Localised national ideas for Lucien, Mountain Tribe, New Varrock, Pescaling, Ungael
+# Localised units for the Northern technology group
+
+#######################
+#Government
+#######################
+
+# Boss nations and nations ruled by Mahjarrat now have distinct leader names
+# Mahjarrat Autocracies are no longer locked to Duchy rank
+# Migratory Tribes now use native mechanics
+
+#######################
+#Religion
+#######################
+
+# New religion: Northern Pantheon (Nonintervention Group).
+## Represents beliefs of Mountain Tribe and some of Acheron.
+## May choose from 5 possible personal deities (same mechanic as Menaphite Pantheon, but different options)
+
+# New religion: Queen of Ashes (Autocratic Group). Added for completeness, currently only for custom nations.
+## Has no mechanics at this time.
+
+# New religion: Lucien (Chaos Group).
+## Not enabled at start, so cannot be used for custom nations.
+## Can be created by Lucien via a decision if you have both the Stone of Jas and Staff of Armadyl.
+## Uses Chaos mechanic (shared with Zamorak/Vampyric). Has five unique events to help gain Chaos.
+
+# New religion: Zemouregal (Chaos Group).
+## Not enabled at start, so cannot be used for custom nations.
+## Can be created by New Varrock (formable by Zemouregal) if you control the entire Misthalin region, are a great power and it is not the Sixth Age.
+## Uses Chaos mechanic (shared with Zamorak/Vampyric). Has five unique events to help gain Chaos.
+
+# All religions in the Chaos group (Zamorak, Vampyric, Lucien, Zemouregal):
+## Positive stability no longer costs Chaos; negative stability now grants Chaos twice as fast as before.
+## Chaos bonuses changed - no longer reduces unrest, but boosts institution spread and reduces autonomy.
+## (Requires Third Rome) Reskinned Metropolitan mechanic as "Empower Chaos Priest" with new text and images.
+## (Requires Third Rome) May now spend Chaos to gain one of five icons at a time; different religions have different icons
+### Due to a limitation in the game's code, religions other than Zamorak currently use Zamorak's icon images, though the mechanics are still different.
+
+#######################
+#Great Projects
+#######################
+
+# Old "Daemonheim" project renamed to Daemonheim Keep; moved to new Daemonheim Keep province
+## Can now be built as the Daemonheim nation even without the Quests institution
+## No longer gives province bonuses; instead gives yearly chaos
+
+# Paterdomus now slows down enemy units in its home area
+## This is to help Misthalin defend against a buffed Vampyric faith
+
+#######################
+#Miscellaneous
+#######################
+
+# Added Hunter skill loading screen
+
+# Doubled starting trade range at DIP tech 1 from 100 to 200.
+# Fixed missing technology code (including institution requirements)
+
+# Adventurers mechanic tweaked: No longer cuts build cost nor provides tax, but now provides some administrative efficency and even more reduction in development cost.
+# New generic disaster: Rise of the Adventurers. Slightly modified version of the vanilla Court and Country disaster; can occur in the Age of Adventurers.
+## A new rebel type can appear during it: Adventurer Riot. These have a large amount of artillery but no cavalry.
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.2.0a patch notes
+
+This patch fixes the inability of nations to drill, and has some other changes that were going to go in a future update.
+
+#######################
+#National Flavour
+#######################
+
+# New tag: Temple of Shadow. Has unique localised national ideas. Not currently accessible.
+
+# Localised national ideas for Crwys
+
+# Cadarn
+## Reworked Fall of Cadarn disaster. Now solved via the mission tree, and has more emphasis on good governance than rebel-squashing.
+## New event to quickly replace elven provinces in Kandarin if Cadarn collapses
+
+#######################
+#Bugfixes
+#######################
+
+# Fixed nations being unable to drill.
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.2.0 patch notes (TzHaar)
+
+This patch finally brings the mod to the most recent EU4 patch version (1.33.x)
+
+#######################
+#Monuments
+#######################
+
+Owners of the Leviathan expansion may now build 44 new monuments found around the world. By region they are:
+
+# Misthalin: Paterdomus, Wizards' Tower, Temple at Senntisten
+# Asgarnia: Entrana Cathedral, Falador Castle, Taverley Stone Circle
+# Kharid: Duel Arena, Jalkabir, Ullek
+# Morytania: Theatre of Blood, Viggora's Folly
+# Wilderness: Daemonheim, Dragonkin Laboratory, Sword of Edicts
+
+# Karamja: Cairn Isle, Elder Kiln
+# Southern Isles: Soul Obelisk, Temple of Marimbo
+# Kandarin: Castle Wars, Grand Tree, Plain of Mud Temple, Temple of Ikov, Wizards' Guild
+# Feldip Hills: Myths' Guild, Oo'glog Spa
+# Tirannwn: Temple of Light, Tower of Voices
+# Troll Country: Giant Dwarf, Temple of Lost Ancients
+
+# Kourend: Arceuus Library, Dark Altar, Doors of Dinh
+# Kebos: Chambers of Xeric
+# Varlamore: Battle Colosseum, College of Bards
+
+# Arc: Tuai Leit Library, Temple of Aminishi
+# Scythe: Genbu's Lair
+# Bowl: Falling Blossom Gardens
+# Pincers: Halls of Reckoning, Suzaku's Perch
+# Loop: Byakko's Lair
+# Shield: Black Stone Fortress, Kami-shima Nexus
+
+Most monuments are restricted by religion, and some are by culture.
+
+For players with the expansion, some old modifiers (e.g. Paterdomus) are removed and their functionality given to these monuments.
+
+#######################
+#National Flavour
+#######################
+
+# TzHaar
+## Localised national ideas; "Integration of the Ga'al" national idea renamed to "Lava Flow Travels"
+## Expanded missions from 4 to 21, plus 2 extra missions depending on your choice in a new disaster
+## New disaster: The Brink of Extinction
+### Occurs in the Age of Adventurers or Divination by losing control of Mor Ul Rek, having a lot of adventurers, or having the Quests institution.
+### Avoidable by having the Elder Kiln at tier 3, though you can get interesting rewards by finishing the disaster.
+### Has four possible outcomes: You take control of the Elder Kiln by upgrading the monument to tier 3, the TzHaar are eliminated and the TokHaar take their place, the day is saved and the Ga'al are integrated as a fifth caste (the canon ending) or the day is saved but the Ga'al are rejected.
+
+# Localised national ideas of Glough, Glugglug, Kalumin and Rantuki
+
+#######################
+#Government and Estates
+#######################
+
+# Obsidian Castes (TzHaar/Karuulm)
+## Fixed estates so they function properly - you can now seize land, grant land, call the diet (all five estates have defined agendas!), and loyalty/influence modifiers mostly work (though for some reason you don't lose loyalty for seizing land, and I don't yet know how to fix it)
+## Hur (Keran) estate:
+### New privilege: Builder Contracts. Speeds up construction.
+## Ket (Narga) estate:
+### New privilege: Capital Reinforcement. Significantly boosts hostile attrition and fort defence in your capital.
+## Mej (Sihar) estate:
+### New privilege: Proselytise Ful. Helps you spread your religion.
+## Xil (Maten) estate:
+### New privilege: Longer Hunts. Increases colonial and trade range.
+## Ga'al estate:
+### Now accessible as TzHaar via a specific option at the end of the Brink of Extinction event.
+### New privilege: Ga'al Representation. Basic loyalty/influence boost
+### New privilege: TzHaar Explorers. Allows exploration and boosts colonial growth.
+
+# Consortium Monarchy/Republic and Dwarven Outpost (Keldagrim)
+## Now disables Call Diet function
+## Fixed estates so they function properly - you can now seize land, grant land, and loyalty/influence modifiers mostly work (though for some reason you don't lose loyalty for seizing land, and I don't yet know how to fix it)
+## New privilege for all Consortium estates: Grant Mineral Rights. Buffs loyalty equilibrium and influence; costs crownland and maximum adventurers.
+
+#######################
+#Miscellaneous
+#######################
+
+# Updated patch to latest EU4 version
+## This has a lot of effects, including the ability to use horde and divine ideas
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.1.0 patch notes (New Heritage)
+
+The biggest patch yet finally expands the gameplay of the Wushanko Isles to the level of the rest of the world - with some unique elements of its own.
+
+That's not all - other parts of the world have received new missions, and there's new fixes for everyone!
+
+#######################
+#Major Wushanko Changes
+#######################
+
+# New Eastern Lands bookmark - same start as the Age of Mortals one, just points out a few interesting Wushanko nations to play
+
+# New generic Wushanko mission tree - every nation in the continent gets 18 missions!
+## Nations that start in the Council of Khans have a different middle column (6 missions) from those outside it. The former encourages peaceful trade and diplomacy; the latter aggressive naval usage.
+# Unique missions on top for New Heritage and Khanoka
+
+# Reforms added for the Council of Khans - Decentralising is buffed relative to unmodded EU4 for example.
+## The penalty to votes to be Khagan for being a small country/heretic has been reduced.
+## Unfortunately, I can't work out how to lessen the "weak Khagan" penalty for trying to pass reforms, so you'll have to expand a fair bit first.
+
+# The Wushanko Guardian religions (Byakko, Genbu, Seiryu and Suzako) now use the Church Aspects mechanic.
+## Each religion has 8 aspects - 2 are shared with all Wushanko faiths, 3 shared with one other, and 3 are unique to the faith.
+
+# Hanalan and Birman now use a similar mechanic to Ralos/Ranul, though they grant temporary modifiers instead of permanent boosts.
+
+# All nations in Wushanko (and therefore the entire mod) now have unique national ideas, flags and defined starting leaders for both bookmarks.
+
+# Hanto has a unique disaster in the Age of Humans: Terror of the Leviathan
+## To win, you must either convert to Xau-Tak or fight off waves of religious rebels. AI will usually convert to Xau-Tak.
+## Winning without converting gives you permanent prestige and diplomatic reputation.
+
+#######
+#New Nations
+#######
+
+# Isle of Adamant - A trade colony in the Shield region, of Shield culture and Byakko faith.
+## Has a special permanent production boost in its capital province reprenting the huge supplies of adamantite ore.
+
+# Gu - A Khanate in the Shield region, of Shield culture and Byakko faith. Has a core on the Obsidian Pirates.
+
+#######
+#New Formables
+#######
+
+# Wushanko Guardian formables - if you're of Wushanko culture you'll have the option to form these depending on your religion.
+## Fenisento (Suzako)
+## Hebikatochi (Genbu)
+## Konjinja (Seiryu)
+## Torakoku (Byakko)
+# All four of these nations get access to the Great Khanate government reform - fixed kingdom rank, no penalty to governing capacity, bonus church power
+
+# Khaganate
+## Formed via the final centralisation reform of the Council of Khans.
+## Has exceptionally strong national ideas to make up for losing the vassal swarm from the previous reform.
+
+# Resurgentia
+## Zarosians in Wushanko can form this kingdom by taking two specific provinces in the Loop region, and having 5 decent Zarosian vassals. The formation releases the vassals and causes you to leave the Council of Khans.
+## This nation has the unique Fateful Monarchy government reform, which gives access to the Great Holy War casus belli - letting you force heathen nations to become Zarosian!
+
+# Shadow Reef
+## Formable by any nation following Xau-Tak if they take all reforms and take a few key provinces. National ideas make a powerful naval/marine game.
+
+# Wushanko
+## Military unification of most of the Wushanko Isles, formable by any Wushanko Guardian-religion nation, or a follower of Hanalan/Birman.
+## Has mighty national ideas, though not quite as strong as the Khaganate.
+
+#######################
+#National Flavour
+#######################
+
+# Asgarnia Region
+## Expanded generic Asgarnian missions from 2 to 12. These new missions nudge nations towards forming Asgarnia.
+### Burthorpe missions moved around so they have both this and their unique missions
+
+# Karamja Region
+## Added 10 generic Karamjan missions for the five nations of Karamjan culture. You can even get a temporary colonist through these!
+## Also added 2 extra events when Karamja is formed; will be expanded in future.
+
+# Miscellaneous
+## Dropped some army/naval tradition-boosting national ideas from +1 to +0.5 to line up with unmodded EU4. The main exceptions are formables or nations with a very strong reason to have a large bonus (e.g. Mogres still have the full +1 naval tradition)
+
+#######################
+#Governments
+#######################
+
+# Khanate government:
+## Now offers only 10% bonus sailors (down from 20%) but comes with bonus trade range to encourage wider interactions in the Council of Khans.
+## Government/leader titles corrected
+
+# Trade colonies - Corrected name from "free city"
+
+# Mahjarrat Autocracies and Boss Nations (of all varieties) no longer have consorts or heirs.
+
+#######################
+#Religion
+#######################
+
+# Armadyl
+## Localised church aspect descriptions
+
+# Bandos
+## New Battle Strategy: Ronin Strategy. Offers +20% razing power gain and +10% drill gain.
+### Ronin Ogres have this from the start, replacing Feldip Consolidation. To unlock it as another Bandosian nation, you'll need to accept ogre culture and have an ogre-culture province in the Wushanko Isles.
+## Feldip Consoldiation now specifically requires an ogre-culture province in the Western Runescape continent to be unlocked. Province warscore cost penalty reduced from +15% to +10%.
+
+# Brassica Prime
+## Tolerance of the true faith lowered from +3 to +2
+### When harmonised religions are considered to be the true faith, +3 tolerance of the true faith gets rather overpowered!
+
+# Dark Lord
+## Localised description text of holy sites and text of blessings
+
+# Ralos
+## Properly implemented addition from last patch, and added Joy of the New, an aspect that gives you a new heir.
+## Cleaned up aspects so the text no longer overlaps
+
+# Ranul
+## Properly implemented addition from last patch, and added Moving On, an aspect that removes your current ruler.
+## Cleaned up aspects so the text no longer overlaps
+
+# Zaros
+## "Gods as Tools" (+1 tolerance of heretics/heathens) replaced with "Shadow Realm" (+25% spy defence)
+## Localised description text of holy sites
+
+#######################
+#Miscellaneous
+#######################
+
+# Misthalin Region
+## Misthalin's Cooks' Guild idea now provides +20% supply limit, up from +5%
+### This puts it more in line with comparable bonuses in unmodded EU4
+
+# Asgarnia Region
+## Asgarnian national ideas - Dwarves of Ice Mountain goods produced now 10% up from 5%; Charter Ships now gives +25% ship trade power instead of +20% light ship combat ability
+### The former is to put it in line with comparable nations; the latter putting it on a stat that makes more sense
+
+# Karamja Region
+## Tai Bwo Wannai, Khazari and Shilo are no longer historic friends, though their common religion will still push them towards making alliances.
+## Localised Karamjan unit text
+
+# Kandarin Region
+## Fixed tech group of Tree Gnome Village (now properly Gnomish instead of Kandarin)
+## The Sarabank province now starts with Idithuun culture and Bandosian religion, reducing the risk of rebellions causing very strange borders for Khazard
+## Loosened the requirements for forming the Goblin Empire - You now need the Plain of Mud and either a set of provinces in Kandarin, or in Misthalin/Asgarnia rather than both. The 30 goblin culture provinces is still a hard requirement however.
+## Fixed religion of the provinces of Saragorgok/Huzamogaarb; now correctly Bandosian
+
+# Wushanko
+## Wushanko regions now line up with the respective regions in RS3 - this creates some rather small regions (the loop in particular) but overall makes more sense.
+## Switched around electors - Ashihama and Yamada are no longer electors; Haranu is now one. The intention was to better balance their distribution around the Council of Khans, and set the initial number at 7 instead of 8.
+## Hyu-Ji and the Purists are now historical enemies
+## Tokoko and the Death Lotus are now historical friends
+## Made the country colour of the Golden Katanas less of an eyesore
+## Improved Han Lun's flag slightly
+## Localised Wushanko unit text
+
+# Other
+## Added Armies of Gielinor theme as main menu music
+## Added Gielinor Universalis image to main menu
+## You can now get explorers/conquistadors via Maritime ideas, as well as via Exploration ideas.
+## Finally managed to go through every single country and define monarch names, so hopefully no-one should be ruled by someone with no name!
+### As a side-effect, certain countries are more likely to have certain leader names, and Great Kourend will have proper regnal numbers.
+### The Lordship of the North Coast will frequently have leaders starting with "Rolo-" as in canon
+## Some new insults because I can't help myself. Try using a scornful insult as a goblin nation against another goblin nation!
+## Every country-specific modifier added prior to this patch has been localised
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.0.2 patch notes (Ardougne)
+
+This time around, I'm fixing some incorrect lore in the mod by adding the tag Ardougne, as an intermediate step for nations trying to form Kandarin. There's also plenty of extra formables for those who want some unique games.
+
+#######################
+#Formables
+#######################
+
+# New nation: Ardougne. Has unique localised national ideas!
+## Ardougne can be formed by any Saradominist Kandarin-culture country by taking West Ardougne, East Ardougne and the Port of Ardougne.
+## Dreaded Years of Tragedy disaster now can affect Ardougne as well as Kandarin
+## Has a mission tree, which now acts as the first part of the Kandarin mission tree
+
+# New World formables - Ex-colonial nations in Zeah can create these. Doing so triggers an event giving you one of three new governments - you can choose from Federal Republic, New World Monarchy and Frontier Theocracy. All have unique localised national ideas.
+## United Provinces of Zeah (for the Kourend region)
+## Auburnvale (for the Kebos region)
+## Aviumia (for the Varlamore region)
+
+# Other new formables - all with unique localised national ideas
+## Baxtoria - Formable by Cadarn; gives you Kandarin Monarchy government. This decision is easier if you break with Tirannwn; harder if you assist them in the Tirannwn Civil War.
+## Goblin Empire - Formable by any Bandosian goblin-culture nation (except hobgoblins). Has unique Goblin Empire government reform for huge, weak armies.
+## Grand Ourania - Formable by Zamorakian Kandarin nations.
+## Marwolaeth - A kind of corrupted Tirannwn formable by followers of the Dark Lord. If you want to take on the world alone, this tag's your best bet!
+## Urval Order - Formed by any Zamorakian druidic state (by default, only the Chaos Druids). Has the unique Druidic Order government (hybrid of Druidic State/Monastic Order)
+
+# Fixed decisions to form Feldip Hills, New Imcandoria and Tirannwn
+
+#######################
+#National Flavour
+#######################
+
+# Carnilleus:
+## Carnilleus has new flag; Ardougne gets a modified version of the flag previously used by Carnilleus.
+## Nerfed national ideas (ae impact now only -10%; siege ability now only +10%) to make switching ideas to Ardougne or Kandarin more lucrative
+
+# Iorwerth: No longer gets a huge missionary speed buff from an early event (this was a relic from an earlier version of the mod where the Tirannwn Civil War worked differently and the Dark Lord religion didn't have an intrinsic missionary speed buff)
+
+# Kandarin:
+## Forming Kandarin now requires BOTH Catherby and Yanille, cannot be done if you are in a disaster and requires 20 provinces in the Kandarin region, up from 12.
+## Kandarin Monarchy government has 100 governing capacity bonus, down from 150, but the minimum autonomy now only affects territories.
+## Added new missions (on top of the new ones which Ardougne also shares). This means Ardougne and Kandarin together have 16 missions, up from 5.
+## National idea changes:
+### Fishing Tradition now additionally grants +10% ship trade power
+### Changed ambition from "-0.10 autonomy" to +1 possible and free ADM policy
+### These changes were designed to buff the value of the idea set relative to Carnilleus/Ardougne while also removing the autonomy reduction (which is out of place for a realm with a lot of autonomy)
+
+# Camelot: Localised national ideas
+# Érable: Localised national ideas
+# Manor: Localised national ideas
+# Seers' Village: Localised national ideas
+# Sinclair: Localised national ideas
+# Trajet: Localised national ideas
+
+# Continuing Wushanko progress
+## New flags for all Scythe nations
+## New (and localised) national ideas for Kei Pi
+
+#######################
+#Religion
+#######################
+
+# Bandos
+## You can now get additional battle strategies by accepting the corresponding culture. It is therefore possible to get all 14 strategies in one game! (The special Chosen Commander one remains inaccessible for the time being)
+## An empire-rank Goblin-culture nation will automatically unlock the Chosen Commander battle strategy (in future this may change)
+## Feldip Consolidation has a smaller province warscore cost penalty, but no longer provides fort defence. This is to make it fit better on the screen.
+
+# Ralos
+## Localised church aspects
+## Internal Investment now costs half as much but only boosts base production, so it fits better on the screen.
+## New aspect: Bastion of Ralos - adds mercantilism and merchant guild loyalty
+
+# Ranul
+## Localised church aspects
+## New aspect: Explore the Mysteries - adds base tax in a province.
+
+#######################
+#Miscellaneous
+#######################
+
+# Added in missing files for Bik and Wen religious rebels
+# Localised Kandarin unit names/descriptions
+# Added Natives file so the image/units used for native uprisings in uncolonised provinces are more consistent
+# Removed the line in the code making the music player not work
+# Removed forts from migratory nations
+# Changed the colours of Arc nations to be more distinct from each other and from Menaphos
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+#Beta 1.0.1 patch notes (Crailey)
+#######################
+
+Welcome to the first patch for Gielinor Universalis! As a small patch, this is appropriately named after a small country: Crailey!
+
+You might wonder what Crailey is. It's one of the 22 human realms of Asgarnia predating its unification - most of which go unnamed in canon, so I had to come up with my own names.
+What makes Crailey worth playing over the likes of Donblas or the Dark Wizards? They have a unique mission tree, which can guide them to Brassica Prime! This patch cleans up Brassica Prime's mechanics to make a much more interesting game with them. 
+
+#######################
+#National Flavour
+#######################
+
+# New flags for the remaining nations of the Skull archipelago of the Wushanko Isles
+# New flags for the nations of the Hook archipelago of the Wushanko Isles
+
+# New (and localised) national ideas for the Glittercaves
+
+#######################
+#Religions
+#######################
+
+# Brassica Prime - Implemented on-action events for harmonisation and modifiers; harmonisation process should work properly now. Also implemented event to turn grain provinces into cabbage provinces.
+## Non-Brassican countries may convert all their cabbage-producing provinces to grains for 50 military power. Crailey cannot do this if they have progressed in their mission tree.
+# Vampyric - added 6 events; some ported from Orthodox.
+# Zamorak - ported over basic 5 Orthodox events, relocalised. It should now be much easier to accumulate Chaos.
+
+#######################
+#Trade
+#######################
+
+# New price events:
+## Divine Energy: Price increases from Invention institution
+## Gunpowder: Price increases when any gunpowder-producing nation builds a cannon
+## Lesser Loot/Runite: Price decreases when Rare Loot is revealed
+## Cabbage: Price increases if Brassica Prime becomes strong enough
+
+#######################
+#Estates
+#######################
+
+# Kharidian-culture nations now have a Burgher privilege allowing them to slowly create Siberian Frontiers throughout the Kharidian desert
+# Varlamore-culture nations, as well as Avizaal, also have an equivalent privilege to expand into Varlamore.
+
+# Implemented basic influence/loyalty privileges for TzHaar estates, though the modifiers do not seem to work at this time.
