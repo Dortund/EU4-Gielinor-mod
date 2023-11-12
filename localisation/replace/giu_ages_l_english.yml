@@ -159,6 +159,9 @@
  LEDGER_GOVERNMENT_MAX_ABSOLUTISM:0 "Max Adventurers"
  HAVE_LESS_THAN_ABSOLUTISM:0 "Have less Adventurers than "
  HAVE_MORE_THAN_ABSOLUTISM:0 "Adventurer rating is at least "
- 
+ MODIFIER_MAX_ABSOLUTISM_EFFECT:0 "Max effect of Adventurers"
+ ESTATE_PRIVILEGE_MAX_ABSOLUTISM_CHANGE:1 "Max Adventurers: $VALUE|+0$\n"
+ PRIVILEGE_MAX_ABSOLUTISM_CHANGE:1 "Max Adventurers will be changed by $VAL|+0$."
+
  death_of_guthix:0 "The Death of Guthix"
  death_of_guthix_name:0 "The Death of Guthix"

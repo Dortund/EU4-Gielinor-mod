@@ -108,6 +108,8 @@
  kourend_council_desc:0 "The Kingdom of Great Kourend has a unique governance structure focused around the balance of its five different houses."
  magiocracy:0 "Magiocracy"
  magiocracy_desc:0 "This realm is lead by powerful mages. Knowledge is power!"
+ necromantic_dictatorship:0 "Necromantic Dictatorship"
+ necromantic_dictatorship_desc:0 "A powerful necromancer rules this nation with an army of the undead."
  obsidian_caste:0 "Obsidian Castes"
  obsidian_caste_desc:0 "The people of this realm are divided into multiple castes from birth which determine their jobs in society."
  political_dynasties:0 "Political Dynasties"
@@ -124,6 +126,8 @@
  town_council_reform_desc:0 "This realm would be considered a city-state but for its small size. A town council drawn up of local residents governs the state."
  free_city:0 "Trade Colony"
  free_city_desc:0 "This is a special trade colony that has been granted special rights and privileges by the Khagan themselves."
+ werewolf_council_reform:0 "Werewolf Council"
+ werewolf_council_reform_desc:0 "A council of elder Werewolves "
  
  evr_civil_war_governance_reform:0 "Civil War Governance"
  evr_civil_war_governance_reform_desc:0 "The heavy weight of the Tirannwn Civil War is our government's main purpose."
@@ -168,6 +172,8 @@
  kou_reinstate_monarchy_reform:0 "Reinstate Monarchy"
  kou_reinstate_monarchy_reform_desc:0 "A sizable portion of Kourend's population cry out for the return of their historic monarchy, while ignoring the substantial achievements the Council has made. Still, perhaps we should give the people what they want."
  
+ ectofuntus_barrier_reform:0 "Ectofuntus Barrier"
+ ectofuntus_barrier_reform_desc:0 "Necromancy shall save our port from the onslaught of vampyres!"
  
 ############### Tribal
  

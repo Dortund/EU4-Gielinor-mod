@@ -2113,7 +2113,6 @@ vampyre_group	= {
 			"Drakan" "Jovkai" "Myrmel" "Shadum" "Vitur"
 		}
 	}
-
 	humanborn_vampyre = {
 		country = { monarch_lifespan = 100 }
 		primary = MYT
@@ -2133,7 +2132,7 @@ vampyre_group	= {
 		Drasdan Draynor Grigan Grigor Grigori Grinka Haemas Johannes Kroy
 		Lenyig Lowerniel Lumiere Malachi Malak Mischa Misdrievus Mordan Mort
 		Noctillion Rachra Ranis Remus Ruantun Sanguinus Simeon Solomon Tenebra
-		Trevallyn Tytn Valentin Vampyrus Vanstrom Victor Vlad Vladigor Von
+		Trevallyn Tytn Valentin Vampyrus Vanstrom Vardorvis Victor Vlad Vladigor Von
 		Vormar Zigfrid
 	}
 	female_names = {
@@ -2149,21 +2148,28 @@ werewolf_group	= {
 
 	canifian = {
 		primary = CAN
+	}
+	aquos = {
 		dynasty_names = {
-			"Blakesley" "Claws" "Moon" "Lowell" "Lupu" "Otso" "Sithech" "Shaw" "Volkov"
-			}
+			"Claws"
+		}
 		male_names = {
-			Barker Boris Brax Dmitri Eduard Fidelio Fyodor Georgy Imre
-			Jeroen Jerrod Joseph Lev Lygrass Manti Nikolai Ralph Roavar Rufus
-			Sbott Yuri Shanty
-			Moon
-			}
-		female_names = {
-			Alexis Alice Galina Greta Helga Irina Ksenia Larsa Liliya Milla
-			Moira Nikita Sofiya Svetlana Vera Yadviga Zoja
-			}
+			Lygrass Manti Shanty
 		}
 	}
+	dynasty_names = {
+		"Blakesley" "Moon" "Lowell" "Lupu" "Otso" "Sithech" "Shaw" "Volkov"
+	}
+	male_names = {
+		Barker Boris Brax Dmitri Eduard Fidelio Fyodor Georgy Imre
+		Jeroen Jerrod Joseph Lev Lygrass Manti Nikolai Ralph Roavar Rufus
+		Scrambles Sbott Yuri Moon
+	}
+	female_names = {
+		Alexis Alice Galina Greta Helga Irina Ksenia Larsa Liliya Milla
+		Moira Nikita Sofiya Svetlana Vera Yadviga Zoja
+	}
+}
 
 pirate_group	= {
 	graphical_culture = westerngfx
@@ -2487,18 +2493,26 @@ varlamore_group	= {
 
 	fortis = {
 		primary = VAR
-		}
-	centralis = {
-		}
+	}
 	aldarin = {
-		}
+		primary = ALD
+	}
+	auburnvaler = {
+		primary = AUB
+	}
+	proudspirian = {
+	}
 	tempestite = {
-		}
+	}
+	tlati = {
+		primary = TLT
+	}
 	dynasty_names = {
+		Arkan
 		"Alighieri" "Bindi" "Boccaccio" "Cacciaconti" "Caraffa" "Galassi" "Girlani" "Piccolomini" "Usodimare"
 		Colonna Caetani Ruspoli Aldobrandini Borghese Odescalchi Serlupi Crescenzi Massimo Patrizi Naro Montoro 
 		Theodoli Senni Ricci Rocchi Datti Pietromarchi Tuccimei Mazzetti Farnese Visconti Sforza Gonzaga
-		}
+	}
 	male_names = {
 		Aimeri Astra Hameln Hanchen Imafore Reshi Thomdril
 		Abbondanzio Abbondio Abelardo Abelino Achille Adalberto Adelfo Adelmio Adelmo Adone 
@@ -2537,7 +2551,7 @@ varlamore_group	= {
 		Secondotto Serafino Sergio Sesto Settimio Severino Severo
 		Silvano Silvestro Simone Simonetto Sinibaldo Sinucello Sozzo Spinetto Stefano
 		Taddeo Tedaldo Tedice Teodoro Tibaldo Tiziano Tommaso Lupo Vittorio Umberto
-		}
+	}
 	female_names = {
 		Kendall Zyanyi
 		Abelina Adalberta Adalgisa Adelaida Adelasia Adelia Adela Adriana Agalina Agnese 
@@ -2553,8 +2567,8 @@ varlamore_group	= {
 		Lodovica Lucia Lucinetta Lucrezia Maddalena Marcella 
 		Margherita Maria Mariana Marietta Martina Matilda Micaela Nunzia Paola 
 		Patrizia Renata Ricciarda Silvana Sofia Stefania Tiziana Tomasina Valentina Violante Virginia
-		}
 	}
+}
 
 troll_group	= {
 	graphical_culture = westerngfx
@@ -2712,14 +2726,26 @@ fairy_group	= {
 	graphical_culture = westerngfx
 	
 	fairy = {
+		primary = ZNS
 		dynasty_names = {
-			Foster Dramen
+			"Co-ordinator" Foster Dramen
 		}
 		male_names = {
 			Jinno Louie Watto Rocco
 		}
 		female_names = {
 			Bub Chaeldar Aeryka Fixit Nuff "Very Wise" Jukat Lunderwin Sunnel Teelee Sioncorn Zoe
+		}
+	}
+	pixie = {
+		dynasty_names = {
+			Cheanannais
+		}
+		male_names = {
+			Cormac Donnacha Fionn Ronan
+		}
+		female_names = {
+			Cait Sorcha Rosie Bethan
 		}
 	}
 }
@@ -2881,22 +2907,7 @@ penguin_group	= {
 
 beast_group	= {
 	graphical_culture = westerngfx
-
-	giant_spider = {
-		country = { monarch_lifespan = 2 }
-		primary = VNN
-		dynasty_names = {
-			"the Spider" "Web"
-		}
-		male_names = {
-			Araxxor
-		}
-		female_names = {
-			Araxxi Eek Infinity Kalrag Sarachnis Spindel Spiral Spyndra Squeak Venenatis
-		}
-	}
 	corrupt_bear = {
-		country = { monarch_lifespan = 2 }
 		primary = CST
 		dynasty_names = {
 			"the Bear"
@@ -2906,19 +2917,6 @@ beast_group	= {
 		}
 		female_names = {
 			Artio Callista
-		}
-	}
-	cursed_scorpion = {
-		country = { monarch_lifespan = 2 }
-		primary = SRP
-		dynasty_names = {
-			"the Scorpion"
-		}
-		male_names = {
-			Scorpio
-		}
-		female_names = {
-			Scorpia
 		}
 	}
 	kalphite = {
@@ -2945,6 +2943,79 @@ beast_group	= {
 			"Si'morgh"
 		}
 	}
+}
+
+arachnid_group	= {
+	graphical_culture = easterngfx
+	araxyte = {
+		primary = ARX
+		dynasty_names = {
+			"The Acidic" "The Highly Acidic" "the Pulsing" "Mirrorback" "the Bladed" "the Spitting" "the Imbued"
+		}
+		male_names = {
+			Araxxor
+		}
+		female_names = {
+			Araxxi
+		}
+	}
+	giant_spider = {
+		dynasty_names = {
+			"the Spider" "Web" "Fever Spider" "of the Teeming Horde" "of the Eight-Fold Seal" "Web-Spinner" "Fly-Catcher"
+		}
+		male_names = {
+			Ek Kalro
+		}
+		female_names = {
+			Eek Infinity Kalrag Spiral Spyndra Squeak
+		}
+	}
+	nycolas = {
+		dynasty_names = {
+			Ischyros Toxobolos Hagios Matomenos Athanatos Vasilias Prinkipas
+		}
+		male_names = {
+			King Minor Greater
+		}
+		female_names = {
+			Queen Minor Greater
+		}
+	}
+	red_spider = {
+		dynasty_names = {
+			"the Spider" "Web" "of the Teeming Horde" "of the Eight-Fold Seal" "Web-Spinner" "Fly-Catcher"
+		}
+		male_names = {
+			Saranchi
+		}
+		female_names = {
+			Sarachnis
+		}
+	}
+	scorpion = {
+		primary = SRP
+		dynasty_names = {
+			"the Scorpion"
+		}
+		male_names = {
+			Scorpio
+		}
+		female_names = {
+			Scorpia
+		}
+	}
+	venen = {
+		primary = VNN
+		dynasty_names = {
+			"the Spider" "Web" "of the Teeming Horde" "of the Eight-Fold Seal" "Web-Spinner" "Fly-Catcher"
+		}
+		male_names = {
+			Spindol Venenator
+		}
+		female_names = {
+			Spindel Venenatis
+		}
+	}	
 }
 
 dragonkin_group	= {
@@ -3051,7 +3122,7 @@ siren_group	= {
 			Ietsugu Yoshimune Ieshige Ieharu Ienari Ieyoshi Iesada Iemochi Yoshinobu
 		}
 		female_names = {
-			Boni Keri Jemi Name Quin Remora Shura Umi
+			Boni Keri Jemi Name Perseriya Quin Remora Shura Umi
 			#Extra
 			Toku Sen Tama Aya Ina Kumiko Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka 
 			Ayako Ayame Ayane Ayano Chika Chikako Chinatsu Chiyo Chiyoko Cho Chou Chouko Emi Etsuko Hana Hanae Hanako Haru 
@@ -3115,17 +3186,46 @@ mahjarrat_group = {
 possessed_group = {
 	graphical_culture = westerngfx
 
+	afflicted = {
+		primary = MRT
+		dynasty_names = {
+			"Alcanthric" "Corbo" "Elding" "Fenkenstrain" "Frey" "Harrow" "Hayes"
+			"Keelgan" "Kludge" "Lestwit" "O'Raleigh" "Shauncy" "Skye"
+			"Stemplehair" "Treforest"
+		}
+		male_names = {
+			Anton Callum Domin Ed Kandik Korvic Liornish Petrik Razmire Rologarric
+			Rologarth Rologray Rolomere Rolovanne Torran Ulsquire
+		}
+		female_names = {
+			Elena Eryn Isla Jayna Jayne Marabella Rolobrae Serra
+		}
+	}
 	sea_slug = {
 		primary = SSG
 		dynasty_names = {
 			"Bailey" "Hobb" "Lovecraft" "Maledict" "Medron" "O'Niall" "Wormwood"
-			}
+		}
 		male_names = {
 			Eustace Ezekial Holgart Jeb Kent
-			}
+		}
 		female_names = {
 			Caroline Kimberley Lucy Mallum Mahey'ish
-			}
+		}
+	}
+	sleepwalker = {
+		primary = NAS
+		dynasty_names = {
+			"B'ats" "Cromwick" "D'rows" "E'piws" "M'als" "A'hara" "Evans" "Ferdygris" "Forshaw" "Fyod" "Guile"
+			"Hurtz" "Juip" "Paddlehorn" "Screwte" "Sefalaltis" "Strom"
+		}
+		male_names = {
+			Andras Carl Don Erodoeht Kurt Lashram Lector Andiess Aurel Calin Charos Cornelius Curpile Cyreg	Flaygian Florin Garth Grigore Harold Harpert Ivan Kael Karnac Kendrick Luscion
+			Marius Mauritys Mekritus Mihail Polmafi Radu Ral Razvam Sergiu Sorin Sven Teodor Vasile Veliaf Vertida Victor Wiskit
+		}
+		female_names = {
+			Aseret Debra Naoj Salohcin Senga Sevi Toen Yram Catalina Elisabeta Emilia Gabriela Helena Ileana Luminata Nicoleta Sarius Simona Valeria
+		}
 	}
 	soulless = {
 		primary = TPS
@@ -3137,6 +3237,69 @@ possessed_group = {
 		}
 		female_names = {
 			Forgotten Half Noname
+		}
+	}
+	strangled = {
+		primary = SGW
+		dynasty_names = {
+			"Alighieri" "Bindi" "Boccaccio" "Cacciaconti" "Caraffa" "Galassi" "Girlani" "Piccolomini" "Usodimare"
+			Colonna Caetani Ruspoli Aldobrandini Borghese Odescalchi Serlupi Crescenzi Massimo Patrizi Naro Montoro 
+			Theodoli Senni Ricci Rocchi Datti Pietromarchi Tuccimei Mazzetti Farnese Visconti Sforza Gonzaga
+		}
+		male_names = {
+			Aimeri Astra Hameln Hanchen Imafore Reshi Thomdril
+			Abbondanzio Abbondio Abelardo Abelino Achille Adalberto Adelfo Adelmio Adelmo Adone 
+			Agapito Agostino Aimone Alamanno Alarico Adriano
+			Albano Alberico Alberto Albino Alboino Alcide Aldobrandino Aleardo Aleramo Alessandro 
+			Alessio Alighiero Alvise Ambrogio Amedeo Anastasio Andrea Angelo
+			Anselmo Antonino Antonio Antoniotto Arcibaldo Arderico Armando Arnolfo 
+			Arsenio Artemio Ascanio Astorre Arrigo Annibale
+			Atenolfo Attilio Augusto Aurelio Ausilio Ausonio Averado Azzo Azzone Baldassarre 
+			Barnaba Bartolomeo Basilio Basil Bassiano Basso Baldovino
+			Battista Beltrano Benedetto Benvenuto Berardo Bernabò Bernardo Berto 
+			Bertoldo Biagio Bonaventura Bonifacio Borso Bruno Bruto Buonconte
+			Buoso Callisto Camillo Candido Cangrande Carlo Cassio Castore Cataldo Catone Cecco 
+			Chiaffredo Chiano Ciro Ciuccio Claudio Clemente Costanzo Cesare
+			Comita Conone Cornelio Corradino Corrado Cosimo Cosma Costante Costantino 
+			Cristoforo Damiano Davide Demetrio Dioniso Doménico 
+			Durante Edoardo Elio Emmanuele Ennio Enrico Enzio Enzo Ercole 
+			Ermenegildo Ettore Eugenio Ezio Ezzelino Fabrizio Fausto Federigo
+			Felice Ferdinando Ferruccio Filippo Fiorello Flavio Folco Fortunato 
+			Fosco Francesco Fresco Gabriele Gabrino Gaetano Galasso Galeazzo Eriprando
+			Galeotto Gaspare Gastone Gelasio Gentile Geraldo Gerardo Germano Gerolamo 
+			Gherardo Giacinto Giacomo Gian Gianfranco Gianleone Giano
+			Giberto Gilberto Giolio Giordano Giorgio Giovanni Giulio Giuseppe Goffredo 
+			Gregorio Gualtiero Guarnito Guerrino Guglielmo Guido Guidone
+			Guigliadore Iacopo Igino Innocenzo Ippolito Isnardo Jacopo Lamberto Landolfo 
+			Lanfranco Lattanzio Lazzarino Lazzaro Landone
+			Lealdo Leonardo Leone Leonello Leopoldo Libero Lionello Livio Lodovico Lorenzo Luca Luchino 
+			Lucio Luigi Malacresta Manfredo Manuele
+			Marco Mariano Marino Mario Marsiglio Martino Mastino Matteo 
+			Merigo Michelangelo Michele Napoleone Nazareno Nestore Niccolò Nicola
+			Nino Nolfo Oberto Obizzino Obizzo Oddone Omero Onorio Oreste Orlando Ottavio Ottobono Ottone 
+			Pagano Pancrazio Pandolfo Paolo Pasquale Otto
+			Patrizio Pellegrino Pericle Pietro Pio Prospero Rafaello Raimondo 
+			Ranerio Raniero Riccardo Rinaldo Rizzardo Roberto Rodolfo Rolando
+			Rosso Ruggiero Salinguerra Salvatore Salvestro Sante Sancho Saverio Sciarra Sebastiano 
+			Secondotto Serafino Sergio Sesto Settimio Severino Severo
+			Silvano Silvestro Simone Simonetto Sinibaldo Sinucello Sozzo Spinetto Stefano
+			Taddeo Tedaldo Tedice Teodoro Tibaldo Tiziano Tommaso Lupo Vittorio Umberto
+		}
+		female_names = {
+			Kendall Zyanyi
+			Abelina Adalberta Adalgisa Adelaida Adelasia Adelia Adela Adriana Agalina Agnese 
+			Agostina Albina Alda Alessandra Alfonsina Alisia Aloisia
+			Amalia Amelia Ambrosia Anastasia Anna Antonella Antonia Argentina Augusta Aurelia 
+			Ausilia Ausonia Beatrice Benedetta Benilde Berenice Berta Bianca Bona Brunilde Camilla Candida Caracosa Carla Carola 
+			Cecilia Chiara Claudia Clorinda Caterina
+			Clotilde Costanza Cornelia Delinda Dora Edda Elena Eleonora
+			Elisabetta Ermenegilda Eudossia Eugenia Elisa
+			Fausta Felicia Felicita Filippa Filomena Flavia Fiora Fortunata Fosca Francesca 
+			Froizza Giacinta Ginevra Giovanna Giuditta Giulia Giuliana 
+			Giuseppa Ippolita Isabella Joscella Laura Lavinia Leonide Letizia Lidia Livia 
+			Lodovica Lucia Lucinetta Lucrezia Maddalena Marcella 
+			Margherita Maria Mariana Marietta Martina Matilda Micaela Nunzia Paola 
+			Patrizia Renata Ricciarda Silvana Sofia Stefania Tiziana Tomasina Valentina Violante Virginia
 		}
 	}
 }

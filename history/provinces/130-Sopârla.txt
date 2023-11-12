@@ -23,3 +23,9 @@ base_manpower = 2
 trade_goods = hunter_creatures
 
 is_city = yes
+
+2100.1.1 = {
+	base_tax = 4
+	base_production = 3
+	base_manpower = 3
+}

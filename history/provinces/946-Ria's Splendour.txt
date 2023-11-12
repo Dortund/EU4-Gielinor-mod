@@ -50,4 +50,7 @@ is_city = yes
 	controller = BTH
 	add_core = BTH
 	remove_core = ASG
+	base_tax = 3
+	base_production = 4
+	base_manpower = 3
 }

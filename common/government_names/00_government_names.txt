@@ -417,7 +417,7 @@ NTZ_burghers = {
 
 	trigger = {
 		government = monarchy
-		tag = NTZ
+		tag = NZS
 	}
 }
 
@@ -505,6 +505,33 @@ kharidian_generic_name = {
 	trigger = {
 		government = monarchy
 		culture_group = kharidian_group
+	}
+}
+
+magiocracy_name = {
+	rank = {
+		1 = REALM
+		2 = REALM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = MAGE
+		2 = MAGE
+		3 = ARCHMAGE
+	}
+
+	ruler_female = {
+		1 = MAGE
+		2 = MAGE
+		3 = ARCHMAGE
+	}
+
+	trigger = {
+		OR = {
+			has_reform = magiocracy
+			has_reform = necromatic_dictatorship
+		}
 	}
 }
 
@@ -859,6 +886,30 @@ shamanic_theocracy = {
 
 	trigger = {
 		has_reform = shamanic_theocracy
+	}
+}
+
+werewolf_council_names = {
+	rank = {
+		1 = PACK
+		2 = HORDE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = ELDER
+		2 = ELDER
+		3 = GRAND_ELDER
+	}
+
+	ruler_female = {
+		1 = ELDER
+		2 = ELDER
+		3 = GRAND_ELDER
+	}
+
+	trigger = {
+		has_reform = werewolf_council_reform
 	}
 }
 

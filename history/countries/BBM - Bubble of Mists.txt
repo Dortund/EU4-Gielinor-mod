@@ -2,6 +2,7 @@ government = monarchy
 add_government_reform = khanate
 government_rank = 1
 primary_culture = loop_culture
+add_accepted_culture = siren
 religion = zaros
 technology_group = wushankotechgroup
 capital = 1202 #Bubble of Mists
@@ -13,8 +14,8 @@ capital = 1202 #Bubble of Mists
 		birth_date = 1878.8.26
 		death_date = 1955.1.5
 		adm = 2
-		dip = 1
-		mil = 0
+		dip = 2
+		mil = 3
 	}
 }
 

@@ -1,19 +1,12 @@
 #950-Umbra
-owner = BDR
-controller = BDR
-add_core = BDR
+owner = ---
+controller = ---
+add_core = ---
 tribal_owner = ---
 culture = meiyer
 religion = saradomin
 
-discovered_by = BDI
-discovered_by = LNC
-discovered_by = MYN
-discovered_by = MRT
-discovered_by = MSH
-discovered_by = PPH
-discovered_by = morytaniantechgroup
-discovered_by = kharidtechgroup
+discovered_by = BDR
 
 hre = no
 
@@ -24,3 +17,12 @@ base_manpower = 1
 trade_goods = lesser_loot
 
 is_city = yes
+
+2135.1.6 = {
+	owner = BDR
+	controller = BDR
+	add_core = BDR
+	culture = meiyer
+	religion = saradomin
+	discovered_by = BDR
+}

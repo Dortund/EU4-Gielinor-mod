@@ -7,14 +7,21 @@ culture = humanborn_vampyre
 religion = vampyric
 
 discovered_by = morytaniantechgroup
+discovered_by = wushankotechgroup
 
 hre = no
 
-base_tax = 4
-base_production = 3
-base_manpower = 2
+base_tax = 5
+base_production = 4
+base_manpower = 4
 
 trade_goods = magic_supplies
 latent_trade_goods = { rare_loot }
 
 is_city = yes
+
+2100.1.1 = {
+	base_tax = 7
+	base_production = 6
+	base_manpower = 6
+}

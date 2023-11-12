@@ -13,7 +13,7 @@ country_decisions = {
 		allow = {
 			dip_tech = 5
 			NOT = { total_development = 50 }
-			IOR = { total_development = 150 }
+			EVR = { total_development = 150 }
 			has_government_power = {
 				mechanic_type = elven_desperation_mechanic
 				power_type = elven_desperation_power_1
@@ -54,7 +54,7 @@ country_decisions = {
 		allow = {
 			dip_tech = 5
 			NOT = { total_development = 50 }
-			IOR = { total_development = 150 }
+			EVR = { total_development = 150 }
 			has_government_power = {
 				mechanic_type = elven_desperation_mechanic
 				power_type = elven_desperation_power_1
@@ -129,7 +129,7 @@ country_decisions = {
 							area = farther_isle_of_souls_area
 						}
 					}
-					add_colonysize = 200
+					add_siberian_construction = 200
 				}
 			}
 		}

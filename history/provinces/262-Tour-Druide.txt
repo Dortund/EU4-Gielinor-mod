@@ -29,9 +29,6 @@ is_city = yes
 	culture = ardignan
 	religion = zamorak
 	remove_core = CDA
-	base_tax = 3
-	base_production = 3
-	base_manpower = 2
 }
 
 2007.2.27 = {
@@ -47,4 +44,7 @@ is_city = yes
 	controller = KDR
 	add_core = KDR
 	remove_core = ADO
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
 }

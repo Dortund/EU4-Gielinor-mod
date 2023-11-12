@@ -5,67 +5,48 @@
 namespace = flavor_var
 normal_or_historical_nations = yes
 
-# The Fall of Quaesitum
 country_event = {
 	id = flavor_var.1
-	title = flavor_var.1.t
-	desc = flavor_var.1.d
+	title = flavor_var.1.t # Settlement of the Tlati Rainforest
+	desc = flavor_var.1.d # Although Varlamorean people have settled the Tlati Rainforest for some time now, they are small and isolated in number and have never been integrated into our nation. Now, however, we can begin a co-ordinated effort to begin the settlement of the area.
 	picture = VARLAMORE_MAP_eventPicture
 	
-	fire_only_once = yes
-
-	trigger = {
-		tag = VAR
-		is_year = 1900
-		owns_core_province = 497 #Quaesitum
-	}
+	is_triggered_only = yes
 
 	mean_time_to_happen = {
-		months = 5
+		days = 1
+	}
+	
+	immediate = {
+		509 = {
+			cede_province = TLT
+			add_core = TLT
+			change_culture = tlati
+			change_religion = ranul
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			change_trade_goods = grains
+		}
+		TLT = {
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+		}
+		vassalize = TLT
 	}
 	
 	option = {
-		name = flavor_var.1.a
-		ai_chance = { factor = 90 }
-		add_yearly_manpower = -4
-		490 = {
-			add_core = VAR
-			cede_province = VAR
-			add_base_tax = 1
-			add_base_production = 1
-			add_base_manpower = 1
-			change_culture = fortis
-			change_religion = ranul
-		}
-		497 = {
-			add_base_tax = -2
-			add_base_production = -3
-			add_base_manpower = -1
-			add_province_modifier = {
-				name = "VAR_dead_citadel"
-				duration = -1
-			}
-		}
+		name = flavor_var.1.a # I will join the colonists!
+		switch_tag = TLT
 	}
-	
 	option = {
-		name = flavor_var.1.b
-		ai_chance = { factor = 10 }
-		490 = {
-			add_core = VAR
-			cede_province = VAR
-			change_culture = fortis
-			change_religion = ranul
-		}
-		497 = {
-			add_base_tax = -2
-			add_base_production = -3
-			add_base_manpower = -1
-			add_province_modifier = {
-				name = "VAR_dead_citadel"
-				duration = -1
-			}
-		}
+		name = flavor_var.1.b # We will command the colony from a safe distance.
 	}
 }
 

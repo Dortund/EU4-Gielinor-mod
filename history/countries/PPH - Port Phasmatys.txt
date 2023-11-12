@@ -21,14 +21,22 @@ historical_friend = HRN
 }
 
 2035.5.17 = {
+	set_country_flag = PPH_plans_of_the_necromancer_flag
+	set_country_flag = PPH_necrovarus_coup_flag
+	add_government_reform = necromantic_dictatorship
+	add_government_reform = ectofuntus_barrier_reform
 	monarch = {
 		name = "Necrovarus"
 		dynasty = "Hanto"
 		birth_date = 2005.2.15
+		religion = zamorak
 		culture = ghost
-		adm = 1
-		dip = 1
-		mil = 5
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+	change_country_color = { 
+		color = { 116 206 164 }
 	}
 	change_primary_culture = ghost
 }

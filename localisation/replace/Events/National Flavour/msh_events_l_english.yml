@@ -1,6 +1,6 @@
 ﻿l_english:
  flavor_msh.1.t:0 "Pirate Mercenaries for Morytania"
- flavor_msh.1.d:0 "Morytania has paid to hire some pirate mercenaries from Mos le' Harmless. We haven't really got a say in the matter, but we have received a fair sum of gold."
+ flavor_msh.1.d:0 "Morytania has paid to hire some pirate mercenaries from [Root.GetName]. We haven't really got a say in the matter, but we have received a fair sum of gold."
  flavor_msh.1.a:0 "So long as Morytania's pirate mercenaries don't raid us..."
  
  flavor_msh.2.t:0 "Pirates of Brimhaven"

@@ -1,7 +1,7 @@
 #489-Vinolitus
-owner = VAR
-controller = VAR
-add_core = VAR
+owner = ALD
+controller = ALD
+add_core = ALD
 tribal_owner = ---
 culture = aldarin
 religion = ralos
@@ -17,3 +17,9 @@ base_manpower = 2
 trade_goods = fruit
 
 is_city = yes
+
+1990.1.1 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+}

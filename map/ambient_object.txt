@@ -86,16 +86,6 @@ type={
 	scale=0.300000
 	time_duration=300.000000
 	object={
-		name="INFANTRY"
-		hidden_on_start=no
-		position={
-			3444.000 11.000 681.000 
-		}
-		rotation={
-			0.000 45.000 0.000 
-		}
-	}
-	object={
 		name="Seagulls_zansibar"
 		hidden_on_start=no
 		position={
@@ -170,6 +160,26 @@ type={
 		hidden_on_start=no
 		position={
 			2700.000 11.000 912.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_zansibar"
+		hidden_on_start=no
+		position={
+			1635.000 11.000 1008.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="INFANTRY"
+		hidden_on_start=no
+		position={
+			3444.000 11.000 681.000 
 		}
 		rotation={
 			0.000 45.000 0.000 
@@ -270,16 +280,6 @@ type={
 		hidden_on_start=no
 		position={
 			4446.000 11.000 519.000 
-		}
-		rotation={
-			0.000 45.000 0.000 
-		}
-	}
-	object={
-		name="Seagulls_zansibar"
-		hidden_on_start=no
-		position={
-			1619.000 11.000 1052.000 
 		}
 		rotation={
 			0.000 45.000 0.000 
@@ -423,6 +423,16 @@ type={
 	use_animation=yes
 	scale=0.200000
 	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1622.000 0.250 1324.000 
+		}
+		rotation={
+			0.000 200.000 0.000 
+		}
+	}
 	object={
 		name="Seagulls_english_channel"
 		hidden_on_start=no
@@ -631,7 +641,7 @@ type={
 		name="Seagulls_english_channel"
 		hidden_on_start=no
 		position={
-			1728.000 0.100 986.000 
+			1989.000 0.100 849.000 
 		}
 		rotation={
 			0.000 -60.000 0.000 
@@ -1444,6 +1454,36 @@ type={
 	use_animation=no
 	scale=0.340000
 	time_duration=300.000000
+	object={
+		name="chichen_itza"
+		hidden_on_start=no
+		position={
+			1694.000 -0.050 862.000 
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
+	object={
+		name="chichen_itza"
+		hidden_on_start=no
+		position={
+			1640.000 -0.050 966.000 
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
+	object={
+		name="chichen_itza"
+		hidden_on_start=no
+		position={
+			1613.000 -0.050 918.000 
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
 	object={
 		name="chichen_itza"
 		hidden_on_start=no

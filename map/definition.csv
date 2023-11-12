@@ -476,62 +476,62 @@ province;red;green;blue;x;x
 475;195;86;0;Quidam Lake;x
 476;68;88;64;Shaman's Stage;x
 477;196;90;128;Chasm Caverns;x
-478;68;92;192;North Attritio Mountains;x
-479;196;94;255;South Attritio Mountains;x
-480;68;96;0;Decimation Point;x
-481;196;98;64;Mount Miser;x
-482;68;100;128;Outlaw Overlook;x
-483;197;102;192;Mount Desperation;x
-484;69;104;255;Custodia's End;x
-485;197;106;0;Baalal Valley;x
+478;68;92;192;Custodia Valley;x
+479;196;94;255;Custodia Pass;x
+480;68;96;0;Yonrithwood;x
+481;196;98;64;Strangled Temple;x
+482;68;100;128;Zema-Tal;x
+483;197;102;192;Tasol-Ikam;x
+484;69;104;255;Uittzema;x
+485;197;106;0;Siuaxali;x
 486;69;108;64;Viridis;x
-487;197;110;128;Quiesalda;x
+487;197;110;128;Valtriti;x
 488;69;112;192;Aldarin;x
 489;197;114;255;Vinolitus;x
-490;70;116;0;Arida's Edge;x
+490;70;116;0;Auburnvale;x
 491;198;118;64;Tempestus;x
 492;70;120;128;Singing Isle;x
 493;198;122;192;Giant Hills;x
-494;70;124;255;Transitus;x
-495;198;126;0;Refuge's Hope;x
-496;70;128;64;Pride Hills;x
-497;199;130;128;Quaesitum;x
-498;71;132;192;Parched Shore;x
-499;199;134;255;Varla's Edge;x
-500;71;136;0;Arcanum Oasis;x
-501;199;138;64;Road of Hope;x
-502;71;140;128;Proudhail Pass;x
-503;199;142;192;Rebel Rift;x
-504;72;144;255;Kourendwatch;x
-505;200;146;0;Proudspire Town;x
-506;72;148;64;Magnitudinem Futurorum;x
-507;200;150;128;Villa Meridiem;x
-508;72;152;192;Arida Anguli;x
-509;200;154;255;North Ranul Forest;x
-510;72;156;0;South Ranul Forest;x
-511;201;158;64;Auceps;x
-512;73;32;128;Avizaal;x
+494;70;124;255;Sacred Stump;x
+495;198;126;0;Gloomthorn Trail;x
+496;70;128;64;Xitatlane;x
+497;199;130;128;Piercing Tree;x
+498;71;132;192;Tlaneatis;x
+499;199;134;255;Fragrant Plain;x
+500;71;136;0;Talates;x
+501;199;138;64;Ranixali;x
+502;71;140;128;Tower of Ascension;x
+503;199;142;192;Sacred Temple;x
+504;72;144;255;Darkfrost Ridge;x
+505;200;146;0;Shady Gorge;x
+506;72;148;64;Proudridge;x
+507;200;150;128;Talk Teklam;x
+508;72;152;192;Ayaktlane;x
+509;200;154;255;Kastori;x
+510;72;156;0;Trembling Grounds;x
+511;201;158;64;Cor Venationis;x
+512;73;32;128;Laqueus Plain;x
 513;201;34;192;Venari Bestias;x
-514;73;36;255;Litushamo;x
+514;73;36;255;Avingres;x
 515;201;38;0;Astra;x
 516;73;40;64;Locus Oasis;x
-517;201;42;128;Ripam Provisus;x
-518;74;44;192;Pulchra Aurora;x
+517;201;42;128;Piscram;x
+518;74;44;192;Stonecutter Outpost;x
 519;202;46;255;Wyrmden;x
-520;74;48;0;Centralis;x
-521;202;50;64;Principium;x
-522;74;52;128;Saepemcoici;x
-523;202;54;192;Oudh;x
-524;74;56;255;Custodem Capitis;x
+520;74;48;0;Kualti Station;x
+521;202;50;64;Cam Torum;x
+522;74;52;128;Tamakamtlati;x
+523;202;54;192;Quaesitum;x
+524;74;56;255;Outer Fortis;x
 525;203;58;0;Civitas illa Fortis;x
-526;75;60;64;Outlaw's Haha;x
+526;75;60;64;Redwood Ridge;x
 527;203;62;128;Custodia Mountains;x
 528;75;64;192;Lake Brimhaven;x
 529;203;66;255;Entry Lake;x
 530;75;68;0;Fletchers' View;x
 531;203;70;64;Wilderness Ridge;x
-532;76;72;128;Quaesitum's Shield;x
-533;204;74;192;Hailstorm Mountains;x
+532;76;72;128;Custodia Mountains;x
+533;204;74;192;Custodia Mountains;x
 534;76;76;255;Proudspire;x
 535;204;78;0;Slopes of Quidamortem;x
 536;76;80;64;Honeyflax;x
@@ -692,34 +692,34 @@ province;red;green;blue;x;x
 691;28;251;251;Lizards' Reef;x
 692;29;201;201;Crystal Trench;x
 693;30;201;251;Gateway of Zeah;x
-694;31;221;251;Antilacerti Reaches;x
-695;32;251;251;Hailstorm Runoff;x
+694;31;221;251;Salvager Sea;x
+695;32;251;251;Shipwreck Shores;x
 696;33;201;201;Coast of Fortis;x
-697;34;201;251;Mare Fortis;x
+697;34;201;251;Refound Shore;x
 698;35;221;251;Varlamore Ridge;x
-699;36;251;251;Cape of Wyrms;x
+699;36;251;251;Cape of Varlamore;x
 700;37;201;201;Outer Avium Sea;x
-701;38;201;251;New Imcandoria Sea;x
+701;38;201;251;Landless Sea;x
 702;39;221;251;Avium Coast;x
-703;40;251;251;Siccum Maris;x
+703;40;251;251;Misty Coast;x
 704;41;201;201;Bluewake;x
 705;42;201;251;Navis Perierat;x
 706;43;221;251;Mare Stultum;x
 707;44;251;251;Turn Rursus;x
 708;45;201;201;Oceanum Novum;x
-709;46;201;251;Outer Ranul;x
-710;47;221;251;Occasus Delta;x
-711;48;251;251;Mare Vatum;x
+709;46;201;251;Mare Vinum;x
+710;47;221;251;Cape of Wyrms;x
+711;48;251;251;Aldarin Channel;x
 712;49;201;201;Mare Spiritus;x
 713;50;201;251;Sonitus Maris;x
-714;51;221;251;Mare Tempestas;x
+714;51;221;251;Mare Luxuria;x
 715;52;251;251;Mare Nubes;x
-716;53;201;201;Titanic Sea;x
-717;54;201;251;Cape of Quaesitum;x
-718;55;221;251;Wine Shores;x
+716;53;201;201;Sea of Avoidance;x
+717;54;201;251;Fragrant Cape;x
+718;55;221;251;Coast of Tal Teklan;x
 719;56;251;251;Tempest Bay;x
-720;57;201;201;Oram Vinum;x
-721;58;201;251;Furthest Custodia;x
+720;57;201;201;Strangleshore;x
+721;58;201;251;Sea of Diversion;x
 722;59;221;251;Western Course;x
 723;60;251;251;Impassable Sea;x
 724;61;201;201;Impassable Sea;x
@@ -836,10 +836,10 @@ province;red;green;blue;x;x
 835;88;120;0;Slopes of Quidamortem;x
 836;216;122;64;Custodia Mountains;x
 837;88;124;128;Custodia Mountains;x
-838;217;126;192;Custodia Mountains;x
-839;89;128;255;Custodia Mountains;x
-840;217;130;0;Quaesitum's Shield;x
-841;89;132;64;Proudspire;x
+838;217;126;192;Darkfrost Cliffs;x
+839;89;128;255;Proudspire Cliffs;x
+840;217;130;0;Cam Torum Cliffs;x
+841;89;132;64;Cliffs of Ralos' Rise;x
 842;1;48;32;Urzica;x
 843;129;50;79;Supliciu;x
 844;1;52;126;Liniste;x
@@ -883,14 +883,14 @@ province;red;green;blue;x;x
 882;6;128;32;Kronos;x
 883;135;130;79;Buchu;x
 884;7;132;126;Quidam Ridge;x
-885;135;134;173;Serenum;x
-886;7;136;32;Ventus Cuniculum;x
-887;135;138;79;Vita Nova;x
-888;7;140;126;Decresco;x
-889;135;142;173;Grando;x
-890;8;144;32;Alia Petram;x
-891;136;146;79;Fortis Beach;x
-892;8;148;126;Fructus;x
+885;135;134;173;Aldashore;x
+886;7;136;32;Molendinum;x
+887;135;138;79;Ents' Grove;x
+888;7;140;126;Citadel Ruins;x
+889;135;142;173;Shipwreck Cove;x
+890;8;144;32;Tlati Delta;x
+891;136;146;79;Traders' Port;x
+892;8;148;126;Villam Triticum;x
 893;91;221;251;Coast of Karuulm;x
 894;8;152;32;Gulvas;x
 895;136;154;79;Hege;x
@@ -901,14 +901,14 @@ province;red;green;blue;x;x
 900;9;36;126;Chainja;x
 901;137;38;173;Lám;x
 902;9;40;32;Llyfrgell;x
-903;92;251;251;Dragons' Depths;x
+903;92;251;251;Unholy Waters;x
 904;93;201;201;Frozen Wind Waters;x
 905;94;201;251;Sea of Lithkren;x
 906;95;221;251;Draconic Trench;x
 907;96;251;251;Cartographer's Error;x
 908;97;201;201;Diluted Swamp;x
 909;98;201;251;Sandcrab Channel;x
-910;99;221;251;Ranul Sea;x
+910;99;221;251;Sunset Channel;x
 911;100;251;251;Central Kebos Sea;x
 912;101;201;201;Far West Zeah Sea;x
 913;102;201;251;Tempoross Sea;x
@@ -991,12 +991,12 @@ province;red;green;blue;x;x
 990;22;88;32;Cinqoundri;x
 991;150;90;79;Gutusquir;x
 992;22;92;126;Maple Bank;x
-993;112;251;251;Tempestus Sound;x
-994;22;96;32;Tempestus Reservoir;x
-995;151;98;79;Mage's Pond;x
-996;23;100;126;Ha'Áantaj;x
-997;151;102;173;Arcanum Oasis;x
-998;23;104;32;Hunters' Pond;x
+993;112;251;251;Silam-Ates;x
+994;22;96;32;Citadel Moat;x
+995;151;98;79;Ralos' Bounty;x
+996;23;100;126;Torum Crater;x
+997;151;102;173;Talates Pools;x
+998;23;104;32;Ortus Pond;x
 999;151;106;79;Locus Oasis;x
 1000;23;108;126;Tempoross Cove;x
 1001;113;201;201;Sea of Tolls;x
@@ -1013,7 +1013,7 @@ province;red;green;blue;x;x
 1012;25;132;126;Achey;x
 1013;233;94;0;Aenbi;x
 1014;181;129;99;Morgen;x
-1015;193;91;91;East Ranul Forest;x
+1015;193;91;91;Ostoxali;x
 1016;132;90;79;Sefte;x
 1017;115;221;251;Impassable Sea;x
 1018;116;251;251;Impassable Sea;x
@@ -1434,3 +1434,57 @@ province;red;green;blue;x;x
 1433;238;46;0;Mycil;x
 1434;110;48;64;Rada's Park;x
 1435;239;50;128;Korbzwerg;x
+1436;111;52;192;Ancient Vault;x
+1437;239;54;255;Daimon's Impact;x
+1438;111;56;0;Huntsman's Wood;x
+1439;239;58;64;Frozen Temple;x
+1440;111;60;128;Tower of Bounty;x
+1441;239;62;192;Rusum Oasis;x
+1442;112;64;255;Uzer Oasis;x
+1443;240;66;0;Daimon's Moat;x
+1444;112;68;64;Thawing Hunt Lake;x
+1445;240;70;128;Forest's Bounty Lake;x
+1446;112;72;192;Templetower Lake;x
+1447;240;74;255;Bounty Moat;x
+1448;112;76;0;Ritual Site;x
+1449;241;78;64;Sequoia Shore;x
+1450;113;80;128;Tempest's Calm;x
+1451;241;82;192;Foresters' Retreat;x
+1452;113;84;255;Brackentop Grotto;x
+1453;241;86;0;Salvager Overlook;x
+1454;113;88;64;Hailstorm Mountain;x
+1455;241;90;128;Ralos' Rise;x
+1456;215;191;212;Iter Peregrini;x
+1457;242;94;255;Hidden Ravine;x
+1458;114;96;0;Mistrock;x
+1459;242;98;64;Sunset Coast;x
+1460;114;100;128;Ortus;x
+1461;242;102;192;Iter Furis;x
+1462;114;104;255;Fortis Cothon;x
+1463;243;106;0;Colosseum Collis;x
+1464;115;108;64;Tempestus Reservoir;x
+1465;243;110;128;Mahogany Lake;x
+1466;115;112;192;Hunters' Pond;x
+1467;243;114;255;Aqueduct's End;x
+1468;115;116;0;Emperor's Pool;x
+1469;243;118;64;Avocamentum Pond;x
+1470;116;120;128;Vinepool;x
+1471;244;122;192;Ritual Hills;x
+1472;116;124;255;Ritual Hills;x
+1473;244;126;0;Ritual Hills;x
+1474;116;128;64;Custodia Mountains;x
+1475;244;130;128;Custodia Mountains;x
+1476;116;132;192;Tempest Cliffs;x
+1477;245;134;255;Tempest Cliffs;x
+1478;117;136;0;Auburn Cliffs;x
+1479;245;138;64;Brackentop Cliffs;x
+1480;117;140;128;Fragrant Ridge;x
+1481;245;142;192;Mistrocks;x
+1482;117;144;255;Mistrocks;x
+1483;245;146;0;Mistrocks;x
+1484;118;148;64;Cam Torum Cliffs;x
+1485;246;150;128;Sunset's Shield;x
+1486;118;152;192;Colosseum Cliffs;x
+1487;246;154;255;Salvager Splinters;x
+1488;118;156;0;Chowa;x
+1489;246;158;64;Villsvin Peninsula;x

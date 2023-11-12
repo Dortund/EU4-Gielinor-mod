@@ -6,7 +6,7 @@ tribal_owner = ---
 culture = cloud_giant
 religion = bandos
 
-discovered_by = CDG
+discovered_by = zeantechgroup
 
 hre = no
 
@@ -19,3 +19,11 @@ fort_15th = yes
 trade_goods = manufactured_goods
 
 is_city = yes
+
+1943.11.5 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+	culture = tempestite
+	religion = ralos
+}

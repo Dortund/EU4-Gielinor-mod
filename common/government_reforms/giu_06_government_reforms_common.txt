@@ -135,6 +135,22 @@ amphibious_specialization_reform = {
 	}
 }
 
+ectofuntus_barrier_reform = {
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "icon_ectofuntus_barrier"
+	potential = {
+		has_reform = ectofuntus_barrier_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 200
+	modifiers = {
+		own_territory_dice_roll_bonus = 3
+		meritocracy = 0.5
+		governing_capacity_modifier = -0.9
+	}
+}
+
 mercenary_leadership_reform = {
 	icon = "war_economy"
 	allow_normal_conversion = yes

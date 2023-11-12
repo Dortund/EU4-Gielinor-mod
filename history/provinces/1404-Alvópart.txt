@@ -1,7 +1,6 @@
 #1404-Alvópart
-owner = MYT
-controller = MYT
-add_core = MYT
+owner = SLP
+controller = SLP
 add_core = SLP
 tribal_owner = ---
 culture = slepe
@@ -12,10 +11,28 @@ discovered_by = wushankotechgroup
 
 hre = no
 
-base_tax = 2
-base_production = 2
-base_manpower = 1
+base_tax = 3
+base_production = 3
+base_manpower = 2
 
 trade_goods = naval_goods
 
 is_city = yes
+
+1975.1.1 = {
+	owner = MYT
+	controller = MYT
+	add_core = MYT
+}
+
+2100.1.1 = {
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
+}
+
+2169.1.1 = {
+	owner = NAS
+	controller = NAS
+	add_core = NAS
+}

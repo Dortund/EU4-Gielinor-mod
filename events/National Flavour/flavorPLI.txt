@@ -37,5 +37,8 @@ country_event = {
 		33 = {
 			change_province_name = "Port Sarim"
 		}
+		540 = {
+			change_province_name = "Sarim Bay"
+		}
 	}
 }

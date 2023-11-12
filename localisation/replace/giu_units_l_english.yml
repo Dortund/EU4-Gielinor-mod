@@ -17,8 +17,8 @@
  alltech_25_cannonDESCR:0 "Gnomish inventors were able to create a minaturised cannon capable of firing dyed toads at sheep, for unclear reasons. This invention would later be enhanced by the use of powerful air spells to fire cannonballs, becoming an invaluable part of the short, sharp wars that characterised the late Fifth Age and early Sixth Age."
  alltech_29_cannon:0 "Oldak Coil"
  alltech_29_cannonDESCR:0 "The almighty Oldak Coil uses divine energy to convert cannonballs into magical bolts of lightning, capable of dealing immense damage in a limited area."
-
-
+ 
+ 
  bandostech_1_infantry:0 "Bandosian Horde"
  bandostech_1_infantryDESCR:0 "The simple ability to round up a rabble and send it at the enemy has been surprisingly effective for Bandosian commanders in history, largely owing to the unreadiness of many of Bandos' enemies."
  bandostech_5_infantry:0 "Bandosian Club Regiment"
@@ -476,15 +476,15 @@
  zeantech_15_infantryDESCR:0 "Elite guard of Varlamore's royalty, the Kualti are famed for their experience, discipline and recordkeeping. Kualti ceremonial daggers are unique to each individual member, making it extremely difficult for any individual member of the guard to betray Varlamore."
  zeantech_19_infantry:0 "Shayzien Soldiers"
  zeantech_19_infantryDESCR:0 "Founded in the Fourth Age by Camorra Shayzien, the city of Shayzien has since been the home for Kourend's military and police force. Shayzien soldiers are raised from a young age in the crafts of war, and such skills combined with their relatively large numbers makes them a dangerous force to cross."
- zeantech_26_infantry:0 "Tempestite Mages"
- zeantech_26_infantryDESCR:0 "The floating city of Tempestus is best-known for its College of Bards, and while music can be a magic all of its own, it is not the only power at play here. Tapping into the ancient powers that cause the city to float, Tempestite Mages develop a unique take on the craft which few understand."
+ zeantech_26_infantry:0 "Tlati Mages"
+ zeantech_26_infantryDESCR:0 "The Tlati Rainforest of Varlamore is littered with the remains of the Old Ones - and is also home to the weather-twisting Rain Demons. Drawing on traditions old and new, Tlati Mages surprise their opponents with a wide diversity of spells."
  zeantech_30_infantry:0 "Twisted Rangers"
  zeantech_30_infantryDESCR:0 "Deep beneath Mount Quidamortem is the Great Olm, whose remains were carved into the infamous Twisted Bows. While extremely powerful against mages, the incredible rarity of the bows limited their practical application - until a curious event happened. The power of the Great Olm seemed to seep into the plantlife of the Kebos Lowlands, generating additional bows - but at what cost?"
 
  zeantech_1_cavalry:0 "Zean Unicorns"
  zeantech_1_cavalryDESCR:0 "Zeah's unicorns were initially used not as mounts but as draft animals, and consequentially tend to be somewhat stockier and slower than those found on Gielinor's central continent."
- zeantech_10_cavalry:0 "Centralis Riders"
- zeantech_10_cavalryDESCR:0 "Open savannas of central Varlamore demand specialist cavalry capable of suriving in remote arid regions. Natural selection of introduced unicorns have, over the centuries, resulted in a resilient breed of unicorn unique to Varlamore which has been particularly effective in operations far from Varlamore's core territory."
+ zeantech_10_cavalry:0 "Avium Riders"
+ zeantech_10_cavalryDESCR:0 "Open savannas of eastern Varlamore demand specialist cavalry capable of suriving in remote arid regions. Natural selection of introduced unicorns have, over the centuries, resulted in a resilient breed unique to Varlamore which has been particularly effective in operations far from cities."
  zeantech_14_cavalry:0 "Shayzien Knights"
  zeantech_14_cavalryDESCR:0 "Shayzien's rough terrain typically makes it impractical for extensive use of cavalry. However, the hardier unicorns of Zeah could find limited use as mounts in the region."
  zeantech_23_cavalry:0 "Wader Cavalry"
@@ -492,3 +492,16 @@
  zeantech_28_cavalry:0 "Wyrm Cavalry"
  zeantech_28_cavalryDESCR:0 "Serpentine, unpredictable wyrms are found beneath Mount Karuulm and the Avium Savannah. Fighting in both melee and magical combat, they just require an experienced rider with archery skills to become incredibly tough to counter."
  
+ 
+ enables_rajput_regiments:0 "Vyrewatch Sentinel Regiments"
+ rajput_regiment:0 "Vyrewatch Sentinel Regiment"
+ REGCAT_rajput:0 "Vyrewatch Sentinels"
+ RAJPUT_REGIMENT:0 "Vyrewatch Sentinel\n$EFFECT$"
+ RAJPUT_NAME:0 "$HOME$'s $NUM$$ORDER$ Vyrewatch Sentinels"
+ RAJPUT_REGIMENT_TYPE:0 "Vyrewatch Sentinel"
+ HAVE_LESS_RAJPUT_THAN:0 "Have less Vyrewatch Sentinel Regiments than $VALUE|Y$.\n"
+ HAVE_AT_LEAST_RAJPUT_THAN:0 "Have at least $VALUE|Y$ Vyrewatch Sentinel Regiments.\n"
+ MODIFIER_CAN_RECRUIT_RAJPUTS:0 "Can recruit Vyrewatch Sentinels"
+ MODIFIER_ALLOWED_RAJPUT_FRACTION:0 "Vyrewatch Sentinel Force Limit Fraction"
+ RAJPUT_FORCELIMIT:1 "We can recruit up to $VAL|%Y$ of our force-limit of $FL$ as §GVyrewatch Sentinels§! due to:\n"
+ RAJPUT_DESC:2 "By using the §YOpen Vyrewatch Sentinel Recruitment§! government interaction, we have gained the ability to recruit the most powerful vampyre soldiers. The psychic abilities of Sentinels allows them to evade more melee hits and scare their enemies."

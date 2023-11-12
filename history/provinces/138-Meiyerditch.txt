@@ -10,8 +10,8 @@ discovered_by = morytaniantechgroup
 
 hre = no
 
-base_tax = 3
-base_production = 4
+base_tax = 5
+base_production = 5
 base_manpower = 7
 
 trade_goods = basic_ores
@@ -19,3 +19,9 @@ trade_goods = basic_ores
 is_city = yes
 
 add_province_triggered_modifier = MYT_descendants_of_hallowvale
+
+2100.1.1 = {
+	base_tax = 7
+	base_production = 7
+	base_manpower = 9
+}

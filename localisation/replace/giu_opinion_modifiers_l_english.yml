@@ -1,6 +1,8 @@
 ﻿l_english:
  boss_tag_opinion:0 "Boss Nation"
  
+ excessive_tithe_took_harsh_tithe:0 "Took unusually harsh tithe"
+ 
  seren_words_of_runecrafter_support:0 "Voiced support for Runecrafting"
  seren_words_of_runecrafter_oppose:0 "Voiced opposition for Runecrafting"
  seren_gave_away_temple_of_light_position:0 "Gave away the position of the Death Altar"
@@ -22,6 +24,9 @@
  cda_joined_resistance:0 "Joined the Elven Resistance"
  cda_limited_resistance_support:0 "Limited Resistance support"
  cda_refused_resistance:0 "Refused to aid the Resistance"
+ 
+ cfs_allies_in_faith:0 "Allies in Faith"
+ cfs_rejected_support:0 "Rejected to support religious bretheren" 
  
  dbs_rejected_kinshra:0 "Rejected Kinshra"
  

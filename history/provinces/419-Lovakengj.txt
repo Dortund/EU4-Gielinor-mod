@@ -16,7 +16,7 @@ base_manpower = 4
 
 fort_15th = yes 
 
-trade_goods = manufactured_goods
+trade_goods = refined_products
 
 is_city = yes
 
@@ -26,4 +26,10 @@ center_of_trade = 1
 	owner = KOU
 	controller = KOU
 	add_core = KOU
+}
+
+2100.1.1 = {
+	base_tax = 6
+	base_production = 7
+	base_manpower = 6
 }

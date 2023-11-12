@@ -4,3 +4,4 @@ discovered_by = karamjantechgroup
 discovered_by = bandostechgroup
 discovered_by = kandarintechgroup
 discovered_by = gnometechgroup
+discovered_by = fremenniktechgroup

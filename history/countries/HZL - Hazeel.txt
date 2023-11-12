@@ -8,6 +8,7 @@ technology_group = kandarintechgroup
 capital = 265 #Hazeel
 national_focus = MIL
 historical_friend = KZD
+historical_rival = CDA
 
 1895.12.6 = {
 	monarch = {

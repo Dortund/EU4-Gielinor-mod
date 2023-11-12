@@ -8,7 +8,7 @@ normal_or_historical_nations = yes
 country_event = {
 	id = flavor_msh.1
 	title = flavor_msh.1.t #Pirate Mercenaries for Morytania
-	desc = flavor_msh.1.d #Morytania has paid to hire some pirate mercenaries from Mos le' Harmless. We haven't really got a say in the matter, but we have received a fair sum of gold.
+	desc = flavor_msh.1.d #Morytania has paid to hire some pirate mercenaries from [Root.GetName]. We haven't really got a say in the matter, but we have received a fair sum of gold.
 	picture = PIRATE_BATTLE_eventPicture
 	
 	is_triggered_only = yes

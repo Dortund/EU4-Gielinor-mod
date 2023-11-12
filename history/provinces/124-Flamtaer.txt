@@ -23,3 +23,8 @@ base_manpower = 1
 trade_goods = magic_supplies
 
 is_city = yes
+
+2023.10.18 = {
+	culture = afflicted
+	add_province_triggered_modifier = MYT_sanguinesti_affliction
+}

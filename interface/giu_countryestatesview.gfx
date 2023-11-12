@@ -482,6 +482,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/privileges/privilege_nobility_MST_cautious_diplomacy.dds"
 	}
 	
+	spriteType = {
+		name = "privilege_nobility_MYT_internal_focus"
+		texturefile = "gfx/interface/privileges/privilege_nobility_MYT_internal_focus.dds"
+	}
+	
+	spriteType = {
+		name = "privilege_nobility_MYT_informal_vyrelord_powers"
+		texturefile = "gfx/interface/privileges/privilege_nobility_MYT_informal_vyrelord_powers.dds"
+	}
+	
 	###############################################
 	#### New Burgher privileges
 	###############################################

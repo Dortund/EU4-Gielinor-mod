@@ -26,6 +26,7 @@ country_event = {
 			}
 			change_religion = saradomin
 		}
+		set_country_flag = DYN_saradomin_missions_flag
 		swap_non_generic_missions = yes
 	}
 	option = {
@@ -41,6 +42,7 @@ country_event = {
 			}
 			change_religion = zamorak
 		}
+		set_country_flag = DYN_chaos_missions_flag
 		swap_non_generic_missions = yes
 	}
 }
@@ -121,6 +123,84 @@ country_event = {
 			siege = 2
 			name = "Draynor Drakan"
 			trait = ruthless_personality
+		}
+	}
+}
+
+#The Religious Focus of Draynor - exists for the AI
+country_event = {
+	id = flavor_dyn.3
+	title = flavor_dyn.3.t
+	desc = flavor_dyn.3.desc
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_dyn.3.a
+		trigger = {
+			OR = {
+				has_country_flag = DYN_religious_peace_flag
+				has_country_flag = DYN_saradomin_missions_flag
+				has_country_flag = DYN_chaos_missions_flag
+			}
+		}
+		select_current_missions = { key = DYN }
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = flavor_dyn.3.c
+		trigger = { NOT = { has_country_flag = DYN_religious_peace_flag } }
+		set_country_flag = DYN_religious_peace_flag
+		clr_country_flag = DYN_saradomin_missions_flag
+		clr_country_flag = DYN_chaos_missions_flag
+		swap_non_generic_missions = yes
+		custom_tooltip = per_preview_muslim_missions
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = flavor_dyn.3.c
+		trigger = { NOT = { has_country_flag = DYN_saradomin_missions_flag } }
+		clr_country_flag = DYN_religious_peace_flag
+		set_country_flag = DYN_saradomin_missions_flag
+		clr_country_flag = DYN_chaos_missions_flag
+		swap_non_generic_missions = yes
+		custom_tooltip = per_preview_muslim_missions
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = flavor_dyn.3.d
+		trigger = { NOT = { has_country_flag = DYN_chaos_missions_flag } }
+		clr_country_flag = DYN_religious_peace_flag
+		clr_country_flag = DYN_saradomin_missions_flag
+		set_country_flag = DYN_chaos_missions_flag
+		swap_non_generic_missions = yes
+		custom_tooltip = per_preview_zoroastrian_missions
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = flavor_dyn.3.e
+		custom_tooltip = BYZ_nothing_will_occur
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	#AI section
+	option = {
+		trigger = { ai = yes }
+		random_list = {
+			70 = { set_country_flag = DYN_religious_peace_flag clr_country_flag = DYN_saradomin_missions_flag clr_country_flag = DYN_chaos_missions_flag }
+			29 = { clr_country_flag = DYN_religious_peace_flag set_country_flag = DYN_saradomin_missions_flag clr_country_flag = DYN_chaos_missions_flag }
+			1 = {  clr_country_flag = DYN_religious_peace_flag clr_country_flag = DYN_saradomin_missions_flag set_country_flag = DYN_chaos_missions_flag }
+		}
+		swap_non_generic_missions = yes
+		select_current_missions = { key = DYN }
+		ai_chance = {
+			factor = 100
 		}
 	}
 }

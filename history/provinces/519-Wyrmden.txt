@@ -12,11 +12,19 @@ hre = no
 
 base_tax = 3
 base_production = 3
-base_manpower = 8
+base_manpower = 5
 
-trade_goods = gemstones
+trade_goods = lesser_loot
 latent_trade_goods = { rare_loot }
 
 native_size = 2
 native_ferocity = 5
 native_hostileness = 1
+
+1943.11.5 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+	culture = fortis
+	religion = ralos
+}

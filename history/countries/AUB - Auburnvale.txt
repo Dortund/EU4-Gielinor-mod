@@ -1,9 +1,18 @@
 government = theocracy
-add_government_reform = frontier_theocracy
-government_rank = 2
-primary_culture = hosidius
-religion = guthix
-religious_school = druidic_school
+add_government_reform = theocratic_government_reform
+government_rank = 1
+primary_culture = auburnvaler
+religion = ralos
 technology_group = zeantechgroup
-capital = 460
+capital = 490
 
+1904.7.17 = {
+	monarch = {
+		name = "Berardo"
+		dynasty = "Drull"
+		birth_date = 1868.11.27
+		adm = 5
+		dip = 5
+		mil = 2
+	}
+}

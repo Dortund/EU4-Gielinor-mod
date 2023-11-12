@@ -665,10 +665,12 @@ snt_missions_4b = {
 		position = 8
 		required_missions = { SNT_route_to_ghorrock SNT_beasts_of_the_wilderness }
 		provinces_to_highlight = {
-			province_id = 355
-			province_id = 177
-			province_id = 167
-			province_id = 168
+			OR = {
+				province_id = 355
+				province_id = 177
+				province_id = 167
+				province_id = 168
+			}
 		}
 		trigger = {
 			owns_core_province = 355
@@ -965,10 +967,12 @@ snt_missions_5 = {
 		position = 7
 		required_missions = { SNT_demonic_reposession }
 		provinces_to_highlight = {
-			province_id = 962
-			province_id = 184
-			province_id = 187
-			province_id = 192
+			OR = {
+				province_id = 962
+				province_id = 184
+				province_id = 187
+				province_id = 192
+			}
 		}
 		trigger = {
 			owns_core_province = 962

@@ -19,6 +19,7 @@ country_decisions = {
 				change_culture = ROOT
 				change_religion = ROOT
 				change_province_name = "Canifis"
+				move_capital_effect = yes
 			}
 			set_country_flag = CFS_founded_canifis_flag
 		}

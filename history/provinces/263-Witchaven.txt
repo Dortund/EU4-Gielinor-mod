@@ -38,4 +38,7 @@ is_city = yes
 	controller = KDR
 	add_core = KDR
 	remove_core = ADO
+	base_tax = 5
+	base_production = 5
+	base_manpower = 4
 }

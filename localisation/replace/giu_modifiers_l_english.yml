@@ -15,6 +15,13 @@
  exploration_exploration_colonial_ventures:0 "Colonial Ventures"
  desc_exploration_exploration_colonial_ventures:0 "With the §YExploration§! institution, concepts of colonisation can be more effectively applied."
 
+ # Canifis
+ 
+ cfs_support_of_slepe:0 "Support of Slepe"
+ desc_cfs_support_of_slepe:0 "Slepe is providing us with additional missionaries for the glory of Lord Zamorak."
+ cfs_freedom_of_slepe:0 "Freedom of Slepe"
+ desc_cfs_freedom_of_slepe:0 "Slepe's semi-independent status is a model of religious tolerance greater than the Vampyres ever had."
+
  # Kandarin
  
  kdr_knights_of_the_round_table:0 "Knights of the Round Table"
@@ -30,6 +37,22 @@
  desc_civil_war_winning_conflict:0 "We are winning our current conflict in the Tirannwn Civil War, and as a result are pulling back from riskier strategies."
  civil_war_losing_conflict:0 "Losing Current Civil War Conflict"
  desc_civil_war_losing_conflict:0 "We are losing our current conflict in the Tirannwn Civil War, and as a result are trying riskier strategies."
+
+ # Vampyric Kingdom
+ 
+ vampyric_kingdom_insufficient_food:0 "Insufficient Blood Supplies"
+ desc_vampyric_kingdom_insufficient_food:0 "Our realm has too many vampyres to adequately feed."
+ vampyric_kingdom_tainted_blood_of_mortton:0 "Tainted Blood of Mort'ton"
+ desc_vampyric_kingdom_tainted_blood_of_mortton:0 "The affliction of Mort'ton makes the village wholly unsuitable for tithing."
+ 
+####################
+# Government Modifiers
+####################
+
+ vampyric_tributary_blood:0 "Tributary Blood"
+ desc_vampyric_tributary_blood:0 "Our tributaries are providing a ready supply of blood tithes."
+ vampyric_enable_sentinel_recruitment:0 "Enable Sentinel Recruitment"
+ desc_vampyric_enable_sentinel_recruitment:0 "With sufficient blood payment, we are able to recruit additional Vyrewatch Sentinels."
 
 ####################
 # National Modifiers (decisions, events and missions)
@@ -60,9 +83,17 @@
  ADO_right_of_conquest:0 "Right of Conquest"
  desc_ADO_right_of_conquest:0 "We are the legitimate voice of the humans of Kandarin and our neighbours - at least in part - believe it."
  ADO_divine_outpost:0 "Divine Outpost"
- desc_ADO_divine_outpost:0 "[Root.GetTag] shall be known as a new centre for the [Root.Religion.GetName] faith!"
- ADO_drill_for_our_deity:0 "Drill for the [Root.Religion.GetName] faith"
+ desc_ADO_divine_outpost:0 "This province shall be known as a new centre for the true faith!"
+ ADO_drill_for_our_deity:0 "Drill for the True Faith"
  desc_ADO_drill_for_our_deity:0 "Train so that we may fight the darkness that surrounds us!"
+
+# Ashihama
+
+ AHH_reinforced_battlements_of_ashihama:0 "Reinforced Battlements of Ashihama"
+ desc_AHH_reinforced_battlements_of_ashihama:0 "Renewed investment ensures that external threats to Ashihama will have a difficult time making landfall."
+ 
+ AHH_end_of_the_nightmare:0 "End of the Nightmare"
+ desc_AHH_end_of_the_nightmare:0 "Our people rejoice with the first good night's rest in their lifetime!"
 
 # Al Kharid
 
@@ -215,6 +246,28 @@
  desc_CDA_national_recovery:0 "Baxtorian's kingdom is restored, and elves are returning to our service."
  CDA_conquest_of_the_hazeelite_lands:0 "Conquest of the Hazeelite Lands"
  desc_CDA_conquest_of_the_hazeelite_lands:0 "We are viewed as largely a more benevolent leader than Hazeel was, so our new subjects are less prone to rebel."
+
+# Canifis
+
+ CFS_oppression_of_slepe:0 "Oppression of Slepe"
+ desc_CFS_oppression_of_slepe:0 "Despite being fellow Zamorakians, we have made no attempt to protect the citizens of Slepe."
+
+ CFS_mahjarrat_assistance:0 "Mahjarrat Assistance"
+ desc_CFS_mahjarrat_assistance:0 "Mahjarrat support is bolstering our military's strength."
+ CFS_scent_of_fear:0 "Scent of Fear"
+ desc_CFS_scent_of_fear:0 "There are humans afoot in Morytania, defiling Zamorak's lands. We should force them out!"
+ CFS_skullball_practice:0 "Skullball Practice"
+ desc_CFS_skullball_practice:0 "A skull isn't exactly round, which makes it quite a challenging object to kick around an obstacle course!"
+ CFS_werewolf_rebellion:0 "Werewolf Rebellion"
+ desc_CFS_werewolf_rebellion:0 "We are ready to throw off the shackles once and for all!"
+ CFS_free_hunters:0 "Free Hunters"
+ desc_CFS_free_hunters:0 "We revel in our independence!"
+ CFS_legacy_of_cave_canem:0 "Legacy of Cave Canem"
+ desc_CFS_legacy_of_cave_canem:0 "For a glorious time in the Third Age, we were free. But when the Vampyres abandoned Zamorak, they treated us as the underclass of Morytania. Well, the underclass aside from the Saradominist humans. But now, we have finally returned the promise of Cave Canem long ago - that werewolves will be free from vampyres once more!"
+ CFS_aquos_colonies:0 "Aquos Colonies"
+ desc_CFS_aquos_colonies:0 "With the support of Aquos werewolves, we are able to break out of Morytania and settle new homes in Wushanko."
+ CFS_werewolf_empire:0 "Werewolf Empire"
+ desc_CFS_werewolf_empire:0 "With the Canifian and Aquos werewolves brought under one mighty banner, let all Gielinor fear our howl."
 
 # Corsair Cove
 
@@ -603,15 +656,52 @@
 
  MYT_theatre_of_blood:0 "Theatre of Blood"
  desc_MYT_theatre_of_blood:0 "The unlucky souls of Meiyerditch may attempt to fight for their freedom here. Some adventurers and mercenaries from other realms have begun to take on the challenge as well."
+ MYT_rune_production_efforts:0 "Rune Production Efforts"
+ desc_MYT_rune_production_efforts:0 "With a constant supply of Daeyalt Essence from lower Darkmeyer, vast quantities of blood runes may be manufactured beneath Castle Drakan."
+ MYT_fresh_tithe_imports:0 "Fresh Tithe Imports"
+ desc_MYT_fresh_tithe_imports:0 "Strengthening our grasp over the region of Morytania has provided us with a fresh supply of tithes to fill Meiyerditch with."
+ MYT_terror_of_the_sleeper_plague:0 "Heightened Terror of the Sleeper Plague"
+ desc_MYT_terror_of_the_sleeper_plague:0 "Residents of Slepe are in terror as they cannot work out why so many of its residents refuse to wake."
+ MYT_mild_terror_of_the_sleeper_plague:0 "Terror of the Sleeper Plague"
+ desc_MYT_terror_of_the_sleeper_plague:0 "Residents of Slepe are in terror as they cannot work out why many of its residents refuse to wake."
+
+ MYT_vyrewatch_training_drills:0 "Vyrewatch Training Drills"
+ desc_MYT_vyrewatch_training_drills:0 "We have authorised the Vyrewatch to take some humans to an isolated area, and hunt them for training purposes."
+ MYT_false_hope_of_the_theatre:0 "False Hope of the Theatre"
+ desc_MYT_false_hope_of_the_theatre:0 "Our human subjects falsely believe they can win their freedom by fighting through the Theatre of Blood."
  MYT_assert_supremacy:0 "Assert Supremacy"
  desc_MYT_assert_supremacy:0 "We have proven ourselves capable of retaking Morytania."
  MYT_vyrewatch_innovation:0 "Vyrewatch Innovation"
  desc_MYT_vyrewatch_innovation:0 "Our enemies will not know how to react to the Vyrewatch's new strategies."
  MYT_pirate_mercenaries:0 "Pirate Mercenaries"
  desc_MYT_pirate_mercenaries:0 "Vampyres are bad at crossing water, but luckily we've got the support of some pirates to do the naval plundering for us."
+ MYT_tree_of_terror:0 "Tree of Terror"
+ desc_MYT_tree_of_terror:0 "The threat of blisterwood cutting their lives short is keeping the nobility in line."
+ MYT_expanded_vyrewatch_potential:0 "Expanded Vyrewatch Potential"
+ desc_MYT_expanded_vyrewatch_potential:0 "The ever-growing vampyric population has allowed the Vyrewatch to grow as a share of our overall army."
+ MYT_spoilt_for_luxuries:0 "Spoilt for Luxuries"
+ desc_MYT_spoilt_for_luxuries:0 "Unique goods from Wushanko are going a long way towards keeping our elite happy."
+ MYT_tithe_the_sleeping:0 "Tithe the Sleeping"
+ desc_MYT_tithe_the_sleeping:0 "Damien Leucurte's plan to force residents of Slepe to, well, sleep, has enabled us to take larger amounts of blood tithes."
+ MYT_tithe_the_sleeping_alt:0 "Tithe the Sleeping"
+ desc_MYT_tithe_the_sleeping_alt:0 "Damien Leucurte's plan to force residents of Slepe to, well, sleep, has enabled us to take larger amounts of blood tithes."
+ MYT_tithe_some_of_the_sleeping:0 "Tithe Some of the Sleeping"
+ desc_MYT_tithe_some_of_the_sleeping:0 "Damien Leucurte's plan to force residents of Slepe to, well, sleep, is a step too far - but a mild version of the plan might avoid too many of its residents from blaming us."
+ MYT_tithe_some_of_the_sleeping_alt:0 "Tithe Some of the Sleeping"
+ desc_MYT_tithe_some_of_the_sleeping:0 "Damien Leucurte's plan to force residents of Slepe to, well, sleep, is a step too far - but a mild version of the plan might avoid too many of its residents from blaming us."
+ MYT_defeat_of_the_werewolves:0 "Defeat of the Werewolves"
+ desc_MYT_defeat_of_the_werewolves:0 "The dogs of Morytania have been put in their place."
+ MYT_werewolf_delegation:0 "Werewolf Delegation"
+ desc_MYT_werewolf_delegation:0 "Werewolf control of northwestern Morytania has eased the burden of governance on ourselves."
  
  MYT_descendants_of_hallowvale:0 "Descendants of Hallowvale"
  desc_MYT_descendants_of_hallowvale:0 "The residents of Meiyerditch are extremely loyal to their Saradominist faith and will be exceptionally hard to convert."
+ MYT_blisterwood_tree:0 "Blisterwood Tree"
+ desc_MYT_blisterwood_tree:0 "Blisterwood can be made into weapons deadly to vampyres. For that reason, any vampyric realm owning this province will be determined not to let it fall into enemy hands."
+ MYT_the_arboretum:0 "The Arboretum"
+ desc_MYT_the_arboretum:0 "This fortified structure is designed to keep the Blisterwood tree weak and out of enemy hands."
+ MYT_sanguinesti_affliction:0 "Sanguinesti Affliction"
+ desc_MYT_sanguinesti_affliction:0 "The Affliction present here has rendered most of the province's residents incoherent and rambling."
 
 # Nardah
 
@@ -647,6 +737,11 @@
  desc_PLG_new_spying_opportunities:0 "Let's see what we can find out about this strange world!"
  PLG_military_investments:0 "Military Investments"
  desc_PLG_military_investments:0 "We have poured considerable resources into the expansion of the military."
+ 
+# Port Phasmatys
+
+ PPH_necromatic_barriers:0 "Necromatic Barriers"
+ desc_PPH_necromatic_barriers:0 "With the power of Necromancy, this city will be extremely difficult to assault."
  
 # Rellekka
  
@@ -771,14 +866,26 @@
  desc_VAR_fletching_guild_modifier:0 "The Fletching Guild at Arida's Edge uses the area's rich biodiversity to experiment with a wide range of wood carving techniques."
  VAR_college_of_bards_modifier:0 "Varlamore College of Bards"
  desc_VAR_college_of_bards_modifier:0 "The greatest Bards' College in Gielinor, this location takes advantage of Tempestus' unparalleled acoustics to create the most beautiful songs ever heard."
- VAR_hunters_guild_modifier:0 "Hunters' Guild"
- desc_VAR_hunters_guild_modifier:0 "The Hunters' Guild takes advantage of Avium's rich diversity to produce furs, pelts, meat and more for Varlamore."
- VAR_fortis_cothon_modifier:0 "Fortis Cothon"
- desc_VAR_fortis_cothon_modifier:0 "This unique shipyard offers a great boon to our shipbuilding capabilities."
- VAR_kourendwatch_fortification_modifier:0 "Kourendwatch Fortifications"
+ VAR_hunters_guild_modifier:0 "Expanded Hunters' Guild"
+ desc_VAR_hunters_guild_modifier:0 "The Hunters' Guild takes advantage of Avium's rich diversity to produce furs, pelts, meat and more for Varlamore. While around since ancient times, fresh investments have made it more productive than ever before."
+ VAR_fortis_cothon_modifier:0 "Expansion of Fortis Cothon"
+ desc_VAR_fortis_cothon_modifier:0 "The unique shipyard of Fortis Cothon allows ships to be sheltered while they are repaired."
+ VAR_kourendwatch_fortification_modifier:0 "Salvager Fortifications"
  desc_VAR_kourendwatch_fortification_modifier:0 "By reinforcing the northern coast of Varlamore against sea attacks, would-be invaders from the north are forced to make more complicated routes."
+ 
  VAR_fletching_innovation:0 "Fletching Innovation"
  desc_VAR_fletching_innovation:0 "With the new Fletching Guild at Arida's Edge, all kinds of new techniques are being tried."
+ VAR_expanding_governance:0 "Expanding Governance"
+ desc_VAR_expanding_governance:0 "Now that the estates of Varlamore are satisfied with their current stake, we are able to incorporate more land directly into the crown without issues."
+ VAR_transport_connections:0 "Growing Transport Connections"
+ desc_VAR_transport_connections:0 "Closer ties with our subject nations allows us to pool more resources, enabling more efficient travel and trade."
+ VAR_bardic_expeditions:0 "Bardic Expeditions"
+ desc_VAR_bardic_expeditions:0 "There is a new world of stories to uncover!"
+ VAR_a_religion_united:0 "A Religion United"
+ desc_VAR_a_religion_united:0 "With the conquest of Forthos, the earliest sites of our faith are securely under our control."
+ VAR_diplomatic_outreach:0 "Diplomatic Outreach"
+ desc_VAR_diplomatic_outreach:0 "Roving bards spread word of Varlamore across Gielinor, inspiring visits from foreign dignitaries."
+ 
 
 # Varze
 
@@ -807,15 +914,15 @@
  genwhk_naval_siege_support:0 "Naval Siege Support"
  desc_genwhk_naval_siege_support:0 "Our navy has learnt much through privateering and embargo efforts, and are ready to apply that aggressive behaviour on more formidable targets."
  genwhk_new_wushanko_faith:0 "New Wushanko Faith"
- desc_genwhk_new_wushanko_faith:0 "Our faith is new to the Wushanko Isles, but it has lately gained ground allowing us to build momentum. May the [Root.Religion.GetName] faith prevail!"
+ desc_genwhk_new_wushanko_faith:0 "Our faith is new to the Wushanko Isles, but it has lately gained ground allowing us to build momentum. May our faith prevail!"
  genwhk_power_of_corruption:0 "Power of Corruption"
  desc_genwhk_power_of_corruption:0 "No-one is immune to Xau-Tak's whispers."
  genwhk_power_of_the_new_khagan:0 "Power of the New Khagan"
- desc_genwhk_power_of_the_new_khagan:0 "Newly and legitimately elected to the office of Khagan, [Root.Monarch.GetName] is viewed as a possible agent for change across the Council of Khans."
+ desc_genwhk_power_of_the_new_khagan:0 "Newly and legitimately elected to the office of Khagan, our leader is viewed as a possible agent for change across the Council of Khans."
  genwhk_trading_diplomacy:0 "Trading Diplomacy"
  desc_genwhk_trading_diplomacy:0 "As more and more nations become accustomed to our trade, the possibility of them supporting our bid to become Khagan has grown."
  genwhk_victory_over_the_west:0 "Victory Over the West"
- desc_genwhk_victory_over_the_west:0 "All will fear the name of [Root.GetName] as our armies march upon their unprepared lands!"
+ desc_genwhk_victory_over_the_west:0 "All will fear the name of our glorious leader as our armies march upon their unprepared lands!"
  genwhk_war_readiness:0 "War Readiness"
  desc_genwhk_war_readiness:0 "We have trained our forces well - now it is time to use them."
 
@@ -931,6 +1038,15 @@
 ####################
 # Government and Estate Modifiers
 ####################
+
+ excessive_tithe_noble_restrictions:0 "Noble Tithing Restrictions"
+ desc_excessive_tithe_noble_restrictions:0 "Much to the anger of our nobility, we have placed harsher limits on their ability to obtain personal blood tithes."
+ excessive_tithe_tithe_concessions:0 "Tithe Concessions"
+ desc_excessive_tithe_tithe_concessions:0 "So that they may grow fatter and more able to provide blood, we are providing some funds towards bettering the lives of our tithes."
+ excessive_tithe_tributary_pressure:0 "Tributary Tithe Pressures"
+ desc_excessive_tithe_tributary_pressure:0 "An increased tithe has been demanded from our realm's tributaries so that we may cover our blood demands without pressuring our own people."
+ excessive_tithe_drive_for_conquest:0 "Drive for Conquest"
+ desc_excessive_tithe_drive_for_conquest:0 "As Lowerniel Drakan has said, vampyres are hunters. We shall obtain our next meal from the hunt."
  
  arceuus_in_power:0 "Arceuus in Power"
  desc_arceuus_in_power:0 "House Arceuus currently holds the balance of power in Great Kourend, and our people's desire for independence has reduced accordingly."
@@ -1252,6 +1368,29 @@
  desc_highprod_rei_ti:0 "While Rei Ti was originally set up as a black slate mining colony, large quantities of particularly valuable gems have been found instead."
  highprod_rune_essence_mine:0 "Rune Essence Mine"
  desc_highprod_rune_essence_mine:0 "The location simply known as the Rune Essence Mine is by far Gielinor's greatest deposit of blank runestones ready for runecrafting."
+ 
+####################
+# Disasters
+####################
+ 
+ excessive_tithe_noble_restrictions:0 "Noble Restrictions"
+ desc_excessive_tithe_noble_restrictions:0 "Even nobles have to make sacrifices to prevent the supply of blood from running out."
+ excessive_tithe_tithe_concessions:0 "Tithe Concessions"
+ desc_excessive_tithe_tithe_concessions:0 "Starving the blood bags--- humans dry wouldn't help our blood situation, so we've endeavoured to treat them slightly better."
+ excessive_tithe_tributary_pressure:0 "Tributary Pressure"
+ desc_excessive_tithe_tributary_pressure:0 "We are placing harsher pressures on our tributaries to provide blood for us."
+ excessive_tithe_drive_for_conquest:0 "Drive for Conquest"
+ desc_excessive_tithe_drive_for_conquest:0 "Only through conquest shall we meet our need for blood!"
+ excessive_tithe_crime_crackdown:0 "Crime Crackdown"
+ desc_excessive_tithe_crime_crackdown:0 "A spree of missing citizens have inspired harsher policies towards crime."
+ MYT_revenge_for_ranis_modifier:0 "Revenge for Ranis"
+ desc_MYT_revenge_for_ranis_modifier:0 "Those who had a hand in Ranis' death shall be made to pay!"
+ MYT_compromise_of_efaritay:0 "Compromise of Efaritay"
+ desc_MYT_compromise_of_efaritay:0 "A cycle of violence shall never end Morytania's myriad issues. Perhaps the answer lies in treating the Saradominist humans better, not worse."
+ 
+ excessive_tithe_double_reinforcement:0 "Double Reinforcement"
+ desc_excessive_tithe_double_reinforcement:0 "No evils from Morytania are passing into our lands!"
+ 
  
 ####################
 # World Events

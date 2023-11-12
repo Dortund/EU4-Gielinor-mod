@@ -4,7 +4,7 @@
  colonial_varlamore:0 "Colonial Varlamore"
  
  trade_company_khazari:0 "Khazari Charter"
- TRADE_COMPANY_KHAZARI_Root_GetName:0 "[Root.GetAdjective] Khazari Company"
+ TRADE_COMPANY_KHAZARI_Root_Culture_GetName:0 "[Root.GetAdjective] Khazari Company"
  TRADE_COMPANY_KHAZARI_Western_Gielinor_Trade_Company:0 "Khazari Trade Company"
  trade_company_ardougne:0 "Ardougne Charter"
  TRADE_COMPANY_ARDOUGNE_Root_Culture_GetName:0 "[Root.GetAdjective] Ardougne Company"

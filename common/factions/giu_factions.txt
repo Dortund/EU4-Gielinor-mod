@@ -125,7 +125,7 @@ cadarn_faction = {
 	always = yes
 
 	modifier = {
-		discipline = 0.25
+		discipline = 0.025
 		drill_gain_modifier = 0.25
 	}
 }

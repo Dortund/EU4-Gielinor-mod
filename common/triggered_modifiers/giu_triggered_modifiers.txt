@@ -460,6 +460,52 @@ kou_independent_shayzien = {
 }
 
 ###########################################
+# Canifis
+###########################################
+
+cfs_support_of_slepe = {
+	potential = {
+		tag = CFS
+		mission_completed = CFS_fate_of_slepe
+		exists = SLP
+		religion = zamorak
+	}
+	trigger = {
+		SLP = {
+			is_subject_of = CFS
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = slepe
+				is_overseas = no
+			}
+		}
+	}
+ 	missionaries = 1
+ 	global_missionary_strength = 0.01
+}
+cfs_freedom_of_slepe = {
+	potential = {
+		tag = CFS
+		mission_completed = CFS_fate_of_slepe
+		exists = SLP
+		NOT = { religion = zamorak }
+	}
+	trigger = {
+		SLP = {
+			is_subject_of = CFS
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = slepe
+				is_overseas = no
+			}
+		}
+	}
+ 	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+
+###########################################
 # Kandarin
 ###########################################
 
@@ -583,4 +629,48 @@ civil_war_losing_conflict = {
 		}
 	}
  	monthly_elven_desperation_power_1 = 2
+}
+
+###########################################
+# Vampyric Government
+###########################################
+
+vampyric_kingdom_insufficient_food = {
+	potential = {
+		has_government_mechanic = blood_power_mechanic
+	}
+	trigger = {
+		OR = {
+			dominant_culture = trueborn_vampyre
+			dominant_culture = humanborn_vampyre
+		}
+	}
+ 	monthly_blood_power_power_1 = -1
+}
+
+vampyric_kingdom_tainted_blood_of_mortton = {
+	potential = {
+		has_government_mechanic = blood_power_mechanic
+		OR = {
+			MRT = {
+				primary_culture = afflicted
+			}
+			any_province = {
+				region = morytania_region
+				culture = afflicted
+			}
+		}
+	}
+	trigger = {
+		OR = {
+			MRT = {
+				primary_culture = afflicted
+				is_subject_of = ROOT
+			}
+			any_owned_province = {
+				culture = afflicted
+			}
+		}
+	}
+	monthly_blood_power_power_1 = -0.1
 }

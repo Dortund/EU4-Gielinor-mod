@@ -8,6 +8,7 @@ religion = saradomin
 
 discovered_by = centraltechgroup
 discovered_by = dwarventechgroup
+discovered_by = northerntechgroup
 
 hre = no
 

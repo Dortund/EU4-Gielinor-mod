@@ -37,10 +37,14 @@ center_of_trade = 1
 2062.1.29 = {
 	owner = ASG
 	controller = ASG
+	add_core = ASG
 	remove_core = GUN
 }
 
 2062.9.29 = {
 	culture = kelda
 	religion = guthix
+	base_tax = 3
+	base_production = 4
+	base_manpower = 3
 }

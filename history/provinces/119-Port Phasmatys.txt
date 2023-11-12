@@ -17,9 +17,9 @@ discovered_by = wushankotechgroup
 
 hre = no
 
-base_tax = 5
-base_production = 5
-base_manpower = 4
+base_tax = 7
+base_production = 7
+base_manpower = 6
 
 fort_15th = yes 
 
@@ -31,4 +31,8 @@ center_of_trade = 2
 
 2035.5.17 = {
 	culture = ghost
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
+	add_province_triggered_modifier = PPH_necromatic_barriers
 }

@@ -911,11 +911,6 @@ age_of_divination = {
 				tag = MYT
 			}
 			modifier = {
-				culture_conversion_cost = 0.15
-				global_missionary_strength = -0.02
-				religious_unity = 0.5
-				tolerance_heretic = 2
-				tolerance_heathen = 2
 				num_accepted_cultures = 3
 				promote_culture_cost = -0.5
 			}

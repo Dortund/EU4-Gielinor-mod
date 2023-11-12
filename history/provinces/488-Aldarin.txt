@@ -1,7 +1,7 @@
 #488-Aldarin
-owner = VAR
-controller = VAR
-add_core = VAR
+owner = ALD
+controller = ALD
+add_core = ALD
 tribal_owner = ---
 culture = aldarin
 religion = ralos
@@ -14,16 +14,26 @@ base_tax = 4
 base_production = 3
 base_manpower = 3
 
-fort_15th = yes
-
 trade_goods = fruit
 
 is_city = yes
 
 center_of_trade = 2
 
+1990.1.1 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+}
+
 2000.1.1 = {
 	base_tax = 6
 	base_production = 5
 	base_manpower = 5
+}
+
+2100.1.1 = {
+	base_tax = 8
+	base_production = 7
+	base_manpower = 7
 }

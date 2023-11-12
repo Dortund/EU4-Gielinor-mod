@@ -44,3 +44,9 @@ center_of_trade = 2
 	add_core = KDR
 	remove_core = ADO
 }
+
+2100.1.1 = {
+	base_tax = 11
+	base_production = 9
+	base_manpower = 9
+}

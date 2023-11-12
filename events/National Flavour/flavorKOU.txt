@@ -73,7 +73,7 @@ country_event = {
 	trigger = {
 		tag = KOU
 		war_with = VAR
-		503 = { is_empty = yes }
+		1457 = { is_empty = yes }
 		NOT = { exists = RRF }
 		has_spy_network_in = {
 			who = VAR
@@ -90,8 +90,8 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			503 = {
-				change_culture = fortis
+			1457 = {
+				change_culture = aldarin
 				change_religion = ranul
 				cede_province = RRF
 				add_core = RRF

@@ -51,4 +51,8 @@ is_city = yes
 
 2132.7.13 = {
 	change_province_name = "Sinclair Mansion"
+	owner = CML
+	controller = CML
+	add_core = CML
+	remove_core = KDR
 }

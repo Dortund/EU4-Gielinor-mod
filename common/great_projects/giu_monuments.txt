@@ -325,7 +325,6 @@ great_project_paterdomus = {
 	}
 }
 
-
 great_project_temple_at_senntisten = {
 	start = 23
 	date = -6157.7.9
@@ -335,7 +334,7 @@ great_project_temple_at_senntisten = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 10
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {
 		religion = zaros
@@ -431,7 +430,6 @@ great_project_temple_at_senntisten = {
 ######################
 # Asgarnia
 ######################
-
 
 great_project_entrana_cathedral = {
 	start = 57
@@ -676,6 +674,233 @@ great_project_falador_castle = {
 	}
 }
 
+great_project_lassar_undercity = {
+	start = 46
+	date = -6157.7.9
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+		OR = {
+			religion = zaros
+			religion = xautak
+		}
+		has_owner_religion = yes
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		OR = {
+			religion = zaros
+			religion = xautak
+		}
+		has_owner_religion = yes
+	}
+	can_upgrade_trigger = {
+		OR = {
+			religion = zaros
+			religion = xautak
+		}
+		has_owner_religion = yes
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			global_spy_defence = 0.1
+			technology_cost = -0.025
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			global_spy_defence = 0.2
+			technology_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			global_spy_defence = 0.3
+			technology_cost = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+great_project_sacred_forge = {
+	start = 46
+	date = -2525.3.24
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+		AND = {
+			culture = imcando
+			province_is_or_accepts_culture = yes
+		}
+	}
+
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		AND = {
+			culture = imcando
+			province_is_or_accepts_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		AND = {
+			culture = imcando
+			province_is_or_accepts_culture = yes
+		}
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		 	trade_goods_size_modifier = 0.25
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		 	idea_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			trade_goods_size_modifier = 0.5
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			diplomatic_reputation = 1
+			idea_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			trade_goods_size_modifier = 1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			diplomatic_reputation = 1
+			tolerance_own = 1
+			idea_cost = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
 great_project_taverley_stone_circle = {
 	start = 49
 	date = 47.2.27
@@ -807,6 +1032,148 @@ great_project_taverley_stone_circle = {
 # Kharid
 ######################
 
+great_project_citharede_abbey = {
+	start = 63
+	date = 1900.1.1
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		AND = {
+			religion = saradomin
+			OR = {
+				has_owner_religion = yes
+				tolerance_to_this = 1
+			}
+		}
+		owner = {
+			NOT = {
+				religion_group = chaos_group
+			}
+		}
+	}
+
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		AND = {
+			religion = saradomin
+			OR = {
+				has_owner_religion = yes
+				tolerance_to_this = 1
+			}
+		}
+		owner = {
+			NOT = {
+				religion_group = chaos_group
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		AND = {
+			religion = saradomin
+			OR = {
+				has_owner_religion = yes
+				tolerance_to_this = 1
+			}
+		}
+		owner = {
+			NOT = {
+				religion_group = chaos_group
+			}
+		}
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			church_privilege_slots = 1
+			papal_influence = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_governing_cost = -0.33
+		 	local_tax_modifier = 0.25
+		}
+		country_modifiers = {
+			church_privilege_slots = 1
+			papal_influence = 0.5
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_governing_cost = -0.75
+			local_tax_modifier = 0.5
+		}
+		country_modifiers = {
+			church_privilege_slots = 1
+			papal_influence = 1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
 great_project_duel_arena = {
 	start = 64
 	date = -6179.6.5
@@ -894,10 +1261,9 @@ great_project_duel_arena = {
 		}
 		area_modifier = {
 			drill_gain_modifier = 0.33
-			manpower_recovery_speed = 0.05
 		}
 		country_modifiers = {
-			
+			manpower_recovery_speed = 0.05
 		}
 		on_upgraded = {
 		}
@@ -913,11 +1279,10 @@ great_project_duel_arena = {
 		}
 		area_modifier = {
 			drill_gain_modifier = 0.5
-			manpower_recovery_speed = 0.1
-			army_tradition = 0.5
 		}
 		country_modifiers = {
-			
+			manpower_recovery_speed = 0.1
+			army_tradition = 0.5
 		}
 		on_upgraded = {
 		}
@@ -1043,7 +1408,7 @@ great_project_jalkabir = {
 }
 
 great_project_jaltevas = {
-	start = 102
+	start = 855
 	date = -7714.4.27
 	time = {
 		months = 0
@@ -1396,6 +1761,134 @@ great_project_ullek = {
 ######################
 # Morytania
 ######################
+
+great_project_castle_drakan = {
+	start = 140
+	date = -3025.6.7
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+		religion = vampyric
+		has_owner_religion = yes
+		culture_group = vampyre_group
+		province_is_or_accepts_culture = yes
+	}
+
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		religion = vampyric
+		has_owner_religion = yes
+		culture_group = vampyre_group
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		religion = vampyric
+		has_owner_religion = yes
+		culture_group = vampyre_group
+		province_is_or_accepts_culture = yes
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		 	monthly_blood_power_power_1 = 0.05
+			legitimacy = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		 	monthly_blood_power_power_1 = 0.1
+			legitimacy = 0.5
+			nobles_loyalty_modifier = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 5
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		 	monthly_blood_power_power_1 = 0.2
+			legitimacy = 1
+			nobles_loyalty_modifier = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 10
+				}
+			}
+		}
+	}
+}
 
 great_project_theatre_of_blood = {
 	start = 135
@@ -1850,8 +2343,8 @@ great_project_dragonkin_laboratory = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			global_manpower_modifier = 0.25
-			land_forcelimit_modifier = 0.25
+			global_manpower_modifier = 0.2
+			land_forcelimit_modifier = 0.2
 		}
 		on_upgraded = {
 		}
@@ -1868,8 +2361,8 @@ great_project_dragonkin_laboratory = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			global_manpower_modifier = 0.5
-			land_forcelimit_modifier = 0.5
+			global_manpower_modifier = 0.3
+			land_forcelimit_modifier = 0.3
 			fire_damage = 0.05
 		}
 		on_upgraded = {
@@ -4351,6 +4844,126 @@ great_project_arceuus_library = {
 	}
 }
 
+great_project_blast_mine = {
+	start = 873
+	date = 1669.5.31
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+		AND = {
+			culture_group = dwarven_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		AND = {
+			culture_group = dwarven_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		AND = {
+			culture_group = dwarven_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			trade_goods_size = 2.0
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.025
+			artillery_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			trade_goods_size = 4.0
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.05
+			artillery_cost = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			trade_goods_size = 6.0
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.1
+			artillery_cost = -0.2
+		}
+		on_upgraded = {
+		}
+	}
+}
+
 great_project_dark_altar = {
 	start = 409
 	date = -4478.1.7
@@ -4588,6 +5201,122 @@ great_project_doors_of_dinh = {
 	}
 }
 
+great_project_tithe_farm = {
+	start = 435
+	date = 1900.1.1
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		AND = {
+			culture = hosidius
+			province_is_or_accepts_culture = yes
+		}
+	}
+
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		AND = {
+			culture = hosidius
+			province_is_or_accepts_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		AND = {
+			culture = hosidius
+			province_is_or_accepts_culture = yes
+		}
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			trade_goods_size = 3
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			development_cost_modifier = -0.025
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			trade_goods_size = 6
+		}
+		country_modifiers = {
+			development_cost_modifier = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			trade_goods_size = 9
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			development_cost_modifier = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+
 ######################
 # Kebos
 ######################
@@ -4714,7 +5443,7 @@ great_project_chambers_of_xeric = {
 ######################
 
 great_project_battle_colosseum = {
-	start = 525
+	start = 1463
 	date = 1183.6.16
 	time = {
 		months = 0
@@ -4924,6 +5653,133 @@ great_project_college_of_bards = {
 			prestige_decay = -0.01
 			global_institution_spread = 0.3
 			free_adm_policy = 1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+great_project_fortis_aqueduct = {
+	start = 523
+	date = 1765.5.29
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+		owner = {
+			owns_core_province = 1461
+			owns_core_province = 525
+		}
+	}
+
+	on_built = {
+		525 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	
+	on_destroyed = {
+		525 = {
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			owns_core_province = 1461
+			owns_core_province = 525
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			owns_core_province = 1461
+			owns_core_province = 525
+		}
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_development_cost_modifier = -0.05
+			build_cost = -0.05
+			build_time = -0.1
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_development_cost_modifier = -0.1
+			build_cost = -0.1
+			build_time = -0.25
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_development_cost_modifier = -0.2
+			build_cost = -0.2
+			build_time = -0.5
+		}
+		country_modifiers = {
 		}
 		on_upgraded = {
 		}
@@ -5189,6 +6045,117 @@ great_project_temple_of_aminishi = {
 }
 
 ######################
+# Skull
+######################
+
+great_project_gunpowder_mills = {
+	start = 1125
+	date = 1900.1.1
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+	}
+
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+	}
+
+	can_upgrade_trigger = {
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			trade_goods_size = 1.0
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			artillery_cost = -0.1
+		}
+		on_upgraded = {
+			change_trade_goods = gunpowder
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			trade_goods_size = 2.0
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			artillery_cost = -0.1
+			artillery_power = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			trade_goods_size = 3.0
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			artillery_cost = -0.1
+			artillery_power = 0.05
+			artillery_barrage_cost = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+######################
 # Scythe
 ######################
 
@@ -5442,6 +6409,116 @@ great_project_falling_blossom = {
 	}
 }
 
+great_project_glittercaves = {
+	start = 1163
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+	}
+
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+	}
+
+	can_upgrade_trigger = {
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			hostile_fleet_attrition = 1
+			block_slave_raid = yes
+		}
+		area_modifier = {
+			province_trade_power_value = 4
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			hostile_fleet_attrition = 2
+			block_slave_raid = yes
+		}
+		area_modifier = {
+			province_trade_power_value = 8
+		}
+		country_modifiers = {
+			diplomatic_upkeep = 1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			hostile_fleet_attrition = 3
+		}
+		area_modifier = {
+			province_trade_power_value = 12
+			block_slave_raid = yes
+		}
+		country_modifiers = {
+			diplomatic_upkeep = 1
+		 	global_ship_trade_power = 0.15
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+
+
 ######################
 # Pincers
 ######################
@@ -5562,6 +6639,129 @@ great_project_halls_of_reckoning = {
 			diplomatic_reputation = 1
 			envoy_travel_time = -0.5
 			imperial_authority = 0.15
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+great_project_hole_in_the_world = {
+	start = 1182
+	date = 1900.1.1
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+		OR = {
+			AND = {
+				religion = suzaku
+				has_owner_religion = yes
+			}
+			absolutism = 50
+		}
+	}
+
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			AND = {
+				religion = suzaku
+				has_owner_religion = yes
+			}
+			absolutism = 50
+		}
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			AND = {
+				religion = suzaku
+				has_owner_religion = yes
+			}
+			absolutism = 50
+		}
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			yearly_absolutism = 1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			yearly_absolutism = 1
+			max_absolutism = 5
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			yearly_absolutism = 1
+			max_absolutism = 5
+			max_absolutism_effect = 0.1
 		}
 		on_upgraded = {
 		}

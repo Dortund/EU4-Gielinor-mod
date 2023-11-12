@@ -3,7 +3,7 @@ owner = SRP
 controller = SRP
 add_core = SRP
 tribal_owner = ---
-culture = cursed_scorpion
+culture = scorpion
 religion = zamorak
 
 hre = no

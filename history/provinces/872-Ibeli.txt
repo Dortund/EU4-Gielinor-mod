@@ -6,6 +6,8 @@ religion = karamjan
 discovered_by = karamjantechgroup
 discovered_by = bandostechgroup
 discovered_by = monkeytechgroup
+discovered_by = kandarintechgroup
+discovered_by = gnometechgroup
 
 hre = no
 

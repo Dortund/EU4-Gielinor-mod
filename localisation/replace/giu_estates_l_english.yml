@@ -247,6 +247,11 @@ estate_nobles_MST_cautious_diplomacy:0 "Cautious Diplomacy Doctrine"
 estate_nobles_MST_cautious_diplomacy_desc:0 "The nobles of Misthalin are wary of our realm being perceived as too domineering by neighbouring human realms, limiting our diplomatic options.\n\nWhile this privilege is enabled, you §Ycannot warn other nations§!."
 MST_cautious_diplomacy_privilege_tooltip:0 "While this privilege is enabled, you §Ycannot warn other nations§!."
 
+estate_nobles_MYT_internal_focus:0 "Internal Focus"
+estate_nobles_MYT_internal_focus_desc:0 "The war with Misthalin a distant memory, Morytania's leadership has become increasingly isolated. This has enabled the Vampyric nobility to secure ever-greater amounts of informal power as the country stagnates."
+estate_nobles_MYT_informal_vyrelord_powers:0 "Informal Vyrelord Powers"
+estate_nobles_MYT_informal_vyrelord_powers_desc:0 "Lord Drakan's long periods of solitude have enabled ever-increasing amounts of corruption among Vyrelords and Vyreladies to go unnoticed."
+
 estate_burghers_kharidian_colonies:0 "Establish Desert Settlement"
 estate_burghers_kharidian_colonies_desc:0 "We can push our merchants to expand our nation's boundaries - albeit at a high price."
 estate_burghers_varlamore_colonies:0 "Expand into Varlamore's Savannas"

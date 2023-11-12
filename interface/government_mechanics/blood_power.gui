@@ -19,4 +19,43 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 	}
+	windowType = {
+		name = "blood_power_gov_button_1"
+		size = { x = 48 y = 48 }
+		moveable = 0
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_blood_power_drain_hope_button"
+			position = { x = 26 y = 0 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "blood_power_gov_button_2"
+		size = { x = 48 y = 48 }
+		moveable = 0
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_blood_power_sell_reserves_button"
+			position = { x = 78 y = 0 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "blood_power_gov_button_3"
+		size = { x = 48 y = 48 }
+		moveable = 0
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_blood_power_recruit_sentinels_button"
+			position = { x = 130 y = 0 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
 }

@@ -12,6 +12,7 @@ discovered_by = elventechgroup
 discovered_by = kandarintechgroup
 discovered_by = gnometechgroup
 discovered_by = karamjantechgroup
+discovered_by = monkeytechgroup
 
 hre = no
 

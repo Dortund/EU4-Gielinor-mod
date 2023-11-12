@@ -68,7 +68,7 @@ categories =  {
 			261 1377 #Kandarin
 			325 #Tirannwn
 			430 431 433 434 435 877 1413 #Kourend
-			488 489 490 #Varlamore
+			487 488 489 509 524 886 892 #Varlamore
 		}		
 	}
 	
@@ -106,7 +106,6 @@ categories =  {
 		terrain_override = {
 			200 #OuterIsles
 			306 307 308 853 1013 #Feldips
-			493 #Varlamore
 			865 #Asgarnia
 		}
 	}
@@ -162,7 +161,7 @@ categories =  {
 			371 #Fremmy
 			410 411 420 476 448 1424 1428 1435 #Kourend
 			453 458 471 477 478 479 480 481 483 484 #Kebos
-			503 505 #Varlamore
+			1454 1455 #Varlamore
 		}
 	}
 
@@ -212,7 +211,7 @@ categories =  {
 			220 223 225 #Karamja
 			291 #Kandarin
 			312 316 #Feldips
-			509 510 #Varlamore
+			496 497 498 499 500 507 508 510 888 1015 #Varlamore
 		}
 	}	
 	
@@ -229,7 +228,7 @@ categories =  {
 		supply_limit = 5
 
 		terrain_override = {
-			67 #Kharid
+			67 91 #Kharid
 			112 842 #Morytania
 			311 1009 #Feldips
 			334 #Tirannwn
@@ -267,8 +266,7 @@ categories =  {
 		supply_limit = 4
 
 		terrain_override = {
-			69 72 81 85 95 96 97 98 99 102 89 90 80 79 78 786 787 788 854 855 858 859 866 867 #Kharid
-			497 498 499 #Varlamore
+			69 70 78 79 80 81 85 89 90 95 96 97 98 99 102 786 787 788 854 855 858 859 866 867 1436 #Kharid
 		}
 	}
 	
@@ -284,6 +282,7 @@ categories =  {
 		
 		terrain_override = {
 			34 58 60 #Asgarnia
+			1000 #Kharid
 			120 #Morytania
 			142 148 951 764 765 955 #OuterIsles
 			215 217 227 #Karamja
@@ -291,8 +290,9 @@ categories =  {
 			263 #Kandarin
 			317 #Feldips
 			399 400 405 432 436 437 876 928 929 1412 #Kourend
-			1000 #Kharid
+			889 1457 1458 1459 1462 #Varlamore
 			1285 1292 1297 1299 1301 1304 #Acheron
+			1108 1152 1154 1187 #Wushanko
 		}
 	}	
 	
@@ -336,7 +336,7 @@ categories =  {
 			345 346 347 348 350 #Troll
 			370 376 377 386 391 392 393 394 395 396 1001 #Fremmy
 			468 884 #Kebos
-			496 502 504 #Varlamore
+			506 521 840 #Varlamore
 			1298 1300 #Acheron
 		}
 	}
@@ -352,9 +352,7 @@ categories =  {
 		nation_designer_cost_multiplier = 0.95	
 		
 		terrain_override = {
-			494 495 496 497 498 499 500 501 502 504 506 507 508 511 512
-			513 514 515 516 517 518 519 520 521 522 523 524 525 887 888
-			889 890 891 892 #Varlamore
+			511 512 513 514 515 516 517 518 519 520 523 891 1460 1461 1463 #Varlamore
 		}		
 	}
 	

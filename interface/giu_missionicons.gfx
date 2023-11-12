@@ -71,6 +71,21 @@ spriteTypes = {
 		name = "mission_v_statue"
 		texturefile = "gfx//interface//missions//mission_v_statue.dds"
 	}
+	
+	##################AHH
+	spriteType = {
+		name = "mission_oust_the_nightmare"
+		texturefile = "gfx//interface//missions//AHH//mission_oust_the_nightmare.dds"
+	}
+	spriteType = {
+		name = "mission_reinforce_the_battlements"
+		texturefile = "gfx//interface//missions//AHH//mission_reinforce_the_battlements.dds"
+	}
+	spriteType = {
+		name = "mission_the_art_of_totemcraft"
+		texturefile = "gfx//interface//missions//AHH//mission_the_art_of_totemcraft.dds"
+	}
+	
 	##################ALK
 	spriteType = {
 		name = "mission_abbey_of_st_elspeth"
@@ -290,8 +305,56 @@ spriteTypes = {
 	}
 	##################CFS
 	spriteType = {
+		name = "mission_agility_training"
+		texturefile = "gfx//interface//missions//CFS//mission_agility_training.dds"
+	}
+	spriteType = {
+		name = "mission_empire_of_canifis"
+		texturefile = "gfx//interface//missions//CFS//mission_empire_of_canifis.dds"
+	}
+	spriteType = {
 		name = "mission_establish_canifis"
 		texturefile = "gfx//interface//missions//CFS//mission_establish_canifis.dds"
+	}
+	spriteType = {
+		name = "mission_fate_of_slepe"
+		texturefile = "gfx//interface//missions//CFS//mission_fate_of_slepe.dds"
+	}
+	spriteType = {
+		name = "mission_festival_of_zamorak"
+		texturefile = "gfx//interface//missions//CFS//mission_festival_of_zamorak.dds"
+	}
+	spriteType = {
+		name = "mission_lordship_diplomacy"
+		texturefile = "gfx//interface//missions//CFS//mission_lordship_diplomacy.dds"
+	}
+	spriteType = {
+		name = "mission_misthalanian_claim"
+		texturefile = "gfx//interface//missions//CFS//mission_misthalanian_claim.dds"
+	}
+	spriteType = {
+		name = "mission_morytanian_dominance"
+		texturefile = "gfx//interface//missions//CFS//mission_morytanian_dominance.dds"
+	}
+	spriteType = {
+		name = "mission_myre_incursion"
+		texturefile = "gfx//interface//missions//CFS//mission_myre_incursion.dds"
+	}
+	spriteType = {
+		name = "mission_ruins_of_kharyrll"
+		texturefile = "gfx//interface//missions//CFS//mission_ruins_of_kharyrll.dds"
+	}
+	spriteType = {
+		name = "mission_werewolf_freedom"
+		texturefile = "gfx//interface//missions//CFS//mission_werewolf_freedom.dds"
+	}
+	spriteType = {
+		name = "mission_werewolf_forces"
+		texturefile = "gfx//interface//missions//CFS//mission_werewolf_forces.dds"
+	}
+	spriteType = {
+		name = "mission_werewolf_sailors"
+		texturefile = "gfx//interface//missions//CFS//mission_werewolf_sailors.dds"
 	}
 	
 	##################CLS
@@ -680,6 +743,60 @@ spriteTypes = {
 	spriteType = {
 		name = "mission_zarosian_secrets"
 		texturefile = "gfx//interface//missions//MWL//mission_zarosian_secrets.dds"
+	}
+	
+	##################MYT
+	spriteType = {
+		name = "mission_break_the_seclusion"
+		texturefile = "gfx//interface//missions//MYT//mission_break_the_seclusion.dds"
+	}
+	spriteType = {
+		name = "mission_intensification_of_meiyerditch"
+		texturefile = "gfx//interface//missions//MYT//mission_intensification_of_meiyerditch.dds"
+	}
+	spriteType = {
+		name = "mission_internal_stability"
+		texturefile = "gfx//interface//missions//MYT//mission_internal_stability.dds"
+	}
+	spriteType = {
+		name = "mission_luxuries_of_wushanko"
+		texturefile = "gfx//interface//missions//MYT//mission_luxuries_of_wushanko.dds"
+	}
+	spriteType = {
+		name = "mission_pirate_mercenaries"
+		texturefile = "gfx//interface//missions//MYT//mission_pirate_mercenaries.dds"
+	}
+	spriteType = {
+		name = "mission_stabilise_the_tithe"
+		texturefile = "gfx//interface//missions//MYT//mission_stabilise_the_tithe.dds"
+	}
+	spriteType = {
+		name = "mission_subject_rule"
+		texturefile = "gfx//interface//missions//MYT//mission_subject_rule.dds"
+	}
+	spriteType = {
+		name = "mission_terror_of_the_araxytes"
+		texturefile = "gfx//interface//missions//MYT//mission_terror_of_the_araxytes.dds"
+	}
+	spriteType = {
+		name = "mission_the_true_blood_altar"
+		texturefile = "gfx//interface//missions//MYT//mission_the_true_blood_altar.dds"
+	}
+	spriteType = {
+		name = "mission_theatre_of_blood"
+		texturefile = "gfx//interface//missions//MYT//mission_theatre_of_blood.dds"
+	}
+	spriteType = {
+		name = "mission_vampyric_conversions"
+		texturefile = "gfx//interface//missions//MYT//mission_vampyric_conversions.dds"
+	}
+	spriteType = {
+		name = "mission_vyrewatch_expansion"
+		texturefile = "gfx//interface//missions//MYT//mission_vyrewatch_expansion.dds"
+	}
+	spriteType = {
+		name = "mission_vyrewatch_training"
+		texturefile = "gfx//interface//missions//MYT//mission_vyrewatch_training.dds"
 	}
 	
 	##################NZS

@@ -10,11 +10,17 @@ discovered_by = morytaniantechgroup
 
 hre = no
 
-base_tax = 4
-base_production = 3
+base_tax = 5
+base_production = 4
 base_manpower = 4
 
 trade_goods = herblore_supplies
 latent_trade_goods = { rare_loot }
 
 is_city = yes
+
+2100.1.1 = {
+	base_tax = 6
+	base_production = 6
+	base_manpower = 5
+}

@@ -144,7 +144,7 @@ pollnivneach_area = {
 }
 
 nardah_area = {
-	86 786 787 1367
+	86 786 787 1367 1436
 }
 
 south_elid_area = {
@@ -297,6 +297,10 @@ daemonheim_peninsula_area = {
 
 dungeons_of_daemonheim_area = {
 	1320 1321 1322 1323 1324
+}
+
+daimons_crater_area = {
+	1437 1438 1439 1440
 }
 
 ##############################################
@@ -640,7 +644,7 @@ stor_glacier_area = {
 }
 
 tasuaq_area = {
-	1293 1294 1295
+	1293 1294 1295 1489
 }
 
 hiipulma_area = {
@@ -684,7 +688,7 @@ hosspring_area = {
 }
 
 south_lovakengj_area = {
-	416 417 419 1435
+	417 419 1435
 }
 
 north_lovakengj_area = {
@@ -771,15 +775,15 @@ quidamortem_area = {
 	471 884 935
 }
 
-attritio_area = {
-	477 478 479
+custodia_area = {
+	477 478 479 1449
 }
 
-crooks_creek_area = {
-	480 481 482
+north_stranglewood_area = {
+	480 481 482 1448
 }
 
-baalal_area = {
+south_stranglewood_area = {
 	483 484 485
 }
 
@@ -787,56 +791,60 @@ baalal_area = {
 #Varlamore
 ##############################################
 
-aldarin_area = {
-	486 487 488 489 885
+north_aldarin_area = {
+	486 488 489 885
+}
+
+south_aldarin_area = {
+	487 1457 1458
 }
 
 tempestus_area = {
-	491 492 493 886
+	491 492 493 886 1450
 }
 
-aridas_edge_area = {
-	490 494 495 887
+auburnvale_area = {
+	490 494 495 887 1451
 }
 
-arcanum_area = {
+inner_tlati_area = {
 	496 497 498 499 500
 }
 
-ranul_forest_area = {
+tlati_river_area = {
 	509 510 1015
 }
 
-meridiem_area = {
+north_tlati_area = {
 	501 507 508 888
 }
 
-hailstorm_mountain_area = {
-	502 503 889
+salvager_shore_area = {
+	502 503 889 1452 1453
 }
 
 proudspire_area = {
-	504 505 506
+	504 505 506 1454 1455
 }
 
-principium_area = {
-	521 522 890
+cam_torum_area = {
+	521 522 890 1456
 }
 
-avizaal_area = {
-	511 512 513 514
+west_avium_area = {
+	511 512 513 514 1459
 }
 
-avium_savannah_area = {
+east_avium_area = {
 	515 516 517 518 519
 }
 
 savannah_farms_area = {
-	520 523 892
+	520 523 892 1460 1461
 }
 
 civitas_illa_fortis_area = {
-	524 525 891
+	524 525 891 1462 1463
 }
 
 ##############################################
@@ -964,7 +972,7 @@ flou_tar_shi_area = {
 }
 
 ashihama_area = {
-	1176 1177 1178
+	1176 1177 1178 1488
 }
 
 yamada_area = {
@@ -1082,11 +1090,15 @@ south_acheron_coast_area = {
 ##############################################
 
 coast_of_tirannwn_area = {
-	618 619 620 621 622
+	618 620 621 622
 }
 
 west_feldip_bay_area = {
-	623 624 626 627 628 629 909 625
+	623 624 625 626 627 628 629 909
+}
+
+lost_grove_coast_area = {
+	619 692 693 697
 }
 
 southern_crystal_ocean_area = {
@@ -1097,12 +1109,8 @@ southern_crystal_ocean_area = {
 #East Zeah Sea
 ##############################################
 
-inner_bay_of_zeah_area = {
-	676 677 694 695
-}
-
-outer_bay_of_zeah_area = {
-	678 692 693 696 697
+bay_of_zeah_area = {
+	676 677 678 694 695
 }
 
 kourend_coast_area = {
@@ -1134,19 +1142,19 @@ xerics_sea_area = {
 ##############################################
 
 tempest_bay_area = {
-	711 717 718 719 993
+	717 718 719 993
 }
 
 new_ocean_area = {
 	706 707 708 712 713 714
 }
 
-occasus_bay_area = {
-	703 704 705 709 710 910
+aldarin_sea_area = {
+	703 704 705 709 711 910
 }
 
 avium_sea_area = {
-	698 699 700 701 702
+	696 698 699 700 701 702 710
 }
 
 ##############################################

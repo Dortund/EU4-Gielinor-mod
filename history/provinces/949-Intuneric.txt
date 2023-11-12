@@ -4,7 +4,7 @@ controller = LNC
 add_core = LNC
 tribal_owner = ---
 culture = north_coaster
-religion = zamorak
+religion = saradomin
 
 discovered_by = BDI
 discovered_by = LNC
@@ -16,9 +16,9 @@ discovered_by = morytaniantechgroup
 
 hre = no
 
-base_tax = 2
-base_production = 2
-base_manpower = 1
+base_tax = 3
+base_production = 3
+base_manpower = 2
 
 trade_goods = logs
 
@@ -29,4 +29,5 @@ is_city = yes
 	controller = CFS
 	add_core = CFS
 	culture = canifian
+	religion = zamorak
 }

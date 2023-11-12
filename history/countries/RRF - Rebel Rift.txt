@@ -1,7 +1,7 @@
 government = republic
 add_government_reform = rogue_republic
 government_rank = 1
-primary_culture = fortis
+primary_culture = aldarin
 religion = ranul
 technology_group = zeantechgroup
 capital = 503 #Rebel Rift

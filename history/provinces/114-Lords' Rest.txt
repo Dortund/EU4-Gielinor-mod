@@ -31,4 +31,7 @@ is_city = yes
 	add_core = CFS
 	culture = ghoul
 	religion = zamorak
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
 }

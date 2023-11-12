@@ -11,6 +11,7 @@ discovered_by = bandostechgroup
 discovered_by = elventechgroup
 discovered_by = kandarintechgroup
 discovered_by = gnometechgroup
+discovered_by = fremenniktechgroup
 
 hre = no
 
@@ -41,4 +42,10 @@ is_city = yes
 	controller = KDR
 	add_core = KDR
 	remove_core = ADO
+}
+
+2100.1.1 = {
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
 }

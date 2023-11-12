@@ -8,17 +8,19 @@ blood_power_mechanic = {
 		blood_power_power_1 = {
 			max = 100
 			default = 50
+			base_monthly_growth = 0.1
+			development_scaled_monthly_growth = -0.4
 			scaled_modifier = {
 				modifier = {
 					yearly_patriarch_authority = 0.02
 				 	culture_conversion_cost = -0.2
-					shock_damage_received = -0.2
+					shock_damage_received = -0.1
 				}
 			}
 			reverse_scaled_modifier = {
 				modifier = {
 					yearly_patriarch_authority = -0.02
-					shock_damage_received = 0.1
+					shock_damage_received = 0.05
 				}
 			}
 			is_good = yes
@@ -26,5 +28,308 @@ blood_power_mechanic = {
 	}
 	
 	interactions = {
+		blood_power_drain_hope = {
+			gui = blood_power_gov_button_1
+			cost_type = blood_power_power_1
+			center = no
+			trigger = {
+				has_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 20
+				}
+				any_owned_province = {
+					OR = {
+						religion_group = chaos_group
+						has_active_triggered_province_modifier = MYT_descendants_of_hallowvale
+						has_active_triggered_province_modifier = religious_center
+					}
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = -20
+				}
+				if = {
+					limit = {
+						government_rank = 1
+						NOT = { government_rank = 2 }
+					}
+					custom_tooltip = blood_power_drain_hope_1_tooltip
+				}
+				if = {
+					limit = {
+						government_rank = 2
+						NOT = { government_rank = 3 }
+					}
+					custom_tooltip = blood_power_drain_hope_2_tooltip
+				}
+				if = {
+					limit = {
+						government_rank = 3
+					}
+					custom_tooltip = blood_power_drain_hope_3_tooltip
+				}
+				hidden_effect = {
+					random_owned_province = {
+						limit = {
+							NOT = { 
+								OR = {
+									religion_group = chaos_group
+									has_active_triggered_province_modifier = MYT_descendants_of_hallowvale
+									has_active_triggered_province_modifier = religious_center
+								}
+							}
+						}
+						set_province_flag = blood_power_zamorak_convert_duchy
+					}
+					if = {
+						limit = {
+							government_rank = 2
+						}
+						random_owned_province = {
+							limit = {
+								NOT = {
+									OR = {
+										religion_group = chaos_group
+										has_active_triggered_province_modifier = MYT_descendants_of_hallowvale
+										has_active_triggered_province_modifier = religious_center
+										has_province_flag = blood_power_zamorak_convert_duchy
+									}
+								}
+							}
+							set_province_flag = blood_power_zamorak_convert_kingdom
+						}
+					}
+					if = {
+						limit = {
+							government_rank = 3
+						}
+						random_owned_province = {
+							limit = {
+								NOT = {
+									OR = {
+										religion_group = chaos_group
+										has_active_triggered_province_modifier = MYT_descendants_of_hallowvale
+										has_active_triggered_province_modifier = religious_center
+										has_province_flag = blood_power_zamorak_convert_kingdom
+									}
+								}
+							}
+							set_province_flag = blood_power_zamorak_convert_empire
+						}
+					}
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								has_province_flag = blood_power_zamorak_convert_duchy
+								has_province_flag = blood_power_zamorak_convert_kingdom
+								has_province_flag = blood_power_zamorak_convert_empire
+							}
+						}
+						change_religion = zamorak
+					}
+				}
+				hidden_effect = {
+					every_owned_province = {
+						clr_province_flag = blood_power_zamorak_convert_duchy
+						clr_province_flag = blood_power_zamorak_convert_kingdom
+						clr_province_flag = blood_power_zamorak_convert_empire
+					}
+				}
+			}
+			ai_chance = {
+				factor = 0.5
+				modifier = {
+					factor = 10
+					NOT = { religious_unity = 0.5 }
+				}
+				modifier = {
+					factor = 5
+					NOT = { religious_unity = 0.75 }
+				}
+				modifier = {
+					factor = 0
+					religious_unity = 1
+				}
+				modifier = {
+					factor = 0
+					has_country_modifier = vampyric_kingdom_insufficient_food
+				}
+				modifier = {
+					factor = 2
+					has_government_power = {
+						mechanic_type = blood_power_mechanic
+						power_type = blood_power_power_1
+						value = 100
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_government_power = {
+							mechanic_type = blood_power_mechanic
+							power_type = blood_power_power_1
+							value = 35
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					has_disaster = excessive_tithe
+				}
+			}
+		}
+		
+		blood_power_sell_reserves = {
+			gui = blood_power_gov_button_2
+			cost_type = blood_power_power_1
+			center = no
+			trigger = {
+				has_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 25
+				}
+				any_owned_province = {
+					NOT = { 
+						religion_group = chaos_group
+					}
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = -25
+				}
+				add_years_of_income = 0.5
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 10
+				}
+			}
+			ai_chance = {
+				factor = 0.5
+				modifier = {
+					factor = 10
+					num_of_loans = 3
+				}
+				modifier = {
+					factor = 4
+					num_of_loans = 1
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 40
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+				}
+				modifier = {
+					factor = 0
+					has_country_modifier = vampyric_kingdom_insufficient_food
+				}
+				modifier = {
+					factor = 2
+					has_government_power = {
+						mechanic_type = blood_power_mechanic
+						power_type = blood_power_power_1
+						value = 100
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_government_power = {
+							mechanic_type = blood_power_mechanic
+							power_type = blood_power_power_1
+							value = 35
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					has_disaster = excessive_tithe
+				}
+			}
+		}
+		
+		blood_power_recruit_sentinels = {
+			gui = blood_power_gov_button_3
+			cost_type = blood_power_power_1
+			center = no
+			trigger = {
+				has_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 25
+				}
+				NOT = {
+					has_country_modifier = vampyric_enable_sentinel_recruitment
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = -25
+				}
+				add_country_modifier = {
+					name = vampyric_enable_sentinel_recruitment
+					duration = 1825
+				}
+			}
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 0
+					army_size_percentage = 1
+				}
+				modifier = {
+					factor = 0
+					has_country_modifier = vampyric_kingdom_insufficient_food
+				}
+				modifier = {
+					factor = 2
+					has_government_power = {
+						mechanic_type = blood_power_mechanic
+						power_type = blood_power_power_1
+						value = 100
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_government_power = {
+							mechanic_type = blood_power_mechanic
+							power_type = blood_power_power_1
+							value = 35
+						}
+					}
+				}
+				modifier = {
+					factor = 10
+					NOT = { army_size_percentage = 0.5 }
+				}
+				modifier = {
+					factor = 0
+					has_disaster = excessive_tithe
+				}
+			}
+		}
 	}
 }

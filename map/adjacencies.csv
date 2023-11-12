@@ -30,10 +30,14 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 399;876;sea;681;-1;-1;-1;-1;Port Piscarilius-West Anglerfish Isle
 405;876;sea;681;-1;-1;-1;-1;West Anglerfish Isle-Foreboding Shore
 436;437;sea;678;-1;-1;-1;-1;Crabclaw Isle-Crab Raises
-488;490;sea;719;-1;-1;-1;-1;Aldarin-Arida's Edge
-491;492;sea;993;-1;-1;-1;-1;Tempestus-Singing Isle
-492;886;sea;993;-1;-1;-1;-1;Singing Isle-Ventus Cuniculum
-491;886;sea;993;-1;-1;-1;-1;Tempestus-Ventus Cuniculum
+483;484;sea;720;-1;-1;-1;-1;West Stranglewood
+483;1448;sea;720;-1;-1;-1;-1;West Stranglewood
+886;1450;sea;719;-1;-1;-1;-1;Tempestus Pub
+886;493;sea;719;-1;-1;-1;-1;Internal Tempestus
+886;491;sea;719;-1;-1;-1;-1;Internal Tempestus
+491;493;sea;719;-1;-1;-1;-1;Internal Tempestus
+492;493;sea;719;-1;-1;-1;-1;Internal Tempestus
+492;491;sea;719;-1;-1;-1;-1;Internal Tempestus
 765;766;sea;641;-1;-1;-1;-1;Slugling Shores-Mount Brackish
 805;806;sea;551;-1;-1;-1;-1;Shores of Life-Ape Cove
 1104;1105;sea;1034;-1;-1;-1;-1;Aminishi

@@ -7,11 +7,12 @@ technology_group = morytaniantechgroup
 capital = 128 #Burgh de Rott
 national_focus = DIP
 
-1927.1.6 = {
+2135.1.6 = {
 	monarch = {
 		name = "Catalina"
 		dynasty = "Ryak"
-		birth_date = 1901.11.17
+		birth_date = 2099.11.17
+		death_date = 2168.3.22
 		adm = 6
 		dip = 5
 		mil = 1

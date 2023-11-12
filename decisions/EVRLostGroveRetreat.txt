@@ -124,7 +124,7 @@ country_decisions = {
 					has_empty_adjacent_province = yes
 				}
 				random_empty_neighbor_province = {
-					add_colonysize = 200
+					add_siberian_construction = 200
 				}
 			}
 		}

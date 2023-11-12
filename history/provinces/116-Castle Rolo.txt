@@ -17,9 +17,9 @@ discovered_by = northerntechgroup
 
 hre = no
 
-base_tax = 4
-base_production = 3
-base_manpower = 2
+base_tax = 5
+base_production = 4
+base_manpower = 3
 
 fort_15th = yes 
 
@@ -33,4 +33,7 @@ is_city = yes
 	add_core = CFS
  	change_province_name = "Castle Fenkenstrain"
 	religion = zamorak
+	base_tax = 4
+	base_production = 3
+	base_manpower = 3
 }

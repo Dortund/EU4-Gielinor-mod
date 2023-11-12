@@ -3,7 +3,7 @@ owner = BBM
 controller = BBM
 add_core = BBM
 tribal_owner = ---
-culture = loop_culture
+culture = siren
 religion = zaros
 
 discovered_by = wushankotechgroup
@@ -14,6 +14,6 @@ base_tax = 2
 base_production = 2
 base_manpower = 2
 
-trade_goods = manufactured_goods
+trade_goods = terracotta
 
 is_city = yes

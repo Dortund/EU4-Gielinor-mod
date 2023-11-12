@@ -12,9 +12,9 @@ discovered_by = bandostechgroup
 
 hre = no
 
-base_tax = 3
+base_tax = 4
 base_production = 3
-base_manpower = 2
+base_manpower = 3
 
 trade_goods = logs
 
@@ -49,4 +49,10 @@ is_city = yes
 	owner = ASG
 	controller = ASG
 	remove_core = GUN
+}
+
+2100.1.1 = {
+	base_tax = 5
+	base_production = 4
+	base_manpower = 4
 }

@@ -6,7 +6,7 @@ tribal_owner = ---
 culture = cloud_giant
 religion = bandos
 
-discovered_by = CDG
+discovered_by = zeantechgroup
 
 hre = no
 

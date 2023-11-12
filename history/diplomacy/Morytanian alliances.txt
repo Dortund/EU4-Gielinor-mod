@@ -7,6 +7,15 @@ dependency = {
 	end_date = 2184.4.25
 }
 
+#Morytania-Slepe
+dependency = {
+	subject_type = "tributary_state"
+	first = MYT
+	second = SLP
+	start_date = 1900.1.1
+	end_date = 1975.1.1
+}
+
 #Morytania-Dessous
 vassal = {
 	first = MYT

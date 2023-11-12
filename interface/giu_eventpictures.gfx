@@ -271,14 +271,38 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "MORYTANIA_MYREQUE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MORYTANIA_MYREQUE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
 		name = "MORYTANIA_SWAMP_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MORYTANIA_SWAMP_eventPicture.dds"
 		alwaystransparent = yes
 	}
 	
 	spriteType = {
+		name = "MORYTANIA_VYREWATCH_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MORYTANIA_VYREWATCH_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MORYTANIA_WEREWOLF_FIGHT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/MORYTANIA_WEREWOLF_FIGHT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
 		name = "NEW_APEMEKEN_DESERT_MONKEYS_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_national_flavour/NEW_APEMEKEN_DESERT_MONKEYS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "NIGHTMARE_OF_ASHIHAMA_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/NIGHTMARE_OF_ASHIHAMA_eventPicture.dds"
 		alwaystransparent = yes
 	}
 	

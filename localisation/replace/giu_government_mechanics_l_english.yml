@@ -6,6 +6,15 @@
  blood_power_mechanic:0 "Blood Power"
  blood_power_power_1:0 "Blood Power"
  monthly_blood_power_power_1:0 "Monthly Blood Power"
+ blood_power_drain_hope:0 "Drain Hope"
+ blood_power_drain_hope_desc:0 "There is nothing more delicious than the taste of hope. Let us drain it forcefully from those who still cling to their lesser gods.\n\n"
+ blood_power_drain_hope_1_tooltip:0 "\nA random province not in the Chaos religious group will be converted to the §YZamorakian§! faith.\nProvinces with the active triggered modifiers §YReligious Centre§! or §YDescendents of Hallowvale§! are not affected.\n\nUpgrading your Government Rank will cause more provinces to be converted per interaction."
+ blood_power_drain_hope_2_tooltip:0 "\nTwo random provinces not in the Chaos religious group will be converted to the §YZamorakian§! faith.\nProvinces with the active triggered modifiers §YReligious Centre§! or §YDescendents of Hallowvale§! are not affected.\n\nUpgrading your Government Rank will cause more provinces to be converted per interaction."
+ blood_power_drain_hope_3_tooltip:0 "\nThree random provinces not in the Chaos religious group will be converted to the §YZamorakian§! faith.\nProvinces with the active triggered modifiers §YReligious Centre§! or §YDescendents of Hallowvale§! are not affected."
+ blood_power_sell_reserves:0 "Sell Reserves"
+ blood_power_sell_reserves_desc:0 "Selling a portion of our realm's private reserve of blood to the noble elites could both win their favour and generate significant funds.\n\n"
+ blood_power_recruit_sentinels:0 "Open Vyrewatch Sentinel Recruitment"
+ blood_power_recruit_sentinels_desc:0 "The elite force of any respectable Vampyre army are the Vyrewatch Sentinels.\n\nVyrewatch Sentinels are a special infantry unit with the following modifiers:\nRegiment Costs: §R+50%§!\nLand Maintenance Modifier: §R+10%§!\nShock Damage Received: §G-20%§!\nMorale Damage: §G+10%§!\n\n"
 
 ############### Elven Desperation
 

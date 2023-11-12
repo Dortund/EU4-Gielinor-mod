@@ -1,4 +1,4 @@
-#1382-
+#1382-Vinbois
 owner = HZL
 controller = HZL
 add_core = HZL
@@ -12,6 +12,7 @@ discovered_by = elventechgroup
 discovered_by = kandarintechgroup
 discovered_by = gnometechgroup
 discovered_by = karamjantechgroup
+discovered_by = monkeytechgroup
 
 hre = no
 
@@ -36,4 +37,7 @@ is_city = yes
 	add_core = KDR
 	remove_core = KZD
 	religion = saradomin
+	base_tax = 3
+	base_production = 3
+	base_manpower = 2
 }

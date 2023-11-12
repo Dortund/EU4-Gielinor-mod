@@ -3,6 +3,10 @@
  DYN_religious_consideration_desc:0 "Zamorakians in northern Draynor clash with the predominantly Saradominist south. We should get this unrest under control."
  dyn_religious_consideration_tooltip:0 "Your choice in this event will determine your subsequent missions on this path."
  
+ DYN_branching_1_2_title:0 "Branching Mission"
+ DYN_branching_1_2_desc:0 "This is a §YBranching Mission.§!"
+ DYN_this_is_a_branching_mission:0 "This is a §YBranching Mission.§! Complete the mission §YReligious Consideration§! to make your choice on which branch to take."
+ 
  DYN_SARA_clean_up_the_manor_title:0 "Clean up the Manor"
  DYN_SARA_clean_up_the_manor_desc:0 "The region around Draynor Manor is a frustrating hotbed of Zamorakian sentiment which needs to be cleaned up."
  DYN_SARA_spread_the_light_title:0 "Spread the Light"

@@ -42,8 +42,6 @@ TZH_extinction_of_the_tzhaar = {
  	discipline = 0.1
 }
 
-
-
 #####################################
 #Dreaded Years of Tragedy
 #####################################
@@ -58,11 +56,61 @@ KDR_dreaded_diplomacy = {
 	global_missionary_strength = -0.02
 }
 
-#Local
+# Local
 KDR_invisible_children = {
 	local_unrest = 20
 	local_production_efficiency = -0.5
 }
+
+#####################################
+#Excessive Tithe
+#####################################
+
+# National
+excessive_tithe_noble_restrictions = {
+	nobles_loyalty_modifier = -0.1
+	nobles_influence_modifier = -0.1
+}
+excessive_tithe_tithe_concessions = {
+	global_tax_modifier = -0.15
+	development_cost = -0.15
+	development_cost_in_primary_culture = 0.25
+}
+excessive_tithe_tributary_pressure = {
+	reduced_liberty_desire = -10
+	vassal_income = 1
+}
+excessive_tithe_drive_for_conquest = {
+	war_exhaustion = -0.1
+	monthly_reform_progress_modifier = -0.5
+}
+excessive_tithe_crime_crackdown = {
+	global_spy_defence = 0.1
+	global_unrest = 1
+}
+MYT_revenge_for_ranis_modifier = {
+	harsh_treatment_cost = -0.25
+	monthly_blood_power_power_1 = -0.1
+}
+MYT_compromise_of_efaritay = {
+ 	relation_with_heathens = 10
+	religious_unity = 0.25
+	tolerance_heathen = 2
+	blood_power_power_1_gain_modifier = 0.2
+	harsh_treatment_cost = 0.25
+	culture_conversion_cost = 0.15
+	global_missionary_strength = -0.02
+}
+MYT_reign_of_terror = {
+	global_unrest = 10
+	monthly_blood_power_power_1 = 1
+}
+
+#Local
+excessive_tithe_double_reinforcement = {
+	local_garrison_size = 0.25
+}
+
 
 #####################################
 #Fall of Cadarn

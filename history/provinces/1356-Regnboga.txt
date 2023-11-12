@@ -11,6 +11,7 @@ discovered_by = kharidtechgroup
 discovered_by = morytaniantechgroup
 discovered_by = dwarventechgroup
 discovered_by = northerntechgroup
+discovered_by = bandostechgroup
 
 hre = no
 

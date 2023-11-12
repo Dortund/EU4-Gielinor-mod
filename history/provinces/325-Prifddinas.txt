@@ -16,7 +16,7 @@ base_manpower = 9
 
 fort_15th = yes 
 
-trade_goods = flax
+trade_goods = refined_products
 
 is_city = yes
 
@@ -28,4 +28,10 @@ add_province_triggered_modifier = religious_center
 	base_tax = 3
 	base_production = 3
 	base_manpower = 3
+}
+
+2187.1.1 = {
+	base_tax = 14
+	base_production = 12
+	base_manpower = 12
 }

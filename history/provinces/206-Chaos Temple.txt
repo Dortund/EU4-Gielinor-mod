@@ -6,6 +6,7 @@ tribal_owner = ---
 culture = zombie
 religion = zamorak
 
+discovered_by = morytaniantechgroup
 discovered_by = northerntechgroup
 
 hre = no

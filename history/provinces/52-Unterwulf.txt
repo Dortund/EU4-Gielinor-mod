@@ -48,4 +48,7 @@ center_of_trade = 1
 	owner = UWF
 	controller = UWF
 	remove_core = GUN
+	base_tax = 3
+	base_production = 4
+	base_manpower = 3
 }

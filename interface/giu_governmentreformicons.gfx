@@ -253,6 +253,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "government_reform_icon_necromatic_dictatorship"
+		texturefile = "gfx//interface//government_reform_icons//icon_necromatic_dictatorship.dds"
+	}
+	
+	spriteType = {
 		name = "government_reform_icon_obsidian_castes"
 		texturefile = "gfx//interface//government_reform_icons//icon_obsidian_castes.dds"
 	}
@@ -300,6 +305,11 @@ spriteTypes = {
 	spriteType = {
 		name = "government_reform_icon_trading_colony"
 		texturefile = "gfx//interface//government_reform_icons//icon_trading_colony.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_werewolf_council"
+		texturefile = "gfx//interface//government_reform_icons//icon_werewolf_council.dds"
 	}
 	
 	
@@ -714,6 +724,13 @@ spriteTypes = {
 	################
 	### Shared
 	################
+	
+	# Military
+	
+	spriteType = {
+		name = "government_reform_icon_ectofuntus_barrier"
+		texturefile = "gfx//interface//government_reform_icons//icon_ectofuntus_barrier.dds"
+	}
 	
 	# Religious
 	

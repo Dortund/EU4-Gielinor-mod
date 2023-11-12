@@ -10,4 +10,25 @@
  colonial_ventures_title:0 "Colonial Ventures"
  colonial_ventures_desc:0 "Opportunity awaits! For the modest sum of gold pieces required to make such a dangerous journey, you shall receive it doubled in the future! Your armour shall be gleaming gold and your raw gems expertly cut in this wonderous new world.\nProvides +1 Colonist with the §YExploration§! institution."
  
+# MIL - Aristocratic
+ noble_knights_title:0 "Noble Knights"
+ noble_knights_desc:0 "Unicorns are a tempremental bunch, hard to tame and even harder to ride. To work them into some kind of usable cavalry force requires an economic system that produces large numbers of domesticated ones. If we were to guarantee the privileges of our noble class on the condition they raise a few unicorns, before long we will have a usable supply."
+ 
+# MIL - Horde
+ horse_lords:0 "Lords of the Beasts"
+ horse_lords_desc:0 "To survive the turmoil of the Fourth Age, some took to cities and shining palaces; some took to agriculture. But to truly understand the land requires us to know how to live with its beasts, work with them, and fight alongside them."
+ beyond_the_sun:0 "Godless Age"
+ beyond_the_sun_desc:0 "It is spoken that in the God Wars, the Gods roamed Gielinor and united all their followers as if they were a single nation. But the realms of Gielinor are so much more divided, even between different nations of the same believers. They can no longer so easily call a coalition against our onslaught."
+ mandate_of_the_khan:0 "Cult of the Horde"
+ mandate_of_the_khan_desc:0 "The power of the Gods has weakened upon Gielinor, leaving the mortals as the true powers of this world. And if the Gods themselves have lost their strength here, is not our leader a better target of our adoration?"
+ 
+ watchers_of_the_silk_road:0 "Trader Extortion"
+ watchers_of_the_silk_road_desc:0 "We do not build, we do not trade. We take what we need... and sometimes more. Our warriors have kept an attentive watch upon foreign merchants and their techniques, and we now know the safest paths to transport our goods."
+ a_magnanimous_empire:0 "A Magnanimous Empire"
+ a_magnanimous_empire_desc:0 "Those worthy of the Horde may join us in our conquests; be they goblin, troll, human or even elf. Those who welcome our tolerant empire shall be treated as part of it."
+ 
+# MIL - Quality
+ finest_of_horses:0 "Finest of Unicorns"
+ finest_of_horses_desc:0 "How steadily those troops take the ground! How beautifully those cavalry form! Look at those unicorns! Who commands them with grace? These are fine troops."
+ 
  

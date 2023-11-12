@@ -1,6 +1,6 @@
 #477 - Chasm Caverns
 tribal_owner = ---
-culture = molch
+culture = baalal
 religion = xeric
 
 discovered_by = zeantechgroup

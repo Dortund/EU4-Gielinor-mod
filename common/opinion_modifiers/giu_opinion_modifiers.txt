@@ -23,6 +23,13 @@ MST_wrong_side_of_salve = {
 # TIMED
 ##############
 
+###Government
+
+excessive_tithe_took_harsh_tithe = {
+	opinion = -50
+	yearly_decay = 3
+}
+
 ###Religion
 
 seren_words_of_runecrafter_support = {
@@ -125,6 +132,18 @@ cda_refused_resistance = {
 	opinion = -50
 	yearly_decay = 1
 }
+
+#Canifis
+
+cfs_allies_in_faith = {
+	opinion = 75
+	yearly_decay = 1
+}
+cfs_rejected_support = {
+	opinion = -50
+	yearly_decay = 1
+}
+
 
 #Donblas
 

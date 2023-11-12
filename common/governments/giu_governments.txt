@@ -226,6 +226,7 @@ republic = {
 				magiocracy
 				merchants_reform
 				military_dictatorship_reform
+				necromantic_dictatorship
 				obsidian_caste
 				pirate_republic_reform
 				political_dynasties
@@ -235,6 +236,7 @@ republic = {
 				tirannwn_resistance
 				town_council_reform
 				trading_city_reform
+				werewolf_council_reform
 			}
 		}
 		republican_virtues = {
@@ -277,6 +279,7 @@ republic = {
 				organized_military_staff_reform
 				military_engineering_reform
 				defensive_stance_reform
+				ectofuntus_barrier_reform
 				sustained_discipline_reform
 				cavalry_warfare_reform
 				mercenary_leadership_reform

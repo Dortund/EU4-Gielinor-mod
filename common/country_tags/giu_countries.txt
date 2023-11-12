@@ -71,6 +71,7 @@ SOP = "countries/SOP - Sophanem.txt"
 TMP = "countries/TMP - Tempoross.txt"
 
 #Morytania
+ARX = "countries/ARX - Araxytes.txt"
 BWS = "countries/BWS - Barrows.txt"
 BDR = "countries/BDR - Burgh de Rott.txt"
 CFS = "countries/CFS - Canem.txt"
@@ -85,7 +86,7 @@ SLP = "countries/SLP - Slepe.txt"
 
 #Forinthry
 ANK = "countries/ANK - Annakarl.txt"
-BZR = "countries/BZR - Berserkers.txt"					#NL
+BZR = "countries/BZR - Berserkers.txt"
 CRD = "countries/CRD - Charred Folk.txt"				#NL
 CST = "countries/CST - Callisto.txt"
 DGH = "countries/DGH - Dagon'hai.txt"
@@ -99,7 +100,7 @@ PHI = "countries/PHI - Pirates' Hideout.txt"			#NL
 ROG = "countries/ROG - Rogues' Castle.txt"				#NL
 SRP = "countries/SRP - Scorpia.txt"
 VET = "countries/VET - Vet'ion.txt"						#NL
-VNN = "countries/VNN - Venenatis.txt"					#NL
+VNN = "countries/VNN - Venenatis.txt"
 WBA = "countries/WBA - Armadyl Warband.txt"				#NL
 WBB = "countries/WBB - Bandos Warband.txt"				#NL
 WBC = "countries/WBC - Wilderness Bandit Camp.txt"
@@ -110,7 +111,7 @@ WBZ = "countries/WBZ - Zamorak Warband.txt"				#NL
 BDI = "countries/BDI - Braindeath.txt"
 HMY = "countries/HMY - Harmony.txt"
 LHK = "countries/LHK - Lithkren.txt"
-MRF = "countries/MRF - Merfolk.txt"						#NL
+MRF = "countries/MRF - Merfolk.txt"
 MSH = "countries/MSH - Mos Le' Harmless.txt"
 MWU = "countries/MWU - Mwanu.txt"
 
@@ -201,6 +202,7 @@ THN = "countries/THN - Trahaearn.txt"
 TNN = "countries/TNN - Tirannwn.txt"
 TPS = "countries/TPS - Temple of Shadow.txt"
 TYS = "countries/TYS - Tyras.txt"
+ZNS = "countries/ZNS - Zanaris.txt"
 ZUA = "countries/ZUA - Zul-Andra.txt"
 
 #Troll Country
@@ -259,7 +261,6 @@ WTD = "countries/WTD - Wintertodt.txt"					#NL
 XER = "countries/XER - Xerician Empire.txt"				#NL
 
 #Kebos
-AUB = "countries/AUB - Auburnvale.txt"
 BAA = "countries/BAA - Baalal.txt"
 CNC = "countries/CNC - Cronch.txt"
 LCT = "countries/LCT - Lacerta.txt"						#NL
@@ -267,15 +268,20 @@ MOC = "countries/MOC - Molch.txt"
 KBS = "countries/KBS - Kebos.txt"						#NL
 KUU = "countries/KUU - Karuulm.txt"
 QMT = "countries/QMT - Quidamortem.txt"					#NL
+SGW = "countries/SGW - Stranglewood.txt"
+TSK = "countries/TSK - Tasabek.txt"
 
 #Varlamore
+ALD = "countries/ALD - Aldarin.txt"
+AUB = "countries/AUB - Auburnvale.txt"
 AVU = "countries/AVU - Aviumia.txt"
 AZA = "countries/AZA - Avizaal.txt"
 CDG = "countries/CDG - Cloud Giants.txt"
-RDE = "countries/RDE - Rain Demons.txt"					#NL
-RRF = "countries/RRF - Rebel Rift.txt"					#NL
+RDE = "countries/RDE - Rain Demons.txt"
+RRF = "countries/RRF - Rebel Rift.txt"
+TLT = "countries/TLT - Tlati.txt"
 VAR = "countries/VAR - Varlamore.txt"
-WYM = "countries/WYM - Colossal Wyrm.txt"				#NL
+WYM = "countries/WYM - Colossal Wyrm.txt"
 
 #Arc
 AMS = "countries/AMS - Aminishi.txt"
@@ -333,6 +339,7 @@ FNS = "countries/FNS - Fenisento.txt"
 FTS = "countries/FTS - Flou Tar-Shei.txt"
 KHG = "countries/KHG - Khaganate.txt"
 KHN = "countries/KHN - Khanoka.txt"
+NAS = "countries/NAS - Nightmare.txt"
 NHE = "countries/NHE - New Heritage.txt"
 PRE = "countries/PRE - Paradise.txt"
 SBL = "countries/SBL - Shambling Lair.txt"

@@ -1,1 +1,1 @@
-discovered_by = CLG
+discovered_by = zeantechgroup

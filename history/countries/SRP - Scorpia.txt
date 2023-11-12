@@ -1,7 +1,7 @@
 government = tribal
 add_government_reform = boss_nation
 government_rank = 1
-primary_culture = cursed_scorpion
+primary_culture = scorpion
 religion = zamorak
 technology_group = northerntechgroup
 capital = 192 #Scorpia

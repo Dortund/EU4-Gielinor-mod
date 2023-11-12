@@ -25,11 +25,23 @@
  great_project_falador_castle:0 "Falador Castle"
  great_project_great_project_falador_castle:0 "Falador Castle"
  
+ great_project_lassar_undercity_title:0 "Lassar Undercity"
+ great_project_lassar_undercity:0 "Lassar Undercity"
+ great_project_great_project_lassar_undercity:0 "Lassar Undercity"
+ 
+ great_project_sacred_forge_title:0 "Sacred Forge"
+ great_project_sacred_forge:0 "Sacred Forge"
+ great_project_great_project_sacred_forge:0 "Sacred Forge"
+ 
  great_project_taverley_stone_circle_title:0 "Taverley Stone Circle"
  great_project_taverley_stone_circle:0 "Taverley Stone Circle"
  great_project_great_project_taverley_stone_circle:0 "Taverley Stone Circle"
  
  #Kharid
+ 
+ great_project_citharede_abbey_title:0 "Citharede Abbey"
+ great_project_citharede_abbey:0 "Citharede Abbey"
+ great_project_great_project_citharede_abbey:0 "Citharede Abbey"
  
  great_project_duel_arena_title:0 "Emir's Arena"
  great_project_duel_arena:0 "Emir's Arena"
@@ -52,6 +64,10 @@
  great_project_great_project_ullek:0 "Ullek"
  
  #Morytania
+ 
+ great_project_castle_drakan_title:0 "Castle Drakan"
+ great_project_castle_drakan:0 "Castle Drakan"
+ great_project_great_project_castle_drakan:0 "Castle Drakan"
  
  great_project_theatre_of_blood_title:0 "Theatre of Blood"
  great_project_theatre_of_blood:0 "Theatre of Blood"
@@ -171,6 +187,10 @@
  great_project_arceuus_library:0 "Arceuus Library"
  great_project_great_project_arceuus_library:0 "Arceuus Library"
  
+ great_project_blast_mine_title:0 "Blast Mine"
+ great_project_blast_mine:0 "Blast Mine"
+ great_project_great_project_blast_mine:0 "Blast Mine"
+ 
  great_project_dark_altar_title:0 "Dark Altar"
  great_project_dark_altar:0 "Dark Altar"
  great_project_great_project_dark_altar:0 "Dark Altar"
@@ -178,6 +198,10 @@
  great_project_doors_of_dinh_title:0 "Doors of Dinh"
  great_project_doors_of_dinh:0 "Doors of Dinh"
  great_project_great_project_doors_of_dinh:0 "Doors of Dinh"
+ 
+ great_project_tithe_farm_title:0 "Tithe Farm"
+ great_project_tithe_farm:0 "Tithe Farm"
+ great_project_great_project_tithe_farm:0 "Tithe Farm"
  
  #Kebos
  
@@ -195,6 +219,10 @@
  great_project_college_of_bards:0 "College of Bards"
  great_project_great_project_college_of_bards:0 "College of Bards"
  
+ great_project_fortis_aqueduct_title:0 "Fortis Aqueduct"
+ great_project_fortis_aqueduct:0 "Fortis Aqueduct"
+ great_project_great_project_fortis_aqueduct:0 "Fortis Aqueduct"
+ 
  #Arc
  
  great_project_tuai_leit_library_title:0 "Tuai Leit Library"
@@ -205,7 +233,11 @@
  great_project_temple_of_aminishi:0 "Temple of Aminishi"
  great_project_great_project_temple_of_aminishi:0 "Temple of Aminishi"
  
- #Skull - No monuments
+ #Skull
+ 
+ great_project_gunpowder_mills_title:0 "Gunpowder Mills"
+ great_project_gunpowder_mills:0 "Gunpowder Mills"
+ great_project_great_project_gunpowder_mills:0 "Gunpowder Mills"
  
  #Hook - No momuments
  
@@ -221,11 +253,19 @@
  great_project_falling_blossom:0 "Falling Blossom Gardens"
  great_project_great_project_falling_blossom:0 "Falling Blossom Gardens"
  
+ great_project_glittercaves_title:0 "Glittercaves"
+ great_project_glittercaves:0 "Glittercaves"
+ great_project_great_project_glittercaves:0 "Glittercaves"
+ 
  #Pincers
  
  great_project_halls_of_reckoning_title:0 "Halls of Reckoning"
  great_project_halls_of_reckoning:0 "Halls of Reckoning"
  great_project_great_project_halls_of_reckoning:0 "Halls of Reckoning"
+ 
+ great_project_hole_in_the_world_title:0 "Hole in the World"
+ great_project_hole_in_the_world:0 "Hole in the World"
+ great_project_great_project_hole_in_the_world:0 "Hole in the World"
  
  great_project_suzakus_perch_title:0 "Suzaku's Perch"
  great_project_suzakus_perch:0 "Suzaku's Perch"

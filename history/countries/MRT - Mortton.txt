@@ -18,6 +18,10 @@ national_focus = ADM
 	}
 }
 
+2023.10.18 = {
+	primary_culture = afflicted
+}
+
 2130.3.14 = {
 	monarch = {
 		name = "Ulsquire"

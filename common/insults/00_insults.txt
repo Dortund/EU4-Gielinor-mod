@@ -252,7 +252,6 @@ insult_noncanon = {
 		tag = SGR
 		tag = TES
 		# From 1.0.2
-		tag = AUB
 		tag = AVU
 		tag = BXT
 		tag = GDO
@@ -282,6 +281,8 @@ insult_noncanon = {
 		tag = ULJ
 		tag = KTR
 		tag = MYN
+		# From 1.7.0
+		tag = TSK
 		}
 	}
 }
@@ -312,7 +313,6 @@ insult_noncanon2 = {
 		tag = SGR
 		tag = TES
 		# From 1.0.2
-		tag = AUB
 		tag = AVU
 		tag = BXT
 		tag = GDO
@@ -342,6 +342,8 @@ insult_noncanon2 = {
 		tag = ULJ
 		tag = KTR
 		tag = MYN
+		# From 1.7.0
+		tag = TSK
 		}
 	}
 }

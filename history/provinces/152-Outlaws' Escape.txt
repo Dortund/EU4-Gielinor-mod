@@ -46,4 +46,7 @@ add_province_triggered_modifier = wildy_border_level_nine
 	controller = DGH
 	add_core = DGH
 	culture = avarrockan
+	base_tax = 4
+	base_production = 4
+	base_manpower = 5
 }

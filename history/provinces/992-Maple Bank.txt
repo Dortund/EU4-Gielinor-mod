@@ -48,3 +48,10 @@ is_city = yes
 	add_core = KDR
 	remove_core = ADO
 }
+
+2132.7.13 = {
+	owner = CML
+	controller = CML
+	add_core = CML
+	remove_core = KDR
+}

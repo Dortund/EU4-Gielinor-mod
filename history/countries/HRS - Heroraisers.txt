@@ -1,5 +1,5 @@
-government = monarchy
-add_government_reform = noble_kingdom
+government = republic
+add_government_reform = necromantic_dictatorship
 government_rank = 1
 primary_culture = arceuus
 add_accepted_culture = shayzien

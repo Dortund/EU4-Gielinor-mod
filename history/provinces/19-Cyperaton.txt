@@ -39,6 +39,9 @@ center_of_trade = 1
 	culture = barbarian
 	religion = v
  	change_province_name = "Gunnarsgrunn"
+	base_tax = 6
+	base_production = 6
+	base_manpower = 6
 }
 
 2071.3.17 = {

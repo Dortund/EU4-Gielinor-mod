@@ -17,7 +17,7 @@ base_manpower = 3
 
 fort_15th = yes 
 
-trade_goods = gems
+trade_goods = gemstones
 
 is_city = yes
 

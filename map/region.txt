@@ -99,6 +99,7 @@ forinthry_region = {
 		ghorrock_area
 		daemonheim_peninsula_area
 		dungeons_of_daemonheim_area
+		daimons_crater_area
 	}
 }
 
@@ -269,26 +270,27 @@ kebos_region = {
 		lizardman_mire_area
 		xerics_claw_area
 		quidamortem_area
-		attritio_area
-		crooks_creek_area
-		baalal_area
+		custodia_area
+		north_stranglewood_area
+		south_stranglewood_area
 	}
 }
 
 
 varlamore_region = {
 	areas = {
-		aldarin_area
+		north_aldarin_area
+		south_aldarin_area
 		tempestus_area
-		aridas_edge_area
-		arcanum_area
-		ranul_forest_area
-		meridiem_area
-		hailstorm_mountain_area
+		auburnvale_area
+		inner_tlati_area
+		tlati_river_area
+		north_tlati_area
+		salvager_shore_area
 		proudspire_area
-		principium_area
-		avizaal_area
-		avium_savannah_area
+		cam_torum_area
+		west_avium_area
+		east_avium_area
 		savannah_farms_area
 		civitas_illa_fortis_area
 	}
@@ -409,14 +411,14 @@ crystal_ocean_region = {
 	areas = {
 		coast_of_tirannwn_area
 		west_feldip_bay_area
+		lost_grove_coast_area
 		southern_crystal_ocean_area
 	}
 }
 
 east_zeah_sea_region = {
 	areas = {
-		inner_bay_of_zeah_area
-		outer_bay_of_zeah_area
+		bay_of_zeah_area
 		kourend_coast_area
 		wintertodt_passage_area
 	}
@@ -434,7 +436,7 @@ shining_ocean_region = {
 	areas = {
 		tempest_bay_area
 		new_ocean_area
-		occasus_bay_area
+		aldarin_sea_area
 		avium_sea_area
 	}
 }

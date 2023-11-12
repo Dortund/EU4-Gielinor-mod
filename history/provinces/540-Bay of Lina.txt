@@ -3,3 +3,8 @@ discovered_by = kharidtechgroup
 discovered_by = dwarventechgroup
 discovered_by = karamjantechgroup
 discovered_by = bandostechgroup
+discovered_by = morytaniantechgroup
+
+2021.10.30 = {
+	change_province_name = "Sarim Bay"
+}

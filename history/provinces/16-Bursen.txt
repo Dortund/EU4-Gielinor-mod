@@ -22,3 +22,9 @@ trade_goods = logs
 is_city = yes
 
 center_of_trade = 1
+
+2100.1.1 = {
+	base_tax = 5
+	base_production = 4
+	base_manpower = 3
+}

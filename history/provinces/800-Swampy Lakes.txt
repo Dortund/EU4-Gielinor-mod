@@ -4,5 +4,4 @@ discovered_by = MYN
 discovered_by = MRT
 discovered_by = MSH
 discovered_by = PPH
-discovered_by = kharidtechgroup
 discovered_by = morytaniantechgroup

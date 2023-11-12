@@ -1,7 +1,7 @@
 government = tribal
 add_government_reform = boss_nation
 government_rank = 1
-primary_culture = giant_spider
+primary_culture = venen
 religion = zamorak
 technology_group = northerntechgroup
 capital = 962 #Silk Chasm
@@ -10,7 +10,7 @@ national_focus = MIL
 15.11.25 = {
 	monarch = {
 		name = "Venenatis"
-		dynasty = "the Giant Spider"
+		dynasty = "the Spider"
 		birth_date = 11.12.27
 		adm = 1
 		dip = 1

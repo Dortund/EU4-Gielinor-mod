@@ -1,3 +1,147 @@
+morytania_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MYT
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MYT_the_true_blood_altar = {
+		icon = mission_the_true_blood_altar
+		position = 2
+		required_missions = { MYT_break_the_seclusion }
+		trigger = {
+			has_institution = runecrafting
+			140 = {
+				owned_by = ROOT
+				base_production = 8
+			}
+			850 = {
+				owned_by = ROOT
+				base_production = 8
+			}
+		}
+		effect = {
+			140 = {
+				add_province_modifier = {
+					name = MYT_rune_production_efforts
+					duration = 9125
+				}
+			}
+		}
+	}
+
+	MYT_take_back_mort_myre = {
+		icon = mission_myre_incursion
+		required_missions = { MYT_conquest_of_the_north_coast }
+		position = 5
+		provinces_to_highlight = {
+			area = mort_myre_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mort_myre_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			silvarea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MYT_break_into_misthalin = {
+		icon = mission_reinforce_paterdomus
+		position = 6
+		required_missions = { MYT_take_back_mort_myre }
+		provinces_to_highlight = {
+			area = silvarea_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			silvarea_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			kings_road_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			varrock_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			saranthium_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MYT_conquest_of_varrock = {
+		icon = mission_misthalin_army
+		position = 7
+		required_missions = { MYT_break_into_misthalin MYT_stabilise_the_tithe }
+		provinces_to_highlight = {
+			OR = {
+				area = kings_road_area
+				area = varrock_area
+				area = saranthium_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			kings_road_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			varrock_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			saranthium_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_power_projection = { 
+				type = 25_permanent_power_projection
+				amount = 25 
+			}
+			custom_tooltip = myt_25_permanent_power_projection
+			misthalin_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
 morytania_missions_2 = {
 	slot = 2
 	generic = no
@@ -8,61 +152,180 @@ morytania_missions_2 = {
 	}
 	has_country_shield = yes
 	
-	MYT_reinforce_the_coast = {
-		icon = mission_conquer_50_development
+	MYT_break_the_seclusion = {
+		icon = mission_break_the_seclusion
 		required_missions = { }
 		trigger = {
-			calc_true_if = {
-				all_owned_province = {
-					has_port = yes
-					OR = {
-						has_building = coastal_defence
-						has_building = naval_battery
-						}
-					}
-				amount = 4
+			NOT = { 
+				has_estate_privilege = estate_nobles_MYT_internal_focus
+				has_estate_privilege = estate_nobles_MYT_informal_vyrelord_powers
 			}
 		}
 		effect = {
-			add_adm_power = 100
+			change_government_reform_progress = 100
 		}
 	}
-	MYT_pirate_accommodation = {
-		icon = mission_conquer_50_development
-		required_missions = { MYT_reinforce_the_coast MYT_strengthen_vassal_ties }
+	MYT_internal_stability = {
+		icon = mission_internal_stability
+		required_missions = { MYT_break_the_seclusion }
+		trigger = {
+			owns_core_province = 140
+			stability = 3
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 50
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 50
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+					NOT = {
+						140 = {
+							has_great_project = {
+								type = great_project_castle_drakan
+								tier = 3
+							}
+						}
+					}
+					religion = vampyric
+					culture_group = vampyre_group
+				}
+				140 = {
+					add_great_project_tier = {
+						type = great_project_castle_drakan
+						tier = 1
+					}
+				}
+			}
+			else = {
+				change_government_reform_progress = 150
+			}
+		}
+	}
+	MYT_intensification_of_meiyerditch = {
+		icon = mission_intensification_of_meiyerditch
+		required_missions = { MYT_the_true_blood_altar MYT_subject_rule }
+		position = 3
+		provinces_to_highlight = {
+			area = south_sanguinesti_province_area
+		}
+		trigger = {
+			development_in_provinces = {
+				value = 80
+				area = south_sanguinesti_province_area
+			}
+			137 = {
+				num_of_buildings_in_province = 2
+			}
+			138 = {
+				num_of_buildings_in_province = 2
+			}
+			849 = {
+				num_of_buildings_in_province = 2
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_government_mechanic = blood_power_mechanic
+				}
+				add_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 10
+				}
+			}
+			else = {
+				change_government_reform_progress = 50
+			}
+			lordship_of_the_north_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MYT_conquest_of_the_north_coast = {
+		icon = mission_lordship_diplomacy
+		position = 4
+		required_missions = { MYT_intensification_of_meiyerditch }
+		provinces_to_highlight = {
+			area = lordship_of_the_north_coast_area
+			NOT = { country_or_subject_holds = ROOT }
+		}
+		trigger = {
+			lordship_of_the_north_coast_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			mort_myre_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			124 = {
+				add_permanent_claim = ROOT
+			}
+			125 = {
+				add_permanent_claim = ROOT
+			}
+			1374 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	MYT_stabilise_the_tithe = {
+		icon = mission_stabilise_the_tithe
+		position = 6
+		required_missions = { MYT_take_back_mort_myre MYT_vampyric_conversions }
 		trigger = {
 			OR = {
 				AND = {
-					reverse_has_opinion = {
-						who = MSH
-						value = 100
+					custom_trigger_tooltip = {
+						tooltip = MYT_stabilise_the_tithe_disaster_tooltip
+						has_country_flag = excessive_tithe_finished
 					}
-					treasury = 250
-					}
+				}
 				AND = {
-					owns_core_province = 142
-					treasury = 100
+					development_in_provinces = {
+						value = 200
+						culture_group = vampyre_group
 					}
+					development_in_provinces = {
+						value = 400
+						NOT = { culture_group = vampyre_group }
+					}
+					has_government_power = {
+						mechanic_type = blood_power_mechanic
+						power_type = blood_power_power_1
+						value = 100
+					}	
+				}
+				AND = {
+					NOT = { has_reform = vampyre_kingdom }
+					has_unified_culture_group = yes
+					total_development = 600
+				}
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "MYT_pirate_mercenaries"
-				duration = 3650
-			}
-			if = {
-				limit = { owns_core_province = 142 }
-				add_treasury = -100
-			}
-			else = {
-				add_treasury = -250
-					MSH = {
-						country_event = {
-						id = flavor_msh.1
-						days = 1
-						}
-					}
-			}
+			change_government_reform_progress = 150
 		}
 	}
 }
@@ -77,8 +340,8 @@ morytania_missions_3 = {
 	}
 	has_country_shield = yes
 	
-	MYT_strengthen_vassal_ties = {
-		icon = mission_conquer_50_development
+	MYT_tithe_ties = {
+		icon = mission_werewolf_forces
 		required_missions = { }
 		trigger = {
 			AND = {
@@ -102,52 +365,184 @@ morytania_missions_3 = {
 					}
 					NOT = { exists = DES }
 				}
+				OR = {
+					AND = {
+						overlord_of = SLP
+						reverse_has_opinion = {
+							who = SLP
+							value = 150
+						}
+					}
+					NOT = { exists = SLP }
+				}
 			}
 		}
 		effect = {
-			add_dip_power = 50
+			if = {
+				limit = {
+					has_government_mechanic = blood_power_mechanic
+				}
+				add_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 10
+				}
+			}
+			else = {
+				add_dip_power = 50
+			}
 		}
 	}
-		
-	MYT_take_back_mort_myre = {
-		icon = mission_conquer_50_development
-		required_missions = { MYT_strengthen_vassal_ties MYT_drill_the_army }
-		provinces_to_highlight = {
-			area = mort_myre_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+	MYT_subject_rule = {
+		icon = mission_subject_rule
+		required_missions = { MYT_break_the_seclusion MYT_tithe_ties }
 		trigger = {
-			mort_myre_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+			south_sanguinesti_province_area = {
 				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				AND = {
+					num_of_subjects = 3
+					total_own_and_non_tributary_subject_development = 225
+				}
+				AND = {
+					NOT = { exists = DES }
+					owns_core_province = 845
+					total_development = 250
+				}
 			}
 		}
 		effect = {
+			south_sanguinesti_province_area = {
+				limit = {
+					has_active_triggered_province_modifier = MYT_descendants_of_hallowvale
+				}
+				add_province_modifier = {
+					name = MYT_fresh_tithe_imports
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+	MYT_integration_of_slepe = {
+		icon = mission_fate_of_slepe
+		position = 3
+		required_missions = { MYT_subject_rule }
+		trigger = {
+			OR = {
+				AND = {
+					overlord_of = SLP
+					reverse_has_opinion = {
+						who = SLP
+						value = 200
+					}
+					SLP = {
+						NOT = {
+							liberty_desire = 10
+						}
+					}
+				}
+				AND = {
+					NOT = { exists = SLP }
+					slepe_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					SLP = {
+					 	is_subject_of_type = tributary_state
+						is_subject_of = PREV
+					}
+				}
+				add_adm_power = -50
+				add_dip_power = -50
+				add_mil_power = -50
+				create_march = SLP
+			}
 			add_country_modifier = {
 				name = "MYT_assert_supremacy"
 				duration = 3650
 			}
 		}
 	}
-
-	MYT_grow_the_vassals = {
-		icon = mission_conquer_50_development
-		required_missions = { MYT_take_back_mort_myre }
+	
+	MYT_wushanko_intrusion = {
+		icon = mission_gunpowder_diplomacy
+		required_missions = { MYT_pirate_accommodation }
+		position = 4
+		provinces_to_highlight = {
+			continent = wushanko_isles_continent
+			NOT = { country_or_subject_holds = ROOT }
+		}
 		trigger = {
-			calc_true_if = {
-				all_subject_country = {
-					total_development = 35
-				}
-				amount = 2
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 8
+				continent = wushanko_isles_continent
 			}
 		}
 		effect = {
-			lordship_of_the_north_coast_area = {
+			if = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					has_government_mechanic = blood_power_mechanic
 				}
-				add_permanent_claim = ROOT
+				add_government_power = {
+					mechanic_type = blood_power_mechanic
+					power_type = blood_power_power_1
+					value = 15
+				}
+			}
+			else = {
+				add_mercantilism = 2
+			}
+			1101 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 35
+					key = MYT_morytanian_tribute_ships_tt
+				}
+			}
+		}
+	}
+
+	MYT_vampyric_conversions = {
+		icon = mission_vampyric_conversions
+		position = 5
+		required_missions = { MYT_conquest_of_the_north_coast MYT_wushanko_intrusion }
+		trigger = {
+			development_in_provinces = {
+				value = 200
+				culture_group = vampyre_group
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_myt.2
+				days = 1
+			}
+			
+			if = {
+				limit = {
+					has_government_mechanic = blood_power_mechanic
+				}
+				add_country_modifier = {
+					name = MYT_expanded_vyrewatch_potential
+					duration = -1
+				}
+			}
+			else = {
+				add_adm_power = 75
+				add_dip_power = 75
+				add_mil_power = 75
 			}
 		}
 	}
@@ -163,71 +558,169 @@ morytania_missions_4 = {
 	}
 	has_country_shield = yes
 	
-	MYT_drill_the_army = {
-		icon = mission_conquer_50_development
+	MYT_vyrewatch_expansion = {
+		icon = mission_vyrewatch_expansion
 		required_missions = { }
 		trigger = {
-			army_professionalism = 0.10
+		 	army_size_percentage = 1
+			if = {
+				limit = {
+					has_government_mechanic = blood_power_mechanic
+				}
+				num_of_rajput = 5
+			}
+			else = {
+				army_professionalism = 0.05
+			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = MYT_vyrewatch_training_drills
+				duration = 7300
+			}
+		}
+	}
+	MYT_reinforce_the_coast = {
+		icon = mission_night_port
+		required_missions = { MYT_tithe_ties MYT_vyrewatch_expansion }
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_port = yes
+					OR = {
+						has_building = coastal_defence
+						has_building = naval_battery
+					}
+				}
+				amount = 4
+			}
+		}
+		effect = {
+			add_dip_power = 50
 			add_mil_power = 50
 		}
 	}
-
-	MYT_conquest_of_the_north_coast = {
-		icon = mission_conquer_50_development
-		position = 4
-		required_missions = { MYT_grow_the_vassals }
-		provinces_to_highlight = {
-			area = lordship_of_the_north_coast_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+	
+	MYT_pirate_accommodation = {
+		icon = mission_pirate_mercenaries
+		required_missions = { MYT_subject_rule MYT_reinforce_the_coast }
 		trigger = {
-			owns_or_non_sovereign_subject_of = 114
-			owns_or_non_sovereign_subject_of = 116
-			owns_or_non_sovereign_subject_of = 117
-			owns_or_non_sovereign_subject_of = 949
+			OR = {
+				AND = {
+					treasury = 250
+					any_country = {
+						has_reform = pirate_republic_reform
+						has_opinion = {
+							who = PREV
+							value = 100
+						}
+					}
+				}
+				AND = {
+					owns_core_province = 142
+					treasury = 100
+				}
+			}
 		}
 		effect = {
-			silvarea_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+			add_country_modifier = {
+				name = "MYT_pirate_mercenaries"
+				duration = 3650
+			}
+			if = {
+				limit = { owns_core_province = 142 }
+				add_treasury = -100
+			}
+			else = {
+				add_treasury = -250
+				random_country = {
+					limit = {
+						has_reform = pirate_republic_reform
+						has_opinion = {
+							who = PREV
+							value = 100
+						}
+					}
+					country_event = {
+						id = flavor_msh.1
+						days = 1
+					}
 				}
-				add_permanent_claim = ROOT
+			}
+			every_known_country = {
+				limit = {
+					capital_scope = {
+						region = skull_region
+					}
+				}
+				reverse_add_casus_belli = {
+					target = PREV
+					type = cb_force_tributary
+					months = 120
+				}
 			}
 		}
 	}
 	
-	MYT_break_into_misthalin = {
-		icon = mission_conquer_50_development
-		position = 5
-		required_missions = { MYT_conquest_of_the_north_coast }
-		provinces_to_highlight = {
-			area = silvarea_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+	MYT_wealth_of_the_sea = {
+		icon = mission_grand_ship
+		required_missions = { MYT_pirate_accommodation }
 		trigger = {
-			silvarea_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
+			139 = {
+				has_most_province_trade_power = ROOT
+			}
+			639 = {
+				has_most_province_trade_power = ROOT
+			}
+			660 = {
+				has_most_province_trade_power = ROOT
 			}
 		}
 		effect = {
-			varrock_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+			add_mercantilism = 2
+		}
+	}
+	MYT_luxuries_of_wushanko = {
+		icon = mission_luxuries_of_wushanko
+		required_missions = { MYT_wushanko_intrusion MYT_wealth_of_the_sea MYT_theatre_of_blood }
+		trigger = {
+			OR = {
+				589 = {
+					has_most_province_trade_power = ROOT
 				}
-				add_permanent_claim = ROOT
+				1051 = {
+					has_most_province_trade_power = ROOT
+				}
+				1081 = {
+					has_most_province_trade_power = ROOT
+				}
+				1088 = {
+					has_most_province_trade_power = ROOT
+				}
 			}
-			saranthium_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
+			OR = {
+				trading_bonus = {
+					trade_goods = bamboo
+					value = yes
 				}
-				add_permanent_claim = ROOT
+				trading_bonus = {
+					trade_goods = gunpowder
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = refined_products
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = terracotta
+					value = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MYT_spoilt_for_luxuries
+				duration = 9125
 			}
 		}
 	}
@@ -242,48 +735,171 @@ morytania_missions_5 = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
-	MYT_renew_the_vyrewatch_corps = {
-		icon = mission_assemble_an_army
+	MYT_vyrewatch_training = {
+		icon = mission_vyrewatch_training
+		required_missions = { MYT_vyrewatch_expansion }
 		position = 2
-		required_missions = { MYT_drill_the_army }
 		trigger = {
-			has_idea = MYT_vyrewatch
-			calc_true_if = {
-				all_owned_province = {
-					culture_group = vampyre_group
-					has_building = training_fields
-				}
-				amount = 3
+			army_professionalism = 0.2
+			has_leader_with = {
+				shock = 4
+			}
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.05
 			}
 		}
 		effect = {
+			add_permanent_claim = 131
 			add_country_modifier = {
 				name = "MYT_vyrewatch_innovation"
 				duration = 3650
 			}
 		}
 	}
-
-	MYT_theatre_of_blood = {
-		icon = mission_conquer_50_development
+	
+	MYT_terror_of_the_araxytes = {
+		icon = mission_terror_of_the_araxytes
+		required_missions = { MYT_vyrewatch_training }
 		position = 3
-		required_missions = { MYT_renew_the_vyrewatch_corps }
+		trigger = {
+			owns_core_province = 131
+		}
+		effect = {
+			add_years_of_income = 0.5
+		}
+	}
+	
+	MYT_theatre_of_blood = {
+		icon = mission_theatre_of_blood
+		required_missions = { MYT_terror_of_the_araxytes }
+		position = 4
 		provinces_to_highlight = {
-				province_id = 135
+			province_id = 135
 		}
 		trigger = {
 			135 = {
-				fort_level = 6
-				development = 15
 				owned_by = ROOT
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					OR = {
+						has_great_project = {
+							type = great_project_theatre_of_blood
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_theatre_of_blood
+							tier = 3
+						}
+					}
+				}
+				else = {
+					fort_level = 4
+					development = 25
+				}
 			}
 		}
 		effect = {
-			135 = {
-				add_province_modifier = {
-					name = "MYT_theatre_of_blood"
-					duration = -1
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				add_country_modifier = {
+					name = MYT_false_hope_of_the_theatre
+					duration = 9125
+				}
+			}
+			else = {
+				135 = {
+					add_province_modifier = {
+						name = "MYT_theatre_of_blood"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	
+	MYT_rein_in_the_werewolves = {
+		icon = mission_werewolf_freedom
+		required_missions = { MYT_theatre_of_blood }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = canifis_area
+				area = lordship_of_the_north_coast_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { exists = CFS }
+					canifis_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+					lordship_of_the_north_coast_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				AND = {
+					overlord_of = CFS
+					reverse_has_opinion = {
+						who = CFS
+						value = 150
+					}
+					CFS = {
+						NOT = {
+							liberty_desire = 10
+						}
+					}
+					army_strength = {
+						who = CFS
+						value = 3
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { exists = CFS }
+				}
+				add_country_modifier = {
+					name = MYT_defeat_of_the_werewolves
+					duration = 9125
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						CFS = {
+							is_subject_of_type = tributary_state
+							is_subject_of = PREV
+						}
+					}
+					add_adm_power = -50
+					add_dip_power = -50
+					add_mil_power = -50
+					create_march = CFS
+					CFS = {
+						country_event = {
+							id = flavor_cfs.7
+							days = 1
+						}
+					}
+				}
+				else = {
+					add_mil_power = 50
+					CFS = {
+						add_liberty_desire = -10
+					}
 				}
 			}
 		}

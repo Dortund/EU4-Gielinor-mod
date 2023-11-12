@@ -403,7 +403,7 @@ militarized_society = { #Reused for Unstable Governments
 }
 
 expand_administation_modifier = {
-	expand_administration_cost = 0.3 #Increased from 0.2
+	expand_administration_cost = 0.3 #Increased from 0.2 due to smaller number of provinces in the world
 	governing_capacity = 20
 }
 
@@ -414,3 +414,14 @@ over_governing_capacity_modifier = {
 	core_creation = 0.2
 	advisor_cost = 1.0
 }
+
+########################################
+# Vyrewatch Sentinels (replacement for Rajput regiments)
+########################################
+
+rajput_regiment = {
+	shock_damage_received = -0.2
+	morale_damage = 0.1
+ 	land_maintenance_modifier = 0.1
+}
+

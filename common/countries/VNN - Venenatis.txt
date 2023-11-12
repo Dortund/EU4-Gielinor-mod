@@ -16,6 +16,8 @@ historical_idea_groups = {
 }
 
 monarch_names = {
-	"Araxxor #0" = 1
-	"Venenatis #0" = -500
+	"Spindol #0" = 1
+	"Venenator #0" = 1
+	"Spindel #0" = -45
+	"Venenatis #0" = -50
 }

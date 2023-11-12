@@ -20,6 +20,27 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress.lua"
 	}
 	
+	spriteType = {
+		name = "GFX_blood_power_drain_hope_button"
+		texturefile = "gfx/interface/government_mechanics/blood_power/blood_power_drain_hope_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_blood_power_recruit_sentinels_button"
+		texturefile = "gfx/interface/government_mechanics/blood_power/blood_power_recruit_sentinels_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_blood_power_sell_reserves_button"
+		texturefile = "gfx/interface/government_mechanics/blood_power/blood_power_sell_reserves_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
 	
 	### ELVEN DESPERATION ###
 

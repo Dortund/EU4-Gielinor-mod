@@ -64,6 +64,19 @@ ADO_drill_for_our_deity = {
 }
 
 #############
+#Ashihama
+#############
+
+AHH_reinforced_battlements_of_ashihama = {
+ 	local_defensiveness = 0.1
+	local_defender_dice_roll_bonus = 1
+}
+
+AHH_end_of_the_nightmare = {
+ 	global_unrest = -2
+}
+
+#############
 #Al Kharid
 #############
 
@@ -389,6 +402,49 @@ CDR_wary_of_adventurers = {
 	discipline = 0.025
 	yearly_absolutism = -0.1
 	max_absolutism = -10
+}
+
+#############
+#Canifis
+#############
+
+# Local
+
+CFS_oppression_of_slepe = {
+	local_unrest = 5
+}
+
+# National
+
+CFS_mahjarrat_assistance = {
+	fire_damage = 0.05
+	manpower_recovery_speed = 0.1
+}
+CFS_scent_of_fear = {
+ 	morale_damage = 0.05
+ 	army_tradition_from_battle = 0.5
+}
+CFS_skullball_practice = {
+	drill_gain_modifier = 0.15
+}
+CFS_werewolf_rebellion = {
+	liberty_desire = 25
+	land_morale = 0.1
+}
+CFS_free_hunters = {
+	shock_damage = 0.1
+	manpower_in_own_culture_provinces = 0.1
+}
+CFS_legacy_of_cave_canem = {
+	tolerance_own = 1
+	yearly_patriarch_authority = 0.1
+}
+CFS_aquos_colonies = {
+	global_colonial_growth = 10
+ 	colony_cost_modifier = -0.25
+}
+CFS_werewolf_empire = {
+	manpower_in_culture_group_provinces = 0.1
 }
 
 #############
@@ -1078,9 +1134,30 @@ MST_rise_of_the_runecrafting_guild = {
 MYT_theatre_of_blood = {
 	prestige = 0.5
 }
+MYT_rune_production_efforts = {
+	trade_goods_size = 0.5
+}
+MYT_fresh_tithe_imports = {
+ 	local_development_cost_modifier = -0.33
+	local_missionary_strength = -0.1
+}
+MYT_terror_of_the_sleeper_plague = {
+	local_unrest = 10
+	min_local_autonomy = 50
+}
+MYT_mild_terror_of_the_sleeper_plague = {
+	local_unrest = 5
+	min_local_autonomy = 20
+}
 
 #National
 
+MYT_vyrewatch_training_drills = {
+	drill_gain_modifier = 0.25
+}
+MYT_false_hope_of_the_theatre = {
+	global_unrest = -2
+}
 MYT_assert_supremacy = {
 	diplomatic_annexation_cost = -0.2
 }
@@ -1090,6 +1167,37 @@ MYT_vyrewatch_innovation = {
 MYT_pirate_mercenaries = {
 	may_perform_slave_raid = yes
  	light_ship_cost = -0.2
+}
+MYT_tree_of_terror = {
+	nobles_influence_modifier = -0.1
+	harsh_treatment_cost = -0.1
+}
+MYT_expanded_vyrewatch_potential = {
+	special_unit_forcelimit = 0.05
+}
+MYT_spoilt_for_luxuries = {
+	all_estate_loyalty_equilibrium = 0.1
+}
+MYT_tithe_the_sleeping = {
+	monthly_blood_power_power_1 = 0.5
+}
+MYT_tithe_the_sleeping_alt = {
+	all_power_cost = -0.05
+}
+MYT_tithe_some_of_the_sleeping = {
+	monthly_blood_power_power_1 = 0.3
+}
+MYT_tithe_some_of_the_sleeping_alt = {
+	all_power_cost = -0.03
+}
+MYT_defeat_of_the_werewolves = {
+	years_of_nationalism = -5
+ 	global_autonomy = -0.025
+}
+MYT_werewolf_delegation = {
+	blood_power_power_1_gain_modifier = 0.1
+	reform_progress_growth = 0.1
+	vassal_income = 0.5
 }
 
 #############
@@ -1424,7 +1532,7 @@ VAR_hunters_guild_modifier = {
 }
 VAR_fortis_cothon_modifier = {
 	local_sailors_modifier = 0.25
-	ship_recruit_speed = -0.25
+	local_ship_repair = 0.2
 }
 VAR_kourendwatch_fortification_modifier = {
 	blockade_force_required = 0.5
@@ -1435,6 +1543,26 @@ VAR_kourendwatch_fortification_modifier = {
 
 VAR_fletching_innovation = {
 	innovativeness_gain = 0.5
+}
+VAR_expanding_governance = {
+	diplomatic_annexation_cost = -0.2
+}
+VAR_transport_connections = {
+	global_sailors_modifier = 0.1
+	ship_trade_power_modifier = 0.1
+}
+VAR_bardic_expeditions = {
+ 	may_explore = yes
+	range = 0.25
+}
+VAR_a_religion_united = {
+	tolerance_own = 1
+	tolerance_heretic = 1
+	church_power_modifier = 0.1
+}
+VAR_diplomatic_outreach = {
+	diplomats = 1
+	envoy_travel_time = -0.25
 }
 
 #############

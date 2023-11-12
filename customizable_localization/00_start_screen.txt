@@ -54,6 +54,12 @@ defined_text = {
 		}
     }
 	text = {
+        localisation_key = string_start_title_canifis
+        trigger = {
+			tag = CFS
+		}
+    }
+	text = {
         localisation_key = string_start_title_carnilleus
         trigger = {
 			tag = CLS
@@ -108,6 +114,12 @@ defined_text = {
 		}
     }
 	text = {
+        localisation_key = string_start_title_morytania
+        trigger = {
+			tag = MYT
+		}
+    }
+	text = {
         localisation_key = string_start_title_new_heritage
         trigger = {
 			tag = NHE
@@ -117,6 +129,12 @@ defined_text = {
         localisation_key = string_start_title_tzhaar
         trigger = {
 			tag = TZH
+		}
+    }
+	text = {
+        localisation_key = string_start_title_varlamore
+        trigger = {
+			tag = VAR
 		}
     }
 	
@@ -341,6 +359,12 @@ defined_text = {
 			tag = CDA
 		}
     }
+	text = {
+        localisation_key = string_start_canifis
+        trigger = {
+			tag = CFS
+		}
+    }
 	text = { # Carnilleus
         localisation_key = string_start_carnilleus
         trigger = {
@@ -395,16 +419,28 @@ defined_text = {
 			tag = MST
         }
     }
+	text = { # Morytania
+        localisation_key = string_start_morytania
+        trigger = {
+			tag = MYT
+        }
+    }
 	text = { # New Heritage
         localisation_key = string_start_new_heritage
         trigger = {
 			tag = NHE
         }
     }
-	text = { # TzHaar
+	text = {
         localisation_key = string_start_tzhaar
         trigger = {
 			tag = TZH
+        }
+    }
+	text = {
+        localisation_key = string_start_varlamore
+        trigger = {
+			tag = VAR
         }
     }
 	
@@ -625,6 +661,12 @@ defined_text = {
     }
 	####Elder God:
 	####Autocratic:
+	text = {
+        localisation_key = string_start_religion_xeric
+        trigger = {
+			religion = xeric
+        }
+    }
 	####Hedonistic:
 	# Brassica Prime (Harmonisation)
 	text = {
@@ -642,6 +684,18 @@ defined_text = {
     }
 	####Horror:
 	####Celestial:
+	text = {
+        localisation_key = string_start_religion_ralos
+        trigger = {
+			religion = ralos
+        }
+    }
+	text = {
+        localisation_key = string_start_religion_ranul
+        trigger = {
+			religion = ranul
+        }
+    }
 	####Wushanko Guardian:
 
 

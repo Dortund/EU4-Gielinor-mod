@@ -2,8 +2,8 @@ government = monarchy
 add_government_reform = shining_kingdom
 government_rank = 2
 primary_culture = fortis
-add_accepted_culture = centralis
-add_accepted_culture = aldarin
+add_accepted_culture = tempestite
+add_accepted_culture = proudspirian
 religion = ralos
 technology_group = zeantechgroup
 capital = 525 #Civitas illa Fortis
@@ -19,6 +19,14 @@ historical_friend = AZA
 		dip = 0
 		mil = 1
 	}
+}
+
+1990.1.1 = {
+	add_accepted_culture = aldarin
+}
+
+2000.1.1 = {
+	add_accepted_culture = auburnvaler
 }
 
 2153.6.16 = {

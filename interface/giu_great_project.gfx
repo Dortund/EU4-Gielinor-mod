@@ -16,6 +16,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_great_project_great_project_blast_mine"
+		texturefile = "gfx//interface//great_projects//great_project_blast_mine.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_great_project_great_project_byakkos_lair"	
 		texturefile = "gfx//interface//great_projects//great_project_byakkos_lair.dds"
 	}
@@ -23,7 +28,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_great_project_great_project_cairn_isle"	
 		texturefile = "gfx//interface//great_projects//great_project_cairn_isle.dds"
-	}	
+	}
+
+	spriteType = {
+		name = "GFX_great_project_great_project_castle_drakan"
+		texturefile = "gfx//interface//great_projects//great_project_castle_drakan.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_great_project_great_project_castle_wars"	
@@ -33,7 +43,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_great_project_great_project_chambers_of_xeric"	
 		texturefile = "gfx//interface//great_projects//great_project_chambers_of_xeric.dds"
-	}	
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_citharede_abbey"
+		texturefile = "gfx//interface//great_projects//great_project_citharede_abbey.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_great_project_great_project_college_of_bards"	
@@ -96,13 +111,28 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_great_project_great_project_glittercaves"	
+		texturefile = "gfx//interface//great_projects//great_project_glittercaves.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_great_project_great_project_grand_tree"	
 		texturefile = "gfx//interface//great_projects//great_project_grand_tree.dds"
 	}
 	
 	spriteType = {
+		name = "GFX_great_project_great_project_gunpowder_mills"
+		texturefile = "gfx//interface//great_projects//great_project_gunpowder_mills.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_great_project_great_project_halls_of_reckoning"	
 		texturefile = "gfx//interface//great_projects//great_project_halls_of_reckoning.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_hole_in_the_world"	
+		texturefile = "gfx//interface//great_projects//great_project_hole_in_the_world.dds"
 	}
 
 	spriteType = {
@@ -121,6 +151,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_great_project_great_project_fortis_aqueduct"	
+		texturefile = "gfx//interface//great_projects//great_project_fortis_aqueduct.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_great_project_great_project_jalkabir"	
 		texturefile = "gfx//interface//great_projects//great_project_jalkabir.dds"
 	}
@@ -128,6 +163,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_great_project_great_project_jaltevas"	
 		texturefile = "gfx//interface//great_projects//great_project_jaltevas.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_lassar_undercity"	
+		texturefile = "gfx//interface//great_projects//great_project_lassar_undercity.dds"
 	}
 	
 	spriteType = {
@@ -163,6 +203,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_great_project_great_project_plain_of_mud_temple"	
 		texturefile = "gfx//interface//great_projects//great_project_plain_of_mud_temple.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_sacred_forge"
+		texturefile = "gfx//interface//great_projects//great_project_sacred_forge.dds"
 	}
 	
 	spriteType = {
@@ -213,6 +258,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_great_project_great_project_theatre_of_blood"	
 		texturefile = "gfx//interface//great_projects//great_project_theatre_of_blood.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_project_tithe_farm"	
+		texturefile = "gfx//interface//great_projects//great_project_tithe_farm.dds"
 	}
 	
 	spriteType = {

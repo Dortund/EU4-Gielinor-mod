@@ -11,9 +11,9 @@ discovered_by = morytaniantechgroup
 
 hre = no
 
-base_tax = 2
+base_tax = 3
 base_production = 2
-base_manpower = 1
+base_manpower = 2
 
 fort_15th = yes
 
@@ -25,4 +25,10 @@ is_city = yes
 	owner = CFS
 	controller = CFS
 	add_core = CFS
+}
+
+2100.1.1 = {
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
 }

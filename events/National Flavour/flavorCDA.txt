@@ -195,11 +195,6 @@ country_event = {
 		months = 12
 	}
 	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-	
 	option = {
 		name = flavor_cda.6.a #This our land!
 		trigger = {

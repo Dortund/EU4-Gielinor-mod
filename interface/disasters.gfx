@@ -24,6 +24,12 @@ spriteTypes = {
   loadType = "INGAME"
  }
  spriteType = {
+  name = "GFX_disaster_excessive_tithe"
+  texturefile = "gfx//interface//disasters//excessive_tithe.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
   name = "GFX_disaster_fall_of_cadarn"
   texturefile = "gfx//interface//disasters//fall_of_cadarn.dds"
   noOfFrames = 3

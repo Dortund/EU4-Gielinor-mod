@@ -136,7 +136,7 @@ crandorian_missions_2 = {
 			add_country_modifier = {
 				name = "CDR_colonial_drive"
 				duration = 7300
-				}
+			}
 		}
 	}
 }

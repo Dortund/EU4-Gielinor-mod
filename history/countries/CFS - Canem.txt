@@ -1,11 +1,12 @@
-government = monarchy
-add_government_reform = noble_kingdom
+government = republic
+add_government_reform = werewolf_council_reform
 government_rank = 1
 primary_culture = canifian
 religion = zamorak
 technology_group = morytaniantechgroup
 capital = 115 #Cave Canem
 national_focus = MIL
+historical_friend = LNC
 
 1929.4.15 = {
 	monarch = {

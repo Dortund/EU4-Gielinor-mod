@@ -45,4 +45,7 @@ is_city = yes
 	controller = CML
 	add_core = CML
 	remove_core = KDR
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
 }

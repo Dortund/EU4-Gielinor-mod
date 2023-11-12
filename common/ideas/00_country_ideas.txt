@@ -114,7 +114,7 @@ AHH_ideas = {
 	}
 	AHH_totemcraft = {
 		build_time = -0.1
-		tolerance_own = 1
+		church_power_modifier = 0.1
 	}
 	AHH_mo_kal = {
 		global_manpower_modifier = 0.1
@@ -164,6 +164,7 @@ AHR_ideas = {
 	}
 	AHR_forwent_guardians = {
 		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	AHR_birth_of_runecrafting = {
 		technology_cost = -0.1
@@ -299,6 +300,48 @@ AKO_ideas = {
 	}
 	AKO_ice_smasher = {
 		leader_land_fire = 1
+	}
+}
+
+#Aldarini Ideas
+ALD_ideas = {
+	start = {
+		global_unrest = -1
+		build_cost = -0.1
+	}
+
+	bonus = {
+		trade_efficiency = 0.15
+	}
+	
+	trigger = {
+		OR = {
+			tag = ALD
+		}
+	}
+	free = yes		#will be added at load.
+	
+	ALD_varlamore_crossing = {
+		transport_cost = -0.1
+		transport_power = 0.1
+	}
+	ALD_wine_chateaux = {
+		burghers_loyalty_modifier = 0.1
+	}
+	ALD_aldarin_red = {
+		diplomatic_reputation = 1
+	}
+	ALD_mineral_wealth = {
+		production_efficiency = 0.1
+	}
+	ALD_tlati_to_fortis = {
+		global_ship_trade_power = 0.2
+	}
+	ALD_retirement_communities = {
+		prestige_decay = -0.01
+	}
+	ALD_shady_happenings = {
+		spy_offence = 0.2
 	}
 }
 
@@ -452,7 +495,7 @@ ANK_ideas = {
 	
 	ANK_rebellious_spirit = {
 		global_unrest = 1
-		land_morale = 0.15
+		morale_damage_received = -0.15
 	}
 	ANK_fort_strategies = {
 		siege_ability = 0.05
@@ -603,6 +646,47 @@ APE_ideas = {
 	}
 }
 
+#Araxyte Ideas
+ARX_ideas = {
+	start = {
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
+	}
+
+	bonus = {
+		culture_conversion_cost = -0.15
+	}
+	
+	trigger = {
+		OR = {
+			tag = ARX
+		}
+	}
+	free = yes		#will be added at load.
+	
+	ARX_venomous_bite = {
+		max_hostile_attrition = 1
+	}
+	ARX_dye_attraction = {
+	 	placed_merchant_power = 2
+	}
+	ARX_limited_pathways = {
+		garrison_size = 0.15
+	}
+	ARX_mirrorback = {
+		shock_damage_received = -0.1
+	}
+	ARX_overloads = {
+		discipline = 0.05
+	}
+	ARX_nyloca_crossbreeding = {
+		num_accepted_cultures = 1
+	}
+	ARX_nyloca_ambition = {
+		ae_impact = -0.1
+	}
+}
+
 #Asgarnia ideas
 ASG_ideas = {
 	start = {
@@ -648,8 +732,12 @@ ASG_ideas = {
 #Auburnvale ideas
 AUB_ideas = {
 	start = {
-		land_attrition = -0.1
-		global_unrest = -2
+		devotion = 1
+		legitimacy = 1
+		republican_tradition = 0.3
+		horde_unity = 1
+		meritocracy = 1
+		global_unrest = -1
 	}
 
 	bonus = {
@@ -662,12 +750,19 @@ AUB_ideas = {
 		}
 	}
 	free = yes		#will be added at load.
-	
-	AUB_rich_soil = {
-		development_cost = -0.1
+
+	AUB_custodia_to_proudspire = {
+	 	global_prov_trade_power_modifier = 0.2
+	}
+	AUB_religious_sites = {
+		church_power_modifier = 0.1
+		global_missionary_strength = 0.01
 	}
 	AUB_regrow_the_redwoods = {
 		prestige = 1
+	}
+	AUB_plentiful_lumber = {
+		build_time = -0.1
 	}
 	AUB_memories_of_autumn = {
 		prestige_decay = -0.01
@@ -675,15 +770,8 @@ AUB_ideas = {
 	AUB_inspirational_sights = {
 		possible_adm_policy = 1
 	}
-	AUB_new_faith = {
-		tolerance_own = 1
-		global_missionary_strength = 0.01
-	}
-	AUB_karluum_integration = {
-		fire_damage_received = -0.15
-	}
-	AUB_molch_treaties = {
-		global_manpower_modifier = 0.2
+	AUB_master_fletchers = {
+		global_regiment_cost = -0.1
 	}
 }
 
@@ -811,8 +899,8 @@ AZA_ideas = {
 	AZA_friends_above_ground = {
 		mercenary_cost = -0.1
 	}
-	AZA_avium_expansion = {
-		global_colonial_growth = 20
+	AZA_dungeons_of_cam_torum = {
+		yearly_absolutism = 1
 	}
 }
 
@@ -1068,7 +1156,7 @@ BDR_ideas = {
 		yearly_absolutism = 1
 	}
 	BDR_fighting_back = {
-		land_morale = 0.1
+		morale_damage = 0.1
 	}
 	BDR_rich_fishing_waters = {
 		navy_tradition = 0.25
@@ -1196,7 +1284,7 @@ BNZ_ideas = {
 		cavalry_power = 0.1
 	}
 	BNZ_forces_of_the_world = {
-		tolerance_own = 1
+		monthly_piety_accelerator = 0.001
 	}
 	BNZ_speak_the_human_tongue = {
 		num_accepted_cultures = 1
@@ -1570,7 +1658,7 @@ BZR_ideas = {
 		land_attrition = -0.1
 	}
 	BZR_realm_of_chaos = {
-		yearly_patriarch_authority = 0.02
+		yearly_patriarch_authority = 0.01
 	}
 	BZR_unarmed_combat = {
 		global_regiment_cost = -0.15
@@ -1717,7 +1805,7 @@ CDR_ideas = {
 CDU_ideas = {
 	start = {
 		tolerance_heathen = 2
-		yearly_patriarch_authority = 0.2
+		yearly_patriarch_authority = 0.1
 		yearly_karma_decay = 0.1
 	}
 
@@ -1777,7 +1865,7 @@ CDZ_ideas = {
 	
 	CDZ_sacred_forge = {
 		spy_offence = 0.1
-		tolerance_own = 1
+		papal_influence = 1
 	}
 	CDZ_never_cursed = {
 		fire_damage = 0.05
@@ -1823,7 +1911,7 @@ CFS_ideas = {
 		global_manpower_modifier = 0.1
 	}
 	CFS_festival_of_zamorak = {
-		tolerance_own = 1
+		yearly_patriarch_authority = 0.01
 	}
 	CFS_taxidermy = {
 		prestige_decay = -0.01
@@ -1888,7 +1976,7 @@ CGI_ideas = {
 #Cave of Guthix Ideas
 CGU_ideas = {
 	start = {
-	 	hostile_attrition = 1
+	 	max_hostile_attrition = 1
 		devotion = 1
 	}
 
@@ -1908,6 +1996,7 @@ CGU_ideas = {
 	}
 	CGU_defenders_of_guthix = {
 		tolerance_own = 2
+		yearly_karma_decay = 0.15
 	}
 	CGU_ancient_defences = {
 		garrison_size = 0.15
@@ -1946,9 +2035,8 @@ CDG_ideas = {
 	}
 	free = yes		#will be added at load.
 	
-	CDG_floating_isles = {
-		defensiveness = 0.1
-		tolerance_heathen = 1
+	CDG_coastal_defences = {
+		own_coast_naval_combat_bonus = 1
 	}
 	CDG_lore_of_varlamore = {
 		prestige = 1
@@ -1989,7 +2077,7 @@ CLS_ideas = {
 	free = yes		#will be added at load.
 	
 	CLS_saradominists_of_kandarin = {
-		tolerance_own = 1
+		papal_influence = 1
 	}
 	CLS_ardougne_ambition = {
 		ae_impact = -0.1
@@ -2126,7 +2214,7 @@ CNC_ideas = {
 		defensiveness = 0.15
 	}
 	CNC_quidamortem_home = {
-		hostile_attrition = 0.5
+		max_hostile_attrition = 1
 		land_attrition = -0.05
 	}
 	CNC_isolate_and_coexist = {
@@ -2188,7 +2276,7 @@ CRD_ideas = {
 	}
 
 	bonus = {
-		yearly_patriarch_authority = 0.02
+		yearly_patriarch_authority = 0.01
 	}
 	
 	trigger = {
@@ -2418,13 +2506,13 @@ CST_ideas = {
 		loot_amount = 0.25
 	}
 	CST_determined_predator = {
-		land_morale = 0.1
+		morale_damage = 0.1
 	}
 	CST_top_of_the_food_chain = {
 		horde_unity = 1
 	}
 	CST_bear_traps = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	CST_coconut_tribute = {
 		trade_range_modifier = 0.25
@@ -2723,13 +2811,14 @@ DES_ideas = {
 		shock_damage_received = -0.1
 	}
 	DES_bark_torches = {
-		tolerance_own = 1
+		yearly_patriarch_authority = 0.01
 	}
 	DES_private_tithe = {
 		monarch_admin_power = 1
 	}
 	DES_blood_bomb = {
 		leader_land_fire = 1
+		monthly_blood_power_power_1 = 0.1
 	}
 }
 
@@ -2762,16 +2851,16 @@ DGH_ideas = {
 	}
 	DGH_chaos_tunnels = {
 		drill_gain_modifier = 0.2
-		yearly_patriarch_authority = 0.2
+		yearly_patriarch_authority = 0.1
 	}
 	DGH_unreliable_portals = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	DGH_bandosian_allies = {
 		tolerance_heathen = 2
 	}
 	DGH_mixed_unit_tactics = {
-		land_morale = 0.1
+		morale_damage_received = -0.1
 	}
 }
 
@@ -2881,7 +2970,7 @@ DMC_ideas = {
 		loot_amount = 0.25
 	}
 	DMC_harshest_desert = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	DMC_natural_fortifications = {
 		fort_maintenance_modifier = -0.15
@@ -2919,7 +3008,8 @@ DMH_ideas = {
 	free = yes		#will be added at load.
 	
 	DMH_onwards_to_the_rift = {
-		tolerance_own = 2
+		tolerance_own = 1
+		yearly_patriarch_authority = 0.01
 	}
 	DMH_resource_dungeons = {
 		core_creation = -0.15
@@ -3047,13 +3137,13 @@ DWF_ideas = {
 	
 	DWF_mockery_of_saradomin = {
 		tolerance_heathen = -1
-		tolerance_own = 2
+		yearly_patriarch_authority = 0.015
 	}
 	DWF_tormentors = {
 		harsh_treatment_cost = -0.25
 	}
 	DWF_constant_fire = {
-		land_morale = 0.1
+		morale_damage_received = -0.1
 	}
 	DWF_rebel_the_intruders = {
 		defensiveness = 0.1
@@ -3076,7 +3166,7 @@ DWF_ideas = {
 DWI_ideas = {
 	start = {
 		fire_damage = 0.1
-		tolerance_own = 1
+		yearly_patriarch_authority = 0.01
 	}
 
 	bonus = {
@@ -3099,10 +3189,11 @@ DWI_ideas = {
 		loot_amount = 0.25
 	}
 	DWI_murderous_succession = {
-		horde_unity = 1
-		legitimacy = 1
 		meritocracy = 1
 		republican_tradition = 0.3
+		horde_unity = 1
+		legitimacy = 1
+		devotion = 1
 	}
 	DWI_magical_artillery = {
 		siege_ability = 0.1
@@ -3140,8 +3231,8 @@ DYN_ideas = {
 		global_own_trade_power = 0.1
 	}
 	DYN_vampyric_touch = {
-		land_morale = 0.1
-		yearly_patriarch_authority = 0.01
+		morale_damage = 0.1
+		yearly_patriarch_authority = 0.005
 	}
 	DYN_fish_by_the_willows = {
 		production_efficiency = 0.1
@@ -3267,7 +3358,7 @@ EKE_ideas = {
 	free = yes		#will be added at load.
 	
 	EKE_scare_the_enemy = {
-		land_morale = 0.1
+		morale_damage = 0.1
 	}
 	EKE_mocking_masks = {
 		global_unrest = -2
@@ -3336,7 +3427,7 @@ ELV_ideas = {
 ENK_ideas = {
 	start = {
 		tolerance_own = 2
-		yearly_patriarch_authority = 0.02
+		yearly_patriarch_authority = 0.01
 	}
 
 	bonus = {
@@ -3745,7 +3836,7 @@ FMG_ideas = {
 		technology_cost = -0.025
 	}
 	FMG_strange_energies = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	FMG_village_living = {
 		global_unrest = -1
@@ -3764,7 +3855,7 @@ FMG_ideas = {
 #Fenisento ideas
 FNS_ideas = {
 	start = {
-		tolerance_own = 2
+		church_power_modifier = 0.15
 		free_adm_policy = 1
 	}
 
@@ -3807,7 +3898,7 @@ FNS_ideas = {
 #Forithrian ideas
 FOR_ideas = {
 	start = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 		global_colonial_growth = 15
 	}
 
@@ -3849,6 +3940,7 @@ FOR_ideas = {
 	}
 }
 
+#Forge of Giants Ideas
 FRG_ideas = {
 	start = {
 		defensiveness = 0.15
@@ -3936,8 +4028,8 @@ FRW_ideas = {
 #Flou-Tar-Shei ideas
 FTS_ideas = {
 	start = {
-		diplomatic_reputation = 2
-		stability_cost_to_declare_war = 1
+		diplomatic_reputation = 1
+		relation_with_same_religion = 15
 	}
 
 	bonus = {
@@ -4063,7 +4155,7 @@ GDE_ideas = {
 GDO_ideas = {
 	start = {
 		tolerance_own = 2
-		yearly_patriarch_authority = 0.02
+		yearly_patriarch_authority = 0.015
 	}
 
 	bonus = {
@@ -4346,7 +4438,7 @@ GNE_ideas = {
 		ae_impact = -0.15
 	}
 	GNE_atarisundri_illusions = {
-		land_morale = 0.15
+		morale_damage = 0.15
 	}
 	GNE_oaknocks_device = {
 		global_spy_defence = 0.25
@@ -4607,7 +4699,7 @@ GUT_ideas = {
 		harsh_treatment_cost = -0.2
 	}
 	GUT_lava_moat = {
-		hostile_attrition = 0.5
+		hostile_attrition = 1
 	}
 	GUT_rock_of_dalgroth = {
 		prestige = 1
@@ -4711,7 +4803,7 @@ HHB_ideas = {
 #Hebikatochian ideas
 HKT_ideas = {
 	start = {
-		tolerance_own = 2
+		church_power_modifier = 0.15
 		fort_maintenance_modifier = -0.15
 	}
 
@@ -5008,7 +5100,7 @@ HOS_ideas = {
 HRN_ideas = {
 	start = {
 		trade_range_modifier = 0.25
-		tolerance_own = 2
+		church_power_modifier = 0.15
 	}
 
 	bonus = {
@@ -5320,13 +5412,17 @@ IBN_ideas = {
 	IBN_son_of_zamorak = {
 		legitimacy = 1
 		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.03
+		yearly_patriarch_authority = 0.01
 	}
 	IBN_beyond_death = {
 		monarch_military_power = 1
 		monarch_lifespan = 0.1
 	}
 	IBN_blessed_kalrag = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	IBN_soulless = {
 		culture_conversion_cost = -0.33
@@ -5428,8 +5524,8 @@ IKO_ideas = {
 #Idolic Ideas
 ILD_ideas = {
 	start = {
-		land_morale = 0.15
-		hostile_attrition = 1
+		morale_damage = 0.15
+		max_hostile_attrition = 1
 	}
 
 	bonus = {
@@ -5667,7 +5763,7 @@ JNG_ideas = {
 		global_own_trade_power = 0.05
 	}
 	JNG_acquired_tastes = {
-		hostile_attrition = 0.5
+		hostile_attrition = 1
 	}
 	JNG_zamorakian_interest = {
 		tolerance_heathen = 2
@@ -5711,7 +5807,7 @@ JTZ_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	JTZ_mining_under_fire = {
-		land_morale = 0.1
+		morale_damage_received = -0.1
 	}
 	JTZ_stone_docks = {
 		naval_forcelimit_modifier = 0.2
@@ -5751,7 +5847,7 @@ KBD_ideas = {
 		leader_land_fire = 1
 	}
 	KBD_poison_breath = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	KBD_freezing_breath = {
 		leader_land_manuever = 1
@@ -5850,7 +5946,7 @@ KDR_ideas = {
 		drill_gain_modifier = 0.25
 	}
 	KDR_legends_guild = {
-		prestige = 1
+		max_absolutism = 5
 		mercenary_discipline = 0.05
 	}
 	KDR_elven_inheritance = {
@@ -5922,6 +6018,7 @@ KDG_ideas = {
 	
 	KDG_the_consortium = {
 		republican_tradition = 0.3
+		meritocracy = 1
 	}
 	KDG_black_guard = {
 		discipline = 0.05
@@ -5934,7 +6031,7 @@ KDG_ideas = {
 		trade_goods_size_modifier = 0.1
 	}
 	KDG_lava_flow_mine = {
-		development_cost = -0.1
+		development_cost_modifier = -0.1
 	}
 	KDG_hand_cannons = {
 		artillery_power = 0.15
@@ -6100,6 +6197,7 @@ KHN_ideas = {
 	}
 	KHN_halls_of_reckoning = {
 		legitimacy = 1
+		horde_unity = 1
 	}
 	KHN_diplomatic_capital = {
 		diplomats = 1
@@ -6148,7 +6246,7 @@ KJA_ideas = {
 		development_cost = -0.05
 	}
 	KJA_one_trinity_one_nation = {
-		monthly_fervor_increase = 2
+		monthly_fervor_increase = 1
 		global_missionary_strength = 0.005
 	}
 	KJA_grand_shipyard = {
@@ -6257,7 +6355,7 @@ KLU_ideas = {
 #Konjinjan Ideas
 KNJ_ideas = {
 	start = {
-		tolerance_own = 2
+		church_power_modifier = 0.15
 		global_heathen_missionary_strength = 0.02
 	}
 
@@ -6304,9 +6402,7 @@ KOU_ideas = {
 	}
 
 	bonus = {
-		burghers_loyalty_modifier = 0.05
-		church_loyalty_modifier = 0.05
-		nobles_loyalty_modifier = 0.05
+		all_estate_loyalty_equilibrium = 0.05
 	}
 	
 	trigger = {
@@ -6470,7 +6566,7 @@ KTW_ideas = {
 KUU_ideas = {
 	start = {
 		army_tradition = 0.5
-		hostile_attrition = 1
+		morale_damage_received = -0.1
 	}
 
 	bonus = {
@@ -6510,7 +6606,7 @@ KUU_ideas = {
 #Khazard ideas
 KZD_ideas = {
 	start = {
-		tolerance_own = 2
+		yearly_patriarch_authority = 0.0015
 		infantry_power = 0.10
 	}
 
@@ -6553,7 +6649,7 @@ KZD_ideas = {
 #Khazari ideas
 KZI_ideas = {
 	start = {
-		hostile_attrition = 1.0
+		hostile_attrition = 1
 		leader_land_manuever = 1
 	}
 
@@ -6569,7 +6665,7 @@ KZI_ideas = {
 	free = yes		#will be added at load.
 	
 	KZI_isolated_from_colonists = {
-		tolerance_own = 2
+		monthly_fervor_increase = 0.5
 	}
 	KZI_totem_craft = {
 		prestige = 1
@@ -6761,7 +6857,7 @@ LNC_ideas = {
 #Lovakengj Ideas
 LOV_ideas = {
 	start = {
-	 	hostile_attrition = 1
+	 	prestige = 1
 		production_efficiency = 0.1
 	}
 
@@ -6920,7 +7016,7 @@ MGA_ideas = {
 	}
 	MGA_flames_of_zamorak = {
 		fire_damage = 0.1
-		yearly_patriarch_authority = 0.02
+		yearly_patriarch_authority = 0.01
 	}
 	MGA_claws_of_guthix = {
 		infantry_power = 0.1
@@ -7389,7 +7485,7 @@ MSH_ideas = {
 		global_unrest = -2
 	}
 	MSH_in_the_face_of_horror = {
-		land_morale = 0.05
+		morale_damage_received = -0.05
 		naval_morale = 0.1
 	}
 	MSH_witchwood = {
@@ -7615,8 +7711,8 @@ MYG_ideas = {
 #Myreton ideas
 MYN_ideas = {
 	start = {		
-	 	hostile_attrition = 1
-		land_attrition = -0.1
+		tolerance_own = 1
+		improve_relation_modifier = 0.15
 	}
 	bonus = {
 		development_cost = -0.1
@@ -7683,7 +7779,7 @@ MYT_ideas = {
 	MYT_mort_myre = {
 		land_attrition = -0.1
 	}
-	MYT_vyrewatch = {
+	MYT_vyrewatch_precognition = {
 		shock_damage_received = -0.15
 	}
 	MYT_new_vampyres = {
@@ -7738,6 +7834,48 @@ NAR_ideas = {
 	}
 }
 
+#Nightmarish Ideas
+NAS_ideas = {
+	start = {
+		culture_conversion_cost = -0.2
+		global_regiment_cost = -0.1
+	}
+
+	bonus = {
+		max_hostile_attrition = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = NAS
+		}
+	}
+	free = yes		#will be added at load.
+	
+	NAS_defence_recovery = {
+		war_exhaustion_cost = -0.15
+	}
+	NAS_spores = {
+		leader_land_manuever = 1
+	}
+	NAS_nightmare_berries = {
+		manpower_recovery_speed = 0.1
+	}
+	NAS_harmonised_staff = {
+		fire_damage = 0.1
+	}
+	NAS_undaunted_by_waves = {
+		ship_durability = 0.05
+	}
+	NAS_morytania_crossing = {
+		cb_on_overseas = yes
+		range = 0.25
+	}
+	NAS_phosanis_horde = {
+		loot_amount = 0.25
+	}
+}
+
 #Nardah ideas
 NDH_ideas = {
 	start = {
@@ -7782,7 +7920,6 @@ NDH_ideas = {
 }
 
 #Narogoshuun ideas
-
 NGU_ideas = {
 	start = {
 		global_manpower_modifier = 0.15
@@ -7978,7 +8115,7 @@ NVA_ideas = {
 	}
 	NVA_black_prism = {
 		global_unrest = -1
-		yearly_patriarch_authority = 0.025
+		yearly_patriarch_authority = 0.02
 	}
 	NVA_zemomarks = {
 		inflation_reduction = 0.1
@@ -8171,7 +8308,7 @@ OGG_ideas = {
 #Okrajec ideas
 OKJ_ideas = {
 	start = {
-		land_morale = 0.1
+		morale_damage = 0.1
 		land_forcelimit_modifier = 0.1
 	}
 
@@ -8524,6 +8661,10 @@ PPH_ideas = {
 	}
 	free = yes		#will be added at load.
 	
+	PPH_rapid_expansion = {
+		development_cost_modifier = -0.075
+		build_cost = -0.05
+	}
 	PPH_take_all_kinds = {
 		tolerance_heretic = 1
 		tolerance_heathen = 1
@@ -8534,18 +8675,14 @@ PPH_ideas = {
 	PPH_cannonball_manufacture = {
 		leader_naval_fire = 1
 	}
-	PPH_ectofuntus = {
-		tolerance_own = 1
+	PPH_body_language = {
+		diplomatic_reputation = 1
 	}
-	PPH_energy_barrier = {
-		defensiveness = 0.3
-		global_unrest = 1
+	PPH_the_old_herald = {
+		global_institution_spread = 0.2
 	}
 	PPH_ectotokens = {
 		inflation_reduction = 0.1
-	}
-	PPH_body_language = {
-		diplomatic_reputation = 1
 	}
 }
 
@@ -8852,7 +8989,7 @@ RBR_ideas = {
 #Rain Demon ideas
 RDE_ideas = {
 	start = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 		land_attrition = -0.1
 	}
 
@@ -8868,7 +9005,7 @@ RDE_ideas = {
 	free = yes		#will be added at load.
 	
 	RDE_new_world_zamorakians = {
-		yearly_patriarch_authority = 0.02
+		yearly_patriarch_authority = 0.015
 	}
 	RDE_powerful_blood = {
 		army_tradition = 0.5
@@ -8876,8 +9013,8 @@ RDE_ideas = {
 	RDE_shadow_of_the_storm = {
 		loot_amount = 0.25
 	}
-	RDE_swamp_navigation = {
-		navy_tradition = 0.5
+	RDE_tlati_river_crossings = {
+		leader_land_manuever = 1
 	}
 	RDE_deep_forest_retreat = {
 		global_spy_defence = 0.15
@@ -9003,7 +9140,7 @@ RGI_ideas = {
 		technology_cost = -0.05
 	}
 	RGI_block_the_sun = {
-		land_morale = 0.1
+		morale_damage = 0.1
 	}
 	RGI_stargazing = {
 		idea_cost = 0.1
@@ -9208,7 +9345,7 @@ ROG_ideas = {
 	free = yes		#will be added at load.
 	ROG_chaos_elemental = {
 		hostile_attrition = 1
-		tolerance_own = 1
+		yearly_patriarch_authority = 0.001
 	}
 	ROG_imposing_volcano = {
 		global_regiment_cost = -0.1
@@ -9259,7 +9396,7 @@ RRF_ideas = {
 		tolerance_heretic = -5
 	}
 	RRF_snuff_out_the_light = {
-		global_heretic_missionary_strength = 0.05
+		global_heretic_missionary_strength = 0.03
 	}
 	RRF_secret_hideouts = {
 		siege_ability = 0.1
@@ -9386,7 +9523,7 @@ RTK_ideas = {
 		build_cost = -0.1
 	}
 	RTK_tribal_totem = {
-		monthly_fervor_increase = 1
+		monthly_fervor_increase = 0.5
 	}
 	RTK_fresh_fish = {
 		global_own_trade_power = 0.1
@@ -9410,7 +9547,7 @@ RTM_ideas = {
 	}
 
 	bonus = {
-		tolerance_own = 2
+		church_power_modifier = 0.15
 	}
 	
 	trigger = {
@@ -9516,7 +9653,7 @@ SBI_ideas = {
 		cavalry_power = 0.2
 	}
 	SBI_poisonous_disease = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	SBI_granite_production = {
 		build_cost = -0.1
@@ -9783,6 +9920,47 @@ SGR_ideas = {
 	}
 }
 
+#Strangler Ideas
+SGW_ideas = {
+	start = {
+		governing_capacity_modifier = 0.1
+		culture_conversion_cost = -0.33
+	}
+
+	bonus = {
+		movement_speed = 0.1
+	}
+	
+	trigger = {
+		OR = {
+			tag = SGW
+		}
+	}
+	free = yes		#will be added at load.
+	
+	SGW_strangled_swarm = {
+		manpower_in_own_culture_provinces = 0.2
+	}
+	SGW_reanimation = {
+		manpower_recovery_speed = 0.15
+	}
+	SGW_no_respite = {
+		max_hostile_attrition = 1
+	}
+	SGW_inheritance_of_the_old_ones = {
+		technology_cost = -0.05
+	}
+	SGW_remnants_of_zema_tal = {
+		defensiveness = 0.15
+	}
+	SGW_axes_of_the_butcher = {
+		leader_land_shock = 1
+	}
+	SGW_mineral_wealth = {
+		production_efficiency = 0.1
+	}
+}
+
 #Shilo ideas
 SHI_ideas = {
 	start = {
@@ -9802,7 +9980,7 @@ SHI_ideas = {
 	free = yes		#will be added at load.
 	
 	SHI_resist_zamoraks_curse = {
-		monthly_fervor_increase = 1
+		monthly_fervor_increase = 0.5
 	}
 	SHI_fly_fishing = {
 		global_trade_goods_size_modifier = 0.1
@@ -9876,7 +10054,7 @@ SKU_ideas = {
 	}
 
 	bonus = {
-		land_morale = 0.1
+		morale_damage = 0.1
 	}
 	
 	trigger = {
@@ -10143,7 +10321,8 @@ SPG_ideas = {
 	free = yes		#will be added at load.
 	
 	SPG_byakkos_lair = {
-		tolerance_own = 2
+		tolerance_own = 1
+		church_power_modifier = 0.05
 	}
 	SPG_moving_reef = {
 		global_spy_defence = 0.2
@@ -10257,7 +10436,7 @@ SRP_ideas = {
 SRT_ideas = {
 	start = {
 		global_missionary_strength = 0.01
-		tolerance_own = 1
+		papal_influence = 1
 	}
 
 	bonus = {
@@ -10322,7 +10501,7 @@ SSG_ideas = {
 		sailors_recovery_speed = 0.1
 	}
 	SSG_zamorakian_history = {
-		yearly_patriarch_authority = 0.02
+		yearly_patriarch_authority = 0.01
 		global_missionary_strength = 0.01
 	}
 	SSG_punishment_for_kandarin = {
@@ -10611,7 +10790,7 @@ TBW_ideas = {
 	}
 
 	bonus = {
-		monthly_fervor_increase = 2
+		monthly_fervor_increase = 1
 	}
 	
 	trigger = {
@@ -10730,7 +10909,7 @@ TGU_ideas = {
 	}
 	TGU_ways_of_the_gourmand_and_spirit = {
 		naval_morale = 0.1
-		tolerance_own = 1
+		church_power_modifier = 0.1
 	}
 }
 
@@ -10942,6 +11121,49 @@ TKK_ideas = {
 	}
 }
 
+#Tlatinese Ideas
+TLT_ideas = {
+	start = {
+		naval_attrition = -0.1
+		garrison_size = 0.1
+	}
+
+	bonus = {
+		colony_cost_modifier = -0.25
+	}
+	
+	trigger = {
+		OR = {
+			tag = TLT
+		}
+	}
+	free = yes		#will be added at load.
+	
+	TLT_ruins_of_the_old_ones = {
+		prestige = 0.5
+		development_cost = -0.05
+	}
+	TLT_farms_of_kastori = {
+		supply_limit_modifier = 0.2
+		land_attrition = -0.05
+	}
+	TLT_batter_down_the_hatches = {
+		war_exhaustion = -0.03
+	}
+	TLT_lessons_of_the_piercing_tree = {
+		defensiveness = 0.1
+	}
+	TLT_fragrant_plain = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	TLT_precious_metals = {
+		global_tax_modifier = 0.1
+	}
+	TLT_supplanting_the_demons = {
+		culture_conversion_cost = -0.15
+	}
+}
+
 #Tempoross ideas
 TMP_ideas = {
 	start = {
@@ -10993,6 +11215,9 @@ TNN_ideas = {
 
 	bonus = {
 		legitimacy = 1
+		horde_unity = 1
+		meritocracy = 1
+		devotion = 1
 		republican_tradition = 0.3
 	}
 	
@@ -11095,6 +11320,7 @@ TPS_ideas = {
 	}
 	TPS_shadows = {
 		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	TPS_well_of_the_damned = {
 		global_own_trade_power = 0.15
@@ -11116,7 +11342,7 @@ TPS_ideas = {
 #Torakokuan ideas
 TRK_ideas = {
 	start = {
-		tolerance_own = 2
+		church_power_modifier = 0.15
 		galley_power = 0.15
 	}
 
@@ -11153,6 +11379,47 @@ TRK_ideas = {
 	}
 	TRK_kamishima_settlement = {
 		global_colonial_growth = 15
+	}
+}
+
+#Tasabek ideas
+TSK_ideas = {
+	start = {
+		defensiveness = 0.15
+		development_cost = -0.1
+	}
+
+	bonus = {
+		development_cost_modifier = -0.1
+	}
+	
+	trigger = {
+		OR = {
+			tag = TSK
+		}
+	}
+	free = yes		#will be added at load.
+	
+	TSK_rich_soil = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	TSK_xerician_cleanup = {
+		land_attrition = -0.1
+	}
+	TSK_security_through_isolation = {
+		global_unrest = -1
+	}
+	TSK_lost_wealth = {
+		global_tax_modifier = 0.15
+	}
+	TSK_cultures_of_kebos = {
+		num_accepted_cultures = 2
+	}
+	TSK_karluum_integration = {
+		fire_damage_received = -0.15
+	}
+	TSK_molch_treaties = {
+		global_manpower_modifier = 0.2
 	}
 }
 
@@ -11273,7 +11540,7 @@ TST_ideas = {
 		global_own_trade_power = 0.1
 	}
 	TST_persistence = {
-		land_morale = 0.1
+		morale_damage_received = -0.1
 	}
 	TST_goutweed = {
 		global_unrest = -1
@@ -11407,7 +11674,7 @@ TYS_ideas = {
 		backrow_artillery_damage = 0.15
 	}
 	TYS_new_purpose = {
-		tolerance_own = 1
+		papal_influence = 2
 	}
 }
 
@@ -11620,7 +11887,7 @@ UNG_ideas = {
 		naval_morale = -0.1
 	}
 	UNG_acid_phase = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	UNG_wealth_of_treasures = {
 		available_province_loot = 0.25
@@ -11676,7 +11943,7 @@ UPZ_ideas = {
 #Urval ideas
 URV_ideas = {
 	start = {
-		yearly_patriarch_authority = 0.02
+		yearly_patriarch_authority = 0.015
 		missionaries = 1
 	}
 
@@ -11740,7 +12007,7 @@ UWF_ideas = {
 		trade_steering = 0.2
 	}
 	UWF_rock_cakes = {
-		hostile_attrition = 0.5
+		shock_damage = 0.05
 		global_unrest = -0.5
 	}
 	UWF_tunnel_geology = {
@@ -11787,23 +12054,27 @@ VAR_ideas = {
 		defensiveness = 0.15
 		garrison_size = 0.10
 	}
-	VAR_proudspire_tombs = {
+	VAR_history_of_coexistence = {
+		diplomatic_reputation = 1
+	}
+	VAR_majesty_of_proudspire = {
 		legitimacy = 1
+		horde_unity = 1
+		devotion = 1
+		meritocracy = 1
+		republican_tradition = 0.3
 	}
 	VAR_cothon_builders = {
 		heavy_ship_cost = -0.10
+		global_ship_repair = 0.1
 	}
-	VAR_reconcile_the_faith = {
-		global_heathen_missionary_strength = 0.01
-		tolerance_own = 1
-		tolerance_heretic = 1
-	}
-	VAR_college_of_bards = {
+	VAR_bardic_legacy = {
 		possible_adm_policy = 1
 		free_adm_policy = 1
 	}
-	VAR_aldarin_red = {
-		diplomatic_reputation = 1
+	VAR_mysteries_of_ranul = {
+		global_heathen_missionary_strength = 0.01
+		tolerance_heretic = 1
 	}
 }
 
@@ -11827,7 +12098,7 @@ VET_ideas = {
 	
 	VET_devout_zamorakian = {
 		tolerance_own = 1
-		yearly_patriarch_authority = 0.01
+		yearly_patriarch_authority = 0.005
 	}
 	VET_hellhound_support = {
 	 	cav_to_inf_ratio = 0.10
@@ -11900,7 +12171,7 @@ VKO_ideas = {
 #Venenatis ideas
 VNN_ideas = {
 	start = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 		global_missionary_strength = 0.01
 	}
 
@@ -11931,7 +12202,7 @@ VNN_ideas = {
 		recover_army_morale_speed = 0.05
 	}
 	VNN_blessed_connection = {
-		yearly_patriarch_authority = 0.02
+		yearly_patriarch_authority = 0.01
 	}
 	VNN_last_of_the_line = {
 		prestige = 1
@@ -12129,7 +12400,7 @@ WBA_ideas = {
 	
 	WBA_armadylean_resurgence = {
 		global_missionary_strength = 0.01
-		tolerance_own = 1
+		church_power_modifier = 0.1
 	}
 	WBA_law_in_disorder = {
 		global_unrest = -1
@@ -12286,7 +12557,7 @@ WBS_ideas = {
 #Warband - Zamorak
 WBZ_ideas = {
 	start = {
-		tolerance_own = 1
+		yearly_patriarch_authority = 0.001
 		global_trade_goods_size_modifier = 0.1
 	}
 
@@ -12603,13 +12874,13 @@ WTD_ideas = {
 	free = yes		#will be added at load.
 	
 	WTD_icy_grasp = {
-		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	WTD_cyrogenic_command = {
 		land_maintenance_modifier = -0.05
 	}
 	WTD_everlasting = {
-		land_morale = 0.1
+		morale_damage_received = -0.1
 	}
 	WTD_truest_elemental = {
 		legitimacy = 1
@@ -12655,19 +12926,21 @@ WYM_ideas = {
 	WYM_bane_of_civitas = {
 		siege_ability = 0.1
 	}
+	WYM_glorious_scales = {
+		prestige = 1
+	}
 	WYM_greatest_of_all_wyrms = {
 		legitimacy = 1
 		horde_unity = 1
-	}
-	WYM_adaptability = {
-		land_attrition = -0.05
-		naval_attrition = -0.05
+		meritocracy = 1
+		devotion = 1
+		republican_tradition = 0.3
 	}
 	WYM_fish_diving = {
 		leader_naval_shock = 1
 	}
-	WYM_banite_deposits = {
-		trade_efficiency = 0.1
+	WYM_legacy_of_the_god_wars = {
+		cb_on_overseas = yes
 	}
 }
 
@@ -12958,6 +13231,53 @@ ZMG_ideas = {
 	}
 	ZMG_curse_of_arrav = {
 		general_cost = -0.2
+	}
+}
+
+#Zanarisian ideas
+ZNS_ideas = {
+	start = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.3
+		movement_speed = 0.1
+	}
+
+	bonus = {
+		trade_efficiency = 0.1
+	}
+	
+	trigger = {
+		OR = {
+			tag = ZNS
+		}
+	}
+	free = yes		#will be added at load.
+	
+	ZNS_nexus_of_worlds = {
+		leader_land_manuever = 1
+		leader_naval_manuever = 1
+	}
+	ZNS_guthixs_arrival = {
+		yearly_karma_decay = 0.1
+	}
+	ZNS_mushroom_connection = {
+		land_attrition = -0.1
+	}
+	ZNS_embodiment_of_magic = {
+		fire_damage = 0.05
+		fire_damage_received = -0.05
+	}
+	ZNS_governance_of_seasons = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	ZNS_extraplanar_merchandise = {
+		merchants = 1
+	}
+	ZNS_healing_wands = {
+		manpower_recovery_speed = 0.1
 	}
 }
 

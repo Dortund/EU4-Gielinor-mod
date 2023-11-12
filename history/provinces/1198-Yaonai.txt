@@ -16,7 +16,7 @@ base_manpower = 3
 
 fort_15th = yes
 
-trade_goods = manufactured_goods
+trade_goods = terracotta
 
 is_city = yes
 

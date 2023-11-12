@@ -11,6 +11,7 @@ discovered_by = kharidtechgroup
 discovered_by = morytaniantechgroup
 discovered_by = dwarventechgroup
 discovered_by = northerntechgroup
+discovered_by = bandostechgroup
 
 hre = no
 
@@ -41,4 +42,10 @@ is_city = yes
 	owner = MST
 	controller = MST
 	remove_core = GUN
+}
+
+2100.1.1 = {
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
 }

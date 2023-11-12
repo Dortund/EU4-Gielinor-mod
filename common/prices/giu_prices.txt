@@ -100,6 +100,11 @@ rare_loot = {
 	#-50% (for 25 years): At least 3 nations have Grand Exchanges in the Sixth Age
 }
 
+refined_products = {
+	base_price = 4
+	#+25%: Invention institution
+}
+
 runes = {
 	base_price = 8
 	#-25%: Runecrafting institution
@@ -121,4 +126,8 @@ bamboo = {
 gunpowder = {
 	base_price = 3.5
 	#+20%: Gunpowder-producing nation builds artillery
+}
+
+terracotta = {
+	base_price = 3.5
 }

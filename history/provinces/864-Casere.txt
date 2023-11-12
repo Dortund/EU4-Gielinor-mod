@@ -26,3 +26,9 @@ is_city = yes
 	controller = ASG
 	add_core = ASG
 }
+
+2100.1.1 = {
+	base_tax = 4
+	base_production = 3
+	base_manpower = 3
+}

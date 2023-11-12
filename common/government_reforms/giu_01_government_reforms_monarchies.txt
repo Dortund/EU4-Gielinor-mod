@@ -1,3 +1,18 @@
+monarchy_mechanic = {
+	monarchy = yes
+	heir = yes
+	queen = yes
+	basic_reform = yes # = invisible/does not take up a slot
+	is_eligible_for_hre_emperor = yes
+	valid_for_nation_designer = no
+	custom_attributes = {
+		enables_aristocratic_idea_group = yes
+	}
+	modifiers = {
+		nobles_influence_modifier = 0.05
+	}
+}
+
 ##########################
 ##########################
 #Feudalism vs Autocracy:
@@ -651,10 +666,11 @@ vampyre_kingdom = {
 		land_forcelimit_modifier = 0.10
 		global_manpower_modifier = 0.10
 		tolerance_heretic = 2
+		special_unit_forcelimit = 0.1
 	}
 	conditional = {
 		government_abilities = {
-			#blood_power_mechanic - coming in later patch
+			blood_power_mechanic
 		}
 	}
 	custom_attributes = {

@@ -13,8 +13,8 @@ discovered_by = bandostechgroup
 
 hre = no
 
-base_tax = 7
-base_production = 6
+base_tax = 8
+base_production = 8
 base_manpower = 7
 
 fort_15th = yes 

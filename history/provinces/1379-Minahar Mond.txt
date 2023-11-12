@@ -6,6 +6,7 @@ tribal_owner = ---
 culture = thorobshuun
 religion = bandos
 
+discovered_by = dwarventechgroup
 discovered_by = bandostechgroup
 discovered_by = elventechgroup
 discovered_by = kandarintechgroup
@@ -17,7 +18,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 4
 
-trade_goods = logs
+trade_goods = livestock_farm
 
 is_city = yes
 

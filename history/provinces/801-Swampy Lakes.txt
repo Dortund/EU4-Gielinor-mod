@@ -5,4 +5,3 @@ discovered_by = MRT
 discovered_by = MSH
 discovered_by = PPH
 discovered_by = morytaniantechgroup
-discovered_by = kharidtechgroup

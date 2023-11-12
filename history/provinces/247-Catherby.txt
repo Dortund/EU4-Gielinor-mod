@@ -52,6 +52,9 @@ center_of_trade = 2
 	controller = KDR
 	add_core = KDR
 	remove_core = ADO
+	base_tax = 7
+	base_production = 6
+	base_manpower = 6
 }
 
 2132.7.13 = {

@@ -39,6 +39,9 @@ is_city = yes
 	controller = GNO
 	add_core = GNO
 	remove_core = GNE
+	base_tax = 2
+	base_production = 3
+	base_manpower = 2
 }
 
 2007.2.27 = {

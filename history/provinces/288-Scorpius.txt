@@ -30,4 +30,7 @@ is_city = yes
 	remove_core = RKS
 	culture = ouranian
 	religion = zamorak
+	base_tax = 4
+	base_production = 3
+	base_manpower = 3
 }

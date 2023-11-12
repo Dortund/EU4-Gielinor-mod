@@ -55,7 +55,20 @@ country_event = {
 	
 	option = {
 		name = vampyric_flavor.1.a
-		add_patriarch_authority = 0.1
+		if = {
+			limit = {
+				has_government_mechanic = blood_power_mechanic
+			}
+			add_government_power = {
+				mechanic_type = blood_power_mechanic
+				power_type = blood_power_power_1
+				value = 8
+			}
+			add_patriarch_authority = 0.05
+		}
+		else = {
+			add_patriarch_authority = 0.1
+		}
 		add_estate_church_loyalty_effect = yes
 		random_owned_province = {
 			limit = {
@@ -75,6 +88,16 @@ country_event = {
 	}
 	option = {
 		name = vampyric_flavor.1.b
+		if = {
+			limit = {
+				has_government_mechanic = blood_power_mechanic
+			}
+			add_government_power = {
+				mechanic_type = blood_power_mechanic
+				power_type = blood_power_power_1
+				value = 1
+			}
+		}
 		add_patriarch_authority = -0.05
 		reduce_estate_church_loyalty_effect = yes
 		random_owned_province = {
@@ -249,7 +272,19 @@ country_event = {
 	option = {
 		name = vampyric_flavor.5.b
 		add_patriarch_authority = -0.05
-		add_mil_power = 50
+		if = {
+			limit = {
+				has_government_mechanic = blood_power_mechanic
+			}
+			add_government_power = {
+				mechanic_type = blood_power_mechanic
+				power_type = blood_power_power_1
+				value = 5
+			}
+		}
+		else = {
+			add_mil_power = 50
+		}
 		reduce_estate_church_loyalty_effect = yes
 		ai_chance = {
 			factor = 0

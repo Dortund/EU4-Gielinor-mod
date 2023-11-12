@@ -39,6 +39,8 @@
  naval_goodsDESC:0 "Longer journeys by sea require the right goods to fix ship damage as it arises. Swamp tar is very effective at providing a waterproof seal over holes, while rope is necessary to fix rigging, nets and suchlike."
  rare_loot:0 "Rare Loot"
  rare_lootDESC:0 "Even the most remote chance for a powerful item will never put adventurers off seeking it. You can fill a dungeon with traps, guard it with the most powerful beasts, but sooner or later that loot is going to find its way to someone's bank account."
+ refined_products:0 "Refined Products"
+ refined_productsDESC:0 "These products are beyond the standard for manufactured goods, created by masters in their respective fields."
  runes:0 "Runes"
  runesDESC:0 "Runes are necessary for most mortals to perform magic. In most of the world prior to the Fifth Age, the only runes were those left over from the Third Age and earlier resulting in them fetching a high price."
  runite:0 "Runite"
@@ -49,3 +51,7 @@
  bambooDESC:0 "Bamboo is a family of fast-growing and strong grasses native to the Wushanko Isles and find uses from construction to weapon crafting."
  gunpowder:0 "Gunpowder"
  gunpowderDESC:0 "Gunpowder is an explosive compound primarily manufactured in the Wushanko Isles. It is commonly used to propel cannonballs."
+ terracotta:0 "Terracotta"
+ terracottaDESC:0 "The Terracotta of Wushanko is a particularly high quality of earthenware, useful in decorative objects and architecture alike."
+ 
+ 

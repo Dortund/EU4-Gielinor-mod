@@ -1,4 +1,4 @@
-#1378-
+#1378-Dougnerive
 owner = CDA
 controller = CDA
 add_core = CDA
@@ -11,6 +11,7 @@ discovered_by = bandostechgroup
 discovered_by = elventechgroup
 discovered_by = kandarintechgroup
 discovered_by = gnometechgroup
+discovered_by = fremenniktechgroup
 
 hre = no
 

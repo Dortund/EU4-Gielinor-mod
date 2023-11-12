@@ -1,19 +1,10 @@
-#848-Rottskirt
-owner = BDR
-controller = BDR
-add_core = BDR
+#848 - Rottskirt
+owner = ---
+controller = ---
+add_core = ---
 tribal_owner = ---
 culture = meiyer
 religion = saradomin
-
-discovered_by = BDI
-discovered_by = LNC
-discovered_by = MYN
-discovered_by = MRT
-discovered_by = MSH
-discovered_by = PPH
-discovered_by = morytaniantechgroup
-discovered_by = kharidtechgroup
 
 hre = no
 
@@ -21,8 +12,15 @@ base_tax = 2
 base_production = 2
 base_manpower = 2
 
-fort_15th = yes 
-
 trade_goods = fishing_spot
 
 is_city = yes
+
+2135.1.6 = {
+	owner = BDR
+	controller = BDR
+	add_core = BDR
+	culture = meiyer
+	religion = saradomin
+	discovered_by = BDR
+}

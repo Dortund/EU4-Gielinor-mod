@@ -88,6 +88,12 @@ country_event = {
 			value = 0.25
 			duration = -1
 		}
+		change_price = {
+			trade_goods = refined_products
+			key = INV_COMPS
+			value = 0.25
+			duration = -1
+		}
 		add_years_of_income = 0.25
 		add_prestige = 25
 		set_global_flag = invention_components

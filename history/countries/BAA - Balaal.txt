@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = baalal
 religion = xeric
 technology_group = zeantechgroup
-capital = 485 #Baalal Valley
+capital = 477 #Chasm Caverns
 national_focus = ADM
 
 1919.11.7 = {

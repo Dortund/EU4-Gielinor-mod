@@ -1,7 +1,7 @@
 #486 - Viridis
-owner = VAR
-controller = VAR
-add_core = VAR
+owner = ALD
+controller = ALD
+add_core = ALD
 tribal_owner = ---
 culture = aldarin
 religion = ralos
@@ -14,9 +14,16 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 
-trade_goods = logs
+trade_goods = advanced_logs
 
 is_city = yes
+
+1990.1.1 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+}
+
 
 2000.1.1 = {
 	base_tax = 3

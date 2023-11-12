@@ -1,5 +1,5 @@
-draynor_missions_2_general = {
-	slot = 2
+draynor_missions_1_general = {
+	slot = 1
 	generic = no
 	ai = yes
 	potential = {
@@ -23,6 +23,10 @@ draynor_missions_2_general = {
 			}
 		}
 		effect = {
+			#enable_branching_mission_review = {
+			#	key = DYN
+			#	ai_event_id = flavor_dyn.3
+			#}
 			country_event = {
 				id = flavor_dyn.1
 				days = 1
@@ -30,15 +34,42 @@ draynor_missions_2_general = {
 		 	custom_tooltip = dyn_religious_consideration_tooltip
 		}
 	}
+	
 }
 
-draynor_missions_2_saradomin = {
-	slot = 2
+DYN_mission_branching_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = DYN
+		NOT = {
+			OR = {
+				has_country_flag = DYN_religious_peace_flag
+				has_country_flag = DYN_saradomin_missions_flag
+				has_country_flag = DYN_chaos_missions_flag
+			}
+		}
+	}
+	has_country_shield = yes
+	DYN_branching_1_2 = {
+		icon = mission_unknown_mission
+		required_missions = { DYN_religious_consideration }
+		position = 2
+		trigger = { custom_trigger_tooltip = { tooltip = DYN_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = DYN_this_is_a_branching_mission }
+	}
+}
+
+
+draynor_missions_1_saradomin = {
+	slot = 1
 	generic = no
 	ai = yes
 	potential = {
 		tag = DYN
-		religion = saradomin
+		has_country_flag = DYN_saradomin_missions_flag
 		NOT = { has_country_flag = DYN_religious_peace_flag }
 		NOT = { map_setup = map_setup_random }
 	}
@@ -47,6 +78,7 @@ draynor_missions_2_saradomin = {
 	DYN_SARA_clean_up_the_manor = {
 		icon = mission_alliances
 		required_missions = { DYN_religious_consideration }
+		position = 2
 		trigger = {
 			8 = {
 				owned_by = ROOT
@@ -67,6 +99,7 @@ draynor_missions_2_saradomin = {
 	DYN_SARA_spread_the_light = {
 		icon = mission_alliances
 		required_missions = { DYN_SARA_clean_up_the_manor }
+		position = 3
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = obj_convert_10_provinces_tooltip
@@ -82,8 +115,8 @@ draynor_missions_2_saradomin = {
 	}
 }
 
-draynor_missions_2_neutral = {
-	slot = 2
+draynor_missions_1_neutral = {
+	slot = 1
 	generic = no
 	ai = yes
 	potential = {
@@ -96,6 +129,7 @@ draynor_missions_2_neutral = {
 	DYN_NEUTRAL_friends_in_strange_places = {
 		icon = mission_alliances
 		required_missions = { DYN_religious_consideration }
+		position = 2
 		trigger = {
 			calc_true_if = {
 				all_ally = {
@@ -119,6 +153,7 @@ draynor_missions_2_neutral = {
 	DYN_NEUTRAL_land_of_tolerance = {
 		icon = mission_alliances
 		required_missions = { DYN_NEUTRAL_friends_in_strange_places  }
+		position = 3
 		trigger = {
 			zamorak = 1
 			saradomin = 1
@@ -130,13 +165,13 @@ draynor_missions_2_neutral = {
 	}
 }
 
-draynor_missions_2_chaos = {
-	slot = 2
+draynor_missions_1_chaos = {
+	slot = 1
 	generic = no
 	ai = yes
 	potential = {
 		tag = DYN
-		religion_group = chaos_group
+		has_country_flag = DYN_chaos_missions_flag
 		NOT = { has_country_flag = DYN_religious_peace_flag }
 		NOT = { map_setup = map_setup_random }
 	}
@@ -145,6 +180,7 @@ draynor_missions_2_chaos = {
 	DYN_CHAOS_rise_of_chaos = {
 		icon = mission_alliances
 		required_missions = { DYN_religious_consideration }
+		position = 2
 		trigger = {
 			draynor_area = {
 				owned_by = ROOT
@@ -159,6 +195,7 @@ draynor_missions_2_chaos = {
 	DYN_CHAOS_army_of_darkness = {
 		icon = mission_alliances
 		required_missions = { DYN_CHAOS_rise_of_chaos }
+		position = 3
 		trigger = {
 			army_size = 15
 			OR = {
@@ -177,6 +214,7 @@ draynor_missions_2_chaos = {
 	DYN_CHAOS_stand_and_be_counted = {
 		icon = mission_alliances
 		required_missions = { DYN_CHAOS_army_of_darkness }
+		position = 4
 		trigger = {
 			is_subject = no
 			is_at_war = no
@@ -193,8 +231,8 @@ draynor_missions_2_chaos = {
 	}
 }
 
-draynor_missions_3 = {
-	slot = 3
+draynor_missions_5 = {
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
