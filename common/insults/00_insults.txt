@@ -354,7 +354,7 @@ insult_pescaling = {
 	}
 }
 
-insult_scarabites = {
+insult_scabarites = {
 	trigger = {
 		tag = SBI
 		FROM = {
@@ -708,7 +708,7 @@ insult_var_bth = {
 	}
 }
 
-insult_pirates_asg = {
+insult_pirates_from_asg = {
 	trigger = {
 		culture_group = pirate_group
 		FROM = {
@@ -1634,33 +1634,33 @@ insult_from_xautak = {
 # Intrafaith
 ###########################
 
-insult_armadyl_incorp_corp = {
-	trigger = {
-		religion = armadyl
-		has_church_aspect = corporealists_aspect
-		NOT = { has_church_aspect = incorporealists_aspect }
-		FROM = {
-			religion = armadyl
-			has_church_aspect = incorporealists_aspect
-			NOT = { has_church_aspect = corporealists_aspect }
-		}
-		NOT = { current_age = age_of_divination }
-	}
-}
+# insult_armadyl_incorp_corp = {
+# 	trigger = {
+# 		religion = armadyl
+# 		has_church_aspect = corporealists_aspect
+# 		NOT = { has_church_aspect = incorporealists_aspect }
+# 		FROM = {
+# 			religion = armadyl
+# 			has_church_aspect = incorporealists_aspect
+# 			NOT = { has_church_aspect = corporealists_aspect }
+# 		}
+# 		NOT = { current_age = age_of_divination }
+# 	}
+# }
 
-insult_armadyl_corp_incorp = {
-	trigger = {
-		religion = armadyl
-		has_church_aspect = incorporealists_aspect
-		NOT = { has_church_aspect = corporealists_aspect }
-		FROM = {
-			religion = armadyl
-			has_church_aspect = corporealists_aspect
-			NOT = { has_church_aspect = incorporealists_aspect }
-		}
-		NOT = { current_age = age_of_divination }
-	}
-}
+# insult_armadyl_corp_incorp = {
+# 	trigger = {
+# 		religion = armadyl
+# 		has_church_aspect = incorporealists_aspect
+# 		NOT = { has_church_aspect = corporealists_aspect }
+# 		FROM = {
+# 			religion = armadyl
+# 			has_church_aspect = corporealists_aspect
+# 			NOT = { has_church_aspect = incorporealists_aspect }
+# 		}
+# 		NOT = { current_age = age_of_divination }
+# 	}
+# }
 
 ###########################
 #To governments

@@ -16,10 +16,6 @@ country_event = {
 	
 	immediate = {
 	}
-
-	mean_time_to_happen = {
-		months = 12
-	}
 	
 	option = {
 		name = flavor_wss.1.a #North we go!
