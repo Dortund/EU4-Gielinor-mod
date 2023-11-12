@@ -6,6 +6,7 @@
  blood_power_mechanic:0 "Blood Power"
  blood_power_power_1:0 "Blood Power"
  monthly_blood_power_power_1:0 "Monthly Blood Power"
+ blood_power_power_1_gain_modifier:0 "Blood Power Gain Modifier"
  blood_power_drain_hope:0 "Drain Hope"
  blood_power_drain_hope_desc:0 "There is nothing more delicious than the taste of hope. Let us drain it forcefully from those who still cling to their lesser gods.\n\n"
  blood_power_drain_hope_1_tooltip:0 "\nA random province not in the Chaos religious group will be converted to the §YZamorakian§! faith.\nProvinces with the active triggered modifiers §YReligious Centre§! or §YDescendents of Hallowvale§! are not affected.\n\nUpgrading your Government Rank will cause more provinces to be converted per interaction."

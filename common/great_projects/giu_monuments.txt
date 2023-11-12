@@ -6663,7 +6663,9 @@ great_project_hole_in_the_world = {
 				religion = suzaku
 				has_owner_religion = yes
 			}
-			absolutism = 50
+			owner = {
+				absolutism = 50
+			}
 		}
 	}
 
@@ -6679,7 +6681,9 @@ great_project_hole_in_the_world = {
 				religion = suzaku
 				has_owner_religion = yes
 			}
-			absolutism = 50
+			owner = {
+				absolutism = 50
+			}
 		}
 	}
 
@@ -6689,7 +6693,9 @@ great_project_hole_in_the_world = {
 				religion = suzaku
 				has_owner_religion = yes
 			}
-			absolutism = 50
+			owner = {
+				absolutism = 50
+			}
 		}
 	}
 	

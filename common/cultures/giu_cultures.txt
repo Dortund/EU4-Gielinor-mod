@@ -3321,7 +3321,7 @@ mechanical_group = {
 	}
 }
 
-gorago_group = {
+gorajo_group = {
 	graphical_culture = northamericagfx
 
 	gorajo = {

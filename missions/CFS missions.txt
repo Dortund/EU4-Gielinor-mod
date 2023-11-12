@@ -423,7 +423,7 @@ canifis_missions_3 = {
 				}
 			}
 			army_size = 20
-			development = 100
+			total_development = 100
 		}
 		effect = {
 			if = {

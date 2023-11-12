@@ -384,7 +384,7 @@ country_event = {
 	
 	trigger = {
 		tag = MYT
-		owns_province = 113
+		owns = 113
 	 	overlord_of = CFS
 	}
 
@@ -457,7 +457,7 @@ country_event = {
 		MYT = {
 			owns_core_province = 140
 		}
-		owns_province = 125
+		owns = 125
 		current_age = age_of_humans
 	}
 
