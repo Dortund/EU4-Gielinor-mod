@@ -13,7 +13,7 @@ country_event = {
 
 	trigger = {
 		46 = {
-			owner = ROOT
+			owned_by = ROOT
 			NOT = { culture = imcando }
 			trade_goods = refined_products
 		}
@@ -38,7 +38,7 @@ country_event = {
 
 	trigger = {
 		46 = {
-			owner = ROOT
+			owned_by = ROOT
 			culture = imcando
 			NOT = { trade_goods = refined_products }
 		}
