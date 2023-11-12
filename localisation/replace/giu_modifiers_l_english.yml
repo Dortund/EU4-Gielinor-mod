@@ -44,6 +44,11 @@
  desc_vampyric_kingdom_insufficient_food:0 "Our realm has too many vampyres to adequately feed."
  vampyric_kingdom_tainted_blood_of_mortton:0 "Tainted Blood of Mort'ton"
  desc_vampyric_kingdom_tainted_blood_of_mortton:0 "The affliction of Mort'ton makes the village wholly unsuitable for tithing."
+
+# Blisterwood
+ vampyre_blisterwood_weapons:0 "Blisterwood possession"
+ desc_vampyre_blisterwood_weapons:0 "The Blisterwood tree is in the hands of our enemies, allowing them to deploy Blisterwood weapons against us."
+
  
 ####################
 # Government Modifiers

@@ -254,31 +254,26 @@ MYT_descendants_of_hallowvale = {
 
 MYT_blisterwood_tree = {
 	potential = {
-		owner = {
-			culture_group = vampyric
-		}
+		always = yes
 	}
 	trigger = {
 		controller = {
 			NOT = {
-				culture_group = vampyric
+				culture_group = vampyre_group
 			}
 		}
 	}
-	shock_damage_received = 0.1
-	defensiveness = -0.05
+	# shock_damage_received = 0.1
+	# defensiveness = -0.05
+	# Triggers 'vampyre_blisterwood_weapons' triggered effect
 }
 MYT_the_arboretum = {
 	potential = {
-		owner = {
-			culture_group = vampyric
-		}
+		always = yes
 	}
 	trigger = {
 		controller = {
-			NOT = {
-				culture_group = vampyric
-			}
+			culture_group = vampyre_group
 		}
 	}
  	local_defensiveness = 0.2

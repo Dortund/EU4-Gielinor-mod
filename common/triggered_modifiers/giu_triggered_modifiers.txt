@@ -674,3 +674,32 @@ vampyric_kingdom_tainted_blood_of_mortton = {
 	}
 	monthly_blood_power_power_1 = -0.1
 }
+
+###########################################
+# Blisterwood
+###########################################
+
+vampyre_blisterwood_weapons = {
+	potential = {
+		139 = {
+			has_province_modifier = MYT_blisterwood_tree
+		}
+	}
+	trigger = {
+		culture_group = vampyre_group
+		139 = {
+			has_active_triggered_province_modifier = MYT_blisterwood_tree
+		}
+		OR = {
+			any_known_country = {
+				owns = 139
+				war_with = ROOT
+			}
+			139 = {
+				owned_by = ROOT
+			}
+		}
+	}
+	shock_damage_received = 0.1
+	defensiveness = -0.05
+}
