@@ -30,7 +30,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 41		# Falador
-				province_id = 50		# Taverley
+				province_id = 49		# Taverley
 				province_id = 51		# Burthorpe
 				province_id = 33		# Port Lina
 			}
