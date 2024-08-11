@@ -154,8 +154,27 @@ on_bi_yearly_pulse_3 = {
 		100 = kourendgov.8 #LOV vs PCL
 		100 = kourendgov.9 #LOV vs SYZ
 		100 = kourendgov.10 #PCL vs SYZ
+		
 	}
 }
+
+on_bi_yearly_pulse_5 = {
+	random_events = { #all these were shifted from on_bi_yearly_pulse_1
+		# Saradominist Events
+		30 = saradomin_flavor.1 #About an issue that shouldn't come up constantly
+		20 = saradomin_flavor.2 #Stability event, needs to be rare for balance
+		100 = saradomin_flavor.3
+		100 = saradomin_flavor.4
+		100 = saradomin_flavor.5
+		100 = saradomin_flavor.6
+		20 = saradomin_flavor.7 #Rarer because it's the equivalent of the Cardinal in Administration
+		100 = saradomin_flavor.8
+		100 = saradomin_flavor.9
+		
+		500 = 0
+	}
+}
+
 
 on_thri_yearly_pulse_2 = {
 	random_events = {

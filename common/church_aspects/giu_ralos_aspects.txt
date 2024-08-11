@@ -22,18 +22,24 @@ internal_investment_aspect = {
 	trigger = {
 		church_power = 50
 		manpower_percentage = 0.1
+		any_owned_province = {
+			NOT = { base_production = 10 }
+		}
 	}
 	effect = {
 		add_yearly_manpower = -1
-		random_owned_province = { 
-			add_base_production = 2
+		random_owned_province = {
+			limit = {
+				NOT = { base_production = 10 }
+			}
+			add_base_production = 1
 		}
 	}
 }
 
 bastion_of_ralos_aspect = {
 	sprite = "GFX_ralos_bastion_of_ralos_aspect"
-	cost = 50
+	cost = 100
 	trigger = {
 		church_power = 50
 	}

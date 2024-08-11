@@ -1,4 +1,4 @@
-version="Beta 1.8.0"
+version="Beta 1.9.1"
 tags={
 	"Alternative History"
 	"Gameplay"
@@ -11,6 +11,7 @@ tags={
 }
 name="Runescape Mod: Gielinor Universalis"
 picture="gielunibanner.png"
+replace_path="common/ai_personalities"
 replace_path="common/bookmarks"
 replace_path="common/country_colors"
 replace_path="common/diplomatic_actions"
@@ -30,5 +31,5 @@ replace_path="history/diplomacy"
 replace_path="history/provinces"
 replace_path="history/wars"
 replace_path="gfx/loadingscreens"
-supported_version="1.36.*"
+supported_version="1.37.*"
 remote_file_id="2783633869"

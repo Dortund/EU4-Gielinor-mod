@@ -1,0 +1,156 @@
+########################################
+# Events for Cashien
+########################################
+
+namespace = flavor_csn
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_csn.1
+	title = flavor_csn.1.t #Commendation from the Temple Knights
+	desc = flavor_csn.1.d #The Temple Knights have been impressed with our recent efforts to build a stronger state directly aligned with their interests. In a celebratory meeting between their leader and [Root.Monarch.GetTitle] and [Root.Monarch.GetName], a curious question arises: is it ever necessary to work behind Entrana's back for the good of Saradomin?
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_csn.1.a #The Church of Saradomin is the closest organisation to Saradomin himself. He cannot defy it.
+		add_prestige = 10
+		add_papal_influence = 10
+		
+		custom_tooltip = CSN_light_path_tooltip
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_csn.1.b #I'm listening...
+		
+		custom_tooltip = CSN_shadowy_path_tooltip
+		set_country_flag = CSN_shadowy_path_flag
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_csn.2
+	title = flavor_csn.2.t #Whispered Secrets
+	desc = flavor_csn.2.d #Why the Temple Knights wanted us to develop Camdozaal was initially unclear, but a strange chasm caught [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s attention. It soon became clear that a terrible secret lies deep beneath Ice Mountain that the Temple Knights believe we could eliminate.
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_csn.2.a #It shall be done.
+		set_country_flag = CSN_fight_the_whisperer
+		custom_tooltip = csn_fight_the_whisperer_tooltip
+		46 = {
+			spawn_rebels = {
+				type = xautak_rebels
+				size = 4
+				leader = "The Whisperer"
+				female = yes
+				unrest = 10
+				should_take_capital = yes
+				win = yes
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_csn.2.b #Whatever's in there is safely sealed away. We will go no further.
+		add_prestige = -25
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = flavor_csn.3
+	title = flavor_csn.3.t #Defeat of the Whisperer
+	desc = flavor_csn.3.d #The strange beast from under Ice Mountain is subdued, and the mysterious city in the depths from which it came now seem dormant. A representative of the Temple Knights comes forward, asking if we know now our purpose of being at Ice Mountain.
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		has_country_flag = CSN_fight_the_whisperer
+		NOT = { religion = xautak }
+		NOT = { religion = zaros }
+		NOT = {	num_of_rebel_armies = 1 }
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = {
+			any_owned_province = {
+				religion = xautak
+			}
+		}
+		owns_core_province = 46
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_csn.3.a #It was because the truth lies in this lost city of Lassar.
+		change_religion = zaros
+		46 = {
+			change_religion = zaros
+		}
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			46 = {
+				add_great_project_tier = {
+					type = great_project_lassar_undercity
+					tier = 1
+				}
+			}
+		}
+		else = {
+			46 = {
+				add_province_modifier = {
+					name = CSN_secrets_of_lassar
+					duration = -1				
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_csn.3.b #Our purpose was to save Asgarnia from evil!
+		add_country_modifier = {
+			name = CSN_secret_guardian_of_asgarnia
+			duration = -1
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}

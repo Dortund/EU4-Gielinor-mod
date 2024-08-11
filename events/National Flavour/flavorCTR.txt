@@ -1,0 +1,66 @@
+########################################
+# Events for Cam Torum
+########################################
+
+namespace = flavor_ctr
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_ctr.1 
+	title = flavor_ctr.1.t #Runes of Cam Torum
+	desc = flavor_ctr.1.d #Cam Torum is the sole supplier of runes in Varlamore, but the secret of where these runes are sourced from is so tightly controlled that we are limited in our capacity to research magic. An investment into expanding our supplies of runes could rectify this problem but risks revealing our secrets.
+	picture = RUNECRAFTING_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = CTR
+		is_institution_enabled = runecrafting
+		NOT = { has_institution = runecrafting }
+		owns_core_province = 1490
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_ctr.1.a #The craft of the Imcando deserves full funding!
+		add_years_of_income = -1.5
+		add_adm_power = -100
+		1490 = {
+			change_trade_goods = runes
+			add_institution_embracement = {
+				which = runecrafting
+				value = 50
+			}
+		}
+		add_country_modifier = { 
+			name = CTR_loose_lips
+			duration = 9125
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = flavor_ctr.1.b #Keep the investment modest.
+		add_years_of_income = -0.25
+		1490 = {
+			add_institution_embracement = {
+				which = runecrafting
+				value = 50
+			}
+		}
+		add_country_modifier = { 
+			name = CTR_loose_lips
+			duration = 3650
+		}
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = flavor_ctr.1.c #Let us keep our secrets.
+		add_country_modifier = { 
+			name = CTR_strict_control_of_runes
+			duration = 9125
+		}
+		ai_chance = { factor = 0 }
+	}
+}

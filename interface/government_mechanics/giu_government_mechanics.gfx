@@ -41,6 +41,24 @@ spriteTypes = {
 		transparencecheck = yes
 	}
 	
+	### CRUSADER_ZEAL ###
+
+	spriteType = {
+		name = "GFX_crusader_zeal_frame"
+		texturefile = "gfx/interface/government_mechanics/crusader_zeal/crusader_zeal_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_crusader_zeal_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/crusader_zeal/crusader_zeal_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/crusader_zeal/crusader_zeal_progress_bar_empty.dds"
+		size = { x = 260 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
 	
 	### ELVEN DESPERATION ###
 

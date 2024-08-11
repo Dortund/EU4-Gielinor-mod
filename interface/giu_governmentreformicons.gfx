@@ -42,6 +42,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "government_reform_icon_figurehead_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//icon_figurehead_monarchy.dds"
+	}
+	
+	spriteType = {
 		name = "government_reform_icon_great_khanate"
 		texturefile = "gfx//interface//government_reform_icons//icon_great_khanate.dds"
 	}
@@ -601,6 +606,11 @@ spriteTypes = {
 	spriteType = {
 		name = "government_reform_icon_quidamortem_boss_nation"
 		texturefile = "gfx//interface//government_reform_icons//icon_quidamortem_boss_nation.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_reformed_gunnite_horde"
+		texturefile = "gfx//interface//government_reform_icons//icon_reformed_gunnite_horde.dds"
 	}
 	
 	spriteType = {

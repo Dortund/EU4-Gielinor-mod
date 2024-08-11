@@ -34,6 +34,7 @@ add_province_triggered_modifier = religious_center
 	owner = ASG
 	controller = ASG
 	add_core = ASG
+	temple = yes
 }
 
 2044.2.15 = {

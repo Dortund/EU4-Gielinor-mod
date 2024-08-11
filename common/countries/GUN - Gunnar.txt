@@ -4,17 +4,15 @@ graphical_culture = westerngfx
 
 color = { 117 81 48 }
 
-revolutionary_colors = { 2 10 6 }
-
-historical_idea_groups = {
-	trade_ideas
-	defensive_ideas
+historical_idea_groups = { #Updated
 	offensive_ideas
-	spy_ideas
-	diplomatic_ideas
-	economic_ideas
-	religious_ideas
-	innovativeness_ideas
+	horde_gov_ideas
+	maritime_ideas
+	quantity_ideas
+	administrative_ideas
+	naval_ideas
+	exploration_ideas
+	expansion_ideas
 }
 
 monarch_names = {
@@ -30,8 +28,8 @@ monarch_names = {
 	"Einarr #0" = 1
 	"Fafner #0" = 1
 	"Fasolt #0" = 1
-	"Gunnar #0" = 1
-	"Gunthor #0" = 1
+	"Gunnar #0" = 5
+	"Gunthor #0" = 5
 	"Gutrune #0" = 1
 	"Haakon #0" = 1
 	"Hagen #0" = 1
@@ -53,7 +51,7 @@ monarch_names = {
 	"Yadech #0" = 1
 
 	"Aesa #0" = -1
-	"Gudrun #0" = -1
+	"Gudrun #0" = -5
 	"Haba #0" = -1
 	"Larrissa #0" = -1
 	"Litara #0" = -1

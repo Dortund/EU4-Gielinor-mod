@@ -288,6 +288,7 @@ varlamore_region = {
 		north_tlati_area
 		salvager_shore_area
 		proudspire_area
+		ralos_rise_area
 		cam_torum_area
 		west_avium_area
 		east_avium_area

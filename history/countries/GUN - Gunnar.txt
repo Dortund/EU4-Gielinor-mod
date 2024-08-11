@@ -9,18 +9,22 @@ secondary_religion = northern_pantheon
 technology_group = fremenniktechgroup
 capital = 369 #near Mountain Camp
 national_focus = MIL
+historical_friend = REL
+historical_friend = MNT
 
 2042.3.15 = {
 	monarch = {
 		name = "Gunnar"
-		dynasty = "Magecrusher"
+		dynasty = "Viljarsson"
 		birth_date = 2024.2.7
-		adm = 3
-		dip = 5
+		adm = 2
+		dip = 3
 		mil = 6
 	}
 	clear_scripted_personalities = yes
-	add_ruler_personality = tactical_genius_personality
+	add_ruler_personality = conqueror_personality
+	add_ruler_personality = zealot_personality
+	add_ruler_personality = naive_personality
 }
 
 2044.2.15 = {

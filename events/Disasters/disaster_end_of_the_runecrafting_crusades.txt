@@ -1,0 +1,253 @@
+namespace = end_of_the_runecrafting_crusades
+
+########################################
+# End of the Runecrafting Crusades
+########################################
+
+# Start
+country_event = {
+	id = end_of_the_runecrafting_crusades.1
+	title = end_of_the_runecrafting_crusades.1.t #End of the Runecrafting Crusades
+	desc = end_of_the_runecrafting_crusades.1.d #Countless Barbarians flocked to the banner of Gunnar Viljarsson to destroy those who practiced Runecrafting, but the initial momentum has stalled and with it the ability of the Gunnites to hold onto what they have taken. Gunnar's initial singleminded approach to governance is no longer workable and it must be reformed or abandoned.
+	picture = RUNECRAFTING_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = GUN_end_of_rc_start
+	}
+	
+	option = {
+		name = end_of_the_runecrafting_crusades.1.a #It is a battle well-fought - but now we must settle down.
+		custom_tooltip = GUN_surrender_tooltip #This will immediately end the disaster but §Rreleases every province not in the capital region§! and §Rreleases every subject nation§!.
+		remove_government_reform = runecrafting_crusader
+		release_all_subjects = yes
+		every_owned_province = {
+			limit = {
+				NOT = { is_in_capital_area = yes }
+			}
+			release_all_possible_countries = yes
+		}
+		custom_tooltip = GUN_surrender_relations_boost_tooltip # Ending the Runecrafting Crusades in this manner will temporarily boost relations with all known non-rival countries by §G100§!.
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					NOT = { is_rival = ROOT }
+					NOT = { is_enemy = ROOT }
+				}
+				reverse_add_opinion  = {
+					who = ROOT
+					modifier = gun_ended_runecrafting_crusades
+				}
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = end_of_the_runecrafting_crusades.1.b #We shall stand and fight!
+		custom_tooltip = GUN_holding_on_tooltip #Taking this option will attempt to reform the Gunnite realm into something more stable.
+		random_owned_province = {
+			limit = {
+				NOT = { is_in_capital_area = yes }
+				NOT = { accepted_culture = ROOT }
+			}
+			nationalist_rebels = 3
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = end_of_the_runecrafting_crusades.2
+	title = end_of_the_runecrafting_crusades.2.t # Preachers and Missionaries
+	desc =  end_of_the_runecrafting_crusades.2.d # To much of Gielinor, we are viewed as godless heathens. Missionaries have decided that if only we converted to their ways, we would stop our conquests. How should we handle this hassle?
+	picture = RUNECRAFTING_eventPicture
+	
+	trigger = {
+		OR = {
+			religion = v
+			religion = northern_pantheon
+		}
+		has_disaster = end_of_the_runecrafting_crusades
+		any_owned_province = {
+			NOT = { has_owner_religion = yes }
+			NOT = { has_owner_secondary_religion = yes }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+	
+	option = {
+		name = end_of_the_runecrafting_crusades.2.a #Fight them off!
+		add_government_power = {
+			mechanic_type = crusader_zeal_mechanic
+			power_type = crusader_zeal_power_1
+			value = 5
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { has_owner_religion = yes }
+				NOT = { has_owner_secondary_religion = yes }
+			}
+			spawn_rebels = {
+				size = 2
+				type = religious_rebels
+			}
+		}
+	}
+	option = {
+		name = end_of_the_runecrafting_crusades.2.b #Make concessions.
+		add_government_power = {
+			mechanic_type = crusader_zeal_mechanic
+			power_type = crusader_zeal_power_1
+			value = -5
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { has_owner_religion = yes }
+				NOT = { has_owner_secondary_religion = yes }
+			}
+			add_local_autonomy = 25
+		}
+	}
+}
+
+country_event = {
+	id = end_of_the_runecrafting_crusades.3
+	title = end_of_the_runecrafting_crusades.3.t # Preachers of the Old Ways
+	desc =  end_of_the_runecrafting_crusades.3.d # More militant followers of the Northern Pantheon are angered at the Gunnites' situation, blaming the lack of recent successes in the Runecrafting Crusades on the abandonment of the old religion.
+	picture = RUNECRAFTING_eventPicture
+	
+	trigger = {
+		NOT = { religion = v }
+		NOT = { religion = northern_pantheon }
+		has_disaster = end_of_the_runecrafting_crusades
+		any_owned_province = {
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+	
+	option = {
+		name = end_of_the_runecrafting_crusades.3.a #Fight them off!
+		random_owned_province = {
+			limit = {
+				has_owner_accepted_culture = yes
+			}
+			spawn_rebels = {
+				size = 2
+				type = northern_pantheon_rebels
+			}
+		}
+	}
+	option = {
+		name = end_of_the_runecrafting_crusades.3.b #Make concessions.
+		random_owned_province = {
+			limit = {
+				has_owner_accepted_culture = yes
+			}
+			add_local_autonomy = 50
+			change_religion = northern_pantheon
+		}
+	}
+}
+
+country_event = {
+	id = end_of_the_runecrafting_crusades.4
+	title = end_of_the_runecrafting_crusades.4.t # Vast Nationalist Force
+	desc =  end_of_the_runecrafting_crusades.4.d # Strong nationalist sentiments persist in some of our captured territories, among people who do not care to be ruled by Barbarians. We are beset by rebels!
+	picture = RUNECRAFTING_eventPicture
+	
+	trigger = {
+		has_disaster = end_of_the_runecrafting_crusades
+		any_owned_province = {
+			OR = {
+				is_core = ASG
+				is_core = MST
+				is_core = ADO
+				is_core = KDR
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = end_of_the_runecrafting_crusades.4.a # We shall face them!
+		add_government_power = {
+			mechanic_type = crusader_zeal_mechanic
+			power_type = crusader_zeal_power_1
+			value = 5
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					is_core = ASG
+					is_core = MST
+					is_core = ADO
+					is_core = KDR
+				}
+			}
+			nationalist_rebels = 3
+		}
+	}
+}
+
+country_event = {
+	id = end_of_the_runecrafting_crusades.100
+	title = end_of_the_runecrafting_crusades.100.t #Gunnar's Legacy Finalised
+	
+	desc = {
+		trigger = {
+			NOT = { has_reform = runecrafting_crusader }
+		}
+		desc = end_of_the_runecrafting_crusades.100.da #Momentum for the Runecrafting Crusades has faded, and the Barbarians that still align themselves to Gunnar's banner have moved to a less unstable form of governance. It might not be the world-shattering force it once was, but Barbarians are resilient like few others.
+	}
+	desc = {
+		trigger = {
+			has_reform = runecrafting_crusader
+		}
+		desc = end_of_the_runecrafting_crusades.100.db #The age of the Runecrafting Crusades could not persist forever, but perhaps the Gunnite realm shall. Those loyal to Gunnar now are not merely led by fanaticism against runecrafting, but through the bonds they now have with each other. The new political situation that has emerged might be less capable of crushing opposition, but it is a lot more stable.
+	}
+	
+	picture = RUNECRAFTING_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		end_disaster = end_of_the_runecrafting_crusades
+		set_country_flag = GUN_end_of_rc_finish
+		clr_country_flag = GUN_end_of_rc_start
+		set_global_flag = GUN_end_of_crusades_flag
+	}
+
+	option = {
+		name = end_of_the_runecrafting_crusades.100.a #What remains is Gunnar's Ground!
+		trigger = {
+			NOT = { has_reform = runecrafting_crusader }
+		}
+		add_stability = 1
+		
+	}
+	option = {
+		name = end_of_the_runecrafting_crusades.100.b #Victory is ours.
+		trigger = {
+			has_reform = runecrafting_crusader
+		}
+		add_government_reform = reformed_gunnite_horde
+		add_stability = 1
+	}
+}

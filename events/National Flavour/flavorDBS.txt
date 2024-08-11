@@ -17,6 +17,10 @@ country_event = {
 		days = 1
 	}
 	
+	immediate = {
+		set_country_flag = DBS_guthixian_dealings_flag
+	}
+	
 	option = {
 		name = flavor_dbs.1.a #Let's take a tolerant approach.
 		every_owned_province = {
@@ -26,6 +30,7 @@ country_event = {
 				duration = 7300
 			}
 		}
+		set_country_flag = DBS_nice_to_guthix_flag
 		ai_chance = {
 			factor = 0.9
 		}
@@ -38,7 +43,7 @@ country_event = {
 				name = "DBS_harsh_guthix_treatment"
 				duration = 7300
 			}
-		 }
+		}
 	}
 }
 
@@ -58,6 +63,10 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = {
 		months = 12
+	}
+	
+	immediate = {
+		set_country_flag = DBS_saradominist_dealings_flag
 	}
 	
 	option = {
@@ -87,6 +96,11 @@ country_event = {
 		months = 12
 	}
 	
+	immediate = {
+		set_country_flag = DBS_zamorakian_dealings_flag
+		set_country_flag = kinshra_appear_event
+	}
+	
 	option = {
 		name = flavor_dbs.3.a #Arise, Kinshra!
 		add_country_modifier = {
@@ -114,12 +128,58 @@ country_event = {
 	}
 }
 
-
-
-
-
-
-
-
-
-
+country_event = {
+	id = flavor_dbs.4
+	title = flavor_dbs.4.t #The Direction of Faith
+	desc = flavor_dbs.4.d #Though Asgarnia - and indeed the Donblas tribe - has been historically dominated by the Saradominist faith, lately new ideas have inspired more of our people to consider alternatives.
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_dbs.4.a #We must stay the course with Saradomin.
+		add_papal_influence = 20
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_dbs.4.b #Our leniency to Guthix has opened our hearts to his teachings.
+		trigger = {
+			has_country_flag = DBS_nice_to_guthix_flag
+			guthix = 0
+		}
+		change_religion = guthix
+		capital_scope = {
+			change_religion = guthix
+		}
+		add_country_modifier = {
+			name = DBS_fresh_fervour
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_dbs.4.c #Valzin was right - the Donblas should side with Zamorak.
+		trigger = {
+			has_country_flag = DBS_black_knights_flag
+		}
+		change_religion = zamorak
+		capital_scope = {
+			change_religion = zamorak
+		}
+		add_country_modifier = {
+			name = DBS_fresh_fervour
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

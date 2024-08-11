@@ -53,3 +53,8 @@
  giu_prices.11.d:0 "The first Grand Exchange was intended to facilitate trade of all kinds of items - but with two rival Grand Exchanges elsewhere in Gielinor, subject to differing taxes, tariffs and trade rules, trade has become more confusing than ever."
  giu_prices.11.a:0 "Panic sell wands!"
  EXCHANGE_CONFUSION:0 "Panic sell wands"
+ 
+ giu_prices.12.t:0 "Zanaris Demands Cabbages!"
+ giu_prices.12.d:0 "Fairies live in a nexus of worlds, from Gielinor to distant places where crops thought of as common are unknown. One of these crops are cabbages, which are so alien to some fairies they are willing to pay handsomely for them."
+ giu_prices.12.a:0 "Show me the green!"
+ ZANARIAN_DEMAND:0 "Demand from Zanaris"

@@ -115,6 +115,22 @@ asg_evil_response = {
 	opinion = -150
 	yearly_decay = 2
 }
+asg_settled_misthalin_border = {
+	opinion = 100
+	yearly_decay = 1
+}
+asg_statement_of_hostility = {
+	opinion = -50
+	yearly_decay = 1
+}
+asg_declined_border_settlement = {
+	opinion = -50
+	yearly_decay = 1
+}
+asg_expanded_runecrafting_altars = {
+	opinion = -100
+	yearly_decay = 1
+}
 
 #Cadarn
 
@@ -201,6 +217,14 @@ gun_runecrafting_aligned = {
 }
 gun_runecrafting_friend = {
 	opinion = 150
+	yearly_decay = 2
+}
+gun_ended_runecrafting_crusades = {
+	opinion = 100
+	yearly_decay = 3
+}
+gun_destroyer_of_camdozaal = {
+	opinion = -100
 	yearly_decay = 2
 }
 
@@ -307,6 +331,13 @@ mst_asgarnian_traitor = {
 msh_fellow_pirates = {
 	opinion = 100
 	yearly_decay = 1
+}
+
+#Taverley
+
+tav_defeated_heresy = {
+	opinion = 50
+	yearly_decay = 2
 }
 
 #Zarosian Empire

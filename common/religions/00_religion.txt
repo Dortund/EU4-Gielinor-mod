@@ -678,7 +678,7 @@ karamjan_group = {
 			local_missionary_strength = -0.02
 		}
 				
-		heretic = { GARA_DUL }
+		heretic = { BROODOO }
 
 		fervor = yes
 	}
@@ -2180,7 +2180,7 @@ order_group = {
 		}
 		
 		hre_heretic_religion = yes
-		heretic = { OLD_DOMINA }
+		heretic = { HAM }
 	}
 	
 	armadyl = {
@@ -2285,7 +2285,7 @@ transcendent_group = {
 		}
 		uses_isolationism = yes
 		
-		heretic = { CRYSTAL_WORSHIPPER }
+		heretic = { CRYSTALLINE_SHAPESHIFTER }
 	}
 	
 	dark_lord = {
@@ -2352,7 +2352,7 @@ elder_god_group = {
 		religious_reforms = yes
 		reform_tooltip = FUL_REFORM_TOOLTIP
 		
-		heretic = { HYDRA }
+		heretic = { TZKAL_ZUK }
 	}
 	
 	jas = {
@@ -2375,7 +2375,7 @@ elder_god_group = {
 		religious_reforms = yes
 		reform_tooltip = JAS_REFORM_TOOLTIP		
 		
-		heretic = { STONE_CULT }
+		heretic = { NEEDLE }
 	}
 	
 	bik = {
@@ -2393,7 +2393,7 @@ elder_god_group = {
 			local_missionary_strength = -0.02
 		}
 		
-		heretic = { MOTHER_NATURE }
+		heretic = { CROESUS }
 	}
 	
 	wen = {
@@ -2446,7 +2446,7 @@ autocratic_group = {
 		}
 		
 		fetishist_cult = yes
-		heretic = { GRAADOR }
+		heretic = { THREE_EYED_CRAVEN }
 
 	}
 	
@@ -2570,7 +2570,7 @@ hedonistic_group = {
 			local_missionary_strength = -0.02
 		}
 		
-		heretic = { KRUK }
+		heretic = { NINJA }
 		
 		misguided_heretic = yes
 		uses_piety = yes
@@ -2631,7 +2631,7 @@ horror_group = {
 		religious_reforms = yes
 		reform_tooltip = XAUTAK_REFORM_TOOLTIP
 		
-		heretic = { CLAW }
+		heretic = { UVHASTUR YOGSATHLA NYARLAHYDRA }
 
 	}
 	harmonized_modifier = harmonized_horror
@@ -2644,7 +2644,7 @@ celestial_group = {
 	flags_with_emblem_percentage = 33 # default == 0 
 	flag_emblem_index_range = { 1 57 } 
 	
-	center_of_religion = 495 #Refuge's Hope
+	center_of_religion = 1455 #The Teomat
 
 	ralos = {
 		color = { 144 146 228 }
@@ -2681,7 +2681,7 @@ celestial_group = {
 			add_prestige = -10
 		}
 		misguided_heretic = yes
-		heretic = { SOLARITE }
+		heretic = { TWILIGHT_EMISSARY }
 	}
 	ranul = {
 		color = { 149 60 53 }
@@ -2718,7 +2718,7 @@ celestial_group = {
 			add_prestige = -10
 		}
 		misguided_heretic = yes
-		heretic = { FORTHOS }
+		heretic = { TWILIGHT_EMISSARY }
 	}
 	
 	hanalan = {

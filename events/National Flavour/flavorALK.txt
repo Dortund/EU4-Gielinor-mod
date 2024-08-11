@@ -99,7 +99,7 @@ country_event = {
 			cede_province = ROOT
 			change_trade_goods = magic_supplies
 			change_province_name = "Training Arena"
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = "ALK_blue_training"
 				duration = -1
 			}
@@ -114,7 +114,7 @@ country_event = {
 			cede_province = ROOT
 			change_trade_goods = magic_supplies
 			change_province_name = "Duel Tower"
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = "ALK_red_training"
 				duration = -1
 			}
@@ -129,7 +129,7 @@ country_event = {
 			cede_province = ROOT
 			change_trade_goods = magic_supplies
 			change_province_name = "Wizards' Clearing"
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = "ALK_green_training"
 				duration = -1
 			}
@@ -145,7 +145,7 @@ country_event = {
 			cede_province = ROOT
 			change_trade_goods = magic_supplies
 			change_province_name = "Scabaras' Library"
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = "ALK_grey_training"
 				duration = -1
 			}

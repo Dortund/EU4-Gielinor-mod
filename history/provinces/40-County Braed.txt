@@ -23,10 +23,14 @@ trade_goods = advanced_ores
 
 is_city = yes
 
+center_of_trade = 1
+
 2021.10.30 = {
 	owner = ASG
 	controller = ASG
 	add_core = ASG
+	culture = south_asgarn
+	religion = saradomin
 }
 
 2100.1.1 = {

@@ -39,6 +39,7 @@ country_event = {
 			mutual = yes
 		}
 		add_dip_power = 100
+		set_country_flag = ASG_taking_in_crandorians_flag
 	}
 	option = {
 		name = flavor_asg.1.b #Forget the Crandorians! What about ourselves?
@@ -99,11 +100,16 @@ country_event = {
 		has_country_flag = DBS_white_knights_flag
 		has_country_flag = DBS_black_knights_flag
 		owns_core_province = 41
+		NOT = { has_country_flag = ASG_decided_knight_event }
 	}
 	
 	fire_only_once = yes
 	mean_time_to_happen = {
 		months = 3
+	}
+	
+	immediate = {
+		set_country_flag = ASG_decided_knight_event
 	}
 	
 	option = {
@@ -351,7 +357,7 @@ country_event = {
 	
 	fire_only_once = yes
 	mean_time_to_happen = {
-		days = 1
+		months = 12
 	}
 	
 	option = {
@@ -412,7 +418,7 @@ country_event = {
 	
 	fire_only_once = yes
 	mean_time_to_happen = {
-		days = 1
+		months = 12
 	}
 	
 	option = {
@@ -981,7 +987,7 @@ country_event = {
 		owns_core_province = 41
 		NOT = { religion = saradomin }
 		NOT = { religion = zaros }
-		has_idea = ASG_temple_knights
+		mission_completed = ASG_SARA_temple_knight_expansion
 		NOT = { has_country_modifier = ASG_retreat_of_the_temple_knights }
 	}
 	
@@ -1008,7 +1014,7 @@ country_event = {
 	trigger = {
 		tag = ASG
 		religion = saradomin
-		has_idea = ASG_temple_knights
+		mission_completed = ASG_SARA_temple_knight_expansion
 		has_country_modifier = ASG_retreat_of_the_temple_knights
 	}
 	
@@ -1034,7 +1040,7 @@ country_event = {
 		tag = ASG
 		owns_core_province = 41
 		NOT = { religion = zaros }
-		has_idea = ASG_temple_knights
+		mission_completed = ASG_SARA_temple_knight_expansion
 		NOT = { current_age = age_of_divination }
 		NOT = { has_country_flag = asg_temple_knight_secrets }
 		NOT = { has_global_flag = asg_revealed_zarosian_plot }
@@ -1102,7 +1108,7 @@ country_event = {
 		tag = ASG
 		owns_core_province = 41
 		NOT = { religion = zaros }
-		has_idea = ASG_temple_knights
+		mission_completed = ASG_SARA_temple_knight_expansion
 		NOT = { current_age = age_of_divination }
 		OR = {
 			AND = {
@@ -1567,3 +1573,1386 @@ country_event = {
 
 	}
 }
+
+country_event = {
+	id = flavor_asg.17
+	title = flavor_asg.17.t #Faithful Diplomacy
+	desc = flavor_asg.17.d #Asgarnia is united under our rule, and any attempt by Misthalin to stop us has resulted in failure. But are they not siblings in the [Root.Religion.GetName] faith? We can put past hostilities behind us for the good of all.
+	picture = MISTHALIN_WIZARDS_TOWER_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_asg.17.a #Settle the border with Misthalin once and for all.
+		custom_tooltip = ASG_misthalanian_outreach_tooltip
+		MST = {
+			country_event = {
+				id = flavor_asg.18 #The Asgarnian Proposal
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = flavor_asg.17.b #Misthalin is a sibling in faith but a rival in politics.
+		add_opinion = {
+			who = MST
+			modifier = asg_statement_of_hostility
+		}
+		add_country_modifier = {
+			name = ASG_sibling_in_faith_rival_in_politics
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_asg.17.c #We have no reason to change our current policies.
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.18
+	title = flavor_asg.18.t #The Asgarnian Proposal
+	desc = flavor_asg.18.d #Asgarnia has sent word that they wish for any of our border issues to be settled for the good of the [Root.Religion.GetName] faith. Putting aside any past tensions could provide us a mighty ally for future struggles elsewhere.
+	picture = MISTHALIN_WIZARDS_TOWER_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_asg.18.a #Let's make the deal, for the good of the faith!
+		if = {
+			limit = {
+				is_rival = ASG
+			}
+			remove_rival = ASG
+		}
+		every_province = {
+			limit = {
+				owned_by = ASG
+			}
+			remove_claim = MST
+		}
+		every_owned_province = {
+			remove_claim = ASG
+		}
+		add_historical_friend = ASG
+		add_opinion = {
+			who = ASG
+			modifier = asg_settled_misthalin_border
+		}
+		ASG = {
+			country_event = {
+				id = flavor_asg.19 #Misthalin agrees to our settlement!
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = flavor_asg.18.b #We do not need a deal with a miserable upstart.
+		add_opinion = {
+			who = ASG
+			modifier = asg_declined_border_settlement
+		}
+		ASG = {
+			country_event = {
+				id = flavor_asg.20 #Misthalin rejects our settlement.
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.19
+	title = flavor_asg.19.t #Misthalin agrees to our settlement!
+	desc = flavor_asg.19.d #Misthalin has agreed to put the past aside for the good of the [Root.Religion.GetName] faith.
+	picture = MISTHALIN_WIZARDS_TOWER_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_asg.19.a #Excellent!
+		if = {
+			limit = {
+				is_rival = MST
+			}
+			remove_rival = MST
+		}
+		add_historical_friend = MST
+		add_opinion = {
+			who = MST
+			modifier = asg_settled_misthalin_border
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.20
+	title = flavor_asg.20.t #Misthalin rejects our settlement.
+	desc = flavor_asg.20.d #Unfortunately, Misthalin has decided to reject our offer of standing together and putting our differences aside for the faith.
+	picture = MISTHALIN_WIZARDS_TOWER_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_asg.20.a #Clearly they aren't true believers.
+	}
+}
+
+country_event = {
+	id = flavor_asg.21
+	title = flavor_asg.21.t #Silence of Ice Mountain
+	desc = flavor_asg.21.d #Once, there was a great hall of Camdozaal, where dwarven hammers rung out in a symphony of metalwork - but it is no more. The Imcando have been destroyed, and Ice Mountain has never felt so cold. Still, time has passed and mourning cannot last forever. What shall be our next steps?
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_asg.21.a #Send word that Asgarnia needs dwarves.
+		45 = {
+			change_culture = kelda
+			change_religion = guthix
+			add_base_tax = 2
+			add_base_production = 3
+			add_base_manpower = 2
+		}
+		46 = {
+			change_culture = kelda
+			change_religion = guthix
+			add_base_production = 1
+		}
+		add_accepted_culture = kelda
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = flavor_asg.21.b #The minerals are ours to do as we see fit.
+		45 = {
+			add_base_production = 2
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_asg.21.c #Let Ice Mountain remain as a memorial to the fallen Imcando.
+		trigger = {
+			religion = saradomin
+		}
+		add_papal_influence = 25
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_asg.21.e #The only dwarves we care about are the dwarves of Zamorak.
+		trigger = {
+			religion = zamorak
+		}
+		45 = {
+			change_culture = chaos_dwarf
+			change_religion = zamorak
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 2
+		}
+		46 = {
+			change_culture = chaos_dwarf
+			change_religion = zamorak
+			add_base_production = 1
+			add_base_manpower = 2
+		}
+		add_accepted_culture = chaos_dwarf
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.22
+	title = flavor_asg.22.t #Traders of [Root.Capital.GetName]
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	desc = flavor_asg.22.d #Enthusiastic about the trade opportunities in [Root.GetName], adventurers have begun trading in large numbers in [Root.Capital.GetName]. Across the city, adventurer merchants stand in specific spots to sell specific wares, waving and flashing signs to attract attention.
+	trigger = {
+		tag = ASG
+		has_country_flag = ASG_owed_adventurers_flag
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+	}
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = flavor_asg.22.a #I know where to go if I want lobsters in bulk!
+		add_years_of_income = 0.15
+		add_absolutism = 10
+	}
+}
+
+country_event = {
+	id = flavor_asg.23
+	title = flavor_asg.23.t #Away with the Fairies
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	desc = flavor_asg.23.d #The Dramen Staff from Entrana, combined with a suspicious-looking shed in the swamps of Southern Misthalin, reacted to bring our scouting party to a whole different world inhabited by fairies! Better yet, these fairies appear to have a keen interest in cabbages, but to trade properly we would need to cede them some land on Gielinor.
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = flavor_asg.23.a #Fairies?! They sound way cooler than this human nonsense I'm stuck with here.
+		custom_tooltip = ZNS_will_tag_switch_tooltip
+		set_global_flag = zanaris_revealed_flag
+		3 = {
+			cede_province = ZNS
+			change_culture = fairy
+			change_religion = guthix
+		}
+		938 = {
+			cede_province = ZNS
+			change_culture = fairy
+			change_religion = guthix
+		}
+		4 = {
+			cede_province = ZNS
+			change_culture = fairy
+			change_religion = guthix
+		}
+		hidden_effect = {
+			ZNS = {
+				938 = {
+					build_to_forcelimit = {
+						infantry = 0.6
+						cavalry = 0.3
+						artillery = 0.1
+						heavy_ship = 0.2
+						light_ship = 0.4
+						transport = 0.3
+					}
+				}
+				discover_country = PREV
+			}
+			add_opinion = {
+				who = ZNS
+				modifier = ZNS_made_contact
+			}
+		}
+		switch_tag = ZNS
+	}
+	option = {
+		name = flavor_asg.23.b #Cede land to the fairies.
+		custom_tooltip = ZNS_will_cede_land_tooltip
+		set_global_flag = zanaris_revealed_flag
+		3 = {
+			cede_province = ZNS
+			change_culture = fairy
+			change_religion = guthix
+		}
+		938 = {
+			cede_province = ZNS
+			change_culture = fairy
+			change_religion = guthix
+		}
+		4 = {
+			cede_province = ZNS
+			change_culture = fairy
+			change_religion = guthix
+		}
+		hidden_effect = {
+			ZNS = {
+				938 = {
+					build_to_forcelimit = {
+						infantry = 0.6
+						cavalry = 0.3
+						artillery = 0.1
+						heavy_ship = 0.2
+						light_ship = 0.4
+						transport = 0.3
+					}
+				}
+				discover_country = PREV
+			}
+		}
+		add_opinion = {
+			who = ZNS
+			modifier = ZNS_made_contact
+		}
+	}
+	option = {
+		name = flavor_asg.23.c #We're not about to give up land to some winged menaces!
+		add_prestige = 50	
+	}
+}
+
+country_event = {
+	id = flavor_asg.24
+	title = flavor_asg.24.t #Fairies of Gielinor
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+	
+	desc = flavor_asg.24.d #The Dramen Staff from Entrana, combined with a suspicious-looking shed in the swamps of Southern Misthalin, reacted to bring our scouting party to a whole different world inhabited by fairies! Better yet, these fairies appear to have a keen interest in cabbages, but to trade properly we would need to cede them some land on Gielinor.
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = flavor_asg.24.a #Cede land to the fairies.
+		custom_tooltip = ZNS_will_cede_land_tooltip
+		set_global_flag = zanaris_revealed_flag
+		938 = {
+			cede_province = ZNS
+			change_culture = fairy
+			change_religion = guthix
+		}
+		hidden_effect = {
+			ZNS = {
+				discover_country = PREV
+			}
+		}
+		add_opinion = {
+			who = ZNS
+			modifier = ZNS_made_contact
+		}
+	}
+	option = {
+		name = flavor_asg.24.b #We're not about to give up land to some winged menaces!
+		add_prestige = 50	
+	}
+}
+
+country_event = {
+	id = flavor_asg.25
+	title = flavor_asg.25.t #The Capital of Asgarnia
+	picture = GUTHIX_BUTTERFLY_eventPicture
+	
+	desc = flavor_asg.25.d #The centre for Guthixian followers in Asgarnia has always been Taverley, yet since Guthixian followers unified Asgarnia under one rule, Falador has been considered a more natural centre of power. What is the best choice?
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = flavor_asg.25.a #The future of Asgarnia lies in Falador.
+		add_adm_power = 10
+		41 = {
+			move_capital_effect = yes
+			add_base_tax = 1
+			add_base_production = 1
+		}
+		49 = {
+			add_base_tax = -1
+			add_base_production = -1
+		}
+	}
+	option = {
+		name = flavor_asg.25.b #A Guthixian Asgarnia should be led by Taverley.
+		41 = {
+			add_base_tax = -1
+			add_base_production = -1
+		}
+		49 = {
+			move_capital_effect = yes
+			add_base_tax = 1
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				karma = 10
+			}
+			add_karma = -10
+		}
+		if = {
+			limit = {
+				NOT = { karma = -10 }
+			}
+			add_karma = 10
+		}
+	}
+	option = {
+		name = flavor_asg.25.c #[Root.Capital.GetName] is more than appropriate, thank you very much.
+		trigger = {
+			NOT = { 41 = { is_capital_of = ROOT } }
+			NOT = { 49 = { is_capital_of = ROOT } }
+		}
+		add_prestige = 10
+		capital_scope = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+		41 = {
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		49 = {
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}	
+	}
+}
+
+country_event = {
+	id = flavor_asg.26
+	title = flavor_asg.26.t #The Black Knights
+	desc = flavor_asg.26.d #There was once a knightly order who served Zamorak during the God Wars, known as the Black Knights. This order has been defunct for centuries while the Saradominist equivalent, the White Knights, persisted as the defenders of Farradorn, now Falador. Reinstating the Black Knights would strengthen our grip on Asgarnia, yet allowing the White Knights to continue could make them useful cannon fodder for Asgarnia.
+	picture = ZAMORAK_ICON_eventPicture
+	
+	is_triggered_only = yes	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = ASG_decided_knight_event
+		set_country_flag = kinshra_appear_event
+	}
+	
+	option = {
+		name = flavor_asg.26.a #The White Knights can continue to defend Falador. The Black Knights shall be kept safe atop Ice Mountain.
+		set_country_flag = DBS_white_knights_flag
+		set_country_flag = DBS_black_knights_flag
+		add_years_of_income = -0.25
+		41 = {
+			add_province_modifier = {
+				name = "ASG_white_knights_castle"
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					41 = { religion = saradomin }
+				}
+			}
+			41 = {
+				change_religion = saradomin
+			}
+		}
+		47 = {
+			add_province_modifier = {
+				name = "ASG_black_knights_fortress"
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				47 = { NOT = { religion = zamorak } }
+			}
+			change_religion = zamorak
+		}
+		add_country_modifier = {
+			name = ASG_tolerance_of_the_white_knights
+			duration = 9125
+		}
+		set_country_flag = ASG_white_falador_black_fortress
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_asg.26.b #The Kinshra are the true champions of Asgarnia; the White Knights shall be granted land away from Falador.
+		add_years_of_income = -0.25
+		41 = {
+			add_province_modifier = {
+				name = "ASG_black_knights_castle"
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					41 = { religion = zamorak }
+				}
+			}
+			41 = {
+				change_religion = zamorak
+			}
+		}
+		47 = {
+			add_province_modifier = {
+				name = "ASG_white_knights_fortress"
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				47 = { NOT = { religion = saradomin } }
+			}
+			change_religion = saradomin
+		}
+		add_country_modifier = {
+			name = ASG_tolerance_of_the_white_knights
+			duration = 9125
+		}
+		set_country_flag = ASG_black_falador_white_fortress
+		set_country_flag = DBS_white_knights_flag
+		set_country_flag = DBS_black_knights_flag
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_asg.26.c #We have seen the darkness and shall embrace it. Exile the White Knights.
+		add_years_of_income = -0.1
+		if = {
+			limit = {
+				NOT = { religion = zamorak }
+			}
+			change_religion = zamorak
+			add_country_modifier = {
+				name = "ASG_zamorakian_fervour"
+				duration = 3650
+			}
+		}
+		41 = {
+			add_province_modifier = {
+				name = "ASG_black_knights_castle"
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = "ASG_banishment_of_the_white_knights"
+			duration = 7300
+		}
+		
+		set_country_flag = ASG_black_knights_only
+		set_country_flag = DBS_black_knights_flag
+		clr_country_flag = DBS_white_knights_flag
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_asg.26.e #The knights shall co-exist in Falador!
+		add_years_of_income = -0.1
+		41 = {
+			add_province_modifier = {
+				name = "ASG_castle_of_the_twin_knights"
+				duration = -1
+			}
+		}
+		set_country_flag = ASG_shared_knight_castle
+		set_country_flag = DBS_white_knights_flag
+		set_country_flag = DBS_black_knights_flag
+		add_country_modifier = {
+			name = ASG_tolerance_of_the_white_knights
+			duration = 9125
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_asg.26.f #Who cares about the knightly orders?
+		add_stability = -1
+		add_country_modifier = {
+			name = "ASG_fall_of_the_knights"
+			duration = 7300
+		}
+		set_country_flag = ASG_no_white_nor_black
+		clr_country_flag = DBS_white_knights_flag
+		clr_country_flag = DBS_black_knights_flag
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.27 
+	title = flavor_asg.27.t #The Knightly Orders of Asgarnia
+	desc = flavor_asg.27.d #Asgarnia never traditionally followed our faith, and that is apparent with the presence of the Saradominist White Knights in Falador. They hardly align to our religious goals but giving them privileges in Asgarnia could be a good way to secure the Saradominists' loyalty.
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_country_flag = ASG_decided_knight_event
+	}
+	
+	option = {
+		name = flavor_asg.27.a #Let the White Knights have their castle.
+		41 = {
+			add_province_modifier = {
+				name = "ASG_white_knights_castle"
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					41 = { religion = saradomin }
+				}
+			}
+			41 = {
+				change_religion = saradomin
+			}
+		}
+		add_country_modifier = {
+			name = ASG_tolerance_of_the_white_knights
+			duration = 9125
+		}
+		set_country_flag = ASG_white_knights_castle
+		set_country_flag = DBS_white_knights_flag
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_asg.27.b #The White Knights are a distraction to our religious goals.
+		add_country_modifier = {
+			name = "ASG_fall_of_the_knights"
+			duration = 7300
+		}
+		set_country_flag = ASG_no_white_nor_black
+		clr_country_flag = DBS_white_knights_flag
+		clr_country_flag = DBS_black_knights_flag
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.28
+	title = flavor_asg.28.t #Declining Power of the Crown
+	desc = flavor_asg.28.d #[Root.Monarch.GetTitle] [Root.Monarch.GetName] has been growing old in years and seemingly more and more aspects of governance have been carried out by the White Knights instead. But power, once taken, is hard to relinquish, and some in Asgarnia fear this is the start of a coup.
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+		
+	trigger = {
+		tag = ASG
+		government = monarchy
+		current_age = age_of_adventurers
+		has_country_flag = DBS_white_knights_flag
+		ruler_age = 60
+	}
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	option = {
+		name = flavor_asg.28.a #The White Knights are to carry out more duties of governance.
+		custom_tooltip = asg_figurehead_monarchy_tooltip
+		add_legitimacy = -10
+		add_government_reform = figurehead_monarchy
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_asg.28.b #The White Knights need to know their place!
+		add_stability = -1
+		capital_scope = {
+			spawn_rebels = {
+				type = saradomin_rebels
+				size = 2
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.29
+	title = flavor_asg.29.t #The Principality of Burthorpe
+	desc = flavor_asg.29.d #[Root.Heir.GetTitle] [Root.Heir.GetName] has been stationed in Burthorpe to gain experience of governing Asgarnia, ahead of [Root.Heir.GetHerHis] ascension to the crown. But this ascension seems increasingly unlikely with the White Knights' control of the kingdom's governance. To this end, [Root.Heir.GetTitle] [Root.Heir.GetName] is increasingly ruling Burthorpe as a separate entity away from White Knight interference.
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+		
+	trigger = {
+		tag = ASG
+		has_reform = figurehead_monarchy
+		current_age = age_of_adventurers
+		has_country_flag = DBS_white_knights_flag
+		has_heir = yes
+		heir_age = 15
+		owns_core_province = 51
+		NOT = { exists = BTH }
+		51 = {
+			NOT = { is_capital_of = ROOT }
+		}
+	}
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	option = {
+		name = flavor_asg.29.a #Let [Root.Heir.GetTitle] [Root.Heir.GetName] run Burthorpe while the White Knights run [Root.Capital.GetName].
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = burthorpe_area
+					province_id = 946
+				}
+			}
+			cede_province = BTH
+		}
+		create_march = BTH
+		exile_heir_as = BTH_prince_anlaf_standin
+		hidden_effect = {
+			BTH = {
+				set_heir = BTH_prince_anlaf_standin
+				kill_ruler = yes
+				add_government_reform = principality_burthorpe
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.6
+						cavalry = 0.2
+						artillery = 0.2
+					}
+				}
+			}
+		}
+		add_legitimacy = 10
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_asg.29.b #This is unacceptable!
+		add_legitimacy = -10
+		51 = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+				use_heir_as_leader = yes
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.30
+	title = flavor_asg.30.t #Status of the White Knights
+	desc = flavor_asg.30.d #The White Knights are a Saradominist knightly order sworn to protect Falador from heathen threats. Until now, they have been more tied to the land than its ruling country, but properly integrating the White Knights into the realm would strengthen us both.
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	is_triggered_only = yes	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_country_flag = ASG_decided_knight_event
+	}
+	
+	option = {
+		name = flavor_asg.30.a #Integrate the White Knights into Asgarnia.
+		41 = {
+			add_province_modifier = {
+				name = "ASG_white_knights_castle"
+				duration = -1
+			}
+		}
+		set_country_flag = DBS_white_knights_flag
+		if = {
+			limit = {
+				NOT = { has_country_flag = DBS_black_knights_flag }
+			}
+			set_country_flag = ASG_white_knights_only
+		}
+		
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_asg.30.b #The White Knights are a barrier to our ambitions. Get rid of them!
+		add_stability = -1
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = DBS_black_knights_flag
+				}
+			}
+			add_country_modifier = {
+				name = "ASG_fall_of_the_knights"
+				duration = 7300
+			}
+			set_country_flag = ASG_no_white_nor_black
+			clr_country_flag = DBS_white_knights_flag
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					region = asgarnia_region
+				}
+				change_religion = zamorak
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.31
+	title = flavor_asg.31.t #The Void Knights' Second Chance
+	desc = flavor_asg.31.d #In time passed, a man by the name of Dracs Melrose received visions from Guthix himself. The visions warned of a future threat to the balance of the world, requiring the reform of ancient order of the Void Knights. However, his pleas went unheard - until now. This new Guthixian Asgarnia is ready to give the Void Knights a new chance.
+	picture = VOID_KNIGHTS_eventPicture
+	
+	is_triggered_only = yes	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_asg.31.a #The Void Knights shall prove themselves worthy.
+		if = {
+			limit = {
+				karma = 50
+			}
+			add_karma = -50
+		}
+		if = {
+			limit = {
+				NOT = { karma = -50 }
+			}
+			add_karma = 50
+		}
+		add_country_modifier = { 
+			name = ASG_void_knight_recruitment_guthix
+			duration = 7300
+		}
+		set_global_flag = asg_void_knight_return
+		set_country_flag = asg_birth_of_void_knights
+		clr_global_flag = asg_no_void_knight_return
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.32
+	title = flavor_asg.32.t #State Religion of Asgarnia
+	desc = {
+		trigger = {
+			religion = saradomin
+		}
+		desc = flavor_asg.32.da #As it was since time immemorial, so it shall be: Asgarnia follows the ways of order; the ways of Saradomin.
+	}
+	desc = {
+		trigger = {
+			religion = zamorak
+		}
+		desc = flavor_asg.32.db #Zamorakians were always the underdogs in Asgarnia - but we have pulled out a victory and claimed the land for Lord Zamorak!
+	}
+	desc = {
+		trigger = {
+			religion = guthix
+		}
+		desc = flavor_asg.32.dc #The needs of balance requires the teachings of Guthix to be expanded throughout Asgarnia. As such, it shall be the country's official religion going forward.
+	}
+	desc = {
+		trigger = {
+			religion = brassicaprime
+		}
+		desc = flavor_asg.32.dd #While they were out praying, we studied the cabbage. The perfect form, the delicious leaves. Who is laughing now? WHO'S LAUGHING NOW?!
+	}
+	desc = {
+		trigger = {
+			NOT = { religion = saradomin }
+			NOT = { religion = zamorak }
+			NOT = { religion = guthix }
+			NOT = { religion = brassicaprime }
+		}
+		desc = flavor_asg.32.de #Little did the people of Asgarnia suspect that the [Root.Religion.GetName] ways would triumph! Our subjects are ill-prepared for this strange new religion so we don't have centuries of precedent to build on, but that's fine! We will do what we can.
+	}
+	
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	is_triggered_only = yes	
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag = asg_define_religious_missions_flag
+	}
+	
+	option = {
+		name = flavor_asg.32.a #So it was, so it shall be.
+		trigger = {
+			religion = saradomin
+		}
+		custom_tooltip = ASG_state_religion_saradomin #Unlocks §BSaradominist§! religious missions for Asgarnia.
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = flavor_asg.32.b #The underdog triumphing is Chaos manifest!
+		trigger = {
+			religion = zamorak
+		}
+		custom_tooltip = ASG_state_religion_zamorak #Unlocks §RZamorakian§! religious missions for Asgarnia.
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = flavor_asg.32.c #Let us follow the path of balance.
+		trigger = {
+			religion = guthix
+		}
+		custom_tooltip = ASG_state_religion_guthix #Unlocks §GGuthixian§! religious missions for Asgarnia.
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = flavor_asg.32.d #Deliciousness is power.
+		trigger = {
+			religion = brassicaprime
+		}
+		custom_tooltip = ASG_state_religion_brassicaprime #Unlocks §lBrassican§! religious missions for Asgarnia.
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = flavor_asg.32.e #We will find our own way.
+		trigger = {
+			NOT = { religion = saradomin }
+			NOT = { religion = zamorak }
+			NOT = { religion = guthix }
+			NOT = { religion = brassicaprime }
+		}
+		custom_tooltip = ASG_state_religion_misc
+		swap_non_generic_missions = yes
+	}
+}
+
+
+country_event = {
+	id = flavor_asg.33
+	title = flavor_asg.33.t #The Kinshra
+	desc = flavor_asg.33.d #Asgarnia officially is a Saradominist nation, but Asgarnia has never solely been inhabited by Saradominists. A faction of Zamorakians known as the Black Knights are willing to serve [Root.Monarch.GetTitle] [Root.Monarch.GetName] on the condition of some measure of religious liberty.
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	is_triggered_only = yes	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_country_flag = kinshra_appear_event
+	}
+	
+	option = {
+		name = flavor_asg.33.a #Accept the offer of the Kinshra.
+		set_country_flag = DBS_black_knights_flag
+		clr_country_flag = ASG_white_knights_only
+		add_country_modifier = {
+			name = "DBS_rise_of_kinshra"
+			duration = 7300
+		}
+		
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_asg.33.b #Asgarnia is a Saradominist realm!
+		add_stability = 1
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.34
+	title = flavor_asg.34.t #The Son of Zamorak
+	desc = flavor_asg.34.d #A Zamorakian warrior-mage by the name of Iban has wandered into the Underground Pass, seeking to take it in Zamorak's name. Strange things have happened in there, however - and word has it Iban has declared himself the Son of Zamorak!
+	picture = IBAN_LAIR_eventPicture
+	
+	is_triggered_only = yes	
+	fire_only_once = yes
+	major = yes
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					338 = { is_empty = yes }
+				}
+				338 = {
+					add_core = IBN
+					cede_province = IBN
+					change_religion = zamorak
+					change_culture = soulless
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+					add_institution_embracement = {
+						which = statehood
+						value = 100
+					}
+					add_institution_embracement = {
+						which = exploration
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					339 = { is_empty = yes }
+				}
+				339 = {
+					add_core = IBN
+					cede_province = IBN
+					change_religion = zamorak
+					change_culture = soulless
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+					add_institution_embracement = {
+						which = statehood
+						value = 100
+					}
+					add_institution_embracement = {
+						which = exploration
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					982 = { is_empty = yes }
+				}
+				982 = {
+					add_core = IBN
+					cede_province = IBN
+					change_religion = zamorak
+					change_culture = dimnes
+					add_institution_embracement = {
+						which = reconstruction
+						value = 100
+					}
+					add_institution_embracement = {
+						which = architecture
+						value = 100
+					}
+					add_institution_embracement = {
+						which = runecrafting
+						value = 100
+					}
+					add_institution_embracement = {
+						which = statehood
+						value = 100
+					}
+					add_institution_embracement = {
+						which = exploration
+						value = 100
+					}
+				}
+			}
+			tirannwn_region = {
+				discover_country = IBN
+			}
+			kandarin_region = {
+				discover_country = IBN
+			}
+			IBN = {
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+				define_ruler = {
+					name = "Iban"
+					dynasty = "Zamoson"
+					culture = dimnes
+					religion = zamorak
+					adm = 4
+					dip = 3
+					mil = 4
+					age = 22
+					claim = 100
+				}
+				add_truce_with = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_asg.34.a #Sounds legitimate. I'm with him.
+		custom_tooltip = ASG_switch_to_IBN_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					owned_by = IBN
+				}
+				add_core = ROOT
+			}
+		}
+		switch_tag = IBN
+
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_asg.34.b #Ridiculous! This is *our* claim!
+		every_owned_province = {
+			limit = {
+				owned_by = IBN
+			}
+			add_core = ROOT
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = flavor_asg.35
+	title = flavor_asg.35.t #Zamorakian Relations
+	desc = {
+		trigger = {
+			has_country_flag = DBS_black_knights_flag
+		}
+		desc = flavor_asg.35.da #The involvement of the Kinshra in our day-to-day operations shows our tolerance to other faiths, and provides much-needed stability to Asgarnia.
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = ASG_no_white_nor_black }
+			NOT = { has_country_flag = DBS_black_knights_flag }
+			NOT = { has_country_flag = ASG_handle_wizards_aftermath }
+			NOT = { has_country_flag = ASG_handle_wizards_aftermath_2 }
+			NOT = { has_country_flag = DBS_zamorakian_dealings_flag }
+			NOT = { current_age = age_of_adventurers }
+			NOT = { current_age = age_of_divination }
+		}
+		desc = flavor_asg.35.db #Our dealings with the Zamorakians have lead down an interesting path, with talk of a Zamorakian order known as the Black Knights, or Kinshra.
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = DBS_black_knights_flag }
+			OR = {
+				has_country_flag = ASG_no_white_nor_black
+				has_country_flag = ASG_handle_wizards_aftermath
+				has_country_flag = ASG_handle_wizards_aftermath_2
+				has_country_flag = DBS_zamorakian_dealings_flag
+				current_age = age_of_adventurers
+				current_age = age_of_divination
+			}
+		}
+		desc = flavor_asg.35.dc #Our excellent handling of the Zamorakian situation has earned us favour with the Church of Saradomin.
+	}
+	
+	picture = ASGARNIA_FALADOR_CASTLE_eventPicture
+	
+	is_triggered_only = yes	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = flavor_asg.35.a #Excellent!
+		trigger = {
+			has_country_flag = DBS_black_knights_flag
+		}
+		if = {
+			limit = {
+				47 = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_province_modifier = ASG_black_knights_fortress
+				}
+			}
+			47 = {
+				add_base_manpower = 1
+			}
+		}
+		add_country_modifier = {
+			name = ASG_tolerance_of_the_black_knights
+			duration = 7300
+		}
+	}
+	option = {
+		name = flavor_asg.35.b #We should investigate this further.
+		trigger = {
+			NOT = { has_country_flag = ASG_no_white_nor_black }
+			NOT = { has_country_flag = DBS_black_knights_flag }
+			NOT = { has_country_flag = ASG_handle_wizards_aftermath }
+			NOT = { has_country_flag = ASG_handle_wizards_aftermath_2 }
+			NOT = { has_country_flag = DBS_zamorakian_dealings_flag }
+			NOT = { current_age = age_of_adventurers }
+			NOT = { current_age = age_of_divination }
+		}
+		country_event = {
+			id = flavor_asg.33 #The Kinshra
+			days = 1
+		}
+	}
+	option = {
+		name = flavor_asg.35.c #Excellent!
+		trigger = {
+			NOT = { has_country_flag = DBS_black_knights_flag }
+			OR = {
+				has_country_flag = ASG_no_white_nor_black
+				has_country_flag = ASG_handle_wizards_aftermath
+				has_country_flag = ASG_handle_wizards_aftermath_2
+				has_country_flag = DBS_zamorakian_dealings_flag
+				current_age = age_of_adventurers
+				current_age = age_of_divination
+			}
+		}
+		add_papal_influence = 20
+	}
+}
+
+country_event = {
+	id = flavor_asg.36
+	title = flavor_asg.36.t #The Fist of Guthix
+	desc = flavor_asg.36.d #Crux Eqal's goal of serving Guthix's interests throughout Gielinor has started with their discovery of a cave in the Wilderness with strange residual powers and a small Saradominist presence. With the combined efforts of druids and a mysterious Guthixian Guardian named Fiara, they have taken the cave to safeguard its energies, naming it the Fist of Guthix.
+	picture = GUTHIX_BUTTERFLY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		158 = {
+			add_core = FGX
+			cede_province = FGX
+			change_religion = guthix
+			change_culture = taverlian
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+			add_institution_embracement = {
+				which = architecture
+				value = 100
+			}
+			add_institution_embracement = {
+				which = runecrafting
+				value = 100
+			}
+			add_institution_embracement = {
+				which = statehood
+				value = 100
+			}
+			add_institution_embracement = {
+				which = exploration
+				value = 100
+			}
+			change_province_name = "Fist of Guthix"
+			change_trade_goods = lesser_loot
+		}
+	}
+	
+	option = {
+		name = flavor_asg.36.a #We should join Lady Fiara!
+		custom_tooltip = ASG_switch_to_FGX_tooltip
+		vassalize = FGX
+		switch_tag = FGX
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_asg.36.b #Well, as long as the land is out of the wrong Gods' hands.
+		vassalize = FGX
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+

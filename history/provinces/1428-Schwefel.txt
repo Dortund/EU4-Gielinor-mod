@@ -4,7 +4,7 @@ controller = LOV
 add_core = LOV
 tribal_owner = ---
 culture = lovakengj
-religion = guthix
+religion = saradomin
 
 discovered_by = zeantechgroup
 

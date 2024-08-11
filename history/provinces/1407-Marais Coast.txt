@@ -25,4 +25,5 @@ native_hostileness = 15
 	owner = MWU
 	controller = MWU
 	add_core = MWU
+	is_city = yes
 }

@@ -50,56 +50,84 @@ age_of_mortals = {
 	abilities = {
 		
 		ab_chain_of_claims = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				can_chain_claim = yes
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_cavalry_armies = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				cav_to_inf_ratio = 0.2
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_attack_bonus_in_capital_terrain = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				attack_bonus_in_capital_terrain = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_institution_spread_from_true_faith = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				institution_spread_from_true_faith = 0.5
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_rival_change = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				rival_change_cost = -0.5
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 0
 			}
 		}
 		ab_rival_border_fort = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				rival_border_fort_maintenance = -1.0
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_harsh_treatment = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				harsh_treatment_cost = -0.5
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
@@ -109,8 +137,12 @@ age_of_mortals = {
 			allow = {
 				tag = GNE
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				same_culture_advisor_cost = -0.5
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -118,38 +150,47 @@ age_of_mortals = {
 		}
 		
 		ab_keldagrim_technology = {
-		
 			allow = {
 				tag = KDG
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				technology_cost = -0.1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 		ab_thorobshuun_horde = {
-		
 			allow = {
 				tag = THO
+			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
 			}
 			modifier = {
 				land_forcelimit_modifier = 0.33
 				global_manpower_modifier = 0.33
 				land_maintenance_modifier = -0.25
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 		ab_mahjarrat_rule = {
-		
 			allow = {
 				tag = KZD
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_mortals }
+			}
 			modifier = {
 				infantry_fire = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -221,55 +262,83 @@ age_of_humans = {
 			effect = {
 				custom_tooltip = edict_of_absolutism_tt
 				set_country_flag = edict_of_absolutism
+				on_age_ability_taken = { age = age_of_humans }
+			}
+			modifier = {
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_free_war_taxes = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				war_taxes_cost_modifier = -1.0
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}	
 		}
 		ab_justified_wars = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				ae_impact = -0.1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}			
 		}
 		ab_autonomy = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				autonomy_change_time = -0.5
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_new_towns = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				build_cost = -0.1
 				build_time = -0.1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_organised_governance = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				state_maintenance_modifier = -0.25
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_state_religion = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				tolerance_own = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
@@ -279,8 +348,12 @@ age_of_humans = {
 			allow = {
 				tag = GUN
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				shock_damage = 0.25
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -290,8 +363,12 @@ age_of_humans = {
 			allow = {
 				tag = ASG
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				years_of_nationalism = -5
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -302,8 +379,12 @@ age_of_humans = {
 			allow = {
 				tag = KDR
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				culture_conversion_cost = -0.33
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -314,8 +395,12 @@ age_of_humans = {
 			allow = {
 				tag = MST
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_humans }
+			}
 			modifier = {
 				idea_cost = -0.15
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -324,11 +409,6 @@ age_of_humans = {
 	
 	}
 }
-
-
-
-
-
 
 
 #################################################################################
@@ -404,63 +484,91 @@ age_of_adventurers = {
 	abilities = {
 
 		ab_yearly_adventurers = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				yearly_absolutism = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 		ab_siege_blockades = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				siege_blockade_progress = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 				modifier = {
 					factor = 0
 					NOT = {
-							num_of_ports = 5
+						num_of_ports = 5
 					}
 				}
 
 			}
 		}
 		ab_mercenary_discipline = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				mercenary_discipline = 0.05
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_ship_power_propagation = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				ship_power_propagation = 0.2
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_more_ships_can_fire = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				global_naval_engagement_modifier = 0.20
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_fairy_rings = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				leader_land_manuever = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_colony_boost_development = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				colony_development_boost = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
@@ -474,8 +582,12 @@ age_of_adventurers = {
 			allow = {
 				tag = VAR
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				church_power_modifier = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -484,12 +596,16 @@ age_of_adventurers = {
 		ab_fremennik_colonies = {
 			allow = {
 				OR = {
-				tag = REL
-				tag = FEM
+					tag = REL
+					tag = FEM
 				}
+			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
 			}
 			modifier = {
 				colonists = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -499,8 +615,12 @@ age_of_adventurers = {
 			allow = {
 				tag = LCI
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				fire_damage = 0.25
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -510,8 +630,12 @@ age_of_adventurers = {
 			allow = {
 				tag = MSH
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_adventurers }
+			}
 			modifier = {
 				capture_ship_chance = 0.5
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -814,56 +938,84 @@ age_of_divination = {
 
 	abilities = {
 		ab_force_march = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				force_march_free = yes
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_no_distance_for_core = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				ignore_coring_distance = yes
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_backrow_artillery = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				backrow_artillery_damage = 0.20
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_warscore_vs_religion = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				warscore_cost_vs_other_religion = -0.25
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_prestige_per_development_from_conversion = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				prestige_per_development_from_conversion = 0.3
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_adm_efficiency = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				administrative_efficiency = 0.05
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
 			}
 		}
 		ab_global_collaboration = {
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				diplomats = 1
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 10
@@ -874,8 +1026,12 @@ age_of_divination = {
 			allow = {
 				tag = TNN
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				development_cost = -0.2
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -885,8 +1041,12 @@ age_of_divination = {
 			allow = {
 				tag = KOU
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				global_unrest = -3
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -899,8 +1059,12 @@ age_of_divination = {
 					tag = KEM
 				}
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				yearly_corruption = -0.25
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -910,9 +1074,13 @@ age_of_divination = {
 			allow = {
 				tag = MYT
 			}
+			effect = { 
+				on_age_ability_taken = { age = age_of_divination }
+			}
 			modifier = {
 				num_accepted_cultures = 3
 				promote_culture_cost = -0.5
+				num_of_age_rewards = 1
 			}
 			ai_will_do = {
 				factor = 100

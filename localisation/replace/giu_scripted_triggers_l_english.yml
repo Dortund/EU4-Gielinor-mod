@@ -1,2 +1,3 @@
 ﻿l_english:
- cda_trigger_has_elves_tooltip:0 "Has at least 3 provinces with Elven culture" 
+ asg_zam_misthalin_west_of_lum_tooltip:0 "Is a province in the §YMisthalin§! region west of the River Lum"
+ cda_trigger_has_elves_tooltip:0 "Has at least 3 provinces with §YElven§! culture"

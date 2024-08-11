@@ -8,6 +8,7 @@
  saradomin_rebels_name:0 "$RELIGION$ Zealots"
  saradomin_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  saradomin_rebels_army:0 "$RELIGION$ Army"
+ HAM:0 "H.A.M."
  
  #Reworked Saradominist content:
  solidified_papal_relations_modifier:0 "Influence in the Apostocratic Council"
@@ -357,6 +358,10 @@
  armadyl_rebels_name:0 "$RELIGION$ Zealots"
  armadyl_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  armadyl_rebels_army:0 "$RELIGION$ Army"
+ BATIERU:0 "Batieru"
+ DOTHARI:0 "Dothari"
+ MIED:0 "Mied"
+ 
  anti_war_ethos_aspect:0 "Anti-War Ethos"
  desc_anti_war_ethos_aspect:0 "Thou shalt avoid war; but, if you must fight, Believe, and thou shalt strike true."
  edict_of_invention_aspect:0 "Edict of Invention"
@@ -397,6 +402,8 @@
  zamorak_rebels_name:0 "$RELIGION$ Zealots"
  zamorak_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  zamorak_rebels_army:0 "$RELIGION$ Army"
+ IBAN:0 "Iban"
+ 
  CURRENT_PATRIARCH_AUTHORITY:0 "Current Chaos"
  PATRIARCH_DESCRIPTION:1 "Chaos represents how much your realm is embracing $RELIGION$ chaotic teachings. In $RELIGION$ provinces, high Chaos will decrease local unrest and increase the number of recruits joining the army."
  AUTHORITY_LESS_THAN:0 "Chaos is less than §Y$VAL$§!.\n"
@@ -483,6 +490,7 @@
  vampyric_rebels_name:0 "$RELIGION$ Zealots"
  vampyric_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  vampyric_rebels_army:0 "$RELIGION$ Army"
+ HAEMALCHEMY:0 "Haemalchemist"
  
  icon_dessous:0 "Icon of Dessous, Harvester of Blood"
  desc_icon_dessous:0 "A useful ally of Lowerniel Drakan in the Third Age, Dessous continued to serve Morytania in the collection of blood tithes."
@@ -506,6 +514,7 @@
  lucien_rebels_name:0 "$RELIGION$ Zealots"
  lucien_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  lucien_rebels_army:0 "$RELIGION$ Army"
+ DARK_SQUALL:0 "Dark Squall"
  
  icon_bork:0 "Icon of Bork, Strongest of Orks"
  desc_icon_bork:0 "A proud Bandosian and possessing great strength, Bork nonetheless has found his way to our side in the servitude of the Dagon'hai - and with our newfound strength under Lord Lucien, he shall serve us evermore."
@@ -527,6 +536,7 @@
  zemouregal_rebels_name:0 "$RELIGION$ Zealots"
  zemouregal_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  zemouregal_rebels_army:0 "$RELIGION$ Army"
+ TINY_ZEMOUREGAL:0 "Tiny Zemouregaller"
  
  icon_armoured_zombies:0 "Icon of Armoured Zombies"
  desc_icon_armoured_zombies:0 "Muscle memory learnt in life can be used for zombies to serve us in dead. Lord Zemouregal takes the greatest warriors among his risen and armours them so they may outlast their foes in combat."
@@ -550,6 +560,7 @@
  karamjan_rebels_name:0 "$RELIGION$ Zealots"
  karamjan_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  karamjan_rebels_army:0 "$RELIGION$ Army"
+ BROODOO:0 "Broodoo"
  
  menaphite_group:0 "Menaphite"
  menaphite:0 "Menaphite"
@@ -560,6 +571,7 @@
  menaphite_rebels_name:0 "$RELIGION$ Zealots"
  menaphite_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  menaphite_rebels_army:0 "$RELIGION$ Army"
+ DEVOURER:0 "Devourerer"
  
  RV_NO_DEITY_TITLE:0 "No Current Deity."
  RV_NO_DEITY_DESC:0 "Your religion allows you to select which god to follow as your main deity. Each deity will come with its own effects and last until your monarch changes."
@@ -598,6 +610,8 @@
  bandos_rebels_name:0 "$RELIGION$ Zealots"
  bandos_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  bandos_rebels_army:0 "$RELIGION$ Army"
+ THREE_EYED_CRAVEN:0 "Three-Eyed Craven"
+ 
  string_cults_info:0 "\n\n£DLC_rom Bandosian rulers can select a §YBattle Strategy§!, with its own bonuses and events. New Battle Strategies can be unlocked through interacting with other Bandosian countries that have adopted Battle Strategies that you lack."
  HAS_FEWER_UNLOCKED_CULTS:0 "Has fewer than $VAL|Y$ unlocked Battle Strategies."
  HAS_AT_LEAST_UNLOCKED_CULTS:0 "Has at least $VAL|Y$ unlocked Battle Strategies." 
@@ -669,6 +683,8 @@
  xeric_rebels_name:0 "$RELIGION$ Zealots"
  xeric_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  xeric_rebels_army:0 "$RELIGION$ Army"
+ OLM:0 "Olmic"
+ 
  xeric_reforms:0 "Xerician Reforms"
  xeric_reform_1:0 "Lizardman Spit"
  xeric_reform_1_desc:0 "Poison spit is one of the great strengths of Xeric's creation, but until now we have never truly realised its potential. Let us create an organised system of training so that lizardmen - and others blessed with similar abilities - can more accurately and quickly aim their attacks."
@@ -689,6 +705,7 @@
  zulrah_rebels_name:0 "$RELIGION$ Zealots"
  zulrah_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  zulrah_rebels_army:0 "$RELIGION$ Army"
+ SACRED_EEL:0 "Sacred Eel"
  zulrah_reforms:0 "Zulrah Reforms"
  zulrah_reform_1:0 "Harsh Negotiations"
  zulrah_reform_1_desc:0 "The first followers of Zulrah knew that to survive they had to make difficult choices on behalf of their continued existence. Let us learn more deeply from this and apply it to our diplomatic efforts."
@@ -709,6 +726,7 @@
  tuska_rebels_name:0 "$RELIGION$ Zealots"
  tuska_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  tuska_rebels_army:0 "$RELIGION$ Army"
+ YAKAMARU:0 "Yakamaru"
  
  queen_of_ashes:0 "Ashen Queen"
  queen_of_ashes_religion_desc:0 "The Queen of Ashes believes in the rebirth of the downtrodden into her cause, and wields the power of fire.\n\nThe Queen of Ashes is virtually unknown on Gielinor, but she may one day make her presence known."
@@ -718,34 +736,12 @@
  queen_of_ashes_rebels_name:0 "$RELIGION$ Zealots"
  queen_of_ashes_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  queen_of_ashes_rebels_army:0 "$RELIGION$ Army"
- 
+ CHARCOAL:0 "Charcoal"
  
 
  
  hedonistic_group:0 "Hedonistic"
- 
- brassicaprime:0 "Brassican"
- brassicaprime_religion_desc:0 "Brassica Prime is the God of Cabbages with a massive combat level of 11. Deliciousness is power.\n\nWorshipping a giant cabbage isn't something one does in polite company."
- brassicaprime_rebels_demand:0 "Convert $COUNTRYNAME$"
- brassicaprime_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
- brassicaprime_rebels_title:0 "Religious"
- brassicaprime_rebels_name:0 "$RELIGION$ Zealots"
- brassicaprime_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
- brassicaprime_rebels_army:0 "$RELIGION$ Army"
- CURRENT_HARMONY:0 "Harmony"
- HARMONY_DESCRIPTION:1 "The religious Harmony of our nation will naturally increase over time. Converting provinces and Harmonising with other religions will reduce our Harmony in the short term."
- CURRENT_HARMONY_VAL:0 "§YHarmony: $VAL$§!\nChanges with $CHANGE$ per year:\n"
- HARMONY_LOSS_FROM_CONV:0 "This decreases our Harmony by §R$VAL$§!."
- HARMONY_FROM_HARMONIZING:0 "Harmonising $RELIGION$: $VAL$"
- MISSIONARY_HARMONY_LOSS_DESC:1 "Converting this province will decrease Harmony by §R$VAL$§!\n(§R$LOSS_PER_DEV$§! per Development)."
- MODIFIER_YEARLY_HARMONY:0 "Yearly Harmony Increase"
- low_harmony:0 "Low Harmony"
- high_harmony:0 "High Harmony"
- HARMONIZE_WITH_RELIGION:0 "§YHarmonise with Religion§!"
- HARMONIZE_DESC:0 "Provinces with Harmonised Religions are tolerated as if they were §Y$NAME$§!.\nCountries following any of your Harmonised Religions will view you as though you were following that religion."
- HARMONIZE_DESC_CURRENT:1 "Currently Harmonising with §Y$RELIGION$§!\nProgress: §Y$PROGRESS$§!\nEstimated Completion: $DONE|Y$"
- HARMONIZE_GROUP_DESC_CURRENT:1 "Currently Harmonising with the §Y$GROUP$§! Religion Group.\nProgress: §Y$PROGRESS$§!\nEstimated Completion: $DONE|Y$"
- CANCEL_HARMONIZATION:0 "Cancel Harmonisation"
+ FORCED_HAPPINESS:0 "Forced Happiness"
  
  marimbo:0 "Marimban"
  marimbo_religion_desc:0 "Marimbo is the Goddess of Monkeys and Hedonism. Though encouraging her followers to enjoy life and party hard, these teachings can just as easily inspire the opposite effect.\n\nMarimbo worship is found on Ape Atoll, and other places monkeys and apes are found."
@@ -755,6 +751,8 @@
  marimbo_rebels_name:0 "$RELIGION$ Zealots"
  marimbo_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  marimbo_rebels_army:0 "$RELIGION$ Army"
+ NINJA:0 "Ninja"
+ 
  USES_PIETY:0 "$COUNTRY|Y$ uses Piety."
  USES_NOT_PIETY:0 "$COUNTRY|Y$ does NOT use Piety."
  CURRENT_PIETY:0 "Current piety"
@@ -780,6 +778,33 @@
  custom_monthly_piety_accelerator:0 "Flexible Devotion"
  custom_monthly_piety_accelerator_desc:0 "Only by embracing both hedonism and discipline can our pious realm achieve spiritual greatness."
 
+ 
+ brassicaprime:0 "Brassican"
+ brassicaprime_religion_desc:0 "Brassica Prime is the God of Cabbages with a massive combat level of 11. Deliciousness is power.\n\nWorshipping a giant cabbage isn't something one does in polite company."
+ brassicaprime_rebels_demand:0 "Convert $COUNTRYNAME$"
+ brassicaprime_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ brassicaprime_rebels_title:0 "Religious"
+ brassicaprime_rebels_name:0 "$RELIGION$ Zealots"
+ brassicaprime_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ brassicaprime_rebels_army:0 "$RELIGION$ Army"
+ SAUERKRAUT:0 "Sauerkraut"
+ 
+ CURRENT_HARMONY:0 "Harmony"
+ HARMONY_DESCRIPTION:1 "The religious Harmony of our nation will naturally increase over time. Converting provinces and Harmonising with other religions will reduce our Harmony in the short term."
+ CURRENT_HARMONY_VAL:0 "§YHarmony: $VAL$§!\nChanges with $CHANGE$ per year:\n"
+ HARMONY_LOSS_FROM_CONV:0 "This decreases our Harmony by §R$VAL$§!."
+ HARMONY_FROM_HARMONIZING:0 "Harmonising $RELIGION$: $VAL$"
+ MISSIONARY_HARMONY_LOSS_DESC:1 "Converting this province will decrease Harmony by §R$VAL$§!\n(§R$LOSS_PER_DEV$§! per Development)."
+ MODIFIER_YEARLY_HARMONY:0 "Yearly Harmony Increase"
+ low_harmony:0 "Low Harmony"
+ high_harmony:0 "High Harmony"
+ HARMONIZE_WITH_RELIGION:0 "§YHarmonise with Religion§!"
+ HARMONIZE_DESC:0 "Provinces with Harmonised Religions are tolerated as if they were §Y$NAME$§!.\nCountries following any of your Harmonised Religions will view you as though you were following that religion."
+ HARMONIZE_DESC_CURRENT:1 "Currently Harmonising with §Y$RELIGION$§!\nProgress: §Y$PROGRESS$§!\nEstimated Completion: $DONE|Y$"
+ HARMONIZE_GROUP_DESC_CURRENT:1 "Currently Harmonising with the §Y$GROUP$§! Religion Group.\nProgress: §Y$PROGRESS$§!\nEstimated Completion: $DONE|Y$"
+ CANCEL_HARMONIZATION:0 "Cancel Harmonisation"
+ 
+
 
  
  nonintervention_group:0 "Non-Intervention"
@@ -791,6 +816,10 @@
  guthix_rebels_name:0 "$RELIGION$ Zealots"
  guthix_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  guthix_rebels_army:0 "$RELIGION$ Army"
+ SOLAK:0 "Solak"
+ KAMI:0 "Kami"
+ OCELLUS:0 "Ocellus"
+ 
  USES_KARMA:0 "$COUNTRY|Y$ uses Balance."
  USES_NOT_KARMA:0 "$COUNTRY|Y$ does NOT use Balance."
  MODIFIER_MONTHLY_KARMA:0 "Monthly Balance"
@@ -837,6 +866,7 @@
  guardian_scholar_modifier:0 "Guthixian Guardian Scholars"
  desc_guardian_scholar_modifier:0 "We are currently entertaining Guthixian Guardian Scholars to further the theological discussion in our country."
 
+
  v:0 "V"
  v_religion_desc:0 "V - whose true name is unknown - is the protector of the Fremennik. Although ascended to Godhood, V is treated as a powerful warrior, not worshipped.\n\nThe ways of V are followed throughout Fremennik, Barbarian and Moonclan realms."
  v_rebels_demand:0 "Convert $COUNTRYNAME$"
@@ -845,6 +875,8 @@
  v_rebels_name:0 "$RELIGION$ Zealots"
  v_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  v_rebels_army:0 "$RELIGION$ Army"
+ MEAD_HALL:0 "Mead Hall"
+ 
  USES_SYNCRETIC_FAITHS:0 "$COUNTRY|Y$ uses Syncretic Faiths."
  USES_NOT_SYNCRETIC_FAITHS:0 "$COUNTRY|Y$ does NOT use Syncretic Faiths."
  defender_school:0 "Defender"
@@ -869,6 +901,8 @@
  godless_rebels_name:0 "$RELIGION$ Zealots"
  godless_rebels_desc:0 "Irreligious fanatics tend to rise up in provinces controlled by nations of a non-Godless faith. They seek to spread their philosophy and smite all believers."
  godless_rebels_army:0 "$RELIGION$ Army"
+ VORAGO:0 "Vorago"
+ 
  ambivalence_school:0 "Ambivalence"
  ambivalence_school_desc:0 "The approach of Ambivalence is not truly Godless because it isn't truly anything. The Ambivalent pay little heed to religion and get on with their lives without thinking about it."
  ambivalence_scholar_modifier:0 "Ambivalence 'Scholars'"
@@ -950,6 +984,7 @@
  subversion_teaching:0 "Subversive Influences"
  manipulation_teaching:0 "Manipulations"
  
+ 
  northern_pantheon:0 "Northern Pantheon"
  northern_pantheon_religion_desc:0 "The Northern pantheon describes a diverse range of interrelated beliefs found in the far north of Gielinor.\n\nWhile once widespread throughout Fremennik lands, the Northern Pantheon is now followed only by the Mountain Tribe of the Fremennik Province, and in Acheron."
  northern_pantheon_rebels_demand:0 "Convert $COUNTRYNAME$"
@@ -958,6 +993,7 @@
  northern_pantheon_rebels_name:0 "$RELIGION$ Zealots"
  northern_pantheon_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  northern_pantheon_rebels_army:0 "$RELIGION$ Army"
+ KENDAL:0 "Kendal"
  
  sun_mother:0 "Sun Mother"
  sun_mother_desc:0 "The bringer of life and light - when she is absent, ill health befalls the minds of our people."
@@ -972,6 +1008,31 @@
  
  
  transcendent_group:0 "Transcendent"
+ 
+ zaros:0 "Zarosian"
+ zaros_religion_desc:0 "The mysterious Empty Lord was presumed slain by Zamorak at the end of the Second Age, yet his status as the God of Fate implies the reality is more complicated.\n\nZarosian worship is limited to scattered remnants such as around the pyramid of Jaldraocht and the Loop in the Wushanko Isles."
+ zaros_rebels_demand:0 "Convert $COUNTRYNAME$"
+ zaros_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ zaros_rebels_title:0 "Religious"
+ zaros_rebels_name:0 "$RELIGION$ Zealots"
+ zaros_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ zaros_rebels_army:0 "$RELIGION$ Army"
+ zaros_blessings:0 "Zarosian Blessings"
+ ORCUS:0 "Orcus"
+ 
+ pick_zaros_blessing:0 "Pick Zarosian Blessing"
+ demonic_pact:0 "Demonic Pact"
+ shadow_realm:0 "Mastery of the Shadow Realm"
+ reborn_church:0 "Reborn Church"
+ god_of_fate:0 "God of Fate"
+ ancient_magicks:0 "Ancient Magicks"
+ HOLY_SITE_20_DESC:0 "The fortress of Paddewwa was one of the earlier settlements of the Zarosian Empire, and over the centuries came to be more of a residential city than a military fortification. Nonetheless, it had a key central location in the Empire and should be restored to its rightful faith."
+ HOLY_SITE_23_DESC:0 "Senntisten, the Holy City and the capital of the Zarosian Empire was where Zaros himself sat upon the Empty Throne and directed the fate of all. Cowardly Saradominists covered up the city with a place they labelled Saranthium, but we could excavate the old temples once more."
+ HOLY_SITE_113_DESC:0 "Kharyll was the key fortress of the eastern Zarosian Empire. Now, nothing remains of the fortifications as Saradominist humans and Zamorakian werewolves have taken over this once glorious settlement."
+ HOLY_SITE_188_DESC:0 "Annakarl was a small, but important fortification in Forinthry, now known as the Wilderness. With the Wilderness now more dangerous than ever, fortifications have only become more important - hence why a band of demons now occupy the site. Perhaps they could be persuaded to join their old master?"
+ HOLY_SITE_358_DESC:0 "Ghorrock Fortress lies at the northwestern tip of the old Zarosian Empire - and unlike the other Second Age fortifications, remains intact. However, some presence under the fortress seems to make the area exceptionally cold which will make resettlement exceptionally difficult."
+ 
+ 
  seren:0 "Serenist"
  seren_religion_desc:0 "Seren is the Goddess of the Elves. She shattered her crystalline form at the start of the Fourth Age to be with her beloved elves for all time.\n\nSeren worship is found throughout Tirannwn, as well as in the Cadarn kingdom in northern Kandarin."
  seren_rebels_demand:0 "Convert $COUNTRYNAME$"
@@ -980,6 +1041,8 @@
  seren_rebels_name:0 "$RELIGION$ Zealots"
  seren_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  seren_rebels_army:0 "$RELIGION$ Army"
+ CRYSTALLINE_SHAPESHIFTER:0 "Crystalline Shapeshifter"
+ 
  seren_incident_recent_tooltip:0 "At least 20 years since last incident."
  incident_tirannwn_civil_war_title:0 "Tirannwn Civil War"
  incident_tirannwn_civil_war_desc:0 "When Clan Iorwerth took Prifddinas and exiled all other elven clans, they sparked a deep and long-lasting conflict with implications for Serenists all over Gielinor."
@@ -1017,28 +1080,6 @@
  seren_rebirth_support_minus2_tooltip:0 "This choice will orient your realm §Ymoderately against§! the rebirth of Seren."
  seren_rebirth_support_minus3_tooltip:0 "This choice will orient your realm §Ysignificantly against§! the rebirth of Seren."
 
- 
- zaros:0 "Zarosian"
- zaros_religion_desc:0 "The mysterious Empty Lord was presumed slain by Zamorak at the end of the Second Age, yet his status as the God of Fate implies the reality is more complicated.\n\nZarosian worship is limited to scattered remnants such as around the pyramid of Jaldraocht and the Loop in the Wushanko Isles."
- zaros_rebels_demand:0 "Convert $COUNTRYNAME$"
- zaros_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
- zaros_rebels_title:0 "Religious"
- zaros_rebels_name:0 "$RELIGION$ Zealots"
- zaros_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
- zaros_rebels_army:0 "$RELIGION$ Army"
- zaros_blessings:0 "Zarosian Blessings"
- pick_zaros_blessing:0 "Pick Zarosian Blessing"
- demonic_pact:0 "Demonic Pact"
- shadow_realm:0 "Mastery of the Shadow Realm"
- reborn_church:0 "Reborn Church"
- god_of_fate:0 "God of Fate"
- ancient_magicks:0 "Ancient Magicks"
- HOLY_SITE_20_DESC:0 "The fortress of Paddewwa was one of the earlier settlements of the Zarosian Empire, and over the centuries came to be more of a residential city than a military fortification. Nonetheless, it had a key central location in the Empire and should be restored to its rightful faith."
- HOLY_SITE_23_DESC:0 "Senntisten, the Holy City and the capital of the Zarosian Empire was where Zaros himself sat upon the Empty Throne and directed the fate of all. Cowardly Saradominists covered up the city with a place they labelled Saranthium, but we could excavate the old temples once more."
- HOLY_SITE_113_DESC:0 "Kharyll was the key fortress of the eastern Zarosian Empire. Now, nothing remains of the fortifications as Saradominist humans and Zamorakian werewolves have taken over this once glorious settlement."
- HOLY_SITE_188_DESC:0 "Annakarl was a small, but important fortification in Forinthry, now known as the Wilderness. With the Wilderness now more dangerous than ever, fortifications have only become more important - hence why a band of demons now occupy the site. Perhaps they could be persuaded to join their old master?"
- HOLY_SITE_358_DESC:0 "Ghorrock Fortress lies at the northwestern tip of the old Zarosian Empire - and unlike the other Second Age fortifications, remains intact. However, some presence under the fortress seems to make the area exceptionally cold which will make resettlement exceptionally difficult."
- 
  dark_lord:0 "Dark Lord"
  dark_lord_religion_desc:0 "The Dark Lord is a mysterious entity with some connection to the Goddess Seren. They have tremendous powers over death and wish to see the most interesting deaths possible.\n\nThe Elven Civil War was most likely sparked by the whispers of the Dark Lord, and the Iorwerth Clan will soon begin worshipping them as the most complete remnant of Seren."
  dark_lord_rebels_demand:0 "Convert $COUNTRYNAME$"
@@ -1047,6 +1088,8 @@
  dark_lord_rebels_name:0 "$RELIGION$ Zealots"
  dark_lord_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  dark_lord_rebels_army:0 "$RELIGION$ Army"
+ FRAGMENT:0 "Fragment"
+ 
  dark_lord_blessings:0 "Dark Lord Blessings"
  pick_dark_lord_blessing:0 "Pick Dark Lord Blessing"
  death_fascination:0 "Death Fascination"
@@ -1065,6 +1108,7 @@
 
  
  elder_god_group:0 "Elder God"
+ REAWAKENING:0 "Reawakening"
  ful:0 "Ful"
  ful_religion_desc:0 "Few have ever even heard the name Ful, and most of those who do know no more than their association with lava and the earth.\n\nFul is followed by the TzHaar on Karamja and upon Mount Karuulm in Kebos."
  ful_rebels_demand:0 "Convert $COUNTRYNAME$"
@@ -1073,6 +1117,8 @@
  ful_rebels_name:0 "$RELIGION$ Zealots"
  ful_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  ful_rebels_army:0 "$RELIGION$ Army"
+ TZKAL_ZUK:0 "TzKal-Zuk"
+ 
  ful_reforms:0 "Ful Reforms"
  ful_reform_1:0 "Ancient Wisdom"
  ful_reform_1_desc:0 "Ful existed before the world was born, and shall survive its end."
@@ -1095,6 +1141,8 @@
  jas_rebels_name:0 "$RELIGION$ Zealots"
  jas_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  jas_rebels_army:0 "$RELIGION$ Army"
+ NEEDLE:0 "Needle"
+ 
  string_doom_info:0 "\n\n£DLC_ed As a Jas country you can always declare war during a §YRegency§!.\nJas countries have a §YRage§! value, that ticks up by one per province and year. Once the Rage counter reaches 100 it heralds our §YRagesday§! which will result in all subjects breaking free and be the end of your ruler and the ruling dynasty.\nIn order to avert Untoppable Rage, Jas countries can declare §YFlower Wars§!, with the goal to capture people to sacrifice.\nNahuatl states can also §YSacrifice§! the §YRulers§! and §YHeirs§! of Subject states to placate the gods and slow down the count down to the day of Unstoppable Rage.\n\nOnce a Nahuatl country has acquired §Y5 Vassal States§! it can enact a §YReligious Reform§!, gaining a permanent bonus, in exchange for all vassals declaring independence.\nOnce all Reforms have been undertaken, Jas states can §YReform their Religion§!, gaining §YTechnology§! and §YInstitutions§! from a more advanced country they border. This will permanently disable the threat of Rage, while retaining the bonuses from all of the Religious Reforms.\n"
  doom:0 "Rage"
  DOOM_FROM_PROVINCES:0 "Number of owned provinces: $VAL$"
@@ -1155,6 +1203,7 @@
  bik_rebels_name:0 "$RELIGION$ Zealots"
  bik_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  bik_rebels_army:0 "$RELIGION$ Army"
+ CROESUS:0 "Croesus"
  
  wen:0 "Wen"
  wen_religion_desc:0 "The cold wind may blow the name of Wen.\n\nFollowers of Wen are rare, and are largely restricted to ancient icy elementals in Acheron and the far north of Kourend."
@@ -1164,7 +1213,7 @@
  wen_rebels_name:0 "$RELIGION$ Zealots"
  wen_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  wen_rebels_army:0 "$RELIGION$ Army"
- 
+ ARCH_GLACOR:0 "Arch Glacor"
  
  
  
@@ -1181,6 +1230,10 @@
  xautak_rebels_name:0 "$RELIGION$ Zealots"
  xautak_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  xautak_rebels_army:0 "$RELIGION$ Army"
+ UVHASTUR:0 "Uvhastur"
+ YOGSATHLA:0 "Yogsathla"
+ NYARLAHYDRA:0 "Nyarlahydra"
+ 
  xautak_reforms:0 "Xau-Tak Reforms"
  xautak_reform_1:0 "Ruler of Seas"
  xautak_reform_1_desc:0 "The sea is but a medium on the way to the true freedom Xau-Tak represents. We must master it to bring all closer to Him."
@@ -1198,6 +1251,7 @@
  
  
  celestial_group:0 "Celestial"
+ TWILIGHT_EMISSARY:0 "Twilight Emissary"
  
  ralos:0 "Ralossian"
  ralos_religion_desc:0 "Ralos is the God of the Sun. Followers emphasise living life to the fullest and honesty.\n\nThough originating in Kourend, Ralos worship dominates Varlamore."
@@ -1222,6 +1276,7 @@
  sunset_aspect:0 "§YSunset§!"
  desc_sunset_aspect:0 "Ralos rules the day, but Ranul rules the night. Both keep one another in balance, so let us pay Ranul the same reverence we have to Ralos!"
  ralos_sunset_tooltip:0 "Gain §G1§! Stability and convert to the §YRanuli§! religion."
+ 
  
  ranul:0 "Ranuli"
  ranul_religion_desc:0 "Ranul is the God of the Moon. Their followers emphasise the importance of preparing for death.\n\nRanul worship is found in parts of Varlamore and at Forthos in Kourend."
@@ -1255,6 +1310,8 @@
  hanalan_rebels_name:0 "$RELIGION$ Zealots"
  hanalan_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  hanalan_rebels_army:0 "$RELIGION$ Army"
+ BANDOSIAN_SUN:0 "Bandosian Sun"
+ 
  HANALAN_ASPECTS_LONG:0 "Religious Action"
  HANALAN_ASPECTS_SHORT:0 "action"
  HANALAN_ASPECTS_POWER_NAME:0 "Faith Power"
@@ -1282,6 +1339,8 @@
  birman_rebels_name:0 "$RELIGION$ Zealots"
  birman_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  birman_rebels_army:0 "$RELIGION$ Army" 
+ BANDOSIAN_MOON:0 "Bandosian Moon"
+ 
  BIRMAN_ASPECTS_LONG:0 "Religious Action"
  BIRMAN_ASPECTS_SHORT:0 "action"
  BIRMAN_ASPECTS_POWER_NAME:0 "Faith Power"
@@ -1312,6 +1371,8 @@
  byakko_rebels_name:0 "$RELIGION$ Zealots"
  byakko_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  byakko_rebels_army:0 "$RELIGION$ Army"
+ REEFDIVER:0 "Reefdiver"
+ 
  BYAKKO_ASPECTS:0 "Byakko Aspects"
  BYAKKO_ASPECTS_LONG:0 "Byakko Aspects"
  BYAKKO_ASPECTS_SHORT:0 "aspect"
@@ -1325,6 +1386,8 @@
  genbu_rebels_name:0 "$RELIGION$ Zealots"
  genbu_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  genbu_rebels_army:0 "$RELIGION$ Army"
+ TURTLER:0 "Turtler"
+ 
  GENBU_ASPECTS:0 "Genbu Aspects"
  GENBU_ASPECTS_LONG:0 "Genbu Aspects"
  GENBU_ASPECTS_SHORT:0 "aspect"
@@ -1338,6 +1401,8 @@
  seiryu_rebels_name:0 "$RELIGION$ Zealots"
  seiryu_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  seiryu_rebels_army:0 "$RELIGION$ Army"
+ ACOLYTE:0 "Acolyte"
+ 
  SEIRYU_ASPECTS:0 "Seiryu Aspects"
  SEIRYU_ASPECTS_LONG:0 "Seiryu Aspects"
  SEIRYU_ASPECTS_SHORT:0 "aspect"
@@ -1351,6 +1416,8 @@
  suzaku_rebels_name:0 "$RELIGION$ Zealots"
  suzaku_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  suzaku_rebels_army:0 "$RELIGION$ Army"
+ ASSASSINATION_CULT:0 "Assassination Cult"
+ 
  SUZAKU_ASPECTS:0 "Suzaku Aspects"
  SUZAKU_ASPECTS_LONG:0 "Suzaku Aspects"
  SUZAKU_ASPECTS_SHORT:0 "aspect"

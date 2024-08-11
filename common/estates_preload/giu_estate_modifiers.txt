@@ -1,6 +1,9 @@
 
 #Define estate loyalty and influence modifiers here
 
+#############################################
+# Mod Estates
+
 estate_kel_blue_opal = {
 	modifier_definition = {
 		type = loyalty

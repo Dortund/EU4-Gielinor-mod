@@ -98,6 +98,133 @@
  flavor_asg.16.a:0 "Let us join up with this Dark Warriors' Fortress."
  flavor_asg.16.b:0 "Why would anyone want to move to the Wilderness?"
 
+ flavor_asg.17.t:0 "Faithful Diplomacy"
+ flavor_asg.17.d:0 "Asgarnia is united under our rule, and any attempt by Misthalin to stop us has resulted in failure. But are they not siblings in the [Root.Religion.GetName] faith? We can put past hostilities behind us for the good of all."
+ flavor_asg.17.a:0 "Settle the border with Misthalin once and for all."
+ ASG_misthalanian_outreach_tooltip:0 "If successful, this will remove all our claims in Misthalanian territory and vice versa. It will also greatly improve our mutual relations."
+ flavor_asg.17.b:0 "Misthalin is a sibling in faith but a rival in politics."
+ flavor_asg.17.c:0 "We have no reason to change our current policies."
+
+ flavor_asg.18.t:0 "The Asgarnian Proposal"
+ flavor_asg.18.d:0 "Asgarnia has sent word that they wish for any of our border issues to be settled for the good of the [Root.Religion.GetName] faith. Putting aside any past tensions could provide us a mighty ally for future struggles elsewhere."
+ flavor_asg.18.a:0 "Let's make the deal, for the good of the faith!"
+ flavor_asg.18.b:0 "We do not need a deal with a miserable upstart."
+ 
+ flavor_asg.19.t:0 "Misthalin agrees to our settlement!"
+ flavor_asg.19.d:0 "Misthalin has agreed to put the past aside for the good of the [Root.Religion.GetName] faith."
+ flavor_asg.19.a:0 "Excellent!"
+ 
+ flavor_asg.20.t:0 "Misthalin rejects our border settlement."
+ flavor_asg.20.d:0 "Unfortunately, Misthalin has decided to reject our offer of standing together and putting our differences aside for the faith."
+ flavor_asg.20.a:0 "Clearly they aren't true believers."
+ 
+ flavor_asg.21.t:0 "Silence of Ice Mountain"
+ flavor_asg.21.d:0 "Once, there was a great hall of Camdozaal, where dwarven hammers rung out in a symphony of metalwork - but it is no more. The Imcando have been destroyed, and Ice Mountain has never felt so cold. Still, time has passed and mourning cannot last forever. What shall be our next steps?"
+ flavor_asg.21.a:0 "Send word that Asgarnia needs dwarves."
+ flavor_asg.21.b:0 "The minerals are ours to do as we see fit."
+ flavor_asg.21.c:0 "Let Ice Mountain remain as a memorial to the fallen Imcando."
+ flavor_asg.21.e:0 "The only dwarves we care about are the dwarves of Zamorak."
+ 
+ flavor_asg.22.t:0 "Traders of [Root.Capital.GetName]"
+ flavor_asg.22.d:0 "Enthusiastic about the trade opportunities in [Root.GetName], adventurers have begun trading in large numbers in [Root.Capital.GetName]. Across the city, adventurer merchants stand in specific spots to sell specific wares, waving and flashing signs to attract attention."
+ flavor_asg.22.a:0 "I know where to go if I want lobsters in bulk!"
+ 
+ flavor_asg.23.t:0 "Away with the Fairies"
+ flavor_asg.23.d:0 "The Dramen Staff from Entrana, combined with a suspicious-looking shed in the swamps of Southern Misthalin, reacted to bring our scouting party to a whole different world inhabited by fairies! Better yet, these fairies appear to have a keen interest in cabbages, but to trade properly we would need to cede them some land on Gielinor."
+ flavor_asg.23.a:0 "Fairies?! They sound way cooler than this human nonsense I'm stuck with here."
+ ZNS_will_tag_switch_tooltip:0 "This option will §Rpermanently switch you to playing as Zanaris§!."
+ flavor_asg.23.b:0 "Cede land to the fairies."
+ ZNS_will_cede_land_tooltip:0 "Giving up some land to Zanaris will pay off before long as their demand will §Yincrease the value of cabbages§!."
+ flavor_asg.23.c:0 "We're not about to give up land to some winged menaces!"
+ 
+ flavor_asg.24.t:0 "Fairies of Gielinor"
+ flavor_asg.24.d:0 "The Dramen Staff from Entrana, combined with a suspicious-looking shed in the swamps of Southern Misthalin, reacted to bring our scouting party to a whole different world inhabited by fairies! Better yet, these fairies appear to have a keen interest in cabbages, but to trade properly we would need to cede them some land on Gielinor nearer to us than their current holdings."
+ flavor_asg.24.a:0 "Cede land to the fairies."
+ flavor_asg.24.b:0 "We're not about to give up land to some winged menaces!"
+ 
+ flavor_asg.25.t:0 "The Capital of Asgarnia"
+ flavor_asg.25.d:0 "The centre for Guthixian followers in Asgarnia has always been Taverley, yet since Guthixian followers unified Asgarnia under one rule, Falador has been considered a more natural centre of power. What is the best choice?"
+ flavor_asg.25.a:0 "The future of Asgarnia lies in Falador."
+ flavor_asg.25.b:0 "A Guthixian Asgarnia should be led by Taverley."
+ flavor_asg.25.c:0 "[Root.Capital.GetName] is more than appropriate, thank you very much."
+  
+ flavor_asg.26.t:0 "The Black Knights"
+ flavor_asg.26.d:0 "There was once a knightly order who served Zamorak during the God Wars, known as the Black Knights. This order has been defunct for centuries while the Saradominist equivalent, the White Knights, persisted as the defenders of Farradorn, now Falador. Reinstating the Black Knights would strengthen our grip on Asgarnia, yet allowing the White Knights to continue could make them useful cannon fodder for Asgarnia."
+ flavor_asg.26.a:0 "The White Knights shall defend Falador; the Kinshra will be granted a generous estate."
+ flavor_asg.26.b:0 "The Kinshra are the future! Grant the White Knights land away from Falador."
+ flavor_asg.26.c:0 "We have seen the darkness and shall embrace it. Exile the White Knights."
+ flavor_asg.26.e:0 "The knights shall co-exist in Falador!"
+ flavor_asg.26.f:0 "Who cares about the knightly orders?"
+
+ flavor_asg.27.t:0 "The Knightly Orders of Asgarnia"
+ flavor_asg.27.d:0 "Asgarnia never traditionally followed our faith, and that is apparent with the presence of the Saradominist White Knights in Falador. They hardly align to our religious goals but giving them privileges in Asgarnia could be a good way to secure the Saradominists' loyalty."
+ flavor_asg.27.a:0 "Let the White Knights have their castle."
+ flavor_asg.27.b:0 "The White Knights are a distraction to our religious goals."
+ 
+ flavor_asg.28.t:0 "Declining Power of the Crown"
+ flavor_asg.28.d:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName] has been growing old in years and seemingly more and more aspects of governance have been carried out by the White Knights instead. But power, once taken, is hard to relinquish, and some in Asgarnia fear this is the start of a coup."
+ flavor_asg.28.a:0 "The White Knights are to carry out more duties of governance."
+ asg_figurehead_monarchy_tooltip:0 "Any heirs to the throne are unlikely to be impressed at the White Knights standing in their way."
+ flavor_asg.28.b:0 "The White Knights need to know their place!"
+ 
+ flavor_asg.29.t:0 "The Principality of Burthorpe"
+ flavor_asg.29.d:0 "[Root.Heir.GetTitle] [Root.Heir.GetName] has been stationed in Burthorpe to gain experience of governing Asgarnia, ahead of [Root.Heir.GetHerHis] ascension to the crown. But this ascension seems increasingly unlikely with the White Knights' control of the kingdom's governance. To this end, [Root.Heir.GetTitle] [Root.Heir.GetName] is increasingly ruling Burthorpe as a separate entity away from White Knight interference."
+ flavor_asg.29.a:0 "Let [Root.Heir.GetTitle] [Root.Heir.GetName] run Burthorpe while the White Knights run [Root.Capital.GetName]."
+ flavor_asg.29.b:0 "This is unacceptable!"
+ 
+ flavor_asg.30.t:0 "Status of the White Knights"
+ flavor_asg.30.d:0 "The White Knights are a Saradominist knightly order sworn to protect Falador from heathen threats. Until now, they have been more tied to the land than its ruling country, but properly integrating the White Knights into the realm would strengthen us both."
+ flavor_asg.30.a:0 "Integrate the White Knights into Asgarnia."
+ flavor_asg.30.b:0 "The White Knights are a barrier to our ambitions. Get rid of them!"
+ 
+ flavor_asg.31.t:0 "The Void Knights' Second Chance"
+ flavor_asg.31.d:0 "In time passed, a man by the name of Dracs Melrose received visions from Guthix himself. The visions warned of a future threat to the balance of the world, requiring the reform of ancient order of the Void Knights. However, his pleas went unheard - until now. This new Guthixian Asgarnia is ready to give the Void Knights a new chance."
+ flavor_asg.31.a:0 "The Void Knights shall prove themselves worthy."
+ 
+ flavor_asg.32.t:0 "State Religion of Asgarnia"
+ flavor_asg.32.da:0 "As it was since time immemorial, so it shall be: Asgarnia follows the ways of order; the ways of Saradomin."
+ flavor_asg.32.db:0 "Zamorakians were always the underdogs in Asgarnia - but we have pulled out a victory and claimed the land for Lord Zamorak!"
+ flavor_asg.32.dc:0 "The needs of balance requires the teachings of Guthix to be expanded throughout Asgarnia. As such, it shall be the country's official religion going forward."
+ flavor_asg.32.dd:0 "While they were out praying, we studied the cabbage. The perfect form, the delicious leaves. Who is laughing now? WHO'S LAUGHING NOW?!"
+ flavor_asg.32.de:0 "Little did the people of Asgarnia suspect that the [Root.Religion.GetName] ways would triumph! Our subjects are ill-prepared for this strange new religion so we don't have centuries of precedent to build on, but that's fine! We will do what we can."
+ flavor_asg.32.a:0 "So it was, so it shall be."
+ ASG_state_religion_saradomin:0 "Unlocks §BSaradominist§! religious missions for Asgarnia."
+ flavor_asg.32.b:0 "The underdog triumphing is Chaos manifest!"
+ ASG_state_religion_zamorak:0 "Unlocks §RZamorakian§! religious missions for Asgarnia."
+ flavor_asg.32.c:0 "Let us follow the path of balance."
+ ASG_state_religion_guthix:0 "Unlocks §GGuthixian§! religious missions for Asgarnia."
+ flavor_asg.32.d:0 "Deliciousness is power."
+ ASG_state_religion_brassicaprime:0 "Unlocks §lBrassican§! religious missions for Asgarnia."
+ flavor_asg.32.e:0 "We will find our own way."
+ ASG_state_religion_misc:0 "Unlocks §gMiscellaneous§! religious missions for Asgarnia."
+ 
+ flavor_asg.33.t:0 "The Kinshra"
+ flavor_asg.33.d:0 "Asgarnia officially is a Saradominist nation, but Asgarnia has never solely been inhabited by Saradominists. A faction of Zamorakians known as the Black Knights are willing to serve [Root.Monarch.GetTitle] [Root.Monarch.GetName] on the condition of some measure of religious liberty."
+ flavor_asg.33.a:0 "Accept the offer of the Kinshra."
+ flavor_asg.33.b:0 "Asgarnia is a Saradominist realm!"
+ 
+ flavor_asg.34.t:0 "The Son of Zamorak"
+ flavor_asg.34.d:0 "A Zamorakian warrior-mage by the name of Iban has wandered into the Underground Pass, seeking to take it in Zamorak's name. Strange things have happened in there, however - and word has it Iban has declared himself the Son of Zamorak!"
+ flavor_asg.34.a:0 "Sounds legitimate. I'm with him."
+ flavor_asg.34.b:0 "Ridiculous! This is *our* claim!"
+ 
+ flavor_asg.35.t:0 "Zamorakian Relations"
+ flavor_asg.35.da:0 "The involvement of the Kinshra in our day-to-day operations shows our tolerance to other faiths, and provides much-needed stability to Asgarnia."
+ flavor_asg.35.db:0 "Our dealings with the Zamorakians have lead down an interesting path, with talk of a Zamorakian order known as the Black Knights, or Kinshra."
+ flavor_asg.35.dc:0 "Our excellent handling of the Zamorakian situation has earned us favour with the Church of Saradomin."
+ flavor_asg.35.a:0 "Excellent!"
+ flavor_asg.35.b:0 "We should investigate this further."
+ flavor_asg.35.c:0 "Excellent!"
+ 
+ flavor_asg.36.t:0 "The Fist of Guthix"
+ flavor_asg.36.d:0 "Crux Eqal's goal of serving Guthix's interests throughout Gielinor has started with their discovery of a cave in the Wilderness with strange residual powers and a small Saradominist presence. With the combined efforts of druids and a mysterious Guthixian Guardian named Fiara, they have taken the cave to safeguard its energies, naming it the Fist of Guthix."
+ flavor_asg.36.a:0 "We should join Lady Fiara!"
+ ASG_switch_to_FGX_tooltip:0 "§RChoosing this option permanently switches you to the Fist of Guthix nation.§!"
+ flavor_asg.36.b:0 "Well, as long as the land is out of the wrong Gods' hands."
+ 
+ 
+ 
+ 
  
  
  

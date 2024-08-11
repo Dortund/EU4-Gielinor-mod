@@ -478,3 +478,152 @@ country_event = {
 		}
 	}
 }
+
+# Melzar
+country_event = {
+	id = flavor_cdr.11
+	title = flavor_cdr.11.t #Melzar the Mage
+	desc = {
+		trigger = {
+			tag = CDR
+			NOT = { religion = brassicaprime }
+		}
+		desc = flavor_cdr.11.da #In the wake of Elvarg's attack on Crandor, one of our mages by the name of Melzar has served with distinction, fending off many of the lesser beasts that emerged from the caverns below.
+	}
+	desc = {
+		trigger = {
+			has_country_flag = ASG_taking_in_crandorians_flag
+			NOT = { religion = brassicaprime }
+			NOT = { tag = NVA }
+		}
+		desc = flavor_cdr.11.db #Crandor has fallen, but one powerful mage by the name of Melzar has survived Elvarg's attack. Rumour has it that seeing his people die around him has driven him insane, but a powerful mage could be worth recruiting.
+	}
+	desc = {
+		trigger = {
+			religion = brassicaprime
+			NOT = { tag = NVA }
+		}
+		desc = flavor_cdr.11.dc #The isle of Crandor was once famously home to mages and adventurers, and one of these mages seems to have insights far beyond those of the ordinary. He rambles about cabbages - like a true believer!
+	}
+	desc = {
+		trigger = {
+			tag = NVA
+		}
+		desc = flavor_cdr.11.dd #Word has it that the pathetic human realm of Crandor fell - though one of their wizards has made a name for himself running fighting rings in [Root.Capital.GetName]. His skill at clockwork is admittedly respectable, and the machines he builds to fight do lend a certain spectacle to the otherwise miserable depths of the city. Now a wealthy man, Melzar could be exactly the sort of person we could use for our own ends.
+	}
+
+	picture = ELVARG_ATTACKS_eventPicture
+
+	trigger = {
+		NOT = { has_global_flag = CDR_melzar_flag }
+		has_institution = quests
+		NOT = { current_age = age_of_divination }
+		OR = {
+			AND = {
+				tag = CDR
+				mission_completed = CDR_dragon_slayer
+			}
+			AND = {
+				has_country_flag = ASG_taking_in_crandorians_flag
+				NOT = { exists = CDR }
+				exists = ELV
+				NOT = {
+					any_country = {
+						religion = brassicaprime
+					}
+				}
+			}
+			AND = {
+				religion = brassicaprime
+				NOT = { exists = CDR }
+				exists = ELV
+			}
+			tag = NVA
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = flavor_cdr.11.a #This Melzar will be a great asset to our armies!
+		trigger = {
+			tag = CDR
+			NOT = { religion = brassicaprime }
+		}
+		define_advisor = {
+			name = "Melzar the Mage"
+			type = commandant
+			skill = 3
+			discount = yes
+			culture = crandorian
+		}
+		set_global_flag = CDR_melzar_flag
+	}
+	option = {
+		name = flavor_cdr.11.b #Melzar could serve [Root.GetName] well.
+		trigger = {
+			has_country_flag = ASG_taking_in_crandorians_flag
+			NOT = { religion = brassicaprime }
+			NOT = { tag = NVA }
+		}
+		define_advisor = {
+			name = "Melzar the Mad"
+			type = fortification_expert
+			skill = 3
+			discount = yes
+			culture = crandorian
+		}
+		set_global_flag = CDR_melzar_flag
+	}
+	option = {
+		name = flavor_cdr.11.c #He speaks of the Cabbage of a Thousand Truths!
+		trigger = {
+			religion = brassicaprime
+			NOT = { tag = NVA }
+		}
+		define_advisor = {
+			name = "Melzar the Magnificent"
+			type = theologian
+			skill = 3
+			discount = yes
+			culture = crandorian
+			religion = brassicaprime
+		}
+		set_global_flag = CDR_melzar_flag
+	}
+	option = {
+		name = flavor_cdr.11.d #Summon this Melzar to serve at once!
+		trigger = {
+			tag = NVA
+		}
+		define_advisor = {
+			name = "Melzar the Mogul"
+			type = trader
+			skill = 3
+			discount = yes
+			culture = crandorian
+		}
+		set_global_flag = CDR_melzar_flag
+	}
+	option = {
+		name = flavor_cdr.11.e #We don't need his assistance.
+		add_prestige = 5
+		if = {
+			limit = {
+				has_country_flag = ASG_taking_in_crandorians_flag
+				owns_core_province = 864
+			}
+			864 = {
+				change_province_name = "Melzar's Maze"
+				change_culture = zombie
+				add_province_modifier = {
+					name = CDR_melzars_maze
+					duration = -1
+				}
+			}
+			set_global_flag = CDR_melzar_flag
+		}
+	}
+}

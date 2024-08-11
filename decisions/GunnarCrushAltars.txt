@@ -21,7 +21,17 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_mil_power = 100
+			add_mil_power = 50
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+				}
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 40
+				}
+			}
 			random_owned_province = {
 				limit = {
 					trade_goods = runes

@@ -1,0 +1,20 @@
+﻿l_english:
+ flavor_csn.1.t:0 "Commendation from the Temple Knights"
+ flavor_csn.1.d:0 "The Temple Knights have been impressed with our recent efforts to build a stronger state directly aligned with their interests. In a celebratory meeting between their leader and [Root.Monarch.GetTitle] and [Root.Monarch.GetName], a curious question arises: is it ever necessary to work behind Entrana's back for the good of Saradomin?"
+ flavor_csn.1.a:0 "The Church is next to Saradomin himself. We cannot defy it."
+ CSN_light_path_tooltip:0 "Taking this option will keep Cashien missions as they are."
+ flavor_csn.1.b:0 "I'm listening..."
+ CSN_shadowy_path_tooltip:0 "Taking this option will make subsequent Cashien missions harder, but potentially more rewarding with greater access to the inner circles of the Temple Knights."
+ 
+ flavor_csn.2.t:0 "Whispered Secrets"
+ flavor_csn.2.d:0 "Why the Temple Knights wanted us to develop Camdozaal was initially unclear, but a strange chasm caught [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s attention. It soon became clear that a terrible secret lies deep beneath Ice Mountain that the Temple Knights believe we could eliminate."
+ flavor_csn.2.a:0 "It shall be done."
+ csn_fight_the_whisperer_tooltip:0 "Successfully defeating this terrible threat will yield permanent rewards."
+ flavor_csn.2.b:0 "Whatever's in there is safely sealed away. We will go no further."
+ 
+ flavor_csn.3.t:0 "Defeat of the Whisperer"
+ flavor_csn.3.d:0 "The strange beast from under Ice Mountain is subdued, and the mysterious city in the depths from which it came now seem dormant. A representative of the Temple Knights comes forward, asking if we know now our purpose of being at Ice Mountain."
+ flavor_csn.3.a:0 "It was because the truth lies in this lost city of Lassar."
+ flavor_csn.3.b:0 "Our purpose was to save Asgarnia from evil!"
+ 
+ 

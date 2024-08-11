@@ -11,4 +11,6 @@ base_manpower = 1
 trade_goods = fishing_spot
 latent_trade_goods = { divine_energy }
 
-is_city = yes
+native_size = 0
+native_ferocity = 0
+native_hostileness = 0

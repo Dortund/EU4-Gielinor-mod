@@ -451,3 +451,53 @@ country_event = {
 		set_global_flag = panic_sell_wands
 	}
 }
+
+country_event = {
+	id = giu_prices.12
+	title = giu_prices.12.t #Zanaris Demands Cabbages!
+	desc = giu_prices.12.d #Fairies live in a nexus of worlds, from Gielinor to distant places where crops thought of as common are unknown. One of these crops are cabbages, which are so alien to some fairies they are willing to pay handsomely for them.
+	picture = BRASSICAPRIME_CABBAGE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				culture_group = fairy_group
+				any_owned_province = {
+					trade_goods = cabbage
+				}
+			}
+			AND = {
+				religion = brassicaprime
+				OR = {
+					any_known_country = {
+						culture_group = fairy_group
+					}
+					any_owned_province = {
+						culture_group = fairy_group
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = giu_prices.12.a #Show me the green!
+		change_price = {
+			trade_goods = cabbage
+			key = ZANARIAN_DEMAND
+			value = 0.25
+			duration = -1
+		}
+		add_harmony = 25
+		add_prestige = 10
+		set_global_flag = zanarian_cabbage_demand
+	}
+}
+

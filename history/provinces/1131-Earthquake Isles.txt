@@ -18,8 +18,4 @@ base_tax = 2
 base_production = 3
 base_manpower = 2
 
-fort_15th = yes
-
 trade_goods = basic_ores
-
-is_city = yes

@@ -36,6 +36,7 @@ add_province_triggered_modifier = wildy_border_level_nine
 	owner = ASG
 	controller = ASG
 	add_core = ASG
+	temple = yes
 }
 
 2054.10.19 = {

@@ -1,13 +1,13 @@
 ﻿l_english:
- tuska_events.1.t:0 "Arrival of Tuska"
- tuska_events.1.d:0 "Our great god Tuska is approaching Gielinor! She shall devour the unworthy as she has on countless other worlds!"
- tuska_events.1.a:0 "Tus-ka! Tus-ka! Tus-ka!"
+ tuska_flavor.1.t:0 "Arrival of Tuska"
+ tuska_flavor.1.d:0 "Our great god Tuska is approaching Gielinor! She shall devour the unworthy as she has on countless other worlds!"
+ tuska_flavor.1.a:0 "Tus-ka! Tus-ka! Tus-ka!"
  tuska_make_the_god_triumph_tooltip:0 "Other Gods' followers are trying to stop Tuska from devastating Gielinor. §YIf any non-Tuska Great Power has an Adventurer Rating of 100 or higher in exactly 2 years, they will defeat Tuska. Otherwise, Tuska will win causing significant damage to the development of all Great Powers and rewarding any nation that follows her.§!"
  
- tuska_events.2.t:0 "The Fall of Tuska"
- tuska_events.2.d:0 "Before she could even reach Gielinor, our god was cruelly assassinated. But we shall still honour her memory as the Children of Tuska! Tus-ka! Tus-ka! Tus-ka!"
- tuska_events.2.a:0 "Gielinor just wasn't ready for a giant boar god from across the stars."
+ tuska_flavor.2.t:0 "The Fall of Tuska"
+ tuska_flavor.2.d:0 "Before she could even reach Gielinor, our god was cruelly assassinated. But we shall still honour her memory as the Children of Tuska! Tus-ka! Tus-ka! Tus-ka!"
+ tuska_flavor.2.a:0 "Gielinor just wasn't ready for a giant boar god from across the stars."
  
- tuska_events.3.t:0 "Tuska's Last Triumph"
- tuska_events.3.d:0 "Oh! What a display! What sheer devastation Tuska wrought! Cities destroyed! Yes, the lesser Gods banded together to kill her, but who could ever top the performance of the greatest god ever to roam the heavens!"
- tuska_events.3.a:0 "We are the Children of Tuska. No lesser god shall ever take that from us!"
+ tuska_flavor.3.t:0 "Tuska's Last Triumph"
+ tuska_flavor.3.d:0 "Oh! What a display! What sheer devastation Tuska wrought! Cities destroyed! Yes, the lesser Gods banded together to kill her, but who could ever top the performance of the greatest god ever to roam the heavens!"
+ tuska_flavor.3.a:0 "We are the Children of Tuska. No lesser god shall ever take that from us!"

@@ -1,7 +1,10 @@
 #508 - Ayaktlane
+owner = RDE
+controller = RDE
+add_core = RDE
 tribal_owner = ---
-culture = tlati
-religion = ranul
+culture = avernic
+religion = zamorak
 
 discovered_by = zeantechgroup
 
@@ -15,13 +18,13 @@ trade_goods = basic_ores
 
 is_city = yes
 
-2000.1.1 = {
+2075.1.1 = {
 	owner = VAR
 	controller = VAR
 	add_core = VAR
 }
 
-2100.1.1 = {
+2125.1.1 = {
 	base_tax = 2
 	base_production = 2
 	base_manpower = 2

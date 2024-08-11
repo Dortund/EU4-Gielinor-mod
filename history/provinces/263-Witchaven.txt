@@ -25,6 +25,8 @@ trade_goods = fishing_spot
 
 is_city = yes
 
+center_of_trade = 1
+
 2007.2.27 = {
 	owner = ADO
 	controller = ADO

@@ -17,4 +17,9 @@ trade_goods = gemstones
 	owner = RRF
 	controller = RRF
 	add_core = RRF
+	is_city = yes
 }
+
+native_size = 10
+native_ferocity = 5
+native_hostileness = 5

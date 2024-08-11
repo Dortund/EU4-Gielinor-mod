@@ -1,6 +1,6 @@
 #Country Name: Please seefilename.
 
-graphical_culture = westerngfx
+graphical_culture = southamericagfx
 
 color = { 163 138 72 }
 

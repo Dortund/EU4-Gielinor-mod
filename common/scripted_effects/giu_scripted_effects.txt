@@ -39,5 +39,121 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 			}
 		}
+		random_country = { #Virtually no-one likes the Monstrous school
+			limit = {
+				religious_school = {
+					group = nonintervention_group
+					school = monstrous_school
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = evasive_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = 1
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = druidic_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = 1
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = dwarven_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = 1
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = fairy_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = 1
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = gnomish_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = 1
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = guardian_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = 1
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = defender_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = 1
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = runecrafter_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = 1
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = warrior_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = 1
+				}
+			}
+		}
 	}
 }

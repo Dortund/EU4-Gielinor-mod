@@ -20,6 +20,8 @@ base_manpower = 3
 
 trade_goods = grains
 
+center_of_trade = 1
+
 is_city = yes
 
 2059.3.24 = {

@@ -1,0 +1,536 @@
+namespace = saradomin_flavor
+
+#The One, the Few, the Many
+country_event = {
+	id = saradomin_flavor.1
+	title = saradomin_flavor.1.t
+	desc = saradomin_flavor.1.d #The official position of the Church of Saradomin is that there are only three Gods: Saradomin, and the lesser gods Zamorak and Guthix. However, teachings vary. Some hold that there were other Gods that may have worked with Saradomin, and some argue that Saradomin alone is the sole God of Gielinor.
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = saradomin
+		NOT = { tag = ENT }
+		NOT = { current_age = age_of_divination }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = saradomin_flavor.1.a #Assert that Saradomin is the only true God.
+		add_prestige = 10
+		random_owned_province = {
+			limit = {
+				NOT = { religion = saradomin }
+			}
+			add_unrest = 10
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saradomin_flavor.1.b #Accept the godhood of the inferior Zamorak and Guthix.
+		add_papal_influence = 3
+		random_owned_province = {
+			limit = {
+				NOT = { religion = saradomin }
+				NOT = { religion = guthix }
+				NOT = { religion = zamorak }
+			}
+			add_unrest = 5
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saradomin_flavor.1.c #Imply that a myriad of Gods may exist, but they are unimportant.
+		add_papal_influence = -3
+		add_dip_power = 15
+		random_owned_province = {
+			limit = {
+				NOT = { religion = saradomin }
+			}
+			add_unrest = -5
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#New Saint Declared
+country_event = {
+	id = saradomin_flavor.2
+	title = saradomin_flavor.2.t
+	desc = saradomin_flavor.2.d #The Church of Saradomin has declared one of our historical figures to be a saint!
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = saradomin
+		NOT = { tag = ENT }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = saradomin_flavor.2.a #Praise Saradomin!
+		add_stability = 1
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Monastic Privileges
+country_event = {
+	id = saradomin_flavor.3
+	title = saradomin_flavor.3.t
+	desc = saradomin_flavor.3.d #Monasteries can be the very model of order, with strict daily regimens and restricted living. In exchange, monasteries are typically granted freedom from taxes and from military recruitment, among other privileges.
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = saradomin
+		has_estate = estate_church
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = saradomin_flavor.3.a #Reassert the freedoms of the monasteries.
+		add_papal_influence = 5
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 30
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = saradomin_flavor.3.b #But what if we *really* need the money?
+		add_years_of_income = 0.5
+		add_papal_influence = -5
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				num_of_loans = 1
+			}
+			modifier = {
+				factor = 4
+				num_of_loans = 3
+			}
+		}
+	}
+}
+
+#The Call to Plain Living
+country_event = {
+	id = saradomin_flavor.4
+	title = saradomin_flavor.4.t
+	desc = saradomin_flavor.4.d #The Church of Saradomin calls out excess and wasteful living. Recently, a priest has called out our merchant class for placing their desire for gold above the faith.
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = saradomin
+		has_estate = estate_burghers
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = saradomin_flavor.4.a #The priest is right! Our merchants must be curtailed.
+		add_papal_influence = 5
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 30
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = saradomin_flavor.4.b #Ignore the matter.
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -5
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 30
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Unicorns of Saradomin
+country_event = {
+	id = saradomin_flavor.5
+	title = saradomin_flavor.5.t
+	desc = saradomin_flavor.5.d #Unicorns have served the faithful since time immemorial, for their healing abilities, as a beast of burden, as a mount, or even just to make Gielinor more beautiful. However, a suspiciously large shipments of unicorn horns to an apothecary in [Root.Capital.GetName] suggests people are deliberately slaying these noble creatures in numbers higher than the Church allows.
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = saradomin
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = saradomin_flavor.5.a #Find out who did this and punish them harshly.
+		add_papal_influence = 5
+		add_mil_power = -10
+		
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = {
+		name = saradomin_flavor.5.b #Pay for the restoration of the unicorn population but take no further action.
+		add_years_of_income = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saradomin_flavor.5.c #But we need all the antipoisons we can get!
+		add_years_of_income = 0.2
+		add_papal_influence = -5
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Beasts of Evil
+country_event = {
+	id = saradomin_flavor.6
+	title = saradomin_flavor.6.t
+	desc = saradomin_flavor.6.d #Rumours of a foul beast have emerged in [saradomin_beasts_of_evil_target.GetName]. Eyewitnesses speak of terrible teeth, terrible claws, and foul breath.
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	goto = saradomin_beasts_of_evil_target
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = saradomin
+		any_owned_province = {
+			religion = saradomin
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = { 
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					religion = saradomin
+				}
+				save_event_target_as = saradomin_beasts_of_evil_target
+			}
+		} 
+	}
+	
+	option = {
+		name = saradomin_flavor.6.a #Surely this evil beast must be put down in the name of Saradomin!
+		add_mil_power = -25
+		event_target:saradomin_beasts_of_evil_target = {
+			add_province_modifier = {
+				name = saradomin_beast_slain
+				duration = 7300
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saradomin_flavor.6.b #But it's not actually hurt anyone, has it?
+		add_prestige = -5
+		event_target:saradomin_beasts_of_evil_target = {
+			add_unrest = 5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Cardinals in Government
+country_event = {
+	id = saradomin_flavor.7
+	title = saradomin_flavor.7.t
+	desc = saradomin_flavor.7.d #With a cardinal present in [Root.GetName] we hold some influence over the Church of Saradomin, and they themselves hold some influence over us. We could tighten this relationship by granting the Cardinal an official governmental position.
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = saradomin
+		has_cardinal = yes
+		NOT = { has_country_modifier = cardinal_in_administration }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = saradomin_flavor.7.a #Yes, bring the Cardinal into government.
+		if = {
+			limit = {
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_CARDINAL_IN_ADMINISTRATION
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_CARDINAL_IN_ADMINISTRATION
+				influence = 5
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = "cardinal_in_administration"
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saradomin_flavor.7.b #We can handle governance, let the Cardinal work on spiritual matters.
+		
+		add_prestige = 10
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Protection of Church Property
+country_event = {
+	id = saradomin_flavor.8
+	title = saradomin_flavor.8.t
+	desc = saradomin_flavor.8.d #Churches are sacred land, and many of the more remote churches of Saradomin are granted large surrounding estates with the intention of minimising distractions from worship. The limits of an church estate in [saradomin_protection_of_church_target.GetName] have been contested by local secular landholders who claim the borders of their territory are being infringed by the church.
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	goto = saradomin_protection_of_church_target
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = saradomin
+		any_owned_province = {
+			OR = {
+				has_building = temple
+				has_building = cathedral
+			}
+			religion = saradomin
+		}
+		has_estate = estate_church
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				religion = saradomin
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+			save_event_target_as = saradomin_protection_of_church_target
+		}
+	}
+	
+	option = {
+		name = saradomin_flavor.8.a #Side with the church.
+		event_target:saradomin_protection_of_church_target = {
+			add_province_modifier = {
+				name = saradomin_expanded_church_lands
+				duration = 7300
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 2
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saradomin_flavor.8.b #Side with the secular landowners.
+		event_target:saradomin_protection_of_church_target = {
+			add_province_modifier = {
+				name = saradomin_contracted_church_lands
+				duration = 7300
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = -2
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 30
+					}
+				}
+			}
+		}
+	}
+}
+
+#Graveyard Full!
+country_event = {
+	id = saradomin_flavor.9
+	title = saradomin_flavor.9.t
+	desc = saradomin_flavor.9.d #The war dead have filled the graves of [saradomin_graveyard_target.GetName] so quickly there is no room remaining in a major graveyard. The people demand proper burials, but they hardly wish for their own land to be appropriated for extra graveyards.
+	picture = SARADOMIN_MISSIONARY_eventPicture
+	goto = saradomin_graveyard_target
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = saradomin
+		NOT = { manpower_percentage = 0.5 }
+		has_estate = estate_church
+		any_owned_province = {
+			religion = saradomin
+			base_manpower = 3
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				religion = saradomin
+				base_manpower = 3
+			}
+			save_event_target_as = saradomin_graveyard_target
+		}
+	}
+	
+	option = {
+		name = saradomin_flavor.9.a #Dedicate resources to making a new graveyard outside of [saradomin_graveyard_target.GetName].
+		add_adm_power = -20
+		add_papal_influence = 5
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saradomin_flavor.9.b #Appropriate land to expand the existing graveyard.
+		event_target:saradomin_protection_of_church_target = {
+			add_unrest = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saradomin_flavor.9.c #Bring out the pyres! Nothing wrong with cremation.
+		event_target:saradomin_protection_of_church_target = {
+			add_province_modifier = {
+				name = saradomin_undesired_rites
+				duration = 7300
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saradomin_flavor.9.e #Dig up some old corpses and shove them somewhere else.
+		add_papal_influence = -2
+				
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

@@ -1,3 +1,448 @@
+gunnar_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = GUN
+		NOT = { map_setup = map_setup_random }
+	}
+	GUN_down_with_the_moon_clan = {
+		icon = mission_down_with_the_moon_clan
+		required_missions = { GUN_lunar_sea_shores }
+		position = 3
+		provinces_to_highlight = {
+			area = lunar_isle_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			lunar_isle_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+				}
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 15
+				}
+			}
+			add_country_modifier = {
+				name = GUN_victory_over_the_moonclan
+				duration = -1
+			}
+		}
+	}
+	GUN_beyond_the_lunar_sea = {
+		icon = mission_to_the_new_world
+		required_missions = { GUN_down_with_the_moon_clan }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 410
+				province_id = 1424
+			}
+		}
+		trigger = {
+			owns_core_province = 410
+			owns_core_province = 1424
+		}
+		effect = {
+			add_prestige = 50
+			add_mil_power = 150
+		}
+	}
+	GUN_power_of_ourania = {
+		icon = mission_punish_the_zamorakians
+		required_missions = { GUN_kandarin_expansion }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 287
+		}
+		trigger = {
+			owns_core_province = 287
+		}
+		effect = {
+			add_horde_unity = 25
+			add_mil_power = 50
+		}
+	}
+}
+
+gunnar_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = GUN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	GUN_supplying_the_invasion = {
+		icon = mission_coins
+		required_missions = {  }
+		position = 1
+		trigger = {
+			share_of_starting_income = 1.2
+			NOT = { average_autonomy = 10 }
+			NOT = { num_of_loans = 1 }
+			is_in_deficit = no
+		}
+		effect = {
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+				}
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 10
+				}
+			}
+			hemenster_area = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	
+	GUN_lunar_sea_shores = {
+		icon = mission_fremennik_voyages
+		required_missions = { GUN_supplying_the_invasion GUN_fremennik_ally }
+		position = 2
+		provinces_to_highlight = {
+			has_port = yes
+			OR = {
+				region = fremennik_region
+				area = maple_wood_area
+				area = hemenster_area
+				area = baxtoria_area
+				area = grand_tree_area
+				area = piscatoris_area
+				area = eagles_peak_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_port = yes
+					OR = {
+						region = fremennik_region
+						area = maple_wood_area
+						area = hemenster_area
+						area = baxtoria_area
+						area = grand_tree_area
+						area = piscatoris_area
+						area = eagles_peak_area
+					}
+				}
+				amount = 5
+			}
+			OR = {
+				naval_strength = {
+					who = MOO
+					value = 1
+				}
+				NOT = { exists = MOO }
+			}
+		}
+		effect = {
+			lunar_isle_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			dougnemarch_area = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	GUN_kandarin_expansion = {
+		icon = mission_growth_of_ardougne
+		required_missions = { GUN_lunar_sea_shores GUN_catherbian_fleet }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = west_ardougne_area
+				area = tree_gnome_village_area
+				area = kandarin_corner_area
+				area = ourania_area					
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = kandarin_region
+				}
+				amount = 12
+			}
+			any_owned_province = {
+				OR = {
+					area = west_ardougne_area
+					area = tree_gnome_village_area
+					area = kandarin_corner_area
+					area = ourania_area					
+				}
+			}
+		}
+		effect = {
+			ourania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	GUN_wrath_and_ruin = {
+		icon = mission_wrath_and_ruin
+		required_missions = { GUN_kandarin_expansion GUN_karamjan_assault }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 985
+		}
+		trigger = {
+			owns_core_province = 985
+		}
+		effect = {
+			add_prestige = 50
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+				}
+				add_country_modifier = {
+					name = GUN_gunnar_the_undefeatable
+					duration = 3650
+				}
+			}
+			else = {
+				add_adm_power = 50
+				add_mil_power = 50
+			}
+		}
+	}
+}
+
+gunnar_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = GUN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	GUN_fremennik_ally = {
+		icon = mission_fremennik_family
+		required_missions = {  }
+		position = 1
+		trigger = {
+			any_ally = {
+				culture_group = fremennik_group
+				trust = { who = ROOT value = 60 }
+			}
+		}
+		effect = {
+			add_dip_power = 25
+			add_country_modifier = {
+				name = genfremmy_diplomatic_fleet
+				duration = 7300
+			}
+		}
+	}
+	
+	GUN_battle_prowess = {
+		icon = mission_v_statue
+		required_missions = { GUN_raise_the_forces }
+		position = 2
+		trigger = {
+			any_great_power = {
+			 	war_with = ROOT
+				NOT = {
+					war_score_against = {
+						who = ROOT
+						value = -50
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+				}
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 15
+				}
+			}
+			else = {
+				add_horde_unity = 25
+				add_prestige = 25
+				add_mil_power = 25
+			}
+		}
+	}
+	
+	GUN_catherbian_fleet = {
+		icon = mission_grand_ship
+		required_missions = { GUN_towards_white_wolf }
+		position = 3
+		provinces_to_highlight = {
+			has_port = yes
+			OR = {
+				area = catherby_area
+				area = east_ardougne_area
+				area = horloge_area
+				area = khazard_area
+				area = yanille_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}		
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_port = yes
+					OR = {
+						area = catherby_area
+						area = east_ardougne_area
+						area = horloge_area
+						area = khazard_area
+						area = yanille_area
+					}
+				}
+				amount = 3
+			}
+			num_of_galley = 10
+		}
+		effect = {
+			karamja_region = {
+				limit = {
+					NOT = {
+						area = kharazi_jungle_area
+					}
+				}
+				discover_country = ROOT
+			}
+			if = {
+				limit = {
+					exists = TBW
+				}
+				add_casus_belli = {
+					target = TBW
+					type = cb_vassalize_mission
+					months = 36
+				}
+			}
+			else = {
+				tai_bwo_wannai_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_claim = ROOT
+				}
+			}
+			entrana_area = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	GUN_karamjan_assault = {
+		icon = mission_island_dominance
+		required_missions = { GUN_catherbian_fleet }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 219
+		}		
+		trigger = {
+			owns_core_province = 219
+		}
+		effect = {
+			add_country_modifier = {
+				name = GUN_spear_smithing
+				duration = 9125
+			}
+		}
+	}
+	GUN_circumvent_falador = {
+		icon = mission_air_rune
+		required_missions = { GUN_the_mind_altar }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 39
+		}
+		trigger = {
+			owns_core_province = 39
+		}
+		effect = {
+			add_mil_power = 100
+		}
+	}
+	GUN_fremennik_traditions = {
+		icon = mission_mountain_camp
+		required_missions = { GUN_founding_of_gunnarsgrunn }
+		position = 6
+		provinces_to_highlight = {
+			province_id = 19
+		}
+		trigger = {
+			prestige = 75
+			has_institution = statehood
+			19 = {
+				num_of_times_improved_by_owner = 5
+			}
+		}
+		effect = {
+			change_government_reform_progress = 100
+		}
+	}
+	GUN_home_of_the_wizards = {
+		icon = mission_establish_wizards_tower
+		required_missions = { GUN_misthalanian_warpath }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 6
+				province_id = 938
+			}
+		}
+		trigger = {
+			owns_core_province = 6
+			owns_core_province = 938
+		}
+		effect = {
+			add_country_modifier = {
+				name = GUN_magecrusher
+				duration = 3650
+			}
+		}
+	}
+}
+
 gunnar_missions_4 = {
 	slot = 4
 	generic = no
@@ -9,57 +454,85 @@ gunnar_missions_4 = {
 	has_country_shield = yes
 	
 	GUN_raise_the_forces = {
-		icon = mission_alliances
+		icon = mission_raise_the_forces
 		required_missions = {  }
 		position = 1
 		trigger = {
 			army_size = 15
 		}
 		effect = {
-			every_province = {
+			if = {
 				limit = {
-					culture = barbarian
-					continent = west_runescape
+					ai = yes
+				}
+				add_accepted_culture = catherbian
+				add_dip_power = -100
+			}
+			custom_tooltip = GUN_accepted_cultures_for_ai
+			maple_wood_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_core = ROOT
 			}
-			maple_wood_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
+			248 = { add_core = ROOT }
+			247 = { add_core = ROOT }
+			kandarin_region = {
+				discover_country = ROOT
 			}
-			247 = { add_permanent_claim = ROOT }
 		}
 	}
 	GUN_towards_white_wolf = {
-		icon = mission_alliances
+		icon = mission_catherby_coast
 		required_missions = { GUN_raise_the_forces }
 		position = 2
 		provinces_to_highlight = {
 			province_id = 247
 		}
 		trigger = {
-			owns_core_province = 247			
+			owns_core_province = 247
 		}
 		effect = {
+			if = {
+				limit = {
+					ai = yes
+				}
+				add_accepted_culture = taverlian
+				add_dip_power = -100
+			}
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+				}
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 10
+				}
+			}
 			taverley_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_core = ROOT
+			}
+			asgarnia_region = {
+				discover_country = ROOT
+			}
+			entrana_bay_area = {
+				discover_country = ROOT
 			}
 		}
 	}
 	GUN_cross_the_mountain = {
-		icon = mission_alliances
+		icon = mission_white_wolf_crossing
 		required_missions = { GUN_towards_white_wolf }
 		position = 3
 		provinces_to_highlight = {
-			province_id = 49
-			province_id = 50
+			area = taverley_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
@@ -68,6 +541,16 @@ gunnar_missions_4 = {
 			}
 		}
 		effect = {
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+				}
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 20
+				}
+			}
 			mountain_valley_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -77,23 +560,21 @@ gunnar_missions_4 = {
 			}
 			43 = { add_permanent_claim = ROOT }
 			44 = { add_permanent_claim = ROOT }
+			1363 = { add_permanent_claim = ROOT }
 		}
 	}
-	GUN_mountain_valley = {
-		icon = mission_alliances
+	GUN_the_mind_altar = {
+		icon = mission_the_mind_altar
 		required_missions = { GUN_cross_the_mountain }
 		position = 4
 		provinces_to_highlight = {
-			province_id = 44
-			province_id = 1006
+			province_id = 48
 		}
 		trigger = {
-			OR = {
-				owns_core_province = 44
-				owns_core_province = 1006
-			}
+			owns_core_province = 48
 		}
 		effect = {
+			add_adm_power = 100
 			ice_mountain_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -115,6 +596,453 @@ gunnar_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			misthalin_region = {
+				limit = {
+					NOT = { 
+						area = swamp_caves_area
+					}
+				}
+				discover_country = ROOT
+			}
+		}
+	}
+	
+	GUN_founding_of_gunnarsgrunn = {
+		icon = mission_gunnarsgrunn
+		required_missions = { GUN_the_mind_altar }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 19
+				province_id = 863
+			}
+		}
+		trigger = {
+			owns_core_province = 19
+			owns_core_province = 863
+		}
+		effect = {
+			add_yearly_manpower = 0.5
+			draynor_area = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	
+	GUN_misthalanian_warpath = {
+		icon = mission_misthalanian_warpath
+		required_missions = { GUN_founding_of_gunnarsgrunn }
+		position = 6
+		provinces_to_highlight = {
+			region = misthalin_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = misthalin_region
+				}
+				amount = 12
+			}
+			OR = {
+				owns_core_province = 11
+				owns_core_province = 790
+			}			
+		}
+		effect = {
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+				}
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 10
+				}
+			}
+			lumbridge_swamp_area = {
+				limit = {
+					NOT = { is_claim = ROOT	}
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			al_kharid_area = {
+				limit = {
+					NOT = { is_claim = ROOT	}
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			upper_kharid_area = {
+				limit = {
+					NOT = { is_claim = ROOT	}
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	
+	GUN_destroy_the_training_area = {
+		icon = mission_the_power_of_runecrafting
+		required_missions = { GUN_misthalanian_warpath }
+		position = 7
+		provinces_to_highlight = {
+			province_id = 66
+		}
+		trigger = {
+			if = {
+				limit = {
+					66 = { NOT = { is_empty = yes } }
+				}
+				owns_core_province = 66
+			}
+			else = {
+				saranthium_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					66 = { NOT = { is_empty = yes } }
+				}
+				add_adm_power = 50
+			}
+			else = {
+				province_event = { 
+					id = flavor_gun.14
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+gunnar_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = GUN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	GUN_altar_burner = {
+		icon = mission_altar_burner
+		required_missions = {  }
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_humans
+						calc_true_if = {
+							all_province = {
+								has_province_modifier = GUN_ruined_runecrafting_altar
+							}
+							amount = 5
+						}
+					}
+				}
+				calc_true_if = {
+					all_province = {
+						has_province_modifier = GUN_ruined_runecrafting_altar
+					}
+					amount = 5
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = obj_convert_10_provinces_tooltip
+					check_variable = { which = num_converted_religion value = 10 }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_humans
+						calc_true_if = {
+							all_province = {
+								has_province_modifier = GUN_ruined_runecrafting_altar
+							}
+							amount = 5
+						}
+					}
+				}
+				every_owned_province = {
+					limit = {
+						provinces_on_capital_continent_of = ROOT
+						local_autonomy = 10
+					}
+					add_local_autonomy = -5
+					}
+				if = {
+					limit = {
+						has_government_mechanic = crusader_zeal_mechanic
+					}
+					add_government_power = {
+						mechanic_type = crusader_zeal_mechanic
+						power_type = crusader_zeal_power_1
+						value = 10
+					}
+				}
+				else = {
+					add_adm_power = 75
+				}
+			}
+			else = {
+				define_advisor = {
+					type = inquisitor
+					skill = 2
+					discount = yes
+				}
+			}
+		}
+	}
+	GUN_stabilisation = {
+		icon = mission_stabilisation
+		required_missions = { GUN_altar_burner }
+		position = 2
+		trigger = {
+			stability = 2
+		 	num_of_provinces_in_states = 25
+			NOT = { average_autonomy = 20 }
+			NOT = { average_unrest = 0 }
+		}
+		effect = {
+			change_government_reform_progress = 100
+		}
+	}
+	
+	GUN_crusaders_triumphant = {
+		icon = mission_crusaders_triumphant
+		required_missions = { GUN_stabilisation }
+		position = 3
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_humans
+						calc_true_if = {
+							all_province = {
+								has_province_modifier = GUN_ruined_runecrafting_altar
+							}
+							amount = 14
+						}
+					}
+				}
+				calc_true_if = {
+					all_province = {
+						has_province_modifier = GUN_ruined_runecrafting_altar
+					}
+					amount = 14
+				}
+			}
+			else = {
+				is_great_power = yes
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = GUN_completed_end_of_rc_crusade_tooltip
+						has_reform = reformed_gunnite_horde
+					}
+					NOT = { government = tribal }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_humans
+						calc_true_if = {
+							all_province = {
+								has_province_modifier = GUN_ruined_runecrafting_altar
+							}
+							amount = 14
+						}
+					}
+				}
+				add_country_modifier = {
+					name = GUN_eternal_crusader
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_reform = reformed_gunnite_horde
+				}
+				add_adm_power = 150
+				change_government_reform_progress = 75
+			}
+			else = {
+				change_government_reform_progress = 100
+			}
+		}
+	}
+	
+	GUN_destruction_of_camdozaal = {
+		icon = mission_fate_of_the_imcando
+		required_missions = { GUN_the_mind_altar }
+		position = 5
+		provinces_to_highlight = {
+			region = asgarnia_region
+			culture = imcando
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 45
+			owns_core_province = 46
+			NOT = {
+			 	any_province = {
+					region = asgarnia_region
+					culture = imcando
+					NOT = { owned_by = ROOT }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_province = {
+						region = asgarnia_region
+						culture = imcando
+					}
+				}
+				country_event = { 
+					id = flavor_gun.15
+					days = 1
+				}
+			}
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+				}
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 10
+				}
+			}
+			160 = {
+				add_claim = ROOT
+			}
+			edgeville_area = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+		
+	GUN_border_of_chaos = {
+		icon = mission_integration_of_edgeville
+		required_missions = { GUN_destruction_of_camdozaal }
+		position = 6
+		provinces_to_highlight = {
+			province_id = 160
+		}
+		trigger = {
+			if = {
+				limit = {
+					160 = {
+						is_empty = yes
+					}
+				}
+				edgeville_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+			else = {
+				owns_core_province = 160
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_government_mechanic = crusader_zeal_mechanic
+					160 = {
+						is_empty = yes
+					}
+				}
+				160 = {
+					add_permanent_province_modifier = {
+						name = GUN_ruined_runecrafting_altar
+						duration = -1
+					}
+				}
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 40
+				}
+				add_country_modifier = {
+					name = GUN_render_chaos_unto_chaos
+					duration = 3650
+				}
+				1401 = {
+					add_claim = ROOT
+				}
+				24 = {
+					add_claim = ROOT
+				}
+				1400 = {
+					add_claim = ROOT
+				}
+			}
+			else = {
+				add_army_tradition = 10
+				1401 = {
+					add_claim = ROOT
+				}
+				24 = {
+					add_claim = ROOT
+				}
+				kings_road_area = {
+					limit = {
+						NOT = { is_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_claim = ROOT
+				}				
+			}
+		}
+	}
+	
+	GUN_down_to_earth = {
+		icon = mission_down_to_earth
+		required_missions = { GUN_border_of_chaos }
+		position = 7
+		provinces_to_highlight = {
+			province_id = 1400
+		}
+		trigger = {
+			owns_core_province = 1400
+		}
+		effect = {
+			add_mil_power = 50
+			silvarea_area = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}	
 		}
 	}
 }

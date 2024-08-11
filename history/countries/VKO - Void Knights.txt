@@ -7,6 +7,7 @@ religious_school = guardian_school
 technology_group = centraltechgroup
 capital = 238 #Windswept Isle
 national_focus = MIL
+historical_friend = FGX
 
 2146.4.24 = {
 	monarch = {

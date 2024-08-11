@@ -224,15 +224,18 @@ genasg_troll_guard = {
 #Asgarnia
 #############
 
+###Shared
 
 #Local
 ASG_black_knights_castle = {
  	local_defensiveness = 0.1
 	garrison_growth = 0.1
+	local_great_project_upgrade_cost = -0.1
 }
 ASG_white_knights_castle = {
  	local_defensiveness = 0.1
 	garrison_growth = 0.1
+	local_great_project_upgrade_cost = -0.1
 }
 ASG_black_knights_fortress = {
  	local_missionary_strength = -0.05
@@ -248,6 +251,36 @@ ASG_castle_of_the_twin_knights = {
  	local_unrest = 2
 	garrison_growth = 0.2
 }
+ASG_growth_of_port_sarim = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_build_time = -0.25
+}
+ASG_crafting_guild_modifier = {
+	trade_goods_size = 1
+}
+ASG_refurbished_falador_castle = {
+	local_defensiveness = 0.2
+	local_garrison_size = 0.1
+}
+ASG_house_portal = {
+	local_development_cost_modifier = -0.2
+	local_build_cost = -0.2
+}
+ASG_mining_guild = {
+	trade_goods_size = 0.5
+	local_production_efficiency = 0.25
+}
+ASG_secret_of_kamishima = {
+	local_great_project_upgrade_cost = -0.25
+	local_development_cost_modifier = -0.2
+	max_absolutism_effect = 0.05
+}
+ASG_heroes_guild = {
+	local_defensiveness = 0.1
+	regiment_recruit_speed = -0.25
+}
+
 
 #National
 ASG_banishment_of_the_black_knights = {
@@ -282,8 +315,7 @@ ASG_void_knight_recruitment_other = {
 	global_manpower_modifier = 0.1
 }
 ASG_retreat_of_the_temple_knights = {
-	spy_offence = -0.2
-	missionary_maintenance_cost = -0.25
+	spy_offence = -0.15
 }
 ASG_one_faith_crusade = {
 	tolerance_heathen = -2
@@ -299,6 +331,199 @@ ASG_exile_of_the_white_knights = {
 	global_manpower_modifier = -0.05
 	tolerance_own = 1
 }
+ASG_asgarnian_artisans = {
+	build_cost = -0.05
+	build_time = -0.1
+}
+ASG_sibling_in_faith_rival_in_politics = {
+	tolerance_own = -1
+	years_of_nationalism = -5
+}
+ASG_cross_religious_dialogue = {
+	diplomatic_reputation = 1
+	relation_with_heretics = 10
+	relation_with_heathens = 10
+}
+ASG_guardian_of_the_imcando = {
+ 	num_accepted_cultures = 1
+	papal_influence = 0.5
+}
+ASG_call_to_discovery = {
+	range = 0.33
+}
+ASG_adventurer_expedition = {
+	colonists = 1
+}
+ASG_ceremonial_swords = {
+	prestige = 0.5
+	production_efficiency = 0.05
+}
+ASG_age_of_invention = {
+	all_power_cost = -0.05
+}
+ASG_opportunities_of_wushanko = {
+	global_colonial_growth = 15
+}
+ASG_colonial_investments = {
+	trade_company_investment_cost = -0.1
+}
+ASG_masterwork_armour = {
+	shock_damage_received = -0.15
+}
+ASG_faithful_unification = {
+	global_missionary_strength = 0.01
+}
+ASG_tolerance_of_the_white_knights = {
+	tolerance_heathen = 2
+	global_heathen_missionary_strength = -0.01
+}
+ASG_tolerance_of_the_black_knights = {
+	tolerance_heathen = 1
+	global_heathen_missionary_strength = -0.02
+}
+ASG_the_godsword = {
+	max_general_shock = 1
+	leader_land_shock = 1
+}
+
+### Generic
+
+# National
+
+ASG_GENRELIGION_fortress_asgarnia = {
+	rival_border_fort_maintenance = -0.25
+	manpower_in_own_culture_provinces = 0.1
+}
+ASG_GENRELIGION_stabilised_faith = {
+	tolerance_own = 1
+	global_unrest = -1
+}
+ASG_GENRELIGION_history_rewritten = {
+	tolerance_own = 1
+	missionaries = 1
+}
+
+
+### Saradomin
+
+# National
+
+ASG_SARA_saradomins_country = {
+	curia_powers_cost = -0.1
+}
+ASG_SARA_faith_and_determination = {
+ 	drill_decay_modifier = -0.1
+	discipline = 0.01
+}
+ASG_SARA_expanded_temple_knight_presence = {
+	spy_offence = 0.15
+}
+ASG_SARA_recruitment_drive = {
+	max_absolutism_effect = 0.05
+ 	spy_offence = 0.05
+}
+ASG_SARA_armadylean_connection = {
+	yearly_army_professionalism = 0.01
+	tolerance_heretic = 2
+}
+ASG_SARA_bastion_of_light = {
+	tolerance_own = 1
+	papal_influence = 1
+	curia_powers_cost = -0.1
+}
+
+### Zamorak
+
+# Local
+
+ASG_ZAM_revenge_of_zadimus = {
+	local_missionary_strength = 0.02
+}
+ASG_ZAM_zamorakian_overlords = {
+	local_years_of_nationalism = -10
+	local_autonomy = -0.1
+}
+ASG_ZAM_taverley_dungeon_barracks = {
+	local_manpower = 1
+	local_hostile_attrition = 1
+}
+
+# National
+ASG_ZAM_zamoraks_due = {
+	yearly_patriarch_authority = 0.05
+	num_accepted_cultures = 1
+}
+
+### Guthix
+
+#Local
+ASG_GUTH_void_knights_castle = {
+ 	local_defensiveness = 0.1
+	garrison_growth = 0.1
+	local_great_project_upgrade_cost = -0.1
+}
+ASG_GUTHIX_tears_of_guthix = {
+	tolerance_own = 1
+	yearly_karma_decay = 0.05
+}
+ASG_GUTHIX_sword_of_edicts_modifier = {
+	warscore_cost_vs_other_religion = -0.2
+	missionary_maintenance_cost = -0.25
+}
+ASG_GUTHIX_monastery_of_ascension_modifier = {
+	local_manpower_modifier = 0.5
+	allowed_num_of_buildings = 1
+}
+
+#National
+ASG_GUTHIX_rise_of_crux_eqal = {
+	spy_offence = 0.1
+	mercenary_discipline = 0.05
+}
+ASG_GUTHIX_gnome_glider_rights = {
+	envoy_travel_time = -0.25
+}
+ASG_GUTHIX_ogres_of_guthix = {
+	cavalry_power = 0.1
+	cavalry_cost = -0.1
+}
+ASG_GUTHIX_guardian_of_the_void = {
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+}
+ASG_GUTHIX_justicar_of_the_void = {
+	shock_damage_received = -0.025
+	fire_damage_received = -0.025
+	shock_damage = 0.025
+	fire_damage = 0.025
+}
+ASG_GUTHIX_executioner_of_the_void = {
+	shock_damage = 0.05
+	fire_damage = 0.05
+}
+
+
+### Brassica Prime
+
+# Local
+ASG_BRASSICA_bumper_harvest = {
+	trade_goods_size_modifier = 0.25
+}
+ASG_BRASSICA_monastery_of_brassica = {
+	trade_goods_size_modifier = 0.5
+ 	local_tax_modifier = 0.25
+	local_unrest = -2
+}
+
+# National
+ASG_BRASSICA_harmony_out_of_chaos = {
+	harmonization_speed = 0.1
+}
+ASG_BRASSICA_cheers_of_the_cabbage_god = {
+	tolerance_own = 1
+	yearly_harmony = 0.25
+}
+
 
 #############
 #Baxtoria
@@ -308,6 +533,10 @@ ASG_exile_of_the_white_knights = {
 BXT_new_elven_capital = {
 	local_development_cost = -0.25
 	local_production_efficiency = 0.25
+}
+BXT_fishing_platform = {
+	trade_goods_size = 1
+	global_unrest = -1
 }
 
 #National
@@ -375,6 +604,9 @@ CCO_corsair_banking = {
 CDR_time_to_mine = {
 	trade_goods_size_modifier = 0.2
 }
+CDR_melzars_maze = {
+	local_defensiveness = 0.25
+}
 
 #National
 CDR_colonial_drive = {
@@ -403,6 +635,7 @@ CDR_wary_of_adventurers = {
 	yearly_absolutism = -0.1
 	max_absolutism = -10
 }
+
 
 #############
 #Canifis
@@ -471,6 +704,48 @@ CLS_saradominist_mission = {
 }
 
 #############
+#Cashien
+#############
+
+#Local
+CSN_secrets_of_lassar = {
+	global_spy_defence = 0.1
+	technology_cost = -0.025
+}
+
+#National
+
+CSN_deepening_temple_knight_involvement = {
+	fabricate_claims_cost = -0.25
+	discovered_relations_impact = -0.5
+}
+CSN_foresight_of_oracles = {
+ 	global_institution_spread = 0.1
+	idea_cost = -0.1
+}
+CSN_greatest_spies_of_asgarnia = {
+	can_chain_claim = yes
+	no_claim_cost_increasement = yes
+}
+CSN_secret_guardian_of_asgarnia = {
+	spy_offence = 0.1
+	global_spy_defence = 0.2
+}
+
+#############
+#Cam Torum
+#############
+
+#National
+CTR_loose_lips = {
+	global_spy_defence = -0.25
+}
+CTR_strict_control_of_runes = {
+	global_spy_defence = 0.25
+	global_own_trade_power = 0.25
+}
+
+#############
 #Donblas
 #############
 
@@ -507,6 +782,12 @@ DBS_rise_of_kinshra = {
 DBS_rejection_of_zamorak = {
 	tolerance_own = 1
 	tolerance_heathen = -1
+}
+DBS_fresh_fervour = {
+	global_missionary_strength = 0.03
+}
+DBS_asgarnian_destiny = {
+	improve_relation_modifier = 0.2
 }
 
 #############
@@ -696,7 +977,26 @@ GUN_modest_sabotage_by_the_gunnites = {
 	shock_damage_received = 0.05
 	ae_impact = 0.1
 }
-
+GUN_victory_over_the_moonclan = {
+	horde_unity = 0.5
+	may_explore = yes
+}
+GUN_spear_smithing = {
+	global_regiment_cost = -0.15
+}
+GUN_gunnar_the_undefeatable = {
+	monthly_crusader_zeal_power_1 = 0.2
+}
+GUN_magecrusher = {
+	monthly_crusader_zeal_power_1 = 0.1
+	fire_damage_received = -0.05
+}
+GUN_eternal_crusader = {
+	monthly_crusader_zeal_power_1 = 0.6
+}
+GUN_render_chaos_unto_chaos = {
+	harsh_treatment_cost = -0.2
+}
 
 #Local
 GUN_ruined_runecrafting_altar = {
@@ -826,6 +1126,13 @@ JTZ_glory_for_the_house_of_jatizso = {
 
 KDR_world_gate_province = {
  	prestige = 0.5
+}
+KDR_fishing_platform = {
+	trade_goods_size = 2
+}
+KDR_neglect_of_witchaven = {
+	local_tax_modifier = -0.25
+ 	trade_goods_size_modifier = -0.25
 }
 
 
@@ -1411,6 +1718,24 @@ SNT_ghorrock_landing = {
 }
 
 #############
+#Taverley
+#############
+
+#National
+
+TAV_boom_of_druidic_practices = {
+ 	missionary_maintenance_cost = -0.25
+	yearly_karma_decay = 0.05
+}
+TAV_united_stone_circles = {
+	global_missionary_strength = 0.01
+	tolerance_own = 1
+}
+TAV_united_under_taverley = {
+	diplomatic_annexation_cost = -0.15
+}
+
+#############
 #Tirannwn
 #############
 
@@ -1538,6 +1863,14 @@ VAR_kourendwatch_fortification_modifier = {
 	blockade_force_required = 0.5
 	hostile_disembark_speed = 1.0
 }
+VAR_growth_of_tempestus = {
+	local_missionary_strength = 0.02
+	local_culture_conversion_cost = -0.25
+ 	local_development_cost_modifier = -0.1
+}
+VAR_vinyards_of_aldarin = {
+	trade_goods_size = 1
+}
 
 #National
 
@@ -1564,6 +1897,13 @@ VAR_diplomatic_outreach = {
 	diplomats = 1
 	envoy_travel_time = -0.25
 }
+VAR_recent_aldarin_investment = {
+	manpower_recovery_speed = -0.05
+}
+VAR_recent_auburnvale_investment = {
+	manpower_recovery_speed = -0.05
+}
+
 
 #############
 #Varze

@@ -12,6 +12,7 @@ historical_friend = JTZ
 historical_friend = KDG
 historical_friend = MCE
 historical_friend = NZS
+historical_friend = GUN
 
 1913.9.11 = {
 	monarch = {

@@ -31,6 +31,7 @@ is_city = yes
 	owner = ASG
 	controller = ASG
 	add_core = ASG
+	temple = yes
 }
 
 2044.2.15 = {

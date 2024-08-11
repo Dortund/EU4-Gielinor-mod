@@ -16,6 +16,18 @@ national_focus = ADM
 		dip = 5
 		mil = 6
 	}
+	complete_mission = genasg_grow_the_economy
+	complete_mission = genasg_proselytise_the_faith
+	complete_mission = genasg_stable_expansion
+	complete_mission = genasg_onward_to_farradorn
+	complete_mission = genasg_friends_in_asgarnia
+	complete_mission = genasg_misthalin_relations
+	complete_mission = genasg_trade_dominance
+	complete_mission = genasg_coastal_control
+	complete_mission = genasg_organise_the_troops
+	complete_mission = genasg_decent_army
+	complete_mission = genasg_inland_expansion
+	complete_mission = genasg_burthorpe_border
 }
 
 
@@ -28,9 +40,27 @@ national_focus = ADM
 		dip = 3
 		mil = 3
 	}
+	complete_mission = ASG_unify_asgarnia
+	complete_mission = ASG_raw_materials
+	complete_mission = ASG_expansion_of_falador
+	complete_mission = ASG_castles_of_asgarnia
+	complete_mission = ASG_crafting_guild
+	complete_mission = ASG_misthalanian_settlement
+	complete_mission = ASG_runecrafting_boom
+	complete_mission = ASG_fate_of_the_imcando
+	complete_mission = ASG_mining_guild
+	complete_mission = ASG_break_the_blockade
+	complete_mission = ASG_sarim_triumphant
+	complete_mission = ASG_musan_colony
+	complete_mission = ASG_crandorian_relations
 }
 
 
 2150.1.1 = {
 	add_absolutism = 45
+}
+
+2159.1.1 = {
+	remove_government_reform = noble_kingdom
+	add_government_reform = figurehead_monarchy
 }

@@ -18,4 +18,6 @@ base_manpower = 1
 
 trade_goods = fishing_spot
 
-is_city = yes
+native_size = 1
+native_ferocity = 10
+native_hostileness = 10

@@ -198,6 +198,21 @@ religious_center = {
 }
 
 ##########################################
+# National Flavour - Asgarnia
+##########################################
+
+ASG_SARA_defence_of_hyu_ji = {
+	trigger = {
+		religion = saradomin
+		culture = sea_orphan
+	}
+	local_institution_spread = 1
+ 	num_accepted_cultures = 1
+	papal_influence = 0.5
+}
+
+
+##########################################
 # National Flavour - Misthalin
 ##########################################
 
@@ -255,13 +270,13 @@ MYT_descendants_of_hallowvale = {
 MYT_blisterwood_tree = {
 	potential = {
 		owner = {
-			culture_group = vampyric
+			culture_group = vampyre_group
 		}
 	}
 	trigger = {
 		controller = {
 			NOT = {
-				culture_group = vampyric
+				culture_group = vampyre_group
 			}
 		}
 	}
@@ -271,13 +286,13 @@ MYT_blisterwood_tree = {
 MYT_the_arboretum = {
 	potential = {
 		owner = {
-			culture_group = vampyric
+			culture_group = vampyre_group
 		}
 	}
 	trigger = {
 		controller = {
 			NOT = {
-				culture_group = vampyric
+				culture_group = vampyre_group
 			}
 		}
 	}
@@ -366,6 +381,25 @@ PPH_necromatic_barriers = {
 	local_fort_maintenance_modifier = -1
 	max_attrition = 1
  	local_hostile_attrition = 1
+}
+
+##########################################
+# National Flavour - Taverley
+##########################################
+
+TAV_enhanced_druidic_rituals = {
+	potential = {
+		owner = {
+			religion = guthix
+		}
+	}
+	trigger = {
+		owner = {
+			religion = guthix
+		}
+	}
+	global_missionary_strength = 0.01
+	yearly_karma_decay = 0.05
 }
 
 ##########################################
@@ -620,6 +654,7 @@ wildy_border_level_one = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
+			NOT = { has_country_modifier = GUN_render_chaos_unto_chaos }
 		}
 		NOT = { has_province_modifier = MST_beacon_network_province }
 		NOT = { has_active_triggered_province_modifier = wildy_border_level_two }
@@ -654,6 +689,7 @@ wildy_border_level_two = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
+			NOT = { has_country_modifier = GUN_render_chaos_unto_chaos }
 		}
 		NOT = { has_province_modifier = MST_beacon_network_province }
 		NOT = { has_active_triggered_province_modifier = wildy_border_level_three }
@@ -686,6 +722,7 @@ wildy_border_level_three = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
+			NOT = { has_country_modifier = GUN_render_chaos_unto_chaos }
 		}
 		NOT = { has_province_modifier = MST_beacon_network_province }
 		NOT = { has_active_triggered_province_modifier = wildy_border_level_four }
@@ -716,6 +753,7 @@ wildy_border_level_four = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
+			NOT = { has_country_modifier = GUN_render_chaos_unto_chaos }
 		}
 		NOT = { has_province_modifier = MST_beacon_network_province }
 		NOT = { has_active_triggered_province_modifier = wildy_border_level_five }
@@ -744,6 +782,7 @@ wildy_border_level_five = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
+			NOT = { has_country_modifier = GUN_render_chaos_unto_chaos }
 		}
 		NOT = { has_province_modifier = MST_beacon_network_province }
 		NOT = { has_active_triggered_province_modifier = wildy_border_level_six }
@@ -770,6 +809,7 @@ wildy_border_level_six = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
+			NOT = { has_country_modifier = GUN_render_chaos_unto_chaos }
 		}
 		NOT = { has_province_modifier = MST_beacon_network_province }
 		NOT = { has_active_triggered_province_modifier = wildy_border_level_seven }
@@ -794,6 +834,7 @@ wildy_border_level_seven = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
+			NOT = { has_country_modifier = GUN_render_chaos_unto_chaos }
 		}
 		NOT = { has_province_modifier = MST_beacon_network_province }
 		NOT = { has_active_triggered_province_modifier = wildy_border_level_eight }
@@ -816,6 +857,7 @@ wildy_border_level_eight = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
+			NOT = { has_country_modifier = GUN_render_chaos_unto_chaos }
 		}
 		NOT = { has_province_modifier = MST_beacon_network_province }
 		NOT = { has_active_triggered_province_modifier = wildy_border_level_nine }
@@ -835,6 +877,7 @@ wildy_border_level_nine = {
 	trigger = {
 		owner = {
 			NOT = { technology_group = northerntechgroup }
+			NOT = { has_country_modifier = GUN_render_chaos_unto_chaos }
 		}
 		NOT = { has_province_modifier = MST_beacon_network_province }
 	}

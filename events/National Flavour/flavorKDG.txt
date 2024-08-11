@@ -39,7 +39,7 @@ country_event = {
 				which = architecture
 				value = 100
 			}
-			change_trade_goods = iron
+			change_trade_goods = basic_ores
 			discover_country = KDG
 		}
 		capital_scope = {

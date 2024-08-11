@@ -69,6 +69,43 @@ DYN_kingdom = {
 	}
 }
 
+FGX_fiara = {
+	rank = {
+		1 = DRUIDIC_VILLAGE
+		2 = DRUIDIC_NATION
+		3 = DRUIDIC_EMPIRE
+	}
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+    heir_male = {
+        1 = APPRENTICE
+		2 = APPRENTICE
+		3 = APPRENTICE
+    }
+    heir_female = {
+        1 = APPRENTICE
+		2 = APPRENTICE
+		3 = APPRENTICE
+    }
+
+	trigger = {
+		tag = FGX
+		ruler_culture = colossus
+		OR = {
+			has_reform = druidic_state
+			has_reform = druidic_order
+		}
+	}
+}
+
 general_khazard = {
 	rank = {
 		1 = REGIME

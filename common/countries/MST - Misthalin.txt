@@ -4,17 +4,17 @@ graphical_culture = westerngfx
 
 color = { 158 0 165 }
 
-revolutionary_colors = { 2 10 6 }
+revolutionary_colors = { 2 11 2 } #Misthalanian Colours
 
-historical_idea_groups = {
-	trade_ideas
+historical_idea_groups = { #Updated
 	defensive_ideas
-	offensive_ideas
-	spy_ideas
-	diplomatic_ideas
 	economic_ideas
-	religious_ideas
-	innovativeness_ideas
+	trade_ideas
+	court_ideas
+	diplomatic_ideas
+	mercenary_ideas
+	exploration_ideas
+	expansion_ideas
 }
 
 ship_names = {

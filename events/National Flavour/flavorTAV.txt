@@ -1,0 +1,40 @@
+########################################
+# Events for Taverley
+########################################
+
+namespace = flavor_tav
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_tav.1
+	title = flavor_tav.1.t #Call for Union Under the [Root.Religion.GetName] Faith
+	desc = flavor_tav.1.d #Our strong, faith-driven ties to Taverley have given us strength, but it is increasingly evident we are struggling to stand apart from them. Perhaps it is best we become subject to them for our own protection.
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_tav.1.a #[Root.Religion.GetName]s are stronger united!
+		random_country = {
+			limit = {
+				has_country_flag = TAV_calling_the_guthixian_union
+			}
+			create_vassal = ROOT
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_tav.1.b #We will surrender our independence to no-one.
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

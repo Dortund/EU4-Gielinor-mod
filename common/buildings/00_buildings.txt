@@ -73,6 +73,7 @@ marketplace = {
 
 	on_obsolete = {
 	}
+	
 	ai_will_do = {
 		factor = 1.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 	}

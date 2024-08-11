@@ -66,6 +66,22 @@ cb_reunite_kourend = {
 	war_goal = goal_reunite_kourend
 }
 
+cb_runecrafting_crusade = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_reform = runecrafting_crusader
+		current_age = age_of_humans
+		FROM = {
+			any_owned_province = {
+				trade_goods = runes
+				NOT = { has_province_modifier = GUN_ruined_runecrafting_altar }
+			}
+		}
+	}
+	war_goal = goal_take_runecrafting_altars
+}
+
 cb_unify_asgarnia = {
 	valid_for_subject = no
 
@@ -73,7 +89,7 @@ cb_unify_asgarnia = {
 		NOT = { exists = ASG }
 		NOT = { tag = ENT }
 		NOT = { tag = CDR }
-		dip_tech = 6
+		mission_completed = genasg_decent_army
 		culture_group = asgarnian_group
 		capital_scope = { region = asgarnia_region }
 		is_revolutionary = no

@@ -136,7 +136,7 @@ ardougne_missions_3 = {
 	has_country_shield = yes
 	
 	ADO_growth_of_ardougne = {
-		icon = mission_early_modern_university
+		icon = mission_growth_of_ardougne
 		required_missions = {  }
 		provinces_to_highlight = {
 			province_id = 264
@@ -179,7 +179,7 @@ ardougne_missions_3 = {
 	}
 	
 	ADO_unquiet_navy = {
-		icon = mission_establish_high_seas_navy
+		icon = mission_night_port
 		required_missions = { ADO_growth_of_ardougne }
 		provinces_to_highlight = {
 			province_id = 263
@@ -332,7 +332,7 @@ ardougne_missions_5 = {
 	has_country_shield = yes
 	
 	ADO_catherby_coast = {
-		icon = mission_retake_ceuta
+		icon = mission_catherby_coast
 		position = 2
 		required_missions = { ADO_greater_ardougne }
 		provinces_to_highlight = {
@@ -367,7 +367,7 @@ ardougne_missions_5 = {
 	}
 	
 	ADO_hinterland_expansion = {
-		icon = mission_rb_conquer_wales
+		icon = mission_sinclair_relations
 		position = 3
 		required_missions = { ADO_catherby_coast }
 		provinces_to_highlight = {

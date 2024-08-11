@@ -111,6 +111,9 @@ country_event = {
 	trigger = {
 		NOT = { is_year = 2080 }
 		is_at_war = no
+		NOT = {
+			exists = GUN
+		}
 		OR = {
 			AND = {
 				tag = REL
@@ -119,9 +122,9 @@ country_event = {
 					any_owned_province = {
 						culture = barbarian
 						runecrafting = 50
-						}
-					amount = 2
 					}
+					amount = 2
+				}
 			}
 			AND = {
 				culture_group = fremennik_group
@@ -130,9 +133,9 @@ country_event = {
 					any_owned_province = {
 						culture = barbarian
 						runecrafting = 60
-						}
-					amount = 3
 					}
+					amount = 3
+				}
 			}
 			AND = {
 				NOT = { culture_group = fremennik_group }
@@ -142,9 +145,9 @@ country_event = {
 					any_owned_province = {
 						culture = barbarian
 						runecrafting = 70
-						}
-					amount = 4
 					}
+					amount = 4
+				}
 			}
 		}
 	}
@@ -174,14 +177,17 @@ country_event = {
 				add_army_professionalism = 0.2
 				define_ruler = {
 					name = "Gunnar"
-					dynasty = "Magecrusher"
-					adm = 3
-					dip = 5
+					dynasty = "Viljarsson"
+					adm = 2
+					dip = 3
 					mil = 6
 					age = 18
 					claim = 100
 				}
-				add_ruler_personality = tactical_genius_personality
+				clear_scripted_personalities = yes
+				add_ruler_personality = conqueror_personality
+				add_ruler_personality = zealot_personality
+				add_ruler_personality = naive_personality
 				change_religion = v
 				add_historical_friend = REL
 				capital_scope = {
@@ -243,14 +249,17 @@ country_event = {
 				add_army_professionalism = 0.2
 				define_ruler = {
 					name = "Gunnar"
-					dynasty = "Magecrusher"
-					adm = 3
-					dip = 5
+					dynasty = "Viljarsson"
+					adm = 2
+					dip = 3
 					mil = 6
 					age = 18
 					claim = 100
 				}
-				add_ruler_personality = tactical_genius_personality
+				clear_scripted_personalities = yes
+				add_ruler_personality = conqueror_personality
+				add_ruler_personality = zealot_personality
+				add_ruler_personality = naive_personality
 				change_religion = v
 				add_historical_friend = REL
 				capital_scope = {
@@ -307,14 +316,17 @@ country_event = {
 				add_army_professionalism = 0.2
 				define_ruler = {
 					name = "Gunnar"
-					dynasty = "Magecrusher"
-					adm = 3
-					dip = 5
+					dynasty = "Viljarsson"
+					adm = 2
+					dip = 3
 					mil = 6
 					age = 18
 					claim = 100
 				}
-				add_ruler_personality = tactical_genius_personality
+				clear_scripted_personalities = yes
+				add_ruler_personality = conqueror_personality
+				add_ruler_personality = zealot_personality
+				add_ruler_personality = naive_personality
 				change_religion = v
 				capital_scope = {
 					add_base_tax = 1

@@ -71,6 +71,7 @@ base_values = {
 	tolerance_of_heathens_capacity = 3
 	max_flagships = 1
 	num_of_parliament_issues = 10
+	has_marines = yes
 }
 
 stability = {
@@ -156,6 +157,8 @@ army_tradition = {
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
 	janissaries_loyalty_modifier = 0.05
+	qizilbash_loyalty_modifier = 0.05
+	ghulams_loyalty_modifier = 0.05
 	allowed_tercio_fraction = 0.1
 	allowed_samurai_fraction = 0.1
 }
@@ -169,6 +172,7 @@ navy_tradition = {
 	mr_traders_influence = 0.1
 	blockade_efficiency = 1
 	sailors_recovery_speed = 0.2
+	monthly_arabic_trade_influence_power = 0.2
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
 	allowed_geobukseon_fraction = 0.5
@@ -397,11 +401,6 @@ low_meritocracy = {
 	yearly_corruption = 0.2 #i.e. 0.1 at 0 Meritocracy
 }
 
-militarized_society = { #Reused for Unstable Governments
- 	stability_cost_modifier = -0.5
- 	global_unrest = -2
-}
-
 expand_administation_modifier = {
 	expand_administration_cost = 0.3 #Increased from 0.2 due to smaller number of provinces in the world
 	governing_capacity = 20
@@ -411,8 +410,14 @@ over_governing_capacity_modifier = {
 	stability_cost_modifier = 1.0
 	ae_impact = 0.5
 	improve_relation_modifier = -0.5
-	core_creation = 0.2
 	advisor_cost = 1.0
+	monthly_militarized_society = -1
+	monthly_prussian_militarized_society_1 = -1
+	monthly_prussian_militarized_society_2 = -1
+	monthly_prussian_militarized_society_3 = -1
+	administrative_efficiency = -0.5
+	monthly_ottoman_decadence = 2
+	monthly_authority_power = 0.5
 }
 
 ########################################

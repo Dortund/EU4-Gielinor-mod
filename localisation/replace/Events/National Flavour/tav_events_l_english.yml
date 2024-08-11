@@ -1,0 +1,5 @@
+﻿l_english:
+ flavor_tav.1.t:0 "Call for Union Under the [Root.Religion.GetName] Faith"
+ flavor_tav.1.d:0 "Our strong, faith-driven ties to Taverley have given us strength, but it is increasingly evident we are struggling to stand apart from them. Perhaps it is best we become subject to them for our own protection."
+ flavor_tav.1.a:0 "[Root.Religion.GetName]s are stronger united!"
+ flavor_tav.1.b:0 "We will surrender our independence to no-one."

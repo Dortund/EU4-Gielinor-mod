@@ -1,7 +1,7 @@
 namespace = terror_of_the_leviathan
 
 ########################################
-# Fall of Cadarn
+# Terror of the Leviathan
 ########################################
 
 # Start

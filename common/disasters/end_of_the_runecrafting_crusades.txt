@@ -1,0 +1,82 @@
+#End of the Runecrafting Crusades
+## For Gunnar if they run out of Crusader Zeal
+
+end_of_the_runecrafting_crusades = {
+	potential = {
+		has_reform = runecrafting_crusader
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+		NOT = { has_global_flag = GUN_end_of_crusades_flag }
+	}
+
+	can_start = {
+		NOT = {
+			has_government_power = {
+				mechanic_type = crusader_zeal_mechanic
+				power_type = crusader_zeal_power_1
+				value = 25
+			}
+		}
+	 	has_any_disaster = no
+	}
+	
+	can_stop = {
+		NOT = { has_reform = runecrafting_crusader }
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2
+			NOT = {
+				has_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = -1
+			has_government_power = {
+				mechanic_type = crusader_zeal_mechanic
+				power_type = crusader_zeal_power_1
+				value = 50
+			}
+		}
+		modifier = {
+			factor = -1
+			has_government_power = {
+				mechanic_type = crusader_zeal_mechanic
+				power_type = crusader_zeal_power_1
+				value = 75
+			}
+		}
+	}
+
+	can_end = {
+		OR = {
+			NOT = { has_reform = runecrafting_crusader }
+			AND = {
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 2
+				had_country_flag = { flag = GUN_end_of_rc_start days = 3650 }
+			}
+		}
+	}
+
+	modifier = {
+		manpower_recovery_speed = -0.10
+		monthly_crusader_zeal_power_1 = -1
+	}
+	
+	on_start = end_of_the_runecrafting_crusades.1
+	on_end = end_of_the_runecrafting_crusades.100
+}
+

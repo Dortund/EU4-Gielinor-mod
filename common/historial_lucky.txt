@@ -19,6 +19,7 @@ CLS = {
 
 #Ardougne
 ADO = {
+	is_year = 2000
 	NOT = {
 		exists = KDR
 	}

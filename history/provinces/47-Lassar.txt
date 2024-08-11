@@ -27,6 +27,7 @@ is_city = yes
 	remove_core = CDZ
 	culture = dimnes
 	religion = zamorak
+	temple = yes
 }
 
 2049.9.29 = {

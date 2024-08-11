@@ -519,7 +519,7 @@
  PROV_ADJ518:1 "Stonecutter Outpost"
  PROV_ADJ519:1 "Wyrmden"
  PROV_ADJ520:1 "Kualti Station"
- PROV_ADJ521:1 "Cam Torum"
+ PROV_ADJ521:1 "Cam Torum Gates"
  PROV_ADJ522:1 "Tamakamtlati"
  PROV_ADJ523:1 "Quaestium"
  PROV_ADJ524:1 "Outer Fortis"
@@ -1401,4 +1401,5 @@
  PROV_ADJ1487:0 "Salvager Splinter"
  PROV_ADJ1488:0 "Chowa"
  PROV_ADJ1489:0 "Villsvin Peninsula"
- 
+ PROV_ADJ1490:0 "Cam Torum"
+ PROV_ADJ1491:0 "Neypotzli"

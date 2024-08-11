@@ -1,7 +1,7 @@
 #890-Tlati Delta
-owner = AZA
-controller = AZA
-add_core = AZA
+owner = CTR
+controller = CTR
+add_core = CTR
 tribal_owner = ---
 culture = imcando
 religion = saradomin

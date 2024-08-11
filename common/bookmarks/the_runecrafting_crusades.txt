@@ -1,0 +1,12 @@
+bookmark =
+{
+	name = "RUNECRAFTING_CRUSADE_START_NAME"
+	desc = "RUNECRAFTING_CRUSADE_START_DESC"
+	date = 2042.3.15
+	
+	center = 52
+	
+	country = GUN
+	country = ASG
+	country = MST
+}

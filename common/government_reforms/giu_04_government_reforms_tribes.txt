@@ -323,6 +323,29 @@ quidamortem_boss_nation = {
 	}
 }
 
+reformed_gunnite_horde = {
+	icon = "icon_runecrafting_crusader"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = reformed_gunnite_horde
+	}
+	legacy_equivalent = runecrafting_crusader_legacy
+	nomad = yes
+	valid_for_nation_designer = no
+
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.25
+
+	modifiers = {
+		horde_unity = 1
+		land_maintenance_modifier = -0.1
+		siege_ability = 0.1
+		shock_damage = 0.1
+		fire_damage_received = -0.1
+	}
+}
+
 runecrafting_crusader = {
 	icon = "icon_runecrafting_crusader"
 	allow_normal_conversion = no
@@ -332,23 +355,29 @@ runecrafting_crusader = {
 	legacy_equivalent = runecrafting_crusader_legacy
 	nomad = yes
 	valid_for_nation_designer = yes
-	nation_designer_cost = 200
+	nation_designer_cost = 250
 
 	lock_level_when_selected = yes
 
 	start_territory_to_estates = 0.25
+	
+	conditional = {
+		government_abilities = {
+			crusader_zeal_mechanic
+		}
+	}
 
 	modifiers = {
+		ignore_coring_distance = yes
 	 	global_tax_income = 60
 		global_manpower = 20
 	 	land_forcelimit = 20
-		land_maintenance_modifier = -0.10
-		global_institution_spread = -0.15
-		siege_ability = 0.25
-		reinforce_cost_modifier = -0.5
+		land_maintenance_modifier = -0.25
+		siege_ability = 0.2
 		shock_damage = 0.1
 		fire_damage_received = -0.1
-		administrative_efficiency = 0.05
+		years_of_nationalism = 5
+		diplomatic_upkeep = -3
 	}
 }
 
@@ -928,6 +957,7 @@ tribe_to_kingdom_reform = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
 			has_reform = quidamortem_boss_nation
+			has_reform = runecrafting_crusader
 		}
 	}
 	allow_normal_conversion = yes
@@ -948,6 +978,7 @@ tribe_to_republic_reform = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
 			has_reform = quidamortem_boss_nation
+			has_reform = runecrafting_crusader
 		}
 	}
 	allow_normal_conversion = yes
@@ -984,6 +1015,7 @@ tribe_to_theocracy_reform = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
 			has_reform = quidamortem_boss_nation
+			has_reform = runecrafting_crusader
 		}
 	}
 	allow_normal_conversion = yes

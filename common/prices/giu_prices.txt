@@ -24,6 +24,7 @@ bones = {
 cabbage = {
 	base_price = 2
 	#+25%: At least 25 Brassica Prime provinces; follows faith; 2+ cabbage-producing provinces
+	#+25%: Fairies own cabbage province or Brassica Prime meets fairies
 }
 
 divine_energy = {
@@ -40,7 +41,7 @@ fishing_spot = {
 }
 
 flax = {
-	base_price = 3
+	base_price = 2.5
 }
 
 fruit = {
@@ -111,7 +112,7 @@ runes = {
 }
 
 runite = {
-	base_price = 5
+	base_price = 4.5
 	#-20%: Greater Loot unlocked
 }
 

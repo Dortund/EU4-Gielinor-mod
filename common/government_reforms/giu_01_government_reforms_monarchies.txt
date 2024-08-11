@@ -191,7 +191,8 @@ fateful_kingdom = {
 	}
 	legacy_equivalent = fateful_kingdom_legacy
 	allow_force_tributary = no
-	valid_for_nation_designer = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 400
 	start_territory_to_estates = 0.25
 
 	effect = {
@@ -240,6 +241,25 @@ feldip_government = {
 	}
 	custom_attributes = {
 		locked_government_type = yes
+	}
+}
+
+figurehead_monarchy = {
+	icon = "icon_figurehead_monarchy"
+	potential = {
+		has_reform = figurehead_monarchy
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	modifiers = {
+		monarch_admin_power = -1
+		yearly_corruption = 0.05
+		legitimacy = -0.5
+		same_religion_advisor_cost = -0.25
+		army_tradition = 0.3
+		tolerance_own = 1
+		tolerance_heathen = -1
 	}
 }
 
@@ -311,6 +331,7 @@ khanate = {
 		OR = {
 			culture_group = wushanko_group
 			culture_group = cyclops_group
+			culture_group = siren_group
 		}
 	}
 	legacy_equivalent = khanate_legacy

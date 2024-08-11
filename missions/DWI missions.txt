@@ -1,16 +1,23 @@
-dark_wizard_missions_3 = {
-	slot = 3
-	generic = no
+dark_wizard_missions_1 = {
+	slot = 1
+	generic = yes
 	ai = yes
 	potential = {
-		tag = DWI
+		OR = {
+			tag = DWI
+			AND = {
+				tag = ASG
+				was_tag = DWI
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
 	DWI_ally_urval = {
-		icon = mission_alliances
+		icon = mission_ally_urval
 		required_missions = {  } #none
+		position = 1
 		trigger = {
 			OR = {
 				AND = {
@@ -39,21 +46,9 @@ dark_wizard_missions_3 = {
 			}
 		}
 	}
-}
-
-dark_wizard_missions_4 = {
-	slot = 4
-	generic = no
-	ai = yes
-	potential = {
-		tag = DWI
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
 	DWI_riches_of_deofolwitga = {
-		icon = mission_alliances
-		required_missions = { DWI_ally_urval }
+		icon = mission_gold_heap
+		required_missions = { DWI_ally_urval genasg_grow_the_economy }
 		position = 2
 		provinces_to_highlight = {
 			province_id = 40
@@ -69,6 +64,85 @@ dark_wizard_missions_4 = {
 					duration = 7300
 				}
 			}
+		 	add_yearly_sailors = 0.5
+		}
+	}
+	DWI_intimidate_entrana = {
+		icon = mission_entrana_cathedral
+		required_missions = { DWI_riches_of_deofolwitga }
+		position = 3
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				ENT = { humiliated_by = ROOT }
+				naval_strength = {
+					who = ENT
+					value = 1.5
+				}
+				AND = {
+					owns_core_province = 56
+					owns_core_province = 57
+				}
+			}
+		}
+		effect = {
+			entrana_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_ardougne_area = {
+				discover_country = ROOT
+			}
+			horloge_area = {
+				discover_country = ROOT
+			}
+			khazard_area = {
+				discover_country = ROOT
+			}
+			west_ardougne_area = {
+				discover_country = ROOT
+			}
+		}
+	}
+}
+
+dark_wizard_missions_5 = {
+	slot = 5
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = DWI
+			AND = {
+				tag = ASG
+				was_tag = DWI
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	DWI_stand_up_to_the_donblas = {
+		icon = mission_banner_of_raddallin
+		required_missions = { genasg_organise_the_troops }
+		position = 2
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				DBS = { humiliated_by = ROOT }
+				AND = {
+					army_size = DBS
+					navy_size = DBS
+				}
+				NOT = { exists = DBS }
+			}
+		}
+		effect = {
 			asgarnian_farmlands_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -79,8 +153,8 @@ dark_wizard_missions_4 = {
 		}
 	}
 	DWI_break_the_farming_order = {
-		icon = mission_alliances
-		required_missions = { DWI_riches_of_deofolwitga }
+		icon = mission_cabbage
+		required_missions = { DWI_stand_up_to_the_donblas }
 		position = 3
 		provinces_to_highlight = {
 			area = asgarnian_farmlands_area
@@ -95,50 +169,19 @@ dark_wizard_missions_4 = {
 		}
 		effect = {
 			add_mil_power = 50
-			port_sarim_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
+			rimmington_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
-	DWI_port_of_call = {
-		icon = mission_alliances
-		required_missions = { DWI_take_down_rimmington DWI_break_the_farming_order }
-		position = 4
-		provinces_to_highlight = {
-			area = port_sarim_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			port_sarim_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
-		}
-		effect = {
-			add_dip_power = 50
-		}
-	}
-}
-
-dark_wizard_missions_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential = {
-		tag = DWI
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
 	DWI_take_down_rimmington = {
-		icon = mission_alliances
-		required_missions = { DWI_riches_of_deofolwitga }
-		position = 3
+		icon = mission_rimmington
+		required_missions = { DWI_break_the_farming_order }
+		position = 4
 		provinces_to_highlight = {
 			OR = {
 				province_id = 864
@@ -152,6 +195,32 @@ dark_wizard_missions_5 = {
 		}
 		effect = {
 			add_mil_power = 50
+			port_sarim_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	DWI_port_of_call = {
+		icon = mission_fall_of_sarim
+		required_missions = { DWI_take_down_rimmington }
+		position = 5
+		provinces_to_highlight = {
+			area = port_sarim_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			port_sarim_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
 			south_asgarnia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -161,4 +230,5 @@ dark_wizard_missions_5 = {
 			}
 		}
 	}
+
 }

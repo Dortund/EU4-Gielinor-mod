@@ -18,6 +18,25 @@
 # Usage:
 # my_test_trigger = { ARG1=foo ARG2=bar CONTEXT=FROM }
 
+asg_zam_misthalin_west_of_lum = {
+	custom_trigger_tooltip = {
+		tooltip = "asg_zam_misthalin_west_of_lum_tooltip"
+		OR = {
+			area = tutorial_island_area
+			area = lumbridge_swamp_area
+			area = swamp_caves_area
+			area = draynor_area
+			area = edgeville_area
+			province_id = 2
+			province_id = 5
+			province_id = 9
+			province_id = 10
+			province_id = 782
+			province_id = 897
+		}
+	}
+}
+
 cda_trigger_has_elves = {
 	custom_trigger_tooltip = {
 		tooltip = cda_trigger_has_elves_tooltip

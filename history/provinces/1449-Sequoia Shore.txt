@@ -1,7 +1,4 @@
 #1449-Sequoia Shore
-owner = AUB
-controller = AUB
-add_core = AUB
 tribal_owner = ---
 culture = auburnvaler
 religion = ralos
@@ -16,14 +13,22 @@ base_manpower = 1
 
 trade_goods = advanced_logs
 
-is_city = yes
-
 native_size = 2
 native_ferocity = 5
 native_hostileness = 1
 
-2000.1.1 = {
+2010.1.1 = {
+	owner = AUB
+	controller = AUB
+	add_core = AUB
+	is_city = yes
+}
+
+2100.1.1 = {
 	owner = VAR
 	controller = VAR
 	add_core = VAR
+	base_tax = 3
+	base_production = 3
+	base_manpower = 2
 }

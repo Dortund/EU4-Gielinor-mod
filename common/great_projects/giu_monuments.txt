@@ -31,15 +31,36 @@ great_project_wizards_tower = {
 
 	#can we build it?
 	build_trigger = {
-		AND = {
-			OR = {
-				religion = guthix
-				religion = saradomin
-				religion = zamorak
+		if = {
+			limit = {
+				owner = {
+					mission_completed = ASG_BRASSICA_the_fifth_kind_of_wizard
+				}
 			}
-			has_owner_religion = yes
-			owner = {
-				has_institution = runecrafting
+			AND = {
+				OR = {
+					religion = brassicaprime
+					religion = guthix
+					religion = saradomin
+					religion = zamorak
+				}
+				has_owner_religion = yes
+				owner = {
+					has_institution = runecrafting
+				}
+			}
+		}
+		else = {
+			AND = {
+				OR = {
+					religion = guthix
+					religion = saradomin
+					religion = zamorak
+				}
+				has_owner_religion = yes
+				owner = {
+					has_institution = runecrafting
+				}
 			}
 		}
 	}
@@ -54,30 +75,72 @@ great_project_wizards_tower = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		AND = {
-			OR = {
-				religion = guthix
-				religion = saradomin
-				religion = zamorak
+		if = {
+			limit = {
+				owner = {
+					mission_completed = ASG_BRASSICA_the_fifth_kind_of_wizard
+				}
 			}
-			has_owner_religion = yes
-			owner = {
-				has_institution = runecrafting
+			AND = {
+				OR = {
+					religion = brassicaprime
+					religion = guthix
+					religion = saradomin
+					religion = zamorak
+				}
+				has_owner_religion = yes
+				owner = {
+					has_institution = runecrafting
+				}
+			}
+		}
+		else = {
+			AND = {
+				OR = {
+					religion = guthix
+					religion = saradomin
+					religion = zamorak
+				}
+				has_owner_religion = yes
+				owner = {
+					has_institution = runecrafting
+				}
 			}
 		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		AND = {
-			OR = {
-				religion = guthix
-				religion = saradomin
-				religion = zamorak
+		if = {
+			limit = {
+				owner = {
+					mission_completed = ASG_BRASSICA_the_fifth_kind_of_wizard
+				}
 			}
-			has_owner_religion = yes
-			owner = {
-				has_institution = runecrafting
+			AND = {
+				OR = {
+					religion = brassicaprime
+					religion = guthix
+					religion = saradomin
+					religion = zamorak
+				}
+				has_owner_religion = yes
+				owner = {
+					has_institution = runecrafting
+				}
+			}
+		}
+		else = {
+			AND = {
+				OR = {
+					religion = guthix
+					religion = saradomin
+					religion = zamorak
+				}
+				has_owner_religion = yes
+				owner = {
+					has_institution = runecrafting
+				}
 			}
 		}
 	}
@@ -797,9 +860,19 @@ great_project_sacred_forge = {
 	type = monument
 
 	build_trigger = {
-		AND = {
-			culture = imcando
-			province_is_or_accepts_culture = yes
+		if = {
+			limit = {
+				AND = {
+					mission_completed = CSN_ice_mountain_oracles
+					has_country_flag = CSN_shadowy_path_flag
+				}
+			}
+		}
+		else = {
+			AND = {
+				culture = imcando
+				province_is_or_accepts_culture = yes
+			}
 		}
 	}
 
@@ -810,16 +883,36 @@ great_project_sacred_forge = {
 	}
 
 	can_use_modifiers_trigger = {
-		AND = {
-			culture = imcando
-			province_is_or_accepts_culture = yes
+		if = {
+			limit = {
+				AND = {
+					mission_completed = CSN_ice_mountain_oracles
+					has_country_flag = CSN_shadowy_path_flag
+				}
+			}
+		}
+		else = {
+			AND = {
+				culture = imcando
+				province_is_or_accepts_culture = yes
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
-		AND = {
-			culture = imcando
-			province_is_or_accepts_culture = yes
+		if = {
+			limit = {
+				AND = {
+					mission_completed = CSN_ice_mountain_oracles
+					has_country_flag = CSN_shadowy_path_flag
+				}
+			}
+		}
+		else = {
+			AND = {
+				culture = imcando
+				province_is_or_accepts_culture = yes
+			}
 		}
 	}
 	
@@ -914,9 +1007,19 @@ great_project_taverley_stone_circle = {
 	type = monument
 
 	build_trigger = {
-		AND = {
+		has_owner_religion = yes
+		OR = {
 			religion = guthix
-			has_owner_religion = yes
+			AND = {
+				religion = zamorak
+				OR = {
+					has_reform = druidic_state
+					has_reform = druidic_order
+					owner = {
+						mission_completed = ASG_ZAM_chaos_druids_of_taverley
+					}
+				}
+			}
 		}
 	}
 
@@ -927,16 +1030,36 @@ great_project_taverley_stone_circle = {
 	}
 
 	can_use_modifiers_trigger = {
-		AND = {
+		has_owner_religion = yes
+		OR = {
 			religion = guthix
-			has_owner_religion = yes
+			AND = {
+				religion = zamorak
+				OR = {
+					has_reform = druidic_state
+					has_reform = druidic_order
+					owner = {
+						mission_completed = ASG_ZAM_chaos_druids_of_taverley
+					}
+				}
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
-		AND = {
+		has_owner_religion = yes
+		OR = {
 			religion = guthix
-			has_owner_religion = yes
+			AND = {
+				religion = zamorak
+				OR = {
+					has_reform = druidic_state
+					has_reform = druidic_order
+					owner = {
+						mission_completed = ASG_ZAM_chaos_druids_of_taverley
+					}
+				}
+			}
 		}
 	}
 	
@@ -2198,7 +2321,7 @@ great_project_daemonheim = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			yearly_patriarch_authority = 0.01
+			yearly_patriarch_authority = 0.001
 			yearly_absolutism = 0.5
 			max_absolutism = 5
 		}
@@ -2217,7 +2340,7 @@ great_project_daemonheim = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			yearly_patriarch_authority = 0.025
+			yearly_patriarch_authority = 0.0025
 			yearly_absolutism = 1
 		 	max_absolutism = 10
 		}
@@ -2236,7 +2359,7 @@ great_project_daemonheim = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			yearly_patriarch_authority = 0.05
+			yearly_patriarch_authority = 0.005
 			yearly_absolutism = 1
 		 	max_absolutism = 10
 			siege_ability = 0.1
@@ -2463,6 +2586,17 @@ great_project_sword_of_edicts = {
 		}
 		on_upgraded = {
 		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					mission_completed = ASG_GUTHIX_guthixs_victory
+				}
+			}
+			modifier = {
+				tolerance_own = 1
+				land_morale = 0.05
+			}
+		}
 	}
 	tier_3 = {
 		upgrade_time = {
@@ -2480,6 +2614,17 @@ great_project_sword_of_edicts = {
 			missionary_maintenance_cost = -0.5
 		}
 		on_upgraded = {
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					mission_completed = ASG_GUTHIX_guthixs_victory
+				}
+			}
+			modifier = {
+				tolerance_own = 2
+				land_morale = 0.1
+			}
 		}
 	}
 }
@@ -4232,6 +4377,12 @@ great_project_temple_of_lost_ancients = {
 				religion = saradomin
 				religion = zamorak
 				religion = zaros
+				AND = {
+					religion = guthix
+					owner = {
+						mission_completed = ASG_GUTHIX_the_unsealing_temple
+					}
+				}
 			}
 			has_owner_religion = yes
 		}
@@ -4251,6 +4402,12 @@ great_project_temple_of_lost_ancients = {
 				religion = saradomin
 				religion = zamorak
 				religion = zaros
+				AND = {
+					religion = guthix
+					owner = {
+						mission_completed = ASG_GUTHIX_the_unsealing_temple
+					}
+				}
 			}
 			has_owner_religion = yes
 		}
@@ -4264,6 +4421,12 @@ great_project_temple_of_lost_ancients = {
 				religion = saradomin
 				religion = zamorak
 				religion = zaros
+				AND = {
+					religion = guthix
+					owner = {
+						mission_completed = ASG_GUTHIX_the_unsealing_temple
+					}
+				}
 			}
 			has_owner_religion = yes
 		}
@@ -6663,7 +6826,9 @@ great_project_hole_in_the_world = {
 				religion = suzaku
 				has_owner_religion = yes
 			}
-			absolutism = 50
+			owner = {
+				absolutism = 50
+			}
 		}
 	}
 
@@ -6679,7 +6844,9 @@ great_project_hole_in_the_world = {
 				religion = suzaku
 				has_owner_religion = yes
 			}
-			absolutism = 50
+			owner = {
+				absolutism = 50
+			}
 		}
 	}
 
@@ -6689,7 +6856,9 @@ great_project_hole_in_the_world = {
 				religion = suzaku
 				has_owner_religion = yes
 			}
-			absolutism = 50
+			owner = {
+				absolutism = 50
+			}
 		}
 	}
 	
@@ -7149,14 +7318,19 @@ great_project_kami_shima = {
 	type = monument
 
 	build_trigger = {
-		AND = {
-			OR = {
-				religion = byakko
-				religion = genbu
-				religion = seiryu
-				religion = suzaku
+		OR = {
+			owner = {
+				mission_completed = ASG_guardians_of_the_world
 			}
-			has_owner_religion = yes
+			AND = {
+				OR = {
+					religion = byakko
+					religion = genbu
+					religion = seiryu
+					religion = suzaku
+				}
+				has_owner_religion = yes
+			}
 		}
 	}
 
@@ -7167,26 +7341,36 @@ great_project_kami_shima = {
 	}
 
 	can_use_modifiers_trigger = {
-		AND = {
-			OR = {
-				religion = byakko
-				religion = genbu
-				religion = seiryu
-				religion = suzaku
+		OR = {
+			owner = {
+				mission_completed = ASG_guardians_of_the_world
 			}
-			has_owner_religion = yes
+			AND = {
+				OR = {
+					religion = byakko
+					religion = genbu
+					religion = seiryu
+					religion = suzaku
+				}
+				has_owner_religion = yes
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
-		AND = {
-			OR = {
-				religion = byakko
-				religion = genbu
-				religion = seiryu
-				religion = suzaku
+		OR = {
+			owner = {
+				mission_completed = ASG_guardians_of_the_world
 			}
-			has_owner_religion = yes
+			AND = {
+				OR = {
+					religion = byakko
+					religion = genbu
+					religion = seiryu
+					religion = suzaku
+				}
+				has_owner_religion = yes
+			}
 		}
 	}
 	

@@ -16,6 +16,8 @@ base_manpower = 3
 
 trade_goods = magic_supplies
 
+is_city = yes
+
 fort_15th = yes
 
 native_size = 30

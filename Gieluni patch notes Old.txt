@@ -6,6 +6,241 @@
 ##########################################################################################################################################
 ##########################################################################################################################################
 
+# Beta 1.8.0 patch notes (Canifis)
+
+# Werewolves now have the opportunity to grow from a minor pack serving under Morytania, to establishing contact with their lost maritime cousins, the Aquos, to finding allies to break themselves free of Vampyric rule.
+# However, the vampyres of Morytania won't want to let their subjects slip from their grasp, as they reconquer parts of the region they abandoned for centuries in search of new tithes.
+# Elsewhere in the world, Varlamore has been completely overhauled, the Kharidian coast has been reworked, the tree distribution of the world has been greatly improved, there are new trade goods, monuments and more.
+
+#######################
+# Map Rework
+#######################
+
+# Completely overhauled Varlamore in accordance with new maps
+## Many provinces have been renamed, and 15 more provinces have been added (and more lakes/wastelands too)
+## New nation: Stranglewood - A boss nation with the new Strangled culture (Possessed Group) found in the far south-west of Kebos.
+## New nation: Tasabek - Replaces Auburnvale as the ex-colonial tag for Kebos.
+## New nation: Aldarin - Subject nation to Varlamore and primary tag of Aldarin culture.
+## New nation: Tlati - Subject nation to Varlamore after spawned by Varlamore's mission tree, and primary tag of Tlati culture.
+## Auburnvale now starts as a vassal of Varlamore, and the primary tag of Auburnvaler culture. Its national ideas have been reworked accordingly.
+## Renamed some Zean-tech units with new Varlamore lore: Tempestite Mages renamed to Tlati Mages, Centralis Riders renamed to Avium Riders
+## Tweaked national ideas for nations in the Varlamore region
+
+# Reworked Kharidian coast to be closer in line with OSRS, including a new Ancient Vault province
+# Added Daimon's Crater north-east of the Wilderness, with 4 provinces
+# Added extra province to the island of Ashihama
+# Added extra province on the south coast of Acheron
+
+# New nation: Araxytes - Boss nation located in eastern Morytania.
+# New nation: Nightmare - Boss nation initially located on Ashihama Island, in the Pincers region of Wushanko. By event the Nightmare can move to Morytania, and it starts there in the 169 5th Age bookmark.
+# New nation: Zanaris - Purely exists as a revolter tag for Fairy culture, given Zanaris isn't even on Gielinor.
+
+# Moved the Lost Grove to make room for Varlamore
+# Replaced much of the map texture with one based more closely on in-game map colours
+# Improved heightmapping of Daemonheim, with some tweaks elsewhere
+# Completely reworked trees for most areas of the map
+# Chambers of Xeric is now on a river rather than the sea
+# Sea around Tutorial Island and the most enclosed portion of the Bays of Kandarin now considered inland seas
+# Bay of Lina becomes renamed Sarim Bay when Port Lina province is renamed Port Sarim
+# Fixed the trade nodes some sea provinces belonged to
+
+# To help balance the buffed Varlamore, many provinces elsewhere in the world have had their development buffed.
+# Buffed many provinces at the 169 5th Age start compared to 1930 4th Age. This is to ensure the majors can keep up with Varlamore's significantly higher development at that point.
+
+#######################
+# National Flavour
+#######################
+
+# Localised national ideas for Colossal Wyrm, Rain Demons, Rebel Rift
+
+# National idea diversification - some excessively common national ideas have been replaced with more unique bonuses.
+## (Burgh de Rott, Callisto, Draynor, Elekeshuun, Gnome Empire, Idol Depths, Okraj, River Giants, Skulls) Morale of Armies replaced with Morale Damage
+## (Annakarl, Dagon'Hai, Dark Warriors' Fortress, Jatizso, Mos le' Harmless, Troll Stronghold, Wintertodt) Morale of Armies replaced with reduced Morale Damage Received
+## (Cave of Guthix, Cronch, Callisto, Dagon'Hai, Siad, Fistmarks of Genma, Forinthry, Iban, Idol Depths, King Black Dragon, Rain Demons, Scabarites, Ungael, Venenatis, Wintertodt) Hostile Attrition replaced with Max Hostile Attrition
+## (Ashihama, Fenisento, Hebikatochi, Haranu, Konjinja, City of Stars, Gu, Torakoku, Armadylean Warband) Tolerance of the true faith replaced with Church Power Modifier
+## (Camdozaal, Carnilleus, Saranthium, Tyras) Tolerance of the true faith replaced with Apostocratic Influence
+## (Bonzara) Tolerance of the true faith replaced with Piety Accelerator
+## (Canem, Dessous, Dark Warriors' Fortress, Dark Wizards, Khazard, Rogues' Castle, Zamorakian Warband) Tolerance of the true faith replaced with Yearly Chaos
+## (Khazari) Tolerance of the true faith replaced with monthly fervour
+
+# Acheron
+## Forwent Guardians national idea now adds +1 maximum hostile attrition
+
+# Ashihama
+## Added 3 missions to try and oust the Nightmare of Ashihama
+
+# Baalal
+## No longer on the map at the game start, and is more of an easter egg nation now given only one uncolonised province begins with the culture.
+
+# Bedabins
+## Made the country's colour lighter to stand out more from Al Kharid
+
+# Bubble of Mists
+## Now starts with Siren as accepted culture, and has a province of Siren culture. This reflects the historic role of Zarosian Sirens (see Desert Treasure II in OSRS)
+
+# Burgh de Rott
+## No longer present at the start of the game, and must appear by event (Morytania must have Excessive Tithe disaster or the Intensification of Meiyerditch mission complete)
+## No other nation now starts with visibility Burgh de Rott's starting provinces.
+
+# Camelot
+## Now starts with the Maple Wood area in the 169 5th Age start
+
+# Canem/Canifis
+## Added startup screen text
+## Changed map colour to be a bit lighter
+## Now starts with the Werewolf Council government reform
+## Considers Lordship of the North Coast to be a historical friend... but not vice-versa. This reflects the influence of the Ring of Charos.
+## New mission tree with 18 missions.
+
+# Daemonheim
+## National idea Onwards to the Rift now offers half as much tolerance of the true faith, but offers +1% yearly Chaos instead.
+
+# Dessous
+## Tweaked map colour to be more distinct from Slepe
+## Blood Bomb national idea now adds monthly Blood Power (see Governments for more information)
+
+# Flou-Tar-Shai
+## Stability cost to declare war tradition replaced with +15 same-religion relations; diplomatic reputation lowered from +2 to +1.
+
+# Iban
+## National idea Son of Zamorak now adds yearly Chaos
+
+# Kandarin
+## National idea Legends' Guild now adds max adventurers instead of prestige.
+
+# Karuulm
+## +1 hostile attrition tradition replaced with -10% morale damage received
+
+# Keldagrim
+## National idea Lava Flow Mine now works as a development cost modifier, rather than just a reduction to development cost, which should generally be a superior bonus.
+
+# Lordship of the North Coast
+## New event to optionally surrender to Morytania as a tributary state if losing a war against them, or under certain other conditions.
+
+# Lovakengj
+## +1 hostile attrition tradition replaced with +1 prestige
+
+# Mort'ton
+## Affliction event can occur in the Age of Humans, converting the population to the Afflicted and massively reducing the productivity of the provinces. Vampyre nations ruling those provinces will suffer a blood power penalty.
+
+# Morytania
+## Added startup screen text
+## Now has Slepe as a tributary at the start of the game rather than directly controlling the provinces.
+## Now starts with the unique Internal Focus nobility privilege. This disallows starting wars and makes diplomatic annexation much more expensive, representing the stagnation of Morytania during the Fourth Age.
+## Now also starts with the unique Informal Vyrelord Powers nobility privilege. This hurts your legitimacy, corruption and all power cost slightly. You might want to repeal this one as soon as you can.
+## Some new flavour events
+## Age Bonus Morytanian Peace now only offers +3 accepted cultures and -50% promote culture cost. All the other effects are moved onto the permanent Compromise of Efaritay modifier possible via the Excessive Tithe disaster in certain circumstances.
+## Mission tree reworked and expanded to 23 missions
+
+# Myreton
+## Old traditions (+1 hostile attrition, -10% land attrition) replaced with +1 tolerance of the true faith, +15% improve relations
+
+# Temple of Shadow
+## National Idea Shadows now adds +1 max hostile attrition, in addition to +1 hostile attrition
+
+# Port Phasmatys
+## Changed initial country colour to remove the ghostly implications
+## New event to optionally set up the Ectofuntus, granting a unique government reform, but leading to terrible consequences...
+## Follow-up event where the population becomes ghosts, Necrovarus seizes power and the country becomes a Necromantic dictatorship - and restores the country's colour to the ghostly shade we all know and love.
+## Tweaked national ideas to no longer directly reference Necrovarus' actions to support an alt-history no-ghosts take on Port Phasmatys.
+
+# Unterwulf
+## Rock Cakes national idea now grants +5% shock damage instead of +0.5 hostile attrition
+
+# Varlamore
+## Added startup screen text
+## Mission tree reworked and expanded to 20 missions. There aren't images for the missions at this time (gotta wait for Varlamore to be added to OSRS), but they should still be functional.
+## National ideas tweaked to be more accurate to the new Varlamore map
+
+#######################
+# Culture
+#######################
+
+# New Arachnid group. Cultures include Araxyte, Giant Spider, Nycolas, Red Spider, Scorpion and Venen
+# Fairy group: Added Pixie culture
+# Possessed group: Added Afflicted, Sleepwalker and Strangled cultures
+# Varlamore group: Added Auburnvaler, Tlati and Proudspirian cultures, removed Centralis
+
+#######################
+# Religion
+#######################
+
+# Localised startup screen for Ralossian, Ranuli and Xerician faiths
+
+#######################
+# Governments
+#######################
+
+# New Republic reform: Necromantic Dictatorship. Used by default for Heroraisers and Shadowmancers, and Port Phasmatys by event. Uses Meritocracy instead of Republican Tradition (like magiocracies), massively boosts manpower recovery.
+# New Republic reform: Werewolf Council, available for any Werewolf-culture nation. Enables Horde ideas instead of Plutocratic, boosts liberty desire, morale damage and tolerance of the true faith.
+
+# Tirannwn Resistance: Now adds +1 own-territory dice roll bonus so the Elven Resistance doesn't get stomped so easily
+
+# Vampyre Kingdom: Now has access to the Blood Power mechanic. (Background image doesn't appear currently because I haven't entirely got the hang of gui modding yet)
+## Gain Blood Power by having tributaries. Vampyric religion events can also sometimes offer Blood Power.
+## You lose Blood Power over time from development (encouraging keeping more tributaries to offset it) and significantly if any vampyre culture becomes dominant in your realm.
+## You can spend Blood Power to forcefully convert provinces from heathen faiths to Zamorak, gain money while boosting nobility favour, or to allow access to the unique Vyrewatch Sentinel unit.
+### Vyrewatch Sentinels cost more to recruit and maintain, but come with -20% shock damage received and +10% morale damage.
+## If your Blood Power falls too low, you will enter the Excessive Tithe disaster. It has unique events if playing as Morytania and Misthalin has completed the In Aid of the Myreque mission.
+
+#######################
+# Tradegoods
+#######################
+
+# New trade good: Terracotta - Found in the Loop region of Wushanko.
+## Base price: 3.5 (high, same as Gunpowder)
+## Province Bonus: +1 allowed buildings
+## Trading-in Bonus: +0.5 prestige
+
+# New trade good: Refined Products - Advanced counterpart to Manufactured goods, found in the Pincers region of Wushanko, certain Dwarven provinces, Dorgesh-Kaan and Prifddinas.
+## Base price: 4 (very high, same as Gemstones, 33% higher than Manufactured Goods)
+## Province Bonus: -5% development cost modifier
+## Trading-in Bonus: -2.5% technology cost
+## Note: Camdozaal starts with this tradegood, but if the culture of the province is converted from Imcando, the tradegood will be changed to Advanced Ores. Switching culture back will switch it back.
+## The Disassembly price event will boost the value of this like other manufactured goods
+
+# Hunter Creatures trading-in bonus changed from +0.5 prestige to -10% land attrition
+
+#######################
+# Monuments
+#######################
+
+# Updated Cairn Isle image with RS3's graphical rework
+# Lowered stat boosts from Dragonkin Laboratory from +50% manpower/forcelimit to +30% at tier 3
+
+# New Monuments
+## Asgarnia: Lassar Undercity - Requires Zaros or Xau-Tak religion nationally and in province.
+## Asgarnia: Sacred Forge - Requires Imcando culture in province and accepted.
+## Kharid: Citharede Abbey - Requires Saradomin religion in province. Either country must be Saradominist, or have a positive tolerance of Saradomin while not in the Chaos religious group.
+## Morytania: Castle Drakan - Requires Vampyric religion and culture group
+## Kourend: Blast Mine - Requires any Dwarven culture in province and accepted.
+## Kourend: Tithe Farm - Requires Hosidius culture in province and accepted.
+## Varlamore: Fortis Aqueduct - Must also control Civitas illa Fortis and Iter Furis provinces.
+## Skull: Gunpowder Mills - No limitations on use
+## Bowl: Glittercaves - No limitations on use
+## Pincers: Hole in the World - Must have 50 Adventurers, or Suzaku religion in province and country.
+
+#######################
+# Bugfixes
+#######################
+
+# Fixed the Cadarn faction giving 25% discipline instead of the intended 2.5%
+# Fixed bad code used for Emir's Arena monument
+# Fixed four provinces having unused trade goods defined
+# Canem now correctly moves their capital to Canifis when founding the village.
+# It is no longer impossible to Iorwerth to take the Isle of Souls Retreat decision.
+
+#######################
+# Miscellaneous
+#######################
+
+# Updated for EU4 version 1.36
+# Added loading screens for Theatre of Blood, Desert Treasure II and the Construction skill
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
 #Beta 1.7.0b patch notes
 
 #######################

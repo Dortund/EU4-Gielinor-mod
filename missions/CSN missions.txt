@@ -1,0 +1,302 @@
+cashien_missions_5 = {
+	slot = 5
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = CSN
+			AND = {
+				tag = ASG
+				was_tag = CSN
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	CSN_heroism = {
+		icon = mission_melee_scimitar
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {	
+			any_war_enemy_country = {
+				NOT = {
+					war_score_against = {
+						who = ROOT
+						value = -10
+					}
+				}
+				army_strength = {
+					who = ROOT
+					value = 1
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			mountain_valley_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	CSN_temple_knight_efforts = {
+		icon = mission_temple_knight_efforts
+		position = 2
+		required_missions = { genasg_organise_the_troops CSN_heroism }
+		trigger = {
+			if = {
+				limit = {
+					tag = CSN
+				}
+				has_idea = CSN_temple_connections
+			}
+			else = {
+				has_idea_group = spy_ideas
+			}
+			spymaster = 2
+			if = {
+				limit = {
+					religion = saradomin
+					exists = ENT
+				}
+				reverse_has_opinion = {
+					who = ENT
+					value = 150
+				}
+			}
+			else_if = {
+				limit = {
+					religion = saradomin
+				}
+				papal_influence = 100
+			}
+			else = {
+				temple = 5
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						religion = saradomin
+						religion = zaros
+					}
+				}
+				add_country_modifier = {
+					name = CSN_deepening_temple_knight_involvement
+					duration = 9125
+				}
+			}
+			else = {
+				add_dip_power = 75
+			}
+		}
+	}
+	
+	CSN_loyalties_of_clan_cashien = {
+		icon = mission_schemes_of_valzin
+		position = 3
+		required_missions = { genasg_decent_army CSN_temple_knight_efforts  }
+		provinces_to_highlight = {
+			region = asgarnia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			any_ally = {
+				trust = {
+					who = ROOT
+					value = 75
+				}
+			}
+			calc_true_if = {
+				all_owned_province = {
+					region = asgarnia_region
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = saradomin
+					NOT = { has_global_flag = asg_revealed_zarosian_plot }
+				}
+				country_event = { 
+					id = flavor_csn.1
+					days = 1
+				}
+			}
+			else = {
+				add_dip_power = 25
+				add_mil_power = 25
+			}
+		}
+	}
+	CSN_ice_mountain_oracles = {
+		icon = mission_ice_mountain_oracles
+		position = 4
+		required_missions = { CSN_loyalties_of_clan_cashien }
+		provinces_to_highlight = {
+			area = ice_mountain_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = CSN_shadowy_path_flag
+				}
+				ice_mountain_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				46 = {
+					development = 20
+					num_of_buildings_in_province = 3
+					NOT = { culture = imcando }
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						exists = CDZ
+					}
+					OR = {
+						AND = {
+							alliance_with = CDZ
+							reverse_has_opinion = {
+								who = CDZ
+								value = 150
+							}
+						}
+						AND = {
+							is_rival = CDZ
+							has_spy_network_from = {
+								who = ROOT
+								value = 50
+							}
+						}
+					}
+				}
+				else = {
+					ice_mountain_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = CSN_shadowy_path_flag
+					has_dlc = "Leviathan"
+				}
+				add_mil_power = 50
+				custom_tooltip = CSN_may_use_sacred_forge_tooltip
+			}
+			else_if = {
+				limit = {
+					has_country_flag = CSN_shadowy_path_flag
+					NOT = { has_dlc = "Leviathan" }
+				}
+				46 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = CSN_foresight_of_oracles
+					duration = 9125
+				}
+			}
+		}
+	}
+	CSN_heart_of_asgarnia = {
+		icon = mission_expand_the_realm
+		position = 5
+		required_missions = { genasg_onward_to_farradorn CSN_ice_mountain_oracles }
+		provinces_to_highlight = {
+			province_id = 41
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = CSN_shadowy_path_flag
+					has_dlc = "Leviathan"
+				}
+				46 = {
+					owned_by = ROOT
+					is_core = ROOT
+					OR = {
+						has_great_project = {
+							type = great_project_sacred_forge
+							tier = 1
+						}
+						has_great_project = {
+							type = great_project_sacred_forge
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_sacred_forge
+							tier = 3
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = CSN_shadowy_path_flag
+					NOT = { has_dlc = "Leviathan" }
+				}
+				ice_mountain_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					development = 15
+					num_of_buildings_in_province = 3
+				}
+			}
+			full_idea_group = spy_ideas
+			41 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = CSN_shadowy_path_flag
+					NOT = { has_global_flag = asg_revealed_zarosian_plot }
+				}
+				country_event = { 
+					id = flavor_csn.2 #Whispered Secrets
+					days = 1
+				}
+				custom_tooltip = csn_whispered_secrets_mission_tooltip
+			}		
+			else = {
+				add_country_modifier = {
+					name = CSN_greatest_spies_of_asgarnia
+					duration = 18250
+				}
+			}
+		}
+	}
+}
+

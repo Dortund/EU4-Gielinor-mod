@@ -40,3 +40,13 @@ add_province_triggered_modifier = wildy_border_level_six
 add_province_triggered_modifier = wildy_border_level_seven
 add_province_triggered_modifier = wildy_border_level_eight
 add_province_triggered_modifier = wildy_border_level_nine
+
+2159.4.9 = {
+	change_province_name = "Fist of Guthix"
+	owner = FGX
+	controller = FGX
+	add_core = FGX
+	change_culture = taverlian
+	change_religion = guthix
+	change_trade_goods = lesser_loot
+}

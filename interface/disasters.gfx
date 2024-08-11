@@ -24,6 +24,12 @@ spriteTypes = {
   loadType = "INGAME"
  }
  spriteType = {
+  name = "GFX_disaster_end_of_the_runecrafting_crusades"
+  texturefile = "gfx//interface//disasters//end_of_the_runecrafting_crusades.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
   name = "GFX_disaster_excessive_tithe"
   texturefile = "gfx//interface//disasters//excessive_tithe.dds"
   noOfFrames = 3

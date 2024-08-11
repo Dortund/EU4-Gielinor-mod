@@ -23,7 +23,7 @@ is_city = yes
 	controller = LOV
 	add_core = LOV
 	remove_core = SWM
-	religion = guthix
+	religion = saradomin
 }
 
 1989.9.4 = {

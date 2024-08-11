@@ -16,6 +16,8 @@ base_manpower = 3
 
 trade_goods = flax
 
+is_city = yes
+
 native_size = 1
 native_ferocity = 1
 native_hostileness = 0

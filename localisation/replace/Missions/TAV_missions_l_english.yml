@@ -1,0 +1,16 @@
+﻿l_english:
+ TAV_druidic_privileges_title:0 "Druidic Privileges"
+ TAV_druidic_privileges_desc:0 "The Druids of Taverley have been a constant presence throughout the Fourth Age and deserve proper recognition."
+ TAV_druidic_ritual_title:0 "Druidic Ritual"
+ TAV_druidic_ritual_desc:0 "Taverley is rich in plantlife and herblore materials for those who know where to look. Through these we can strengthen our stone circle and amplify Guthix's power."
+ TAV_stone_circle_of_misthalin_title:0 "Stone Circle of Misthalin"
+ TAV_stone_circle_of_misthalin_desc:0 "Unfortunately, the stone circle of Misthalin was taken out of Guthixian hands a long time ago. Bringing it back to druidic control will be exceptionally difficult."
+ 
+ TAV_mutual_support_title:0 "Mutual Support"
+ TAV_mutual_support_desc:0 "A domineering power is not a balanced one; we must respect our friends and aid them as we would have them aid us."
+ TAV_proactive_defence_title:0 "Proactive Defence"
+ TAV_proactive_defence_desc:0 "The Zamorakian chaos druids threaten the balance of nature with the bizarre interpretation of Guthix. Though it pains us to take arms, sometimes such actions are necessary."
+ TAV_guthixian_union_title:0 "Guthixian Union"
+ TAV_guthixian_union_desc:0 "Ideals and pragmatic reality are prone to clashing. Ideally, we would want our allies to be evenly strong with ourselves, but the reality of Asgarnia is that in order to balance the faiths, we must band together with like-minded people as one."
+ TAV_guthixian_union_tooltip:0 "Sends a request to an Asgarnian ally of the same faith and less than 50 development to become a subject nation. If not controlled by a human player, the nation will always accept."
+ 

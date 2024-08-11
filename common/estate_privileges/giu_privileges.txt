@@ -206,7 +206,7 @@ estate_burghers_varlamore_colonies = {
 	is_valid = {
 		OR = {
 			culture_group = varlamore_group
-			tag = AZA
+			tag = CTR
 		}
 		capital_scope = {
 			region = varlamore_region

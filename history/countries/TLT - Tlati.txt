@@ -6,3 +6,13 @@ religion = ranul
 technology_group = zeantechgroup
 capital = 507
 
+1903.8.16 = {
+	monarch = {
+		name = "Hegio"
+		dynasty = "Arkan"
+		birth_date = 1879.3.5
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}

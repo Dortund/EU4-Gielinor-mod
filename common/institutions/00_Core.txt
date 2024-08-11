@@ -418,6 +418,7 @@ runecrafting = {
 					region = fremennik_region
 					region = kourend_region
 					region = acheron_region
+					area = cam_torum_area
 				}
 			}
 			AND = {
@@ -435,6 +436,7 @@ runecrafting = {
 					region = tirannwn_region
 					region = morytania_region
 					region = kebos_region
+					region = varlamore_region
 				}
 			}
 			AND = {

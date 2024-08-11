@@ -1,4 +1,7 @@
 #509-Kastori
+owner = TLT
+controller = TLT
+add_core = TLT
 tribal_owner = ---
 culture = tlati
 religion = ranul
@@ -7,9 +10,9 @@ discovered_by = zeantechgroup
 
 hre = no
 
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 3
+base_production = 2
+base_manpower = 2
 
 trade_goods = grains
 
@@ -19,7 +22,7 @@ native_hostileness = 1
 
 center_of_trade = 1
 
-2000.1.1 = {
+2075.1.1 = {
 	owner = VAR
 	controller = VAR
 	add_core = VAR

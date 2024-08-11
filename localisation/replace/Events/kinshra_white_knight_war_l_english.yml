@@ -9,6 +9,7 @@
  kinshra_white_knight_war.2.da:0 "In our efforts against the Kinshra, a covert operation has succeeded in bringing down one of the biggest threats - a warrior-mage named Iban. However, a witch by the name of Kardia managed to smuggle out his body with a plan to resurrect him in the western lands..."
  kinshra_white_knight_war.2.db:0 "One of the Kinshra's finest nobles, swordsmen and mages, Iban, has been killed by White Knights in a cowardly attack. And then his body went missing! Rumours speak of a witch named Kardia taking the body - seemingly to resurrect him to serve Zamorak elsewhere."
  kinshra_white_knight_war.2.a:0 "Coming back from the dead? Clearly we should forget this conflict and side with Iban!"
+ ASG_switch_to_IBN_tooltip:0 "§RThis will cause you to play as Iban instead of [Root.GetName].§!"
  kinshra_white_knight_war.2.b:0 "Iban's fate is no longer intertwined with Asgarnia's."
  
  kinshra_white_knight_war.100.t:0 "End of the Kinshra-White Knight War"

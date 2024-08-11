@@ -16,4 +16,20 @@
  flavor_var.3.b:0 "Suggest there may be some ideological link, but nothing more."
  flavor_var.3.c:0 "Those fools wouldn't know a true god if it smote them."
  
+ flavor_var.4.t:0 "Settlement of Aldarin"
+ flavor_var.4.d:0 "The rocky shores of Aldarin Isle has discouraged landings, but behind the difficult terrain is a land highly suitable for grape cultivation. A small set of colonists have set out to claim the land for Varlamore!"
+ flavor_var.4.a:0 "I will join the colonists!"
+ flavor_var.4.b:0 "We will command the colony from a safe distance."
  
+ flavor_var.5.t:0 "Settlement of Auburnvale"
+ flavor_var.5.d:0 "The need for ever-more lumber has driven our people closer to the treacherous Custodia Pass. They claim Auburnvale for Varlamore!"
+ flavor_var.5.a:0 "I will join the colonists!"
+ flavor_var.5.b:0 "We will command the colony from a safe distance."
+ 
+ flavor_var.6.t:0 "Fresh Investments"
+ flavor_var.6.d:0 "Fresh settlers from mainland Varlamore have arrived, bringing fresh resources ready to expand our borders."
+ flavor_var.6.a:0 "Excellent!"
+ 
+ flavor_var.7.t:0 "Fresh Investments"
+ flavor_var.7.d:0 "Fresh settlers from the south have arrived, bringing fresh resources ready to expand our borders."
+ flavor_var.7.a:0 "Excellent!"

@@ -1,10 +1,10 @@
 #496 - Xitatlane
-owner = RDE
-controller = RDE
-add_core = RDE
+owner = TLT
+controller = TLT
+add_core = TLT
+culture = tlati
+religion = ranul
 tribal_owner = ---
-culture = avernic
-religion = zamorak
 
 discovered_by = zeantechgroup
 
@@ -19,3 +19,9 @@ trade_goods = tropical_logs
 native_size = 2
 native_ferocity = 5
 native_hostileness = 1
+
+2075.1.1 = {
+	owner = VAR
+	controller = VAR
+	add_core = VAR
+}

@@ -9,6 +9,7 @@ monarchy = {
 				exile_clan
 				fateful_kingdom
 				feldip_government
+				figurehead_monarchy
 				great_khanate
 				horde_kingdom
 				kandarin_monarchy

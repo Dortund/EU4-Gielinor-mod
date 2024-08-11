@@ -1,0 +1,114 @@
+country_decisions = {
+	VAR_invest_in_aldarin = {
+		potential = {
+			tag = VAR
+			overlord_of = ALD
+			ALD = {
+				NOT = { num_of_cities = 7 }
+				any_owned_province = {
+					OR = {
+						area = north_aldarin_area
+						area = south_aldarin_area
+					}
+					has_empty_adjacent_province = yes
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_aldarin_area
+				area = south_aldarin_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			overlord_of = ALD
+			ALD = {
+				NOT = { num_of_cities = 7 }
+				NOT = { liberty_desire = 50 }
+			}
+			NOT = {
+				has_country_modifier = VAR_recent_aldarin_investment
+			}
+			adm_power = 25
+			dip_power = 25
+			mil_power = 25
+		}
+		effect = {
+			ALD = {
+				country_event = { 
+					id = flavor_var.6
+					days = 1
+				}
+			}
+			custom_tooltip = VAR_invest_in_aldarin_tooltip
+			add_country_modifier = { 
+				name = VAR_recent_aldarin_investment
+				duration = 3650
+			}
+			add_adm_power = -25
+			add_dip_power = -25
+			add_mil_power = -25
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 300
+	}
+	VAR_invest_in_auburnvale = {
+		potential = {
+			tag = VAR
+			overlord_of = AUB
+			AUB = {
+				NOT = { num_of_cities = 7 }
+				any_owned_province = {
+					OR = {
+						area = auburnvale_area
+						area = custodia_area
+					}
+					has_empty_adjacent_province = yes
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = auburnvale_area
+				area = custodia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			overlord_of = AUB
+			AUB = {
+				NOT = { num_of_cities = 7 }
+				NOT = { liberty_desire = 50 }
+			}
+			NOT = {
+				has_country_modifier = VAR_recent_auburnvale_investment
+			}
+			adm_power = 25
+			dip_power = 25
+			mil_power = 25
+		}
+		effect = {
+			AUB = {
+				country_event = { 
+					id = flavor_var.7
+					days = 1
+				}
+			}
+			custom_tooltip = VAR_invest_in_auburnvale_tooltip
+			add_country_modifier = { 
+				name = VAR_recent_auburnvale_investment
+				duration = 3650
+			}
+			add_adm_power = -25
+			add_dip_power = -25
+			add_mil_power = -25
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 300
+	}
+}

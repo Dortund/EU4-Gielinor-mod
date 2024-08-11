@@ -3,15 +3,20 @@ genasg_missions_2 = {
 	generic = yes
 	ai = yes
 	potential = {
-		culture_group = asgarnian_group
-		capital_scope = {
-			region = asgarnia_region
+		OR = {
+			AND = {
+				culture_group = asgarnian_group
+				capital_scope = {
+					region = asgarnia_region
+				}
+			}
+			tag = ASG
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
 	genasg_grow_the_economy = {
-		icon = mission_entrepot_of_india
+		icon = mission_coins
 		required_missions = {  }
 		position = 1
 		trigger = {
@@ -25,7 +30,7 @@ genasg_missions_2 = {
 		}
 	}
 	genasg_proselytise_the_faith = {
-		icon = mission_hands_praying
+		icon = mission_three_altars
 		required_missions = { genasg_grow_the_economy }
 		position = 2
 		trigger = {
@@ -54,7 +59,7 @@ genasg_missions_2 = {
 		}
 	}
 	genasg_stable_expansion = {
-		icon = mission_high_income
+		icon = mission_scales
 		required_missions = { genasg_proselytise_the_faith }
 		position = 3
 		trigger = {
@@ -68,13 +73,46 @@ genasg_missions_2 = {
 		}
 		effect = {
 			add_prestige = 25
-			41 = {
-				add_permanent_claim = ROOT
+			if = {
+				limit = {
+					OR = {
+						tag = DBS
+						tag = ASG
+					}
+					add_adm_power = 50
+				}
+			}
+			else = {
+				41 = {
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
+}
+
+genasg_missions_2_special = {
+	slot = 2
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				culture_group = asgarnian_group
+				capital_scope = {
+					region = asgarnia_region
+				}
+				NOT = { tag = DBS }
+			}
+			AND = {
+				tag = ASG
+				NOT = { was_tag = DBS }
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
 	genasg_onward_to_farradorn = {
-		icon = mission_conquer_50_development
+		icon = mission_falador_castle
 		required_missions = { genasg_stable_expansion }
 		position = 4
 		trigger = {
@@ -96,15 +134,20 @@ genasg_missions_3 = {
 	generic = yes
 	ai = yes
 	potential = {
-		culture_group = asgarnian_group
-		capital_scope = {
-			region = asgarnia_region
+		OR = {
+			AND = {
+				culture_group = asgarnian_group
+				capital_scope = {
+					region = asgarnia_region
+				}
+			}
+			tag = ASG
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
 	genasg_friends_in_asgarnia = {
-		icon = mission_alliances
+		icon = mission_diplomacy_generic
 		required_missions = {  }
 		position = 1
 		trigger = {
@@ -127,7 +170,7 @@ genasg_missions_3 = {
 	}
 	
 	genasg_misthalin_relations = {
-		icon = mission_monarch_in_throne_room
+		icon = mission_misthalin_army
 		required_missions = { genasg_friends_in_asgarnia }
 		position = 2
 		trigger = {
@@ -175,7 +218,7 @@ genasg_missions_3 = {
 	}
 	
 	genasg_trade_dominance = {
-		icon = mission_dominate_home_trade_node
+		icon = mission_trade_generic
 		required_missions = { genasg_misthalin_relations }
 		position = 3
 		trigger = {
@@ -195,13 +238,13 @@ genasg_missions_3 = {
 	}
 	
 	genasg_coastal_control = {
-		icon = mission_invade_island
+		icon = mission_night_port
 		required_missions = { genasg_trade_dominance }
 		position = 4
 		trigger = {
 			owns_core_province = 33
-			num_of_heavy_ship = 5
-		 	num_of_light_ship = 15
+			num_of_heavy_ship = 3
+		 	num_of_light_ship = 10
 		}
 		effect = {
 			add_dip_power = 100
@@ -214,15 +257,20 @@ genasg_missions_4 = {
 	generic = yes
 	ai = yes
 	potential = {
-		culture_group = asgarnian_group
-		capital_scope = {
-			region = asgarnia_region
+		OR = {
+			AND = {
+				culture_group = asgarnian_group
+				capital_scope = {
+					region = asgarnia_region
+				}
+			}
+			tag = ASG
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
 	genasg_organise_the_troops = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_army_fighting
 		required_missions = {  }
 		position = 1
 		trigger = {
@@ -238,7 +286,7 @@ genasg_missions_4 = {
 		}
 	}
 	genasg_decent_army = {
-		icon = mission_assemble_an_army
+		icon = mission_united_forces
 		required_missions = { genasg_organise_the_troops }
 		position = 2
 		trigger = {
@@ -246,14 +294,14 @@ genasg_missions_4 = {
 			army_size = 15
 		}
 		effect = {
-			add_yearly_manpower = 0.2
+			custom_tooltip = genasg_unify_asgarnia_cb_tooltip
 			capital_scope = {
 				add_base_manpower = 1
 			}
 		}
 	}
 	genasg_inland_expansion = {
-		icon = mission_rb_import_potatoes
+		icon = mission_human_realm
 		required_missions = { genasg_decent_army }
 		position = 3
 		trigger = {
@@ -282,7 +330,11 @@ genasg_missions_4 = {
 		}
 	}
 	genasg_burthorpe_border = {
-		icon = the_alpine_wall
+		icon = mission_burthorpe_border
+		provinces_to_highlight = {
+			area = burthorpe_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		required_missions = { genasg_inland_expansion }
 		position = 4
 		trigger = {

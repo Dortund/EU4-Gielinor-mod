@@ -1,0 +1,22 @@
+#1491-Neypotzli
+owner = NPZ
+controller = NPZ
+add_core = NPZ
+tribal_owner = ---
+culture = nagua
+religion = ranul
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 4
+
+trade_goods = herblore_supplies
+latent_trade_goods = { rare_loot }
+
+fort_15th = yes
+
+is_city = yes

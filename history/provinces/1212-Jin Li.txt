@@ -1,4 +1,7 @@
 #1212 - Jin Li
+tribal_owner = ---
+culture = shield_culture
+religion = byakko
 
 discovered_by = wushankotechgroup
 
@@ -10,4 +13,6 @@ base_manpower = 2
 
 trade_goods = advanced_ores
 
-is_city = yes
+native_size = 10
+native_ferocity = 5
+native_hostileness = 5

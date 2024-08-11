@@ -79,7 +79,6 @@ country_event = {
 		desc = kinshra_white_knight_war.2.db #One of the Kinshra's finest nobles, swordsmen and mages, Iban, has been killed by White Knights in a cowardly attack. And then his body went missing! Rumours speak of a witch named Kardia taking the body - seemingly to resurrect him to serve Zamorak elsewhere.
 	}
 	
-	is_triggered_only = yes
 	major = yes
 	
 	trigger = {
@@ -92,6 +91,10 @@ country_event = {
 		}
 		NOT = { exists = IBN }
 		NOT = { has_global_flag = temple_of_shadow_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
 	}
 	
 	immediate = {
@@ -221,6 +224,7 @@ country_event = {
 	
 	option = {
 		name = kinshra_white_knight_war.2.a #Coming back from the dead? Clearly we should forget this conflict and side with Iban!
+		custom_tooltip = ASG_switch_to_IBN_tooltip
 		switch_tag = IBN
 	}
 	option = {
@@ -240,6 +244,7 @@ country_event = {
 	
 	immediate = {
 		clr_country_flag = asg_war164_start
+		set_country_flag = asg_end_of_kinshra_white_knight_war_flag
 	}
 
 	option = {

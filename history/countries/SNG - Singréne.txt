@@ -10,9 +10,9 @@ national_focus = ADM
 
 1916.5.21 = {
 	monarch = {
-		name = "Crenthmix"
+		name = "Ristor"
 		dynasty = "Greenlead"
-		birth_date = 1879.4.3
+		birth_date = 1899.4.13
 		adm = 2
 		dip = 1
 		mil = 2

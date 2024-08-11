@@ -5,13 +5,14 @@
 namespace = flavor_var
 normal_or_historical_nations = yes
 
-country_event = {
+country_event = { #Now defunct
 	id = flavor_var.1
 	title = flavor_var.1.t # Settlement of the Tlati Rainforest
 	desc = flavor_var.1.d # Although Varlamorean people have settled the Tlati Rainforest for some time now, they are small and isolated in number and have never been integrated into our nation. Now, however, we can begin a co-ordinated effort to begin the settlement of the area.
 	picture = VARLAMORE_MAP_eventPicture
 	
 	is_triggered_only = yes
+	major = yes
 
 	mean_time_to_happen = {
 		days = 1
@@ -117,5 +118,165 @@ country_event = {
 	option = {
 		name = flavor_var.3.c # Those fools wouldn't know a true god if it smote them.
 		set_global_flag = seren_no_ralos_tie_flag
+	}
+}
+
+country_event = {
+	id = flavor_var.4
+	title = flavor_var.4.t # Settlement of Aldarin
+	desc = flavor_var.4.d # The rocky shores of Aldarin Isle has discouraged landings, but behind the difficult terrain is a land highly suitable for grape cultivation. A small set of colonists have set out to claim the land for Varlamore!
+	picture = VARLAMORE_MAP_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		885 = {
+			cede_province = ALD
+			add_core = ALD
+			change_culture = aldarin
+			change_religion = ralos
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+		}
+		ALD = {
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+		}
+		vassalize = ALD
+	}
+	
+	option = {
+		name = flavor_var.4.a # I will join the colonists!
+		switch_tag = ALD
+	}
+	option = {
+		name = flavor_var.4.b # We will command the colony from a safe distance.
+	}
+}
+
+country_event = {
+	id = flavor_var.5
+	title = flavor_var.5.t # Settlement of Auburnvale
+	desc = flavor_var.5.d # The need for ever-more lumber has driven our people closer to the treacherous Custodia Pass. They claim Auburnvale for Varlamore!
+	picture = VARLAMORE_MAP_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		887 = {
+			cede_province = AUB
+			add_core = AUB
+			change_culture = auburnvaler
+			change_religion = ralos
+			add_institution_embracement = {
+				which = reconstruction
+				value = 100
+			}
+		}
+		AUB = {
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+		}
+		vassalize = AUB
+	}
+	
+	option = {
+		name = flavor_var.5.a # I will join the colonists!
+		switch_tag = AUB
+	}
+	option = {
+		name = flavor_var.5.b # We will command the colony from a safe distance.
+	}
+}
+
+country_event = { #Aldarin investment decision goes here
+	id = flavor_var.6
+	title = flavor_var.6.t # Fresh Investments
+	desc = flavor_var.6.d # Fresh settlers from mainland Varlamore have arrived, bringing fresh resources ready to expand our borders.
+	picture = VARLAMORE_MAP_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_var.6.a #Excellent!
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = north_aldarin_area
+					area = south_aldarin_area
+				}
+				has_empty_adjacent_province = yes
+			}
+			random_empty_neighbor_province = {
+				limit = {
+					OR = {
+						area = north_aldarin_area
+						area = south_aldarin_area
+					}
+				}
+				add_siberian_construction = 25
+			}
+		}
+	}
+}
+
+country_event = { #Auburnvale investment decision goes here
+	id = flavor_var.7
+	title = flavor_var.7.t # Fresh Investments
+	desc = flavor_var.7.d # Fresh settlers from the south have arrived, bringing fresh resources ready to expand our borders.
+	picture = VARLAMORE_MAP_eventPicture
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_var.7.a #Excellent!
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = auburnvale_area
+					area = custodia_area
+				}
+				has_empty_adjacent_province = yes
+			}
+			random_empty_neighbor_province = {
+				limit = {
+					OR = {
+						area = auburnvale_area
+						area = custodia_area
+					}
+				}
+				add_siberian_construction = 25
+			}
+		}
 	}
 }

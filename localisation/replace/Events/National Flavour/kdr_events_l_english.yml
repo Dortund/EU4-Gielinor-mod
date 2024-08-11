@@ -60,4 +60,20 @@
  flavor_kdr.13.a:0 "I sure hope nothing terrible comes through that gate."
  KDR_world_gate_revealed:0 "World Gate Revealed"
  
+ flavor_kdr.14.t:0 "The Fishing Platform"
+ flavor_kdr.14.da:0 "Kandarin is a land of plentiful fish, but even greater opportunities await on the open sea where fish remain plentiful and underexploited. A small initial investment in a fishing platform could soon pay itself back."
+ flavor_kdr.14.db:0 "Clan Crwys taught us the value of food; when it is plentiful, unrest is kept to a minimum and diplomacy becomes easier. Kandarin is rich in food, but we must always prepare for the future lest we are caught unaware by a crisis once more and our people are left starving. To this end, a representative from Clan Ithell has a intriguing prospect: build a platform in the sea between Port Cadarn and Crandor so that we have a richer source of fish."
+ flavor_kdr.14.a:0 "This could bring in great wealth!"
+ flavor_kdr.14.b:0 "Food security is clan security."
+ KDR_build_fishing_platform_tooltip:0 "Disturbing an untouched part of the sea may have unforseen consequences."
+ flavor_kdr.14.c:0 "We cannot afford this."
+ 
+ flavor_kdr.15.t:0 "Slug Menace"
+ flavor_kdr.15.da:0 "The residents of Witchaven are looking rather strange of late. It's as if the entire village came down with a bad case of jaundice..."
+ flavor_kdr.15.db:0 "It seems the most insidious servants of Zamorak remain active long after the God Wars - for the residents of the village of Witchaven show the telltale signs of sea slug infestation."
+ flavor_kdr.15.a:0 "It's probably nothing."
+ flavor_kdr.15.b:0 "This nonsense is why we stayed in Tirannwn during the Third Age."
+ flavor_kdr.15.c:0 "Wait! That's a sea slug infestation! Lord Zamorak would be proud."
+ 
+ 
  

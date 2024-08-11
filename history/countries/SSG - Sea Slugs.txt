@@ -1,19 +1,21 @@
-government = monarchy
-add_government_reform = noble_kingdom
-government_rank = 2
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
 primary_culture = sea_slug
 religion = zamorak
-technology_group = kandarintechgroup
+technology_group = centraltechgroup
 capital = 263 #Witchaven
 national_focus = DIP
 
-2169.2.11 = {
+2006.9.20 = {
 	monarch = {
 		name = "Medron"
 		dynasty = "Mahey'ish"
-		birth_date = 1.1.1
+		birth_date = 1980.9.20
 		adm = 4
 		dip = 6
 		mil = 5
 	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
 }

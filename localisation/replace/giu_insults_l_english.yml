@@ -24,6 +24,7 @@
  insult_menaphos:0 "I couldn't care less what my reputation is in your city."
  insult_misthalin_ge:0 "Merching can't save you now!"
  insult_misthalin_lumby:0 "I'll give you a free teleport to Lumbridge!"
+ insult_moonclan:0 "You're doing SO well."
  insult_morytania:0 "Your swamps are overrated!"
  insult_nhe:0 "Your nation shall last shorter than your heritage."
  insult_noncanon:0 "[Root.GetName] will never be incorporated into the canon of history!"
@@ -40,6 +41,7 @@
  insult_zarosian_empire:0 "You do know what happened to the last Zarosian Empire, right?"
  
  insult_from_ape:0 "Ook!"
+ insult_from_ape2:0 "Eek!"
  insult_from_bao:0 "Such insolence! How dare you act like that, you poor excuse for goblin-dribble!"
  insult_from_etc:0 "We're the best, Etceteria beats the rest! And [From.Monarch.GetName] is very pretty, [Root.Monarch.GetName] is a fool, hey, nonny-nonny!"
  insult_from_gno:0 "My granny can move faster than you!"
@@ -86,7 +88,10 @@
  
  insult_camel_group:0 "Mmm... looks like [Root.Monarch.GetName] would make a nice kebab."
  insult_mechanical_group:0 "Reported for botting."
- 
+
+ insult_from_gnome:0 "Your people will go far. The further, the better."
+ insult_from_gnome2:0 "Es ataris eto meriz ip prit es gutus!"
+ insult_from_gnome3:0 "Why don't you make like a tree and leaf?"
  insult_from_troll:0 "My dad named after your dad."
  
  insult_goblins_from_dgk:0 "Dark brown armour best!"
@@ -152,10 +157,11 @@
  insult_xeric2:0 "Your god got beaten by a farmer!"
  insult_xeric3:0 "Based on what you're worshipping, seems anyone can claim to be a deity. I went to my god yesterday to help my pet god with an infestation of gods!"
  insult_zamorak:0 "The followers of your heathen god shall burn like Forinthry!"
- insult_zamorak_from_karamja:0 "You cannot even comprehend the vengeance we will unleash on your pitiful god."
+ insult_zamorak_from_karamja:1 "Rashiliyia was right about your pitiful God's followers."
  insult_zamorak_rebels:0 "You believe in chaos? Explains the state of your realm."
  insult_zaros:0 "The people of [Root.GetName] have brains as empty as their Lord."
  insult_zaros_from_saranthium:0 "Our city is built upon the ash of your god's failed realm."
+ insult_zaros_from_zamorak:0 "Your god lost, get over it!"
  insult_zulrah:0 "I heard [Root.Monarch.GetName] is the next sacrifice."
  insult_zulrah_from_arposandra:0 "You really don't want to know what your sacred eels are swimming in."
  insult_zulrah_from_xeric:0 "I've got a twisted bow. Zulrah won't last a minute."
@@ -190,7 +196,7 @@
  insult_no_army:0 "I'd offer to trim your armour, but you don't even have any."
  insult_bookkeeping:0 "The Gods save your pitiful bank."
  insult_heir_hunter:0 "I've heard your heir enjoys hunting. Do be careful, chinchompas can be surprisingly... volatile."
- insult_monarchy:1 "[Root.Monarch.GetName]... [Root.Monarch.GetName]... Nope, doesn't ring a bell."
+ insult_monarchy:0 "[Root.Monarch.GetName]... [Root.Monarch.GetName]... Nope, doesn't ring a bell."
  insult_diamonds:0 "Free gem cutting!"
  insult_guybrush:0 "How appropriate. You fight like a cow!"
  insult_against_guybrush:0 "I will milk every drop of blood from your body!"

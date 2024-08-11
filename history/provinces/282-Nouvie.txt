@@ -24,6 +24,13 @@ trade_goods = herblore_supplies
 
 is_city = yes
 
+2007.2.27 = {
+	owner = KZD
+	controller = KZD
+	add_core = KZD
+	remove_core = HZL
+}
+
 2105.2.27 = {
 	owner = KDR
 	controller = KDR

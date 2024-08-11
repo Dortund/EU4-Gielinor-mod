@@ -1,0 +1,28 @@
+﻿l_english:
+ end_of_the_runecrafting_crusades.1.t:0 "Beginning of the End of the Runecrafting Crusades"
+ end_of_the_runecrafting_crusades.1.d:0 "Countless Barbarians flocked to the banner of Gunnar Viljarsson to destroy those who practiced Runecrafting, but the initial momentum has stalled and with it the ability of the Gunnites to hold onto what they have taken. Gunnar's initial singleminded approach to governance is no longer workable and it must be reformed or abandoned."
+ end_of_the_runecrafting_crusades.1.a:0 "It is a battle well-fought - but now we must settle down."
+ GUN_surrender_tooltip:0 "This will immediately end the disaster but §Rreleases every province not in the capital region§!."
+ GUN_surrender_relations_boost_tooltip:0 "Ending the Runecrafting Crusades in this manner will temporarily boost relations with all known non-rival countries by §G100§!."
+ end_of_the_runecrafting_crusades.1.b:0 "We shall stand and fight!"
+ GUN_holding_on_tooltip:0 "Taking this option will attempt to reform the Gunnite realm into something more stable."
+ 
+ end_of_the_runecrafting_crusades.2.t:0 "Preachers and Missionaries"
+ end_of_the_runecrafting_crusades.2.d:0 "To much of Gielinor, we are viewed as godless heathens. Missionaries have decided that if only we converted to their ways, we would stop our conquests. How should we handle this hassle?"
+ end_of_the_runecrafting_crusades.2.a:0 "Fight them off!"
+ end_of_the_runecrafting_crusades.2.b:0 "Make concessions."
+ 
+ end_of_the_runecrafting_crusades.3.t:0 "Preachers of the Old Ways"
+ end_of_the_runecrafting_crusades.3.d:0 "More militant followers of the Northern Pantheon are angered at the Gunnites' situation, blaming the lack of recent successes in the Runecrafting Crusades on the abandonment of the old religion."
+ end_of_the_runecrafting_crusades.3.a:0 "Fight them off!"
+ end_of_the_runecrafting_crusades.3.b:0 "Make concessions."
+ 
+ end_of_the_runecrafting_crusades.4.t:0 "Vast Nationalist Force"
+ end_of_the_runecrafting_crusades.4.d:0 "Strong nationalist sentiments persist in some of our captured territories, among people who do not care to be ruled by Barbarians. We are beset by rebels!"
+ end_of_the_runecrafting_crusades.4.a:0 "We shall face them!"
+ 
+ end_of_the_runecrafting_crusades.100.t:0 "Gunnar's Legacy Finalised"
+ end_of_the_runecrafting_crusades.100.da:0 "Momentum for the Runecrafting Crusades has faded, and the Barbarians that still align themselves to Gunnar's banner have moved to a less unstable form of governance. It might not be the world-shattering force it once was, but Barbarians are resilient like few others."
+ end_of_the_runecrafting_crusades.100.db:0 "The age of the Runecrafting Crusades could not persist forever, but perhaps the Gunnite realm shall. Those loyal to Gunnar now are not merely led by fanaticism against runecrafting, but through the bonds they now have with each other. The new political situation that has emerged might be less capable of crushing opposition, but it is a lot more stable."
+ end_of_the_runecrafting_crusades.100.a:0 "What remains is Gunnar's Ground!"
+ end_of_the_runecrafting_crusades.100.b:0 "Victory is ours."

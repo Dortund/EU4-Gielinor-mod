@@ -1,0 +1,292 @@
+# Empire Formables/non-returning - these should never try to rebel
+
+# Cave of Guthix - special case due to weird nature of tag
+CGU = {
+	always = no
+}
+
+# Fremennik Empire
+FEM = {
+	always = no
+}
+
+# Goblin Empire
+GEM = {
+	always = no
+}
+
+# Gnome Empire
+GNE = {
+	always = no
+}
+
+# Kharidian Empire
+KEM = {
+	always = no
+}
+
+# Khaganate
+KHG = {
+	always = no
+}
+
+# Marwolaeth - special case as unlike Tirannwn people are unlikely to clamour for its return if it fell
+MWL = {
+	always = no
+}
+
+# New Varrock - special case as people are unlikely to clamour for its return if it fell
+NVA = {
+	always = no
+}
+
+# Wushanko
+WHK = {
+	always = no
+}
+
+# Xerician Empire
+XER = {
+	always = no
+}
+
+# Zarosian Empire
+ZAR = {
+	always = no
+}
+
+
+###################################
+# Regular Formables
+
+# Acheron
+AHR = {
+	OR = {
+		is_core = AHR
+		owner = {
+			capital_scope = {
+				is_core = AHR
+			}
+		}
+	}
+}
+
+# Ardougne
+ADO = {
+	OR = {
+		is_core = ADO
+		owner = {
+			capital_scope = {
+				is_core = ADO
+			}
+		}
+	}
+	NOT = { exists = KDR }
+}
+
+# Asgarnia
+ASG = {
+	OR = {
+		is_core = ASG
+		owner = {
+			capital_scope = {
+				is_core = ASG
+			}
+		}
+	}
+}
+
+# Baxtoria
+BXT = {
+	OR = {
+		is_core = BXT
+		owner = {
+			capital_scope = {
+				is_core = BXT
+			}
+		}
+	}
+}
+
+# Feldip Hills
+FEL = {
+	OR = {
+		is_core = FEL
+		owner = {
+			capital_scope = {
+				is_core = FEL
+			}
+		}
+	}
+}
+
+# Fenisento
+FNS = {
+	OR = {
+		is_core = FNS
+		owner = {
+			capital_scope = {
+				is_core = FNS
+			}
+		}
+	}
+}
+
+# Forinthry
+FOR = {
+	OR = {
+		is_core = FOR
+		owner = {
+			capital_scope = {
+				is_core = FOR
+			}
+		}
+	}
+}
+
+# Grand Ourania
+GDO = {
+	OR = {
+		is_core = GDO
+		owner = {
+			capital_scope = {
+				is_core = GDO
+			}
+		}
+	}
+}
+
+#Hebikatochi
+HKT = {
+	OR = {
+		is_core = HKT
+		owner = {
+			capital_scope = {
+				is_core = HKT
+			}
+		}
+	}
+}
+
+# Kandarin
+KDR = {
+	OR = {
+		is_core = KDR
+		owner = {
+			capital_scope = {
+				is_core = KDR
+			}
+		}
+	}
+}
+
+#Konjinja
+KNJ = {
+	OR = {
+		is_core = KNJ
+		owner = {
+			capital_scope = {
+				is_core = KNJ
+			}
+		}
+	}
+}
+
+# New Imcandoria
+NIM = {
+	OR = {
+		is_core = NIM
+		owner = {
+			capital_scope = {
+				is_core = NIM
+			}
+		}
+	}
+}
+
+# Resurgentia
+RSG = {
+	OR = {
+		is_core = RSG
+		owner = {
+			capital_scope = {
+				is_core = RSG
+			}
+		}
+	}
+}
+
+# Senntisten
+SNT = {
+	OR = {
+		is_core = SNT
+		owner = {
+			capital_scope = {
+				is_core = SNT
+			}
+		}
+	}
+}
+
+# Tirannwn
+TNN = {
+	OR = {
+		is_core = TNN
+		owner = {
+			capital_scope = {
+				is_core = TNN
+			}
+		}
+	}
+}
+
+# Torakoku
+TRK = {
+	OR = {
+		is_core = TRK
+		owner = {
+			capital_scope = {
+				is_core = TRK
+			}
+		}
+	}
+}
+
+###################################
+# Post-Colonial Nations
+
+# United Provinces of Zeah
+UPZ	= {
+	OR = {
+		is_core = UPZ
+		owner = {
+			capital_scope = {
+				is_core = UPZ
+			}
+		}
+	}
+}
+
+#Tasabek
+TSK	= {
+	OR = {
+		is_core = TSK
+		owner = {
+			capital_scope = {
+				is_core = TSK
+			}
+		}
+	}
+}
+
+#Aviumia
+AVU	= {
+	OR = {
+		is_core = AVU
+		owner = {
+			capital_scope = {
+				is_core = AVU
+			}
+		}
+	}
+}

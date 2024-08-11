@@ -198,6 +198,28 @@ marimbo_reduced_taxation = {
 	global_tax_modifier = -0.15
 }
 
+#############
+#Saradomin
+#############
+
+#Local
+saradomin_beast_slain = {
+	local_unrest = -2
+	local_production_efficiency = 0.25
+}
+saradomin_expanded_church_lands = {
+	local_tax_modifier = 0.25
+	local_unrest = -1
+}
+saradomin_contracted_church_lands = {
+	local_tax_modifier = -0.15
+}
+saradomin_undesired_rites = {
+	local_unrest = 2
+	local_tax_modifier = -0.1
+}
+
+
 
 #############
 #Seren

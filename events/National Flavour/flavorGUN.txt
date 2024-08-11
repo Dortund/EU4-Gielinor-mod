@@ -26,6 +26,7 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				limit = {
+					NOT = { tag = GUN }
 					OR = {
 						capital_scope = {
 							OR = {
@@ -64,10 +65,10 @@ country_event = {
 		name = flavor_gun.1.a #Excellent!
 		add_years_of_income = 1
 		add_manpower = 10
-		add_country_modifier = {
-			name = "GUN_crusader_recruitment"
-			duration = 3650
-		}
+		#add_country_modifier = { #Removed because Crusader Zeal mechanic takes the role
+		#	name = "GUN_crusader_recruitment"
+		#	duration = 3650
+		#}
 	}
 }
 
@@ -813,6 +814,130 @@ country_event = {
 		country_event = { 
 			id = flavor_gun.12
 			days = 5
+		}
+	}
+}
+
+#The Destruction of the Magic Training Area
+country_event = {
+	id = flavor_gun.14
+	title = flavor_gun.14.t
+	desc = flavor_gun.14.d #Far across Gielinor the Gunnites have come, and beyond Kandarin, Asgarnia and Misthalin was a site of huge magical significance - emphasis upon was. For the Gunnites have burnt the Magic Training Area to the ground and with it stopped a new generation of mages from stealing godly powers!
+	picture = ALKHARID_CITY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.14.a #Down with the wizards!
+		if = {
+			limit = {
+				has_government_mechanic = crusader_zeal_mechanic
+			}
+			add_government_power = {
+				mechanic_type = crusader_zeal_mechanic
+				power_type = crusader_zeal_power_1
+				value = 10
+			}
+		}
+		if = {
+			limit = {
+				66 = {
+					has_province_modifier = ALK_red_training
+				}
+			}
+			66 = {
+				remove_province_modifier = ALK_red_training
+			}
+		}
+		if = {
+			limit = {
+				66 = {
+					has_province_modifier = ALK_green_training
+				}
+			}
+			66 = {
+				remove_province_modifier = ALK_green_training
+			}
+		}
+		if = {
+			limit = {
+				66 = {
+					has_province_modifier = ALK_grey_training
+				}
+			}
+			66 = {
+				remove_province_modifier = ALK_grey_training
+			}
+		}
+		if = {
+			limit = {
+				66 = {
+					has_province_modifier = ALK_blue_training
+				}
+			}
+			66 = {
+				remove_province_modifier = ALK_blue_training
+			}
+		}
+	}
+}
+
+#The Fall of Camdozaal
+country_event = {
+	id = flavor_gun.15
+	title = flavor_gun.15.t
+	desc = flavor_gun.15.d #For all the magical weaponry and cannons at their disposal, the Imcando could not fight back the Barbarian horde forever. The hall of Camdozaal fell, and with it, all known Imcando dwarves.
+	picture = V_CHAMPION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_gun.15.a #If only they had listened.
+		every_owned_province = {
+			limit = {
+				region = asgarnia
+				culture = imcando
+			}
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		45 = {
+			set_base_tax = 1
+			set_base_production = 2
+			set_base_manpower = 1
+		}
+		46 = {
+			set_base_tax = 1
+			set_base_production = 1
+			set_base_manpower = 1
+		}
+		every_known_country = {
+			limit = {
+				OR = {
+					culture_group = dwarven_group
+					capital_scope = {
+						OR = {
+							region = asgarnia_region
+							region = misthalin_region
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = gun_destroyer_of_camdozaal
+				}
+			}
 		}
 	}
 }

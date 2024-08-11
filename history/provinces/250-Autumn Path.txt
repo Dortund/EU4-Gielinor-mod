@@ -23,7 +23,7 @@ trade_goods = livestock_farm
 
 is_city = yes
 
-2042.3.15 = {
+2043.2.10 = {
 	owner = GUN
 	controller = GUN
 	add_core = GUN

@@ -17,3 +17,7 @@
  UNIFY_ASGARNIA_WAR_NAME:0 "War of Asgarnian Unification"
  goal_unify_asgarnia:0 "Show Superiority"
  
+ cb_runecrafting_crusade:0 "Runecrafting Crusade"
+ cb_runecrafting_crusade_desc:0 "They are abusing powers not meant for mortal hands!"
+ RUNECRAFTING_CRUSADE_WAR_NAME:0 "Great Invasion"
+ goal_take_runecrafting_altars:0 "Take Runecrafting Altars"

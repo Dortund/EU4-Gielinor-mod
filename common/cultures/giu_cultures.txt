@@ -108,7 +108,7 @@ asgarnian_group	= {
 		}
 	}
 	burthorpian = {
-		primary = BUR
+		primary = BTH
 		dynasty_names = {
 			"Bronzearms" "Corothers" "Donblas" "Manslaughter" "Radebaugh" "Rancour"
 			"Savage" "Stonemason" "Thwait"
@@ -332,7 +332,7 @@ fremennik_group	= {
 			"Thokson" "Uppsen" "Urda-Stein"
 		}
 		male_names = {
-			Agnar Alfrick Armod Askeladden Bardur Beigarth Bjorn Blanin Bork
+			Agnar Alfrick Arnkel Armod Askeladden Bardur Beigarth Bjorn Blanin Bork
 			Borrokar Brundt Drangund Dron Eldgrim Eric Erjolf Flosi
 			Freidir Fridgeir Gjuki Gruva Gunnar Hannu Hrad Hrafn Hring Irwinsson Isaak
 			Jarvald Jatizso Kjedelig Lanzig Magnus Manni Marmaros Mawnis
@@ -342,7 +342,7 @@ fremennik_group	= {
 		}
 		female_names = {
 			Anne Bryll Freja Freygerd Hild Inga Jennella Jofridr Hilda Lensa Lisse Maria
-			Sassilik Sif Signy Sonje Thora Vali Vanligga Vitharr Yrsa
+			Sassilik Sif Signy Sonje Thora Thurid Vali Vanligga Vitharr Yrsa
 		}
 	}
 	miscellanean = {
@@ -769,7 +769,10 @@ dwarven_group	= {
 		country = { monarch_lifespan = 1.2 }
 		primary = CDZ
 		male_names = {
-			Ramarno Thalmund Thurgo
+			Callio Funbo Huito Kalko Ramarno Sonalo Thalmund Thurgo Tizoro Yarnio
+		}
+		female_names = {
+			Attala Conara Cuica Metla
 		}
 	}
 	lovakengj = {
@@ -2489,9 +2492,9 @@ kourend_group	= {
 	}
 
 varlamore_group	= {
-	graphical_culture = westerngfx
+	graphical_culture = southamericagfx
 
-	fortis = {
+	fortis = { #perican
 		primary = VAR
 	}
 	aldarin = {
@@ -2504,69 +2507,21 @@ varlamore_group	= {
 	}
 	tempestite = {
 	}
-	tlati = {
+	tlati = { #talkasti
 		primary = TLT
 	}
 	dynasty_names = {
-		Arkan
-		"Alighieri" "Bindi" "Boccaccio" "Cacciaconti" "Caraffa" "Galassi" "Girlani" "Piccolomini" "Usodimare"
-		Colonna Caetani Ruspoli Aldobrandini Borghese Odescalchi Serlupi Crescenzi Massimo Patrizi Naro Montoro 
-		Theodoli Senni Ricci Rocchi Datti Pietromarchi Tuccimei Mazzetti Farnese Visconti Sforza Gonzaga
+		Arkan Cento Ozomah Tullus Yorah
 	}
 	male_names = {
-		Aimeri Astra Hameln Hanchen Imafore Reshi Thomdril
-		Abbondanzio Abbondio Abelardo Abelino Achille Adalberto Adelfo Adelmio Adelmo Adone 
-		Agapito Agostino Aimone Alamanno Alarico Adriano
-		Albano Alberico Alberto Albino Alboino Alcide Aldobrandino Aleardo Aleramo Alessandro 
-		Alessio Alighiero Alvise Ambrogio Amedeo Anastasio Andrea Angelo
-		Anselmo Antonino Antonio Antoniotto Arcibaldo Arderico Armando Arnolfo 
-		Arsenio Artemio Ascanio Astorre Arrigo Annibale
-		Atenolfo Attilio Augusto Aurelio Ausilio Ausonio Averado Azzo Azzone Baldassarre 
-		Barnaba Bartolomeo Basilio Basil Bassiano Basso Baldovino
-		Battista Beltrano Benedetto Benvenuto Berardo Bernabò Bernardo Berto 
-		Bertoldo Biagio Bonaventura Bonifacio Borso Bruno Bruto Buonconte
-		Buoso Callisto Camillo Candido Cangrande Carlo Cassio Castore Cataldo Catone Cecco 
-		Chiaffredo Chiano Ciro Ciuccio Claudio Clemente Costanzo Cesare
-		Comita Conone Cornelio Corradino Corrado Cosimo Cosma Costante Costantino 
-		Cristoforo Damiano Davide Demetrio Dioniso Doménico 
-		Durante Edoardo Elio Emmanuele Ennio Enrico Enzio Enzo Ercole 
-		Ermenegildo Ettore Eugenio Ezio Ezzelino Fabrizio Fausto Federigo
-		Felice Ferdinando Ferruccio Filippo Fiorello Flavio Folco Fortunato 
-		Fosco Francesco Fresco Gabriele Gabrino Gaetano Galasso Galeazzo Eriprando
-		Galeotto Gaspare Gastone Gelasio Gentile Geraldo Gerardo Germano Gerolamo 
-		Gherardo Giacinto Giacomo Gian Gianfranco Gianleone Giano
-		Giberto Gilberto Giolio Giordano Giorgio Giovanni Giulio Giuseppe Goffredo 
-		Gregorio Gualtiero Guarnito Guerrino Guglielmo Guido Guidone
-		Guigliadore Iacopo Igino Innocenzo Ippolito Isnardo Jacopo Lamberto Landolfo 
-		Lanfranco Lattanzio Lazzarino Lazzaro Landone
-		Lealdo Leonardo Leone Leonello Leopoldo Libero Lionello Livio Lodovico Lorenzo Luca Luchino 
-		Lucio Luigi Malacresta Manfredo Manuele
-		Marco Mariano Marino Mario Marsiglio Martino Mastino Matteo 
-		Merigo Michelangelo Michele Napoleone Nazareno Nestore Niccolò Nicola
-		Nino Nolfo Oberto Obizzino Obizzo Oddone Omero Onorio Oreste Orlando Ottavio Ottobono Ottone 
-		Pagano Pancrazio Pandolfo Paolo Pasquale Otto
-		Patrizio Pellegrino Pericle Pietro Pio Prospero Rafaello Raimondo 
-		Ranerio Raniero Riccardo Rinaldo Rizzardo Roberto Rodolfo Rolando
-		Rosso Ruggiero Salinguerra Salvatore Salvestro Sante Sancho Saverio Sciarra Sebastiano 
-		Secondotto Serafino Sergio Sesto Settimio Severino Severo
-		Silvano Silvestro Simone Simonetto Sinibaldo Sinucello Sozzo Spinetto Stefano
-		Taddeo Tedaldo Tedice Teodoro Tibaldo Tiziano Tommaso Lupo Vittorio Umberto
+		Aco Aimeri Arrun Astra Atlazora Caius Cobado Ennius Fox Gilman Hameln Hanchen Hegio Imafore
+		Itzla Leo Marcellus Marhuitz Maximus Mezan Oli Ornus Pitri Pellem Regulus Reshi Rufus Servius Taur
+		Teco Thomdril Ueman Velam Victor Virilis Zuma
 	}
 	female_names = {
-		Kendall Zyanyi
-		Abelina Adalberta Adalgisa Adelaida Adelasia Adelia Adela Adriana Agalina Agnese 
-		Agostina Albina Alda Alessandra Alfonsina Alisia Aloisia
-		Amalia Amelia Ambrosia Anastasia Anna Antonella Antonia Argentina Augusta Aurelia 
-		Ausilia Ausonia Beatrice Benedetta Benilde Berenice Berta Bianca Bona Brunilde Camilla Candida Caracosa Carla Carola 
-		Cecilia Chiara Claudia Clorinda Caterina
-		Clotilde Costanza Cornelia Delinda Dora Edda Elena Eleonora
-		Elisabetta Ermenegilda Eudossia Eugenia Elisa
-		Fausta Felicia Felicita Filippa Filomena Flavia Fiora Fortunata Fosca Francesca 
-		Froizza Giacinta Ginevra Giovanna Giuditta Giulia Giuliana 
-		Giuseppa Ippolita Isabella Joscella Laura Lavinia Leonide Letizia Lidia Livia 
-		Lodovica Lucia Lucinetta Lucrezia Maddalena Marcella 
-		Margherita Maria Mariana Marietta Martina Matilda Micaela Nunzia Paola 
-		Patrizia Renata Ricciarda Silvana Sofia Stefania Tiziana Tomasina Valentina Violante Virginia
+		Apatura Artima Atza Aurelia Avinia Ava Azali Cervus Claudia Cuali Dizana Floria Furia Gloria
+		Kendall Imia Jessamine Lavina Lucia Metzli Nalia Nel Oriana Orsaga Picaria Quoatlos
+		Seia Spike Verity Wolf Xerna Zyanyi 
 	}
 }
 
@@ -2718,6 +2673,29 @@ elemental_group	= {
 		}
 		female_names = {
 			Warrior Mage Ranger Thrower Caster Fighter Striker
+		}
+	}
+	nagua = {
+		primary = NPZ
+		dynasty_names = {
+			"Moon"
+		}
+		male_names = {
+			Blood Blue Eclipse Eyatlalli Sulphur
+		}
+		female_names = {
+			Blood Blue Eclipse Eyatlalli Sulphur
+		}
+	}
+	ascended = {
+		dynasty_names = {
+			Primus Secundus Tertius Quartus Quintus Sextus Septimus
+		}
+		male_names = {
+			Rorarius Gladius Capsarius Scutarius Legiones Legio
+		}
+		female_names = {
+			Rorarius Gladius Capsarius Scutarius Legiones Legio
 		}
 	}
 }
@@ -2941,6 +2919,18 @@ beast_group	= {
 		}
 		female_names = {
 			"Si'morgh"
+		}
+	}
+	colossus = {
+		country = { monarch_lifespan = 1000 }
+		dynasty_names = {
+			"the Guardian"
+		}
+		male_names = {
+			Byakko Genbu Loarnab Seiryu Suzaku Typhon Ur-Det
+		}
+		female_names = {
+			Byakko Fiara Genbu Loarnab Seiryu Suzaku Typhon Ur-Det Valluta
 		}
 	}
 }
@@ -3242,64 +3232,17 @@ possessed_group = {
 	strangled = {
 		primary = SGW
 		dynasty_names = {
-			"Alighieri" "Bindi" "Boccaccio" "Cacciaconti" "Caraffa" "Galassi" "Girlani" "Piccolomini" "Usodimare"
-			Colonna Caetani Ruspoli Aldobrandini Borghese Odescalchi Serlupi Crescenzi Massimo Patrizi Naro Montoro 
-			Theodoli Senni Ricci Rocchi Datti Pietromarchi Tuccimei Mazzetti Farnese Visconti Sforza Gonzaga
+			Arkan Cento Ozomah Tullus Yorah
 		}
 		male_names = {
-			Aimeri Astra Hameln Hanchen Imafore Reshi Thomdril
-			Abbondanzio Abbondio Abelardo Abelino Achille Adalberto Adelfo Adelmio Adelmo Adone 
-			Agapito Agostino Aimone Alamanno Alarico Adriano
-			Albano Alberico Alberto Albino Alboino Alcide Aldobrandino Aleardo Aleramo Alessandro 
-			Alessio Alighiero Alvise Ambrogio Amedeo Anastasio Andrea Angelo
-			Anselmo Antonino Antonio Antoniotto Arcibaldo Arderico Armando Arnolfo 
-			Arsenio Artemio Ascanio Astorre Arrigo Annibale
-			Atenolfo Attilio Augusto Aurelio Ausilio Ausonio Averado Azzo Azzone Baldassarre 
-			Barnaba Bartolomeo Basilio Basil Bassiano Basso Baldovino
-			Battista Beltrano Benedetto Benvenuto Berardo Bernabò Bernardo Berto 
-			Bertoldo Biagio Bonaventura Bonifacio Borso Bruno Bruto Buonconte
-			Buoso Callisto Camillo Candido Cangrande Carlo Cassio Castore Cataldo Catone Cecco 
-			Chiaffredo Chiano Ciro Ciuccio Claudio Clemente Costanzo Cesare
-			Comita Conone Cornelio Corradino Corrado Cosimo Cosma Costante Costantino 
-			Cristoforo Damiano Davide Demetrio Dioniso Doménico 
-			Durante Edoardo Elio Emmanuele Ennio Enrico Enzio Enzo Ercole 
-			Ermenegildo Ettore Eugenio Ezio Ezzelino Fabrizio Fausto Federigo
-			Felice Ferdinando Ferruccio Filippo Fiorello Flavio Folco Fortunato 
-			Fosco Francesco Fresco Gabriele Gabrino Gaetano Galasso Galeazzo Eriprando
-			Galeotto Gaspare Gastone Gelasio Gentile Geraldo Gerardo Germano Gerolamo 
-			Gherardo Giacinto Giacomo Gian Gianfranco Gianleone Giano
-			Giberto Gilberto Giolio Giordano Giorgio Giovanni Giulio Giuseppe Goffredo 
-			Gregorio Gualtiero Guarnito Guerrino Guglielmo Guido Guidone
-			Guigliadore Iacopo Igino Innocenzo Ippolito Isnardo Jacopo Lamberto Landolfo 
-			Lanfranco Lattanzio Lazzarino Lazzaro Landone
-			Lealdo Leonardo Leone Leonello Leopoldo Libero Lionello Livio Lodovico Lorenzo Luca Luchino 
-			Lucio Luigi Malacresta Manfredo Manuele
-			Marco Mariano Marino Mario Marsiglio Martino Mastino Matteo 
-			Merigo Michelangelo Michele Napoleone Nazareno Nestore Niccolò Nicola
-			Nino Nolfo Oberto Obizzino Obizzo Oddone Omero Onorio Oreste Orlando Ottavio Ottobono Ottone 
-			Pagano Pancrazio Pandolfo Paolo Pasquale Otto
-			Patrizio Pellegrino Pericle Pietro Pio Prospero Rafaello Raimondo 
-			Ranerio Raniero Riccardo Rinaldo Rizzardo Roberto Rodolfo Rolando
-			Rosso Ruggiero Salinguerra Salvatore Salvestro Sante Sancho Saverio Sciarra Sebastiano 
-			Secondotto Serafino Sergio Sesto Settimio Severino Severo
-			Silvano Silvestro Simone Simonetto Sinibaldo Sinucello Sozzo Spinetto Stefano
-			Taddeo Tedaldo Tedice Teodoro Tibaldo Tiziano Tommaso Lupo Vittorio Umberto
+			Aco Aimeri Arrun Astra Atlazora Caius Cobado Ennius Fox Gilman Hameln Hanchen Hegio Imafore
+			Itzla Leo Marcellus Marhuitz Maximus Mezan Oli Ornus Pitri Pellem Regulus Reshi Rufus Servius Taur
+			Teco Thomdril Ueman Velam Victor Virilis Zuma
 		}
 		female_names = {
-			Kendall Zyanyi
-			Abelina Adalberta Adalgisa Adelaida Adelasia Adelia Adela Adriana Agalina Agnese 
-			Agostina Albina Alda Alessandra Alfonsina Alisia Aloisia
-			Amalia Amelia Ambrosia Anastasia Anna Antonella Antonia Argentina Augusta Aurelia 
-			Ausilia Ausonia Beatrice Benedetta Benilde Berenice Berta Bianca Bona Brunilde Camilla Candida Caracosa Carla Carola 
-			Cecilia Chiara Claudia Clorinda Caterina
-			Clotilde Costanza Cornelia Delinda Dora Edda Elena Eleonora
-			Elisabetta Ermenegilda Eudossia Eugenia Elisa
-			Fausta Felicia Felicita Filippa Filomena Flavia Fiora Fortunata Fosca Francesca 
-			Froizza Giacinta Ginevra Giovanna Giuditta Giulia Giuliana 
-			Giuseppa Ippolita Isabella Joscella Laura Lavinia Leonide Letizia Lidia Livia 
-			Lodovica Lucia Lucinetta Lucrezia Maddalena Marcella 
-			Margherita Maria Mariana Marietta Martina Matilda Micaela Nunzia Paola 
-			Patrizia Renata Ricciarda Silvana Sofia Stefania Tiziana Tomasina Valentina Violante Virginia
+			Apatura Artima Atza Aurelia Avinia Ava Azali Cervus Claudia Cuali Dizana Floria Furia Gloria
+			Kendall Imia Jessamine Lavina Lucia Metzli Nalia Nel Oriana Orsaga Picaria Quoatlos
+			Seia Spike Verity Wolf Xerna Zyanyi 
 		}
 	}
 }
@@ -3321,7 +3264,7 @@ mechanical_group = {
 	}
 }
 
-gorago_group = {
+gorajo_group = {
 	graphical_culture = northamericagfx
 
 	gorajo = {

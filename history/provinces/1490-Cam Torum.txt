@@ -1,7 +1,7 @@
-#521 - Cam Torum
-owner = AZA
-controller = AZA
-add_core = AZA
+#1490 - Cam Torum
+owner = CTR
+controller = CTR
+add_core = CTR
 tribal_owner = ---
 culture = imcando
 religion = saradomin
@@ -10,11 +10,11 @@ discovered_by = zeantechgroup
 
 hre = no
 
-base_tax = 4
-base_production = 3
-base_manpower = 3
+base_tax = 6
+base_production = 6
+base_manpower = 5
 
-trade_goods = gemstones
+trade_goods = bones
 
 fort_15th = yes
 

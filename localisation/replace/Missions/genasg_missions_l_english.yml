@@ -22,6 +22,7 @@
  genasg_organise_the_troops_desc:0 "A thoughtless rabble might pass for an army among the other clans of Asgarnia, but it won't be sufficient for our own ambitions."
  genasg_decent_army_title:0 "Decent Army"
  genasg_decent_army_desc:0 "Doesn't fifteen-thousand have an excellent ring to it? Sounds a lot better than a mere six thousand troops."
+ genasg_unify_asgarnia_cb_tooltip:0 "Enables use of the §YUnify Asgarnia§! casus belli against countries that hold land in the Asgarnian mainland."
  genasg_inland_expansion_title:0 "Inland Expansion"
  genasg_inland_expansion_desc:0 "Asgarnia's fishing waters are less rich than the likes of Kandarin or even Misthalin, causing us to rely on farmed produce and livestock found further inland. We need to take these provinces to be truly self-sufficient in food."
  genasg_burthorpe_border_title:0 "Burthorpe Border"

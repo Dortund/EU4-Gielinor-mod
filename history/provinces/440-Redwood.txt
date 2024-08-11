@@ -18,6 +18,8 @@ trade_goods = advanced_logs
 
 is_city = yes
 
+center_of_trade = 1
+
 1989.9.4 = {
 	owner = KOU
 	controller = KOU

@@ -33,7 +33,6 @@ is_city = yes
 	add_core = ASG
 	remove_core = DBS
 	remove_core = DWI
-	culture = north_asgarn
 	religion = saradomin
 }
 

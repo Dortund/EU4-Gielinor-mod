@@ -1,19 +1,28 @@
 bth_missions_1 = {
 	slot = 1
-	generic = no
+	generic = yes
 	ai = yes
 	potential = {
-		tag = BTH
+		OR = {
+			tag = BTH
+			AND = {
+				tag = ASG
+				was_tag = BTH
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
 	BTH_alternative_route = {
-		icon = the_alpine_wall
+		icon = mission_alternative_route
 		position = 1
 		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 346
+		}
 		trigger = {
-			absolutism = 75
+			absolutism = 25
 			OR = {
 				owns_core_province = 346
 				346 = {
@@ -32,8 +41,7 @@ bth_missions_1 = {
 			}
 			else = {
 				346 = {
-					cede_province = ROOT
-					add_core = ROOT
+					add_siberian_construction = 25
 				}
 			}
 		}
@@ -44,6 +52,7 @@ bth_missions_1 = {
 		required_missions = { BTH_alternative_route }
 		trigger = {
 			army_size = 25
+			army_size = TST
 			has_global_modifier_value = {
 				which = discipline
 				value = 0.15
@@ -55,20 +64,58 @@ bth_missions_1 = {
 			348 = { add_permanent_claim = ROOT }
 		}
 	}
+	BTH_death_plateau = {
+		icon = mission_death_plateau
+		position = 3
+		required_missions = { BTH_outmatch_the_trolls }
+		provinces_to_highlight = {
+			province_id = 345
+		}
+		trigger = {
+			345 = {
+				owned_by = ROOT
+				is_core = ROOT
+				fort_level = 4
+				has_owner_culture = yes
+				has_owner_religion = yes
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					347 = {
+						is_empty = yes
+					}
+				}
+				347 = {
+					add_siberian_construction = 25
+				}
+			}
+			else = {
+				add_mil_power = 100
+			}
+		}
+	}
 }
 
 bth_missions_5 = {
 	slot = 5
-	generic = no
+	generic = yes
 	ai = yes
 	potential = {
-		tag = BTH
+		OR = {
+			tag = BTH
+			AND = {
+				tag = ASG
+				was_tag = BTH
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
 	BTH_the_imperial_guard_mission = {
-		icon = moravian_arms
+		icon = mission_the_imperial_guard
 		position = 1
 		required_missions = {  }
 		trigger = {
@@ -87,16 +134,22 @@ bth_missions_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			946 = { add_permanent_claim = ROOT }
 		}
 	}
 	BTH_expand_the_warriors_guild = {
 		icon = mission_expand_the_warriors_guild
-		position = 4
+		position = 3
 		required_missions = { BTH_the_imperial_guard_mission }
+		provinces_to_highlight = {
+			province_id = 794
+		}
 		trigger = {
 			has_idea = BTH_warriors_guild
 			absolutism = 50
 			794 = {
+				owned_by = ROOT
+				is_core = ROOT
 				base_manpower = 5
 			}
 			1109 = {

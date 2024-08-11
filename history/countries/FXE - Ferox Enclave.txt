@@ -5,6 +5,7 @@ primary_culture = rogue
 religion = zamorak
 technology_group = northerntechgroup
 capital = 159 #Ferox
+historical_friend = FGX
 
 2168.7.16 = {
 	monarch = {

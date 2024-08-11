@@ -44,7 +44,7 @@ our_scholar_matches_their_school_trigger = {
 	}
 }
 
-#Uses one of the Shia schools:
+#Uses one of the Godless schools:
 #Country
 has_godless_school_trigger = {
 	OR = {

@@ -16,6 +16,8 @@ base_manpower = 4
 
 trade_goods = manufactured_goods
 
+is_city = yes
+
 fort_15th = yes
 
 native_size = 30

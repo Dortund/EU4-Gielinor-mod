@@ -5,6 +5,7 @@ primary_culture = mountaintribe
 religion = northern_pantheon
 technology_group = fremenniktechgroup
 capital = 371 #Fjellcamp
+historical_friend = GUN
 
 1903.11.12 = {
 	monarch = {

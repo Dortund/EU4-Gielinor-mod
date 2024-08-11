@@ -19,6 +19,8 @@ latent_trade_goods = { divine_energy }
 
 fort_15th = yes
 
+center_of_trade = 1
+
 native_size = 5
 native_ferocity = 2
 native_hostileness = 2

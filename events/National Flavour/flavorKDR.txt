@@ -533,3 +533,208 @@ country_event = {
 		set_global_flag = KDR_world_gate_revealed
 	}
 }
+
+country_event = {
+	id = flavor_kdr.14
+	title = flavor_kdr.14.t #The Fishing Platform
+	desc = {
+		trigger = {
+			OR = {
+				tag = ADO
+				tag = KDR
+			}
+		}
+		desc = flavor_kdr.14.da #Kandarin is a land of plentiful fish, but even greater opportunities await on the open sea where fish remain plentiful and underexploited. A small initial investment in a fishing platform could soon pay itself back.
+	}
+	desc = {
+		trigger = {
+			tag = BXT
+		}
+		desc = flavor_kdr.14.db #Clan Crwys taught us the value of food; when it is plentiful, unrest is kept to a minimum and diplomacy becomes easier. Kandarin is rich in food, but we must always prepare for the future lest we are caught unaware by a crisis once more and our people are left starving. To this end, a representative from Clan Ithell has a intriguing prospect: build a platform in the sea between Port Cadarn and Crandor so that we have a richer source of fish.
+	}
+	picture = EXPLORATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns_core_province = 263
+		owns_core_province = 1376
+		has_institution = quests
+		calc_true_if = {
+			all_owned_province = {
+				region = kandarin_region
+			}
+			amount = 10
+		}
+		OR = {
+			tag = ADO
+			tag = KDR
+			tag = BXT
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = flavor_kdr.14.a #This could bring in great wealth!
+		trigger = {
+			OR = {
+				tag = ADO
+				tag = KDR
+			}
+		}
+		add_years_of_income = -0.15
+		1376 = {
+			change_trade_goods = fishing_spot
+			add_province_modifier = {
+				name = KDR_fishing_platform
+				duration = -1
+			}
+		}
+		263 = {
+			add_province_modifier = {
+				name = KDR_neglect_of_witchaven
+				duration = 9125
+			}
+		}
+		custom_tooltip = KDR_build_fishing_platform_tooltip
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_kdr.14.b #Food security is clan security.
+		trigger = {
+			tag = BXT
+		}
+		add_years_of_income = -0.15
+		1376 = {
+			change_trade_goods = fishing_spot
+			add_province_modifier = {
+				name = BXT_fishing_platform
+				duration = -1
+			}
+		}
+		263 = {
+			add_province_modifier = {
+				name = KDR_neglect_of_witchaven
+				duration = 9125
+			}
+		}
+		custom_tooltip = KDR_build_fishing_platform_tooltip
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_kdr.14.c #We cannot afford this.
+		add_prestige = -5
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kdr.15
+	title = flavor_kdr.15.t #Slug Menace
+	desc = {
+		trigger = {
+			OR = {
+				NOT = { tag = BXT }
+				religion = zamorak
+			}
+		}
+		desc = flavor_kdr.14.da #The residents of Witchaven are looking rather strange of late. It's as if the entire village came down with a bad case of jaundice...
+	}
+	desc = {
+		trigger = {
+			tag = BXT
+			NOT = { religion = zamorak }
+		}
+		desc = flavor_kdr.15.db #It seems the most insidious servants of Zamorak remain active long after the God Wars - for the residents of the village of Witchaven show the telltale signs of sea slug infestation.
+	}
+	picture = EXPLORATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns_core_province = 263
+		1376 = {
+			owned_by = ROOT
+			is_core	= ROOT
+			OR = {
+				has_province_modifier = KDR_fishing_platform
+				has_province_modifier = BXT_fishing_platform
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = flavor_kdr.15.a #It's probably nothing.
+		trigger = {
+			NOT = { tag = BXT }
+			NOT = { religion = zamorak }
+		}
+		263 = {
+			change_culture = sea_slug
+			change_religion = zamorak
+			add_core = SSY
+			add_nationalism = 20
+		}
+		1376 = {
+			change_culture = sea_slug
+			change_religion = zamorak
+			add_core = SSY
+			add_nationalism = 20
+		}
+	}
+	option = {
+		name = flavor_kdr.15.b #This nonsense is why we stayed in Tirannwn during the Third Age.
+		trigger = {
+			tag = BXT
+			NOT = { religion = zamorak }
+		}
+		263 = {
+			change_culture = sea_slug
+			change_religion = zamorak
+			add_core = SSY
+			add_nationalism = 20
+		}
+		1376 = {
+			change_culture = sea_slug
+			change_religion = zamorak
+			add_core = SSY
+			add_nationalism = 20
+		}
+	}
+	option = {
+		name = flavor_kdr.15.c #Wait! That's a sea slug infestation! Lord Zamorak would be proud.
+		trigger = {
+			religion = zamorak
+		}
+		add_patriarch_authority = 0.05
+		263 = {
+			change_culture = sea_slug
+			change_religion = zamorak
+			add_core = SSY
+		}
+		1376 = {
+			change_culture = sea_slug
+			change_religion = zamorak
+			add_core = SSY
+		}
+	}
+}
+
+
+
+

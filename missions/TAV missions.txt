@@ -1,0 +1,271 @@
+taverley_missions_1 = {
+	slot = 1
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = TAV
+			AND = {
+				tag = ASG
+				was_tag = TAV
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TAV_druidic_privileges = {
+		icon = mission_druidic_privileges
+		required_missions = {  } #none
+		position = 1
+		trigger = {
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 2
+			}
+			estate_influence = {
+				estate = estate_church
+				influence = 50
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 75
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = TAV_boom_of_druidic_practices
+				duration = 9125
+			}
+		}
+	}
+	TAV_druidic_ritual = {
+		icon = mission_druidic_ritual
+		required_missions = { TAV_druidic_privileges genasg_proselytise_the_faith }
+		position = 3
+		provinces_to_highlight = {
+			culture = taverlian
+		}
+		trigger = {
+			owns_core_province = 49
+			development_in_provinces = {
+				value = 100
+				culture = taverlian
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				49 = {
+					add_great_project_tier = {
+						type = great_project_taverley_stone_circle
+						tier = 1
+					}
+				}
+			}
+			else = {
+				49 = {
+					add_province_triggered_modifier = TAV_enhanced_druidic_rituals
+				}
+			}
+		}
+	}
+	TAV_stone_circle_of_misthalin = {
+		icon = mission_stone_circle_of_misthalin
+		required_missions = { TAV_druidic_ritual genasg_onward_to_farradorn }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 12
+		}
+		trigger = {
+			12 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+			}
+		}
+		effect = {
+			12 = {
+				change_province_name = "Aeternam"
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			add_country_modifier = {
+				name = TAV_united_stone_circles
+				duration = 9125
+			}
+		}
+	}
+}
+
+taverley_missions_5 = {
+	slot = 5
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = TAV
+			AND = {
+				tag = ASG
+				was_tag = TAV
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	TAV_mutual_support = {
+		icon = mission_mutual_support
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				any_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					has_matching_religion = ROOT
+					total_development = 35
+				}
+				any_subject_country = {
+					has_opinion = {
+						who = ROOT
+						value = 175
+					}
+					has_matching_religion = ROOT
+					total_development = 50
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			793 = {
+				add_permanent_claim = ROOT
+			}
+			1005 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	TAV_proactive_defence = {
+		icon = mission_ally_urval
+		required_missions = { TAV_mutual_support genasg_organise_the_troops }
+		position = 2
+		provinces_to_highlight = {
+			province_id = 793
+		}
+		trigger = {
+			OR = {
+				barracks = 2
+				training_fields = 2
+			}
+			793 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+			}
+			1005 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+			}
+			NOT = { exists = CDU }
+		}
+		effect = {
+			add_mil_power = 25
+			every_known_country = {
+				limit = {
+					capital_scope = {
+						region = asgarnia_region
+					}
+					has_matching_religion = ROOT
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = tav_defeated_heresy
+				}
+			}
+		}
+	}
+	TAV_guthixian_union = {
+		icon = mission_guthixian_union
+		required_missions = { TAV_proactive_defence }
+		position = 3
+		provinces_to_highlight = {
+		}
+		trigger = {
+			grown_by_development = 50
+			OR = {
+				any_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+					has_matching_religion = ROOT
+					capital_scope = {
+						region = asgarnia_region
+					}
+					NOT = { total_development = 50 }
+				}
+				any_subject_country = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+					has_matching_religion = ROOT
+					total_development = 35
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
+						has_matching_religion = ROOT
+						capital_scope = {
+							region = asgarnia_region
+						}
+						NOT = { total_development = 50 }
+					}
+				}
+				custom_tooltip = TAV_guthixian_union_tooltip
+				hidden_effect = {
+					set_country_flag = TAV_calling_the_guthixian_union
+				}
+				random_ally = {
+					limit = {
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
+						has_matching_religion = ROOT
+						capital_scope = {
+							region = asgarnia_region
+						}
+						NOT = { total_development = 50 }
+					}
+					country_event = { 
+						id = flavor_tav.1
+						days = 5
+					}
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = TAV_united_under_taverley
+					duration = 9125
+				}
+			}			
+		}
+	}
+}

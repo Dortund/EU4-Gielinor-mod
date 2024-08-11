@@ -59,7 +59,12 @@ country_decisions = {
 		effect = {
 			41 = {
 				move_capital_effect = yes
-				change_province_name = "Falador"
+				if = {
+					limit = {
+						NOT = { mission_completed = DBS_rise_of_falador }
+					}
+					change_province_name = "Falador"
+				}
 			}
 			change_tag = ASG
 			swap_non_generic_missions = yes

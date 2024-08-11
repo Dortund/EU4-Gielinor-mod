@@ -1,22 +1,19 @@
 #522 - Tamakamtlati
+owner = CTR
+controller = CTR
+add_core = CTR
 tribal_owner = ---
-culture = tlati
-religion = ranul
+culture = imcando
+religion = saradomin
 
 discovered_by = zeantechgroup
 
 hre = no
 
-base_tax = 1
-base_production = 1
+base_tax = 2
+base_production = 2
 base_manpower = 1
 
 trade_goods = herblore_supplies
 
 is_city = yes
-
-2000.1.1. = {
-	owner = VAR
-	controller = VAR
-	add_core = VAR
-}

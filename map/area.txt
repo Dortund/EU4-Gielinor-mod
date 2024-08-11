@@ -824,11 +824,15 @@ salvager_shore_area = {
 }
 
 proudspire_area = {
-	504 505 506 1454 1455
+	504 505 506 1454
+}
+
+ralos_rise_area = {
+	1455 1456 521 522 890 
 }
 
 cam_torum_area = {
-	521 522 890 1456
+	1490 1491
 }
 
 west_avium_area = {

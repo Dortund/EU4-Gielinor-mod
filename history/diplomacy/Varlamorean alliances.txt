@@ -1,23 +1,23 @@
+#Varlamore-Tlati
+vassal = {
+	first = VAR
+	second = TLT
+	start_date = 1900.1.1
+	end_date = 2075.1.1
+}
+
 #Varlamore-Aldarin
 vassal = {
 	first = VAR
 	second = ALD
-	start_date = 1900.5.17
-	end_date = 1990.1.1
+	start_date = 1990.1.1
+	end_date = 2070.1.1
 }
 
 #Varlamore-Auburnvale
 vassal = {
 	first = VAR
 	second = AUB
-	start_date = 1900.5.17
-	end_date = 2000.1.1
-}
-
-#Varlamore-Tlati
-vassal = {
-	first = VAR
-	second = TLT
-	start_date = 1950.5.17
-	end_date = 2010.1.1
+	start_date = 2010.1.1
+	end_date = 2100.1.1
 }

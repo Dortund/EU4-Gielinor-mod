@@ -27,6 +27,11 @@
  kdr_knights_of_the_round_table:0 "Knights of the Round Table"
  desc_kdr_knights_of_the_round_table:0 "The knights of Camelot have great expertise in leadership which has helped us keep our more autonomous regions in check."
  
+ # Taverley
+ 
+ TAV_enhanced_druidic_rituals:0 "Enhanced Druidic Rituals"
+ desc_TAV_enhanced_druidic_rituals:0 "Taverley's stone circle has been renewed and improved, and the druids which use it are believed to have a stronger connection with Guthix."
+ 
  # Tirannwn Civil War
  
  civil_war_underdog:0 "Weaker Civil War Faction"
@@ -165,10 +170,12 @@
  APE_students_to_masters:0 "Students to Masters"
  desc_APE_students_to_masters:0 "We have proven ourselves as the greatest ninjas Gielinor has ever seen!"
 
-# Asgarnia
+# Asgarnia - Generic
 
  genasg_troll_guard:0 "Guarding Against Trolls"
  desc_genasg_troll_guard:0 "Now we are the front line of Asgarnians against the forces of the Troll Stronghold, we must work on our defence against their vile rock-throwers."
+
+# Asgarnia - Shared
 
  ASG_black_knights_castle:0 "Black Knights' Castle"
  desc_ASG_black_knights_castle:0 "Falador's castle is the headquarters of the Kinshra, or Black Knights."
@@ -180,6 +187,21 @@
  desc_ASG_white_knights_fortress:0 "This province is home to a mansion, serving as a major base of the White Knights."
  ASG_castle_of_the_twin_knights:0 "Castle of the Twin Knights"
  desc_ASG_castle_of_the_twin_knights:0 "The Zamorakian Black Knights and Saradominist White Knights awkwardly co-exist in the same castle in Falador."
+ ASG_growth_of_port_sarim:0 "Growth of Port Sarim"
+ desc_ASG_growth_of_port_sarim:0 "Terrible memories of the fall of Port Lina have faded as the united Asgarnia is now powerful enough to safeguard its existence. As a result, Port Sarim can boom like never before."
+ ASG_crafting_guild_modifier:0 "Crafting Guild"
+ desc_ASG_crafting_guild_modifier:0 "The Crafting Guild brings together a wide variety of crafting stations with an excellent supply of raw materials in the form of clay, silver and gold."
+ ASG_refurbished_falador_castle:0 "Refurbished Falador Castle"
+ desc_ASG_refurbished_falador_castle:0 "No longer a partial ruin, Falador Castle now stands as Asgarnia's greatest fortification."
+ ASG_house_portal:0 "House Portal"
+ desc_ASG_house_portal:0 "Advanced magic has allowed a large number of adventurers to call this town home while taking up minimal space."
+ ASG_mining_guild_modifier:0 "Mining Guild"
+ desc_ASG_mining_guild_modifier:0 "Rich minerals beneath Falador are mined in vast quantities, ensuring Asgarnia's furnaces are well-supplied."
+ ASG_secret_of_kamishima:0 "Secret of Kami-Shima"
+ desc_ASG_secret_of_kamishima:0 "In the centre of Kami-Shima, huge divine power and ancient wisdom has been uncovered by legends of Wushanko and Asgarnia alike."
+ ASG_heroes_guild:0 "Heroes' Guild"
+ desc_ASG_heroes_guild:0 "The Heroes' Guild celebrates those of the past and present willing to do anything - no matter how strange - to prove their worth."
+
  ASG_banishment_of_the_black_knights:0 "Banishment of the Black Knights"
  desc_ASG_banishment_of_the_black_knights:0 "The Black Knights have been banished from Asgarnia. Zamorakian subjects are not pleased about this turn of events."
  ASG_banishment_of_the_white_knights:0 "Banishment of the White Knights"
@@ -204,12 +226,119 @@
  desc_ASG_exile_of_the_kinshra:0 "After some time tolerating the presence of the Black Knights in Asgarnia, we have realised the folly of our ways and have exiled them from the kingdom."
  ASG_exile_of_the_white_knights:0 "Exile of the White Knights"
  desc_ASG_exile_of_the_white_knights:0 "After some time tolerating the presence of the White Knights in Asgarnia, we have realised the folly of our ways and have exiled them from the kingdom."
+ ASG_asgarnian_artisans:0 "Asgarnian Artisans"
+ desc_ASG_asgarnian_artisans:0 "Ready supplies of raw materials has cut the time and costs needed for construction."
+ ASG_sibling_in_faith_rival_in_politics:0 "Sibling in Faith, Rival in Politics"
+ desc_ASG_sibling_in_faith_rival_in_politics:0 "Our hostile actions towards our siblings in faith have complicated our internal religious situation."
+ ASG_cross_religious_dialogue:0 "Cross-Religious Dialogue"
+ desc_ASG_cross_religious_dialogue:0 "Efforts to keep good relations with Misthalin inspire our diplomats to work harder with other countries as well."
+ ASG_guardian_of_the_imcando:0 "Guardian of the Imcando"
+ desc_ASG_guardian_of_the_imcando:0 "The Imcando Dwarves survive under our protection!"
+ ASG_call_to_discovery:0 "Call to Discovery"
+ desc_ASG_call_to_discovery:0 "There are riches beyond those of Port Sarim or Musa Point - we just need to find them."
+ ASG_ceremonial_swords:0 "Ceremonial Swords"
+ desc_ASG_ceremonial_swords:0 "Great dwarven smiths are manufacturing decorative weaponry famed throughout Gielinor."
+ ASG_age_of_invention:0 "Age of Invention"
+ desc_ASG_age_of_invention:0 "Asgarnia leads the way into this strange new age."
+ ASG_adventurer_expedition:0 "Adventurer Expedition"
+ desc_ASG_adventurer_expedition:0 "Obsessed with the chance for fresh loot and experience, adventurers are willing to boldly build colonies on Asgarnia's behalf."
+ ASG_opportunities_of_wushanko:0 "Opportunities of Wushanko"
+ desc_ASG_opportunities_of_wushanko:0 "With a range of established Asgarnian colonies in Wushanko, more settlers than ever before are willing to set sail to join them."
+ ASG_colonial_investments:0 "Colonial Investments"
+ desc_ASG_colonial_investments:0 "As the Asgarnian dominance of Wushanko grows, colonial economies have grown prosperous enough to partially fund their own investments."
+ ASG_masterwork_armour:0 "Masterwork Armour"
+ desc_ASG_masterwork_armour:0 "Asgarnia's Artisans' Workshop has produced perhaps the greatest melee armour ever made."
+ ASG_faithful_unification:0 "Faithful Unification"
+ desc_ASG_faithful_unification:0 "A unified state could benefit from a more unified religious situation."
+ ASG_tolerance_of_the_white_knights:0 "Tolerance of the White Knights"
+ desc_ASG_tolerance_of_the_white_knights:0 "As much as a pain as the White Knights are, they do a pretty good job of keeping us safe... and serving as cannon fodder."
+ ASG_tolerance_of_the_black_knights:0 "Tolerance of the Black Knights"
+ desc_ASG_tolerance_of_the_black_knights:0 "The Black Knights legitimise the state of Asgarnia as more than an extension of Entranan power."
+ ASG_the_godsword:0 "The Godsword"
+ desc_ASG_the_godsword:0 "One of the last battles of the Third Age was fought over this legendary blade, rumoured capable of slaying Gods. In reality, there seems to be multiple copies of the blade and they are not quite as powerful as rumoured, but any wielder of a Godsword nonethess is a terrifying presence on the battlefield."
+
+# Asgarnia - Generic
+
+ ASG_GENRELIGION_fortress_asgarnia:0 "Fortress Asgarnia"
+ desc_ASG_GENRELIGION_fortress_asgarnia:0 "The entire Asgarnian region is firmly under a single rule and must be kept secure."
+ ASG_GENRELIGION_stabilised_faith:0 "Stabilised Faith"
+ desc_ASG_GENRELIGION_stabilised_faith:0 "The tension of bringing a whole new religion to Asgarnia has eased off somewhat."
+ ASG_GENRELIGION_history_rewritten:0 "History Rewritten"
+ desc_ASG_GENRELIGION_history_rewritten:0 "So what of the struggles of the Saradominists, Zamorakians or Guthixians? They are irrelevant to our united Asgarnian peoples!"
+
+# Asgarnia - Saradomin
+
+ ASG_SARA_saradomins_country:0 "Saradomin's Country"
+ desc_ASG_SARA_saradomins_country:0 "Although Saradomin first set foot upon Entrana, the land that is now Asgarnia is where he built up his following. Our role as Apostolistic Controller only serves to strengthen such ancient bonds."
+ ASG_SARA_faith_and_determination:0 "Faith and Determination"
+ desc_ASG_SARA_faith_and_determination:0 "Let White Armour be a symbol of our resolve - to keep disciplined for we fight for Saradomin."
+ ASG_SARA_expanded_temple_knight_presence:0 "Expanded Temple Knight Presence"
+ desc_ASG_SARA_expanded_temple_knight_presence:0 "Investment into the arts of espionage grants the ancient Saradominist order of the Temple Knights greater reach than ever before."
+ ASG_SARA_recruitment_drive:0 "Recruitment Drive"
+ desc_ASG_SARA_recruitment_drive:0 "The Temple Knights have begun recruiting adventurers into their ranks to expand their reach."
+ ASG_SARA_armadylean_connection:0 "Armadylean Connection"
+ desc_ASG_SARA_armadylean_connection:0 "A secret order of Armadylean forces are willing to work with us to take down those who would endanger the world with reckless power."
+ ASG_SARA_bastion_of_light:0 "Bastion of Light"
+ desc_ASG_SARA_bastion_of_light:0 "We have proven ourselves worthy of Saradomin's grace and shall work tirelessly to keep it."
+
+ ASG_SARA_defence_of_hyu_ji:0 "Defence of Hyu-Ji"
+ desc_ASG_SARA_defence_of_hyu_ji:0 "The Saradominist protection of Hyu-Ji has granted the island status in Wushanko it never before has had."
+ 
+# Asgarnia - Zamorak
+
+ ASG_ZAM_revenge_of_zadimus:0 "Revenge of Zadimus"
+ desc_ASG_ZAM_revenge_of_zadimus:0 "Zadimus, high priest of Zamorak, was tortured and killed by queen Rashiliyia of Karamja for not returning her affections. The following of Zamorak in Karamja collapsed as a consequence - but it is now time to reverse that!"
+ ASG_ZAM_zamorakian_overlords:0 "Zamorakian Overlords"
+ desc_ASG_ZAM_zamorakian_overlords:0 "Although werewolves would prefer to govern themselves, being ruled under a foreign Zamorakian power is certainly preferable over being ruled by vampyres that view them as cannon fodder."
+ ASG_ZAM_taverley_dungeon_barracks:0 "Taverley Dungeon Barracks"
+ desc_ASG_ZAM_taverley_dungeon_barracks:0 "Hidden deep in Taverley Dungeon is Asgarnia's greatest barracks - safe from enemy attack by the myriad winding paths and monsters on the way there."
+ 
+ ASG_ZAM_zamoraks_due:0 "Zamorak's Due"
+ desc_ASG_ZAM_zamoraks_due:0 "Hallowvale was conquered for Zamorak in the Third Age. Unfortunately, at the end of the era, Lord Drakan turned his back on the very God who put him in the position he was in, leaving Morytania ruled by heretics. Now it is rightfully under Zamorakian rule!"
+ 
+# Asgarnia - Guthix
+
+ ASG_GUTH_void_knights_castle:0 "Void Knights' Castle"
+ desc_ASG_GUTH_void_knights_castle:0 "This province hosts the headquarters of the Void Knights."
+ ASG_GUTHIX_tears_of_guthix:0 "Tears of Guthix"
+ desc_ASG_GUTHIX_tears_of_guthix:0 "According to legend, Guthix wept in this cave upon discovering the horrors of the God Wars, and the very rocks themselves wept with him. They have never stopped since."
+ ASG_GUTHIX_sword_of_edicts_modifier:0 "Sword of Edicts"
+ desc_ASG_GUTHIX_sword_of_edicts_modifier:0 "The Sword of Edicts represents Guthix's law on Gielinor; that other Gods are to leave Gielinor and never return, and that mortals must be free from their tyranny."
+ ASG_GUTHIX_monastery_of_ascension_modifier:0 "Monastery of Ascension"
+ desc_ASG_GUTHIX_monastery_of_ascension_modifier:0 "The strange Monastery of Ascension was built by the Guardian of Guthix Ocellus as a means to protect against other gods, but until we took command of it, it had strayed far, far from its path."
+ 
+ ASG_GUTHIX_rise_of_crux_eqal:0 "Rise of Crux Eqal"
+ desc_ASG_GUTHIX_rise_of_crux_eqal:0 "Crux Eqal serves the interests of Guthix across Gielinor and will recruit the most powerful adventurers to aid in their goals."
+ ASG_GUTHIX_gnome_glider_rights:0 "Gnome Glider Rights"
+ desc_ASG_GUTHIX_gnome_glider_rights:0 "With the help of new Gnomish allies, we have secured access to their incredibly fast - albeit limited in capacity - Gnome Gliders."
+ ASG_GUTHIX_ogres_of_guthix:0 "Ogres of Guthix"
+ desc_ASG_GUTHIX_ogres_of_guthix:0 "A successful expedition to spread the faith of Guthix to the Feldip Hills has allowed us to share expertise in Summoning."
+ ASG_GUTHIX_guardian_of_the_void:0 "Guardian of the Void"
+ desc_ASG_GUTHIX_guardian_of_the_void:0 "Through careful defensive efforts we aided the Valluta in her defence against the threats of the Void."
+ ASG_GUTHIX_justicar_of_the_void:0 "Justicar of the Void"
+ desc_ASG_GUTHIX_justicar_of_the_void:0 "Through balance we served the Valluta in her defence against the threats of the Void."
+ ASG_GUTHIX_executioner_of_the_void:0 "Executioner of the Void"
+ desc_ASG_GUTHIX_executioner_of_the_void:0 "Through forceful effort we served the Valluta in her defence against the threats of the Void."
+
+# Asgarnia - Brassica Prime
+
+ ASG_BRASSICA_harmony_out_of_chaos:0 "Harmony out of Chaos"
+ desc_ASG_BRASSICA_harmony_out_of_chaos:0 "Cabbage goes well with everything, from the salads of Taverley to the fires of Zamorakians. Let us put out past disagreements behind us and gather around the coleslaw bowl."
+
+ ASG_BRASSICA_bumper_harvest:0 "Bumper Harvest"
+ desc_ASG_BRASSICA_bumper_harvest:0 "Our farmers are extra enthusastic about making this decade's harvests better than ever before!"
+ ASG_BRASSICA_monastery_of_brassica:0 "Monastery of Brassica"
+ desc_ASG_BRASSICA_monastery_of_brassica:0 "Let us contemplate the simplest of pleasures away from distractions."
+ ASG_BRASSICA_cheers_of_the_cabbage_god:0 "Cheers of the Cabbage God"
+ desc_ASG_BRASSICA_cheers_of_the_cabbage_god:0 "Hooray!"
 
 # Baxtoria
 
  BXT_new_elven_capital:0 "New Elven Capital"
  desc_BXT_new_elven_capital:0 "Baxtoria has supplanted the lands of Tirannwn as the predominant elven realm. As a consequence, this city is now considered the most important elven settlement."
-
+ BXT_fishing_platform:0 "Fishing Platform"
+ desc_BXT_fishing_platform:0 "The expertise in construction offered by Clan Ithell has created a structure in the sea where great quantities of fish are caught and brought ashore."
+ 
  BXT_expansion_of_democracy:0 "Expansion of Democracy"
  desc_BXT_expansion_of_democracy:0 "The Cadarn Kingdom since it was first established in Kandarin always has tried to pursue diplomatic efforts with the various peoples of the region. With many of those areas now under Cadarn leadership, this diplomatic effort has been reflected in a limited form of democracy in Baxtoria."
  BXT_crystalline_sunrise:0 "Crystalline Sunrise"
@@ -246,6 +375,13 @@
  desc_CDA_national_recovery:0 "Baxtorian's kingdom is restored, and elves are returning to our service."
  CDA_conquest_of_the_hazeelite_lands:0 "Conquest of the Hazeelite Lands"
  desc_CDA_conquest_of_the_hazeelite_lands:0 "We are viewed as largely a more benevolent leader than Hazeel was, so our new subjects are less prone to rebel."
+ 
+# Cam Torum
+
+ CTR_loose_lips:0 "Loose Lips"
+ desc_CTR_loose_lips:0 "With a wide expansion in the dwarves made aware of Cam Torum's rune sources, it only takes a single drunken dwarf to spill all our secrets."
+ CTR_strict_control_of_runes:0 "Strict Control of Runes"
+ desc_CTR_strict_control_of_runes:0 "No humans will know of Cam Torum's secrets!"
 
 # Canifis
 
@@ -269,6 +405,20 @@
  CFS_werewolf_empire:0 "Werewolf Empire"
  desc_CFS_werewolf_empire:0 "With the Canifian and Aquos werewolves brought under one mighty banner, let all Gielinor fear our howl."
 
+# Cashien
+
+ CSN_secrets_of_lassar:0 "Secrets of Lassar"
+ desc_CSN_secrets_of_lassar:0 "This ancient city buried beneath Ice Mountain holds incredible secrets around shadow magic."
+
+ CSN_deepening_temple_knight_involvement:0 "Deepening Temple Knight Involvement"
+ desc_CSN_deepening_temple_knight_involvement:0 "As Clan Cashien becomes increasingly integrated into the affairs of the Temple Knights, we have gained improved knowledge of their acts of spycraft."
+ CSN_foresight_of_oracles:0 "Foresight of Oracles"
+ desc_CSN_foresight_of_oracles:0 "Limited glances into the future are hinting at later innovations."
+ CSN_greatest_spies_of_asgarnia:0 "Greatest Spies of Asgarnia"
+ desc_CSN_greatest_spies_of_asgarnia:0 "Clan Cashien has proven itself to all that a little espionage can save a lot of bother later."
+ CSN_secret_guardian_of_asgarnia:0 "Secret Guardian of Asgarnia"
+ desc_CSN_secret_guardian_of_asgarnia:0 "Few will ever know what we did in the defence of Gielinor, but our spies have learnt immensely from our example."
+
 # Corsair Cove
 
  CCO_corsair_banking:0 "Corsair Banking"
@@ -278,6 +428,9 @@
  
  CDR_time_to_mine:0 "Time to Mine"
  desc_CDR_time_to_mine:0 "We are discovering great mineral riches deep in Crandor's volcano."
+ CDR_melzars_maze:0 "Melzar's Maze"
+ desc_CDR_melzars_maze:0 "The wizard Melzar has constructed a strange tower with bizarre forms of security."
+ 
  CDR_colonial_drive:0 "Colonial Drive"
  desc_CDR_colonial_drive:0 "A new world calls, and Crandor shall answer!"
  CDR_crandor_triumphant:0 "Crandor Triumphant"
@@ -318,6 +471,10 @@
  desc_DBS_rise_of_kinshra:0 "The Kinshra, or Black Knights, are a Zamorakian order which has pledged their support to the Donblas tribe in exchange for freedom to practice their religion."
  DBS_rejection_of_zamorak:0 "Rejection of the Zamorakians"
  desc_DBS_rejection_of_zamorak:0 "Zamorakians tried to weasel their way into our government! We can't let that happen."
+ DBS_fresh_fervour:0 "Fresh Fervour"
+ desc_DBS_fresh_fervour:0 "The spread of a new faith is an exciting time for our people - it is said there is none more devout than a convert."
+ DBS_asgarnian_destiny:0 "Asgarnian Destiny"
+ desc_DBS_asgarnian_destiny:0 "Shrewd diplomatic efforts have strengthened our claim to Asgarnian lands."
 
 # Dark Wizards
 
@@ -412,7 +569,18 @@
  desc_GUN_major_sabotage_by_the_gunnites:0 "Our pro-Runecrafting stance has angered supporters of Gunnar's Runecrafting Crusades, who are sabotaging our military efforts accordingly."
  GUN_modest_sabotage_by_the_gunnites:0 "Modest Sabotage by the Gunnites"
  desc_GUN_modest_sabotage_by_the_gunnites:0 "Our moderately pro-Runecrafting stance has angered supporters of Gunnar's Runecrafting Crusades, who are sabotaging our military efforts accordingly."
-
+ GUN_victory_over_the_moonclan:0 "Victory Over the Moonclan"
+ desc_GUN_victory_over_the_moonclan:0 "With the worst perpetrators of Runecrafting eliminated, we need to look further afield to see where else they may have influenced."
+ GUN_spear_smithing:0 "Karamjan Spear Smithing"
+ desc_GUN_spear_smithing:0 "The tribes of Karamja have an old connection to the Barbarians. While much of our connection is long-forgotten, the Karamjans have similar skills in spear-making to ourselves which can be combined with our own capabilities."
+ GUN_gunnar_the_undefeatable:0 "Gunnar the Undefeatable"
+ desc_GUN_gunnar_the_undefeatable:0 "The Myths' Guild, specifically established to prevent our Crusade, has failed against us. Let Gielinor know that the time of Runecrafting shall be over forever!"
+ GUN_magecrusher:0 "Magecrusher"
+ desc_GUN_magecrusher:0 "Hail to Gunnar, whose crusade toppled the Wizards' Tower!"
+ GUN_eternal_crusader:0 "Eternal Crusader"
+ desc_GUN_eternal_crusader:0 "With the runecrafters comprehensively crushed, the Gunnites are almost unlimited in capabilities - so long as they do not overextend."
+ GUN_render_chaos_unto_chaos:0 "Render Chaos Unto Chaos"
+ desc_GUN_render_chaos_unto_chaos:0 "Prevents Wilderness Border events from occuring.\n\nOur destruction of the Chaos Altar has frightened even the beasts of the Wilderness. For the time being, they will stay away."
 
  GUN_ruined_runecrafting_altar:0 "Ruined Runecrafting Altar"
  desc_GUN_ruined_runecrafting_altar:0 "Gunnar's Crusade has destroyed the entrance to this runecrafting altar, and it is now unproductive."
@@ -480,6 +648,11 @@
  desc_KDR_market_of_the_world:0 "The establishment of Ardougne Market has staked out our ambition to be a major power in Gielinor in the future."
  KDR_anti_thievery_efforts:0 "Anti-Thievery Efforts"
  desc_KDR_anti_thievery_efforts:0 "Yes, we know that Ardougne has a reputation for crime. But we're working on it. We've even implemented two-factor authentication traps on our most valuable chests!"
+
+ KDR_fishing_platform:0 "Fishing Platform"
+ desc_KDR_fishing_platform:0 "Off the province's east coast is a structure in the sea where great quantities of fish are caught and brought ashore."
+ KDR_neglect_of_witchaven:0 "Neglect of Witchaven"
+ desc_KDR_neglect_of_witchaven:0 "Vast quantities of fish are brought in from the Fishing Platform undercutting the fishing industry of Witchaven."
  
  KDR_castle_wars_modifier:0 "Faith of Castle Wars"
  desc_KDR_castle_wars_modifier:0 "Having differing religions on the two sides of Castle Wars is a great incentive for the sides to fight harder."
@@ -811,6 +984,15 @@
  SNT_ghorrock_landing:0 "Ghorrock Landing"
  desc_SNT_ghorrock_landing:0 "Our people are determined to take the fortress of Ghorrock."
  
+# Taverley
+
+ TAV_boom_of_druidic_practices:0 "Boom of Druidic Practices"
+ desc_TAV_boom_of_druidic_practices:0 "Strong privileges afforded to Taverley's druids have allowed them to strengthen the Guthixian faith for a time."
+ TAV_united_stone_circles:0 "United Stone Circles"
+ desc_TAV_united_stone_circles:0 "Varrock's stone circle finally being brought back into druidic control shall be a great source of inspiration to the faithful."
+ TAV_united_under_taverley:0 "United Under Taverley"
+ desc_TAV_united_under_taverley:0 "An ever-closer tie between Taverley and its subjects should soon result in a true political union."
+ 
 # Tirannwn 
  
  TNN_construction_boom:0 "Construction Boom"
@@ -857,6 +1039,26 @@
  desc_TZH_entrenched_caste_power:0 "The old traditions of the TzHaar caste system have been entrenched, ensuring the loyalty of the castes' elites."
  TZH_eternal_stability:0 "Eternal Stability"
  desc_TZH_eternal_stability:0 "After the chaos at the Elder Kiln, we have elected to pursue a path of calm stability in future."
+
+ TZH_volcanic_frontier:0 "Volcanic Frontier"
+ desc_TZH_volcanic_frontier:0 "A new population is rushing to enjoy the newly-settled cliffs of the Karamja Volcano."
+ TZH_tzhaar_hur_architecture:0 "TzHaar-Hur Architecture"
+ desc_TZH_tzhaar_hur_architecture:0 "Efforts of the TzHaar-Hur have ensured our city shall stand the test of time."
+ TZH_tzhaar_ket_reinforcement:0 "TzHaar-Ket Reinforcement"
+ desc_TZH_tzhaar_ket_reinforcement:0 "Efforts of the TzHaar-Ket have reinforced our city defences."
+ TZH_influx_of_runes:0 "Influx of Runes"
+ desc_TZH_influx_of_runes:0 "Our depleted stocks of runes are finally being replaced by the spread of runecrafting."
+ TZH_defended_home_trade:0 "Defence of the Tokkul Market"
+ desc_TZH_defended_home_trade:0 "We have made great efforts to secure the hunting grounds of Mor Ul Rek."
+ TZH_strength_of_the_tzhaar_ket:0 "Strength of the TzHaar-Ket"
+ desc_TZH_strength_of_the_tzhaar_ket:0 "Recent reforms to the structure of the TzHaar-Ket caste have made our military more powerful."
+ 
+ TZH_rejection_of_the_gaal:0 "Rejection of the Ga'al"
+ desc_TZH_rejection_of_the_gaal:0 "The Ga'al have been rejected from inclusion in TzHaar society."
+ TZH_extinction_of_the_tzhaar:0 "Extinction of the TzHaar"
+ desc_TZH_extinction_of_the_tzhaar:0 "The isolationist TokHaar have supplanted the TzHaar."
+ 
+ 
  
 # Varlamore
  
@@ -872,6 +1074,14 @@
  desc_VAR_fortis_cothon_modifier:0 "The unique shipyard of Fortis Cothon allows ships to be sheltered while they are repaired."
  VAR_kourendwatch_fortification_modifier:0 "Salvager Fortifications"
  desc_VAR_kourendwatch_fortification_modifier:0 "By reinforcing the northern coast of Varlamore against sea attacks, would-be invaders from the north are forced to make more complicated routes."
+ VAR_growth_of_tempestus:0 "Growth of Tempestus"
+ desc_VAR_growth_of_tempestus:0 "The growing number of human settlers in Tempestus is aiding in pushing out the last of the giant population."
+ VAR_vinyards_of_aldarin:0 "Vinyards of Aldarin"
+ desc_VAR_vinyards_of_aldarin:0 "The highly-productive vinyards of Aldarin bring considerable wealth to the area."
+ VAR_recent_aldarin_investment:0 "Recent Aldarin Investment"
+ desc_VAR_recent_aldarin_investment:0 "With a number of our subjects busy expanding the colonies on Aldarin, we are unable to commit to further investments at this time."
+ VAR_recent_auburnvale_investment:0 "Recent Auburnvale Investment"
+ desc_VAR_recent_auburnvale_investment:0 "With a number of our subjects busy expanding the colonies on Auburnvale, we are unable to commit to further investments at this time."
  
  VAR_fletching_innovation:0 "Fletching Innovation"
  desc_VAR_fletching_innovation:0 "With the new Fletching Guild at Arida's Edge, all kinds of new techniques are being tried."
@@ -886,7 +1096,6 @@
  VAR_diplomatic_outreach:0 "Diplomatic Outreach"
  desc_VAR_diplomatic_outreach:0 "Roving bards spread word of Varlamore across Gielinor, inspiring visits from foreign dignitaries."
  
-
 # Varze
 
  VRZ_glory_to_saradomin:0 "Glory to Saradomin"
@@ -926,26 +1135,6 @@
  genwhk_war_readiness:0 "War Readiness"
  desc_genwhk_war_readiness:0 "We have trained our forces well - now it is time to use them."
 
-# TzHaar
-
- TZH_volcanic_frontier:0 "Volcanic Frontier"
- desc_TZH_volcanic_frontier:0 "A new population is rushing to enjoy the newly-settled cliffs of the Karamja Volcano."
- TZH_tzhaar_hur_architecture:0 "TzHaar-Hur Architecture"
- desc_TZH_tzhaar_hur_architecture:0 "Efforts of the TzHaar-Hur have ensured our city shall stand the test of time."
- TZH_tzhaar_ket_reinforcement:0 "TzHaar-Ket Reinforcement"
- desc_TZH_tzhaar_ket_reinforcement:0 "Efforts of the TzHaar-Ket have reinforced our city defences."
- TZH_influx_of_runes:0 "Influx of Runes"
- desc_TZH_influx_of_runes:0 "Our depleted stocks of runes are finally being replaced by the spread of runecrafting."
- TZH_defended_home_trade:0 "Defence of the Tokkul Market"
- desc_TZH_defended_home_trade:0 "We have made great efforts to secure the hunting grounds of Mor Ul Rek."
- TZH_strength_of_the_tzhaar_ket:0 "Strength of the TzHaar-Ket"
- desc_TZH_strength_of_the_tzhaar_ket:0 "Recent reforms to the structure of the TzHaar-Ket caste have made our military more powerful."
- 
- TZH_rejection_of_the_gaal:0 "Rejection of the Ga'al"
- desc_TZH_rejection_of_the_gaal:0 "The Ga'al have been rejected from inclusion in TzHaar society."
- TZH_extinction_of_the_tzhaar:0 "Extinction of the TzHaar"
- desc_TZH_extinction_of_the_tzhaar:0 "The isolationist TokHaar have supplanted the TzHaar."
- 
 # Zarosian Empire
  ZAR_redevelopment_efforts:0 "Redevelopment Efforts"
  desc_ZAR_redevelopment_efforts:0 "Zaros' power shall gradually reverse the damage to Forinthry by the pretender Zamorak."
@@ -1189,6 +1378,25 @@
  desc_marimbo_reduced_taxation:0 "Taxes have been reduced for the time being in order to help achieve Marimbo's goal of happiness for all. Hopefully the loss of revenue won't cause more damage than this solves."
  marimbo_equity:0 "Happiness for the Unhappy"
  desc_marimbo_equity:0 "We are pursuing a national effort to target unhappiness."
+ 
+ # Saradomin relocalised
+ 
+ cardinal_in_administration:0 "Cardinal in Administration"
+ desc_cardinal_in_administration:0 "A representative of the Church of Saradomin now holds a high position in our country's governance."
+ saradomin_expanded_church_lands:0 "Expanded Church lands"
+ desc_saradomin_expanded_church_lands:0 "A local church's claim to additional lands has been legitimised, and with it its ability to exert power to make subjects tithe has grown."
+ saradomin_contracted_church_lands:0 "Contracted Church Lands"
+ desc_saradomin_contracted_church_lands:0 "A local church has lost control of some of the land it previously administered, and with it has lost some ability to force subjects to tithe."
+ saradomin_undesired_rites:0 "Undesired Rites"
+ desc_saradomin_undesired_rites:0 "Local people demanded burial for fallen soldiers, and they received cremations instead. Suffice to say, they are not pleased."
+ 
+ 
+ # Saradomin new
+ 
+ saradomin_beast_slain:0 "Evil Beast Slain"
+ desc_saradomin_beast_slain:0 "The local people rejoice for an evil beast is slain in the name of Saradomin! They are motivated to work extra hard."
+
+ 
  
  # Seren Local
  

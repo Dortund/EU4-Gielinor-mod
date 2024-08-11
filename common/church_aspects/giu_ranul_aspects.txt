@@ -11,19 +11,28 @@ war_footing_aspect = {
 		change_mil = 1
 		change_adm = -1
 	}
+	ai_will_do = {
+		factor = 0
+	}
 }
 
 explore_the_mysteries_aspect = {
 	sprite = "GFX_ranul_explore_the_mysteries_aspect"
-	cost = 50
+	cost = 100
 	trigger = {
 		church_power = 50
 		manpower_percentage = 0.1
+		any_owned_province = {
+			NOT = { base_tax = 10 }
+		}
 	}
 	effect = {
 		add_yearly_manpower = -1
-		random_owned_province = { 
-			add_base_tax = 2
+		random_owned_province = {
+			limit = {
+				NOT = { base_tax = 10 }
+			}
+			add_base_tax = 1
 		}
 	}
 }

@@ -1,9 +1,9 @@
 #1456 - Iter Peregrini
-owner = AZA
-controller = AZA
-add_core = AZA
+owner = VAR
+controller = VAR
+add_core = VAR
 tribal_owner = ---
-culture = imcando
+culture = proudspirian
 religion = ralos
 
 discovered_by = zeantechgroup

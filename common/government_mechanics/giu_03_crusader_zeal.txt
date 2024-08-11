@@ -1,0 +1,34 @@
+crusader_zeal_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 2
+	available = {
+	}
+
+	powers = {
+		crusader_zeal_power_1 = {
+			max = 100
+			base_monthly_growth = -0.2
+			development_scaled_monthly_growth = -0.5
+			default = 100
+			scaled_modifier = {
+				modifier = {
+				 	global_unrest = -10
+					manpower_recovery_speed = 0.25
+				 	war_exhaustion = -0.1
+					reinforce_cost_modifier = -0.5
+					reinforce_speed = 0.25
+					global_regiment_recruit_speed = -0.25
+					global_institution_spread = -0.25
+				}
+			}
+			reverse_scaled_modifier = {
+				modifier = {
+					global_unrest = 5
+					manpower_recovery_speed = -0.25
+				 	stability_cost_modifier = 1
+				}
+			}
+			is_good = yes
+		}
+	}
+}

@@ -1,0 +1,48 @@
+﻿l_english:
+ saradomin_flavor.1.t:0 "The One, the Few, the Many"
+ saradomin_flavor.1.d:0 "The official position of the Church of Saradomin is that there are only three Gods: Saradomin, and the lesser gods Zamorak and Guthix. However, teachings vary. Some hold that there were other Gods that may have worked with Saradomin, and some argue that Saradomin alone is the sole God of Gielinor."
+ saradomin_flavor.1.a:0 "Assert that Saradomin is the only true God."
+ saradomin_flavor.1.b:0 "Accept the godhood of the inferior Zamorak and Guthix."
+ saradomin_flavor.1.c:0 "Imply that a myriad of Gods may exist, but they are unimportant."
+ 
+ saradomin_flavor.2.t:0 "New Saint Declared"
+ saradomin_flavor.2.d:0 "The Church of Saradomin has declared one of our historical figures to be a saint!"
+ saradomin_flavor.2.a:0 "Praise Saradomin!"
+ 
+ saradomin_flavor.3.t:0 "Monastic Privileges"
+ saradomin_flavor.3.d:0 "Monasteries can be the very model of order, with strict daily regimens and restricted living. In exchange, monasteries are typically granted freedom from taxes and from military recruitment, among other privileges."
+ saradomin_flavor.3.a:0 "Reassert the freedoms of the monasteries."
+ saradomin_flavor.3.b:0 "But what if we *really* need the money?"
+ 
+ saradomin_flavor.4.t:0 "The Call to Plain Living"
+ saradomin_flavor.4.d:0 "The Church of Saradomin calls out excess and wasteful living. Recently, a priest has called out our merchant class for placing their desire for gold above the faith."
+ saradomin_flavor.4.a:0 "The priest is right! Our merchants must be curtailed."
+ saradomin_flavor.4.b:0 "Ignore the matter."
+ 
+ saradomin_flavor.5.t:0 "The Unicorns of Saradomin"
+ saradomin_flavor.5.d:0 "Unicorns have served the faithful since time immemorial, for their healing abilities, as a beast of burden, as a mount, or even just to make Gielinor more beautiful. However, a suspiciously large shipments of unicorn horns to an apothecary in [Root.Capital.GetName] suggests people are deliberately slaying these noble creatures in numbers higher than the Church allows."
+ saradomin_flavor.5.a:0 "Find out who did this and punish them harshly."
+ saradomin_flavor.5.b:0 "Pay for the restoration of the unicorn population but take no further action."
+ saradomin_flavor.5.c:0 "But we need all the antipoisons we can get!"
+ 
+ saradomin_flavor.6.t:0 "Beast of Evil"
+ saradomin_flavor.6.d:0 "Rumours of a foul beast have emerged in [saradomin_beasts_of_evil_target.GetName]. Eyewitnesses speak of terrible teeth, terrible claws, and disgusting breath."
+ saradomin_flavor.6.a:0 "Surely this evil beast must be put down in the name of Saradomin!"
+ saradomin_flavor.6.b:0 "But it's not actually hurt anyone, has it?"
+ 
+ saradomin_flavor.7.t:0 "Cardinals in Government"
+ saradomin_flavor.7.d:0 "With a cardinal present in [Root.GetName] we hold some influence over the Church of Saradomin, and they themselves hold some influence over us. We could tighten this relationship by granting the Cardinal an official governmental position."
+ saradomin_flavor.7.a:0 "Yes, bring the Cardinal into government."
+ saradomin_flavor.7.b:0 "We can handle governance, let the Cardinal work on spiritual matters."
+ 
+ saradomin_flavor.8.t:0 "Protection of Church Property"
+ saradomin_flavor.8.d:0 "Churches are sacred land, and many of the more remote churches of Saradomin are granted large surrounding estates with the intention of minimising distractions from worship. The limits of an church estate in [saradomin_protection_of_church_target.GetName] have been contested by local secular landholders who claim the borders of their territory are being infringed by the church."
+ saradomin_flavor.8.a:0 "Side with the church."
+ saradomin_flavor.8.b:0 "Side with the secular landowners."
+ 
+ saradomin_flavor.9.t:0 "Graveyard Full!"
+ saradomin_flavor.9.d:0 "The war dead have filled the graves of [saradomin_graveyard_target.GetName] so quickly there is no room remaining in a major graveyard. The people demand proper burials, but they hardly wish for their own land to be appropriated for extra graveyards."
+ saradomin_flavor.9.a:0 "Dedicate resources to making a new graveyard outside of [saradomin_graveyard_target.GetName]."
+ saradomin_flavor.9.b:0 "Appropriate land to expand the existing graveyard."
+ saradomin_flavor.9.c:0 "Bring out the pyres! Nothing wrong with cremation."
+ saradomin_flavor.9.e:0 "Dig up some old corpses and shove them somewhere else."

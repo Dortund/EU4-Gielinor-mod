@@ -1,0 +1,4062 @@
+asgarnian_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	ASG_raw_materials = {
+		icon = mission_mining
+		position = 6
+		required_missions = { ASG_unify_asgarnia }
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				OR = {
+					trade_goods = basic_ores
+					trade_goods = advanced_ores
+				}
+			}
+		}
+		trigger = {
+			any_owned_province = {
+				trade_goods = basic_ores
+				base_production = 8
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				NOT = { local_autonomy = 1 }
+			}
+			any_owned_province = {
+				trade_goods = advanced_ores
+				base_production = 8
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				NOT = { local_autonomy = 1 }
+			}
+		}
+		effect = {
+			add_years_of_income = 0.2
+			add_country_modifier = {
+				name = ASG_asgarnian_artisans
+				duration = 7300
+			}
+		}
+	}
+	
+	ASG_castles_of_asgarnia = {
+		icon = mission_keep
+		position = 7
+		required_missions = { ASG_raw_materials }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 41
+				province_id = 47
+				province_id = 51
+			}
+		}
+		trigger = {
+			OR = {
+				army_professionalism = 0.5
+				has_global_modifier_value = {
+					which = mercenary_discipline
+					value = 0.1
+				}
+			}
+			41 = {
+				owned_by = ROOT
+				is_core = ROOT
+				fort_level = 4
+			}
+			47 = {
+				owned_by = ROOT
+				is_core = ROOT
+				fort_level = 4
+			}
+			51 = {
+				owned_by = ROOT
+				is_core = ROOT
+				fort_level = 4
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+					NOT = { 
+						41 = {
+							has_great_project = {
+								type = great_project_falador_castle
+								tier = 3
+							}
+						}
+					}
+				}
+				41 = {
+					add_great_project_tier = {
+						type = great_project_falador_castle
+						tier = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					41 = {
+						has_great_project = {
+							type = great_project_falador_castle
+							tier = 3
+						}
+					}
+				}
+				41 = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+			else = {
+				41 = {
+					add_province_modifier = {
+						name = ASG_refurbished_falador_castle
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	
+	ASG_housing_boom = {
+		icon = mission_construction_house
+		position = 8
+		required_missions = { ASG_castles_of_asgarnia ASG_crafting_guild }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 35
+				province_id = 49
+			}
+		}
+		trigger = {
+			absolutism = 75
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						trade_goods = advanced_logs
+						trade_goods = logs
+						trade_goods = tropical_logs
+					}					
+					has_building = mills
+				}
+				amount = 5
+			}
+			owns_core_province = 35
+			owns_core_province = 49
+		}
+		effect = {
+			add_years_of_income = 0.5
+			35 = {
+				add_base_tax = 1
+				add_province_modifier = {
+					name = ASG_house_portal
+					duration = -1
+				}
+			}
+			49 = {
+				add_base_tax = 1
+				add_province_modifier = {
+					name = ASG_house_portal
+					duration = -1
+				}
+			}
+		}
+	}
+
+	ASG_inventive_spirit = {
+		icon = mission_inventive_spirit
+		position = 11
+		required_missions = { ASG_artisans_workshop }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_institution = invention
+			innovativeness = 75
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_age_of_invention
+				duration = -1
+			}
+		}
+	}
+}
+
+asgarnian_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ASG_unify_asgarnia = {
+		icon = mission_unify_asgarnia
+		position = 5
+		required_missions = {  } #none
+		provinces_to_highlight = {
+			region = asgarnia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = asgarnia_region
+				}
+				amount = 38
+			}
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					region = asgarnia_region
+				}
+				add_local_autonomy = -10
+			}
+		}
+	}
+	ASG_expansion_of_falador = {
+		icon = mission_expansion_of_falador
+		position = 6
+		required_missions = { ASG_unify_asgarnia }
+		provinces_to_highlight = {
+			province_id = 41
+		}
+		trigger = {
+			41 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 30
+				num_of_buildings_in_province = 4
+				fort_level = 2
+			}
+		}
+		effect = {
+			add_prestige = 25
+		}
+	}
+	ASG_crafting_guild = {
+		icon = mission_crafting_guild
+		position = 7
+		required_missions = { ASG_raw_materials ASG_expansion_of_falador }
+		provinces_to_highlight = {
+			province_id = 40
+		}
+		trigger = {
+			artist = 3
+			is_in_deficit = no
+			40 = {
+				owned_by = ROOT
+				is_core = ROOT
+				base_production = 10
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		effect = {
+			40 = {
+				add_province_modifier = {
+					name = ASG_crafting_guild_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	ASG_mining_guild = {
+		icon = mission_imcando_pickaxe
+		position = 9
+		required_missions = { ASG_crafting_guild ASG_fate_of_the_imcando }
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				OR = {
+					trade_goods = basic_ores
+					trade_goods = advanced_ores
+				}
+			}
+		}
+		trigger = {
+			owns_core_province = 41
+			OR = {
+				trading_bonus = {
+					trade_goods = basic_ores
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = advanced_ores
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = runite
+					value = yes
+				}
+			}
+			any_owned_province = {
+				trade_goods = basic_ores
+				base_production = 10
+				has_building = weapons
+			}
+			any_owned_province = {
+				trade_goods = advanced_ores
+				base_production = 10
+				has_building = weapons
+			}
+		}
+		effect = {
+			add_years_of_income = 0.25
+			if = {
+				limit = {
+					41 = {
+						trade_goods = manufactured_goods
+					}
+				}
+				41 = {
+					change_trade_goods = runite
+				}
+			}
+			41 = {
+				add_province_modifier = {
+					name = ASG_mining_guild_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	ASG_artisans_workshop = {
+		icon = mission_artisans_workshop
+		position = 10
+		required_missions = { ASG_mining_guild }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			any_owned_province = {
+				culture_group = dwarven_group
+				has_owner_accepted_culture = yes
+				NOT = { unrest = 0 }
+				base_production = 10
+			}
+			innovativeness = 15
+			weapons = 5
+			
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_ceremonial_swords
+				duration = 9125
+			}
+		}
+	}
+	
+	ASG_masterwork = {
+		icon = mission_masterwork
+		position = 12
+		required_missions = { ASG_artisans_workshop ASG_wushanko_imports }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			owns_core_province = 41
+			innovativeness = 25
+			army_professionalism = 1
+		}
+		effect = {
+			if = {
+				limit = {
+					41 = {
+						OR = {
+							trade_goods = manufactured_goods
+							trade_goods = runite
+						}
+					}
+				}
+				41 = {
+					change_trade_goods = refined_products
+				}
+			}
+			custom_tooltip = asg_masterwork_dev_boost_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = refined_products
+					}
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+			add_country_modifier = {
+				name = ASG_masterwork_armour
+				duration = 9125
+			}
+		}
+	}
+}
+
+asgarnian_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	ASG_misthalanian_settlement = {
+		icon = mission_queen_ellamaria
+		position = 6
+		required_missions = { ASG_unify_asgarnia }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			mission_completed = genasg_misthalin_relations
+			OR = {
+				AND = {
+					alliance_with = MST
+					reverse_has_opinion = {
+						who = MST
+						value = 150
+					}
+				}
+				AND = {
+					NOT = { war_with = MST }
+					army_strength = {
+						who = MST
+						value = 0.8
+					}
+					naval_strength = {
+						who = MST
+						value = 0.8
+					}
+				}				
+				AND = {
+					NOT = { exists = MST }
+					calc_true_if = {
+						all_owned_province = {
+							region = misthalin_region
+						}
+						amount = 10
+					}
+				}
+				
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { exists = MST }
+				}
+				add_mil_power = 50
+			}
+			else_if = {
+				limit = {
+					MST = {
+						has_matching_religion = ROOT
+					}
+					alliance_with = MST
+				}
+				if = {
+					limit = {
+					 	NOT = { historical_friend_with = MST }
+					}
+					add_historical_friend = MST
+				}
+				MST = {
+					if = {
+						limit = {
+							NOT = { historical_friend_with = ASG }
+						}
+						add_historical_friend = ASG
+					}
+				}
+				add_dip_power = 50
+			}
+			else_if = {
+				limit = {
+					MST = {
+						has_matching_religion = ROOT
+					}
+					NOT = { alliance_with = MST }
+				}
+				country_event = {
+					id = flavor_asg.17 #Faithful Diplomacy
+					days = 1
+				}
+			}
+			else_if = {
+				limit = {
+					MST = {
+						NOT = { has_matching_religion = ROOT }
+					}
+					alliance_with = MST
+				}
+				add_country_modifier = {
+					name = ASG_cross_religious_dialogue
+					duration = 9125
+				}
+			}
+			else = {
+				add_casus_belli = {
+					target = MST
+					type = cb_border_war
+					months = 12
+				}
+			}
+		}
+	}
+	
+	ASG_runecrafting_boom = {
+		icon = mission_air_rune
+		position = 7
+		required_missions = { ASG_expansion_of_falador }
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				OR = {
+					trade_goods = runes
+					has_latent_trade_goods = runes
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				natural_scientist = 3
+				army_reformer = 3
+				trading_bonus = {
+					trade_goods = runes
+					value = yes
+				}
+			}
+			calc_true_if = {
+				all_owned_province = {
+					trade_goods = runes
+					base_production = 10
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+			if = {
+				limit = {
+					NOT = { is_institution_enabled = statehood }
+					NOT = { exists = GUN }
+					NOT = { has_global_flag = GUN_end_of_crusades_flag }
+				}
+				custom_tooltip = crusader_vulnerability_plus2_tooltip
+				hidden_effect = {
+					change_variable = {
+						which = CrusaderVulnerabilityVariable
+						value = 2
+					}
+				}
+				add_adm_power = 50
+			}
+			else_if = {
+				limit = {
+					exists = GUN
+					NOT = { has_global_flag = GUN_end_of_crusades_flag }
+				}
+				add_opinion = {
+					who = GUN
+					modifier = asg_expanded_runecrafting_altars
+				}
+				add_mil_power = 25
+			}
+		}
+	}
+	
+	ASG_fate_of_the_imcando = {
+		icon = mission_fate_of_the_imcando
+		position = 8
+		required_missions = { ASG_runecrafting_boom }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_institution = statehood
+			custom_trigger_tooltip = {
+				tooltip = ASG_no_runecrafting_crusaders_in_asgarnia
+				NOT = {
+					any_country = {
+						has_reform = runecrafting_crusader
+						any_owned_province = {
+							region = asgarnia_region
+						}
+					}
+				}
+			}
+			OR = {
+				ice_mountain_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				AND = {
+					exists = CDZ
+					CDZ = {
+						OR = {
+							alliance_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						any_province = {
+							region = asgarnia_region
+							culture = imcando
+						}
+					}
+					ice_mountain_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				country_event = {
+					id = flavor_asg.21 #Silence of Ice Mountain
+					days = 1
+				}
+			}
+			else_if = {
+				limit = {
+					ice_mountain_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_mil_power = 50
+				add_country_modifier = {
+					name = ASG_guardian_of_the_imcando
+					duration = 3650
+				}
+				add_accepted_culture = imcando
+			}
+			else = {
+				add_dip_power = 50
+				add_country_modifier = {
+					name = ASG_guardian_of_the_imcando
+					duration = 9125
+				}			
+			}
+		}
+	}
+	
+	ASG_friends_in_the_east = {
+		icon = mission_friends_in_the_east
+		position = 9
+		required_missions = { ASG_wushanko_discoveries }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+						capital_scope = {
+							continent = wushanko_isles_continent
+						}
+					}
+					amount = 2
+				}
+				calc_true_if = {
+					all_subject_country = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+						capital_scope = {
+							continent = wushanko_isles_continent
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			559 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 20
+					key = asg_wushanko_relations_tooltip
+				}
+			}
+			589 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 20
+					key = asg_wushanko_relations_tooltip
+				}
+			}
+		}
+	}
+	ASG_steer_to_sarim = {
+		icon = mission_steer_to_sarim
+		position = 10
+		required_missions = { ASG_friends_in_the_east ASG_arc_landing }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			540 = {
+				is_strongest_trade_power = ROOT
+			}
+			541 = {
+				has_merchant = ROOT
+				is_strongest_trade_power = ROOT
+			}
+			589 = {
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
+			}
+			1051 = {
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 1
+			add_mercantilism = 2
+		}
+	}
+	ASG_wushanko_imports = {
+		icon = mission_luxuries_of_wushanko
+		position = 11
+		required_missions = { ASG_steer_to_sarim ASG_expanding_colonies }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			trading_bonus = {
+				trade_goods = bamboo
+				value = yes
+			}
+			trading_bonus = {
+				trade_goods = gunpowder
+				value = yes
+			}
+			trading_bonus = {
+				trade_goods = terracotta
+				value = yes
+			}
+			trading_bonus = {
+				trade_goods = refined_products
+				value = yes
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+		}
+	}
+	ASG_wushanko_missions = {
+		icon = mission_nondenominational_church
+		position = 12
+		required_missions = { ASG_wushanko_imports ASG_the_farthest_east }
+		provinces_to_highlight = {
+			continent = wushanko_isles_continent
+			NOT = { religion = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					continent = wushanko_isles_continent
+					religion = ROOT
+				}
+				amount = 20
+			}
+		}
+		effect = {
+			set_country_flag = can_use_propagate_religion
+			custom_tooltip = ASG_wushanko_missions_reward_tooltip
+		}
+	}
+}
+
+asgarnian_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	ASG_break_the_blockade = {
+		icon = mission_sarim_bay
+		position = 5
+		required_missions = { } #none
+		provinces_to_highlight = {
+			province_id = 33
+		}
+		trigger = {
+			owns_core_province = 33
+			navy_size_percentage = 0.9
+			539 = {
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+			541 = {
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 1
+			33 = {
+				add_province_modifier = {
+					name = ASG_growth_of_port_sarim
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+	ASG_sarim_triumphant = {
+		icon = mission_scout_zeah
+		position = 6
+		required_missions = { ASG_break_the_blockade }
+		provinces_to_highlight = {
+			province_id = 33
+		}
+		trigger = {
+			mission_completed = genasg_coastal_control
+			33 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 25
+				OR = {
+					has_building = courthouse
+					has_building = coastal_defence
+					has_building = naval_battery
+				}
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 0.25
+			if = {
+				limit = {
+					exists = MUS
+				}
+				add_casus_belli = {
+					target = MUS
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+			else = {
+				musa_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+						NOT = { province_id = 212 }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	ASG_musan_colony = {
+		icon = mission_island_dominance
+		position = 7
+		required_missions = { ASG_sarim_triumphant }
+		provinces_to_highlight = {
+			province_id = 209
+		}
+		trigger = {
+			OR = {
+				209 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			 	overlord_of = MUS			
+			}
+		}
+		effect = {
+			create_explorer = { tradition = 80 }
+			add_country_modifier = {
+				name = ASG_call_to_discovery
+				duration = 9125
+			}
+		}
+	}
+	ASG_wushanko_discoveries = {
+		icon = mission_wushanko_discoveries
+		position = 8
+		required_missions = { ASG_musan_colony }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			navy_size_percentage = 0.9
+			num_of_light_ship = 15
+		 	num_of_transport = 20
+			arc_region = {
+				type = all
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			add_navy_tradition = 15
+		}
+	}
+	ASG_arc_landing = {
+		icon = mission_journey_to_wushanko
+		position = 9
+		required_missions = { ASG_wushanko_discoveries ASG_asgarnian_adventurers }
+		provinces_to_highlight = {
+			region = arc_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					region = arc_region
+					is_core = ROOT
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					region = arc_region
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+		}
+	}
+	ASG_expanding_colonies = {
+		icon = mission_expanding_colonies
+		position = 10
+		required_missions = { ASG_arc_landing }
+		provinces_to_highlight = {
+			continent = wushanko_isles_continent
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			any_owned_province = {
+				is_core = ROOT
+				region = skull_region
+			}
+			any_owned_province = {
+				is_core = ROOT
+				region = hook_region
+			}
+			any_owned_province = {
+				is_core = ROOT
+				region = scythe_region
+			}
+			development_in_provinces = {
+				value = 100
+				continent = wushanko_isles_continent
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_opportunities_of_wushanko
+				duration = 9125
+			}
+		}
+	}
+	
+	ASG_the_farthest_east = {
+		icon = mission_the_farthest_east
+		position = 11
+		required_missions = { ASG_expanding_colonies }
+		provinces_to_highlight = {
+			OR = {
+				region = bowl_region
+				region = pincers_region
+				region = loop_region
+				region = shield_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			any_owned_province = {
+				is_core = ROOT
+				region = bowl_region
+			}
+			any_owned_province = {
+				is_core = ROOT
+				region = pincers_region
+			}
+			any_owned_province = {
+				is_core = ROOT
+				region = loop_region
+			}
+			any_owned_province = {
+				is_core = ROOT
+				region = shield_region
+			}
+			calc_true_if = {
+				all_owned_province = {
+					continent = wushanko_isles_continent
+					num_of_buildings_in_province = 3
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_colonial_investments
+				duration = 7300
+			}
+		}
+	}
+	
+	ASG_guardians_of_the_world = {
+		icon = mission_guardians_of_the_world
+		position = 12
+		required_missions = { ASG_the_farthest_east }
+		provinces_to_highlight = {
+			province_id = 1228
+		}
+		trigger = {
+			current_age = age_of_divination
+			1228 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			absolutism = 100
+			any_owned_province = {
+				trade_goods = divine_energy
+				has_building = furnace
+			}
+			has_commanding_three_star = yes
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			custom_tooltip = asg_guardians_of_the_world_tooltip
+			1228 = {
+				add_province_modifier = {
+					name = ASG_secret_of_kamishima
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+asgarnian_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	ASG_crandorian_relations = {
+		icon = mission_tzh_crandor_volcano
+		position = 6
+		required_missions = { ASG_break_the_blockade }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					region = asgarnia_region
+					province_has_center_of_trade_of_level = 2
+				}
+				amount = 3
+			}
+			OR = {
+				reverse_has_opinion = {
+					who = CDR
+					value = 150
+				}
+				AND = {
+					is_rival = CDR
+					army_strength = {
+						who = CDR
+						value = 1.5
+					}
+					naval_strength = {
+						who = CDR
+						value = 1.5
+					}
+				}
+				crandor_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 0.25
+			if = {
+				limit = {
+					reverse_has_opinion = {
+						who = CDR
+						value = 150
+					}
+				}
+				add_dip_power = 25
+			}
+			else = {
+				add_mil_power = 25
+			}
+		}
+	}
+	ASG_the_power_of_trade = {
+		icon = mission_grand_ship
+		position = 7
+		required_missions = { ASG_sarim_triumphant ASG_crandorian_relations }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			trade_income_percentage = 0.25
+			541 = {
+				trade_share = {
+					country = ROOT
+					share = 20
+				}
+			}
+			539 = {
+				trade_share = {
+					country = ROOT
+					share = 20
+				}
+			}
+			559 = {
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+		}
+		effect = {
+			33 = {
+				add_trade_node_income = 24
+			}
+			custom_tooltip = ASG_owed_adventurer_tooltip
+			set_country_flag = ASG_owed_adventurers_flag
+		}
+	}
+	ASG_asgarnian_adventurers = {
+		icon = mission_adventurer
+		position = 8
+		required_missions = { ASG_the_power_of_trade }
+		provinces_to_highlight = {
+			province_id = 946
+		}
+		trigger = {
+		 	is_great_power = yes
+			has_institution = exploration
+			absolutism = 50
+			owns_core_province = 946
+		}
+		effect = {
+			946 = {
+				add_province_modifier = {
+					name = ASG_heroes_guild
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = ASG_adventurer_expedition
+				duration = 3650
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				custom_tooltip = ASG_asgarnian_adventurers_ai_tooltip
+				random_province = {
+					limit = {
+						region = arc_region
+						is_empty = yes
+					}
+					discover_country = ROOT
+					create_colony = 200
+					infantry = ROOT
+				}
+			}
+		}
+	}
+}
+
+### Religious - Shared
+
+asgarnian_religious_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	ASG_SHAREDRELIGION_confirm_the_faith = {
+		icon = mission_confirm_the_faith
+		position = 13
+		required_missions = {  }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			mission_completed = genasg_proselytise_the_faith
+			OR = {
+				temple = 5
+				cathedral = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_faithful_unification
+				duration = 3650
+			}
+			set_country_flag = asg_define_religious_missions_flag
+			custom_tooltip = ASG_confirm_the_faith_flag
+			country_event = {
+				id = flavor_asg.32 #State Religion of Asgarnia
+				days = 1
+			}
+		}
+	}
+}
+
+asgarnian_branching_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = ASG
+		NOT = { has_country_flag = asg_define_religious_missions_flag }
+	}
+	has_country_shield = yes
+	ASG_branching_3_14 = {
+		icon = mission_unknown_mission
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		position = 14
+		trigger = { custom_trigger_tooltip = { tooltip = DYN_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = DYN_this_is_a_branching_mission }
+	}
+}
+
+### Religious - Generic
+
+asgarnian_religious_generic_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		NOT = { religion = saradomin }
+		NOT = { religion = zamorak }
+		NOT = { religion = guthix }
+		NOT = { religion = brassicaprime }
+	}
+	has_country_shield = yes
+
+	ASG_GENRELIGION_knights_of_asgarnia = {
+		icon = mission_defence_of_falador
+		position = 15
+		required_missions = { ASG_GENRELIGION_spread_the_new_faith }
+		provinces_to_highlight = {
+			province_id = 41
+		}
+		trigger = {
+			owns_core_province = 41
+			OR = {
+				army_size = 30
+				army_professionalism = 0.3
+				army_tradition = 50
+			}
+			if = {
+				limit = {
+					AND = {
+						has_country_flag = DBS_white_knights_flag
+						has_country_flag = DBS_black_knights_flag
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = ASG_had_triumph_of_knights_tooltip
+					has_country_flag = ASG_decided_knight_event
+				}
+			}			
+			else = {
+				capital_scope = {
+					religion = ROOT
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = ASG_decided_knight_event
+				}
+				add_adm_power = 25
+				add_dip_power = 25
+				add_mil_power = 25
+			}
+			else = {
+				country_event = {
+					id = flavor_asg.27 #Knightly Orders of Asgarnia
+					days = 1
+				}
+			}
+			entrana_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ASG_GENRELIGION_true_unification = {
+		icon = mission_entrana_map
+		position = 16
+		required_missions = { ASG_GENRELIGION_knights_of_asgarnia }
+		provinces_to_highlight = {
+			region = asgarnia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			asgarnia_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_GENRELIGION_fortress_asgarnia
+				duration = 9125
+			}
+		}
+	}
+}
+
+asgarnian_religious_generic_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		NOT = { religion = saradomin }
+		NOT = { religion = zamorak }
+		NOT = { religion = guthix }
+		NOT = { religion = brassicaprime }
+	}
+	has_country_shield = yes
+
+	ASG_GENRELIGION_spread_the_new_faith = {
+		icon = mission_tale_of_armadyl
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			religious_unity = 0.9
+			capital_scope = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = { has_building = cathedral }
+					}
+					add_building = cathedral
+				}
+			}
+			else = {
+				capital_scope = {
+					add_base_tax = 2
+				}
+			}
+		}
+	}
+	
+	ASG_GENRELIGION_allies_in_faith = {
+		icon = mission_armadyl_diviner
+		position = 15
+		required_missions = { ASG_GENRELIGION_spread_the_new_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					has_matching_religion = ROOT
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	ASG_GENRELIGION_faithful_subjects = {
+		icon = mission_bandos_armoured_caravan
+		position = 16
+		required_missions = { ASG_GENRELIGION_allies_in_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			calc_true_if = {
+				all_subject_country = {
+					has_matching_religion = ROOT
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "obedient_subjects"
+				duration = 9125 #25 years
+			}
+			every_subject_country = {
+				add_liberty_desire = -10
+			}
+		}
+	}
+	
+	
+	ASG_GENRELIGION_new_asgarnian_legacy = {
+		icon = mission_new_asgarnian_legacy
+		position = 17
+		required_missions = { ASG_GENRELIGION_true_unification ASG_GENRELIGION_faithful_subjects ASG_GENRELIGION_a_new_monastery }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			is_great_power = yes
+			asgarnia_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_matching_religion = ROOT
+			}
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				41 = {
+					has_great_project = {
+						type = great_project_falador_castle
+						tier = 3
+					}
+				}
+			}
+			else = {
+				41 = {
+					development = 60
+				}
+			}
+		}
+		effect = {
+			add_prestige = 100
+			add_country_modifier = {
+				name = ASG_GENRELIGION_history_rewritten
+				duration = -1
+			}	
+		}
+	}
+}
+
+asgarnian_religious_generic_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		NOT = { religion = saradomin }
+		NOT = { religion = zamorak }
+		NOT = { religion = guthix }
+		NOT = { religion = brassicaprime }
+	}
+	has_country_shield = yes
+
+	ASG_GENRELIGION_rededicate_the_churches = {
+		icon = mission_the_temple_at_senntisten
+		position = 15
+		required_missions = { ASG_GENRELIGION_spread_the_new_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_matching_religion = ROOT
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+				amount = 15
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_GENRELIGION_stabilised_faith
+				duration = 9125
+			}
+		}
+	}
+	ASG_GENRELIGION_a_new_monastery = {
+		icon = mission_monastic_farming
+		position = 16
+		required_missions = { ASG_GENRELIGION_rededicate_the_churches }
+		provinces_to_highlight = {
+			province_id = 865
+		}
+		trigger = {
+			if = {
+				limit = {
+					was_tag = VRZ
+				}
+				mission_completed = VRZ_ice_mountain_monastery
+				865 = {
+					owned_by = ROOT
+					is_core = ROOT
+					development = 15
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			else = {
+				865 = {
+					has_matching_religion = ROOT
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+					owned_by = ROOT
+					is_core = ROOT
+					development = 15
+				}
+			}
+		}
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 20
+			}
+			if = {
+				limit = {
+					865 = {
+						has_building = temple
+					}
+				}
+				865 = {
+					add_building = cathedral
+				}
+			}
+			else = {
+				865 = {
+					add_base_tax = 2
+				}
+			}
+		}
+	}
+}
+
+
+### Religious - Saradominist
+
+
+asgarnian_SARA_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = saradomin
+	}
+	has_country_shield = yes
+	
+	ASG_SARA_monastic_living = {
+		icon = mission_monastic_farming
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			province_id = 865
+		}
+		trigger = {
+			if = {
+				limit = {
+					was_tag = VRZ
+				}
+				mission_completed = VRZ_ice_mountain_monastery
+				865 = {
+					owned_by = ROOT
+					is_core = ROOT
+					development = 15
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			else = {
+				865 = {
+					religion = saradomin
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+					owned_by = ROOT
+					is_core = ROOT
+					development = 15
+				}
+			}
+		}
+		effect = {
+			add_papal_influence = 10
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			if = {
+				limit = {
+					865 = {
+						has_building = temple
+					}
+				}
+				865 = {
+					add_building = cathedral
+				}
+			}
+			else = {
+				865 = {
+					add_base_tax = 2
+				}
+			}
+		}
+	}
+	
+	ASG_SARA_defence_of_harmony = {
+		icon = mission_pirate_mercenaries
+		position = 15
+		required_missions = { ASG_SARA_monastic_living ASG_SARA_entranan_connection }
+		provinces_to_highlight = {
+			province_id = 148
+		}
+		trigger = {
+			has_institution = exploration
+			OR = {
+				reverse_has_opinion = {
+					who = HMY
+					value = 150
+				}
+				AND = {
+					NOT = { exists = HMY }
+					148 = {
+						owned_by = ROOT
+						is_core = ROOT
+						religion = saradomin
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_papal_influence = 10
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+		}
+	}
+	ASG_SARA_convert_hyu_ji = {
+		icon = mission_convert_hyu_ji
+		position = 17
+		required_missions = { ASG_SARA_defence_of_harmony }
+		provinces_to_highlight = {
+			province_id = 1124
+		}
+		trigger = {
+			mission_completed = ASG_arc_landing
+			OR = {
+				owns_core_province = 1124
+				HUJ = {
+					is_subject_of = ROOT
+				}
+				HUJ = {
+				 	alliance_with = ROOT
+				}
+			}
+			1124 = {
+				religion = saradomin
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						owns_core_province = 1124
+					}
+				}
+				add_dip_power = 100
+			}
+			1124 = {
+				add_province_triggered_modifier = ASG_SARA_defence_of_hyu_ji
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+}
+
+asgarnian_SARA_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = saradomin
+	}
+	has_country_shield = yes
+
+	ASG_SARA_entranan_connection = {
+		icon = mission_entranan_connection
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				papal_influence = 150
+				reverse_has_opinion = {
+					who = ENT
+					value = 150
+				}
+			}
+		}
+		effect = {
+			add_papal_influence = 10
+			add_dip_power = 10
+		}
+	}
+	ASG_SARA_control_the_church = {
+		icon = mission_icon_saradomin
+		position = 15
+		required_missions = { ASG_SARA_entranan_connection }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			is_papal_controller = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_SARA_saradomins_country
+				duration = 3650
+			}
+		}
+	}
+	ASG_SARA_saradomins_armoury = {
+		icon = mission_furnace
+		position = 16
+		required_missions = { ASG_SARA_control_the_church }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_regiments_at_full_drill = 10
+			any_owned_province = {
+				has_building = weapons
+				religion = ROOT
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_SARA_faith_and_determination
+				duration = 7300
+			}
+		}
+	}
+	ASG_SARA_crusade_for_saradomin = {
+		icon = mission_crusade_for_saradomin
+		position = 17
+		required_missions = { ASG_SARA_saradomins_armoury }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_crusade
+				}
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_crusade_pheasants
+				}
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_world_crusade
+				}
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_spread_the_true_faith
+				}
+			}
+			any_war_enemy_country = {
+				NOT = { religion = ROOT }
+				is_great_power = yes
+				NOT = {
+					war_score_against = {
+						who = ROOT
+						value = -25
+					}
+				}
+			}
+		}
+		effect = {
+			add_papal_influence = 10
+			add_war_exhaustion = -2
+			add_mil_power = 25
+		}
+	}
+}
+
+asgarnian_SARA_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = saradomin
+	}
+	has_country_shield = yes
+	
+	ASG_SARA_white_knights_of_falador = {
+		icon = mission_white_knights_of_falador
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			province_id = 41
+		}
+		trigger = {
+			41 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = saradomin
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = ASG_decided_knight_event
+				}
+				add_adm_power = 25
+				add_dip_power = 25
+				add_mil_power = 25
+			}
+			else = {
+				country_event = {
+					id = flavor_asg.30 #Status of the White Knights
+					days = 1
+				}
+			}
+		}
+	}
+	
+	ASG_SARA_temple_knight_expansion = {
+		icon = mission_temple_knight_expansion
+		position = 16
+		required_missions = { ASG_SARA_control_the_church ASG_SARA_white_knights_of_falador }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				has_building = courthouse
+			}
+		}
+		trigger = {
+			OR = {
+				full_idea_group = spy_ideas
+				spymaster = 3
+			}
+			OR = {
+				courthouse = 10
+				town_hall = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_SARA_expanded_temple_knight_presence
+				duration = -1
+			}
+		}
+	}
+	
+	ASG_SARA_kandarin_operations = {
+		icon = mission_kandarin_operations
+		position = 17
+		required_missions = { ASG_SARA_temple_knight_expansion }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 263
+				province_id = 289
+			}
+		}
+		trigger = {
+			has_institution = quests
+			state_house = 3
+			town_hall = 10
+			263 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owner = {
+						has_spy_network_from = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+			}
+			289 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owner = {
+						has_spy_network_from = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						NOT = { 
+							263 = { country_or_non_sovereign_subject_holds = ROOT }
+						}
+						NOT = {
+							289 = { country_or_non_sovereign_subject_holds = ROOT }
+						}
+					}
+				}
+				add_country_modifier = {
+					name = ASG_SARA_recruitment_drive
+					duration = 9125
+				}
+			}
+			else = {
+				add_mil_power = 100
+			}
+		}
+	}
+	
+	ASG_SARA_brave_new_world = {
+		icon = mission_brave_new_world
+		position = 18
+		required_missions = { ASG_SARA_crusade_for_saradomin ASG_SARA_the_secret_artefacts }
+		provinces_to_highlight = {
+			province_id = 41
+		}
+		trigger = {
+			current_age = age_of_divination
+			religion = saradomin
+			is_great_power = yes
+			religious_unity = 1
+			cathedral = 5
+			development_in_provinces = {
+				value = 600
+				region = asgarnia_region
+			}
+			owns_core_province = 41
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				41 = {
+					has_great_project = {
+						type = great_project_falador_castle
+						tier = 3
+					}
+				}
+			}
+			else = {
+				41 = {
+					development = 60
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_SARA_bastion_of_light
+				duration = -1
+			}
+		}
+	}	
+}
+
+asgarnian_SARA_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = saradomin
+	}
+	has_country_shield = yes
+	
+	ASG_SARA_handle_the_zamorakians = {
+		icon = mission_icon_zamorak
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = ASG_SARA_handle_the_zamorakians_tolerance_tooltip
+					zamorak = 1
+				}
+				custom_trigger_tooltip = {
+					tooltip = ASG_SARA_handle_the_zamorakians_conversion_tooltip
+					NOT = {
+						any_province = {
+							region = asgarnia_region
+							religion = zamorak
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_asg.35
+				days = 1
+			}
+		}
+	}
+	ASG_SARA_defence_of_falador = {
+		icon = mission_defence_of_falador
+		position = 15
+		required_missions = { ASG_SARA_white_knights_of_falador ASG_SARA_handle_the_zamorakians }
+		provinces_to_highlight = {
+			province_id = 41
+		}
+		trigger = {
+			owns_core_province = 41
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = ASG_sara_defence_of_falador_complete_disaster
+					has_country_flag = asg_end_of_kinshra_white_knight_war_flag
+				}
+				AND = {
+					mission_completed = ASG_castles_of_asgarnia
+					mission_completed = ASG_fate_of_the_imcando
+					absolutism = 25
+					religious_unity = 1
+					custom_trigger_tooltip = {
+						tooltip = obj_convert_25_provinces_tooltip
+						check_variable = { which = num_converted_religion value = 25 }
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+					NOT = { 
+						41 = {
+							has_great_project = {
+								type = great_project_falador_castle
+								tier = 3
+							}
+						}
+					}
+				}
+				41 = {
+					add_great_project_tier = {
+						type = great_project_falador_castle
+						tier = 1
+					}
+				}
+			}
+			else = {
+				41 = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+		}
+	}
+	
+	ASG_SARA_the_secret_artefacts = {
+		icon = mission_the_secret_artefacts
+		position = 17
+		required_missions = { ASG_SARA_temple_knight_expansion ASG_SARA_defence_of_falador ASG_SARA_tale_of_armadyl }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_institution = exploration
+			custom_trigger_tooltip = {
+				tooltip = knows_about_stone_of_jas_tooltip
+				has_country_flag = knowledge_stone_of_jas
+			}
+			custom_trigger_tooltip = {
+				tooltip = knows_about_staff_of_armadyl_tooltip
+				has_country_flag = knowledge_staff_of_armadyl
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+	}
+}
+
+asgarnian_SARA_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = saradomin
+	}
+	has_country_shield = yes
+	
+	ASG_SARA_taverlese_relations = {
+		icon = mission_icon_guthix
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			area = taverley_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { province_id = 52 }
+		}
+		trigger = {
+			49 = {
+				owned_by = ROOT
+				is_core = ROOT
+				NOT = { unrest = 0 }
+				NOT = { local_autonomy = 10 }
+			}
+			50 = {
+				owned_by = ROOT
+				is_core = ROOT
+				NOT = { unrest = 0 }
+				NOT = { local_autonomy = 10 }
+			}
+			946 = {
+				owned_by = ROOT
+				is_core = ROOT
+				NOT = { unrest = 0 }
+				NOT = { local_autonomy = 10 }
+			}
+			1005 = {
+				owned_by = ROOT
+				is_core = ROOT
+				NOT = { unrest = 0 }
+				NOT = { local_autonomy = 10 }
+			}
+			if = {
+				limit = {
+					was_tag = DBS
+				}
+				mission_completed = DBS_fate_of_taverley
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { was_tag = DBS }
+				}
+				country_event = {
+					id = flavor_dbs.1 #Guthixian Relations (yes, recycling the Donblassian event)
+					days = 1
+				}
+			}
+			else = {
+				add_adm_power = 50
+			}
+		}
+	}
+	
+	ASG_SARA_tale_of_armadyl = {
+		icon = mission_tale_of_armadyl
+		position = 16
+		required_missions = { ASG_SARA_taverlese_relations }
+		provinces_to_highlight = {
+			province_id = 252
+		}
+		trigger = {
+			absolutism = 65
+			OR = {
+				any_owned_province = {
+					religion = armadyl
+					base_tax = 8
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+				252 = {
+					owned_by = ROOT
+					is_core = ROOT
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+				any_ally = {
+					religion = armadyl
+					trust = { who = ROOT value = 65 }
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = knows_about_staff_of_armadyl_tooltip
+						has_country_flag = knowledge_staff_of_armadyl
+					}
+					any_known_country = {
+						NOT = { religion_group = order_group }
+						any_owned_province = {
+							has_province_modifier = artefact_staff_of_armadyl
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 36
+				}
+				36 = {
+					change_religion = armadyl
+				}
+			}
+			add_country_modifier = {
+				name = ASG_SARA_armadylean_connection
+				duration = 9125
+			}
+		}
+	}
+	
+	ASG_SARA_temple_of_lost_ancients = {
+		icon = mission_zilyana
+		position = 16
+		required_missions = { ASG_SARA_tale_of_armadyl }
+		provinces_to_highlight = {
+			province_id = 354
+		}
+		trigger = {
+			354 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				
+			}
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				354 = {
+					OR = {
+						has_great_project = {
+							type = great_project_temple_of_lost_ancients
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_temple_of_lost_ancients
+							tier = 3
+						}
+					}
+				}
+			}
+			else = {
+				354 = {
+					development = 20
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_the_godsword
+				duration = 9125
+			}
+		}
+	}
+}
+
+### Religious - Zamorakian
+
+asgarnian_ZAM_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = zamorak
+	}
+	has_country_shield = yes
+	
+	ASG_ZAM_glory_of_falador = {
+		icon = mission_glory_of_falador
+		position = 15
+		required_missions = { ASG_ZAM_fate_of_the_white_knights }
+		provinces_to_highlight = {
+			province_id = 41
+		}
+		trigger = {
+			owns_core_province = 41
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = ASG_sara_defence_of_falador_complete_disaster
+					has_country_flag = asg_end_of_kinshra_white_knight_war_flag
+				}
+				AND = {
+					mission_completed = ASG_castles_of_asgarnia
+					mission_completed = ASG_fate_of_the_imcando
+					absolutism = 25
+					religious_unity = 1
+					custom_trigger_tooltip = {
+						tooltip = obj_convert_25_provinces_tooltip
+						check_variable = { which = num_converted_religion value = 25 }
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+					NOT = { 
+						41 = {
+							has_great_project = {
+								type = great_project_falador_castle
+								tier = 3
+							}
+						}
+					}
+				}
+				41 = {
+					add_great_project_tier = {
+						type = great_project_falador_castle
+						tier = 1
+					}
+				}
+			}
+			else = {
+				41 = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+		}
+	}
+	
+	ASG_ZAM_children_of_zamorak = {
+		icon = mission_underground_pass_exploration
+		position = 17
+		required_missions = { ASG_ZAM_glory_of_falador ASG_ZAM_allies_of_ourania }
+		provinces_to_highlight = {
+			area = underground_pass_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				owner = {
+					alliance_with = ROOT
+				}
+			}
+			NOT = { religion = zamorak }
+		}
+		trigger = {
+			underground_pass_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+					religion = zamorak
+					owner = {
+						alliance_with = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					underground_pass_area = {
+						type = all
+						is_empty = yes
+					}
+				}
+				absolutism = 80
+			}
+		}
+		effect = {
+			add_patriarch_authority = 0.05
+			if = {
+				limit = {
+					underground_pass_area = {
+						type = all
+						is_empty = yes
+					}
+					NOT = {
+						OR = {
+							has_country_flag = asg_war164_start
+							has_country_flag = asg_end_of_kinshra_white_knight_war_flag
+						}
+					}
+				}
+				country_event = {
+					id = flavor_asg.34 #The Son of Zamorak
+					days = 1
+				}
+			}
+			custom_tooltip = ASG_ZAM_children_of_zamorak_underground_pass_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = underground_pass_area
+					}
+					add_base_manpower = 1
+				}
+			}
+			underground_pass_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+asgarnian_ZAM_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = zamorak
+	}
+	has_country_shield = yes
+	
+	ASG_ZAM_fate_of_the_white_knights = { #Guides non-Donblassian Asgarnia to the Knight event chains
+		icon = mission_white_knights_of_falador
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			province_id = 41
+		}
+		trigger = {
+			owns_core_province = 41
+			religious_unity = 0.8
+			if = {
+				limit = {
+					AND = {
+						has_country_flag = DBS_white_knights_flag
+						has_country_flag = DBS_black_knights_flag
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = ASG_had_triumph_of_knights_tooltip
+					has_country_flag = ASG_decided_knight_event
+				}
+			}			
+			else = {
+				capital_scope = {
+					religion = zamorak
+				}
+				owns_core_province = 47
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = ASG_decided_knight_event
+				}
+				add_adm_power = 25
+				add_dip_power = 25
+				add_mil_power = 25
+			}
+			else = {
+				country_event = {
+					id = flavor_asg.26 #The Black Knights
+					days = 1
+				}
+			}
+			entrana_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ASG_ZAM_onto_entrana = {
+		icon = mission_entranan_connection
+		position = 15
+		required_missions = { ASG_ZAM_fate_of_the_white_knights }
+		provinces_to_highlight = {
+			area = entrana_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			entrana_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_patriarch_authority = 0.05
+			eastern_karamja_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ASG_ZAM_allies_of_ourania = {
+		icon = mission_challenge_hazeel
+		position = 16
+		required_missions = { ASG_ZAM_onto_entrana }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				any_ally = {
+					capital_scope = {
+						region = kandarin_region
+					}
+					religion = zamorak
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				any_subject_country = {
+					capital_scope = {
+						region = kandarin_region
+					}
+					religion = zamorak
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			kandarin_region = {
+				discover_country = ROOT
+			}
+		}
+	}
+}
+
+asgarnian_ZAM_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = zamorak
+	}
+	has_country_shield = yes
+	
+	ASG_ZAM_chaos_druids_of_taverley = {
+		icon = mission_chaos_druids_of_taverley
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			province_id = 49
+		}
+		trigger = {
+			49 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zamorak
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 25
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				custom_tooltip = ASG_ZAM_chaos_druids_of_taverley_tooltip
+			}
+			else = {
+				49 = {
+					add_base_manpower = 3
+				}
+			}
+		}
+	}
+	
+	
+	ASG_ZAM_taverley_dungeon = {
+		icon = mission_daquarius
+		position = 15
+		required_missions = { ASG_ZAM_fate_of_the_white_knights ASG_ZAM_chaos_druids_of_taverley}
+		provinces_to_highlight = {
+			province_id = 793
+		}
+		trigger = {
+			793 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = zamorak
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+				OR = {
+					has_building = regimental_camp
+					has_building = conscription_center
+				}
+				OR = {
+					has_building = soldier_households
+					base_manpower = 15
+				}
+			}
+		}
+		effect = {
+			add_army_tradition = 10
+			793 = {
+				add_province_modifier = {
+					name = ASG_ZAM_taverley_dungeon_barracks
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	ASG_ZAM_return_to_karamja = {
+		icon = mission_island_dominance
+		position = 16
+		required_missions = { ASG_ZAM_onto_entrana }
+		provinces_to_highlight = {
+			area = eastern_karamja_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			eastern_karamja_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			eastern_karamja_area = {
+				type = all
+				add_province_modifier = {
+					name = ASG_ZAM_revenge_of_zadimus
+					duration = 9125
+				}
+			}
+			shilo_area = {
+				limit = {
+					NOT = { is_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+asgarnian_ZAM_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = zamorak
+	}
+	has_country_shield = yes
+	
+	ASG_ZAM_valzins_legacy = {
+		icon = mission_lum_trade
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			asg_zam_misthalin_west_of_lum = yes
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					asg_zam_misthalin_west_of_lum = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			silvarea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ASG_ZAM_salve_passage = {
+		icon = mission_reinforce_paterdomus
+		position = 15
+		required_missions = { ASG_ZAM_valzins_legacy }
+		provinces_to_highlight = {
+			area = silvarea_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			silvarea_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			canifis_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			lordship_of_the_north_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			haunted_woods_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ASG_ZAM_zamoraks_wilderness = {
+		icon = mission_zamoraks_wilderness
+		position = 16
+		required_missions = { ASG_ZAM_taverley_dungeon ASG_ZAM_salve_passage }
+		provinces_to_highlight = {
+			region = forinthry_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					region = forinthry_region
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			add_patriarch_authority = 0.1
+			random_owned_province = {
+				limit = {
+					any_empty_neighbor_province = {
+						region = forinthry_region
+					}
+				}
+				random_empty_neighbor_province = {
+					limit = {
+						region = forinthry_region
+					}
+					add_siberian_construction = 50
+				}
+			}
+		}
+	}
+}
+
+asgarnian_ZAM_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = zamorak
+	}
+	has_country_shield = yes
+	
+	ASG_ZAM_return_to_canifis = {
+		icon = mission_werewolf_forces
+		position = 16
+		required_missions = { ASG_ZAM_salve_passage }
+		provinces_to_highlight = {
+			region = morytania_region
+			OR = {
+				NOT = { religion = zamorak }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			religion = zamorak
+			calc_true_if = {
+				all_province = {
+					region = morytania_region
+					religion = zamorak
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				amount = 20
+			}
+		}
+		effect = {
+			add_accepted_culture = canifian
+			add_country_modifier = {
+				name = ASG_ZAM_zamoraks_due
+				duration = -1
+			}
+			custom_tooltip = ASG_ZAM_return_to_canifis_werewolf_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = werewolf_group
+					}
+					add_province_modifier = {
+						name = ASG_ZAM_zamorakian_overlords
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+}
+
+
+### Religious - Guthixian
+
+asgarnian_GUTHIX_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = guthix
+	}
+	has_country_shield = yes
+
+	ASG_GUTHIX_herbs_of_trollheim = {
+		icon = mission_herbs_of_trollheim
+		position = 16
+		required_missions = { ASG_GUTHIX_shadows_of_burthorpe }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 349
+				province_id = 350
+			}
+		}
+		trigger = {
+			349 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			350 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 25
+			add_mil_power = 25
+			354 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ASG_GUTHIX_the_unsealing_temple = {
+		icon = mission_icy_cliff
+		position = 17
+		required_missions = { ASG_GUTHIX_herbs_of_trollheim }
+		provinces_to_highlight = {
+			province_id = 354
+		}
+		trigger = {
+			owns_core_province = 354
+			OR = {
+				absolutism = 100
+				full_idea_group = religious_ideas
+			}
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				adm_power = 100
+				mil_power = 100
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				add_adm_power = -100
+				add_mil_power = -100
+				custom_tooltip = ASG_GUTHIX_may_use_temple_as_guthix_tooltip
+				354 = {
+					add_great_project_tier = {
+						type = great_project_temple_of_lost_ancients
+						tier = 1
+					}
+				}
+			}
+			else = {
+				add_prestige = 50
+				if = {
+					limit = {
+						karma = 15
+					}
+					add_karma = -15
+				}
+				else_if = {
+					limit = {
+						NOT = { karma = -15 }
+					}
+					add_karma = 15
+				}
+			}
+		}
+	}	
+}
+
+asgarnian_GUTHIX_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = guthix
+	}
+	has_country_shield = yes
+
+	ASG_GUTHIX_taverley_and_falador = {
+		icon = mission_icon_guthix
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 41
+				province_id = 49
+			}
+		}
+		trigger = {
+			is_at_war = no
+			41 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = guthix
+			}
+			49 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = guthix
+			}
+			OR = {
+				41 = {
+					development = 30
+					num_of_buildings_in_province = 4
+					fort_level = 2
+				}
+				49 = {
+					development = 30
+					num_of_buildings_in_province = 4
+					fort_level = 2
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_asg.25 #The Capital of Asgarnia
+				days = 1
+			}
+		}
+	}
+	ASG_GUTHIX_shadows_of_burthorpe = {
+		icon = mission_shadows_of_burthorpe
+		position = 15
+		required_missions = { ASG_GUTHIX_taverley_and_falador }
+		provinces_to_highlight = {
+			area = burthorpe_area
+		}
+		trigger = {
+			burthorpe_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			development_in_provinces = {
+				value = 35
+				area = burthorpe_area
+			}
+			51 = {
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+				OR = {
+					has_building = temple
+					has_building = cathedral				
+				}
+			}
+		}
+		effect = {
+			death_plateau_area = {
+				discover_country = ROOT
+			}
+			east_fremennik_area = {
+				discover_country = ROOT
+			}
+			keldagrim_area = {
+				discover_country = ROOT
+			}
+			trollheim_area = {
+				discover_country = ROOT
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ASG_GUTHIX_dwarven_outreach = {
+		icon = mission_dwarven_diplomacy
+		position = 16
+		required_missions = { ASG_GUTHIX_shadows_of_burthorpe }
+		provinces_to_highlight = {
+			culture_group = dwarven_group
+			NOT = { region = asgarnia_region }
+		}
+		trigger = {
+			mission_completed = ASG_fate_of_the_imcando
+			OR = {
+				any_ally = {
+					culture_group = dwarven_group
+					custom_trigger_tooltip = {
+						tooltip = capital_not_in_asgarnia
+						NOT = {
+							capital_scope = {
+								region = asgarnia_region
+							}
+						}
+					}
+				}
+				any_subject_country = {
+					culture_group = dwarven_group
+					custom_trigger_tooltip = {
+						tooltip = capital_not_in_asgarnia
+						NOT = {
+							capital_scope = {
+								region = asgarnia_region
+							}
+						}
+					}
+				}
+				any_owned_province = {
+					culture_group = dwarven_group
+					NOT = { nationalism = 1 }
+					NOT = {
+						region = asgarnia_region
+					}
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 0.25
+			add_dip_power = 25
+		}
+	}
+	
+	ASG_GUTHIX_fremennik_ties = {
+		icon = mission_fremennik_family
+		position = 17
+		required_missions = { ASG_GUTHIX_dwarven_outreach }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				any_ally = {
+					culture_group = fremennik_group
+					has_matching_religion = guthix
+				}
+				any_subject_country = {
+					culture_group = fremennik_group
+					has_matching_religion = guthix
+					NOT = { liberty_desire = 10 }
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+	}
+	
+	ASG_GUTHIX_guthixs_victory = {
+		icon = mission_guthixs_victory
+		position = 18
+		required_missions = { ASG_GUTHIX_the_unsealing_temple ASG_GUTHIX_fremennik_ties ASG_GUTHIX_gnomish_diplomacy }
+		provinces_to_highlight = {
+			province_id = 165
+		}
+		trigger = {
+			owns_core_province = 165
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				165 = {
+					OR = {
+						has_great_project = {
+							type = great_project_sword_of_edicts
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_sword_of_edicts
+							tier = 3
+						}
+					}
+				}
+			}
+			else = {
+				165 = {
+					development = 20
+					num_of_buildings_in_province = 4
+				}
+			}
+			calc_true_if = {
+				all_owned_province = {
+					region = forinthry_region
+					religion = guthix
+				}
+				amount = 20
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				custom_tooltip = ASG_GUTHIX_guthixs_victory_monument_extension
+			}
+			else = {
+				165 = {
+					add_province_modifier = {
+						name = ASG_GUTHIX_sword_of_edicts_modifier
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+asgarnian_GUTHIX_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = guthix
+	}
+	has_country_shield = yes
+	
+	ASG_GUTHIX_a_port_for_taverley = {
+		icon = mission_a_port_for_taverley
+		position = 15
+		required_missions = { ASG_GUTHIX_taverley_and_falador ASG_GUTHIX_handle_the_chaos_druids }
+		provinces_to_highlight = {
+			province_id = 793
+		}
+		trigger = {
+			793 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 15
+				religion = guthix
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			793 = {
+				center_of_trade = 1
+			}
+			create_explorer = { tradition = 50 }
+		}
+	}
+	
+	ASG_GUTHIX_gnomish_diplomacy = {
+		icon = mission_the_grand_tree
+		position = 17
+		required_missions = { ASG_GUTHIX_a_port_for_taverley }
+		provinces_to_highlight = {
+			culture_group = gnome_group
+		}
+		trigger = {
+			OR = {
+				any_ally = {
+					culture_group = gnome_group
+				}
+				any_owned_province = {
+					culture_group = gnome_group
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_GUTHIX_gnome_glider_rights
+				duration = 9125		
+			}
+		}
+	}
+	
+	ASG_GUTHIX_druids_of_the_feldips = {
+		icon = mission_ogre_shaman
+		position = 18
+		required_missions = { ASG_GUTHIX_gnomish_diplomacy }
+		provinces_to_highlight = {
+			region = feldip_hills_region
+			NOT = { religion = guthix }
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					region = feldip_hills_region
+					religion = guthix
+				}
+				amount = 5
+			}
+			OR = {
+				any_owned_province = {
+					region = feldip_hills_region
+				}
+				any_ally = {
+					capital_scope = {
+						region = feldip_hills_region
+					}
+				}
+				any_subject_country = {
+					capital_scope = {
+						region = feldip_hills_region
+					}
+				}
+			}
+		}
+		effect = {
+			feldip_jungle_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = ASG_GUTHIX_ogres_of_guthix
+				duration = 9125			
+			}
+		}
+	}
+	
+	ASG_GUTHIX_monastery_of_ascension = {
+		icon = mission_monastery_of_ascension
+		position = 19
+		required_missions = { ASG_GUTHIX_druids_of_the_feldips }
+		provinces_to_highlight = {
+			province_id = 313
+		}
+		trigger = {
+			religion = guthix
+			calc_true_if = {
+				all_province = {
+					region = feldip_hills_region
+					religion = guthix
+				}
+				amount = 12
+			}
+			313 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = guthix
+				has_building = cathedral
+				has_building = training_fields
+			}
+		}
+		effect = {
+			313 = {
+				change_culture = ascended
+				center_of_trade = 1
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 4
+				add_province_modifier = {
+					name = ASG_GUTHIX_monastery_of_ascension_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+asgarnian_GUTHIX_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = guthix
+	}
+	has_country_shield = yes
+
+	ASG_GUTHIX_handle_the_chaos_druids = {
+		icon = mission_chaos_druids_of_taverley
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			region = asgarnia_region
+			culture = taverlian
+			religion = zamorak
+		}
+		trigger = {
+			religion = guthix
+			NOT = {
+				any_province = {
+					region = asgarnia_region
+					culture = taverlian
+					religion = zamorak
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					karma = 15
+				}
+				add_karma = -15
+			}
+			else_if = {
+				limit = {
+					NOT = { karma = -15 }
+				}
+				add_karma = 15
+			}
+			else = {
+				add_adm_power = 25
+			}
+		}
+	}
+	
+	ASG_GUTHIX_the_void_knights = {
+		icon = mission_the_void_knights
+		position = 15
+		required_missions = { ASG_GUTHIX_handle_the_chaos_druids }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			mil_tech = 10
+			custom_trigger_tooltip = {
+				tooltip = ASG_GUTHIX_the_void_knights_tooltip
+				OR = {
+					has_country_flag = asg_birth_of_void_knights
+					has_global_flag = asg_no_void_knight_return
+				}
+			}
+			religion = guthix
+			OR = {
+				karma = 50
+				NOT = { karma = -50 }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = asg_no_void_knight_return
+				}
+				country_event = {
+					id = flavor_asg.31 #The Void Knights' Second Chance
+					days = 1				
+				}
+			}
+			else = {
+				add_army_professionalism = 0.05
+			}
+			if = {
+				limit = {
+					NOT = {
+						capital_scope = {
+							OR = {
+								has_province_modifier = ASG_black_knights_castle
+								has_province_modifier = ASG_white_knights_castle
+							}
+						}
+					}
+				}
+				capital_scope = {
+					add_province_modifier = {
+						name = ASG_GUTH_void_knights_castle
+						duration = -1				
+					}
+				}
+			}
+		}
+	}
+		
+	ASG_GUTHIX_void_knight_travels = {
+		icon = mission_void_knight_travels
+		position = 16
+		required_missions = { ASG_GUTHIX_a_port_for_taverley ASG_GUTHIX_the_void_knights }
+		provinces_to_highlight = {
+			province_id = 238
+		}
+		trigger = {
+			num_of_transport = 20
+			238 = {
+				has_discovered = ROOT
+				religion = guthix
+				OR = {
+					owned_by = ROOT
+					owned_by = VKO
+				}
+			}			
+		}
+		effect = {
+			lumbridge_swamp_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ASG_GUTHIX_swamps_of_misthalin = {
+		icon = mission_juna
+		position = 16
+		required_missions = { ASG_GUTHIX_void_knight_travels }
+		provinces_to_highlight = {
+			province_id = 1358
+		}
+		trigger = {
+			has_institution = quests
+			owns_core_province = 1358
+		}
+		effect = {
+			1358 = {
+				change_religion = guthix
+				add_province_modifier = {
+					name = ASG_GUTHIX_tears_of_guthix
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+asgarnian_GUTHIX_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = guthix
+	}
+	has_country_shield = yes
+
+	ASG_GUTHIX_crux_eqal = {
+		icon = mission_crux_eqal
+		position = 15
+		required_missions = { ASG_GUTHIX_handle_the_chaos_druids }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			absolutism = 50
+			OR = {
+				full_idea_group = spy_ideas
+				spymaster = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ASG_GUTHIX_rise_of_crux_eqal
+				duration = 9125
+			}
+			if = {
+				limit = {
+					NOT = { exists = FGX }
+					158 = {
+						owned_by = ROOT
+					}
+				}
+				add_adm_power = 100
+			}
+			if = {
+				limit = {
+					NOT = { exists = FGX }
+					158 = {
+						OR = {
+							is_empty = yes
+							owned_by = ROOT
+						}
+					}
+				}
+				country_event = {
+					id = flavor_asg.36 #The Fist of Guthix
+					days = 1
+				}
+			}
+			else = {
+				158 = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	ASG_GUTHIX_legend_of_the_valluta = {
+		icon = mission_valluta
+		position = 17
+		required_missions = { ASG_GUTHIX_crux_eqal ASG_GUTHIX_void_knight_travels }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 41
+				province_id = 239
+				province_id = 793
+			}
+		}
+		trigger = {
+			religion = guthix
+			religious_unity = 1
+			owns_core_province = 41
+			owns_core_province = 239
+			owns_core_province = 793
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			has_global_modifier_value = {
+					which = discipline
+					value = 0.25
+			}
+		}
+		effect = {
+			custom_tooltip = asg_guthix_valluta_karma_tooltip
+			if = {
+				limit = {
+					karma = 33
+				}
+				add_country_modifier = {
+					name = ASG_GUTHIX_guardian_of_the_void
+					duration = 9125
+				}
+			}
+			else_if = {
+				limit = {
+					karma = -32
+				}
+				add_country_modifier = {
+					name = ASG_GUTHIX_justicar_of_the_void
+					duration = 9125
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = ASG_GUTHIX_executioner_of_the_void
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+
+### Religious - Brassican
+
+asgarnian_BRASSICA_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = brassicaprime
+	}
+	has_country_shield = yes
+
+	ASG_BRASSICA_shadows_of_draynor = {
+		icon = mission_master_farmer
+		position = 15
+		required_missions = { ASG_BRASSICA_cabbage_farms }
+		provinces_to_highlight = {
+			area = draynor_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			draynor_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			8 = {
+				development = 15
+				num_of_buildings_in_province = 3
+			}
+		}
+		effect = {
+			lumbridge_swamp_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { province_id = 212 }
+				}
+				add_permanent_claim = ROOT
+			}
+			8 = { change_trade_goods = cabbage }
+		}
+	}
+	
+	ASG_BRASSICA_the_fifth_kind_of_wizard = {
+		icon = mission_establish_wizards_tower
+		position = 16
+		required_missions = { ASG_BRASSICA_shadows_of_draynor }
+		provinces_to_highlight = {
+			province_id = 6
+		}
+		trigger = {
+			6 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 15
+				num_of_buildings_in_province = 3
+			}
+		}
+		effect = {
+			add_adm_power = 25
+			custom_tooltip = ASG_BRASSICA_may_use_wizards_tower_tooltip
+			6 = { change_trade_goods = cabbage }
+		}
+	}
+}
+
+asgarnian_BRASSICA_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = brassicaprime
+	}
+	has_country_shield = yes
+
+	ASG_BRASSICA_cabbage_farms = {
+		icon = mission_cabbage_farms
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+		 	cabbage = 5
+			any_owned_province = {
+			 	trade_goods = cabbage
+				development = 20
+				has_building = farm_estate
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					trade_goods = cabbage
+				}
+				add_province_modifier = {
+					name = ASG_BRASSICA_bumper_harvest
+					duration = 9125
+				}
+			}
+			draynor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { province_id = 212 }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ASG_BRASSICA_guthixian_harmony = {
+		icon = mission_icon_guthix
+		position = 15
+		required_missions = { ASG_BRASSICA_grow_the_faith }
+		provinces_to_highlight = {
+			province_id = 49
+		}
+		trigger = {
+			owns_core_province = 49
+		 	has_harmonized_with = guthix
+		}
+		effect = {
+			add_dip_power = 25
+			49 = {
+				add_base_tax = 1
+				add_base_production = 1
+				change_trade_goods = cabbage
+			}
+		}
+	}
+
+	ASG_BRASSICA_lost_city = {
+		icon = mission_lost_city
+		position = 16
+		required_missions = { ASG_BRASSICA_shadows_of_draynor ASG_BRASSICA_saradominist_harmony ASG_BRASSICA_guthixian_harmony }
+		provinces_to_highlight = {
+			OR = {
+				area = entrana_area
+				area = lumbridge_swamp_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			entrana_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			lumbridge_swamp_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { exists = ZNS }
+					NOT = { has_global_flag = zanaris_revealed_flag }
+				}
+				country_event = {
+					id = flavor_asg.23 #Away with the Fairies
+					days = 1
+				}
+			}
+			else_if = {
+				limit = {
+					exists = ZNS
+					NOT = { has_global_flag = zanaris_revealed_flag }
+					ZNS = {
+						NOT = {
+							any_owned_province = {
+								region = misthalin_region
+							}
+						}
+					}
+				}
+				country_event = {
+					id = flavor_asg.24 #Fairies of Gielinor
+					days = 1
+				}
+			}
+			else = {
+				add_prestige = 50
+			}
+		}
+	}
+}
+
+asgarnian_BRASSICA_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = brassicaprime
+	}
+	has_country_shield = yes
+	
+	ASG_BRASSICA_grow_the_faith = {
+		icon = mission_grow_the_faith
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { religion = brassicaprime }
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					religion = brassicaprime
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			add_harmony = 25
+			add_country_modifier = {
+				name = ASG_BRASSICA_harmony_out_of_chaos
+				duration = 9125
+			}
+		}
+	}
+
+	ASG_BRASSICA_saradominist_harmony = {
+		icon = mission_icon_saradomin
+		position = 15
+		required_missions = { ASG_BRASSICA_grow_the_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+		 	has_harmonized_with = saradomin
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = ENT
+				}
+				add_casus_belli = {
+					target = ENT
+					type = cb_vassalize_mission
+					months = 60
+				}
+			}
+			else = {
+				add_adm_power = 25
+				entrana_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	ASG_BRASSICA_monastic_farming = {
+		icon = mission_monastic_farming
+		position = 16
+		required_missions = { ASG_BRASSICA_saradominist_harmony }
+		provinces_to_highlight = {
+			province_id = 865
+		}
+		trigger = {
+			OR = {
+				harmony = 100
+				has_global_modifier_value = {
+					which = global_missionary_strength
+					value = 0.1
+				}
+			}
+		 	865 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_building = cathedral
+			}
+		}
+		effect = {
+			865 = {
+				change_trade_goods = cabbage
+				add_province_modifier = {
+					name = ASG_BRASSICA_monastery_of_brassica
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+asgarnian_BRASSICA_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ASG
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = asg_define_religious_missions_flag
+		religion = brassicaprime
+	}
+	has_country_shield = yes
+
+	ASG_BRASSICA_the_ooglog_road = {
+		icon = mission_ooglog
+		position = 14
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		provinces_to_highlight = {
+			province_id = 317
+		}
+		trigger = {
+			capital_scope = {
+				region = asgarnia_region
+			}
+			317 = {
+				owned_by = ROOT
+				is_core = ROOT
+				is_in_capital_area = yes
+			}
+		}
+		effect = {
+			add_prestige = 100
+			add_country_modifier = {
+				name = ASG_BRASSICA_cheers_of_the_cabbage_god
+				duration = -1
+			}
+		}
+	}
+
+	ASG_BRASSICA_zamorakian_harmony = {
+		icon = mission_icon_zamorak
+		position = 15
+		required_missions = { ASG_BRASSICA_grow_the_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+		 	has_harmonized_with = zamorak
+		}
+		effect = {
+			add_mil_power = 25
+			if = {
+				limit = {
+					any_owned_province = {
+						any_neighbor_province = {
+							is_empty = yes
+							region = forinthry_region
+						}
+					}
+				}
+				random_neighbor_province = {
+					limit = {
+						is_empty = yes
+						region = forinthry_region
+					}
+					add_siberian_construction = 50
+				}			
+			}
+		}
+	}
+}

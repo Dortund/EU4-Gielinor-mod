@@ -1,15 +1,22 @@
 varze_missions_1 = {
 	slot = 1
-	generic = no
+	generic = yes
 	ai = yes
 	potential = {
-		tag = VRZ
+		OR = {
+			tag = VRZ
+			AND = {
+				tag = ASG
+				was_tag = VRZ
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	VRZ_ice_mountain_monastery = {
 		icon = mission_ice_mountain_monastery
 		required_missions = {  }
+		position = 1
 		provinces_to_highlight = {
 			province_id = 865
 		}
@@ -20,6 +27,7 @@ varze_missions_1 = {
 					has_building = temple
 					has_building = cathedral
 				}
+				owned_by = ROOT
 				is_core = ROOT
 			}
 		}
@@ -38,7 +46,7 @@ varze_missions_1 = {
 	}
 	
 	VRZ_earn_entranas_favour = {
-		icon = mission_earn_entranas_favour
+		icon = mission_entrana_cathedral
 		position = 2
 		required_missions = { VRZ_ice_mountain_monastery }
 		trigger = {
@@ -95,16 +103,23 @@ varze_missions_1 = {
 
 varze_missions_5 = {
 	slot = 5
-	generic = no
+	generic = yes
 	ai = yes
 	potential = {
-		tag = VRZ
+		OR = {
+			tag = VRZ
+			AND = {
+				tag = ASG
+				was_tag = VRZ
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
 	VRZ_achieve_independence = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_melee_scimitar
+		position = 1
 		required_missions = {  }
 		trigger = {
 			NOT = { is_subject = yes }

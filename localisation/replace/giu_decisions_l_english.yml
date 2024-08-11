@@ -124,6 +124,7 @@
  
  destroy_cabbages_title:0 "Destroy the Cabbages"
  destroy_cabbages_desc:0 "Although a useful source of nutrition, cabbages are not exactly the most valuable of crops. Perhaps we should destroy them to make room for a more useful crop."
+ 
  gunnar_crush_altars_title:0 "Crush the Runecrafting Altars!"
  gunnar_crush_altars_desc:0 "The vile Moonclan built these wretched altars to steal the power of the Gods for themselves! They must be destroyed."
  gunnar_restore_altars_title:0 "Restore our Runecrafting Altars"
@@ -136,6 +137,13 @@
  tyras_explore_desc:0 "It was an open secret that Tyras was far more interested in exploration than governing. Perhaps we should indulge such an interest and bring our forces westward - even if it means abandoning our holdings in West Ardougne?"
  weiss_retreat_title:0 "Retreat Northward"
  weiss_retreat_desc:0 "War hurt us much! Must go to safe north place and build back strength."
+ 
+ VAR_invest_in_aldarin_title:0 "Invest in Aldarin"
+ VAR_invest_in_aldarin_desc:0 "The colony of Aldarin will struggle to be productive without our support."
+ VAR_invest_in_aldarin_tooltip:0 "A colony will be created in an empty province on Aldarin."
+ VAR_invest_in_auburnvale_title:0 "Invest in Auburnvale"
+ VAR_invest_in_auburnvale_desc:0 "The colony of Auburnvale will struggle to be productive without our support."
+ VAR_invest_in_auburnvale_tooltip:0 "A colony will be created in an empty province in the Auburnvale or Custodia areas."
  
  council_of_khans_faith_title:0 "Switch to the Khagan's faith"
  council_of_khans_faith_desc:0 "With the Khagan pushing a harsher line on religious freedom within the Council of Khans, perhaps it is best to convert to their religion?"

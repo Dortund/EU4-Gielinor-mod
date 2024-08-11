@@ -217,6 +217,14 @@ divine_energy = {
 	}
 	chance = {
 		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { current_age = age_of_divination }
+		}
+		modifier = {
+			factor = 5
+			continent = wushanko_isles_continent
+		}
 	}
 }
 

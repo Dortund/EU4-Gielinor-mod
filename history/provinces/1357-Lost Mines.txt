@@ -1,4 +1,4 @@
-#1357 - 
+#1357 - Lost Mines
 tribal_owner = ---
 culture = dorgeshuun
 religion = godless
@@ -13,4 +13,6 @@ base_manpower = 1
 
 trade_goods = basic_ores
 
-is_city = yes
+native_size = 2
+native_ferocity = 0
+native_hostileness = 0

@@ -8,8 +8,8 @@ varlamore_missions_1 = {
 	}
 	has_country_shield = yes
 	
-	VAR_light_of_ralos = {
-		icon = mission_conquer_50_development
+	VAR_losanium_faith = {
+		icon = mission_losanium_faith
 		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 503
@@ -33,14 +33,470 @@ varlamore_missions_1 = {
 		}
 		effect = {
 			add_church_power = 25
-			503 = {
+			1455 = {
 				add_base_tax = 1
+				add_base_production = 1
 			}
 		}
 	}
+	VAR_end_of_the_titans = {
+		icon = mission_end_of_the_titans
+		required_missions = { VAR_losanium_faith VAR_expansion_of_tempestus }
+		provinces_to_highlight = {
+			area = tempestus_area
+			culture = cloud_giant
+		}
+		trigger = {
+			tempestus_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = { culture = cloud_giant }
+			}
+		}
+		effect = {
+			492 = {
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					492 = {
+						add_great_project_tier = {
+							type = great_project_college_of_bards
+							tier = 1
+						}
+					}
+				}
+				else = {
+					add_province_modifier = {
+						name = "VAR_college_of_bards_modifier"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	VAR_college_of_bards_mission = {
+		icon = mission_conquer_50_development
+		required_missions = { VAR_end_of_the_titans }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 492
+		}
+		trigger = {
+			has_idea = VAR_bardic_legacy
+			owns_core_province = 491
+			owns_core_province = 492
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				492 = {
+					has_great_project = {
+						type = great_project_college_of_bards
+						tier = 2
+					}
+				}
+			}
+			else = {
+				491 = {
+					development = 25
+					num_of_buildings_in_province = 4
+				}
+				492 = {
+					development = 15
+					num_of_buildings_in_province = 2
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 0.25
+			add_adm_power = 50
+			add_dip_power = 25
+		}
+	}
+	
+	VAR_legends_of_varlamore = {
+		icon = mission_conquer_50_development
+		required_missions = { VAR_college_of_bards_mission VAR_war_of_the_rain }
+		position = 5
+		provinces_to_highlight = {
+		}
+		trigger = {
+		 	mission_completed = VAR_terror_of_the_wyrm
+			absolutism = 25
+			prestige = 80
+		}
+		effect = {
+		 	create_explorer = { tradition = 100 }
+			add_country_modifier = {
+				name = "VAR_bardic_expeditions"
+				duration = 9125
+			}
+		}
+	}
+	
+	VAR_cultural_exchange = {
+		icon = mission_conquer_50_development
+		required_missions = { VAR_legends_of_varlamore }
+		position = 6
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_discovered = 985
+			has_discovered = 368
+			has_discovered = 33
+			has_discovered = 133
+		}
+		effect = {
+		 	add_country_modifier = {
+				name = "VAR_diplomatic_outreach"
+				duration = 9125
+			}
+		}
+	}
+}
+
+varlamore_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = VAR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	VAR_expansion_of_tempestus = {
+		icon = mission_alliances
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 491
+		}
+		trigger = {
+			491 = {
+				development = 15
+			 	num_of_buildings_in_province = 2
+			}
+		}
+		effect = {
+			tempestus_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = { 
+					name = VAR_growth_of_tempestus
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+	VAR_tlati_investment = {
+		icon = mission_alliances
+		required_missions = { VAR_neighbourly_ties }
+		provinces_to_highlight = {
+			province_id = 507
+			province_id = 509
+		}
+		trigger = {
+			507 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 15
+			}
+			509 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					TLT = {
+						is_subject_of = ROOT
+					}
+					
+				}
+				TLT = {
+					add_liberty_desire = -10
+				}
+				inner_tlati_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+						NOT = { is_permanent_claim = TLT }
+						NOT = { is_core = TLT }
+					}
+					add_permanent_claim = TLT
+				}
+				tlati_river_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+						NOT = { is_permanent_claim = TLT }
+						NOT = { is_core = TLT }
+					}
+					add_permanent_claim = TLT
+				}
+				north_tlati_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+						NOT = { is_permanent_claim = TLT }
+						NOT = { is_core = TLT }
+					}
+					add_permanent_claim = TLT
+				}
+			}
+			else = {
+				add_years_of_income = 0.5
+				inner_tlati_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				tlati_river_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				north_tlati_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	VAR_war_of_the_rain = {
+		icon = mission_alliances
+		required_missions = { VAR_tlati_investment }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = inner_tlati_area
+				area = tlati_river_area
+				area = north_tlati_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			inner_tlati_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tlati_river_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_tlati_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 75
+			random_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						area = inner_tlati_area
+						area = tlati_river_area
+						area = north_tlati_area
+					}
+					NOT = { culture_group = varlamore_group }
+				}
+				change_culture = tlati
+				change_religion = ranul
+			}
+		}
+	}
+}
+
+
+varlamore_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = VAR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	VAR_neighbourly_ties = {
+		icon = mission_neighbourly_ties
+		required_missions = {  }
+		trigger = {
+			num_of_subjects = 1
+			any_subject_country = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = CTR
+					}
+				}
+				owns_core_province = 512
+				accepted_culture = imcando
+			}
+			else = {
+				OR = {
+					AND = {
+						alliance_with = CTR
+						reverse_has_opinion = {
+							who = CTR
+							value = 150
+						}
+					}
+					is_rival = CTR
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "VAR_transport_connections"
+				duration = 7300
+			}
+		}
+	}
+	
+	VAR_connecting_trade = {
+		icon = mission_connecting_trade
+		required_missions = { VAR_neighbourly_ties }
+		trigger = {
+			OR = {
+				marketplace = 3
+				trade_depot = 3
+				stock_exchange = 3
+			}
+			525 = {
+				has_most_province_trade_power = ROOT
+			}
+			885 = {
+				has_most_province_trade_power = ROOT
+			}
+			505 = {
+				has_most_province_trade_power = ROOT
+			}
+		}
+		effect = {
+		 	add_mercantilism = 2
+			add_years_of_income = 0.5
+		}
+	}
+	VAR_aldarin_settlement = {
+		icon = mission_alliances
+		required_missions = { VAR_connecting_trade }
+		provinces_to_highlight = {
+			province_id = 885
+		}
+		trigger = {
+			if = {
+				limit = {
+					885 = { is_empty = yes }
+				}
+				manpower_percentage = 0.5
+			}
+			else = {
+				owns_core_province = 885
+				885 = {
+					development = 15
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					885 = { is_empty = yes }
+				}
+				add_yearly_manpower = -5
+				country_event = {
+					id = flavor_var.4
+					days = 1
+				}
+				custom_tooltip = VAR_aldarin_settlement_tooltip
+			}
+			else = {
+				add_years_of_income = 0.5
+			}
+		}
+	}
+	VAR_aldarin_red = {
+		icon = mission_alliances
+		required_missions = { VAR_aldarin_settlement }
+		provinces_to_highlight = {
+			OR = {
+				area = north_aldarin_area
+				area = south_aldarin_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_at_war = no
+			488 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			calc_true_if = {
+				all_province = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						area = north_aldarin_area
+						area = south_aldarin_area
+					}
+				}
+				amount = 6
+			}
+		}
+		effect = {
+			488 = {
+				change_trade_goods = fruit
+				add_province_modifier = {
+					name = VAR_vinyards_of_aldarin
+					duration = -1
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			if = {
+				limit = {
+					488 = {
+						owned_by = TLT
+					}
+					TLT = {
+						ai = yes
+					}
+				}
+				TLT = {
+					set_capital = 488
+				}
+			}
+			if = {
+				limit = {
+				 	overlord_of = TLT
+				}
+				TLT = {
+					add_liberty_desire = -10
+				}
+			}
+		}
+	}
+	
 	VAR_new_land_rights = {
 		icon = mission_conquer_50_development
-		required_missions = { VAR_light_of_ralos VAR_expansion_of_tempestus }
+		required_missions = { VAR_war_of_the_rain VAR_aldarin_red VAR_fletching_guild }
 		trigger = {
 			AND = {
 				estate_loyalty = {
@@ -91,54 +547,20 @@ varlamore_missions_1 = {
 		trigger = {
 			owns_core_province = 488
 			owns_core_province = 490
+			owns_core_province = 507
 			NOT = { exists = AUB }
 			NOT = { exists = ALD }
+			NOT = { exists = TLT }
 			total_development = 300
 		}
 		effect = {
 			add_adm_power = 100
 		}
 	}
-	VAR_fletching_guild = {
-		icon = mission_conquer_50_development
-		required_missions = { VAR_integration_of_varlamore }
-		provinces_to_highlight = {
-			province_id = 1451
-		}
-		trigger = {
-			treasury = 100
-			1451 = {
-				owned_by = ROOT
-				is_core = ROOT
-				development = 10
-				custom_trigger_tooltip = {
-					tooltip = var_fletching_guild_prosperous_tooltip
-					is_prosperous = yes
-				}
-				OR = {
-					has_building = workshop
-					has_building = counting_house
-				}
-			}
-		}
-		effect = {
-			add_treasury = -100
-			1451 = {
-				add_province_modifier = {
-					name = "VAR_fletching_guild_modifier"
-					duration = -1
-				}
-			}
-			add_country_modifier = {
-				name = "VAR_fletching_innovation"
-				duration = 3650
-			}
-		}
-	}
 }
 
-varlamore_missions_2 = {
-	slot = 2
+varlamore_missions_4 = {
+	slot = 4
 	generic = no
 	ai = yes
 	potential = {
@@ -147,190 +569,49 @@ varlamore_missions_2 = {
 	}
 	has_country_shield = yes
 	
-	VAR_expansion_of_tempestus = {
-		icon = mission_alliances
-		required_missions = {  }
-		
+	VAR_shipbuilding = {
+		icon = mission_shipbuilding
+		required_missions = { }
 		trigger = {
-			491 = {
-				development = 15
-			 	num_of_buildings_in_province = 2
+			OR = {
+				navy_size_percentage = 1
+			 	navy_tradition = 50
+				navy_size = 50
 			}
 		}
 		effect = {
-			tempestus_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	VAR_victory_over_the_titans = {
-		icon = mission_alliances
-		required_missions = { VAR_expansion_of_tempestus VAR_a_subject_of_subjects }
-		provinces_to_highlight = {
-			province_id = 492
-			province_id = 493
-			province_id = 886
-		}
-		trigger = {
-			owns_core_province = 492
-			owns_core_province = 493
-			owns_core_province = 886
-		}
-		effect = {
-			492 = {
-				change_culture = tempestite
-				change_religion = ralos
-				if = {
-					limit = {
-						has_dlc = "Leviathan"
-					}
-					492 = {
-						add_great_project_tier = {
-							type = great_project_college_of_bards
-							tier = 1
-						}
-					}
-				}
-				else = {
-					add_province_modifier = {
-						name = "VAR_college_of_bards_modifier"
-						duration = -1
-					}
-				}
-			}
-		}
-	}
-
-	VAR_college_of_bards_mission = {
-		icon = mission_conquer_50_development
-		required_missions = { VAR_victory_over_the_titans }
-		position = 4
-		provinces_to_highlight = {
-			province_id = 492
-		}
-		trigger = {
-			has_idea = VAR_bardic_legacy
-			owns_core_province = 491
-			owns_core_province = 492
 			if = {
 				limit = {
-					has_dlc = "Leviathan"
-				}
-				492 = {
-					has_great_project = {
-						type = great_project_college_of_bards
-						tier = 2
+					1453 = {
+						is_empty = yes
 					}
+				}
+				1453 = {
+					add_siberian_construction = 25
 				}
 			}
 			else = {
-				491 = {
-					development = 25
-					num_of_buildings_in_province = 4
-				}
-				492 = {
-					development = 15
-					num_of_buildings_in_province = 2
-				}
+				add_dip_power = 25
 			}
-		}
-		effect = {
-		 	create_explorer = { tradition = 100 }
-			add_country_modifier = {
-				name = "VAR_bardic_expeditions"
-				duration = 9125
-			}
-		}
-	}
-	
-	VAR_cultural_exchange = {
-		icon = mission_conquer_50_development
-		required_missions = { VAR_college_of_bards_mission VAR_cothon_expansion }
-		position = 5
-		provinces_to_highlight = {
-		}
-		trigger = {
-			has_discovered = 985
-			has_discovered = 368
-			has_discovered = 33
-			has_discovered = 133
-		}
-		effect = {
-		 	add_country_modifier = {
-				name = "VAR_diplomatic_outreach"
-				duration = 9125
-			}
-		}
-	}
-}
-
-varlamore_missions_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		tag = VAR
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	VAR_a_subject_of_subjects = {
-		icon = mission_alliances
-		required_missions = {  }
-		trigger = {
-			num_of_subjects = 1
-			calc_true_if = {
-				all_subject_country = {
-					has_opinion = {
-						who = ROOT
-						value = 150
+			if = {
+				limit = {
+					889 = {
+						is_empty = yes
 					}
 				}
-				amount = 2
+				889 = {
+					add_siberian_construction = 25
+				}
 			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "VAR_transport_connections"
-				duration = 7300
+			else = {
+				add_dip_power = 25
 			}
 		}
 	}
-	VAR_connecting_trade = {
-		icon = mission_alliances
-		required_missions = { VAR_a_subject_of_subjects VAR_imcando_friends }
-		trigger = {
-			OR = {
-				marketplace = 4
-				trade_depot = 4
-				stock_exchange = 4
-			}
-			525 = {
-				has_most_province_trade_power = ROOT
-			}
-			885 = {
-				has_most_province_trade_power = ROOT
-			}
-			505 = {
-				has_most_province_trade_power = ROOT
-			}
-			491 = {
-				has_most_province_trade_power = ROOT
-			}
-		}
-		effect = {
-		 	add_mercantilism = 2
-			add_years_of_income = 0.5
-		}
-	}
+
 	VAR_salvager_overlook = {
 		icon = mission_alliances
-		required_missions = { VAR_connecting_trade }
+		required_missions = { VAR_shipbuilding }
 		provinces_to_highlight = {
 			OR = {
 				province_id = 503
@@ -378,15 +659,138 @@ varlamore_missions_3 = {
 			}
 		}
 	}
+	
+	VAR_settlement_of_auburnvale = {
+		icon = mission_alliances
+		required_missions = { VAR_connecting_trade VAR_salvager_overlook }
+		provinces_to_highlight = {
+			province_id = 887
+		}
+		trigger = {
+			if = {
+				limit = {
+					887 = { is_empty = yes }
+				}
+				manpower_percentage = 0.5
+			}
+			else = {
+				owns_core_province = 887
+				887 = {
+					development = 15
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					887 = { is_empty = yes }
+				}
+				add_yearly_manpower = -5
+				country_event = {
+					id = flavor_var.5
+					days = 1
+				}
+				custom_tooltip = VAR_settlement_of_auburnvale_tooltip
+			}
+			else = {
+				add_years_of_income = 0.5
+			}
+		}
+	}
+	
+	VAR_fletching_guild = {
+		icon = mission_conquer_50_development
+		required_missions = { VAR_settlement_of_auburnvale }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1451
+				AND = {
+					OR = {
+						area = auburnvale_area
+						area = custodia_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		}
+		trigger = {
+			is_at_war = no
+			490 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			calc_true_if = {
+				all_province = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						area = auburnvale_area
+						area = custodia_area
+					}
+				}
+				amount = 5
+			}
+			1451 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+				custom_trigger_tooltip = {
+					tooltip = var_fletching_guild_prosperous_tooltip
+					is_prosperous = yes
+				}
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+					base_production = 10
+				}
+			}
+		}
+		effect = {
+			1451 = {
+				add_province_modifier = {
+					name = "VAR_fletching_guild_modifier"
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "VAR_fletching_innovation"
+				duration = 3650
+			}
+			if = {
+				limit = {
+					490 = {
+						owned_by = AUB
+					}
+					AUB = {
+						ai = yes
+					}
+				}
+				AUB = {
+					set_capital = 490
+				}
+			}
+			if = {
+				limit = {
+				 	overlord_of = AUB
+				}
+				AUB = {
+					add_liberty_desire = -10
+					add_country_modifier = {
+						name = "VAR_fletching_innovation"
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+		
 	VAR_cothon_expansion = {
 		icon = mission_grand_ship
-		required_missions = { VAR_salvager_overlook }
+		required_missions = { VAR_fletching_guild }
 		trigger = {
 			is_in_deficit = no
 		 	navy_size_percentage = 0.9
-		 	num_of_heavy_ship = 10		
+		 	num_of_heavy_ship = 10
 			525 = {
 				owned_by = ROOT
+				base_production = 10
 				OR = {
 					has_building = shipyard
 					has_building = grand_shipyard
@@ -396,7 +800,6 @@ varlamore_missions_3 = {
 					has_building = drydock
 				}
 			}
-			
 		}
 		effect = {
 			525 = {
@@ -406,11 +809,11 @@ varlamore_missions_3 = {
 				}
 			}
 		}
-	}	
+	}
 }
 
-varlamore_missions_4 = {
-	slot = 4
+varlamore_missions_5 = {
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
@@ -419,146 +822,82 @@ varlamore_missions_4 = {
 	}
 	has_country_shield = yes
 	
-	VAR_imcando_friends = {
-		icon = mission_alliances
-		required_missions = {  }
-		
+	VAR_hunters_investment = {
+		icon = mission_hunters_investment
+		required_missions = { }
 		trigger = {
-			if = {
-				limit = {
-					NOT = {
-						exists = AZA
-					}
-				}
-				owns_core_province = 512
-				accepted_culture = imcando
-			}
-			else = {
-				OR = {
-					AND = {
-						alliance_with = AZA
-						reverse_has_opinion = {
-							who = AZA
-							value = 150
-						}
-					}
-					is_rival = AZA
-				}
+			army_professionalism = 0.05
+			511 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 10
+				province_has_center_of_trade_of_level = 2
 			}
 		}
 		effect = {
-			add_dip_power = 50
-		}
-	}
-
-	VAR_tlati_settlement = {
-		icon = mission_alliances
-		required_missions = { VAR_imcando_friends VAR_hunters_investment }
-		
-		trigger = {
-			if = {
+			511 = {
+				add_province_modifier = {
+					name = "VAR_hunters_guild_modifier"
+					duration = -1
+				}
+			}
+			east_avium_area = {
 				limit = {
-					509 = { is_empty = yes }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+					NOT = { owned_by = CTR }
 				}
-				OR = {
-					religion = ranul
-					dip_tech = 5
-				}
-				manpower_percentage = 0.5
-			}
-			else = {
-				owns_core_province = 509
-				509 = {
-					development = 15
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					509 = { is_empty = yes }
-				}
-				add_yearly_manpower = -5
-				country_event = {
-					id = flavor_var.1
-					days = 1
-				}
-			}
-			else = {
-				add_years_of_income = 0.5
+				add_permanent_claim = ROOT
 			}
 		}
 	}
 	
-	VAR_war_of_the_rain = {
-		icon = mission_alliances
-		required_missions = { VAR_tlati_settlement }
+	VAR_terror_of_the_wyrm = {
+		icon = mission_conquer_50_development
+		required_missions = { VAR_hunters_investment }
+		position = 3
 		provinces_to_highlight = {
 			OR = {
-				province_id = 496
-				province_id = 500
-				province_id = 510
-				province_id = 1015
+				province_id = 515
+				province_id = 519
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_or_non_sovereign_subject_of = 496
-			owns_or_non_sovereign_subject_of = 500
-			owns_or_non_sovereign_subject_of = 510
-			owns_or_non_sovereign_subject_of = 1015
+			NOT = { exists = WYM }
+			owns_core_province = 515
+			owns_core_province = 519
 		}
 		effect = {
-			if = {
+			add_army_professionalism = 0.1
+			add_army_tradition = 5
+		}
+	}
+	
+	VAR_victory_of_the_kualti = {
+		icon = mission_conquer_50_development
+		required_missions = { VAR_terror_of_the_wyrm }
+		position = 4
+		trigger = {
+			army_size = 25
+			army_size_percentage = 0.9
+			army_professionalism = 0.25
+		}
+		effect = {
+			south_hosidius_area = {
 				limit = {
-					TLT = {
-						is_subject_of = VAR
-						AND = {
-							owns = 496
-							owns = 500
-							owns = 510
-							owns = 1015
-						}
-					}
-					507 = {
-						is_empty = yes
-					}
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
-				507 = {
-					cede_province = TLT
-					add_core = TLT
-				}
-			}
-			else_if = {
-				limit = {
-					TLT = {
-						is_subject_of = VAR
-						AND = {
-							owns = 496
-							owns = 500
-							owns = 510
-							owns = 1015
-						}
-					}
-					507 = {
-						NOT = { is_empty = yes }
-					}
-				}
-				500 = {
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}		
-			}
-			else = {
-				add_mil_power = 75
+				add_permanent_claim = ROOT
 			}
 		}
 	}
+	
 	VAR_kourendite_intervention = {
 		icon = mission_to_the_new_world
 		required_missions = { VAR_cothon_expansion VAR_victory_of_the_kualti }
-		position = 5
+		position = 6
 		provinces_to_highlight = {
 			area = south_hosidius_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -598,7 +937,7 @@ varlamore_missions_4 = {
 	VAR_the_road_to_forthos = {
 		icon = mission_conquer_50_development
 		required_missions = { VAR_kourendite_intervention }
-		position = 6
+		position = 7
 		provinces_to_highlight = {
 			OR = {
 				area = south_hosidius_area
@@ -633,86 +972,4 @@ varlamore_missions_4 = {
 			}
 		}
 	}
-	
-}
-
-varlamore_missions_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential = {
-		tag = VAR
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	VAR_hunters_investment = {
-		icon = mission_conquer_50_development
-		required_missions = { }
-		trigger = {
-			army_professionalism = 0.05
-			511 = {
-				owned_by = ROOT
-				is_core = ROOT
-				development = 10
-				province_has_center_of_trade_of_level = 2
-			}
-		}
-		effect = {
-			511 = {
-				change_religion = ranul
-				add_province_modifier = {
-					name = "VAR_hunters_guild_modifier"
-					duration = -1
-				}
-			}
-			east_avium_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	VAR_terror_of_the_wyrm = {
-		icon = mission_conquer_50_development
-		required_missions = { VAR_hunters_investment }
-		position = 3
-		provinces_to_highlight = {
-			area = east_avium_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			NOT = { exists = WYM }
-			owns_core_province = 515
-			owns_core_province = 519
-		}
-		effect = {
-			add_army_professionalism = 0.1
-			add_army_tradition = 5
-		}
-	}
-	
-	VAR_victory_of_the_kualti = {
-		icon = mission_conquer_50_development
-		required_missions = { VAR_terror_of_the_wyrm }
-		position = 4
-		trigger = {
-			army_size = 25
-			army_size_percentage = 0.9
-			army_professionalism = 0.25
-		}
-		effect = {
-			south_hosidius_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
 }

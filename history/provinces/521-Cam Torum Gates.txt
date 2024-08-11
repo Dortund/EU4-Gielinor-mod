@@ -1,0 +1,19 @@
+#521 - Cam Torum Gates
+owner = CTR
+controller = CTR
+add_core = CTR
+tribal_owner = ---
+culture = imcando
+religion = saradomin
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+trade_goods = hunter_creatures
+
+is_city = yes
