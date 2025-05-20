@@ -9,7 +9,7 @@ guiTypes = {
 			name = "government_power_bar"
 			spriteType = "GFX_elven_desperation_power_bar"
 			position = { x = 16 y = 49 }
-			Orientation = "LOWER_LEFT"
+			Orientation = "UPPER_LEFT"
 		}
 
 		# Frame
@@ -17,7 +17,7 @@ guiTypes = {
 			name = "government_power_bar_frame"
 			spriteType = "GFX_elven_desperation_frame"
 			position = { x = 0 y = 0 }
-			Orientation = "LOWER_LEFT"
+			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 		
@@ -25,7 +25,7 @@ guiTypes = {
 			name = "government_interaction_button"
 			quadTextureSprite = "GFX_elven_desperation_last_stand_button"
 			position = { x = 0 y = 30 }
-			Orientation = "LOWER_LEFT"
+			Orientation = "UPPER_LEFT"
 			buttonFont = "vic_18"
 			clicksound = back_click
 		}
