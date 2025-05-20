@@ -466,8 +466,8 @@
  
  zeantech_1_infantry:0 "Zean Warriors"
  zeantech_1_infantryDESCR:0 "The original human and dwarven settlers of Zeah came to flee a war, and their descendents were little-prepared when war started from within. Since the time of Xeric, all realms of Zeah are sure to keep a well-trained force ready in case of such devastation repeating itself."
- zeantech_5_infantry:0 "Zean Strikers"
- zeantech_5_infantryDESCR:0 "The continent of Zeah's relatively low population density has encouraged the use of more mobile infantry tactics."
+ zeantech_6_infantry:0 "Zean Strikers"
+ zeantech_6_infantryDESCR:0 "The continent of Zeah's relatively low population density has encouraged the use of more mobile infantry tactics."
  zeantech_9_infantry:0 "Zean Regiment"
  zeantech_9_infantryDESCR:0 "Kourend's civil war would drive significant changes in how its militaries were comprised. For one, houses aside from Shayzien necessarily had to develop their own armed forces. For another, forces had to be retrained to be able to fight fellow humans and dwarves after years of predominantly fighting lizardmen."
  zeantech_12_infantry:0 "Arceuus Mages"
