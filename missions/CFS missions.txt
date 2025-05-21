@@ -282,14 +282,12 @@ canifis_missions_2 = {
 					religion = zamorak
 				}
 				country_event = {
-					id = flavor_cfs.6
-					days = 1
+					id = flavor_cfs.5
 				}
 			}
 			else = {
 				country_event = {
-					id = flavor_cfs.7
-					days = 1
+					id = flavor_cfs.6
 				}
 			}
 		}

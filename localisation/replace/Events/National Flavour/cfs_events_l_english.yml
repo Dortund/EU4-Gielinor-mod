@@ -26,7 +26,7 @@
  flavor_cfs.6.t:0 "The Fate of Slepe"
  flavor_cfs.6.d:0 "Slepe was never really a core part of the realm of Morytania. They follow Zamorak, much like us werewolves once did - and much unlike the views of the Vampyres. Granting them greater autonomy would go a long way to proving our credentials as more fair than the previous Vampyric regime."
  flavor_cfs.6.a:0 "Provide them with limited self-governance."
- cfs_tooltip_support_of_slepe:0 "While Slepe remains a subject, we will permanently receive §T+1 Tolerance of Heretics§! and §T+1 Tolerance of Heathens§!."
+ cfs_tooltip_support_of_slepe_not_zamorak:0 "While Slepe remains a subject, we will permanently receive §T+1 Tolerance of Heretics§! and §T+1 Tolerance of Heathens§!."
  flavor_cfs.6.b:0 "Give them more equal status in our realm."
  flavor_cfs.6.c:0 "Let's put this whole Slepe situation to rest."
  
