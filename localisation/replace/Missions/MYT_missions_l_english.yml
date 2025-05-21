@@ -19,6 +19,7 @@
  MYT_conquest_of_the_north_coast_desc:0 "What is this?! Settlers from Misthalin in our lands?! We must force them out!"
  MYT_stabilise_the_tithe_title:0 "Stabilise the Tithe"
  MYT_stabilise_the_tithe_desc:0 "A balance must be made between the supply of blood and the quantity of vampyres in our lands. Too many vampyres relative to tithes, and the vampyres shall starve. Too few, and the tithes will become unruly."
+ MYT_stabilise_the_tithe_disaster_tooltip:0 "Succesfully dealt with with the Excessive Tithe disaster."
  
  MYT_tithe_ties_title:0 "Tithe Ties"
  MYT_tithe_ties_desc:0 "Our subjects have become too autonomous, and we need to reintegrate them into the realm. First, let us seek better relations to ease the process."
