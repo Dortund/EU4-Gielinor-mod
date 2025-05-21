@@ -862,10 +862,12 @@ great_project_sacred_forge = {
 	build_trigger = {
 		if = {
 			limit = {
-				AND = {
-					mission_completed = CSN_ice_mountain_oracles
+				owner = {
 					has_country_flag = CSN_shadowy_path_flag
 				}
+			}
+			owner = {
+				mission_completed = CSN_ice_mountain_oracles
 			}
 		}
 		else = {
@@ -885,10 +887,12 @@ great_project_sacred_forge = {
 	can_use_modifiers_trigger = {
 		if = {
 			limit = {
-				AND = {
-					mission_completed = CSN_ice_mountain_oracles
+				owner = {
 					has_country_flag = CSN_shadowy_path_flag
 				}
+			}
+			owner = {
+				mission_completed = CSN_ice_mountain_oracles
 			}
 		}
 		else = {
@@ -902,10 +906,12 @@ great_project_sacred_forge = {
 	can_upgrade_trigger = {
 		if = {
 			limit = {
-				AND = {
-					mission_completed = CSN_ice_mountain_oracles
+				owner = {
 					has_country_flag = CSN_shadowy_path_flag
 				}
+			}
+			owner = {
+				mission_completed = CSN_ice_mountain_oracles
 			}
 		}
 		else = {
