@@ -6,6 +6,7 @@ crusader_zeal_mechanic = {
 
 	powers = {
 		crusader_zeal_power_1 = {
+			gui = crusader_zeal_gov_mech
 			max = 100
 			base_monthly_growth = -0.2
 			development_scaled_monthly_growth = -0.5

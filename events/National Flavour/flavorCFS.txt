@@ -132,6 +132,7 @@ country_event = {
 	
 	option = {
 		name = flavor_cfs.5.a #Provide them with limited self-governance.
+		release = SLP
 		create_march = SLP
 		custom_tooltip = cfs_tooltip_support_of_slepe
 		ai_chance = {
@@ -177,6 +178,7 @@ country_event = {
 	
 	option = {
 		name = flavor_cfs.6.a #Provide them with limited self-governance.
+		release = SLP
 		create_march = SLP
 		custom_tooltip = cfs_tooltip_support_of_slepe_not_zamorak
 		ai_chance = {

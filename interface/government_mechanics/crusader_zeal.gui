@@ -9,7 +9,7 @@ guiTypes = {
 			name = "government_power_bar"
 			spriteType = "GFX_crusader_zeal_power_bar"
 			position = { x = 16 y = 49 }
-			Orientation = "LOWER_LEFT"
+			Orientation = "UPPER_LEFT"
 		}
 
 		# Frame
@@ -17,7 +17,7 @@ guiTypes = {
 			name = "government_power_bar_frame"
 			spriteType = "GFX_crusader_zeal_frame"
 			position = { x = 0 y = 0 }
-			Orientation = "LOWER_LEFT"
+			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 	}

@@ -323,7 +323,7 @@ country_event = {
 
 	trigger = {
 		religion = saradomin
-		has_cardinal = yes
+		num_of_cardinals = 1
 		NOT = { has_country_modifier = cardinal_in_administration }
 	}
 	

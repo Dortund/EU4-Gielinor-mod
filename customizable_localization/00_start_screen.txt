@@ -887,27 +887,35 @@ defined_text = {
     }
 }
 
-#Coptic Blessings
+#Coptic / Zoroastrian Blessings
 defined_text = {
-	name = start_coptic_blessings
+	name = start_coptic_zoroastrian_blessings
 	random = no
 	text = {
         localisation_key = string_blessings_info #Has to end with \n
         trigger = {
-			OR = {
-				religion = dark_lord
-				religion = zaros
-			}
+			religion = coptic
 			has_dlc = "Rights of Man"
         }
     }
 	text = {
         localisation_key = string_blessings_info_no #\n
         trigger = {
-			OR = {
-				religion = dark_lord
-				religion = zaros
-			}
+			religion = coptic
+			NOT = { has_dlc = "Rights of Man" }
+        }
+    }
+	text = {
+        localisation_key = string_rituals_info #Has to end with \n
+        trigger = {
+			religion = zoroastrian
+			has_dlc = "Rights of Man"
+        }
+    }
+	text = {
+        localisation_key = string_rituals_info_no #\n
+        trigger = {
+			religion = zoroastrian
 			NOT = { has_dlc = "Rights of Man" }
         }
     }
