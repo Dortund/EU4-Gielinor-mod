@@ -1,0 +1,13 @@
+﻿l_english:
+ KDG_legacy_of_king_alvis_title:0 "Legacy of King Alvis"
+ KDG_legacy_of_king_alvis_desc:0 "In the over 250 years since King Alvis died, the Consortium has taken charge and consolidated its power. Let us ensure that their power is used for the good of the city."
+ 
+ KDG_fremennik_ties_title:0 "Fremennik Ties"
+ KDG_fremennik_ties_desc:0 "When we re-emerged to the surface world after centuries apart, we came across the human group known as the Fremennik. Though strange like all humans, the Fremennik at least seem to share our views that the Gods are better-off being out of the way."
+
+ KDG_establish_a_trade_outpost_title:0 "Establish a Trade Outpost"
+ KDG_establish_a_trade_outpost_desc:0 "Many of the best mining spots around Keldagrim have already been exploited so it is necessary for us to seek out new opportunities further afield."
+ dwarven_outpost_explanation_tooltip:0 "A §YDwarven Outpost§! can be established in a foreign nation via diplomacy, under the §YEconomic Actions§!. You can only request to make an Outpost if they have an eligible province.\n\nEligible provinces must:\n- Be in a nation with at least 5 provinces\n- Be on a non-capital province with basic ores, advanced ores, gemstones or runite\n- Not be in the same trade node as another Dwarven Outpost\n- Be within trade range"
+ 
+ KDG_train_the_black_guard_title:0 "Train the Black Guard"
+ KDG_train_the_black_guard_desc:0 "As Dwarven contact with the outside world emerges, it is apparent we need stronger means to secure the riches we already possess."

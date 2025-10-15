@@ -1,7 +1,7 @@
 government = monarchy
 add_government_reform = feudal_reform
 government_rank = 2
-primary_culture = imcando
+primary_culture = cam_torum
 religion = saradomin
 technology_group = zeantechgroup
 capital = 1490 #Cam Torum

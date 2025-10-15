@@ -2,6 +2,167 @@
 
 # For patches previous to current one
 
+########################################################################################################
+########################################################################################################
+########################################################################################################
+
+# Beta 1.9.1 Patch Notes (Cashien)
+
+#######################
+# National Flavour
+#######################
+
+# Asgarnia
+## Added extra mission for Brassican Route: The Fifth Kind of Wizard. Enables use of Wizards' Tower.
+
+# Cashien
+## Added 5 unique national ideas.
+
+#######################
+# Bugfixes
+#######################
+
+# Fixed Asgarnian minor missions not being in the right place when forming Asgarnia
+# Fixed Asgarnian-Guthix mission Guthix's Victory having broken requirements
+# Fixed Figurehead Monarchy government for Asgarnia not appearing
+# Fixed Kami-Shima Nexus, Sword of Edicts, Taverley Stone Circle and Temple of Lost Ancients mission conditions not working
+
+########################################################################################################
+########################################################################################################
+########################################################################################################
+
+# Beta 1.9.0 Patch Notes (Asgarnia)
+
+# Asgarnia is the primary focus of this patch, with reworked missions for the nations that can form it, a new set for Taverley, and a vast unified Asgarnian tree.
+# Meanwhile, Gunnar's Runecrafting Crusades have seen considerable changes and Varlamore has been brought up-to-date with new additions.
+
+#######################
+# Map Changes
+#######################
+
+# 2 new provinces (Cam Torum and Neypotzli) in Varlamore
+# Moved around centres of trade in Varlamore to more appropriate provinces
+
+# Varlamore starting provinces:
+## Cam Torum now controls Tamakamtlati and the Stonecutter Outpost, but Varlamore now controls Iter Peregrini
+## Tlati Rainforest is now fully settled at the start of the game, under the control of either the Rain Demons or Tlati (a vassal of Varlamore)
+## Tempestus now starts entirely in Varlamore's control, though Cloud Giants may rebel
+## Aldarin and Auburnvale is no longer settled at the start of the game, but will appear via Varlamore's mission tree
+
+#######################
+# National Flavour
+#######################
+
+# New nation: Fist of Guthix. Can be created by a Guthixian Asgarnia. Also present at the 169 5th Age start.
+# New nation: Neypotzli. Boss nation found in Varlamore.
+# Localised national ideas for Braedsnape, Casere, Chaos Druids, Death Plateau, Drýas, Elvarg, Heoruwearg, New Imcandoria, Rebrum, Rennard and Weiss
+
+# Al Kharid
+## The Magic Training Arena province modifiers now persist if captured by other nations.
+
+# Ardougne/Baxtoria/Kandarin
+## Added Fishing Platform event and Sea Slug event
+
+# Avizaal
+## Reworked as Cam Torum, with most national ideas replaced.
+## New event when the Runecrafting institution forms, giving you the opportunity to start producing runes in Cam Torum for a price.
+
+# Asgarnia
+## Now carries forward generic Asgarnian missions, and the unique missions of nations that use generic Asgarnian ideas (Burthorpe, Crailey, Dark Wizards, Donblas, Taverley, Varze)
+## Generic Asgarnian mission Decent Army now unlocks the Unify Asgarnia casus belli, instead of needing diplomatic tech 6. The casus belli now generates even less aggressive expansion, but doesn't reduce province cost as much.
+## Buffed national ideas to be a bit more in line with other formables
+## 29 new missions, plus varying numbers depending on religious choice
+### 17 for Saradomin
+### 12 for Zamorak
+### 17 for Guthix
+### 9 for Brassica Prime
+### 8 for any other religion (all other religions have this generic tree)
+## New flavour events
+
+# Burthorpe
+## Tweaked missions slightly, and added new Death Plateau mission enabling a free province towards the Troll Stronghold
+
+# Crailey
+## Rearranged missions so Crailey can use generic Asgarnian missions
+
+# Crandor
+## New flavour event for everyone's favourite Dragon Slayer miniboss: Melzar
+
+# Donblas
+## Reworked missions so Donblas can use generic Asgarnian missions.
+
+# Dark Wizards
+## Rearranged missions so the Dark Wizards can use generic Asgarnian missions
+
+# Gunnar
+## Expanded mission tree with 27 missions, up from 4 (but no longer uses any generic Fremennik missions)
+## Runecrafting Crusader government reworked with new Crusader Zeal mechanic. You gain Crusader Zeal from destroying runecrafting altars, but it declines over time. Low Crusader Zeal makes the realm unstable. You also can no longer switch government types when in the Crusader Government!
+### Due to the Zeal mechanic, the temporary Crusader Recruitment modifier is no longer used.
+### Unique Disaster: End of the Runecrafting Crusades. Entered by running low on Crusader Zeal. Completing the disaster in its entirety grants access to the Reformed Gunnite Horde government.
+## Unique casus belli vs. nations producing runes (usable with Runecrafting Crusader government until the Age of Adventurers)
+
+
+# Lovakengj
+## Now follows the Saradominist faith
+
+# Taverley
+## Now has 6 unique missions alongside the generic Asgarnian missions.
+
+# Varlamore
+## Mission tree rearranged yet again in accordance with new lore. There are now 24 missions, up from 20.
+## New Aldarin and Auburnvale investment decisions to help expand those vassals
+## Updated startup text
+
+#######################
+# Religion
+#######################
+
+# Localised the names of religious heresy rebels
+
+# Ralos/Ranul
+## The aspects boosting development can now only boost the development of provinces with less than 10 of the respective type. This is to stop Neypotzli building up to an absurd size.
+## Some aspect church power costs have been adjusted.
+
+# Saradomin
+## Added 9 random events for countries following the Saradominist faith.
+
+#######################
+# Cultures
+#######################
+
+# Beast Group: New Colossus culture
+# Dwarven Group: New Imcando Dwarf names
+# Elemental Group: Added Ascended and Nagua cultures
+# Varlamore Group:
+## "Fortis" has been relocalised as "Perican"; "Tlati" as "Talkasti"
+## Graphical culture now South American instead of Western
+## Updated names with new OSRS NPCs
+
+#######################
+# Monuments
+#######################
+
+# Updated images for Fortis Colosseum and Fortis Aqueduct
+# Daemonheim Keep now correctly only offers +0.5% Chaos per year, not +5%.
+
+#######################
+# Bugfixes
+#######################
+
+# Fixed some nations getting Chaos faster than intended
+# Corrected "Khazari" to "Kharazi"
+# Fixed many uncolonised provinces unintentionally having no population
+
+#######################
+# Miscellaneous
+#######################
+
+# Updated to EU4 version 1.37
+# Added Varlamore login screen as a loading screen
+# New Runecrafting Crusades starting bookmark. Events/missions aren't yet coded properly to account for later bookmarks so expect bugs; this mostly exists for ease of internal testing.
+# Defined some ai personality likelihoods. This doesn't change a lot, but should make selected countries more or less likely to start wars.
+# Added code to prevent formable nations spawning prematurely by rebels
+
 ##########################################################################################################################################
 ##########################################################################################################################################
 ##########################################################################################################################################

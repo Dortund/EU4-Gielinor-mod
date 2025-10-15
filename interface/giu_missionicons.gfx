@@ -903,6 +903,16 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//KDR//mission_piscatoris_fishing_colony.dds"
 	}
 	
+	##################KDG
+	spriteType = {
+		name = "mission_stonemasonry"
+		texturefile = "gfx//interface//missions//KDG//mission_stonemasonry.dds"
+	}
+	spriteType = {
+		name = "mission_train_the_black_guard"
+		texturefile = "gfx//interface//missions//KDG//mission_train_the_black_guard.dds"
+	}
+	
 	##################KDS
 	spriteType = {
 		name = "mission_expand_our_trade_power"
@@ -1561,32 +1571,35 @@ spriteTypes = {
 	}
 	
 	##################VAR
-	
+
+	spriteType = {
+		name = "mission_aldarin_red"
+		texturefile = "gfx//interface//missions//VAR//mission_aldarin_red.dds"
+	}
+	spriteType = {
+		name = "mission_aldarin_settlement"
+		texturefile = "gfx//interface//missions//VAR//mission_aldarin_settlement.dds"
+	}
 	spriteType = {
 		name = "mission_connecting_trade"
 		texturefile = "gfx//interface//missions//VAR//mission_connecting_trade.dds"
 	}
-	
 	spriteType = {
 		name = "mission_end_of_the_titans"
 		texturefile = "gfx//interface//missions//VAR//mission_end_of_the_titans.dds"
 	}
-	
 	spriteType = {
 		name = "mission_hunters_investment"
 		texturefile = "gfx//interface//missions//VAR//mission_hunters_investment.dds"
 	}
-	
 	spriteType = {
 		name = "mission_losanium_faith"
 		texturefile = "gfx//interface//missions//VAR//mission_losanium_faith.dds"
 	}
-	
 	spriteType = {
 		name = "mission_neighbourly_ties"
 		texturefile = "gfx//interface//missions//VAR//mission_neighbourly_ties.dds"
 	}
-	
 	spriteType = {
 		name = "mission_shipbuilding"
 		texturefile = "gfx//interface//missions//VAR//mission_shipbuilding.dds"

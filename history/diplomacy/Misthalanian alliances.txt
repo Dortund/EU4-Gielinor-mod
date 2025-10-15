@@ -5,3 +5,11 @@ vassal = {
 	start_date = 1900.5.17
 	end_date = 2015.1.1
 }
+
+#Misthalin-Draynor
+vassal = {
+	first = MST
+	second = DYN
+	start_date = 2015.5.17
+	end_date = 2083.1.28
+}

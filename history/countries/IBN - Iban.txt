@@ -8,6 +8,12 @@ technology_group = centraltechgroup
 capital = 339 #Underground Pass
 national_focus = MIL
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 2165.11.1 = {
 	monarch = {
 		name = "Iban"
@@ -19,4 +25,12 @@ national_focus = MIL
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = malevolent_personality
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
 }

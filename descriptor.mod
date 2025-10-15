@@ -1,4 +1,4 @@
-version="Beta 1.9.1"
+version="Beta 1.10.0"
 tags={
 	"Alternative History"
 	"Gameplay"
@@ -31,5 +31,5 @@ replace_path="history/diplomacy"
 replace_path="history/provinces"
 replace_path="history/wars"
 replace_path="gfx/loadingscreens"
-supported_version="1.37.*"
+supported_version="v1.37.*"
 remote_file_id="2783633869"

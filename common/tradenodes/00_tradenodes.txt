@@ -134,7 +134,7 @@ lava_dragon_isle_node={
 coast_of_forinthry_node={
 	location=675
 	color={
-		99 60 44 
+		99 60 44
 	}
 	outgoing={
 		name="daemonheim_node"
@@ -349,7 +349,7 @@ new_heritage_node={
 waiko_node={
 	location=589
 	color={
-		16 122 130 
+		16 122 130
 	}
 	outgoing={
 		name="khazari_node"
@@ -679,7 +679,7 @@ bays_of_kandarin_node={
 ardougne_node={
 	location=265
 	color={
-		161 41 33 
+		161 41 33
 	}
 	inland=yes
 	outgoing={
@@ -773,7 +773,7 @@ isle_of_souls_node={
 aldarin_node={
 	location=885
 	color={
-		41 137 0 
+		41 137 0
 	}
 	outgoing={
 		name="fortis_node"
@@ -804,7 +804,7 @@ fortis_node={
 		}
 	}
 	members={
-		514 515 516 517 518 502 503 524 525 494 889 891 892 1452 1453 1463 694 695 696 699 702 1462 
+		514 515 516 517 518 502 503 524 525 494 889 891 892 1452 1453 1463 694 695 696 699 702 1462 1492
 	}
 	ai_will_propagate_through_trade=yes
 }
@@ -956,7 +956,7 @@ south_lum_node={
 		}
 	}
 	members={
-		1 2 3 4 5 9 10 11 61 62 63 64 65 66 67 69 70 539 542 789 791 792 867 896 897 1003 938 942 1000 1357 1358 1359 1360 1395 1397 
+		1 2 3 4 5 9 10 11 61 62 63 64 65 66 67 69 70 539 542 789 791 792 867 896 897 1003 938 942 1357 1358 1359 1360 1395 1397 
 	}
 	ai_will_propagate_through_trade=yes
 }
@@ -1014,7 +1014,7 @@ menaphos_node={
 		27 75 108 
 	}
 	members={
-		81 85 95 96 97 98 99 100 101 102 544 547 586 587 590 788 854 855 857 858 859 866 913 
+		81 85 95 96 97 98 99 100 101 102 544 547 586 587 590 788 854 855 857 858 859 866 913 1000
 	}
 	end=yes
 }

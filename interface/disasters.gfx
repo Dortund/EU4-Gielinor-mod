@@ -66,6 +66,12 @@ spriteTypes = {
   loadType = "INGAME"
  }
  spriteType = {
+  name = "GFX_disaster_war_of_betrayal"
+  texturefile = "gfx//interface//disasters//war_of_betrayal.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+ spriteType = {
   name = "GFX_disaster_war_of_five_houses"
   texturefile = "gfx//interface//disasters//war_of_five_houses.dds"
   noOfFrames = 3

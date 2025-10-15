@@ -397,7 +397,7 @@ varlamore_missions_3 = {
 		}
 	}
 	VAR_aldarin_settlement = {
-		icon = mission_alliances
+		icon = mission_aldarin_settlement
 		required_missions = { VAR_connecting_trade }
 		provinces_to_highlight = {
 			province_id = 885
@@ -434,7 +434,7 @@ varlamore_missions_3 = {
 		}
 	}
 	VAR_aldarin_red = {
-		icon = mission_alliances
+		icon = mission_aldarin_red
 		required_missions = { VAR_aldarin_settlement }
 		provinces_to_highlight = {
 			OR = {
@@ -621,11 +621,6 @@ varlamore_missions_4 = {
 			NOT = { has_building = coastal_defence }
 		}
 		trigger = {
-			503 = {
-				owned_by = ROOT
-				is_core = ROOT
-				has_building = coastal_defence
-			}
 			1453 = {
 				owned_by = ROOT
 				is_core = ROOT
@@ -639,12 +634,6 @@ varlamore_missions_4 = {
 		}
 		effect = {
 			add_navy_tradition = 10
-			504 = {
-				add_province_modifier = {
-					name = "VAR_kourendwatch_fortification_modifier"
-					duration = 9125
-				}
-			}
 			522 = {
 				add_province_modifier = {
 					name = "VAR_kourendwatch_fortification_modifier"
@@ -855,7 +844,7 @@ varlamore_missions_5 = {
 	VAR_terror_of_the_wyrm = {
 		icon = mission_conquer_50_development
 		required_missions = { VAR_hunters_investment }
-		position = 3
+		position = 2
 		provinces_to_highlight = {
 			OR = {
 				province_id = 515
@@ -874,12 +863,72 @@ varlamore_missions_5 = {
 		}
 	}
 	
+	VAR_secrets_of_the_twilight = {
+		icon = mission_conquer_50_development
+		required_missions = { VAR_salvager_overlook VAR_terror_of_the_wyrm }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 503
+		}
+		trigger = {
+			OR = {
+				religion = ralos
+				religion = ranul
+			}
+			503 = {
+				owned_by = ROOT
+				is_core = ROOT
+				development = 15
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			503 = {
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					if = {
+						limit = {
+							503 = {
+								has_province_modifier = VAR_desecrated_ground
+							}
+						}
+						503 = {
+							remove_province_modifier = VAR_desecrated_ground
+						}
+					}
+					503 = {
+						add_great_project_tier = {
+							type = great_project_temple_of_twilight
+							tier = 1
+						}
+					}
+				}
+				else = {
+					add_province_triggered_modifier = VAR_temple_of_twilight_modifier
+				}
+			}
+			1492 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	
 	VAR_victory_of_the_kualti = {
 		icon = mission_conquer_50_development
-		required_missions = { VAR_terror_of_the_wyrm }
+		required_missions = { VAR_secrets_of_the_twilight }
 		position = 4
 		trigger = {
-			army_size = 25
+			army_size = 40
 			army_size_percentage = 0.9
 			army_professionalism = 0.25
 		}

@@ -109,3 +109,8 @@
  MAGE:0 "Mage"
  ARCHMAGE:0 "Archmage"
  
+ CULT:0 "Cult"
+ CULT_EMPIRE:0 "Cult Empire"
+ AUGUR:0 "Augur"
+ GRAND_AUGUR:0 "Grand Augur"
+ 

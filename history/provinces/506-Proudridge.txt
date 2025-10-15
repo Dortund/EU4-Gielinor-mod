@@ -4,7 +4,7 @@ controller = VAR
 add_core = VAR
 tribal_owner = ---
 culture = proudspirian
-religion = ralos
+religion = ranul
 
 discovered_by = zeantechgroup
 
@@ -17,3 +17,12 @@ base_manpower = 1
 trade_goods = advanced_ores
 
 is_city = yes
+
+2160.3.20 = {
+	owner = TWE
+	controller = TWE
+	add_core = TWE
+	base_tax = 3
+	base_production = 3
+	base_manpower = 2
+}

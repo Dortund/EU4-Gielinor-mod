@@ -18,6 +18,13 @@ MST_wrong_side_of_salve = {
 	opinion = -100
 }
 
+#Dwarven Outpost
+is_dwarven_outpost = {
+	opinion = 150
+}
+is_hosted_dwarven_outpost = {
+	opinion = 150
+}
 
 ##############
 # TIMED
@@ -338,6 +345,25 @@ msh_fellow_pirates = {
 tav_defeated_heresy = {
 	opinion = 50
 	yearly_decay = 2
+}
+
+#Varlamore
+
+var_murdered_royal_family = {
+	opinion = -150
+	yearly_decay = 2
+}
+var_pleasant_trip = {
+	opinion = 50
+	yearly_decay = 2
+}
+var_agreed_to_end_war = {
+	opinion = 50
+	yearly_decay = 2
+}
+kou_royal_accord_of_twill_opinion = {
+	opinion = 100
+	yearly_decay = 4
 }
 
 #Zarosian Empire

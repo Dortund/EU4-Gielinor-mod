@@ -190,6 +190,634 @@ guthix_rest_place_knowledge = {
 #	monthly_militarized_society = -1
 #}
 
+###########################################
+# Dwarven Colony Hosts
+###########################################
+
+D01_host_country = {
+	potential = {
+		has_country_flag = D01_host_country
+	}
+	trigger = {
+		exists = D01
+		D01 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D02_host_country = {
+	potential = {
+		has_country_flag = D02_host_country
+	}
+	trigger = {
+		exists = D02
+		D02 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D03_host_country = {
+	potential = {
+		has_country_flag = D03_host_country
+	}
+	trigger = {
+		exists = D03
+		D03 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D04_host_country = {
+	potential = {
+		has_country_flag = D04_host_country
+	}
+	trigger = {
+		exists = D04
+		D04 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D05_host_country = {
+	potential = {
+		has_country_flag = D05_host_country
+	}
+	trigger = {
+		exists = D05
+		D05 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D06_host_country = {
+	potential = {
+		has_country_flag = D06_host_country
+	}
+	trigger = {
+		exists = D06
+		D06 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D07_host_country = {
+	potential = {
+		has_country_flag = D07_host_country
+	}
+	trigger = {
+		exists = D07
+		D07 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D08_host_country = {
+	potential = {
+		has_country_flag = D08_host_country
+	}
+	trigger = {
+		exists = D08
+		D08 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D09_host_country = {
+	potential = {
+		has_country_flag = D09_host_country
+	}
+	trigger = {
+		exists = D09
+		D09 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D10_host_country = {
+	potential = {
+		has_country_flag = D10_host_country
+	}
+	trigger = {
+		exists = D10
+		D10 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D11_host_country = {
+	potential = {
+		has_country_flag = D11_host_country
+	}
+	trigger = {
+		exists = D11
+		D11 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D12_host_country = {
+	potential = {
+		has_country_flag = D12_host_country
+	}
+	trigger = {
+		exists = D12
+		D12 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D13_host_country = {
+	potential = {
+		has_country_flag = D13_host_country
+	}
+	trigger = {
+		exists = D13
+		D13 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D14_host_country = {
+	potential = {
+		has_country_flag = D14_host_country
+	}
+	trigger = {
+		exists = D14
+		D14 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D15_host_country = {
+	potential = {
+		has_country_flag = D15_host_country
+	}
+	trigger = {
+		exists = D15
+		D15 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D16_host_country = {
+	potential = {
+		has_country_flag = D16_host_country
+	}
+	trigger = {
+		exists = D16
+		D16 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D17_host_country = {
+	potential = {
+		has_country_flag = D17_host_country
+	}
+	trigger = {
+		exists = D17
+		D17 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D18_host_country = {
+	potential = {
+		has_country_flag = D18_host_country
+	}
+	trigger = {
+		exists = D18
+		D18 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D19_host_country = {
+	potential = {
+		has_country_flag = D19_host_country
+	}
+	trigger = {
+		exists = D19
+		D19 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D20_host_country = {
+	potential = {
+		has_country_flag = D20_host_country
+	}
+	trigger = {
+		exists = D20
+		D20 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D21_host_country = {
+	potential = {
+		has_country_flag = D21_host_country
+	}
+	trigger = {
+		exists = D21
+		D21 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D22_host_country = {
+	potential = {
+		has_country_flag = D22_host_country
+	}
+	trigger = {
+		exists = D22
+		D22 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D23_host_country = {
+	potential = {
+		has_country_flag = D23_host_country
+	}
+	trigger = {
+		exists = D23
+		D23 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D24_host_country = {
+	potential = {
+		has_country_flag = D24_host_country
+	}
+	trigger = {
+		exists = D24
+		D24 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D25_host_country = {
+	potential = {
+		has_country_flag = D25_host_country
+	}
+	trigger = {
+		exists = D25
+		D25 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D26_host_country = {
+	potential = {
+		has_country_flag = D26_host_country
+	}
+	trigger = {
+		exists = D26
+		D26 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D27_host_country = {
+	potential = {
+		has_country_flag = D27_host_country
+	}
+	trigger = {
+		exists = D27
+		D27 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D28_host_country = {
+	potential = {
+		has_country_flag = D28_host_country
+	}
+	trigger = {
+		exists = D28
+		D28 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D29_host_country = {
+	potential = {
+		has_country_flag = D29_host_country
+	}
+	trigger = {
+		exists = D29
+		D29 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D30_host_country = {
+	potential = {
+		has_country_flag = D30_host_country
+	}
+	trigger = {
+		exists = D30
+		D30 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D31_host_country = {
+	potential = {
+		has_country_flag = D31_host_country
+	}
+	trigger = {
+		exists = D31
+		D31 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D32_host_country = {
+	potential = {
+		has_country_flag = D32_host_country
+	}
+	trigger = {
+		exists = D32
+		D32 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D33_host_country = {
+	potential = {
+		has_country_flag = D33_host_country
+	}
+	trigger = {
+		exists = D33
+		D33 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D34_host_country = {
+	potential = {
+		has_country_flag = D34_host_country
+	}
+	trigger = {
+		exists = D34
+		D34 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D35_host_country = {
+	potential = {
+		has_country_flag = D35_host_country
+	}
+	trigger = {
+		exists = D35
+		D35 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D36_host_country = {
+	potential = {
+		has_country_flag = D36_host_country
+	}
+	trigger = {
+		exists = D36
+		D36 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D37_host_country = {
+	potential = {
+		has_country_flag = D37_host_country
+	}
+	trigger = {
+		exists = D37
+		D37 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D38_host_country = {
+	potential = {
+		has_country_flag = D38_host_country
+	}
+	trigger = {
+		exists = D38
+		D38 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+D39_host_country = {
+	potential = {
+		has_country_flag = D39_host_country
+	}
+	trigger = {
+		exists = D39
+		D39 = {
+			has_reform = dwarven_outpost
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
 
 ###########################################
 # Kourend Government

@@ -56,6 +56,7 @@ consortium_republic = {
 		republican_tradition = 0.3
 		global_trade_power = 0.25
 		stability_cost_modifier = 0.25
+		#num_of_dwarven_outposts = 1
 	}
 	valid_for_nation_designer = yes
 	start_territory_to_estates = 0.5
@@ -68,15 +69,7 @@ consortium_republic = {
 	duration = 4
 	conditional = {
 		can_use_trade_post = yes
-	}
-	conditional = {
 		can_form_trade_league = yes
-		trade_city_reform = dwarven_outpost
-	}
-	conditional = {
-		can_use_trade_post = yes
-		can_form_trade_league = yes
-		trade_city_reform = dwarven_outpost
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -84,6 +77,7 @@ consortium_republic = {
 		enables_aristocratic_idea_group = no
 		is_merchant_republic = yes
 		blocked_call_diet = yes
+		#can_establish_dwarven_outposts = yes
 	}
 	ai = {
 		factor = 1 #generic
@@ -94,7 +88,7 @@ dwarven_outpost = {
 	icon = "icon_dwarven_outpost"
 	allow_normal_conversion = no
 	potential = {
-		has_reform = dwarven_outpost
+		is_subject_of_type = subject_dwarven_outpost
 	}
 	valid_for_nation_designer = no
 	legacy_equivalent = dwarven_outpost_legacy
@@ -105,6 +99,8 @@ dwarven_outpost = {
 		max_absolutism = -20
 		production_efficiency = 0.1
 	 	trade_goods_size_modifier = 0.1
+		global_unrest = -5
+		
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -113,7 +109,6 @@ dwarven_outpost = {
 		blocked_call_diet = yes
 	}
 	can_use_trade_post = yes
-	can_form_trade_league = yes
 	trade_city_reform = merchants_reform # For trade cities this is their fallback government if they get more than 1 provinces
 	duration = 4
 }
@@ -130,7 +125,7 @@ federal_republic = {
 	nation_designer_cost = 30
 	modifiers = {
 		state_maintenance_modifier = 0.25
-		governing_capacity = 150
+		governing_capacity = 75
 		global_unrest = -1
 	}
 	has_parliament = yes
@@ -175,6 +170,33 @@ free_city = {
 	duration = 4
 }
 
+frog_collective = {
+	icon = "icon_frog_collective"
+	potential = {
+		primary_culture = frog
+	}
+	duration = 2
+	legacy_equivalent = political_dynasties_legacy
+	allow_force_tributary = no
+	valid_for_nation_designer = no	
+	start_territory_to_estates = 0.25
+
+	modifiers = {
+    	stability_cost_to_declare_war = 1
+		allow_client_states = yes
+	}
+	has_parliament = yes
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+}
+
 kourend_council = {
 	icon = "icon_kourend_council"
 	allow_normal_conversion = no
@@ -200,7 +222,7 @@ kourend_council = {
 	start_territory_to_estates = 0.25
 
 	modifiers = {
-    	governing_capacity = 100
+    	governing_capacity = 50
 		num_accepted_cultures = 1
 	}
 	
@@ -500,7 +522,7 @@ sirenic_republic = {
 	}
 	modifiers = {
 		max_absolutism = -20
-		governing_capacity = -100
+		governing_capacity = -50
 		own_coast_naval_combat_bonus = 1
 		global_sailors_modifier = 0.2
 	 	meritocracy = 0.5
@@ -908,7 +930,7 @@ administrative_divisions_reform = {
 	icon = "map"
 	allow_normal_conversion = yes
 	modifiers = {
-		governing_capacity = 250
+		governing_capacity = 100
 	}
 	ai = {
 		factor = 1

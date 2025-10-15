@@ -6,6 +6,12 @@ religion = suzaku
 technology_group = wushankotechgroup
 capital = 1177 #Ashihama totems
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 1763.2.6 = {
 	monarch = {
 		name = "Nightmare"
@@ -22,4 +28,9 @@ capital = 1177 #Ashihama totems
 
 2169.1.1 = {
 	capital = 1404
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
 }

@@ -19,6 +19,14 @@ highprod_rei_ti = {
 }
 
 #############
+#Dwarven Interest
+#############
+
+province_of_dwarven_interest = {
+	province_trade_power_value = 0.1
+}
+
+#############
 #Elder Artefacts
 #############
 

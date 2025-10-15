@@ -1,0 +1,32 @@
+########################################
+# Events for Locus
+########################################
+
+namespace = flavor_lcs
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_lcs.1
+	title = flavor_lcs.1.t #The Greatest Form of Government
+	desc = flavor_lcs.1.d #We're all frogs here. Let's do away with the boring other forms of government and make a proper collective.
+	picture = VARLAMORE_MAP_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = LCS
+		NOT = { has_reform = frog_collective }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_lcs.1.a #Alright.
+		change_government_to_republic = yes
+		add_government_reform = frog_collective
+	}
+	option = {
+		name = flavor_lcs.1.b #Sounds like too much work.
+	}
+}

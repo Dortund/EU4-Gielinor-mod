@@ -67,7 +67,7 @@ country_event = {
 country_event = {
 	id = flavor_kou.2
 	title = flavor_kou.2.t #Rebel Rift
-	desc = flavor_kou.2.d #Our enemy Varlamore has little history of external conflict, so their army and guards have tended to look inwards. Some, escaping this pressure, have lived remotely in the savannah. But at a time of war, we need any support we can get in Varlamore. For that reason, our spies have succeeded in getting a few defectors to Varlamore to establish an outpost at Rebel Rift.
+	desc = flavor_kou.2.d #Our enemy Varlamore has little history of external conflict, so their army and guards have tended to look inwards. Some, escaping this pressure, have lived in remote regions. But at a time of war, we need any support we can get in Varlamore. For that reason, our spies have succeeded in getting a few defectors to Varlamore to establish an outpost at Rebel Rift.
 	picture = WARBANDS_eventPicture
 	
 	trigger = {
@@ -141,6 +141,109 @@ country_event = {
 		name = flavor_kou.2.c #That wasn't the plan; just leave the rebels be.
 		ai_chance = {
 			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kou.3
+	title = flavor_kou.3.t #The Royal Accord of Twill
+	desc = flavor_kou.3.d #Relations between the people of Kourend and Varlamore have been uneasy since their monarch betrayed our people, but [Root.Monarch.GetTitle] [Root.Monarch.GetName] has an idea to help repair those relations - loan their Grand Museum the Royal Accord of Twill. This document was crucial for defining the power of Kourend's Houses and shall serve as a symbol of friendship.
+	picture = KOUREND_OVERVIEW_eventPicture
+	
+	trigger = {
+		tag = KOU
+		NOT = { is_at_war = yes }
+		VAR = {
+			exists = yes
+			has_country_flag = VAR_end_of_betrayal_flag
+			NOT = { has_reform = tarnished_monarchy }
+			NOT = {	truce_with = ROOT }
+			owns_core_province = 525
+		}
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 400
+		modifier = {
+			factor = 0.2
+			VAR = {
+				has_country_flag = VAR_royal_accord_of_twill_gift_potential
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_kou.3.a #Send the Royal Accord of Twill!
+		random_list = {
+			50 = {
+				country_event = {
+					id = flavor_kou.4
+					days = 40
+				}
+			}
+			50 = {
+				VAR = {
+					country_event = {
+						id = flavor_kou.5
+						days = 60
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_kou.3.b #We will not risk this crucial document to people we cannot trust.
+		add_prestige = -5
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kou.4
+	title = flavor_kou.4.t #The Royal Accord of Twill lost at sea!
+	desc = flavor_kou.4.d #On its way to Varlamore, the Royal Accord of Twill and the ship it was aboard has sunk to the bottom of the sea!
+	picture = KOUREND_OVERVIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_kou.4.a #Blast!
+		add_prestige = -10
+		set_country_flag = KOU_royal_accord_lost_at_sea
+	}
+}
+
+country_event = {
+	id = flavor_kou.5
+	title = flavor_kou.5.t #A Gift from Kourend
+	desc = flavor_kou.5.d #It is clear that relations between Kourend and Varlamore have been tense ever since the War of Betrayal. However, [KOU.Monarch.GetTitle] [KOU.Monarch.GetName] has granted us one of Kourend's most valuable documents - the Royal Accord of Twill - to place on display as a sign of goodwill.
+	picture = KOUREND_OVERVIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_kou.5.a #May the future be one of peace.
+		capital_scope = {
+			add_province_modifier = {
+				name = VAR_royal_accord_of_twill_on_display
+				duration = 9125
+			}
+		}
+		add_opinion = {
+			who = KOU
+			modifier = kou_royal_accord_of_twill_opinion
+		}
+		reverse_add_opinion = {
+			who = KOU
+			modifier = kou_royal_accord_of_twill_opinion
 		}
 	}
 }

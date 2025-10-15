@@ -840,6 +840,10 @@ trade_ideas = {
 				has_idea_group = economic_ideas
 			}
 		}
+		modifier = {
+			factor = 2
+			is_subject_of_type = subject_dwarven_outpost
+		}
 	}
 }
 
@@ -917,6 +921,10 @@ economic_ideas = {
 				has_idea_group = trade_ideas
 				has_idea_group = offensive_ideas 
 			}
+		}
+		modifier = {
+			factor = 1.1
+			is_subject_of_type = subject_dwarven_outpost
 		}
 	}
 }
@@ -1402,6 +1410,10 @@ expansion_ideas = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			is_subject_of_type = subject_dwarven_outpost
+		}
 	}
 }
 
@@ -1823,6 +1835,10 @@ infrastructure_ideas = {
 				has_idea_group = trade_ideas
 				has_idea_group = naval_ideas
 			}
+		}
+		modifier = {
+			factor = 1.2
+			is_subject_of_type = subject_dwarven_outpost
 		}
 	}
 }

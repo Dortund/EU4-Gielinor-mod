@@ -6,6 +6,12 @@ religion = menaphite
 technology_group = kharidtechgroup
 capital = 69 #Kalphite
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 1912.1.7 = {
 	monarch = {
 		name = "Queen"
@@ -27,5 +33,13 @@ capital = 69 #Kalphite
 		dip = 0
 		mil = 5
 		female = yes
+	}
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
 	}
 }

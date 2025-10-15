@@ -4,7 +4,20 @@
  flavor_kou.1.a:0 "And don't break free again!"
  
  flavor_kou.2.t:0 "Rebel Rift"
- flavor_kou.2.d:0 "Our enemy Varlamore has little history of external conflict, so their army and guards have tended to look inwards. Some, escaping this pressure, have lived remotely in the savannah. But at a time of war, we need any support we can get in Varlamore. For that reason, our spies have succeeded in getting a few defectors to Varlamore to establish an outpost at Rebel Rift."
+ flavor_kou.2.d:0 "Our enemy Varlamore has little history of external conflict, so their army and guards have tended to look inwards. Some, escaping this pressure, have lived remotely in the far reaches of the island of Aldarin. But at a time of war, we need any support we can get in Varlamore. For that reason, our spies have succeeded in getting a few defectors to Varlamore to establish an outpost at Rebel Rift."
  flavor_kou.2.a:0 "I want to take personal command of this new outpost."
  flavor_kou.2.b:0 "Secure an alliance with this new outpost."
  flavor_kou.2.c:0 "That wasn't the plan; just leave the rebels be."
+ 
+ flavor_kou.3.t:0 "The Royal Accord of Twill"
+ flavor_kou.3.d:0 "Relations between the people of Kourend and Varlamore have been uneasy since their monarch betrayed our people, but [Root.Monarch.GetTitle] [Root.Monarch.GetName] has an idea to help repair those relations - loan their Grand Museum the Royal Accord of Twill. This document was crucial for defining the power of Kourend's Houses and shall serve as a symbol of friendship."
+ flavor_kou.3.a:0 "Send the Royal Accord of Twill!"
+ flavor_kou.3.b:0 "We will not risk this crucial document to people we cannot trust."
+ 
+ flavor_kou.4.t:0 "The Royal Accord of Twill lost at sea!"
+ flavor_kou.4.d:0 "On its way to Varlamore, the Royal Accord of Twill and the ship it was aboard has sunk to the bottom of the sea!"
+ flavor_kou.4.a:0 "Blast!"
+ 
+ flavor_kou.5.t:0 "A Gift from Kourend"
+ flavor_kou.5.d:0 "It is clear that relations between Kourend and Varlamore have been tense ever since the War of Betrayal. However, [KOU.Monarch.GetTitle] [KOU.Monarch.GetName] has granted us one of Kourend's most valuable documents - the Royal Accord of Twill - to place on display as a sign of goodwill."
+ flavor_kou.5.a:0 "May the future be one of peace."

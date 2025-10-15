@@ -20,6 +20,7 @@
  flavor_cfs.5.d:0 "The village of Slepe was formed by humans who saw the folly of Saradomin's ways and instead joined Lord Zamorak. As fellow Zamorakians, they perhaps should be granted more privileges than the heretical vampyres - and they should repay the favour in turn."
  flavor_cfs.5.a:0 "Provide them with limited self-governance."
  cfs_tooltip_support_of_slepe:0 "While Canifis remains Zamorakian and Slepe remains a subject, we will permanently receive §T+1 Missionary§! and §T+1% Missionary Strength§!."
+ cfs_tooltip_support_of_slepe_not_zamorak:0 "While Slepe remains a subject, we will permanently receive §T+1 Tolerance of Heretics§! and §T+1 Tolerance of Heathens§!."
  flavor_cfs.5.b:0 "Give them more equal status in our realm."
  flavor_cfs.5.c:0 "Let's put this whole Slepe situation to rest."
  

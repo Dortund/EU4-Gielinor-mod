@@ -9,6 +9,12 @@ capital = 379 #Isle of Stone
 national_focus = MIL
 historical_rival = REL
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 1.1.1 = {
 	monarch = {
 		name = "The Jormungand"
@@ -20,4 +26,12 @@ historical_rival = REL
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = immortal_personality
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
 }

@@ -7,7 +7,10 @@ estate_kel_blue_opal =
 		OR = {
 			has_reform = consortium_monarchy
 			has_reform = consortium_republic
-			has_reform = dwarven_outpost
+			AND = {
+				has_reform = dwarven_outpost
+				has_country_flag = dwarven_outpost_blue_opal_charter_outpost
+			}
 		}
 	}
 

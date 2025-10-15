@@ -33,3 +33,35 @@
  flavor_var.7.t:0 "Fresh Investments"
  flavor_var.7.d:0 "Fresh settlers from the south have arrived, bringing fresh resources ready to expand our borders."
  flavor_var.7.a:0 "Excellent!"
+ 
+ flavor_var.8.t:0 "A Royal Invitation"
+ flavor_var.8.d:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName] has been seen pacing around the halls of the palace in [Root.GetCapitalName]. [Root.Monarch.GetSheHe] wants to invite the royal family of Kourend over for a royal visit, but there seems to be more going on than immediately apparent."
+ flavor_var.8.a:0 "Yes! Let's go invite the Kourendite royal family!"
+ var_invite_kourend_tooltip:0 "Something doesn't feel right about this..."
+ flavor_var.8.b:0 "Maybe it's best we leave this be."
+ 
+ flavor_var.9.t:0 "An Invitation from Varlamore"
+ flavor_var.9.d:0 "[VAR.Monarch.GetTitle] [VAR.Monarch.GetName] has invited our royal family on a tour of Varlamore! This could be a golden opportunity to learn from their culture and technologies!"
+ flavor_var.9.a:0 "This sounds an excellent idea!"
+ var_invite_kourend_tooltip:0 "Something about this seems too perfect. It could go horribly wrong..."
+ flavor_var.9.b:0 "I don't think this is a good idea..."
+ 
+ flavor_var.10.t:0 "The Tour of Varlamore"
+ flavor_var.10.d:0 "[KOU.Monarch.GetTitle] [KOU.Monarch.GetName] of Great Kourend has arrived in Varlamore to meet with [Root.Monarch.GetTitle] [Root.Monarch.GetName] and undertake a tour of Varlamore, from the Proudspire to the palace of [Root.Capital.GetName]. A great feast is planned to celebrate the friendship between the two peoples!"
+ flavor_var.10.a:0 "Excellent. Now kill them all!"
+ var_will_start_war_of_betrayal_tooltip:0 "Will lead to the §RWar of Betrayal§! disaster and likely a §RDeclaration of War§! from Kourend."
+ flavor_var.10.b:0 "Let's keep this a pleasant experience for all involved."
+ 
+ flavor_var.11.t:0 "Kourend Declines to Visit"
+ flavor_var.11.d:0 "Great Kourend has declined our invitation to tour Varlamore."
+ flavor_var.11.a:0 "Oh well..."
+ 
+ flavor_var.12.t:0 "Betrayal!"
+ flavor_var.12.d:0 "[VAR.Monarch.GetTitle] [VAR.Monarch.GetName] has betrayed our royal family, killing them all!"
+ flavor_var.12.a:0 "This means war!"
+ flavor_var.12.b:0 "We can always get new royals elsewhere."
+ 
+ flavor_var.13.t:0 "The Twilight Emissaries"
+ flavor_var.13.d:0 "At the Twilight Temple in northeastern Varlamore a new group has organised. Calling themselves the Twilight Emissaries, they claim it is their duty to bring about the end of the world themselves rather than leaving it to Ralos and Ranul. Already they have broken from our control and are gathering an army."
+ flavor_var.13.a:0 "Heresy! They shall be stamped out!"
+ flavor_var.13.b:0 "Finally! No more waiting around."

@@ -8,6 +8,12 @@ technology_group = kharidtechgroup
 capital = 415 #Wintertodt
 national_focus = DIP
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 2167.3.24 = {
 	monarch = {
 		name = "Tempoross"
@@ -19,4 +25,12 @@ national_focus = DIP
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = immortal_personality
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
 }

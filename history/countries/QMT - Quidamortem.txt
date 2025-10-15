@@ -10,6 +10,12 @@ historical_friend = LCT
 historical_friend = MOH
 historical_rival = KOU
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 1033.10.3 = {
 	monarch = {
 		name = "Great Olm"
@@ -21,4 +27,12 @@ historical_rival = KOU
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = immortal_personality
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
 }

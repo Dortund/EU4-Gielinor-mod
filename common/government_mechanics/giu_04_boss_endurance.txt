@@ -1,0 +1,37 @@
+boss_endurance_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 2
+	available = {
+	}
+
+	powers = {
+		boss_endurance_power = {
+			gui = boss_endurance_gov_mech
+			max = 100
+			base_monthly_growth = 0.03
+			scaled_modifier = {
+				modifier = {
+					global_tax_income = 120
+				 	global_regiment_cost = -0.5
+					global_ship_cost = -0.5
+					global_supply_limit_modifier = 1
+					global_manpower_modifier = 2
+					land_forcelimit_modifier = 2
+					global_sailors_modifier = 1
+					naval_forcelimit_modifier = 1
+					discipline = 0.1
+					ship_durability = 0.1
+					defensiveness = 0.5
+					army_tradition = 5
+					navy_tradition = 5
+				}
+			}
+			reverse_scaled_modifier = {
+				modifier = {
+				}
+			}
+			is_good = yes
+		}
+	}
+	
+}

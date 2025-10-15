@@ -1,0 +1,88 @@
+# Keldagrim Missions
+
+kdg_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = KDG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDG_legacy_of_king_alvis = { #Currently only supports original Consortium estates - expand for Magenta Accordion, Black Bug and Orange Flame
+		icon = mission_collect_yasak
+		position = 1
+		required_missions = {  }
+		trigger = {
+			any_consortium_estate_60_loyalty_and_influence = yes
+		}
+		effect = {
+			change_government_reform_progress = 25
+		}
+	}
+}
+
+kdg_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = KDG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDG_fremennik_ties = {
+		icon = mission_fremennik_family
+		position = 1
+		required_missions = {  }
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					capital_scope = {
+						region = fremennik_region
+					}
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			add_dip_power = 25
+		}
+	}
+}
+
+kdg_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = KDG
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDG_train_the_black_guard = {
+		icon = mission_train_the_black_guard
+		position = 1
+		required_missions = {  }
+		trigger = {
+			OR = {
+				army_size_percentage = 1
+				army_size = 20
+			}
+			OR = {
+			 	army_tradition = 30
+				army_professionalism = 0.1
+			}
+		}
+		effect = {
+			add_mil_power = 25
+		}
+	}
+}

@@ -18,6 +18,7 @@ trade_goods = gemstones
 	controller = RRF
 	add_core = RRF
 	is_city = yes
+	religion = ranul
 }
 
 native_size = 10

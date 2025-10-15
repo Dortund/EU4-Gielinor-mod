@@ -808,5 +808,17 @@
  khanreform_declare_khaganate_title:0 "Declare the Khaganate"
  khanreform_declare_khaganate_desc:0 "Remove the last vestiges of independence among the Khans."
  united_khaganate_tooltip:0 "§YUnite the Council of Khans into a true empire!§!"
-
-
+ 
+ #############################
+ #From goose_1_35:
+ #############################
+ 
+ imperial_authority_emperor:0 "Khagan Authority"
+ imperial_authority_member:0 "Khagan Authority"
+ 
+ #############################
+ #From eldorado:
+ #############################
+ 
+ custom_idea_imperial_authority:0 "Strength of the Khagan"
+ custom_idea_imperial_authority_desc:0 "Wushanko is not a centralised realm and the Council of Khans has never been rigidly controlled. But those who do not expect centralised authority will be ill-prepared for an ambitious Khagan which exerts it."

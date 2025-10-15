@@ -1,10 +1,10 @@
 #986-Bewindla
-owner = DBS
-controller = DBS
-add_core = DBS
+owner = NRV
+controller = NRV
+add_core = NRV
 tribal_owner = ---
 culture = north_asgarn
-religion = saradomin
+religion = guthix
 
 discovered_by = bandostechgroup
 discovered_by = centraltechgroup
@@ -24,13 +24,14 @@ is_city = yes
 	owner = ASG
 	controller = ASG
 	add_core = ASG
-	remove_core = DBS
+	religion = saradomin
 }
 
 2054.10.19 = {
 	owner = GUN
 	controller = GUN
 	add_core = GUN
+	remove_core = NRV
 }
 
 2062.11.4 = {

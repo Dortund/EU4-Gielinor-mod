@@ -97,7 +97,7 @@ clan_monarchy_legacy = {
 		years_of_nationalism = -5
 	 	diplomatic_upkeep = -1
 		max_absolutism = -20
-		governing_capacity = -50
+		governing_capacity = -25
 	}
 }
 
@@ -142,7 +142,7 @@ despotic_monarchy = {
 	nation_designer_cost = 0
 	monarchy = yes
 	modifiers = {
-    	governing_capacity = 50
+    	governing_capacity = 25
 		global_unrest = -1
 		unjustified_demands = -0.1
 		max_absolutism = 5
@@ -275,7 +275,7 @@ kandarin_monarchy_legacy = {
 	valid_for_nation_designer = no
 	monarchy = yes
 	modifiers = {
-		governing_capacity = 150
+		governing_capacity = 75
 	 	min_autonomy = 10
 	 	num_accepted_cultures = 2
 		tolerance_heretic = 1
@@ -295,7 +295,7 @@ khanate_legacy = {
 	valid_for_nation_designer = no
 	monarchy = yes
 	modifiers = {
-		governing_capacity = -100
+		governing_capacity = -50
 	 	global_sailors_modifier = 0.2
 		global_ship_cost = -0.1
 	}
@@ -313,7 +313,7 @@ kourend_monarchy_legacy = {
 	valid_for_nation_designer = no
 	monarchy = yes
 	modifiers = {
-    	governing_capacity = 100
+    	governing_capacity = 50
 		num_accepted_cultures = 1
 		reduced_liberty_desire = 10
 	 	province_warscore_cost = 1
@@ -341,7 +341,7 @@ kourend_reformed_monarchy_legacy = {
 	valid_for_nation_designer = no
 	monarchy = yes
 	modifiers = {
-    	governing_capacity = 100
+    	governing_capacity = 50
 		num_accepted_cultures = 1
 	}
 	factions = {
@@ -453,7 +453,7 @@ principality_burthorpe_legacy = {
 	fixed_rank = 1
 	modifiers = {
 		army_tradition = 0.5
-		governing_capacity = -100
+		governing_capacity = -50
 	}
 }
 
@@ -465,7 +465,7 @@ shining_kingdom_legacy = {
 	valid_for_nation_designer = no
 	monarchy = yes
 	modifiers = {
-		governing_capacity = 100
+		governing_capacity = 50
 		tolerance_heretic = 2
 		global_colonial_growth = 10
 		global_missionary_strength = -0.02
@@ -638,7 +638,7 @@ federal_republic_legacy = {
 	republic = yes
 	modifiers = {
 		state_maintenance_modifier = 0.25
-		governing_capacity = 150
+		governing_capacity = 75
 		global_unrest = -1
 	}
 	has_parliament = yes
@@ -692,7 +692,7 @@ kourend_council_legacy = {
 	valid_for_nation_designer = no
 	monarchy = yes
 	modifiers = {
-    	governing_capacity = 100
+    	governing_capacity = 50
 		num_accepted_cultures = 1
 	}
 	factions = {
@@ -757,7 +757,7 @@ merchant_republic = {
 		merchants = 1
 		caravan_power = 0.33
 		max_absolutism = -50
-    	governing_capacity = 150
+    	governing_capacity = -50
 	}
 
 	conditional = {
@@ -952,7 +952,7 @@ sirenic_republic_legacy = {
 	republic = yes
 	modifiers = {
 		max_absolutism = -20
-		governing_capacity = -100
+		governing_capacity = -50
 		own_coast_naval_combat_bonus = 1
 		global_sailors_modifier = 0.2
 	 	meritocracy = 0.5
@@ -1118,8 +1118,7 @@ boss_nation_legacy = {
 	 	global_tax_income = 12
 		global_tax_modifier = 1
 	 	global_trade_power = -0.5
-	 	global_regiment_cost = -0.5
-		land_maintenance_modifier = -0.5
+	 	global_regiment_cost = -0.75
 		
 		tolerance_own = 5
 		tolerance_heretic = -5
@@ -1131,10 +1130,6 @@ boss_nation_legacy = {
 		loot_amount = 1
 		reinforce_cost_modifier = -0.75
 		
-		leader_land_fire = 1
-	 	leader_land_manuever = 1
-		leader_land_shock = 1
-		leader_siege = 1
 		leader_cost = -0.5
 		discipline = 0.1
 	 	defensiveness = 0.25
@@ -1289,8 +1284,7 @@ quidamortem_boss_nation_legacy = {
 	 	global_tax_income = 12
 		global_tax_modifier = 1
 	 	global_trade_power = -0.5
-	 	global_regiment_cost = -0.5
-		land_maintenance_modifier = -0.5
+	 	global_regiment_cost = -0.75
 		
 		tolerance_own = 5
 		tolerance_heretic = -5
@@ -1452,7 +1446,7 @@ apostocracy_legacy = {
 	religion = yes
 	monastic = yes
 	modifiers = {
-    	governing_capacity = -100
+    	governing_capacity = -50
 		tolerance_own = 1
 		prestige_per_development_from_conversion = 0.33
 		global_autonomy = -0.05
@@ -1683,8 +1677,7 @@ guthixian_cave_legacy = {
 	 	global_tax_income = 12
 		global_tax_modifier = 1
 	 	global_trade_power = -0.75
-		land_maintenance_modifier = -0.75
-	 	global_regiment_cost = -0.75
+	 	global_regiment_cost = -0.9
 		
 		global_manpower_modifier = 3
 		land_forcelimit_modifier = 3
@@ -1727,7 +1720,7 @@ monastic_order_government = {
 	religion = yes
 	monastic = yes
 	modifiers = {
-    	governing_capacity = 150
+    	governing_capacity = -25
 		tolerance_own = 1
 		fort_maintenance_modifier = -0.2
 	}

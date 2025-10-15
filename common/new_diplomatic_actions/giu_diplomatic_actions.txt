@@ -1,0 +1,1995 @@
+# Triggers and effects will be given the Actor's scope, with the Recipient's as FROM
+# Icons are used from the messageicons.dds
+static_actions = { # static_actions is a reserved token.
+	# alert_index maps to the frame of the alert icon
+	royal_marriage = 										{ alert_index = 1 alert_tooltip = ICON_RM }
+	requestpeace = 										{ alert_index = 2 alert_tooltip = ICON_PEACE  } # alert_index will be overwritten in code for this one.
+	allianceaction = 										{ alert_index = 3 alert_tooltip = ICON_ALLIANCE }
+	# 4 is currently unused.
+	integrationaction = 									{ alert_index = 5 alert_tooltip = ICON_ANNEX }
+	annexationaction =									{ alert_index = 5 alert_tooltip = ICON_ANNEX }
+	vassalaction = 										{ alert_index = 6 alert_tooltip = ICON_VASSAL }
+	milaccess = 											{ alert_index = 7 alert_tooltip = ICON_ASKMIL }
+	fleet_access = 										{ alert_index = 8 alert_tooltip = ICON_ASKFLEET }
+	offermilaccess = 										{ alert_index = 9 alert_tooltip = ICON_OFFACC }
+	callaction = 											{ alert_index = 10 alert_tooltip = ICON_CALLALLY } # This one is referred to in the code (settings.cpp)
+	offerloan = 												{ alert_index = 11 alert_tooltip = ICON_OFFERLOAN }
+	sellprov = 												{ alert_index = 12 alert_tooltip = ICON_PROVSALE }
+		#13 is cursed
+	request_to_join_federation = 						{ alert_index = 14 alert_tooltip = ICON_FEDERATIONREQUEST }
+	invite_to_federation = 								{ alert_index = 15 alert_tooltip = ICON_FEDERATIONINVITE }
+	transfer_trade_power = 							{ alert_index = 16 alert_tooltip = TRANSFER_TRADE_POWER }
+	religious_unity_action = 							{ alert_index = 17 alert_tooltip = ICON_RELIGIOUS_UNITY }
+		# 18 is used by requestpeace
+	form_coalition = 										{ alert_index = 19 alert_tooltip = ICON_FORM_COALITION }
+	enforce_peace = 										{ alert_index = 20 alert_tooltip = ICON_ENFORCE_PEACE } # This one may be overwritten in code.
+	grant_electorate = 									{ alert_index = 21 alert_tooltip = ICON_GRANT_ELECTORATE }
+	demand_unlawful_territory_action = 			{ alert_index = 22 alert_tooltip = ICON_DEMAND_UNLAWFUL_TERRITORY }
+		# 23 is used by requestpeace
+		# 24 is used by requestpeace
+		# 25 is used by requestpeace
+		# 26 is used by requestpeace
+		# 27 is used by enforce_peace (when actor is coalition leader) with tooltip "ICON_ENFORCE_PEACE_COALITION_LEADER"
+	support_independence_action = 					{ alert_index = 28 alert_tooltip = support_independence }
+	steer_trade = 										{ alert_index = 29 alert_tooltip = ICON_STEER_TRADE }
+	ask_for_march = 										{ alert_index = 30 alert_tooltip = ICON_MARCH }
+	sell_ships_action = 									{ alert_index = 31 alert_tooltip = ICON_FLEETSALE }
+	grant_freecity = 										{ alert_index = 32 alert_tooltip = ICON_GRANT_FREECITY }
+	# 33 is currently unused
+	invite_to_trade_league = 							{ alert_index = 34 alert_tooltip = ICON_TRADELEAGUEINVITE }
+	request_to_join_trade_league = 					{ alert_index = 35 alert_tooltip = ICON_TRADELEAGUEREQUEST }
+	sharemap = 											{ alert_index = 36 alert_tooltip = ICON_REQUESTSHAREMAP } # alert_tooltip gets special treatment in the code
+	condottieri_action = 								{ alert_index = 37 alert_tooltip = ICON_CONDOTTIERI }
+	offer_fleet_access = 								{ alert_index = 38 alert_tooltip = ICON_OFFERFLEET }
+	break_alliance = 										{ alert_index = 39 alert_tooltip = ICON_BREAK_ALLIANCE }
+	tributary_state_action = 							{ alert_index = 40 alert_tooltip = ICON_TRIBUTARY }
+	ask_for_tributary_state_action = 				{ alert_index = 41 alert_tooltip = ICON_ASK_TRIBUTARY }
+	knowledge_sharing = 								{ alert_index = 42 alert_tooltip = ICON_KNOWLEDGESHARE } #The answer to life
+	# 43 is currently unused
+	charter_company = 								{ alert_index = 44 alert_tooltip = ICON_CHARTERCOMPANY }
+	reduce_relations_favor = { alert_index = 45 alert_tooltip = ICON_TRADEFAVORSFORREDUCERELATIONS }
+	return_core_favor = { alert_index = 46 alert_tooltip = ICON_TRADEFAVORSFORRETURNCORE }
+	break_alliance_favor = { alert_index = 47 alert_tooltip = ICON_TRADEFAVORSFORBREAKALLIANCE }
+	trade_favors_for_trust = { alert_index = 48 alert_tooltip = ICON_TRADEFAVORSFORTRUST }
+	trade_favors_for_men = { alert_index = 49 alert_tooltip = ICON_TRADEFAVORSFORMEN }
+	trade_favors_for_sailors = { alert_index = 50 alert_tooltip = ICON_TRADEFAVORSFORSAILORS }
+	trade_favors_for_heir = { alert_index = 51 alert_tooltip = ICON_TRADEFAVORSFORHEIR }
+	trade_favors_for_war_prep = { alert_index = 52 alert_tooltip = ICON_TRADEFAVORSFORWARPREP }
+	trade_favors_for_gold = { alert_index = 53 alert_tooltip = ICON_TRADEFAVORSFORGOLD }
+	ask_knowledge_sharing = { alert_index = 55 alert_tooltip = ICON_ASKKNOWLEDGESHARE }
+}
+
+# Establish Dwarven Outpost
+establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your lands. Accepting would cede a non-capital province that produces basic ore, advanced ore, gemstones or runite. As host of the colony you would receive 100 gold immediately and the following benefits so long as you are host: \n+10% production efficiency\n+5% goods produced
+	category = economy
+
+	alert_index = 115
+	alert_tooltip = establish_dwarven_outpost_alert_tooltip
+
+	require_acceptance = yes # Whether the recipient gets an option to decline
+
+	is_visible = {
+		has_government_attribute = can_establish_dwarven_outposts
+	}
+	is_allowed = {
+		treasury = 100
+		if = {
+			limit = { reached_dwarven_outpost_slot_limit = yes }
+			custom_trigger_tooltip = {
+				tooltip = not_enough_free_dwarven_outpost_slots_tooltip
+				enough_dwarven_outpost_slots = yes
+			}
+		}
+		#if = {
+		#	limit = {
+		#		NOT = {
+		#			has_country_flag = allow_multiple_dwarven_outposts
+		#		}
+		#		FROM = {
+		#			any_subject_country = {
+		#				is_subject_of_type = subject_hosted_dwarven_outpost
+		#			}
+		#		}
+		#	}
+		#	custom_trigger_tooltip = {
+		#		tooltip = dwarven_colony_no_doubles_tooltip
+		#		FROM = {
+		#			NOT = {
+		#				any_subject_country = {
+		#					is_subject_of_type = subject_hosted_dwarven_outpost
+		#				}
+		#			}
+		#		}
+		#	}
+		#}
+		if = {
+			limit = { FROM = { has_government_attribute = can_establish_dwarven_outposts } }
+			custom_trigger_tooltip = {
+				tooltip = dwarven_colony_no_fellow_dwarf_tooltip
+				FROM = { NOT = { has_government_attribute = can_establish_dwarven_outposts } }
+			}
+		}
+		if = {
+			limit = { FROM = { has_country_modifier = dwarven_colony_reject_hidden_modifier } }
+			custom_trigger_tooltip = {
+				tooltip = dwarven_colony_no_reject_tooltip
+				FROM = { NOT = { has_country_modifier = dwarven_colony_reject_hidden_modifier } }
+			}
+		}
+		if = {
+			limit = {
+				FROM = { 
+					capital_scope = {
+						NOT = {
+							trade_range = ROOT
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = dwarven_colony_no_out_of_trade_range_tooltip
+				FROM = { 
+					capital_scope = {
+						trade_range = ROOT
+					}
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { is_subject_other_than_tributary_trigger = yes } }
+			custom_trigger_tooltip = {
+				tooltip = dwarven_colony_no_subject_tooltip
+				FROM = { is_free_or_tributary_trigger = yes }
+			}
+		}
+		if = {
+			limit = { FROM = { is_at_war = yes } }
+			custom_trigger_tooltip = {
+				tooltip = dwarven_colony_target_no_war_tooltip
+				NOT = { FROM = { is_at_war = yes }  }
+			}
+		}
+		if = {
+			limit = { is_at_war = yes }
+			custom_trigger_tooltip = {
+				tooltip = dwarven_colony_no_war_tooltip
+				NOT = { is_at_war = yes }
+			}
+		}
+		if = {
+			limit = { 
+				FROM = {
+					NOT = { num_of_provinces_in_states = 5 }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = dwarven_colony_no_country_under_5_provinces_tooltip
+				num_of_provinces_in_states = 5
+			}
+		}
+		if = {
+			limit = { 
+				FROM = {
+					NOT = {
+						any_trade_node = {
+							any_trade_node_member_province = {
+								owned_by = FROM
+								OR = {
+									trade_goods = advanced_ores
+									trade_goods = basic_ores
+									trade_goods = gemstones
+									trade_goods = runite
+								}
+								NOT = { is_capital = yes }
+							}
+							NOT = {
+								any_trade_node_member_province = {
+									owner = {
+										is_subject_of_type = subject_dwarven_outpost
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = dwarven_colony_no_lack_of_appropriate_resources_tooltip
+				FROM = {
+					any_trade_node = {
+						any_trade_node_member_province = {
+							owned_by = FROM
+							OR = {
+								trade_goods = advanced_ores
+								trade_goods = basic_ores
+								trade_goods = gemstones
+								trade_goods = runite
+							}
+							NOT = { is_capital = yes }
+						}
+						NOT = {
+							any_trade_node_member_province = {
+								owner = {
+									is_subject_of_type = subject_dwarven_outpost
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		add_treasury = -100
+		FROM = {
+			add_treasury = 100
+			random_trade_node = {
+				limit = {
+					NOT = {
+						any_trade_node_member_province = {
+							owner = {
+								is_subject_of_type = subject_dwarven_outpost
+							}
+						}
+					}
+					any_trade_node_member_province = {
+						owned_by = FROM
+						OR = {
+							trade_goods = advanced_ores
+							trade_goods = basic_ores
+							trade_goods = gemstones
+							trade_goods = runite
+						}
+						NOT = { is_capital = yes }
+					}
+				}
+				random_trade_node_member_province = {
+					limit = {
+						owned_by = FROM
+						OR = {
+							trade_goods = advanced_ores
+							trade_goods = basic_ores
+							trade_goods = gemstones
+							trade_goods = runite
+						}
+						NOT = { is_capital = yes }
+					}
+					### cede_province = KDG #Placeholder
+					set_province_flag = dwarven_colony_target
+				}
+			}
+		}
+		
+		every_province = {
+			if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 1285 # It doesn't seem to recognise this line, which makes it just miss it and default to D01
+				}
+				cede_province = D01
+				add_core = D01
+				remove_core = FROM
+				D01 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D01
+					}
+				}
+				FROM = {
+					set_country_flag = D01_host_country
+					add_opinion = {
+						who = D01
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 885
+				}
+				cede_province = D02
+				add_core = D02
+				remove_core = FROM
+				D02 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D02
+					}
+				}
+				FROM = {
+					set_country_flag = D02_host_country
+					add_opinion = {
+						who = D02
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 265
+				}
+				cede_province = D03
+				add_core = D03
+				remove_core = FROM
+				D03 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D03
+					}
+				}
+				FROM = {
+					set_country_flag = D03_host_country
+					add_opinion = {
+						who = D03
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 1202
+				}
+				cede_province = D04
+				add_core = D04
+				remove_core = FROM
+				D04 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D04
+					}
+				}
+				FROM = {
+					set_country_flag = D04_host_country
+					add_opinion = {
+						who = D04
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 247
+				}
+				cede_province = D05
+				add_core = D05
+				remove_core = FROM
+				D05 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D05
+					}
+				}
+				FROM = {
+					set_country_flag = D05_host_country
+					add_opinion = {
+						who = D05
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 525
+				}
+				cede_province = D06
+				add_core = D06
+				remove_core = FROM
+				D06 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D06
+					}
+				}
+				FROM = {
+					set_country_flag = D06_host_country
+					add_opinion = {
+						who = D06
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 1238
+				}
+				cede_province = D07
+				add_core = D07
+				remove_core = FROM
+				D07 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D07
+					}
+				}
+				FROM = {
+					set_country_flag = D07_host_country
+					add_opinion = {
+						who = D07
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 176
+				}
+				cede_province = D08
+				add_core = D08
+				remove_core = FROM
+				D08 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D08
+					}
+				}
+				FROM = {
+					set_country_flag = D08_host_country
+					add_opinion = {
+						who = D08
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 139
+				}
+				cede_province = D09
+				add_core = D09
+				remove_core = FROM
+				D09 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D09
+					}
+				}
+				FROM = {
+					set_country_flag = D09_host_country
+					add_opinion = {
+						who = D09
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 41
+				}
+				cede_province = D10
+				add_core = D10
+				remove_core = FROM
+				D10 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D10
+					}
+				}
+				FROM = {
+					set_country_flag = D10_host_country
+					add_opinion = {
+						who = D10
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 137
+				}
+				cede_province = D11
+				add_core = D11
+				remove_core = FROM
+				D11 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D11
+					}
+				}
+				FROM = {
+					set_country_flag = D11_host_country
+					add_opinion = {
+						who = D11
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 1156
+				}
+				cede_province = D12
+				add_core = D12
+				remove_core = FROM
+				D12 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D12
+					}
+				}
+				FROM = {
+					set_country_flag = D12_host_country
+					add_opinion = {
+						who = D12
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 620
+				}
+				cede_province = D13
+				add_core = D13
+				remove_core = FROM
+				D13 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D13
+					}
+				}
+				FROM = {
+					set_country_flag = D13_host_country
+					add_opinion = {
+						who = D13
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 754
+				}
+				cede_province = D14
+				add_core = D14
+				remove_core = FROM
+				D14 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D14
+					}
+				}
+				FROM = {
+					set_country_flag = D14_host_country
+					add_opinion = {
+						who = D14
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 571
+				}
+				cede_province = D15
+				add_core = D15
+				remove_core = FROM
+				D15 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D15
+					}
+				}
+				FROM = {
+					set_country_flag = D15_host_country
+					add_opinion = {
+						who = D15
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 232
+				}
+				cede_province = D16
+				add_core = D16
+				remove_core = FROM
+				D16 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D16
+					}
+				}
+				FROM = {
+					set_country_flag = D16_host_country
+					add_opinion = {
+						who = D16
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 402
+				}
+				cede_province = D17
+				add_core = D17
+				remove_core = FROM
+				D17 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D17
+					}
+				}
+				FROM = {
+					set_country_flag = D17_host_country
+					add_opinion = {
+						who = D17
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 183
+				}
+				cede_province = D18
+				add_core = D18
+				remove_core = FROM
+				D18 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D18
+					}
+				}
+				FROM = {
+					set_country_flag = D18_host_country
+					add_opinion = {
+						who = D18
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 419
+				}
+				cede_province = D19
+				add_core = D19
+				remove_core = FROM
+				D19 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D19
+					}
+				}
+				FROM = {
+					set_country_flag = D19_host_country
+					add_opinion = {
+						who = D19
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 393
+				}
+				cede_province = D20
+				add_core = D20
+				remove_core = FROM
+				D20 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D20
+					}
+				}
+				FROM = {
+					set_country_flag = D20_host_country
+					add_opinion = {
+						who = D20
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 100
+				}
+				cede_province = D21
+				add_core = D21
+				remove_core = FROM
+				D21 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D21
+					}
+				}
+				FROM = {
+					set_country_flag = D21_host_country
+					add_opinion = {
+						who = D21
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 461
+				}
+				cede_province = D22
+				add_core = D22
+				remove_core = FROM
+				D22 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D22
+					}
+				}
+				FROM = {
+					set_country_flag = D22_host_country
+					add_opinion = {
+						who = D22
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 424
+				}
+				cede_province = D23
+				add_core = D23
+				remove_core = FROM
+				D23 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D23
+					}
+				}
+				FROM = {
+					set_country_flag = D23_host_country
+					add_opinion = {
+						who = D23
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 209
+				}
+				cede_province = D24
+				add_core = D24
+				remove_core = FROM
+				D24 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D24
+					}
+				}
+				FROM = {
+					set_country_flag = D24_host_country
+					add_opinion = {
+						who = D24
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 1188
+				}
+				cede_province = D25
+				add_core = D25
+				remove_core = FROM
+				D25 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D25
+					}
+				}
+				FROM = {
+					set_country_flag = D25_host_country
+					add_opinion = {
+						who = D25
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 292
+				}
+				cede_province = D26
+				add_core = D26
+				remove_core = FROM
+				D26 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D26
+					}
+				}
+				FROM = {
+					set_country_flag = D26_host_country
+					add_opinion = {
+						who = D26
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 399
+				}
+				cede_province = D27
+				add_core = D27
+				remove_core = FROM
+				D27 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D27
+					}
+				}
+				FROM = {
+					set_country_flag = D27_host_country
+					add_opinion = {
+						who = D27
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 75
+				}
+				cede_province = D28
+				add_core = D28
+				remove_core = FROM
+				D28 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D28
+					}
+				}
+				FROM = {
+					set_country_flag = D28_host_country
+					add_opinion = {
+						who = D28
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 33
+				}
+				cede_province = D29
+				add_core = D29
+				remove_core = FROM
+				D29 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D29
+					}
+				}
+				FROM = {
+					set_country_flag = D29_host_country
+					add_opinion = {
+						who = D29
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 325
+				}
+				cede_province = D30
+				add_core = D30
+				remove_core = FROM
+				D30 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D30
+					}
+				}
+				FROM = {
+					set_country_flag = D30_host_country
+					add_opinion = {
+						who = D30
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 505
+				}
+				cede_province = D31
+				add_core = D31
+				remove_core = FROM
+				D31 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D31
+					}
+				}
+				FROM = {
+					set_country_flag = D31_host_country
+					add_opinion = {
+						who = D31
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 368
+				}
+				cede_province = D32
+				add_core = D32
+				remove_core = FROM
+				D32 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D32
+					}
+				}
+				FROM = {
+					set_country_flag = D32_host_country
+					add_opinion = {
+						who = D32
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 2
+				}
+				cede_province = D33
+				add_core = D33
+				remove_core = FROM
+				D33 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D33
+					}
+				}
+				FROM = {
+					set_country_flag = D33_host_country
+					add_opinion = {
+						who = D33
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 491
+				}
+				cede_province = D34
+				add_core = D34
+				remove_core = FROM
+				D34 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D34
+					}
+				}
+				FROM = {
+					set_country_flag = D34_host_country
+					add_opinion = {
+						who = D34
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 349
+				}
+				cede_province = D35
+				add_core = D35
+				remove_core = FROM
+				D35 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D35
+					}
+				}
+				FROM = {
+					set_country_flag = D35_host_country
+					add_opinion = {
+						who = D35
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 79
+				}
+				cede_province = D36
+				add_core = D36
+				remove_core = FROM
+				D36 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D36
+					}
+				}
+				FROM = {
+					set_country_flag = D36_host_country
+					add_opinion = {
+						who = D36
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 14
+				}
+				cede_province = D37
+				add_core = D37
+				remove_core = FROM
+				D37 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D37
+					}
+				}
+				FROM = {
+					set_country_flag = D37_host_country
+					add_opinion = {
+						who = D37
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 1101
+				}
+				cede_province = D38
+				add_core = D38
+				remove_core = FROM
+				D38 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D38
+					}
+				}
+				FROM = {
+					set_country_flag = D38_host_country
+					add_opinion = {
+						who = D38
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = dwarven_colony_target
+					same_trade_node = 964
+				}
+				cede_province = D39
+				add_core = D39
+				remove_core = FROM
+				D39 = {
+					hidden_effect = {
+						country_event = dwarven_outpost_events.1
+						add_government_reform = dwarven_outpost
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.5
+								cavalry = 0.2
+								artillery = 0.3
+								light_ship = 0.5
+								transport = 0.3
+							}
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = subject_dwarven_outpost
+						subject = D39
+					}
+				}
+				FROM = {
+					set_country_flag = D39_host_country
+					add_opinion = {
+						who = D39
+						modifier = is_hosted_dwarven_outpost
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					add_treasury = 100
+				}
+				FROM = {
+					add_treasury = -100
+				}
+			}
+			clr_province_flag = dwarven_colony_target
+		}
+	}
+	on_decline = {
+		custom_tooltip = declined_dwarven_colony_tooltip
+		FROM = {
+			hidden_effect = {
+				add_country_modifier = { 
+					name = dwarven_colony_reject_hidden_modifier
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	ai_acceptance = { # This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
+		add_entry = {
+			name = RELUCTANT_TO_CEDE_LAND
+			limit = {
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}			
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+			#1 trust = +4 ai points
+			multiply_variable = {
+				which = ai_value
+				value = 0.4
+			}
+		}
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 0.2
+			}
+		}
+		add_entry = {
+			name = DIPLO_IS_RIVAL
+			limit = {
+				FROM = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_rivalry
+					}
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+		add_entry = {
+			name = diplomatic_reputation
+			limit = { }
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+			}
+			#1 rep = 2
+			multiply_variable = {
+				which = ai_value
+				value = 2
+			}
+		}
+	}
+
+	ai_will_do = { # this is a trigger
+		OR = {
+			AND = {
+				has_opinion = {
+					who = FROM
+					value = 50
+				}
+				trust = {
+					who = FROM
+					value = 65
+				}
+			}
+			has_opinion = {
+				who = FROM
+				value = 150
+			}
+		}
+		FROM = {
+			NOT = { stability = 2 }
+		}
+		NOT = { is_rival = FROM }
+		NOT = { is_enemy = FROM }
+		NOT = {
+			FROM = {
+				is_hegemon = yes
+			}
+		}
+	}
+}

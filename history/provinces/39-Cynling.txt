@@ -1,7 +1,7 @@
 #39 - Cynling
-owner = CYN
-controller = CYN
-add_core = CYN
+owner = CCI
+controller = CCI
+add_core = CCI
 tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
@@ -16,26 +16,19 @@ base_tax = 3
 base_production = 3
 base_manpower = 4
 
-fort_15th = yes
-
 trade_goods = logs
 latent_trade_goods = { runes }
 
 is_city = yes
 
-1957.10.13 = {
-	owner = DWI
-	controller = DWI
-	add_core = DWI
-}
-
-1986.11.17 = {
+2001.3.2 = {
 	owner = DBS
 	controller = DBS
 	add_core = DBS
+	remove_core = CCI
 }
 
-2008.4.6 = {
+2008.6.5 = {
 	owner = ASG
 	controller = ASG
 	add_core = ASG
@@ -46,7 +39,7 @@ is_city = yes
 	owner = GUN
 	controller = GUN
 	add_core = GUN
-	remove_core = CYN
+	remove_core = CCI
 }
 
 2059.11.28 = {

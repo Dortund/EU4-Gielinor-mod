@@ -58,7 +58,7 @@ kharidian_desert_region = {
 		unkah_area
 		ullek_area
 		menaphos_area
-		elid_isles_area
+		outer_menaphos_area
 		sophanem_area
 	}
 }
@@ -287,6 +287,7 @@ varlamore_region = {
 		tlati_river_area
 		north_tlati_area
 		salvager_shore_area
+		twilight_temple_area
 		proudspire_area
 		ralos_rise_area
 		cam_torum_area

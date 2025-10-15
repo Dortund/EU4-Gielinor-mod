@@ -29,6 +29,11 @@ historical_friend = CTR
 	add_accepted_culture = auburnvaler
 }
 
+2069.1.1 = {
+	set_country_flag = VAR_end_of_betrayal_flag
+	add_government_reform = reformed_shining_kingdom
+}
+
 2153.6.16 = {
 	monarch = {
 		name = "Zyanyi"
@@ -38,5 +43,12 @@ historical_friend = CTR
 		dip = 4
 		mil = 4
 		female = yes
+	}
+}
+
+2160.3.20 = {
+	add_opinion = {
+		who = TWE
+		modifier = renounced_as_heretics
 	}
 }

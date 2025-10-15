@@ -7,6 +7,12 @@ technology_group = northerntechgroup
 capital = 962 #Silk Chasm
 national_focus = MIL
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 15.11.25 = {
 	monarch = {
 		name = "Venenatis"
@@ -19,4 +25,12 @@ national_focus = MIL
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = immortal_personality
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
 }

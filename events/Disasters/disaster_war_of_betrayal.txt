@@ -1,0 +1,791 @@
+namespace = war_of_betrayal
+
+########################################
+# War of Betrayal (Varlamore)
+########################################
+
+# Start
+country_event = {
+	id = war_of_betrayal.1
+	title = war_of_betrayal.1.t #War of Betrayal
+	desc = war_of_betrayal.1.d #Since Varlamore was founded, it has never found itself at war with Kourend in the north - until now. Such a change in course has alarmed the citizenry of both nations and violence has erupted throughout the Shining Kingdom...
+	picture = WAR_OF_BETRAYAL_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = VAR_war_of_betrayal_start
+			random_owned_province = {
+				limit = {
+					AND = {
+						region = varlamore_region
+						NOT = { units_in_province = 1 }
+						is_capital = no
+					}
+				}
+				set_province_flag = VAR_betrayal_spawn_rebels_here
+			}
+			if = {
+				limit = {
+					num_of_cities = 20
+				}
+				random_owned_province = {
+					limit = {
+						AND = {
+							region = varlamore_region
+							NOT = { units_in_province = 1 }
+							NOT = { has_province_flag = VAR_betrayal_spawn_rebels_here }
+							is_capital = no
+						}
+					}
+					set_province_flag = VAR_betrayal_spawn_rebels_here
+				}
+			}		
+		}
+	}
+	
+	option = {
+		name = war_of_betrayal.1.a #Kourend must fall and I will crush anyone that stands in my way!
+		custom_tooltip = war_of_betrayal_loyalist_tooltip
+		hidden_effect = {
+			set_country_flag = war_of_betrayal_loyalist_flag
+		}
+		add_disaster_modifier = {
+			name = "VAR_loyalists_to_the_crown"
+			duration = -1
+			disaster = war_of_betrayal
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = VAR_betrayal_spawn_rebels_here
+			}
+			spawn_rebels = {
+				type = varlamore_resistance_rebels
+				size = 3
+			}
+			clr_province_flag = VAR_betrayal_spawn_rebels_here
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = VAR_betrayal_spawn_rebels_here
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_flag = VAR_betrayal_spawn_rebels_here
+				}
+				spawn_rebels = {
+					type = varlamore_resistance_rebels
+					size = 2
+				}
+				clr_province_flag = VAR_betrayal_spawn_rebels_here
+			}
+		}
+		add_stability = -1
+		if = {
+			limit = {
+				current_age = age_of_mortals
+			}
+			custom_tooltip = VAR_betrayal_severely_early
+			add_disaster_modifier = {
+				name = "VAR_severe_lack_of_preparation"
+				duration = -1
+				disaster = war_of_betrayal
+			}
+			add_stability = -2
+		}
+		if = {
+			limit = {
+				current_age = age_of_humans
+			}
+			custom_tooltip = VAR_betrayal_substantially_early
+			add_disaster_modifier = {
+				name = "VAR_substantial_lack_of_preparation"
+				duration = -1
+				disaster = war_of_betrayal
+			}
+			add_stability = -1
+		}
+	}
+	option = {
+		name = war_of_betrayal.1.b #The war must end, and [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s rule with it!
+		custom_tooltip = war_of_betrayal_resistance_tooltip
+		hidden_effect = {
+			set_country_flag = war_of_betrayal_resistance_flag
+		}
+		add_disaster_modifier = {
+			name = "VAR_shining_resistance"
+			duration = -1
+			disaster = war_of_betrayal
+		}
+		if = {
+			limit = { has_heir = yes }
+			hidden_effect = {
+				exile_heir_as = var_imafore_heir_standin_exile
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = VAR_betrayal_spawn_rebels_here
+			}
+			spawn_rebels = {
+				type = varlamore_loyalist_rebels
+				use_monarch_as_leader = yes
+				size = 3
+			}
+			clr_province_flag = VAR_betrayal_spawn_rebels_here
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = VAR_betrayal_spawn_rebels_here
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_flag = VAR_betrayal_spawn_rebels_here
+				}
+				spawn_rebels = {
+					type = varlamore_loyalist_rebels
+					size = 2
+				}
+				clr_province_flag = VAR_betrayal_spawn_rebels_here
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = VAR_blood_for_ranul
+			}
+			remove_country_modifier = VAR_blood_for_ranul
+		}
+		else = {
+			add_stability = -1
+		}
+		if = {
+			limit = {
+				current_age = age_of_mortals
+			}
+			custom_tooltip = VAR_betrayal_severely_early
+			add_disaster_modifier = {
+				name = "VAR_severe_lack_of_preparation"
+				duration = -1
+				disaster = war_of_betrayal
+			}
+			add_stability = -2
+		}
+		if = {
+			limit = {
+				current_age = age_of_humans
+			}
+			custom_tooltip = VAR_betrayal_substantially_early
+			add_disaster_modifier = {
+				name = "VAR_substantial_lack_of_preparation"
+				duration = -1
+				disaster = war_of_betrayal
+			}
+			add_stability = -1
+		}
+	}
+}
+
+# Fate of the Temple of Twilight
+country_event = {
+	id = war_of_betrayal.2
+	title = war_of_betrayal.2.t
+	desc = war_of_betrayal.2.d #The bizarre choices of the monarch seem to have a connection to the bizarre Temple of Twilight, where teachings many consider heretical have taken place. The people cry out to purge this monument to evil.
+	picture = WAR_OF_BETRAYAL_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = war_of_betrayal_resistance_flag
+		NOT = { has_country_flag = VAR_destroy_temple_flag }
+		503 = {
+			owner = ROOT
+		 	controlled_by = ROOT
+			OR = {
+				has_great_project = {
+					type = great_project_temple_of_twilight
+					tier = 3
+				}
+				has_great_project = {
+					type = great_project_temple_of_twilight
+					tier = 2
+				}
+				has_great_project = {
+					type = great_project_temple_of_twilight
+					tier = 1
+				}
+			 	has_active_triggered_province_modifier = VAR_temple_of_twilight_modifier
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = VAR_destroy_temple_flag
+	}
+	
+	option = {
+		name = war_of_betrayal.2.a #Shut down the temple!
+		ai_chance = { factor = 100 }
+		add_stability_or_adm_power = 1
+		if = {
+			limit = {
+				503 = {
+					has_great_project = {
+						type = great_project_temple_of_twilight
+						tier = 3
+					}
+				}
+			}
+			add_treasury = 5000
+			503 = {
+				add_great_project_tier = {
+					type = great_project_temple_of_twilight
+					tier = -3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				503 = {
+					has_great_project = {
+						type = great_project_temple_of_twilight
+						tier = 2
+					}
+				}
+			}
+			add_treasury = 2500
+			503 = {
+				add_great_project_tier = {
+					type = great_project_temple_of_twilight
+					tier = -2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				503 = {
+					has_great_project = {
+						type = great_project_temple_of_twilight
+						tier = 1
+					}
+				}
+			}
+			add_treasury = 1000
+			503 = {
+				add_great_project_tier = {
+					type = great_project_temple_of_twilight
+					tier = -1
+				}
+			}
+		}
+		else = {
+			503 = {
+				remove_province_triggered_modifier = VAR_temple_of_twilight_modifier
+			}
+		}
+		503 = {
+			add_devastation = 50
+			add_province_modifier = {
+				name = VAR_desecrated_ground
+				duration = 9125
+			}
+			hidden_effect = {
+				set_province_flag = VAR_temple_of_twilight_unused_flag
+			}
+		}
+	}
+	option = {
+		name = war_of_betrayal.2.b #It's just a building.
+		ai_chance = { factor = 0 }
+		add_stability = -1
+		add_disaster_modifier = {
+			name = VAR_refusal_to_oust_temple
+			duration = -1
+			disaster = war_of_betrayal
+		}
+	}
+}
+
+# Assault on the Temple of Twilight
+country_event = {
+	id = war_of_betrayal.3
+	title = war_of_betrayal.3.t
+	desc = war_of_betrayal.3.d #The rebels to [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s rule have assaulted the Temple of Twilight! This is a site of crucial religious insight but defending it could take precious resources we cannot afford to spare from our war effort.
+	picture = WAR_OF_BETRAYAL_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = war_of_betrayal_loyalist_flag
+		NOT = { has_country_flag = VAR_destroy_temple_flag }
+		503 = {
+			owner = ROOT
+		 	has_rebel_faction = varlamore_resistance_rebels
+			OR = {
+				has_great_project = {
+					type = great_project_temple_of_twilight
+					tier = 3
+				}
+				has_great_project = {
+					type = great_project_temple_of_twilight
+					tier = 2
+				}
+				has_great_project = {
+					type = great_project_temple_of_twilight
+					tier = 1
+				}
+			 	has_active_triggered_province_modifier = VAR_temple_of_twilight_modifier
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = VAR_destroy_temple_flag
+	}
+	
+	option = {
+		name = war_of_betrayal.3.a #Divert funds to securing the Temple.
+		ai_chance = { factor = 0 }
+		custom_tooltip = VAR_secured_temple_investment_tooltip
+		add_stability_or_adm_power = 1
+		add_treasury = -250
+	}
+	option = {
+		name = war_of_betrayal.3.b #Retrieve all the treasure we can, and let the temple fall.
+		ai_chance = { factor = 100 }
+		
+		if = {
+			limit = {
+				503 = {
+					has_great_project = {
+						type = great_project_temple_of_twilight
+						tier = 3
+					}
+				}
+			}
+			add_treasury = 4000
+			503 = {
+				add_great_project_tier = {
+					type = great_project_temple_of_twilight
+					tier = -3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				503 = {
+					has_great_project = {
+						type = great_project_temple_of_twilight
+						tier = 2
+					}
+				}
+			}
+			add_treasury = 2000
+			503 = {
+				add_great_project_tier = {
+					type = great_project_temple_of_twilight
+					tier = -2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				503 = {
+					has_great_project = {
+						type = great_project_temple_of_twilight
+						tier = 1
+					}
+				}
+			}
+			add_treasury = 750
+			503 = {
+				add_great_project_tier = {
+					type = great_project_temple_of_twilight
+					tier = -1
+				}
+			}
+		}
+		else = {
+			503 = {
+				remove_province_triggered_modifier = VAR_temple_of_twilight_modifier
+			}
+		}
+		503 = {
+			add_devastation = 50
+			add_province_modifier = {
+				name = VAR_desecrated_ground
+				duration = 9125
+			}
+			hidden_effect = {
+				set_province_flag = VAR_temple_of_twilight_unused_flag
+			}
+		}
+	}
+}
+
+# A Hope for Peace
+country_event = {
+	id = war_of_betrayal.4
+	title = war_of_betrayal.4.t
+	desc = war_of_betrayal.4.d #To the forces of Kourend, they are at war with Varlamore and do not easily distinguish our rebels from the loyalist forces. If we send an emissary we could bring the external war to an end, but we would have to grant assurances this situation will never repeat itself.
+	picture = WAR_OF_BETRAYAL_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = war_of_betrayal_resistance_flag
+		NOT = {
+			had_country_flag = { flag = VAR_war_of_betrayal_start days = 3650 }
+		}
+		any_country = {
+			AND = {
+				OR = {
+					primary_culture = lovakengj
+					culture_group = kourend_group
+				}
+				OR = {
+					is_in_war = {
+						attacker_leader = ROOT
+						defender_leader = PREV
+					}
+					is_in_war = {
+						attacker_leader = PREV
+						defender_leader = ROOT
+					}
+				}
+				NOT = {
+					war_score_against = {
+						who = ROOT
+						value = 25
+					}
+				}
+				NOT = {
+					has_country_flag = VAR_declined_to_end_war_flag
+				}
+			}
+		}
+		NOT = { num_of_rebel_controlled_provinces = 6 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = war_of_betrayal.4.a #Send a generous peace offer.
+		ai_chance = { factor = 100 }
+		custom_tooltip = VAR_generous_peace_offer_tooltip
+		add_treasury = -250
+		add_dip_power = -100
+		random_country = {
+			limit = {
+				AND = {
+					OR = {
+						primary_culture = lovakengj
+						culture_group = kourend_group
+					}
+					OR = {
+						is_in_war = {
+							attacker_leader = ROOT
+							defender_leader = PREV
+						}
+						is_in_war = {
+							attacker_leader = PREV
+							defender_leader = ROOT
+						}
+					}
+				}
+				NOT = {
+					war_score_against = {
+						who = ROOT
+						value = 25
+					}
+				}
+				NOT = {
+					has_country_flag = VAR_declined_to_end_war_flag
+				}
+			}
+			country_event = {
+				id = war_of_betrayal.5
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = war_of_betrayal.4.b #We cannot afford to make such an offer.
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+# The Varlamore Resistance
+country_event = {
+	id = war_of_betrayal.5
+	title = war_of_betrayal.5.t
+	desc = war_of_betrayal.5.d #It appears we are not the only people shocked by the actions of Varlamore's leadership. There is a brewing resistance movement which promises to grant us compensation if we agree to stand aside from the war.
+	picture = WAR_OF_BETRAYAL_eventPicture
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = war_of_betrayal.5.a #Accept the offer.
+		ai_chance = { factor = 100 }
+		custom_tooltip = VAR_generous_peace_offer_tooltip
+		add_treasury = 250
+		add_dip_power = 100
+		add_prestige = 50
+		white_peace = VAR
+	 	add_truce_with = VAR
+		hidden_effect = {
+			VAR = {
+				set_country_flag = VAR_royal_accord_of_twill_gift_potential
+			}
+		}
+		add_opinion = {
+			who = VAR
+			modifier = var_agreed_to_end_war
+		}
+	}
+	option = {
+		name = war_of_betrayal.5.b #Reject the offer.
+		set_country_flag = VAR_declined_to_end_war_flag
+		ai_chance = { factor = 0 }
+		VAR = {
+			add_treasury = 250
+			add_dip_power = 100
+		}
+	}
+}
+
+# Alarmed Subjects
+country_event = {
+	id = war_of_betrayal.6
+	title = war_of_betrayal.6.t
+	desc = war_of_betrayal.6.d #Much as our war with Kourend alarmed those in Varlamore without vision, it has also upset the narrow-minded within our subject provinces. We could placate them for a time with more autonomy, or have a show of force. 
+	picture = WAR_OF_BETRAYAL_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = war_of_betrayal_loyalist_flag
+		any_country = {
+			is_subject_of = ROOT
+		}
+		NOT = { has_country_flag = VAR_alarmed_subject_event_done }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = VAR_alarmed_subject_event_done
+	}
+	
+	option = {
+		name = war_of_betrayal.6.a #Keep the subjects in line with temporary autonomy.
+		ai_chance = { factor = 50 }
+		add_disaster_modifier = {
+			name = VAR_temporary_vassal_autonomy
+			duration = -1
+			disaster = war_of_betrayal
+		}
+	}
+	option = {
+		name = war_of_betrayal.6.b #We do not care for their petty pleas.
+		ai_chance = { factor = 50 }
+		add_disaster_modifier = {
+			name = VAR_harsh_vassal_treatment
+			duration = -1
+			disaster = war_of_betrayal
+		}
+	}
+}
+
+# Kourendite Landing
+country_event = {
+	id = war_of_betrayal.7
+	title = war_of_betrayal.7.t
+	desc = {
+		trigger = {
+			has_country_flag = war_of_betrayal_loyalist_flag
+		}
+		desc = war_of_betrayal.7.da #Our Kourendite enemies have landed in Varlamore! Surely now the people can see the real threat we face.
+	}
+	desc = {
+		trigger = {
+			has_country_flag = war_of_betrayal_resistance_flag
+		}
+		desc = war_of_betrayal.7.db #Kourendite forces have landed upon Varlamore's shores. Unfortunately, they do not distinguish between the loyalists and the resistance and both parties are alarmed at this development.
+	}
+	
+	picture = WAR_OF_BETRAYAL_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			limit = {
+				region = varlamore_region
+			}
+			controller = {
+				OR = {
+					primary_culture = lovakengj
+					culture_group = kourend_group
+				}
+				war_with = ROOT
+			}
+		}
+		NOT = { has_country_flag = VAR_kourendite_landing_event_done }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = VAR_kourendite_landing_event_done
+	}
+	
+	option = {
+		name = war_of_betrayal.7.a #This proves the need for further recruitment!
+		ai_chance = { factor = 50 }
+		add_yearly_manpower = 1
+	}
+	option = {
+		name = war_of_betrayal.7.b #This common threat will lower violence between the people of Varlamore.
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+			limit = {
+				region = varlamore_region
+			}
+			add_unrest = -5
+		}
+	}
+}
+
+country_event = {
+	id = war_of_betrayal.100
+	title = war_of_betrayal.100.t #End of the War of Betrayal
+	desc = {
+		trigger = {
+			has_country_flag = war_of_betrayal_loyalist_flag
+			NOT = { has_country_flag = var_resistance_rebel_victory }
+			NOT = {
+				any_owned_province = {
+					has_rebel_faction = varlamore_resistance_rebels
+				}
+			}
+		}
+		desc = war_of_betrayal.100.da #Our actions against Kourend were just, and as was the treatment of our people. Varlamore stands united under the true faith of Losanium and let all of Gielinor know it!
+	}
+	desc = {
+		trigger = {
+			has_country_flag = war_of_betrayal_resistance_flag
+			NOT = { has_country_flag = var_loyalist_rebel_victory }
+			NOT = {
+				any_owned_province = {
+					has_rebel_faction = varlamore_loyalist_rebels
+				}
+			}
+		}
+		desc = war_of_betrayal.100.db #Whatever possessed the old monarch to betray Varlamore's history is unclear, but what is clear is we need more safeguards going forward. The sun rises again on a stronger, and more weary, Varlamore.
+	}
+	desc = {
+		trigger = {
+			has_country_flag = war_of_betrayal_resistance_flag
+			has_country_flag = var_loyalist_rebel_victory
+		}
+		desc = war_of_betrayal.100.dc #The heroic resistance failed to push back whatever horror possessed the monarch. Varlamore has an unsetting future ahead of it...
+	}
+	desc = {
+		trigger = {
+			has_country_flag = war_of_betrayal_loyalist_flag
+			has_country_flag = var_resistance_rebel_victory
+		}
+		desc = war_of_betrayal.100.dd #The accursed resistance has defeated a perfectly just monarch, which was only trying to follow the path of Losanium! Heresy! Heresy...
+	}
+	
+	
+	picture = WAR_OF_BETRAYAL_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_country_flag = VAR_war_of_betrayal_start
+		set_country_flag = VAR_end_of_betrayal_flag
+	}
+
+	option = {
+		name = war_of_betrayal.100.a #Ximoua beckons...
+		trigger = {
+			NOT = { has_country_flag = var_resistance_rebel_victory }
+			has_country_flag = war_of_betrayal_loyalist_flag
+		}
+		add_mil_power = 100
+		add_stability_or_adm_power = yes
+		add_government_reform = tarnished_kingdom
+	}
+	option = {
+		name = war_of_betrayal.100.b #The light shines upon us today.
+		trigger = {
+			NOT = { has_country_flag = var_loyalist_rebel_victory }
+			has_country_flag = war_of_betrayal_resistance_flag
+		}
+		add_dip_power = 100
+		add_stability_or_adm_power = yes
+		add_government_reform = reformed_shining_kingdom
+	}
+	option = {
+		name = war_of_betrayal.100.c #Let's hope Ximoua hasn't come early.
+		trigger = {
+			has_country_flag = war_of_betrayal_resistance_flag
+			has_country_flag = var_loyalist_rebel_victory
+		}
+		kill_ruler = yes
+		hidden_effect = {
+			remove_consort = yes
+			kill_heir = { allow_new_heir = no }
+		}
+		add_government_reform = tarnished_kingdom
+	}
+	option = {
+		name = war_of_betrayal.100.e #This new government can't last forever.
+		trigger = {
+			has_country_flag = war_of_betrayal_loyalist_flag
+			has_country_flag = var_resistance_rebel_victory
+		}
+		kill_ruler = yes
+		hidden_effect = {
+			remove_consort = yes
+			kill_heir = { allow_new_heir = no }
+		}
+		add_government_reform = reformed_shining_kingdom
+	}
+}

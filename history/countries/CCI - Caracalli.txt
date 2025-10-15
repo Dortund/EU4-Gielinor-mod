@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = south_asgarn
+religion = saradomin
+technology_group = centraltechgroup
+capital = 39 #Cynling
+
+1915.7.26 = {
+	monarch = {
+		name = "Hemet"
+		dynasty = "Caracalli"
+		birth_date = 1885.1.13
+		adm = 0
+		dip = 2
+		mil = 0
+	}
+}

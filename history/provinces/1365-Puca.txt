@@ -1,7 +1,7 @@
 #1365 - Puca
-owner = PLI
-controller = PLI
-add_core = PLI
+owner = MSS
+controller = MSS
+add_core = MSS
 tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
@@ -14,8 +14,10 @@ discovered_by = bandostechgroup
 hre = no
 
 base_tax = 3
-base_production = 2
+base_production = 3
 base_manpower = 2
+
+fort_15th = yes
 
 trade_goods = logs
 latent_trade_goods = { rare_loot }
@@ -26,4 +28,8 @@ is_city = yes
 	owner = ASG
 	controller = ASG
 	add_core = ASG
+}
+
+2100.1.1 = {
+	remove_core = MSS
 }

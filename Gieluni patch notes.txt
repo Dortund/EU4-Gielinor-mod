@@ -1,158 +1,127 @@
 ##Gielinor Universalis Patch Notes
 
-# Beta 1.9.1 Patch Notes (Cashien)
+# Beta 1.10.0 Patch Notes (Varlamore)
+
+This is really a combination of an unfinished patch I was working on some time ago and some recent fixes, but given the net result mostly involved Varlamore I thought it'd make sense to name the patch after it.
+
+Although there are some map adjustments in line with the book The Gift of Guthix, I haven't implemented the Fremennik clans mentioned in the book yet as I wanted to get the patch out sooner.
+There's also some map adjustments in line with OSRS' Sailing, though islands will come at a later date.
+
+#######################
+# Map
+#######################
+
+# Renamed >160 sea (and some land) provinces in accordance with upcoming OSRS Sailing
+## Full Sailing changes are held off for the time being as the Sailing maps are not finalised (and have some overlap with Wushanko)
+
+# Adjusted Kharidian coast in line with the OSRS map.
+## Tempoross Cove is now considered part of Menaphos trade node instead of South Lum due to its relocation, and has been moved to where it'll be post-Sailing.
+## Menaphos' wider area has the same number of provinces as before, but some are no longer islands.
+## Akthanakos Island shrunk to match the size of the equivalent island for OSRS Sailing
+
+# Renamed a couple of provinces on Tutorial Island to lessen the meta aspects of the island, and incorporate some very obscure mentions of Jarn
+# Lumbridge Swamp is now renamed by Misthalin dynamically rather than by events
 
 #######################
 # National Flavour
 #######################
 
-# Asgarnia
-## Added extra mission for Brassican Route: The Fifth Kind of Wizard. Enables use of Wizards' Tower.
+# New Boss Nation and Province: Tapoyauik. Found in northeastern Varlamore.
+# New Nation: Twilight Emissaries. Appears on later starts.
+# Try culture-converting in Locus Oasis...
+# Tweaked uses of "global regiment cost", "infantry cost", "cavalry cost" and "artillery cost" in national ideas for balancing reasons
+# Replaced culture-conversion cost for time in national ideas of Hallowvale, Iban, Idol Depths, Morytania, Nightmare, Strangler, Sea Slugs
 
-# Cashien
-## Added 5 unique national ideas.
+# Four new tribes of Asgarnia described in The Gift of Guthix replace existing noncanonical nations:
+## Caracelli - Replaces Cynling.
+## Kareivis - Replaces Singrene.
+## Massama - Replaces Feorweg.
+## Narvra - Replaces Brerdas.
+# Also adjusted some Asgarnian colours to be more alike each other to give the region more of a sense of coherence
 
-#######################
-# Bugfixes
-#######################
-
-# Fixed Asgarnian minor missions not being in the right place when forming Asgarnia
-# Fixed Asgarnian-Guthix mission Guthix's Victory having broken requirements
-# Fixed Figurehead Monarchy government for Asgarnia not appearing
-# Fixed Kami-Shima Nexus, Sword of Edicts, Taverley Stone Circle and Temple of Lost Ancients mission conditions not working
-
-########################################################################################################
-########################################################################################################
-########################################################################################################
-
-# Beta 1.9.0 Patch Notes (Asgarnia)
-
-# Asgarnia is the primary focus of this patch, with reworked missions for the nations that can form it, a new set for Taverley, and a vast unified Asgarnian tree.
-# Meanwhile, Gunnar's Runecrafting Crusades have seen considerable changes and Varlamore has been brought up-to-date with new additions.
-
-#######################
-# Map Changes
-#######################
-
-# 2 new provinces (Cam Torum and Neypotzli) in Varlamore
-# Moved around centres of trade in Varlamore to more appropriate provinces
-
-# Varlamore starting provinces:
-## Cam Torum now controls Tamakamtlati and the Stonecutter Outpost, but Varlamore now controls Iter Peregrini
-## Tlati Rainforest is now fully settled at the start of the game, under the control of either the Rain Demons or Tlati (a vassal of Varlamore)
-## Tempestus now starts entirely in Varlamore's control, though Cloud Giants may rebel
-## Aldarin and Auburnvale is no longer settled at the start of the game, but will appear via Varlamore's mission tree
-
-#######################
-# National Flavour
-#######################
-
-# New nation: Fist of Guthix. Can be created by a Guthixian Asgarnia. Also present at the 169 5th Age start.
-# New nation: Neypotzli. Boss nation found in Varlamore.
-# Localised national ideas for Braedsnape, Casere, Chaos Druids, Death Plateau, Drýas, Elvarg, Heoruwearg, New Imcandoria, Rebrum, Rennard and Weiss
-
-# Al Kharid
-## The Magic Training Arena province modifiers now persist if captured by other nations.
-
-# Ardougne/Baxtoria/Kandarin
-## Added Fishing Platform event and Sea Slug event
-
-# Avizaal
-## Reworked as Cam Torum, with most national ideas replaced.
-## New event when the Runecrafting institution forms, giving you the opportunity to start producing runes in Cam Torum for a price.
-
-# Asgarnia
-## Now carries forward generic Asgarnian missions, and the unique missions of nations that use generic Asgarnian ideas (Burthorpe, Crailey, Dark Wizards, Donblas, Taverley, Varze)
-## Generic Asgarnian mission Decent Army now unlocks the Unify Asgarnia casus belli, instead of needing diplomatic tech 6. The casus belli now generates even less aggressive expansion, but doesn't reduce province cost as much.
-## Buffed national ideas to be a bit more in line with other formables
-## 29 new missions, plus varying numbers depending on religious choice
-### 17 for Saradomin
-### 12 for Zamorak
-### 17 for Guthix
-### 9 for Brassica Prime
-### 8 for any other religion (all other religions have this generic tree)
-## New flavour events
-
-# Burthorpe
-## Tweaked missions slightly, and added new Death Plateau mission enabling a free province towards the Troll Stronghold
-
-# Crailey
-## Rearranged missions so Crailey can use generic Asgarnian missions
-
-# Crandor
-## New flavour event for everyone's favourite Dragon Slayer miniboss: Melzar
-
-# Donblas
-## Reworked missions so Donblas can use generic Asgarnian missions.
-
-# Dark Wizards
-## Rearranged missions so the Dark Wizards can use generic Asgarnian missions
-
-# Gunnar
-## Expanded mission tree with 27 missions, up from 4 (but no longer uses any generic Fremennik missions)
-## Runecrafting Crusader government reworked with new Crusader Zeal mechanic. You gain Crusader Zeal from destroying runecrafting altars, but it declines over time. Low Crusader Zeal makes the realm unstable. You also can no longer switch government types when in the Crusader Government!
-### Due to the Zeal mechanic, the temporary Crusader Recruitment modifier is no longer used.
-### Unique Disaster: End of the Runecrafting Crusades. Entered by running low on Crusader Zeal. Completing the disaster in its entirety grants access to the Reformed Gunnite Horde government.
-## Unique casus belli vs. nations producing runes (usable with Runecrafting Crusader government until the Age of Adventurers)
-
-
-# Lovakengj
-## Now follows the Saradominist faith
-
-# Taverley
-## Now has 6 unique missions alongside the generic Asgarnian missions.
+# Great Kourend
+## Added Royal Accord of Twill event which can fire in the aftermath of Varlamore's War of Betrayal disaster
 
 # Varlamore
-## Mission tree rearranged yet again in accordance with new lore. There are now 24 missions, up from 20.
-## New Aldarin and Auburnvale investment decisions to help expand those vassals
-## Updated startup text
+## Updated flag
+## New event chain reflecting Imafore's Betrayal. Must be in the Age of Adventurers following Ralos or Ranul, Kourend must exist and be a monarchy.
+## New Disaster: War of Betrayal. Caused via the Imafore's Betrayal event chain *or* by declaring war on a nation of Kourendite or Lovakengj culture.
+### Activating this disaster before the Age of Adventurers makes it take longer and have bigger penalties.
+### Depending on the outcome you are granted access to the Reformed Shining Kingdom or Tarnished Kingdom governments, both variations on the classic Shining Kingdom.
+## New event to spawn the Twilight Emissaries
 
 #######################
-# Religion
+# Religions
 #######################
 
-# Localised the names of religious heresy rebels
+# Guthix - New religious school: Proactive. Used by Kareivis, Narvra and the Void Knights.
 
-# Ralos/Ranul
-## The aspects boosting development can now only boost the development of provinces with less than 10 of the respective type. This is to stop Neypotzli building up to an absurd size.
-## Some aspect church power costs have been adjusted.
-
-# Saradomin
-## Added 9 random events for countries following the Saradominist faith.
+# V - Vampyric syncretism gives culture-conversion time reduction instead of cost
 
 #######################
 # Cultures
 #######################
 
-# Beast Group: New Colossus culture
-# Dwarven Group: New Imcando Dwarf names
-# Elemental Group: Added Ascended and Nagua cultures
-# Varlamore Group:
-## "Fortis" has been relocalised as "Perican"; "Tlati" as "Talkasti"
-## Graphical culture now South American instead of Western
-## Updated names with new OSRS NPCs
+# Cam Torum is now considered its own culture in the Dwarven group, separate from Imcando.
+
+# Rennard is now the primary nation of the Dimnes culture instead of Dark Wizards. Hopefully this should create more logical rebels.
+
+#######################
+# Government
+#######################
+
+# "Quidamortem Boss Nation" renamed to "Quidamortem Government" with fewer restrictions than before, but also fewer bonuses. The subsequent government reforms they may choose have also been adjusted.
+# Boss, Island Boss and Quidamortem governments have nerfed intrinsic bonuses, but now has access to the Boss Endurance mechanic.
+## Boss Endurance ticks up slowly over time making boss nations harder to defeat as time goes on - but they also become richer if you feel like fighting them for cash.
+## War exhaustion causes nations to lose Boss Endurance.
+# Government reforms for Boss Nations have also been reined in power-wise to account for the Boss Endurance mechanic.
+
+# Vampyre Kingdom - Blood Power now gives culture conversion time reduction instead of cost reduction
+
+# I attempted to implement a new system of Dwarven Colonies but it caused so much trouble I cut it, with some stuff in the code but commented out or inaccessible. I might reimplement the idea in future though.
+
+#######################
+# Events
+#######################
+
+# New set of Wilderness Border events concerning outlaws. The mechanics of these events are a stealth means to bring institution spread into the Wilderness as you can choose to exile the outlaws.
+
+#######################
+# Institutions
+#######################
+
+# Runecrafting institution now spreads slower by default, but faster than before in provinces with Asgarnian, Fremennik, Kandarin, Kharidian, Kourendite, Misthalanian, Varlamorean, Cam Torum, Imcando or Lovakengj culture.
+## This is intended to reflect the rapid spread of Runecrafting through primarily human realms. The Imcando and Cam Torum dwarves were also rapid adopters, and Lovakengj is included due to being a related population.
+# Runecrafting institution spread for Runes and latent Runes adjusted; latent Runes are still slower to gain the institution than non-latent ones, but the gap is closed. This is to help main-continent human realms.
 
 #######################
 # Monuments
 #######################
 
-# Updated images for Fortis Colosseum and Fortis Aqueduct
-# Daemonheim Keep now correctly only offers +0.5% Chaos per year, not +5%.
+# New Monument: Temple of Twilight. Found in northeastern Varlamore, requires the Ranul or Ralos faith. Offers a fixed boost to land forcelimit and bonuses to manpower in true-faith provinces.
+
+# Chambers of Xeric offers less regiment cost reduction until tier 3
+# Forge of Giants no longer offers reduced army maintenance costs, but instead offers extra goods produced for the province
+# Fortis Aqueduct has been adjusted to offer region-wide bonuses
+# Tuai Leit Library now offers direct institution growth in its province instead of just a growth multiplier
 
 #######################
 # Bugfixes
 #######################
 
-# Fixed some nations getting Chaos faster than intended
-# Corrected "Khazari" to "Kharazi"
-# Fixed many uncolonised provinces unintentionally having no population
+# Bugfixes thanks to Dortund:
+## Fixed missing gui on government mechanics
+## Fixed alternative unlock route for Sacred Forge
+## Fixed Canifis Fate of Slepe mission using the wrong events
+## Fixed Canifis events for releasing Slepe as a march
+## Fixed Saradomin event that requires a cardinal to trigger so it functions properly
+## Fixed Travelling Runecrafters institution event
+## Fixed the entire mod being considered for an outdated version of the game
+
+# Fixed broken Kourend subjects not being targeted by the "restore House" casus belli
 
 #######################
 # Miscellaneous
 #######################
 
-# Updated to EU4 version 1.37
-# Added Varlamore login screen as a loading screen
-# New Runecrafting Crusades starting bookmark. Events/missions aren't yet coded properly to account for later bookmarks so expect bugs; this mostly exists for ease of internal testing.
-# Defined some ai personality likelihoods. This doesn't change a lot, but should make selected countries more or less likely to start wars.
-# Added code to prevent formable nations spawning prematurely by rebels
+# Governing capacity has been reduced across the board to account for the smaller game world relative to vanilla EU4. Penalties from certain governments have also been reduced proportionally.

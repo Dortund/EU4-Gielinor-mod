@@ -480,7 +480,7 @@ runecrafting = {
 	embracement_speed = {
 		modifier = {
 			scale = yes
-			factor = 0.6
+			factor = 0.3
 			custom_trigger_tooltip = {
 				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_runecrafting
 				any_friendly_coast_border_province = {
@@ -489,7 +489,7 @@ runecrafting = {
 			}
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.2
 			scale = yes
 			potential = {
 				NOT = {
@@ -507,7 +507,59 @@ runecrafting = {
 			}
 		}
 		modifier = {
-			factor = 2
+			scale = yes
+			factor = 0.6
+			custom_trigger_tooltip = {
+				tooltip = tooltip_friendly_coast_culture_province_has_embraced_runecrafting
+				OR = {
+					culture_group = misthalin_group
+					culture_group = asgarnian_group
+					culture_group = kandarin_group
+					culture_group = kharidian_group
+					culture_group = fremennik_group
+					culture_group = kourend_group
+					culture_group = varlamore_group
+					culture = imcando
+					culture = cam_torum
+					culture = lovakengj
+				}
+				any_friendly_coast_border_province = {
+					runecrafting = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						runecrafting = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_friendly_culture_province_has_embraced_runecrafting
+				OR = {
+					culture_group = misthalin_group
+					culture_group = asgarnian_group
+					culture_group = kandarin_group
+					culture_group = kharidian_group
+					culture_group = fremennik_group
+					culture_group = kourend_group
+					culture_group = varlamore_group
+					culture = imcando
+					culture = cam_torum
+					culture = lovakengj
+				}
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					runecrafting = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
 			scale = yes
 			custom_trigger_tooltip = {
 				tooltip = tooltip_has_runes
@@ -524,7 +576,7 @@ runecrafting = {
 			}
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.8
 			scale = yes
 			custom_trigger_tooltip = {
 				tooltip = tooltip_has_latent_runes

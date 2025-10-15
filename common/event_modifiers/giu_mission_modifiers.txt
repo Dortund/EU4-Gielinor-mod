@@ -1871,6 +1871,9 @@ VAR_growth_of_tempestus = {
 VAR_vinyards_of_aldarin = {
 	trade_goods_size = 1
 }
+VAR_royal_accord_of_twill_on_display = {
+	prestige = 0.5
+}
 
 #National
 
@@ -1902,6 +1905,16 @@ VAR_recent_aldarin_investment = {
 }
 VAR_recent_auburnvale_investment = {
 	manpower_recovery_speed = -0.05
+}
+VAR_blood_for_ranul = {
+	warscore_cost_vs_other_religion = -0.25
+ 	church_power_modifier = 1
+	global_unrest = 10
+}
+VAR_righteous_war = {
+	global_unrest = -5
+ 	war_exhaustion = -0.05
+	naval_morale = 0.1
 }
 
 

@@ -1,5 +1,7 @@
 ﻿l_english:
  boss_tag_opinion:0 "Boss Nation"
+ is_dwarven_outpost:0 "Dwarven Outpost Ties"
+ is_hosted_dwarven_outpost:0 "Hosted Dwarven Outpost"
  
  excessive_tithe_took_harsh_tithe:0 "Took unusually harsh tithe"
  
@@ -66,6 +68,7 @@
  kou_aided_house:0 "Aided House"
  kou_small_help:0 "Gave a small amount of help"
  kou_small_hinderance:0 "Slightly hindered"
+ kou_royal_accord_of_twill_opinion:0 "Royal Accord of Twill gift"
  
  kouhouse_war_of_five:0 "War of Five Houses"
  
@@ -82,5 +85,9 @@
  mst_goes_too_far:0 "Overbearing Misthalin"
  
  tav_defeated_heresy:0 "Defeated chaos druid heresy"
+ 
+ var_murdered_royal_family:0 "Murdered our Royal Family"
+ var_pleasant_trip:0 "Pleasant trip in Varlamore"
+ var_agreed_to_end_war:0 "Agreed to end the War of Betrayal"
  
  zar_respected_the_dark_lord:0 "Respected the Dark Lord"

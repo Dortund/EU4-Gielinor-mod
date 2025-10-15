@@ -1,0 +1,154 @@
+#War of Betrayal
+#Occurs when Varlamore goes to war with Kourend
+
+war_of_betrayal = {
+	potential = {
+		tag = VAR
+		NOT = { current_age = age_of_divination }
+		NOT = { has_country_flag = VAR_end_of_betrayal_flag }
+		is_free_or_tributary_trigger = yes
+		is_lesser_in_union = no
+		normal_or_historical_nations = yes
+	}
+
+	can_start = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = VAR_war_of_betrayal_alt_start_tooltip
+				has_country_flag = VAR_war_of_betrayal_alt_start_flag
+			}
+			any_war_enemy_country = {
+				OR = {
+					culture_group = kourend_group
+					primary_culture = lovakengj
+				}
+				defensive_war_with = VAR
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = VAR_war_of_betrayal_scaling_difficulty_tooltip
+		}
+	}
+	
+	can_stop = {
+		OR = {
+			current_age = age_of_divination
+			NOT = {
+				any_country = {
+					OR = {
+						culture_group = kourend_group
+						primary_culture = lovakengj
+					}
+				}
+			}
+			AND = {
+				NOT = {
+					is_at_war = yes
+				}
+				NOT = {
+					any_province = {
+						region = kourend_region
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 3
+			custom_trigger_tooltip = {
+				tooltip = VAR_has_twilight_temple_tooltip
+				503 = {
+					owned_by = ROOT
+					is_core = ROOT
+					OR = {
+						has_great_project = {
+							type = great_project_temple_of_twilight
+							tier = 1
+						}
+						has_great_project = {
+							type = great_project_temple_of_twilight
+							tier = 2
+						}
+						has_great_project = {
+							type = great_project_temple_of_twilight
+							tier = 3
+						}
+						has_active_triggered_province_modifier = VAR_temple_of_twilight_modifier
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			is_at_war = yes
+		}
+	}
+
+	can_end = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = var_loyalist_rebel_victory_tooltip
+				has_country_flag = var_loyalist_rebel_victory
+			}
+			custom_trigger_tooltip = {
+				tooltip = var_resistance_rebel_victory_tooltip
+				has_country_flag = var_resistance_rebel_victory
+			}
+			AND = {
+				NOT = { num_of_rebel_armies = 1 }
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 2
+				if = {
+					limit = {
+						current_age = age_of_mortals
+					}
+					had_country_flag = { flag = VAR_war_of_betrayal_start days = 3650 }
+				}
+				if = {
+					limit = {
+						current_age = age_of_humans
+					}
+					had_country_flag = { flag = VAR_war_of_betrayal_start days = 2555 }
+				}
+				if = {
+					limit = {
+						current_age = age_of_adventurers
+					}
+					had_country_flag = { flag = VAR_war_of_betrayal_start days = 1825 }
+				}
+			}
+		}
+	}
+
+	modifier = {
+		diplomatic_reputation = -3
+	 	global_unrest = 10
+	 	reduced_liberty_desire = -10
+	}
+	
+	on_start = war_of_betrayal.1
+	on_end = war_of_betrayal.100
+	
+	on_monthly = {
+		events = { }
+		random_events = {
+			1000 = 0
+			100 = war_of_betrayal.2
+			100 = war_of_betrayal.3
+			100 = war_of_betrayal.4
+			100 = war_of_betrayal.6
+			100 = war_of_betrayal.7
+		}
+	}
+}

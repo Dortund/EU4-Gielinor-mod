@@ -299,6 +299,30 @@ theocratic_government_reform = {
 	}
 }
 
+twilight_cult = {
+	icon = "icon_twilight_cult"
+	potential = {
+		has_reform = twilight_cult
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government_reform_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+	modifiers = {
+		devotion = 1
+		manpower_in_true_faith_provinces = 0.10
+		technology_cost = 0.05
+		morale_damage_received = -0.1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	queen = no
+	heir = no
+}
+
+
+
 ##############################
 # Internal/External Mission
 ##############################
@@ -812,7 +836,7 @@ religious_culture_reform = {
 	allow_normal_conversion = yes
 
 	modifiers = {
-		governing_capacity = 250
+		governing_capacity = 100
 	}
 	ai = {
 		factor = 1

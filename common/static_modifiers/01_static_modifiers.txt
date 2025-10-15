@@ -60,7 +60,7 @@ base_values = {
 	horde_unity = -2
 	devotion = -0.5
 	meritocracy = -2
-	governing_capacity = 200
+	governing_capacity = 100 #Reduced from 200 to account for smaller world
 	num_accepted_cultures = 2
 	monthly_splendor = 1
 	artillery_levels_available_vs_fort = 5
@@ -119,7 +119,25 @@ over_extension = {
 	monthly_kourend_disunity_power_1 = 5
 }
 
-
+war_exhaustion = {
+	global_unrest = 1
+	global_regiment_recruit_speed = 0.02
+	global_ship_recruit_speed = 0.02
+	core_creation = 0.03
+	temples_influence = -0.05
+	mr_aristocrats_influence = -0.05
+	rr_girondists_influence = -0.05
+	rr_royalists_influence = 0.05
+	manpower_recovery_speed = -0.01
+	sailors_recovery_speed = -0.01
+	siege_ability = -0.01
+	global_trade_goods_size_modifier = -0.02
+	monthly_militarized_society = -0.05
+	monthly_arabic_trade_influence_power = -0.05
+	monthly_cultural_unity = -0.05
+	monthly_authority_power = 0.01
+	
+}
 
 ###############################
 

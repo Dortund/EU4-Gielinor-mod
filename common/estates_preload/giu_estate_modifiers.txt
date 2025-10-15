@@ -226,5 +226,16 @@ estate_tzh_gaal = {
 	}
 }
 
+###################################
 
-
+#For special scripted modifiers which are not in the code base.
+estate_special = {
+	#For countries with Dwarven Outpost subjects
+	modifier_definition = {
+		type = privileges
+		key = num_of_dwarven_outposts
+		trigger = {
+			has_government_attribute = can_establish_dwarven_outposts
+		}
+	}
+}

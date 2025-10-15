@@ -3,7 +3,7 @@ owner = CTR
 controller = CTR
 add_core = CTR
 tribal_owner = ---
-culture = imcando
+culture = cam_torum
 religion = saradomin
 
 discovered_by = zeantechgroup

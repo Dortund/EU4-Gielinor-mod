@@ -137,13 +137,13 @@ asgarnian_group	= {
 		}
 	}
 	dimnes = {
-		primary = DWI
+		primary = RNN
 		dynasty_names = {
 			"Graves" "Horfyre" "Ints" "Krand" "Mortifier" "Razorlor"
 			"Redmark" "York"
 		}
 		male_names = {
-			Daer Gaius Grayzag Guy Iban Malignius Marius Neilan Sithik
+			Daer Gaius Gilbert Grayzag Guy Iban Malignius Marius Neilan Sithik
 			Tarn Urval Vile Whitezag Zandar
 		}
 		female_names = {
@@ -155,13 +155,15 @@ asgarnian_group	= {
 		"Lance" "Payne" "Ponfit" "Rebrum" "Renitee" "Rinch" "Sonde" "Table"
 		"Templeton" "Tinley" "Tremene" "Vyvin" "Fsup" "Laye" "Lina" "Hagg"
 		"Troughton" "Finistere" "Itchwood" "Justrain" "Milton" "Sharp" "Varze"
+		"Narvra" "Caracalli" "Kareivis" "Massama"
 	}
 	male_names = {
 		Alfred Amik Brian Flynn Frank Harold Harry Herquin Jake Jeff Jones Larry
-		Marcus Nicholas Nigel Norman Radigad Ramsey Ren Sam Velrak Wayne Will
+		Marcus Martyn Nicholas Nigel Norman Radigad Ramsey Ren Sam Velrak Wayne Will
+		Tymon
 	}
 	female_names = {
-		Alison Amy Carwen Cassie Clara Elise Emily Grace Heskel Lucy Jacquelyn Judith
+		Alison Amy Carwen Cassie Clara Elise Emily Geniven Grace Heskel Lucy Jacquelyn Judith
 		Kaylee Mary Megan Nora Rachael Ruth Sophie Tau Tina
 	}
 }
@@ -765,14 +767,24 @@ dwarven_group	= {
 			"of the Magenta Accordion" "of the Black Bug"
 		}
 	}
+	cam_torum = {
+		country = { monarch_lifespan = 1.2 }
+		primary = CTR
+		male_names = {
+			Callio Funbo Huito Ichta Kalko Khougo Necto Ramarno Sonalo Thalmund Thurgo Tizoro Yarnio
+		}
+		female_names = {
+			Attala Conara Cuica Metla
+		}
+	}
 	imcando = {
 		country = { monarch_lifespan = 1.2 }
 		primary = CDZ
 		male_names = {
-			Callio Funbo Huito Kalko Ramarno Sonalo Thalmund Thurgo Tizoro Yarnio
+			Callio Funbo Huito Ichta Kalko Khougo Necto Ramarno Seppan Sonalo Temur Thalmund Thurgo Tizoro Yarnio
 		}
 		female_names = {
-			Attala Conara Cuica Metla
+			Attala Conara Cuica Metla Temur
 		}
 	}
 	lovakengj = {
@@ -2599,21 +2611,21 @@ troll_group	= {
 			Laundry Leaf Leech Maggot Salmon Sand Sediment Soap
 			"Upturned Cart" Water "Water Wheel"
 		}
-		}
+	}
 	undeadtroll = {
 		dynasty_names = {
 			"the Undead Troll" "the Skeletal Troll"
-			}
-		}
-		male_names = {
-			Brains Marrow Tombstone Flowers Rat Epitaph "Commemorative Bench" Worm Maggot Bones Skull Rat Spider
-			Coffin "Dead Tree"
-		}
-		female_names = {
-			Brains Marrow Tombstone Flowers Rat Epitaph "Commemorative Bench" Worm Maggot Bones Skull Rat Spider
-			Coffin "Dead Tree"
 		}
 	}
+	male_names = {
+		Brains Marrow Tombstone Flowers Rat Epitaph "Commemorative Bench" Worm Maggot Bones Skull Rat Spider
+		Coffin "Dead Tree"
+	}
+	female_names = {
+		Brains Marrow Tombstone Flowers Rat Epitaph "Commemorative Bench" Worm Maggot Bones Skull Rat Spider
+		Coffin "Dead Tree"
+	}
+}
 
 elemental_group	= {
 	graphical_culture = westerngfx
@@ -2678,13 +2690,13 @@ elemental_group	= {
 	nagua = {
 		primary = NPZ
 		dynasty_names = {
-			"Moon"
+			"Guardian" "Moon"
 		}
 		male_names = {
-			Blood Blue Eclipse Eyatlalli Sulphur
+			Amoxliatl Blood Blue Eclipse Eyatlalli Frost Sulphur
 		}
 		female_names = {
-			Blood Blue Eclipse Eyatlalli Sulphur
+			Amoxliatl Blood Blue Eclipse Eyatlalli Frost Sulphur
 		}
 	}
 	ascended = {
@@ -2879,6 +2891,23 @@ penguin_group	= {
 		}
 		female_names = {
 			Lara Rose
+		}
+	}
+}
+
+amphibian_group = {
+	graphical_culture = southamericagfx
+	frog = {
+		country = { monarch_lifespan = 0.1 }
+		primary = LCS
+		dynasty_names = {
+			"Lord of Dread" "Orange-Eater" "Fly-Eater" "Herald" "of Frogland"
+		}
+		male_names = {
+			Cuthbert Dave Gary
+		}
+		female_names = {
+			Jane Sue
 		}
 	}
 }
@@ -3254,13 +3283,13 @@ mechanical_group = {
 		primary = CGU
 		dynasty_names = {
 			"the Generator" "the Guardian" "the Tracer" "the Ancient" "the Confused" "the Enraged" "the Archivist" "the Memory Storer"
-			}
+		}
 		male_names = {
 			Cres 
-			}
+		}
 		female_names = {
 			Cres
-			}
+		}
 	}
 }
 

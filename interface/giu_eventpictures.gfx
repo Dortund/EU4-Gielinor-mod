@@ -34,6 +34,12 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	
+	spriteType = {
+		name = "WAR_OF_BETRAYAL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/WAR_OF_BETRAYAL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
 ##########################
 	#Elder Artefacts
 ##########################
@@ -765,5 +771,9 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_pictures_wilderness/ZOMBIES_eventPicture.dds"
 		alwaystransparent = yes
 	}
-	
+	spriteType = {
+		name = "WILDERNESS_BANDIT_CAMP_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_wilderness/WILDERNESS_BANDIT_CAMP_eventPicture.dds"
+		alwaystransparent = yes
+	}
 }

@@ -6,6 +6,7 @@ house_disunity_mechanic = {
 
 	powers = {
 		kourend_disunity_power_1 = {
+			gui = house_disunity_gov_mech
 			max = 100
 			development_scaled_monthly_growth = 1
 			scaled_modifier = {

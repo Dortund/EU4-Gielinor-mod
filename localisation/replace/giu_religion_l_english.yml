@@ -865,6 +865,11 @@
  guardian_school_desc:0 "The Guardians of Guthix are a select number of powerful beings assigned by Guthix himself to help maintain balance. The Guardians, and those who follow them, take a more interventionist approach in defending Guthix's values than most other schools."
  guardian_scholar_modifier:0 "Guthixian Guardian Scholars"
  desc_guardian_scholar_modifier:0 "We are currently entertaining Guthixian Guardian Scholars to further the theological discussion in our country."
+ proactive_school:0 "Proactive"
+ proactive_school_desc:0 "Followers of the Proactive school believe Guthixians must take action to preserve balance even if it necessitates violence, and even without divine instruction."
+ proactive_scholar_modifier:0 "Guthixian Proactive Scholars"
+ desc_proactive_scholar_modifier:0 "We are currently entertaining Guthixian Proactive Scholars to further the theological discussion in our country."
+ 
 
 
  v:0 "V"

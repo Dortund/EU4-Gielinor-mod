@@ -7,6 +7,12 @@ technology_group = gnometechgroup
 capital = 334 #Zul-Andra
 national_focus = MIL
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 2103.11.13 = {
 	monarch = {
 		country_of_origin = AOS
@@ -27,5 +33,13 @@ national_focus = MIL
 		adm = 2
 		dip = 3
 		mil = 4
+	}
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
 	}
 }

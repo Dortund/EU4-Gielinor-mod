@@ -9,6 +9,12 @@ capital = 377 #Waterbirth Dungeon
 national_focus = MIL
 historical_rival = REL
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 1915.12.9 = {
 	monarch = {
 		name = "Dagannoth"
@@ -30,5 +36,13 @@ historical_rival = REL
 		dip = 1
 		mil = 6
 		female = yes
+	}
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
 	}
 }

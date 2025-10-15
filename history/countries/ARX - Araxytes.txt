@@ -7,6 +7,12 @@ religious_school = monstrous_school
 technology_group = morytaniantechgroup
 capital = 131
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 15.11.25 = {
 	monarch = {
 		name = "Araxxi"
@@ -19,4 +25,12 @@ capital = 131
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = immortal_personality
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
 }

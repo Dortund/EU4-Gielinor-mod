@@ -203,7 +203,7 @@ chaos_group = {
 		}
 		country_as_secondary = {
 			vassal_income = 0.33
-		 	culture_conversion_cost = -0.15
+	 	 	culture_conversion_time = -0.15
 		}
 		province = {
 			local_missionary_strength = -0.02
@@ -1490,6 +1490,76 @@ nonintervention_group = {
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
 			leader_land_fire = 1
 		}
+		proactive_school = {
+			potential_invite_scholar = {
+				OR = {
+					AND = {
+						OR = {
+							religion = guthix
+							religion = northern_pantheon
+							religion = v
+						}
+						knows_of_scholar_country_capital_trigger = yes
+					}
+					has_country_flag = can_always_invite_proactive_school
+					has_country_flag = privilege_can_always_invite_proactive_school
+				}
+			}
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_proactive_school }
+						NOT = { has_country_flag = privilege_can_always_invite_proactive_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = proactive_scholar_modifier }
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = proactive_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = proactive_scholar_modifier
+
+			picture = "GFX_icon_guthix_school_proactive"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			leader_land_manuever = 1
+		}
+		
 		###############
 		# V Schools
 		###############

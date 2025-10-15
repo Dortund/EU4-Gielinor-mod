@@ -6,6 +6,7 @@ elven_desperation_mechanic = {
 
 	powers = {
 		elven_desperation_power_1 = {
+			gui = elven_desperation_gov_mech
 			max = 100
 			scaled_modifier = {
 				modifier = {

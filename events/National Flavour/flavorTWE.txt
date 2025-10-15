@@ -1,0 +1,70 @@
+########################################
+# Events for Twilight Emissaries
+########################################
+
+namespace = flavor_twe
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_twe.1
+	title = flavor_twe.1.t # Restoration of the Temple of Twilight
+	desc = flavor_twe.1.d # The Temple of Twilight, built above the Ruins of Tapoyauik, stands as a testament to those who sought to find forbidden knowledge - but has unfortunately been left to disrepair. However, the Twilight Emissaries are driven to restore the Temple to its former glory!
+	picture = WAR_OF_BETRAYAL_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = TWE
+		503 = {
+			owned_by = ROOT
+			NOT = {
+				has_great_project = {
+					type = great_project_temple_of_twilight
+					tier = 3
+				}
+			}
+			NOT = {
+				has_active_triggered_province_modifier = VAR_temple_of_twilight_modifier
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = flavor_twe.1.a #Excellent!
+		503 = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				if = {
+					limit = {
+						503 = {
+							has_province_modifier = VAR_desecrated_ground
+						}
+					}
+					503 = {
+						remove_province_modifier = VAR_desecrated_ground
+					}
+				}
+				503 = {
+					add_great_project_tier = {
+						type = great_project_temple_of_twilight
+						tier = 3
+					}
+				}
+			}
+			else = {
+				add_province_triggered_modifier = VAR_temple_of_twilight_modifier
+			}
+		}
+	 	add_years_of_income = 1	
+		add_yearly_manpower = 1
+		1492 = {
+			add_core = ROOT
+		}
+	}
+}

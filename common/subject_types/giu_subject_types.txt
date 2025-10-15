@@ -21,7 +21,7 @@ subject_house = {
 
 	relative_power_class = 1
 
-	restoration_cb = cb_restore_personal_union
+	restoration_cb = cb_restore_kourend_house
 	
 	# Subject Interactions:
 	placate_rulers = yes
@@ -172,4 +172,147 @@ tributary_state = {
 			}
 		}
 	}
+}
+
+subject_dwarven_outpost = {
+	copy_from = default
+	can_have_great_projects_moved_by_overlord = no
+	
+	# Graphics:
+    sprite = GFX_subject_dwarven_outpost
+	diplomacy_overlord_sprite = GFX_diplomacy_leaddwarfoutpost
+	diplomacy_subject_sprite = GFX_diplomacy_isdwarfoutpost
+
+	# Properties:
+	has_overlords_ruler = no
+	can_fight_independence_war = no
+	is_voluntary = no
+	transfer_trade_power = yes
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	opinion_on_subject_integration = 0 #Determines how much opinion they actually lose when a fellow subject gets integrated.
+	overlord_can_attack = yes
+	takes_diplo_slot = no
+	has_power_projection = no
+	can_release_in_peace = no
+	uses_military_focus = no
+	overlord_protects_external = no
+	counts_for_borders = yes
+	overlord_enforce_peace_attacking = no
+	can_use_claims = no
+	share_rebel_popup = yes
+	can_transfer_in_peace = no
+	can_set_mil_focus = yes
+	can_send_missionary_to_subject = no
+	can_union_break = no
+	overlord_can_fabricate_for = no
+	max_government_rank = 1
+	cities_required_for_bonuses = 0
+	trust_on_start = 50
+	base_liberty_desire = -50
+	pays_overlord = 2.0
+	military_focus = 1
+	relative_power_class = 0
+	
+	can_fight = {
+	}
+	can_rival = {
+	}
+	can_ally = {
+	}
+	can_marry = {
+	}
+
+	# Subject Interactions:
+	# (immediate)
+	grant_province = no
+	grant_core_claim = no
+	takeondebt = yes
+	send_additional_troops = yes
+	knowledge_sharing = yes
+	block_settlement_growth = no
+	allow_settlement_growth = no
+	
+	# Modifiers:
+	modifier_overlord = {
+		modifier = dwarven_outpost_overlord_modifier
+	}
+	modifier_subject = {
+		modifier = dwarven_outpost_subject_modifier
+	}
+
+	overlord_opinion_modifier = is_dwarven_outpost
+	subject_opinion_modifier = is_dwarven_outpost
+}
+
+subject_hosted_dwarven_outpost = { #Unused - use triggered modifier instead
+	copy_from = default
+	can_have_great_projects_moved_by_overlord = no
+	
+	# Graphics:
+    sprite = GFX_subject_dwarven_outpost
+	diplomacy_overlord_sprite = GFX_diplomacy_hostdwarfoutpost
+	diplomacy_subject_sprite = GFX_diplomacy_hostdwarfoutpost
+
+	# Properties:
+	has_overlords_ruler = no
+	can_fight_independence_war = no
+	is_voluntary = no
+	transfer_trade_power = no
+	joins_overlords_wars = no
+	joins_colonial_wars = no
+	opinion_on_subject_integration = 0 #Determines how much opinion they actually lose when a fellow subject gets integrated.
+	overlord_can_attack = yes
+	takes_diplo_slot = no
+	has_power_projection = no
+	can_release_in_peace = yes
+	uses_military_focus = no
+	overlord_protects_external = no
+	counts_for_borders = no
+	overlord_enforce_peace_attacking = no
+	can_use_claims = no
+	share_rebel_popup = no
+	can_transfer_in_peace = no
+	can_set_mil_focus = no
+	can_send_missionary_to_subject = no
+	can_union_break = no
+	overlord_can_fabricate_for = no
+	max_government_rank = 1
+	cities_required_for_bonuses = 0
+	trust_on_start = 10
+	base_liberty_desire = -50
+	pays_overlord = 0
+	military_focus = 1
+	relative_power_class = 0
+	can_be_annexed = no
+	
+	can_fight = {
+	}
+	can_rival = {
+	}
+	can_ally = {
+	}
+	can_marry = {
+	}
+
+	# Subject Interactions:
+	# (immediate)
+	customize_subject = no
+	grant_province = no
+	grant_core_claim = no
+	takeondebt = no
+	send_additional_troops = no
+	knowledge_sharing = no
+	block_settlement_growth = no
+	allow_settlement_growth = no
+	
+	# Modifiers:
+	modifier_overlord = {
+		modifier = dwarven_outpost_host_modifier
+	}
+	modifier_subject = {
+	}
+
+	overlord_opinion_modifier = is_hosted_dwarven_outpost
+	subject_opinion_modifier = is_hosted_dwarven_outpost
 }

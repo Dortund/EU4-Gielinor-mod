@@ -1,0 +1,3 @@
+3 = "Lummouth"
+4 = "West Lumbridge Swamp"
+938 = "South Lumbridge Swamp"

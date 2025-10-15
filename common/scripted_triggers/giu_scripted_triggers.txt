@@ -18,6 +18,136 @@
 # Usage:
 # my_test_trigger = { ARG1=foo ARG2=bar CONTEXT=FROM }
 
+# Government - Dwarven Outposts
+
+reached_dwarven_outpost_slot_limit = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			variable_name = current_amount_of_dwarven_outposts
+			value = modifier:dwarven_outpost_amount_check_influence
+		}
+		export_to_variable = {
+			variable_name = max_amount_of_dwarven_outposts
+			value = modifier:num_of_dwarven_outposts
+		}
+		check_variable = {
+			which = current_amount_of_dwarven_outposts
+			which = max_amount_of_dwarven_outposts
+		}
+	}
+}
+
+enough_dwarven_outpost_slots = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			variable_name = current_amount_of_dwarven_outposts
+			value = modifier:dwarven_outposts_amount_check_influence
+		}
+		export_to_variable = {
+			variable_name = max_amount_of_dwarven_outposts
+			value = modifier:num_of_dwarven_outposts
+		}
+		NOT = {
+			check_variable = {
+				which = current_amount_of_dwarven_outposts
+				which = max_amount_of_dwarven_outposts
+			}
+		}
+	}
+}
+
+# Government - Consortium Estates
+
+any_consortium_estate_60_loyalty_and_influence = { # Currently only supports original Consortium estates
+	OR = {
+		AND = {
+			estate_influence = {
+				estate = estate_kel_blue_opal
+				influence = 60
+			}
+			estate_loyalty = {
+				estate = estate_kel_blue_opal
+				loyalty = 60
+			}
+		}
+		AND = {
+			estate_influence = {
+				estate = estate_kel_brown_engine
+				influence = 60
+			}
+			estate_loyalty = {
+				estate = estate_kel_brown_engine
+				loyalty = 60
+			}
+		}
+		AND = {
+			estate_influence = {
+				estate = estate_kel_green_gemstone
+				influence = 60
+			}
+			estate_loyalty = {
+				estate = estate_kel_green_gemstone
+				loyalty = 60
+			}
+		}
+		AND = {
+			estate_influence = {
+				estate = estate_kel_purple_pewter
+				influence = 60
+			}
+			estate_loyalty = {
+				estate = estate_kel_purple_pewter
+				loyalty = 60
+			}
+		}
+		AND = {
+			estate_influence = {
+				estate = estate_kel_red_axe
+				influence = 60
+			}
+			estate_loyalty = {
+				estate = estate_kel_red_axe
+				loyalty = 60
+			}
+		}
+		AND = {
+			estate_influence = {
+				estate = estate_kel_silver_cog
+				influence = 60
+			}
+			estate_loyalty = {
+				estate = estate_kel_silver_cog
+				loyalty = 60
+			}
+		}
+		AND = {
+			estate_influence = {
+				estate = estate_kel_white_chisel
+				influence = 60
+			}
+			estate_loyalty = {
+				estate = estate_kel_white_chisel
+				loyalty = 60
+			}
+		}
+		AND = {
+			estate_influence = {
+				estate = estate_kel_yellow_fortune
+				influence = 60
+			}
+			estate_loyalty = {
+				estate = estate_kel_yellow_fortune
+				loyalty = 60
+			}
+		}
+	}
+}
+
+
+###########################################
+
+# National Flavour
+
 asg_zam_misthalin_west_of_lum = {
 	custom_trigger_tooltip = {
 		tooltip = "asg_zam_misthalin_west_of_lum_tooltip"

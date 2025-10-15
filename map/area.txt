@@ -164,15 +164,15 @@ ullek_area = {
 }
 
 menaphos_area = {
-	96 97 100 857 858
+	96 97 100 857
 }
 
-elid_isles_area = {
-	98 99 859
+outer_menaphos_area = {
+	98 858 859
 }
 
 sophanem_area = {
-	101 102 854 855
+	99 101 102 854 855
 }
 
 ##############################################
@@ -820,7 +820,11 @@ north_tlati_area = {
 }
 
 salvager_shore_area = {
-	502 503 889 1452 1453
+	889 1452 1453
+}
+
+twilight_temple_area = {
+	502 503 1492
 }
 
 proudspire_area = {

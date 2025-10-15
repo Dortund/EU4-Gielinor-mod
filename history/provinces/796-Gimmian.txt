@@ -4,7 +4,7 @@ controller = DBS
 add_core = DBS
 tribal_owner = ---
 culture = dimnes
-religion = saradomin
+religion = guthix
 
 discovered_by = centraltechgroup
 discovered_by = dwarventechgroup
@@ -38,4 +38,5 @@ is_city = yes
 	owner = ASG
 	controller = ASG
 	remove_core = GUN
+	religion = saradomin
 }

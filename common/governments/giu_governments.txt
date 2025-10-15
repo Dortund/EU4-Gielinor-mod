@@ -23,7 +23,9 @@ monarchy = {
 				new_world_kingdom
 				noble_kingdom
 				principality_burthorpe
+				reformed_shining_kingdom
 				shining_kingdom
+				tarnished_kingdom
 				unstable_monarchy
 				vampyre_kingdom
 			}
@@ -223,6 +225,7 @@ republic = {
 				dwarven_outpost
 				federal_republic
 				free_city
+				frog_collective
 				kourend_council
 				magiocracy
 				merchants_reform
@@ -517,6 +520,7 @@ theocracy = {
 				restored_zarosian_theocracy
 				shamanic_theocracy
 				theocratic_government_reform
+				twilight_cult
 			}
 		}
 		internal_vs_external_mission = {

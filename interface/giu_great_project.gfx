@@ -256,6 +256,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_great_project_great_project_temple_of_twilight"	
+		texturefile = "gfx//interface//great_projects//great_project_temple_of_twilight.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_great_project_great_project_theatre_of_blood"	
 		texturefile = "gfx//interface//great_projects//great_project_theatre_of_blood.dds"
 	}

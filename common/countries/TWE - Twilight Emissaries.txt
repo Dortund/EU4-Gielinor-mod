@@ -1,0 +1,84 @@
+#Country Name: Please seefilename.
+
+graphical_culture = southamericagfx
+
+color = { 29 37 58 }
+
+historical_idea_groups = {
+	defensive_ideas
+	expansion_ideas
+	religious_ideas
+	maritime_ideas
+	quality_ideas
+	court_ideas
+	economic_ideas
+	naval_ideas
+}
+
+monarch_names = {
+	"Aco #0" = 1
+	"Aimeri #0" = 1
+	"Arrun #0" = 1
+	"Astra #0" = 1
+	"Atlazora #0" = 1
+	"Caius #0" = 1
+	"Cobado #0" = 1
+	"Ennius #0" = 1
+	"Gilman #0" = 1
+	"Hameln #0" = 1
+	"Hanchen #0" = 1
+	"Hegio #0" = 1
+	"Imafore #0" = 1
+	"Itzla #0" = 1
+	"Leo #0" = 1
+	"Marcellus #0" = 1
+	"Marhuitz #0" = 1
+	"Maximus #0" = 1
+	"Mezan #0" = 1
+	"Oli #0" = 1
+	"Ornus #0" = 1
+	"Pitri #0" = 1
+	"Pellem #0" = 1
+	"Regulus #0" = 1
+	"Reshi #0" = 1
+	"Rufus #0" = 1
+	"Servius #0" = 1
+	"Taur #0" = 1
+	"Teco #0" = 1
+	"Thomdril #0" = 1
+	"Ueman #0" = 1
+	"Velam #0" = 1
+	"Virilis #0" = 1
+	"Zuma #0" = 1
+	
+	"Apatura #0" = -1
+	"Artima #0" = -1
+	"Atza #0" = -1
+	"Aurelia #0" = -1
+	"Avinia #0" = -1
+	"Ava #0" = -1
+	"Azali #0" = -1
+	"Cervus #0" = -1
+	"Claudia #0" = -1
+	"Cuali #0" = -1
+	"Dizana #0" = -1
+	"Floria #0" = -1
+	"Furia #0" = -1
+	"Gloria #0" = -1
+	"Kendall #0" = -1
+	"Imia #0" = -1
+	"Jessamine #0" = -1
+	"Lavina #0" = -1
+	"Lucia #0" = -1
+	"Metzli #0" = -1
+	"Nalia #0" = -1
+	"Nel #0" = -1
+	"Oriana #0" = -1
+	"Orsaga #0" = -1
+	"Picaria #0" = -1
+	"Quoatlos #0" = -1
+	"Seia #0" = -1
+	"Verity #0" = -1
+	"Xerna #0" = -1
+	"Zyanyi #0" = -1
+}

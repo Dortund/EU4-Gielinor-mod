@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = north_asgarn
+religion = guthix
+religious_school = proactive_school
+technology_group = centraltechgroup
+capital = 48 #Astram's Ridge
+
+1925.8.2 = {
+	monarch = {
+		name = "Hemet"
+		dynasty = "Kareivis"
+		birth_date = 1901.9.17
+		adm = 2
+		dip = 3
+		mil = 4
+		female = yes
+	}
+}

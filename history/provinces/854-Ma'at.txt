@@ -17,7 +17,7 @@ base_production = 3
 base_manpower = 4
 
 trade_goods = bones
-latent_trade_goods = { rare_loot }
+latent_trade_goods = { divine_energy }
 
 is_city = yes
 

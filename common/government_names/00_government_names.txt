@@ -620,6 +620,29 @@ restored_zarosian_theocracy = {
 	}
 }
 
+twilight_cult_name = {
+	rank = {
+		1 = CULT
+		2 = CULT
+		3 = CULT_EMPIRE
+	}
+	ruler_male = {
+		1 = AUGUR
+		2 = AUGUR
+		3 = GRAND_AUGUR
+	}
+
+	ruler_female = {
+		1 = AUGUR
+		2 = AUGUR
+		3 = GRAND_AUGUR
+	}
+
+	trigger = {
+		has_reform = twilight_cult
+	}
+}
+
 ####################################
 # General
 ####################################

@@ -3,6 +3,23 @@
 ##################################################################################################
 
 #############
+#Dwarven Outpost
+#############
+
+dwarven_outpost_overlord_modifier = {
+	merchants = 1
+}
+dwarven_outpost_subject_modifier = {
+	global_prov_trade_power_modifier = 1
+}
+dwarven_outpost_host_modifier = {
+ 	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.1
+}
+dwarven_colony_reject_hidden_modifier = {
+}
+
+#############
 #Vampyric
 #############
 

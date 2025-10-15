@@ -6,6 +6,8 @@ blood_power_mechanic = {
 
 	powers = {
 		blood_power_power_1 = {
+			gui = blood_power_gov_mech
+			show_before_interactions = yes
 			max = 100
 			default = 50
 			base_monthly_growth = 0.1
@@ -13,7 +15,7 @@ blood_power_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					yearly_patriarch_authority = 0.02
-				 	culture_conversion_cost = -0.2
+				 	culture_conversion_time = -0.2
 					shock_damage_received = -0.1
 				}
 			}

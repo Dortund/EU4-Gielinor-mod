@@ -264,7 +264,7 @@ AIJ_ideas = {
 #Akthanakosite Ideas
 AKO_ideas = {
 	start = {
-		cavalry_cost = -0.2
+		cavalry_cost = -0.15
 		cav_to_inf_ratio = 0.2
 	}
 
@@ -364,7 +364,7 @@ ALK_ideas = {
 	free = yes		#will be added at load.
 	
 	ALK_smithing_tradition = {
-		global_regiment_cost = -0.10
+		global_regiment_cost = -0.1
 	}
 	ALK_toll_gate = {
 		global_tax_modifier = 0.1
@@ -590,7 +590,7 @@ AOS_ideas = {
 		build_cost = -0.1
 	}
 	AOS_warped_creatures = {
-		cavalry_cost = -0.15
+		cavalry_cost = -0.1
 	}
 	AOS_poison_waste = {
 		hostile_attrition = 1
@@ -774,7 +774,7 @@ AUB_ideas = {
 		possible_adm_policy = 1
 	}
 	AUB_master_fletchers = {
-		global_regiment_cost = -0.1
+		global_regiment_cost = -0.05
 	}
 }
 
@@ -1071,7 +1071,7 @@ BDS_ideas = {
 		global_institution_spread = 0.2
 	}
 	BDS_dart_smithing = {
-		global_regiment_cost = -0.1
+		global_regiment_cost = -0.05
 	}
 	BDS_poison_darts = {
 		fire_damage = 0.1
@@ -1255,7 +1255,7 @@ BMU_ideas = {
 		leader_naval_manuever = 1
 	}
 	BMU_whale_whispering = {
-		cavalry_cost = -0.2
+		cavalry_cost = -0.15
 	}
 }
 
@@ -1343,7 +1343,7 @@ BOI_ideas = {
 	}
 }
 
-#Brerdas ideas
+#Brerdas ideas - Depreciated in favour of Narvra
 BRD_ideas = {
 	start = {
 		fort_maintenance_modifier = -0.1
@@ -1670,7 +1670,7 @@ BZR_ideas = {
 		yearly_patriarch_authority = 0.01
 	}
 	BZR_unarmed_combat = {
-		global_regiment_cost = -0.15
+		global_regiment_cost = -0.1
 	}
 	BZR_leap_of_death = {
 		leader_land_manuever = 1
@@ -1680,6 +1680,48 @@ BZR_ideas = {
 	}
 	BZR_mercenary_forces = {
 		mercenary_cost = -0.1
+	}
+}
+
+#Caracalli Ideas
+CCI_ideas = {
+	start = {
+		build_cost = -0.1
+		build_time = -0.1
+	}
+
+	bonus = {
+		land_forcelimit_modifier = 0.2
+	}
+	
+	trigger = {
+		OR = {
+			tag = CCI
+		}
+	}
+	free = yes		#will be added at load.
+	
+	CCI_togetherness = {
+		stability_cost_modifier = -0.1
+	}
+	CCI_unicorn_cavalry = {
+		cavalry_power = 0.1
+	}
+	CCI_air_altar = {
+		movement_speed = 0.1
+	}
+	CCI_sight_of_citadels = {
+		idea_cost = -0.1
+		tolerance_heretic = 1
+	}
+	CCI_clan_citadels = {
+		garrison_size = 0.2
+	}
+	CCI_citadel_grind = {
+		production_efficiency = 0.1
+	}
+	CCI_custom_courses = {
+		adm_tech_cost_modifier = -0.1
 	}
 }
 
@@ -1884,7 +1926,7 @@ CDZ_ideas = {
 		production_efficiency = 0.15
 	}
 	CDZ_warforged_bronze = {
-		global_regiment_cost = -0.10
+		global_regiment_cost = -0.05
 	}
 	CDZ_goldrune = {
 		global_tax_modifier = 0.1
@@ -2660,7 +2702,7 @@ CYC_ideas = {
 	}
 }
 
-#Cynling ideas
+#Cynling ideas - Depreciated in favour of CCI
 CYN_ideas = {
 	start = {
 		global_manpower_modifier = 0.1
@@ -3104,7 +3146,8 @@ DSK_ideas = {
 		global_own_trade_power = 0.15
 	}
 	DSK_frog_leather = {
-		global_regiment_cost = -0.1
+		global_regiment_cost = -0.05
+		fire_damage_received = -0.05
 	}
 	DSK_geothermal_energy = {
 		production_efficiency = 0.1
@@ -3538,7 +3581,7 @@ ENV_ideas = {
 	free = yes		#will be added at load.
 	
 	ENV_elemental_obelisks = {
-		global_regiment_cost = -0.1
+		global_regiment_cost = -0.05
 	}
 	ENV_yew_trees = {
 		production_efficiency = 0.1
@@ -4023,7 +4066,7 @@ FRG_ideas = {
 		leader_land_shock = 1
 	}
 	FRG_mould_library = {
-		global_regiment_cost = -0.1
+		global_regiment_cost = -0.05
 	}
 	FRG_coastal_defence = {
 		own_coast_naval_combat_bonus = 1
@@ -4034,7 +4077,7 @@ FRG_ideas = {
 	}
 }
 
-#Feorweg ideas
+#Feorweg ideas - Depreciated for Massama
 FRW_ideas = {
 	start = {
 		caravan_power = 0.2
@@ -5298,7 +5341,7 @@ HUJ_ideas = {
 		land_attrition = -0.1
 	}
 	HUJ_local_sulphur = {
-		artillery_cost = -0.2
+		artillery_cost = -0.15
 	}
 	HUJ_only_the_best = {
 		mercenary_discipline = 0.05
@@ -5380,7 +5423,7 @@ HVL_ideas = {
 	free = yes		#will be added at load.
 	
 	HVL_decontamination = {
-		culture_conversion_cost = -0.2
+		culture_conversion_time = -0.2
 	}
 	HVL_statues_to_legends = {
 		build_cost = -0.15
@@ -5479,7 +5522,7 @@ IBN_ideas = {
 		max_hostile_attrition = 1
 	}
 	IBN_soulless = {
-		culture_conversion_cost = -0.33
+		culture_conversion_time = -0.33
 	}
 	IBN_well_of_the_damned = {
 		defensiveness = 0.15
@@ -5515,7 +5558,7 @@ IDI_ideas = {
 		land_attrition = -0.1
 	}
 	IDI_nosorog_tamers = {
-		cavalry_cost = -0.2
+		cavalry_cost = -0.15
 	}
 	IDI_pastoral_living = {
 		production_efficiency = 0.1
@@ -5597,7 +5640,7 @@ ILD_ideas = {
 		navy_tradition = 0.5
 	}
 	ILD_quick_assimilation = {
-		culture_conversion_cost = -0.2
+		culture_conversion_time = -0.2
 	}
 	ILD_annex_the_expertise = {
 		adm_tech_cost_modifier = -0.05
@@ -6061,6 +6104,8 @@ KDG_ideas = {
 	bonus = {
 		global_trade_power = 0.2
 		legitimacy = 1
+		horde_unity = 1
+		devotion = 1
 	}
 	
 	trigger = {
@@ -6073,6 +6118,7 @@ KDG_ideas = {
 	KDG_the_consortium = {
 		republican_tradition = 0.3
 		meritocracy = 1
+		num_of_dwarven_outposts = 1
 	}
 	KDG_black_guard = {
 		discipline = 0.05
@@ -6082,10 +6128,11 @@ KDG_ideas = {
 		defensiveness = 0.1
 	}
 	KDG_blast_furnace = {
-		trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	KDG_lava_flow_mine = {
 		development_cost_modifier = -0.1
+		global_regiment_cost = -0.05
 	}
 	KDG_hand_cannons = {
 		artillery_power = 0.15
@@ -6434,7 +6481,7 @@ KNJ_ideas = {
 		own_coast_naval_combat_bonus = 1
 	}
 	KNJ_gunpowder_monopoly = {
-		artillery_cost = -0.2
+		artillery_cost = -0.15
 	}
 	KNJ_menaphite_trade = {
 		global_trade_power = 0.1
@@ -6531,6 +6578,48 @@ KPH_ideas = {
 	}
 	KPH_sandstorm = {
 		cavalry_flanking = 0.5
+	}
+}
+
+#Kareivis ideas
+KRV_ideas = {
+	start = {
+		envoy_travel_time = -0.1
+		tolerance_heathen = 1
+	}
+
+	bonus = {
+		innovativeness_gain = 0.25
+	}
+	
+	trigger = {
+		OR = {
+			tag = KRV
+		}
+	}
+	free = yes		#will be added at load.
+	
+	KRV_ready_lumber_supply = {
+		build_time = -0.1
+	}
+	KRV_mind_altar = {
+		idea_cost = -0.1
+	}
+	KRV_pet_squirrels = {
+		global_unrest = -1
+	}
+	KRV_woodland_rogues = {
+		loot_amount = 0.25
+	}
+	KRV_ice_mountain_suppliers = {
+		artillery_cost = -0.1
+	}
+	KRV_banner_of_rebellion = {
+		rebel_support_efficiency = 0.25
+	}
+	KRV_tower_of_miazrqa = {
+		yearly_corruption = 0.01
+		global_spy_defence = 0.25
 	}
 }
 
@@ -6780,6 +6869,53 @@ LCI_ideas = {
 	}
 	LCI_ascension_objective = {
 		missionaries = 1
+	}
+}
+
+#Locusian ideas
+LCS_ideas = {
+	start = {
+		possible_dip_policy = 1
+		justify_trade_conflict_cost = -1
+	}
+
+	bonus = {
+		development_cost_in_primary_culture = -0.15
+	}
+	
+	trigger = {
+		OR = {
+			tag = LCS
+		}
+	}
+	free = yes		#will be added at load.
+	
+	LCS_collective_leadership = {
+		republican_tradition = 0.3
+		legitimacy = 1
+		devotion = 1
+		meritocracy = 1
+		horde_unity = 1
+	}
+	LCS_fair_work_for_fair_treatment = {
+		global_prosperity_growth = 0.01
+	}
+	LCS_generational_inaction = {
+		parliament_debate_duration = 5
+		parliament_effect_duration = 5
+	}
+	LCS_peace_could_be_fun = {
+		unjustified_demands = -0.15
+	}
+	LCS_democracy_in_action = {
+		candidate_random_bonus = 1
+		reelection_cost = -0.1
+	}
+	LCS_lord_of_dread = {
+		monarch_military_power = 1
+	}
+	LCS_fly_cleanup = {
+		global_monthly_devastation = -0.1
 	}
 }
 
@@ -7152,7 +7288,7 @@ MNR_ideas = {
 		trade_efficiency = 0.1
 	}
 	MNR_selective_breeding = {
-		cavalry_cost = -0.15
+		cavalry_cost = -0.1
 	}
 	MNR_harlequin_cows = {
 		prestige = 1
@@ -7270,7 +7406,7 @@ MOO_ideas = {
 	free = yes		#will be added at load.
 	
 	MOO_runecrafting_pioneers = {
-		global_regiment_cost = -0.1
+		global_regiment_cost = -0.05
 		global_trade_goods_size_modifier = 0.05
 	}
 	MOO_suqah = {
@@ -7544,6 +7680,50 @@ MSH_ideas = {
 	}
 	MSH_witchwood = {
 		fire_damage_received = -0.1
+	}
+}
+
+# Massama ideas
+MSS_ideas = {
+	start = {
+		diplomatic_upkeep = 1
+		spy_offence = 0.2
+	}
+
+	bonus = {
+		manpower_recovery_speed = 0.2
+	}
+	
+	trigger = {
+		OR = {
+			tag = MSS
+		}
+	}
+	free = yes		#will be added at load.
+	
+	MSS_hedging_loyalties = {
+		relation_with_same_religion = 10
+	 	reverse_relation_with_same_religion = 10
+		diplomatic_reputation = 1
+	}
+	MSS_secessionists = {
+		rebel_support_efficiency = 0.25
+	}
+	MSS_changing_seasons = {
+		land_attrition = -0.1
+	}
+	MSS_between_the_ports = {
+		advisor_pool = 1
+	}
+	MSS_elemental_wizards = {
+		fire_damage = 0.1
+	}
+	MSS_song_from_the_depths = {
+		global_unrest = -2
+		global_manpower_modifier = -0.1
+	}
+	MSS_armadylean_interest = {
+		tolerance_heretic = 2
 	}
 }
 
@@ -7837,7 +8017,8 @@ MYT_ideas = {
 		shock_damage_received = -0.15
 	}
 	MYT_new_vampyres = {
-		culture_conversion_cost = -0.15
+		culture_conversion_cost = -0.1
+		culture_conversion_time = -0.1
 	}
 	MYT_haemalchemy = {
 		idea_cost = -0.1
@@ -7891,7 +8072,7 @@ NAR_ideas = {
 #Nightmarish Ideas
 NAS_ideas = {
 	start = {
-		culture_conversion_cost = -0.2
+		culture_conversion_time = -0.2
 		global_regiment_cost = -0.1
 	}
 
@@ -8187,6 +8368,51 @@ NPZ_ideas = {
 	NPZ_eclipse_atlatl = {
 		max_general_fire = 1
 	 	leader_land_fire = 1
+	}
+}
+
+NRV_ideas = {
+	start = {
+		land_morale = 0.1
+		female_advisor_chance = 0.2
+		heir_chance = 0.25
+	}
+
+	bonus = {
+		development_cost_in_primary_culture = -0.2
+	}
+	
+	trigger = {
+		OR = {
+			tag = NRV
+		}
+	}
+	free = yes		#will be added at load.
+	
+	
+	NRV_keep_the_tribes_independent = {
+		diplomatic_upkeep = 1
+	}
+	NRV_ghost_of_the_eastern_reaches = {
+		leader_land_manuever = 1
+	}
+	NRV_spycraft = {
+		spy_offence = 0.1
+		dip_advisor_cost = -0.1
+	}
+	NRV_fence_shortcuts = {
+		movement_speed = 0.1
+	}
+	NRV_road_to_sarim = {
+		global_prov_trade_power_modifier = 0.2
+	}
+	NRV_gossip_and_quests = {
+		yearly_absolutism = 0.5
+		spy_offence = 0.1
+	}
+	NRV_spirit_link = {
+		tolerance_own = 1
+		yearly_karma_decay = 0.1
 	}
 }
 
@@ -9711,7 +9937,7 @@ RVL_ideas = {
 		num_accepted_cultures = 2
 	}
 	RVL_fox_taming = {
-		cavalry_cost = -0.15
+		cavalry_cost = -0.1
 	}
 	RVL_stop_the_wolves = {
 		global_heathen_missionary_strength = 0.02
@@ -10027,7 +10253,7 @@ SGR_ideas = {
 SGW_ideas = {
 	start = {
 		governing_capacity_modifier = 0.1
-		culture_conversion_cost = -0.33
+		culture_conversion_time = -0.33
 	}
 
 	bonus = {
@@ -10579,7 +10805,7 @@ SRT_ideas = {
 #Sea Slug ideas
 SSG_ideas = {
 	start = {
-		culture_conversion_cost = -0.33
+		culture_conversion_time = -0.33
 		fire_damage_received = 0.1
 	}
 
@@ -10611,7 +10837,7 @@ SSG_ideas = {
 		ae_impact = -0.15
 	}
 	SSG_lobster_minions = {
-		cavalry_cost = -0.15
+		cavalry_cost = -0.1
 		cavalry_power = 0.1
 	}
 	SSG_phasmatys_to_witchaven = {
@@ -11442,6 +11668,47 @@ TPS_ideas = {
 	}
 }
 
+#Tapoyauiki ideas
+TPY_ideas = {
+	start = {
+		fire_damage_received = 0.1
+		supply_limit_modifier = 0.25
+	}
+
+	bonus = {
+		defensiveness = 0.2
+	}
+	
+	trigger = {
+		OR = {
+			tag = TPY
+		}
+	}
+	free = yes		#will be added at load.
+	
+	TPY_frozen_depths = { #The coldest part of Varlamore is where we thrive and so many others fail.
+		hostile_attrition = 1
+	}
+	TPY_sealed_knowledge = { #The unworthy are not to know about the Old One's secrets. But we may reveal them steadily for those who are ready.
+		institution_spread_from_true_faith = 0.2
+	}
+	TPY_pendant_of_ates = { #This pendant of ice and water carries with it the powers of teleportation.
+		leader_land_manuever = 1
+	}
+	TPY_moon_chest = { #Our icy depths preserve ancient treasures for an eternity; through it surpluses can be kept for times of need.
+		inflation_reduction = 0.1
+	}
+	TPY_huasca_secrets = { #Power of the Gods should be harnessed steadily and with the utmost care; potions made with the huasca herb are particularly adept at honing spiritual connections.
+		missionary_maintenance_cost = -0.25
+	}
+	TPY_ice_and_fire = { #Dragons are a rare sight in Varlamore, and the ones found in Tapoyauik are notable for their dual wielding of ice and fire powers alike for a unique combination of strengths.
+		fire_damage = 0.1
+	}
+	TPY_intimidating_nagua = { #Nagua, while somewhat fragile, are seldom seen on the surface world and terrify the unprepared.
+		morale_damage = 0.1
+	}
+}
+
 #Torakokuan ideas
 TRK_ideas = {
 	start = {
@@ -11739,6 +12006,50 @@ TVV_ideas = {
 	}
 }
 
+#Twilight Emissary Ideas
+TWE_ideas = {
+	start = {
+		global_missionary_strength = 0.01
+		global_tax_modifier = 0.1
+	}
+
+	bonus = {
+		core_creation = -0.1
+	}
+	
+	trigger = {
+		OR = {
+			tag = TWE
+		}
+	}
+	free = yes		#will be added at load.
+	
+	TWE_restore_the_temple = { #The Temple of Twilight's purpose is to aid our exploration of the mysteries of Tapoyauik. It must be restored before we proceed.
+		build_time = -0.1
+		great_project_upgrade_time = -0.1
+	}
+	TWE_hailstorm_living = { #The Hailstorm Mountains are unsuited for agriculture but from foraging, fishing and the herding of animals we can supply just enough for ourselves.
+		land_attrition = -0.1
+		supply_limit_modifier = 0.1
+	}
+	TWE_tower_of_ascension = { #The Tower of Ascension is where new recruits are tested for worthiness to join the Twilight Emissaries. The sense of being in an exclusive community strengthens our bonds.
+		manpower_in_true_faith_provinces = 0.25
+	}
+	TWE_recruitment_surge = { #An underground network of recruiters throughout Varlamore searches for the vulnerable and those lacking a sense of purpose to serve our glorious ends.
+		rebel_support_efficiency = 0.5
+	}
+	TWE_shipwrecked_cliffs = { #The cliffs surrounding the Temple of Twilight are notoriously rough and hazardous to passing ships. We can exploit this to keep our seas safe from invasion.
+		own_coast_naval_combat_bonus = 1
+	}
+	TWE_reincarnation = { #Ralos and Ranul walk among us, in reincarnated human form!
+		tolerance_own = 2
+		tolerance_heretic = 2
+	}
+	TWE_tsak_tauli = { #Tsak Tauli is the final dawn. The end of the world. Which we must bring about.
+		war_exhaustion = -0.05
+	}
+}
+
 #Tyras ideas
 TYS_ideas = {
 	start = {
@@ -11771,7 +12082,7 @@ TYS_ideas = {
 		trade_range_modifier = 0.2
 	}
 	TYS_catapult_construction = {
-		artillery_cost = -0.15
+		artillery_cost = -0.1
 	}
 	TYS_second_line = {
 		backrow_artillery_damage = 0.15
@@ -12416,7 +12727,7 @@ VYV_ideas = {
 	free = yes		#will be added at load.
 	
 	VYV_armourers = {
-		global_regiment_cost = -0.1
+		global_regiment_cost = -0.05
 	}
 	VYV_white_armour = {
 		global_heathen_missionary_strength = 0.01
@@ -12546,7 +12857,6 @@ WBB_ideas = {
 	
 	WBB_weaponsmiths = {
 		global_regiment_cost = -0.1
-		land_maintenance_modifier = -0.05
 	}
 	WBB_human_followers = {
 		num_accepted_cultures = 1

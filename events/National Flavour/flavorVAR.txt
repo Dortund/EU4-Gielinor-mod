@@ -280,3 +280,293 @@ country_event = { #Auburnvale investment decision goes here
 		}
 	}
 }
+
+country_event = {
+	id = flavor_var.8
+	title = flavor_var.8.t # A Royal Invitation
+	desc = flavor_var.8.d # [Root.Monarch.GetTitle] [Root.Monarch.GetName] has been seen pacing around the halls of the palace in [Root.GetCapitalName]. [Root.Monarch.GetSheHe] wants to invite the royal family of Kourend over for a royal visit, but there seems to be more going on than immediately apparent.
+	picture = VARLAMORE_MAP_eventPicture
+	
+	trigger = {
+		current_age = age_of_adventurers
+		tag = VAR
+		exists = KOU
+		NOT = {
+		 	is_at_war = yes
+		}
+		KOU = {	
+			NOT = {
+				is_at_war = yes
+			}
+			government = monarchy
+		}
+		NOT = { has_country_flag = VAR_end_of_betrayal_flag }
+		has_any_disaster = no
+		OR = {
+			religion = ralos
+			religion = ranul
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 80
+	}
+	
+	immediate = {
+		set_country_flag = VAR_royal_invitation_flag
+	}
+	
+	option = {
+		name = flavor_var.8.a # Yes! Let's go invite the Kourendite royal family!
+		KOU = {
+			country_event = {
+				id = flavor_var.9
+				days = 1
+			}
+		}
+		custom_tooltip = var_invite_kourend_tooltip
+		ai_chance = { 
+			factor = 1 
+		}
+	}
+	option = {
+		name = flavor_var.8.b # Maybe it's best we leave this be.
+		add_legitimacy = -5
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_var.9
+	title = flavor_var.9.t # An Invitation from Varlamore
+	desc = flavor_var.9.d # [VAR.Monarch.GetTitle] [VAR.Monarch.GetName] has invited our royal family on a tour of Varlamore! This could be a golden opportunity to learn from their culture and technologies!
+	picture = VARLAMORE_MAP_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_var.9.a #This sounds an excellent idea!
+		VAR = {
+			country_event = {
+				id = flavor_var.10
+				days = 30
+				random = 10
+			}
+		}
+		add_adm_power = 35
+		add_dip_power = 35
+		add_mil_power = 35
+		custom_tooltip = kou_nervous_invitation_tooltip
+		ai_chance = { 
+			factor = 1 
+		}
+	}
+	option = {
+		name = flavor_var.9.b #I don't think this is a good idea...
+		add_prestige = -5
+		VAR = {
+			country_event = {
+				id = flavor_var.11
+				days = 15
+				random = 5
+			}
+		}
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_var.10
+	title = flavor_var.10.t #The Tour of Varlamore
+	desc = flavor_var.10.d #[KOU.Monarch.GetTitle] [KOU.Monarch.GetName] of Great Kourend has arrived in Varlamore to meet with [Root.Monarch.GetTitle] [Root.Monarch.GetName] and undertake a tour of Varlamore, from the Proudspire to the palace of [Root.Capital.GetName]. A great feast is planned to celebrate the friendship between the two peoples!
+	picture = VARLAMORE_MAP_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_var.10.a #Excellent. Now kill them all!
+		KOU = {
+			add_stability = -1
+			kill_heir = yes
+			remove_consort = yes
+		 	kill_ruler = yes
+			country_event = {
+				id = flavor_var.12
+				days = 1
+			}
+		}
+		add_opinion = {
+			who = KOU
+			modifier = var_murdered_royal_family
+		}
+		custom_tooltip = var_will_start_war_of_betrayal_tooltip
+		hidden_effect = {
+			set_country_flag = VAR_war_of_betrayal_alt_start_flag
+		}
+		add_country_modifier = {
+			name = VAR_blood_for_ranul
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 1 
+		}
+	}
+	option = {
+		name = flavor_var.10.b #Let's keep this a pleasant experience for all involved.
+		add_opinion = {
+			who = KOU
+			modifier = var_pleasant_trip
+		}
+		add_prestige = 25
+		add_legitimacy = 10
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_var.11
+	title = flavor_var.11.t #Kourend Declines to Visit
+	desc = flavor_var.11.d #Great Kourend has declined our invitation to tour Varlamore.
+	picture = VARLAMORE_MAP_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_var.11.a #Oh well...
+		add_prestige = -5
+	}
+}
+
+country_event = {
+	id = flavor_var.12
+	title = flavor_var.12.t #Betrayal!
+	desc = flavor_var.12.d #[VAR.Monarch.GetTitle] [VAR.Monarch.GetName] has betrayed our royal family, killing them all!
+	picture = WAR_OF_BETRAYAL_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_var.12.a #This means war!
+		add_prestige = 50
+		add_stability = 1
+		add_country_modifier = {
+			name = VAR_righteous_war
+			duration = 3650
+		}
+		declare_war_with_cb = {
+			who = VAR
+			casus_belli = cb_insult
+		}
+		ai_chance = { 
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_var.12.b #We can always get new royals elsewhere.
+		add_prestige = -50
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_var.13
+	title = flavor_var.13.t #The Twilight Emissaries
+	desc = flavor_var.13.d #At the Twilight Temple in northeastern Varlamore a new group has organised. Calling themselves the Twilight Emissaries, they claim it is their duty to bring about the end of the world themselves rather than leaving it to Ralos and Ranul. Already they have broken from our control and are gathering an army.
+	picture = VARLAMORE_MAP_eventPicture
+	
+	trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		tag = VAR
+		OR = {
+			religion = ralos
+			religion = ranul
+		}
+		had_country_flag = {
+			flag = VAR_royal_invitation_flag
+			days = 18250
+		}
+		owns = 503
+		mission_completed = VAR_secrets_of_the_twilight
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 502
+					province_id = 503
+					province_id = 506
+					province_id = 1492
+				}
+			}
+			cede_province = TWE
+			add_core = TWE
+		}
+		TWE = {
+			add_years_of_income = 1
+			add_yearly_manpower = 1
+			add_army_professionalism = 0.5
+			503 = {
+				move_capital_effect = yes
+				change_religion = ranul
+				add_great_project_tier = {
+					type = great_project_temple_of_twilight
+					tier = 1
+				}
+				build_to_forcelimit = {
+					infantry = 0.5
+					cavalry = 0.2
+					artillery = 0.3
+				}
+			}
+			change_religion = ranul
+		}
+	}
+	
+	option = {
+		name = flavor_var.13.a # Heresy! They shall be stamped out!
+		ai_chance = { 
+			factor = 1 
+		}
+	}
+	option = {
+		name = flavor_var.13.b # Finally! No more waiting around.
+		switch_tag = TWE
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}

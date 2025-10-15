@@ -852,4 +852,9 @@ spriteTypes = {
 	  	name = "GFX_subject_house"
 	 	texturefile = "gfx/interface/subject_house_icon.dds"
 	}
+	
+    spriteType = {
+	  	name = "GFX_subject_dwarven_outpost"
+	 	texturefile = "gfx/interface/subject_dwarven_outpost_icon.dds"
+	}
 }

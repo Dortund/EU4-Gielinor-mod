@@ -561,7 +561,7 @@ alkharidian_missions_3 = {
 						owned_by = ROOT
 						is_core = ROOT
 					}
-					elid_isles_area = {
+					outer_menaphos_area = {
 						type = all
 						owned_by = ROOT
 						is_core = ROOT
@@ -583,7 +583,7 @@ alkharidian_missions_3 = {
 							owned_by = ROOT
 							is_core = ROOT
 						}
-						elid_isles_area = {
+						outer_menaphos_area = {
 							type = all
 							owned_by = ROOT
 							is_core = ROOT
@@ -610,7 +610,7 @@ alkharidian_missions_3 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				elid_isles_area = {
+				outer_menaphos_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT	}
 						NOT = { is_core = ROOT	}

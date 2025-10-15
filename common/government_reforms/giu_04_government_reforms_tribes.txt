@@ -73,20 +73,22 @@ boss_nation = {
 	 	global_tax_income = 36
 		horde_unity = 5
 		
-		global_manpower_modifier = 2
-		land_forcelimit_modifier = 2
-		loot_amount = 1
+		land_forcelimit = 15
+		global_manpower = 15
 		reinforce_cost_modifier = -0.75
+		global_supply_limit_modifier = 1
 		
-		army_tradition = 2
-		discipline = 0.1
-	 	defensiveness = 0.25
 		hostile_attrition = 1
 	}
 	queen = no
 	heir = no
 	custom_attributes = {
 		locked_government_type = yes
+	}
+	conditional = {
+		government_abilities = {
+			boss_endurance_mechanic
+		}
 	}
 }
 
@@ -189,26 +191,26 @@ island_boss_nation = {
 	 	global_tax_income = 36
 		horde_unity = 5
 		
-		global_manpower_modifier = 1
-		land_forcelimit_modifier = 1
-		loot_amount = 1
-		reinforce_cost_modifier = -0.5
+		land_forcelimit = 10
+		global_manpower = 10
+		reinforce_cost_modifier = -0.75
+		global_supply_limit_modifier = 1
 		
-		army_tradition = 1
-		discipline = 0.1
-	 	defensiveness = 0.25
 		hostile_attrition = 1
 		
-		global_sailors_modifier = 1
-		sailors_recovery_speed = 0.25
-		naval_forcelimit_modifier = 1
-		global_ship_cost = -0.2
-		naval_maintenance_modifier = -0.2
+		global_sailors = 10000
+		naval_forcelimit = 10
+		heavy_ship_cost = -0.25
 	}
 	queen = no
 	heir = no
 	custom_attributes = {
 		locked_government_type = yes
+	}
+	conditional = {
+		government_abilities = {
+			boss_endurance_mechanic
+		}
 	}
 }
 
@@ -288,38 +290,28 @@ quidamortem_boss_nation = {
 		has_reform = quidamortem_boss_nation
 	}
 	legacy_equivalent = quidamortem_boss_nation_legacy
-	fixed_rank = 1
+	fixed_rank = 2
 	valid_for_nation_designer = no
 	nomad = yes
 	allow_convert = no
 	modifiers = {
-		can_not_declare_war = yes
-		can_not_build_missionaries = yes
-		can_not_build_colonies = yes
-		can_not_send_merchants = yes
-		relation_with_heretics = -200
-	 	relation_with_heathens = -200
-		
+		stability_cost_to_declare_war = 1
+	 	ae_impact = 0.5
+		relation_with_same_religion = 50
+		relation_with_heretics = -100
+	 	relation_with_heathens = -100
 	 	liberty_desire = 1000
 		governing_capacity_modifier = -0.98
-		
-	 	global_tax_income = 36
-		horde_unity = 5
-		
-		global_manpower_modifier = 2
-		land_forcelimit_modifier = 2
-		loot_amount = 1
-		reinforce_cost_modifier = -0.75
-		
-		army_tradition = 2
-		discipline = 0.1
-	 	defensiveness = 0.25
-		hostile_attrition = 1
+	 	global_tax_income = 12
+		horde_unity = 1
 	}
-	queen = no
-	heir = no
 	custom_attributes = {
 		locked_government_type = yes
+	}
+	conditional = {
+		government_abilities = {
+			boss_endurance_mechanic
+		}
 	}
 }
 
@@ -481,7 +473,6 @@ isolationist_culture_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -512,7 +503,6 @@ maritime_culture_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -546,7 +536,6 @@ razer_culture_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -565,7 +554,6 @@ trader_culture_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -586,18 +574,13 @@ terror_of_seas_reform = {
 		OR = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
-		global_sailors_modifier = 2
+		global_sailors_modifier = 1
 		sailors_recovery_speed = 0.25
-		naval_forcelimit_modifier = 2
-		global_ship_cost = -0.5
-		naval_maintenance_modifier = -0.5
-		leader_naval_fire = 1
+		naval_forcelimit_modifier = 0.5
 		leader_naval_manuever = 1
-		leader_naval_shock = 1
 	}
 	ai = {
 		factor = 2
@@ -629,15 +612,13 @@ resilience_reform = {
 		OR = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
-		country_military_power = 1
 		fort_maintenance_modifier = -0.5
-		fire_damage_received = -0.1
-		shock_damage_received = -0.1
-		manpower_recovery_speed = 0.2
+		fire_damage_received = -0.05
+		shock_damage_received = -0.05
+		manpower_recovery_speed = 0.1
 	}
 	ai = {
 		factor = 1
@@ -657,7 +638,6 @@ strict_obedience_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 		religion = bandos
 	}
@@ -682,7 +662,6 @@ inward_pressure_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -705,7 +684,6 @@ outward_pressure_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -729,13 +707,15 @@ open_to_challenge_reform = {
 		OR = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
 		diplomatic_reputation = 1
 		improve_relation_modifier = 0.2
 		global_institution_spread = 0.2
+		relation_with_same_religion = 180
+		relation_with_heretics = 180
+		relation_with_heathens = 180
 	}
 	ai = {
 		factor = 1
@@ -757,7 +737,7 @@ xenophobe_reform = {
 		}
 	}
 	modifiers = {
-		same_culture_advisor_cost = -0.3
+		same_culture_advisor_cost = -0.25
 		culture_conversion_cost = -0.2
 	}
 	ai = {
@@ -782,7 +762,6 @@ internal_development_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -809,7 +788,6 @@ organised_army_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -827,7 +805,6 @@ organised_navy_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 		OR = {
 			NOT = { is_nomad = yes }
@@ -866,7 +843,6 @@ raider_boss_reform = {
 		OR = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -892,7 +868,6 @@ expansionist_boss_reform = {
 		OR = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	modifiers = {
@@ -917,7 +892,6 @@ eternal_tribe_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	allow_normal_conversion = yes
@@ -937,7 +911,6 @@ reformed_horde_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	allow_normal_conversion = yes
@@ -1014,15 +987,14 @@ tribe_to_theocracy_reform = {
 		NOT = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 			has_reform = runecrafting_crusader
 		}
 	}
 	allow_normal_conversion = yes
 	effect = {
 		lose_reforms = 4
-		change_government = republic
-		add_government_reform = political_dynasties
+		change_government = theocracy
+		add_government_reform = theocratic_government_reform
 	}
 	ai = {
 		factor = 1
@@ -1107,7 +1079,6 @@ greater_boss_nation_reform = {
 		OR = {
 			has_reform = boss_nation
 			has_reform = island_boss_nation
-			has_reform = quidamortem_boss_nation
 		}
 	}
 	allow_normal_conversion = yes
@@ -1117,6 +1088,7 @@ greater_boss_nation_reform = {
 		global_sailors_modifier = 1
 		naval_forcelimit_modifier = 1
 		governing_capacity_modifier = 0.05
+		boss_endurance_power_gain_modifier = 0.25
 	}
 	ai = {
 		factor = 1

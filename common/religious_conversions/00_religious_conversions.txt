@@ -60,7 +60,9 @@ propagate_religion_policy = {
 		}
 		modifier = {
 			factor = 0.25
-			has_port = no
+			NOT = {
+				has_port = yes
+			}
 		}
 		modifier = {
 			factor = 0.5

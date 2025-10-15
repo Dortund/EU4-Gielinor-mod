@@ -17,6 +17,14 @@
  blood_power_recruit_sentinels:0 "Open Vyrewatch Sentinel Recruitment"
  blood_power_recruit_sentinels_desc:0 "The elite force of any respectable Vampyre army are the Vyrewatch Sentinels.\n\nVyrewatch Sentinels are a special infantry unit with the following modifiers:\nRegiment Costs: §R+50%§!\nLand Maintenance Modifier: §R+10%§!\nShock Damage Received: §G-20%§!\nMorale Damage: §G+10%§!\n\n"
 
+############### Boss Endurance
+
+ ability_boss_endurance_mechanic:0 "Boss Endurance"
+ boss_endurance_mechanic:0 "Boss Endurance"
+ boss_endurance_power:0 "Boss Endurance"
+ monthly_boss_endurance_power:0 "Monthly Boss Endurance"
+ boss_endurance_power_gain_modifier:0 "Boss Endurance Gain Modifier"
+
 ############### Crusader Zeal
 
  ability_crusader_zeal_mechanic:0 "Crusader Zeal"

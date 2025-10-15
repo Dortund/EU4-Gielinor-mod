@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = shining_kingdom
+government_rank = 1
+primary_culture = frog
+religion = ralos
+technology_group = zeantechgroup
+capital = 516 #Locus Oasis

@@ -4,3 +4,15 @@
   subject_house_is_our: "$NAME|Y$ is one of our Houses."
   subject_house_title: "House"
   subject_house_title_plural: "Houses"
+  
+  subject_dwarven_outpost: "Dwarven Outpost"
+  subject_dwarven_outpost_long_desc: "The great Dwarven cities negotiate access to key mining sites in other nations, exchanging expertise along the way."
+  subject_dwarven_outpost_is_our: "$NAME|Y$ is one of our Dwarven Outposts."
+  subject_dwarven_outpost_title: "Dwarven Outpost"
+  subject_dwarven_outpost_title_plural: "Dwarven Outposts"
+  
+  num_of_dwarven_outposts:0 "Dwarven Outpost Limit"
+  
+  DWARVEN_OUTPOST_HOST_TT:0 "Another country is already hosting this outpost"
+  
+  dwarven_outpost_expanded_guard: "Expanded Guard"

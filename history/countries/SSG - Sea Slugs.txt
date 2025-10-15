@@ -7,6 +7,12 @@ technology_group = centraltechgroup
 capital = 263 #Witchaven
 national_focus = DIP
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 2006.9.20 = {
 	monarch = {
 		name = "Medron"
@@ -18,4 +24,12 @@ national_focus = DIP
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = immortal_personality
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
 }

@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = clan_monarchy
+government_rank = 1
+primary_culture = south_asgarn
+add_accepted_culture = north_asgarn
+religion = guthix
+religious_school = proactive_school
+technology_group = centraltechgroup
+capital = 987 #Brerdas
+historical_rival = DBS
+
+1919.6.15 = {
+	monarch = {
+		name = "Gerradin"
+		dynasty = "Narvra"
+		birth_date = 1893.12.23
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}
+
+1981.5.17 = {
+	monarch = {
+		name = "Moranna"
+		dynasty = "Narvra"
+		birth_date = 1941.5.12
+		adm = 4
+		dip = 3
+		mil = 5
+		female = yes
+	}
+}

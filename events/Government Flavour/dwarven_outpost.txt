@@ -1,0 +1,27 @@
+########################################
+# Events for Dwarven Outposts
+########################################
+
+namespace = dwarven_outpost_events
+normal_or_historical_nations = yes
+
+country_event = { #Placeholder to force Dwarven Outpost government
+	id = dwarven_outpost_events.1
+	title = dwarven_outpost_events.1.t #New Dwarven Outpost Founded!
+	desc = dwarven_outpost_events.1.d #
+	picture = LUCIEN_ATTACKS_eventPicture ######################## Needs replacing
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		
+	}
+
+	option = {
+		name = dwarven_outpost_events.1.a #Excellent.
+		add_government_reform = dwarven_outpost
+	}
+}

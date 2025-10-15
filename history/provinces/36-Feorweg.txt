@@ -1,7 +1,7 @@
 #36 - Feorweg
-owner = FRW
-controller = FRW
-add_core = FRW
+owner = MSS
+controller = MSS
+add_core = MSS
 tribal_owner = ---
 culture = south_asgarn
 religion = saradomin
@@ -32,4 +32,5 @@ is_city = yes
 	base_tax = 4
 	base_production = 4
 	base_manpower = 3
+	remove_core = MSS
 }

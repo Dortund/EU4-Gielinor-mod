@@ -8,6 +8,18 @@ technology_group = centraltechgroup
 capital = 239 #Bo
 national_focus = MIL
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 2125.10.6 = {
 	monarch = {
 		name = "Queen"
@@ -16,5 +28,13 @@ national_focus = MIL
 		adm = 2
 		dip = 1
 		mil = 4
+	}
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
 	}
 }

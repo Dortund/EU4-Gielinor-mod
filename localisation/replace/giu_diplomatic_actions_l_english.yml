@@ -1,0 +1,18 @@
+﻿l_english:
+ mechanic_can_establish_dwarven_outposts_yes:0 "Can establish §YDwarven Outposts§!"
+ establish_dwarven_outpost_title:0 "Establish Dwarven Outpost"
+ establish_dwarven_outpost_tooltip:0 "Request one of their ore-yielding provinces to establish a trading colony. This costs §Y100§! gold."
+ establish_dwarven_outpost_desc:0 "Request one of their ore-yielding provinces to establish a trading colony. This costs §Y100§! gold.\n\nTrading colonies cost no diplomatic relations slots, provide us with §G+1§! Merchant each, and provide the host with §G+10%§! Production Efficiency and Goods Produced for no diplomatic relations costs."
+ 
+ not_enough_free_dwarven_outpost_slots_tooltip:0 "Must have capacity for more Dwarven Outposts"
+ dwarven_colony_no_doubles_tooltip:0 "Target must not already be host to a Dwarven Outpost"
+ dwarven_colony_no_fellow_dwarf_tooltip:0 "Target must not be able to form Dwarven Outposts of their own"
+ dwarven_colony_no_reject_tooltip:0 "Target must have not declined an offer for a Dwarven Outpost in the last 10 years"
+ dwarven_colony_no_out_of_trade_range_tooltip:0 "Target must be within trade range"
+ dwarven_colony_no_subject_tooltip:0 "Target must not be a subject nation"
+ dwarven_colony_target_no_war_tooltip:0 "Target must not be at war"
+ dwarven_colony_no_war_tooltip:0 "We must not be at war"
+ dwarven_colony_no_country_under_5_provinces_tooltip:0 "Target must have at least 5 provinces"
+ dwarven_colony_no_lack_of_appropriate_resources_tooltip:0 "Target must have a non-capital province yielding basic ores, advanced ores, gemstones or runite, which is not in the same trade node as an existing Dwarven Outpost."
+ 
+ RELUCTANT_TO_CEDE_LAND:0 "Reluctant to cede any land"

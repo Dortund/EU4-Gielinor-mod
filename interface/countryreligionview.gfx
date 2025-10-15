@@ -482,6 +482,10 @@ spriteTypes = {
 		name = "GFX_icon_guthix_school_guardian"
 		texturefile = "gfx/interface/icon_guthix_school_guardian.dds"
 	}
+	spriteType = {
+		name = "GFX_icon_guthix_school_proactive"
+		texturefile = "gfx/interface/icon_guthix_school_proactive.dds"
+	}
 
 	spriteType = {
 		name = "GFX_icon_v_school_defender"

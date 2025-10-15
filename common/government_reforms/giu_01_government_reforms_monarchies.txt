@@ -48,14 +48,14 @@ clan_monarchy = {
 	}
 	legacy_equivalent = clan_monarchy_legacy
 	valid_for_nation_designer = yes
-	nation_designer_cost = 10
+	nation_designer_cost = 15
 	fixed_rank = 1
 	modifiers = {
 		land_morale = 0.1
 		years_of_nationalism = -5
 		diplomatic_upkeep = -1
 		max_absolutism = -20
-		governing_capacity = -50
+		governing_capacity = -25
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -312,7 +312,7 @@ kandarin_monarchy = {
 	legacy_equivalent = kandarin_monarchy_legacy
 	start_territory_to_estates = 0.3
 	modifiers = {
-		governing_capacity = 100
+		governing_capacity = 50
 	 	min_autonomy_in_territories = 0.1
 	 	num_accepted_cultures = 2
 		tolerance_heretic = 1
@@ -338,7 +338,7 @@ khanate = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
-		governing_capacity = -100
+		governing_capacity = -50
 	 	global_sailors_modifier = 0.1
 		global_ship_cost = -0.1
 	 	trade_range_modifier = 0.25
@@ -417,7 +417,7 @@ kourend_reformed_monarchy = {
 	start_territory_to_estates = 0.25
 
 	modifiers = {
-    	governing_capacity = 100
+    	governing_capacity = 50
 		num_accepted_cultures = 1
 	}
 	
@@ -618,7 +618,28 @@ principality_burthorpe = {
 	fixed_rank = 1
 	modifiers = {
 		army_tradition = 0.5
-		governing_capacity = -100
+		governing_capacity = -50
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+reformed_shining_kingdom = {
+	icon = "icon_reformed_shining_kingdom"
+	potential = {
+		AND = {
+			NOT = { map_setup = map_setup_random }
+			has_reform = reformed_shining_kingdom
+		}
+	}
+	legacy_equivalent = shining_kingdom_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+	modifiers = {
+		governing_capacity = 100
+		global_unrest = -2
+		production_efficiency = 0.05
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -629,18 +650,46 @@ shining_kingdom = {
 	icon = "icon_shining_kingdom"
 	potential = {
 		AND = {
-			tag = VAR
 			NOT = { map_setup = map_setup_random }
+			has_reform = shining_kingdom
 		}
 	}
 	legacy_equivalent = shining_kingdom_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 50
 	modifiers = {
-		governing_capacity = 100
+		governing_capacity = 50
 		tolerance_heretic = 2
 		global_colonial_growth = 10
 		global_heretic_missionary_strength = -0.02
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+tarnished_kingdom = {
+	icon = "icon_tarnished_kingdom"
+	potential = {
+		AND = {
+			NOT = { map_setup = map_setup_random }
+			has_reform = tarnished_kingdom
+			OR = {
+				religion = ralos
+				religion = ranul
+			}
+		}
+	}
+	legacy_equivalent = tarnished_kingdom_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	modifiers = {
+		governing_capacity = 100
+		diplomatic_reputation = -1
+		tolerance_own = 1
+		tolerance_heretic = 1
+		global_colonial_growth = 10
+		global_heathen_missionary_strength = 0.02
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -688,11 +737,10 @@ vampyre_kingdom = {
 		global_manpower_modifier = 0.10
 		tolerance_heretic = 2
 		special_unit_forcelimit = 0.1
+		allowed_rajput_fraction = 0.2
 	}
-	conditional = {
-		government_abilities = {
-			blood_power_mechanic
-		}
+	government_abilities = {
+		blood_power_mechanic
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -1247,7 +1295,7 @@ absolutist_governance_reform = {
 	icon = "queen"
 	allow_normal_conversion = yes
 	modifiers = {
-		governing_capacity = 250
+		governing_capacity = 100
 	}
 	ai = {
 		factor = 1.5

@@ -54,6 +54,54 @@
 # Government Modifiers
 ####################
 
+# Dwarven Outpost
+ dwarven_outpost_overlord_modifier:0 "Merchants of the Dwarven Outpost"
+ desc_dwarven_outpost_overlord_modifier:0 "The establishment of a Dwarven Outpost under our control has boosted our ability to trade."
+ dwarven_outpost_subject_modifier:0 "Dwarven Outpost Trade Bonus"
+ desc_dwarven_outpost_subject_modifier:0 "Our entire purpose is to collect goods, trade with local people and send the profits back home."
+ dwarven_outpost_host_modifier:0 "Host of a Dwarven Outpost"
+ desc_dwarven_outpost_overlord_modifier:0 "The dwarven outpost we are hosting provides us with valuable manufacturing expertise."
+ D01_host_country:0 "Host of Acheron Dwarven Outpost"
+ D02_host_country:0 "Host of South Varlamore Dwarven Outpost"
+ D03_host_country:0 "Host of Central Kandarin Dwarven Outpost"
+ D04_host_country:0 "Host of East Wushanko Dwarven Outpost"
+ D05_host_country:0 "Host of Kandarin Shores Dwarven Outpost"
+ D06_host_country:0 "Host of Perican Dwarven Outpost"
+ D07_host_country:0 "Host of Rocky Shores Dwarven Outpost"
+ D08_host_country:0 "Host of West Wilderness Dwarven Outpost"
+ D09_host_country:0 "Host of Morytania Dwarven Outpost"
+ D10_host_country:0 "Host of Asgarnia Dwarven Outpost"
+ D11_host_country:0 "Host of Eastern Sea Dwarven Outpost"
+ D12_host_country:0 "Host of West Wushanko Dwarven Outpost"
+ D13_host_country:0 "Host of Coastal Tirannwn Dwarven Outpost"
+ D14_host_country:0 "Host of West Feldip Dwarven Outpost"
+ D15_host_country:0 "Host of North Kandarin Dwarven Outpost"
+ D16_host_country:0 "Host of Deep Jungle Dwarven Outpost"
+ D17_host_country:0 "Host of Central Kourend Dwarven Outpost"
+ D18_host_country:0 "Host of East Wilderness Dwarven Outpost"
+ D19_host_country:0 "Host of Lovakengj Dwarven Outpost"
+ D20_host_country:0 "Host of West Fremennik Dwarven Outpost"
+ D21_host_country:0 "Host of South Kharid Dwarven Outpost"
+ D22_host_country:0 "Host of Kebos Dwarven Outpost"
+ D23_host_country:0 "Host of Morra Dwarven Outpost"
+ D24_host_country:0 "Host of East Karamja Dwarven Outpost"
+ D25_host_country:0 "Host of Central Wushanko Dwarven Outpost"
+ D26_host_country:0 "Host of Herrenhaus Dwarven Outpost"
+ D27_host_country:0 "Host of Coastal Kourend Dwarven Outpost"
+ D28_host_country:0 "Host of Central Kharid Dwarven Outpost"
+ D29_host_country:0 "Host of Asgarnian Coast Dwarven Outpost"
+ D30_host_country:0 "Host of Tirannwn Dwarven Outpost"
+ D31_host_country:0 "Host of Proudspire Dwarven Outpost"
+ D32_host_country:0 "Host of East Fremennik Dwarven Outpost"
+ D33_host_country:0 "Host of South Lum Dwarven Outpost"
+ D34_host_country:0 "Host of West Varlamore Dwarven Outpost"
+ D35_host_country:0 "Host of Troll Country Dwarven Outpost"
+ D36_host_country:0 "Host of East Kharid Dwarven Outpost"
+ D37_host_country:0 "Host of Misthalin Dwarven Outpost"
+ D38_host_country:0 "Host of Wushanko Gateway Dwarven Outpost"
+ D39_host_country:0 "Host of Coastal Wilderness Dwarven Outpost"
+ 
+# Vampyric
  vampyric_tributary_blood:0 "Tributary Blood"
  desc_vampyric_tributary_blood:0 "Our tributaries are providing a ready supply of blood tithes."
  vampyric_enable_sentinel_recruitment:0 "Enable Sentinel Recruitment"
@@ -1082,6 +1130,8 @@
  desc_VAR_recent_aldarin_investment:0 "With a number of our subjects busy expanding the colonies on Aldarin, we are unable to commit to further investments at this time."
  VAR_recent_auburnvale_investment:0 "Recent Auburnvale Investment"
  desc_VAR_recent_auburnvale_investment:0 "With a number of our subjects busy expanding the colonies on Auburnvale, we are unable to commit to further investments at this time."
+ VAR_royal_accord_of_twill_on_display:0 "Royal Accord of Twill"
+ desc_VAR_royal_accord_of_twill_on_display:0 "Great Kourend has loaned us one of their most valuable founding documents - the Royal Accord of Twill - as a gesture of goodwill."
  
  VAR_fletching_innovation:0 "Fletching Innovation"
  desc_VAR_fletching_innovation:0 "With the new Fletching Guild at Arida's Edge, all kinds of new techniques are being tried."
@@ -1095,6 +1145,13 @@
  desc_VAR_a_religion_united:0 "With the conquest of Forthos, the earliest sites of our faith are securely under our control."
  VAR_diplomatic_outreach:0 "Diplomatic Outreach"
  desc_VAR_diplomatic_outreach:0 "Roving bards spread word of Varlamore across Gielinor, inspiring visits from foreign dignitaries."
+ VAR_blood_for_ranul:0 "Blood for Ranul"
+ desc_VAR_blood_for_ranul:0 "The blood of the unworthy spills upon the floor!"
+ VAR_righteous_war:0 "Righteous War"
+ desc_VAR_righteous_war:0 "The people are rightfully outraged at Varlamore's betrayal and will stand as one against them."
+ 
+ VAR_temple_of_twilight_modifier:0 "Temple of Twilight"
+ desc_VAR_temple_of_twilight_modifier:0 "The Temple of Twilight is built over the Ruins of Tapoyauik, a fortress of the Old Ones with unknown secrets of our faith." 
  
 # Varze
 
@@ -1578,6 +1635,13 @@
  desc_highprod_rune_essence_mine:0 "The location simply known as the Rune Essence Mine is by far Gielinor's greatest deposit of blank runestones ready for runecrafting."
  
 ####################
+# Dwarven Interest
+####################
+ 
+ province_of_dwarven_interest:0 "Province of Dwarven Interest"
+ desc_province_of_dwarven_interest:0 "Dwarves from far afield are fascinated in the natural wealth of this province and a sufficiently strong dwarven nation may be driven to establish a trade colony here."
+ 
+####################
 # Disasters
 ####################
  
@@ -1599,6 +1663,23 @@
  excessive_tithe_double_reinforcement:0 "Double Reinforcement"
  desc_excessive_tithe_double_reinforcement:0 "No evils from Morytania are passing into our lands!"
  
+ VAR_loyalists_to_the_crown:0 "Loyalists to the Crown"
+ desc_VAR_loyalists_to_the_crown:0 "It matters not what happens - we stay loyal to our monarch!"
+ VAR_shining_resistance:0 "Shining Resistance"
+ desc_VAR_shining_resistance:0 "In the wake of our own leader's betrayal the people of Varlamore are standing united to end their terrible reign."
+ VAR_severe_lack_of_preparation:0 "Severe Lack of Preparation"
+ desc_VAR_severe_lack_of_preparation:0 "Varlamore is not an entirely developed state and suddenly betraying Kourend is hardly helping in that endeavour."
+ VAR_substantial_lack_of_preparation:0 "Substantial Lack of Preparation"
+ desc_VAR_substantial_lack_of_preparation:0 "Varlamore is not entirely settled as a nation and a sudden betrayal of Kourend does not fill the citizenry with confidence."
+ VAR_refusal_to_oust_temple:0 "Refused to Oust the Temple of Twilight"
+ desc_VAR_refusal_to_oust_temple:0 "The Temple of Twilight is associated in the minds of Varlamore's citizens with the terrible betrayals of the monarch. Our refusal to shut down its operations are a source of great confusion."
+ VAR_temporary_vassal_autonomy:0 "Temporary Subject Autonomy"
+ desc_VAR_temporary_vassal_autonomy:0 "For the time being, subjects of Varlamore are being kept on a looser leash to prevent greater instability."
+ VAR_harsh_vassal_treatment:0 "Harsh Subject Treatment"
+ desc_VAR_harsh_vassal_treatment:0 "Do our subject nations not remember who they are subject to?"
+ 
+ VAR_desecrated_ground:0 "Desecrated Ground"
+ desc_VAR_desecrated_ground:0 "Prevents the use of the §YTemple of Twilight§! monument.\n\nDuring the War of Betrayal, members of Varlamore's resistance shut down the operations of the Temple of Twilight, viewing it as a place of great heresy. Few now wish to return."
  
 ####################
 # World Events

@@ -337,6 +337,19 @@ spriteTypes = {
 		name = "GFX_diplomacy_ishouse"
 		texturefile = "gfx//interface//icon_diplomacy_ishouse.dds"
 	}
+    spriteType = {
+		name = "GFX_diplomacy_leaddwarfoutpost"
+		texturefile = "gfx//interface//icon_diplomacy_leaddwarfoutpost.dds"
+	}
+	spriteType = {
+		name = "GFX_diplomacy_isdwarfoutpost"
+		texturefile = "gfx//interface//icon_diplomacy_isdwarfoutpost.dds"
+	}
+	spriteType = {
+		name = "GFX_diplomacy_hostdwarfoutpost"
+		texturefile = "gfx//interface//icon_diplomacy_hostdwarfoutpost.dds"
+	}
+	
 ###########################################	
 	
 	spriteType = {

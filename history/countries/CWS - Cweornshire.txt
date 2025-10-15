@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = lummer
 religion = saradomin
 technology_group = centraltechgroup
-capital = 9 #Millane
+capital = 782 #Lumford
 
 1912.6.3 = {
 	monarch = {

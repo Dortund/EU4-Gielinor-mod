@@ -180,3 +180,55 @@ MST_traitor_to_asgarnia = {
 	diplomatic_reputation = -1
 	global_unrest = 2
 }
+
+#####################################
+#War of Betrayal
+#####################################
+
+#National
+VAR_loyalists_to_the_crown = {
+	legitimacy = 1
+}
+VAR_shining_resistance = {
+	diplomatic_reputation = 1
+	global_unrest = -2
+}
+VAR_severe_lack_of_preparation = {
+	all_power_cost = 0.2
+	stability_cost_modifier = 0.5
+ 	min_autonomy = 10
+}
+VAR_substantial_lack_of_preparation = {
+	all_power_cost = 0.1
+	stability_cost_modifier = 0.2
+ 	min_autonomy = 5
+}
+VAR_refusal_to_oust_temple = {
+	land_morale = -0.05
+	global_unrest = 2
+}
+VAR_temporary_vassal_autonomy = {
+ 	vassal_income = -0.5
+	vassal_manpower_bonus = -0.5
+ 	vassal_sailors_bonus = -0.5
+	reduced_liberty_desire = 10
+}
+VAR_harsh_vassal_treatment = {
+ 	vassal_income = 1
+	vassal_manpower_bonus = 1
+ 	vassal_sailors_bonus = 1
+	reduced_liberty_desire = -20
+}
+
+
+
+#Local
+VAR_desecrated_ground = {
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	local_manpower_modifier = -0.25
+}
+
+
+
+

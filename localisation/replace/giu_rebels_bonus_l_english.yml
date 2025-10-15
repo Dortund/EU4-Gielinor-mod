@@ -12,3 +12,20 @@
  dragonkin_raid_rebels_name:0 "Dragonkin Raid"
  dragonkin_raid_rebels_desc:0 "Dragonkin Raids aim to kill the users of the Stone of Jas. They are among the most powerful kinds of rebel."
  dragonkin_raid_rebels_army:0 "Dragonkin Raiders"
+ 
+ varlamore_loyalist_rebels_demand:0 "Secure Varlamore"
+ varlamore_loyalist_rebels_demand_desc:0 "Even in the face of the monarchy's betrayal of Kourend, there are many that remain loyal to the crown above all else."
+ varlamore_loyalist_rebels_title:0 "Varlamore Loyalists"
+ varlamore_loyalist_rebels_name:0 "Varlamore Loyalists"
+ varlamore_loyalist_rebels_desc:0 "Varlamore Loyalists aim to crush all opposition to their central leader's rule. They are reasonably strong but will be distracted by any provinces occupied by Great Kourend."
+ varlamore_loyalist_rebels_army:0 "Varlamore Loyalists"
+ var_loyalists_win_war_tooltip:0 "The §YLoyalists§! will declare victory in the War of Betrayal, bringing the disaster to a messy conclusion."
+ 
+ varlamore_resistance_rebels_demand:0 "Replace the Monarch"
+ varlamore_resistance_rebels_demand_desc:0 "In wake of the betrayal of Kourend, a strong resistance has risen with the aim of replacing the present monarch and normalising international relations."
+ varlamore_resistance_rebels_title:0 "Varlamore Resistance"
+ varlamore_resistance_rebels_name:0 "Varlamore Resistance"
+ varlamore_resistance_rebels_desc:0 "Varlamore Resistance rebels aim to end external conflicts and depose the monarch."
+ varlamore_resistance_rebels_army:0 "Varlamore Resistance"
+ var_resistance_win_war_tooltip:0 "The §YResistance§! will declare victory in the War of Betrayal, bringing the disaster to a messy conclusion."
+ 

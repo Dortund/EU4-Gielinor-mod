@@ -1,0 +1,25 @@
+#Country Name: Please seefilename.
+
+graphical_culture = southamericagfx
+
+color = { 66 110 184 }
+
+historical_idea_groups = {
+	defensive_ideas
+	expansion_ideas
+	religious_ideas
+	maritime_ideas
+	quality_ideas
+	court_ideas
+	economic_ideas
+	naval_ideas
+}
+
+monarch_names = {
+	"Cuthbert #0" = 1
+	"Dave #0" = 10
+	"Gary #0" = 10
+	
+	"Jane #0" = -10
+	"Sue #0" = -10
+}

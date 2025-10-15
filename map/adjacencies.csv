@@ -3,11 +3,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 3;62;sea;539;-1;-1;-1;-1;East Lumbridge Swamp-Al Kharid
 6;7;sea;540;-1;-1;-1;-1;Wizards Tower-Draynor
 89;90;sea;597;-1;-1;-1;-1;Tamsah-Akthanakos
-97;98;sea;586;-1;-1;-1;-1;'iimbraturia-Amiral
-858;98;sea;586;-1;-1;-1;-1;Tumeken-Amiral
+90;91;sea;597;-1;-1;-1;-1;Akhanakos-Ullek Swamp
 98;99;sea;586;-1;-1;-1;-1;Amiral-Crondis
-859;99;sea;586;-1;-1;-1;-1;Almina' Aljanubiu-Crondis
-99;855;sea;586;-1;-1;-1;-1;Crondis-Madiya
+99;854;sea;586;-1;-1;-1;-1;Crondis-South of Sophanem
 142;144;sea;603;-1;-1;-1;-1;Mos Ayes Le'-La Grotte
 147;900;sea;602;-1;-1;-1;-1;Brassage-Chainja
 200;201;sea;670;-1;-1;-1;-1;Fossil's Heart-House on the Hill

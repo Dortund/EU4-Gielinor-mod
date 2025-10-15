@@ -8,6 +8,12 @@ religious_school = guardian_school
 technology_group = kandarintechgroup
 capital = 1349 #Phoenix Lair
 
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 10
+}
+
 1177.1.6 = {
 	monarch = {
 		name = "Phoenix"
@@ -20,4 +26,12 @@ capital = 1349 #Phoenix Lair
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = immortal_personality
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
 }

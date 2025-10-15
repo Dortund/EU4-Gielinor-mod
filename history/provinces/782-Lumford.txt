@@ -1,0 +1,47 @@
+#782 - Lumford
+owner = CWS
+controller = CWS
+add_core = CWS
+tribal_owner = ---
+culture = lummer
+religion = zamorak
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+discovered_by = dwarventechgroup
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = grains
+
+is_city = yes
+
+fort_15th = yes
+
+1943.5.12 = {
+	owner = MST
+	controller = MST
+	add_core = MST
+}
+
+2059.3.24 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	remove_core = CWS
+}
+
+2062.1.29 = {
+	owner = MST
+	controller = MST
+	remove_core = GUN
+	base_tax = 4
+	base_production = 4
+	base_manpower = 3
+}

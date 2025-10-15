@@ -144,21 +144,6 @@ declarewar = {
 			}
 		}
 	}
-	condition = {
-		tooltip = CANNOT_DECLARE_WARS_TEUTONS_HRE
-		potential = {
-			ai = yes 
-			has_country_flag = teu_joined_the_hre
-			FROM = { is_part_of_hre = yes }
-		}
-		allow = { 
-			FROM = { is_part_of_hre = no }
-		}
-	}
-	effect = {
-		on_war_declaration_effect = yes
-		#nothing
-	}
 }
 
 allianceaction = {
@@ -297,7 +282,7 @@ allianceaction = {
 			FROM = {
 				OR = {
 					culture_group = lizardman_group
-					religion = xeric
+					has_matching_religion = ROOT
 				}
 			}
 		}
@@ -307,7 +292,7 @@ allianceaction = {
 			NOT = {
 				OR = {
 					culture_group = lizardman_group
-					religion = xeric
+					has_matching_religion = ROOT
 				}
 			}
 		}
@@ -409,6 +394,20 @@ guaranteeaction = {
 	effect = {
 		change_asha_vahishta = { value = 1 }
 	}
+	condition = {
+		tooltip = DWARVEN_OUTPOST_HOST_TT
+		potential = {
+			FROM = {
+				is_subject_of_type = subject_dwarven_outpost
+			}
+		}
+		allow = {
+			NOT = {
+				any_country = {
+					has_guaranteed = FROM
+				}
+			}
+		}
 }
 threaten_war = {
 	effect = {
@@ -492,12 +491,15 @@ annexationaction = {
 		tooltip = CANNOT_ANNEX
 		potential = {
 			FROM = {
-				has_country_modifier = tur_mamlukian_administration
+				is_subject_of_type = subject_dwarven_outpost
 			}
 		}
 		allow = {
 			FROM = {
-				NOT = { has_country_modifier = tur_mamlukian_administration }
+				OR = {
+					NOT = { is_subject_of_type = subject_dwarven_outpost }
+					is_neighbor_of = ROOT
+				}
 			}
 		}
 	}

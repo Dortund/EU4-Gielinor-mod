@@ -862,10 +862,12 @@ great_project_sacred_forge = {
 	build_trigger = {
 		if = {
 			limit = {
-				AND = {
-					mission_completed = CSN_ice_mountain_oracles
+				owner = {
 					has_country_flag = CSN_shadowy_path_flag
 				}
+			}
+			owner = {
+				mission_completed = CSN_ice_mountain_oracles
 			}
 		}
 		else = {
@@ -885,10 +887,12 @@ great_project_sacred_forge = {
 	can_use_modifiers_trigger = {
 		if = {
 			limit = {
-				AND = {
-					mission_completed = CSN_ice_mountain_oracles
+				owner = {
 					has_country_flag = CSN_shadowy_path_flag
 				}
+			}
+			owner = {
+				mission_completed = CSN_ice_mountain_oracles
 			}
 		}
 		else = {
@@ -902,10 +906,12 @@ great_project_sacred_forge = {
 	can_upgrade_trigger = {
 		if = {
 			limit = {
-				AND = {
-					mission_completed = CSN_ice_mountain_oracles
+				owner = {
 					has_country_flag = CSN_shadowy_path_flag
 				}
+			}
+			owner = {
+				mission_completed = CSN_ice_mountain_oracles
 			}
 		}
 		else = {
@@ -4577,12 +4583,12 @@ great_project_forge_of_giants = {
 			factor = 1000
 		}
 		province_modifiers = {
+			global_trade_goods_size = 0.5
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			global_regiment_cost = -0.025
-			land_maintenance_modifier = -0.025
 		}
 		on_upgraded = {
 		}
@@ -4595,12 +4601,12 @@ great_project_forge_of_giants = {
 			factor = 2500
 		}
 		province_modifiers = {
+			global_trade_goods_size = 1
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			global_regiment_cost = -0.05
-		 	land_maintenance_modifier = -0.05
 		}
 		on_upgraded = {
 		}
@@ -4613,12 +4619,12 @@ great_project_forge_of_giants = {
 			factor = 5000
 		}
 		province_modifiers = {
+			global_trade_goods_size = 2
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			global_regiment_cost = -0.10
-			land_maintenance_modifier = -0.10
 		}
 		on_upgraded = {
 		}
@@ -5555,7 +5561,7 @@ great_project_chambers_of_xeric = {
 		}
 		country_modifiers = {
 			land_forcelimit_modifier = 0.1
-		 	global_regiment_cost = -0.05
+		 	global_regiment_cost = -0.025
 		}
 		on_upgraded = {
 		}
@@ -5573,7 +5579,7 @@ great_project_chambers_of_xeric = {
 		}
 		country_modifiers = {
 			land_forcelimit_modifier = 0.1
-			global_regiment_cost = -0.05
+			global_regiment_cost = -0.025
 			free_mil_policy = 1
 		}
 		on_upgraded = {
@@ -5904,6 +5910,8 @@ great_project_fortis_aqueduct = {
 			build_cost = -0.05
 			build_time = -0.1
 		}
+		region_modifier = {
+		}
 		country_modifiers = {
 		}
 		on_upgraded = {
@@ -5919,9 +5927,14 @@ great_project_fortis_aqueduct = {
 		province_modifiers = {
 		}
 		area_modifier = {
-			local_development_cost_modifier = -0.1
-			build_cost = -0.1
-			build_time = -0.25
+			local_development_cost_modifier = -0.05
+			build_cost = -0.05
+			build_time = -0.1
+		}
+		region_modifier = {
+			local_development_cost_modifier = -0.05
+			build_cost = -0.05
+			build_time = -0.05
 		}
 		country_modifiers = {
 		}
@@ -5938,11 +5951,156 @@ great_project_fortis_aqueduct = {
 		province_modifiers = {
 		}
 		area_modifier = {
-			local_development_cost_modifier = -0.2
-			build_cost = -0.2
-			build_time = -0.5
+			local_development_cost_modifier = -0.1
+			build_cost = -0.1
+			build_time = -0.1
+		}
+		region_modifier = {
+			local_development_cost_modifier = -0.1
+			build_cost = -0.1
+			build_time = -0.1
 		}
 		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+great_project_temple_of_twilight = {
+	start = 503
+	date = 1765.5.29
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		owner = {
+			OR = {
+				religion = ranul
+				religion = ralos
+			}
+		}
+		OR = {
+			religion = ranul
+			religion = ralos
+		}
+		NOT = {
+			has_province_modifier = VAR_desecrated_ground
+		}
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = {
+				religion = ranul
+				religion = ralos
+			}
+		}
+		OR = {
+			religion = ranul
+			religion = ralos
+		}
+		NOT = {
+			has_province_modifier = VAR_desecrated_ground
+		}
+	}
+	can_upgrade_trigger = {
+		owner = {
+			OR = {
+				religion = ranul
+				religion = ralos
+			}
+		}
+		OR = {
+			religion = ranul
+			religion = ralos
+		}
+		NOT = {
+			has_province_modifier = VAR_desecrated_ground
+		}
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_manpower_modifier = 0.5
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			land_forcelimit = 5
+			manpower_in_true_faith_provinces = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_manpower_modifier = 1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			land_forcelimit = 10
+		 	manpower_in_true_faith_provinces = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_manpower_modifier = 2
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			land_forcelimit = 15
+			manpower_in_true_faith_provinces = 0.2
 		}
 		on_upgraded = {
 		}
@@ -6019,7 +6177,7 @@ great_project_tuai_leit_library = {
 			factor = 1000
 		}
 		province_modifiers = {
-		 	local_institution_spread = 0.25
+		 	institution_growth = 3
 		}
 		area_modifier = {
 		}
@@ -6038,7 +6196,7 @@ great_project_tuai_leit_library = {
 			factor = 2500
 		}
 		province_modifiers = {
-			local_institution_spread = 0.5
+			institution_growth = 6
 		}
 		area_modifier = {
 		}
@@ -6057,7 +6215,7 @@ great_project_tuai_leit_library = {
 			factor = 5000
 		}
 		province_modifiers = {
-			local_institution_spread = 1
+			institution_growth = 12
 		}
 		area_modifier = {
 		}

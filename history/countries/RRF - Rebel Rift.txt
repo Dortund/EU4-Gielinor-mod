@@ -6,6 +6,7 @@ religion = ranul
 technology_group = zeantechgroup
 capital = 503 #Rebel Rift
 historical_friend = KOU
+historical_friend = TWE
 
 2139.3.16 = {
 	monarch = {

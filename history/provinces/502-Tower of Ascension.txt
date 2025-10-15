@@ -17,3 +17,16 @@ base_manpower = 2
 trade_goods = lesser_loot
 
 is_city = yes
+
+2160.3.20 = {
+	owner = TWE
+	controller = TWE
+	add_core = TWE
+	base_tax = 3
+	base_production = 3
+	base_manpower = 4
+	add_great_project_tier = {
+		type = great_project_temple_of_twilight
+		tier = 3
+	}
+}

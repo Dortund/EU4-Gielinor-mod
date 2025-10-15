@@ -1,7 +1,7 @@
 #48-Astram's Ridge
-owner = SNG
-controller = SNG
-add_core = SNG
+owner = KRV
+controller = KRV
+add_core = KRV
 tribal_owner = ---
 culture = north_asgarn
 religion = guthix
@@ -12,11 +12,9 @@ discovered_by = northerntechgroup
 
 hre = no
 
-base_tax = 3
-base_production = 4
-base_manpower = 3
-
-fort_15th = yes 
+base_tax = 2
+base_production = 3
+base_manpower = 2
 
 trade_goods = logs
 latent_trade_goods = { runes }
@@ -43,7 +41,7 @@ add_province_triggered_modifier = wildy_border_level_nine
 	owner = GUN
 	controller = GUN
 	add_core = GUN
-	remove_core = SNG
+	remove_core = KRV
 }
 
 2059.11.28 = {

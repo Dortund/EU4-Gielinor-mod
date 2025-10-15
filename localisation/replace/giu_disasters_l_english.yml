@@ -34,3 +34,13 @@
  
  war_of_five_houses:0 "War of the Five Houses"
  desc_war_of_five_houses:0 "The five Houses of Kourend have squabbled with one another for centuries, but the current period of time seems particularly harsh. This could soon escalate to all-out war, with the winner able to determine the future of Kourend..."
+ 
+ war_of_betrayal:0 "War of Betrayal"
+ desc_war_of_betrayal:0 "Varlamore has persisted for centuries without going to war with its northern neighbour Kourend. To break this informal pact would be a source of great alarm to the people of Varlamore and will result in a messy conflict."
+ VAR_war_of_betrayal_scaling_difficulty_tooltip:0 "This disaster has §Rmore severe penalties§! and will §Rlast longer§! the earlier era it starts in."
+ VAR_war_of_betrayal_start:0 "Start of the War of Betrayal"
+ VAR_war_of_betrayal_alt_start_tooltip:0 "Have chosen to betray the Kourendite Royal Family in the §YTour of Varlamore§! event."
+ VAR_has_twilight_temple_tooltip:0 "Has the Temple of Twilight monument"
+ VAR_has_twilight_temple_alt_tooltip:0 "Has the Temple of Twilight province modifier"
+ var_loyalist_rebel_victory_tooltip:0 "Have Varlamore Loyalist Rebels enforce their demands."
+ var_resistance_rebel_victory_tooltip:0 "Have Varlamore Resistance Rebels enforce their demands."

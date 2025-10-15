@@ -422,6 +422,24 @@ temple_of_light_modifier = {
 }
 
 ##########################################
+# National Flavour - Varlamore
+##########################################
+
+VAR_temple_of_twilight_modifier = {
+	trigger = {
+		owner = {
+			OR = {
+				religion = ralos
+				religion = ranul
+			}
+		}
+	}
+	local_manpower_modifier = 1
+	land_forcelimit = 5
+ 	manpower_in_true_faith_provinces = 0.05
+}
+
+##########################################
 # The Wilderness
 ##########################################
 
