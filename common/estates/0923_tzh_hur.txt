@@ -109,6 +109,7 @@ estate_tzh_hur =
 	privileges = {
 		estate_tzh_hur_crafter_representation
 		estate_tzh_hur_builder_contracts
+		estate_tzh_hur_builders_of_gielinor
 	}
 
 	agendas = {

@@ -1,0 +1,7 @@
+﻿l_english:
+ estate_church_propagate_religion_trigger_tooltip:0 "All inhabited provinces in the §Y[agenda_trade_node.GetTradeNodeName]§! trade node follow the §Y[Root.Religion.GetName]§! faith, or follow a faith in the Wushanko Guardians group."
+ PROPAGATE_RELIGION_TRADING_POLICY:1 "You can convert provinces of a Trade Node. Only provinces following the Wushanko Guardians can be converted unless stated otherwise.\n"
+ enable_propogate_religion_in_karamjan_provinces_tt:0 "The '§YPropagate Religion§!' Trading Policy can now convert §YKaramjan§! provinces."
+ menaphite_propogate_religion:0 "May propogate religion"
+ menaphite_can_propagate_religion_tooltip:0 "Religion in §Y[Root.GetName]§! is in the §YMenaphite§! religion group and the ability to propogate religion is unlocked."
+ 

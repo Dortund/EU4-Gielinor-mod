@@ -28,4 +28,5 @@ native_hostileness = 2
 	controller = SBI
 	add_core = SBI
 	culture = scabarite
+	religion = amascut_religion
 }

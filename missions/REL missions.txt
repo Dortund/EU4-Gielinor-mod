@@ -383,7 +383,6 @@ rellekka_missions_4 = {
 		effect = {
 			country_event = {
 				id = flavor_rel.3
-				days = 1
 			}
 		}
 	}

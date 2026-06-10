@@ -1,0 +1,16 @@
+#1518-Wintumber Island
+tribal_owner = ---
+culture = mogre
+religion = bandos
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = bones
+
+native_size = 15
+native_ferocity = 8
+native_hostileness = 8

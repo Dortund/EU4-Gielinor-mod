@@ -80,7 +80,6 @@ crailey_missions_1 = {
 		effect = {
 			country_event = {
 				id = flavor_cly.1
-				days = 1
 			}
 		}
 	}

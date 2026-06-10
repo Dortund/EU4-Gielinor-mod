@@ -2988,9 +2988,9 @@ guiTypes = {
 	}
 
 	################################################################################################
-	################# Church aspect item (for selection) For Jewish
+	################# Church aspect item (for selection) For Queen of Ashes
 	windowType = {
-		name = "countryreligionview_aspectitem_jewish"
+		name = "countryreligionview_aspectitem_queen_of_ashes"
 		backGround =""
 		position = { x=10 y=-20 }	
 		size = { x=50 y=46 }

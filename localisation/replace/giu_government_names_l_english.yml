@@ -1,6 +1,10 @@
 ﻿l_english:
  COUNTY:0 "County"
  GREAT_COUNTY:0 "Great County"
+ 
+ TEMPLE:0 "Temple"
+ LONELY_GOD:0 "Lonely God"
+ LONELY_GODDESS:0 "Lonely Goddess"
 
  VILLAGE:0 "Village"
  GENERAL:0 "General"
@@ -61,6 +65,7 @@
  CITY:0 "City"
  GREAT_CITY:0 "Great City"
  GOLDEN_CITY:0 "Golden City"
+ GOLDEN_EMPIRE:0 "Golden Empire"
  
  ELDER:0 "Elder"
  GRAND_ELDER:0 "Grand Elder"
@@ -77,6 +82,12 @@
  CLAN:0 "Clan"
  MAJOR_CLAN:0 "Major Clan"
  UNITED_CLANS:0 "United Clans"
+ CLAN_UNION:0 "Clan Union"
+ CLAN_EMPIRE:0 "Clan Empire"
+ 
+ JARL:0 "Jarl"
+ GREAT_JARL:0 "Great Jarl"
+ GRAND_JARL:0 "Grand Jarl"
  
  LAIR:0 "Lair"
  BOSS:0 "Boss"
@@ -113,4 +124,3 @@
  CULT_EMPIRE:0 "Cult Empire"
  AUGUR:0 "Augur"
  GRAND_AUGUR:0 "Grand Augur"
- 

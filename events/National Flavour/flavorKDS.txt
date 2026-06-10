@@ -6,19 +6,31 @@ namespace = flavor_kds
 normal_or_historical_nations = yes
 
 country_event = {
-	id = flavor_kds.1
-	title = flavor_kds.1.t #Settlement of Al Kharid
-	desc = flavor_kds.1.d #Misthalin has been driving goblins out of the southern Lum region to settle it themselves. However, goblins still prominent in the region and seeking vengeance, some Misthalin settlers have headed towards our lands instead. Combined with our own settlers, we can create a new city of Al Kharid.
+	id = flavor_kds.1 #Event exists to get the AI to develop Al Kharid sooner by making it their capital. May be reworked for players in future.
+	title = flavor_kds.1.t #A suitable capital?
+	desc = flavor_kds.1.d #The extensive flat land north of Shantay Pass is not quite as barren as it first appeared. Proximity to the sea and the River Lum brings it a level of life we didn't think possible; perhaps this could make a great capital!
 	picture = ALKHARID_CITY_eventPicture
 	
-	is_triggered_only = yes
 	fire_only_once = yes
 	
+	trigger = {
+		tag = KDS
+		owns_core_province = 62
+		ai = yes
+		NOT = {
+			has_country_flag = kds_move_capital
+		}
+	}
+	
+	immediate = {
+		set_country_flag = kds_move_capital
+	}
+	
 	option = {
-		name = flavor_kds.1.a #Excellent!
+		name = flavor_kds.1.a #Make it so.
 		62 = {
-			add_core = KDS
-			cede_province = KDS
+			move_capital_effect = yes
+			add_base_tax = 1
 		}
 	}
 }
@@ -26,37 +38,53 @@ country_event = {
 country_event = {
 	id = flavor_kds.2
 	title = flavor_kds.2.t #Misthalin or Menaphos?
-	desc = flavor_kds.2.d #Despite being the key custodians of the Kharidian Passes keeping Misthalin safe from raids, they seem to have been neglecting us. With powers consolidating around the world, we need more than what we currently have if we are to survive. Either Misthalin offers us support, or we should seek someone else to help. Perhaps Menaphos?
+	desc = flavor_kds.2.d #Our role as custodian of the northern Kharidian passes seems to be taken for granted but with powers consolidating around the world, we need more than what we currently have if we are to survive. Misthalin and Menaphos both have the means to support our efforts - which one should we reach out to?
 	picture = MENAPHOS_CITY_eventPicture
 	
 	fire_only_once = yes
-	trigger = {
-		tag = KDS
-		exists = MST
-		exists = MPS
-		adm_tech = 5
-		NOT = {	owns_core_province = 62 }
-	}
-
-	mean_time_to_happen = {
-		months = 120
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = flavor_kds.2.a #I'm sure Misthalin will help us.
+		if = {
+			limit = {
+				has_global_flag = KDS_guaranteed_MST_help_flag
+			}
+			custom_tooltip = KDS_guaranteed_MST_help_tooltip
+		}
 		MST = {
 			country_event = {
 				id = flavor_mst.1
-				days = 90
+				days = 20
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = KDS_guaranteed_MST_help_flag }
 			}
 		}
 	}
 	option = {
 		name = flavor_kds.2.b #Let's seek out Menaphos' assistance.
+		if = {
+			limit = {
+				has_global_flag = KDS_guaranteed_MPS_help_flag
+			}
+			custom_tooltip = KDS_guaranteed_MPS_help_tooltip
+		}
 		MPS = {
 			country_event = {
 				id = flavor_mps.1
-				days = 90
+				days = 20
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = KDS_guaranteed_MPS_help_flag }
 			}
 		}
 	}
@@ -73,9 +101,20 @@ country_event = {
 	
 	option = {
 		name = flavor_kds.3.a #Wonderful!
-		62 = {
-			add_core = KDS
-			cede_province = KDS
+		if = {
+			limit = {
+				62 = {
+					is_empty = yes
+				}
+			}
+			62 = {
+				add_siberian_construction = 500
+			}
+		}
+		else = {
+			62 = {
+				add_core = KDS
+			}
 		}
 	}
 }
@@ -97,7 +136,7 @@ country_event = {
 country_event = {
 	id = flavor_kds.5
 	title = flavor_kds.5.t #Menaphos Grants Assistance
-	desc = flavor_kds.5.d #Menaphos has graciously granted us infrastructual support and an alliance, allowing us to expand our realm further!
+	desc = flavor_kds.5.d #Menaphos has graciously granted us infrastructual support, allowing us to expand our realm further!
 	picture = MENAPHOS_CITY_eventPicture
 	
 	is_triggered_only = yes
@@ -105,9 +144,20 @@ country_event = {
 	
 	option = {
 		name = flavor_kds.5.a #Wonderful!
-		62 = {
-			add_core = KDS
-			cede_province = KDS
+		if = {
+			limit = {
+				62 = {
+					is_empty = yes
+				}
+			}
+			62 = {
+				add_siberian_construction = 500
+			}
+		}
+		else = {
+			62 = {
+				add_core = KDS
+			}
 		}
 	}
 }
@@ -125,3 +175,564 @@ country_event = {
 		name = flavor_kds.6.a #Booooo!
 	}
 }
+
+# (Used for the AI to pick Al Kharid's direction)
+country_event = {
+	id = flavor_kds.7
+	title = flavor_kds.7.t #Future of the North Kharidians
+	desc = flavor_kds.7.d #It is time to decide our path.
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = flavor_kds.7.a #We are no longer defined by the Empire of Kharid!
+		set_country_flag = KDS_al_kharid_missions_branch_flag
+		swap_non_generic_missions = yes
+		if = {
+			limit = {
+				is_subject_of_type = tributary_state
+			}
+			set_country_flag = KDS_breaking_free_flag
+			overlord = {
+				add_opinion = {
+					who = ROOT
+					modifier = kds_broke_from_empire_of_kharid
+				}
+				country_event = {
+					id = flavor_kds.9
+				}
+			}
+			grant_independence = yes
+		}
+		if = {
+			limit = {
+				NOT = { government = monarchy }
+				is_revolutionary = no
+			}
+			change_government_to_monarchy = yes
+		}
+		add_government_reform = al_kharid_emirate
+		country_event = {
+			id = flavor_kds.10
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_kds.7.b #We are the hand of the Pharoah!
+		set_country_flag = KDS_loyalist_missions_branch_flag
+		swap_non_generic_missions = yes
+		random_country = {
+			limit = {
+				is_emperor_of_china = yes
+			}
+			add_historical_friend = ROOT
+			ROOT = {
+				add_historical_friend = PREV
+			}			
+		}
+		remove_historical_friend = MST
+		MST = {
+			remove_historical_friend = ROOT
+		}
+		if = {
+			limit = {
+				alliance_with = MST
+			}
+			break_alliance = MST
+		}
+		add_government_reform = hand_of_het
+		country_event = {
+			id = flavor_kds.11
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				exists = MST
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.8
+	title = flavor_kds.8.t #Het's Arena
+	desc = flavor_kds.8.d #Old scriptures pertaining to Het suggest a connection between him and some kind of great arena for duelling. It appears we have found it buried beneath the desert sands and have now begun excavating it...
+	picture = ALKHARID_CITY_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = KDS
+			tag = ALK
+		}
+		has_country_flag = KDS_professional_brothers_duel_arena_setup_flag
+		owns_core_province = 64
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_kds.8.a #I bet this will be of great benefit to us!
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+				NOT = {
+					OR = {
+						64 = {
+							has_great_project = {
+								type = great_project_duel_arena
+								tier = 1
+							}
+						}
+						64 = {
+							has_great_project = {
+								type = great_project_duel_arena
+								tier = 2
+							}
+						}
+						64 = {
+							has_great_project = {
+								type = great_project_duel_arena
+								tier = 3
+							}
+						}
+					}
+				}
+			}
+			64 = {
+				change_trade_goods = lesser_loot
+				add_great_project_tier = {
+					type = great_project_duel_arena
+					tier = 1
+				}
+			}
+		}
+		else = {
+			64 = {
+				change_trade_goods = lesser_loot
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.9
+	title = flavor_kds.9.t #The North Kharidians Declare Independence!
+	desc = flavor_kds.9.d #Terrible foreign influences seem to have infiltrated the North Kharidians. They have declared themselves no longer subject to the Kharidian Empire and intend to form a kingdom of their own.
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = flavor_kds.9.a #How dare they?!
+	 	add_mandate = -10
+		add_casus_belli = {
+			target = KDS
+			type = cb_vassalize_mission
+			months = 60
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.10
+	title = flavor_kds.10.t #An Emirate Emerges
+	desc = flavor_kds.10.d #"Out from under the shadows of kingdoms and empires, the Emirate of Al Kharid arises. As a young kingdom, our goal should be to find strong allies and learn from their long-established methods of governance so that we can grow further."
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = kharidian_emergence_adm_var
+				value = 0
+			}
+			set_variable = {
+				which = kharidian_emergence_dip_var
+				value = 0
+			}
+			set_variable = {
+				which = kharidian_emergence_mil_var
+				value = 0
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_kds.10.a #For the Emir!
+		if = {
+			limit = {
+				NOT = { government_rank = 2 }
+			}
+			set_government_rank = 2
+		}
+		change_tag = ALK
+		set_country_flag = KDS_al_kharid_missions_branch_flag
+		set_country_flag = formed_al_kharid_flag
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		add_government_power = {
+			mechanic_type = kharidian_emergence_mechanic
+			power_type = kharidian_emergence_adm
+			value = 10
+		}
+		add_government_power = {
+			mechanic_type = kharidian_emergence_mechanic
+			power_type = kharidian_emergence_dip
+			value = 10
+		}
+		add_government_power = {
+			mechanic_type = kharidian_emergence_mechanic
+			power_type = kharidian_emergence_mil
+			value = 10
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.11
+	title = flavor_kds.11.t #The Realm of Hetiyyah
+	desc = flavor_kds.11.d #Our future lies with our past; the Empire of Kharid. Utilising our strong bonds with the god Het we may act as the military power of the Empire, and push it beyond borders it ever had before.
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = kharidian_emergence_adm_var
+				value = 0
+			}
+			set_variable = {
+				which = kharidian_emergence_dip_var
+				value = 0
+			}
+			set_variable = {
+				which = kharidian_emergence_mil_var
+				value = 0
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_kds.11.a #Glory to Het!
+		if = {
+			limit = {
+				NOT = { government_rank = 2 }
+			}
+			set_government_rank = 2
+		}
+		set_country_flag = KDS_loyalist_missions_branch_flag
+		custom_tooltip = KDS_HET_upgrade_national_ideas
+		hidden_effect = {
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				swap_free_idea_group = yes
+			}
+		}
+		override_country_name = HETIYYAH
+		if = {
+			limit = {
+				owns_core_province = 62
+			}
+			62 = {
+				change_province_name = "Hetiyyah"
+			}
+		}
+		add_government_power = {
+			mechanic_type = kharidian_emergence_mechanic
+			power_type = kharidian_emergence_adm
+			value = 10
+		}
+		add_government_power = {
+			mechanic_type = kharidian_emergence_mechanic
+			power_type = kharidian_emergence_dip
+			value = 10
+		}
+		add_government_power = {
+			mechanic_type = kharidian_emergence_mechanic
+			power_type = kharidian_emergence_mil
+			value = 10
+		}
+		lumbridge_swamp_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		south_lum_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		tutorial_island_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.12
+	title = flavor_kds.12.t #Reform of the Hetiyyan Realm
+	desc = flavor_kds.12.d #It is evident that our tribal ways are dated in an age of increasingly-sophisticated nations. Now that we understand the complexities of government, we are able to reform into a governance structure that has a tie to our historical strengths while acknowledging Gielinor's emerging needs.
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = flavor_kds.12.a #Arise, the Order of Het!
+	 	trigger = {
+			religion_group = menaphite_group
+		}
+		change_government = theocracy
+		hidden_effect = {
+			set_country_flag = kharidian_emergence_completed
+		}
+		add_government_reform = order_of_het
+	}
+	option = {
+		name = flavor_kds.12.b #The past? I stopped following Het a long time ago.
+	 	trigger = {
+			NOT = { religion_group = menaphite_group }
+		}
+		remove_government_reform = hand_of_het
+		hidden_effect = {
+			set_country_flag = kharidian_emergence_completed
+		}
+		change_government = monarchy		
+	}
+}
+
+country_event = {
+	id = flavor_kds.13
+	title = flavor_kds.13.t #Fresh Hetiyyan Conquests
+	desc = flavor_kds.13.d #The Empire of Kharid continues to expand thanks to the efforts of Hetiyyah!
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_kds.13.a #Excellent.
+ 	 	add_mandate = 15
+	}
+}
+
+country_event = {
+	id = flavor_kds.14
+	title = flavor_kds.14.t #Wealth of Hetiyyah
+	desc = flavor_kds.14.d #Our subject, Hetiyyah, has demonstrated the power of their trade by steering vast amounts towards us!
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_kds.14.a #Excellent.
+ 	 	add_mandate = 20
+		add_years_of_income = 2
+	}
+}
+
+country_event = {
+	id = flavor_kds.15
+	title = flavor_kds.15.t #Additional Tribute from Hetiyyah
+	desc = flavor_kds.15.d #Hetiyyah, the Arm of the Pharoah, has delivered to us a great deal of additional tribute. How should we use it?
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_kds.15.a #We should take it for our own direct use.
+ 	 	if = {
+			limit = {
+				KDS = {
+					has_country_flag = kds_buffed_aid_for_pharoah
+				}
+			}
+			add_treasury = 200
+			add_manpower = 20
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+		else = {
+			add_treasury = 100
+			add_manpower = 10
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				AND = {
+					treasury = 100
+					manpower_percentage = 0.5
+				}
+			}
+			modifier = {
+				factor = 10
+				NOT = {
+					manpower_percentage = 0.1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_kds.15.b #Expand the Empire's settlements!
+		trigger = {
+			empire_of_china_reform_passed = kem_expand_settlements_reform
+			any_province = {
+				region = kharidian_desert_region
+				is_empty = yes
+			}
+			any_province = {
+				region = kharidian_desert_region
+				country_or_subject_holds = ROOT
+				any_neighbor_province = {
+					is_empty = yes
+					region = kharidian_desert_region
+				}
+			}
+		}
+		if = {
+			limit = {
+				KDS = {
+					has_country_flag = kds_buffed_aid_for_pharoah
+				}
+				any_owned_province = {
+					any_neighbor_province = {
+						is_empty = yes
+						region = kharidian_desert_region
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					region = kharidian_desert_region
+					has_empty_adjacent_province = yes
+				}
+				random_empty_neighbor_province = {		
+					limit = {
+						region = kharidian_desert_region
+					}
+					add_siberian_construction = 100
+				}
+			}
+		}
+		country_event = {
+			id = flavor_kds.15
+		}
+ 	 	custom_tooltip = kem_settlement_ignore_normal_cooldown
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.16
+	title = flavor_kds.16.t #Hetiyyah Applies for Tributary Status
+	desc = flavor_kds.16.d #For some reason, the Northern Kharidians fell out of the Kharidian Empire, but they are now seeking to repair their historical ties. Should we let them?
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_kds.16.a #Accept their offer!
+ 	 	create_subject = {
+			subject_type = tributary_state
+			subject = KDS
+		}
+		hidden_effect = {
+			add_historical_friend = KDS
+			KDS = {
+				add_historical_friend = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = flavor_kds.16.b #Reject their offer.
+		KDS = {
+			add_country_modifier = {
+				name = KDS_HET_refused_by_pharoah
+				duration = 3650
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_kds.17
+	title = flavor_kds.17.t #Triumph of Hetiyyah
+	desc = flavor_kds.17.d #Our trust in the northern Kharidians was well-placed. They have conquered a great swathe of land for the glory of the Kharidian Empire and their riches are pouring into our coffers at rates never seen before.
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_kds.17.a #Render unto Pharoah that which is Pharoah's.
+		add_years_of_income = 5
+	 	add_mandate = 100
+		every_subject_country = {
+			limit = {
+				capital_scope = {
+					region = kharidian_desert_region
+				}
+				any_owned_province = {
+					region = kharidian_desert_region
+					has_empty_adjacent_province = yes
+				}
+			}
+			country_event = { 
+				id = empire_of_kharid_events.1
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

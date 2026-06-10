@@ -7,13 +7,14 @@ east_old_world_superregion = {
 	morytania_region
 	forinthry_region
 	outer_isles_region
+	southern_isles_region
 }
 
 west_old_world_superregion = {
 	karamja_region
-	southern_isles_region
 	kandarin_region
 	feldip_hills_region
+	isle_of_souls_region
 	tirannwn_region
 	troll_country_region
 	fremennik_region
@@ -39,23 +40,24 @@ wushanko_isles_superregion = {
 
 # Sea super regions are used by AI to plan naval bases (it wants at least one fleet in each it has non-home presence if possible).
 
-south_sea_superregion = {
+unquiet_oceans_superregion = {
+	ardent_ocean_region
 	unquiet_ocean_region
-	crystal_ocean_region
+	shrouded_ocean_region
 }
 
-north_sea_superregion = {
-	lunar_sea_region
-	northern_sea_region
+great_continental_divide_superregion = {
+	western_ocean_region
+	northern_ocean_region
 }
 
-zeah_sea_superregion = {
-	east_zeah_sea_region
-	sea_of_kebos_region
-	shining_ocean_region
+west_zeah_oceans_superregion = {
+	sunset_ocean_region
+	forgotten_ocean_region
 }
 
-eastern_sea_superregion = {
-	eastern_sea_region
-	far_eastern_sea_region
+eastern_oceans_superregion = {
+	untamed_ocean_region
+	eastern_ocean_region
+	wushanko_ocean_region
 }

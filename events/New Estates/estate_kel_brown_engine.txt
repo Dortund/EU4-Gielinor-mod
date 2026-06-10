@@ -1,0 +1,19 @@
+###########################################################
+# Events for the Brown Engine Estate
+###########################################################
+
+namespace = kel_brown_engine_estate_events
+
+#Province revolt
+province_event = {
+	id = kel_brown_engine_estate_events.1
+	title = kel_brown_engine_estate_events.1.t
+	desc = kel_brown_engine_estate_events.1.d
+	picture = DWARVES_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kel_brown_engine_estate_events.1.a #Ok.
+	}
+}

@@ -1,0 +1,19 @@
+###########################################################
+# Events for the TzHaar-Xil Estate
+###########################################################
+
+namespace = tzh_xil_estate_events
+
+#Province revolt
+province_event = {
+	id = tzh_xil_estate_events.1
+	title = tzh_xil_estate_events.1.t
+	desc = tzh_xil_estate_events.1.d
+	picture = TZHAAR_XIL_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tzh_xil_estate_events.1.a #Ok.
+	}
+}

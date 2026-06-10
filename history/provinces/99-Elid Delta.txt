@@ -1,7 +1,7 @@
 #99 - Elid Delta
-owner = MPS
-controller = MPS
-add_core = MPS
+owner = SOP
+controller = SOP
+add_core = SOP
 tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite

@@ -1,5 +1,6 @@
 government = monarchy
-add_government_reform = noble_kingdom
+add_government_reform = kharidian_empire
+add_government_reform = menaphite_factions
 government_rank = 2
 primary_culture = menaphiteculture
 religion = menaphite
@@ -24,6 +25,14 @@ historical_friend = SOP
 		who = SOP
 		modifier = mps_sister_cities
 	}
+	change_estate_land_share = {
+		estate = all
+		share = 10
+	}
+	change_estate_land_share = {
+		estate = all
+		share = 10
+	}
 }
 
 2113.7.5 = {
@@ -31,8 +40,9 @@ historical_friend = SOP
 		name = "Kemesis"
 		dynasty = "of Menaphos"
 		birth_date = 2094.3.15
-		adm = 1
-		dip = 3
+		religion = amascut_religion
+		adm = 0
+		dip = 2
 		mil = 6
 	}
 	clear_scripted_personalities = yes

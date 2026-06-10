@@ -1,0 +1,447 @@
+country_decisions = {
+	chaos_group_policy_of_vandalism_decision = {
+		potential = {
+			religion_group = chaos_group
+			NOT = {
+				has_country_modifier = chaos_group_policy_of_vandalism
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = chaos_group_policy_of_vandalism
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea_group = humanist_ideas
+			}
+		}	
+	}
+	zamorak_open_zmi_branch_decision = {
+		potential = {
+			religion = zamorak
+			NOT = {
+				has_country_modifier = zamorak_open_zmi_branch
+			}
+		}
+		allow = {
+			has_institution = runecrafting
+		}
+		effect = {	
+			add_country_modifier = {
+				name = zamorak_open_zmi_branch
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	karamjan_group_widen_potion_rituals_decision = {
+		potential = {
+			religion_group = karamjan_group
+			NOT = {
+				has_country_modifier = karamjan_group_widen_potion_rituals
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = karamjan_group_widen_potion_rituals
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	menaphite_group_support_wandering_scholars_decision = {
+		potential = {
+			religion_group = menaphite_group
+			NOT = {
+				has_country_modifier = menaphite_group_support_wandering_scholars
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = menaphite_group_support_wandering_scholars
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	nonintervention_group_religious_history_education_decision = {
+		potential = {
+			religion_group = nonintervention_group
+			NOT = {
+				has_country_modifier = nonintervention_group_religious_history_education
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = nonintervention_group_religious_history_education
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	guthix_widen_druidic_recruitment_decision = {
+		potential = {
+			religion = guthix
+			NOT = {
+				has_country_modifier = guthix_widen_druidic_recruitment
+			}
+		}
+		allow = {
+			num_accepted_cultures = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = guthix_widen_druidic_recruitment
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	order_group_edict_of_uniformity_decision = {
+		potential = {
+			religion_group = order_group
+			NOT = {
+				has_country_modifier = order_group_edict_of_uniformity
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = order_group_edict_of_uniformity
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea_group = humanist_ideas
+			}
+			modifier = {
+				factor = 0
+				tag = DBS
+			}
+			modifier = {
+				factor = 2
+				tag = ASG
+			}
+		}
+	}
+	armadyl_promote_armadylean_law_decision = {
+		potential = {
+			religion = armadyl
+			NOT = {
+				has_country_modifier = armadyl_promote_armadylean_law
+			}
+		}
+		allow = {
+			any_owned_province = {
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+			}
+		}
+		effect = {	
+			add_country_modifier = {
+				name = armadyl_promote_armadylean_law
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	saradomin_edict_of_denial_decision = {
+		potential = {
+			religion = saradomin
+			NOT = {
+				has_country_modifier = saradomin_edict_of_denial
+			}
+		}
+		allow = {
+			total_development = 300
+			dominant_religion = saradomin
+			stability = 2
+			NOT = {
+				has_country_modifier = saradomin_pragmatic_theology
+			}
+		}
+		effect = {	
+			add_country_modifier = {
+				name = saradomin_edict_of_denial
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_idea_group = religious_ideas }
+			}
+			modifier = {
+				factor = 0
+				has_idea_group = humanist_ideas
+			}
+			modifier = {
+				factor = 0
+				tag = DBS
+			}
+		}
+	}
+	saradomin_pragmatic_theology_decision = {
+		potential = {
+			religion = saradomin
+			NOT = {
+				has_country_modifier = saradomin_pragmatic_theology
+			}
+		}
+		allow = {
+			total_development = 300
+			dominant_religion = saradomin
+			stability = 2
+			NOT = {
+				has_country_modifier = saradomin_edict_of_denial
+			}
+		}
+		effect = {	
+			add_country_modifier = {
+				name = saradomin_pragmatic_theology
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				religious_unity = 0.95
+			}
+			modifier = {
+				factor = 0
+				has_idea_group = religious_ideas
+			}
+			modifier = {
+				factor = 2
+				tag = DBS
+			}
+		}
+	}
+	
+	transcendent_group_promote_godly_hierarchy_decision = {
+		potential = {
+			religion_group = transcendent_group
+			NOT = {
+				has_country_modifier = transcendent_group_promote_godly_hierarchy
+			}
+		}
+		allow = {
+			adm_tech = 10
+			if = {
+				limit = {
+					religion = seren
+				}
+				NOT = {
+					has_country_modifier = seren_promote_serenist_tolerance
+				}
+			}
+		}
+		effect = {	
+			add_country_modifier = {
+				name = transcendent_group_promote_godly_hierarchy
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				religion = seren
+			}
+		}
+	}
+	seren_promote_serenist_tolerance_decision = {
+		potential = {
+			religion = seren
+			NOT = {
+				has_country_modifier = seren_promote_serenist_tolerance
+			}
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = transcendent_group_promote_godly_hierarchy
+			}
+			stability = 1
+			any_owned_province = {
+				NOT = {
+					religion_group = transcendent_group
+				}
+			}
+		}
+		effect = {	
+			add_country_modifier = {
+				name = seren_promote_serenist_tolerance
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	elder_god_group_open_proselytising_decision = {
+		potential = {
+			religion_group = elder_god_group
+			NOT = {
+				has_country_modifier = elder_god_group_open_proselytising
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = elder_god_group_open_proselytising
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	autocratic_group_doctrine_of_might_decision = {
+		potential = {
+			religion_group = autocratic_group
+			NOT = {
+				has_country_modifier = autocratic_group_doctrine_of_might
+			}
+		}
+		allow = {
+			mil_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = autocratic_group_doctrine_of_might
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bandos_dogma_literacy_decision = {
+		potential = {
+			religion = bandos
+			NOT = {
+				has_country_modifier = bandos_dogma_literacy
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = bandos_dogma_literacy
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	horror_group_construct_blackstone_pillars_decision = {
+		potential = {
+			religion_group = horror_group
+			NOT = {
+				has_country_modifier = horror_group_construct_blackstone_pillars
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = horror_group_construct_blackstone_pillars
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	celestial_group_astrological_charting_decision = {
+		potential = {
+			religion_group = celestial_group
+			NOT = {
+				has_country_modifier = celestial_group_astrological_charting
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = celestial_group_astrological_charting
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	wushanko_group_counter_missionaries_decision = {
+		potential = {
+			religion_group = wushanko_guardian_group
+			NOT = {
+				has_country_modifier = wushanko_group_counter_missionaries
+			}
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {	
+			add_country_modifier = {
+				name = wushanko_group_counter_missionaries
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

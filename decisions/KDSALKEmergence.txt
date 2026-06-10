@@ -1,0 +1,211 @@
+country_decisions = {
+	kds_alk_full_emergence_decision = {
+		potential = {
+			has_government_mechanic = kharidian_emergence_mechanic
+			NOT = {	has_country_flag = kharidian_emergence_completed }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = kds_alk_all_emergence_reforms
+				OR = {
+					has_country_modifier = kharidian_emergence_adm_5_modifier_HET
+					has_country_modifier = kharidian_emergence_adm_5_modifier_ALK
+				}
+				OR = {
+					has_country_modifier = kharidian_emergence_dip_5_modifier_HET
+					has_country_modifier = kharidian_emergence_dip_5_modifier_ALK
+				}
+				OR = {
+					has_country_modifier = kharidian_emergence_mil_5_modifier_HET
+					has_country_modifier = kharidian_emergence_mil_5_modifier_ALK
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = kds_alk_keep_all_emergence_bonuses
+			add_splendor = 200
+			if = {
+				limit = {
+					has_reform = hand_of_het
+				}
+				country_event = {
+					id = flavor_kds.12
+				}
+			}
+			else_if = {
+				limit = {
+					has_reform = al_kharid_emirate
+				}
+				hidden_effect = {
+					remove_government_reform = al_kharid_emirate
+					set_country_flag = kharidian_emergence_completed #Removing the flag is moved to the events in the other possibilities to prevent the government being immediately revoked after issuing
+				}
+				add_government_reform = al_kharid_emirate_reformed
+			}
+			else = {
+				country_event = {
+					id = flavor_alk.8
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 600
+	}
+	
+	kds_het_apply_for_tributary_status = {
+		potential = {
+			has_country_flag = KDS_loyalist_missions_branch_flag
+			not_in_mission_preview_mode = { key = KDS }
+			tag = KDS
+			has_government_mechanic = kharidian_emergence_mechanic
+			NOT = {	has_country_flag = kharidian_emergence_completed }
+			any_country = {
+				is_emperor_of_china = yes
+			}
+			NOT = {
+				is_emperor_of_china = yes
+			}
+			is_subject = no
+		}
+		allow = {
+			religion = menaphite
+			is_at_war = no
+			NOT = { has_country_modifier = KDS_HET_refused_by_pharoah }
+			random_country = {
+				limit = {
+					is_emperor_of_china = yes
+				}
+				NOT = { truce_with = ROOT }
+				NOT = { is_enemy = ROOT }
+				is_at_war = no
+				ROOT = {
+					trust = { who = PREV value = 50 }
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = kds_het_bid_for_tributary_tooltip
+			random_country = {
+				limit = {
+					is_emperor_of_china = yes
+				}
+				country_event = {
+					id = flavor_kds.17
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 10
+	}
+	
+	kds_het_aid_for_the_pharoah_decision = {
+		potential = {
+			has_country_flag = KDS_loyalist_missions_branch_flag
+			not_in_mission_preview_mode = { key = KDS }
+			has_government_mechanic = kharidian_emergence_mechanic
+			NOT = {	has_country_flag = kharidian_emergence_completed }
+			any_country = {
+				is_emperor_of_china = yes
+			}
+		}
+		allow = {
+			NOT = { has_country_modifier = kharidian_emergence_pharoahs_blessing_modifier }
+			NOT = { has_country_modifier = kharidian_emergence_enhanced_pharoahs_blessing_modifier }
+			is_subject_of_type = tributary_state
+			overlord = {
+				is_emperor_of_china = yes
+			}
+			if = {
+				limit = {
+					has_country_flag = kds_buffed_aid_for_pharoah
+				}
+				treasury = 200
+				manpower = 20
+				adm_power = 50
+				dip_power = 50
+				mil_power = 50
+			}
+			else = {
+				treasury = 100
+				manpower = 10
+				adm_power = 25
+				dip_power = 25
+				mil_power = 25
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = kds_buffed_aid_for_pharoah
+				}
+				add_treasury = -200
+				add_manpower = -20
+				add_adm_power = -50
+				add_dip_power = -50
+				add_mil_power = -50
+				add_government_power = {
+					mechanic_type = kharidian_emergence_mechanic
+					power_type = kharidian_emergence_adm
+					value = 100
+				}
+				add_government_power = {
+					mechanic_type = kharidian_emergence_mechanic
+					power_type = kharidian_emergence_dip
+					value = 100
+				}
+				add_government_power = {
+					mechanic_type = kharidian_emergence_mechanic
+					power_type = kharidian_emergence_mil
+					value = 100
+				}
+				add_country_modifier = {
+					name = kharidian_emergence_enhanced_pharoahs_blessing_modifier
+					duration = 7300
+				}
+			}
+			else = {
+				add_treasury = -100
+				add_manpower = -10
+				add_adm_power = -25
+				add_dip_power = -25
+				add_mil_power = -25
+				add_government_power = {
+					mechanic_type = kharidian_emergence_mechanic
+					power_type = kharidian_emergence_adm
+					value = 50
+				}
+				add_government_power = {
+					mechanic_type = kharidian_emergence_mechanic
+					power_type = kharidian_emergence_dip
+					value = 50
+				}
+				add_government_power = {
+					mechanic_type = kharidian_emergence_mechanic
+					power_type = kharidian_emergence_mil
+					value = 50
+				}
+				add_country_modifier = {
+					name = kharidian_emergence_pharoahs_blessing_modifier
+					duration = 7300
+				}
+			}
+			overlord = {
+				country_event = {
+					id = flavor_kds.15
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 10
+	}
+}

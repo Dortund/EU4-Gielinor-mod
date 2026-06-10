@@ -28,3 +28,5 @@ native_hostileness = 5
 	culture = piscatorian
 	religion = saradomin
 }
+
+add_province_triggered_modifier = queenofashes_phoenixfeathers_target

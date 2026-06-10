@@ -3,7 +3,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_icon_no_institution"
 		texturefile = "gfx//interface//estates_icons.dds"
-		noOfFrames = 11
+		noOfFrames = 29
 		loadType = "INGAME"
 	}
 
@@ -312,7 +312,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_province_view_religion"
 		texturefile = "gfx//interface//province_view_religion.dds"
-		noOfFrames = 35
+		noOfFrames = 36
 		loadType = "INGAME"
 	}
 	spriteType = {

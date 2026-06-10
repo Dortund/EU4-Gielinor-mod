@@ -1,0 +1,25 @@
+country_decisions = {
+	GCH_end_the_culture_of_travel = {
+		potential = {
+			has_reform = tortugan_travelling_culture_reform
+		}
+		allow = {
+		 	stability = 3
+			OR = {
+			 	innovativeness = 20
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { culture = root }
+				}
+			}
+		}
+		effect = {
+			remove_government_reform = tortugan_travelling_culture_reform
+			add_stability = -2
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		ai_importance = 2
+	}
+}

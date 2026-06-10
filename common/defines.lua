@@ -348,7 +348,7 @@ NDiplomacy = {
 	CORE_PEACE_COST_DIP_FRACTION = -0.2,			-- Fraction of dipcost you pay for cores
 	CANCEL_TRADE_TRANSFER_PRESTIGE_HIT = -5,
 
-	DIPLOMAT_SPEED = 20.0,							-- DIPLOMAT_SPEED
+	DIPLOMAT_SPEED = 30.0,							-- DIPLOMAT_SPEED
 	DIPLOMAT_COOLDOWN_TIME = 1,						-- DIPLOMATIC ACTION COOLDOWN IN MONTHS
 	MIN_RELATIONS_TO_ALLY = -25,						-- Alliances not possible if either country has an opinion of the other lower than this
 	MIN_RELATIONS_TO_SUPPORT_INDEPENDENCE = -25,	-- Support Independence not possible if either country has an opinion of the other lower than this
@@ -1184,7 +1184,7 @@ NEconomy = {
 	MERCHANT_COMPETE = 0.5,							-- _EDEF_MERCHANT_COMPETE_
 	MAX_PROVINCE_SELL_PRICE = 100,					-- _EDEF_MAX_PROVINCE_SELL_PRICE_
 	COLONIST_DISTANCE_DIVISOR = 1000,				-- _EDEF_COLONIST_DISTANCE_DIVISOR_
-	COLONIST_TIME = 0.3,							-- _EDEF_COLONIST_TIME_
+	COLONIST_TIME = 0.2,							-- _EDEF_COLONIST_TIME_
 	MISSIONARY_TIME_BASE = 1000,					-- _EDEF_MISSIONARY_TIME_BASE = 10,
 	MISSIONARY_TIME_DISTANCE = 0.2,					-- _EDEF_MISSIONARY_TIME_DISTANCE = 10,
 	TRADE_WIND_STRENGTH = 0.5,						-- _EDEF_TRADE_WIND_STRENGTH_
@@ -1193,7 +1193,7 @@ NEconomy = {
 	OPEN_SEA_MODIFIER = 1.7,						-- _EDEF_OPEN_SEA_MODIFIER_
 	COASTAL_MODIFIER = 1.0,							-- _EDEF_COASTAL_MODIFIER_
 	TRADE_CAPITAL_POWER = 5.0,						-- TRADE_CAPITAL_POWER
-	MERCHANT_SPEED = 20.0,							-- MERCHANT_SPEED
+	MERCHANT_SPEED = 30.0,							-- MERCHANT_SPEED
 	MERCHANT_MAX_POWER_BONUS = 2.0,					-- MERCHANT_MAX_POWER_BONUS
 	TRADE_SHIP_MAX_DAYS_IN_PORT = 5.0,				-- TRADE_SHIP_MAX_DAYS_IN_PORT
 	TRADE_SHIP_ORG_LIMIT = 0.5,						-- TRADE_SHIP_ORG_LIMIT
@@ -1322,9 +1322,9 @@ NMilitary = {
 	INFANTRY_BREAKTHROUGH = 0.0,                                        -- Between 0 and 1
 	CAVALRY_BREAKTHROUGH = 0.0,                                                -- Between 0 and 1 
 	
-	INFANTRY_SPEED = 0.7, 							-- _MDEF_INFANTRY_SPEED = 10,
-	CAVALRY_SPEED = 0.7, 							-- _MDEF_CAVALRY_SPEED = 10,
-	ARTILLERY_SPEED = 0.7, 							-- _MDEF_ARTILLERY_SPEED = 10,
+	INFANTRY_SPEED = 1.0, 							-- _MDEF_INFANTRY_SPEED = 10,
+	CAVALRY_SPEED = 1.0, 							-- _MDEF_CAVALRY_SPEED = 10,
+	ARTILLERY_SPEED = 1.0, 							-- _MDEF_ARTILLERY_SPEED = 10,
 
 	INFANTRY_COST = 10.0, 							-- _MDEF_INFANTRY_COST = 10,
 	CAVALRY_COST = 25.0, 							-- _MDEF_CAVALRY_COST = 10,
@@ -1537,7 +1537,7 @@ NMilitary = {
 	REVOLUTIONARY_GUARD_STARTING_STRENGTH = 1.0,
 
 	SPECIAL_REGIMENT_ESTATE_LOYALTY_COST = 0.0,		-- Estate loyalty cost of recruiting thei related special troops
-	NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 20,			-- Minimum naval force limit to be able to select a naval doctrine
+	NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 12,			-- Minimum naval force limit to be able to select a naval doctrine
 	LEAGUE_LEADER_CHANGE_SCORE_THRESHOLD = 1.5,		-- Score * factor needed for leader change (Compared to current leader)
 	MAX_DRILL_DECAY = -0.9,							-- Drill can never Decay with more than this value. 
 	MIN_DRILL_DECAY = 0,							-- Drill can never Decay with less than this value.

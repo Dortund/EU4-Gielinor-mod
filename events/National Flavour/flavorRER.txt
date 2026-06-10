@@ -1,0 +1,80 @@
+########################################
+# Events for the Red Reef
+########################################
+
+namespace = flavor_rer
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_rer.1
+	title = flavor_rer.1.t #Rise of the Red Reef Trading Company
+	desc = flavor_rer.1.d #A young entrepreneur by the name of Spencer Brentwood has discovered a form of red coral with strange divinational properties. He has set up a base on a nearby sandbank under the name of the Red Reed Trading Company.
+	picture = EXPLORATION_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		OR = {
+			current_age = age_of_adventurers
+			current_age = age_of_divination
+		}
+		owns_core_province = 1500
+		1512 = { is_empty = yes }
+		has_institution = quests
+		NOT = { exists = RER }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			71 = {
+				cede_province = RER
+				add_core = RER
+				add_base_tax = 1
+				add_base_production = 1
+				change_culture = ardignan
+				change_religion = saradomin
+			}
+			RER = {
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+						heavy_ship = 0.2
+						light_ship = 0.5
+						transport = 0.3
+					}
+				}
+				define_ruler = {
+					name = "Spencer"
+					dynasty = "Brentwood"
+					age = 20
+					adm = 3
+					dip = 4
+					mil = 3
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_rer.1.a #I see the future, and it's with the Red Reef Trading Company!
+
+		switch_tag = RER
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_rer.1.b #This sounds like a bad idea...
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

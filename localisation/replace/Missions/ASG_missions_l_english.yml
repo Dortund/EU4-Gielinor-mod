@@ -39,7 +39,8 @@
  ASG_wushanko_imports_desc:0 "What wonderful goods our traders bring in! Beautiful pottery, versatile bamboo, deadly gunpowder! We should control it all."
  ASG_wushanko_missions_title:0 "Wushanko Missions"
  ASG_wushanko_missions_desc:0 "The faith of Wushanko to us seems vague and undefined - far from the example of our true faith. Let us show them what they are missing."
- ASG_wushanko_missions_reward_tooltip:0 "Allows the ability to propagate religion via trade in provinces of the §YWushanko Guardian§! religious group."
+ ASG_wushanko_missions_reward_main_religion_tooltip:0 "Allows the ability to propagate religion via trade with just 40% trade power in a node."
+ ASG_wushanko_missions_reward_misc_religion_tooltip:0 "Allows the ability to propagate religion via trade in provinces of the §YWushanko Guardian§! religious group."
  
  ASG_break_the_blockade_title:0 "Break the Blockade"
  ASG_break_the_blockade_desc:0 "Piracy doomed Port Lina but a unified Asgarnia can float a navy strong enough to keep such threats at bay."
@@ -74,11 +75,29 @@
  ASG_SHAREDRELIGION_confirm_the_faith_desc:0 "A unified state would benefit from clearer religious leadership."
  ASG_confirm_the_faith_flag:0 "Completing this mission will unlock access to extra missions §Ydepending on your current religion§!."
 
+ ASG_branching_2_14_title:0 "Branching Mission"
+ ASG_branching_2_14_desc:0 "This is a §YBranching Mission.§!"
+ ASG_branching_2_15_title:0 "Branching Mission"
+ ASG_branching_2_15_desc:0 "This is a §YBranching Mission.§!"
+
  ASG_branching_3_14_title:0 "Branching Mission"
  ASG_branching_3_14_desc:0 "This is a §YBranching Mission.§!"
  ASG_this_is_a_branching_mission:0 "This is a §YBranching Mission.§! Complete the mission §YConfirm the Faith§! to enable a path depending on which religion Asgarnia follows."
+ ASG_branching_3_15_title:0 "Branching Mission"
+ ASG_branching_3_15_desc:0 "This is a §YBranching Mission.§!"
+ ASG_branching_3_16_title:0 "Branching Mission"
+ ASG_branching_3_16_desc:0 "This is a §YBranching Mission.§!"
+ 
+ ASG_branching_4_14_title:0 "Branching Mission"
+ ASG_branching_4_14_desc:0 "This is a §YBranching Mission.§!"
+ ASG_branching_4_15_title:0 "Branching Mission"
+ ASG_branching_4_15_desc:0 "This is a §YBranching Mission.§!"
+ 
+ 
 
 # Religious Missions - Generic
+
+ ASG_miscellaneous_missions_branch_flag_tooltip:0 "Preview the §YMiscellaneous Religion§! branch."
 
  ASG_GENRELIGION_knights_of_asgarnia_title:0 "Knights of Asgarnia"
  ASG_GENRELIGION_knights_of_asgarnia_desc:0 "The Saradominist White Knights guard Falador from threats - but is an order opposed to our faith worth keeping?"
@@ -100,6 +119,8 @@
  ASG_GENRELIGION_a_new_monastery_desc:0 "Saradominists viewed the area to the east of Ice Mountain as an excellent place for religious contemplation. Let us take it first so they can't."
 
 # Religious Missions - Saradomin
+
+ ASG_saradomin_missions_branch_flag_tooltip:0 "Preview the §YSaradominist§! branch."
  
  ASG_SARA_monastic_living_title:0 "Monastic Living"
  ASG_SARA_monastic_living_desc:0 "Let us invest in the fledgling monastic communities near Ice Mountain."
@@ -148,6 +169,8 @@
 
 # Religious Missions - Zamorak
 
+ ASG_zamorak_missions_branch_flag_tooltip:0 "Preview the §YZamorakian§! branch."
+
  ASG_ZAM_glory_of_falador_title:0 "Glory of Falador"
  ASG_ZAM_glory_of_falador_desc:0 "As an ancient bastion of Order and Light, Falador will always be a target for the vile Saradominists who want it back. Hold fast to our faith and we shall keep it secure."
  ASG_ZAM_children_of_zamorak_title:0 "Children of Zamorak"
@@ -182,6 +205,8 @@
  ASG_ZAM_return_to_canifis_werewolf_tooltip:0 "Every owned province in the §YWerewolf§! culture group will gain the §YZamorakian Overlords§! province modifier for 10 years, giving the following effects:\nMonthly Autonomy Change: §G-0.10§!\nYears of Separatism: §G-10§!"
 
 # Religious Missions - Guthix
+
+ ASG_guthix_missions_branch_flag_tooltip:0 "Preview the §YGuthixian§! branch."
 
  ASG_GUTHIX_herbs_of_trollheim_title:0 "Herbs of Trollheim"
  ASG_GUTHIX_herbs_of_trollheim_desc:0 "Goutweed is known to grow in the mountains of Trollweiss, and it is an extremely versatile herb with applications in druidic rituals, dream magic and as a consistently good seasoning. Securing a permanent supply of these herbs requires direct action, and though it pains us to fight the trolls in their own territory, the Balance is better-served with the herbs in our possession."
@@ -229,6 +254,8 @@
  asg_guthix_valluta_karma_tooltip:0 "Your reward for this mission §Yvaries depending on your current Karma rating.§!"
 
 # Religious Missions - Brassican
+
+ ASG_brassica_missions_branch_flag_tooltip:0 "Preview the §YBrassican§! branch."
 
  ASG_BRASSICA_shadows_of_draynor_title:0 "Shadows of Draynor"
  ASG_BRASSICA_shadows_of_draynor_desc:0 "Strange powers are afoot at Draynor Manor - powers we can keep at bay with proper, nutritious brassicas."

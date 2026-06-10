@@ -1,0 +1,37 @@
+government = tribal
+add_government_reform = boss_nation
+government_rank = 1
+primary_culture = avernic
+religion = zamorak
+technology_group = zeantechgroup
+capital = 1560 #Chasm of Fire
+
+set_government_power = {
+	mechanic_type = boss_endurance_mechanic
+	power_type = boss_endurance_power
+	value = 20
+}
+
+1.11.7 = {
+	monarch = {
+		name = "Yama"
+		dynasty = "Master of Pacts"
+		culture = avernic
+		birth_date = 1.5.14
+		adm = 4
+		dip = 6
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = fierce_negotiator_personality
+	add_ruler_personality = intricate_web_weaver_personality
+}
+
+2169.1.1 = {
+	set_government_power = {
+		mechanic_type = boss_endurance_mechanic
+		power_type = boss_endurance_power
+		value = 75
+	}
+}

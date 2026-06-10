@@ -6,6 +6,7 @@ tribal_owner = ---
 discovered_by = karamjantechgroup
 discovered_by = bandostechgroup
 discovered_by = monkeytechgroup
+discovered_by = kharidtechgroup
 
 hre = no
 

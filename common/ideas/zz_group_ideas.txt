@@ -44,6 +44,49 @@ dwarven_outpost_ideas = {
 	}
 }
 
+fremennik_clan_ideas = {
+	start = {
+		shock_damage = 0.1
+		may_perform_slave_raid = yes
+	}
+	
+	bonus = {
+		global_sailors_modifier = 0.2
+	}
+	
+	trigger = {
+		has_reform = fremennik_clan
+	}
+	free = yes		#will be added at load.
+	
+	fremclan_traditional_leadership = {
+		legitimacy = 0.5
+		horde_unity = 0.5
+		meritocracy = 0.5
+		devotion = 0.5
+		republican_tradition = 0.15
+	}
+	fremclan_rise_of_v = {
+		tolerance_heretic = 2
+	}
+	fremclan_prestige_of_war = {
+		prestige_from_land = 0.5
+		prestige_from_naval = 0.5
+	}
+	fremclan_shipbuilding_expansion = {
+		global_ship_recruit_speed = -0.1
+	}
+	fremclan_winter_warfare = {
+		land_attrition = -0.1
+	}
+	fremclan_union_of_clans = {
+		diplomatic_annexation_cost = -0.1
+	}
+	fremclan_invasion_strategies = {
+		years_of_nationalism = -5
+	}
+}
+
 client_ideas = {
 	start = {
 		land_morale = 0.1

@@ -228,7 +228,6 @@ snt_missions_2 = {
 			else = {
 				country_event = {
 					id = flavor_jal.1
-					days = 30
 				}
 			}
 		}
@@ -333,7 +332,6 @@ snt_missions_3 = {
 				}
 				country_event = {
 					id = flavor_snt.2
-					days = 30
 				}
 			}
 			else = {
@@ -356,7 +354,6 @@ snt_missions_3 = {
 		effect = {
 			country_event = {
 				id = flavor_snt.4
-				days = 1
 			}
 		}
 	}
@@ -1103,7 +1100,7 @@ zar_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = menaphos_area
-				area = elid_isles_area
+				area = outer_menaphos_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1114,7 +1111,7 @@ zar_missions_1 = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			elid_isles_area = {
+			outer_menaphos_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
@@ -1274,7 +1271,6 @@ zar_missions_2 = {
 				}
 				country_event = {
 					id = flavor_zar.2
-					days = 1
 				}
 			}
 			else_if = {
@@ -1285,13 +1281,11 @@ zar_missions_2 = {
 				}
 				country_event = {
 					id = flavor_zar.3
-					days = 1
 				}
 			}
 			else = {
 				country_event = {
 					id = flavor_zar.5
-					days = 1
 				}
 			}
 		}
@@ -1461,7 +1455,6 @@ zar_missions_3 = {
 				}
 				country_event = {
 					id = flavor_zar.1
-					days = 30
 				}
 			}
 			else = {

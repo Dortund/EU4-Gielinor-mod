@@ -1,0 +1,4 @@
+﻿l_english:
+ kel_white_chisel_estate_events.1.t:0 "Revolt of the [Root.GetName] $ESTATE_KEL_WHITE_CHISEL$"
+ kel_white_chisel_estate_events.1.d:0 "In the opinion of the $ESTATE_KEL_WHITE_CHISEL$'s director, the role of the [Root.Monarch.GetTitle] of [Root.GetName] is to leave the Consortium's trading companies to handle their own affairs. To directly seize holdings by the $ESTATE_KEL_WHITE_CHISEL$ is a violation of Keldagrim's governance and has been met in turn with violent unrest."
+ kel_white_chisel_estate_events.1.a:0 "Ok."

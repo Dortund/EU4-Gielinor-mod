@@ -1,0 +1,63 @@
+# Localisation is handled with the Estates file rather than with other modifiers.
+
+#############
+#Admiral Monopolies
+#############
+
+estate_admirals_monopoly_of_fish_mod = {
+	local_production_efficiency = -10
+}
+estate_admirals_monopoly_of_naval_goods_mod = {
+	local_production_efficiency = -10
+}
+
+#############
+#Burgher Monopolies
+#############
+
+estate_burghers_monopoly_of_bamboo_mod = {
+	local_production_efficiency = -10
+}
+estate_burghers_monopoly_of_manufactured_goods_mod = { #Manufactured, Refined goods and Terracotta
+	local_production_efficiency = -10
+}
+
+#############
+#Clergy Monopolies
+#############
+
+estate_church_monopoly_of_divine_energy_mod = {
+	local_production_efficiency = -10
+}
+estate_church_monopoly_of_ritual_goods_mod = { #Bones and Herblore Supplies
+	local_production_efficiency = -10
+}
+
+#############
+#Nobility Monopolies
+#############
+
+estate_nobles_monopoly_of_gunpowder_mod = {
+	local_production_efficiency = -10
+}
+estate_nobles_monopoly_of_hunter_creatures_mod = {
+	local_production_efficiency = -10
+}
+estate_nobles_monopoly_of_monster_loot_mod = { #Lesser Loot, Rare Loot
+	local_production_efficiency = -10
+}
+
+#############
+#Worker Monopolies
+#############
+
+estate_workers_monopoly_of_logs_mod = { #Logs, Advanced Logs, Hardwoods
+	local_production_efficiency = -10
+}
+estate_workers_monopoly_of_fibres_mod = {
+	local_production_efficiency = -10
+}
+estate_workers_monopoly_of_ore_mod = { #Basic Ores, Advanced Ores, Runite
+	local_production_efficiency = -10
+}
+

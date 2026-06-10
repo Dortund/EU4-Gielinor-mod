@@ -1,0 +1,50 @@
+country_decisions = {
+
+	amascut_religion_escape_decision = {
+		major = yes
+		potential = {
+			religion = amascut_religion
+		}
+		allow = {
+			stability = 1
+			NOT = { corruption = 5 }
+			NOT = {
+				has_government_power = {
+					mechanic_type = enthrallment_mechanic
+					power_type = enthrallment_power_1
+					value = 10
+				}
+			}
+		}
+		effect = {
+			change_religion = menaphite
+			capital_scope = {
+				amascut_religion_rebels = 3
+			}
+			add_stability = -2
+			add_corruption = -1
+			custom_tooltip = amascut_religion_escape_removes_reform
+			hidden_effect = {
+				remove_government_reform = thrall_of_amascut_monarchy_reform
+				remove_government_reform = thrall_of_amascut_republic_reform
+				remove_government_reform = thrall_of_amascut_theocracy_reform
+				remove_government_reform = thrall_of_amascut_tribe_reform
+				if = {
+					limit = {
+						tag = MPS
+						government = monarchy
+					}
+					add_government_reform = menaphite_factions
+				}
+			}
+			add_country_modifier = {
+				name = amascut_religion_escape_modifier
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 600
+	}
+}

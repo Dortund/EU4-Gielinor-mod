@@ -16,21 +16,38 @@ country_event = {
 	
 	option = {
 		name = flavor_mst.1.a #Alright, but this better be their only demand.
-		add_adm_power = -100
+		add_adm_power = -50
 		add_prestige = 10
 		KDS = {
 			country_event = {
 				id = flavor_kds.3
-				days = 1
+				days = 20
 			}
 		}
 		add_opinion = {
 			who = KDS
 			modifier = kds_granted_assistance
 		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				alliance_with = KDS
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					is_enemy = KDS
+					is_rival = KDS
+				}
+			}
+		}
 	}
 	option = {
 		name = flavor_mst.1.b #They can sort it out themselves!
+		trigger = {
+			NOT = { has_global_flag = KDS_guaranteed_MST_help_flag }
+		}
 		add_prestige = -10
 		KDS = {
 			country_event = {
@@ -41,6 +58,20 @@ country_event = {
 		add_opinion = {
 			who = KDS
 			modifier = kds_refused_assistance
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = KDS_guaranteed_MST_help_flag }
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					is_enemy = KDS
+					is_rival = KDS
+				}
+			}
 		}
 	}
 }

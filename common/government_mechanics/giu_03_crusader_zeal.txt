@@ -1,6 +1,6 @@
 crusader_zeal_mechanic = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics
-	alert_icon_index = 2
+	alert_icon_index = 4
 	available = {
 	}
 
@@ -8,7 +8,7 @@ crusader_zeal_mechanic = {
 		crusader_zeal_power_1 = {
 			gui = crusader_zeal_gov_mech
 			max = 100
-			base_monthly_growth = -0.2
+			base_monthly_growth = -0.25
 			development_scaled_monthly_growth = -0.5
 			default = 100
 			scaled_modifier = {
@@ -30,6 +30,206 @@ crusader_zeal_mechanic = {
 				}
 			}
 			is_good = yes
+		}
+	}
+	
+	
+	
+	interactions = {
+		crusader_zeal_crush_altars = {
+			gui = crusader_zeal_gov_button_1
+			cost_type = crusader_zeal_power_1
+			center = no
+			trigger = {
+				current_age = age_of_humans
+				any_province = {
+					trade_goods = runes
+					NOT = { has_province_modifier = GUN_ruined_runecrafting_altar }
+					controlled_by = ROOT
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 40
+				}
+				random_owned_province = {
+					limit = {
+						trade_goods = runes
+						NOT = { has_province_modifier = GUN_ruined_runecrafting_altar }
+					}
+					add_permanent_province_modifier = {
+						name = GUN_ruined_runecrafting_altar
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_province = {
+								trade_goods = runes
+								NOT = { has_province_modifier = GUN_ruined_runecrafting_altar }
+								controlled_by = ROOT
+							}
+						}
+					}
+					custom_tooltip = destroys_an_altar_tooltip
+				}
+			}
+			ai_chance = {
+				factor = 500
+			}
+		}
+		
+		crusader_zeal_migrate_fremennik = {
+			gui = crusader_zeal_gov_button_2
+			cost_type = crusader_zeal_power_1
+			center = no
+			trigger = {
+				current_age = age_of_humans
+				is_at_war = no
+				any_ally = {
+					culture_group = fremennik_group
+				}
+				any_owned_province = {
+					region = fremennik_region
+					any_neighbor_province = {
+						owner = {
+							culture_group = fremennik_group
+							alliance_with = ROOT
+						}
+					}
+					NOT = {
+						custom_trigger_tooltip = {
+							tooltip = GUN_already_ceded_province_tooltip
+							has_province_flag = GUN_already_ceded_province
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = currently_coring_province_tooltip
+					any_owned_province = {
+						has_construction = core
+					}
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = crusader_zeal_mechanic
+					power_type = crusader_zeal_power_1
+					value = 10
+				}
+				if = {
+					limit = {
+						any_ally = {
+							historical_friend_with = ROOT
+							culture_group = fremennik_group
+						}
+					}
+					random_ally = {
+						limit = {
+							historical_friend_with = ROOT
+							culture_group = fremennik_group
+						}
+						save_event_target_as = cede_province_target_country
+					}
+				}
+				else_if = {
+					limit = {
+						any_ally = {
+							culture_group = fremennik_group
+						}
+					}
+					random_ally = {
+						limit = {
+							culture_group = fremennik_group
+						}
+						save_event_target_as = cede_province_target_country
+					}
+				}
+				else = {
+					custom_tooltip = crusader_zeal_migrate_fremennik_cede_province
+				}
+				random_owned_province = {
+					limit = {
+						region = fremennik_region
+						any_neighbor_province = {
+							owner = {
+								culture_group = fremennik_group
+								alliance_with = ROOT
+							}
+						}
+					}
+					save_global_event_target_as = cede_province_target_province
+					set_province_flag = GUN_already_ceded_province
+				}
+				event_target:cede_province_target_country = {
+					event_target:cede_province_target_province = {
+						cede_province = PREV
+						hidden_effect = {
+							add_core = PREV
+							remove_core = ROOT
+							if = {
+								limit = {
+									culture = barbarian
+									OR = {
+										area = rellekka_area
+										area = hunterlands_area
+										province_id = 369
+										province_id = 370 
+										province_id = 371
+										province_id = 971
+									}
+								}
+								change_culture = PREV
+							}
+							if = {
+								limit = {
+									base_tax = 2
+								}
+								add_base_tax = -1
+							}
+							if = {
+								limit = {
+									base_production = 2
+								}
+								add_base_production = -1
+							}
+							if = {
+								limit = {
+									base_manpower = 2
+								}
+								add_base_manpower = -1
+							}
+						}
+					}
+					country_event = { id = flavor_gun.16 }
+				}
+				custom_tooltip = instant_cores_tooltip
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_construction = core
+						}
+						add_core = ROOT
+						cancel_construction = yes
+					}
+				}
+			}
+			
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 0
+					has_government_power = {
+						mechanic_type = blood_power_mechanic
+						power_type = blood_power_power_1
+						value = 90
+					}
+				}
+				
+			}
 		}
 	}
 }

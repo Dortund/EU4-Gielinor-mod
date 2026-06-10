@@ -1,0 +1,50 @@
+﻿l_english:
+ empire_of_kharid_events.1.t:0 "Settlement Spree"
+ empire_of_kharid_events.1.d:0 "Our overlord, [EmperorOfChina.GetTitle] [EmperorOfChina.GetName], has saw it fit to invest resources in a considerable expansion of desert land, for which we are a beneficiary."
+ empire_of_kharid_events.1.a:0 "Sometimes being a subject nation pays off!"
+ 
+ empire_of_kharid_events.2.t:0 "The Reconstruction of Uzer"
+ empire_of_kharid_events.2.d:0 "During the last centuries of the God Wars, the demon Thammaron destroyed the city of Uzer by use of a portal to circumvent its clay golem guardians. Though eventually slain, the demon's work left the city a ruin - until now. With the work of an ever-strengthening Kharidian Empire, Uzer is finally back on the map."
+ empire_of_kharid_events.2.a:0 "Uzer shall never fall again!"
+ empire_of_kharid_events.2.a:0 "Forget this Pharoah nonsense, I want to live in Uzer!"
+ 
+ empire_of_kharid_events.3.t:0 "The Reconstruction of Uzer"
+ empire_of_kharid_events.3.d:0 "During the last centuries of the God Wars, the demon Thammaron destroyed the city of Uzer by use of a portal to circumvent its clay golem guardians. Though eventually slain, the demon's work left the city a ruin - until now. With the work of an ever-strengthening Kharidian Empire, Uzer is finally back on the map."
+ empire_of_kharid_events.3.a:0 "Uzer shall never fall again!"
+ 
+ empire_of_kharid_events.4.t:0 "The Reconstruction of Uzer"
+ empire_of_kharid_events.4.d:0 "[EmperorOfChina.GetTitle] [EmperorOfChina.GetName] has decreed that Uzer shall be rebuilt. It falls within our territory so naturally we receive the benefits of this action."
+ empire_of_kharid_events.4.a:0 "Uzer shall never fall again!"
+ 
+ empire_of_kharid_events.5.t:0 "The Reconstruction of Ullek"
+ empire_of_kharid_events.5.d:0 "Once Kharid's most properous city - and among the richest in Gielinor - Ullek never fell to invasion until the demon Balfrug Kreeyath destroyed it near the end of the God Wars. Its culture lives on among the people of Menaphos, who have contributed greatly to its reconstruction!"
+ empire_of_kharid_events.5.a:0 "Ullek is reborn!"
+ empire_of_kharid_events.5.a:0 "Forget this Pharoah nonsense, I want to live in Ullek!"
+
+ empire_of_kharid_events.6.t:0 "The Reconstruction of Ullek"
+ empire_of_kharid_events.6.d:0 "Once Kharid's most properous city - and among the richest in Gielinor - Ullek never fell to invasion until the demon Balfrug Kreeyath destroyed it near the end of the God Wars. Its culture lives on among the people of Menaphos, who have contributed greatly to its reconstruction!"
+ empire_of_kharid_events.6.a:0 "Ullek is reborn!"
+ 
+ empire_of_kharid_events.7.t:0 "The Reconstruction of Ullek"
+ empire_of_kharid_events.7.d:0 "[EmperorOfChina.GetTitle] [EmperorOfChina.GetName] has decreed that Ullek shall be rebuilt. It falls within our territory so naturally we receive the benefits of this action."
+ empire_of_kharid_events.7.a:0 "Ullek is reborn!"
+
+ empire_of_kharid_events.8.t:0 "New Kharidian Settlement"
+ empire_of_kharid_events.8.da:0 "In our effort to expand the reach of the Pharoah, we have successfully established a new tributary settlement in [kharid_settlement_location.GetName]!"
+ empire_of_kharid_events.8.db:0 "It seems we were not the only people looking to build a settlement! A strange group of beings calling themselves the Goebies are looking to find new land away from their home plane of Mazcab. They have promised to abide by our laws and accept the rule of the [Root.Religion.GetName] faith, and have saved us a lot of trouble finding settlers of our own!"
+ empire_of_kharid_events.8.dc:0 "In the wake of the terrifying Tempoross, a faction calling themselves the Spirit Anglers have formed to oppose it. We've allowed them to take the place of our intended settlers so long as they provide us with a share of their loot!"
+ empire_of_kharid_events.8.dd:0 "Our settlers have come to a huge tower and uncovered its entrance. Greeted by a strange talking face, they have learnt that this place is known as the Dominion Tower. It should serve as an excellent central point for this new town."
+ empire_of_kharid_events.8.de:0 "In our attempt to build a new settlement, we have instead crashed into an ancient temple! Unfortunately, this temple was not empty and we seem to have accidentally let loose two of the legendary Stern Judges of old. Suffice to say, most of the settlers are dead and we have no new tributary to show for it."
+ empire_of_kharid_events.8.df:0 "We have successfully expanded our territory in [kharid_settlement_location.GetCapitalName]. As we had no valid subject nation to create or expand, we will own this province outright but it will not strengthen our Mandate as effectively."
+ empire_of_kharid_events.8.a:0 "Our empire grows stronger."
+ empire_of_kharid_events.8.b:0 "Welcome to Gielinor!"
+ empire_of_kharid_events.8.c:0 "I wonder if they know any good sea shanties?"
+ empire_of_kharid_events.8.d:0 "Who knew that colossal stone tower had a purpose?"
+ empire_of_kharid_events.8.e:0 "Curse it all!"
+ empire_of_kharid_events.8.f:0 "Our empire grows stronger."
+ 
+ kharid_tributary_known_bug_tooltip:0 "§TDeveloper Note: This event is supposed to create a tributary status over the nation but the command simply doesn't work. I've upped the Mandate from this event to compensate.§!"
+
+ empire_of_kharid_events.9.t:0 "New Land Granted"
+ empire_of_kharid_events.9.d:0 "Our overlord, [EmperorOfChina.GetTitle] [EmperorOfChina.GetName], has saw it fit to invest resources in a considerable expansion of desert land, for which we are a beneficiary."
+ empire_of_kharid_events.9.a:0 "Sometimes being a subject nation pays off!"

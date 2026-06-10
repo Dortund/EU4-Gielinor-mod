@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = menaphiteculture
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 93 #Ullek

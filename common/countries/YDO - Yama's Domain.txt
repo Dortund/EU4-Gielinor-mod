@@ -1,0 +1,22 @@
+#Country Name: Please seefilename.
+
+graphical_culture = westerngfx
+
+color = { 86 21 17 }
+
+historical_idea_groups = {
+	spy_ideas
+	defensive_ideas
+	influence_ideas
+	quantity_ideas
+	economic_ideas
+	court_ideas
+	mercenary_ideas
+	religious_ideas
+}
+
+monarch_names = {
+	"Yama #0" = 5
+	
+	"Yama #0" = -5
+}

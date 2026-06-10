@@ -158,7 +158,6 @@ genape_missions_2 = {
 				}
 				country_event = { 
 					id = flavor_genape.1
-					days = 1
 				}
 			}
 			add_adm_power = 25
@@ -389,7 +388,6 @@ genape_missions_5 = {
 		effect = {
 			country_event = {
 				id = flavor_genape.2
-				days = 1
 			}
 		}
 	}
@@ -861,7 +859,6 @@ ape_missions_4 = {
 		effect = {
 			country_event = {
 				id = flavor_ape.3
-				days = 1
 			}
 		}
 	}
@@ -891,7 +888,6 @@ ape_missions_4 = {
 			custom_tooltip = ape_kharidian_colony_tooltip
 			country_event = {
 				id = flavor_ape.4
-				days = 1
 			}
 		}
 	}

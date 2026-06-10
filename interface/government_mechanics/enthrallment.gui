@@ -1,0 +1,109 @@
+guiTypes = {
+	windowType = { # Copied and adjusted from government_interaction_type, visible as the interaction specifies this, has cost_type specified to the power, and the power doesn't have a UI
+		name = "enthrallment_gov_mech"
+		size = { x = 300 y = 82 }
+		moveable = 0
+		
+		# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_enthrallment_power_bar"
+			position = { x = 16 y = 49 }
+		}
+
+		# Frame
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_enthrallment_frame"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+	
+	windowType = {
+		name = "enthrallment_gov_button_1"
+		size = { x = 48 y = 48 }
+		moveable = 1
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_enthrallment_aid_against_amascut_button"
+			position = { x = 6 y = 0 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "enthrallment_gov_button_2"
+		size = { x = 48 y = 48 }
+		moveable = 1
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_enthrallment_feather_of_maat_button"
+			position = { x = 16 y = 0 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "enthrallment_gov_button_3"
+		size = { x = 48 y = 48 }
+		moveable = 1
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_enthrallment_blood_moon_order_button"
+			position = { x = 26 y = 0 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	
+	
+	windowType = {
+		name = "enthrallment_gov_button_4"
+		size = { x = 48 y = 48 }
+		moveable = 1
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_enthrallment_proselytise_amascut_button"
+			position = { x = 122 y = 0 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "enthrallment_gov_button_5"
+		size = { x = 48 y = 48 }
+		moveable = 1
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_enthrallment_internalise_the_corruption_button"
+			position = { x = 132 y = 0 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "enthrallment_gov_button_6"
+		size = { x = 48 y = 48 }
+		moveable = 1
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_enthrallment_slayers_boon_button"
+			position = { x = 142 y = 0 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+}

@@ -1,0 +1,487 @@
+# Kharidian Realm reforms
+
+kem_expand_settlements_reform = {
+	empire = celestial_empire
+	trigger = {
+		total_development = 50
+		capital_scope = {
+			region = kharidian_desert_region
+		}
+	}
+	member = {
+		colonist_placement_chance = 0.05
+	}
+	emperor = {
+		global_colonial_growth = 10
+	}
+	on_effect = {
+		custom_tooltip = enable_kharidian_settlement_expansion_decisions
+	}
+}
+
+kem_wushanko_trade_networks_reform = {
+	empire = celestial_empire
+	trigger = {
+		1028 = {
+			trade_share = {
+				country = ROOT
+				share = 10
+			}
+		}
+	}
+	member = {
+		merchants = 1
+	}
+	emperor = {
+		merchants = 1
+		may_explore = yes
+	}
+}
+
+kem_wushanko_tributary_reform = {
+	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = kem_wushanko_trade_networks_reform
+		1028 = {
+			trade_share = {
+				country = ROOT
+				share = 25
+			}
+		}
+	}
+	member = {
+		global_foreign_trade_power = 0.1
+	}
+	emperor = {
+		trade_range_modifier = 0.2
+	}
+	on_effect = {
+		custom_tooltip = can_justify_overseas_tributary_vs_arc_skull_tooltip
+	}
+}
+
+kem_karamjan_office_reform = {
+	empire = celestial_empire
+	trigger = {
+		OR = {
+			559 = {
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+			541 = {
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+		}
+	}
+	member = {
+		trade_efficiency = 0.1
+	}
+	emperor = {
+		trade_efficiency = 0.1
+		trade_steering = 0.1
+	}
+}
+
+kem_karamjan_tributary_reform = {
+	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = kem_karamjan_office_reform
+	}
+	member = {
+		merchants = 1
+	}
+	emperor = {
+		merchants = 1
+	}
+	on_effect = {
+		custom_tooltip = can_justify_overseas_tributary_vs_karamja_tooltip
+		custom_tooltip = can_propagate_versus_karamjan_tooltip
+	}
+}
+
+kem_expand_tribute_web_reform = {
+	empire = celestial_empire
+	trigger = {
+		empire_of_china_num_reforms_passed = 10
+		empire_of_china_reform_passed = kem_wushanko_tributary_reform
+		empire_of_china_reform_passed = kem_karamjan_tributary_reform
+	}
+	member = {
+		global_tax_modifier = 0.1
+	}
+	emperor = {
+		monarch_power_tribute = 1
+	}
+	on_effect = {
+		custom_tooltip = can_justify_overseas_tributary_vs_all_wushanko_tooltip
+	}
+}
+
+kem_promote_secularism_reform = {
+	empire = celestial_empire
+	trigger = {
+		full_idea_group = humanist_ideas
+	}
+	disabled_by = kem_promote_the_pantheon_reform
+	member = {
+		global_institution_spread = 0.25
+	}
+	emperor = {
+		tolerance_heathen = 1
+		relation_with_heathens = 10
+		reverse_relation_with_heathen_religion = 10
+		innovativeness_gain = 0.25
+	}
+}
+
+kem_promote_the_pantheon_reform = {
+	empire = celestial_empire
+	trigger = {
+		full_idea_group = religious_ideas
+		religion_group = menaphite_group
+	}
+	disabled_by = kem_promote_secularism_reform
+	member = {
+		religious_unity = 0.25
+	}
+	emperor = {
+		tolerance_own = 1
+		relation_with_same_religion = 10
+		reverse_relation_with_same_religion = 10
+	}
+	on_effect = {
+		custom_tooltip = can_propagate_as_menaphite_tooltip
+	}
+}
+
+kem_expand_spy_networks_reform = {
+	empire = celestial_empire
+	trigger = {
+		OR = {
+		 	full_idea_group = spy_ideas
+			num_of_diplomats = 4
+		}
+	}
+	member = {
+		diplomats = 1
+	}
+	emperor = {
+		spy_offence = 0.2
+		global_spy_defence = 0.2
+	}
+}
+
+kem_imperial_ambition_reform = {
+	empire = celestial_empire
+	trigger = {
+		OR = {
+			total_own_and_non_tributary_subject_development = 500
+			empire_of_china_num_reforms_passed = 5
+		}
+	}
+	member = {
+		development_cost_modifier = -0.05
+	}
+	emperor = {
+		state_governing_cost = -0.1
+	}
+	on_effect = {
+		if = {
+			limit = {
+				NOT = {
+					government_rank = 3
+				}
+			}
+			set_government_rank = 3
+		}
+	}
+}
+
+kem_imperial_centralisation_reform = {
+	empire = celestial_empire
+	trigger = {
+		empire_of_china_num_reforms_passed = 8
+		empire_of_china_reform_passed = kem_imperial_ambition_reform
+	}
+	member = {
+		global_autonomy = -0.05
+	}
+	emperor = {
+	 	imperial_mandate = 0.05
+	}
+	on_effect = {
+		custom_tooltip = vassalize_tributaries_decision_tt
+		set_global_flag = eoc_vassalize_tributaries
+	}
+	off_effect = {
+		custom_tooltip = vassalize_tributaries_decision_ct
+		clr_global_flag = eoc_vassalize_tributaries
+	}
+}
+
+kem_reconstruction_of_uzer_reform = {
+	empire = celestial_empire
+	trigger = {
+		OR = {
+			owns_or_subject_of = 79
+			79 = {
+				is_empty = yes
+			}
+		}
+		OR = {
+			empire_of_china_num_reforms_passed = 8
+			AND = {
+				absolutism = 90
+				full_idea_group = infrastructure_ideas
+			}
+		}
+	}
+	member = {
+	 	prestige_decay = -0.005
+	}
+	emperor = {
+		administrative_efficiency = 0.025
+	}
+	on_effect = {
+		if = {
+			limit = {
+				79 = {
+					is_empty = yes
+				}
+			}
+			custom_tooltip = kem_restoration_of_uzer_empty_tooltip
+			country_event = { 
+				id = empire_of_kharid_events.2
+			}
+		}
+		else_if = {
+			limit = {
+				owns = 79
+			}
+			custom_tooltip = kem_restoration_of_uzer_owned_tooltip
+			country_event = { 
+				id = empire_of_kharid_events.3
+			}
+		}
+		else = {
+			custom_tooltip = kem_restoration_of_uzer_subject_tooltip
+			79 = {
+				owner = {
+					country_event = { 
+						id = empire_of_kharid_events.4
+					}
+				}
+			}
+		}
+	}
+}
+
+kem_reconstruction_of_ullek_reform = {
+	empire = celestial_empire
+	trigger = {
+		OR = {
+			owns_or_subject_of = 93
+			93 = {
+				is_empty = yes
+			}
+		}
+		OR = {
+			empire_of_china_num_reforms_passed = 5
+			AND = {
+				absolutism = 75
+				full_idea_group = infrastructure_ideas
+			}
+		}
+	}
+	member = {
+		defensiveness = 0.1
+		fort_maintenance_modifier = -0.1
+	}
+	emperor = {
+		great_project_upgrade_cost = -0.1
+		great_project_upgrade_time = -0.1
+	}
+	on_effect = {
+		if = {
+			limit = {
+				93 = {
+					is_empty = yes
+				}
+			}
+			custom_tooltip = kem_restoration_of_ullek_empty_tooltip
+			country_event = { 
+				id = empire_of_kharid_events.5
+			}
+		}
+		else_if = {
+			limit = {
+				owns = 93
+			}
+			custom_tooltip = kem_restoration_of_ullek_owned_tooltip
+			country_event = { 
+				id = empire_of_kharid_events.6
+			}
+		}
+		else = {
+			custom_tooltip = kem_restoration_of_ullek_subject_tooltip
+			93 = {
+				owner = {
+					country_event = { 
+						id = empire_of_kharid_events.7
+					}
+				}
+			}
+		}
+	}
+}
+
+kem_desert_recovery_reform = {
+	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = kem_expand_settlements_reform
+		NOT = {
+			any_province = {
+				religion = amascut_religion
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = kem_desert_recovery_capital_is_prosperous
+			capital_scope = {
+				is_prosperous = yes
+			}
+		}
+	}
+	member = {
+		colony_cost_modifier = -0.1
+	}
+	emperor = {
+		global_monthly_devastation = -0.1
+	}
+	on_effect = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = kem_expand_settlements_flag }
+			}
+			custom_tooltip = kem_desert_recovery_colonising_spree
+			hidden_effect = {
+				set_global_flag = kem_expand_settlements_flag
+				every_subject_country = {
+					limit = {
+						capital_scope = {
+							region = kharidian_desert_region
+						}
+						any_owned_province = {
+							region = kharidian_desert_region
+							has_empty_adjacent_province = yes
+						}
+					}
+					country_event = { 
+						id = empire_of_kharid_events.1
+					}
+				}
+			}
+		}
+	}
+	off_effect = {
+	}
+}
+
+kem_fleet_expansion_reform = {
+	empire = celestial_empire
+	trigger = {
+		OR = {
+			num_of_heavy_ship = 50
+			full_idea_group = naval_ideas
+			full_idea_group = quality_ideas 
+			full_idea_group = maritime_ideas
+		}
+	}
+	member = {
+		naval_forcelimit_modifier = 0.1
+		global_sailors_modifier = 0.1
+	}
+	emperor = {
+		heavy_ship_power = 0.1
+		admirals_loyalty_modifier = 0.05
+	}
+}
+
+kem_colonial_expansion_reform = {
+	empire = celestial_empire
+	trigger = {
+		num_of_colonists = 1
+		has_institution = exploration
+	}
+	member = {
+		production_efficiency = 0.05
+	}
+	emperor = {
+		colonists = 1
+	}
+}
+
+kem_legitimise_treasure_seekers_reform = {
+	empire = celestial_empire
+	trigger = {
+		absolutism = 25
+	}
+	member = {
+		yearly_absolutism = 1
+	}
+	emperor = {
+	 	max_absolutism = 10
+		loot_amount = 0.25
+	}
+}
+
+kem_eliminate_the_soul_obelisks_reform = {
+	empire = celestial_empire
+	trigger = {
+		NOT = {
+			religion = amascut_religion
+		}
+		NOT = {
+			any_province = {
+				religion = amascut_religion
+			}
+		}
+	}
+	member = {
+		yearly_corruption = -0.1
+	}
+	emperor = {
+		yearly_corruption = -0.1
+		drill_gain_modifier = 0.25
+	}
+}
+
+kem_burial_rites_reform = {
+	empire = celestial_empire
+	trigger = {
+		owns_or_subject_of = 101
+		NOT = {	religion = amascut_religion }
+		if = {
+			limit = {
+				religion = menaphite
+			}
+			has_personal_deity = icthlarin
+		}
+		else = {
+			menaphite = 3
+		}
+		has_estate = estate_church
+	}
+	member = {
+		stability_cost_modifier = -0.1
+	}
+	emperor = {
+		no_stability_loss_on_monarch_death = yes
+		candidate_random_bonus = 2
+		imperial_mandate = 0.02
+	}
+}

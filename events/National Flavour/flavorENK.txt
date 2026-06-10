@@ -41,6 +41,7 @@ country_event = {
 				change_religion = zamorak
 			}
 			ENK = {
+				adopt_reform_progress = ROOT
 				capital_scope = {
 					build_to_forcelimit = {
 						infantry = 0.5
@@ -76,6 +77,7 @@ country_event = {
 					change_religion = zaros
 				}
 				AKO = {
+					adopt_reform_progress = ROOT
 					capital_scope = {
 						build_to_forcelimit = {
 							infantry = 0.5

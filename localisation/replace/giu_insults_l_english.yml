@@ -15,6 +15,7 @@
  insult_donblas:0 "You shall never unite Asgarnia! NEVER!"
  insult_entrana_from_excom:0 "Yeah, well, I'm gonna build my own church! With blackjack! And left hooks! In fact, forget the church!"
  insult_evr_dl:0 "What are you even fighting for any more?"
+ insult_great_conch:0 "I think I saw one of your own visiting our ports. Driving ships at high speeds, constantly drunk, getting in trouble with the guards... Are all of you like that?"
  insult_gunnar:0 "Look behind you! A rune!"
  insult_kandarin:0 "A hodgepodge of random towns is not a country!"
  insult_keldagrim:0 "I'd send an ambassador, but they'd suffocate."
@@ -88,6 +89,7 @@
  
  insult_camel_group:0 "Mmm... looks like [Root.Monarch.GetName] would make a nice kebab."
  insult_mechanical_group:0 "Reported for botting."
+ insult_tortugan_group:0 "Anyone for soup?"
 
  insult_from_gnome:0 "Your people will go far. The further, the better."
  insult_from_gnome2:0 "Es ataris eto meriz ip prit es gutus!"
@@ -106,6 +108,9 @@
  insult_goblins_from_tho:0 "Red armour best!"
  insult_goblins_from_yur:0 "Yellow armour best!"
  
+ insult_amascut:0 "Oh, you're a thrall to the Devourer? Steal any good canopic jars lately?"
+ insult_amascut2:0 "Heerrreee kitty-kitty... good kitty... Excuse me, I was talking to your god."
+ insult_amascut_from_menaphite:0 "Thanks for all the cursed scarabs! My bank account is bursting just like they were!"
  insult_armadyl:0 "At least I don't worship a giant chicken!"
  insult_armadyl_from_zamorak:0 "If the Aviantese didn't want to die, they shouldn't have come to war."
  insult_armadyl_from_bsp:0 "Our spears stab many bird people in Big War. And they say flyers supposed to beat warriors!"
@@ -121,7 +126,7 @@
  insult_dark_lord_from_zaros:0 "It's ZAROS you want to worship. Z A R O S."
  insult_ful:0 "I hear [Root.GetName] worships a pile of lava. I mean, I don't even like them but they can do so much better!"
  insult_genbu:0 "Let me get this straight. There's a tortoise that lives in a big pit. And you look UP to them?!"
- insult_godless_not_sixth_age:0 "Who'dya think made the world? A bunch of people with a magic box?"
+ insult_godless_not_sixth_age:0 "Who'dya think made the world? Some brothers with a magic box?"
  insult_godless_sixth_age:0 "Remember what happened to those who followed no god in the Third Age? Oh wait, you can't; they're dead."
  insult_guthix_not_sixth_age:0 "For all your talk about balance, your god is grossly overpowered."
  insult_guthix_sixth_age:0 "Haha, your god's dead!"
@@ -134,8 +139,10 @@
  insult_lucien_or_zemouregal_from_zamorak:0 "Whoo boy, Zamorak's going to be angry when he gets back."
  insult_marimbo:0 "Party time is over, [Root.Monarch.GetName]."
  insult_menaphite:0 "I found your gods in my back garden!"
+ insult_menaphite_from_amascut:0 "Stop this pretence. Lay down your arms. Join my cause. Watch as this miserable empire is swallowed by the sand, as the souls of its people are judged and consumed. Do this, and I will claim your soul last."
  insult_northern_pantheon:0 "Fear me! I'm the almighty Kendal! I'm definitely not just some random person in a bear suit! Scary!"
  insult_queen_of_ashes:0 "Oh no! The queen of the most useless skill!"
+ insult_queen_of_ashes_from_amascut:0 "There is only room for one Goddess of Destruction. Begone."
  insult_ralos:0 "The only thing your god is smiting is your eyesight."
  insult_ralos_from_menaphite:0 "You can't even worship Tumeken right."
  insult_ranul:0 "Just because you found some blood runes lying around doesn't make it your god."
@@ -176,7 +183,10 @@
  insult_boss_nation2:0 "I don't even need to pay attention to destroy you."
  insult_unstable_monarchy:0 "I hear your kingdom could collapse at any moment. I must applaud your clearly very shrewd governance."
  
- insult_from_boss_nation:0 "You will never be ready to face us."
+ insult_from_boss_nation:0 "You will never be ready to face me."
+ 
+ insult_from_ironman:0 "Ironman, by the way."
+ insult_wintertodt_from_ironman:0 "You're my first target."
  
  insult_default:1 "No adventurer is restricting themselves to [Root.GetName]."
  insult_default2:0 "[Root.GetName] is dead content!"
@@ -207,6 +217,7 @@
  insult_revolutionary:0 "Your lore is boring, [Root.Monarch.GetName]!"
  insult_monarchy_rank:0 "I have a party hat. You have a mere crown."
  insult_low_adm:0 "Do emote plz! Oh, wait."
+ insult_low_mandate:0 "Looks like not even your own Gods like your rule."
  insult_against_craven:0 "Running away won't save ya!" 
  insult_against_sinner:0 "Reported."
  insult_loans:0 "You're clearly great with money. I've got some rare black lobster if you're interested."

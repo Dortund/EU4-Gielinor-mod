@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_colony_terrain_underground"
+		texturefile = "gfx/interface/colony_terrain_underground.dds"
+	}
+	spriteType = {
+		name = "GFX_combat_terrain_underground"
+		texturefile = "gfx/interface/combat_terrain_underground.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_terrain_volcanic"
+		texturefile = "gfx/interface/colony_terrain_volcanic.dds"
+	}
+	spriteType = {
+		name = "GFX_combat_terrain_volcanic"
+		texturefile = "gfx/interface/combat_terrain_volcanic.dds"
+	}
+}

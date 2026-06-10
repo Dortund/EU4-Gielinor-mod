@@ -559,7 +559,12 @@ country_event = {
 				discover_country = VPE
 				discover_country = VKO
 			}
-			sea_of_pests_area = {
+			seas_of_bones_area = {
+				discover_country = ROOT
+				discover_country = VPE
+				discover_country = VKO
+			}
+			sea_of_marimbo_area = {
 				discover_country = ROOT
 				discover_country = VPE
 				discover_country = VKO
@@ -763,7 +768,11 @@ country_event = {
 				discover_country = ROOT
 				discover_country = VPE
 			}
-			sea_of_pests_area = {
+			seas_of_bones_area = {
+				discover_country = ROOT
+				discover_country = VPE
+			}
+			sea_of_marimbo_area = {
 				discover_country = ROOT
 				discover_country = VPE
 			}
@@ -1839,10 +1848,6 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	major = yes
-	
-	mean_time_to_happen = {
-		months = 12
-	}
 
 	option = {
 		name = flavor_asg.23.a #Fairies?! They sound way cooler than this human nonsense I'm stuck with here.
@@ -1938,10 +1943,6 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	major = yes
-	
-	mean_time_to_happen = {
-		months = 12
-	}
 
 	option = {
 		name = flavor_asg.24.a #Cede land to the fairies.
@@ -1976,10 +1977,6 @@ country_event = {
 	desc = flavor_asg.25.d #The centre for Guthixian followers in Asgarnia has always been Taverley, yet since Guthixian followers unified Asgarnia under one rule, Falador has been considered a more natural centre of power. What is the best choice?
 	is_triggered_only = yes
 	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		months = 12
-	}
 
 	option = {
 		name = flavor_asg.25.a #The future of Asgarnia lies in Falador.
@@ -2219,9 +2216,6 @@ country_event = {
 	
 	is_triggered_only = yes
 	fire_only_once = yes
-	mean_time_to_happen = {
-		months = 3
-	}
 	
 	immediate = {
 		set_country_flag = ASG_decided_knight_event
@@ -2394,9 +2388,6 @@ country_event = {
 	
 	is_triggered_only = yes	
 	fire_only_once = yes
-	mean_time_to_happen = {
-		months = 3
-	}
 	
 	immediate = {
 		set_country_flag = ASG_decided_knight_event
@@ -2460,9 +2451,6 @@ country_event = {
 	
 	is_triggered_only = yes	
 	fire_only_once = yes
-	mean_time_to_happen = {
-		months = 12
-	}
 	
 	option = {
 		name = flavor_asg.31.a #The Void Knights shall prove themselves worthy.
@@ -2543,6 +2531,7 @@ country_event = {
 			religion = saradomin
 		}
 		custom_tooltip = ASG_state_religion_saradomin #Unlocks §BSaradominist§! religious missions for Asgarnia.
+		set_country_flag = ASG_saradomin_missions_branch_flag
 		swap_non_generic_missions = yes
 	}
 	option = {
@@ -2551,6 +2540,7 @@ country_event = {
 			religion = zamorak
 		}
 		custom_tooltip = ASG_state_religion_zamorak #Unlocks §RZamorakian§! religious missions for Asgarnia.
+		set_country_flag = ASG_zamorak_missions_branch_flag
 		swap_non_generic_missions = yes
 	}
 	option = {
@@ -2559,6 +2549,7 @@ country_event = {
 			religion = guthix
 		}
 		custom_tooltip = ASG_state_religion_guthix #Unlocks §GGuthixian§! religious missions for Asgarnia.
+		set_country_flag = ASG_guthix_missions_branch_flag
 		swap_non_generic_missions = yes
 	}
 	option = {
@@ -2567,6 +2558,7 @@ country_event = {
 			religion = brassicaprime
 		}
 		custom_tooltip = ASG_state_religion_brassicaprime #Unlocks §lBrassican§! religious missions for Asgarnia.
+		set_country_flag = ASG_brassica_missions_branch_flag
 		swap_non_generic_missions = yes
 	}
 	option = {
@@ -2578,6 +2570,7 @@ country_event = {
 			NOT = { religion = brassicaprime }
 		}
 		custom_tooltip = ASG_state_religion_misc
+		set_country_flag = ASG_miscellaneous_missions_branch_flag
 		swap_non_generic_missions = yes
 	}
 }
@@ -2591,9 +2584,6 @@ country_event = {
 	
 	is_triggered_only = yes	
 	fire_only_once = yes
-	mean_time_to_happen = {
-		months = 3
-	}
 	
 	immediate = {
 		set_country_flag = kinshra_appear_event
@@ -2631,9 +2621,6 @@ country_event = {
 	is_triggered_only = yes	
 	fire_only_once = yes
 	major = yes
-	mean_time_to_happen = {
-		months = 3
-	}
 	
 	immediate = {
 		hidden_effect = {
@@ -2832,9 +2819,6 @@ country_event = {
 	
 	is_triggered_only = yes	
 	fire_only_once = yes
-	mean_time_to_happen = {
-		months = 3
-	}
 	
 	immediate = {
 	}
@@ -2902,9 +2886,6 @@ country_event = {
 	
 	is_triggered_only = yes
 	fire_only_once = yes
-	mean_time_to_happen = {
-		months = 3
-	}
 	
 	immediate = {
 		158 = {

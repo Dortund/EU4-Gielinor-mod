@@ -1,22 +1,22 @@
 government = tribal
 add_government_reform = runecrafting_crusader
-government_rank = 1
-primary_culture = mountaintribe
-add_accepted_culture = barbarian
+government_rank = 3
+primary_culture = barbarian
+add_accepted_culture = mountaintribe
 religion = v
 religious_school = warrior_school
-secondary_religion = northern_pantheon
+secondary_religion = guthix
 technology_group = fremenniktechgroup
-capital = 369 #near Mountain Camp
+capital = 367 #Wolf Clan
 national_focus = MIL
 historical_friend = REL
 historical_friend = MNT
 
-2042.3.15 = {
+2042.5.6 = {
 	monarch = {
 		name = "Gunnar"
 		dynasty = "Viljarsson"
-		birth_date = 2024.2.7
+		birth_date = 2020.2.7
 		adm = 2
 		dip = 3
 		mil = 6
@@ -31,6 +31,6 @@ historical_friend = MNT
 	capital = 946
 }
 
-2054.10.19 = {
+2062.6.4 = {
 	capital = 19
 }

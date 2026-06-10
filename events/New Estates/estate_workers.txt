@@ -1,0 +1,965 @@
+###########################################################
+# Events for the Workers Estate
+###########################################################
+
+namespace = workers_estate_events
+
+#Province revolt
+province_event = {
+	id = workers_estate_events.1
+	title = workers_estate_events.1.t
+	desc = workers_estate_events.1.d
+	picture = WORKER_ESTATE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = workers_estate_events.1.a #Ok.
+	}
+}
+
+#Advancement of the $ESTATE_WORKERS$"
+#Random +10/+20
+country_event = {
+	id = workers_estate_events.2
+	title = workers_estate_events.2.t
+	desc = workers_estate_events.2.d
+	picture = WORKER_ESTATE_eventPicture
+	
+	trigger = {
+		has_estate = estate_workers
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_WORKERS_ADVANCE
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_WORKERS_ADVANCE_20
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_WORKERS_DECLINE
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = workers_estate_events.2.a #Ok
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_WORKERS_ADVANCE
+			influence = 10
+			duration = 5475
+		}
+	}
+}
+
+#Declining Relevance of the $ESTATE_WORKERS$
+country_event = {
+	id = workers_estate_events.3
+	title = workers_estate_events.3.t
+	desc = workers_estate_events.3.d
+	picture = WORKER_ESTATE_eventPicture
+	
+	trigger = {
+		has_estate = estate_workers
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_WORKERS_ADVANCE
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_WORKERS_ADVANCE_20
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_WORKERS_DECLINE
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	} 
+	
+	option = {
+		name = workers_estate_events.3.a #Ok
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_WORKERS_DECLINE
+			influence = -10
+			duration = 5475
+		}
+	}
+}
+
+#Freedom of the Land
+country_event = {
+	id = workers_estate_events.4
+	title = workers_estate_events.4.t
+	desc = workers_estate_events.4.d
+	picture = WORKER_ESTATE_eventPicture
+	
+	is_triggered_only = yes
+	goto = potentially_free_city
+	
+	trigger = {
+		has_estate = estate_workers
+		any_owned_province = {
+			base_production = 3
+			is_capital = no
+			is_territory = no
+			is_city = yes
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_WORKERS_ADVANCE
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			any_owned_province = {
+				base_production = 3
+				is_capital = no
+				is_territory = no
+				is_city = yes
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					base_production = 3
+					is_capital = no
+					is_territory = no
+					is_city = yes
+				}
+				save_event_target_as = potentially_free_city
+			}
+		}
+	}
+	
+	option = {
+		name = workers_estate_events.4.a #
+		give_estate_land_share_medium = { estate = estate_workers }
+		ai_chance = {
+			factor = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = 15
+		}
+		event_target:potentially_free_city = {
+			add_base_tax = 1
+			add_base_production = 1
+		}
+	}
+	option = {
+		name = workers_estate_events.4.b #
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.2
+				estate_influence = {
+					estate = estate_workers
+					influence = 75
+				}
+			}
+			modifier = {
+				factor = 0.5
+				estate_loyalty = {
+					estate = estate_workers
+					loyalty = 40
+				}
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = -15
+		}
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_FREEDOM_OF_LAND_DENIED
+			influence = -10
+			duration = 5475
+		}
+	}
+}
+
+#Anti-Corruption Drive
+country_event = {
+	id = workers_estate_events.5
+	title = workers_estate_events.5.t
+	desc = workers_estate_events.5.d #The $ESTATE_WORKERS$, never being the beneficiaries of corruption, are the first to voice alarm at its growing presence. A representative of the $ESTATE_WORKERS$ requests [Root.Monarch.GetTitle] to work with them on tackling the issue; their near-invisibility to elites allows them to enter places and eavedrop on conversations others cannot.
+	picture = WORKER_ESTATE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_estate = estate_workers
+		corruption = 1
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = workers_estate_events.5.a #Sounds like a plan.
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.8
+				estate_influence = {
+					estate = estate_workers
+					influence = 75
+				}
+			}
+			modifier = {
+				factor = 1.2
+				NOT = {
+					estate_loyalty = {
+						estate = estate_workers
+						loyalty = 30
+					}
+				}
+			}
+		}		
+		add_years_of_income = -0.25
+		add_corruption = -1
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = 10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_ANTI_CORRUPTION_DRIVE
+			influence = 10
+			duration = 5475
+		}
+	}
+	option = {
+		name = workers_estate_events.5.b #Corruption is an elite problem! It needs an elite solution!
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 10
+				estate_influence = {
+					estate = estate_workers
+					influence = 80
+				}
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = -10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_REFUSED_ANTI_CORRUPTION_DRIVE
+			influence = -10
+			duration = 5475
+		}
+	}
+	
+	option = {
+		name = workers_estate_events.5.c #I will personally handle this!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = incorruptible_personality
+		}
+		ai_chance = {
+			factor = 50
+		}		
+		add_years_of_income = -0.15
+		add_corruption = -1
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = 10
+		}
+	}
+}
+
+#The Great Project of [great_project_in_progress.GetName]
+country_event = {
+	id = workers_estate_events.6
+	title = workers_estate_events.6.t
+	desc = workers_estate_events.6.d #A great portion of our $ESTATE_WORKERS$ are engaged in an enormous construction project in [great_project_in_progress.GetName]. One of their representatives bemoans the exacting rules placed upon their efforts and has argued that the construction would be done much faster if overseers weren't constantly looking over their shoulder.
+	picture = WORKER_ESTATE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_estate = estate_workers
+		any_owned_province = {
+			has_construction = great_project
+			NOT = { construction_progress = 0.6 }
+		}
+		estate_loyalty = {
+			estate = estate_workers
+			loyalty = 50
+		}		
+	}
+	goto = great_project_in_progress
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_construction = great_project
+					NOT = { construction_progress = 0.6 }
+				}
+				save_event_target_as = great_project_in_progress
+			}
+		}
+	}
+	
+	option = {
+		name = workers_estate_events.6.a #Loosen the reins on the $ESTATE_WORKERS$.
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				estate_influence = {
+					estate = estate_workers
+					influence = 80
+				}
+			}
+		}
+		event_target:great_project_in_progress = {		
+			add_construction_progress = 0.2
+		}
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_GREAT_PROJECT_ASSISTANCE
+			influence = 10
+			duration = 5475
+		}
+	}
+	option = {
+		name = workers_estate_events.6.b #The construction will be finished when it's finished.
+		ai_chance = {
+			factor = 4
+		}
+		add_adm_power = 10
+		add_prestige = 10
+	}
+	option = {
+		name = workers_estate_events.6.c #We can ease up on the $ESTATE_WORKERS$ in subtler ways.
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = secretive_personality
+				ruler_has_personality = intricate_web_weaver_personality
+				ruler_has_personality = reformist_personality
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		event_target:great_project_in_progress = {		
+			add_construction_progress = 0.2
+		}
+	}
+	option = {
+		name = workers_estate_events.6.e #There's a lot we can learn about construction from the $ESTATE_WORKERS$!
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = architectural_visionary_personality
+				ruler_has_personality = industrious_personality
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		event_target:great_project_in_progress = {		
+			add_construction_progress = 0.4
+		}
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_GREAT_PROJECT_ASSISTANCE
+			influence = 10
+			duration = 5475
+		}
+	}
+	option = {
+		name = workers_estate_events.6.f #Get it built quicker?! Why would I want to do that?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = obsessive_perfectionist_personality
+		}
+		ai_chance = {
+			factor = 50
+		}
+		event_target:great_project_in_progress = {		
+			add_construction_progress = -0.2
+		}
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_SIDELINED_FROM_CONSTRUCTION
+			influence = -10
+			duration = 5475
+		}
+		add_adm_power = 50
+	}
+}
+
+#Upset Workers
+country_event = {
+	id = workers_estate_events.7
+	title = workers_estate_events.7.t
+	desc = workers_estate_events.7.d #
+	picture = WORKER_ESTATE_eventPicture
+	
+	trigger = {
+		has_estate = estate_workers
+		NOT = {
+			estate_loyalty = {
+				estate = estate_workers
+				loyalty = 30
+			}
+		}
+		estate_territory = { 
+			estate = estate_workers
+			territory = 10
+		}
+		any_owned_province = {
+			base_production = 3
+			is_capital = no
+			is_city = yes
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			while = {
+				limit = {
+					NOT = { 
+						development_in_provinces = {
+							has_province_flag = worker_protests
+							value = estate
+							estate = estate_workers
+						}
+					}
+					any_owned_province = {
+						base_production = 3
+						is_capital = no
+						is_city = yes
+						NOT = { has_province_flag = worker_protests }
+					}
+					check_reducing_estate_revolt_size_trigger = {
+						FLAG = worker_protests
+					}
+				}
+				random_owned_province = {
+					limit = {
+						base_production = 3
+						is_capital = no
+						is_city = yes
+						NOT = { has_province_flag = worker_protests }
+					}
+					set_province_flag = worker_protests
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 2.0
+			NOT = {
+				estate_loyalty = {
+					estate = estate_workers
+					loyalty = 15
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = workers_estate_events.7.a #
+		ai_chance = {
+			factor = 0
+		}
+		every_owned_province = {
+			limit = {
+				has_province_flag = worker_protests
+			}
+			clr_province_flag = worker_protests
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 1
+			}
+		}
+	}
+	option = {
+		name = workers_estate_events.7.b #
+		ai_chance = {
+			factor = 1
+		}
+		every_owned_province = {
+			limit = {
+				has_province_flag = worker_protests
+			}
+			clr_province_flag = worker_protests
+			add_local_autonomy = 33
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = 15
+		}
+	}
+}
+
+#New Workshops
+country_event = {
+	id = workers_estate_events.8
+	title = workers_estate_events.8.t
+	desc = workers_estate_events.8.d #
+	picture = WORKER_ESTATE_eventPicture
+	goto = workshop_incoming
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		adm_tech = 6
+		has_estate = estate_workers
+		estate_loyalty = {
+			estate = estate_workers
+			loyalty = 75
+		}		
+		estate_influence = {
+			estate = estate_workers
+			influence = 75
+		}
+		OR = {
+			AND = {
+				adm_tech = 24
+				any_owned_province = {
+					NOT = {
+						has_building = counting_house
+					}
+					OR = {
+						has_building = workshop
+						num_free_building_slots = 1
+					}
+				}
+			}
+			any_owned_province = {
+				NOT = {
+					has_building = workshop
+				}
+				num_free_building_slots = 1
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					adm_tech = 24
+				}
+				random_owned_province = {
+					limit = {
+						NOT = {
+							has_building = counting_house
+						}
+						OR = {
+							has_building = workshop
+							num_free_building_slots = 1
+						}
+					}
+					save_event_target_as = workshop_incoming
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						NOT = {
+							has_building = workshop
+						}
+						num_free_building_slots = 1
+					}
+					save_event_target_as = workshop_incoming
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = workers_estate_events.8.a #
+		event_target:workshop_incoming = {
+			if = {
+				limit = {
+					has_building = workshop
+				}
+				remove_building = workshop
+				add_building = counting_house
+			}
+			else = {
+				add_building = workshop
+			}
+			add_base_production = 2
+		}
+	}
+}
+
+
+#Workers vs. Nobility
+country_event = {
+	id = workers_estate_events.9
+	title = workers_estate_events.9.t
+	desc = workers_estate_events.9.d
+	picture = WORKER_ESTATE_eventPicture
+	
+	trigger = {
+		has_estate = estate_workers
+		has_estate = estate_nobles
+		estate_influence = {
+			estate = estate_workers
+			influence = 25
+		}
+		estate_influence = {
+			estate = estate_nobles
+			influence = 25
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_WORKER_AUTHORITY_ASSERTED
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_WORKER_AUTHORITY_QUESTIONED
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	} 
+	
+	option = {
+		name = workers_estate_events.9.a #
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_workers
+						loyalty = 45
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				estate_influence = {
+					estate = estate_workers
+					influence = 65
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 45
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					estate = estate_nobles
+					influence = 65
+				}
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = 15
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -15
+		}
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_WORKERS_AUTHORITY_ASSERTED
+			influence = 10
+			duration = 5475
+		}
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = EST_VAL_WORKERS_AUTHORITY_ASSERTED
+			influence = -10
+			duration = 5475
+		}
+	}
+	option = {
+		name = workers_estate_events.9.b #
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_workers
+						loyalty = 45
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					estate = estate_workers
+					influence = 65
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 45
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				estate_influence = {
+					estate = estate_nobles
+					influence = 65
+				}
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = -15
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 15
+		}
+		add_estate_influence_modifier = {
+			estate = estate_workers
+			desc = EST_VAL_WORKERS_AUTHORITY_QUESTIONED
+			influence = -10
+			duration = 5475
+		}
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = EST_VAL_WORKERS_AUTHORITY_QUESTIONED
+			influence = 10
+			duration = 5475
+		}
+	}
+}
+
+#Elites and the Upstarts
+country_event = {
+	id = workers_estate_events.10
+	title = workers_estate_events.10.t
+	desc = {
+	   trigger = { NOT = { has_estate = estate_church } }
+	   desc = workers_estate_events.10.da
+	}
+	desc = {
+	   trigger = { has_estate = estate_church }
+	   desc = workers_estate_events.10.db
+	}
+	picture = WORKER_ESTATE_eventPicture
+	
+	trigger = {
+		has_estate = estate_burghers
+		has_estate = estate_nobles
+		has_estate = estate_admirals
+		has_estate = estate_workers
+		
+		estate_influence = {
+			estate = estate_burghers
+			influence = 30
+		}
+		estate_influence = {
+			estate = estate_nobles
+			influence = 30
+		}
+		estate_influence = {
+			estate = estate_admirals
+			influence = 30
+		}
+		estate_influence = {
+			estate = estate_workers
+			influence = 30
+		}
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			estate_influence = {
+				estate = estate_church
+				influence = 30
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_UPSTART_RULE
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_workers
+				modifier = EST_VAL_TRADITIONAL_RULE
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	} 
+	
+	option = {
+		name = workers_estate_events.10.a #Celebrate our traditional strengths.
+		if = {
+			limit = {
+				is_emperor_of_china = yes
+			}
+			add_mandate = 5
+		}
+		else = {
+			add_prestige = 15
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 5
+		}
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 5
+			}
+		}
+	}
+	option = {
+		name = workers_estate_events.10.b #Celebrate our new minds.
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			change_innovativeness = 1.5
+		}
+		else = {
+			change_innovativeness = 1
+		}
+		add_estate_loyalty = {
+			estate = estate_admirals
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = 5
+		}		
+	}
+	option = {
+		name = workers_estate_events.10.c #Are we not all people of [Root.GetName]?
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = inspiring_leader_personality
+				ruler_has_personality = well_connected_personality
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		if = {
+			limit = {
+				is_emperor_of_china = yes
+			}
+			add_mandate = 5
+		}
+		else = {
+			add_prestige = 15
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 5
+		}
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 5
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_admirals
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = 5
+		}	
+	}
+}
+
+

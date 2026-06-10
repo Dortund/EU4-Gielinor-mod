@@ -17,6 +17,12 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "CORRUPTION_OF_AMASCUT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/CORRUPTION_OF_AMASCUT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
 		name = "DREADED_YEARS_OF_TRAGEDY_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_disasters/DREADED_YEARS_OF_TRAGEDY_eventPicture.dds"
 		alwaystransparent = yes
@@ -35,8 +41,20 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "THALASSOCRATIC_COUP_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/THALASSOCRATIC_COUP_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
 		name = "WAR_OF_BETRAYAL_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_disasters/WAR_OF_BETRAYAL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "WORKERS_COUP_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_disasters/WORKERS_COUP_eventPicture.dds"
 		alwaystransparent = yes
 	}
 	
@@ -59,6 +77,31 @@ spriteTypes = {
 	spriteType = {
 		name = "STONE_OF_JAS_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_elder_artefacts/STONE_OF_JAS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+##########################
+	#Estates
+##########################
+
+	spriteType = {
+		name = "ADMIRAL_ESTATE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_estates/ADMIRAL_ESTATE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "WORKER_ESTATE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_estates/WORKER_ESTATE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+##########################
+	#Government
+##########################
+
+	spriteType = {
+		name = "EMPIRE_OF_KHARID_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_government/EMPIRE_OF_KHARID_eventPicture.dds"
 		alwaystransparent = yes
 	}
 
@@ -111,6 +154,12 @@ spriteTypes = {
 	spriteType = {
 		name = "DEATH_LOTUS_NINJA_STAR_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_national_flavour/DEATH_LOTUS_NINJA_STAR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "DWARVES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/DWARVES_eventPicture.dds"
 		alwaystransparent = yes
 	}
 	
@@ -413,13 +462,37 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TZHAAR_ENTRANCE_eventPicture.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "TZHAAR_HUR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TZHAAR_HUR_eventPicture.dds"
+		alwaystransparent = yes
+	}
 	
 	spriteType = {
 		name = "TZHAAR_GAAL_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TZHAAR_GAAL_eventPicture.dds"
 		alwaystransparent = yes
 	}
-
+	
+	spriteType = {
+		name = "TZHAAR_KET_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TZHAAR_KET_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TZHAAR_MEJ_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TZHAAR_MEJ_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "TZHAAR_XIL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_national_flavour/TZHAAR_XIL_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
 	spriteType = {
 		name = "VARLAMORE_MAP_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_national_flavour/VARLAMORE_MAP_eventPicture.dds"
@@ -525,6 +598,12 @@ spriteTypes = {
 ##########################
 
 	spriteType = {
+		name = "AMASCUT_COMBAT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/AMASCUT_COMBAT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
 		name = "BANDOS_CHOSEN_COMMANDER_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_religion/BANDOS_CHOSEN_COMMANDER_eventPicture.dds"
 		alwaystransparent = yes
@@ -601,7 +680,46 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_pictures_religion/GUTHIX_BUTTERFLY_eventPicture.dds"
 		alwaystransparent = yes
 	}
-	
+	spriteType = {
+		name = "MENAPHITE_AMASCUT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/MENAPHITE_AMASCUT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "MENAPHITE_APMEKEN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/MENAPHITE_APMEKEN_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "MENAPHITE_CRONDIS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/MENAPHITE_CRONDIS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "MENAPHITE_ELIDINIS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/MENAPHITE_ELIDINIS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "MENAPHITE_HET_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/MENAPHITE_HET_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "MENAPHITE_ICTHLARIN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/MENAPHITE_ICTHLARIN_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "MENAPHITE_SCABARAS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/MENAPHITE_SCABARAS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "QUEEN_OF_ASHES_FALLEN_NIHIL_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_religion/QUEEN_OF_ASHES_FALLEN_NIHIL_eventPicture.dds"
+		alwaystransparent = yes
+	}
 	spriteType = {
 		name = "SARADOMIN_MISSIONARY_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_religion/SARADOMIN_MISSIONARY_eventPicture.dds"
@@ -759,6 +877,32 @@ spriteTypes = {
 	spriteType = {
 		name = "WORLD_GATE_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_sixth_age/WORLD_GATE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+##########################
+	#Trade Goods
+##########################
+
+	spriteType = {
+		name = "BONES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_trade_goods/BONES_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "HERBLORE_SUPPLIES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_trade_goods/HERBLORE_SUPPLIES_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "HUNTER_CREATURES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_trade_goods/HUNTER_CREATURES_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "MANUFACTURED_GOODS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_trade_goods/MANUFACTURED_GOODS_eventPicture.dds"
 		alwaystransparent = yes
 	}
 

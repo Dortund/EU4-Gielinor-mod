@@ -79,8 +79,8 @@ genasg_missions_2 = {
 						tag = DBS
 						tag = ASG
 					}
-					add_adm_power = 50
 				}
+				add_adm_power = 50
 			}
 			else = {
 				41 = {

@@ -59,6 +59,443 @@ static_actions = { # static_actions is a reserved token.
 	ask_knowledge_sharing = { alert_index = 55 alert_tooltip = ICON_ASKKNOWLEDGESHARE }
 }
 
+# Amascut Religion
+
+send_amascut_plague = {
+	category = covert
+	require_acceptance = no
+
+	is_visible = {
+		religion = amascut_religion
+	}
+	is_allowed = {
+		FROM = {
+			religion = menaphite
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 50
+					}
+				}
+				NOT = { full_idea_group = spy_ideas }
+				NOT = { has_country_flag = reduced_overseas_tributary_cb_spy_cost }
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_50_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 50
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 40
+					}
+				}
+				full_idea_group = spy_ideas
+				NOT = { has_country_flag = reduced_overseas_tributary_cb_spy_cost }
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_40_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 17
+					}
+				}
+				NOT = { full_idea_group = spy_ideas }
+				has_country_flag = reduced_overseas_tributary_cb_spy_cost
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_17_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 17
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 14
+					}
+				}
+				full_idea_group = spy_ideas
+				has_country_flag = reduced_overseas_tributary_cb_spy_cost
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_14_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 14
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_modifier = amascut_religion_plague_of_amascut
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = HAS_CORRUPT_SCARABS_ALREADY_TT
+				NOT = {
+					FROM = {
+						has_country_modifier = amascut_religion_plague_of_amascut
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					FROM = {
+						capital_scope = {
+							trade_range = ROOT
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_CAPITAL_IN_TRADE_RANGE_TT
+				FROM = {
+					capital_scope = {
+						trade_range = ROOT
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		if = {
+			limit = {
+				full_idea_group = spy_ideas
+				has_country_flag = reduced_overseas_tributary_cb_spy_cost
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -14
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { full_idea_group = spy_ideas }
+				has_country_flag = reduced_overseas_tributary_cb_spy_cost
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -17
+			}
+		}
+		else_if = {
+			limit = {
+				full_idea_group = spy_ideas
+				NOT = { has_country_flag = reduced_overseas_tributary_cb_spy_cost }
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -40
+			}
+		}
+		else = {
+			add_spy_network_in = {
+				who = FROM
+				value = -50
+			}
+		}
+		ROOT = {
+			save_global_event_target_as = plague_sending_nation
+		}
+		FROM = {
+			country_event = {
+				id = amascut_religion_flavor.2
+				days = 1
+			}
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 50
+		}
+	}
+}
+
+# Empire of Kharid
+
+justify_tributary_imposition = {
+	category = covert
+
+	require_acceptance = no
+
+	is_visible = {
+		is_emperor_of_china = yes
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				empire_of_china_reform_passed = kem_expand_tribute_web_reform
+			}
+			FROM = {
+				capital_scope = {
+					OR = {
+						region = kharidian_desert_region
+						region = karamja_region
+						continent = wushanko_isles_continent
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					empire_of_china_reform_passed = kem_karamjan_tributary_reform
+					empire_of_china_reform_passed = kem_wushanko_tributary_reform
+				}
+			}
+			FROM = {
+				capital_scope = {
+					OR = {
+						region = kharidian_desert_region
+						region = karamja_region
+						region = arc_region
+						region = wushanko_region
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				empire_of_china_reform_passed = kem_wushanko_tributary_reform
+			}
+			FROM = {
+				capital_scope = {
+					OR = {
+						region = kharidian_desert_region
+						region = arc_region
+						region = skull_region
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				empire_of_china_reform_passed = kem_karamjan_tributary_reform
+			}
+			FROM = {
+				capital_scope = {
+					OR = {
+						region = kharidian_desert_region
+						region = karamja_region
+					}
+				}
+			}
+		}
+		else = {
+			FROM = {
+				capital_scope = {
+					region = kharidian_desert_region
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 90
+					}
+				}
+				NOT = { full_idea_group = spy_ideas }
+				NOT = { has_country_flag = reduced_overseas_tributary_cb_spy_cost }
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_90_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 90
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 72
+					}
+				}
+				full_idea_group = spy_ideas
+				NOT = { has_country_flag = reduced_overseas_tributary_cb_spy_cost }
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_72_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 72
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 30
+					}
+				}
+				NOT = { full_idea_group = spy_ideas }
+				has_country_flag = reduced_overseas_tributary_cb_spy_cost
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_30_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 30
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 24
+					}
+				}
+				full_idea_group = spy_ideas
+				has_country_flag = reduced_overseas_tributary_cb_spy_cost
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_24_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 24
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_casus_belli = {
+					type = cb_force_tributary_mission
+					target = FROM
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = HAS_FORCE_TRIBUTARY_CB_ALREADY_TT
+				NOT = {
+					has_casus_belli = {
+						type = cb_force_tributary_mission
+						target = FROM
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { is_subject = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = CANNOT_DO_ACTION_TO_SUBJECTS_TT
+				FROM = { is_subject = no }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					FROM = {
+						capital_scope = {
+							trade_range = ROOT
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_CAPITAL_IN_TRADE_RANGE_TT
+				FROM = {
+					capital_scope = {
+						trade_range = ROOT
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		if = {
+			limit = {
+				full_idea_group = spy_ideas
+				has_country_flag = reduced_overseas_tributary_cb_spy_cost
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -24
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { full_idea_group = spy_ideas }
+				has_country_flag = reduced_overseas_tributary_cb_spy_cost
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -30
+			}
+		}
+		else_if = {
+			limit = {
+				full_idea_group = spy_ideas
+				NOT = { has_country_flag = reduced_overseas_tributary_cb_spy_cost }
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -72
+			}
+		}
+		else = {
+			add_spy_network_in = {
+				who = FROM
+				value = -90
+			}
+		}
+		add_casus_belli = {
+			target = FROM
+			type = cb_force_tributary_mission
+			months = 90
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 100
+		}
+	}
+}
+
+
+### This one doesn't work properly at all! Trying to select by trade node is doomed to failure.
 # Establish Dwarven Outpost
 establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your lands. Accepting would cede a non-capital province that produces basic ore, advanced ore, gemstones or runite. As host of the colony you would receive 100 gold immediately and the following benefits so long as you are host: \n+10% production efficiency\n+5% goods produced
 	category = economy
@@ -269,7 +706,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D01
 				add_core = D01
 				remove_core = FROM
-				D01 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -310,7 +747,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D02
 				add_core = D02
 				remove_core = FROM
-				D02 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -351,7 +788,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D03
 				add_core = D03
 				remove_core = FROM
-				D03 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -392,7 +829,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D04
 				add_core = D04
 				remove_core = FROM
-				D04 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -433,7 +870,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D05
 				add_core = D05
 				remove_core = FROM
-				D05 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -474,7 +911,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D06
 				add_core = D06
 				remove_core = FROM
-				D06 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -515,7 +952,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D07
 				add_core = D07
 				remove_core = FROM
-				D07 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -556,7 +993,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D08
 				add_core = D08
 				remove_core = FROM
-				D08 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -597,7 +1034,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D09
 				add_core = D09
 				remove_core = FROM
-				D09 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -638,7 +1075,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D10
 				add_core = D10
 				remove_core = FROM
-				D10 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -679,7 +1116,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D11
 				add_core = D11
 				remove_core = FROM
-				D11 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -720,7 +1157,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D12
 				add_core = D12
 				remove_core = FROM
-				D12 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -761,7 +1198,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D13
 				add_core = D13
 				remove_core = FROM
-				D13 = {
+				owner  {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -802,7 +1239,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D14
 				add_core = D14
 				remove_core = FROM
-				D14 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -843,7 +1280,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D15
 				add_core = D15
 				remove_core = FROM
-				D15 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -884,7 +1321,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D16
 				add_core = D16
 				remove_core = FROM
-				D16 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -925,7 +1362,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D17
 				add_core = D17
 				remove_core = FROM
-				D17 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -966,7 +1403,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D18
 				add_core = D18
 				remove_core = FROM
-				D18 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1007,7 +1444,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D19
 				add_core = D19
 				remove_core = FROM
-				D19 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1048,7 +1485,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D20
 				add_core = D20
 				remove_core = FROM
-				D20 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1089,7 +1526,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D21
 				add_core = D21
 				remove_core = FROM
-				D21 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1130,7 +1567,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D22
 				add_core = D22
 				remove_core = FROM
-				D22 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1171,7 +1608,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D23
 				add_core = D23
 				remove_core = FROM
-				D23 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1212,7 +1649,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D24
 				add_core = D24
 				remove_core = FROM
-				D24 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1253,7 +1690,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D25
 				add_core = D25
 				remove_core = FROM
-				D25 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1294,7 +1731,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D26
 				add_core = D26
 				remove_core = FROM
-				D26 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1335,7 +1772,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D27
 				add_core = D27
 				remove_core = FROM
-				D27 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1376,7 +1813,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D28
 				add_core = D28
 				remove_core = FROM
-				D28 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1417,7 +1854,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D29
 				add_core = D29
 				remove_core = FROM
-				D29 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1458,7 +1895,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D30
 				add_core = D30
 				remove_core = FROM
-				D30 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1499,7 +1936,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D31
 				add_core = D31
 				remove_core = FROM
-				D31 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1540,7 +1977,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D32
 				add_core = D32
 				remove_core = FROM
-				D32 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1581,7 +2018,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D33
 				add_core = D33
 				remove_core = FROM
-				D33 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1622,7 +2059,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D34
 				add_core = D34
 				remove_core = FROM
-				D34 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1663,7 +2100,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D35
 				add_core = D35
 				remove_core = FROM
-				D35 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1704,7 +2141,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D36
 				add_core = D36
 				remove_core = FROM
-				D36 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1745,7 +2182,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D37
 				add_core = D37
 				remove_core = FROM
-				D37 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1786,7 +2223,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D38
 				add_core = D38
 				remove_core = FROM
-				D38 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost
@@ -1827,7 +2264,7 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 				cede_province = D39
 				add_core = D39
 				remove_core = FROM
-				D39 = {
+				owner = {
 					hidden_effect = {
 						country_event = dwarven_outpost_events.1
 						add_government_reform = dwarven_outpost

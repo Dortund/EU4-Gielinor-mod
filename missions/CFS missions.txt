@@ -232,7 +232,6 @@ canifis_missions_2 = {
 				}
 				country_event = { 
 					id = flavor_cfs.4
-					days = 5
 				}
 			}
 			else = {
@@ -247,7 +246,6 @@ canifis_missions_2 = {
 					}
 					country_event = {
 						id = flavor_cfs.1
-						days = 5
 					}
 				}
 			}
@@ -283,13 +281,11 @@ canifis_missions_2 = {
 				}
 				country_event = {
 					id = flavor_cfs.5
-					days = 1
 				}
 			}
 			else = {
 				country_event = {
 					id = flavor_cfs.6
-					days = 1
 				}
 			}
 		}

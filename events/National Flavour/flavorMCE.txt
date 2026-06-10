@@ -1,0 +1,40 @@
+########################################
+# Events for Miscellania and Etceteria
+########################################
+
+namespace = flavor_mce
+normal_or_historical_nations = yes
+
+# Reform of the Miscellanian Monarchy
+country_event = {
+	id = flavor_mce.1
+	title = flavor_mce.1.t #
+	desc = flavor_mce.1.d #Gielinor is changing and our governing structure needs to change to keep up. We cannot afford to remain isolated among the upheaval of adventurers breaking out every sealed monster and investigating every locked door.
+	picture = FREMENNIK_LANDING_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_mce.1.a #We should work with these adventurers.
+		add_government_reform = miscelleanean_monarchy_reformed
+		set_country_flag = MCE_monarchy_reformed
+		change_government_reform_progress = -100
+	}
+	option = {
+		name = flavor_mce.1.b #We should look for the governing structures of other realms.
+		remove_government_reform = miscellanean_monarchy
+		change_government_reform_progress = 50
+	}
+	option = {
+		name = flavor_mce.1.c #Why change anything?
+		add_prestige = 25
+		add_adm_power = 25
+	}
+}

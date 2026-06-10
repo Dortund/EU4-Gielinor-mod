@@ -226,6 +226,44 @@ estate_tzh_gaal = {
 	}
 }
 
+estate_admirals = {
+	modifier_definition = {
+		type = loyalty
+		key = admirals_loyalty_modifier
+		trigger = {
+			has_estate = estate_admirals
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = admirals_influence_modifier
+		trigger = {
+			has_estate = estate_admirals
+		}
+	}
+}
+
+estate_workers = {
+	modifier_definition = {
+		type = loyalty
+		key = workers_loyalty_modifier
+		trigger = {
+			has_estate = estate_workers
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = workers_influence_modifier
+		trigger = {
+			has_estate = estate_workers
+		}
+	}
+}
+
+
+
+
+
 ###################################
 
 #For special scripted modifiers which are not in the code base.

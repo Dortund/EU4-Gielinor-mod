@@ -81,7 +81,7 @@ cloistered_order = {
 	potential = {
 		OR = {
 			tag = HMY
-			tag = SBI
+			primary_culture = scabarite
 		}
 	}
 	allow_normal_conversion = no
@@ -233,6 +233,32 @@ monastic_order_reform = {
 	fixed_rank = 1
 }
 
+order_of_het = {
+	icon = "icon_hand_of_het"
+	potential = {
+		has_country_flag = KDS_loyalist_missions_branch_flag
+		has_country_flag = kharidian_emergence_completed
+		religion_group = menaphite_group
+	}
+	modifiers = {
+		tolerance_own = 1
+	 	improve_relation_modifier = 0.1
+		land_forcelimit_modifier = 0.1
+		global_manpower_modifier = 0.1
+		monthly_reform_progress_modifier = 0.1
+	}
+	effect = {
+		custom_tooltip = world_crusade_tt
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 150
+	allow_normal_conversion = yes
+	legacy_equivalent = monastic_order_government
+	monastic = yes
+}
+
 restored_zarosian_theocracy = {
 	icon = "icon_restored_zarosian_theocracy"
 	lock_level_when_selected = yes
@@ -355,6 +381,25 @@ mission_of_balance_reform = {
 	}
 	ai = {
 		factor = 2.5
+	}
+}
+
+thrall_of_amascut_theocracy_reform = {
+	icon = "icon_thrall_of_amascut_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		religion = amascut_religion
+	}
+	modifiers = {
+	 	global_heretic_missionary_strength = 0.03
+	 	all_estate_influence_modifier = -0.1
+		ae_impact = 1
+		max_absolutism = -20
+	}
+	raze_province = yes
+	government_abilities = {
+		enthrallment_mechanic
 	}
 }
 

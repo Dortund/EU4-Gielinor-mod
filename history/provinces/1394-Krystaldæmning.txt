@@ -1,7 +1,7 @@
 #1394 - Krystaldæmning
-owner = BAO
-controller = BAO
-add_core = BAO
+owner = OXC
+controller = OXC
+add_core = OXC
 tribal_owner = ---
 culture = barbarian
 religion = armadyl
@@ -23,3 +23,17 @@ base_manpower = 1
 trade_goods = advanced_logs
 
 is_city = yes
+
+2042.5.6 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2072.5.6 = {
+	owner = BAO
+	controller = BAO
+	add_core = BAO
+	remove_core = GUN
+	remove_core = OXC
+}

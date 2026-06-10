@@ -165,6 +165,9 @@ country_event = {
 		owns_core_province = 61
 		owns_core_province = 62
 		adm_tech = 8
+		62 = {
+			base_manpower = 3
+		}
 	}
 	
 	fire_only_once = yes
@@ -194,6 +197,7 @@ country_event = {
 		owns_core_province = 62
 		exists = TMP
 		95 = { is_empty = yes }
+		NOT = { has_global_flag = kharid_spirit_angler_spawn_flag }
 	}
 	
 	fire_only_once = yes
@@ -205,13 +209,28 @@ country_event = {
 	option = {
 		name = flavor_alk.4.a #The Spirit Anglers shall have their funding!
 		add_sailors = -1000
-		add_treasury = -250
-		add_dip_power = -50
-		95 = {
-			add_core = ROOT
-			cede_province = ROOT
+		add_treasury = -100
+		hidden_effect = {
+			95 = {
+				add_core = SAN
+				cede_province = SAN
+				change_culture = alkharidian
+			}
 		}
-		1000 = { add_permanent_claim = ROOT }
+		create_vassal = SAN
+		hidden_effect = {
+			SAN = {
+				capital_scope = {
+					build_to_forcelimit = {
+						heavy_ship = 0.3
+						light_ship = 0.3
+						transport = 0.4
+					}
+				}
+			}
+		}
+		1000 = { add_permanent_claim = SAN }
+		set_global_flag = kharid_spirit_angler_spawn_flag
 	}
 	option = {
 		name = flavor_alk.4.b #We cannot afford this.
@@ -292,16 +311,95 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_alk.4.a #We must step up our efforts to crush this corruption!
+		name = flavor_alk.6.a #We must step up our efforts to crush this corruption!
 		add_mil_power = -25
 		add_years_of_income = -0.1
 	}
 	option = {
-		name = flavor_alk.4.b #This can continue so long as we get a cut.
+		name = flavor_alk.6.b #This can continue so long as we get a cut.
+		add_corruption = 2
+		add_years_of_income = 0.5
 		add_country_modifier = {
 			name = ALK_corrupt_duels
 			duration = 9125
 		}
 	}
 }
+
+country_event = {
+	id = flavor_alk.7
+	title = flavor_alk.7.t #A Reformer's Work is Never Done
+	desc = flavor_alk.7.d #Our incredible success in taking the throne of Kharid is undercut somewhat by our incomplete efforts to improve our government. To this end, we have incorporated our reform-minded administrators into the bureaucracy of the Empire of Kharid.
+	picture = ALKHARID_CITY_eventPicture
+	
+	trigger = {
+		OR = {
+			has_country_flag = KDS_al_kharid_missions_branch_flag
+			has_country_flag = KDS_loyalist_missions_branch_flag
+		}
+		is_emperor_of_china = yes
+		government = monarchy
+		NOT = {	has_country_flag = kharidian_emergence_completed }
+		NOT = { has_reform = al_kharidian_administrators }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_alk.7.a #Try to keep up!
+		add_government_reform = al_kharidian_administrators
+		custom_tooltip = alk_can_carry_on_reform_tooltip
+	}
+}
+
+country_event = {
+	id = flavor_alk.8
+	title = flavor_alk.8.t #Completion of Reformers' Research
+	desc = flavor_alk.8.d #We have finally completed the efforts to learn about administrating a kingdom - and now an empire - from other nations. Such efforts have made our bureaucrats rather effective at problem-solving, so perhaps we should continue a policy of looking for outside ideas?
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = flavor_alk.8.a #A reformer's work is never done.
+		remove_government_reform = al_kharidian_administrators
+		hidden_effect = {
+			set_country_flag = kharidian_emergence_completed
+		}
+	 	add_government_reform = open_imperial_administration
+	}
+	option = {
+		name = flavor_alk.8.b #A reformer's work is sometimes done.
+		remove_government_reform = al_kharidian_administrators
+		hidden_effect = {
+			set_country_flag = kharidian_emergence_completed
+		}
+	 	custom_tooltip = unlock_open_imperial_administration_reform
+	}
+}
+
+country_event = {
+	id = flavor_alk.9
+	title = flavor_alk.9.t #Heirs of Hallowvale
+	desc = flavor_alk.9.d #The people of Morytania were surprised to say the least at our arrival. What omen could our arrival bring - are we destined to rebuild the Kingdom of Hallowvale?
+	picture = ALKHARID_CITY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = flavor_alk.9.a #We shall be the torch in the darkness!
+		custom_tooltip = alk_hallowvale_route_tooltip   # "We will gain the ability to form @HVL §Y[HVL.GetName]§! without the usual culture requirements."
+		custom_tooltip = kem_not_allowed_tooltip   # "We will no longer be able to form @KEM §Y[KEM.GetName]§!."
+		set_country_flag = ALK_hallowvale_direction
+	}
+	option = {
+		name = flavor_alk.9.b #Hallowvale is not our home.
+		add_prestige = 10
+	}
+}
+
 

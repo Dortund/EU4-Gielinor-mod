@@ -23,6 +23,7 @@ country_event = {
 	}
 	
 	immediate = {
+		set_global_flag = great_invasion_begins_flag
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -69,6 +70,27 @@ country_event = {
 		#	name = "GUN_crusader_recruitment"
 		#	duration = 3650
 		#}
+		if = {
+			limit = {
+				ai = yes
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 5
+						culture = barbarian
+					}
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						continent = west_runescape
+						continent = east_runescape
+					}
+					culture = barbarian
+				}
+				add_core = ROOT
+			}
+		}		
 	}
 }
 
@@ -83,11 +105,19 @@ country_event = {
 	
 	trigger = {
 		tag = GUN
-		owns_core_province = 19
+		owns = 19
 	}
 
 	mean_time_to_happen = {
 		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			19 = {
+				add_core = GUN
+			}
+		}
 	}
 	
 	option = {
@@ -96,8 +126,8 @@ country_event = {
 			change_province_name = "Gunnarsgrunn"
 			change_culture = barbarian
 			change_religion = v
+			move_capital_effect = yes
 		}
-		set_capital = 14
 	}
 	option = {
 		name = flavor_gun.2.b #A useful part of a wider plan.
@@ -112,7 +142,7 @@ country_event = {
 country_event = {
 	id = flavor_gun.3
 	title = flavor_gun.3.t #The Wrath of the Gunnites
-	desc = flavor_gun.3.d #Our triumphs thus far have inspired competition. A strange new runecrafting altar has emerged far to the south and an order calling themselves the Myths' Guild have sworn to protect it. Scum mages claim our wrath created it - like we would have any part in granting the power of the Gods onto an unworthy world!
+	desc = flavor_gun.3.d #Our triumphs thus far have inspired competition. A strange new runecrafting altar has emerged far to the south and an order calling themselves the Sect of Uhld have sworn to protect it. Scum mages claim our wrath created it - like we would have any part in granting the power of the Gods onto an unworthy world!
 	picture = RUNECRAFTING_eventPicture
 	
 	fire_only_once = yes
@@ -173,7 +203,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_gun.3.a #Leave Gunnar's crusade and join the Myths' Guild.
+		name = flavor_gun.3.a #Leave Gunnar's crusade and join the Sect of Uhld!
 		add_historical_rival = MYG
 		switch_tag = MYG
 	}
@@ -933,12 +963,28 @@ country_event = {
 						}
 					}
 				}
-				add_opinion = {
-					who = ROOT
-					modifier = gun_destroyer_of_camdozaal
-				}
+
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = gun_destroyer_of_camdozaal
 			}
 		}
 	}
 }
 
+#Gunnar Cedes Us [cede_province_target_province.GetName]!
+country_event = {
+	id = flavor_gun.16
+	title = flavor_gun.16.t
+	desc = flavor_gun.16.d #In an effort to bring more people to the front lines of the Great Invasion, the Gunnites have moved much of the population of [cede_province_target_province.GetName] away and have ceded the province to us!
+	picture = FREMENNIK_LANDING_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_gun.16.a #I hope this doesn't make my borders messy...
+		clear_global_event_target = cede_province_target_province
+		custom_tooltip = gained_gunnar_province_tooltip
+	}
+}

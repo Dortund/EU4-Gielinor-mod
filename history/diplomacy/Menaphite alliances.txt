@@ -1,7 +1,50 @@
-#Menaphos-Sophanem
-alliance = {
+#Menaphite Tributaries
+
+# Kharidians - Leaves via taking the Al Kharid path
+dependency = {
+	subject_type = "tributary_state"
+	first = MPS
+	second = KDS
+	start_date = 1800.1.1
+	end_date = 1937.1.4
+}
+
+# Sophanem
+dependency = {
+	subject_type = "tributary_state"
 	first = MPS
 	second = SOP
-	start_date = 1921.1.1
-	end_date = 2105.1.1
+	start_date = 1800.1.1
+}
+
+# Bedabins
+dependency = {
+	subject_type = "tributary_state"
+	first = MPS
+	second = BDS
+	start_date = 1800.1.1
+}
+
+# Pollnivneach
+dependency = {
+	subject_type = "tributary_state"
+	first = MPS
+	second = PVC
+	start_date = 1800.1.1
+}
+
+# Nardah
+dependency = {
+	subject_type = "tributary_state"
+	first = MPS
+	second = NDH
+	start_date = 1800.1.1
+}
+
+# Gisha
+dependency = {
+	subject_type = "tributary_state"
+	first = MPS
+	second = GSA
+	start_date = 1800.1.1
 }

@@ -728,7 +728,7 @@ country_event = {
 	trigger = {
 		tag = MYT
 		has_any_disaster = yes
-		country_flag = excessive_tithe_power_struggle_flag
+		has_country_flag = excessive_tithe_power_struggle_flag
 		NOT = { has_ruler = "Lowerniel" }
 		NOT = { has_country_flag = MYT_end_of_myreque_disaster_chain }
 	}

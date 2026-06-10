@@ -20,3 +20,17 @@ base_manpower = 2
 trade_goods = livestock_farm
 
 is_city = yes
+
+2042.5.6 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	religion = v
+}
+
+2047.7.3 = {
+	owner = MNT
+	controller = MNT
+	add_core = MNT
+	remove_core = GUN
+}

@@ -203,13 +203,12 @@ country_event = {
 	picture = WAR_OF_BETRAYAL_eventPicture
 
 	is_triggered_only = yes
-	
 	trigger = {
 		has_country_flag = war_of_betrayal_resistance_flag
 		NOT = { has_country_flag = VAR_destroy_temple_flag }
+		owns = 503
+		controls = 503
 		503 = {
-			owner = ROOT
-		 	controlled_by = ROOT
 			OR = {
 				has_great_project = {
 					type = great_project_temple_of_twilight
@@ -227,19 +226,19 @@ country_event = {
 			}
 		}
 	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	immediate = {
-		set_country_flag = VAR_destroy_temple_flag
-	}
-	
 	option = {
 		name = war_of_betrayal.2.a #Shut down the temple!
 		ai_chance = { factor = 100 }
-		add_stability_or_adm_power = 1
+		if = {
+			limit = {
+				stability = 3
+			}
+			add_adm_power = 50
+		}
+		else = {
+			add_stability = 1
+		}
+		set_country_flag = VAR_destroy_temple_flag
 		if = {
 			limit = {
 				503 = {
@@ -311,6 +310,7 @@ country_event = {
 		name = war_of_betrayal.2.b #It's just a building.
 		ai_chance = { factor = 0 }
 		add_stability = -1
+		set_country_flag = VAR_destroy_temple_flag
 		add_disaster_modifier = {
 			name = VAR_refusal_to_oust_temple
 			duration = -1
@@ -331,8 +331,8 @@ country_event = {
 	trigger = {
 		has_country_flag = war_of_betrayal_loyalist_flag
 		NOT = { has_country_flag = VAR_destroy_temple_flag }
+		owns = 503
 		503 = {
-			owner = ROOT
 		 	has_rebel_faction = varlamore_resistance_rebels
 			OR = {
 				has_great_project = {
@@ -352,25 +352,26 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	immediate = {
-		set_country_flag = VAR_destroy_temple_flag
-	}
-	
 	option = {
 		name = war_of_betrayal.3.a #Divert funds to securing the Temple.
 		ai_chance = { factor = 0 }
+		set_country_flag = VAR_destroy_temple_flag
 		custom_tooltip = VAR_secured_temple_investment_tooltip
-		add_stability_or_adm_power = 1
+		if = {
+			limit = {
+				stability = 3
+			}
+			add_adm_power = 50
+		}
+		else = {
+			add_stability = 1
+		}
 		add_treasury = -250
 	}
 	option = {
 		name = war_of_betrayal.3.b #Retrieve all the treasure we can, and let the temple fall.
 		ai_chance = { factor = 100 }
-		
+		set_country_flag = VAR_destroy_temple_flag
 		if = {
 			limit = {
 				503 = {
@@ -483,10 +484,6 @@ country_event = {
 		}
 		NOT = { num_of_rebel_controlled_provinces = 6 }
 	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
 
 	option = {
 		name = war_of_betrayal.4.a #Send a generous peace offer.
@@ -543,15 +540,10 @@ country_event = {
 	picture = WAR_OF_BETRAYAL_eventPicture
 
 	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
 
 	option = {
 		name = war_of_betrayal.5.a #Accept the offer.
 		ai_chance = { factor = 100 }
-		custom_tooltip = VAR_generous_peace_offer_tooltip
 		add_treasury = 250
 		add_dip_power = 100
 		add_prestige = 50
@@ -571,9 +563,11 @@ country_event = {
 		name = war_of_betrayal.5.b #Reject the offer.
 		set_country_flag = VAR_declined_to_end_war_flag
 		ai_chance = { factor = 0 }
-		VAR = {
-			add_treasury = 250
-			add_dip_power = 100
+		hidden_effect = {
+			VAR = {
+				add_treasury = 250
+				add_dip_power = 100
+			}
 		}
 	}
 }
@@ -646,9 +640,7 @@ country_event = {
 	
 	trigger = {
 		any_owned_province = {
-			limit = {
-				region = varlamore_region
-			}
+			region = varlamore_region
 			controller = {
 				OR = {
 					primary_culture = lovakengj

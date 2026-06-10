@@ -537,10 +537,10 @@
  SUBJECT_NOT_NEW_VAR:0 "$OVERLORD$ will not join the war between $SUBJECT$ and $SUBJECT_ENEMY$: $REASON$"
  PART_OF_HRE:0 "$COUNTRY|Y$ is part of the Council of Khans."
  
- BENEFIT_FOR_EMPEROR:1 "Khagan gets:\n$MODIFIER$"
- BENEFIT_FOR_EMPEROR_PER_PRINCE:1 "Khagan gets (depends on number of Khans):\n$MODIFIER$"
+ BENEFIT_FOR_EMPEROR:1 "Leader gets:\n$MODIFIER$"
+ BENEFIT_FOR_EMPEROR_PER_PRINCE:1 "Leader gets (depends on number of Khans):\n$MODIFIER$"
  BENEFIT_FOR_ELECTOR_PER_PRINCE:1 "Electors get (depends on number of Khans):\n$MODIFIER$"
- BENEFIT_FOR_MEMBER:2 "Khans & Trade Colonies get:\n$MODIFIER$"
+ BENEFIT_FOR_MEMBER:2 "Other members get:\n$MODIFIER$"
  BENEFIT_FOR_EVERYONE:1 "All in the Council get:\n$MODIFIER$"
  
  ################

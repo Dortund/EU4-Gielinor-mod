@@ -83,7 +83,7 @@ country_event = {
 	
 	option = {
 		name = council_reforms.3.a
-		change_tag = WHK
+		change_tag = KHG
 		restore_country_name_effect = yes
 		every_province = {
 			limit = {
@@ -106,7 +106,10 @@ country_event = {
 		}
 		dismantle_hre = yes
 		set_government_rank = 3
-		add_adm_power = 250
+		add_country_modifier = {
+			name = KHG_unified_council_of_khans_modifier
+			duration = -1
+		}
 		if = {
 			limit = {
 				has_custom_ideas = no
@@ -128,7 +131,7 @@ country_event = {
 	
 	option = {
 		name = council_reforms.4.a
-		WHK = {
+		KHG = {
 			inherit = ROOT
 		}
 	}

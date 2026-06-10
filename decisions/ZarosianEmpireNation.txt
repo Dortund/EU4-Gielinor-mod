@@ -42,9 +42,11 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			misthalin_region = {
-				type = all
-				owned_by = ROOT
+			calc_true_if = {
+				all_owned_province = {
+					region = misthalin_region
+				}
+				amount = 45
 			}
 			owns_core_province = 46  # Lassar
 			owns_core_province = 63  # Kharid-Et

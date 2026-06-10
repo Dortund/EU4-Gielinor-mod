@@ -1,0 +1,113 @@
+###########################################################
+# Gielinor Universalis estate disasters
+###########################################################
+
+namespace = estate_giu_disasters
+
+# The Admirals take control
+country_event = {
+	id = estate_giu_disasters.1
+	title = estate_giu_disasters.1.t
+	desc = estate_giu_disasters.1.d
+	picture = {
+		trigger = {
+			NOT = { religion = xautak }
+		}
+		picture = ADMIRAL_ESTATE_eventPicture
+	}
+	picture = {
+	   trigger = { religion = xautak }
+	   picture = TERROR_OF_THE_LEVIATHAN_eventPicture
+	}
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = estate_admirals_in_power
+			set_country_flag = has_estate_disaster_flag
+		}
+	}
+	
+	option = {
+		name = estate_giu_disasters.1.a	
+		add_stability = -1
+		custom_tooltip = estate_giu_disasters.1.a.tt
+	}
+}
+
+# Admirals brought to heel
+country_event = {
+	id = estate_giu_disasters.2
+	title = estate_giu_disasters.2.t
+	desc = estate_giu_disasters.2.d
+	picture = {
+		trigger = {
+			NOT = { religion = xautak }
+		}
+		picture = ADMIRAL_ESTATE_eventPicture
+	}
+	picture = {
+	   trigger = { religion = xautak }
+	   picture = TERROR_OF_THE_LEVIATHAN_eventPicture
+	}
+	
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = has_estate_disaster_flag
+		}
+	}
+	
+	option = {
+		name = estate_giu_disasters.2.a
+	}
+}
+
+# The Workers take control
+country_event = {
+	id = estate_giu_disasters.3
+	title = estate_giu_disasters.3.t
+	desc = estate_giu_disasters.3.d
+	picture = WORKERS_COUP_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = estate_workers_in_power
+			set_country_flag = has_estate_disaster_flag
+		}
+	}
+	
+	option = {
+		name = estate_giu_disasters.3.a	
+		add_stability = -1
+		custom_tooltip = estate_giu_disasters.3.a.tt
+	}
+}
+
+# Workers brought to heel
+country_event = {
+	id = estate_giu_disasters.4
+	title = estate_giu_disasters.4.t
+	desc = estate_giu_disasters.4.d
+	picture = WORKERS_COUP_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = has_estate_disaster_flag
+		}
+	}
+	
+	option = {
+		name = estate_giu_disasters.4.a
+	}
+}

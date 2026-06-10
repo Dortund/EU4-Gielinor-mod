@@ -8,7 +8,6 @@ religion = zamorak
 
 discovered_by = centraltechgroup
 discovered_by = morytaniantechgroup
-discovered_by = kharidtechgroup
 discovered_by = dwarventechgroup
 discovered_by = bandostechgroup
 discovered_by = northerntechgroup

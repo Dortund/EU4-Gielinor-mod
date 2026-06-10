@@ -74,6 +74,7 @@ end_of_the_runecrafting_crusades = {
 	modifier = {
 		manpower_recovery_speed = -0.10
 		monthly_crusader_zeal_power_1 = -1
+		all_power_cost = 0.25
 	}
 	
 	on_start = end_of_the_runecrafting_crusades.1

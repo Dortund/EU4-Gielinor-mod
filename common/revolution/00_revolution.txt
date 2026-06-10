@@ -15,5 +15,6 @@ revolution = {
 	zeal_modifiers = {
 		administrative_efficiency = 0.3
 		special_unit_forcelimit = 0.2
+		discipline = 0.05
 	}
 }

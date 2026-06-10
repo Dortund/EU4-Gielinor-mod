@@ -1,0 +1,736 @@
+namespace = corruption_of_amascut
+
+########################################
+# Corruption of Amascut
+########################################
+
+# Start
+country_event = {
+	id = corruption_of_amascut.1
+	title = corruption_of_amascut.1.t #Corruption of Amascut
+	desc = corruption_of_amascut.1.d #As corruption has grown in [Root.GetName], so too has Amascut's power. What began as random sightings of glowing scarabs and the occasional missing person has ballooned into outright warfare as undead thralls march upon [amascut_invasion_city.GetCapitalName]. It looks as though Amascut plans to take personal control of [Root.Monarch.GetTitle] [Root.Monarch.GetName].
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	goto = amascut_invasion_city
+	
+	immediate = {
+		set_country_flag = corruption_of_amascut_disaster_start
+		random_owned_province = {
+			limit = {
+				OR = {
+					religion = menaphite
+					is_capital = yes
+				}
+			}
+			save_event_target_as = amascut_invasion_city
+		}
+	}
+	
+	option = {
+		name = corruption_of_amascut.1.a #I cannot fight this!
+		change_religion = amascut_religion
+		add_stability = -2
+		capital_scope = {
+			change_religion = amascut_religion
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = corruption_of_amascut.1.b #We must fight for our souls!
+		add_stability = -2
+	 	add_corruption = -1
+		event_target:amascut_invasion_city = {
+			amascut_religion_rebels = 3
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = corruption_of_amascut.2
+	title = corruption_of_amascut.2.t # Amascutite Recruitment
+	desc =  corruption_of_amascut.2.d # Those who fall to Amascut's corruption can quickly be used to fuel her forces, forcing us to fight our own subjects. One fresh army has emerged in [amascut_recruitment_city.GetCapitalName].
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	goto = amascut_recruitment_city
+	
+	trigger = {
+		any_owned_province = {
+			religion = amascut_religion
+			base_tax = 2
+		}
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				religion = amascut_religion
+				base_tax = 2
+			}
+			save_event_target_as = amascut_recruitment_city
+		}
+	}
+	
+	option = {
+		name = corruption_of_amascut.2.a #We can mourn the dead later - for now we must fight!
+		event_target:amascut_recruitment_city = {
+			amascut_religion_rebels = 2
+			add_base_tax = -1
+		}
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = corruption_of_amascut.2.b #Keep damages to a minimum.
+		event_target:amascut_recruitment_city = {
+			amascut_religion_rebels = 2
+		}
+		add_adm_power = -50
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = corruption_of_amascut.3
+	title = corruption_of_amascut.3.t # Prayers to Icthlarin
+	desc =  corruption_of_amascut.3.d # Our $ESTATE_CHURCH$ are trying hard to purify Amascut's corruption in [purify_city_from_amascut.GetName]. With additional resources they may be able to accelerate the process.
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	goto = purify_city_from_amascut
+	
+	trigger = {
+		has_disaster = corruption_of_amascut
+		has_estate = estate_church
+		any_owned_province = {
+			religion = amascut_religion
+			NOT = { has_construction = missionary }
+		}
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				religion = amascut_religion
+				base_tax = 2
+			}
+			save_event_target_as = purify_city_from_amascut
+		}
+	}
+	
+	option = {
+		name = corruption_of_amascut.3.a # Provide the $ESTATE_CHURCH$ with what they need.
+		add_years_of_income = -0.2
+		event_target:purify_city_from_amascut = {
+			change_religion = ROOT
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				tag = SOP
+			}
+		}
+	}
+	option = {
+		name = corruption_of_amascut.3.b # We should focus on the root cause of the corruption.
+		add_years_of_income = -0.2
+		add_corruption = -0.5
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				ruler_has_personality = incorruptible_personality
+			}
+		}
+	}
+}
+
+country_event = {
+	id = corruption_of_amascut.4
+	title = corruption_of_amascut.4.t # Contradictions of $MONARCHTITLE$ $MONARCH$
+	desc =  corruption_of_amascut.4.d # There is considerable alarm among the court as [Root.Monarch.GetTitle] [Root.Monarch.GetName] appears to still consider Amascut [Root.Monarch.GetHerHis] personal deity in the wake of open warfare against her.
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_personal_deity = amascut
+		NOT = {
+			has_country_modifier = corruption_of_amascut_hoping_for_reformation
+		}
+	}
+	
+	option = {
+		name = corruption_of_amascut.4.a # Perhaps it is time to switch allegiance...
+		change_personal_deity = icthlarin
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = corruption_of_amascut.4.b # I follow the idea of Amascut, not the Devourer who took her place!
+		add_stability = 1
+		add_corruption = 1
+		add_disaster_modifier = {
+			name = "corruption_of_amascut_hoping_for_reformation"
+			duration = -1
+			disaster = corruption_of_amascut
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = corruption_of_amascut.4.c # I follow Amascut, right or wrong!
+		change_religion = amascut_religion
+		add_stability = -1
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = corruption_of_amascut.5
+	title = corruption_of_amascut.5.t # Soul Obelisks
+	desc =  corruption_of_amascut.5.d # One of the many tools Amascut's forces use to amass power is the Soul Obelisk - an object that can be summoned into cities to drain the souls of nearby civilians. To destroy them typically requires a blood sacrifice. With the appearance of a new soul obelisk, we must decide on a course of action.
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = corruption_of_amascut.5.a #Shut that soul obelisk down!
+		add_yearly_manpower = -0.25
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = corruption_of_amascut.5.b #We cannot spare manpower for this.
+		add_corruption = 1
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Divine Intervention
+country_event = {
+	id = corruption_of_amascut.6
+	title = corruption_of_amascut.6.t 
+	desc = {
+		trigger = {
+			has_personal_deity = apmeken
+		}
+		desc = corruption_of_amascut.6.da #In the struggle against Amascut, we are not without aid. It appears Apmeken's divine favour is shining upon us, strengthening our people's resolve.
+	}
+	desc = {
+		trigger = {
+			has_personal_deity = crondis
+		}
+		desc = corruption_of_amascut.6.db #In the struggle against Amascut, we are not without aid. It appears Crondis's divine favour is shining upon us, strengthening our people's resolve.
+	}
+	desc = {
+		trigger = {
+			has_personal_deity = elidinis
+		}
+		desc = corruption_of_amascut.6.dc #In the struggle against Amascut, we are not without aid. It appears Elidinis' divine favour is shining upon us, strengthening our people's resolve.
+	}
+	desc = {
+		trigger = {
+			has_personal_deity = het
+		}
+		desc = corruption_of_amascut.6.dd #In the struggle against Amascut, we are not without aid. It appears Het's divine favour is shining upon us, strengthening our people's resolve.
+	}
+	desc = {
+		trigger = {
+			has_personal_deity = icthlarin
+		}
+		desc = corruption_of_amascut.6.de #In the struggle against Amascut, we are not without aid. It appears Icthlarin's divine favour is shining upon us, strengthening our people's resolve.
+	}
+	desc = {
+		trigger = {
+			has_personal_deity = scabaras
+		}
+		desc = corruption_of_amascut.6.df #In the struggle against Amascut, we are not without aid. It appears Scabaras' divine favour is shining upon us, strengthening our people's resolve.
+	}
+	desc = {
+		trigger = {
+			has_personal_deity = tumeken
+		}
+		desc = corruption_of_amascut.6.dg #In the struggle against Amascut, we are not without aid. It appears Tumeken's divine favour is shining upon us, strengthening our people's resolve.
+	}
+	
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_personal_deity = apmeken
+			has_personal_deity = crondis
+			has_personal_deity = elidinis
+			has_personal_deity = het
+			has_personal_deity = icthlarin
+			has_personal_deity = scabaras
+			has_personal_deity = tumeken
+		}
+		NOT = {
+			has_country_flag = corruption_of_amascut_divine_intervention_flag
+		}
+	}
+	
+	immediate = {
+		set_country_flag = corruption_of_amascut_divine_intervention_flag
+	}
+	
+	option = {
+		name = corruption_of_amascut.6.a # That's what friends are for!
+		trigger = {
+			has_personal_deity = apmeken
+		}
+		add_disaster_modifier = {
+			name = "corruption_of_amascut_aid_of_apmeken"
+			duration = -1
+			disaster = corruption_of_amascut
+		}
+	}
+	option = {
+		name = corruption_of_amascut.6.b # Modesty is a good counter to corruption...
+		trigger = {
+			has_personal_deity = crondis
+		}
+		add_disaster_modifier = {
+			name = "corruption_of_amascut_aid_of_crondis"
+			duration = -1
+			disaster = corruption_of_amascut
+		}
+	}
+	option = {
+		name = corruption_of_amascut.6.c # Let the Elid cleanse this corruption!
+		trigger = {
+			has_personal_deity = elidinis
+		}
+		add_disaster_modifier = {
+			name = "corruption_of_amascut_aid_of_elidinis"
+			duration = -1
+			disaster = corruption_of_amascut
+		}
+	}
+	option = {
+		name = corruption_of_amascut.6.d # Healthy mind, harder to corrupt!
+		trigger = {
+			has_personal_deity = het
+		}
+		add_disaster_modifier = {
+			name = "corruption_of_amascut_aid_of_het"
+			duration = -1
+			disaster = corruption_of_amascut
+		}
+	}
+	option = {
+		name = corruption_of_amascut.6.e # Of course we'd have the Protector of Souls backing us up!
+		trigger = {
+			has_personal_deity = icthlarin
+		}
+		add_disaster_modifier = {
+			name = "corruption_of_amascut_aid_of_icthlarin"
+			duration = -1
+			disaster = corruption_of_amascut
+		}
+	}
+	option = {
+		name = corruption_of_amascut.6.f # Even the God of Isolation cannot stand idly by!
+		trigger = {
+			has_personal_deity = scabaras
+		}
+		add_disaster_modifier = {
+			name = "corruption_of_amascut_aid_of_scabaras"
+			duration = -1
+			disaster = corruption_of_amascut
+		}
+	}
+	option = {
+		name = corruption_of_amascut.6.g # In the light of the sun, corruption shall burn.
+		trigger = {
+			has_personal_deity = tumeken
+		}
+		add_disaster_modifier = {
+			name = "corruption_of_amascut_aid_of_tumeken"
+			duration = -1
+			disaster = corruption_of_amascut
+		}
+	}	
+}
+
+country_event = {
+	id = corruption_of_amascut.7
+	title = corruption_of_amascut.7.t # Corrupted Scarabs
+	desc =  corruption_of_amascut.7.d # Mysterious beetles have appeared in [corrupted_scarab_city.GetName], seemingly crawling from depths below. They spread corruption and those who attempt to squish them become injured in the process. Curiously, however, they seem to all carry gold...
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	goto = corrupted_scarab_city
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				OR = {
+					religion = menaphite
+					is_capital = yes
+				}
+			}
+			save_event_target_as = corrupted_scarab_city
+		}
+	}
+	
+	option = {
+		name = corruption_of_amascut.7.a # Close off the routes to these scarabs and quickly squish the rest!
+		add_years_of_income = 0.02
+		add_yearly_manpower = -0.02
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = corruption_of_amascut.7.b # If we act slowly we could make a lot of money from these scarabs...
+		add_corruption = 1
+		add_yearly_manpower = -0.3
+		add_years_of_income = 1
+		event_target:corrupted_scarab_city = {
+			change_religion = amascut_religion
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = corruption_of_amascut.7.c # What if we shared responsibility for squishing scarabs and the rewards among the citizenry?
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = incorruptible_personality
+				ruler_has_personality = tactical_genius_personality
+			}
+		}
+		event_target:corrupted_scarab_city = {
+			add_base_tax = 2
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = corruption_of_amascut.7.e # Myself and my personal guard will handle this personally!
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = embezzler_personality
+				ruler_has_personality = greedy_personality
+			}
+		}
+		random = { 
+			chance = 50 
+			kill_ruler = yes
+		}
+		add_corruption = 1
+		add_years_of_income = 1.25
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+}
+
+country_event = {
+	id = corruption_of_amascut.8
+	title = corruption_of_amascut.8.t # Dual Attack
+	desc =  corruption_of_amascut.8.d # Forces of corruption have split their efforts into two separate assaults, likely in the hopes of securing at least one province for Amascut before relief can arrive.
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = corruption_of_amascut.8.a # We will stop them both!
+		if = {
+			limit = {
+				num_of_states = 2
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						is_in_capital_area = yes
+					}
+				}
+				amascut_religion_rebels = 1
+			}
+			random_owned_province = {
+				limit = {
+					is_in_capital_area = yes
+				}
+				amascut_religion_rebels = 1
+			}
+		}
+		else = {
+			capital_scope = {
+				amascut_religion_rebels = 1
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+				}
+				amascut_religion_rebels = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = corruption_of_amascut.9
+	title = corruption_of_amascut.9.t # Repent the Corruption
+	desc =  corruption_of_amascut.9.d # The $ESTATE_CHURCH$ calls on $MONARCHTITLE$ $MONARCH$ to take responsibility for the corruption rife in $COUNTRY$ that drew in Amascut's attacks. Repentence is a good way to win divine favour and in turn cleanse some corruption, but it will weaken the $MONARCHTITLE$'s political power.
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_estate = estate_church
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = corruption_of_amascut.9.a # Repent!
+		add_corruption = -1
+		change_estate_land_share = {
+			estate = estate_church
+			share = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = corruption_of_amascut.9.b # Corruption isn't the responsibility of just one person!
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = corruption_of_amascut.9.c # I do not need the $ESTATE_CHURCH$ to be an intermediary for justice.
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = just_personality
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = incorruptible_personality
+			}
+		}
+		add_corruption = -1
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = corruption_of_amascut.9.e # Repent harder!
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = zealot_personality
+				ruler_has_personality = pious_personality
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_corruption = -2
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = corruption_of_amascut.10
+	title = corruption_of_amascut.10.t # Vulnerability of the $ESTATE_WORKERS$
+	desc =  corruption_of_amascut.10.d # With minimal security and access to weaponry, our $ESTATE_WORKERS$ are particularly vulnerable to the attacks of Amascut. With corruption beginning to spread in a part of [workers_vulnerable_to_amascut.GetName] with a high population of $ESTATE_WORKERS$, we must decide whether we can spare them the resources or not.
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+	
+	is_triggered_only = yes
+	goto = workers_vulnerable_to_amascut
+	
+	trigger = {
+		has_estate = estate_workers
+		any_owned_province = {
+			base_production = 3
+		}
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				base_production = 3
+			}
+			save_event_target_as = workers_vulnerable_to_amascut
+		}
+	}
+	immediate = {
+	}
+	
+	option = {
+		name = corruption_of_amascut.10.a # Spare what we can!
+		add_years_of_income = -0.15
+		add_yearly_manpower = -0.15
+		add_mil_power = -10
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = 5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = corruption_of_amascut.10.b # We cannot help the $ESTATE_WORKERS$.
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = -10
+		}
+		event_target:workers_vulnerable_to_amascut = {
+			change_religion = amascut_religion
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = corruption_of_amascut.100
+	title = corruption_of_amascut.100.t #End of Amascut's War
+	
+	desc = {
+		trigger = {
+			religion = amascut_religion
+			NOT = { has_global_flag = amascut_repentant_flag }
+		}
+		desc = corruption_of_amascut.100.da #Amascut's power overwhelmed [Root.GetName], leaving [Root.Monarch.GetTitle] [Root.Monarch.GetName] little more than a thrall to serve her ambitions. Perhaps great power will be found by Amascut's side, or there will be an opportunity to break free once more...
+	}
+	desc = {
+		trigger = {
+			NOT = { religion = amascut_religion }
+			NOT = { has_global_flag = amascut_repentant_flag }
+		}
+		desc = corruption_of_amascut.100.db #The Devourer has failed to take [Root.GetName] and has retreated for the time being.
+	}
+	desc = {
+		trigger = {
+			has_global_flag = amascut_repentant_flag
+		}
+		desc = corruption_of_amascut.100.dc #The war against Amascut has suddenly ended as Amascut has surrendered to Icthlarin!
+	}
+	
+	picture = CORRUPTION_OF_AMASCUT_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		end_disaster = corruption_of_amascut
+		clr_country_flag = corruption_of_amascut_disaster_start
+		clr_country_flag = corruption_of_amascut_divine_intervention_flag
+	}
+
+	option = {
+		name = corruption_of_amascut.100.a #Amascut has triumphed!
+		trigger = {
+			religion = amascut_religion
+			NOT = { has_global_flag = amascut_repentant_flag }
+		}
+		add_corruption = 1
+		if = {
+			limit = {
+				ruler_has_personality = incorruptible_personality
+			}
+		 	remove_ruler_personality = incorruptible_personality
+		}
+	}
+	option = {
+		name = corruption_of_amascut.100.b #Hopefully that's the last we see of Amascut's forces.
+		trigger = {
+			NOT = { religion = amascut_religion }
+			NOT = { has_global_flag = amascut_repentant_flag }
+		}
+		add_stability = 1
+		add_corruption = -1
+	}
+	option = {
+		name = corruption_of_amascut.100.c #We are saved!
+		trigger = {
+			has_global_flag = amascut_repentant_flag
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					religion = amascut_religion
+				}
+				custom_tooltip = all_amascut_converts_to_menaphite_tooltip
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							religion = amascut_religion
+						}
+						change_religion = menaphite
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			disband_rebels = amascut_religion_rebels
+		}
+		add_stability = 1
+		add_corruption = -5
+	}
+}

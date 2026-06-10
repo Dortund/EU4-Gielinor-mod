@@ -527,7 +527,6 @@ morytania_missions_3 = {
 		effect = {
 			country_event = {
 				id = flavor_myt.2
-				days = 1
 			}
 			
 			if = {
@@ -643,7 +642,6 @@ morytania_missions_4 = {
 					}
 					country_event = {
 						id = flavor_msh.1
-						days = 1
 					}
 				}
 			}
@@ -891,7 +889,6 @@ morytania_missions_5 = {
 					CFS = {
 						country_event = {
 							id = flavor_cfs.7
-							days = 1
 						}
 					}
 				}

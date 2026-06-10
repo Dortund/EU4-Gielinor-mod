@@ -1,0 +1,22 @@
+#1560-Chasm of Fire
+owner = YDO
+controller = YDO
+add_core = YDO
+tribal_owner = ---
+culture = avernic
+religion = zamorak
+
+discovered_by = zeantechgroup
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 3
+
+fort_15th = yes 
+
+trade_goods = advanced_ores
+latent_trade_goods = { rare_loot }
+
+is_city = yes

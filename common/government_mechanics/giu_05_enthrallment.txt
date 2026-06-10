@@ -1,0 +1,294 @@
+enthrallment_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 5
+	available = {
+	}
+
+	powers = {
+		enthrallment_power_1 = {
+			gui = enthrallment_gov_mech
+			show_before_interactions = yes
+			max = 100
+			default = 70
+			base_monthly_growth = 0.05
+			scaled_modifier = {
+				modifier = { 
+					may_perform_slave_raid = yes
+				}
+				start_value = 90
+				end_value = 100
+			}
+			scaled_modifier = {
+				modifier = {
+					tolerance_own = 3
+					tolerance_heretic = -3
+					spy_offence = 0.25
+					relation_with_heretics = -20
+				 	reverse_relation_with_heretic_religion = -20
+				}
+			}
+			reverse_scaled_modifier = {
+				modifier = {
+					tolerance_own = -3
+					tolerance_heretic = 3
+					raze_power_gain = -1
+					relation_with_heretics = 20
+				 	reverse_relation_with_heretic_religion = 20
+				}
+			}
+			is_good = no
+		}
+	}
+	
+	interactions = {
+		enthrallment_aid_against_amascut = {
+			gui = enthrallment_gov_button_1
+			cost_type = enthrallment_power_1
+			center = no
+			trigger = {
+				has_government_power = {
+					mechanic_type = enthrallment_mechanic
+					power_type = enthrallment_power_1
+					value = 10
+				}
+				NOT = {
+					has_country_modifier = amascut_religion_friends_against_corruption
+				}
+				any_ally = {
+					NOT = { religion = amascut_religion }
+					owes_favors = { 
+						who = ROOT
+						value = 20
+					}
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = enthrallment_mechanic
+					power_type = enthrallment_power_1
+					value = -10
+				}
+				every_ally = {
+					limit = {
+						NOT = { religion = amascut_religion }
+					}
+					add_favors = {
+					   who = ROOT
+					   amount = -20
+					}
+				}
+				add_country_modifier = {
+					name = amascut_religion_friends_against_corruption
+					duration = 3650
+				}
+			}
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					has_government_power = {
+						mechanic_type = enthrallment_mechanic
+						power_type = enthrallment_power_1
+						value = 65
+					}
+				}
+				modifier = {
+					factor = 10
+					NOT = {
+						has_government_power = {
+							mechanic_type = enthrallment_mechanic
+							power_type = enthrallment_power_1
+							value = 50
+						}
+					}
+				}
+			}
+		}
+		enthrallment_feather_of_maat = {
+			gui = enthrallment_gov_button_2
+			cost_type = enthrallment_power_1
+			center = no
+			trigger = {
+				has_government_power = {
+					mechanic_type = enthrallment_mechanic
+					power_type = enthrallment_power_1
+					value = 10
+				}
+				NOT = {
+					has_country_modifier = amascut_religion_cleansing_of_maat
+				}
+				years_of_income = 0.25
+				adm_power = 10
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = enthrallment_mechanic
+					power_type = enthrallment_power_1
+					value = -10
+				}
+				add_years_of_income = -0.25
+				add_adm_power = -10
+				add_country_modifier = {
+					name = amascut_religion_cleansing_of_maat
+					duration = 3650
+				}
+			}
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					has_government_power = {
+						mechanic_type = enthrallment_mechanic
+						power_type = enthrallment_power_1
+						value = 65
+					}
+				}
+				modifier = {
+					factor = 10
+					NOT = {
+						has_government_power = {
+							mechanic_type = enthrallment_mechanic
+							power_type = enthrallment_power_1
+							value = 50
+						}
+					}
+				}
+			}
+		}
+		enthrallment_blood_moon_order = {
+			gui = enthrallment_gov_button_3
+			cost_type = enthrallment_power_1
+			center = no
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = enthrallment_mechanic
+						power_type = enthrallment_power_1
+						value = 50
+					}
+				}
+				NOT = {
+					has_country_modifier = amascut_religion_promote_blood_moon
+				}
+			}
+			effect = {
+				add_country_modifier = {
+					name = amascut_religion_promote_blood_moon
+					duration = 3650
+				}
+				custom_tooltip = amascut_religion_promote_blood_moon_tooltip
+			}
+			ai_chance = {
+				factor = 0
+			}
+		}
+		
+		enthrallment_proselytise_amascut = {
+			gui = enthrallment_gov_button_4
+			cost_type = enthrallment_power_1
+			center = no
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = enthrallment_mechanic
+						power_type = enthrallment_power_1
+						value = 30
+					}
+				}
+				NOT = {
+					has_country_modifier = amascut_religion_enhanced_proselytisation
+				}
+			}
+			effect = {
+				random_owned_province = {
+					limit = {
+						NOT = {
+							religion = amascut_religion
+						}
+					}
+					change_religion = amascut_religion
+				}
+				add_country_modifier = {
+					name = amascut_religion_enhanced_proselytisation
+					duration = 3650
+				}
+			}
+			ai_chance = {
+				factor = 0
+			}
+		}
+		enthrallment_internalise_the_corruption = {
+			gui = enthrallment_gov_button_5
+			cost_type = enthrallment_power_1
+			center = no
+			trigger = {
+				NOT = {
+					has_country_modifier = amascut_religion_internalising_corruption
+				}
+			}
+			effect = {
+				add_corruption = -0.5
+				add_government_power = {
+					mechanic_type = enthrallment_mechanic
+					power_type = enthrallment_power_1
+					value = 10
+				}
+				add_country_modifier = {
+					name = amascut_religion_internalising_corruption
+					duration = 3650
+				}
+			}
+			ai_chance = {
+				factor = 0.5
+				modifier = {
+					factor = 5
+					has_government_power = {
+						mechanic_type = enthrallment_mechanic
+						power_type = enthrallment_power_1
+						value = 65
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_government_power = {
+							mechanic_type = enthrallment_mechanic
+							power_type = enthrallment_power_1
+							value = 50
+						}
+					}
+				}
+			}
+		}
+		
+		enthrallment_slayers_boon = {
+			gui = enthrallment_gov_button_6
+			cost_type = enthrallment_power_1
+			center = no
+			trigger = {
+				has_government_power = {
+					mechanic_type = enthrallment_mechanic
+					power_type = enthrallment_power_1
+					value = 80
+				}
+				NOT = {
+					has_country_modifier = amascut_religion_slayers_boon
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = enthrallment_mechanic
+					power_type = enthrallment_power_1
+					value = 20
+				}
+				add_country_modifier = {
+					name = amascut_religion_slayers_boon
+					duration = 3650
+				}
+			}
+			ai_chance = {
+				factor = 5
+			}
+		}
+	}
+}

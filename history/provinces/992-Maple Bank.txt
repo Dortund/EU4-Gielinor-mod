@@ -23,7 +23,7 @@ trade_goods = logs
 
 is_city = yes
 
-2042.3.15 = {
+2042.5.6 = {
 	owner = GUN
 	controller = GUN
 	add_core = GUN

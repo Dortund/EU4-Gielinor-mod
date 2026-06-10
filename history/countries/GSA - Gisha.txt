@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = town_council_reform
+government_rank = 1
+primary_culture = menaphiteculture
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 788 #Gisha
+historical_friend = MPS
+
+1926.9.23 = {
+	monarch = {
+		name = "Meskhenet"
+		dynasty = "Sabry"
+		female = yes
+		birth_date = 1905.5.17
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}
+
+2161.11.4 = {
+	monarch = {
+		name = "Khattak"
+		dynasty = "Fathy"
+		birth_date = 2132.6.23
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}

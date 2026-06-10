@@ -1,0 +1,326 @@
+# cost is the Meritocracy cost
+# duration is in days
+# ai_will_do has to be 10 for AI to do it (with >=99 Meritocracy).
+
+############# Kharidian Realm decrees
+
+##ADM
+
+study_dynastic_records_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+ 	 	imperial_mandate = 0.05
+		prestige_decay = -0.01
+	}
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 15
+	}
+}
+
+expand_the_libraries_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		global_institution_spread = 0.25
+		technology_cost = -0.1
+	}
+	effect = {
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+infrastructural_expansion_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		great_project_upgrade_cost = -0.1
+	 	expand_infrastructure_cost_modifier = -0.25
+		workers_influence_modifier = 0.05
+	}
+	effect = {
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			AND = {
+				OR = {
+					governing_capacity_percentage = 0.9
+					NOT = { adm_power = 100 }
+				}
+				NOT = { treasury = 800 }
+			}
+		}
+	}
+}
+
+cleanse_corruption_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+		religion = menaphite
+	}
+	trigger = {
+	}
+	modifier = {
+ 	 	yearly_corruption = -0.1
+		global_heretic_missionary_strength = 0.03
+		workers_loyalty_modifier = 0.1
+	}
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+spread_corruption_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+		religion = amascut_religion
+	}
+	trigger = {
+	}
+	modifier = {
+ 	 	yearly_corruption = 0.1
+		warscore_cost_vs_other_religion = -0.25
+	}
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+##DIP
+
+recognise_tribute_autonomy_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		reduced_liberty_desire = 10
+		diplomatic_reputation = 1
+	}
+	effect = {
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 10
+			any_subject_country = {
+				liberty_desire = 60
+			}
+		}
+	}
+}
+
+anti_piracy_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		global_ship_cost = -0.1
+	 	global_prov_trade_power_modifier = 0.25
+	}
+	effect = {
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.1
+			NOT = { trade_income_percentage = 0.25 }
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.35
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.45
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.5
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.55
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.6
+		}
+	}
+}
+
+justify_centralisation_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		diplomatic_annexation_cost = -0.1
+		annexation_relations_impact = -0.5
+	}
+	effect = {
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = {
+				any_subject_country = {
+					NOT = {
+						is_subject_of_type = tributary_state
+					}
+				}
+			}
+		}
+	}
+}
+
+intelligence_gathering_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+	 	spy_offence = 0.2
+		discovered_relations_impact = -0.5
+	}
+	effect = {
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+## MIL
+
+pharaohs_command_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		war_taxes_cost_modifier = -0.5
+		all_estate_influence_modifier = -0.1
+	}
+	effect = {
+	}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+defensive_effort_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = { 
+		defensiveness = 0.25
+	 	hostile_attrition = 1
+	}
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 50
+			is_in_important_war = yes
+		}
+	}
+}
+
+internal_crackdown_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = { 
+	 	harsh_treatment_cost = -0.2
+	 	global_autonomy = -0.05
+	}
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+mass_draft_decree = {
+	cost = 20
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		global_manpower_modifier = 0.15
+		reinforce_speed = 0.25
+	}
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.1
+			is_at_war = no
+		}
+		modifier = {
+			factor = 10
+			is_in_important_war = yes
+		}
+	}
+}

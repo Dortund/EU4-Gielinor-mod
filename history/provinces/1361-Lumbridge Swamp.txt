@@ -1,5 +1,1 @@
-discovered_by = centraltechgroup
-discovered_by = kharidtechgroup
-discovered_by = morytaniantechgroup
-discovered_by = dwarventechgroup
-discovered_by = bandostechgroup
+discovered_by = DSK

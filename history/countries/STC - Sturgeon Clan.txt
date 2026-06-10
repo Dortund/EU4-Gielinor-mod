@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = fremennik_clan
+government_rank = 1
+primary_culture = barbarian
+religion = v
+religious_school = warrior_school
+secondary_religion = northern_pantheon
+technology_group = fremenniktechgroup
+capital = 785
+
+1930.1.1 = {
+	monarch = {
+		name = "Clan Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

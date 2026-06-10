@@ -206,10 +206,34 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		hidden_effect = {
-			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
-			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
-			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+		if = {
+			limit = {
+				OR = {
+					has_estate = estate_kel_blue_opal
+					has_estate = estate_kel_brown_engine
+					has_estate = estate_kel_green_gemstone
+					has_estate = estate_kel_purple_pewter
+					has_estate = estate_kel_red_axe
+					has_estate = estate_kel_silver_cog
+					has_estate = estate_kel_white_chisel
+					has_estate = estate_kel_yellow_fortune
+				}
+			}
+			hidden_effect = {
+				pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+				pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+				pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+				pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+				pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+				pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+			}
+		}
+		else = {
+			hidden_effect = {
+				pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+				pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+				pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+			}
 		}
 	}
 
@@ -226,6 +250,15 @@ country_event = {
 		clr_country_flag = estate_jains_present_agenda
 		clr_country_flag = estate_rajput_present_agenda
 		
+		clr_country_flag = estate_kel_blue_opal_present_agenda
+		clr_country_flag = estate_kel_brown_engine_present_agenda
+		clr_country_flag = estate_kel_green_gemstone_present_agenda
+		clr_country_flag = estate_kel_purple_pewter_present_agenda
+		clr_country_flag = estate_kel_red_axe_present_agenda
+		clr_country_flag = estate_kel_silver_cog_present_agenda
+		clr_country_flag = estate_kel_white_chisel_present_agenda
+		clr_country_flag = estate_kel_yellow_fortune_present_agenda
+
 		clr_country_flag = estate_tzh_hur_present_agenda
 		clr_country_flag = estate_tzh_ket_present_agenda
 		clr_country_flag = estate_tzh_mej_present_agenda
@@ -753,6 +786,98 @@ country_event = {
 	}
 	# New estates
 	option = {
+		name = estate_privileges_and_agendas_events.3.j
+		trigger = { has_country_flag = estate_workers_present_agenda }
+		start_estate_agenda = estate_workers
+		goto = estate_workers
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_workers
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_workers
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_workers
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_workers
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_workers
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.k
+		trigger = { has_country_flag = estate_admirals_present_agenda }
+		start_estate_agenda = estate_admirals
+		goto = estate_admirals
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_admirals
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_admirals
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_admirals
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_admirals
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_admirals
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
 		name = estate_privileges_and_agendas_events.3.tzh.1
 		trigger = { has_country_flag = estate_tzh_hur_present_agenda }
 		start_estate_agenda = estate_tzh_hur
@@ -977,6 +1102,374 @@ country_event = {
 				}
 				estate_loyalty = {
 					estate = estate_tzh_gaal
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.kel.1
+		trigger = { has_country_flag = estate_kel_blue_opal_present_agenda }
+		start_estate_agenda = estate_kel_blue_opal
+		goto = estate_kel_blue_opal
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_kel_blue_opal
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_kel_blue_opal
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_kel_blue_opal
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_kel_blue_opal
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_kel_blue_opal
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.kel.2
+		trigger = { has_country_flag = estate_kel_brown_engine_present_agenda }
+		start_estate_agenda = estate_kel_brown_engine
+		goto = estate_kel_brown_engine
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_kel_brown_engine
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_kel_brown_engine
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_kel_brown_engine
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_kel_brown_engine
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_kel_brown_engine
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.kel.3
+		trigger = { has_country_flag = estate_kel_green_gemstone_present_agenda }
+		start_estate_agenda = estate_kel_green_gemstone
+		goto = estate_kel_green_gemstone
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_kel_green_gemstone
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_kel_green_gemstone
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_kel_green_gemstone
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_kel_green_gemstone
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_kel_green_gemstone
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.kel.4
+		trigger = { has_country_flag = estate_kel_purple_pewter_present_agenda }
+		start_estate_agenda = estate_kel_purple_pewter
+		goto = estate_kel_purple_pewter
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_kel_purple_pewter
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_kel_purple_pewter
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_kel_purple_pewter
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_kel_purple_pewter
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_kel_purple_pewter
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.kel.5
+		trigger = { has_country_flag = estate_kel_red_axe_present_agenda }
+		start_estate_agenda = estate_kel_red_axe
+		goto = estate_kel_red_axe
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_kel_red_axe
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_kel_red_axe
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_kel_red_axe
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_kel_red_axe
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_kel_red_axe
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.kel.6
+		trigger = { has_country_flag = estate_kel_silver_cog_present_agenda }
+		start_estate_agenda = estate_kel_silver_cog
+		goto = estate_kel_silver_cog
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_kel_silver_cog
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_kel_silver_cog
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_kel_silver_cog
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_kel_silver_cog
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_kel_silver_cog
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.kel.7
+		trigger = { has_country_flag = estate_kel_white_chisel_present_agenda }
+		start_estate_agenda = estate_kel_white_chisel
+		goto = estate_kel_white_chisel
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_kel_white_chisel
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_kel_white_chisel
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_kel_white_chisel
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_kel_white_chisel
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_kel_white_chisel
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.kel.8
+		trigger = { has_country_flag = estate_kel_yellow_fortune_present_agenda }
+		start_estate_agenda = estate_kel_yellow_fortune
+		goto = estate_kel_yellow_fortune
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_kel_yellow_fortune
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_kel_yellow_fortune
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_kel_yellow_fortune
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_kel_yellow_fortune
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_kel_yellow_fortune
 					higher_than_influence = no
 				}
 			}

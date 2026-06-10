@@ -2,6 +2,8 @@ monarchy = {
 	reform_levels = {
 		feudalism_vs_autocracy = {
 			reforms = {
+				al_kharid_emirate
+				al_kharid_emirate_reformed
 				autocracy_reform
 				clan_monarchy
 				consortium_monarchy
@@ -14,12 +16,14 @@ monarchy = {
 				horde_kingdom
 				kandarin_monarchy
 				khanate
+				kharidian_empire
 				kourend_monarchy
 				kourend_reformed_monarchy
 				kourend_house
 				kourend_independent_house
 				mahjarrat_autocracy
 				miscellanean_monarchy
+				miscellanean_monarchy_reformed
 				new_world_kingdom
 				noble_kingdom
 				principality_burthorpe
@@ -38,6 +42,8 @@ monarchy = {
 				grant_trader_privileges_reform
 				ior_civil_war_focus_reform
 				kou_house_privileges_reform
+				menaphite_factions
+				thrall_of_amascut_monarchy_reform
 				vampyric_tiers_reform
 				grant_noble_castle_rights_reform
 				grant_nobles_electorate_reform
@@ -47,10 +53,12 @@ monarchy = {
 		}
 		bureaucracy = {
 			reforms = {
+				al_kharidian_administrators
 				centralize_reform
 				decentralize_reform
 				expand_imperial_court_reform
 				limit_imperial_court_reform
+				open_imperial_administration
 				regional_council_reform
 				representation_of_the_crown_reform
 			}
@@ -200,9 +208,11 @@ republic = {
 	legacy_government = {
 		chalkeocracy_legacy
 		consortium_republic_legacy
+		dominion_tower_reform
 		dwarven_outpost_legacy
 		federal_republic_legacy
 		imperial_city
+		independent_faction
 		kourend_council_legacy
 		magiocracy_legacy
 		merchant_republic
@@ -235,11 +245,12 @@ republic = {
 				pirate_republic_reform
 				political_dynasties
 				rogue_republic
+				secluded_island_republic
 				sirenic_republic
 				tirannwn_republic
 				tirannwn_resistance
 				town_council_reform
-				trading_city_reform
+				trading_city
 				werewolf_council_reform
 			}
 		}
@@ -254,6 +265,8 @@ republic = {
 				smugglers_haven_reform
 				none_above_seren_reform
 				apprenticeship_education_reform
+				thrall_of_amascut_republic_reform
+				tortugan_travelling_culture_reform
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -397,7 +410,9 @@ tribal = {
 				boss_nation
 				cloud_giant_tribe
 				feldip_tribe
+				fremennik_clan
 				goblin_empire
+				hand_of_het
 				island_boss_nation
 				kharidian_tribe
 				migratory_tribe
@@ -414,6 +429,7 @@ tribal = {
 			reforms = {
 				isolationist_culture_reform
 				maritime_culture_reform
+				thrall_of_amascut_tribe_reform
 				razer_culture_reform #Hordes only
 				trader_culture_reform
 				resilience_reform #Boss nations only
@@ -517,6 +533,7 @@ theocracy = {
 				frontier_theocracy
 				guthixian_cave
 				monastic_order_reform
+				order_of_het
 				restored_zarosian_theocracy
 				shamanic_theocracy
 				theocratic_government_reform
@@ -530,6 +547,7 @@ theocracy = {
 				mission_of_balance_reform
 				commercial_mission_reform
 				mission_to_protect_reform
+				thrall_of_amascut_theocracy_reform
 			}
 		}
 		education_of_the_state = {

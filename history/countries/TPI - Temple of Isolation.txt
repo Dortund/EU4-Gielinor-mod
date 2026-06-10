@@ -1,0 +1,22 @@
+government = theocracy
+add_government_reform = cloistered_order
+government_rank = 1
+primary_culture = scabarite
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 1563 #Temple of Isolation
+
+100.1.1 = {
+	monarch = {
+		name = "Scabaras"
+		dynasty = "Tumeken"
+		birth_date = 2.1.1
+		adm = 7
+		dip = 1
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = scholar_personality
+	add_ruler_personality = secretive_personality
+}

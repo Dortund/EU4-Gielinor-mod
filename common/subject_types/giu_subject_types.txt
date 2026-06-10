@@ -51,15 +51,20 @@ tributary_state = {
 			AND = {
 				has_dlc = "Mandate of Heaven"
 				NOT = { 
-					is_subject_of_type = tributary_state
+					OR = {
+						is_subject_of_type = tributary_state
+						has_reform = runecrafting_crusader
+					}
 				}
 				OR = {
 					has_reform = vampyre_kingdom
+					has_reform = kharidian_empire
 					has_government_attribute = has_tributaries
 					has_country_flag = can_create_tributaries_flag
 					has_country_flag = can_create_tributaries_flag_estate
 					is_nomad = yes
 					religion_group = autocratic_group
+					religion_group = menaphite_group
 					technology_group = wushankotechgroup
 				}
 			}

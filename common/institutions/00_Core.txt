@@ -176,7 +176,11 @@ architecture = {
 	history = {
 		OR = {
 			AND = {
-				is_year = 1960
+				is_year = 1950
+				area = keldagrim_area
+			}
+			AND = {
+				is_year = 1955
 				OR = {
 					region = kharidian_desert_region
 					region = tirannwn_region
@@ -188,7 +192,7 @@ architecture = {
 			}
 			
 			AND = {
-				is_year = 1980
+				is_year = 1960
 				OR = {
 					region = fremennik_region
 					region = kandarin_region
@@ -201,7 +205,7 @@ architecture = {
 				}
 			}
 			AND = {
-				is_year = 1990
+				is_year = 1975
 				OR = {
 					region = kebos_region
 					region = morytania_region
@@ -1003,7 +1007,10 @@ exploration = {
 		has_port = yes
 		is_state = yes
 		owner = {
-			navy_size = 50
+			OR = {
+				navy_size = 50
+				navy_tradition = 60
+			}
 		}
 	}
 	start_chance = 5		#in 100 for when a province can_start
@@ -1046,14 +1053,36 @@ exploration = {
 			}
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.6
 			scale = yes
 			custom_trigger_tooltip = {
 				tooltip = tooltip_has_fifty_ships
 				owner = {
-					navy_size = 50
+				 	navy_size = 50
 				}
 				has_port = yes
+			}
+		}
+		modifier = {
+			factor = 0.6
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_high_navy_tradition
+				owner = {
+					navy_tradition = 60
+				}
+				has_port = yes
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_capital_has_adventurers
+				owner = {
+					absolutism = 20
+				}
+				is_capital = yes
 			}
 		}
 		modifier = {

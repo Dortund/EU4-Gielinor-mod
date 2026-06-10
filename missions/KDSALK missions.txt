@@ -1,35 +1,8 @@
-kharidian_missions_1 = {
-	slot = 1
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = KDS
-			tag = ALK
-		}
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	KDS_religious_tolerance = {
-		icon = mission_throne_of_saradomin
-		required_missions = { KDS_misthalanian_relations }
-		position = 2
-		trigger = {
-			saradomin = 0
-		}
-		effect = {
-			capital_scope = {
-				add_province_modifier = {
-					name = "KDS_saradominist_interest"
-					duration = 3650
-				}
-			}
-		}
-	}
-}
+####################################################
+# North Kharidian Shared
+####################################################
 
-kharidian_missions_2 = {
+kharidian_shared_missions_2 = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -37,47 +10,112 @@ kharidian_missions_2 = {
 		OR = {
 			tag = KDS
 			tag = ALK
+			AND = {
+				tag = KEM
+				OR = {
+					was_tag = KDS
+					was_tag = ALK
+				}
+				OR = {
+					has_country_flag = KDS_al_kharid_missions_branch_flag
+					has_country_flag = KDS_loyalist_missions_branch_flag
+				}
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
-	KDS_misthalanian_relations = {
-		icon = mission_misthalin_army
-		required_missions = {  }
-		trigger = {
-			OR = {
-				AND = {
-					alliance_with = MST
-					reverse_has_opinion = {
-						who = MST
-						value = 100
-					}
-				}
-				is_rival = MST
-				NOT = { exists = MST }
-			}
-		}
-		effect = {
-			add_dip_power = 50
-		}
-	}
 	
 	KDS_expand_our_trade_power = {
 		icon = mission_expand_our_trade_power
-		required_missions = { KDS_misthalanian_relations }
+		required_missions = { }
+		position = 1
 		trigger = {
 			63 = {
-				is_strongest_trade_power = ROOT
+				OR = {
+					is_strongest_trade_power = ROOT
+					trade_share = {
+						country = ROOT
+						share = 20
+					}
+				}
 			}
 		}
 		effect = {
 			add_mercantilism = 2
+			random_owned_province = {
+				limit = {
+					has_port = yes
+				}
+				add_province_modifier = {
+					name = ALK_shipbuilding_frenzy
+					duration = 9125
+				}
+			}
+		}
+	}
+	KDS_kharidian_port = {
+		icon = mission_kharidian_port
+		required_missions = { KDS_expand_our_trade_power }
+		position = 2
+		trigger = {
+			62 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			1561 = {
+				owned_by = ROOT
+				is_core = ROOT
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			num_of_light_ship = 10
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 62
+				province_id = 1561
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ALK_merchant_fleet"
+				duration = 3650
+			}
+			set_country_flag = KDS_unlock_spirit_anglers
+			custom_tooltip = KDS_unlock_spirit_anglers_tooltip
+		}
+	}
+	
+	KDS_terror_of_tempoross = {
+		icon = mission_terror_of_tempoross
+		required_missions = { KDS_kharidian_port }
+		position = 3
+		trigger = {
+			has_institution = exploration
+			NOT = { exists = TMP }
+			owns_core_province = 1000
+		}
+		provinces_to_highlight = {
+			province_id = 1000
+		}
+		effect = {
+			add_country_modifier = {
+				name = ALK_defeat_of_tempoross
+				duration = -1
+			}
 		}
 	}
 }
 
-kharidian_missions_3 = {
+kharidian_shared_missions_3 = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -85,105 +123,232 @@ kharidian_missions_3 = {
 		OR = {
 			tag = KDS
 			tag = ALK
+			AND = {
+				tag = KEM
+				OR = {
+					was_tag = KDS
+					was_tag = ALK
+				}
+				OR = {
+					has_country_flag = KDS_al_kharid_missions_branch_flag
+					has_country_flag = KDS_loyalist_missions_branch_flag
+				}
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
-	KDS_settle_al_kharid = {
-		icon = mission_settle_al_kharid
-		required_missions = {  }
+	KDS_misthalin_or_menaphos = {
+		icon = mission_misthalin_army
+		required_missions = { }
+		position = 1
 		trigger = {
 			OR = {
-				owns_core_province = 62
 				AND = {
-					treasury = 100
-					adm_power = 50
-					adm_tech = 6
+					OR = {
+						alliance_with = MST
+						is_subject_of = MST
+					}
+					reverse_has_opinion = {
+						who = MST
+						value = 100
+					}
+				}
+				AND = {
+					OR = {
+						alliance_with = MPS
+						is_subject_of = MPS
+					}
+					reverse_has_opinion = {
+						who = MPS
+						value = 100
+					}
+				}
+				is_great_power = yes
+			}			
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						alliance_with = MST
+						is_subject_of = MST
+					}
+					reverse_has_opinion = {
+						who = MST
+						value = 100
+					}
 					62 = {
 						is_empty = yes
 					}
 				}
+				set_global_flag = KDS_guaranteed_MST_help_flag
+				custom_tooltip = KDS_guaranteed_MST_help_tooltip
+			}
+			if = {
+				limit = {
+					OR = {
+						alliance_with = MPS
+						is_subject_of = MPS
+					}
+					reverse_has_opinion = {
+						who = MPS
+						value = 100
+					}
+					62 = {
+						is_empty = yes
+					}
+				}
+				set_global_flag = KDS_guaranteed_MPS_help_flag
+				custom_tooltip = KDS_guaranteed_MPS_help_tooltip
+			}
+			if = {
+				limit = {
+					is_great_power = yes
+					62 = {
+						is_empty = yes
+					}
+				}
+				62 = {
+					add_siberian_construction = 500
+				}
+			}
+			else_if = {
+				limit = {
+					tag = KDS
+					62 = {
+						is_empty = yes
+					}
+				}
+				country_event = {
+					id = flavor_kds.2
+				}
+			}
+			else_if = {
+				limit = {
+					owns_core_province = 62
+				}
+				62 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				62 = {
+					add_core = ROOT
+				}
+			}
+		}
+	}
+	
+	KDS_settle_al_kharid = {
+		icon = mission_settle_al_kharid
+		required_missions = { KDS_misthalin_or_menaphos }
+		position = 2
+		trigger = {
+		 	is_at_war = no
+			62 = {
+				owned_by = ROOT
+				is_core = ROOT
+				num_of_buildings_in_province = 1
+				development = 10
 			}
 		}
 		provinces_to_highlight = {
 			province_id = 62
 		}
 		effect = {
+			62 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				change_trade_goods = manufactured_goods
+				move_capital_effect = yes
+			}
 			if = {
 				limit = {
-					owns_core_province = 62
+					62 = {
+						num_free_building_slots = 1
 					}
-				add_adm_power = 50
-				62 = {
-					change_trade_goods = manufactured_goods
-				}
-			}
-			else = {
-				add_treasury = -100
-				add_adm_power = -50
-				62 = {
-					add_siberian_construction = 400
-					change_trade_goods = manufactured_goods
-				}
-			}
-		}
-	}
-	
-	KDS_rusum_pass = {
-		icon = mission_rusum_pass
-		required_missions = { KDS_settle_al_kharid }
-		trigger = {
-			AND = {
-				OR = {
-					has_idea = KDS_hold_the_pass
-					has_idea = ALK_toll_gate
-				}
-				OR = {
-					owns_core_province = 61
-					AND = {
-						treasury = 100
-						dip_power = 75
-						61 = {
-							is_empty = yes
+					NOT = {
+						62 = {
+							fort_level = 3
 						}
 					}
 				}
+				62 = {
+					add_building = fort_15th
+				}
+			}
+			add_country_modifier = {
+				name = KDS_emerging_nation
+				duration = 3650
+			}
+		}
+	}
+	KDS_future_of_north_kharid = {
+		icon = mission_future_of_al_kharid
+		required_missions = { KDS_settle_al_kharid }
+		position = 3
+		trigger = {
+		 	total_development = 35
+			has_institution = architecture
+			OR = {
+				is_subject = no
+				is_subject_of_type = tributary_state
+			}
+			OR = {
+				AND = {
+					OR = {
+						alliance_with = MST
+						overlord_of = MST
+					}
+					reverse_has_opinion = {
+						who = MST
+						value = 175
+					}
+				}
+				AND = {
+					any_country = {
+						is_emperor_of_china = yes
+						has_opinion = {
+							who = root
+							value = 175
+						}
+						OR = {
+							alliance_with = ROOT
+							overlord_of = ROOT
+						}
+					}
+				}
+				is_great_power = yes
 			}
 		}
 		provinces_to_highlight = {
-			province_id = 61
 		}
 		effect = {
+			change_government_reform_progress = 100
 			if = {
 				limit = {
-					owns_core_province = 61
-				}
-				add_dip_power = 25
-				61 = {
-					add_province_modifier = {
-						name = "KDS_toll_gate"
-						duration = 9125
+					NOT = {
+						tag = ALK
 					}
+				}
+				enable_branching_mission_review = {
+					key = KDS
+					ai_event_id = flavor_kds.7
 				}
 			}
 			else = {
-				add_treasury = -100
-				add_dip_power = -75
-				61 = {
-					add_siberian_construction = 400
-					add_province_modifier = {
-						name = "KDS_toll_gate"
-						duration = 9125
-					}
-					change_trade_goods = livestock_farm
-				}
+				add_prestige = 10
 			}
 		}
 	}
 }
 
-kharidian_missions_4 = {
+kharidian_shared_missions_4 = {
 	slot = 4
 	generic = no
 	ai = yes
@@ -191,79 +356,190 @@ kharidian_missions_4 = {
 		OR = {
 			tag = KDS
 			tag = ALK
+			AND = {
+				tag = KEM
+				OR = {
+					was_tag = KDS
+					was_tag = ALK
+				}
+				OR = {
+					has_country_flag = KDS_al_kharid_missions_branch_flag
+					has_country_flag = KDS_loyalist_missions_branch_flag
+				}
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
-	KDS_hets_land = {
-		icon = mission_hets_land
-		required_missions = { }
+	KDS_worthy_army = {
+		icon = mission_expand_the_training_ground
+		required_missions = {  }
+		position = 1
 		trigger = {
-			OR = {
-				owns_core_province = 789
-				AND = {
-					has_personal_deity = het
-					treasury = 50
-					mil_power = 25
-					manpower_percentage = 0.25
-					789 = {
-						is_empty = yes
-					}
-				}
-			}
-		}
-		provinces_to_highlight = {
-			province_id = 789
+			army_size_percentage = 1
 		}
 		effect = {
 			if = {
 				limit = {
-					owns_core_province = 789
+					religion = menaphite
 				}
-				789 = {
+				add_country_modifier = {
+					name = KDS_holy_training_regimen
+					duration = 9125
+				}
+			}
+			else = {
+				add_mil_power = 50
+			}
+		}
+	}
+	
+	KDS_professional_brothers = {
+		icon = mission_professional_brothers
+		required_missions = { KDS_worthy_army }
+		position = 2
+		trigger = {
+			army_professionalism = 0.25
+			has_global_modifier_value = {
+				which = land_morale
+				value = 0.2
+			}
+		}
+		effect = {
+			add_mil_power = 25
+			add_country_modifier = {
+				name = KDS_coordinated_defence
+				duration = 3650
+			}
+			if = {
+				limit = {
+					owns_core_province = 64
+					has_dlc = "Leviathan"
+					NOT = {
+						OR = {
+							64 = {
+								has_great_project = {
+									type = great_project_duel_arena
+									tier = 1
+								}
+							}
+							64 = {
+								has_great_project = {
+									type = great_project_duel_arena
+									tier = 2
+								}
+							}
+							64 = {
+								has_great_project = {
+									type = great_project_duel_arena
+									tier = 3
+								}
+							}
+						}
+					}
+				}
+				64 = {
+					change_trade_goods = lesser_loot
+					add_great_project_tier = {
+						type = great_project_duel_arena
+						tier = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					owns_core_province = 64
+				}
+				64 = {
+					change_trade_goods = lesser_loot
+					add_base_tax = 1
+					add_base_production = 1
 					add_base_manpower = 2
 				}
 			}
 			else = {
-				add_treasury = -50
-				add_mil_power = -25
-				add_yearly_manpower = -2.5
-				789 = {
-					add_siberian_construction = 400
-					change_trade_goods = lesser_loot
+				set_country_flag = KDS_professional_brothers_duel_arena_setup_flag
+				custom_tooltip = KDS_professional_brothers_duel_arena_setup_tooltip
+			}
+		}
+	}
+	
+	KDS_build_the_duel_arena = {
+		icon = mission_duel_arena
+		required_missions = { KDS_professional_brothers }
+		position = 3
+		trigger = {
+			owns_core_province = 64
+			if = {
+				limit = {
+					NOT = { has_dlc = "Leviathan" }
+				}
+				64 = {
+					development = 25
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+				}
+			}
+			else = {
+				OR = {
+					64 = {
+						has_great_project = {
+							type = great_project_duel_arena
+							tier = 2
+						}
+					}
+					64 = {
+						has_great_project = {
+							type = great_project_duel_arena
+							tier = 3
+						}
+					}
+				}
+			}
+			religion = menaphite
+			has_personal_deity = het
+		}
+		provinces_to_highlight = {
+			province_id = 64
+		}
+		effect = {
+			add_army_professionalism = 0.05
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				custom_tooltip = KDS_duel_arena_conditional_modifier_tooltip
+			}
+			else = {
+				add_country_modifier = {
+					name = KDS_glory_of_het
+					duration = -1
 				}
 			}
 		}
 	}
 	
-	KDS_scimitar_manufacture = {
-		icon = mission_combat_market
-		position = 2
-		required_missions = { KDS_worthy_army KDS_hets_land KDS_settle_al_kharid }
+	KDS_the_power_of_runecrafting = {
+		icon = mission_the_power_of_runecrafting
+		required_missions = { KDS_future_of_north_kharid }
+		position = 4
 		trigger = {
-			62 = {
-				owned_by = ROOT
-				is_core = ROOT
-				OR = {
-					has_building = workshop
-					has_building = counting_house
-				}
-				base_production = 6
-			}
+			has_institution = runecrafting
+			owns_core_province = 66
+			runes = 1
 		}
 		effect = {
-			add_country_modifier = {
-				name = "KDS_scimitar_production"
-				duration = 3650
+			country_event = { 
+				id = flavor_alk.5
 			}
-			65 = { add_permanent_claim = ROOT }
-			1395 = { add_permanent_claim = ROOT }
 		}
 	}
 }
 
-kharidian_missions_5 = {
+kharidian_shared_missions_5 = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -271,38 +547,1257 @@ kharidian_missions_5 = {
 		OR = {
 			tag = KDS
 			tag = ALK
+			AND = {
+				tag = KEM
+				OR = {
+					was_tag = KDS
+					was_tag = ALK
+				}
+				OR = {
+					has_country_flag = KDS_al_kharid_missions_branch_flag
+					has_country_flag = KDS_loyalist_missions_branch_flag
+				}
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
-	KDS_worthy_army = {
-		icon = mission_worthy_army
-		required_missions = {  }
-		trigger = {
-			army_size = 8
-		}
-		effect = {
-			add_mil_power = 50
-		}
-	}
-	
-	KDS_professional_brothers = {
-		icon = mission_professional_brothers
+	KDS_scimitar_manufacture = {
+		icon = mission_combat_market
+		position = 2
 		required_missions = { KDS_worthy_army }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				OR = {
+					trade_goods = manufactured_goods
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
 		trigger = {
-			army_professionalism = 0.1
-			has_global_modifier_value = {
-				which = land_morale
-				value = 0.2
+			calc_true_if = {
+				all_owned_province = {
+					base_production = 6
+					OR = {
+						trade_goods = manufactured_goods
+						has_building = workshop
+						has_building = counting_house
+					}
+				}
+				amount = 3
 			}
 		}
 		effect = {
-			add_prestige = 10
-			add_mil_power = 50
+			add_country_modifier = {
+				name = "KDS_scimitar_production"
+				duration = 7300
+			}
 		}
 	}
 }
+
+####################################################
+# Branching Slots
+####################################################
+
+kharidian_branching_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = KDS
+		NOT = {
+			OR = {
+				has_country_flag = KDS_al_kharid_missions_branch_flag
+				has_country_flag = KDS_loyalist_missions_branch_flag
+			}
+		}
+	}
+	has_country_shield = yes
+	KDS_branching_1_3 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_kharidian_port }
+		position = 3
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+	KDS_branching_1_5 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_branching_1_3 }
+		position = 5
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+}
+
+kharidian_branching_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = KDS
+		NOT = {
+			OR = {
+				has_country_flag = KDS_al_kharid_missions_branch_flag
+				has_country_flag = KDS_loyalist_missions_branch_flag
+			}
+		}
+	}
+	has_country_shield = yes
+	KDS_branching_2_4 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_future_of_north_kharid }
+		position = 4
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+	KDS_branching_2_6 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_branching_1_5 KDS_branching_2_4 KDS_branching_3_5 }
+		position = 6
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+	KDS_branching_2_7 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_branching_2_6 }
+		position = 7
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+}
+
+kharidian_branching_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = KDS
+		NOT = {
+			OR = {
+				has_country_flag = KDS_al_kharid_missions_branch_flag
+				has_country_flag = KDS_loyalist_missions_branch_flag
+			}
+		}
+	}
+	has_country_shield = yes
+	KDS_branching_3_5 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_future_of_north_kharid }
+		position = 5
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+	KDS_branching_3_6 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_branching_3_5 }
+		position = 6
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+	KDS_branching_3_8 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_branching_2_7 KDS_branching_3_6 KDS_branching_4_7 }
+		position = 8
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+}
+
+kharidian_branching_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = KDS
+		NOT = {
+			OR = {
+				has_country_flag = KDS_al_kharid_missions_branch_flag
+				has_country_flag = KDS_loyalist_missions_branch_flag
+			}
+		}
+	}
+	KDS_branching_4_5 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_the_power_of_runecrafting }
+		position = 5
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+	KDS_branching_4_7 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_branching_4_5 KDS_branching_5_6 }
+		position = 7
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+}
+
+kharidian_branching_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = KDS
+		NOT = {
+			OR = {
+				has_country_flag = KDS_al_kharid_missions_branch_flag
+				has_country_flag = KDS_loyalist_missions_branch_flag
+			}
+		}
+	}
+	KDS_branching_5_3 = {
+		icon = mission_unknown_mission
+		required_missions = { }
+		position = 3
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+	KDS_branching_5_4 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_branching_5_3 }
+		position = 4
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+	KDS_branching_5_6 = {
+		icon = mission_unknown_mission
+		required_missions = { KDS_branching_5_4 }
+		position = 6
+		trigger = { custom_trigger_tooltip = { tooltip = KDS_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = KDS_this_is_a_branching_mission }
+	}
+}
+
+####################################################
+# Kharidian Loyalist (Hetiyyah)
+####################################################
+
+kharidian_HET_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = KEM
+		}		
+		has_country_flag = KDS_loyalist_missions_branch_flag
+		NOT = { has_country_flag = KDS_al_kharid_missions_branch_flag }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDS_HET_conquest_of_south_lum = {
+		icon = mission_settle_the_south
+		required_missions = { KDS_kharidian_port }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = tutorial_island_area
+				area = lumbridge_swamp_area
+				area = south_lum_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			calc_true_if = {
+				all_owned_or_non_tributary_subject_province = {
+					OR = {
+						area = tutorial_island_area
+						area = lumbridge_swamp_area
+						area = south_lum_area
+					}
+				}
+				amount = 8
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 25
+			}		
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = tutorial_island_area
+						area = lumbridge_swamp_area
+						area = south_lum_area
+					}
+				}
+				add_province_modifier = {
+					name = KDS_honourably_defeated
+					duration = 9125
+				}
+			}
+			draynor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			breadbasket_of_misthalin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.13
+					}
+				}
+			}
+		}
+	}
+	
+	KDS_HET_quest_for_draynor = {
+		icon = mission_annex_draynor
+		required_missions = { KDS_HET_conquest_of_south_lum }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = draynor_area
+				area = tutorial_island_area
+				area = lumbridge_swamp_area
+				area = south_lum_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			owns_core_province = 942
+			calc_true_if = {
+				all_owned_or_non_tributary_subject_province = {
+					OR = {
+						area = draynor_area
+						area = tutorial_island_area
+						area = lumbridge_swamp_area
+						area = south_lum_area
+					}
+				}
+				amount = 14
+			}
+		}
+		effect = {
+			add_corruption = -2
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 50
+			}	
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = draynor_area
+						area = tutorial_island_area
+						area = lumbridge_swamp_area
+						area = south_lum_area
+					}
+					NOT = {
+						has_province_modifier = KDS_honourably_defeated
+					}
+					NOT = {
+						is_religion = ROOT
+					}
+				}
+				add_province_modifier = {
+					name = KDS_honourably_defeated
+					duration = 9125
+				}
+			}
+			port_sarim_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_asgarnia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.13
+					}
+				}
+			}
+		}
+	}
+	KDS_HET_third_age_flank = {
+		icon = mission_fall_of_sarim
+		required_missions = { KDS_HET_quest_for_draynor }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = port_sarim_area
+				area = south_asgarnia_area
+				area = rimmington_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			owns_core_province = 33
+			calc_true_if = {
+				all_owned_or_non_tributary_subject_province = {
+					OR = {
+						area = port_sarim_area
+						area = south_asgarnia_area
+						area = rimmington_area
+					}
+				}
+				amount = 7
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 50
+			}	
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = port_sarim_area
+						area = south_asgarnia_area
+						area = rimmington_area
+					}
+					NOT = {
+						has_province_modifier = KDS_honourably_defeated
+					}
+					NOT = {
+						is_religion = ROOT
+					}
+				}
+				add_province_modifier = {
+					name = KDS_honourably_defeated
+					duration = 9125
+				}
+			}
+			eastern_karamja_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.13
+					}
+				}
+			}
+		}
+	}
+	KDS_HET_karamjan_intervention = {
+		icon = mission_island_dominance
+		required_missions = { KDS_HET_third_age_flank }
+		position = 6
+		provinces_to_highlight = {
+			region = karamja_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			calc_true_if = {
+				all_owned_or_non_tributary_subject_province = {
+					region = karamja_region
+				}
+				amount = 4
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = KDS_HET_bay_of_het
+				duration = -1
+			}
+			539 = {
+				change_province_name = "Eulayid Lagoon"
+			}
+			540 = {
+				change_province_name = "Bay of Het"
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 100
+			}	
+			every_owned_province = {
+				limit = {
+					region = karamja_region
+					NOT = {
+						has_province_modifier = KDS_honourably_defeated
+					}
+					NOT = {
+						is_religion = ROOT
+					}
+				}
+				add_province_modifier = {
+					name = KDS_honourably_defeated
+					duration = 9125
+				}
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.13
+					}
+				}
+			}
+		}
+	}
+}
+
+kharidian_HET_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = KEM
+		}		
+		has_country_flag = KDS_loyalist_missions_branch_flag
+		NOT = { has_country_flag = KDS_al_kharid_missions_branch_flag }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDS_HET_command_misthalins_bounty = {
+		icon = mission_lum_trade
+		required_missions = { KDS_HET_conquest_of_south_lum KDS_future_of_north_kharid }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = breadbasket_of_misthalin_area
+				area = south_lum_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			south_lum_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			breadbasket_of_misthalin_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 50
+			}
+			varrock_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			saranthium_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			kings_road_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.13
+					}
+				}
+			}
+		}
+	}
+	KDS_HET_ardent_trade_dominance = {
+		icon = mission_shipyard_expansion
+		required_missions = { KDS_HET_third_age_flank KDS_HET_command_misthalins_bounty }
+		position = 6
+		provinces_to_highlight = {
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			mercantilism = 25
+			539 = {
+				has_most_province_trade_power = ROOT
+			}
+			540 = {
+				has_most_province_trade_power = ROOT
+			}
+			541 = {
+				has_most_province_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 1
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 50
+			}
+		}
+	}
+	KDS_HET_wealth_for_menaphos = {
+		icon = mission_gold_heap
+		required_missions = { KDS_HET_ardent_trade_dominance }
+		position = 7
+		provinces_to_highlight = {
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			num_of_light_ship = 30
+			100 = {
+				highest_value_trade_node = yes
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 100
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.14
+					}
+				}
+			}
+		}
+	}
+}
+
+kharidian_HET_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = KEM
+		}		
+		has_country_flag = KDS_loyalist_missions_branch_flag
+		NOT = { has_country_flag = KDS_al_kharid_missions_branch_flag }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	KDS_HET_proof_of_loyalty = {
+		icon = mission_royal_menaphite_army
+		required_missions = { KDS_future_of_north_kharid }
+		position = 4
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				owner = {
+					is_emperor_of_china = yes
+				}
+			}
+			else = {
+				owner = {
+					alliance_with = ROOT
+				}
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }			
+			if = {
+				limit = {
+					any_country = {
+						is_emperor_of_china = yes
+					}
+					NOT = {
+						is_emperor_of_china = yes
+					}
+				}
+				is_subject_of_type = tributary_state
+				custom_tooltip = kds_het_become_tributary_by_decision_tooltip
+				overlord = {
+					is_emperor_of_china = yes
+					ROOT = {
+						trust = { who = PREV value = 75 }
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = has_recently_used_aid_for_the_pharoah_decision
+					OR = {
+						has_country_modifier = kharidian_emergence_pharoahs_blessing_modifier
+						has_country_modifier = kharidian_emergence_enhanced_pharoahs_blessing_modifier
+					}
+				}
+			}
+			else = {
+			 	num_of_trusted_allies = 3
+			}
+		}
+		effect = {
+			change_ruler_stat = {
+				type = dip
+				amount = 2
+			}
+			add_ruler_personality = charismatic_negotiator_personality
+		}
+	}
+	
+	KDS_HET_pharoahs_aid = {
+		icon = mission_jalkabir
+		required_missions = { KDS_HET_proof_of_loyalty }
+		position = 6
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				owner = {
+					is_emperor_of_china = yes
+				}
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }	
+			if = {
+				limit = {
+					any_country = {
+						is_emperor_of_china = yes
+					}
+					NOT = {
+						is_emperor_of_china = yes
+					}
+				}
+				is_subject_of_type = tributary_state
+				custom_tooltip = kds_het_become_tributary_by_decision_tooltip
+				custom_trigger_tooltip = {
+					tooltip = has_recently_used_aid_for_the_pharoah_decision
+					OR = {
+						has_country_modifier = kharidian_emergence_pharoahs_blessing_modifier
+						has_country_modifier = kharidian_emergence_enhanced_pharoahs_blessing_modifier
+					}
+				}
+			}
+			else = {
+		 	 	government_rank = 3
+			}
+			if = {
+				limit = {
+					has_government_mechanic = kharidian_emergence_mechanic
+				}
+				custom_trigger_tooltip = {
+					tooltip = tier_3_all_kharidian_emergence
+					check_variable = {
+						which = kharidian_emergence_adm_var
+						value = 3
+					}
+					check_variable = {
+						which = kharidian_emergence_dip_var
+						value = 3
+					}
+					check_variable = {
+						which = kharidian_emergence_mil_var
+						value = 3
+					}
+				}
+			}
+			else = {
+				reform_level = 6
+				has_institution = statehood
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			if = {
+				limit = {
+					has_government_mechanic = kharidian_emergence_mechanic
+				}
+				custom_tooltip = kds_het_enhance_aid_for_the_pharoah_tooltip
+				set_country_flag = kds_buffed_aid_for_pharoah
+			}
+			else = {
+				add_adm_power = 50
+			}
+		}
+	}
+	
+	KDS_HET_reformation_of_hetiyyah = {
+		icon = mission_al_kharid_ascendant
+		required_missions = { KDS_HET_pharoahs_aid }
+		position = 7
+		provinces_to_highlight = {
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }	
+			if = {
+				limit = {
+					OR = {
+						has_government_mechanic = kharidian_emergence_mechanic
+						has_country_flag = kharidian_emergence_completed
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = completed_all_kharidian_emergence_reforms
+					has_country_flag = kharidian_emergence_completed
+				}
+			}
+			else = {
+				great_power_rank = 3
+			}
+		}
+		effect = {
+			change_government_reform_progress = 250
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+	
+	KDS_HET_hets_chosen = {
+		icon = mission_hets_chosen
+		required_missions = { KDS_HET_wealth_for_menaphos KDS_HET_reformation_of_hetiyyah KDS_HET_consolidate_misthalin }
+		position = 8
+		provinces_to_highlight = {
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }	
+			religion_group = menaphite_group
+			if = {
+				limit = {
+					religion = menaphite
+				}
+				has_personal_deity = het
+			}
+			development_in_provinces = {
+				value = 300
+				culture_group = kharidian_group
+			}
+			NOT = { corruption = 1 }
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					ROOT = { trust = { who = PREV value = 100 } }
+				}
+			}
+			else = {
+				OR = {
+					is_emperor_of_china = yes
+					AND = {
+						is_subject_of_type = tributary_state
+						overlord = {
+							is_emperor_of_china = yes
+							ROOT = { trust = { who = PREV value = 100 } }
+						}
+					}
+					num_of_owned_provinces_with = {
+						region = kharidian_desert_region
+						value = 25
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = KDS_HET_hets_chosen
+				duration = -1
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.17
+					}
+				}
+			}
+		}
+	}
+}
+
+kharidian_HET_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = KEM
+		}		
+		has_country_flag = KDS_loyalist_missions_branch_flag
+		NOT = { has_country_flag = KDS_al_kharid_missions_branch_flag }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	KDS_HET_best_the_blue_order = {
+		icon = mission_establish_wizards_tower
+		required_missions = { KDS_the_power_of_runecrafting }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 6
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			religion_group = menaphite_group
+			owns_core_province = 6
+			army_strength = {
+				who = MST
+				value = 1
+			}
+		}
+		effect = {
+			custom_tooltip = enables_wizards_tower_as_menaphite_tooltip
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_adm
+				value = 25
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 25
+			}
+		}
+	}
+	KDS_HET_the_desert_grows = {
+		icon = mission_expand_inland
+		required_missions = { KDS_HET_best_the_blue_order }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				province_id = 65
+				region = misthalin_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			owns_core_province = 65
+			num_of_owned_provinces_with = {
+				region = misthalin_region
+				value = 30
+			}
+		}
+		effect = {
+			misthalin_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = {
+						area = swamp_caves_area
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 50
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.13
+					}
+				}
+			}
+		}
+	}
+	KDS_HET_consolidate_misthalin = {
+		icon = mission_consolidate_misthalin
+		required_missions = { KDS_HET_the_desert_grows KDS_HET_victory_over_the_empty_lord }
+		position = 7
+		provinces_to_highlight = {
+			region = misthalin_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			culture_group = kharidian_group
+			religion_group = menaphite_group
+			owns_core_province = 14
+			num_of_owned_provinces_with = {
+				region = misthalin_region
+				value = 45
+			}
+			num_of_owned_provinces_with = {
+				region = misthalin_region
+				culture_group = kharidian_group
+				value = 10
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 50
+			}
+			14 = {
+				change_province_name = "Arraviyyah"
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_adm
+				value = 50
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 50
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.13
+					}
+				}
+			}
+		}
+	}
+}
+
+kharidian_HET_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KDS
+			tag = KEM
+		}		
+		has_country_flag = KDS_loyalist_missions_branch_flag
+		NOT = { has_country_flag = KDS_al_kharid_missions_branch_flag }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	KDS_HET_menaphite_proselytisation = {
+		icon = mission_glory_of_the_pantheon
+		required_missions = { }
+		position = 3
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				NOT = { religion = ROOT }
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			religion_group = menaphite_group
+			num_of_owned_provinces_with = {
+				NOT = { region = kharidian_desert_region }
+				value = 10
+				religion = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = KDS_HET_kharidian_culture_enthusiasm
+				duration = 9125			
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_adm
+				value = 50
+			}
+		}
+	}
+	
+	KDS_HET_awe_of_the_pantheon = {
+		icon = mission_awe_of_the_pantheon
+		required_missions = { KDS_build_the_duel_arena KDS_HET_menaphite_proselytisation }
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			num_of_owned_provinces_with = {
+				NOT = { region = kharidian_desert_region }
+				value = 20
+				religion = ROOT
+			}
+			army_size = 30
+		 	army_professionalism = 0.5
+		}
+		effect = {
+			custom_tooltip = chance_for_siege_conversion_tooltip
+			set_country_flag = KDS_HET_sieges_can_convert_tooltip
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_adm
+				value = 50
+			}
+		}
+	}
+	
+	KDS_HET_victory_over_the_empty_lord = {
+		icon = mission_fort_of_kharid_et
+		required_missions = { KDS_HET_best_the_blue_order KDS_HET_awe_of_the_pantheon }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = kharidian_desert_region
+					religion = zaros
+				}
+				area = saranthium_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			owns_core_province = 63
+			religion_group = menaphite_group
+			saranthium_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = ROOT
+			}
+			NOT = {
+				any_province = {
+					region = kharidian_desert_region
+					religion = zaros
+				}
+			}			
+		}
+		effect = {
+			63 = {
+				add_province_modifier = {
+					name = KDS_HET_fort_of_kharid_et
+					duration = -1
+				}
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_adm
+				value = 100
+			}
+			if = {
+				limit = {
+					is_subject_of_type = tributary_state
+					overlord = {
+						is_emperor_of_china = yes
+					}
+				}
+				overlord = {
+					country_event = {
+						id = flavor_kds.13
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
 
 ####################################################
 # Al-Kharid
@@ -313,121 +1808,16 @@ alkharidian_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = ALK
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	ALK_saradominist_immigration = {
-		icon = mission_encourage_saradominist_immigration
-		required_missions = { KDS_religious_tolerance KDS_expand_our_trade_power }
-		trigger = {
-			any_ally = {
-				trust = { who = ROOT value = 60 }
-				religion = saradomin
-			}
-			stability = 3
-		}
-		effect = {
-			random_owned_province = {
-				limit = {
-					NOT = { is_capital = yes }
+		OR = {
+			AND = {
+				OR = {
+					tag = KDS
+					tag = KEM
 				}
-				change_religion = saradomin
-				add_base_tax = 2
-				add_base_production = 1
-				add_base_manpower = 1
-				add_province_modifier = {
-					name = "ALK_saradomist_integration"
-					duration = 7300
-				}
+				has_country_flag = KDS_al_kharid_missions_branch_flag
 			}
+			tag = ALK
 		}
-	}
-	
-	ALK_abbey_of_st_elspeth = {
-		icon = mission_abbey_of_st_elspeth
-		required_missions = { ALK_saradominist_immigration }
-		trigger = {
-			63 = {
-				has_building = cathedral
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			saradomin = 1
-		}
-		effect = {
-			63 = {
-				change_province_name = "Citharede Abbey"
-				change_culture = alkharidian
-				change_religion = saradomin
-				add_base_tax = 2
-				add_base_production = 1
-				add_base_manpower = 1
-				add_province_modifier = {
-					name = "ALK_citharede"
-					duration = -1
-				}
-			}
-		}
-	}
-	
-	ALK_the_power_of_runecrafting = {
-		icon = mission_the_power_of_runecrafting
-		required_missions = {  }
-		position = 5
-		trigger = {
-			has_institution = runecrafting
-			owns_core_province = 66
-			runes = 1
-		}
-		effect = {
-			country_event = { 
-				id = flavor_alk.5
-				days = 1
-			}
-		}
-	}
-	ALK_banks_of_the_salve = {
-		icon = mission_banks_of_the_salve
-		position = 7
-		required_missions = { ALK_the_power_of_runecrafting }
-		trigger = {
-			owns_core_province = 66
-			absolutism = 90
-			OR = {
-				owns_core_province = 67
-				AND = {
-					adm_power = 75
-					mil_power = 75
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					owns_core_province = 67
-					}
-				add_mil_power = 50
-			}
-			else = {
-				add_adm_power = -75
-				add_mil_power = -75
-				67 = {
-					add_siberian_construction = 400
-				}
-			}
-		}
-	}
-	
-}
-
-alkharidian_missions_2 = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		tag = ALK
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -435,23 +1825,42 @@ alkharidian_missions_2 = {
 	ALK_pollnivneach_trade = {
 		icon = mission_pollnivneach_trade
 		position = 3
-		required_missions = { KDS_expand_our_trade_power }
+		required_missions = { KDS_kharidian_port }
 		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
 			75 = {
 				is_strongest_trade_power = ROOT
 			}
 		}
 		effect = {
 			add_mercantilism = 2
-			95 = { add_permanent_claim = ROOT }
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 25
+			}	
+			add_country_modifier = {
+				name = ALK_riches_of_pollnivneach
+				duration = 9125
+			}
 		}
 	}
-	
-	ALK_traders_of_menaphos = {
+	ALK_menaphite_trade_war = {
 		icon = mission_traders_of_menaphos
 		position = 5
-		required_missions = { ALK_pollnivneach_trade ALK_menaphite_relations }
+		required_missions = { ALK_pollnivneach_trade }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
 		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
 			100 = {
 				trade_share = {
 					country = ROOT
@@ -459,80 +1868,96 @@ alkharidian_missions_2 = {
 				}
 			}
 			OR = {
-				trade_depot = 2
-				stock_exchange = 2
+				marketplace = 3
+				trade_depot = 3
+				stock_exchange = 3
 			}
+			num_of_light_ship = 15
+			navy_size_percentage = 0.9
 		}
 		effect = {
 			add_mercantilism = 2
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 50
+			}	
+			add_country_modifier = {
+				name = ALK_growing_naval_pressure
+				duration = 9125
+			}
+		}
+	}
+	
+	ALK_challenge_the_khagan = {
+		icon = mission_khagan
+		position = 7
+		required_missions = { ALK_al_kharid_ascendant }
+		provinces_to_highlight = {
+			is_part_of_hre = yes
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			OR = {
+				NOT = { hre_size = 1 }
+				emperor = {
+					humiliated_by = ROOT
+				}
+			}
+		}
+		effect = {
+			add_permanent_power_projection = {
+				type = 25_permanent_power_projection
+				amount = 25
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 100
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 100
+			}
 		}
 	}
 }
 
-alkharidian_missions_3 = {
-	slot = 3
+alkharidian_missions_2 = {
+	slot = 2
 	generic = no
 	ai = yes
 	potential = {
-		tag = ALK
+		OR = {
+			AND = {
+				OR = {
+					tag = KDS
+					tag = KEM
+				}
+				has_country_flag = KDS_al_kharid_missions_branch_flag
+			}
+			tag = ALK
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
-	ALK_kharidian_port = {
-		icon = mission_kharidian_port
-		required_missions = { KDS_expand_our_trade_power KDS_rusum_pass }
-		trigger = {
-			62 = {
-				OR = {
-					has_building = shipyard
-					has_building = grand_shipyard
-				}
-			}
-			num_of_light_ship = 10
-		}
-		provinces_to_highlight = {
-			province_id = 62
-			}
-		effect = {
-			add_country_modifier = {
-				name = "ALK_merchant_fleet"
-				duration = 3650
-			}
-		}
-	}
-	ALK_menaphite_relations = {
-		icon = mission_menaphite_relations
-		required_missions = { ALK_kharidian_port }
-		trigger = {
-			total_development = 50
-			OR = {
-				owns_core_province = 100
-				100 = {
-					owner = {
-						alliance_with = ROOT
-					}
-				}
-				100 = {
-					owner = {
-						is_rival = ROOT
-					}
-				}
-			}
-		}
-		effect = {
-			add_dip_power = 50
-		}
-	}
-	
 	ALK_spies_of_al_kharid = {
 		icon = mission_spies_of_al_kharid
-		required_missions = { ALK_menaphite_relations }
+		required_missions = { KDS_future_of_north_kharid }
+		position = 4
 		trigger = {
-			advisor = spymaster
-			has_global_modifier_value = {
-				which = spy_offence
-				value = 0.6
+			not_in_mission_preview_mode = { key = KDS }
+			OR = {
+				full_idea_group = spy_ideas
+				AND = {
+					advisor = spymaster
+					has_global_modifier_value = {
+						which = spy_offence
+						value = 0.6
+					}
+				}
 			}
 			any_rival_country = {
 				has_spy_network_from = {
@@ -542,6 +1967,11 @@ alkharidian_missions_3 = {
 			}
 		}
 		effect = {
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 25
+			}	
 			add_country_modifier = {
 				name = "ALK_agenda_of_espionage"
 				duration = 3650
@@ -549,13 +1979,48 @@ alkharidian_missions_3 = {
 		}
 	}
 	
-	ALK_al_kharid_ascendant = {
-		icon = mission_al_kharid_ascendant
-		required_missions = { ALK_traders_of_menaphos ALK_spies_of_al_kharid }
+	ALK_menaphite_turnaround = {
+		icon = mission_menaphite_relations
+		required_missions = { ALK_spies_of_al_kharid }
+		position = 5
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					OR = {
+						is_emperor_of_china = yes
+						NOT = {
+							any_country = {
+								is_emperor_of_china = yes
+							}
+						}
+					}
+				}
+				OR = {
+					area = menaphos_area
+					area = outer_menaphos_area
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+			else = {
+				owner = {
+					is_emperor_of_china = yes
+				}
+			}
+		}
 		trigger = {
-			OR = {
+			not_in_mission_preview_mode = { key = KDS }
+			if = {
+				limit = {
+					OR = {
+						is_emperor_of_china = yes
+						NOT = {
+							any_country = {
+								is_emperor_of_china = yes
+							}
+						}
+					}
+				}
 				AND = {
-					NOT = { exists = MPS }
 					menaphos_area = {
 						type = all
 						owned_by = ROOT
@@ -567,14 +2032,25 @@ alkharidian_missions_3 = {
 						is_core = ROOT
 					}
 				}
-				AND = {
-					exists = MPS
-					army_size = MPS
-					total_development = MPS
-				}	
+			}
+			else = {
+				any_country = {
+					is_emperor_of_china = yes
+					NOT = {
+						army_size = ROOT
+					}
+					NOT = {
+						total_development = ROOT
+					}
+				}
 			}
 		}
 		effect = {
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 25
+			}
 			if = {
 				limit = {
 					AND = {
@@ -620,6 +2096,406 @@ alkharidian_missions_3 = {
 			}
 		}
 	}
+	
+	ALK_al_kharid_ascendant = {
+		icon = mission_al_kharid_ascendant
+		required_missions = { ALK_menaphite_trade_war ALK_menaphite_turnaround }
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					OR = {
+						is_emperor_of_china = yes
+						NOT = {
+							any_country = {
+								is_emperor_of_china = yes
+							}
+						}
+					}
+				}
+				OR = {
+					area = menaphos_area
+					area = outer_menaphos_area
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+			else = {
+				owner = {
+					is_emperor_of_china = yes
+				}
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							is_emperor_of_china = yes
+						}
+					}
+				}
+				AND = {
+					menaphos_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+					outer_menaphos_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				great_power_rank = 4
+			}
+			else = {
+				is_emperor_of_china = yes
+				owns_core_province = 100
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 100
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				add_mandate = 20
+				if = {
+					limit = {
+						has_dlc = Leviathan
+					}
+					100 = {
+						add_great_project_tier = {
+							type = great_project_jalkabir
+							tier = 1
+						}
+					}
+				}
+				else = {
+					100 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+			else = {
+				sophanem_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			100 = {
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+		}
+	}
+	
+	ALK_new_tributary_system = {
+		icon = mission_gold_heap
+		required_missions = { ALK_al_kharid_ascendant }
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					OR = {
+						is_emperor_of_china = yes
+						NOT = {
+							any_country = {
+								is_emperor_of_china = yes
+							}
+						}
+					}
+				}
+				OR = {
+					area = menaphos_area
+					area = outer_menaphos_area
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+			else = {
+				owner = {
+					is_emperor_of_china = yes
+				}
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							is_emperor_of_china = yes
+						}
+					}
+				}
+				calc_true_if = {
+					all_subject_country = {
+						OR = {
+							is_subject_of_type = march
+							is_subject_of_type = vassal
+						}
+						total_development = 100
+					}
+					amount = 3
+				}
+			}
+			else = {
+				is_emperor_of_china = yes
+				calc_true_if = {
+					all_subject_country = {
+						is_subject_of_type = tributary_state
+					}
+					amount = 5
+				}
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 100
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							is_emperor_of_china = yes
+						}
+					}
+				}
+				add_country_modifier = {
+					name = ALK_imperial_consolidation
+					duration = 9125
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						NOT = {
+							is_emperor_of_china = yes
+						}
+					}
+					custom_tooltip = new_tributary_system_reward_information_tooltip
+				}
+				add_mandate = 10
+				every_subject_country = {
+					limit = {
+						capital_scope = {
+							region = kharidian_desert_region
+						}
+						any_owned_province = {
+							region = kharidian_desert_region
+							has_empty_adjacent_province = yes
+						}
+						is_subject_of_type = tributary_state
+					}
+					country_event = {
+						id = empire_of_kharid_events.1
+					}
+				}
+			}
+		}
+	}	
+}
+
+
+alkharidian_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				OR = {
+					tag = KDS
+					tag = KEM
+				}
+				has_country_flag = KDS_al_kharid_missions_branch_flag
+			}
+			tag = ALK
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	ALK_governance_of_al_kharid = {
+		icon = mission_kharidian_diplomacy
+		position = 4
+		required_missions = { KDS_future_of_north_kharid }
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			owns_core_province = 62
+			if = {
+				limit = {
+					NOT = { has_government_mechanic = kharidian_emergence_mechanic }
+					NOT = { has_country_flag = has_country_flag = kharidian_emergence_completed }
+				}
+				reform_level = 6
+				has_institution = statehood
+				62 = {
+					num_of_times_expanded_infrastructure = 2
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = has_country_flag = kharidian_emergence_completed
+				}
+				reform_level = 6
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = tier_3_all_kharidian_emergence
+					check_variable = {
+						which = kharidian_emergence_adm_var
+						value = 3
+					}
+					check_variable = {
+						which = kharidian_emergence_dip_var
+						value = 3
+					}
+					check_variable = {
+						which = kharidian_emergence_mil_var
+						value = 3
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_government_mechanic = kharidian_emergence_mechanic
+				}
+				change_government_reform_progress = 100
+			}
+			else = {
+				add_adm_power = 50
+			}
+			change_ruler_stat = {
+				type = adm
+				amount = 2
+			}
+		}
+	}
+	
+	ALK_a_true_emirate = {
+		icon = mission_a_true_emirate
+		position = 6
+		required_missions = { ALK_menaphite_turnaround ALK_governance_of_al_kharid ALK_banks_of_the_salve }
+		provinces_to_highlight = {
+			OR = {
+				area = al_kharid_area
+				area = upper_kharid_area
+				area = kharidian_border_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			al_kharid_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			upper_kharid_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			kharidian_border_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = { amount = 25 }
+			custom_tooltip = ALK_distribute_15_development_randomly_in_north_kharid
+			hidden_effect = {
+				for = {
+					amount = 15
+					effect = "
+						random_owned_province = {
+							limit = {
+								OR = {
+									area = al_kharid_area
+									area = upper_kharid_area
+									area = kharidian_border_area
+								}
+							}
+							add_random_development = 1
+						}
+					"
+				}
+			}
+		}
+	}
+	
+	ALK_kharidian_glory = {
+		icon = mission_kharidian_glory
+		position = 8
+		required_missions = { ALK_new_tributary_system ALK_a_true_emirate ALK_invasion_of_morytania }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			is_great_power = yes
+			62 = {
+				development = 40
+				num_of_times_expanded_infrastructure = 2
+				num_of_buildings_in_province = 8
+				province_has_center_of_trade_of_level = 3
+			}
+			al_kharid_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				development = 10
+			}
+			upper_kharid_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				development = 10
+			}
+			kharidian_border_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				development = 10
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government_mechanic = kharidian_emergence_mechanic
+						has_country_flag = kharidian_emergence_completed
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = completed_all_kharidian_emergence_reforms
+					has_country_flag = kharidian_emergence_completed
+				}
+			}
+			else = {
+				great_power_rank = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ALK_kharidian_glory_modifier
+				duration = -1
+			}
+		}
+	}
 }
 
 alkharidian_missions_4 = {
@@ -627,103 +2503,167 @@ alkharidian_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = ALK
+		OR = {
+			AND = {
+				OR = {
+					tag = KDS
+					tag = KEM
+				}
+				has_country_flag = KDS_al_kharid_missions_branch_flag
+			}
+			tag = ALK
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
-	ALK_local_metal_source = {
-		icon = mission_mining
-		required_missions = { KDS_rusum_pass KDS_scimitar_manufacture }
+	ALK_banks_of_the_salve = {
+		icon = mission_banks_of_the_salve
+		position = 5
+		required_missions = { KDS_the_power_of_runecrafting }
 		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			owns_core_province = 67
 			OR = {
-				army_size = 20
-				any_owned_province = { has_building = soldier_households }
-				any_owned_province = { has_building = impressment_offices }
-				any_owned_province = { has_building = conscription_center }
-				mil_tech = 12
-			}
-			OR = {
-				owns_core_province = 65
-				AND = {
-					treasury = 200
-					mil_power = 75
-					manpower_percentage = 0.2
-					65 = {
-						is_empty = yes
-					}
+				absolutism = 50
+				67 = {
+					development = 20
+					has_manufactory_trigger = yes
 				}
 			}
-			OR = {
-				owns_core_province = 1395
-				AND = {
-					treasury = 100
-					mil_power = 35
-					manpower_percentage = 0.1
-					1395 = {
-						is_empty = yes
-					}
-				}
-			}
-		}
-		provinces_to_highlight = {
-			province_id = 65
 		}
 		effect = {
-			if = {
-				limit = {
-					owns_core_province = 65
-				}
-				65 = {
-					add_base_production = 2
-				}
-			}
-			else = {
-				add_treasury = -200
-				add_mil_power = -75
-				add_yearly_manpower = -2
-				65 = {
-					add_siberian_construction = 500
-					change_trade_goods = basic_ores
-				}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_adm
+				value = 50
 			}
 			if = {
 				limit = {
-					owns_core_province = 1395
+					67 = {
+						NOT = { trade_goods = divine_energy }
+						NOT = { trade_goods = lesser_loot }
+						NOT = { trade_goods = rare_loot }
+					}
 				}
-				65 = {
-					add_base_tax = 1
-				}
-			}
-			else = {
-				add_treasury = -100
-				add_mil_power = -35
-				add_yearly_manpower = -1
-				1395 = {
-					add_siberian_construction = 100
+				67 = {
+					change_trade_goods = lesser_loot
 				}
 			}
-		}
-	}
-	ALK_terror_of_tempoross = {
-		icon = mission_terror_of_tempoross
-		required_missions = { ALK_kharidian_port }
-		trigger = {
-			has_institution = exploration
-			NOT = { exists = TMP }
-			owns_core_province = 1000
-		}
-		provinces_to_highlight = {
-			province_id = 1000
-		}
-		effect = {
-			add_country_modifier = {
-				name = ALK_defeat_of_tempoross
-				duration = 9125
+			67 = {
+				add_province_modifier = {
+					name = ALK_polypore_dungeon
+					duration = -1
+				}
+			}
+			the_burgh_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
 	
+	ALK_invasion_of_morytania = {
+		icon = mission_in_aid_of_the_myreque
+		required_missions = { ALK_banks_of_the_salve ALK_resettle_uzer }
+		position = 7
+		provinces_to_highlight = {
+			region = morytania_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			num_of_owned_provinces_with = {
+				region = morytania_region
+				value = 10
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = saradomin
+				}
+				add_country_modifier = {
+					name = ALK_guardians_of_hallowvale_saradomin
+					duration = -1
+				}
+				random_owned_province = {
+					limit = {
+						region = morytania_region
+						has_port = yes
+					}
+					if = {
+						limit = {
+							NOT = { religion = saradomin }
+						}
+						change_religion = saradomin
+					}
+					add_province_modifier = {
+						name = ALK_hallowvale_haven_saradomin
+						duration = -1
+					}
+				}
+				country_event = {
+					id = flavor_alk.9
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = order_group
+				}
+				add_country_modifier = {
+					name = ALK_guardians_of_hallowvale_order
+					duration = -1
+				}
+				random_owned_province = {
+					limit = {
+						region = morytania_region
+						has_port = yes
+					}
+					add_province_modifier = {
+						name = ALK_hallowvale_haven
+						duration = -1
+					}
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = ALK_guardians_of_hallowvale
+					duration = -1
+				}
+				random_owned_province = {
+					limit = {
+						region = morytania_region
+						has_port = yes
+					}
+					add_province_modifier = {
+						name = ALK_hallowvale_haven
+						duration = -1
+					}
+				}
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_mil
+				value = 100
+			}
+			custom_tooltip = alk_saradominists_opinion_boost_morytania_tooltip
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						religion = saradomin
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = alk_freed_morytanian_saradominists
+					}
+				}
+			}
+		}
+	}
 }
 
 alkharidian_missions_5 = {
@@ -731,92 +2671,640 @@ alkharidian_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = ALK
+		OR = {
+			AND = {
+				OR = {
+					tag = KDS
+					tag = KEM
+				}
+				has_country_flag = KDS_al_kharid_missions_branch_flag
+			}
+			tag = ALK
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
-	ALK_expand_the_training_grounds = {
-		icon = mission_expand_the_training_ground
-		required_missions = { KDS_scimitar_manufacture KDS_professional_brothers }
+	ALK_religious_tolerance = {
+		icon = mission_throne_of_saradomin
+		required_missions = { }
 		position = 3
 		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			if = {
+				limit = {
+					NOT = {
+						religion = menaphite
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = tolerance_to_menaphite_1_tooltip
+					menaphite = 1
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = tolerance_to_saradomin_1_tooltip
+					saradomin = 1
+				}
+			}
 			OR = {
-				owns_core_province = 64
-				AND = {
-					treasury = 200
-					mil_power = 50
-					manpower_percentage = 0.2
-					64 = {
-						is_empty = yes
+				church = 3
+				cathedral = 3
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 25
+			}
+			if = {
+				limit = {
+					NOT = { religion = saradomin }
+				}
+				capital_scope = {
+					add_province_modifier = {
+						name = "KDS_saradominist_interest"
+						duration = 3650
+					}
+				}
+			}
+			else = {
+				add_papal_influence = 10
+				add_dip_power = 25
+			}
+			add_country_modifier = {
+				name = "ALK_tolerance_efforts"
+				duration = 3650
+			}
+		}
+	}
+	
+	ALK_saradominist_immigration = {
+		icon = mission_encourage_saradominist_immigration
+		required_missions = { ALK_religious_tolerance }
+		position = 4
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			OR = {
+				any_ally = {
+					has_opinion = {
+						who = root
+						value = 175
+					}
+					trust = { who = ROOT value = 60 }
+					religion = saradomin
+				}
+				development_in_provinces = {
+					value = 100
+					religion = saradomin
+				}
+			}
+			stability = 3
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 25
+			}
+			if = {
+				limit = {
+					owns_core_province = 63
+				}
+				63 = {
+					change_religion = saradomin
+					add_base_tax = 2
+					add_base_production = 1
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = "ALK_saradomist_integration"
+						duration = 9125
+					}
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						NOT = { is_capital = yes }
+					}
+					change_religion = saradomin
+					add_base_tax = 2
+					add_base_production = 1
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = "ALK_saradomist_integration"
+						duration = 9125
 					}
 				}
 			}
 		}
-		provinces_to_highlight = {
-			province_id = 64
+	}
+	
+	ALK_abbey_of_st_elspeth = {
+		icon = mission_abbey_of_st_elspeth
+		required_missions = { ALK_saradominist_immigration }
+		position = 5
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			owns_core_province = 63
+			OR = {
+				religion = saradomin
+				saradomin = 2
+			}
+			if = {
+				limit = {
+					has_dlc = Leviathan
+				}
+				63 = {
+					OR = {
+						AND = {
+							religion = saradomin
+							has_great_project = {
+								type = great_project_citharede_abbey
+								tier = 1
+							}
+						}
+						AND = {
+							has_building = cathedral
+							total_development = 20
+						}
+					}
+				}
+			}
+			else = {
+				63 = {
+					has_building = cathedral
+					total_development = 20
+				}
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_adm
+				value = 50
+			}
+			63 = {
+				change_province_name = "Citharede Abbey"
+				change_culture = ROOT
+				change_religion = saradomin
+			}
+			if = {
+				limit = {
+					has_dlc = Leviathan
+					NOT = {
+						63 = {
+							has_great_project = {
+								type = great_project_citharede_abbey
+								tier = 1
+							}
+						}
+					}
+				}
+				63 = {
+					add_great_project_tier = {
+						type = great_project_citharede_abbey
+						tier = 2
+					}
+				}
+				custom_tooltip = ALK_easier_use_of_citharede_abbey_tooltip
+			}
+			else_if = {
+				limit = {
+					has_dlc = Leviathan
+					NOT = {
+						63 = {
+							has_great_project = {
+								type = great_project_citharede_abbey
+								tier = 2
+							}
+						}
+					}
+				}
+				63 = {
+					add_great_project_tier = {
+						type = great_project_citharede_abbey
+						tier = 1
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = ALK_easier_use_of_citharede_abbey_tooltip
+			}
+			else_if = {
+				limit = {
+					has_dlc = Leviathan
+					63 = {
+						has_great_project = {
+							type = great_project_citharede_abbey
+							tier = 2
+						}
+					}
+				}
+				63 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				add_stability = 1
+				custom_tooltip = ALK_easier_use_of_citharede_abbey_tooltip
+			}
+			else = {
+				63 = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = "ALK_citharede"
+						duration = -1
+					}
+				}
+			}
+			north_elid_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			uzer_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ALK_resettle_uzer = {
+		icon = mission_instruct_the_golems
+		required_missions = { ALK_abbey_of_st_elspeth }
+		position = 6
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			OR = {
+				AND = {
+					is_emperor_of_china = yes
+					empire_of_china_reform_passed = kem_reconstruction_of_uzer_reform
+					any_owned_or_subject_province = { province_id = 79 }
+				}
+				uzer_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			79 = {
+				add_province_triggered_modifier = ALK_uzeran_integration
+				if = {
+					limit = {
+						num_free_building_slots = 1
+						NOT = {
+							has_building = shipyard
+						}
+					}
+					add_building = shipyard
+				}
+				else_if = {
+					limit = {
+						has_building = shipyard
+						NOT = { has_building = grand_shipyard }
+					}
+					remove_building = shipyard
+					add_building = grand_shipyard
+				}
+				else = {
+					add_base_production = 2
+				}
+			}
+			if = {
+				limit = {
+					is_emperor_of_china = yes
+					UZE = {
+						subject_of = ROOT
+					}
+				}
+				UZE = {
+					every_owned_province = {
+						limit = {
+							region = kharidian_desert_region
+						}
+						change_culture = ROOT
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+				add_mandate = 10
+			}
+			else_if = {
+				limit = {
+					is_emperor_of_china = yes
+					NOT = {
+						owns = 79
+					}
+				}
+				add_mandate = 10
+			}
+			else = {
+				add_accepted_culture = uzeran
+				uzer_area = {
+					change_culture = uzeran
+					add_core = UZE
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 100
+			}
+			create_conquistador = { tradition = 50 }
+			create_explorer = { tradition = 100 }
+		}
+	}
+	
+	ALK_path_to_daemonheim = {
+		icon = mission_daemonheim_base_camp
+		required_missions = { ALK_resettle_uzer }
+		position = 7
+		trigger = {
+			not_in_mission_preview_mode = { key = KDS }
+			custom_trigger_tooltip = {
+				tooltip = ALK_discovered_sea_route_to_daemonheim_keep
+				has_discovered = 906
+				has_discovered = 1236
+				has_discovered = 1238
+				has_discovered = 660
+				has_discovered = 658
+				has_discovered = 648
+				has_discovered = 647
+				has_discovered = 639
+				has_discovered = 637
+				has_discovered = 636
+			}
+			OR = {
+				absolutism = 50
+				AND = {
+					is_emperor_of_china = yes
+					empire_of_china_num_reforms_passed = 5
+				}
+			}
+			OR = {
+				full_idea_group = exploration_ideas
+				full_idea_group = expansion_ideas
+				any_ally = {
+					culture_group = fremennik_group
+				}
+			}
 		}
 		effect = {
 			if = {
 				limit = {
-					owns_core_province = 64
+					1236 = {
+						is_empty = yes
+					}
 				}
-				64 = {
-					add_base_manpower = 2
-				}
-			}
-			else = {
-				add_treasury = -200
-				add_mil_power = -50
-				add_yearly_manpower = -2
-				64 = {
+				1236 = {
 					add_siberian_construction = 400
-					change_trade_goods = lesser_loot
 				}
 			}
-		}
-	}
-	ALK_duel_arena_mission = {
-		icon = mission_duel_arena
-		required_missions = { ALK_local_metal_source ALK_expand_the_training_grounds }
-		trigger = {
-			64 = {
-				owned_by = ROOT
-				is_core = ROOT
-				if = {
-					limit = {
-						has_dlc = "Leviathan"
-					}
-					OR = {
-						has_great_project = {
-							type = great_project_duel_arena
-							tier = 1
-						}
-						has_great_project = {
-							type = great_project_duel_arena
-							tier = 2
-						}
-						has_great_project = {
-							type = great_project_duel_arena
-							tier = 3
-						}
-					}
+			daemonheim_peninsula_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
-				else = {
-					development = 12
-					OR = {
-						has_building = barracks
-						has_building = training_fields
-					}
-				}
+				add_permanent_claim = ROOT
 			}
-		}
-		provinces_to_highlight = {
-			province_id = 64
-		}
-		effect = {
-			add_army_tradition = 15
-			add_mil_power = 50
+			dungeons_of_daemonheim_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_government_power = {
+				mechanic_type = kharidian_emergence_mechanic
+				power_type = kharidian_emergence_dip
+				value = 100
+			}
 		}
 	}
 }
+
+####################################################
+# Depreciated
+####################################################
+
+#kharidian_missions_3 = {
+#	slot = 3
+#	generic = no
+#	ai = yes
+#	potential = {
+#		OR = {
+#			tag = KDS
+#			tag = ALK
+#		}
+#		NOT = { map_setup = map_setup_random }
+#	}
+#	has_country_shield = yes
+#	
+#
+#	
+#	KDS_rusum_pass = {
+#		icon = mission_rusum_pass
+#		required_missions = { KDS_settle_al_kharid }
+#		trigger = {
+#			AND = {
+#				OR = {
+#					has_idea = KDS_hold_the_pass
+#					has_idea = ALK_toll_gate
+#				}
+#				OR = {
+#					owns_core_province = 61
+#					AND = {
+#						treasury = 100
+#						dip_power = 75
+#						61 = {
+#							is_empty = yes
+#						}
+#					}
+#				}
+#			}
+#		}
+#		provinces_to_highlight = {
+#			province_id = 61
+#		}
+#		effect = {
+#			if = {
+#				limit = {
+#					owns_core_province = 61
+#				}
+#				add_dip_power = 25
+#				61 = {
+#					add_province_modifier = {
+#						name = "KDS_toll_gate"
+#						duration = 9125
+#					}
+#				}
+#			}
+#			else = {
+#				add_treasury = -100
+#				add_dip_power = -75
+#				61 = {
+#					add_siberian_construction = 400
+#					add_province_modifier = {
+#						name = "KDS_toll_gate"
+#						duration = 9125
+#					}
+#					change_trade_goods = livestock_farm
+#				}
+#			}
+#		}
+#	}
+#}
+
+#alkharidian_missions_4 = {
+#	slot = 4
+#	generic = no
+#	ai = yes
+#	potential = {
+#		tag = ALK
+#		NOT = { map_setup = map_setup_random }
+#	}
+#	has_country_shield = yes
+#	
+#	ALK_local_metal_source = {
+#		icon = mission_mining
+#		required_missions = { KDS_rusum_pass KDS_scimitar_manufacture }
+#		trigger = {
+#			OR = {
+#				army_size = 20
+#				any_owned_province = { has_building = soldier_households }
+#				any_owned_province = { has_building = impressment_offices }
+#				any_owned_province = { has_building = conscription_center }
+#				mil_tech = 12
+#			}
+#			OR = {
+#				owns_core_province = 65
+#				AND = {
+#					treasury = 200
+#					mil_power = 75
+#					manpower_percentage = 0.2
+#					65 = {
+#						is_empty = yes
+#					}
+#				}
+#			}
+#			OR = {
+#				owns_core_province = 1395
+#				AND = {
+#					treasury = 100
+#					mil_power = 35
+#					manpower_percentage = 0.1
+#					1395 = {
+#						is_empty = yes
+#					}
+#				}
+#			}
+#		}
+#		provinces_to_highlight = {
+#			province_id = 65
+#		}
+#		effect = {
+#			if = {
+#				limit = {
+#					owns_core_province = 65
+#				}
+#				65 = {
+#					add_base_production = 2
+#				}
+#			}
+#			else = {
+#				add_treasury = -200
+#				add_mil_power = -75
+#				add_yearly_manpower = -2
+#				65 = {
+#					add_siberian_construction = 500
+#					change_trade_goods = basic_ores
+#				}
+#			}
+#			if = {
+#				limit = {
+#					owns_core_province = 1395
+#				}
+#				65 = {
+#					add_base_tax = 1
+#				}
+#			}
+#			else = {
+#				add_treasury = -100
+#				add_mil_power = -35
+#				add_yearly_manpower = -1
+#				1395 = {
+#					add_siberian_construction = 100
+#				}
+#			}
+#		}
+#	}	
+#}
+
+#alkharidian_missions_5 = {
+#	slot = 5
+#	generic = no
+#	ai = yes
+#	potential = {
+#		tag = ALK
+#		NOT = { map_setup = map_setup_random }
+#	}
+#	has_country_shield = yes
+#	
+#	ALK_expand_the_training_grounds = {
+#		icon = mission_expand_the_training_ground
+#		required_missions = { KDS_scimitar_manufacture KDS_professional_brothers }
+#		position = 3
+#		trigger = {
+#			OR = {
+#				owns_core_province = 64
+#				AND = {
+#					treasury = 200
+#					mil_power = 50
+#					manpower_percentage = 0.2
+#					64 = {
+#						is_empty = yes
+#					}
+#				}
+#			}
+#		}
+#		provinces_to_highlight = {
+#			province_id = 64
+#		}
+#		effect = {
+#			if = {
+#				limit = {
+#					owns_core_province = 64
+#				}
+#				64 = {
+#					add_base_manpower = 2
+#				}
+#			}
+#			else = {
+#				add_treasury = -200
+#				add_mil_power = -50
+#				add_yearly_manpower = -2
+#				64 = {
+#					add_siberian_construction = 400
+#					change_trade_goods = lesser_loot
+#				}
+#			}
+#		}
+#	}
+#}

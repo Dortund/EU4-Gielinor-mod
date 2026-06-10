@@ -1,0 +1,23 @@
+#1500 - Summer Shore
+owner = GCH
+controller = GCH
+add_core = GCH
+tribal_owner = ---
+culture = tortugan
+religion = seiryu
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+fort_15th = yes
+
+trade_goods = fishing_spot
+
+is_city = yes
+
+center_of_trade = 1

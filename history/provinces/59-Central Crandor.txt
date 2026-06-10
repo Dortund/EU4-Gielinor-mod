@@ -27,6 +27,8 @@ is_city = yes
 
 center_of_trade = 2
 
+add_cardinal = yes
+
 2139.9.23 = {
 	owner = ELV
 	controller = ELV
@@ -37,5 +39,6 @@ center_of_trade = 2
 	base_manpower = 2
 	culture = avernic
 	religion = zamorak
+	remove_cardinal = yes
 }
 

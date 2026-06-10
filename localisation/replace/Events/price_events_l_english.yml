@@ -58,3 +58,20 @@
  giu_prices.12.d:0 "Fairies live in a nexus of worlds, from Gielinor to distant places where crops thought of as common are unknown. One of these crops are cabbages, which are so alien to some fairies they are willing to pay handsomely for them."
  giu_prices.12.a:0 "Show me the green!"
  ZANARIAN_DEMAND:0 "Demand from Zanaris"
+ 
+ giu_prices.13.t:0 "Bespoke Shipbuilding"
+ giu_prices.13.d:0 "The call of the sea has drawn in many treasure-seeking adventurers. Rich off monster hunting, they will pay any price for top-quality hardwoods in order to take to the seas in style."
+ giu_prices.13.a:0 "This will increase demand for hardwoods."
+ BESPOKE_SHIPBUILDING:0 "Bespoke Shipbuilding"
+ 
+ giu_prices.14.t:0 "Growth of the Bamboo Trade"
+ giu_prices.14.d:0 "A curious - and highly versatile - plant has been traded extensively in the Wushanko Isles for time immemorial. With an expansion of our trade efforts, we are finally able to bring this so-called Bamboo back to [Root.Capital.GetName] in large quantities to be sold at great profit."
+ giu_prices.14.a:0 "These prices can only shoot up!"
+ GROWTH_OF_BAMBOO_TRADE:0 "Growth of the Bamboo Trade"
+ 
+ giu_prices.15.t:0 "Desire for Divine Favour"
+ giu_prices.15.d:0 "With a massive number of provinces not following our main religion, additional efforts are needed to maximise divine favour. To this end, our $ESTATE_CHURCH$ has sought ever-greater numbers of bones to sacrifice, and followers of rival religions have taken notice."
+ giu_prices.15.a:0 "This will increase demand for bones."
+ DEMAND_FOR_DIVINE_FAVOUR_TRADE:0 "Demand for Divine Favour"
+ 
+ 

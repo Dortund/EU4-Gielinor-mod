@@ -1,0 +1,677 @@
+estate_workers_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		governing_capacity = 100
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.4
+			num_of_territories = 5
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 10
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 15
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_workers
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_workers_land_rights }
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_workers_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_workers_land_rights
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { governing_capacity_percentage = 0.5 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_workers_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_workers_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_workers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_workers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+	}
+}
+
+estate_workers_managerial_state = {
+	icon = privilege_admin_power
+	land_share = 10
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = -0.05
+	can_select = {
+		can_select_monarch_power_privilege = {
+			estate = estate_workers
+			type = adm
+		}
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		country_admin_power = 1
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 30 }
+				estate_influence = {
+					estate = estate_workers
+					influence = 95
+				}
+			}
+			NOT = { has_estate_privilege = estate_workers_managerial_state }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 55 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_workers_managerial_state }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { adm = 2 }
+		}
+	}
+}
+
+estate_workers_political_representation = {
+	icon = privilege_workers_political_representation
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_workers_employment_subsidies = {
+	icon = privilege_workers_employment_subsidies
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.1
+	influence = 0.05
+	penalties = {
+		global_tax_modifier = -0.2
+	}
+	benefits = {
+		build_time = -0.1
+		production_efficiency = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 10
+			production_income_percentage = 0.5
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				production_income_percentage = 0.25
+			}
+		}
+		modifier = {
+			factor = 0
+			tax_income_percentage = 0.5
+		}
+	}
+}
+
+estate_workers_social_mobility = {
+	icon = privilege_workers_social_mobility
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+		advisor_pool = 2
+	 	meritocracy = 0.5
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { has_reform = kharidian_empire }
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_workers_expanded_holidays = {
+	icon = privilege_workers_expanded_holidays
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.05
+	penalties = {
+		global_trade_goods_size_modifier = -0.1
+	}
+	benefits = {
+		tolerance_own = 2
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_workers_guaranteed_commons = {
+	icon = privilege_workers_guaranteed_commons
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	loyalty = 0.1
+	land_share = 10
+	is_valid = {
+	}
+	can_select = {
+	}
+	on_granted = {
+	} 
+	modifier_by_land_ownership = {
+		global_unrest = -2
+		global_prosperity_growth = 0.2
+	}
+	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_territory = {
+					estate = estate_workers
+					territory = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_territory = {
+					estate = estate_workers
+					territory = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_territory = {
+					estate = estate_workers
+					territory = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_income_balance = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_income_balance = 0 }
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_workers_fibres_monopoly = {
+	icon = privilege_workers_fibres_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			trade_goods = flax
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				flax = 1
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = flax
+			}
+			custom_tooltip = MONOPOLY_INCOME_FIBRES_DESC
+		}
+		custom_tooltip = estate_workers_monopoly_of_fibres_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = flax
+			}
+			add_province_modifier = {
+				name = estate_workers_monopoly_of_fibres_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_workers_monopoly_of_fibres_mod
+			}
+			remove_province_modifier = estate_workers_monopoly_of_fibres_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_workers_monopoly_of_fibres_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_workers_monopoly_of_fibres_mod
+			}
+			remove_province_modifier = estate_workers_monopoly_of_fibres_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_workers_monopoly_of_fibres_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_workers_monopoly_of_fibres_mod
+			}
+			remove_province_modifier = estate_workers_monopoly_of_fibres_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			estate_workers_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.3 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_workers_logs_monopoly = {
+	icon = privilege_workers_logs_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			OR = {
+				trade_goods = logs
+				trade_goods = advanced_logs
+				trade_goods = tropical_logs
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				OR = {
+					logs = 1
+					advanced_logs = 1
+					tropical_logs = 1
+				}
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				OR = {
+					trade_goods = logs
+					trade_goods = advanced_logs
+					trade_goods = tropical_logs
+				}
+			}
+			custom_tooltip = MONOPOLY_INCOME_LOGS_DESC
+		}
+		custom_tooltip = estate_workers_monopoly_of_logs_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					trade_goods = logs
+					trade_goods = advanced_logs
+					trade_goods = tropical_logs
+				}
+			}
+			add_province_modifier = {
+				name = estate_workers_monopoly_of_logs_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_workers_monopoly_of_logs_mod
+			}
+			remove_province_modifier = estate_workers_monopoly_of_logs_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_workers_monopoly_of_logs_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_workers_monopoly_of_logs_mod
+			}
+			remove_province_modifier = estate_workers_monopoly_of_logs_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_workers_monopoly_of_logs_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_workers_monopoly_of_logs_mod
+			}
+			remove_province_modifier = estate_workers_monopoly_of_logs_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			estate_workers_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.4 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_workers_ore_monopoly = {
+	icon = privilege_workers_ore_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			OR = {
+				trade_goods = basic_ores
+				trade_goods = advanced_ores
+				trade_goods = runite
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				OR = {
+					basic_ores = 1
+					advanced_ores = 1
+					runite = 1
+				}
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				OR = {
+					trade_goods = basic_ores
+					trade_goods = advanced_ores
+					trade_goods = runite
+				}
+			}
+			custom_tooltip = MONOPOLY_INCOME_ORES_DESC
+		}
+		custom_tooltip = estate_workers_monopoly_of_ore_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					trade_goods = basic_ores
+					trade_goods = advanced_ores
+					trade_goods = runite
+				}
+			}
+			add_province_modifier = {
+				name = estate_workers_monopoly_of_ore_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_workers_monopoly_of_ore_mod
+			}
+			remove_province_modifier = estate_workers_monopoly_of_ore_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_workers_monopoly_of_ore_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_workers_monopoly_of_ore_mod
+			}
+			remove_province_modifier = estate_workers_monopoly_of_ore_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_workers_monopoly_of_ore_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_workers_monopoly_of_ore_mod
+			}
+			remove_province_modifier = estate_workers_monopoly_of_ore_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			estate_workers_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.5 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

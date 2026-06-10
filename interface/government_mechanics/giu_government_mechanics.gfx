@@ -60,6 +60,21 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress.lua"
 	}
 	
+	spriteType = {
+		name = "GFX_crusader_zeal_crush_altars_button"
+		texturefile = "gfx/interface/government_mechanics/crusader_zeal/crusader_zeal_crush_altars_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_crusader_zeal_migrate_fremennik_button"
+		texturefile = "gfx/interface/government_mechanics/crusader_zeal/crusader_zeal_migrate_fremennik_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	
 	### BOSS ENDURANCE ###
 
 	spriteType = {
@@ -101,6 +116,86 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_elven_desperation_last_stand_button"
 		texturefile = "gfx/interface/government_mechanics/elven_desperation/elven_desperation_last_stand_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	### ENTHRALLMENT ###
+	
+	spriteType = {
+		name = "GFX_enthrallment_frame"
+		texturefile = "gfx/interface/government_mechanics/enthrallment/enthrallment_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_enthrallment_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/enthrallment/enthrallment_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/enthrallment/enthrallment_progress_bar_empty.dds"
+		size = { x = 260 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_enthrallment_aid_against_amascut_button"
+		texturefile = "gfx/interface/government_mechanics/enthrallment/enthrallment_aid_against_amascut_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_enthrallment_feather_of_maat_button"
+		texturefile = "gfx/interface/government_mechanics/enthrallment/enthrallment_feather_of_maat_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_enthrallment_blood_moon_order_button"
+		texturefile = "gfx/interface/government_mechanics/enthrallment/enthrallment_blood_moon_order_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_enthrallment_proselytise_amascut_button"
+		texturefile = "gfx/interface/government_mechanics/enthrallment/enthrallment_proselytise_amascut_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_enthrallment_internalise_the_corruption_button"
+		texturefile = "gfx/interface/government_mechanics/enthrallment/enthrallment_internalise_the_corruption_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_enthrallment_slayers_boon_button"
+		texturefile = "gfx/interface/government_mechanics/enthrallment/enthrallment_slayers_boon_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	### KHARIDIAN EMERGENCE ###	
+	
+	spriteType = {
+		name = "GFX_kharidian_emergence_ADM"
+		texturefile = "gfx//interface//government_mechanics/kharidian_emergence/kharidian_emergence_adm_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_kharidian_emergence_DIP"
+		texturefile = "gfx//interface//government_mechanics/kharidian_emergence/kharidian_emergence_dip_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_kharidian_emergence_MIL"
+		texturefile = "gfx//interface//government_mechanics/kharidian_emergence/kharidian_emergence_mil_button.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}

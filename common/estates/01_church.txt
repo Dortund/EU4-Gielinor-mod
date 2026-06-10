@@ -23,6 +23,7 @@ estate_church = {
 				NOT = { has_reform = consortium_republic }
 				NOT = { has_reform = consortium_monarchy }
 				NOT = { has_reform = dwarven_outpost }
+				NOT = { has_reform = menaphite_factions }
 				NOT = { has_reform = tirannwn_republic }
 				NOT = { has_reform = tirannwn_resistance } 
 				NOT = { has_government_attribute = is_pirate_republic_reform }
@@ -190,197 +191,125 @@ estate_church = {
 	}
 	
 	custom_name = {
-		desc = estate_klirikoi
+		desc = estate_shamans
 		trigger = {
-			tag = BYZ
-			culture_group = byzantine
-		}
-	}
-	custom_name = {
-		desc = estate_ogboni
-		trigger = {
-			tag = OYO
-		}
-	}
-	custom_name = {
-		desc = estate_tengbiise
-		trigger = {
-			primary_culture = mossi
-			religion = shamanism
+			OR = {
+				AND = {
+					religion = armadyl
+					NOT = {
+						has_reform = monastic_order_reform
+					}
+				}
+				religion = bandos
+				religion_group = karamjan_group
+				religion = 
+			}
 		}
 	}
 	custom_name = {
 		desc = estate_monasteries
 		trigger = {
 			OR = {
-				religion = buddhism #Theravada
-				religion = mahayana
-				religion = vajrayana
+				religion = seren
+				religion = dark_lord
+				religion_group = wushanko_guardian_group
 			}
 		}
 	}
 	custom_name = {
-		desc = estate_babaylanes
-		trigger = {
-			tag = MAS
-		}
-	}
-	custom_name = {
-		desc = estate_brahmins
-		trigger = {
-			religion = hinduism
-		}
-	}
-	custom_name = {
-		desc = estate_pastors
+		desc = estate_druids
 		trigger = {
 			OR = {
-				religion = protestant
-				religion = reformed
+				religion = guthix
+				has_reform = druidic_state
 			}
 		}
 	}
 	custom_name = {
-		desc = estate_popes
+		desc = estate_marshals
 		trigger = {
 			AND = {
-				religion = orthodox
-				OR = {
-					culture_group = east_slavic
-					culture_group = south_slavic
-					culture_group = west_slavic
-					culture_group = slavic
+				religion = armadyl
+				has_reform = monastic_order_reform
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_emissaries
+		trigger = {
+			OR = {
+				religion = v
+				religion = godless
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_healers
+		trigger = {
+			religion = northernpantheon
+		}
+	}
+	custom_name = {
+		desc = estate_pyradins
+		trigger = {
+			religion = queen_of_ashes
+		}
+	}
+	custom_name = {
+		desc = estate_priests
+		trigger = {
+			OR = {
+				religion = birman
+				religion = brassicaprime
+				religion = hanalan
+				religion_group = menaphite_group
+				religion = saradomin
+				religion = tuska
+				religion = zulrah
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_chaos_priests
+		trigger = {
+			OR = {
+				AND = {
+					religion = zamorak
+					NOT = { has_reform = druidic_state }
 				}
+				religion = lucien
+				religion = zemouregal
 			}
 		}
 	}
 	custom_name = {
-		desc = estate_shamans
+		desc = estate_teoki
 		trigger = {
 			OR = {
-				religion = tengri_pagan_reformed
+				religion = ralos
+				religion = ranul
 			}
 		}
 	}
 	custom_name = {
-		desc = estate_gurus
+		desc = estate_ascended
 		trigger = {
-			religion = sikhism
+			religion = xautak
 		}
 	}
 	custom_name = {
-		desc = estate_medicine_men
+		desc = estate_pontificis
 		trigger = {
-			religion = totemism
+			religion = zaros
 		}
 	}
-	custom_name = {
-		desc = estate_godar
-		trigger = {
-			religion = norse_pagan_reformed
-		}
-	}
-	custom_name = {
-		desc = estate_rabbis
-		trigger = {
-			religion = jewish
-		}
-	}
-	custom_name = {
-		desc = estate_mobeds
-			trigger = {
-				religion = zoroastrian
-			}
-	}
-	custom_name = {
-		desc = estate_kannushi
-			trigger = {
-				religion = shinto
-			}
-	}
-	custom_name = {
-		desc = estate_panacas
-		trigger = {
-			religion = inti
-		}
-	}
-	custom_name = {
-		desc = estate_gentry
-		trigger = {
-			OR = {
-				has_reform = celestial_empire
-				culture_group = east_asian
-			}
-		}
-	}
-	custom_name = {
-		desc = estate_ulema
-		trigger = {
-			religion_group = muslim
-		}
-	}
-	custom_name = {
-		desc = estate_tlamacazqueh
-		trigger = {
-			religion = nahuatl
-		}
-	}
-	custom_name = {
-		desc = estate_yangban_scholars
-		trigger = {
-			tag = KOR
-			religion = confucianism
-		}
-	}
-	custom_name = {
-		desc = estate_kahuna
-		trigger = {
-			capital_scope = {
-				area = northern_polynesia_area
-			}
-			primary_culture = polynesian
-			religion = animism
-		}
-	}
-	custom_name = {
-		desc = estate_tohunga
-		trigger = {
-			primary_culture = maori
-			religion = animism
-		}
-	}		
-	custom_name = {
-		desc = estate_taula_otua
-		trigger = {
-			tag = TOG
-			religion = animism
-		}
-	}	
-	custom_name = {
-		desc = estate_taula_aitu
-		trigger = {
-			tag = SAM
-			religion = animism
-		}
-	}
-	custom_name = {
-		desc = estate_bete
-		trigger = {
-			OR = {
-				tag = LAI
-				tag = VIL
-				tag = VNL
-			}
-			religion = animism
-		}
-	}
-
+	
 	contributes_to_curia_treasury = yes
 	color = { 200 150 0 }
 
 	privileges = {
 		estate_church_land_rights
-		estate_church_papal_emissary
+		estate_church_entranan_emissary
 		estate_church_religious_state
 		estate_church_independent_inquisition
 		estate_church_new_world_mission
@@ -421,13 +350,10 @@ estate_church = {
 		estate_church_religious_delegation
 		estate_church_institutionalized_clergy
 		estate_church_donation_right
-		estate_church_union_of_the_churches
-		estate_church_BYZ_legitimization_of_dynasty
-		#1.36
-		estate_church_fund_dar_al_hadith
-		estate_church_fund_madrasas
-		estate_church_sponsor_waqf_payments
-		estate_church_muslim_integration
+		#Monopolies
+		estate_church_ritual_goods_monopoly
+		estate_church_divine_energy_monopoly
+		#National Flavour
 		estate_clergy_zamorakian_coexistence
 	}
 

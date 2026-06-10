@@ -38,7 +38,6 @@ bandosian_horde = {
 		loot_amount = 0.25
 		global_institution_spread = -0.15
 		reinforce_cost_modifier = -0.5
-		movement_speed = 0.2
 		shock_damage = 0.1
 		fire_damage_received = 0.05
 		naval_forcelimit_modifier = -0.5
@@ -132,6 +131,34 @@ feldip_tribe = {
 	}
 }
 
+fremennik_clan = {
+	icon = "icon_fremennik_clan"
+	allow_normal_conversion = no
+	potential = {
+		culture_group = fremennik_group
+		NOT = { has_reform = boss_nation }
+	}
+	allow_force_tributary = yes
+	legacy_equivalent = bandosian_horde_legacy
+	fixed_rank = 1
+	nomad = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.5
+
+	modifiers = {
+		horde_unity = 1
+		loot_amount = 0.25
+		infantry_power = 0.1
+		reinforce_cost_modifier = -0.5
+		governing_capacity_modifier = -0.5
+		raze_power_gain = -0.25
+	}
+}
+
 goblin_empire = {
 	icon = "icon_goblin_empire"
 	allow_normal_conversion = no
@@ -151,16 +178,39 @@ goblin_empire = {
 
 	modifiers = {
 		horde_unity = 1
-		global_manpower_modifier = 0.5
-		land_forcelimit_modifier = 0.5
+		global_manpower_modifier = 0.33
+		land_forcelimit_modifier = 0.33
 		manpower_recovery_speed = 0.1
 		loot_amount = 0.5
 		global_institution_spread = -0.15
 		reinforce_speed = 0.5
 		reinforce_cost_modifier = -0.75
-		movement_speed = 0.2
-		discipline = -0.05
-		land_morale = -0.10
+	}
+}
+
+hand_of_het = {
+	icon = "icon_hand_of_het"
+	potential = {
+		has_country_flag = KDS_loyalist_missions_branch_flag
+		NOT = { has_country_flag = kharidian_emergence_completed }
+	}
+	legacy_equivalent = kharidian_tribe_legacy
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 125
+	modifiers = {
+		tolerance_own = 1
+	 	improve_relation_modifier = 0.1
+		land_forcelimit_modifier = 0.1
+		global_manpower_modifier = 0.1
+		monthly_reform_progress_modifier = 0.1
+		liberty_desire = -25
+	}
+	government_abilities = {
+		kharidian_emergence_mechanic
+	}
+	custom_attributes = {
+		locked_government_type = yes
 	}
 }
 
@@ -219,6 +269,8 @@ kharidian_tribe = {
 	allow_normal_conversion = no
 	potential = {
 		tag = KDS
+		NOT = { has_country_flag = KDS_loyalist_missions_branch_flag }
+		NOT = { has_country_flag = KDS_al_kharid_missions_branch_flag }
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -256,7 +308,10 @@ mogre_horde = {
 	icon = "icon_mogre_horde"
 	allow_normal_conversion = no
 	potential = {
-		tag = MKM
+		OR = {
+			tag = MKM
+			primary_culture = mogre
+		}
 		NOT = { has_reform = boss_nation }
 	}
 	legacy_equivalent = mogre_horde_legacy
@@ -274,7 +329,6 @@ mogre_horde = {
 		loot_amount = 0.25
 		global_institution_spread = -0.15
 		reinforce_cost_modifier = -0.5
-		movement_speed = 0.1
 		shock_damage = 0.05
 		fire_damage_received = 0.05
 		naval_forcelimit_modifier = 0.25
@@ -345,10 +399,12 @@ runecrafting_crusader = {
 		has_reform = runecrafting_crusader
 	}
 	legacy_equivalent = runecrafting_crusader_legacy
+	allow_force_tributary = no
 	nomad = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 250
 
+	fixed_rank = 3
 	lock_level_when_selected = yes
 
 	start_territory_to_estates = 0.25
@@ -368,7 +424,7 @@ runecrafting_crusader = {
 		siege_ability = 0.2
 		shock_damage = 0.1
 		fire_damage_received = -0.1
-		years_of_nationalism = 5
+		years_of_nationalism = 10
 		diplomatic_upkeep = -3
 	}
 }
@@ -430,7 +486,6 @@ unleashed_horde = {
 		global_institution_spread = -0.15
 		reinforce_cost_modifier = -0.5
 		cav_to_inf_ratio = 0.25
-		movement_speed = 0.2
 		years_of_nationalism = -5
 	}
 }
@@ -562,6 +617,27 @@ trader_culture_reform = {
 	}
 	ai = {
 		factor = 3
+	}
+}
+
+thrall_of_amascut_tribe_reform = {
+	icon = "icon_thrall_of_amascut_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		religion = amascut_religion
+	}
+	modifiers = {
+	 	global_heretic_missionary_strength = 0.02
+	 	all_estate_influence_modifier = -0.1
+		ae_impact = 1
+		horde_unity = 1
+		legitimacy = 1
+		max_absolutism = -20
+	}
+	raze_province = yes
+	government_abilities = {
+		enthrallment_mechanic
 	}
 }
 

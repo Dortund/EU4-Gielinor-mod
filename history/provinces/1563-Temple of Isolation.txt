@@ -1,0 +1,24 @@
+#1563-Temple of Isolation
+owner = TPI
+controller = TPI
+add_core = TPI
+tribal_owner = ---
+culture = scabarite
+religion = menaphite
+trade_goods = lesser_loot
+
+discovered_by = TPI
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 2
+
+native_size = 20
+native_ferocity = 20
+native_hostileness = 20
+
+fort_15th = yes
+
+is_city = yes

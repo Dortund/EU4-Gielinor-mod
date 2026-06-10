@@ -31,6 +31,7 @@ is_city = yes
 	add_core = ADO
 	remove_core = TJT
 	religion = saradomin
+	add_cardinal = yes
 }
 
 2098.11.2 = {

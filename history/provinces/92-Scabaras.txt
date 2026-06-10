@@ -4,7 +4,7 @@ controller = SBI
 add_core = SBI
 tribal_owner = ---
 culture = scabarite
-religion = menaphite
+religion = amascut_religion
 
 discovered_by = kharidtechgroup
 discovered_by = monkeytechgroup

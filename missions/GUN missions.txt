@@ -474,10 +474,10 @@ gunnar_missions_4 = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
-			248 = { add_core = ROOT }
-			247 = { add_core = ROOT }
+			248 = { add_permanent_claim = ROOT }
+			247 = { add_permanent_claim = ROOT }
 			kandarin_region = {
 				discover_country = ROOT
 			}
@@ -516,12 +516,15 @@ gunnar_missions_4 = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
 			asgarnia_region = {
 				discover_country = ROOT
 			}
-			entrana_bay_area = {
+			seas_of_lina_area = {
+				discover_country = ROOT
+			}
+			shores_of_kandarin_area = {
 				discover_country = ROOT
 			}
 		}
@@ -720,7 +723,6 @@ gunnar_missions_4 = {
 			else = {
 				province_event = { 
 					id = flavor_gun.14
-					days = 5
 				}
 			}
 		}
@@ -922,7 +924,6 @@ gunnar_missions_5 = {
 				}
 				country_event = { 
 					id = flavor_gun.15
-					days = 1
 				}
 			}
 			if = {

@@ -114,6 +114,27 @@ ALK_grey_training = {
 	prestige = 0.5
  	local_unrest = -1
 }
+ALK_shipbuilding_frenzy = {
+	ship_recruit_speed = -0.5
+}
+ALK_polypore_dungeon = {
+	trade_goods_size = 0.5
+	local_hostile_attrition = 1
+}
+ALK_hallowvale_haven = {
+	local_unrest = -2
+	local_build_cost = -0.25
+	local_development_cost = -0.1
+	statewide_governing_cost = -0.25
+}
+ALK_hallowvale_haven_saradomin = {
+	local_unrest = -2
+	local_build_cost = -0.25
+	local_development_cost = -0.1
+	statewide_governing_cost = -0.25
+}
+
+
 
 #National
 
@@ -123,7 +144,6 @@ ALK_merchant_fleet = {
 ALK_agenda_of_espionage = {
 	spy_offence = 0.25
 }
-
 ALK_telekinetic_grab = {
  	loot_amount = 1
 }
@@ -141,11 +161,39 @@ ALK_corrupt_duels = {
 	yearly_corruption = 0.1
 }
 ALK_defeat_of_tempoross = {
-	prestige = 0.5
-	global_ship_trade_power = 0.2
+	prestige_from_naval = 0.25
+	global_ship_trade_power = 0.1
 }
-
-
+ALK_tolerance_efforts = {
+	relation_with_heathens = 10
+ 	reverse_relation_with_heathen_religion = 10
+}
+ALK_riches_of_pollnivneach = {
+	reduced_trade_penalty_on_non_main_tradenode = 0.2
+}
+ALK_growing_naval_pressure = {
+	blockade_efficiency = 0.25
+	naval_morale = 0.1
+}
+ALK_imperial_consolidation = {
+	diplomatic_annexation_cost = -0.15
+}
+ALK_guardians_of_hallowvale = {
+	tolerance_heathen = 1
+}
+ALK_guardians_of_hallowvale_order = {
+	tolerance_heretic = 2
+ 	tolerance_of_heretics_capacity = 1
+}
+ALK_guardians_of_hallowvale_saradomin = {
+	papal_influence = 1
+}
+ALK_kharidian_glory_modifier = {
+	imperial_mandate = 0.1
+ 	state_governing_cost = -0.1
+	monarch_admin_power = 1
+	monarch_diplomatic_power = 1
+}
 
 #############
 #Arposandra
@@ -267,7 +315,7 @@ ASG_house_portal = {
 	local_development_cost_modifier = -0.2
 	local_build_cost = -0.2
 }
-ASG_mining_guild = {
+ASG_mining_guild_modifier = {
 	trade_goods_size = 0.5
 	local_production_efficiency = 0.25
 }
@@ -445,13 +493,19 @@ ASG_ZAM_zamorakian_overlords = {
 }
 ASG_ZAM_taverley_dungeon_barracks = {
 	local_manpower = 1
+	local_manpower_modifier = 0.5
+	regiment_recruit_speed = -0.5
 	local_hostile_attrition = 1
 }
 
 # National
 ASG_ZAM_zamoraks_due = {
-	yearly_patriarch_authority = 0.05
+	yearly_patriarch_authority = 0.025
 	num_accepted_cultures = 1
+}
+ASG_ZAM_zamorakian_integration = {
+	reduced_liberty_desire = 10
+ 	diplomatic_annexation_cost = -0.1
 }
 
 ### Guthix
@@ -670,7 +724,7 @@ CFS_free_hunters = {
 }
 CFS_legacy_of_cave_canem = {
 	tolerance_own = 1
-	yearly_patriarch_authority = 0.1
+	yearly_patriarch_authority = 0.01
 }
 CFS_aquos_colonies = {
 	global_colonial_growth = 10
@@ -777,7 +831,7 @@ DBS_rise_of_white_knights = {
 DBS_rise_of_kinshra = {
 	siege_ability = 0.1
 	tolerance_heathen = 2
-	yearly_patriarch_authority = 0.1
+	yearly_patriarch_authority = 0.01
 }
 DBS_rejection_of_zamorak = {
 	tolerance_own = 1
@@ -1145,6 +1199,37 @@ KDR_anti_thievery_efforts = {
 }
 
 #############
+#Khaganate
+#############
+
+#National
+KHG_unified_council_of_khans_modifier = {
+	picture = "imperial_authority"
+	
+	prestige = 1
+	trade_range_modifier = 0.25
+	build_cost = -0.05
+	development_cost = -0.05
+	diplomatic_reputation = 1
+	diplomatic_upkeep = 1
+	diplomats = 1
+	stability_cost_modifier = -0.1
+	republican_tradition = 0.3
+	merchants = 1
+	meritocracy = 1
+	same_culture_advisor_cost = -0.1
+	advisor_pool = 1
+	global_missionary_strength = 0.02
+	land_forcelimit = 50
+	global_manpower = 50
+	global_tax_modifier = 0.05
+	tax_income = 50
+	spy_offence = 0.1
+	advisor_pool = 1
+	free_leader_pool = 1
+}
+
+#############
 #Khanoka
 #############
 
@@ -1242,6 +1327,11 @@ genkharid_capital_wealth = {
 
 #National
 
+genkharid_great_project_enthusiasm = {
+	great_project_upgrade_cost = -0.1
+	great_project_upgrade_time = -0.1
+}
+
 genkharid_glory_of_the_monuments = {
 	prestige = 1
 	global_missionary_strength = 0.02
@@ -1273,13 +1363,55 @@ KDS_toll_gate = {
 	local_tax_modifier = 0.25
 }
 KDS_saradominist_interest = {
-	local_development_cost = -0.15
+	local_development_cost = -0.1
+}
+KDS_honourably_defeated = {
+	local_missionary_strength = 0.015
+	local_years_of_nationalism = -5
+}
+KDS_HET_fort_of_kharid_et = {
+	local_garrison_size = 0.25
+	local_defender_dice_roll_bonus = 1
+	local_manpower_modifier = 0.25
 }
 
 #National
 
 KDS_scimitar_production = {
 	land_maintenance_modifier = -0.1
+}
+KDS_emerging_nation = {
+	diplomatic_reputation = 1
+	development_cost = -0.1
+}
+KDS_holy_training_regimen = {
+	tolerance_own = 1
+	drill_gain_modifier = 0.2
+	drill_decay_modifier = -0.2
+}
+KDS_coordinated_defence = {
+	own_territory_dice_roll_bonus = 1
+}
+KDS_glory_of_het = {
+	enforce_religion_cost = -0.1
+}
+
+KDS_HET_bay_of_het = {
+	center_of_trade_upgrade_cost = -0.1
+	global_trade_power = 0.05
+}
+KDS_HET_refused_by_pharoah = {
+	legitimacy = -0.5
+	devotion = -0.5
+}
+KDS_HET_kharidian_culture_enthusiasm = {
+	culture_conversion_cost = -0.15
+	culture_conversion_time = -0.25
+}
+KDS_HET_hets_chosen = {
+	tolerance_own = 2
+ 	drill_decay_modifier = -0.25
+	yearly_corruption = -0.1
 }
 
 #############
@@ -1525,12 +1657,25 @@ NDH_mitigated_dried_well = {
 	local_development_cost = 0.25
 	local_manpower_modifier = -0.15
 }
+NDH_centre_for_herbalism = {
+	trade_goods_size = 1
+}
 
 #National
 
 NDH_protect_from_missiles = {
 	global_missionary_strength = 0.02
 	fire_damage_received = -0.1
+}
+NDH_genie_lamps = {
+	max_absolutism = 10
+	drill_gain_modifier = 0.1
+}
+NDH_reaffirmed_faith = {
+	tolerance_own = 1
+}
+NDH_conquest_of_the_elid = {
+	global_missionary_strength = 0.01
 }
 
 #############
@@ -2021,6 +2166,36 @@ TZH_defended_home_trade = {
 }
 TZH_strength_of_the_tzhaar_ket = {
 	infantry_power = 0.1
+}
+
+#############
+#Ullek
+#############
+
+#Local
+ULL_second_age_legacy = {
+	local_development_cost_modifier = -0.25
+}
+
+#############
+#Uzer
+#############
+
+#Local
+UZE_second_age_legacy = {
+	local_development_cost_modifier = -0.25
+}
+
+#National
+UZE_legacy_of_tolerance_modifier = {
+	no_religion_penalty = yes
+	relation_with_heretics = 10
+	reverse_relation_with_heretic_religion = 10
+ 	relation_with_heathens = 10
+ 	reverse_relation_with_heathen_religion = 10
+}
+UZE_discipline_of_golems = {
+	discipline = 0.05
 }
 
 #############

@@ -388,7 +388,6 @@ country_event = {
 		CDA = {
 			add_country_modifier = {
 				name = CDA_gnomish_assistance
-				# TODO currently duration is a placeholder value, as it was not defined before, but was needed to fix the event.
 				duration = 3650
 			}
 			country_event = {

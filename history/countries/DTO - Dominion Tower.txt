@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = dominion_tower_reform
+government_rank = 1
+primary_culture = midkharidian
+religion = menaphite
+technology_group = kharidtechgroup
+capital = 73 #Dominion
+
+1511.11.1 = {
+	monarch = {
+		name = "Strange Face"
+		dynasty = "of the Tower"
+		culture = living_rock
+		birth_date = 1490.11.1
+		adm = 5
+		dip = 3
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

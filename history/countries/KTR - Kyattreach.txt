@@ -1,7 +1,7 @@
-government = monarchy
-add_government_reform = noble_kingdom
+government = tribal
+add_government_reform = fremennik_clan
 government_rank = 1
-primary_culture = rellekkan
+primary_culture = barbarian
 religion = v
 religious_school = warrior_school
 secondary_religion = northern_pantheon

@@ -5,7 +5,14 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			NOT = { has_country_flag = formed_kourend_flag }
-			was_never_end_game_tag_trigger = yes
+			OR = {
+				was_never_end_game_tag_trigger = yes
+				was_tag = KOU
+			}
+			NOT = {
+				tag = KHG
+				was_tag = KHG
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

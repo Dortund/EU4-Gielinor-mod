@@ -109,6 +109,9 @@ estate_kel_yellow_fortune =
 
 	privileges = {
 		keldagrim_grant_mineral_rights
+		estate_burghers_mountain_expansion
+		estate_burghers_excavation_rights
+		estate_burghers_volcanic_development
 	}
 
 	agendas = {

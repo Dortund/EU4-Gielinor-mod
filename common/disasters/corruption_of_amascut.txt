@@ -1,0 +1,113 @@
+#Corruption of Amascut
+#A danger to any nation following the Menaphite Pantheon with high corruption
+
+corruption_of_amascut = {
+	potential = {
+		religion = menaphite
+		NOT = { has_global_flag = amascut_repentant_flag }
+	}
+
+	can_start = {
+	 	has_any_disaster = no
+		religion = menaphite
+		OR = {
+			corruption = 10
+			AND = {
+				corruption = 5
+				has_personal_deity = amascut
+			}
+		}
+		NOT = { has_country_modifier = amascut_religion_escape_modifier }
+	}
+	
+	can_stop = {
+		OR = {
+			religion = amascut_religion
+			NOT = {
+				corruption = 2
+			}
+			has_global_flag = amascut_repentant_flag
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2
+			corruption = 20
+		}
+		modifier = {
+			factor = 1
+			corruption = 15
+		}
+		modifier = {
+			factor = 1
+			corruption = 10
+		}
+		modifier = {
+			factor = 2
+			corruption = 5
+		}
+		modifier = {
+			factor = 2
+			has_personal_deity = amascut
+		}
+		modifier = {
+			factor = -1
+			OR = {
+				has_personal_deity = icthlarin
+				ruler_has_personality = incorruptible_personality
+			}
+		}
+		modifier = {
+			factor = -1
+			stability = 2
+		}
+	}
+
+	can_end = {
+		OR = {
+			religion = amascut_religion
+			AND = {
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 2
+				had_country_flag = { flag = corruption_of_amascut_disaster_start days = 3650 }
+				OR = {
+					AND = {
+						NOT = { has_personal_deity = amascut }
+						NOT = { corruption = 5 }
+					}
+					NOT = { corruption = 2 }
+				}
+			}
+			has_global_flag = amascut_repentant_flag
+		}
+	}
+
+	modifier = {
+		global_unrest = 5
+		tolerance_heretic = -5
+		all_estate_loyalty_equilibrium = -0.1
+		global_tax_modifier = -0.25
+	}
+	
+	on_start = corruption_of_amascut.1
+	on_end = corruption_of_amascut.100
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			800 = 0
+			50 = corruption_of_amascut.2 #
+			50 = corruption_of_amascut.3 #
+			400 = corruption_of_amascut.4 # High likelihood as it can only happen once per disaster
+			50 = corruption_of_amascut.5 #
+			200 = corruption_of_amascut.6 # High likelihood as it can only happen once per disaster
+			50 = corruption_of_amascut.7 #
+			50 = corruption_of_amascut.8 #
+			50 = corruption_of_amascut.9 #
+			50 = corruption_of_amascut.10 #
+		}
+	}
+}
+

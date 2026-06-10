@@ -1,0 +1,19 @@
+#1504 - Seashell Plain
+owner = GCH
+controller = GCH
+add_core = GCH
+tribal_owner = ---
+culture = tortugan
+religion = seiryu
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+trade_goods = advanced_logs
+
+is_city = yes

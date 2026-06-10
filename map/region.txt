@@ -46,12 +46,14 @@ asgarnia_region = {
 kharidian_desert_region = {
 	areas = {
 		al_kharid_area
+		kharidian_border_area
 		upper_kharid_area
 		kalphite_area
 		bedabin_area
 		north_elid_area
 		uzer_area
 		pollnivneach_area
+		jackal_desert_area
 		nardah_area
 		south_elid_area
 		jaldraocht_area
@@ -109,6 +111,7 @@ outer_isles_region = {
 		east_mos_le_harmless_area
 		harmony_area
 		braindeath_island_area
+		lithkren_area
 		outer_fossil_isles_area
 		west_fossil_island_area
 		east_fossil_island_area
@@ -136,9 +139,12 @@ southern_isles_region = {
 		ape_atoll_jungle_area
 		marim_area
 		bo_isles_area
-		insular_isle_of_souls_area
-		farther_isle_of_souls_area
-		central_isle_of_souls_area
+		southern_ardent_ocean_isles_area
+		summer_shore_area
+		abalone_area
+		eastern_great_conch_area
+		burnt_isles_area
+		shrouded_isles_area
 	}
 }
 
@@ -178,10 +184,20 @@ feldip_hills_region = {
 	}
 }
 
+isle_of_souls_region = {
+	areas = {
+		insular_isle_of_souls_area
+		farther_isle_of_souls_area
+		central_isle_of_souls_area
+		outlying_souls_isles_area
+	}
+}
+
 tirannwn_region = {
 	areas = {
 		prifddinas_area
 		gwenith_area
+		porth_gwenith_isles_area
 		arandar_area
 		north_isafdar_area
 		central_isafdar_area
@@ -216,6 +232,8 @@ fremennik_region = {
 		etceteria_area
 		jatizso_area
 		neitiznot_area
+		north_fremennik_isles_area
+		pirates_havens_area
 		lunar_isle_area
 	}
 }
@@ -223,6 +241,7 @@ fremennik_region = {
 acheron_region = {
 	areas = {
 		frozen_isles_area
+		here_be_penguins_area
 		imcandoria_area
 		stor_glacier_area
 		tasuaq_area
@@ -295,6 +314,7 @@ varlamore_region = {
 		east_avium_area
 		savannah_farms_area
 		civitas_illa_fortis_area
+		varlamore_outlying_isles_area
 	}
 }
 
@@ -387,106 +407,103 @@ shield_region = {
 # SEAS		                     	   #
 ########################################
 
+ardent_ocean_region = {
+	areas = {
+		seas_of_lina_area
+		shores_of_kandarin_area
+		karamjan_seas_area
+		the_storm_tempor_area
+		sea_of_marimbo_area
+	}
+}
+
 unquiet_ocean_region = {
 	areas = {
-		entrana_bay_area
-		tutors_sea_area
-		karamja_straits_area
-		marimbo_sea_area
-		sea_of_pests_area
-		khazari_sea_area
+		menaphite_bay_area
+		tortugan_seas_area
+		seas_of_bones_area
 	}
 }
 
-lunar_sea_region = {
+shrouded_ocean_region = {
 	areas = {
-		inner_kandarin_waters_area
-		fremennik_sea_area
-		frozen_sea_area
-		cape_of_piscatoris_area
-		stampot_area
-		south_acheron_coast_area
+		backwater_area
+		barracuda_seas_area
+		southern_expanse_area
 	}
 }
 
-crystal_ocean_region = {
+western_ocean_region = {
 	areas = {
-		coast_of_tirannwn_area
-		west_feldip_bay_area
-		lost_grove_coast_area
-		southern_crystal_ocean_area
+		crystal_sea_area
+		lost_grove_waters_area
+		western_gate_area
+		great_sound_area
+		kourend_gateway_area
+		piscarilius_sea_area
 	}
 }
 
-east_zeah_sea_region = {
+northern_ocean_region = {
 	areas = {
-		bay_of_zeah_area
-		kourend_coast_area
-		wintertodt_passage_area
+		bays_of_kandarin_area
+		lunar_sea_area
+		inner_acheron_waters_area
+		outer_acheron_waters_area
 	}
 }
 
-sea_of_kebos_region = {
+sunset_ocean_region = {
 	areas = {
-		karuulm_cape_area
-		outer_sea_of_kebos_area
-		xerics_sea_area
+		sea_of_aldarin_area
+		far_horizon_sea_area
+		sea_of_tempestus_area
+		far_varlamore_waters_area
 	}
 }
 
-shining_ocean_region = {
+forgotten_ocean_region = {
 	areas = {
-		tempest_bay_area
-		new_ocean_area
-		aldarin_sea_area
-		avium_sea_area
+		kebossian_shores_area
+		wintertodt_waters_area
+		outer_forgotten_ocean_area
 	}
 }
 
-northern_sea_region = {
+untamed_ocean_region = {
 	areas = {
-		north_forinthry_sea_area
-		daemonheim_bay_area
-		phasmatys_sea_area
-		ammonite_sea_area
-		two_fossil_strait_area
-		fargone_area
-		timelost_sea_area
-		far_north_forinthry_sea_area
-		polar_ocean_area
+		frozen_seas_area
+		searing_sea_area
+		coast_of_daemonheim_area
+		fossil_sea_area
+		havensway_area
 	}
 }
 
-eastern_sea_region = {
+eastern_ocean_region = {
 	areas = {
-		menaphos_delta_area
-		ullek_coast_area
-		south_morytanian_coast_area
-		rummy_waters_area
-		mos_le_harmless_sea_area
-		premias_channel_area
-		adventurous_waters_area
-		north_wushanko_sea_area
-		arc_sea_area
-		sea_of_cyclosis_area
-		skull_sea_area
-		hook_sea_area
-		juniper_sea_area
-		scythe_sea_area
-		bowl_sea_area
+		seas_of_ullek_area
+		seas_of_hallowvale_area
+		piratical_seas_area
+		empty_expanse_area
+		wushanko_gateway_area
+		gunpowder_sea_area
+		the_hooks_catch_area
+		scythes_harvest_area
 	}
 }
 
-far_eastern_sea_region = {
+wushanko_ocean_region = {
 	areas = {
-		pincers_sea_area
-		shambling_sea_area
-		loop_sea_area
-		post_wushanko_sea_area
-		shield_sea_area
-		lonely_ocean_area
+		lost_way_area
+		bowl_waters_area
+		grasped_sea_area
+		bowlspill_sea_area
+		sea_of_guardians_area
+		faraway_sea_area
 	}
 }
+
 
 
 ########################################

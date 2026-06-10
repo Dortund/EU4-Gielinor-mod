@@ -1,0 +1,2 @@
+1.1.1 = { celestial_emperor = ULL }
+2.1.1 = { celestial_emperor = MPS }

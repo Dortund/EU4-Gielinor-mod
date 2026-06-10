@@ -1,7 +1,7 @@
 #366 - Barren Shore
-owner = BAO
-controller = BAO
-add_core = BAO
+owner = SLC
+controller = SLC
+add_core = SLC
 tribal_owner = ---
 culture = barbarian
 religion = v
@@ -23,3 +23,17 @@ base_manpower = 1
 trade_goods = naval_goods
 
 is_city = yes
+
+2042.5.6 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2072.5.6 = {
+	owner = BAO
+	controller = BAO
+	add_core = BAO
+	remove_core = GUN
+	remove_core = SLC
+}

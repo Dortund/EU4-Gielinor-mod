@@ -131,4 +131,34 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\alert_pick_church_aspect_suzaku.dds"
 		alwaystransparent = yes
 	}
+	spriteType =
+	{
+		name = "GFX_alert_pick_church_aspect_ralos"
+		texturefile = "gfx\\interface\\alert_pick_church_aspect_ralos.dds"
+		alwaystransparent = yes
+	}
+	spriteType =
+	{
+		name = "GFX_alert_pick_church_aspect_ranul"
+		texturefile = "gfx\\interface\\alert_pick_church_aspect_ranul.dds"
+		alwaystransparent = yes
+	}
+	spriteType =
+	{
+		name = "GFX_alert_pick_church_aspect_hanalan"
+		texturefile = "gfx\\interface\\alert_pick_church_aspect_hanalan.dds"
+		alwaystransparent = yes
+	}
+	spriteType =
+	{
+		name = "GFX_alert_pick_church_aspect_birman"
+		texturefile = "gfx\\interface\\alert_pick_church_aspect_birman.dds"
+		alwaystransparent = yes
+	}
+	spriteType =
+	{
+		name = "GFX_alert_pick_church_aspect_queen_of_ashes"
+		texturefile = "gfx\\interface\\alert_pick_church_aspect_queen_of_ashes.dds"
+		alwaystransparent = yes
+	}
 }

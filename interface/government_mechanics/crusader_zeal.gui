@@ -9,7 +9,6 @@ guiTypes = {
 			name = "government_power_bar"
 			spriteType = "GFX_crusader_zeal_power_bar"
 			position = { x = 16 y = 49 }
-			Orientation = "UPPER_LEFT"
 		}
 
 		# Frame
@@ -17,8 +16,36 @@ guiTypes = {
 			name = "government_power_bar_frame"
 			spriteType = "GFX_crusader_zeal_frame"
 			position = { x = 0 y = 0 }
-			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
+		}
+	}
+	
+	windowType = {
+		name = "crusader_zeal_gov_button_1"
+		size = { x = 48 y = 48 }
+		moveable = 0
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_crusader_zeal_crush_altars_button"
+			position = { x = 74 y = 0 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "crusader_zeal_gov_button_2"
+		size = { x = 48 y = 48 }
+		moveable = 0
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_crusader_zeal_migrate_fremennik_button"
+			position = { x = 126 y = 0 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			clicksound = back_click
 		}
 	}
 }

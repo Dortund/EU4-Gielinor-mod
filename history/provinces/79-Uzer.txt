@@ -1,5 +1,4 @@
 #79 - Uzer
-
 culture = midkharidian
 religion = menaphite
 tribal_owner = ---

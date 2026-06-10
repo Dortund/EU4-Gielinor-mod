@@ -1,0 +1,14 @@
+#1514-Isle of Bones
+tribal_owner = ---
+trade_goods = bones
+culture = skeleton
+religion = zamorak
+
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 2
+
+native_size = 10
+native_ferocity = 8
+native_hostileness = 8

@@ -16,25 +16,38 @@ country_event = {
 	
 	option = {
 		name = flavor_mps.1.a #Hmm, seems like a good idea...
-		add_adm_power = -75
+		add_adm_power = -35
 		add_prestige = 10
 		KDS = {
 			country_event = {
 				id = flavor_kds.5
-				days = 1
+				days = 20
 			}
 		}
 		add_opinion = {
 			who = KDS
 			modifier = kds_granted_assistance
 		}
-		create_alliance = KDS
 		ai_chance = {
-			factor = 1
+			factor = 5
+			modifier = {
+				factor = 2
+				alliance_with = KDS
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					is_enemy = KDS
+					is_rival = KDS
+				}
+			}
 		}
 	}
 	option = {
 		name = flavor_mps.1.b #We'll not get involved.
+		trigger = {
+			NOT = { has_global_flag = KDS_guaranteed_MPS_help_flag }
+		}
 		add_prestige = -5
 		KDS = {
 			country_event = {
@@ -45,6 +58,20 @@ country_event = {
 		add_opinion = {
 			who = KDS
 			modifier = kds_refused_assistance
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = KDS_guaranteed_MPS_help_flag }
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					is_enemy = KDS
+					is_rival = KDS
+				}
+			}
 		}
 	}
 }

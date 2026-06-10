@@ -1,0 +1,4 @@
+﻿l_english:
+ tzh_xil_estate_events.1.t:0 "Revolt of the [Root.GetName] $ESTATE_TZH_XIL$"
+ tzh_xil_estate_events.1.d:0 "Appalled at the loss of their privileges the $ESTATE_TZH_XIL$ of the [Root.GetName] province have taken up arms against us!"
+ tzh_xil_estate_events.1.a:0 "Ok."

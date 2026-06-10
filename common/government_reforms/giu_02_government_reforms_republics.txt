@@ -37,7 +37,7 @@ chalkeocracy = {
 	nation_designer_cost = 0
 	modifiers = {
 	 	production_efficiency = 0.05
-		max_absolutism = -15
+		max_absolutism = -10
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -84,6 +84,28 @@ consortium_republic = {
 	}
 }
 
+dominion_tower_reform = {
+	icon = "icon_dominion_tower"
+	lock_level_when_selected = yes
+	rulers_can_be_generals = no
+	has_term_election = no
+	potential = {
+		tag = DTO
+	}
+	valid_for_nation_designer = no
+	modifiers = {
+	 	governing_capacity_modifier = -0.75
+		build_cost = -0.25
+		garrison_size = 0.5
+	 	max_absolutism = 10
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	queen = no
+	heir = no
+}
+
 dwarven_outpost = {
 	icon = "icon_dwarven_outpost"
 	allow_normal_conversion = no
@@ -96,7 +118,7 @@ dwarven_outpost = {
 	lock_level_when_selected = yes
 	is_trading_city = yes
 	modifiers = {
-		max_absolutism = -20
+		max_absolutism = -15
 		production_efficiency = 0.1
 	 	trade_goods_size_modifier = 0.1
 		global_unrest = -5
@@ -157,7 +179,7 @@ free_city = {
 	modifiers = {
 		trade_efficiency = 0.1
 		development_cost = -0.1
-		max_absolutism = -20
+		max_absolutism = -15
 		burghers_influence_modifier = 0.15
 	}
 	fixed_rank = 1
@@ -177,6 +199,7 @@ frog_collective = {
 	}
 	duration = 2
 	legacy_equivalent = political_dynasties_legacy
+	can_change_primary_culture = no
 	allow_force_tributary = no
 	valid_for_nation_designer = no	
 	start_territory_to_estates = 0.25
@@ -194,6 +217,28 @@ frog_collective = {
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
+		enables_estate_workers = yes
+	}
+}
+
+independent_faction = {
+	icon = "icon_independent_faction"
+	allow_normal_conversion = yes
+	duration = 4
+	legacy_equivalent = political_dynasties_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		governing_capacity_modifier = -0.5
+		max_absolutism = 10
+	}
+	fixed_rank = 1
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	ai = {
+		factor = 0.5 #generic
 	}
 }
 
@@ -260,7 +305,6 @@ magiocracy = {
 	modifiers = {
 		leader_land_fire = 1
 		global_institution_spread = 0.1
-	 	meritocracy = 0.5
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -269,14 +313,13 @@ magiocracy = {
 	ai = {
 		factor = 2
 	}
-	has_meritocracy = yes
 }
 
 merchants_reform = {
 	icon = "icon_merchant_republic"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_absolutism = -50
+		max_absolutism = -25
 		merchants = 1
 	}
 	valid_for_nation_designer = yes
@@ -352,7 +395,6 @@ military_dictatorship_reform = {
 	modifiers = {
 		global_autonomy = -0.075
 		land_morale = 0.1
-		max_absolutism = -10
 	}
 	custom_attributes = {
 		generals_become_rulers = yes
@@ -381,13 +423,13 @@ necromantic_dictatorship = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 	}
-	has_meritocracy = yes
 }
 
 obsidian_caste = {
 	icon = "icon_obsidian_castes"
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
+	can_change_primary_culture = no
 	potential = {
 		culture_group = tzhaar_group
 	}
@@ -462,7 +504,6 @@ pirate_republic_reform = {
 		locked_government_type = yes
 		force_admiral_leader = yes
 	}
-	
 }
 
 political_dynasties = {
@@ -510,6 +551,44 @@ rogue_republic = {
 	}
 }
 
+secluded_island_republic = {
+	icon = "icon_secluded_island_republic"
+	allow_normal_conversion = yes
+	potential = {
+		any_owned_province = {
+			has_port = yes
+		}
+		capital_scope = {
+			OR = {
+			 	is_island = yes
+				region = outer_isles_region
+				region = isle_of_souls_region
+				region = southern_isles_region
+				superregion = wushanko_isles_superregion
+			}
+		}
+	}
+	duration = 6
+	legacy_equivalent = political_dynasties_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		sailors_recovery_speed = 0.2
+		allowed_marine_fraction = 0.25
+		same_culture_advisor_cost = -0.25
+		diplomatic_upkeep = -1
+		governing_capacity_modifier = -0.5
+		max_absolutism = -40
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	ai = {
+		factor = 0.2 #generally not switched to
+	}
+}
+
 sirenic_republic = {
 	icon = "icon_sirenic_republic"
 	allow_normal_conversion = yes
@@ -525,7 +604,6 @@ sirenic_republic = {
 		governing_capacity = -50
 		own_coast_naval_combat_bonus = 1
 		global_sailors_modifier = 0.2
-	 	meritocracy = 0.5
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -534,7 +612,6 @@ sirenic_republic = {
 	ai = {
 		factor = 2
 	}
-	has_meritocracy = yes
 }
 
 tirannwn_republic = {
@@ -645,6 +722,7 @@ town_council_reform = {
 		locked_government_type = yes
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
+		enables_estate_workers = yes
 	}
 	duration = 4
 }
@@ -858,6 +936,47 @@ apprenticeship_education_reform = {
 	}
 	ai = {
 		factor = 1.5
+	}
+}
+
+thrall_of_amascut_republic_reform = {
+	icon = "icon_thrall_of_amascut_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		religion = amascut_religion
+	}
+	modifiers = {
+	 	global_heretic_missionary_strength = 0.02
+	 	all_estate_influence_modifier = -0.1
+		ae_impact = 1
+		republican_tradition = -0.5
+		max_absolutism = -20
+	}
+	raze_province = yes
+	government_abilities = {
+		enthrallment_mechanic
+	}
+}
+
+tortugan_travelling_culture_reform = {
+	icon = "icon_tortugan_travelling_culture"
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = tortugan_group
+	}
+	modifiers = {
+		stability_cost_modifier = -0.2
+		global_unrest = -1
+	 	manpower_in_culture_group_provinces = -0.2
+		global_trade_goods_size_modifier = -0.1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	ai = {
+		factor = 0
 	}
 }
 

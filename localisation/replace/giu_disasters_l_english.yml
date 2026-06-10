@@ -1,4 +1,22 @@
 ﻿l_english:
+
+# Estates
+
+ estate_admirals_disaster:0 "Thalassocratic Coup"
+ estate_admirals_disaster_desc:0 "The representatives of our nation's sea power have grown so powerful they assumed de facto control over our country."
+ EST_CRUSHED_ADMIRALS:0 "The Admirals have been curtailed"
+
+ estate_workers_disaster:0 "Worker Coup"
+ estate_workers_disaster_desc:0 "The downtrodden masses have amassed enough political power they intended to use it to overthrow their would-be masters."
+ EST_CRUSHED_WORKERS:0 "The Workers have been curtailed"
+ 
+# Religion
+
+ corruption_of_amascut:0 "Corruption of Amascut"
+ corruption_of_amascut_desc:0 "The goddess Amascut - known also as the Devourer - is usually a subtle presence among the Kharidian realms. However, she is drawn to opportunities to amass personal power and if a nation was left vulnerable to her presence via high corruption, she would be likely to openly strike."
+ 
+# Tag-specific
+
  tirannwn_civil_war:0 "Tirannwn Civil War"
  desc_tirannwn_civil_war:0 "As the Cadarn clan and many other elves crossed the Galarpos Mountains east into Baxtorian's kingdom, the ancient elven capital of Prifddinas was left vulnerable. The Iorwerth Clan now stake claim to Tirannwn, though others resist."
  

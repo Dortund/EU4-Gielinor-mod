@@ -146,7 +146,6 @@ ectofuntus_barrier_reform = {
 	nation_designer_cost = 200
 	modifiers = {
 		own_territory_dice_roll_bonus = 3
-		meritocracy = 0.5
 		governing_capacity_modifier = -0.9
 	}
 }
@@ -643,10 +642,8 @@ grand_exchange_reform = {
 				tag = MST
 			 	mission_completed = MST_grand_exchange_mission
 			}
-			AND = {
-				full_idea_group = economic_ideas
-				full_idea_group = trade_ideas
-			}
+			full_idea_group = economic_ideas
+			full_idea_group = trade_ideas
 		}
 	}
 	modifiers = {

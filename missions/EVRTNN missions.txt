@@ -231,7 +231,6 @@ elven_resistance_missions_3 = {
 					IOR = {
 						country_event = {
 							id = flavor_ior.3
-							days = 1
 						}
 					}
 				}
@@ -244,7 +243,6 @@ elven_resistance_missions_3 = {
 					IOR = {
 						country_event = {
 							id = flavor_ior.3
-							days = 1
 						}
 					}
 				}
@@ -293,7 +291,6 @@ elven_resistance_missions_3 = {
 				IOR = {
 					country_event = {
 						id = flavor_ior.2
-						days = 1
 					}
 				}
 			}
@@ -400,7 +397,6 @@ elven_resistance_missions_3 = {
 			IOR = {
 				country_event = {
 					id = flavor_ior.7
-					days = 30
 				}
 			}
 		}
@@ -666,10 +662,10 @@ elven_resistance_missions_5 = {
 				name = EVR_kandarin_innovations
 				duration = 3650
 			}
-			entrana_bay_area = {
+			seas_of_lina_area = {
 				discover_country = ROOT
 			}
-			tutors_sea_area = {
+			shores_of_kandarin_area = {
 				discover_country = ROOT
 			}
 			south_asgarnia_area = {
@@ -732,7 +728,6 @@ elven_resistance_missions_5 = {
 					}
 					country_event = {
 						id = flavor_evr.8
-						days = 30
 					}
 				}
 				add_dip_power = 50

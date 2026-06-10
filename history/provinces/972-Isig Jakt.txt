@@ -1,9 +1,9 @@
 #972-Isig Jakt
-owner = KTR
-controller = KTR
-add_core = KTR
+owner = BKC
+controller = BKC
+add_core = BKC
 tribal_owner = ---
-culture = rellekkan
+culture = barbarian
 religion = northern_pantheon
 
 discovered_by = dwarventechgroup
@@ -23,9 +23,18 @@ trade_goods = hunter_creatures
 
 is_city = yes
 
-1957.3.28 = {
+2042.5.6 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	religion = v
+}
+
+2047.7.3 = {
 	owner = REL
 	controller = REL
 	add_core = REL
-	religion = v
+	remove_core = GUN
+	remove_core = BKC
+	culture = rellekkan
 }

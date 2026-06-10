@@ -1,0 +1,10 @@
+﻿l_english:
+ amascut_religion_flavor.1.t:0 "Enthrallment of $COUNTRY$"
+ amascut_religion_flavor.1.d:0 "Amascut has seized control of most of our people. If we are to be free of her, it will be a difficult struggle. Alternatively, we could let ourselves be subject to her will in exchange for power."
+ amascut_religion_flavor.1.a:0 "We must follow her will... for now."
+ thrall_of_amascut_no_easy_escape_tooltip:0 "The §YEnthrallment§! metric measures how strong a grasp Amascut has over our people, scaling from 0 to 100. If it is below 10, we can escape Amascut's grasp via a decision.\nAccepting the demands of religious rebels of a dominant rival faith §Rwill not§! convert us out of Amascut's grasp, but it will make it easier.\nHowever, we can still be force-converted in a war."
+ 
+ amascut_religion_flavor.2.t:0 "[plague_sending_nation.GetName] Sends a Plague!"
+ amascut_religion_flavor.2.d:0 "A strange corrupt presence has befallen our people. We suspect the Devourer's handiwork via her [plague_sending_nation.GetAdjective] thralls."
+ amascut_religion_flavor.2.a:0 "We must cleanse this corruption!"
+ corrupt_scarab_information_tooltip:0 "Gain §R1§! Corruption and §R+0.1§! Corruption for 5 years.\nGain the §YCleansing of Heresy§! casus belli against [plague_sending_nation.GetName] for 5 years.\nForce-converting an Amascutite nation in war will prevent them from corrupting our nation."

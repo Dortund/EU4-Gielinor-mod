@@ -1,10 +1,10 @@
 #367-Hjem Hjemmefra
-owner = REL
-controller = REL
-add_core = REL
+owner = LHC
+controller = LHC
+add_core = LHC
 tribal_owner = ---
 culture = barbarian
-religion = guthix
+religion = northern_pantheon
 
 discovered_by = dwarventechgroup
 discovered_by = fremenniktechgroup
@@ -23,3 +23,19 @@ base_manpower = 3
 trade_goods = logs
 
 is_city = yes
+
+2042.5.6 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	religion = guthix
+}
+
+2047.7.3 = {
+	owner = REL
+	controller = REL
+	add_core = REL
+	remove_core = GUN
+	remove_core = LHC
+	culture = rellekkan
+}

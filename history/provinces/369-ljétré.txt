@@ -1,7 +1,7 @@
 #369-Ijétré
-owner = RVL
-controller = RVL
-add_core = RVL
+owner = EKC
+controller = EKC
+add_core = EKC
 tribal_owner = ---
 culture = barbarian
 religion = northern_pantheon
@@ -25,16 +25,13 @@ trade_goods = logs
 is_city = yes
 
 1965.9.27 = {
-	owner = REL
-	controller = REL
-	add_core = REL
+	religion = guthix
 }
 
-2042.3.15 = {
+2042.5.6 = {
 	owner = GUN
 	controller = GUN
 	add_core = GUN
-	remove_core = REL
 }
 
 2047.7.3 = {
@@ -42,4 +39,6 @@ is_city = yes
 	controller = REL
 	add_core = REL
 	remove_core = GUN
+	remove_core = EKC
+	culture = rellekkan
 }

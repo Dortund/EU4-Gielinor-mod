@@ -3,8 +3,8 @@ owner = KTR
 controller = KTR
 add_core = KTR
 tribal_owner = ---
-culture = rellekkan
-religion = v
+culture = barbarian
+religion = northern_pantheon
 
 discovered_by = dwarventechgroup
 discovered_by = fremenniktechgroup
@@ -21,12 +21,20 @@ base_manpower = 1
 
 trade_goods = hunter_creatures
 
-fort_15th = yes
-
 is_city = yes
 
-1957.3.28 = {
+2042.5.6 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	religion = v
+}
+
+2047.7.3 = {
 	owner = REL
 	controller = REL
 	add_core = REL
+	remove_core = GUN
+	remove_core = KTR
+	culture = rellekkan
 }

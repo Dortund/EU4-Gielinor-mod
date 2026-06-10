@@ -19,8 +19,6 @@ base_tax = 3
 base_production = 3
 base_manpower = 3
 
-fort_15th = yes 
-
 trade_goods = logs
 
 is_city = yes

@@ -51,6 +51,23 @@ exploration_exploration_colonial_ventures = {
 }
 
 ###########################################
+# Religion
+###########################################
+
+#Queen of Ashes with Fire Poi
+queenofashes_fire_poi_aspect_war_modifier = {
+	potential = {
+		religion = queen_of_ashes
+		has_church_aspect = queenofashes_fire_poi_aspect
+	}
+	trigger = {
+		is_at_war = yes
+		prestige = 80
+	}
+	church_power_modifier = 0.5
+}
+
+###########################################
 # Elder Artefacts
 ###########################################
 
@@ -1132,6 +1149,27 @@ cfs_freedom_of_slepe = {
 	tolerance_heathen = 1
 }
 
+###########################################
+# Gunnar
+###########################################
+
+gun_war_against_runecrafters = {
+	potential = {
+		has_reform = runecrafting_crusader
+	}
+	trigger = {
+		any_war_enemy_country = {
+			has_institution = runecrafting
+			any_owned_province = {
+				OR = {
+					trade_goods = runes
+					has_latent_trade_goods = runes
+				}
+			}
+		}
+	}
+	monthly_crusader_zeal_power_1 = 0.1
+}
 
 ###########################################
 # Kandarin
@@ -1149,6 +1187,42 @@ kdr_knights_of_the_round_table = {
 		}
 	}
  	min_autonomy_in_territories = -0.1
+}
+
+###########################################
+# Kharidian Emergence
+###########################################
+
+alk_great_northern_ally = {
+	potential = {
+		has_government_mechanic = kharidian_emergence_mechanic
+		has_country_flag = KDS_al_kharid_missions_branch_flag
+	}
+	trigger = {
+		any_ally = {
+			is_great_power = yes
+			technology_group = centraltechgroup	
+		}
+	}
+	monthly_kharidian_emergence_adm = 0.15
+	monthly_kharidian_emergence_dip = 0.15
+	monthly_kharidian_emergence_mil = 0.15
+}
+
+kds_het_servant_of_the_pharoah = {
+	potential = {
+		has_government_mechanic = kharidian_emergence_mechanic
+		has_country_flag = KDS_loyalist_missions_branch_flag
+	}
+	trigger = {
+		is_subject_of_type = tributary_state
+		overlord = {
+			is_emperor_of_china = yes
+		}
+	}
+	monthly_kharidian_emergence_adm = 0.25
+	monthly_kharidian_emergence_dip = 0.25
+	monthly_kharidian_emergence_mil = 0.25
 }
 
 ###########################################

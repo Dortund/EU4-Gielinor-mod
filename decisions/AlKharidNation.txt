@@ -11,7 +11,14 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { exists = ALK }
-			tag = KDS
+			NOT = {
+				OR = {
+					tag = MPS
+					was_tag = MPS
+				}
+			}
+			NOT = { has_country_flag = KDS_loyalist_missions_branch_flag }
+			primary_culture = alkharidian			
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -20,11 +27,12 @@ country_decisions = {
 					ai = no
 				}
 			}
+			not_in_mission_preview_mode = { key = KDS }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 61		# Rusum
 				province_id = 62		# Al Kharid
+				province_id = 1561		# Shantay Pass
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -34,24 +42,40 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			total_development = 25
-			owns_core_province = 61		# Rusum
+			total_development = 50
 			owns_core_province = 62		# Al Kharid
+			owns_core_province = 1561
+			if = {
+				limit = {
+					tag = KDS
+				}
+				custom_trigger_tooltip = {
+					tooltip = choose_al_kharid_missions_tooltip
+					has_country_flag = KDS_al_kharid_missions_branch_flag
+				}
+			}
 		}
 		effect = {
 			62 = {
 				move_capital_effect = yes
 			}
 			change_tag = ALK
+			set_country_flag = KDS_al_kharid_missions_branch_flag
 			swap_non_generic_missions = yes
-			ALK = {
-				if = {
-					limit = {
-						NOT = { government = monarchy }
-						is_revolutionary = no
-					}
-					change_government_to_monarchy = yes
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+					is_revolutionary = no
 				}
+				change_government_to_monarchy = yes
+			}
+			if = {
+				limit = {
+					NOT = { has_reform = al_kharid_emirate }
+					NOT = { has_country_flag = kharidian_emergence_completed }
+					NOT = { is_emperor_of_china = yes }
+				}
+				add_government_reform = al_kharid_emirate
 			}
 			if = {
 				limit = {
@@ -69,11 +93,24 @@ country_decisions = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			hidden_effect = {
+				set_variable = {
+					which = kharidian_emergence_adm_var
+					value = 0
+				}
+				set_variable = {
+					which = kharidian_emergence_dip_var
+					value = 0
+				}
+				set_variable = {
+					which = kharidian_emergence_mil_var
+					value = 0
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-
 }

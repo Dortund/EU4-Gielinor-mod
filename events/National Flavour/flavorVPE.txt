@@ -30,10 +30,15 @@ country_event = {
 				discover_country = ROOT
 				discover_country = VPE
 			}
-			sea_of_pests_area = {
+			seas_of_bones_area = {
 				discover_country = ROOT
 				discover_country = VPE
 			}
+			sea_of_marimbo_area = {
+				discover_country = ROOT
+				discover_country = VPE
+			}
+			
 			239 = {
 				cede_province = VPE
 				add_core = VPE
@@ -156,11 +161,15 @@ country_event = {
 			set_global_flag = asg_void_pests_emerge
 			bo_isles_area = {
 				discover_country = ROOT
-				discover_country = VKO
+				discover_country = VPE
 			}
-			sea_of_pests_area = {
+			seas_of_bones_area = {
 				discover_country = ROOT
-				discover_country = VKO
+				discover_country = VPE
+			}
+			sea_of_marimbo_area = {
+				discover_country = ROOT
+				discover_country = VPE
 			}
 			238 = {
 				cede_province = VKO

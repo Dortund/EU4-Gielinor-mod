@@ -9,6 +9,7 @@ religion = guthix
 discovered_by = bandostechgroup
 discovered_by = centraltechgroup
 discovered_by = dwarventechgroup
+discovered_by = kharidtechgroup
 
 hre = no
 

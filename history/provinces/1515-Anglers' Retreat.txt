@@ -1,0 +1,18 @@
+#1515-Anglers' Retreat
+tribal_owner = ---
+culture = mogre
+religion = bandos
+
+discovered_by = bandostechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 2
+base_manpower = 1
+
+trade_goods = fishing_spot
+
+native_size = 10
+native_ferocity = 5
+native_hostileness = 5

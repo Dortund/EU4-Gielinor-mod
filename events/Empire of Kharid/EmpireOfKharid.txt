@@ -1,0 +1,808 @@
+namespace = empire_of_kharid_events
+
+# Settlement Spree
+country_event = {
+	id = empire_of_kharid_events.1
+	title = empire_of_kharid_events.1.t
+	desc = empire_of_kharid_events.1.d #Our overlord, [EmperorOfChina.GetTitle] [EmperorOfChina.GetName], has saw it fit to invest resources in a considerable expansion of desert land, for which we are a beneficiary.
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = empire_of_kharid_events.1.a #Sometimes being a subject nation pays off!
+		random_owned_province = {
+			limit = {
+				region = kharidian_desert_region
+				has_empty_adjacent_province = yes
+			}
+			add_siberian_construction = 100
+		}
+	}
+}
+
+# The Reconstruction of Uzer (empty province)
+country_event = {
+	id = empire_of_kharid_events.2
+	title = empire_of_kharid_events.2.t
+	desc = empire_of_kharid_events.2.d #During the last centuries of the God Wars, the demon Thammaron destroyed the city of Uzer by use of a portal to circumvent its clay golem guardians. Though eventually slain, the demon's work left the city a ruin - until now. With the work of an ever-strengthening Kharidian Empire, Uzer is finally back on the map.
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			93 = {
+				add_core = UZE
+				cede_province = UZE
+				change_culture = uzeran
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+				center_of_trade = 2
+			}
+			create_subject = { #It doesn't work but I'm keeping this here anyway.
+				subject_type = tributary_state
+				subject = UZE
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = amascut_religion
+					}
+				}
+				UZE = {
+					country_event = {
+						id = flavor_uze.1
+					}
+				}
+			}
+			UZE = {
+				adopt_reform_progress = ROOT
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = empire_of_kharid_events.2.a #Uzer shall never fall again!
+
+	}
+	option = {
+		name = empire_of_kharid_events.2.b #Forget this Pharoah nonsense, I want to live in Uzer!
+		switch_tag = UZE
+	}
+}
+
+# The Reconstruction of Uzer (owned province)
+country_event = {
+	id = empire_of_kharid_events.3
+	title = empire_of_kharid_events.3.t
+	desc = empire_of_kharid_events.3.d #During the last centuries of the God Wars, the demon Thammaron destroyed the city of Uzer by use of a portal to circumvent its clay golem guardians. Though eventually slain, the demon's work left the city a ruin - until now. With the work of an ever-strengthening Kharidian Empire, Uzer is finally back on the map.
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = empire_of_kharid_events.3.a #Uzer shall never fall again!
+		93 = {
+			add_core = UZE
+			change_culture = uzeran
+			add_base_tax = 4
+			add_base_production = 4
+			add_base_manpower = 4
+			center_of_trade = 1
+		}
+	}
+}
+
+# The Reconstruction of Uzer (subject province)
+country_event = {
+	id = empire_of_kharid_events.4
+	title = empire_of_kharid_events.4.t
+	desc = empire_of_kharid_events.4.d #[EmperorOfChina.GetTitle] [EmperorOfChina.GetName] has decreed that Uzer shall be rebuilt. It falls within our territory so naturally we receive the benefits of this action.
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = empire_of_kharid_events.4.a #Uzer shall never fall again!
+		93 = {
+			add_core = UZE
+			change_culture = uzeran
+			add_base_tax = 4
+			add_base_production = 4
+			add_base_manpower = 4
+			center_of_trade = 1
+		}
+	}
+}
+
+# The Reconstruction of Ullek (empty province)
+country_event = {
+	id = empire_of_kharid_events.5
+	title = empire_of_kharid_events.5.t
+	desc = empire_of_kharid_events.5.d #Once Kharid's most properous city - and among the richest in Gielinor - Ullek never fell to invasion until the demon Balfrug Kreeyath destroyed it near the end of the God Wars. Its culture lives on among the people of Menaphos, who have contributed greatly to its reconstruction!
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			79 = {
+				add_core = ULL
+				cede_province = ULL
+				change_culture = menaphiteculture
+				add_base_tax = 6
+				add_base_production = 6
+				add_base_manpower = 5
+				center_of_trade = 2
+			}
+			create_subject = { #It doesn't work but I'm keeping this here anyway.
+				subject_type = tributary_state
+				subject = ULL
+			}
+			ULL = {
+				adopt_reform_progress = ROOT
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = empire_of_kharid_events.5.a #Ullek is reborn!
+
+	}
+	option = {
+		name = empire_of_kharid_events.5.b #Forget this Pharoah nonsense, I want to live in Ullek!
+		switch_tag = ULL
+	}
+}
+
+# The Reconstruction of Ullek (owned province)
+country_event = {
+	id = empire_of_kharid_events.6
+	title = empire_of_kharid_events.6.t
+	desc = empire_of_kharid_events.6.d #
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = empire_of_kharid_events.6.a #Ullek is reborn!
+		79 = {
+			add_core = ULL
+			change_culture = menaphiteculture
+			add_base_tax = 5
+			add_base_production = 5
+			add_base_manpower = 4
+			center_of_trade = 1
+		}
+	}
+}
+
+# The Reconstruction of Ullek (subject province)
+country_event = {
+	id = empire_of_kharid_events.7
+	title = empire_of_kharid_events.7.t
+	desc = empire_of_kharid_events.7.d #
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = empire_of_kharid_events.7.a #Ullek is reborn!
+		79 = {
+			add_core = ULL
+			change_culture = menaphiteculture
+			add_base_tax = 5
+			add_base_production = 5
+			add_base_manpower = 4
+			center_of_trade = 1
+		}
+	}
+}
+
+# New Kharidian Settlement
+country_event = {
+	id = empire_of_kharid_events.8
+	title = empire_of_kharid_events.8.t #A New Settlement!
+	
+	desc = {
+		trigger = {
+			NOT = {
+				has_global_flag = kharid_goebies_incoming_flag
+				has_global_flag = kharid_dominion_tower_incoming_flag
+				has_global_flag = kharid_spirit_anglers_incoming_flag
+				has_global_flag = kharid_enakhra_incoming_flag
+				has_global_flag = kharid_personal_province_incoming_flag
+			}
+		}
+	   desc = empire_of_kharid_events.8.da #In our effort to expand the reach of the Pharoah, we have successfully established a new settlement in [kharid_settlement_location.GetCapitalName], extending the territory of our subject and strengthening our Mandate!
+	}
+	desc = {
+		trigger = {
+			has_global_flag = kharid_goebies_incoming_flag
+		}
+	   desc = empire_of_kharid_events.8.db #It seems we were not the only people looking to build a settlement! A strange group of beings calling themselves the Goebies are looking to find new land away from their home plane of Mazcab. They have promised to abide by our laws and accept the rule of the [Root.Religion.GetName] faith, and have saved us a lot of trouble finding settlers of our own!
+	}
+	desc = {
+		trigger = {
+			has_global_flag = kharid_spirit_anglers_incoming_flag
+		}
+	   desc = empire_of_kharid_events.8.dc #In the wake of the terrifying Tempoross, a faction calling themselves the Spirit Anglers have formed to oppose it. We've allowed them to take the place of our intended settlers so long as they provide us with a share of their loot!
+	}
+	desc = {
+		trigger = {
+			has_global_flag = kharid_dominion_tower_incoming_flag
+		}
+	   desc = empire_of_kharid_events.8.dd #Our settlers have come to a huge tower and uncovered its entrance. Greeted by a strange talking face, they have learnt that this place is known as the Dominion Tower. It should serve as an excellent central point for this new town.
+	}
+	desc = {
+		trigger = {
+			has_global_flag = kharid_enakhra_incoming_flag
+		}
+	   desc = empire_of_kharid_events.8.de #In our attempt to build a new settlement, we have instead crashed into an ancient temple! Unfortunately, this temple was not empty and we seem to have accidentally let loose two of the legendary Stern Judges of old. Suffice to say, most of the settlers are dead and we have little to show for it.
+	}
+	desc = {
+		trigger = {
+			has_global_flag = kharid_personal_province_incoming_flag
+		}
+	   desc = empire_of_kharid_events.8.df #We have successfully expanded our territory in [kharid_settlement_location.GetCapitalName]. As we had no valid subject nation to create or expand, we will own this province outright but it will not strengthen our Mandate as effectively.
+	}
+	
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				20 = { #When the best provinces are exhausted but there's still some left
+					trigger = {
+						NOT = {
+							any_province = {
+								region = kharidian_desert_region
+								NOT = {
+									area = al_kharid_area
+									area = kharidian_border_area
+									area = upper_kharid_area
+									area = ullek_area
+									province_id = 71
+									province_id = 72
+									province_id = 77
+									province_id = 79
+									province_id = 85
+									province_id = 1000
+									province_id = 1539
+								}
+								is_empty = yes
+							}
+						}
+						any_subject_country = {
+							any_owned_province = {
+								region = kharidian_desert_region
+								has_empty_adjacent_province = yes
+							}
+						}
+					}				
+					random_subject_country = {
+						limit = {
+							any_owned_province = {
+								region = kharidian_desert_region
+								has_empty_adjacent_province = yes
+							}
+						}
+						random_owned_province = {
+							limit = {
+								region = kharidian_desert_region
+								has_empty_adjacent_province = yes
+							}
+						 	random_empty_neighbor_province = {		
+								limit = {
+									region = kharidian_desert_region
+								}
+								save_event_target_as = kharid_settlement_location
+							}
+						}
+						save_event_target_as = kharid_settlement_country
+					}
+				}
+				20 = { #Default
+					random_province = {
+						limit = {
+							region = kharidian_desert_region
+							is_empty = yes
+							NOT = {
+								area = al_kharid_area
+								area = kharidian_border_area
+								area = upper_kharid_area
+								area = ullek_area
+								province_id = 71
+								province_id = 72
+								province_id = 77
+								province_id = 79
+								province_id = 85
+								province_id = 1000
+								province_id = 1539
+							}
+						 	any_neighbor_province = {
+								country_or_subject_holds = ROOT
+							}
+						}
+						save_event_target_as = kharid_settlement_location
+						random_neighbor_province = {
+							limit = {
+								NOT = { owned_by = ROOT }
+								owner = {
+									is_subject_of = ROOT
+								}
+							}
+							owner = {
+								save_event_target_as = kharid_settlement_country
+							}
+						}
+					}
+					random_subject_country = {
+						limit = {
+							any_owned_province = {
+								region = kharidian_desert_region
+								any_neighbor_province = {
+									region = kharidian_desert_region
+									is_empty = yes
+									NOT = {
+										area = al_kharid_area
+										area = kharidian_border_area
+										area = upper_kharid_area
+										area = ullek_area
+										province_id = 71
+										province_id = 72
+										province_id = 77
+										province_id = 79
+										province_id = 85
+										province_id = 1000
+										province_id = 1539
+									}
+								}
+							}
+						}
+						random_owned_province = {
+							limit = {
+								region = kharidian_desert_region
+								any_neighbor_province = {
+									region = kharidian_desert_region
+									is_empty = yes
+									NOT = {
+										area = al_kharid_area
+										area = kharidian_border_area
+										area = upper_kharid_area
+										area = ullek_area
+										province_id = 71
+										province_id = 72
+										province_id = 77
+										province_id = 79
+										province_id = 85
+										province_id = 1000
+										province_id = 1539
+									}
+								}
+							}
+						 	random_empty_neighbor_province = {		
+								limit = {
+									region = kharidian_desert_region
+									NOT = {
+										area = al_kharid_area
+										area = kharidian_border_area
+										area = upper_kharid_area
+										area = ullek_area
+										province_id = 71
+										province_id = 72
+										province_id = 77
+										province_id = 79
+										province_id = 85
+										province_id = 1000
+										province_id = 1539
+									}
+								}
+								save_event_target_as = kharid_settlement_location
+							}
+						}
+						save_event_target_as = kharid_settlement_country
+					}
+				}
+				100 = { #Goebies
+					trigger = {
+						has_global_flag = eldergodwars_tuska_dies
+						NOT = { exists = GOE }
+						any_province = {
+							region = kharidian_desert_region
+							NOT = {
+								province_id = 79
+								province_id = 93
+							}
+							is_empty = yes
+						}
+					}
+					set_global_flag = kharid_goebies_incoming_flag
+					random_province = {
+						limit = { #Goebies arrive late so their specific location doesn't matter as much - just reserving Ullek and Uzer.
+							region = kharidian_desert_region
+							NOT = {
+								province_id = 79
+								province_id = 93
+							}
+							is_empty = yes
+						}
+						save_event_target_as = kharid_settlement_location
+					}
+				}
+				100 = { #Spirit Anglers
+					trigger = {
+						exists = TMP
+						NOT = { exists = SAN }
+						any_province = {
+							OR = {
+								province_id = 70
+								province_id = 81
+								province_id = 95
+								province_id = 866
+								province_id = 867
+								province_id = 1562
+							}
+							is_empty = yes
+						}
+					}
+					set_global_flag = kharid_spirit_anglers_incoming_flag
+					random_province = { #West coast of Kharid, but not Enakhra's province
+						limit = {
+							OR = {
+								province_id = 70
+								province_id = 81
+								province_id = 95
+								province_id = 866
+								province_id = 867
+								province_id = 1562
+							}
+							is_empty = yes
+						}
+						save_event_target_as = kharid_settlement_location
+					}
+				}
+				50 = { #Dominion Tower
+					trigger = {
+						NOT = { exists = DTO }
+						77 = {
+							is_empty = yes
+						}
+					}
+					set_global_flag = kharid_dominion_tower_incoming_flag
+					77 = {
+						save_event_target_as = kharid_settlement_location
+					}
+				}
+				1 = { #Enakra Early
+					trigger = {
+						NOT = { has_global_flag = enkhara_revealed_flag }
+						85 = { is_empty = yes }
+					}
+					set_global_flag = kharid_enakhra_incoming_flag
+					85 = {
+						save_event_target_as = kharid_settlement_location
+					}
+				}
+				20 = { #When you have no valid targets for a subject nation to expand
+					trigger = {
+						NOT = {
+							any_subject_country = {
+								any_owned_province = {
+									region = kharidian_desert_region
+									has_empty_adjacent_province = yes
+								}
+							}
+						}
+					}
+					random_owned_province = {
+						limit = {
+							region = kharidian_desert_region
+							has_empty_adjacent_province = yes
+						}
+					 	random_empty_neighbor_province = {		
+							limit = {
+								region = kharidian_desert_region
+							}
+							save_event_target_as = kharid_settlement_location
+						}
+					}
+					set_global_flag = kharid_personal_province_incoming_flag
+				}
+			}
+		}
+	}
+	
+	option = { #DEFAULT 
+		name = empire_of_kharid_events.8.a #Our empire grows stronger.
+		trigger = {
+			NOT = {
+				has_global_flag = kharid_goebies_incoming_flag
+				has_global_flag = kharid_dominion_tower_incoming_flag
+				has_global_flag = kharid_spirit_anglers_incoming_flag
+				has_global_flag = kharid_enakhra_incoming_flag
+				has_global_flag = kharid_personal_province_incoming_flag
+			}
+		}
+		event_target:kharid_settlement_location = {
+			save_global_event_target_as = kharid_province_to_deliver
+		}
+		event_target:kharid_settlement_country = {
+			country_event = { 
+				id = empire_of_kharid_events.9
+			}
+		}
+		add_mandate = 10
+	}
+	option = { #Goebies
+		name = empire_of_kharid_events.8.b #Welcome to Gielinor!
+		trigger = {
+			has_global_flag = kharid_goebies_incoming_flag
+		}
+		event_target:kharid_settlement_location = {
+			cede_province = GOE
+			add_core = GOE
+			change_culture = goebie
+			add_base_tax = 1
+		}
+		create_subject = { #No matter how hard I try this command simply doesn't work (creating other kinds of subject do however.) I've upped the mandate to compensate a little.
+			subject_type = tributary_state 
+			subject = GOE
+		}
+		custom_tooltip = kharid_tributary_known_bug_tooltip
+		hidden_effect = {
+			kharidian_desert_region = {
+				discover_country = GOE
+			}
+			GOE = {
+				adopt_reform_progress = ROOT
+			}
+			clr_global_flag = kharid_goebies_incoming_flag
+		}
+		add_adm_power = 50
+		add_mandate = 10
+	}
+	
+	option = { #Spirit Anglers
+		name = empire_of_kharid_events.8.c #I wonder if they know any good sea shanties?
+		trigger = {
+			has_global_flag = kharid_spirit_anglers_incoming_flag
+		}
+		event_target:kharid_settlement_location = {
+			cede_province = SAN
+			add_core = SAN
+			change_culture = alkharidian
+			add_base_tax = 1
+			add_base_production = 1
+		}
+		if = { 
+			limit = { 
+				SAN = { NOT = { is_subject_of_type = tributary_state } }
+				OR = {
+					has_dlc = "Art of War"
+					has_dlc = "Leviathan"
+					has_dlc = "Mandate of Heaven"
+				}
+			}
+			create_subject = {
+				subject_type = tributary_state 
+				subject = SAN
+			}
+		}
+		custom_tooltip = kharid_tributary_known_bug_tooltip
+		hidden_effect = {
+			kharidian_desert_region = {
+				discover_country = SAN
+			}
+			SAN = {
+				adopt_reform_progress = ROOT
+			}
+			clr_global_flag = kharid_spirit_anglers_incoming_flag
+		}
+		add_dip_power = 50
+		add_mandate = 10
+	}
+	
+	option = { #Dominion Tower
+		name = empire_of_kharid_events.8.d #Who knew that colossal stone tower had a purpose?
+		trigger = {
+			has_global_flag = kharid_dominion_tower_incoming_flag
+		}
+		event_target:kharid_settlement_location = {
+			cede_province = DTO
+			add_core = DTO
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 2
+		}
+		if = { 
+			limit = { 
+				DTO = { NOT = { is_subject_of_type = tributary_state } }
+				OR = {
+					has_dlc = "Art of War"
+					has_dlc = "Leviathan"
+					has_dlc = "Mandate of Heaven"
+				}
+			}
+			create_subject = {
+				subject_type = tributary_state 
+				subject = DTO
+			}
+		}
+		custom_tooltip = kharid_tributary_known_bug_tooltip
+		hidden_effect = {
+			kharidian_desert_region = {
+				discover_country = DTO
+			}
+			DTO = {
+				adopt_reform_progress = ROOT
+			}
+			clr_global_flag = kharid_dominion_tower_incoming_flag
+		}
+		add_mil_power = 50
+		add_mandate = 10
+	}
+
+	option = { #Enakhra
+		name = empire_of_kharid_events.8.e #Curse it all!
+		trigger = {
+			has_global_flag = kharid_enakhra_incoming_flag
+		}
+		event_target:kharid_settlement_location = {
+			cede_province = ENK
+			add_core = ENK
+			change_culture = skeleton
+			change_religion = zamorak
+		}
+		hidden_effect = {
+			kharidian_desert_region = {
+				discover_country = ENK
+			}
+			set_global_flag = enkhara_revealed_flag
+			ENK = {
+				adopt_reform_progress = ROOT
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+				define_ruler = {
+					name = "Enkhara"
+					dynasty = "of the Mahjarrat"
+					culture = mahjarrat
+					adm = 3
+					dip = 2
+					mil = 4
+					age = 1000
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = immortal_personality
+			}
+			clr_global_flag = kharid_enakhra_incoming_flag
+		}
+		if = {
+			limit = {
+				90 = {
+					is_empty = yes
+				}
+			}
+			90 = {
+				cede_province = AKO
+				add_core = AKO
+				add_base_production = 1
+				add_base_manpower = 1
+				change_culture = camelwarrior
+				change_religion = zaros
+			}
+			hidden_effect = {
+				kharidian_desert_region = {
+					discover_country = AKO
+				}
+				AKO = {
+					adopt_reform_progress = ROOT
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.5
+							cavalry = 0.2
+							artillery = 0.3
+						}
+					}
+					define_ruler = {
+						name = "Akthanakos"
+						dynasty = "of the Mahjarrat"
+						culture = mahjarrat
+						adm = 2
+						dip = 2
+						mil = 5
+						age = 1000
+						claim = 100
+					}
+					clear_scripted_personalities = yes
+					add_ruler_personality = immortal_personality
+				}
+			}
+		}
+	}
+	option = { #DEFAULT 
+		name = empire_of_kharid_events.8.f #Our empire grows stronger.
+		trigger = {
+			has_global_flag = kharid_personal_province_incoming_flag
+		}
+		event_target:kharid_settlement_location = {
+			add_siberian_construction = 100
+		}
+		add_mandate = 5
+		hidden_effect = {
+			clr_global_flag = kharid_personal_province_incoming_flag
+		}
+	}
+}
+
+# New Land Granted
+country_event = {
+	id = empire_of_kharid_events.9
+	title = empire_of_kharid_events.9.t
+	desc = empire_of_kharid_events.9.d #Our overlord, [EmperorOfChina.GetTitle] [EmperorOfChina.GetName], has saw it fit to invest resources in a considerable expansion of desert land, for which we are a beneficiary.
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = empire_of_kharid_events.9.a #Sometimes being a subject nation pays off!
+		event_target:kharid_province_to_deliver = {
+			add_siberian_construction = 100
+		}
+		clear_global_event_target = kharid_province_to_deliver
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

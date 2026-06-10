@@ -20,6 +20,8 @@ fort_15th = yes
 
 trade_goods = manufactured_goods
 
+add_cardinal = yes
+
 is_city = yes
 
 center_of_trade = 2

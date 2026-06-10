@@ -727,11 +727,11 @@ province;red;green;blue;x;x
 726;63;221;251;Impassable Sea;x
 727;64;251;251;Impassable Sea;x
 728;65;201;201;Impassable Sea;x
-729;66;221;251;Impassable Sea;x
-730;67;221;251;Impassable Sea;x
-731;68;251;251;Impassable Sea;x
-732;69;201;201;Impassable Sea;x
-733;70;201;251;Impassable Sea;x
+729;66;221;251;Horizon's End;x
+730;67;221;251;Slithering Shores;x
+731;68;251;251;Sea Shadow;x
+732;69;201;201;Unknown Extent;x
+733;70;201;251;Onyx Sea;x
 734;71;221;251;Impassable Sea;x
 735;72;251;251;Impassable Sea;x
 736;73;201;201;Impassable Sea;x
@@ -1449,7 +1449,7 @@ province;red;green;blue;x;x
 1448;112;76;0;Ritual Site;x
 1449;241;78;64;Sequoia Shore;x
 1450;113;80;128;Tempest's Calm;x
-1451;241;82;192;Foresters' Retreat;x
+1451;241;82;192;Nemus Retreat;x
 1452;113;84;255;Brackentop Grotto;x
 1453;241;86;0;Salvager Overlook;x
 1454;113;88;64;Hailstorm Mountain;x
@@ -1494,3 +1494,72 @@ province;red;green;blue;x;x
 1493;128;34;79;Cliffs of Twilight;x
 1494;0;36;126;Twilight Tor;x
 1495;128;38;173;Varlacliff;x
+1496;0;40;32;The Pandemonium;x
+1497;128;42;79;The Rock;x
+1498;0;44;126;Dognose Island;x
+1499;129;46;173;Floopa's Fall;x
+1500;137;42;79;Summer Shore;x
+1501;10;44;126;Jatoba;x
+1502;138;46;173;Thorny Ascent;x
+1503;10;48;32;Abalone Cliffs;x
+1504;138;50;79;Seashell Plain;x
+1505;10;52;126;The Sacred Grove;x
+1506;138;54;173;Coralfarm Beach;x
+1507;10;56;32;Mahogany Overlook;x
+1508;139;58;79;Cape Conch;x
+1509;11;60;126;The Little Pearl;x
+1510;139;62;173;The Onyx Crest;x
+1511;11;64;32;Last Light;x
+1512;139;66;79;Red Rock;x
+1513;11;68;126;Charred Island;x
+1514;139;70;173;Isle of Bones;x
+1515;12;72;32;Anglers' Retreat;x
+1516;140;74;79;Tear of the Soul;x
+1517;12;76;126;Deepfin Point;x
+1518;140;78;173;Wintumber Island;x
+1519;154;142;173;Sunbleak Island;x
+1520;26;144;32;Rainbow's End;x
+1521;154;146;79;Isle of Serpents;x
+1522;26;148;126;The Crown Jewel;x
+1523;154;150;173;Shimmering Atoll;x
+1524;26;152;32;Laguna Aurorae;x
+1525;155;154;79;Vatrachos Island;x
+1526;27;156;126;Minotaurs' Rest;x
+1527;155;158;173;Lledrith Island;x
+1528;27;32;32;Chinchompa Island;x
+1529;155;34;79;Ynysdail;x
+1530;27;36;126;Drumstick Isle;x
+1531;155;38;173;Buccaneers' Haven;x
+1532;28;40;32;Brittle Isle;x
+1533;156;42;79;The Graveyard;x
+1534;28;44;126;Grimstone;x
+1535;156;46;173;Dragon's Horn;x
+1536;28;48;32;Ringcliff Isle;x
+1537;156;50;79;Beach Flats;x
+1538;28;52;126;Everlight Remnant;x
+1539;157;54;173;Uzer's Shield;x
+1540;29;56;32;Lost Isle;x
+1541;102;202;252;Prism Sea;x
+1542;103;222;252;Impassable Sea;x
+1543;104;252;252;The Endless Sea;x
+1544;105;202;202;The Searing Sea;x
+1545;106;202;252;Depths of Mermaids;x
+1546;157;58;79;Akthanakos Oasis;x
+1547;29;254;126;Summer Spring;x
+1548;157;62;173;Gryphons' Trough;x
+1549;29;64;32;Lavaflow;x
+1550;157;66;79;Summer Cliffs;x
+1551;30;68;126;Abalone Cliffface;x
+1552;158;70;173;Mahogany Cliffs;x
+1553;30;243;32;Summer Cliffs;x
+1554;158;174;79;Sacred Cliffs;x
+1555;30;76;126;Cape Conch Cliffs;x
+1556;158;78;173;Snakecliff;x
+1557;107;222;252;Refracting Sea;x
+1558;30;80;32;Troll Camp;x
+1559;159;82;79;Shrouded Shipyard;x
+1560;31;84;126;Chasm of Fire;x
+1561;159;86;173;Shantay Pass;x
+1562;31;88;32;Kalphite Shore;x
+1563;159;90;79;Temple of Isolation;x
+1564;31;92;126;Ullek's Shadow;x

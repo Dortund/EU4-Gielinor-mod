@@ -6,17 +6,31 @@
  DYN_branching_1_2_title:0 "Branching Mission"
  DYN_branching_1_2_desc:0 "This is a §YBranching Mission.§!"
  DYN_this_is_a_branching_mission:0 "This is a §YBranching Mission.§! Complete the mission §YReligious Consideration§! to make your choice on which branch to take."
+
+ DYN_branching_1_3_title:0 "Branching Mission"
+ DYN_branching_1_3_desc:0 "This is a §YBranching Mission.§!"
  
- DYN_SARA_clean_up_the_manor_title:0 "Clean up the Manor"
- DYN_SARA_clean_up_the_manor_desc:0 "The region around Draynor Manor is a frustrating hotbed of Zamorakian sentiment which needs to be cleaned up."
- DYN_SARA_spread_the_light_title:0 "Spread the Light"
- DYN_SARA_spread_the_light_desc:0 "Saradomin's word must wash over this land lest it falls into corruption."
+ 
+ DYN_religious_peace_branch_flag_tooltip:0 "Preview the §YReligious Peace§! branch."
  
  DYN_NEUTRAL_friends_in_strange_places_title:0 "Friends in Strange Places"
  DYN_NEUTRAL_friends_in_strange_places_desc:0 "We must practice what we preach when it comes to religious tolerance, and look beyond the narrow bounds of our faith for answers."
  DYN_NEUTRAL_land_of_tolerance_title:0 "Land of Tolerance"
  DYN_NEUTRAL_land_of_tolerance_desc:0 "Saradominists and Zamorakians living together is not impossible and shall strengthen our nation."
+ tolerance_of_saradomin_at_least_1:0 "Tolerance of the Saradominist faith is at least 1."
+ tolerance_of_zamorak_at_least_1:0 "Tolerance of the Zamorakian faith is at least 1."
+
+
+ DYN_saradominist_missions_branch_flag_tooltip:0 "Preview the §YSaradominist§! branch."
  
+ DYN_SARA_clean_up_the_manor_title:0 "Clean up the Manor"
+ DYN_SARA_clean_up_the_manor_desc:0 "The region around Draynor Manor is a frustrating hotbed of Zamorakian sentiment which needs to be cleaned up."
+ DYN_SARA_spread_the_light_title:0 "Spread the Light"
+ DYN_SARA_spread_the_light_desc:0 "Saradomin's word must wash over this land lest it falls into corruption."
+
+
+ DYN_chaos_missions_branch_flag_tooltip:0 "Preview the §YChaos§! branch."
+
  DYN_CHAOS_rise_of_chaos_title:0 "Rise of Chaos"
  DYN_CHAOS_rise_of_chaos_desc:0 "It is time for the Saradominists of Draynor to be swept aside!"
  DYN_CHAOS_army_of_darkness_title:0 "Army of Darkness"

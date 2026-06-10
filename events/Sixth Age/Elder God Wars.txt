@@ -175,6 +175,10 @@ country_event = {
 			}
 		}
 	}
+	
+	immediate = {
+		set_global_flag = eldergodwars_tuska_dies
+	}
 
 	mean_time_to_happen = {
 		days = 1

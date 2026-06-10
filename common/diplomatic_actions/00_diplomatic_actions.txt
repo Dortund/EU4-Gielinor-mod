@@ -708,6 +708,13 @@ tributary_state_action = {
 					NOT = { ROOT = { capital_scope = { region = morytania_region } } }
 				}
 			}
+			OR = {
+				NOT = { FROM = { capital_scope = { region = kharidian_desert_region } } }
+				AND = {
+					FROM = { capital_scope = { region = kharidian_desert_region } }
+					NOT = { ROOT = { capital_scope = { region = kharidian_desert_region } } }
+				}
+			}
 		}
 	}
 }
@@ -722,6 +729,13 @@ ask_for_tributary_state_action = {
 				AND = {
 					FROM = { capital_scope = { region = morytania_region } }
 					NOT = { ROOT = { capital_scope = { region = morytania_region } } }
+				}
+			}
+			OR = {
+				NOT = { FROM = { capital_scope = { region = kharidian_desert_region } } }
+				AND = {
+					FROM = { capital_scope = { region = kharidian_desert_region } }
+					NOT = { ROOT = { capital_scope = { region = kharidian_desert_region } } }
 				}
 			}
 		}

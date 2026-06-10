@@ -72,9 +72,9 @@ crandorian_missions_2 = {
 		trigger = {
 			outer_isles_region = { has_discovered = ROOT }
 			tirannwn_region = { has_discovered = ROOT }
-			lunar_sea_region = { has_discovered = ROOT }
-			sea_of_kebos_region = { has_discovered = ROOT }
-			shining_ocean_region = { has_discovered = ROOT }
+			northern_ocean_region = { has_discovered = ROOT }
+			forgotten_ocean_region = { has_discovered = ROOT }
+			sunset_ocean_region = { has_discovered = ROOT }
 		}
 		effect = {
 			add_country_modifier = {
@@ -350,7 +350,6 @@ crandorian_bonus_missions_4 = {
 		effect = {
 			country_event = {
 				id = flavor_cdr.9 #Libraries of the TzHaar
-				days = 1
 			}
 		}
 	}
@@ -378,7 +377,6 @@ crandorian_bonus_missions_4 = {
 		effect = {
 			country_event = {
 				id = flavor_cdr.10 #Runecrafting and the Catalyst
-				days = 1
 			}
 		}
 	}
@@ -432,7 +430,6 @@ crandorian_bonus_missions_5 = {
 		effect = {
 			country_event = {
 				id = flavor_cdr.8 #Tale of Dragons
-				days = 1
 			}
 		}
 	}

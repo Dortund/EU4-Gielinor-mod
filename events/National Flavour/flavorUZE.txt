@@ -1,0 +1,43 @@
+########################################
+# Events for Uzer
+########################################
+
+namespace = flavor_uze
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_uze.1
+	title = flavor_uze.1.t #The Religious Direction of Uzer
+	desc = flavor_uze.1.d #Uzer historically was a religiously diverse city with a reputation for tolerance. Perhaps it is worth considering reviving one of the old faiths?
+	picture = EMPIRE_OF_KHARID_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = flavor_uze.1.a #The Menaphite Pantheon has served Kharid well in the intervening centuries.
+		change_religion = menaphite
+	}
+	option = {
+		name = flavor_uze.1.b #Following Saradomin could gain us favour with kingdoms outside Kharid.
+		change_religion = saradomin
+	}
+	option = {
+		name = flavor_uze.1.c #Justice and tolerance are intrinsically linked. Let us follow Armadyl.
+		change_religion = armadyl
+	}
+	option = {
+		name = flavor_uze.1.e #Chaos is not merely destructive; there is opportunity as well.
+		change_religion = zamorak
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

@@ -279,6 +279,7 @@ merc_ouranian_mercenary_axemen = {
 				region = misthalin_region
 				region = asgarnia_region
 				region = troll_country_region
+				region = isle_of_souls_region
 			}
 		}
 	}
@@ -306,6 +307,7 @@ merc_ouranian_mercenary_mages = {
 				region = misthalin_region
 				region = asgarnia_region
 				region = troll_country_region
+				region = isle_of_souls_region
 			}
 		}
 	}
@@ -360,6 +362,7 @@ merc_ogre_chompy_hunters = {
 			OR = {
 				region = feldip_hills_region
 				region = kandarin_region
+				region = isle_of_souls_region
 			}
 		}
 	}
@@ -385,6 +388,7 @@ merc_dwarves_of_arms = {
 				region = kandarin_region
 				region = tirannwn_region
 				region = southern_isles_region
+				region = isle_of_souls_region
 			}
 		}
 	}
@@ -411,6 +415,7 @@ merc_elves_of_arms = {
 				region = kandarin_region
 				region = tirannwn_region
 				region = southern_isles_region
+				region = isle_of_souls_region
 			}
 		}
 	}
@@ -437,6 +442,7 @@ merc_goblins_of_arms = {
 				region = kandarin_region
 				region = tirannwn_region
 				region = southern_isles_region
+				region = isle_of_souls_region
 			}
 		}
 	}

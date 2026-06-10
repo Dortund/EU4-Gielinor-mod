@@ -2,7 +2,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_estates_icons"
 		texturefile = "gfx//interface//estates_icons.dds"
-		noOfFrames = 27
+		noOfFrames = 29
 		loadType = "INGAME"
 	}
 	
@@ -134,7 +134,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_estates_icons_colour-stroke"
 		texturefile = "gfx/interface/estates_icons_colour-stroke.dds"
-		noOfFrames = 27
+		noOfFrames = 29
 		loadType = "INGAME"
 	}
 
@@ -472,6 +472,24 @@ spriteTypes = {
 	#### New Noble privileges
 	###############################################
 	
+	#Monopolies
+	
+	spriteType = {
+		name = "privilege_nobles_gunpowder_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_nobles_gunpowder_monopoly.dds"
+	}
+	spriteType = {
+		name = "privilege_nobles_hunter_creature_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_nobles_hunter_creature_monopoly.dds"
+	}
+	spriteType = {
+		name = "privilege_nobles_monster_loot_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_nobles_monster_loot_monopoly.dds"
+	}
+	
+	
+	#National Flavour
+	
 	spriteType = {
 		name = "privilege_nobility_KOU_house_cohesion"
 		texturefile = "gfx/interface/privileges/privilege_nobility_KOU_house_cohesion.dds"
@@ -497,6 +515,40 @@ spriteTypes = {
 	###############################################
 	
 	spriteType = {
+		name = "privilege_burghers_excavation_rights"
+		texturefile = "gfx/interface/privileges/privilege_burghers_excavation_rights.dds"
+	}
+	spriteType = {
+		name = "privilege_burghers_expand_swamp_dwellings"
+		texturefile = "gfx/interface/privileges/privilege_burghers_expand_swamp_dwellings.dds"
+	}
+	spriteType = {
+		name = "privilege_burghers_glacial_expansion"
+		texturefile = "gfx/interface/privileges/privilege_burghers_glacial_expansion.dds"
+	}
+	spriteType = {
+		name = "privilege_burghers_volcanic_attunement"
+		texturefile = "gfx/interface/privileges/privilege_burghers_volcanic_attunement.dds"
+	}
+	spriteType = {
+		name = "privilege_burghers_volcanic_development"
+		texturefile = "gfx/interface/privileges/privilege_burghers_volcanic_development.dds"
+	}
+	
+	#Monopolies
+	
+	spriteType = {
+		name = "privilege_burghers_bamboo_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_burghers_bamboo_monopoly.dds"
+	}
+	spriteType = {
+		name = "privilege_burghers_manufactured_goods_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_burghers_manufactured_goods_monopoly.dds"
+	}
+	
+	#National Flavour
+	
+	spriteType = {
 		name = "privilege_burghers_kharidian_colonies"
 		texturefile = "gfx/interface/privileges/privilege_burghers_kharidian_colonies.dds"
 	}
@@ -506,6 +558,93 @@ spriteTypes = {
 		texturefile = "gfx/interface/privileges/privilege_burghers_varlamore_colonies.dds"
 	}
 	
+	###############################################
+	#### New Clergy privileges
+	###############################################
+
+	#Monopolies
+	
+	spriteType = {
+		name = "privilege_church_divine_energy_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_church_divine_energy_monopoly.dds"
+	}
+	spriteType = {
+		name = "privilege_church_ritual_goods_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_church_ritual_goods_monopoly.dds"
+	}
+
+	###############################################
+	#### Admiral privileges
+	###############################################
+	
+	spriteType = {
+		name = "privilege_admirals_admirals_political_representation"
+		texturefile = "gfx/interface/privileges/privilege_admirals_admirals_political_representation.dds"
+	}
+	spriteType = {
+		name = "privilege_admirals_colonial_logistics"
+		texturefile = "gfx/interface/privileges/privilege_admirals_colonial_logistics.dds"
+	}
+	spriteType = {
+		name = "privilege_admirals_expand_impressment"
+		texturefile = "gfx/interface/privileges/privilege_admirals_expand_impressment.dds"
+	}
+	spriteType = {
+		name = "privilege_admirals_fish_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_admirals_fish_monopoly.dds"
+	}
+	spriteType = {
+		name = "privilege_admirals_naval_goods_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_admirals_naval_goods_monopoly.dds"
+	}
+	spriteType = {
+		name = "privilege_admirals_promote_admiral_initiative"
+		texturefile = "gfx/interface/privileges/privilege_admirals_promote_admiral_initiative.dds"
+	}
+	spriteType = {
+		name = "privilege_admirals_rum_supplies"
+		texturefile = "gfx/interface/privileges/privilege_admirals_rum_supplies.dds"
+	}
+	
+	###############################################
+	#### Workers privileges
+	###############################################
+	
+	spriteType = {
+		name = "privilege_workers_employment_subsidies"
+		texturefile = "gfx/interface/privileges/privilege_workers_employment_subsidies.dds"
+	}
+	spriteType = {
+		name = "privilege_workers_expanded_holidays"
+		texturefile = "gfx/interface/privileges/privilege_workers_expanded_holidays.dds"
+	}
+	spriteType = {
+		name = "privilege_workers_guaranteed_commons"
+		texturefile = "gfx/interface/privileges/privilege_workers_guaranteed_commons.dds"
+	}
+	spriteType = {
+		name = "privilege_workers_political_representation"
+		texturefile = "gfx/interface/privileges/privilege_workers_political_representation.dds"
+	}
+	spriteType = {
+		name = "privilege_workers_social_mobility"
+		texturefile = "gfx/interface/privileges/privilege_workers_social_mobility.dds"
+	}
+	
+	# Monopolies
+	spriteType = {
+		name = "privilege_workers_fibres_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_workers_fibres_monopoly.dds"
+	}
+	spriteType = {
+		name = "privilege_workers_logs_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_workers_logs_monopoly.dds"
+	}
+	spriteType = {
+		name = "privilege_workers_ore_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_workers_ore_monopoly.dds"
+	}
+
 	###############################################
 	#### Keldagrim privileges
 	###############################################
@@ -527,6 +666,10 @@ spriteTypes = {
 	spriteType = {
 		name = "privilege_tzh_hur_builder_contracts"
 		texturefile = "gfx/interface/privileges/privilege_tzh_hur_builder_contracts.dds"
+	}
+	spriteType = {
+		name = "privilege_tzh_hur_builders_of_gielinor"
+		texturefile = "gfx/interface/privileges/privilege_tzh_hur_builders_of_gielinor.dds"
 	}
 	
 	

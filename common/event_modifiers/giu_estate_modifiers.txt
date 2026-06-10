@@ -1,9 +1,44 @@
 ##################################################################################################
-# Also used for events.
+# Gielinor Universalis Estate Modifiers
 ##################################################################################################
 
 example_modifier = {
 	local_unrest = -1
+}
+
+#############
+#Burghers
+#############
+
+#Terrain Modifiers
+
+estate_burghers_excavation_rights_underground = { #Eliminates penalty
+	local_development_cost = -0.5
+}
+estate_burghers_expand_swamp_dwellings_marsh = { #Half penalty
+	local_development_cost = -0.125
+ 	local_friendly_movement_speed = 0.15
+}
+estate_burghers_glacial_expansion_glacial = { #Half penalty
+	local_development_cost = -0.25
+	local_friendly_movement_speed = 0.15
+}
+estate_burghers_volcanic_attunement_volcanic = { #Eliminates penalty and self-attrition
+	local_development_cost = -0.6
+	attrition = -1
+	hostile_attrition = 1
+}
+estate_burghers_volcanic_development_volcanic = { #Half penalty
+	local_development_cost = -0.3
+}
+
+#Agenda Rewards
+
+growing_bamboo_trade = {
+	global_tax_income = 25
+}
+growing_terracotta_trade = {
+	global_tax_income = 25
 }
 
 #############
@@ -21,3 +56,28 @@ tzh_ket_capital_reinforcement_modifier = {
 tzh_gaal_trade_post_in_wushanko = {
 	trade_goods_size = 1
 }
+
+#############
+#TzHaar-Hur
+#############
+
+# Builders of Gielinor - Privilege that eliminates terrain development costs from a range of TzHaar-relevant things!
+tzh_hur_builders_of_gielinor_hills = {
+	local_development_cost = -0.25
+}
+tzh_hur_builders_of_gielinor_highlands = {
+	local_development_cost = -0.2
+}
+tzh_hur_builders_of_gielinor_mountains = {
+	local_development_cost = -0.35
+}
+tzh_hur_builders_of_gielinor_underground = {
+	local_development_cost = -0.5
+}
+tzh_hur_builders_of_gielinor_volcanic = {
+	local_development_cost = -0.6
+	attrition = -1
+	hostile_attrition = 1
+}
+
+

@@ -30,8 +30,13 @@ sbi_missions_2 = {
 		position = 2
 		required_missions = { SBI_policy_of_isolation }
 		trigger = {
-			religion = menaphite
-			has_personal_deity = scabaras
+			OR = {
+				AND = {
+					religion = menaphite
+					has_personal_deity = scabaras
+				}
+				religion = amascut_religion
+			}
 			OR = {
 				temple = 1
 				cathedral = 1
@@ -184,7 +189,6 @@ sbi_missions_3 = {
 		effect = {
 			country_event = {
 				id = flavor_sbi.1
-				days = 1
 			}
 		}
 	}

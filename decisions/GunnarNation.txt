@@ -1,0 +1,259 @@
+country_decisions = {
+
+	gunnar_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_gunnar_flag }
+			NOT = { has_global_flag = great_invasion_begins_flag }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = GUN }
+			OR = {
+				current_age = age_of_mortals
+				current_age = age_of_humans
+			}
+			primary_culture = barbarian
+			capital_scope = {
+				OR = {
+					continent = west_runescape
+					continent = east_runescape
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			culture = barbarian
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			current_age = age_of_humans
+			any_owned_province = {
+				runecrafting = 100
+			}
+			calc_true_if = {
+				all_owned_province = {
+					culture = barbarian
+				}
+				amount = 5
+			}
+			custom_trigger_tooltip = {
+				tooltip = must_be_strongest_barbarian
+				NOT = {
+					any_country = {
+						capital_scope = {
+							OR = {
+								continent = west_runescape
+								continent = east_runescape
+							}
+						}
+						primary_culture = barbarian
+						total_development = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = great_invasion_begins_flag
+			change_tag = GUN
+			change_government = tribal
+			add_government_reform = runecrafting_crusader
+			swap_non_generic_missions = yes
+			add_splendor = 500
+			add_government_power = {
+				mechanic_type = crusader_zeal_mechanic
+				power_type = crusader_zeal_power_1
+				value = 100
+			}
+			custom_tooltip = gunnar_becomes_leader_and_army_tooltip
+			hidden_effect = {
+				define_ruler = {
+					name = "Gunnar"
+					dynasty = "Viljarsson"
+					adm = 2
+					dip = 3
+					mil = 6
+					age = 18
+					claim = 100
+				}
+				clear_scripted_personalities = yes
+				add_ruler_personality = conqueror_personality
+				add_ruler_personality = zealot_personality
+				add_ruler_personality = naive_personality
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
+					}
+				}
+				fremennik_region = {
+					discover_country = GUN
+				}
+			}
+			set_country_flag = formed_gunnar_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			country_event = { id = flavor_gun.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	release_gunnar_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_global_flag = great_invasion_begins_flag }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = GUN }
+			OR = {
+				current_age = age_of_mortals
+				current_age = age_of_humans
+			}
+			culture_group = fremennik_group
+			NOT = { primary_culture = barbarian }
+			NOT = { primary_culture = moonclan }
+			capital_scope = {
+				OR = {
+					continent = west_runescape
+					continent = east_runescape
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			culture = barbarian
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			current_age = age_of_humans
+			any_owned_province = {
+				runecrafting = 100
+			}
+			calc_true_if = {
+				all_owned_province = {
+					culture = barbarian
+				}
+				amount = 5
+			}
+			custom_trigger_tooltip = {
+				tooltip = must_be_stronger_than_all_barbarians
+				NOT = {
+					any_country = {
+						capital_scope = {
+							OR = {
+								continent = west_runescape
+								continent = east_runescape
+							}
+						}
+						primary_culture = barbarian
+						total_development = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = great_invasion_begins_flag
+			custom_tooltip = cede_all_barbarian_provinces_to_friendly_gunnar
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = barbarian
+					}
+					cede_province = GUN
+					add_core = GUN
+				}
+			}
+			add_historical_friend = GUN		
+			GUN = {
+				set_country_flag = formed_gunnar_flag
+				add_historical_friend = ROOT
+				hidden_effect = {
+					change_government = tribal
+					add_government_reform = runecrafting_crusader
+					swap_non_generic_missions = yes
+					add_splendor = 500
+					change_religion = v
+					add_government_power = {
+						mechanic_type = crusader_zeal_mechanic
+						power_type = crusader_zeal_power_1
+						value = 100
+					}
+					
+					define_ruler = {
+						name = "Gunnar"
+						dynasty = "Viljarsson"
+						adm = 2
+						dip = 3
+						mil = 6
+						age = 18
+						claim = 100
+					}
+					clear_scripted_personalities = yes
+					add_ruler_personality = conqueror_personality
+					add_ruler_personality = zealot_personality
+					add_ruler_personality = naive_personality
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.5
+							cavalry = 0.2
+							artillery = 0.3
+						}
+					}
+					country_event = { id = flavor_gun.1 }
+				}
+			}
+			custom_tooltip = gunnar_will_love_you_tooltip
+			hidden_effect = {
+				change_variable = {
+					which = CrusaderVulnerabilityVariable
+					value = -50
+				}
+				fremennik_region = {
+					discover_country = GUN
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+}

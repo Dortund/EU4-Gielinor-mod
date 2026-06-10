@@ -20,6 +20,11 @@ spriteTypes = {
 		name = "government_reform_icon_consortium_monarchy"
 		texturefile = "gfx//interface//government_reform_icons//icon_consortium_monarchy.dds"
 	}
+	
+	spriteType = {
+		name = "government_reform_icon_emirate_of_al_kharid"
+		texturefile = "gfx//interface//government_reform_icons//icon_emirate_of_al_kharid.dds"
+	}
 
 	spriteType = {
 		name = "government_reform_icon_elven_aristocracy"
@@ -67,6 +72,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "government_reform_icon_kharidian_empire"
+		texturefile = "gfx//interface//government_reform_icons//icon_kharidian_empire.dds"
+	}
+	
+	spriteType = {
 		name = "government_reform_icon_kourend_house"
 		texturefile = "gfx//interface//government_reform_icons//icon_kourend_house.dds"
 	}
@@ -90,7 +100,7 @@ spriteTypes = {
 		name = "government_reform_icon_mahjarrat_autocracy"
 		texturefile = "gfx//interface//government_reform_icons//icon_mahjarrat_autocracy.dds"
 	}
-	
+
 	spriteType = {
 		name = "government_reform_icon_miscellanean_monarchy"
 		texturefile = "gfx//interface//government_reform_icons//icon_miscellanean_monarchy.dds"
@@ -146,6 +156,11 @@ spriteTypes = {
 	spriteType = {
 		name = "government_reform_icon_grant_noble_privileges"
 		texturefile = "gfx//interface//government_reform_icons//icon_grant_noble_privileges.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_menaphite_factions"
+		texturefile = "gfx//interface//government_reform_icons//icon_menaphite_factions.dds"
 	}
 	
 	spriteType = {
@@ -243,6 +258,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "government_reform_icon_dominion_tower"
+		texturefile = "gfx//interface//government_reform_icons//icon_dominion_tower.dds"
+	}
+	
+	spriteType = {
 		name = "government_reform_icon_dwarven_outpost"
 		texturefile = "gfx//interface//government_reform_icons//icon_dwarven_outpost.dds"
 	}
@@ -250,6 +270,11 @@ spriteTypes = {
 	spriteType = {
 		name = "government_reform_icon_frog_collective"
 		texturefile = "gfx//interface//government_reform_icons//icon_frog_collective.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_independent_faction"
+		texturefile = "gfx//interface//government_reform_icons//icon_independent_faction.dds"
 	}
 	
 	spriteType = {
@@ -298,6 +323,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "government_reform_icon_secluded_island_republic"
+		texturefile = "gfx//interface//government_reform_icons//icon_secluded_island_republic.dds"
+	}
+	
+	spriteType = {
 		name = "government_reform_icon_sirenic_republic"
 		texturefile = "gfx//interface//government_reform_icons//icon_sirenic_republic.dds"
 	}
@@ -343,6 +373,11 @@ spriteTypes = {
 	spriteType = {
 		name = "government_reform_icon_none_above_seren"
 		texturefile = "gfx//interface//government_reform_icons//icon_none_above_seren.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_tortugan_travelling_culture"
+		texturefile = "gfx//interface//government_reform_icons//icon_tortugan_travelling_culture.dds"
 	}
 
 	# Tier 5
@@ -599,8 +634,18 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "government_reform_icon_fremennik_clan"
+		texturefile = "gfx//interface//government_reform_icons//icon_fremennik_clan.dds"
+	}
+	
+	spriteType = {
 		name = "government_reform_icon_goblin_empire"
 		texturefile = "gfx//interface//government_reform_icons//icon_goblin_empire.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_icon_hand_of_het"
+		texturefile = "gfx//interface//government_reform_icons//icon_hand_of_het.dds"
 	}
 	
 	spriteType = {
@@ -827,5 +872,9 @@ spriteTypes = {
 	spriteType = {
 		name = "government_reform_icon_elven_desperation_reform"
 		texturefile = "gfx//interface//government_reform_icons//icon_elven_desperation_reform.dds"
+	}
+	spriteType = {
+		name = "government_reform_icon_thrall_of_amascut_reform"
+		texturefile = "gfx//interface//government_reform_icons//icon_thrall_of_amascut.dds"
 	}
 }

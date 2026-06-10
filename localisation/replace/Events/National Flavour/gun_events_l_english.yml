@@ -9,8 +9,8 @@
  flavor_gun.2.b:0 "A useful part of a wider plan."
 
  flavor_gun.3.t:0 "The Wrath of the Gunnites"
- flavor_gun.3.d:0 "Our triumphs thus far have inspired competition. A strange new runecrafting altar has emerged far to the south and an order calling themselves the Myths' Guild have sworn to protect it. Scum mages claim our wrath created it - like we would have any part in granting the power of the Gods onto an unworthy world!"
- flavor_gun.3.a:0 "Leave Gunnar's crusade and join the Myths' Guild."
+ flavor_gun.3.d:0 "Our triumphs thus far have inspired competition. A strange new runecrafting altar has emerged far to the south and an order calling themselves the Sect of Uhld have sworn to protect it. Scum mages claim our wrath created it - like we would have any part in granting the power of the Gods onto an unworthy world!"
+ flavor_gun.3.a:0 "Leave Gunnar's crusade and join the Sect of Uhld!"
  flavor_gun.3.b:0 "One more Runecrafting altar to smash!"
 
  flavor_gun.4.t:0 "The Great Invasion"
@@ -80,3 +80,8 @@
  flavor_gun.15.t:0 "The Fall of Camdozaal"
  flavor_gun.15.d:0 "For all the magical weaponry and cannons at their disposal, the Imcando could not fight back the Barbarian horde forever. The hall of Camdozaal fell, and with it, all known Imcando dwarves."
  flavor_gun.15.a:0 "If only they had listened."
+ 
+ flavor_gun.16.t:0 "Gunnar Cedes Us [cede_province_target_province.GetName]!"
+ flavor_gun.16.d:0 "In an effort to bring more people to the front lines of the Great Invasion, the Gunnites have moved much of the population of [cede_province_target_province.GetName] away and have ceded the province to us!"
+ flavor_gun.16.a:0 "I hope this doesn't make my borders messy..."
+ gained_gunnar_province_tooltip:0 "Acquire the §Y[cede_province_target_province.GetName]§! province!"

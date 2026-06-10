@@ -1,3 +1,2 @@
-discovered_by = kharidtechgroup
 discovered_by = wushankotechgroup
 discovered_by = monkeytechgroup

@@ -256,7 +256,6 @@ taverley_missions_5 = {
 					}
 					country_event = { 
 						id = flavor_tav.1
-						days = 5
 					}
 				}
 			}

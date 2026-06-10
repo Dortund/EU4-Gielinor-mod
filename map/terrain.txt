@@ -42,11 +42,12 @@ categories =  {
 		nation_designer_cost_multiplier = 0.75		
 		
 		terrain_override = {
-			196 197 966 #Wilderness		
+			196 197 1439 #Wilderness		
 			351 352 353 354 355 356 357 358 359 783 967 968 969 #Troll
 			412 413 414 415 #Kourend
 			373 378 380 387 389 390 972 973 1350 #Fremmy
-			1287 1294 1302 1303 1305 #Acheron
+			1287 1294 1295 1302 1303 1305 #Acheron
+			1532 1533 1534 #Sailing Expansion
 		}
 	}
 
@@ -63,12 +64,16 @@ categories =  {
 		nation_designer_cost_multiplier = 1.05
 		
 		terrain_override = {
-			2 10 11 12 14 895 #Misthalin
-			37 41 #Asgarnia
-			261 1377 #Kandarin
-			325 #Tirannwn
-			430 431 433 434 435 877 1413 #Kourend
-			487 488 489 509 524 886 892 #Varlamore
+			2 9 10 11 12 782 895 1397 #Misthalin
+			37 964 #Asgarnia
+			117 #Morytania
+			148 #Outer Isles
+			247 261 293 536 861 1377 #Kandarin
+			325 327 #Tirannwn
+			381 384 #Fremennik
+			429 430 431 433 434 435 877 1413 #Kourend
+			459 460 #Kebos
+			487 488 489 509 524 886 892 1460 #Varlamore
 		}		
 	}
 	
@@ -87,6 +92,8 @@ categories =  {
 		terrain_override = { 
 			330 332 333 335 336 337 772 773 774 979 980 983 #Tirannwn
 			388 #Fremmy
+			480 #Kebos
+			150 160 163 165 174 180 166 168 156 157 171 #Wilderness
 		}                                      
 	}
 	
@@ -104,9 +111,15 @@ categories =  {
 		supply_limit = 5
 		
 		terrain_override = {
-			200 #OuterIsles
+			200 1537 #OuterIsles
 			306 307 308 853 1013 #Feldips
-			865 #Asgarnia
+			797 863 865 #Asgarnia
+			116 #Morytania
+			149 151 956 153 957 154 172 177 184 #Wilderness
+			768 #Kandarin
+			771 902 1387 1529 #Tirannwn
+			376 #Fremmy
+			1498 #Sailing
 		}
 	}
 
@@ -125,14 +138,18 @@ categories =  {
 		
 		terrain_override = {
 			8 18 19 21 23 24 25 790 901 #Misthalin
-			36 42 48 56 795 797 988 1006 #Asgarnia
-			154 155 957 1237 #Forinthry
-			250 260 292 860 #Kandarin
-			482 #Kebos
+			36 42 48 56 795 988 1006 #Asgarnia
+			155 162 152 159 959 176 173 #Forinthry
+			250 256 260 279 292 860 #Kandarin
+			310 #Feldips
+			1244 1527 1530 #Tirannwn
+			441 442 443 1420 #Kourend
+			481 482 483 1448 #Kebos
 			369 974 #Fremmy
 			931 #Kourend
 			954 #OuterIsles
 			1010 #Feldips
+			1519 #Sailing
 		}
 	}
 	
@@ -151,16 +168,16 @@ categories =  {
 		
 		terrain_override = {
 			26 27 #Misthalin
-			45 46 47 52 59 #Asgarnia
+			45 47 59 #Asgarnia
+			1561 #Shantay Pass
 			126 #Morytania
-			190 #Wilderness
-			212 #Karamja
-			257 276 #Kandarin
-			328 331 324 338 339 538 340 341 342 #Tirannwn
-			349 352 353 #Troll
+			276 #Kandarin
+			309 #Feldips
+			328 331 324 340 341 342 #Tirannwn
+			349 352 353 1558 #Troll
 			371 #Fremmy
-			410 411 420 476 448 1424 1428 1435 #Kourend
-			453 458 471 477 478 479 480 481 483 484 #Kebos
+			409 410 411 420 476 448 1424 1428 1435 #Kourend
+			453 471 477 478 479 480 481 483 484 #Kebos
 			1454 1455 #Varlamore
 		}
 	}
@@ -188,9 +205,12 @@ categories =  {
 		
 		terrain_override = {
 			9 781 939 #Misthalin
-			294 295 #Kandarin
+			137 138 849 850 #Morytania
+			285 289 294 295 1378 #Kandarin
+			386 #Fremennik
 			441 442 #Kourend
-			1005 #Asgarnia
+			761 924 #Isle of Souls
+			796 1005 1364 #Asgarnia
 		}
 	}
 
@@ -208,10 +228,10 @@ categories =  {
 		
 		terrain_override = {
 			143 144 145 146 147 900 #OuterIsles
-			220 223 225 #Karamja
+			223 #Karamja
 			291 #Kandarin
 			312 316 #Feldips
-			496 497 498 499 500 507 508 510 888 1015 #Varlamore
+			496 497 498 499 500 507 508 510 888 1015 1522 #Varlamore
 		}
 	}	
 	
@@ -228,12 +248,14 @@ categories =  {
 		supply_limit = 5
 
 		terrain_override = {
+			3 4 938 #Misthalin
 			67 91 #Kharid
-			112 842 #Morytania
+			122 134 125 126 131 130 844 846 847 1374 1404 #Morytania
+			990 #Kandarin
 			311 1009 #Feldips
 			334 #Tirannwn
-			953 #OuterIsles
-			1034 #Kebos
+			203 870 953 #OuterIsles
+			461 463 464 933 934 1034 1432 #Kebos
 			1139 #Wushanko
 		}
 	}
@@ -250,7 +272,7 @@ categories =  {
 		nation_designer_cost_multiplier = 0.8
 		
 		terrain_override = {
-			
+			1503 #Great Conch
 		}
 	}
 	
@@ -266,7 +288,10 @@ categories =  {
 		supply_limit = 4
 
 		terrain_override = {
-			69 70 78 79 80 81 85 89 90 95 96 98 99 102 786 787 788 854 855 858 859 866 867 1436 #Kharid
+			70 78 79 80 81 85 89 90 95 96 98 99 102 786 787 788 854 855 858 859 866 867 1436 1539 1562 1564 #Kharid
+			1508 1509 #Great Conch
+			1517 #Red Rock
+			1523 #Shimmering Atoll
 		}
 	}
 	
@@ -281,18 +306,23 @@ categories =  {
 		supply_limit = 6 
 		
 		terrain_override = {
-			34 58 60 #Asgarnia
+			6 7 #Misthalin
+			33 34 40 58 60 943 #Asgarnia
 			1000 #Kharid
-			120 #Morytania
-			142 148 951 764 765 955 #OuterIsles
-			215 217 227 #Karamja
+			120 1538 #Morytania
+			142 951 764 765 955 1344 1537 #OuterIsles
+			215 217 220 221 225 227 872 #Karamja
 			238 239 978 #SouthernIsles
-			263 #Kandarin
-			317 #Feldips
-			399 400 405 432 436 437 876 928 929 1412 #Kourend
-			889 1457 1458 1459 1462 #Varlamore
+			263 282 290 #Kandarin
+			314 315 317 #Feldips
+			329 1390 #Tirannwn
+			366 1394 #Fremennik
+			399 400 405 432 436 437 876 928 929 1412 1528 #Kourend
+			889 1457 1458 1459 1462 1526 #Varlamore
 			1285 1292 1297 1299 1301 1304 #Acheron
 			1108 1152 1154 1187 #Wushanko
+			1499 1504 1506 1514 1518 1520 1559 #Sailing
+			170 186 189 1234 1236 1345 #Wilderness
 		}
 	}	
 	
@@ -309,9 +339,11 @@ categories =  {
 		allowed_num_of_buildings = 1
 
 		terrain_override = {
+			100 #Menaphos
 			201 #OuterIsles
 			467 469 470 #Kebos
-			525 #Varlamore
+			525 1525 #Varlamore
+			1502 #Great Conch
 		}
 	}
 
@@ -329,15 +361,17 @@ categories =  {
 		nation_designer_cost_multiplier = 0.9	
 
 		terrain_override = {
-			92 93 #Kharid
+			63 92 93 #Kharid
+			112 139 140 842 #Morytania
 			198 199 #OuterIsles
 			233 #Karamja
-			305 309 315 985 1011 #Feldips
-			345 346 347 348 350 #Troll
-			370 376 377 386 391 392 393 394 395 396 1001 #Fremmy
+			257 775 1374 #Kandarin
+			315 985 1011 #Feldips
+			345 346 347 348 1558 #Troll
+			322 370 391 393 395 1001 #Fremmy
 			468 884 #Kebos
-			506 521 840 #Varlamore
-			1298 1300 #Acheron
+			495 506 521 840 #Varlamore
+			1293 1296 1298 1300 1489 #Acheron
 		}
 	}
 
@@ -371,6 +405,70 @@ categories =  {
 			
 		}	
 	}	
+	
+	#######New for Gielinor Universalis
+	
+	underground = {
+		color = { 51 24 4 }
+
+		sound_type = mountains
+
+		
+		movement_cost = 1.35
+		supply_limit = 4		
+		local_development_cost = 0.5
+		nation_designer_cost_multiplier = 0.75
+		local_fort_maintenance_modifier = -0.5
+		
+		terrain_override = {
+			46 #Camdozaal
+			52 #White Wolf Mountain
+			69 #Kalphite Lair
+			212 #TzHaar
+			338 339 340 341 538 981 982 #Underground Pass and Arposandra
+			350 374 970 1351 1549 1393 #Keldagrim-Troll-Slayer Cave
+			377 #Waterbirth Dungeon
+			935 #Chambers of Xeric
+			1163 #Glittercaves
+			1177 #Nightmare start in Wushanko
+			1290 #Imcandoria Depths
+			1320 1321 1322 1323 1324 #Daemonheim
+			1349 #Phoenix Lair
+			1357 1358 1359 1360 #Dorgesh-Kaan
+			1405 #Haunted Mine
+			1490 1491 1492 #Varlamore Underground
+			1560 #Chasm of Fire
+			1563 #Temple of Isolation
+		}
+	}
+	
+	volcanic = {
+		color = { 30 0 0 }
+
+		type = plains
+		sound_type = plains
+		
+		movement_cost = 1.00
+		supply_limit = 6	
+		local_development_cost = 0.6
+		nation_designer_cost_multiplier = 0.75
+		max_attrition = 1
+		attrition = 1
+		
+		terrain_override = {
+			158 167 169 206 164 958 175 869 960 179 178 181 182 183 961 185 188 187 190 191 192 963 964 193 194 965 195 966 1437 1438 1440 #Wilderness		
+			204 205 952 #Fossil Island
+			211 975 #Karamja Volcano
+			287 #Ourania
+			305 #Gu'Tanoth
+			416 417 418 419 873 874 875 1427 #Lovakengj
+			457 458 879 880 881 #Karuulm
+			762 #Isle of Souls
+			1291 #Forge of Giants
+			1510 #The Onyx Crest
+			1513 #Charred Island
+		}
+	}
 }
 	
 ##################################################################

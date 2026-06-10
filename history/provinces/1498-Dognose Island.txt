@@ -1,0 +1,19 @@
+#1498-Dognose Island
+tribal_owner = ---
+culture = mogre
+religion = bandos
+trade_goods = advanced_logs
+
+discovered_by = kharidtechgroup
+discovered_by = karamjantechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup
+
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 1
+native_ferocity = 1
+native_hostileness = 1

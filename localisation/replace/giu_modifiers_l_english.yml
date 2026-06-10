@@ -14,6 +14,17 @@
 
  exploration_exploration_colonial_ventures:0 "Colonial Ventures"
  desc_exploration_exploration_colonial_ventures:0 "With the §YExploration§! institution, concepts of colonisation can be more effectively applied."
+ 
+ # Queen of Ashes
+ 
+ queenofashes_gnomefirelighters_target:0 "Source of Gnomish Firelighters"
+ desc_queenofashes_gnomefirelighters_target:0 "Gnomish Firelighters are often hidden away as treasure, but many originate in this province. A follower of the Queen of Ashes in control here may find themselves hungry for more and embarking on more treasure-seeking expeditions."
+ queenofashes_phoenixfeathers_target:0 "Source of Phoenix Feathers"
+ desc_queenofashes_phoenixfeathers_target:0 "Phoenix Feathers hold some magical capabilities which are particularly of interest to followers of the Queen of Ashes."
+ queenofashes_trollsalts_target:0 "Source of Troll Salts"
+ desc_queenofashes_trollsalts_target:0 "Te, Efh and Urt salts hold the power to greatly enhance fires, and are as such of great interest to followers of the Queen of Ashes."
+ queenofashes_trollsalts_target2:0 "Source of Cyclops Salts"
+ desc_queenofashes_trollsalts_target:0 "Salty crabs can be found throughout the Arc region, although they are best-understood on the island of Cyclosis. What powers they truly possess are unknown, but followers of the Queen of Ashes seem to be taking an interest."
 
  # Canifis
  
@@ -22,10 +33,24 @@
  cfs_freedom_of_slepe:0 "Freedom of Slepe"
  desc_cfs_freedom_of_slepe:0 "Slepe's semi-independent status is a model of religious tolerance greater than the Vampyres ever had."
 
+ # Gunnar
+ 
+ gun_war_against_runecrafters:0 "War Against Runecrafters"
+ desc_gun_war_against_runecrafters:0 "Our enemy actively engages in Runecrafting, redoubling our righteous zeal!"
+
  # Kandarin
  
  kdr_knights_of_the_round_table:0 "Knights of the Round Table"
  desc_kdr_knights_of_the_round_table:0 "The knights of Camelot have great expertise in leadership which has helped us keep our more autonomous regions in check."
+ 
+ # Kharidian Emergence
+ 
+ alk_great_northern_ally:0 "Great Northern Ally"
+ desc_alk_great_northern_ally:0 "A powerful nation by our side is a great inspiration for our reformation efforts."
+
+ kds_het_servant_of_the_pharoah:0 "Servant of the Pharoah"
+ desc_kds_het_servant_of_the_pharoah:0 "We are the arm of the Pharoah and their force for expanding the Empire."
+ 
  
  # Taverley
  
@@ -101,6 +126,69 @@
  D38_host_country:0 "Host of Wushanko Gateway Dwarven Outpost"
  D39_host_country:0 "Host of Coastal Wilderness Dwarven Outpost"
  
+# Kharidian Emergence
+
+ kharidian_emergence_adm_2_modifier_HET:0 "Integrated Governing Techniques"
+ desc_kharidian_emergence_adm_2_modifier_HET:0 "From our efforts in peace and war alike, we have learnt the methods of managing a much greater realm than previously possible."
+ kharidian_emergence_adm_3_modifier_HET:0 "Integrated Governing Techniques"
+ desc_kharidian_emergence_adm_3_modifier_HET:0 "From our efforts in peace and war alike, we have learnt the methods of managing a much greater realm than previously possible."
+ kharidian_emergence_adm_4_modifier_HET:0 "Integrated Governing Techniques"
+ desc_kharidian_emergence_adm_4_modifier_HET:0 "From our efforts in peace and war alike, we have learnt the methods of managing a much greater realm than previously possible."
+ kharidian_emergence_adm_5_modifier_HET:0 "Integrated Governing Techniques"
+ desc_kharidian_emergence_adm_5_modifier_HET:0 "From our efforts in peace and war alike, we have learnt the methods of managing a much greater realm than previously possible."
+ 
+ kharidian_emergence_adm_2_modifier_ALK:0 "Syncretic Planning Techniques"
+ desc_kharidian_emergence_adm_2_modifier_ALK:0 "Drawing from ideas from Misthalin, Kharid and beyond, our ability to develop provinces is greater than ever before."
+ kharidian_emergence_adm_3_modifier_ALK:0 "Syncretic Planning Techniques"
+ desc_kharidian_emergence_adm_3_modifier_ALK:0 "Drawing from ideas from Misthalin, Kharid and beyond, our ability to develop provinces is greater than ever before."
+ kharidian_emergence_adm_4_modifier_ALK:0 "Syncretic Planning Techniques"
+ desc_kharidian_emergence_adm_4_modifier_ALK:0 "Drawing from ideas from Misthalin, Kharid and beyond, our ability to develop provinces is greater than ever before."
+ kharidian_emergence_adm_5_modifier_ALK:0 "Syncretic Planning Techniques"
+ desc_kharidian_emergence_adm_5_modifier_ALK:0 "Drawing from ideas from Misthalin, Kharid and beyond, our ability to develop provinces is greater than ever before."
+ 
+ kharidian_emergence_dip_2_modifier_HET:0 "Het Syncretism"
+ desc_kharidian_emergence_dip_2_modifier_HET:0 "The teachings of Het can inspire those who do and do not worship the Menaphite Pantheon."
+ kharidian_emergence_dip_3_modifier_HET:0 "Het Syncretism"
+ desc_kharidian_emergence_dip_3_modifier_HET:0 "The teachings of Het can inspire those who do and do not worship the Menaphite Pantheon."
+ kharidian_emergence_dip_4_modifier_HET:0 "Het Syncretism"
+ desc_kharidian_emergence_dip_4_modifier_HET:0 "The teachings of Het can inspire those who do and do not worship the Menaphite Pantheon."
+ kharidian_emergence_dip_5_modifier_HET:0 "Het Syncretism"
+ desc_kharidian_emergence_dip_5_modifier_HET:0 "The teachings of Het can inspire those who do and do not worship the Menaphite Pantheon."
+ 
+ kharidian_emergence_dip_2_modifier_ALK:0 "Formalised Diplomatic Etiquette"
+ desc_kharidian_emergence_dip_2_modifier_ALK:0 "Understanding the ways of other faiths' worshippers has improved our ability to do diplomacy with their leaders."
+ kharidian_emergence_dip_3_modifier_ALK:0 "Formalised Diplomatic Etiquette"
+ desc_kharidian_emergence_dip_3_modifier_ALK:0 "Understanding the ways of other faiths' worshippers has improved our ability to do diplomacy with their leaders."
+ kharidian_emergence_dip_4_modifier_ALK:0 "Formalised Diplomatic Etiquette"
+ desc_kharidian_emergence_dip_4_modifier_ALK:0 "Understanding the ways of other faiths' worshippers has improved our ability to do diplomacy with their leaders."
+ kharidian_emergence_dip_5_modifier_ALK:0 "Formalised Diplomatic Etiquette"
+ desc_kharidian_emergence_dip_5_modifier_ALK:0 "Understanding the ways of other faiths' worshippers has improved our ability to do diplomacy with their leaders."
+ 
+ kharidian_emergence_mil_2_modifier_HET:0 "Expanded Rituals of Het"
+ desc_kharidian_emergence_mil_2_modifier_HET:0 "Our soldiers are used to training in the deserts and highlands of Upper Kharid. As we expand beyond our previous borders, it has been necessary to modify these practices to allow for wetter and colder climates."
+ kharidian_emergence_mil_3_modifier_HET:0 "Expanded Rituals of Het"
+ desc_kharidian_emergence_mil_3_modifier_HET:0 "Our soldiers are used to training in the deserts and highlands of Upper Kharid. As we expand beyond our previous borders, it has been necessary to modify these practices to allow for wetter and colder climates."
+ kharidian_emergence_mil_4_modifier_HET:0 "Expanded Rituals of Het"
+ desc_kharidian_emergence_mil_4_modifier_HET:0 "Our soldiers are used to training in the deserts and highlands of Upper Kharid. As we expand beyond our previous borders, it has been necessary to modify these practices to allow for wetter and colder climates."
+ kharidian_emergence_mil_5_modifier_HET:0 "Expanded Rituals of Het"
+ desc_kharidian_emergence_mil_5_modifier_HET:0 "Our soldiers are used to training in the deserts and highlands of Upper Kharid. As we expand beyond our previous borders, it has been necessary to modify these practices to allow for wetter and colder climates."
+ 
+ kharidian_emergence_mil_2_modifier_ALK:0 "Diversified Drills"
+ desc_kharidian_emergence_mil_2_modifier_ALK:0 "In order to prepare our soldiers for any occasion, we vary up the methods of drilling inspired by all manner of foreign militaries."
+ kharidian_emergence_mil_3_modifier_ALK:0 "Diversified Drills"
+ desc_kharidian_emergence_mil_3_modifier_ALK:0 "In order to prepare our soldiers for any occasion, we vary up the methods of drilling inspired by all manner of foreign militaries."
+ kharidian_emergence_mil_4_modifier_ALK:0 "Diversified Drills"
+ desc_kharidian_emergence_mil_4_modifier_ALK:0 "In order to prepare our soldiers for any occasion, we vary up the methods of drilling inspired by all manner of foreign militaries."
+ kharidian_emergence_mil_5_modifier_ALK:0 "Diversified Drills"
+ desc_kharidian_emergence_mil_5_modifier_ALK:0 "In order to prepare our soldiers for any occasion, we vary up the methods of drilling inspired by all manner of foreign militaries."
+ 
+ kharidian_emergence_pharoahs_blessing_modifier:0 "Pharoah's Blessing"
+ desc_kharidian_emergence_pharoahs_blessing_modifier:0 "Our aid to the Pharoah is being rewarded with expertise on governance."
+ kharidian_emergence_enhanced_pharoahs_blessing_modifier:0 "Enhanced Pharoah's Blessing"
+ desc_kharidian_emergence_enhanced_pharoahs_blessing_modifier:0 "Our aid to the Pharoah is being rewarded with expertise on governance."
+ 
+ 
+ 
 # Vampyric
  vampyric_tributary_blood:0 "Tributary Blood"
  desc_vampyric_tributary_blood:0 "Our tributaries are providing a ready supply of blood tithes."
@@ -150,6 +238,9 @@
 
 # Al Kharid
 
+ ALK_uzeran_integration:0 "Uzeran Integration"
+ desc_ALK_uzeran_integration:0 "A serious attempt of reconstructing the lost city of Uzer has coincided with a revival of Uzeran culture."
+
  ALK_depop_plateau:0 "Depopulation of the Plateau"
  desc_ALK_depop_plateau:0 "Many residents of the Kharidian Plateau have relocated to Al Kharid, making this province distinctly underpopulated."
  ALK_saradomist_integration:0 "Saradomist Integration"
@@ -164,7 +255,15 @@
  desc_ALK_green_training:0 "The Guthixian green wizards have been invited to aid the efforts of the Magic Training Arena."
  ALK_grey_training:0 "Grey Training"
  desc_ALK_grey_training:0 "The Magic Training Arena is ran by the efforts of Al Kharid's own wizards, without outside assistance."
-
+ ALK_shipbuilding_frenzy:0 "Shipbuilding Frenzy"
+ desc_ALK_shipbuilding_frenzy:0 "Determined to take their trade expertise further out, local merchants are funding rapid construction of ships."
+ ALK_polypore_dungeon:0 "Polypore Dungeon"
+ desc_ALK_polypore_dungeon:0 "Beasts made of mushrooms dwell in the dungeons beneath this province. Their hides and spores make potent magic armour."
+ ALK_hallowvale_haven:0 "Hallowvale Haven"
+ desc_ALK_hallowvale_haven:0 "We have made a safe location for the residents of the often-hostile Morytania."
+ ALK_hallowvale_haven_saradomin:0 "Hallowvale Haven"
+ desc_ALK_hallowvale_haven_saradomin:0 "We now have a new safe route in and out of Morytania, bypassing the conventional path around Paterdomus."
+ 
  ALK_merchant_fleet:0 "Merchant Fleet"
  desc_ALK_merchant_fleet:0 "The growing Al Kharidian merchant fleet is carving out an increasingly strong share of regional trade."
  ALK_agenda_of_espionage:0 "Agenda of Espionage"
@@ -181,6 +280,22 @@
  desc_ALK_corrupt_duels:0 "The Duel Arena has been overrun by gambling and match-fixing - secretly allowed to continue in exchange for a cut of proceeds."
  ALK_defeat_of_tempoross:0 "Defeat of Tempoross"
  desc_ALK_defeat_of_tempoross:0 "With Tempoross defeated for good, our traders in the Unquiet Ocean feel much safer."
+ ALK_tolerance_efforts:0 "Tolerance Efforts"
+ desc_ALK_tolerance_efforts:0 "Our active attempts to be welcoming to those of other religions has aided our diplomatic efforts."
+ ALK_riches_of_pollnivneach:0 "Riches of Pollnivneach"
+ desc_ALK_riches_of_pollnivneach:0 "Our domination of central Kharidian trade allows us to dictate its terms."
+ ALK_growing_naval_pressure:0 "Growing Naval Pressure"
+ desc_ALK_growing_naval_pressure:0 "Our regional rivals can no longer take our naval prowess for granted."
+ ALK_imperial_consolidation:0 "Imperial Consolidation"
+ desc_ALK_imperial_consolidation:0 "With the fall of the Empire of Kharid, we are taking the role of regional hegemon and can hence justify more rapid consolidation of subjects."
+ ALK_guardians_of_hallowvale:0 "Guardians of Hallowvale"
+ desc_ALK_guardians_of_hallowvale:0 "We have aided our Saradominist allies in ways previously thought unimaginable, striking into Morytania."
+ ALK_guardians_of_hallowvale_order:0 "Guardians of Hallowvale"
+ desc_ALK_guardians_of_hallowvale_order:0 "We have aided our Saradominist allies in ways previously thought unimaginable, striking into Morytania."
+ ALK_guardians_of_hallowvale_saradomin:0 "Guardians of Hallowvale"
+ desc_ALK_guardians_of_hallowvale_saradomin:0 "We have aided our Saradominist allies in ways previously thought unimaginable, striking into Morytania."
+ ALK_kharidian_glory_modifier:0 "Kharidian Glory"
+ desc_ALK_kharidian_glory_modifier:0 "From dust, Al Kharid has grown to be a true power in Gielinor. Our governance, once nearly non-existent, is now the envy of the world."
 
 # Arposandra
 
@@ -343,6 +458,8 @@
  
  ASG_ZAM_zamoraks_due:0 "Zamorak's Due"
  desc_ASG_ZAM_zamoraks_due:0 "Hallowvale was conquered for Zamorak in the Third Age. Unfortunately, at the end of the era, Lord Drakan turned his back on the very God who put him in the position he was in, leaving Morytania ruled by heretics. Now it is rightfully under Zamorakian rule!"
+ ASG_ZAM_zamorakian_integration:0 "Zamorakian Integration"
+ desc_ASG_ZAM_zamorakian_integration:0 "Strengthened Asgarnian-Kandaranian Zamorakian ties are bearing fruit, and we will more easily be able to join both realms."
  
 # Asgarnia - Guthix
 
@@ -707,6 +824,11 @@
  KDR_world_gate_province:0 "The World Gate"
  desc_KDR_world_gate_province:0 "The legendary gateway to other worlds - for those who know how to use it."
 
+# Khaganate
+
+ KHG_unified_council_of_khans_modifier:0 "Unifier of the Council"
+ desc_KHG_unified_council_of_khans_modifier:0 "All the power which was invested in the Council of Khans is now invested in the Khaganate."
+
 # Khanoka
  
  KHN_agriculture_boom:0 "Agriculture Boom"
@@ -756,6 +878,8 @@
  genkharid_capital_wealth:0 "Capital Wealth"
  desc_genkharid_capital_wealth:0 "The wealth of our capital has inspired greater levels of investment."
 
+ genkharid_great_project_enthusiasm:0 "Great Project Enthusiasm"
+ desc_genkharid_great_project_enthusiasm:0 "More people than ever before are willing to aid our construction of monuments." 
  genkharid_glory_of_the_monuments:0 "Glory of the Monuments"
  desc_genkharid_glory_of_the_monuments:0 "The renewed monuments of Kharid inspire our people and inspire envy elsewhere in Gielinor."
  genkharid_building_boom:0 "Building Boom"
@@ -767,14 +891,37 @@
  genkharid_drive_to_unify:0 "Drive to Unify"
  desc_genkharid_drive_to_unify:0 "Our powerful army has the means to unite the Kharidian Desert under one banner."
 
-# Kharidians
+# North Kharidians / Hetiyyah
 
  KDS_toll_gate:0 "Toll Gate"
  desc_KDS_toll_gate:0 "The famous toll gate of Al Kharid charges only a mere 10gp, but the huge demand for passage will quickly accumulate a large volume of gold for us."
  KDS_saradominist_interest:0 "Saradominist Interest"
  desc_KDS_saradominist_interest:0 "Our tolerance of different faiths has made it considerably easier to attract immigrants."
+ KDS_honourably_defeated:0 "Honourably Defeated"
+ desc_KDS_honourably_defeated:0 "Our honourable combat prowess is inspiring new converts."
+ 
+ KDS_HET_fort_of_kharid_et:0 "Fort of Kharid-Et"
+ desc_KDS_HET_fort_of_kharid_et:0 "We have discovered and renovated the ancient Zarosian fort of Kharid-Et."
+ 
  KDS_scimitar_production:0 "Scimitar Production"
  desc_KDS_scimitar_production:0 "Local production of scimitars has cut the costs of maintaining our army."
+ KDS_emerging_nation:0 "Emerging Nation"
+ desc_KDS_emerging_nation:0 "Our emerging capital has attracted great interest from diplomats and migrants alike."
+ KDS_holy_training_regimen:0 "Holy Training Regimen"
+ desc_KDS_holy_training_regimen:0 "Ancient techniques from Het, handed down over generations, are finding renewed favour among our people."
+ KDS_coordinated_defence:0 "Co-ordinated Defence"
+ desc_KDS_coordinated_defence:0 "Our warriors work in tandem to cover each other's weaknesses. Those who attack into our land soon find themselves surrounded on multiple sides."
+ KDS_glory_of_het:0 "Glory of Het"
+ desc_KDS_glory_of_het:0 "Troops trained under Het's strategies inspire awe in our enemies."
+ 
+ KDS_HET_bay_of_het:0 "Bay of Het"
+ desc_KDS_HET_bay_of_het:0 "One of the most valuable regions for the control of trade in Gielinor is under our command."
+ KDS_HET_refused_by_pharoah:0 "Refused by Pharoah"
+ desc_KDS_HET_refused_by_pharoah:0 "The Pharoah refused to let us become their tributary, making our efforts to appease them look a bit silly."
+ KDS_HET_kharidian_culture_enthusiasm:0 "Enthusiasm for Kharidian Cultures"
+ desc_KDS_HET_kharidian_culture_enthusiasm:0 "Renewed interest in the Menaphite Pantheon has also been met with renewed interest in Kharidian cultural practices."
+ KDS_HET_hets_chosen:0 "Het's Chosen"
+ desc_KDS_HET_hets_chosen:0 "We have shown our worth as Het's champions upon Gielinor."
 
 # Kourend
  
@@ -930,9 +1077,17 @@
  desc_NDH_dried_well:0 "The mysterious drying up of Nardah's well threatens to leave the town uninhabitable."
  NDH_mitigated_dried_well:0 "Mitigated Dried Well"
  desc_NDH_mitigated_dried_well:0 "Nardah's well has mysteriously dried up, so all financial resources in the town have been diverted into obtaining an alternative source of water from Pollnivneach."
+ NDH_centre_for_herbalism:0 "Centre for Herbalism"
+ desc_NDH_centre_for_herbalism:0 "Local expertise in making potions quickly and cleanly has greatly enhanced production."
 
  NDH_protect_from_missiles:0 "Protect from Missiles"
  desc_NDH_protect_from_missiles:0 "A Saradominist priest has told us of his god's ability to defend against ranged attacks."
+ NDH_genie_lamps:0 "Genie Lamps"
+ desc_NDH_genie_lamps:0 "Adventurers seem strangely drawn to the genie lamps found scattered around Nardah."
+ NDH_reaffirmed_faith:0 "Reaffirmed Faith"
+ desc_NDH_reaffirmed_faith:0 "In the face of challenges to the Menaphite Pantheon, we have demonstrated renewed loyalty."
+ NDH_conquest_of_the_elid:0 "Conquest of the Elid"
+ desc_NDH_conquest_of_the_elid:0 "Elidinis' power has waned; we are the new masters of her river!"
 
 # Neitiznot
 
@@ -1106,7 +1261,20 @@
  TZH_extinction_of_the_tzhaar:0 "Extinction of the TzHaar"
  desc_TZH_extinction_of_the_tzhaar:0 "The isolationist TokHaar have supplanted the TzHaar."
  
+# Ullek
+
+ ULL_second_age_legacy:0 "Second Age Legacy"
+ desc_ULL_second_age_legacy:0 "Extensive carved rock tunnels maintained over the centuries by the Scabarites has left enough of Ullek intact to make expansion easier."
  
+# Uzer
+
+ UZE_second_age_legacy:0 "Second Age Legacy"
+ desc_UZE_second_age_legacy:0 "Uzer was once among the biggest and most powerful cities of Gielinor. The remnants of the city's plan still lays buried beneath the sands, so as we clear lands we learn how to rebuild its full glory."
+ 
+ UZE_legacy_of_tolerance_modifier:0 "Legacy of Tolerance"
+ desc_UZE_legacy_of_tolerance_modifier:0 "Where else in Gielinor could followers of Armadyl, Zamorak, Saradomin and the Menaphite Pantheon peacefully co-exist?"
+ UZE_discipline_of_golems:0 "Discipline of Golems"
+ desc_UZE_discipline_of_golems:0 "Golems do not feel pain, do not need rest, and can be sustained with clay."
  
 # Varlamore
  
@@ -1233,6 +1401,9 @@
 ####################
 # Misc Triggered Modifiers
 ####################
+
+ GCH_tortugan_spawning_grounds:0 "Tortugan Spawning Grounds"
+ desc_GCH_tortugan_spawning_grounds:0 "Tortugans of the Great Conch lay eggs here to be safe from gryphon predators."
  
  temple_of_light_modifier:0 "Temple of Light"
  desc_temple_of_light_modifier:0 "The Temple of Light was built to protect the world from the energies of the Death Altar and a being known as the Dark Lord."
@@ -1282,7 +1453,7 @@
  desc_wildy_border_level_nine:0 "This province borders uncolonised Wilderness provinces, including at least one of an extremely high risk.\nThe level of severity in this province is determined by population size, aggressiveness and ferocity of the neighbouring uncolonised provinces."
  
 ####################
-# Government and Estate Modifiers
+# Government Modifiers
 ####################
 
  excessive_tithe_noble_restrictions:0 "Noble Tithing Restrictions"
@@ -1338,11 +1509,39 @@
  kou_independent_shayzien:0 "Independent Shayzien"
  desc_kou_independent_shayzien:0 "We have entirely lost control of House Shayzien. Unless this situation can be restored, our grip on the Kingdom as a whole will rapidly loosen."
  
+####################
+# Estate Modifiers
+####################
+
+ estate_burghers_excavation_rights_underground:0 "Excavation Rights"
+ desc_estate_burghers_excavation_rights_underground:0 "The rights to expand the livable space of these chasms has been delegated to people most able to do so."
+ estate_burghers_expand_swamp_dwellings_marsh:0 "Expanded Swamp Dwellings"
+ desc_estate_burghers_expand_swamp_dwellings_marsh:0 "The denziens of this realm know something about swampland living and are actively contributing to the marsh's infrastructure."
+ estate_burghers_glacial_expansion_glacial:0 "Glacial Expansion"
+ desc_estate_burghers_glacial_expansion_glacial:0 "In the cold wastes, most struggle but some thrive. Those that do have been granted free rein to develop this land."
+ estate_burghers_volcanic_attunement_volcanic:0 "Volcanic Attunement"
+ desc_estate_burghers_volcanic_attunement_volcanic:0 "This realm is subject to those with a natural ability to withstand heat, so developing the land is hardly an issue." 
+ estate_burghers_volcanic_development_volcanic:0 "Volcanic Development Rights"
+ desc_estate_burghers_volcanic_development_volcanic:0 "Some rather foolhardy individuals have been given greater rights to try and build on this hellish land."
+ 
+ 
+# TzHaar
+ 
  tzh_ket_capital_reinforcement_modifier:0 "Capital Reinforcement"
  desc_tzh_ket_capital_reinforcement_modifier:0 "This city's guardians have heavily reinforced its defences making it extremely resistant to attack."
  trade_post_in_wushanko:0 "Major Trading Post"
  desc_trade_post_in_wushanko:0 "This port is a major trading post for the bamboo and gunpowder coming out of Wushanko."
  
+ tzh_hur_builders_of_gielinor_hills:0 "Builders of Gielinor"
+ desc_tzh_hur_builders_of_gielinor_hills:0 "Those that follow in the traditions of the shapers of Gielinor have been granted rights to carry on their ancient practices in this province."
+ tzh_hur_builders_of_gielinor_highlands:0 "Builders of Gielinor"
+ desc_tzh_hur_builders_of_gielinor_highlands:0 "Those that follow in the traditions of the shapers of Gielinor have been granted rights to carry on their ancient practices in this province."
+ tzh_hur_builders_of_gielinor_mountains:0 "Builders of Gielinor"
+ desc_tzh_hur_builders_of_gielinor_mountains:0 "Those that follow in the traditions of the shapers of Gielinor have been granted rights to carry on their ancient practices in this province."
+ tzh_hur_builders_of_gielinor_underground:0 "Builders of Gielinor"
+ desc_tzh_hur_builders_of_gielinor_underground:0 "Those that follow in the traditions of the shapers of Gielinor have been granted rights to carry on their ancient practices in this province."
+ tzh_hur_builders_of_gielinor_volcanic:0 "Builders of Gielinor"
+ desc_tzh_hur_builders_of_gielinor_volcanic:0 "Those that follow in the traditions of the shapers of Gielinor have been granted rights to carry on their ancient practices in this province."
  
 ####################
 # Elder Artefacts and Sixth Age
@@ -1371,6 +1570,76 @@
 ####################
 # Religious Modifiers
 ####################
+
+ # Missionary boost decisions
+ 
+ chaos_group_policy_of_vandalism:0 "Policy of Vandalism"
+ desc_chaos_group_policy_of_vandalism:0 "We are encouraging the vandalism of other faiths' altars."
+ zamorak_open_zmi_branch:0 "Zamorakian Magical Institute Branch"
+ desc_zamorak_open_zmi_branch:0 "A local branch of the Zamorakian Magical Institute is improving both our religious and research goals."
+
+ karamjan_group_widen_potion_rituals:0 "Widened Potion Rituals"
+ desc_karamjan_group_widen_potion_rituals:0 "We are looking to the powerful herbs of Karamja to create new potions of protection!"
+
+ menaphite_group_support_wandering_scholars:0 "Wandering Religious Scholars"
+ desc_menaphite_group_support_wandering_scholars:0 "We are using our most learned subjects as a beacon of the true faith."
+
+ nonintervention_group_religious_history_education:0 "Religious History Education"
+ desc_nonintervention_group_religious_history_education:0 "The true history of the brutality of unrestrained Gods is being spread throughout our nation."
+ guthix_widen_druidic_recruitment:0 "Widened Druidic Recruitment"
+ desc_guthix_widen_druidic_recruitment:0 "Guthix holds no prejudice against the races of Gielinor and neither shall we."
+
+ order_group_edict_of_uniformity:0 "Edict of Uniformity"
+ desc_order_group_edict_of_uniformity:0 "In the name of Order, our land should be under one faith."
+ armadyl_promote_armadylean_law:0 "Armadylean Law Prioritised"
+ desc_armadyl_promote_armadylean_law:0 "Armadylean law is upheld above all other forms of law in our realm."
+ saradomin_edict_of_denial:0 "Edict of Denial"
+ desc_saradomin_edict_of_denial:0 "Our state is actively denying the existence of gods other than Saradomin, Zamorak and Guthix."
+ saradomin_pragmatic_theology:0 "Edict of Pragmatic Theology"
+ desc_saradomin_pragmatic_theology:0 "We are somewhat tolerating other faiths within our realm for the sake of building a common purpose."
+
+ transcendent_group_promote_godly_hierarchy:0 "Godly Hierarchy Promoted"
+ desc_transcendent_group_promote_godly_hierarchy:0 "We follow a real God. Much of Gielinor does not."
+ seren_promote_serenist_tolerance:0 "Policy of Serenist Tolerance"
+ desc_seren_promote_serenist_tolerance:0 "Following Seren's past example, we are working openly with peoples of other faiths."
+
+ elder_god_group_open_proselytising:0 "Open Proselytising"
+ desc_elder_god_group_open_proselytising:0 "We have opened the hidden knowledge of the Elder Gods somewhat and we are winning many converts out of fear."
+
+ autocratic_group_doctrine_of_might:0 "Doctrine of Might"
+ desc_autocratic_group_doctrine_of_might:0 "Defeated foes must know they lost because their God is inferior!"
+ bandos_dogma_literacy:0 "Dogmatic Literacy Programmes"
+ desc_bandos_dogma_literacy:0 "By expanding literacy efforts, our people can engage with our religious propaganda even when a shaman is not present."
+
+ horror_group_construct_blackstone_pillars:0 "Additional Black Stone Pillars"
+ desc_horror_group_construct_blackstone_pillars:0 "The whispers are stronger when the pillars are built. The whispers are stronger when the pillars are built. The whispers..."
+
+ celestial_group_astrological_charting:0 "Astrological Charting"
+ desc_celestial_group_astrological_charting:0 "The Sun and the Moon guide our way, and are just part of an endless sky."
+
+ wushanko_group_counter_missionaries:0 "Counter-Missionary Doctrine"
+ desc_wushanko_group_counter_missionaries:0 "We are actively pushing back religions that threaten the Wushanko Guardians."
+ 
+ # Amascut
+ 
+ amascut_religion_friends_against_corruption:0 "Friends Against Corruption"
+ desc_amascut_religion_friends_against_corruption:0 "By leaning on the support of allies, the corruption of Amascut is in retreat."
+ amascut_religion_cleansing_of_maat:0 "Cleansing of Ma'at"
+ desc_amascut_religion_cleansing_of_maat:0 "We have managed to secure a Feather of Ma'at to resist Amascut's corruption."
+ amascut_religion_promote_blood_moon:0 "Promoting the Order of the Blood Moon"
+ desc_amascut_religion_promote_blood_moon:0 "Assigning a §YLocal Organisation§! such as Order of the Blood Moon will reduce your §YEnthrallment§! by 10.\n\nThe Order of the Blood Moon once served Elidinis before being converted to Amascut's side. Promoting the Order could be a boon for national development so long as we stay aligned to Amascut, but this risks awakening Elidinis' power within them."
+ 
+ amascut_religion_enhanced_proselytisation:0 "Enhanced Amascutite Proselytisation"
+ desc_amascut_religion_enhanced_proselytisation:0 "Our subjects are just free enough from corruption that they can make a convincing argument for following Amascut."
+ amascut_religion_internalising_corruption:0 "Internalising Corruption"
+ desc_amascut_religion_internalising_corruption:0 "Take the corruption of the world, take it inwards, and strengthen the bond with the Devourer."
+ amascut_religion_slayers_boon:0 "Slayer's Boon"
+ desc_amascut_religion_slayers_boon:0 "Amascut, founder of the Order of Slayers, has taught us techniques of precise combat."
+ 
+ amascut_religion_escape_modifier:0 "Recent Escape from Amascut"
+ desc_amascut_religion_escape_modifier:0 "Having just broken free from Amascut's grasp, our people are in no hurry to return to her side."
+ amascut_religion_plague_of_amascut:0 "Plague of Amascut"
+ desc_amascut_religion_plague_of_amascut:0 "Minions of Amascut are sending strange forms of corruption after us."
 
  # Armadyl
  
@@ -1436,6 +1705,12 @@
  marimbo_equity:0 "Happiness for the Unhappy"
  desc_marimbo_equity:0 "We are pursuing a national effort to target unhappiness."
  
+ # Queen of Ashes
+ 
+ queen_of_ashes_intro_contemplating_flame:0 "Contemplating the Flames"
+ desc_queen_of_ashes_intro_contemplating_flame:0 "Rather than carrying out their full duties, our ruler has become obsessed with the secrets behind fire."
+ 
+ 
  # Saradomin relocalised
  
  cardinal_in_administration:0 "Cardinal in Administration"
@@ -1447,13 +1722,10 @@
  saradomin_undesired_rites:0 "Undesired Rites"
  desc_saradomin_undesired_rites:0 "Local people demanded burial for fallen soldiers, and they received cremations instead. Suffice to say, they are not pleased."
  
- 
  # Saradomin new
  
  saradomin_beast_slain:0 "Evil Beast Slain"
  desc_saradomin_beast_slain:0 "The local people rejoice for an evil beast is slain in the name of Saradomin! They are motivated to work extra hard."
-
- 
  
  # Seren Local
  
@@ -1644,6 +1916,24 @@
 ####################
 # Disasters
 ####################
+
+ corruption_of_amascut_hoping_for_reformation:0 "Hoping for Reformation"
+ desc_corruption_of_amascut_hoping_for_reformation:0 "In the face of Amascut's invasion, our leader refused to drop her as a personal deity claiming that the idea of Amascut is worth believing in even if her Devourer guise is not."
+ corruption_of_amascut_aid_of_apmeken:0 "Aid of Apmeken"
+ desc_corruption_of_amascut_aid_of_apmeken:0 "It appears Apmeken's divine blessing is aiding our efforts against Amascut."
+ corruption_of_amascut_aid_of_crondis:0 "Aid of Crondis"
+ desc_corruption_of_amascut_aid_of_crondis:0 "It appears Crondis' divine blessing is aiding our efforts against Amascut."
+ corruption_of_amascut_aid_of_elidinis:0 "Aid of Elidinis"
+ desc_corruption_of_amascut_aid_of_crondis:0 "It appears Elidinis' divine blessing is aiding our efforts against Amascut."
+ corruption_of_amascut_aid_of_het:0 "Aid of Het"
+ desc_corruption_of_amascut_aid_of_crondis:0 "It appears Het's divine blessing is aiding our efforts against Amascut."
+ corruption_of_amascut_aid_of_icthlarin:0 "Aid of Icthlarin"
+ desc_corruption_of_amascut_aid_of_crondis:0 "It appears Icthlarin's divine blessing is aiding our efforts against Amascut."
+ corruption_of_amascut_aid_of_scabaras:0 "Aid of Scabaras"
+ desc_corruption_of_amascut_aid_of_crondis:0 "It appears Scabaras' divine blessing is aiding our efforts against Amascut."
+ corruption_of_amascut_aid_of_tumeken:0 "Aid of Tumeken"
+ desc_corruption_of_amascut_aid_of_crondis:0 "It appears Tumeken's divine blessing is aiding our efforts against Amascut."
+ 
  
  excessive_tithe_noble_restrictions:0 "Noble Restrictions"
  desc_excessive_tithe_noble_restrictions:0 "Even nobles have to make sacrifices to prevent the supply of blood from running out."

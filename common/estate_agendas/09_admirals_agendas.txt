@@ -1,0 +1,865 @@
+#This one or the next one will always be valid
+
+estate_admirals_develop_x = {
+	selection_weight = {
+		factor = 1
+	}
+	can_select = {
+		capital_scope = {
+			is_state_core = root
+		}
+		any_owned_province = {
+			has_port = yes
+		}
+	}
+	pre_effect = {
+		random_list = {
+			1 = {
+				random_owned_province = {
+					limit = {
+						is_state_core = root
+						area_for_scope_province = {
+							is_capital_of = root
+						}
+						has_port = yes
+					}
+					save_event_target_as = agenda_province
+				}
+			}
+			2 = {
+				trigger = {
+					any_owned_province = {
+						is_state_core = root
+						OR = {
+							AND = {
+								religion = root
+								OR = {
+									culture = root
+									has_owner_accepted_culture = yes
+								}
+							}
+						}
+						region_for_scope_province = {
+							is_capital_of = root
+						}
+						has_port = yes
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_state_core = root
+						OR = {
+							AND = {
+								religion = root
+								OR = {
+									culture = root
+									has_owner_accepted_culture = yes
+								}
+							}
+						}
+						region_for_scope_province = {
+							is_capital_of = root
+						}
+						has_port = yes
+					}
+					save_event_target_as = agenda_province
+				}
+			}
+			1 = {
+				random_owned_province = {
+					limit = {
+						is_state_core = root
+						has_port = yes
+					}
+					save_event_target_as = agenda_province
+				}
+			}
+		}
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_dip_var
+						value = 1
+					}
+				}
+				set_variable = {
+					which = province_dip_var
+					value = 0
+				}
+			}
+			export_to_variable = {
+				which = province_dip_var
+				value = trigger_value:base_production
+			}
+			change_variable = {
+				which = province_dip_var
+				value = 2
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			NOT = { owned_by = root }
+		}
+	}
+    task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_admirals
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_admirals
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				base_production = "province_dip_var"
+			}
+		}
+    }
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_admirals
+		}
+		add_estate_loyalty = {
+			estate = estate_admirals
+			loyalty = 10
+		}
+		add_yearly_sailors = 0.3
+    }
+    failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		event_target:agenda_province = {
+			if = {
+				limit = { owned_by = root }
+				add_named_unrest = {
+					name = local_admirals_displeased
+					value = 5
+				}
+			}
+		}
+        add_estate_loyalty_modifier = {
+            estate = estate_admirals
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+
+
+
+
+estate_admirals_build_port_building_in_y = {
+	can_select = {
+		dip_tech = 6
+		any_owned_province = {
+			is_state_core = root
+			has_port = yes
+			OR = {
+				NOT = { has_building = grand_shipyard }
+				NOT = { has_building = drydock }
+			}
+			OR = {
+				AND = {
+					NOT = { has_building = dock }
+					num_free_building_slots = 1
+				}
+				AND = {
+					ROOT = { dip_tech = 8 }
+					NOT = { has_building = shipyard }
+					num_free_building_slots = 1
+				}
+				AND = {
+					ROOT = { dip_tech = 19 }
+					NOT = { has_building = drydock }
+					OR = {
+						num_free_building_slots = 1
+						has_building = dock
+					}
+				}
+				AND = {
+					ROOT = { dip_tech = 24 }
+					NOT = { has_building = grand_shipyard }
+					OR = {
+						num_free_building_slots = 1
+						has_building = shipyard
+					}
+				}
+			}
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.75
+			always = yes
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				crown_land_share = 15
+			}
+		}
+	}
+	pre_effect = {
+		set_variable = {
+			which = estate_admirals_build_port_building_in_y_var
+			value = 0
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				has_port = yes
+				OR = {
+					NOT = { has_building = grand_shipyard }
+					NOT = { has_building = drydock }
+				}
+				OR = {
+					AND = {
+						NOT = { has_building = dock }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { dip_tech = 8 }
+						NOT = { has_building = shipyard }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { dip_tech = 19 }
+						NOT = { has_building = drydock }
+						OR = {
+							num_free_building_slots = 1
+							has_building = dock
+						}
+					}
+					AND = {
+						ROOT = { dip_tech = 24 }
+						NOT = { has_building = grand_shipyard }
+						OR = {
+							num_free_building_slots = 1
+							has_building = shipyard
+						}
+					}
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				development = 12
+				has_port = yes
+				OR = {
+					NOT = { has_building = grand_shipyard }
+					NOT = { has_building = drydock }
+				}
+				OR = {
+					AND = {
+						NOT = { has_building = dock }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { dip_tech = 8 }
+						NOT = { has_building = shipyard }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { dip_tech = 19 }
+						NOT = { has_building = drydock }
+						OR = {
+							num_free_building_slots = 1
+							has_building = dock
+						}
+					}
+					AND = {
+						ROOT = { dip_tech = 24 }
+						NOT = { has_building = grand_shipyard }
+						OR = {
+							num_free_building_slots = 1
+							has_building = shipyard
+						}
+					}
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				development = 20
+				has_port = yes
+				OR = {
+					NOT = { has_building = grand_shipyard }
+					NOT = { has_building = drydock }
+				}
+				OR = {
+					AND = {
+						NOT = { has_building = dock }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { dip_tech = 8 }
+						NOT = { has_building = shipyard }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { dip_tech = 19 }
+						NOT = { has_building = drydock }
+						OR = {
+							num_free_building_slots = 1
+							has_building = dock
+						}
+					}
+					AND = {
+						ROOT = { dip_tech = 24 }
+						NOT = { has_building = grand_shipyard }
+						OR = {
+							num_free_building_slots = 1
+							has_building = shipyard
+						}
+					}
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					has_building = shipyard
+					NOT = { has_building = grand_shipyard }
+					ROOT = { dip_tech = 24 }
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_admirals_build_port_building_in_y_var
+						value = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_building = shipyard }
+					NOT = { has_building = grand_shipyard }
+					ROOT = { dip_tech = 8 }
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_admirals_build_port_building_in_y_var
+						value = 3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = dock
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_admirals_build_port_building_in_y_var
+						value = 2
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					set_variable = {
+						which = estate_admirals_build_port_building_in_y_var
+						value = 1
+					}
+				}
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			NOT = { owned_by = root }
+		}
+	}
+    task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_admirals
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_admirals
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = estate_admirals_build_port_building_in_y_var
+						value = 4
+					}
+				}
+				event_target:agenda_province = {
+					has_building = grand_shipyard
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_admirals_build_port_building_in_y_var
+						value = 3
+					}
+				}
+				event_target:agenda_province = {
+					OR = {
+						has_building = shipyard
+						has_building = grand_shipyard
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_admirals_build_port_building_in_y_var
+						value = 2
+					}
+				}
+				event_target:agenda_province = {
+					has_building = drydock
+				}
+			}
+			else = {
+				event_target:agenda_province = {
+					OR = {
+						has_building = dock
+						has_building = drydock
+					}
+				}
+			}
+		}
+    }
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_admirals
+		}
+		add_estate_loyalty = {
+			estate = estate_admirals
+			loyalty = 10
+		}
+		if = {
+			limit = {
+				NOT = { crown_land_share = 15 }
+				estate_territory = {
+					estate = estate_admirals
+					territory = 10
+				}
+				estate_not_has_exempt_from_seize_land_privilege = { estate = estate_admirals }
+			}
+			take_estate_land_share_small = { estate = estate_admirals }
+		}
+		else = {
+			event_target:agenda_province = {
+				add_base_production = 1
+			}
+		}
+    }
+    failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		event_target:agenda_province = {
+			if = {
+				limit = { owned_by = root }
+				add_named_unrest = {
+					name = local_admirals_displeased
+					value = 5
+				}
+			}
+		}
+        add_estate_loyalty_modifier = {
+            estate = estate_admirals
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+
+#Access to the Sea
+estate_admirals_access_sea = {
+	can_select = {
+		is_free_or_tributary_trigger = yes
+		NOT = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		any_owned_province = {
+			any_neighbor_province = {
+				has_port = yes
+				owner = {
+					NOT = { overlord_of = root }
+					NOT = { is_subject_of = root }
+					NOT = { alliance_with = root }
+					NOT = { ROOT = { truce_with = prev } }
+					NOT = {
+						has_opinion = {
+							who = root
+							value = 50
+						}
+					}
+					OR = {
+						is_part_of_hre = no
+						NOT = { hre_reform_passed = landfriede }
+						ROOT = { is_part_of_hre = no }
+					}
+				}
+			}
+		}
+	}
+	selection_weight = {
+		factor = 2.5
+		modifier = {
+			factor = 0.25
+			any_country = {
+				coalition_target = root
+			}
+		}
+	}
+	pre_effect = {
+		random_owned_province = {
+			limit = {
+				any_neighbor_province = {
+					has_port = yes
+					owner = {
+						NOT = { overlord_of = root }
+						NOT = { is_subject_of = root }
+						NOT = { alliance_with = root }
+						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							has_opinion = {
+								who = root
+								value = 50
+							}
+						}
+						OR = {
+							is_part_of_hre = no
+							NOT = { hre_reform_passed = landfriede }
+							ROOT = { is_part_of_hre = no }
+						}
+					}
+				}
+			}
+			random_neighbor_province = {
+				limit = {
+					has_port = yes
+					owner = {
+						NOT = { overlord_of = root }
+						NOT = { is_subject_of = root }
+						NOT = { alliance_with = root }
+						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							has_opinion = {
+								who = root
+								value = 50
+							}
+						}
+						OR = {
+							is_part_of_hre = no
+							NOT = { hre_reform_passed = landfriede }
+							ROOT = { is_part_of_hre = no }
+						}
+					}
+				}
+				save_event_target_as = agenda_province
+			}
+		}
+	}
+	provinces_to_highlight = {
+		OR = {
+			province_id = event_target:agenda_province
+			AND = {
+				OR = {
+					is_claim = root
+					is_core = root
+				}
+				has_port = yes
+			}
+		}
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_admirals
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_admirals
+			}
+		}
+		else = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+	}
+	immediate_effect = {
+		if = {
+			limit = {
+				event_target:agenda_province = {
+					NOT = { is_core = root }
+					NOT = { is_claim = root }
+				}
+			}
+			event_target:agenda_province = {
+				add_claim = root
+			}
+		}
+	}
+	on_invalid = {
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					is_claim = root
+					NOT = { is_permanent_claim = root }
+				}
+				remove_claim = root
+			}
+		}
+	}
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_admirals
+		}
+		add_estate_loyalty = {
+			estate = estate_admirals
+			loyalty = 10
+		}
+		add_sailors = 500
+	}
+    failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_admirals
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					is_claim = root
+					NOT = { is_permanent_claim = root }
+				}
+				remove_claim = root
+			}
+		}
+    }
+}
+
+#Bigger Fleet
+estate_admirals_build_a_fleet = {
+	can_select = {
+		primitives = no
+		any_owned_province = {
+			has_port = yes
+			is_core = root
+		}
+		navy_size = 1
+		NOT = { navy_size_percentage = 0.5 }
+		NOT = { navy_size = 250 }
+		NOT = { has_country_modifier = thriving_ship_building_sector }
+	}
+	selection_weight = {
+		factor = 2.5
+		modifier = {
+			factor = 1.5
+			any_rival_country = {
+				NOT = { truce_with = root }
+				navy_size = root
+			}
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { navy_size_percentage = 0.3 }
+			NOT = { navy_size = 150 }
+		}
+		modifier = {
+			factor = 0.5
+			navy_size = 100
+		}
+		modifier = {
+			factor = 0.25
+			navy_size = 200
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { num_of_ports = 3 }
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				has_idea_group = quality_ideas 
+				has_idea_group = naval_ideas
+			}
+			navy_size_percentage = 0.05
+		}
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_admirals
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_admirals
+			}
+		}
+		else = {
+			navy_size_percentage = 0.75
+		}
+	}
+	fail_if = {
+		NOT = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+	}
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_admirals
+		}
+		add_estate_loyalty = {
+			estate = estate_admirals
+			loyalty = 10
+		}
+		create_admiral = {
+			tradition = 40
+		}
+	}
+    failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_admirals
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+
+#Bigger Fleet than Rival
+estate_admirals_bigger_fleet_than_rival = {
+	can_select = {
+		primitives = no
+		any_owned_province = {
+			has_port = yes
+			is_core = root
+		}
+		NOT = { government = native }
+		NOT = { has_country_modifier = naval_enthusiasm_mission }
+
+		NOT = { navy_size_percentage = 1 }
+
+		any_rival_country = {
+			NOT = { war_with = root }
+			NOT = { root = { navy_size = prev } }
+			navy_balance = {
+				who = root
+				value = 1.05
+			}
+			NOT = {
+				navy_balance = {
+					who = root
+					value = 1.25
+				}
+			}
+		}
+	}
+	selection_weight = {
+		factor = 5
+	}
+	pre_effect = {
+		random_rival_country = {
+			limit = {
+				NOT = { war_with = root }
+				NOT = { root = { navy_size = prev } }
+				navy_balance = {
+					who = root
+					value = 1.05
+				}
+				NOT = {
+					navy_balance = {
+						who = root
+						value = 1.25
+					}
+				}
+			}
+			save_event_target_as = agenda_country
+		}
+	}
+	provinces_to_highlight = {
+		is_capital_of = event_target:agenda_country
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_admirals
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_admirals
+			}
+		}
+		else = {
+			if = {
+				limit = { event_target:agenda_country = { num_of_cities = 1 } }
+				navy_size = event_target:agenda_country
+			}
+			else = {
+				always = yes
+			}
+		}
+	}
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_admirals
+		}
+		add_estate_loyalty = {
+			estate = estate_admirals
+			loyalty = 10
+		}
+		add_country_modifier = {
+			name = naval_enthusiasm_mission
+			duration = 3650
+		}
+	}
+	fail_if = {
+		NOT = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+	}
+    failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_admirals
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}

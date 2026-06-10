@@ -1,0 +1,89 @@
+##############################
+# Amascut Flavor Events    #
+##############################
+
+namespace = amascut_religion_flavor
+
+#Forcing the government reform
+
+country_event = {
+	id = amascut_religion_flavor.1
+	title = amascut_religion_flavor.1.t #Enthrallment of $COUNTRY$
+	desc = amascut_religion_flavor.1.d #Amascut has seized control of most of our people. If we are to be free of her, it will be a difficult struggle. Alternatively, we could let ourselves be subject to her will in exchange for power.
+	picture = AMASCUT_COMBAT_eventPicture
+
+	trigger = {
+		religion = amascut_religion
+		NOT = {
+			has_government_mechanic = enthrallment_mechanic
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = amascut_religion_flavor.1.a #We must follow her will... for now.
+		if = {
+			limit = {
+				NOT = {	reform_level = 2 }
+			}
+			change_government_reform_progress = -100
+		}
+		if = {
+			limit = {
+				government = monarchy
+			}
+			add_government_reform = thrall_of_amascut_monarchy_reform
+		
+		}
+		else_if = {
+			limit = {
+				government = republic
+			}
+			add_government_reform = thrall_of_amascut_republic_reform
+		
+		}
+		else_if = {
+			limit = {
+				government = theocracy
+			}
+			add_government_reform = thrall_of_amascut_theocracy_reform
+		}
+		else = {
+			add_government_reform = thrall_of_amascut_tribe_reform
+		}
+		set_government_power = {
+			mechanic_type = enthrallment_mechanic
+			power_type = enthrallment_power_1
+			value = 70
+		}
+		custom_tooltip = thrall_of_amascut_no_easy_escape_tooltip
+	}
+}
+
+country_event = {
+	id = amascut_religion_flavor.2
+	title = amascut_religion_flavor.2.t #[plague_sending_nation.GetName] Sends a Plague!
+	desc = amascut_religion_flavor.2.d #A strange corrupt presence has befallen our people. We suspect the Devourer's handiwork via her [plague_sending_nation.GetAdjective] thralls.
+	picture = AMASCUT_COMBAT_eventPicture
+	goto = plague_sending_nation
+
+	is_triggered_only = yes
+
+	option = {
+		name = amascut_religion_flavor.2.a #We must cleanse this corruption!
+		add_corruption = 1			
+		add_country_modifier = {
+			name = amascut_religion_plague_of_amascut
+			duration = 1825
+		}
+		add_casus_belli = {
+			target = event_target:plague_sending_nation
+			type = cb_cleanse_corruption
+			months = 60
+		}
+		clear_global_event_target = plague_sending_nation
+	}
+}

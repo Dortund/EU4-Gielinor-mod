@@ -41,6 +41,19 @@ propagate_religion_policy = {
 		}
 		modifier = {
 			factor = 0
+			religion_group = karamjan_group
+			FROM = {
+				NOT = {
+					AND = {
+						religion_group = menaphite_group
+						is_emperor_of_china = yes
+						empire_of_china_reform_passed = kem_karamjan_tributary_reform
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
 			OR = {
 				religion_group = chaos_group
 				religion_group = order_group
@@ -49,13 +62,14 @@ propagate_religion_policy = {
 				religion_group = transcendent_group
 				religion_group = elder_god_group
 				religion_group = horror_group
-				religion_group = karamjan_group
 				religion_group = menaphite_group
 				religion_group = celestial_group
 				religion_group = nonintervention_group
 			}
 			FROM = {
-				NOT = { has_country_flag = can_propagate_religion_in_misc_religions #break this up into multiple if you want to use it }
+				NOT = {
+					has_country_flag = can_propagate_religion_in_misc_religions
+				}
 			}
 		}
 		modifier = {
@@ -99,6 +113,75 @@ propagate_religion_policy = {
 # Centers of Reformation
 # From Scope is center of Reformation Province
 # Will only target provinces on same continent
+
+guthix_center_of_reformation = { #Used to displace the Northern Pantheon
+	
+	religion = guthix
+
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 2.5
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = northern_pantheon }
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = west_runescape }
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				religion = guthix
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				religion = v
+			}
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				culture_group = FROM
+			}
+		}
+		modifier = {
+			factor = 2
+			culture = FROM
+		}
+		modifier = {
+			factor = 0.5
+			has_state_edict = edict_religion_enforced
+		}
+	}
+}
 
 godless_center_of_reformation = {
 	

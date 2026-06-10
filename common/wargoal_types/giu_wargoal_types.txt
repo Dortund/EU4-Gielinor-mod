@@ -47,6 +47,31 @@
 #
 # --------------------------------------------------------------
 
+goal_cleanse_amascut_corruption = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 2
+		peace_cost_factor = 1
+		required_treaty_to_take_provinces = {
+			po_cleanse_corruption
+		}
+		peace_options = {
+			po_cleanse_corruption
+			po_become_tributary_state
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 2
+		peace_cost_factor = 1
+	}
+	
+	war_name = CLEANSE_CORRUPTION_WAR_NAME
+}
+
 goal_take_capital_disloyal_house = {
 	type = take_capital
 	

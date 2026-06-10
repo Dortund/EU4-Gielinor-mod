@@ -121,10 +121,680 @@ estate_nobles_MYT_informal_vyrelord_powers = {
 	}
 }
 
+estate_nobles_gunpowder_monopoly = {
+	icon = privilege_nobles_gunpowder_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			trade_goods = gunpowder
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				gunpowder = 1
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = gunpowder
+			}
+			custom_tooltip = MONOPOLY_INCOME_GUNPOWDER_DESC
+		}
+		custom_tooltip = estate_nobles_monopoly_of_gunpowder_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = gunpowder
+			}
+			add_province_modifier = {
+				name = estate_nobles_monopoly_of_gunpowder_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_gunpowder_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_gunpowder_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_monopoly_of_gunpowder_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_gunpowder_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_gunpowder_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_nobles_monopoly_of_gunpowder_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_gunpowder_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_gunpowder_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			nobles_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.6 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_nobles_hunter_creatures_monopoly = {
+	icon = privilege_nobles_hunter_creatures_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			trade_goods = hunter_creatures
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				hunter_creatures = 1
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = hunter_creatures
+			}
+			custom_tooltip = MONOPOLY_INCOME_HUNTER_CREATURES_DESC
+		}
+		custom_tooltip = estate_nobles_monopoly_of_hunter_creatures_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = hunter_creatures
+			}
+			add_province_modifier = {
+				name = estate_nobles_monopoly_of_hunter_creatures_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_hunter_creatures_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_hunter_creatures_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_monopoly_of_hunter_creatures_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_hunter_creatures_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_hunter_creatures_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_nobles_monopoly_of_hunter_creatures_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_hunter_creatures_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_hunter_creatures_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			nobles_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.7 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_nobles_monster_loot_monopoly = {
+	icon = privilege_nobles_monster_loot_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			OR = {
+				trade_goods = lesser_loot
+				trade_goods = rare_loot
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				OR = {
+					lesser_loot = 1
+					rare_loot = 1
+				}
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				OR = {
+					trade_goods = lesser_loot
+					trade_goods = rare_loot
+				}
+			}
+			custom_tooltip = MONOPOLY_INCOME_MONSTER_LOOT_DESC
+		}
+		custom_tooltip = estate_nobles_monopoly_of_monster_loot_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					trade_goods = lesser_loot
+					trade_goods = rare_loot
+				}
+			}
+			add_province_modifier = {
+				name = estate_nobles_monopoly_of_monster_loot_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_monster_loot_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_monster_loot_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_monopoly_of_monster_loot_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_monster_loot_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_monster_loot_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_nobles_monopoly_of_monster_loot_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_monster_loot_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_monster_loot_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			nobles_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.8 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
 
 #####################################
 # Burghers
 #####################################
+
+estate_burghers_excavation_rights = {
+	icon = privilege_burghers_excavation_rights
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_unlocked_estate_privilege = { estate_privilege = estate_burghers_excavation_rights }
+			culture_group = arachnid_group
+			culture_group = dragonkin_group
+			culture_group = dwarven_group
+			primary_culture = ascended
+			primary_culture = cave_giant
+			primary_culture = dorgeshuun
+			primary_culture = kalphite
+			primary_culture = living_rock
+			primary_culture = nagua
+			primary_culture = scabarite
+		}
+	}
+	can_select = {
+		any_owned_province = {
+			has_terrain = underground
+		}
+		custom_trigger_tooltip = {
+			tooltip = already_granted_to_other_estate_tooltip
+			NOT = {
+				has_estate_privilege = estate_burghers_excavation_rights
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_excavation_rights_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = underground
+				}
+				add_province_modifier = {
+					name = estate_burghers_excavation_rights_underground
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_excavation_rights_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_burghers_excavation_rights_underground
+				}
+				remove_province_modifier = estate_burghers_excavation_rights_underground
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				has_terrain = underground
+				value = 8
+			}
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_burghers_expand_swamp_dwellings = {
+	icon = privilege_burghers_expand_swamp_dwellings
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_unlocked_estate_privilege = { estate_privilege = estate_burghers_expand_swamp_dwellings }
+			culture_group = lizardman_group
+			culture_group = amphibian_group
+			culture_group = ogre_group
+		}
+	}
+	can_select = {
+		any_owned_province = {
+			has_terrain = marsh
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_expand_swamp_dwellings_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = marsh
+				}
+				add_province_modifier = {
+					name = estate_burghers_expand_swamp_dwellings_marsh
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_expand_swamp_dwellings_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_burghers_expand_swamp_dwellings_marsh
+				}
+				remove_province_modifier = estate_burghers_expand_swamp_dwellings_marsh
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				has_terrain = marsh
+				value = 8
+			}
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_burghers_glacial_expansion = {
+	icon = privilege_burghers_glacial_expansion
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_unlocked_estate_privilege = { estate_privilege = estate_burghers_glacial_expansion }
+			culture_group = penguin_group
+			primary_culture = ice_giant
+			primary_culture = ice_sprite
+			primary_culture = icelord
+			primary_culture = icetroll
+			primary_culture = snow_imp
+			primary_culture = yeti
+		}
+	}
+	can_select = {
+		any_owned_province = {
+			has_terrain = glacier
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_glacial_expansion_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = glacier
+				}
+				add_province_modifier = {
+					name = estate_burghers_glacial_expansion_glacier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_glacial_expansion_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_burghers_glacial_expansion_glacier
+				}
+				remove_province_modifier = estate_burghers_glacial_expansion_glacier
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				has_terrain = glacier
+				value = 8
+			}
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_burghers_volcanic_attunement = {
+	icon = privilege_burghers_volcanic_attunement
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_unlocked_estate_privilege = { estate_privilege = estate_burghers_volcanic_attunement }
+			culture_group = demon_group
+			primary_culture = fire_giant
+			primary_culture = fire_imp
+			primary_culture = reborn_warrior
+			primary_culture = phoenix
+		}
+	}
+	can_select = {
+		any_owned_province = {
+			has_terrain = volcanic
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_volcanic_attunement_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = volcanic
+				}
+				add_province_modifier = {
+					name = estate_burghers_volcanic_attunement_volcanic
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_volcanic_attunement_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_burghers_volcanic_attunement_volcanic
+				}
+				remove_province_modifier = estate_burghers_volcanic_attunement_volcanic
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				has_terrain = volcanic
+				value = 8
+			}
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_burghers_volcanic_development = {
+	icon = privilege_burghers_volcanic_development
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_unlocked_estate_privilege = { estate_privilege = estate_burghers_volcanic_development }
+			religion = zamorak
+			religion = zemouregal
+			religion = lucien
+			religion = queen_of_ashes
+			culture_group = dwarven_group
+		}
+		NOT = { #all these have the upgraded variant
+			OR = {
+				culture_group = demon_group
+				primary_culture = fire_giant
+				primary_culture = fire_imp
+				primary_culture = reborn_warrior
+				primary_culture = phoenix
+			}
+		}
+	}
+	can_select = {
+		any_owned_province = {
+			has_terrain = volcanic
+		}
+		custom_trigger_tooltip = {
+			tooltip = already_granted_to_other_estate_tooltip
+			NOT = {
+				has_estate_privilege = state_burghers_volcanic_development
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_volcanic_development_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = volcanic
+				}
+				add_province_modifier = {
+					name = estate_burghers_volcanic_development_volcanic
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_volcanic_development_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_burghers_volcanic_development_volcanic
+				}
+				remove_province_modifier = estate_burghers_volcanic_development_volcanic
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				has_terrain = volcanic
+				value = 8
+			}
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+
 
 estate_burghers_kharidian_colonies = {
 	icon = privilege_burghers_kharidian_colonies
@@ -273,12 +943,278 @@ estate_burghers_varlamore_colonies = {
 	}
 }
 
+############ Monopolies
+
+estate_burghers_manufactured_goods_monopoly = {
+	icon = privilege_burghers_manufactured_goods_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			OR = {
+				trade_goods = manufactured_goods
+				trade_goods = refined_products
+				trade_goods = terracotta
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				OR = {
+					manufactured_goods = 1
+					refined_products = 1
+					terracotta = 1
+				}
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				OR = {
+					trade_goods = manufactured_goods
+					trade_goods = refined_products
+					trade_goods = terracotta
+				}
+			}
+			custom_tooltip = MONOPOLY_INCOME_MANUFACTURED_GOODS_DESC
+		}
+		custom_tooltip = estate_burghers_monopoly_of_manufactured_goods_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					trade_goods = manufactured_goods
+					trade_goods = refined_products
+					trade_goods = terracotta
+				}
+			}
+			add_province_modifier = {
+				name = estate_burghers_monopoly_of_manufactured_goods_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod
+			}
+			remove_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_monopoly_of_manufactured_goods_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod
+			}
+			remove_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_burghers_monopoly_of_manufactured_goods_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod
+			}
+			remove_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			burghers_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.9 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_burghers_bamboo_monopoly = {
+	icon = privilege_burghers_bamboo_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			trade_goods = bamboo
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				OR = {
+					bamboo = 1
+				}
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = bamboo
+			}
+			custom_tooltip = MONOPOLY_INCOME_BAMBOO_DESC
+		}
+		custom_tooltip = estate_burghers_monopoly_of_bamboo_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = bamboo
+			}
+			add_province_modifier = {
+				name = estate_burghers_monopoly_of_bamboo_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_burghers_monopoly_of_bamboo_mod
+			}
+			remove_province_modifier = estate_burghers_monopoly_of_bamboo_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_monopoly_of_bamboo_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_monopoly_of_bamboo_mod
+			}
+			remove_province_modifier = estate_burghers_monopoly_of_bamboo_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_burghers_monopoly_of_bamboo_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_monopoly_of_bamboo_mod
+			}
+			remove_province_modifier = estate_burghers_monopoly_of_bamboo_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			burghers_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.10 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
 ###############################################################################################################
 
 #####################################
 # Clergy
 #####################################
 
+estate_church_entranan_emissary = {
+	icon = privilege_send_emissary_to_pope
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		religion = saradomin
+		NOT = { tag = ENT }
+		has_discovered = 57
+	}
+	can_select = {
+		papal_influence = 20
+		num_of_cardinals = 1
+	}
+	on_granted = {
+		add_papal_influence = -5
+	}
+	penalties = {
+		curia_powers_cost = 0.05
+	}
+	benefits = {
+		papal_influence = 1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_part_of_hre = yes
+			is_emperor = no
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				reverse_has_opinion = {
+					who = ENT
+					value = 50
+				}
+			}
+		}
+	}
+}
 
 estate_clergy_zamorakian_coexistence = {
 	icon = privilege_promoto_dhimmi_nobles
@@ -372,7 +1308,219 @@ estate_clergy_zamorakian_coexistence = {
 	}
 }
 
+estate_church_ritual_goods_monopoly = {
+	icon = privilege_church_ritual_goods_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			OR = {
+				trade_goods = bones
+				trade_goods = herblore_supplies
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				OR = {
+					bones = 1
+					herblore_supplies = 1
+				}
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				OR = {
+					trade_goods = bones
+					trade_goods = herblore_supplies
+				}
+			}
+			custom_tooltip = MONOPOLY_INCOME_RITUAL_GOODS_DESC
+		}
+		custom_tooltip = estate_church_monopoly_of_ritual_goods_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					trade_goods = bones
+					trade_goods = herblore_supplies
+				}
+			}
+			add_province_modifier = {
+				name = estate_church_monopoly_of_ritual_goods_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_church_monopoly_of_ritual_goods_mod
+			}
+			remove_province_modifier = estate_church_monopoly_of_ritual_goods_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_monopoly_of_ritual_goods_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_monopoly_of_ritual_goods_mod
+			}
+			remove_province_modifier = estate_church_monopoly_of_ritual_goods_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_monopoly_of_ritual_goods_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_monopoly_of_ritual_goods_mod
+			}
+			remove_province_modifier = estate_church_monopoly_of_ritual_goods_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
 
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			church_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.11 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_church_divine_energy_monopoly = {
+	icon = privilege_church_divine_energy_monopoly
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			trade_goods = divine_energy
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				OR = {
+					divine_energy = 1
+				}
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = divine_energy
+			}
+			custom_tooltip = MONOPOLY_INCOME_DIVINE_ENERGY_DESC
+		}
+		custom_tooltip = estate_church_monopoly_of_divine_energy_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = divine_energy
+			}
+			add_province_modifier = {
+				name = estate_church_monopoly_of_divine_energy_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_church_monopoly_of_divine_energy_mod
+			}
+			remove_province_modifier = estate_church_monopoly_of_divine_energy_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_monopoly_of_divine_energy_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_monopoly_of_divine_energy_mod
+			}
+			remove_province_modifier = estate_church_monopoly_of_divine_energy_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_monopoly_of_divine_energy_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_monopoly_of_divine_energy_mod
+			}
+			remove_province_modifier = estate_church_monopoly_of_divine_energy_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			church_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = giu_monopoly_privileges.12 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 
 ###############################################################################################################
 
@@ -418,6 +1566,123 @@ estate_tzh_hur_builder_contracts = {
 		}
 	}
 }
+
+estate_tzh_hur_builders_of_gielinor = {
+	icon = privilege_tzh_hur_builders_of_gielinor
+	land_share = 5
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.15
+	loyalty = 0.05
+	is_valid = {
+		culture_group = tzhaar_group
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_terrain = hills
+				has_terrain = underground
+				has_terrain = volcanic
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_tzh_hur_builders_of_gielinor_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = mountain
+				}
+				add_province_modifier = {
+					name = tzh_hur_builders_of_gielinor_mountains
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_terrain = highlands
+				}
+				add_province_modifier = {
+					name = tzh_hur_builders_of_gielinor_highlands
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_terrain = hills
+				}
+				add_province_modifier = {
+					name = tzh_hur_builders_of_gielinor_hills
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_terrain = underground
+				}
+				add_province_modifier = {
+					name = tzh_hur_builders_of_gielinor_underground
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_terrain = volcanic
+				}
+				add_province_modifier = {
+					name = tzh_hur_builders_of_gielinor_volcanic
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_tzh_hur_builders_of_gielinor_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = tzh_hur_builders_of_gielinor_hills
+						has_province_modifier = tzh_hur_builders_of_gielinor_highlands
+						has_province_modifier = tzh_hur_builders_of_gielinor_mountains
+						has_province_modifier = tzh_hur_builders_of_gielinor_underground
+						has_province_modifier = tzh_hur_builders_of_gielinor_volcanic
+					}
+				}
+				remove_province_modifier = tzh_hur_builders_of_gielinor_hills
+				remove_province_modifier = tzh_hur_builders_of_gielinor_highlands
+				remove_province_modifier = tzh_hur_builders_of_gielinor_mountains
+				remove_province_modifier = tzh_hur_builders_of_gielinor_underground
+				remove_province_modifier = tzh_hur_builders_of_gielinor_volcanic
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = highlands
+					has_terrain = hills
+					has_terrain = underground
+					has_terrain = volcanic
+				}
+				value = 8
+			}
+		}
+	}
+}
+
+
+
 
 #####################################
 # TzHaar-Ket
@@ -669,6 +1934,9 @@ keldagrim_grant_mineral_rights = {
 	loyalty = 0.1
 	influence = 0.1
 	can_select = {
+		NOT = {
+			has_estate_privilege = keldagrim_grant_mineral_rights
+		}
 	}
 	on_granted = {
 	}

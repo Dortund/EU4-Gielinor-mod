@@ -1,8 +1,9 @@
 government = theocracy
 add_government_reform = cloistered_order
+add_government_reform = thrall_of_amascut_theocracy_reform
 government_rank = 1
 primary_culture = scabarite
-religion = menaphite
+religion = amascut_religion
 technology_group = kharidtechgroup
 capital = 93 #Scabaras
 

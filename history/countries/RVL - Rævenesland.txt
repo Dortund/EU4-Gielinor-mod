@@ -1,5 +1,5 @@
-government = monarchy
-add_government_reform = noble_kingdom
+government = tribal
+add_government_reform = fremennik_clan
 government_rank = 1
 primary_culture = barbarian
 religion = v

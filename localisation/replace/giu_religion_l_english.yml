@@ -339,7 +339,8 @@
  
  REFORM_DESIRE_TOOLTIP:0 "§YReform Desire§!\nWhatever major heresies split from the Church of Saradomin occurred a long time ago; there are few serious calls for schism now."
  
- 
+ #From hnn_l_english
+ papal_influence:0 "Apostocratic Influence"
  
  
  
@@ -476,8 +477,8 @@
  desc_icon_scorpius:0 "Pioneer of the art of astronomy, Scorpius gazed upon the heavens and his ghost may still be viewed by those who do the same. His apprentice, Phyrrys, began work on the modern calendar of Gielinor."
  icon_viggora:0 "Throne of Viggora, the Slayer"
  desc_icon_viggora:0 "General Viggora was the greatest human of the Second Age, who performed seemingly impossible feats of combat, and witnessed the ascension of Lord Zamorak to Godhood."
- icon_yama:0 "Icon of the Judges of Yama"
- desc_icon_yama:0 "Yama, ruler of the Chasm of Fire, provides mortals with power in exchange for their allegiance. Those who disobey face the might of his Judges."
+ icon_yama:0 "Icon of Yama, Master of Pacts"
+ desc_icon_yama:0 "Yama influences Kourend from the depths of the Chasm of Fire. He provides mortals with power in exchange for their allegiance. Those who break his contracts face the might of his Judges."
  icon_zamorak_destroyer_of_forinthry:0 "Icon of Zamorak, Destroyer of Forinthry"
  desc_icon_zamorak_destroyer_of_forinthry:0 "Lord Zamorak, surrounded by enemies, did take upon his power and burn them to ashes. Little knowledge remains of this monumental event, but it should be celebrated as Zamorak's victory over his many enemies.\n§YPicking this icon activates the Desecrated Land of Forinthry event, granting a frontier on an adjacent Wilderness province.§!"
  
@@ -571,7 +572,7 @@
  menaphite_rebels_name:0 "$RELIGION$ Zealots"
  menaphite_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  menaphite_rebels_army:0 "$RELIGION$ Army"
- DEVOURER:0 "Devourerer"
+ KHARID_IB_CULTISTS:0 "Kharid-ib Cultists"
  
  RV_NO_DEITY_TITLE:0 "No Current Deity."
  RV_NO_DEITY_DESC:0 "Your religion allows you to select which god to follow as your main deity. Each deity will come with its own effects and last until your monarch changes."
@@ -585,17 +586,25 @@
  icthlarin:0 "Icthlarin"
  scabaras:0 "Scabaras"
  tumeken:0 "Tumeken"
- amascut_desc:0 "The lion-headed Amascut, once the goddess of rebirth, is now known simply as The Devourer."
+ amascut_desc:0 "The lion-headed Amascut, once the goddess of rebirth, is now known simply as The Devourer. A curse by her former priesthood rendered her name lost, but in recent times the curse appears to be lifting and she is gaining new followers, ignorant to the terror she has caused."
  apmeken_desc:0 "Apmeken is the goddess of friendship and pleasure. She is known to wear three faces at varying times - the skillful monkey, the wise ape, and comical baboon."
  crondis_desc:0 "The crocodile-headed Crondis is the goddess of resourcefulness. Followers understand they can live a full life without the need for excess."
- elidinis_desc:0 "Goddess of fertility and growth, mother to Icthalrin and Amascut, and inextricably tied to the River Elid."
+ elidinis_desc:0 "Goddess of fertility and growth, mother to Icthlarin and Amascut, and inextricably tied to the River Elid."
  het_desc:0 "Once a man who held open the pass of Al-Kharid, Het is now the god of physical and mental fitness."
  icthlarin_desc:0 "The jackal-headed Icthlarin is the god of the dead, guiding souls to their afterlife."
  scabaras_desc:0 "Scabaras, a great scarab in the shape of a man, is the god of wisdom and isolation."
  tumeken_desc:0 "The God of Light, father to Icthlarin and Amascut, and creator of Apmeken, Crondis, Het and Scabaras. Though he now sleeps, we pray for his glorious return."
  
- 
- 
+ amascut_religion:0 "Amascutite"
+ amascut_religion_religion_desc:0 "While a member of the broader Menaphite Pantheon, Amascut in her guise as the Devourer seeks to steal its power and ascend to true godhood alone. To this end, she aims to enthrall mortals to serve her personally.\n\nAmascut's presence in the Kharidian Desert is usually subtle, but high corruption in particular could lead to open Devourer worship."
+ amascut_religion_rebels_demand:0 "Convert $COUNTRYNAME$"
+ amascut_religion_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. These thralls will not stop until we bow down to the Devourer."
+ amascut_religion_rebels_title:0 "Religious"
+ amascut_religion_rebels_name:0 "$RELIGION$ Zealots"
+ amascut_religion_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ amascut_religion_rebels_army:0 "$RELIGION$ Army"
+ SUMONA:0 "Sumonan"
+ amascut_repentant_flag:0 "Repentance of Amascut" #Represents the ending of Eclipse of the Heart - essentially disables the Amascutite religion
  
  
  
@@ -738,6 +747,37 @@
  queen_of_ashes_rebels_army:0 "$RELIGION$ Army"
  CHARCOAL:0 "Charcoal"
  
+ QUEENOFASHES_ASPECTS_LONG:0 "Queen of Ashes Aspects"
+ QUEENOFASHES_ASPECTS_SHORT:0 "aspect"
+ QUEENOFASHES_HAS_ADM_ASPECT:0 "Has any §Fuel YAspect§! active."
+ SYNAGOGUE_OF:0 "Grand Firepit of $COUNTRY$"
+ SYNAGOGUE_POWER:0 "Faith Power: $POWER|Y$"
+ CELEBRATE:0 "Celebrate"
+ SHOW_FILTERED_ASPECTS:0 "Select $ADMDIPMIL|Y$ $ASPECTS_LONG|Y$"
+ CHURCH_POWER_COST:0 "Costs $COST|Y0$ Faith Power.\n"
+ CHURCH_POWER_NOT_ENOUGH:0 "§RYou need at least $COST|Y0$ Faith Power to take this action.§!"
+ 
+ celebrate:0 "Celebrate Festival"
+ queenofashes_logs_aspect:0 "Log Fuel"
+ desc_queenofashes_logs_aspect:0 "§YFuel Aspect§!\n§YCelebrate Festival§! gives us §G+20§! Reform Progress and §G+5§! Legitimacy (or its equivalent for other governments). If receiving the trading bonus in §lLogs§!, §lAdvanced Logs§! or §lHardwoods§! this will be doubled.\n\nLogs are a traditional and dependable fuel for our bonfires."
+ queenofashes_pitch_aspect:0 "Pitch Fuel"
+ desc_queenofashes_pitch_aspect:0 "§YFuel Aspect§!\n§YCelebrate Festival§! gives us §G+1§! Innovativeness (scaled with Innovativeness Gain). If receiving the trading bonus in §lManufactured Goods§! or §lNaval Supplies§! this will be doubled.\n\nPitch is traditionally used to seal ships but also makes an effective fire starter. But the secrets of this substance are only beginning to reveal itself to us..."
+ queenofashes_spells_aspect:0 "Magic Fuel"
+ desc_queenofashes_spells_aspect:0 "§YFuel Aspect§!\n§YCelebrate Festival§! gives us §G0.25§! Years of Income and reduces Inflation by §G-0.5§!. If receiving the trading bonus in §lMagic Supplies§! or §lRunes§! this will be doubled.\n\nThe magical arts offer an alternative means of starting fires without conventional fuel - and the power of fire is known to be very effective in the alchemical arts."
+ queenofashes_gnomish_firelighters_aspect:0 "Gnome Firelighters"
+ desc_queenofashes_gnomish_firelighters_aspect:0 "§YTreatment Aspect§!\nHolding the provinces of The Grand Tree and Tree Gnome Village will provide §G+25%§! Loot Amount each.\n\nGnomes are known to dabble with metallic powders to change the colour of fire. Unfortunately, many of their fancy firelighters are hidden away behind treasure trails."
+ queenofashes_phoenix_feathers_aspect:0 "Phoenix Feathers"
+ desc_queenofashes_phoenix_feathers_aspect:0 "§YTreatment Aspect§!\nHolding the provinces of Dhahab (north of Uzer) and the Phoenix Lair will provide §G+10%§! Average Monarch Lifespan each.\n\nPhoenixes rebirth themselves in fire but unfortunately are seldom aligned with the Queen of Ashes' interests. There appears to be a particularly powerful one in northwestern Piscatoris, and another variety can be found near Uzer in the Kharidian Desert."
+ queenofashes_troll_salts_aspect:0 "Rare Salts"z
+ desc_queenofashes_troll_salts_aspect:0 "§YTreatment Aspect§!\nHolding the provinces of Weiss and Hanalan Beach (on Cyclosis in the Arc region) will provide §G+20%§! Innovativeness Gain each.\n\nSalts appear to hold many mysteries which could be used to enhance our fires. Guidance from the Queen of Ashes seems to point us towards the far-flung regions of Weiss in the Troll Country and Cyclosis in the Arc."
+ queenofashes_fire_breathing_aspect:0 "Fire Breathing"
+ desc_queenofashes_fire_breathing_aspect:0 "§YDance Aspect§!\nEvery won war grants us §G+75§! Faith Power. Separate peace treaties in a war do not trigger this effect.\n\nChemical solutions allow our troops to spit flames at unsuspecting foes, adding a medium-distance attack option between melee brawls and ranged or magic volleys."
+ queenofashes_fire_knife_aspect:0 "Fire Knife"
+ desc_queenofashes_fire_knife_aspect:0 "§YDance Aspect§!\nWinning sieges against hostile forts gives us §G+5§! Faith Power.\n\nFire Knives are lit clubs or torches used in ceremonial dances. Though seldom used in direct combat for their tendency to cauterise the wounds they inflict, they can nonetheless cut through armour and weak points in defences alike."
+ queenofashes_fire_poi_aspect:0 "Fire Poi"
+ desc_queenofashes_fire_poi_aspect:0 "§YDance Aspect§!\n While at war while having at least 80 Prestige, our country generates §G+50%§! Faith Power.\n\nPoi are tethered weights, which, when set alight, create a dazzling effect that disorients our foes."
+
+ 
 
  
  hedonistic_group:0 "Hedonistic"
@@ -839,6 +879,9 @@
  KARMA_DECREASE:0 "This will cost us §Y$VAL$§! Balance."
  KARMA_INCREASE_FOR_COUNTRY:0 "This will give $COUNTRY$ §Y$VAL$§! Balance."
  KARMA_DECREASE_FOR_COUNTRY:0 "This will cost $COUNTRY$ §Y$VAL$§! Balance."
+ CURRENT_KARMA:0 "Current Balance"
+
+ guthix_center_of_reformation:0 "Centre of Guthixian Teachings"
 
 
  druidic_school:0 "Druidic"

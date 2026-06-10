@@ -1,4 +1,25 @@
 spriteTypes = {
+#Estates
+ spriteType = {
+  name = "GFX_disaster_estate_admirals_disaster"
+  texturefile = "gfx//interface//disasters//estate_admirals_disaster.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+  spriteType = {
+  name = "GFX_disaster_estate_workers_disaster"
+  texturefile = "gfx//interface//disasters//estate_workers_disaster.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+#Religion
+ spriteType = {
+  name = "GFX_disaster_corruption_of_amascut"
+  texturefile = "gfx//interface//disasters//corruption_of_amascut.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+#National Flavour
  spriteType = {
   name = "GFX_disaster_tirannwn_civil_war"
   texturefile = "gfx//interface//disasters//tirannwn_civil_war.dds"

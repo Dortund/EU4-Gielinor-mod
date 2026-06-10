@@ -1,0 +1,6 @@
+#Al Kharid-Spirit Anglers
+vassal = {
+	first = ALK
+	second = SAN
+	start_date = 2167.3.24
+}

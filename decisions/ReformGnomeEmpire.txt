@@ -1,0 +1,95 @@
+country_decisions = {
+	reform_gnome_empire = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				was_never_end_game_tag_trigger = yes
+				was_tag = GNE
+			}
+			NOT = {
+				tag = KHG
+				was_tag = KHG
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			culture_group = gnome_group
+			NOT = { exists = GNE }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = gnome_stronghold_area
+				area = grand_tree_area
+				area = atarisundri_area
+				area = tree_gnome_village_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			gnome_stronghold_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			grand_tree_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			atarisundri_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			tree_gnome_village_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			change_tag = GNE
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_prestige = 50
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			hidden_effect = {
+				complete_mission = GNE_the_grand_tree_mission
+				complete_mission = GNE_atarisundri
+				complete_mission = GNE_cadarn_relations
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 600
+	}
+}

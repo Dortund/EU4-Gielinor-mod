@@ -13,6 +13,7 @@ country_decisions = {
 			NOT = { exists = HVL }
 			OR = {
 				culture_group = hallowvale_group
+				has_country_flag = ALK_hallowvale_direction
 			}
 			religion = saradomin
 			is_colonial_nation = no
@@ -38,12 +39,12 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			morytania_region = {
-					type = all
-					owned_by = ROOT
-				}
+				type = all
+				owned_by = ROOT
+			}
 			NOT = {
 				exists = MYT
-				}
+			}
 		}
 		effect = {
 			136 = {

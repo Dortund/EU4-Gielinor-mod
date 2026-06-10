@@ -65,6 +65,8 @@
  tooltip_any_friendly_coast_border_province_has_embraced_exploration:0 "Adjacent friendly coast province with Exploration present"
  tooltip_any_neighbor_has_embraced_exploration:0 "Neighbouring province has Exploration present"
  tooltip_has_fifty_ships:0 "Port of a nation with at least 50 ships."
+ tooltip_has_high_navy_tradition:0 "Port of a nation with at least 60 naval tradition"
+ tooltip_capital_has_adventurers:0 "Capital of a nation with at least 20 Adventurers"
  tooltip_colonial_overlord_exploration:0 "The overlord of this colonial port or capital province has embraced Exploration"
  tooltip_exploration_embraced:0 "Province owner has embraced Exploration"
  
@@ -101,7 +103,7 @@
  BIRTHPLACE_OF_INSTITUTION:0 "$PROV$ is the birthplace of §Y$NAME$§!"
  DATE_EARLIERST_FOR_INSTI:0 "This is the earliest date that this institution can appear and spread through the world."
  INSTITUTION_CAN_APPEAR:1 "Among your provinces it is most likely to appear in $PROVINCE|Y$ due to:\n"
- INSTITUTION_PENALTY_INFO:2 "Haven't embraced $NAME|Y$: $PENALTY$\n"
+ INSTITUTION_PENALTY_INFO:2 "Haven't embraced $NAME|Y$:0 $PENALTY$\n"
  CV_EMBRACE_INSTITUTION:0 "Embrace $NAME$"
  INSTI_NOT_YET:0 "This institution has not yet been created in the world."
  MBRACE_INSTITUTI:1 "Currently spreads by $SPEED$ each month."

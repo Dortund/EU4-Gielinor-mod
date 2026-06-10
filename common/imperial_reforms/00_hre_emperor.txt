@@ -128,7 +128,7 @@ khanreform_united_front = {
 
 khanreform_religious_freedom = {
 	empire = hre
-	required_reform = khanreform_united_front
+	required_reform = khanreform_khagan_bureaucracy
 	disabled_by = khanreform_religious_restrictions
 	gui_container = left_branch
 
@@ -238,7 +238,7 @@ khanreform_religious_restrictions = {
 	off_effect = {
 		clr_global_flag = khagan_enforce_religion
 	}
-	required_reform = khanreform_united_front
+	required_reform = khanreform_khagan_bureaucracy
 	disabled_by = khanreform_religious_freedom
 	gui_container = right_branch
 }

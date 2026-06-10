@@ -1,0 +1,322 @@
+﻿l_english:
+
+# From diplo_reasons_l_english:
+
+ DIPLO_THREATHENING_MANDATE:0 "Mandate is threathened: "
+ 
+# From diplomacy_l_english:
+
+ CELESTIAL_EMPIRE_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$ war for the Throne of Kharid"
+ 
+# From domination_l_english:
+
+ pay_meritocracy:0 "Allow Nepotism"
+ national_pay_meritocracy:0 "Allow National Nepotism"
+ 
+# From EU4_l_english:
+
+ meritocracy:0 "Meritocracy"
+ 
+ cb_take_mandate:0 "Take Mandate of Tumeken"
+ cb_take_mandate_desc:0 "We must prove to all Kharidians we are deserving of the Mandate of Tumeken."
+
+# From goose_1_35_l_english:
+
+ mandate:0 "Mandate"
+ IMPERIAL_MANDATE_MODIFIER_DESC:0 "Mandate gives the following Scaled Modifier:\n$MODIFIERDESC$"
+
+# From government_l_english:
+ 
+ mechanic_has_meritocracy_yes:0 "Uses Meritocracy."
+ mechanic_has_meritocracy_no:0 "Does not use Meritocracy."
+ 
+# From king_of_kings_l_english:
+
+ add_meritocracy_or_mil_power_tt:0 "All the excess §YMeritocracy§! will be converted into §G10§! §YMilitary Power§! per 1 §YMeritocracy§!."
+ 
+# From levithan_l_english:
+
+ custom_imperial_mandate:0 "Legitimacy of Tumeken"
+ custom_imperial_mandate_desc:0 "Tumeken's light reaches the strangest of places - even realms that no-one else in Gielinor has yet heard of."
+ 
+# From text_l_english:
+
+ IS_CELESTIAL_EMPEROR:0 "Is the Pharoah of Kharid"
+ ISNT_CELESTIAL_EMPEROR:0 "Is NOT the Pharoah of Kharid"
+
+
+ CELESTIAL_CELESTIAL:0 "Empire of Kharid"
+ CELESTIAL_EMPEROR:0 "$EMPERORNAME|Y$ is the Pharoah of Kharid"
+ CELESTIAL_MANDATE:0 "Mandate"
+ CELESTIAL_DECISIONS:0 "Kharidian Reforms"
+ CELESTIAL_TRIBUTARIES:0 "$NUM$ Tributaries"
+ CELESTIAL_DECREES:0 "Decrees"
+ CELESTIAL_CLOSE:0 "Close"
+ CELESTIAL_EMPIRE:0 "Empire of Kharid"
+ 
+ the_mandate_of_heaven:0 "The Mandate of Tumeken"
+ desc_the_mandate_of_heaven:0 "The Mandate of Tumeken blesses and legitimizes the just rule and ruler, and woe to those who seek to rule in defiance of it."
+ the_mandate_of_heaven_lost:0 "The Mandate of Tumeken Lost"
+ desc_the_mandate_of_heaven_lost:0 "Our people no longer consider our rule to be blessed with the Mandate of Tumeken."
+ 
+ celestial_empire_ruler:0 "Pharoah"
+ celestial_empire_ruler_female:0 "Pharoah"
+ 
+ MANDATE_LESS_THAN:0 "Mandate less than"
+ MANDATE_AT_LEAST:0 "Mandate is at least"
+ 
+ vassalize_tributaries_decision_tt:0 "The Pharoah of Kharid can use the Mandate to elevate a Tributary State to a direct Vassal."
+ vassalize_tributaries_decision_ct:0 "The Pharoah of Kharid can no longer elevate Tributaries to Vassals."
+ 
+ TAKE_MANDATE_PO_LIST_TEXT:0 "Claim Mandate of Tumeken"
+ TAKE_MANDATE_PO_TOOLTIP:0 "Claim the Mandate of Tumeken from the false pretender $CURRENTHOLDER|Y$!"
+ TAKE_MANDATE_PO_NOT_EMPEROR:0 "$COUNTRYNAME$ does not hold the Mandate of Tumeken."
+ lost_mandate_of_heaven:0 "Lost Mandate of Tumeken"
+ 
+ positive_mandate:0 "Positive Mandate"
+ negative_mandate:0 "Negative Mandate"
+ MANDATE_GROWTH_MODIFIERS:0 "Modifiers affecting monthly §YMandate Growth§!:"
+ MANDATE_FROM_STABILITY:0 "Stability: "
+ MANDATE_FROM_PROSPERITY:0 "Prosperity: "
+ MANDATE_FROM_DEVASTATION:0 "Devastation: "
+ MANDATE_FROM_TRIBUTARIES:0 "Tributaries: "
+ MANDATE_FROM_NONTRIBUTARIES:0 "Non-Tributaries: "
+ MANDATE_FROM_5_LOANS:0 "At least $LOANS|Y$ loans: "
+ CELESTIAL_DECISION_ALREADY_ENACTED:0 "This Decision has already been taken."
+ CELESTIAL_DECISION_NEED_EARLIER:0 "Need to enact previous Decisions before this one one can be taken."
+ CELESTIAL_DECISION_ALL_ENACTED:0 "All Decisions have already been taken."
+ CELESTIAL_DECISION_NONE_EXIST:0 "No Decisions exist."
+ CELESTIAL_DECISION_MINIMUM_TO_ENACT:0 "Need a minimum of $MINVALUE|Y$ Mandate to take this Decision."
+ CELESTIAL_DECISION_NOT_ENOUGH_MANDATE:0 "This Decision costs $MANDATECOST|Y$ Mandate, but you only have $CURRENTMANDATE|Y$ Mandate."
+ CELESTIAL_DECISION_NOT_ENOUGH_STABILITY:0 "You may not enact this reform at the moment as your country is too disorganized. This Decision costs $STABILITYCOST|Y$ Stability, and you cannot go lower than $MINIMUMSTABILITY|Y$!"
+ CELESTIAL_DECISION_NOT_EMPEROR:0 "Must be the §YPharoah of Kharid§! to enact Centralisation Reforms."
+ CURRENT_CELESTIAL_EMPEROR:0 "$RULERNAME|Y$ is the current Pharoah of Kharid."
+ CELESTIAL_EMPIRE_NO_EMPEROR:0 "The Empire of Kharid is currently in an interregnum."
+ IMPERIAL_MANDATE_DESC:0 "The Mandate value represents the authority of the current Pharoah. Mandate can be used to enact centralisation decisions within the Empire of Kharid."
+ IMPERIAL_MANDATE_CURRENT_DESC:0 "Current Mandate gives the following Modifier:\n$MODIFIERDESC$"
+ IMPERIAL_MANDATE_BONUS_DESC:0 "Mandate above §Y50§! gives the following Scaled Modifier:\n$MODIFIERDESC$"
+ IMPERIAL_MANDATE_PENALTY_DESC:0 "Mandate below §Y50§! gives the following Scaled Modifier:\n$MODIFIERDESC$"
+ IMPERIAL_MANDATE_GAIN_DESC:0 "Gained by:\n -Having a positive Stability.\n -Having Tributary States.\n -For each State enjoying Prosperity."
+ IMPERIAL_MANDATE_LOSS_DESC:1 "Lost by:\n -Devastated provinces.\n -Corruption of the State.\n -Having loans."
+ CELESTIAL_EMPEROR_BENEFIT:0 "Being the §YPharoah of Kharid§! gives the following benefits:\n"
+ CELESTIAL_EMPEROR_BENEFIT_DESC:0 "- Bonuses from High Mandate.\n- Can enact Decrees.\n- Can enact Centralisation Decisions."
+ CELESTIAL_EMPEROR_DIPLOMATIC_ACTIONS_DESC:0 "The §YPharoah of Kharid§! may take the following additional diplomatic action:\n§YJustify Tributary Imposition§!"
+ CELESTIAL_EMPIRE_NO_DIPLOMATIC_ACTIONS:0 "None"
+ CELESTIAL_EMPIRE_PAST_EMPERORS:0 "Previous Pharoahs:"
+
+ vassalize_tributary_title:0 "Elevate to Vassal"
+ vassalize_tributary_tooltip:0 "Use the Mandate to elevate a Tributary to a Vassal."
+ vassalize_tributary_desc:0 "§Y[From.GetName]§! will become a direct §YVassal§! of [Root.GetName]. This action will cancel ALL subject relations §Y[From.GetName]§! has.\n\nThis will cost us §Y0.4 * [From.GetName]'s Total Development§! Mandate."
+ HAS_MORE_MANDATE_THAN_TRIBUTARY_HAS_DEV:0 "Have Mandate of at least of §Y0.4 of [From.GetName]'s§! Total Development"
+ 
+# From third_rome_l_english:
+ 
+ custom_meritocracy:1 "Strict Examinations"
+ custom_meritocracy_desc:1 "By holding our examinees to only the highest of standards, we ensure that the greatest of minds are those who assist our administration."
+ 
+# From tmm_l_english:
+ 
+ CONVERT_TRIBUTARY_TO_VASSAL_DIPLO_ACTION:0 "Convert Tributary To Vassal"
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_TITLE:0 "Convert Tributary To Vassal"
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_SETUP:0 "When we use Mandate to make a country into a Vassal."
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_HEADER:0 "$MESSENGER$"
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_1:0 "Tributary Converted To Vassal"
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_2:0 "$MONARCHTITLE$, we have converted $RECIPIENT$ into a Vassal"
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_3:0 "in exchange for $MANDATE|Y$ Mandate."
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_4:0 "Our cities grow in number!"
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_LOG:0 "We have converted $RECIPIENT$ into a Vassal using our Mandate."
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_BTN1:0 "OK"
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_BTN2:0 "OK"
+ WE_CONVERT_TRIBUTARY_TO_VASSAL_BTN3:0 "Go to"
+ CONVERT_TRIBUTARY_TO_VASSAL_TITLE:0 "Convert Tributary To Vassal"
+ CONVERT_TRIBUTARY_TO_VASSAL_SETUP:0 "When a country uses Mandate to make us into a Vassal."
+ CONVERT_TRIBUTARY_TO_VASSAL_HEADER:0 "Herald from"
+ CONVERT_TRIBUTARY_TO_VASSAL_1:0 "$ACTOR$"
+ CONVERT_TRIBUTARY_TO_VASSAL_2:0 "$MONARCHTITLE$, the Country of $ACTOR$ has"
+ CONVERT_TRIBUTARY_TO_VASSAL_3:0 "converted us into their Vassals"
+ CONVERT_TRIBUTARY_TO_VASSAL_4:0 "in exchange for Mandate."
+ CONVERT_TRIBUTARY_TO_VASSAL_5:0 "What. They can do that?"
+ CONVERT_TRIBUTARY_TO_VASSAL_LOG:0 "$ACTOR$ have converted us into their Vassals."
+ CONVERT_TRIBUTARY_TO_VASSAL_BTN1:0 "OK"
+ CONVERT_TRIBUTARY_TO_VASSAL_BTN2:0 "OK"
+ CONVERT_TRIBUTARY_TO_VASSAL_BTN3:0 "Go to"
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_TITLE:0 "Convert Tributary To Vassal"
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_SETUP:0 "When a country uses Mandate to make another country into a Vassal."
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_HEADER:0 "Herald from"
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_1:0 "$ACTOR$"
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_2:0 "$MONARCHTITLE$, the Country of $ACTOR$ has"
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_3:0 "converted $RECIPIENT$ int their Vassal using their Mandate."
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_6:0 "They grow worryingly stronger..."
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_LOG:0 "$ACTOR$ has converted $RECIPIENT$ into their Vassals in exchange for Mandate."
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_BTN1:0 "OK"
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_BTN2:0 "OK"
+ OTHER_CONVERT_TRIBUTARY_TO_VASSAL_BTN3:0 "Go to"
+ CONVERT_TRIBUTARY_TO_VASSAL_CANNOT_NOT_EMPEROR:0 "You are not the Pharoah of Kharid."
+ CONVERT_TRIBUTARY_TO_VASSAL_CANNOT_NOT_GOT_REFORM:0 "The Pharoah of Kharid cannot Vassalize its Tributaries until the correct decision has been made."
+ CONVERT_TRIBUTARY_TO_VASSAL_CANNOT_NOT_ENOUGH_MANDATE:0 "You do not have the $MANDATE$ Mandate required."
+ CONVERT_TRIBUTARY_TO_VASSAL_CANNOT_TOO_MUCH_LIBERTY_DESIRE:0 "$COUNTRY$ have more than $LIBERTYDESIRE$ Liberty Desire."
+ CONVERT_TRIBUTARY_TO_VASSAL_DESC2:0 "Spend $MANDATE|Y$ Mandate ($PERCENT|%$ of their development) to convert $COUNTRY|Y$ from a Tributary State to a Vassal."
+ CONVERT_TRIBUTARY_TO_VASSAL_DESC:0 "We will spend $MANDATE|Y$ Mandate ($PERCENT|%$ of their development) to convert $COUNTRY|Y$ from a Tributary State to a Vassal."
+
+# From triggers_and_effects_l_english:
+
+ CELESTIAL_REFORM_LEVEL_NOT:0 "$REFORMNAME|Y$ is NOT enacted."
+ CELESTIAL_REFORM_LEVEL:0 "$REFORMNAME|Y$ is enacted."
+ SET_CELESTIAL_EMPEROR_DESC:0 "$COUNTRYNAME$ becomes the Pharoah of Kharid.\n"
+ DISMANTLE_CELESTIAL_EMPIRE_DESC:0 "The Empire of Kharid is dismantled.\n"
+ REFORM_CELESTIAL_EMPIRE_DESC:0 "The Empire of Kharid is re-formed.\n"
+ ADD_MANDATE_DESC:0 "$DIRECTION$ $MANDATECHANGE|Y$ Mandate.\n"
+ SET_MANDATE_DESC:0 "Set Mandate to $MANDATEVALUE|Y$.\n"
+ 
+# Decrees
+ study_dynastic_records_decree:0 "Study Dynastic Records Decree"
+ study_dynastic_records_decree_title:0 "Study Dynastic Records"
+ study_dynastic_records_decree_desc:0 ""
+ expand_the_libraries_decree:0 "Expand the Libraries Decree"
+ expand_the_libraries_decree_title:0 "Expand the Libraries"
+ expand_the_libraries_decree_desc:0 ""
+ infrastructural_expansion:0 "Infrastructural Expansion Decree"
+ infrastructural_expansion_decree_title:0 "Infrastructural Expansion"
+ infrastructural_expansion_decree_desc:0 ""
+ cleanse_corruption_decree:0 "Cleanse Corruption Decree"
+ cleanse_corruption_decree_title:0 "Cleanse Corruption"
+ cleanse_corruption_decree_desc:0 ""
+ spread_corruption_decree:0 "Spread Corruption Decree"
+ spread_corruption_decree_title:0 "Spread Corruption"
+ spread_corruption_decree_desc:0 ""
+
+ recognise_tribute_autonomy_decree:0 "Recognise Tribute Autonomy Decree"
+ recognise_tribute_autonomy_decree_title:0 "Recognise Tribute Autonomy"
+ recognise_tribute_autonomy_decree_desc:0 ""
+ anti_piracy_decree:0 "Anti-Piracy Decree"
+ anti_piracy_decree_title:0 "Anti-Piracy Decree"
+ anti_piracy_decree_desc:0 ""
+ justify_centralisation_decree:0 "Justify Centralisation Decree"
+ justify_centralisation_decree_title:0 "Justify Centralisation"
+ justify_centralisation_decree_desc:0 ""
+ intelligence_gathering_decree:0 "Intelligence Gathering Decree"
+ intelligence_gathering_decree_title:0 "Expand Intelligence Gathering"
+ intelligence_gathering_decree_desc:0 ""
+
+ pharaohs_command_decree:0 "Emphasised Pharoah's Commands"
+ pharaohs_command_decree_title:0 "Emphasise Pharoah's Commands"
+ pharaohs_command_decree_desc:0 ""
+ defensive_effort_decree:0 "Defensive Effort Decree"
+ defensive_effort_decree_title:0 "Defensive Effort"
+ defensive_effort_decree_desc:0 ""
+ internal_crackdown_decree:0 "Internal Crackdown Decree"
+ internal_crackdown_decree_title:0 "Internal Crackdown"
+ internal_crackdown_decree_desc:0 ""
+ mass_draft_decree:0 "Mass Draft Decree"
+ mass_draft_decree_title:0 "Issue a Mass Draft"
+ mass_draft_decree_desc:0 ""
+
+# Reforms
+ kem_expand_settlements_reform_title:0 "Expand Settlements"
+ kem_expand_settlements_reform_emperor:0 "Expand Settlements"
+ kem_expand_settlements_reform_member:0 "Expand Settlements Kharidian Reform"
+ kem_expand_settlements_reform_desc:0 "Tumeken's Mandate hardly rests upon the shoulders of a miniscule realm. We must promote the settlement of more of the Kharidian Desert if we are to accumulate his favour at a greater rate."
+ enable_kharidian_settlement_expansion_decisions:0 "Enables decisions to create new Kharidian tributaries, which in turn help generate additional Mandate."
+ 
+ kem_wushanko_trade_networks_reform_title:0 "Wushanko Trade Networks"
+ kem_wushanko_trade_networks_reform_emperor:0 "Wushanko Trade Networks"
+ kem_wushanko_trade_networks_reform_member:0 "Wushanko Trade Networks Kharidian Reform"
+ kem_wushanko_trade_networks_reform_desc:0 "The Wushanko Isles are home to rich resources. The Kharidian cities can serve as an intermediary between the Wushankoan producers and the rest of the world, earning us enormous amounts of gold."
+ 
+ kem_wushanko_tributary_reform_title:0 "Wushanko Tributaries"
+ kem_wushanko_tributary_reform_emperor:0 "Wushanko Tributaries"
+ kem_wushanko_tributary_reform_member:0 "Wushanko Tributaries Kharidian Reform"
+ kem_wushanko_tributary_reform_desc:0 "In the interests of limiting piracy, we could take a more proactive role in securing our influence in the Arc and Skull regions."
+ can_justify_overseas_tributary_vs_arc_skull_tooltip:0 "Enables use of the §YJustify Tributary Imposition§! diplomatic action against nations in the §YArc§! and §YSkull§! regions. "
+ 
+ kem_karamjan_office_reform_title:0 "Karamjan Office"
+ kem_karamjan_office_reform_emperor:0 "Karamjan Office"
+ kem_karamjan_office_reform_member:0 "Karamjan Office Kharidian Reform"
+ kem_karamjan_office_reform_desc:0 "Menaphites and Kharidians have common interests, notably including a similar religious tradition threatened by the expansion of Saradominists and Zamorakians. We also have a lot worth trading with each other. Let us establish an office to co-ordinate our various interests on the island!"
+ 
+ kem_karamjan_tributary_reform_title:0 "Karamjan Tributaries"
+ kem_karamjan_tributary_reform_emperor:0 "Karamjan Tributaries"
+ kem_karamjan_tributary_reform_member:0 "Karamjan Tributaries Kharidian Reform"
+ kem_karamjan_tributary_reform_desc:0 "Perhaps it is best to tie the fates of Karamja and Kharid together to resist the power of the northern kingdoms."
+ can_justify_overseas_tributary_vs_karamja_tooltip:0 "Enables use of the §YJustify Tributary Imposition§! diplomatic action against nations in the §YKaramja§! region."
+ can_propagate_versus_karamjan_tooltip:0 "If the §YPromote the Pantheon§! Reform is passed, may propagate religion in provinces of the §YKaramjan§! religion."
+ 
+ kem_expand_tribute_web_reform_title:0 "Expand Tribute Web"
+ kem_expand_tribute_web_reform_emperor:0 "Expand Tribute Web"
+ kem_expand_tribute_web_reform_member:0 "Expand Tribute Web Kharidian Reform"
+ kem_expand_tribute_web_reform_desc:0 "Kharidians have fought off the might of the Empty Lord, and of Zamorak, but both came at great expense. Through our tributaries it will be possible to fund our ambitions of restoring Kharid to its height."
+ can_justify_overseas_tributary_vs_all_wushanko_tooltip:0 "Enables use of the §YJustify Tributary Imposition§! diplomatic action against nations in the §YWushanko Isles§! continent!"
+ 
+ kem_promote_secularism_reform_title:0 "§OPromote Secularism§!"
+ kem_promote_secularism_reform_emperor:0 "Promote Secularism"
+ kem_promote_secularism_reform_member:0 "Promote Secularism Kharidian Reform"
+ kem_promote_secularism_reform_desc:0 "The Menaphite Pantheon is very rarely followed outside of Kharid. Showing greater willingness to listen to outside perspectives may help us win allies further afield."
+ 
+ kem_promote_the_pantheon_reform_title:0 "§OPromote the Pantheon§!"
+ kem_promote_the_pantheon_reform_emperor:0 "Promote the Pantheon"
+ kem_promote_the_pantheon_reform_member:0 "Promote the Pantheon Kharidian Reform"
+ kem_promote_the_pantheon_reform_desc:0 "Our Pantheon has given so much for us, from repelling the Empty Lord to even protecting the dead. The rest of Gielinor should learn of their generousity."
+ can_propagate_as_menaphite_tooltip:0 "Enables use of the §YPropagate Religion§! trading policy."
+ 
+ kem_expand_spy_networks_reform_title:0 "Expand Spy Networks"
+ kem_expand_spy_networks_reform_emperor:0 "Expand Spy Networks"
+ kem_expand_spy_networks_reform_member:0 "Expand Spy Networks Kharidian Reform"
+ kem_expand_spy_networks_reform_desc:0 "Our influence does not come without enemies, who seek to undermine us at every turn. Thankfully, extensive diplomatic networks with tributaries provide us for the potential for a great intelligence-gathering effort."
+ 
+ kem_imperial_ambition_reform_title:0 "Imperial Ambition"
+ kem_imperial_ambition_reform_emperor:0 "Imperial Ambition"
+ kem_imperial_ambition_reform_member:0 "Imperial Ambition Kharidian Reform"
+ kem_imperial_ambition_reform_desc:0 "The Empire of Kharid has been something of a misnomer given the scattered nature of Kharid's remaining cities. Yet we can let it be known we aim for something greater and form a true Empire!"
+ 
+ kem_imperial_centralisation_reform_title:0 "Imperial Centralisation"
+ kem_imperial_centralisation_reform_emperor:0 "Imperial Centralisation"
+ kem_imperial_centralisation_reform_member:0 "Imperial Centralisation Kharidian Reform"
+ kem_imperial_centralisation_reform_desc:0 "Tumeken's Mandate shores up our ascendant Empire. It is now time to centralise our rule under one Pharoah!"
+ 
+ kem_reconstruction_of_uzer_reform_title:0 "Reconstruction of Uzer"
+ kem_reconstruction_of_uzer_reform_emperor:0 "Reconstruction of Uzer"
+ kem_reconstruction_of_uzer_reform_member:0 "Reconstruction of Uzer Kharidian Reform"
+ kem_reconstruction_of_uzer_reform_desc:0 "Once among Gielinor's most powerful cities, Uzer was home to a diverse array of religious beliefs and magical crafters capable of building living clay golems. The God Wars left it in rubble. A strong enough Empire could rebuild it..."
+ kem_restoration_of_uzer_empty_tooltip:0 "Resettles the city of §WUzer§! as our tributary!"
+ kem_restoration_of_uzer_owned_tooltip:0 "Greatly develops our province of §WUzer§!!"
+ kem_restoration_of_uzer_subject_tooltip:0 "Greatly develops our subject's province of §WUzer§!!"
+ 
+ kem_reconstruction_of_ullek_reform_title:0 "Reconstruction of Ullek"
+ kem_reconstruction_of_ullek_reform_emperor:0 "Reconstruction of Ullek"
+ kem_reconstruction_of_ullek_reform_member:0 "Reconstruction of Ullek Kharidian Reform"
+ kem_reconstruction_of_ullek_reform_desc:0 "Few cities had such immense wealth and power as Ullek - indeed, so much so it inspired Tumeken to create Crondis to remind its citizens of restraint. It was destroyed during the God Wars but its culture lives on among the people of Menaphos. Perhaps the time is right to restore it..."
+ kem_restoration_of_ullek_empty_tooltip:0 "Resettles the city of §WUllek§! as our tributary!"
+ kem_restoration_of_ullek_owned_tooltip:0 "Greatly develops our province of §WUllek§!!"
+ kem_restoration_of_ullek_subject_tooltip:0 "Greatly develops our subject's province of §WUllek§!!"
+ 
+ kem_desert_recovery_reform_title:0 "Desert Recovery"
+ kem_desert_recovery_reform_emperor:0 "Desert Recovery"
+ kem_desert_recovery_reform_member:0 "Desert Recovery Kharidian Reform"
+ kem_desert_recovery_reform_desc:0 "If the threat of the Devourer were to be lifted - just for a moment - it would open an opportunity to recover lands lost since the God Wars."
+ kem_desert_recovery_capital_is_prosperous:0 "Capital is experiencing prosperity"
+ kem_desert_recovery_colonising_spree:0 "Every subject and tributary nation in the Kharidian region will gain a Frontier on a random adjacent uncolonised province!"
+ 
+ kem_fleet_expansion_reform_title:0 "Fleet Expansion"
+ kem_fleet_expansion_reform_emperor:0 "Fleet Expansion"
+ kem_fleet_expansion_reform_member:0 "Fleet Expansion Kharidian Reform"
+ kem_fleet_expansion_reform_desc:0 "We have heard of the growing naval prowess of the Asgarnians and it impresses upon us the need to keep an advantage over them."
+ 
+ kem_colonial_expansion_reform_title:0 "Colonial Expansion"
+ kem_colonial_expansion_reform_emperor:0 "Colonial Expansion"
+ kem_colonial_expansion_reform_member:0 "Colonial Expansion Kharidian Reform"
+ kem_colonial_expansion_reform_desc:0 "Citizens of tributary nations can suffer from a sense of crushed opportunity, so as their gracious overlord we can return it by offering them a chance of a lifetime in our colonies."
+ 
+ kem_legitimise_treasure_seekers_reform_title:0 "Legitimise Treasure Seekers"
+ kem_legitimise_treasure_seekers_reform_emperor:0 "Legitimise Treasure Seekers"
+ kem_legitimise_treasure_seekers_reform_member:0 "Legitimise Treasure Seekers Kharidian Reform"
+ kem_legitimise_treasure_seekers_reform_desc:0 "Adventurers will steal everything not nailed down. If we have keep some moderately-precious items conspicuously not nailed down, our more precious artefacts should be less vulnerable. The small financial loss can be compensated by the expertise and power these adventurers bring."
+ 
+ kem_eliminate_the_soul_obelisks_reform_title:0 "Eliminate the Soul Obelisks"
+ kem_eliminate_the_soul_obelisks_reform_emperor:0 "Eliminate the Soul Obelisks"
+ kem_eliminate_the_soul_obelisks_reform_member:0 "Eliminate the Soul Obelisks Kharidian Reform"
+ kem_eliminate_the_soul_obelisks_reform_desc:0 "The Devourer's handiwork is behind the Soul Obelisks, which drain from our citizenry for unknown ends. If Amascut was kept at bay for a time we could work on more permanently dismantling them."
+ 
+ kem_burial_rites_reform_title:0 "Burial Rites"
+ kem_burial_rites_reform_emperor:0 "Burial Rites"
+ kem_burial_rites_reform_member:0 "Burial Rites Kharidian Reform"
+ kem_burial_rites_reform_desc:0 "In the Second Age, burial rites for Pharoahs was an extremely elaborate process, one which has become rather simplified over the centuries. Restore the full rites, and ensure that Pharoahs never truly die, but ascend to eternal glory!"

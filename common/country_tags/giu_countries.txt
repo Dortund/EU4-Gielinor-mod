@@ -61,7 +61,10 @@ AKO = "countries/AKO - Akthanakos.txt"
 ALK = "countries/ALK - Al Kharid.txt"
 BDS = "countries/BDS - Bedabins.txt"
 DMC = "countries/DMC - Siad.txt"
+DTO = "countries/DTO - Dominion Tower.txt"
 ENK = "countries/ENK - Enkhara.txt"
+GOE = "countries/GOE - Goebies.txt"
+GSA = "countries/GSA - Gisha.txt"
 JAL = "countries/JAL - Jaldraocht.txt"
 KEM = "countries/KEM - Kharidian Empire.txt"
 KDS = "countries/KDS - Kharidians.txt"
@@ -70,9 +73,13 @@ MPS = "countries/MPS - Menaphos.txt"
 NDH = "countries/NDH - Nardah.txt"
 NWA = "countries/NWA - New Apmeken.txt"
 PVC = "countries/PVC - Pollnivneach.txt"
+SAN = "countries/SAN - Spirit Anglers.txt"
 SBI = "countries/SBI - Scabarites.txt"
 SOP = "countries/SOP - Sophanem.txt"
 TMP = "countries/TMP - Tempoross.txt"
+TPI = "countries/TPI - Temple of Isolation.txt"
+ULL = "countries/ULL - Ullek.txt"
+UZE = "countries/UZE - Uzer.txt"
 
 #Morytania
 ARX = "countries/ARX - Araxytes.txt"
@@ -99,12 +106,12 @@ DWF = "countries/DWF - Dark Warriors Fortress.txt"		#NL
 FOR = "countries/FOR - Forinthry.txt"					#NL
 FGX = "countries/FGX - Fist of Guthix.txt"
 FXE = "countries/FXE - Ferox Enclave.txt"				#NL
-KBD = "countries/KBD - King Black Dragon.txt"			#NL
+KBD = "countries/KBD - King Black Dragon.txt"
 MGA = "countries/MGA - Mage Arena.txt"					#NL
 PHI = "countries/PHI - Pirates' Hideout.txt"			#NL
-ROG = "countries/ROG - Rogues' Castle.txt"				#NL
+ROG = "countries/ROG - Rogues' Castle.txt"
 SRP = "countries/SRP - Scorpia.txt"
-VET = "countries/VET - Vet'ion.txt"						#NL
+VET = "countries/VET - Vet'ion.txt"
 VNN = "countries/VNN - Venenatis.txt"
 WBA = "countries/WBA - Armadyl Warband.txt"				#NL
 WBB = "countries/WBB - Bandos Warband.txt"				#NL
@@ -137,8 +144,9 @@ TZH = "countries/TZH - TzHaar.txt"
 APE = "countries/APE - Ape Atoll.txt"
 BNZ = "countries/BNZ - Bonzara.txt"
 BOI = "countries/BOI - Bo Isles.txt"
+GCH = "countries/GCH - Great Conch.txt"
 MRM = "countries/MRM - Marim.txt"
-NMD = "countries/NMD - Nomad.txt"
+RER = "countries/RER - Red Reef.txt"
 RDN = "countries/RDN - Rednana.txt"
 VKO = "countries/VKO - Void Knights.txt"
 VPE = "countries/VPE - Void Pests.txt"
@@ -164,7 +172,7 @@ KZD = "countries/KZD - Khazard.txt"
 IDI = "countries/IDI - Idithuun.txt"
 IKO = "countries/IKO - Guardians of Ikov.txt"
 MNR = "countries/MNR - Manor.txt"
-OGG = "countries/OGG - Og.txt"							#NL
+OGG = "countries/OGG - Og.txt"
 PXL = "countries/PXL - Phoenix Lair.txt"
 RKS = "countries/RKS - Rekeshuun.txt"
 SGK = "countries/SGK - Saragorgok.txt"
@@ -188,6 +196,9 @@ OOG = "countries/OOG - Oo'glog.txt"						#NL
 SGR = "countries/SGR - Snagru.txt"						#NL
 TES = "countries/TES - Tess.txt"						#NL
 ULW = "countries/ULW - Uglogwee.txt"					#NL
+
+#Isle of Souls
+NMD = "countries/NMD - Nomad.txt"
 
 #Tirannwn
 AML = "countries/AML - Amlodd.txt"
@@ -220,21 +231,31 @@ ZMG = "countries/ZMG - Zemouregal.txt"
 
 #Fremennik
 BAO = "countries/BAO - Barbarian Outpost.txt"
+BKC = "countries/BKC - Basilisk Clan.txt"
+EKC = "countries/EKC - Elk Clan.txt"
 ETC = "countries/ETC - Etceteria.txt"
 FEM = "countries/FEM - Fremennik Empire.txt"
+FNC = "countries/FNC - Falcon Clan.txt"
 GUN = "countries/GUN - Gunnar.txt"
 JTZ = "countries/JTZ - Jatizso.txt"
 KTR = "countries/KTR - Kyattreach.txt"
+LHC = "countries/LHC - Larch Clan.txt"
+MHC = "countries/MHC - Mammoth Clan.txt"
 MNT = "countries/MNT - Mountain Tribe.txt"
 MOO	= "countries/MOO - Moonclan.txt"
 MCE = "countries/MCE - Miscellania.txt"
 NZS = "countries/NZS - Neitiznot.txt"
+OXC = "countries/OXC - Ox Clan.txt"
 PRC = "countries/PRC - Pirates Cove.txt"
 RVL = "countries/RVL - Rævenesland.txt"
 REL = "countries/REL - Rellekka.txt"
+SLC = "countries/SLC - Seal Clan.txt"
+SNC = "countries/SNC - Salmon Clan.txt"
+STC = "countries/STC - Sturgeon Clan.txt"
 UBS = "countries/UBS - Uboafshudup.txt"
 ULJ = "countries/ULJ - Ulvejægere.txt"
 WAT = "countries/WAT - Waterbirth.txt"
+WFC = "countries/WFC - Wolf Clan.txt"
 
 #Acheron
 AHR = "countries/AHR - Acheron.txt"
@@ -264,6 +285,7 @@ SYZ = "countries/SYZ - Shayzien.txt"
 UPZ = "countries/UPZ - United Provinces of Zeah.txt"
 WTD = "countries/WTD - Wintertodt.txt"					#NL
 XER = "countries/XER - Xerician Empire.txt"				#NL
+YDO = "countries/YDO - Yama's Domain.txt"
 
 #Kebos
 BAA = "countries/BAA - Baalal.txt"
@@ -370,6 +392,7 @@ TGU = "countries/TGU - Gu.txt"
 TVV = "countries/TVV - Tavi-Vynal.txt"
 
 #Dwarven Outposts - Corresponding trade node and province id noted to make it easier to set things up
+## Currently these are unused as the intended mechanic got very complicated and was cut, but I'll keep them around in the files for now.
 D01 = "countries/D01 - Acheron Outpost.txt" #Acheron Node - 1285
 D02 = "countries/D02 - South Varlamore Outpost.txt" #Aldarin Node - 885
 D03 = "countries/D03 - Central Kandarin Outpost.txt" #Ardougne Node - 265

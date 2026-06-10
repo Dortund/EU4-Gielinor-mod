@@ -125,6 +125,118 @@ each_estate_effect = {
 			$jains_effect$
 		]
 	}
+	
+	if = {
+		limit = {
+			has_estate = estate_workers
+		}
+		[[effect]
+			$effect$
+		]
+		[[workers_effect]
+			$workers_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_admirals
+		}
+		[[effect]
+			$effect$
+		]
+		[[workers_effect]
+			$admirals_effect$
+		]
+	}
+	
+	if = {
+		limit = {
+			has_estate = estate_kel_blue_opal
+		}
+		[[effect]
+			$effect$
+		]
+		[[tzh_hur_effect]
+			$kel_blue_opal_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_kel_brown_engine
+		}
+		[[effect]
+			$effect$
+		]
+		[[tzh_hur_effect]
+			$kel_brown_engine_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_kel_green_gemstone
+		}
+		[[effect]
+			$effect$
+		]
+		[[tzh_hur_effect]
+			$kel_green_gemstone_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_kel_purple_pewter
+		}
+		[[effect]
+			$effect$
+		]
+		[[tzh_hur_effect]
+			$kel_purple_pewter_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_kel_red_axe
+		}
+		[[effect]
+			$effect$
+		]
+		[[tzh_hur_effect]
+			$kel_red_axe_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_kel_silver_cog
+		}
+		[[effect]
+			$effect$
+		]
+		[[tzh_hur_effect]
+			$kel_silver_cog_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_kel_white_chisel
+		}
+		[[effect]
+			$effect$
+		]
+		[[tzh_hur_effect]
+			$kel_white_chisel_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_kel_yellow_fortune
+		}
+		[[effect]
+			$effect$
+		]
+		[[tzh_hur_effect]
+			$kel_yellow_fortune_effect$
+		]
+	}
 
 	if = {
 		limit = {
@@ -461,6 +573,144 @@ reduce_estate_rajput_loyalty_effect = {
 		add_estate_loyalty = {
 			estate = estate_rajput
 			loyalty = -10
+		}
+	}
+}
+
+#Workers
+add_estate_workers_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_workers
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_workers_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_workers
+		}
+		add_estate_loyalty = {
+			estate = estate_workers
+			loyalty = -10
+		}
+	}
+}
+
+#Admirals
+add_estate_admirals_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_admirala
+		}
+		add_estate_loyalty = {
+			estate = estate_admirals
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_admirals_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_admirals
+		}
+		add_estate_loyalty = {
+			estate = estate_admirals
+			loyalty = -10
+		}
+	}
+}
+
+# Keldagrim Estates
+add_estate_kel_blue_opal_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_kel_blue_opal
+		}
+		add_estate_loyalty = {
+			estate = estate_kel_blue_opal
+			loyalty = 10
+		}
+	}
+}
+add_estate_kel_brown_engine_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_kel_brown_engine
+		}
+		add_estate_loyalty = {
+			estate = estate_kel_brown_engine
+			loyalty = 10
+		}
+	}
+}
+add_estate_kel_green_gemstone_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_kel_green_gemstone
+		}
+		add_estate_loyalty = {
+			estate = estate_kel_green_gemstone
+			loyalty = 10
+		}
+	}
+}
+add_estate_kel_purple_pewter_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_kel_purple_pewter
+		}
+		add_estate_loyalty = {
+			estate = estate_kel_purple_pewter
+			loyalty = 10
+		}
+	}
+}
+add_estate_kel_red_axe_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_kel_red_axe
+		}
+		add_estate_loyalty = {
+			estate = estate_kel_red_axe
+			loyalty = 10
+		}
+	}
+}
+add_estate_kel_silver_cog_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_kel_silver_cog
+		}
+		add_estate_loyalty = {
+			estate = estate_kel_silver_cog
+			loyalty = 10
+		}
+	}
+}
+add_estate_kel_white_chisel_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_kel_white_chisel
+		}
+		add_estate_loyalty = {
+			estate = estate_kel_white_chisel
+			loyalty = 10
+		}
+	}
+}
+add_estate_kel_yellow_fortune_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_kel_yellow_fortune
+		}
+		add_estate_loyalty = {
+			estate = estate_kel_yellow_fortune
+			loyalty = 10
 		}
 	}
 }
@@ -1466,6 +1716,33 @@ on_province_owner_change_estate_privileges_effect = {
 	}
 	if = {
 		limit = {
+			has_climate = arid
+			owner = {
+				has_estate_privilege = estate_burghers_ARB_oasis_development
+			}
+		}
+		add_province_modifier = {
+			name = ARB_estate_burghers_arid_climate_development
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_terrain = desert
+				has_terrain = coastal_desert
+			}
+			owner = {
+				has_estate_privilege = estate_burghers_ARB_oasis_development
+			}
+		}
+		add_province_modifier = {
+			name = ARB_estate_burghers_desert
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
 			religion = animism
 			owner = {
 				has_estate_privilege = estate_church_lao_animism
@@ -1570,6 +1847,363 @@ on_province_owner_change_estate_privileges_effect = {
 				name = estate_burghers_hydraulic_rights_savanna
 				duration = -1
 			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_forest_expansion
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = forest
+			}
+			add_province_modifier = {
+				name = estate_burghers_forest_expansion_forest
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = woods
+			}
+			add_province_modifier = {
+				name = estate_burghers_forest_expansion_woods
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_mountain_expansion
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = mountain
+			}
+			add_province_modifier = {
+				name = estate_burghers_mountain_expansion_mountains
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = highlands
+			}
+			add_province_modifier = {
+				name = estate_burghers_mountain_expansion_highlands
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = hills
+			}
+			add_province_modifier = {
+				name = estate_burghers_mountain_expansion_hills
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_excavation_rights
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = underground
+			}
+			add_province_modifier = {
+				name = estate_burghers_excavation_rights_underground
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_expand_swamp_dwellings
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = marsh
+			}
+			add_province_modifier = {
+				name = estate_burghers_expand_swamp_dwellings_marsh
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_glacial_expansion
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = glacier
+			}
+			add_province_modifier = {
+				name = estate_burghers_glacial_expansion_glacial
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_volcanic_attunement
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = volcanic
+			}
+			add_province_modifier = {
+				name = estate_burghers_volcanic_attunement_volcanic
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_volcanic_development
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = volcanic
+			}
+			add_province_modifier = {
+				name = estate_burghers_volcanic_development_volcanic
+				duration = -1
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_tzh_hur_builders_of_gielinor
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = mountain
+			}
+			add_province_modifier = {
+				name = tzh_hur_builders_of_gielinor_mountains
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = highlands
+			}
+			add_province_modifier = {
+				name = tzh_hur_builders_of_gielinor_highlands
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = hills
+			}
+			add_province_modifier = {
+				name = tzh_hur_builders_of_gielinor_hills
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = underground
+			}
+			add_province_modifier = {
+				name = tzh_hur_builders_of_gielinor_underground
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_terrain = volcanic
+			}
+			add_province_modifier = {
+				name = tzh_hur_builders_of_gielinor_volcanic
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_admirals_fish_monopoly
+			}
+			trade_goods = fishing_spot
+		}
+		add_province_modifier = {
+			name = estate_admirals_monopoly_of_fish_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_admirals_naval_goods_monopoly
+			}
+			trade_goods = naval_goods
+		}
+		add_province_modifier = {
+			name = estate_admirals_monopoly_of_naval_goods_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_workers_fibres_monopoly
+			}
+			trade_goods = flax
+		}
+		add_province_modifier = {
+			name = estate_workers_monopoly_of_fibres_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_workers_logs_monopoly
+			}
+			OR = {
+				trade_goods = logs
+				trade_goods = advanced_logs
+				trade_goods = tropical_logs
+			}
+		}
+		add_province_modifier = {
+			name = estate_workers_monopoly_of_logs_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_workers_ore_monopoly
+			}
+			OR = {
+				trade_goods = basic_ores
+				trade_goods = advanced_ores
+				trade_goods = runite
+			}
+		}
+		add_province_modifier = {
+			name = estate_workers_monopoly_of_ore_mod
+			duration = -1
+		}
+	}
+		
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_nobles_gunpowder_monopoly
+			}
+			trade_goods = gunpowder
+		}
+		add_province_modifier = {
+			name = estate_nobles_monopoly_of_gunpowder_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_nobles_hunter_creatures_monopoly
+			}
+			trade_goods = hunter_creatures
+		}
+		add_province_modifier = {
+			name = estate_nobles_monopoly_of_hunter_creatures_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_nobles_monster_loot_monopoly
+			}
+			OR = {
+				trade_goods = lesser_loot
+				trade_goods = rare_loot
+			}
+		}
+		add_province_modifier = {
+			name = estate_nobles_monopoly_of_monster_loot_mod
+			duration = -1
+		}
+	}
+		
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_manufactured_goods_monopoly
+			}
+			OR = {
+				trade_goods = manufactured_goods
+				trade_goods = refined_products
+				trade_goods = terracotta
+			}
+		}
+		add_province_modifier = {
+			name = estate_burghers_monopoly_of_manufactured_goods_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_bamboo_monopoly
+			}
+			trade_goods = bamboo
+		}
+		add_province_modifier = {
+			name = estate_burghers_monopoly_of_bamboo_mod
+			duration = -1
+		}
+	}
+		
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_church_ritual_goods_monopoly
+			}
+			OR = {
+				trade_goods = bones
+				trade_goods = herblore_supplies
+			}
+		}
+		add_province_modifier = {
+			name = estate_church_monopoly_of_ritual_goods_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_church_divine_energy_monopoly
+			}
+			trade_goods = divine_energy
+		}
+		add_province_modifier = {
+			name = estate_church_monopoly_of_divine_energy_mod
+			duration = -1
 		}
 	}
 }
@@ -2022,6 +2656,219 @@ on_trade_good_changed_estate_privileges_effect = {
 			duration = -1
 		}
 	}
+	
+	
+	if = {
+		limit = {
+			has_province_modifier = estate_admirals_monopoly_of_fish_mod
+			NOT = { trade_goods = fishing_spot }
+		}
+		remove_province_modifier = estate_admirals_monopoly_of_fish_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_admirals_fish_monopoly }
+			NOT = { has_province_modifier = estate_admirals_monopoly_of_fish_mod }
+			trade_goods = fishing_spot
+		}
+		remove_province_modifier = estate_admirals_monopoly_of_fish_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = estate_admirals_monopoly_of_naval_goods_mod
+			NOT = { trade_goods = naval_goods }
+		}
+		remove_province_modifier = estate_admirals_monopoly_of_naval_goods_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_admirals_naval_goods_monopoly }
+			NOT = { has_province_modifier = estate_admirals_monopoly_of_naval_goods_mod }
+			trade_goods = naval_goods
+		}
+		remove_province_modifier = estate_admirals_monopoly_of_naval_goods_mod
+	}
+	
+	if = {
+		limit = {
+			has_province_modifier = estate_workers_monopoly_of_fibres_mod
+			NOT = { trade_goods = flax }
+		}
+		remove_province_modifier = estate_workers_monopoly_of_fibres_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_workers_fibres_monopoly }
+			NOT = { has_province_modifier = estate_workers_monopoly_of_fibres_mod }
+			trade_goods = flax
+		}
+		remove_province_modifier = estate_workers_monopoly_of_fibres_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = estate_workers_monopoly_of_logs_mod
+			NOT = { trade_goods = logs }
+			NOT = { trade_goods = advanced_logs }
+			NOT = { trade_goods = tropical_logs }
+		}
+		remove_province_modifier = estate_workers_monopoly_of_logs_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_workers_logs_monopoly }
+			NOT = { has_province_modifier = estate_workers_monopoly_of_logs_mod }
+			OR = {
+				trade_goods = logs
+				trade_goods = advanced_logs
+				trade_goods = tropical_logs
+			}
+		}
+		remove_province_modifier = estate_workers_monopoly_of_logs_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = estate_workers_monopoly_of_ore_mod
+			NOT = { trade_goods = basic_ores }
+			NOT = { trade_goods = advanced_ores }
+			NOT = { trade_goods = runite }
+		}
+		remove_province_modifier = estate_workers_monopoly_of_ore_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_workers_ore_monopoly }
+			NOT = { has_province_modifier = estate_workers_monopoly_of_ore_mod }
+			OR = {
+				trade_goods = basic_ores
+				trade_goods = advanced_ores
+				trade_goods = runite
+			}
+		}
+		remove_province_modifier = estate_workers_monopoly_of_ore_mod
+	}
+	
+	if = {
+		limit = {
+			has_province_modifier = estate_nobles_monopoly_of_gunpowder_mod
+			NOT = { trade_goods = gunpowder }
+		}
+		remove_province_modifier = estate_workers_monopoly_of_gunpowder_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_nobles_gunpowder_monopoly }
+			NOT = { has_province_modifier = estate_nobles_monopoly_of_gunpowder_mod }
+			trade_goods = gunpowder
+		}
+		remove_province_modifier = estate_nobles_monopoly_of_gunpowder_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = estate_nobles_monopoly_of_hunter_creatures_mod
+			NOT = { trade_goods = hunter_creatures }
+		}
+		remove_province_modifier = estate_workers_monopoly_of_hunter_creatures_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_nobles_hunter_creatures_monopoly }
+			NOT = { has_province_modifier = estate_nobles_monopoly_of_hunter_creatures_mod }
+			trade_goods = hunter_creatures
+		}
+		remove_province_modifier = estate_nobles_monopoly_of_hunter_creatures_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = estate_nobles_monopoly_of_monster_loot_mod
+			NOT = { trade_goods = lesser_loot }
+			NOT = { trade_goods = rare_loot }
+		}
+		remove_province_modifier = estate_nobles_monopoly_of_monster_loot_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_nobles_monster_loot_monopoly }
+			NOT = { has_province_modifier = estate_nobles_monopoly_of_monster_loot_mod }
+			OR = {
+				trade_goods = lesser_loot
+				trade_goods = rare_loot
+			}
+		}
+		remove_province_modifier = estate_nobles_monopoly_of_monster_loot_mod
+	}
+		
+	if = {
+		limit = {
+			has_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod
+			NOT = { trade_goods = manufactured_goods }
+			NOT = { trade_goods = refined_products }
+			NOT = { trade_goods = terracotta }
+		}
+		remove_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_burghers_manufactured_goods_monopoly }
+			NOT = { has_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod }
+			OR = {
+				trade_goods = manufactured_goods
+				trade_goods = refined_products
+				trade_goods = terracotta
+			}
+		}
+		remove_province_modifier = estate_burghers_monopoly_of_manufactured_goods_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = estate_burghers_monopoly_of_bamboo_mod
+			NOT = { trade_goods = bamboo }
+		}
+		remove_province_modifier = estate_burghers_monopoly_of_bamboo_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_burghers_bamboo_monopoly }
+			NOT = { has_province_modifier = estate_burghers_monopoly_of_bamboo_mod }
+			trade_goods = bamboo
+		}
+		remove_province_modifier = estate_burghers_monopoly_of_bamboo_mod
+	}
+	
+	if = {
+		limit = {
+			has_province_modifier = estate_church_monopoly_of_ritual_goods_mod
+			NOT = { trade_goods = bones }
+			NOT = { trade_goods = herblore_supplies }
+		}
+		remove_province_modifier = estate_church_monopoly_of_ritual_goods_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_church_ritual_goods_monopoly }
+			NOT = { has_province_modifier = estate_church_monopoly_of_ritual_goods_mod }
+			OR = {
+				trade_goods = bones
+				trade_goods = herblore_supplies
+			}
+		}
+		remove_province_modifier = estate_church_monopoly_of_ritual_goods_mod
+	}
+	
+	if = {
+		limit = {
+			has_province_modifier = estate_church_monopoly_of_divine_energy_mod
+			NOT = { trade_goods = divine_energy }
+		}
+		remove_province_modifier = estate_church_monopoly_of_divine_energy_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_church_divine_energy_monopoly }
+			NOT = { has_province_modifier = estate_church_monopoly_of_divine_energy_mod }
+			trade_goods = divine_energy
+		}
+		remove_province_modifier = estate_church_monopoly_of_divine_energy_mod
+	}
 }
 
 on_loan_repaid_estate_privileges_effect = {
@@ -2244,7 +3091,76 @@ scaled_estate_cossacks_land_share_effect = {
 	scaled_estate_land_share_add_effect = { estate = estate_cossack }
 }
 
+scaled_estate_workers_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_workers }
+}
+scaled_estate_workers_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_workers }
+}
 
+scaled_estate_admirals_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_admirals }
+}
+scaled_estate_admirals_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_admirals }
+}
+
+
+scaled_estate_kel_blue_opal_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_kel_blue_opal }
+}
+scaled_estate_kel_blue_opal_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_kel_blue_opal }
+}
+
+scaled_estate_kel_brown_engine_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_kel_brown_engine }
+}
+scaled_estate_kel_brown_engine_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_kel_brown_engine }
+}
+
+scaled_estate_kel_green_gemstone_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_kel_green_gemstone }
+}
+scaled_estate_kel_green_gemstone_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_kel_green_gemstone }
+}
+
+scaled_estate_kel_purple_pewter_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_kel_purple_pewter }
+}
+scaled_estate_kel_purple_pewter_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_kel_purple_pewter }
+}
+
+scaled_estate_kel_red_axe_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_kel_red_axe }
+}
+scaled_estate_kel_red_axe_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_kel_red_axe }
+}
+
+scaled_estate_kel_silver_cog_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_kel_silver_cog }
+}
+scaled_estate_kel_silver_cog_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_kel_silver_cog }
+}
+
+scaled_estate_kel_white_chisel_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_kel_white_chisel }
+}
+scaled_estate_kel_white_chisel_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_kel_white_chisel }
+}
+
+scaled_estate_kel_yellow_fortune_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_kel_yellow_fortune }
+}
+scaled_estate_kel_yellow_fortune_negative_land_share_effect = {
+	scaled_estate_land_share_reduce_effect = { estate = estate_kel_yellow_fortune }
+}
 
 
 
@@ -2252,34 +3168,27 @@ scaled_estate_cossacks_land_share_effect = {
 scaled_estate_tzh_hur_land_share_effect = {
 	scaled_estate_land_share_add_effect = { estate = estate_tzh_hur }
 }
-
 scaled_estate_tzh_hur_negative_land_share_effect = {
 	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_hur }
 }
 
-
 scaled_estate_tzh_ket_land_share_effect = {
 	scaled_estate_land_share_add_effect = { estate = estate_tzh_ket }
 }
-
 scaled_estate_tzh_ket_negative_land_share_effect = {
 	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_ket }
 }
 
-
 scaled_estate_tzh_mej_land_share_effect = {
 	scaled_estate_land_share_add_effect = { estate = estate_tzh_mej }
 }
-
 scaled_estate_tzh_mej_negative_land_share_effect = {
 	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_mej }
 }
 
-
 scaled_estate_tzh_xil_land_share_effect = {
 	scaled_estate_land_share_add_effect = { estate = estate_tzh_xil }
 }
-
 scaled_estate_tzh_xil_negative_land_share_effect = {
 	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_xil }
 }
@@ -2288,13 +3197,9 @@ scaled_estate_tzh_xil_negative_land_share_effect = {
 scaled_estate_tzh_gaal_land_share_effect = {
 	scaled_estate_land_share_add_effect = { estate = estate_tzh_gaal }
 }
-
 scaled_estate_tzh_gaal_negative_land_share_effect = {
 	scaled_estate_land_share_reduce_effect = { estate = estate_tzh_gaal }
 }
-
-
-
 
 
 
@@ -2514,6 +3419,7 @@ spawn_rebels_from_unhappy_estate = {
 			owner = {
 				trigger_switch = {
 					on_trigger = religion
+					amascut_religion =   { PREV = { spawn_rebels = { type = amascut_religion_rebels size = $size$ as_if_faction = yes } } }
 					armadyl =    	 	 { PREV = { spawn_rebels = { type = armadyl_rebels size = $size$ as_if_faction = yes } } }
 					bandos =    	 	 { PREV = { spawn_rebels = { type = bandos_rebels size = $size$ as_if_faction = yes } } }
 					bik =     		     { PREV = { spawn_rebels = { type = bik_rebels size = $size$ as_if_faction = yes } } }
@@ -2719,6 +3625,49 @@ spawn_rebels_from_unhappy_estate = {
 				type = tribal_rebels
 				size = $size$
 				estate = estate_nomadic_tribes
+				as_if_faction = yes
+			}
+		}
+		
+		##################
+		###### New
+		##################
+		
+		1 = {
+			trigger = {
+				owner = {
+					has_estate = estate_workers
+					NOT = {
+						estate_loyalty = {
+							estate = estate_workers
+							loyalty = 30
+						}
+					}
+				}
+			}
+			spawn_rebels = {
+				type = particularist_rebels
+				size = $size$
+				estate = estate_workers
+				as_if_faction = yes
+			}
+		}
+		1 = {
+			trigger = {
+				owner = {
+					has_estate = estate_admirals
+					NOT = {
+						estate_loyalty = {
+							estate = estate_admirals
+							loyalty = 30
+						}
+					}
+				}
+			}
+			spawn_rebels = {
+				type = particularist_rebels
+				size = $size$
+				estate = estate_admirals
 				as_if_faction = yes
 			}
 		}
@@ -3095,6 +4044,112 @@ pick_random_estate_if_present = {
 			]
 		}
 		##################
+		###### New
+		##################
+		1 = { 
+			trigger = {
+				has_estate = estate_workers
+				NOT = { has_country_flag = estate_workers_$flag$ }
+			}
+			set_country_flag = estate_workers_$flag$
+			[[estate_action]
+			$estate_action$ = estate_workers
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_admirals
+				NOT = { has_country_flag = estate_admirals_$flag$ }
+			}
+			set_country_flag = estate_admirals_$flag$
+			[[estate_action]
+			$estate_action$ = estate_admirals
+			]
+		}
+		##################
+		###### Keldagrim
+		##################
+		1 = { 
+			trigger = {
+				has_estate = estate_kel_blue_opal
+				NOT = { has_country_flag = estate_kel_blue_opal_$flag$ }
+			}
+			set_country_flag = estate_kel_blue_opal_$flag$
+			[[estate_action]
+			$estate_action$ = estate_kel_blue_opal
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_kel_brown_engine
+				NOT = { has_country_flag = estate_kel_brown_engine_$flag$ }
+			}
+			set_country_flag = estate_kel_brown_engine_$flag$
+			[[estate_action]
+			$estate_action$ = estate_kel_brown_engine
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_kel_green_gemstone
+				NOT = { has_country_flag = estate_kel_green_gemstone_$flag$ }
+			}
+			set_country_flag = estate_kel_green_gemstone_$flag$
+			[[estate_action]
+			$estate_action$ = estate_kel_green_gemstone
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_kel_purple_pewter
+				NOT = { has_country_flag = estate_kel_purple_pewter_$flag$ }
+			}
+			set_country_flag = estate_kel_purple_pewter_$flag$
+			[[estate_action]
+			$estate_action$ = estate_kel_purple_pewter
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_kel_red_axe
+				NOT = { has_country_flag = estate_kel_red_axe_$flag$ }
+			}
+			set_country_flag = estate_kel_red_axe_$flag$
+			[[estate_action]
+			$estate_action$ = estate_kel_red_axe
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_kel_silver_cog
+				NOT = { has_country_flag = estate_kel_silver_cog_$flag$ }
+			}
+			set_country_flag = estate_kel_silver_cog_$flag$
+			[[estate_action]
+			$estate_action$ = estate_kel_silver_cog
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_kel_white_chisel
+				NOT = { has_country_flag = estate_kel_white_chisel_$flag$ }
+			}
+			set_country_flag = estate_kel_white_chisel_$flag$
+			[[estate_action]
+			$estate_action$ = estate_kel_white_chisel
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_kel_yellow_fortune
+				NOT = { has_country_flag = estate_kel_yellow_fortune_$flag$ }
+			}
+			set_country_flag = estate_kel_yellow_fortune_$flag$
+			[[estate_action]
+			$estate_action$ = estate_kel_yellow_fortune
+			]
+		}
+		##################
 		###### TzHaar
 		##################
 		1 = { 
@@ -3263,10 +4318,6 @@ remove_estate_monopoly_modifier = {
 	remove_province_modifier = $privilege$_mod
 }
 
-
-
-
-
 re_add_loyalty_from_seized_land = {
 	hidden_effect = {
 		if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nobles } }			add_estate_loyalty = { estate = estate_nobles			 loyalty = 20 } }
@@ -3280,7 +4331,9 @@ re_add_loyalty_from_seized_land = {
 		if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nomadic_tribes } }	add_estate_loyalty = { estate = estate_nomadic_tribes	 loyalty = 20 } }
 		if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_rajput } }			add_estate_loyalty = { estate = estate_rajput			 loyalty = 20 } }
 		if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_vaisyas } }		add_estate_loyalty = { estate = estate_vaisyas			 loyalty = 20 } }
-	
+		
+		if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_workers } }		add_estate_loyalty = { estate = estate_workers			 loyalty = 20 } }
+		if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_admirals } }		add_estate_loyalty = { estate = estate_admirals			 loyalty = 20 } }
 	
 		if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_kel_blue_opal } }		add_estate_loyalty = { estate = estate_kel_blue_opal	 	 loyalty = 20 } }
 		if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_kel_brown_engine } }	add_estate_loyalty = { estate = estate_kel_brown_engine	 	 loyalty = 20 } }
@@ -3405,3 +4458,142 @@ spawn_rebels_seize_land_switch = {
 		1 = { custom_tooltip = estate_seize_land_interaction_tooltip_1 seize_land_effect = { scale = 1 } }
 	}
 }
+
+####################################################
+
+#Cleaning error tect by ensuring these scripted effects are in
+
+
+auto_complete_estate_agenda = {
+	custom_tooltip = auto_complete_estate_agenda_$estate$_tt
+	hidden_effect = {
+		set_country_flag = auto_complete_estate_agenda_$estate$
+	}
+}
+
+clr_auto_complete_flag = {
+	hidden_effect = {
+		clr_country_flag = auto_complete_estate_agenda_estate_nobles
+		clr_country_flag = auto_complete_estate_agenda_estate_brahmins
+		clr_country_flag = auto_complete_estate_agenda_estate_burghers
+		clr_country_flag = auto_complete_estate_agenda_estate_church
+		clr_country_flag = auto_complete_estate_agenda_estate_cossacks
+		clr_country_flag = auto_complete_estate_agenda_estate_dhimmi
+		clr_country_flag = auto_complete_estate_agenda_estate_jains
+		clr_country_flag = auto_complete_estate_agenda_estate_maratha
+		clr_country_flag = auto_complete_estate_agenda_estate_nomadic_tribes
+		clr_country_flag = auto_complete_estate_agenda_estate_rajput
+		clr_country_flag = auto_complete_estate_agenda_estate_vaisyas
+		clr_country_flag = auto_complete_estate_agenda_estate_janissaries
+		clr_country_flag = auto_complete_estate_agenda_estate_eunuchs
+		clr_country_flag = auto_complete_estate_agenda_estate_qizilbash
+		clr_country_flag = auto_complete_estate_agenda_estate_ghulams
+		clr_country_flag = auto_complete_estate_agenda_all
+	}
+}
+
+on_completed_agenda_effect_estate_nobles = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
+on_completed_agenda_effect_estate_brahmins = {
+	if = {
+		limit = { has_government_attribute = clergy_estate_agendas_gives_karma }
+		add_karma = 10
+	}
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = -0.05
+	}
+}
+on_completed_agenda_effect_estate_burghers = {
+	if = {
+		limit = {
+			has_country_flag = ITA_upgrade_city_expansion_privileges_flag
+			has_estate_privilege = estate_burghers_development_of_cities
+		}
+		custom_tooltip = ITA_3_random_dev_distribution
+		hidden_effect = {
+			for = {
+				amount = 3
+				effect = "
+					random_owned_province = {
+						add_random_development = 1
+					}
+				"
+			}
+		}
+	}
+}
+on_completed_agenda_effect_estate_church = {
+	if = {
+		limit = { has_government_attribute = clergy_estate_agendas_gives_karma }
+		add_karma = 10
+	}
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = -0.05
+	}
+}
+on_completed_agenda_effect_estate_cossacks = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
+on_completed_agenda_effect_estate_dhimmi = {}
+on_completed_agenda_effect_estate_jains = {}
+on_completed_agenda_effect_estate_maratha = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
+on_completed_agenda_effect_estate_nomadic_tribes = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
+on_completed_agenda_effect_estate_rajput = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
+on_completed_agenda_effect_estate_vaisyas = {}
+on_completed_agenda_effect_estate_janissaries = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
+on_completed_agenda_effect_estate_eunuchs = {}
+on_completed_agenda_effect_estate_qizilbash = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
+on_completed_agenda_effect_estate_ghulams = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
+on_completed_agenda_effect_estate_admirals = {
+}
+on_completed_agenda_effect_estate_workers = {
+}
+
+on_completed_agenda_effect = {
+	on_completed_agenda_effect_$estate$ = yes
+	clr_auto_complete_flag = yes
+}
+
+on_failed_agenda_effect = {
+}
+
+

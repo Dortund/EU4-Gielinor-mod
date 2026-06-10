@@ -1,9 +1,9 @@
 #1392-Tabttrae
-owner = ULJ
-controller = ULJ
-add_core = ULJ
+owner = MHC
+controller = MHC
+add_core = MHC
 tribal_owner = ---
-culture = rellekkan
+culture = barbarian
 religion = northern_pantheon
 
 discovered_by = dwarventechgroup
@@ -20,15 +20,22 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 
-fort_15th = yes
-
 trade_goods = logs
 
 is_city = yes
 
-1949.12.16 = {
+2042.5.6 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+	religion = v
+}
+
+2047.7.3 = {
 	owner = REL
 	controller = REL
 	add_core = REL
-	religion = v
+	remove_core = GUN
+	remove_core = MHC
+	culture = rellekkan
 }

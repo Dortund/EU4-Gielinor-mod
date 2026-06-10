@@ -1,0 +1,133 @@
+uze_missions_1 = {
+	slot = 1
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = UZE
+			AND = {
+				tag = KEM
+				was_tag = NDH
+				NOT = { was_tag = KDS }
+				NOT = { was_tag = ALK }
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	UZE_restore_uzers_extent = {
+		icon = mission_al_kharid_ascendant
+		position = 3
+		required_missions = { genkharid_strong_capital }
+		provinces_to_highlight = {
+			province_id = 79
+		}
+		trigger = {
+			79 = {
+				owned_by = ROOT
+				is_core = ROOT
+			 	development = 30
+				num_of_times_expanded_infrastructure = 2
+				num_of_buildings_in_province = 6
+			}
+		}
+		effect = {
+			79 = {
+				add_province_modifier = {
+					name = UZE_second_age_legacy
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					80 = {
+						is_empty = yes
+					}
+				}
+				80 = {
+					add_siberian_construction = 200
+				}
+			}
+			else = {
+				80 = {
+					add_core = ROOT
+				}
+			}
+			uzer_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	UZE_legacy_of_tolerance = {
+		icon = mission_three_altars
+		position = 4
+		required_missions = { UZE_restore_uzers_extent }
+		trigger = {
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = 5
+			}
+			any_owned_province = {
+				NOT = {
+					religion = ROOT
+				}
+			}
+		 	num_accepted_cultures = 4
+		}
+		effect = {
+			add_dip_power = 100
+			change_innovativeness = 2
+			add_country_modifier = {
+				name = UZE_legacy_of_tolerance_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+uze_missions_5 = {
+	slot = 5
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = UZE
+			AND = {
+				tag = KEM
+				was_tag = NDH
+				NOT = { was_tag = KDS }
+				NOT = { was_tag = ALK }
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	UZE_instruct_the_golems = {
+		icon = mission_instruct_the_golems
+		position = 2
+		required_missions = { genkharid_defend_ourselves }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_idea = UZE_clay_golems
+			land_forcelimit = 20
+			army_size_percentage = 0.9
+			capital_scope = {
+				province_has_current_tech_fort_trigger = yes
+				has_manpower_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = UZE_discipline_of_golems
+				duration = 9125
+			}
+		}
+	}
+}

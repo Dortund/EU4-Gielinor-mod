@@ -1,0 +1,19 @@
+#1507 - Mahogany Overlook
+owner = GCH
+controller = GCH
+add_core = GCH
+tribal_owner = ---
+culture = tortugan
+religion = seiryu
+
+discovered_by = wushankotechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = tropical_logs
+
+is_city = yes

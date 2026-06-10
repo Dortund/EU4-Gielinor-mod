@@ -19,6 +19,8 @@
  elder_god_wars_enemies:0 "Enemies in the Elder God Wars"
  elder_god_wars_traitors:0 "Traitors in the Elder God Wars"
  
+ alk_freed_morytanian_saradominists:0 "Freed Saradominists in Morytania"
+ 
  asg_hosted_refugees:0 "Hosted refugees"
  asg_neglected_refugees:0 "Neglected refugees"
  asg_evil_response:0 "Evil response"
@@ -63,6 +65,7 @@
  
  kds_refused_assistance:0 "Refused to aid the Kharidians"
  kds_granted_assistance:0 "Aided the Kharidians"
+ kds_broke_from_empire_of_kharid:0 "Broke from the Empire of Kharid"
  
  kou_placated_house:0 "Placated House"
  kou_aided_house:0 "Aided House"

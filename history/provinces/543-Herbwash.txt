@@ -1,4 +1,5 @@
 discovered_by = karamjantechgroup
 discovered_by = bandostechgroup
 discovered_by = monkeytechgroup
+discovered_by = kharidtechgroup
 discovered_by = TMP

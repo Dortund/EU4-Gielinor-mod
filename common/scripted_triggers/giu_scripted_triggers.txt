@@ -18,6 +18,21 @@
 # Usage:
 # my_test_trigger = { ARG1=foo ARG2=bar CONTEXT=FROM }
 
+###########################################
+
+# Estate - Admirals
+
+estate_action_GRANT_ADMIRALSHIP_ADMIRALS = {
+	create_leader_scaling_with_tradition = {
+		leader = admiral
+		type = navy
+	}
+	add_estate_loyalty = {
+		estate = estate_admirals
+		loyalty = -10
+	}
+}
+
 # Government - Dwarven Outposts
 
 reached_dwarven_outpost_slot_limit = {

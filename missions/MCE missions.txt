@@ -1,0 +1,95 @@
+miscellanean_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MCE
+			tag = ETC
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	MCE_miscellanean_rivalry = {
+		icon = mission_miscellanean_rivalry
+		required_missions = {  } #none
+		position = 1
+		trigger = {
+			OR = {
+				AND = {
+					miscellania_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+					etceteria_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				AND = {
+					tag = MCE
+					exists = ETC
+					army_strength = {
+						who = ETC
+						value = 2
+					}
+					naval_strength = {
+						who = ETC
+						value = 2
+					}
+				}
+				AND = {
+					tag = ETC
+					exists = MCE
+					army_strength = {
+						who = MCE
+						value = 2
+					}
+					naval_strength = {
+						who = MCE
+						value = 2
+					}
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+		}
+	}
+
+	MCE_reform_the_monarchy = {
+		icon = mission_miscellanean_rivalry
+		required_missions = { MCE_miscellanean_rivalry }
+		position = 4
+		trigger = {
+			OR = {
+				NOT = {
+					has_reform = miscellanean_monarchy
+				}
+				AND = {
+					capital_scope = {
+						development = 25
+					}
+					absolutism = 50
+					government_reform_progress = 100
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_reform = miscellanean_monarchy
+				}
+				country_event = { 
+					id = flavor_mce.1
+				}
+			}
+			else = {
+				change_government_reform_progress = 50
+			}
+		}
+	}
+}

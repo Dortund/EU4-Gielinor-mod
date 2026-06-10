@@ -465,7 +465,7 @@ country_event = {
 	trigger = {
 		OR = {
 			AND = {
-				culture_group = fairy_group
+				primary_culture = fairy
 				any_owned_province = {
 					trade_goods = cabbage
 				}
@@ -474,10 +474,10 @@ country_event = {
 				religion = brassicaprime
 				OR = {
 					any_known_country = {
-						culture_group = fairy_group
+						primary_culture = fairy
 					}
 					any_owned_province = {
-						culture_group = fairy_group
+						culture = fairy
 					}
 				}
 			}
@@ -501,3 +501,140 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = giu_prices.13
+	title = giu_prices.13.t #Bespoke Shipbuilding
+	desc = giu_prices.13.d #The call of the sea has drawn in many treasure-seeking adventurers. Rich off monster hunting, they will pay any price for top-quality hardwoods in order to take to the seas in style.
+	picture = EXPLORATION_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+	 	has_institution = exploration
+		tropical_logs = 2
+	 	absolutism = 5
+		NOT = { has_global_flag = bespoke_shipbuilding_flag }
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = giu_prices.13.a #This will increase demand for hardwoods.
+		change_price = {
+			trade_goods = tropical_logs
+			key = BESPOKE_SHIPBUILDING
+			value = 0.2
+			duration = -1
+		}
+		add_absolutism = 10
+		add_years_of_income  = 0.25
+		set_global_flag = bespoke_shipbuilding_flag
+	}
+}
+
+country_event = {
+	id = giu_prices.14
+	title = giu_prices.14.t #Growth of the Bamboo Trade
+	desc = giu_prices.14.d #A curious - and highly versatile - plant has been traded extensively in the Wushanko Isles for time immemorial. With an expansion of our trade efforts, we are finally able to bring this so-called Bamboo back to [Root.Capital.GetName] in large quantities to be sold at great profit.
+	picture = EXPLORATION_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+	 	has_institution = exploration
+		NOT = { has_global_flag = bamboo_trade_flag }
+		capital_scope = {
+			NOT = { continent = wushanko_isles_continent }
+			NOT = { region = kharidian_desert_region }
+			NOT = { region = southern_isles_region }
+			NOT = { region = morytania_region }
+		}
+		any_active_trade_node = {
+			has_merchant = PREV
+			OR = {
+				province_id = 1028 # Waiko node
+				province_id = 1051 # Han Lun node
+				province_id = 1088 # New Heritage node
+				province_id = 1081 # Bubble of Mists node
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = giu_prices.14.a #These prices can only shoot up!
+		change_price = {
+			trade_goods = bamboo
+			key = GROWTH_OF_BAMBOO_TRADE
+			value = 0.3
+			duration = -1
+		}
+		add_years_of_income  = 0.2
+		set_global_flag = bamboo_trade_flag
+	}
+}
+
+country_event = {
+	id = giu_prices.15
+	title = giu_prices.15.t #Desire for Divine Favour
+	desc = giu_prices.15.d #With a massive number of provinces not following our main religion, additional efforts are needed to maximise divine favour. To this end, our $ESTATE_CHURCH$ has sought ever-greater numbers of bones to sacrifice, and followers of rival religions have taken notice.
+	picture = BONES_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		has_estate = estate_church
+		NOT = { has_global_flag = divine_favour_bones_flag }
+		NOT = { has_idea_group = humanist_ideas }
+		calc_true_if = {
+			all_owned_province = {
+				NOT = {
+					religion = ROOT
+				}
+			}
+			amount = 16
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = giu_prices.15.a #This will increase demand for bones.
+		change_price = {
+			trade_goods = bones
+			key = DEMAND_FOR_DIVINE_FAVOUR_TRADE
+			value = 0.2
+			duration = -1
+		}
+		add_adm_power = 25
+		random_owned_province = {
+			limit = {
+				NOT = {
+					religion = ROOT
+				}
+				NOT = {
+					OR = {
+						has_province_modifier = religious_zeal_at_conv
+						is_religious_center_province = yes
+						has_great_project = {
+							type = great_project_citharede_abbey
+							tier = 1
+						}
+					}
+				}
+			}
+			change_religion = ROOT
+		}
+		set_global_flag = divine_favour_bones_flag
+	}
+}

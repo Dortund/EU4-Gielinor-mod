@@ -721,13 +721,11 @@ magiocracy_legacy = {
 	modifiers = {
 		leader_land_fire = 1
 		global_institution_spread = 0.1
-	 	meritocracy = 0.5
 	}
 
 	ai = {
 		factor = 0
 	}
-	has_meritocracy = yes
 }
 
 merchant_republic = {
@@ -955,13 +953,11 @@ sirenic_republic_legacy = {
 		governing_capacity = -50
 		own_coast_naval_combat_bonus = 1
 		global_sailors_modifier = 0.2
-	 	meritocracy = 0.5
 	}
 
 	ai = {
 		factor = 0
 	}
-	has_meritocracy = yes
 }
 
 tirannwn_republic_legacy = {

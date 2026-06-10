@@ -230,9 +230,20 @@ bik_rebels = {
 			limit = {
 				NOT = { religion = bik }
 				dominant_religion = bik
+				NOT = { has_government_mechanic = enthrallment_mechanic }
 			}
 			change_religion = bik
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				has_government_mechanic = enthrallment_mechanic
+			}
+			add_government_power = {
+				mechanic_type = enthrallment_mechanic
+				power_type = enthrallment_power_1
+				value = -25
+			}
 		}
 		else = { add_stability = -1 } #Should probably never get here
 		if = {

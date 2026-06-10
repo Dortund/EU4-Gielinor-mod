@@ -1,0 +1,4 @@
+﻿l_english:
+ kel_red_axe_estate_events.1.t:0 "Revolt of the [Root.GetName] $ESTATE_KEL_RED_AXE$"
+ kel_red_axe_estate_events.1.d:0 "In the opinion of the $ESTATE_KEL_RED_AXE$'s director, the role of the [Root.Monarch.GetTitle] of [Root.GetName] is to leave the Consortium's trading companies to handle their own affairs. Taking a break from their usual violent anti-human outbreaks, the $ESTATE_KEL_RED_AXE$ has seen fit to violently assert their opposition to the seizure of their property."
+ kel_red_axe_estate_events.1.a:0 "Ok."

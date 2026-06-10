@@ -241,3 +241,65 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = flavor_ape.5
+	title = flavor_ape.5.t #The Monkeys Across the Strait
+	desc = flavor_ape.5.d #Ape Atoll is unified under one rule and yet the Bo Isles have remained stubbonly out of reach. However, their windswept climate is hardly prime land for growing bananas and a representative of the Bo Isles suggests handing over the land in exchange for some.
+	picture = APE_ATOLL_MONKEYS_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		culture_group = monkey_group
+		owns_core_province = 235
+		owns_core_province = 236
+		owns_core_province = 237
+		owns_core_province = 805
+		owns_core_province = 806
+		owns_core_province = 1409
+		is_at_war = no
+		NOT = { tag = BOI }
+		NOT = { exists = APE }
+		NOT = { exists = VPE }
+		NOT = { exists = VKO }
+		OR = {
+			current_age = age_of_mortals
+			current_age = age_of_humans
+		}
+		BOI = {
+			is_at_war = no
+		 	ai = yes
+			owns_core_province = 238
+			owns_core_province = 239
+			owns_core_province = 978
+			NOT = {
+				num_of_cities = 5
+			}
+			NOT = {
+				num_of_subjects = 1
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = flavor_ape.5.a #Let's unify under one rule!
+		add_years_of_income = -0.2
+		vassalize = BOI
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_ape.5.b #Perhaps apes together are not so strong after all.
+		add_prestige = 50
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

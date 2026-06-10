@@ -32,6 +32,45 @@
  crusader_zeal_power_1:0 "Crusader Zeal"
  monthly_crusader_zeal_power_1:0 "Monthly Crusader Zeal"
 
+ crusader_zeal_crush_altars:0 "Crush Runecrafting Altar"
+ crusader_zeal_crush_altars_desc:0 "The vile Moonclan built these wretched altars to steal the power of the Gods for themselves! They must be destroyed."
+ destroys_an_altar_tooltip:0 "Crushes the altar present on a random controlled province producing §YRunes§!."
+ 
+ crusader_zeal_migrate_fremennik:0 "Migrate the Fremennik"
+ crusader_zeal_migrate_fremennik_desc:0 "To keep our war's momentum going we must be willing to pull from our Fremennik heartland."
+ currently_coring_province_tooltip:0 "Currently coring a province."
+ GUN_already_ceded_province_tooltip:0 "Province was already previously ceded through this interaction"
+ crusader_zeal_migrate_fremennik_cede_province:0 "§RCedes a province§! in the Fremennik region to an adjacent ally."
+ instant_cores_tooltip:0 "§GInstantly completes§! any in-progress coring actions."
+ 
+  
+############### Enthrallment
+
+ ability_enthrallment_mechanic:0 "Enthrallment"
+ enthrallment_mechanic:0 "Enthrallment"
+ enthrallment_power_1:0 "Enthrallment"
+ monthly_enthrallment_power_1:0 "Monthly Enthrallment"
+ enthrallment_power_1_gain_modifier:0 "Enthrallment Gain Modifier"
+ 
+ # Freedom
+ enthrallment_aid_against_amascut:0 "Aid Against Amascut"
+ enthrallment_aid_against_amascut_desc:0 "Some remain who can resist Amascut's corruption. If they could just get the word out to our allies, they might be able to fight these binds."
+ enthrallment_feather_of_maat:0 "Feather of Ma'at"
+ enthrallment_feather_of_maat_desc:0 "The few left who resist the Devourer might be able to secure a Feather of Ma'at, which has the power to repel corruption."
+ enthrallment_blood_moon_order:0 "Promote the Order of the Blood Moon"
+ enthrallment_blood_moon_order_desc:0 "Once serving Elidinis, the Order of the Blood Moon was taken over by Amascut to serve her interests. Although promoting the Order could be a great source of manpower so long as we side with Amascut, it could also reawaken dormant allegiances to Elidinis."
+ amascut_religion_promote_blood_moon_tooltip:0 "While this modifier is active, assigning a §YLocal Organisation§! such as Order of the Blood Moon will reduce your §YEnthrallment§! by 10."
+ 
+ #Captivity
+ enthrallment_proselytise_amascut:0 "Proselytise Amascut"
+ enthrallment_proselytise_amascut_desc:0 "Usually Amascut does not engage in conventional proselytisation, preferring instead to bribe or force people to do her bidding. Still, if our peoples' minds were just clear enough to sound convincingly non-monstrous, it could be a boon to conversion efforts."
+ enthrallment_internalise_the_corruption:0 "Internalise the Corruption"
+ enthrallment_internalise_the_corruption_desc:0 "If we take corruption within ourselves, we can serve the Devourer in a more orderly fashion."
+ enthrallment_slayers_boon:0 "Slayer's Boon"
+ enthrallment_slayers_boon_desc:0 "Amascut founded the Order of Slayer Masters and can grant us her knowledge of monster-killing."
+
+ 
+
 ############### Elven Desperation
 
  ability_elven_desperation_mechanic:0 "Civil War Desperation"
@@ -40,6 +79,86 @@
  monthly_elven_desperation_power_1:0 "Monthly Civil War Desperation"
  elven_desperation_last_stand:0 "Last Stand"
  elven_desperation_last_stand_desc:0 "Call on the struggling people to regroup for one last stand!"
+ 
+############### Kharidian Emergence
+
+ ability_kharidian_emergence_mechanic:0 "Kharidian Emergence"
+ kharidian_emergence:0 "Kharidian Emergence"
+ monthly_kharidian_emergence:0 "Monthly Kharidian Emergence"
+ kharidian_emergence_gain_modifier:0 "Kharidian Emergence Modifier"
+ 
+ kharidian_emergence_adm:0 "Kharidian Administrative Emergence"
+ monthly_kharidian_emergence_adm:0 "Monthly Administrative Emergence"
+ kharidian_emergence_adm_gain_modifier:0 "Administrative Emergence Modifier"
+ 
+ kharidian_emergence_dip:0 "Kharidian Diplomatic Emergence"
+ monthly_kharidian_emergence_dip:0 "Monthly Diplomatic Emergence"
+ kharidian_emergence_dip_gain_modifier:0 "Diplomatic Emergence Modifier"
+ 
+ kharidian_emergence_mil:0 "Kharidian Military Emergence"
+ monthly_kharidian_emergence_mil:0 "Monthly Military Emergence"
+ kharidian_emergence_mil_gain_modifier:0 "Military Emergence Modifier"
+ 
+ 
+ #ADM
+ kharidian_emergence_adm_reform:0 "Expand Bureaucratic Apparatus"
+ kharidian_emergence_adm_reform_desc:0 "This region of Kharid has not had a sophisticated government for centuries. Let us learn what we can from other countries."
+ kharidian_emergence_trigger_tt:0 "We have not fully reformed our administration"
+ 
+ kharidian_emergence_adm_counter_1_tt_HET:0 "£no£ Gain §G100.00§! Government Reform Progress\n£no£ Governing Capacity: §G+50§!\n£no£ Governing Capacity: §G+100§!\n£no£ Governing Capacity: §G+150§!\n£no£ Governing Capacity: §G+200§!"
+ kharidian_emergence_adm_counter_2_tt_HET:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£no£ Governing Capacity: §G+50§!\n£no£ Governing Capacity: §G+100§!\n£no£ Governing Capacity: §G+150§!\n£no£ Governing Capacity: §G+200§!"
+ kharidian_emergence_adm_counter_3_tt_HET:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£yes£ Governing Capacity: §G+50§!\n£no£ Governing Capacity: §G+100§!\n£no£ Governing Capacity: §G+150§!\n£no£ Governing Capacity: §G+200§!"
+ kharidian_emergence_adm_counter_4_tt_HET:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£yes£ Governing Capacity: §G+50§!\n£yes£ Governing Capacity: §G+100§!\n£no£ Governing Capacity: §G+150§!\n£no£ Governing Capacity: §G+200§!"
+ kharidian_emergence_adm_counter_5_tt_HET:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£yes£ Governing Capacity: §G+50§!\n£yes£ Governing Capacity: §G+100§!\n£yes£ Governing Capacity: §G+150§!\n£no£ Governing Capacity: §G+200§!"
+ kharidian_emergence_adm_counter_6_tt_HET:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£yes£ Governing Capacity: §G+50§!\n£yes£ Governing Capacity: §G+100§!\n£yes£ Governing Capacity: §G+150§!\n£yes£ Governing Capacity: §G+200§!"
+
+ kharidian_emergence_adm_counter_1_tt_ALK:0 "£no£ Gain §G100.00§! Government Reform Progress\n£no£ Development Cost in Primary Cultures: §G-2.5%§!\n£no£ Development Cost in Primary Cultures: §G-5%§!\n£no£ Development Cost in Primary Cultures: §G-7.5%§!\n£no£ Development Cost in Primary Cultures: §G-10%§!"
+ kharidian_emergence_adm_counter_2_tt_ALK:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£no£ Development Cost in Primary Cultures: §G-2.5%§!\n£no£ Development Cost in Primary Cultures: §G-5%§!\n£no£ Development Cost in Primary Cultures: §G-7.5%§!\n£no£ Development Cost in Primary Cultures: §G-10%§!"
+ kharidian_emergence_adm_counter_3_tt_ALK:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£yes£ Development Cost in Primary Cultures: §G-2.5%§!\n£no£ Development Cost in Primary Cultures: §G-5%§!\n£no£ Development Cost in Primary Cultures: §G-7.5%§!\n£no£ Development Cost in Primary Cultures: §G-10%§!"
+ kharidian_emergence_adm_counter_4_tt_ALK:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£yes£ Development Cost in Primary Cultures: §G-2.5%§!\n£yes£ Development Cost in Primary Cultures: §G-5%§!\n£no£ Development Cost in Primary Cultures: §G-7.5%§!\n£no£ Development Cost in Primary Cultures: §G-10%§!"
+ kharidian_emergence_adm_counter_5_tt_ALK:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£yes£ Development Cost in Primary Cultures: §G-2.5%§!\n£yes£ Development Cost in Primary Cultures: §G-5%§!\n£yes£ Development Cost in Primary Cultures: §G-7.5%§!\n£no£ Development Cost in Primary Cultures: §G-10%§!"
+ kharidian_emergence_adm_counter_6_tt_ALK:0 "£yes£ Gain §G100.00§! Government Reform Progress\n£yes£ Development Cost in Primary Cultures: §G-2.5%§!\n£yes£ Development Cost in Primary Cultures: §G-5%§!\n£yes£ Development Cost in Primary Cultures: §G-7.5%§!\n£yes£ Development Cost in Primary Cultures: §G-10%§!"
+
+
+ #DIP
+ kharidian_emergence_dip_reform:0 "Expand Diplomatic Corps"
+ kharidian_emergence_dip_reform_desc:0 "Serving the useful role of fighting bandits served us well for a time, but this new age of growing nations demands a more sophisticated approach to diplomacy."
+ kharidian_emergence_trigger_2_tt:0 "We have not fully expanded our diplomatic efforts"
+ 
+ kharidian_emergence_dip_counter_1_tt_HET:0 "£no£ Gain §G5§! Mercantilism\n£no£ Province Warscore Cost vs. Other Religions: §G-2.5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-7.5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-10%§!"
+ kharidian_emergence_dip_counter_2_tt_HET:0 "£yes£ Gain §G5§! Mercantilism\n£no£ Province Warscore Cost vs. Other Religions: §G-2.5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-7.5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-10%§!"
+ kharidian_emergence_dip_counter_3_tt_HET:0 "£yes£ Gain §G5§! Mercantilism\n£yes£ Province Warscore Cost vs. Other Religions: §G-2.5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-7.5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-10%§!"
+ kharidian_emergence_dip_counter_4_tt_HET:0 "£yes£ Gain §G5§! Mercantilism\n£yes£ Province Warscore Cost vs. Other Religions: §G-2.5%§!\n£yes£ Province Warscore Cost vs. Other Religions: §G-5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-7.5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-10%§!"
+ kharidian_emergence_dip_counter_5_tt_HET:0 "£yes£ Gain §G5§! Mercantilism\n£yes£ Province Warscore Cost vs. Other Religions: §G-2.5%§!\n£yes£ Province Warscore Cost vs. Other Religions: §G-5%§!\n£yes£ Province Warscore Cost vs. Other Religions: §G-7.5%§!\n£no£ Province Warscore Cost vs. Other Religions: §G-10%§!"
+ kharidian_emergence_dip_counter_6_tt_HET:0 "£yes£ Gain §G5§! Mercantilism\n£yes£ Province Warscore Cost vs. Other Religions: §G-2.5%§!\n£yes£ Province Warscore Cost vs. Other Religions: §G-5%§!\n£yes£ Province Warscore Cost vs. Other Religions: §G-7.5%§!\n£yes£ Province Warscore Cost vs. Other Religions: §G-10%§!"
+ 
+ kharidian_emergence_dip_counter_1_tt_ALK:0 "£no£ Gain §G5§! Mercantilism\n£no£ Relations with Heathens: §G+5§!\n£no£ Relations with Heathens: §G+10§!\n£no£ Relations with Heathens: §G+15§!\n£no£ Relations with Heathens: §G+20§!"
+ kharidian_emergence_dip_counter_2_tt_ALK:0 "£yes£ Gain §G5§! Mercantilism\n£no£ Relations with Heathens: §G+5§!\n£no£ Relations with Heathens: §G+10§!\n£no£ Relations with Heathens: §G+15§!\n£no£ Relations with Heathens: §G+20§!"
+ kharidian_emergence_dip_counter_3_tt_ALK:0 "£yes£ Gain §G5§! Mercantilism\n£yes£ Relations with Heathens: §G+5§!\n£no£ Relations with Heathens: §G+10§!\n£no£ Relations with Heathens: §G+15§!\n£no£ Relations with Heathens: §G+20§!"
+ kharidian_emergence_dip_counter_4_tt_ALK:0 "£yes£ Gain §G5§! Mercantilism\n£yes£ Relations with Heathens: §G+5§!\n£yes£ Relations with Heathens: §G+10§!\n£no£ Relations with Heathens: §G+15§!\n£no£ Relations with Heathens: §G+20§!"
+ kharidian_emergence_dip_counter_5_tt_ALK:0 "£yes£ Gain §G5§! Mercantilism\n£yes£ Relations with Heathens: §G+5§!\n£yes£ Relations with Heathens: §G+10§!\n£yes£ Relations with Heathens: §G+15§!\n£no£ Relations with Heathens: §G+20§!"
+ kharidian_emergence_dip_counter_6_tt_ALK:0 "£yes£ Gain §G5§! Mercantilism\n£yes£ Relations with Heathens: §G+5§!\n£yes£ Relations with Heathens: §G+10§!\n£yes£ Relations with Heathens: §G+15§!\n£yes£ Relations with Heathens: §G+20§!"
+ 
+ 
+ #MIL 
+ kharidian_emergence_mil_reform:0 "Diversify Military Strategies"
+ kharidian_emergence_mil_reform_desc:0 "The ways of Het are hugely influential to us and can be built upon further with foreign innovations."
+ kharidian_emergence_trigger_3_tt:0 "We have not fully diversified our military strategies."
+
+ kharidian_emergence_mil_counter_1_tt_HET:0 "£no£ Gain §G5§! Army Professionalism\n£no£ Yearly Army Tradition: §G+0.1§!\n£no£ Yearly Army Tradition: §G+0.2§!\n£no£ Yearly Army Tradition: §G+0.35§!\n£no£ Yearly Army Tradition: §G+0.5§!"
+ kharidian_emergence_mil_counter_2_tt_HET:0 "£yes£ Gain §G5§! Army Professionalism\n£no£ Yearly Army Tradition: §G+0.1§!\n£no£ Yearly Army Tradition: §G+0.2§!\n£no£ Yearly Army Tradition: §G+0.35§!\n£no£ Yearly Army Tradition: §G+0.5§!"
+ kharidian_emergence_mil_counter_3_tt_HET:0 "£yes£ Gain §G5§! Army Professionalism\n£yes£ Yearly Army Tradition: §G+0.1§!\n£no£ Yearly Army Tradition: §G+0.2§!\n£no£ Yearly Army Tradition: §G+0.35§!\n£no£ Yearly Army Tradition: §G+0.5§!"
+ kharidian_emergence_mil_counter_4_tt_HET:0 "£yes£ Gain §G5§! Army Professionalism\n£yes£ Yearly Army Tradition: §G+0.1§!\n£yes£ Yearly Army Tradition: §G+0.2§!\n£no£ Yearly Army Tradition: §G+0.35§!\n£no£ Yearly Army Tradition: §G+0.5§!"
+ kharidian_emergence_mil_counter_5_tt_HET:0 "£yes£ Gain §G5§! Army Professionalism\n£yes£ Yearly Army Tradition: §G+0.1§!\n£yes£ Yearly Army Tradition: §G+0.2§!\n£yes£ Yearly Army Tradition: §G+0.35§!\n£no£ Yearly Army Tradition: §G+0.5§!"
+ kharidian_emergence_mil_counter_6_tt_HET:0 "£yes£ Gain §G5§! Army Professionalism\n£yes£ Yearly Army Tradition: §G+0.1§!\n£yes£ Yearly Army Tradition: §G+0.2§!\n£yes£ Yearly Army Tradition: §G+0.35§!\n£yes£ Yearly Army Tradition: §G+0.5§!"
+ 
+ kharidian_emergence_mil_counter_1_tt_ALK:0 "£no£ Gain §G5§! Army Professionalism\n£no£ Yearly Army Professionalism: §G+0.05§!\n£no£ Yearly Army Professionalism: §G+0.1§!\n£no£ Yearly Army Professionalism: §G+0.15§!\n£no£ Yearly Army Professionalism: §G+0.25§!"
+ kharidian_emergence_mil_counter_2_tt_ALK:0 "£yes£ Gain §G5§! Army Professionalism\n£no£ Yearly Army Professionalism: §G+0.05§!\n£no£ Yearly Army Professionalism: §G+0.1§!\n£no£ Yearly Army Professionalism: §G+0.15§!\n£no£ Yearly Army Professionalism: §G+0.25§!"
+ kharidian_emergence_mil_counter_3_tt_ALK:0 "£yes£ Gain §G5§! Army Professionalism\n£yes£ Yearly Army Professionalism: §G+0.05§!\n£no£ Yearly Army Professionalism: §G+0.1§!\n£no£ Yearly Army Professionalism: §G+0.15§!\n£no£ Yearly Army Professionalism: §G+0.25§!"
+ kharidian_emergence_mil_counter_4_tt_ALK:0 "£yes£ Gain §G5§! Army Professionalism\n£yes£ Yearly Army Professionalism: §G+0.05§!\n£yes£ Yearly Army Professionalism: §G+0.1§!\n£no£ Yearly Army Professionalism: §G+0.15§!\n£no£ Yearly Army Professionalism: §G+0.25§!"
+ kharidian_emergence_mil_counter_5_tt_ALK:0 "£yes£ Gain §G5§! Army Professionalism\n£yes£ Yearly Army Professionalism: §G+0.05§!\n£yes£ Yearly Army Professionalism: §G+0.1§!\n£yes£ Yearly Army Professionalism: §G+0.15§!\n£no£ Yearly Army Professionalism: §G+0.25§!"
+ kharidian_emergence_mil_counter_6_tt_ALK:0 "£yes£ Gain §G5§! Army Professionalism\n£yes£ Yearly Army Professionalism: §G+0.05§!\n£yes£ Yearly Army Professionalism: §G+0.1§!\n£yes£ Yearly Army Professionalism: §G+0.15§!\n£yes£ Yearly Army Professionalism: §G+0.25§!"
+
 
 ############### Kourend House Disunity
  

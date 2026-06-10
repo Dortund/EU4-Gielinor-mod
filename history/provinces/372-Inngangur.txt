@@ -3,7 +3,7 @@ owner = ULJ
 controller = ULJ
 add_core = ULJ
 tribal_owner = ---
-culture = rellekkan
+culture = barbarian
 religion = v
 
 discovered_by = dwarventechgroup
@@ -23,8 +23,17 @@ trade_goods = basic_ores
 
 is_city = yes
 
-1949.12.16 = {
+2042.5.6 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2047.7.3 = {
 	owner = REL
 	controller = REL
 	add_core = REL
+	remove_core = GUN
+	remove_core = ULJ
+	culture = rellekkan
 }

@@ -1157,26 +1157,13 @@ country_event = {
 		any_owned_province = {
 			current_institution = 100
 		}
-		random_country = {
-			limit = {
-				capital_scope = {
-					region = forinthry_region
-				}
-				technology_group = northerntechgroup
-				any_owned_province = {
-					NOT = { current_institution = 99 }
-				}
+		any_country = {
+			capital_scope = {
+				region = forinthry_region
 			}
-			random_owned_province = {
-				limit = {
-					NOT = { current_institution = 99 }
-				}
-				add_next_institution_embracement = 80
-			}
-			country_event = { 
-				id = wildernessborder.410
-				days = 30
-				random = 15
+			technology_group = northerntechgroup
+			any_owned_province = {
+				NOT = { current_institution = 99 }
 			}
 		}
 	}

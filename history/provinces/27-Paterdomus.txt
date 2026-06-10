@@ -21,6 +21,8 @@ trade_goods = bones
 
 is_city = yes
 
+add_cardinal = yes
+
 if = {
 	limit = {
 		NOT = { has_dlc = "Leviathan" }

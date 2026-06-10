@@ -1,0 +1,4 @@
+#1546-Akthanakos Oasis
+discovered_by = kharidtechgroup
+discovered_by = monkeytechgroup
+discovered_by = wushankotechgroup

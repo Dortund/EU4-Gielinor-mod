@@ -26,13 +26,9 @@ country_event = {
 		name = end_of_the_runecrafting_crusades.1.a #It is a battle well-fought - but now we must settle down.
 		custom_tooltip = GUN_surrender_tooltip #This will immediately end the disaster but §Rreleases every province not in the capital region§! and §Rreleases every subject nation§!.
 		remove_government_reform = runecrafting_crusader
+		set_government_rank = 1
 		release_all_subjects = yes
-		every_owned_province = {
-			limit = {
-				NOT = { is_in_capital_area = yes }
-			}
-			release_all_possible_countries = yes
-		}
+		release_all_possible_countries = yes
 		custom_tooltip = GUN_surrender_relations_boost_tooltip # Ending the Runecrafting Crusades in this manner will temporarily boost relations with all known non-rival countries by §G100§!.
 		hidden_effect = {
 			every_known_country = {

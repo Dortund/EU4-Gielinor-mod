@@ -196,6 +196,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_queen_of_ashes_aspects_icon"
+		texturefile = "gfx/interface/queen_of_ashes_aspects_icon.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_protestant_aspects_icon_slot"
 		texturefile = "gfx/interface/protestant_aspects_icon_slot.dds"
 	}		

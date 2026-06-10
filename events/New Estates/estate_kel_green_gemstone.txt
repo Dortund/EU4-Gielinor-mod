@@ -1,0 +1,19 @@
+###########################################################
+# Events for the Green Gemstone Estate
+###########################################################
+
+namespace = kel_green_gemstone_estate_events
+
+#Province revolt
+province_event = {
+	id = kel_green_gemstone_estate_events.1
+	title = kel_green_gemstone_estate_events.1.t
+	desc = kel_green_gemstone_estate_events.1.d
+	picture = DWARVES_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kel_green_gemstone_estate_events.1.a #Ok.
+	}
+}

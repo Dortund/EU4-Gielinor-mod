@@ -1,0 +1,3 @@
+#1533-The Graveyard
+discovered_by = fremenniktechgroup
+discovered_by = northerntechgroup

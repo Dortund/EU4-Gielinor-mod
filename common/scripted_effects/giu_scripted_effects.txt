@@ -10,6 +10,7 @@ clear_religious_scholar_modifiers_effect = {
 	remove_country_modifier = fairy_scholar_modifier
 	remove_country_modifier = gnomish_scholar_modifier
 	remove_country_modifier = guardian_scholar_modifier
+	remove_country_modifier = proactive_scholar_modifier
 	remove_country_modifier = defender_scholar_modifier
 	remove_country_modifier = runecrafter_scholar_modifier
 	remove_country_modifier = warrior_scholar_modifier
@@ -55,7 +56,7 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 				set_school_opinion = {
 					who = PREV
-					opinion = 1
+					opinion = -1
 				}
 			}
 			random_country = {
@@ -67,7 +68,7 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 				set_school_opinion = {
 					who = PREV
-					opinion = 1
+					opinion = -1
 				}
 			}
 			random_country = {
@@ -79,7 +80,7 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 				set_school_opinion = {
 					who = PREV
-					opinion = 1
+					opinion = -1
 				}
 			}
 			random_country = {
@@ -91,7 +92,7 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 				set_school_opinion = {
 					who = PREV
-					opinion = 1
+					opinion = -1
 				}
 			}
 			random_country = {
@@ -103,7 +104,7 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 				set_school_opinion = {
 					who = PREV
-					opinion = 1
+					opinion = -1
 				}
 			}
 			random_country = {
@@ -115,7 +116,7 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 				set_school_opinion = {
 					who = PREV
-					opinion = 1
+					opinion = -1
 				}
 			}
 			random_country = {
@@ -127,7 +128,7 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 				set_school_opinion = {
 					who = PREV
-					opinion = 1
+					opinion = -1
 				}
 			}
 			random_country = {
@@ -139,7 +140,7 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 				set_school_opinion = {
 					who = PREV
-					opinion = 1
+					opinion = -1
 				}
 			}
 			random_country = {
@@ -151,7 +152,19 @@ giu_initialize_schools_effect = { #Used in on_startup on_action
 				}
 				set_school_opinion = {
 					who = PREV
-					opinion = 1
+					opinion = -1
+				}
+			}
+			random_country = {
+				limit = {
+					religious_school = {
+						group = nonintervention_group
+						school = proactive_school
+					}
+				}
+				set_school_opinion = {
+					who = PREV
+					opinion = -1
 				}
 			}
 		}

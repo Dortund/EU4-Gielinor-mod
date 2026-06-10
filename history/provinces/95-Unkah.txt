@@ -21,8 +21,8 @@ native_hostileness = 2
 center_of_trade = 1
 
 2167.3.24 = {
-	owner = ALK
-	controller = ALK
-	add_core = ALK
+	owner = SAN
+	controller = SAN
+	add_core = SAN
 	culture = alkharidian
 }

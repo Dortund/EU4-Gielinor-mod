@@ -1,0 +1,1324 @@
+kharidian_emergence_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 6
+	available = {
+	}
+	powers = {
+		kharidian_emergence_adm = {
+			max = 250
+			monarch_power = ADM
+			base_monthly_growth = 0.25
+		}
+		kharidian_emergence_dip = {
+			max = 250
+			monarch_power = DIP
+			base_monthly_growth = 0.25
+		}
+		kharidian_emergence_mil = {
+			max = 250
+			monarch_power = MIL
+			base_monthly_growth = 0.25
+		}
+	}
+	
+	interactions = {
+		kharidian_emergence_adm_reform = {
+			icon = GFX_kharidian_emergence_ADM
+			cost_type = kharidian_emergence_adm
+			cost = 0
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = kharidian_emergence_trigger_tt
+					NOT = { 
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 5
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 4
+						}
+						NOT = {
+							check_variable = {
+								which = kharidian_emergence_adm_var
+								value = 5
+							}
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = 200
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 3
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = 175
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 2
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = 150
+					}
+					66 = {
+						OR = {
+							owned_by = ROOT
+							AND = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 1
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = 125
+					}
+					62 = {
+						OR = {
+							owned_by = ROOT
+							AND = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = 100
+					}
+				}
+            }
+			effect = {
+				if = {
+					limit = { 
+						NOT = {
+							check_variable = {
+								which = kharidian_emergence_adm_var
+								value = 1
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = -100
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_adm_counter_1_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_adm_counter_1_tt_ALK
+					}
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_adm_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_3_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_2_modifier_ALK
+						change_government_reform_progress = 100
+						set_variable = {
+							which = kharidian_emergence_adm_var
+							value = 1
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 1
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_adm_var
+								value = 2
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = -125
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_adm_counter_2_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_adm_counter_2_tt_ALK
+					}
+
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_adm_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_3_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_adm_var
+							value = 2
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_adm_2_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_adm_2_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 2
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_adm_var
+								value = 3
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = -150
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_adm_counter_3_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_adm_counter_3_tt_ALK
+					}
+
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_adm_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_2_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_adm_var
+							value = 3
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_adm_3_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_adm_3_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+					if = {
+						limit = {
+							789 = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+						789 = {
+							add_siberian_construction = 400
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 3
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_adm_var
+								value = 4
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = -175
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_adm_counter_4_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_adm_counter_4_tt_ALK
+					}
+
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_adm_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_3_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_2_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_adm_var
+							value = 4
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_adm_4_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_adm_4_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+					if = {
+						limit = {
+							66 = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+						66 = {
+							add_siberian_construction = 400
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 4
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_adm_var
+								value = 5
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_adm
+						value = -200
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_adm_counter_5_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_adm_counter_5_tt_ALK
+					}
+					
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_adm_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_adm_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_3_modifier_ALK
+						remove_country_modifier = kharidian_emergence_adm_2_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_adm_var
+							value = 5
+						}
+					}
+					
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_adm_5_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_adm_5_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_adm_var
+							value = 5
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_adm_counter_6_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_adm_counter_6_tt_ALK
+					}
+				}
+				else = {}
+			}
+			ai_chance = {
+				factor = 10
+			}
+		}
+		kharidian_emergence_dip_reform = {
+			icon = GFX_kharidian_emergence_DIP
+			cost_type = kharidian_emergence_dip
+			cost = 0
+			trigger = { 
+				custom_trigger_tooltip = {
+					tooltip = kharidian_emergence_trigger_tt
+					NOT = { 
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 5
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 4
+						}
+						NOT = {
+							check_variable = {
+								which = kharidian_emergence_dip_var
+								value = 5
+							}
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = 200
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 3
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = 175
+					}
+					1395 = {
+						OR = {
+							owned_by = ROOT
+							AND = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 2
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = 150
+					}
+					65 = {
+						OR = {
+							owned_by = ROOT
+							AND = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 1
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = 125
+					}
+					61 = {
+						OR = {
+							owned_by = ROOT
+							AND = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = 100
+					}
+				}
+            }
+			effect = {
+				if = {
+					limit = { 
+						NOT = {
+							check_variable = {
+								which = kharidian_emergence_dip_var
+								value = 1
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = -100
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_dip_counter_1_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_dip_counter_1_tt_ALK
+					}
+
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_dip_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_3_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_2_modifier_ALK
+						add_mercantilism = 5
+						set_variable = {
+							which = kharidian_emergence_dip_var
+							value = 1
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 1
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_dip_var
+								value = 2
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = -125
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_dip_counter_2_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_dip_counter_2_tt_ALK
+					}
+
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_dip_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_3_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_dip_var
+							value = 2
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_dip_2_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_dip_2_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+					if = {
+						limit = {
+							61 = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+						61 = {
+							add_siberian_construction = 400
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 2
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_dip_var
+								value = 3
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = -150
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_dip_counter_3_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_dip_counter_3_tt_ALK
+					}
+				
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_dip_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_2_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_dip_var
+							value = 3
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_dip_3_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_dip_3_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+					if = {
+						limit = {
+							65 = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+						65 = {
+							add_siberian_construction = 400
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 3
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_dip_var
+								value = 4
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = -175
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_dip_counter_4_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_dip_counter_4_tt_ALK
+					}
+	
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_dip_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_3_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_2_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_dip_var
+							value = 4
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_dip_4_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_dip_4_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+					if = {
+						limit = {
+							1395 = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+						1395 = {
+							add_siberian_construction = 400
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 4
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_dip_var
+								value = 5
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_dip
+						value = -200
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_dip_counter_5_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_dip_counter_5_tt_ALK
+					}
+					
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_dip_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_dip_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_3_modifier_ALK
+						remove_country_modifier = kharidian_emergence_dip_2_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_dip_var
+							value = 5
+						}
+					}
+					
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_dip_5_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_dip_5_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_dip_var
+							value = 5
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_dip_counter_6_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_dip_counter_6_tt_ALK
+					}
+				}
+				else = {}
+			}
+			ai_chance = {
+				factor = 10
+			}
+		}
+		kharidian_emergence_mil_reform = {
+			icon = GFX_kharidian_emergence_MIL
+			cost_type = kharidian_emergence_mil
+			cost = 0
+			trigger = { 
+				custom_trigger_tooltip = {
+					tooltip = kharidian_emergence_trigger_tt
+					NOT = { 
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 5
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 4
+						}
+						NOT = {
+							check_variable = {
+								which = kharidian_emergence_mil_var
+								value = 5
+							}
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = 200
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 3
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = 175
+					}
+					67 = {
+						OR = {
+							owned_by = ROOT
+							AND = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 2
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = 150
+					}
+					64 = {
+						OR = {
+							owned_by = ROOT
+							AND = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 1
+						}
+					}
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = 125
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = 100
+					}
+				}
+            }
+			effect = {
+				if = {
+					limit = { 
+						NOT = {
+							check_variable = {
+								which = kharidian_emergence_mil_var
+								value = 1
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = -100
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_mil_counter_1_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_mil_counter_1_tt_ALK
+					}
+					
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_mil_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_3_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_2_modifier_ALK
+						add_army_professionalism = 0.05
+						set_variable = {
+							which = kharidian_emergence_mil_var
+							value = 1
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 1
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_mil_var
+								value = 2
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = -125
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_mil_counter_2_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_mil_counter_2_tt_ALK
+					}
+
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_mil_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_3_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_mil_var
+							value = 2
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_mil_2_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_mil_2_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 2
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_mil_var
+								value = 3
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = -150
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_mil_counter_3_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_mil_counter_3_tt_ALK
+					}
+				
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_mil_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_2_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_mil_var
+							value = 3
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_mil_3_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_mil_3_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+					if = {
+						limit = {
+							64 = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+						64 = {
+							add_siberian_construction = 400
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 3
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_mil_var
+								value = 4
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = -175
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_mil_counter_4_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_mil_counter_4_tt_ALK
+					}
+	
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_mil_5_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_5_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_3_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_2_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_mil_var
+							value = 4
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_mil_4_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_mil_4_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+					if = {
+						limit = {
+							67 = {
+								is_empty = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+								}
+							}
+						}
+						67 = {
+							add_siberian_construction = 400
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 4
+						}
+						NOT = { 
+							check_variable = {
+								which = kharidian_emergence_mil_var
+								value = 5
+							}
+						}
+					}
+					add_government_power = {
+						mechanic_type = kharidian_emergence_mechanic
+						power_type = kharidian_emergence_mil
+						value = -200
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_mil_counter_5_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_mil_counter_5_tt_ALK
+					}
+					
+					hidden_effect = {
+						remove_country_modifier = kharidian_emergence_mil_4_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_3_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_2_modifier_HET
+						remove_country_modifier = kharidian_emergence_mil_4_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_3_modifier_ALK
+						remove_country_modifier = kharidian_emergence_mil_2_modifier_ALK
+						set_variable = {
+							which = kharidian_emergence_mil_var
+							value = 5
+						}
+					}
+					
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						add_country_modifier = {
+							name = kharidian_emergence_mil_5_modifier_HET
+							duration = -1
+							hidden = yes
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = kharidian_emergence_mil_5_modifier_ALK
+							duration = -1
+							hidden = yes
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = {
+							which = kharidian_emergence_mil_var
+							value = 5
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = KDS_loyalist_missions_branch_flag
+						}
+						custom_tooltip = kharidian_emergence_mil_counter_6_tt_HET
+					}
+					else = {
+						custom_tooltip = kharidian_emergence_mil_counter_6_tt_ALK
+					}
+				}
+				else = {}
+			}
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+}

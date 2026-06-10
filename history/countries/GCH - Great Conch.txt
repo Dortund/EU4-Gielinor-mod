@@ -1,0 +1,31 @@
+government = republic
+add_government_reform = secluded_island_republic
+add_government_reform = tortugan_travelling_culture_reform
+government_rank = 1
+primary_culture = tortugan
+religion = seiryu
+technology_group = wushankotechgroup
+capital = 1500 #Summer Shore
+
+1896.11.27 = {
+	monarch = {
+		name = "Bonito"
+		dynasty = "Fisher"
+		birth_date = 1885.2.15
+		adm = 5
+		dip = 0
+		mil = 4
+	}
+}
+
+2160.8.2 = {
+	monarch = {
+		name = "Bonnethead"
+		dynasty = "Scout"
+		birth_date = 2125.3.14
+		adm = 2
+		dip = 2
+		mil = 4
+		female = yes
+	}
+}

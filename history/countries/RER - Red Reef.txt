@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = merchants_reform
+government_rank = 1
+primary_culture = ardignan
+religion = saradomin
+technology_group = centraltechgroup
+capital = 1512 #Red Reef
+national_focus = DIP
+
+2144.11.19 = {
+	monarch = {
+		name = "Spencer"
+		dynasty = "Brentwood"
+		birth_date = 2126.5.20
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

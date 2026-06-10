@@ -125,6 +125,17 @@ insult_evr_dl = {
 	}
 }
 
+insult_great_conch = {
+	trigger = {
+		tag = GCH
+		FROM = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+	}
+}
+
 insult_gunnar = {
 	trigger = {
 		tag = GUN
@@ -148,8 +159,8 @@ insult_kharidian_empire = {
 		tag = KEM
 		FROM = {
 			NOT = {
-			religion_group = menaphite_group
-			religion = seren
+				religion_group = menaphite_group
+				religion = seren
 			}
 		}
 	}
@@ -157,15 +168,19 @@ insult_kharidian_empire = {
 
 insult_kourend = {
 	trigger = {
-		tag = KOU
+		OR = {
+			tag = GCH
+			tag = KOU
+		}		
 		FROM = {
 			NOT = {
-			tag = AUU
-			tag = HOS
-			tag = LOV
-			tag = PCL
-			tag = SYZ
-			tag = KTW
+				tag = AUU
+				tag = HOS
+				tag = LOV
+				tag = PCL
+				tag = SYZ
+				tag = KTW
+				tag = GCH
 			}
 		}
 	}
@@ -289,6 +304,7 @@ insult_noncanon = {
 		tag = MYN
 		# From 1.7.0
 		tag = TSK
+		# Probably more I missed to be honest
 		}
 	}
 }
@@ -581,7 +597,10 @@ insult_bth_syz = {
 
 insult_sar_mst_zam_myt = {
 	trigger = {
-		tag = MYT
+		OR = {
+			tag = CFS
+			tag = MYT
+		}
 		religion = zamorak
 		FROM = {
 			tag = MST 
@@ -713,9 +732,15 @@ insult_msh_mst = {
 
 insult_var_bth = {
 	trigger = {
-		tag = BTH
+		OR = {
+			tag = BTH
+			tag = HOS
+		}
 		FROM = {
-			tag = VAR
+			OR = {
+				tag = VAR
+				tag = ALD
+			}
 		}
 	}
 }
@@ -814,6 +839,15 @@ insult_mechanical_group = {
 		culture_group = mechanical_group
 		FROM = {
 			NOT = { culture_group = mechanical_group }
+		}
+	}
+}
+
+insult_tortugan_group = {
+	trigger = {
+		culture_group = tortugan_group
+		FROM = {
+			NOT = { culture_group = tortugan_group }
 		}
 	}
 }
@@ -1049,6 +1083,33 @@ insult_goblins_from_yur = {
 ###########################
 # Gods
 ###########################
+
+insult_amascut = {
+	trigger = {
+		religion = amascut_religion
+		FROM = { 
+			NOT = { religion = amascut_religion }
+		}
+	}
+}
+
+insult_amascut2 = {
+	trigger = {
+		religion = amascut_religion
+		FROM = { 
+			NOT = { religion_group = menaphite_group }
+		}
+	}
+}
+
+insult_amascut_from_menaphite = {
+	trigger = {
+		religion = amascut_religion
+		FROM = { 
+			religion = menaphite
+		}
+	}
+}
 
 insult_armadyl = {
 	trigger = {
@@ -1298,10 +1359,10 @@ insult_karamjan = {
 		religion = karamjan
 		FROM = {
 			NOT = {
-			religion = karamjan
-			religion = menaphite
-			religion = v
-			religion = northern_pantheon
+				religion = karamjan
+				religion_group = menaphite_group
+				religion = v
+				religion = northern_pantheon
 			}
 		}
 	}
@@ -1346,7 +1407,16 @@ insult_menaphite = {
 	trigger = {
 		religion = menaphite
 		FROM = { 
-			NOT = { religion = menaphite }
+			NOT = { religion_group = menaphite_group }
+		}
+	}
+}
+
+insult_menaphite_from_amascut = {
+	trigger = {
+		religion = menaphite
+		FROM = { 
+			religion = amascut_religion
 		}
 	}
 }
@@ -1365,6 +1435,15 @@ insult_queen_of_ashes = {
 		religion = queen_of_ashes
 		FROM = {
 			NOT = { religion = queen_of_ashes }
+		}
+	}
+}
+
+insult_queen_of_ashes_from_amascut = {
+	trigger = {
+		religion = queen_of_ashes
+		FROM = {
+			religion = amascut_religion
 		}
 	}
 }
@@ -1761,6 +1840,26 @@ insult_from_boss_nation = {
 	}
 }
 
+###########################
+#Special
+###########################
+
+insult_from_ironman = {
+	trigger = {
+		from = {
+			ironman = yes
+		}
+	}
+}
+insult_wintertodt_from_ironman = {
+	trigger = {
+		tag = WDT
+		from = {
+			ironman = yes
+		}
+	}
+}
+
 #######################################################
 
 # Default
@@ -1969,6 +2068,14 @@ insult_low_adm = {
 		}
 	}
 }
+
+insult_low_mandate = {
+	trigger = {
+		is_emperor_of_china = yes
+		NOT = { imperial_mandate = 30 }
+	}
+}
+
 
 insult_against_craven = {
 	trigger = {

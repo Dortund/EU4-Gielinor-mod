@@ -26,12 +26,12 @@ country_event = {
 			}
 			change_religion = saradomin
 		}
-		set_country_flag = DYN_saradomin_missions_flag
+		set_country_flag = DYN_saradomin_missions_branch_flag
 		swap_non_generic_missions = yes
 	}
 	option = {
 		name = flavor_dyn.1.b #We need to learn to live together.
-		set_country_flag = DYN_religious_peace_flag
+		set_country_flag = DYN_religious_peace_branch_flag
 		swap_non_generic_missions = yes
 	}
 	option = {
@@ -42,7 +42,7 @@ country_event = {
 			}
 			change_religion = zamorak
 		}
-		set_country_flag = DYN_chaos_missions_flag
+		set_country_flag = DYN_chaos_missions_branch_flag
 		swap_non_generic_missions = yes
 	}
 }
@@ -51,7 +51,7 @@ country_event = {
 	id = flavor_dyn.2
 	title = flavor_dyn.2.t #The Return of Count Draynor
 	desc = flavor_dyn.2.d #Since around 1100 of the Fourth Age, the vampyre Draynor Drakan has been stranded in Misthalin, steadily losing power. But now as the power of Draynor's followers grow, and the supply of blood to feed him increases, he is finally strong enough to take a position of leadership.
-	picture = ZAMORAK_ICON_eventPicture
+	picture = MORYTANIA_VYREWATCH_eventPicture
 	
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -139,9 +139,9 @@ country_event = {
 		name = flavor_dyn.3.a
 		trigger = {
 			OR = {
-				has_country_flag = DYN_religious_peace_flag
-				has_country_flag = DYN_saradomin_missions_flag
-				has_country_flag = DYN_chaos_missions_flag
+				has_country_flag = DYN_religious_peace_branch_flag
+				has_country_flag = DYN_saradomin_missions_branch_flag
+				has_country_flag = DYN_chaos_missions_branch_flag
 			}
 		}
 		select_current_missions = { key = DYN }
@@ -150,34 +150,31 @@ country_event = {
 	
 	option = {
 		name = flavor_dyn.3.c
-		trigger = { NOT = { has_country_flag = DYN_religious_peace_flag } }
-		set_country_flag = DYN_religious_peace_flag
-		clr_country_flag = DYN_saradomin_missions_flag
-		clr_country_flag = DYN_chaos_missions_flag
+		trigger = { NOT = { has_country_flag = DYN_religious_peace_branch_flag } }
+		set_country_flag = DYN_religious_peace_branch_flag
+		clr_country_flag = DYN_saradomin_missions_branch_flag
+		clr_country_flag = DYN_chaos_missions_branch_flag
 		swap_non_generic_missions = yes
-		custom_tooltip = per_preview_muslim_missions
 		ai_chance = { factor = 0 }
 	}
 	
 	option = {
 		name = flavor_dyn.3.c
-		trigger = { NOT = { has_country_flag = DYN_saradomin_missions_flag } }
-		clr_country_flag = DYN_religious_peace_flag
-		set_country_flag = DYN_saradomin_missions_flag
-		clr_country_flag = DYN_chaos_missions_flag
+		trigger = { NOT = { has_country_flag = DYN_saradomin_missions_branch_flag } }
+		clr_country_flag = DYN_religious_peace_branch_flag
+		set_country_flag = DYN_saradomin_missions_branch_flag
+		clr_country_flag = DYN_chaos_missions_branch_flag
 		swap_non_generic_missions = yes
-		custom_tooltip = per_preview_muslim_missions
 		ai_chance = { factor = 0 }
 	}
 	
 	option = {
 		name = flavor_dyn.3.d
-		trigger = { NOT = { has_country_flag = DYN_chaos_missions_flag } }
-		clr_country_flag = DYN_religious_peace_flag
-		clr_country_flag = DYN_saradomin_missions_flag
-		set_country_flag = DYN_chaos_missions_flag
+		trigger = { NOT = { has_country_flag = DYN_chaos_missions_branch_flag } }
+		clr_country_flag = DYN_religious_peace_branch_flag
+		clr_country_flag = DYN_saradomin_missions_branch_flag
+		set_country_flag = DYN_chaos_missions_branch_flag
 		swap_non_generic_missions = yes
-		custom_tooltip = per_preview_zoroastrian_missions
 		ai_chance = { factor = 0 }
 	}
 	
@@ -193,9 +190,22 @@ country_event = {
 	option = {
 		trigger = { ai = yes }
 		random_list = {
-			70 = { set_country_flag = DYN_religious_peace_flag clr_country_flag = DYN_saradomin_missions_flag clr_country_flag = DYN_chaos_missions_flag }
-			29 = { clr_country_flag = DYN_religious_peace_flag set_country_flag = DYN_saradomin_missions_flag clr_country_flag = DYN_chaos_missions_flag }
-			1 = {  clr_country_flag = DYN_religious_peace_flag clr_country_flag = DYN_saradomin_missions_flag set_country_flag = DYN_chaos_missions_flag }
+			70 = {
+				set_country_flag = DYN_religious_peace_branch_flag
+				clr_country_flag = DYN_saradomin_missions_branch_flag
+				clr_country_flag = DYN_chaos_missions_branch_flag
+			}
+			29 = {
+				clr_country_flag = DYN_religious_peace_branch_flag
+				set_country_flag = DYN_saradomin_missions_branch_flag
+				clr_country_flag = DYN_chaos_missions_branch_flag
+			}
+			1 = { 
+				clr_country_flag = DYN_religious_peace_branch_flag
+				clr_country_flag = DYN_saradomin_missions_branch_flag
+				set_country_flag = DYN_chaos_missions_branch_flag
+				change_religion = zamorak
+			}
 		}
 		swap_non_generic_missions = yes
 		select_current_missions = { key = DYN }

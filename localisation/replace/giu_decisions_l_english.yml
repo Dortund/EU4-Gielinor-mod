@@ -1,14 +1,46 @@
 ﻿l_english:
+
+# Estates
+
+ curtail_estate_admirals_title:0 "Curtail the Admirality"
+ curtail_estate_admirals_desc:0 "The naval interests of our country have grown out of control; to restore order we must curtail their power and privileges."
+ curtail_estate_workers_title:0 "Curtail the Workers"
+ curtail_estate_workers_desc:0 "Workers have gained enough power in our realm that our ruler struggles to exert any influence. If we are to restore centralised power, we must seize it from the workers."
+
+ estate_admirals_grant_admiralship_title:0 "[Root.GetAdmiralsName]: Grant New Admiralship"
+ estate_admirals_grant_admiralship_desc:0 "[Root.EstateDecisionDescription]"
+ 
+# Empire of Kharid
+
+ empire_of_kharid_establish_settlement_title:0 "Establish New Kharidian Settlement"
+ empire_of_kharid_establish_settlement_desc:0 "The lost strength of the Kharidian Empire can be restored through resettling the desert. It will cost us a small sum of resources but strengthen Tumeken's mandate upon our Pharoah."
+ empire_of_kharid_establish_settlement_must_valid_empty_tooltip:0 "Must have a valid province in the §YKharidian Desert§! region open for colonisation."
+ empire_of_kharid_establish_settlement_20_year_cooldown:0 "Must not have performed this action more recently than 20 years ago."
+ kharidian_settlement_cooldown_flag:0 "Recently used §YEstablish Kharidian Settlement§!"
+ 
+ kds_het_apply_for_tributary_status_title:0 "Apply to be the Pharoah's Tributary"
+ kds_het_apply_for_tributary_status_desc:0 "Hetiyyah was founded to represent the Pharoah's power beyond Kharid yet somehow we have fallen out of their grasp. Let us rebuild this status!"
+ kds_het_bid_for_tributary_tooltip:0 "Make a bid for Tributary status. An AI-controlled Pharoah will always accept this offer."
+ kds_het_aid_for_the_pharoah_decision_title:0 "Aid for the Pharoah"
+ kds_het_aid_for_the_pharoah_decision_desc:0 "The Pharoah will be pleased if we can send additional resources above the usual tribute."
+ 
+
+# National Formation
+
  acheron_nation_title:0 "Unite Acheron"
  acheron_nation_desc:0 "Our isle is forgotten by the rest of the world, but if we united it under a single rule, we could stake our claim to a place in Gielinor."
  al_kharid_nation_title:0 "Form Al Kharid"
  al_kharid_nation_desc:0 "We have wandered the desert for a long time, but now our interests would be better-served settling down into a more permanent city. Raise the banner of Al Kharid!"
+ choose_al_kharid_missions_tooltip:0 "Must have chosen the §YAl Kharid§! branch of Kharidian missions"
  ape_atoll_nation_title:0 "Unify Ape Atoll"
  ape_atoll_nation_desc:0 "Followers of Marimbo were once under one banner - or at least, going to the same parties. Things have fallen apart over the centuries and it is up to us to reunite the faithful."
  ardougne_nation_title:0 "Found the town of Ardougne"
  ardougne_nation_desc:0 "The Zamorakian presence in Kandarin has become too much to bear. For the sake of the future for all good followers of Saradomin, we must drive the heathens out and establish a new safe haven for the faith!"
  asgarnian_nation_title:0 "Form Asgarnia"
  asgarnian_nation_desc:0 "The tribes of Asgarnia share a common identity and need to stand together if they are to survive. Let us be the ones to lead a united Asgarnia!"
+ barbarian_outpost_nation_title:0 "Settle into a Barbarian Outpost"
+ barbarian_outpost_nation_desc:0 "The world is changing and the age of small, isolated Fremennik Clans is coming to an end. Perhaps it is best for us to find a good spot to settle down."
+ gunnar_must_have_appeared_tooltip:0 "Gunnar must have initiated his Great Invasion."
  baxtoria_nation_title:0 "Form the Kingdom of Baxtoria"
  baxtoria_nation_desc:0 "The Cadarn clan has been relatively insular within northern Kandarin, but with the war in Tirannwn, it is necessary to reassess our original aims. Perhaps our new ambition should be to create a new, open, kingdom in Kandarin breaking from the insularity of Tirannwn past?"
  feldip_nation_title:0 "Unite the Feldip Hills"
@@ -29,10 +61,13 @@
  karamjan_nation_desc:0 "There were once powerful Karamjan kingdoms with far-reaching influence, but much was destroyed by the God Wars. If we were to achieve a dominant position on the island, perhaps we can avenge our ancestors, lost to the Zamorakians, and strike out as a united Karamja once more!"
  kharidian_empire_nation_title:0 "Restore the Kharidian Empire"
  kharidian_empire_nation_desc:0 "Once a power capable of resisting the vast Zarosian Empire, the Kharidian people are now left scattered in various crumbling cities. However, if we were to unite all the Kharidian realms, we could create an empire without the obstacles of the past, and raise the Menaphite Pantheon to the highest among all the gods!"
+ choose_direction_of_kharidians_tooltip:0 "Must choose a path unlocked after the §YFuture of North Kharid§! mission."
  new_imcandoria_nation_title:0 "Found a New Imcandoria"
  new_imcandoria_nation_desc:0 "The old city of Imcandoria, home of the Imcando Dwarves, was lost in the late-Second Age. Though it may never be reclaimed, we can honour its memory in a new nation."
  new_varrock_nation_title:0 "Proclaim a New Varrock"
  new_varrock_nation_desc:0 "The pesky realm of Misthalin has evaded my grasp for aeons, but now is the time to strike! Let us erase the history of that curséd realm and proclaim a New Varrock!"
+ reform_gnome_empire_title:0 "Reform the Gnome Empire"
+ reform_gnome_empire_desc:0 "Mutual mistrust between the Tree Gnome Stronghold and Tree Gnome Village tore the Gnome Empire apart. But we can reunify the Empire under our own terms!"
  reform_misthalin_title:0 "Reform Misthalin"
  reform_misthalin_desc:0 "Misthalin was once the greatest of human nations, but it has since collapsed. Let us pick up the torn banner of Arrav's people and reforge a new Misthalin!"
  reform_kourend_title:0 "Reform Kourend"
@@ -43,6 +78,16 @@
  urval_order_nation_desc:0 "Urval the Exile was the founder of the Chaos Druids. Thus far we have followed his initial actions in keeping our actions limited, but as our power grows it may be time to take a more active stance in spreading the good word of Zamorak around the world."
  zaros_empire_nation_title:0 "Restore the Zarosian Empire"
  zaros_empire_nation_desc:0 "In the Second Age, the Empty Lord dominated a continent with the greatest empire the world ever saw. The fall of that empire lead to two thousand years of brutal warfare engulfing the entire world. The only way to undo that damage is for the followers of Zaros to restore his empire!"
+ 
+ gunnar_nation_title:0 "Initiate the Runecrafting Crusades"
+ gunnar_nation_desc:0 "Magic has always been controversial among the Fremennik, but with the spread of Runecrafting throughout Gielinor, the anti-magic Barbarians will be ready to unite under one banner and unleash the Great Invasion!"
+ must_be_strongest_barbarian:0 "Must have §Ymore total development§! than any other nearby Barbarian-culture country"
+ gunnar_becomes_leader_and_army_tooltip:0 "§YGunnar Viljarsson§! will lead our nation and bring a §Yconsiderable army§! to our capital to serve us!"
+ release_gunnar_nation_title:0 "Sponsor the Great Invasion"
+ release_gunnar_nation_desc:0 "The spread of Runecrafting throughout Gielinor has driven a vicious wedge between those Fremennik who oppose mortal use of magic and those who do not. Perhaps we can save ourselves some internal division by letting them go off on their own crusade."
+ must_be_stronger_than_all_barbarians:0 "Must have §Ymore total development§! than any nearby Barbarian-culture country"
+ cede_all_barbarian_provinces_to_friendly_gunnar:0 "All owned provinces of Barbarian culture §Rwill be ceded§! to §YGunnar§!, who will consider you a §Yhistorical friend§!.\n\nIf you ally Gunnar, you will be §Gfavoured to receive provinces§! from his §YMigrate the Fremennik§! government interaction.\n"
+ gunnar_will_love_you_tooltip:0 "Such support for the Great Invasion will §Yeliminate any vulnerability§! you built up to the enemies of Runecrafting via events."
  
  evr_reunite_tirannwn_nation_title:0 "Reunite Tirannwn"
  evr_reunite_tirannwn_nation_desc:0 "Once the terrible menace of Clan Iorwerth is put to an end, we can finally reunite the clans under the banner of Tirannwn once more!"
@@ -73,6 +118,8 @@
  wushanko_nation_title:0 "Forcefully Unite Wushanko"
  wushanko_nation_desc:0 "Few have dreamed to unify Wushanko, and even fewer believe it is possible. The continent is vast; its peoples diverse. The Council of Khans has historically been seen as the furthest intra-continental co-operation would get - but there may be another way. It would take the greatest of admirals; the toughest of ships; and tenacity never seen before."
  
+ # Elder Artefacts
+ 
  raid_temple_of_ikov_title:0 "Raid the Temple of Ikov"
  raid_temple_of_ikov_desc:0 "An almighty weapon has been extracted from the Armadylean Temple of Ikov. Such an action may have dire consequences for the world - or huge opportunities for its wielder."
  raid_the_guthixian_temple_title:0 "Raid the Guthixian Temple"
@@ -82,6 +129,15 @@
  capture_the_staff_of_armadyl_desc:0 "If we control the province the Staff of Armadyl is located in, we can take it back to our capital."
  capture_the_stone_of_jas_title:0 "Capture the Stone of Jas"
  capture_the_stone_of_jas_desc:0 "If we control the province the Stone of Jas is located in, we can take it back to our capital."
+ 
+ # Governments
+ 
+ kds_alk_full_emergence_decision_title:0 "Complete the Kharidian Emergence Reforms"
+ kds_alk_full_emergence_decision_desc:0 "Once we have finished learning all we can about governance from other countries, it is time to reform the structure of our government."
+ kds_alk_all_emergence_reforms:0 "Completed all 15 §YKharidian Emergence§! reforms."
+ kds_alk_keep_all_emergence_bonuses:0 "Permanently keep all bonuses acquired via the §YKharidian Emergence§! mechanic."
+ 
+ # National Flavour
  
  CFS_found_canifis_title:0 "Found Canifis"
  CFS_found_canifis_desc:0 "A permanent capital would bring greater prestige to werewolves. There is a curious clearing, surrounded by a seemingly natural moat, to our west, which is an ideal place to build a new settlement."
@@ -125,6 +181,9 @@
  destroy_cabbages_title:0 "Destroy the Cabbages"
  destroy_cabbages_desc:0 "Although a useful source of nutrition, cabbages are not exactly the most valuable of crops. Perhaps we should destroy them to make room for a more useful crop."
  
+ GCH_end_the_culture_of_travel_title:0 "End the Culture of Travel"
+ GCH_end_the_culture_of_travel_desc:0 "Tortugans traditionally travel away from home during adulthood, only returning in older age. This keeps our realm stable but also limits its productivity. Perhaps fresh thinking is what we need?"
+ 
  gunnar_crush_altars_title:0 "Crush the Runecrafting Altars!"
  gunnar_crush_altars_desc:0 "The vile Moonclan built these wretched altars to steal the power of the Gods for themselves! They must be destroyed."
  gunnar_restore_altars_title:0 "Restore our Runecrafting Altars"
@@ -150,3 +209,57 @@
  
  settle_salve_bank_decision_title:0 "Settle the East Bank of the Salve"
  settle_salve_bank_decision_desc:0 "Swamp waters in Morytania have impeded development in many parts of the region. But with sufficient investment, we could settle the east bank of the Salve near Paterdomus."
+ 
+ # Religious Decisions
+ 
+ amascut_religion_escape_decision_title:0 "Escape Amascut's Grasp"
+ amascut_religion_escape_decision_desc:0 "With great effort, we can break from the bounds of Amascut and once again be a free people."
+ amascut_religion_escape_removes_reform:0 "Removes the §YThrall of Amascut§! government reform."
+ 
+ chaos_group_policy_of_vandalism_decision_title:0 "Policy of Vandalism"
+ chaos_group_policy_of_vandalism_decision_desc:0 "Employ a policy of actively vandalising altars of opposing religions."
+ zamorak_open_zmi_branch_decision_title:0 "Open Zamorakian Magical Institute Branch"
+ zamorak_open_zmi_branch_decision_desc:0 "In chaos we find possibility. Through expanding the Zamorakian Magical Institute to our own country we can boost both our religious and research aims."
+
+ karamjan_group_widen_potion_rituals_decision_title:0 "Widen Potion Rituals"
+ karamjan_group_widen_potion_rituals_decision_desc:0 "In the face of powerful religions from outside Karamja, we must take a proactive stance to safeguard our traditions. Look to the powerful herbs of Karamja to create new potions of protection!"
+
+ menaphite_group_support_wandering_scholars_decision_title:0 "Support Wandering Religious Scholars"
+ menaphite_group_support_wandering_scholars_decision_desc:0 "Let us use our most learned subjects as a beacon of the true faith."
+
+ nonintervention_group_religious_history_education_decision_title:0 "Expand Religious History Education"
+ nonintervention_group_religious_history_education_decision_desc:0 "The Third Age demonstrated how Gods can act without restraint, devastating their followers. However, followers of these most destructive Gods are ignorant of this history so we must bring it to them."
+ guthix_widen_druidic_recruitment_decision_title:0 "Widen Druidic Recruitment"
+ guthix_widen_druidic_recruitment_decision_desc:0 "Guthix holds no prejudice against the races of Gielinor and neither shall we."
+
+ order_group_edict_of_uniformity_decision_title:0 "Edict of Uniformity"
+ order_group_edict_of_uniformity_decision_desc:0 "In the name of Order, our land should be under one faith."
+ armadyl_promote_armadylean_law_decision_title:0 "Prioritise Armadylean Law"
+ armadyl_promote_armadylean_law_decision_desc:0 "Uphold Armadylean law above all other legal systems in our realm."
+ saradomin_edict_of_denial_decision_title:0 "Edict of Denial"
+ saradomin_edict_of_denial_decision_desc:0 "§RMutually Exclusive§! with §YEdict of Pragmatic Theology§!\n\nMake it official government policy to deny the existence of Gods beyond the righteous Saradomin, the evil Zamorak and misguided Guthix."
+ saradomin_pragmatic_theology_decision_title:0 "Edict of Pragmatic Theology"
+ saradomin_pragmatic_theology_decision_desc:0 "§RMutually Exclusive§! with §YEdict of Denial§!\n\nIt is sometimes necessary to work with other faiths for a greater purpose, even if this sometimes undermines official church doctrine."
+
+ transcendent_group_promote_godly_hierarchy_decision_title:0 "Promote Godly Hierarchy"
+ transcendent_group_promote_godly_hierarchy_decision_desc:0 "Encourage the idea that our God is not merely superior to that of others, but cosmically so."
+ seren_promote_serenist_tolerance_decision_title:0 "Policy of Serenist Tolerance"
+ seren_promote_serenist_tolerance_decision_desc:0 "§RMutually Exclusive§! with §YPromote Godly Hierarchy§!\n\nSeren's history of collaboration with Guthix is an example to our people of tolerance we can emulate."
+
+ elder_god_group_open_proselytising_decision_title:0 "Open Proselytising"
+ elder_god_group_open_proselytising_decision_desc:0 "We do not typically discuss matters of faith with outsiders, though the power of our Gods would inspire converts."
+
+ autocratic_group_doctrine_of_might_decision_title:0 "Doctrine of Might"
+ autocratic_group_doctrine_of_might_decision_desc:0 "Our God is the best because our God will lead us to victory! Those defeated by us should learn from this and convert!"
+ bandos_dogma_literacy_decision_title:0 "Dogmatic Literacy Programmes"
+ bandos_dogma_literacy_decision_desc:0 "Faith in Bandos can be strengthened through propaganda. By expanding literacy efforts among our population, they can engage with our propaganda even when our shamans are absent."
+
+ horror_group_construct_blackstone_pillars_decision_title:0 "Construct Black Stone Pillars"
+ horror_group_construct_blackstone_pillars_decision_desc:0 "The whispers are stronger when the pillars are built. The whispers are stronger when the pillars are built. The whispers..."
+
+ celestial_group_astrological_charting_decision_title:0 "Expand Astrological Charting"
+ celestial_group_astrological_charting_decision_desc:0 "The Sun and the Moon guide our way, and are just part of an endless sky."
+
+ wushanko_group_counter_missionaries_decision_title:0 "Counter-Missionary Doctrine"
+ wushanko_group_counter_missionaries_decision_desc:0 "Foreign missionaries threaten faith in the Wushanko Guardians. If we invest in missionaries of our own, we should be able to keep this pressure at bay."
+ 

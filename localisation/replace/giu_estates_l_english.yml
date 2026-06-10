@@ -1,4 +1,20 @@
 ﻿l_english:
+already_granted_to_other_estate_tooltip:0 "This privilege must §Rnot§! be currently granted to another estate."
+
+# Clergy Names
+estate_marshals:0 "Marshals"
+estate_emissaries:0 "Emissaries"
+estate_healers:0 "Healers"
+estate_pyradins:0 "Pyradins"
+estate_priests:0 "Priests"
+estate_chaos_priests:0 "Chaos Priests"
+estate_teoki:0 "Teoki"
+estate_ascended:0 "Ascended"
+estate_pontificis:0 "Pontificis"
+estate_druids:0 "Druids"
+
+
+# Keldagrim
 estate_kel_blue_opal:0 "Blue Opal"
 estate_kel_blue_opal_desc:0 "The Blue Opal company is home to Keldagrim's finest armour smiths - their best artisans exceed the skill of most humans and rivals the Imcando."
 estate_kel_blue_opal_ownership:0 "[Country.GetBlue OpalName] Land Ownership"
@@ -47,12 +63,154 @@ estate_kel_yellow_fortune_ownership:0 "[Country.GetYellow FortuneName] Land Owne
 kel_yellow_fortune_loyalty_modifier:0 "[Country.GetYellow FortuneName] Loyalty Equilibrium"
 kel_yellow_fortune_influence_modifier:0 "[Country.GetYellow FortuneName] Influence"
 
-
 keldagrim_grant_mineral_rights:0 "Grant Mineral Rights"
 keldagrim_grant_mineral_rights_desc:0 "We can directly strengthen a corporation in the Consortium by granting them exclusive mineral rights to an ore vein."
 
+################################
+#Menaphos
+estate_merchants:0 "Merchants"
+estate_imperials:0 "Imperials"
+
+#Admirals
+estate_admirals:0 "Admirals"
+estate_admirals_desc:0 "Though usually tied to the power of merchants or to the nobility, the naval leaders of this specific realm have considerable enough power to constitute a faction in their own right."
+estate_crassians:0 "Crassians"
+estate_crassians_desc:0 "Xau-Tak's strange, aquatic crab-like beasts serve as the front line of our naval assaults."
+estate_admirals_ownership:0 "[Country.GetAdmiralsName] Land Ownership"
+admirals_loyalty_modifier:0 "[Country.GetAdmiralsName] Loyalty Equilibrium"
+admirals_influence_modifier:0 "[Country.GetAdmiralsName] Influence"
+mechanic_enables_estate_admirals_yes:0 "Enables §YAdmirals§! estate."
+
+EST_VAL_HAS_NO_PORT:0 "Has no coastal provinces"
+EST_VAL_HAS_ADMIRAL:0 "Has at least one Admiral recruited"
+EST_VAL_HAS_HALF_NAVAL_FORCELIMIT:0 "Navy size is at least 50% of the total force limit"
+EST_VAL_HAS_THREE_QUARTERS_NAVAL_FORCELIMIT:0 "Navy size is at least 75% of the total force limit"
+EST_VAL_HAS_MARINES:0 "Has active Marine regiments"
+
+estate_admirals_develop_x:0 "Increase Production in [agenda_province.GetName]"
+estate_admirals_develop_x_desc:0 "The [Root.GetBurghersName] request that we invest in the prosperity of the city of [agenda_province.GetCapitalName]."
+estate_admirals_build_port_building_in_y:0 "Expand Port Infrastructure in [agenda_province.GetName]"
+estate_admirals_build_port_building_in_y_desc:0 "The [Root.GetAdmiralsName] call for the expansion of [agenda_province.GetName]'s port facilities, allowing the province to develop into a valuable naval base for our nation."
+estate_admirals_access_sea:0 "Gain Access to the Sea"
+estate_admirals_access_sea_desc:0 "The [Root.GetAdmiralsName] cannot serve their purpose without access to the sea. They request military action to secure a port for our nation."
+estate_admirals_build_a_fleet:0 "Build a Navy for our Nation"
+estate_admirals_build_a_fleet_desc:0 "The [Root.GetAdmiralsName] are concerned about our lack of maritime strength and demand we build up a navy lest our very shores become controlled bey a foreign power."
+estate_admirals_bigger_fleet_than_rival:0 "Protect against the [agenda_country.GetAdjective] Fleet"
+estate_admirals_bigger_fleet_than_rival_desc:0 "The strength of the [agenda_country.GetAdjective] fleet is a matter of great concern to the [Root.GetAdmiralsName], who worry that they would easily achieve naval supremacy in a war. They call for us to expand our fleet to match that of our rivals."
+
+estate_admirals_land_rights:0 "$ESTATE_NAME$ Land Rights"
+estate_admirals_land_rights_desc:0 "Although the [Root.GetAdmiralsName] thrive in the sea, to achieve their full potential they do also need access to ports."
+estate_admirals_maritime_state:0 "Maritime State"
+estate_admirals_maritime_state_desc:0 "A strong set of [Root.GetAdmiralsName] could expand our state's capacity for action."
+estate_admirals_political_representation:0 "$ESTATE_NAME$ Political Representation"
+estate_admirals_political_representation_desc:0 "Granting [Root.GetAdmiralsName] a larger role in governance could be a good counterbalance to the efforts of rival estates."
+estate_admirals_colonial_logistics:0 "Colonial Logistics"
+estate_admirals_colonial_logistics_desc:0 "Most colonisation happens far from our homelands which means we must rely on sea routes to supply the colonists. As such, we should perhaps work alongside our [Root.GetAdmiralsName]."
+estate_admirals_expand_impressment:0 "Expand Impressment"
+estate_admirals_expand_impressment_desc:0 "No-one wants to be dragged from their home and put out to sea against their will. Which is why we can get the [Root.GetAdmiralsName] to handle it instead of ourselves."
+estate_admirals_promote_admiral_initiative:0 "Promote Initative of $ESTATE_NAME$"
+estate_admirals_promote_admiral_initiative_desc:0 "In the midst of battle our [Root.GetAdmiralsName] can see what we can't from the capital. If they are to see opportunities we do not, they should be able to take them!"
+estate_admirals_private_trade_fleets:0 "Private $ESTATE_NAME$ Trade Fleets"
+estate_admirals_private_trade_fleets_desc:0 "Directly controlling an entire navy is an extremely expensive prospect for a nation. Legitimising some smaller private fleets could bring our costs down without incurring too much of a risk to our own security."
+#estate_admirals_naval_school_right:0 "Naval School Rights"
+#estate_admirals_naval_school_right_desc:0 "By allowing the [Root.GetAdmiralsName] estate control over their own naval academies, we can produce a steady stream of capable naval leaders."
+estate_admirals_rum_supplies:0 "Rum Supplies"
+estate_admirals_rum_supplies_desc:0 "[Root.GetAdmiralsName] and the sailors who serve them are inexplicably drawn to rum. Supplying it across our entire fleet would be a boon to morale, but drunken sailors are not the most effective fighters."
+
+estate_admirals_fish_monopoly:0 "Monopoly on Fish"
+estate_admirals_fish_monopoly_desc:0 "[Root.Admirals.GetName] can travel to deep seas and catch fish we couldn't possibly access on land. Perhaps it is time to grant them a full monopoly over fish production?"
+estate_admirals_monopoly_of_fish_mod:0 "Monopoly on Fish"
+desc_estate_admirals_monopoly_of_fish_mod:0 "The state has granted the [Root.Owner.GetAdmiralsName] monopoly rights over fish production."
+MONOPOLY_INCOME_FISH_DESC:0 "from fish production."
+estate_admirals_monopoly_of_fish_effect_tooltip:0 "§RNo income from §YFish§!§!"
+estate_admirals_monopoly_of_fish_revoke_tooltip:0 "Production income from §YFish§! is restored"
+
+estate_admirals_naval_goods_monopoly:0 "Monopoly on Naval Goods"
+estate_admirals_naval_goods_monopoly_desc:0 "By granting our [Root.Admirals.GetName] a monopoly over naval goods, they should remain well-supplied for future naval engagements."
+estate_admirals_monopoly_of_naval_goods_mod:0 "Monopoly on Naval Goods"
+desc_estate_admirals_monopoly_of_naval_goods_mod:0 "The state has granted the [Root.Owner.GetAdmiralsName] monopoly rights over naval good production."
+MONOPOLY_INCOME_NAVAL_GOODS_DESC:0 "From naval goods production."
+estate_admirals_monopoly_of_naval_goods_effect_tooltip:0 "§RNo income from §YNaval Goods§!§!"
+estate_admirals_monopoly_of_naval_goods_revoke_tooltip:0 "Production income from §YNaval Goods§! is restored"
 
 
+#Workers
+estate_workers:0 "Workers"
+estate_workers_desc:0 "The downtrodden gatherers and crafters may not have much in the way of individual power, but collectively they exert an influence on this realm."
+estate_workers_ownership:0 "[Country.GetWorkersName] Land Ownership"
+workers_loyalty_modifier:0 "[Country.GetWorkersName] Loyalty Equilibrium"
+workers_influence_modifier:0 "[Country.GetWorkersName] Influence"
+mechanic_enables_estate_workers_yes:0 "Enables §YWorkers§! estate."
+
+EST_VAL_GREAT_PROJECT_CONSTRUCTION:0 "Great Project Under Construction: §Y$VAL$%§!"
+EST_VAL_LOW_PRODUCTION_INCOME:0 "Low Production Income: §Y$VAL$%§!"
+EST_VAL_HIGH_PRODUCTION_INCOME:0 "High Production Income: §Y$VAL$%§!"
+EST_VAL_VERY_HIGH_PRODUCTION_INCOME:0 "Very High Production Income: §Y$VAL$%§!"
+
+#Agendas
+estate_workers_fire_advisor:0 "Fire our Administrative Advisor"
+estate_workers_fire_advisor_desc:0 "[Root.Adm_Advisor.GetTitle] [Root.Adm_Advisor.GetName] has shown no sign of relief towards the [Root.GetWorkersName]. The [Root.GetWorkersName], in turn, demand that we fire [Root.Mil_Advisor.GetHerHim]!"
+estate_workers_reduce_corruption:0 "Reduce Corruption"
+estate_workers_reduce_corruption_desc:0 "The [Root.GetWorkersName] are the first to notice when corruption grows out of hand. They demand it be reined in."
+estate_workers_increase_autonomy_in_province_x_desc:0 "The [Root.GetWorkersName] of [agenda_province.GetName] complain at the [Root.GovernmentName]'s heavy-handed rule. They request that we grant them greater autonomy."
+estate_workers_increase_autonomy_in_province_x:0 "Increase Autonomy in [agenda_province.GetName]"
+estate_workers_increase_autonomy_in_province_x_tooltip:0 "[agenda_province.GetName]'s autonomy is reduced by more than 10"
+estate_workers_reduce_war_exhaustion:0 "Recover from the Ravages of War"
+estate_workers_reduce_war_exhaustion_desc:0 "Warfare has ravaged the [Root.GetWorkersName] of [Root.GetName]. They beg that we give them a moment of relief."
+estate_workers_build_production_building_in_y:0 "Invest in crafting infrastructure in [agenda_province.GetName]"
+estate_workers_build_production_building_in_y_desc:0 "The [Root.GetWorkersName] of [agenda_province.GetName] are finding their work particularly burdensome with insufficient investment. They ask that you develop better production infrastructure."
+estate_workers_develop_x:0 "Develop [agenda_province.GetName]"
+estate_workers_develop_x_desc:0 "Good infrastructure can be to the benefit of all, including the [Root.GetWorkersName]. They ask for some investment."
+estate_workers_three_privileges:0 "Grant [Root.GetWorkersName] Privileges"
+estate_workers_three_privileges_desc:0 "The [Root.GetWorkersName] view themselves as the backbone of [Root.GetName] but also consider themselves to have insufficient political representation. They request we grant them further privileges."
+
+#Privileges
+estate_workers_land_rights:0 "$ESTATE_NAME$ Land Rights"
+estate_workers_land_rights_desc:0 "Reserving lands specifically for the homes and workplaces of the [Root.GetWorkersName] should both gain their favour, and reduce our administrative burden."
+estate_workers_managerial_state:0 "Managerial State"
+estate_workers_managerial_state_desc:0 "Stricter oversight of [Root.GetWorkersName] will not appease them yet should yield us greater political power."
+estate_workers_political_representation:0 "$ESTATE_NAME$ Political Representation"
+estate_workers_political_representation_desc:0 "Perhaps the people who build the table should have a seat at it."
+estate_workers_employment_subsidies:0 "Employment Subsidies"
+estate_workers_employment_subsidies_desc:0 "Those who do not provide for the [Root.GetWorkersName] must hear the harrowing cry of the oppressed in the streets: Free stuff please."
+estate_workers_social_mobility:0 "Encourage Social Mobility"
+estate_workers_social_mobility_desc:0 "Apparently there is great expertise to be found among the [Root.GetWorkersName], but other estates are unwilling to hear of it. Perhaps we should take a more proactive approach to finding these experts?"
+estate_workers_expanded_holidays:0 "Expanded Holidays"
+estate_workers_expanded_holidays_desc:0 "Holidays both win the respect of the [Root.GetWorkersName] and forward our [Root.GetReligionName] cause."
+estate_workers_guaranteed_commons:0 "Guaranteed Commons"
+estate_workers_guaranteed_commons_desc:0 "The common land is technically for all people, but in practice it is most relevant for the [Root.GetWorkersName] as they seldom have private land of their own. By guaranteeing a certain portion of common land we grant the [Root.GetWorkersName] better rights than may be afforded in many other realms."
+
+#Monopolies
+estate_workers_logs_monopoly:0 "Monopoly on Logs"
+estate_workers_logs_monopoly_desc:0 "Logs are fundamental to so much of what we build in our nation, so the collection of them requires the mobilisation of vast numbers of [Root.GetWorkersName]. In turn, this requires a huge network of overseers - but if we cut the reins loose and let [Root.GetWorkersName] control production themselves, we could save ourselves some trouble."
+estate_workers_monopoly_of_logs_mod:0 "Monopoly on Logs"
+desc_estate_workers_monopoly_of_logs_mod:0 "The state has granted the [Root.Owner.GetWorkersName] monopoly rights over log production."
+MONOPOLY_INCOME_LOGS_DESC:0 "from basic logs, advanced logs and hardwood production."
+estate_workers_monopoly_of_logs_effect_tooltip:0 "§RNo income from §YBasic Logs§!, §YAdvanced Logs§! and §YHardwoods§!§!"
+estate_workers_monopoly_of_logs_revoke_tooltip:0 "Production income from §YBasic Logs§!, §YAdvanced Logs§! and §YHardwoods§! is restored"
+
+estate_workers_fibres_monopoly:0 "Monopoly on Fibres"
+estate_workers_fibres_monopoly_desc:0 "Picking fibrous plants like flax is an easy, but monotonous job. Perhaps it is best to leave the [Root.GetWorkersName] to it."
+estate_workers_monopoly_of_fibres_mod:0 "Monopoly on Fibres"
+desc_estate_workers_monopoly_of_fibres_mod:0 "The state has granted the [Root.Owner.GetWorkersName] monopoly rights over fibre production."
+MONOPOLY_INCOME_FIBRES_DESC:0 "from fibres production."
+estate_workers_monopoly_of_fibres_effect_tooltip:0 "§RNo income from §YFibres§!§!"
+estate_workers_monopoly_of_fibres_revoke_tooltip:0 "Production income from §YFibres§! is restored"
+
+estate_workers_ore_monopoly:0 "Monopoly on Ores"
+estate_workers_ore_monopoly_desc:0 "Mining can be a pretty menial job, so it tends to be left to the [Root.GetWorkersName]. But harsh conditions and low pay discourage production - perhaps we could add an extra financial incentive by granting the [Root.GetWorkersName] a monopoly?"
+estate_workers_monopoly_of_ore_mod:0 "Monopoly on Ores"
+desc_estate_workers_monopoly_of_ore_mod:0 "The state has granted the [Root.Owner.GetWorkersName] monopoly rights over ore production."
+MONOPOLY_INCOME_ORES_DESC:0 "from basic ore, advanced ore and runite production."
+estate_workers_monopoly_of_ore_effect_tooltip:0 "§RNo income from §YBasic Ores§!, §YAdvanced Ores§! and §YRunite§!§!"
+estate_workers_monopoly_of_ore_revoke_tooltip:0 "Production income from §YBasic Ores§!, §YAdvanced Ores§! and §YRunite§! is restored"
+
+
+
+
+################################
+
+#Obsidian Castes
 estate_tzh_hur:0 "Hur"
 estate_tzh_hur_desc:0 "This caste consists of of crafters and builders."
 estate_kuu_keran:0 "Keran"
@@ -62,9 +220,14 @@ tzh_hur_loyalty_modifier:0 "[Country.GetHurName] Loyalty Equilibrium"
 tzh_hur_influence_modifier:0 "[Country.GetHurName] Influence"
 
 estate_tzh_hur_crafter_representation:0 "Crafter Representation"
-estate_tzh_hur_crafter_representation_desc:0 "Our craftsmen would be greatly appreciative if we gave them better access to our government."
+estate_tzh_hur_crafter_representation_desc:0 "Our crafters would be greatly appreciative if we gave them better access to our government."
 estate_tzh_hur_builder_contracts:0 "Builder Contracts"
 estate_tzh_hur_builder_contracts_desc:0 "Our builders would appreciate a more regulated system of building orders, rather than demanding their assistance at any random moment."
+estate_tzh_hur_builders_of_gielinor:0 "Builders of Gielinor"
+estate_tzh_hur_builders_of_gielinor_desc:0 "Our builders are direct descendants of those who shaped Gielinor's landscape. Their methods have not been forgotten."
+estate_tzh_hur_builders_of_gielinor_gt:0 "Eliminates the development cost penalty caused by terrain type of every owned §YHills§!, §YHighlands§!, §YMountain§!, §YUnderground§! and §YVolcanic§! province and eliminates the self-attrition from §YVolcanic§! provinces."
+estate_tzh_hur_builders_of_gielinor_rt:0 "Restores the development cost penalty caused by terrain type of every owned §YHills§!, §YHighlands§!, §YMountain§!, §YUnderground§! and §YVolcanic§! province and eliminates the self-attrition from §YVolcanic§! provinces."
+
 
 estate_tzh_hur_hire_advisor:0 "Hire a Diplomatic Advisor"
 estate_tzh_hur_hire_advisor_desc:0 "The [Root.GetHurName] desire the [Root.Monarch.GetTitle] to hire a new diplomatic advisor."
@@ -240,6 +403,9 @@ estate_tzh_gaal_protect_against_piracy:0 "Protect Against Piracy"
 estate_tzh_gaal_protect_against_piracy_desc:0 "The [Root.GetGa'alName] bemoan their losses from piracy in the [agenda_trade_node_sea.GetName]. They beseech us to take action to drive out the pirates and privateers that are plundering their trade ships."
 
 
+######################### Nobles
+
+#Privileges
 estate_nobles_KOU_house_cohesion:0 "House Favouritism"
 estate_nobles_KOU_house_cohesion_desc:0 "The Houses of Great Kourend have a huge amount of power which limits the capabilities of the monarch's holdings to expand."
 
@@ -252,11 +418,103 @@ estate_nobles_MYT_internal_focus_desc:0 "The war with Misthalin a distant memory
 estate_nobles_MYT_informal_vyrelord_powers:0 "Informal Vyrelord Powers"
 estate_nobles_MYT_informal_vyrelord_powers_desc:0 "Lord Drakan's long periods of solitude have enabled ever-increasing amounts of corruption among Vyrelords and Vyreladies to go unnoticed."
 
+
+estate_nobles_gunpowder_monopoly:0 "Monopoly on Gunpowder"
+estate_nobles_gunpowder_monopoly_desc:0 "Gunpowder is of immense value for militaries, including the levies held by our [Root.GetNoblesName]. Given the rarity of sources of gunpowder, the [Root.GetNoblesName] are willing to pay a lot for exclusive rights."
+estate_nobles_monopoly_of_gunpowder_mod:0 "Monopoly on Gunpowder"
+desc_estate_nobles_monopoly_of_gunpowder_mod:0 "The state has granted the [Root.Owner.GetNoblesName] monopoly rights over gunpowder production."
+MONOPOLY_INCOME_GUNPOWDER_DESC:0 "from gunpowder production."
+estate_nobles_monopoly_of_gunpowder_effect_tooltip:0 "§RNo income from §YGunpowder§!§!"
+estate_nobles_monopoly_of_gunpowder_revoke_tooltip:0 "Production income from §YGunpowder§! is restored"
+
+estate_nobles_hunter_creature_monopoly:0 "Monopoly on Hunter Creatures"
+estate_nobles_hunter_creature_monopoly_desc:0 "[Root.GetNoblesName] love a good hunt for fun and trophies alike. They would like full control of hunting grounds for themselves so they don't have to mingle with the riff-raff, and are willing to pay upfront for the privilege."
+estate_nobles_monopoly_of_hunter_creature_mod:0 "Monopoly on Hunter Creatures"
+desc_estate_nobles_monopoly_of_hunter_creature_mod:0 "The state has granted the [Root.Owner.GetNoblesName] monopoly rights over hunter creature production."
+MONOPOLY_INCOME_HUNTER_CREATURE_DESC:0 "from hunter creature production."
+estate_nobles_monopoly_of_hunter_creature_effect_tooltip:0 "§RNo income from §YHunter Creatures§!§!"
+estate_nobles_monopoly_of_hunter_creature_revoke_tooltip:0 "Production income from §YHunter Creatures§! is restored"
+
+estate_nobles_monster_loot_monopoly:0 "Monopoly on Monster Loot"
+estate_nobles_monster_loot_monopoly_desc:0 "Our affluent [Root.GetNoblesName] believe owning rare monster loot would give them great prestige, and are willing to pay a large upfront sum of gold in exchange for monopoly rights over it."
+estate_nobles_monopoly_of_monster_loot_mod:0 "Monopoly on Monster Loot"
+desc_estate_nobles_monopoly_of_monster_loot_mod:0 "The state has granted the [Root.Owner.GetNoblesName] monopoly rights over monster loot production."
+MONOPOLY_INCOME_MONSTER_LOOT_DESC:0 "from lesser loot and rare loot production."
+estate_nobles_monopoly_of_monster_loot_effect_tooltip:0 "§RNo income from §YLesser Loot§! and §YRare Loot§!§!"
+estate_nobles_monopoly_of_monster_loot_revoke_tooltip:0 "Production income from §YLesser Loot§! and §YRare Loot§! is restored"
+
+
+######################## Burghers
+
+#Agenda
+estate_burghers_bamboo_trade:0 "Control the Bamboo Trade"
+estate_burghers_bamboo_trade_desc:0 "Among the opportunities that our outposts in the Wushanko Isles offer are the chance to establish control over the sources of bamboo. The [Root.GetBurghersName] urge us to make their acquisition our priority."
+estate_burghers_terracotta_trade:0 "Control the Terracotta Trade"
+estate_burghers_terracotta_trade_desc:0 "Among the opportunities that our outposts in the Wushanko Isles offer are the chance to establish control over the sources of terracotta. The [Root.GetBurghersName] urge us to make their acquisition our priority."
+
+#Agenda Result
+growing_bamboo_trade:0 "Growing Bamboo Trade"
+growing_bamboo_trade_desc:0 "The valuable bamboo is in the hands of our merchants, and for once they are actually paying their taxes on time."
+growing_terracotta_trade:0 "Growing Terracotta Trade"
+growing_terracotta_trade_desc:0 "The valuable terracotta is in the hands of our merchants, and for once they are actually paying their taxes on time."
+
+#Privileges
+
+estate_burghers_excavation_rights:0 "Excavation Rights"
+estate_burghers_excavation_rights_desc:0 "Our society thrives underground. We can delegate the job of expanding our caverns and save resources in doing so in exchange for granting this new space to those who carve it out."
+estate_burghers_excavation_rights_gt:0 "Eliminates the development cost penalty caused by terrain type of every owned §YUnderground§! province."
+estate_burghers_excavation_rights_rt:0 "Restores the development cost penalty caused by terrain type of every owned §YUnderground§! province."
+
+estate_burghers_expand_swamp_dwellings:0 "Expand Swamp Dwellings"
+estate_burghers_expand_swamp_dwellings_desc:0 "Marshland is teeming with life - and potential sources of food! By promising free access to this valuable food in exchange for work on marshland development, we can more effectively develop our realm."
+estate_burghers_expand_swamp_dwellings_gt:0 "Halves the development cost and movement speed penalties caused by terrain type of every owned §YMarsh§! province."
+estate_burghers_expand_swamp_dwellings_rt:0 "Restores the development cost and movement speed penalties caused by terrain type of every owned §YMarsh§! province."
+
+estate_burghers_glacial_expansion:0 "Glacial Expansion"
+estate_burghers_glacial_expansion_desc:0 "We have an understanding of the cold places of the world most do not. Riches lie among the ice, and those who help develop the land will have a share of its bounty."
+estate_burghers_glacial_expansion_gt:0 "Halves the development cost and movement speed penalties caused by terrain type of every owned §YGlacial§! province."
+estate_burghers_glacial_expansion_rt:0 "Restores the development cost and movement speed penalties caused by terrain type of every owned §YGlacial§! province."
+
+estate_burghers_volcanic_attunement:0 "Volcanic Attunement"
+estate_burghers_volcanic_attunement_desc:0 "The immense heat of volcanoes feel just like home! We can surely find people eager to help us develop these lands."
+estate_burghers_volcanic_attunement_gt:0 "Eliminates the development cost penalty caused by terrain type of every owned §YVolcanic§! province, and makes the attrition penalty only affect enemies."
+estate_burghers_volcanic_attunement_rt:0 "Restores the development cost penalty caused by terrain type of every owned §YVolcanic§! province, as well as the full affect of attrition."
+
+estate_burghers_volcanic_development:0 "Volcanic Development"
+estate_burghers_volcanic_development_desc:0 "There are unsettlingly eager subjects of our realm who may aid our efforts to develop our volcanic landscapes in exchange for a share of the spoils."
+estate_burghers_volcanic_development_gt:0 "Halves the development cost penalty caused by terrain type of every owned §YVolcanic§! province."
+estate_burghers_volcanic_development_rt:0 "Restores the development cost penalty caused by terrain type of every owned §YVolcanic§! province."
+
+
 estate_burghers_kharidian_colonies:0 "Establish Desert Settlement"
 estate_burghers_kharidian_colonies_desc:0 "We can push our merchants to expand our nation's boundaries - albeit at a high price."
 estate_burghers_varlamore_colonies:0 "Expand into Varlamore's Savannas"
 estate_burghers_varlamore_colonies_desc:0 "We can push our merchants to expand our nation's boundaries - albeit at a high price."
 
+
+estate_burghers_bamboo_monopoly:0 "Monopoly on Bamboo"
+estate_burghers_bamboo_monopoly_desc:0 "Bamboo is highly versatile, and, although not rare within the Wushanko Isles, it is outside of it. Our [Root.GetBurghersName] would greatly appreciate gaining monopoly rights over the goods."
+estate_burghers_monopoly_of_bamboo_mod:0 "Monopoly on Bamboo"
+desc_estate_burghers_monopoly_of_bamboo_mod:0 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over bamboo production."
+MONOPOLY_INCOME_BAMBOO_DESC:0 "from bamboo production."
+estate_burghers_monopoly_of_bamboo_effect_tooltip:0 "§RNo income from §YBamboo§!§!"
+estate_burghers_monopoly_of_bamboo_revoke_tooltip:0 "Production income from §YBamboo§! is restored"
+
+estate_burghers_manufactured_goods_monopoly:0 "Monopoly on Manufactured Goods"
+estate_burghers_manufactured_goods_monopoly_desc:0 "Manufactured goods are high in value and the [Root.GetBurghersName] know it. If we granted them monopoly rights over these valuable goods, we could be rewarded with an immense amount of upfront cash."
+estate_burghers_monopoly_of_manufactured_goods_mod:0 "Monopoly on Manufactured Goods"
+desc_estate_burghers_monopoly_of_manufactured_goods_mod:0 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over manufactured goods production."
+MONOPOLY_INCOME_MANUFACTURED_GOODS_DESC:0 "from manufactured goods, refined products and terracotta production."
+estate_burghers_monopoly_of_manufactured_goods_effect_tooltip:0 "§RNo income from §YManufactured Goods§!, §YRefined Products§! and §YTerracotta§!§!"
+estate_burghers_monopoly_of_manufactured_goods_revoke_tooltip:0 "Production income from §YManufactured Goods§!, §YRefined Products§! and §YTerracotta§! is restored"
+
+
+######################## Clergy
+
+# Privileges
+
+estate_church_entranan_emissary:0 "Entranan Emissary"
+estate_church_entranan_emissary_desc:0 "Allowing a freer movement of priests to and from Entrana should be useful for gaining our support in the Apostocratic Council."
 
 estate_clergy_zamorakian_coexistence:0 "Zamorakian Co-Existence"
 estate_clergy_zamorakian_coexistence_desc:0 "Zamorakians can still be useful allies to our cause despite our differences of opinion. By promising not to press the Vampyric ways upon them, they should give us less trouble."
@@ -264,5 +522,20 @@ estate_clergy_zamorakian_coexistence_effect_tooltip:0 "Every owned province of �
 estate_clergy_zamorakian_coexistence_revoke_tooltip:0 "The modifier §Y'Zamorakian Co-Existence'§! is removed from all owned §YZamorakian§! provinces."
 
 
+estate_church_ritual_goods_monopoly:0 "Monopoly on Ritual Goods"
+estate_church_ritual_goods_monopoly_desc:0 "The [Root.GetChurchName] desire access to bones, herbs and herblore secondaries in order to gain divine favour."
+estate_church_monopoly_of_ritual_goods_mod:0 "Monopoly on Ritual Goods"
+desc_estate_church_monopoly_of_ritual_goods_mod:0 "The state has granted the [Root.Owner.GetChurchName] monopoly rights over bones and herblore supply production."
+MONOPOLY_INCOME_RITUAL_GOODS_DESC:0 "from bones and herblore supplies production."
+estate_church_monopoly_of_ritual_goods_effect_tooltip:0 "§RNo income from §YBones§! and §YHerblore Supplies§!§!"
+estate_church_monopoly_of_ritual_goods_revoke_tooltip:0 "Production income from §YBones§! and §YHerblore Supplies§! is restored"
+
+estate_church_divine_energy_monopoly:0 "Monopoly on Divine Energy"
+estate_church_divine_energy_monopoly_desc:0 "Divine Energy is powerful and our [Root.GetChurchName] wants some lest it ends up in the hands of unworthy gods."
+estate_church_monopoly_of_divine_energy_mod:0 "Monopoly on Divine Energy"
+desc_estate_church_monopoly_of_divine_energy_mod:0 "The state has granted the [Root.Owner.GetChurchName] monopoly rights over divine energy production."
+MONOPOLY_INCOME_DIVINE_ENERGY_DESC:0 "from divine energy production."
+estate_church_monopoly_of_divine_energy_effect_tooltip:0 "§RNo income from §YDivine Energy§!§!"
+estate_church_monopoly_of_divine_energy_revoke_tooltip:0 "Production income from §YDivine Energy§! is restored"
 
 

@@ -3,7 +3,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 3;62;sea;539;-1;-1;-1;-1;East Lumbridge Swamp-Al Kharid
 6;7;sea;540;-1;-1;-1;-1;Wizards Tower-Draynor
 89;90;sea;597;-1;-1;-1;-1;Tamsah-Akthanakos
-90;91;sea;597;-1;-1;-1;-1;Akhanakos-Ullek Swamp
 98;99;sea;586;-1;-1;-1;-1;Amiral-Crondis
 99;854;sea;586;-1;-1;-1;-1;Crondis-South of Sophanem
 142;144;sea;603;-1;-1;-1;-1;Mos Ayes Le'-La Grotte
@@ -17,6 +16,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 780;256;sea;570;-1;-1;-1;-1;Retraite-Coal Trucks
 315;985;sea;627;-1;-1;-1;-1;Warforge-Mythic Isle
 365;366;sea;915;-1;-1;-1;-1;Barbarian Outpost-Barren Shore
+327;1529;sea;617;-1;-1;-1;-1;Aquanites
 373;972;sea;574;-1;-1;-1;-1;Jaktomrodet-Isig Jakt
 381;384;sea;914;-1;-1;-1;-1;Brodkorg-Etceteria
 383;384;sea;576;-1;-1;-1;-1;Sogthorpe-Etceteria
@@ -30,6 +30,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 436;437;sea;678;-1;-1;-1;-1;Crabclaw Isle-Crab Raises
 483;484;sea;720;-1;-1;-1;-1;West Stranglewood
 483;1448;sea;720;-1;-1;-1;-1;West Stranglewood
+756;1516;sea;909;-1;-1;-1;-1;Tear of the Soul
 886;1450;sea;719;-1;-1;-1;-1;Tempestus Pub
 886;493;sea;719;-1;-1;-1;-1;Internal Tempestus
 886;491;sea;719;-1;-1;-1;-1;Internal Tempestus

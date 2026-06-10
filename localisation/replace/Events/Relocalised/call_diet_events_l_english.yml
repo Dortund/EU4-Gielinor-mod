@@ -1,4 +1,16 @@
 ﻿l_english:
+ estate_privileges_and_agendas_events.3.j:0 "The Agenda of the [Root.GetWorkersName]"
+ estate_privileges_and_agendas_events.3.k:0 "The Agenda of the [Root.GetAdmiralsName]"
+
+ estate_privileges_and_agendas_events.3.kel.1:0 "The Agenda of the Blue Opal"
+ estate_privileges_and_agendas_events.3.kel.2:0 "The Agenda of the Brown Engine"
+ estate_privileges_and_agendas_events.3.kel.3:0 "The Agenda of the Green Gemstone"
+ estate_privileges_and_agendas_events.3.kel.4:0 "The Agenda of the Purple Pewter"
+ estate_privileges_and_agendas_events.3.kel.5:0 "The Agenda of the Red Axe"
+ estate_privileges_and_agendas_events.3.kel.6:0 "The Agenda of the Silver Cog"
+ estate_privileges_and_agendas_events.3.kel.7:0 "The Agenda of the White Chisel"
+ estate_privileges_and_agendas_events.3.kel.18:0 "The Agenda of the Yellow Fortune"
+
  estate_privileges_and_agendas_events.3.tzh.1:0 "The Agenda of the [Root.GetHurName]"
  estate_privileges_and_agendas_events.3.tzh.2:0 "The Agenda of the [Root.GetKetName]"
  estate_privileges_and_agendas_events.3.tzh.3:0 "The Agenda of the [Root.GetMejName]"

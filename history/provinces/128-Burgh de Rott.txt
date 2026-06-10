@@ -1,7 +1,4 @@
 #128 - Burgh de Rott
-owner = ---
-controller = ---
-add_core = ---
 tribal_owner = ---
 culture = meiyer
 religion = saradomin

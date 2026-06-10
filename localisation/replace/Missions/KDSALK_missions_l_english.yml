@@ -1,62 +1,189 @@
 ﻿l_english:
- KDS_religious_tolerance_title:0 "Religious Tolerance"
- KDS_religious_tolerance_desc:0 "Nearby Misthalin is a huge Saradomist realm, and our nearest fellow followers of the Menaphite Pantheon are found quite some way into the desert. For the sake of better relations with our closer neighbours, we should take a tolerant approach to their faith."
+# Kharidian Shared
 
- KDS_misthalanian_relations_title:0 "Misthalanian Relations"
- KDS_misthalanian_relations_desc:0 "Misthalin benefits greatly from our position guarding the northern Kharidian Desert from bandits and other risks from further south. We should seek a more formal alliance."
  KDS_expand_our_trade_power_title:0 "Expand Our Trade Power"
  KDS_expand_our_trade_power_desc:0 "To be taken seriously as a regional power, we need to at the very least have a strong position over our own trade."
+ KDS_kharidian_port_title:0 "Kharidian Port"
+ KDS_kharidian_port_desc:0 "We have secured our trade position on land, but now we need to consider our position on the seas."
+ KDS_unlock_spirit_anglers_tooltip:0 "Unlocks the §TSpirit Anglers§! Naval Doctrine once [1000.GetName] is owned by any nation."
+ KDS_terror_of_tempoross_title:0 "Terror of Tempoross"
+ KDS_terror_of_tempoross_desc:0 "The depths of the sea holds many terrors we may barely comprehend - yet proving our victory over one would be a huge reassurance to our sailors."
 
+ KDS_misthalin_or_menaphos_title:0 "Misthalin or Menaphos?"
+ KDS_misthalin_or_menaphos_desc:0 "Like the arms of Het himself, we hold open the passes into the Kharidian Desert, while limiting the reach of bandits. While this role has won us much respect among the merchants of Misthalin and Menaphos, we have received little tangible for our efforts. Perhaps by making the two nations compete for our support we could get something more direct?"
+ KDS_guaranteed_MST_help_tooltip:0 "Misthalin will be §Gguaranteed§! to assist us in our settling of Al Kharid."
+ KDS_guaranteed_MPS_help_tooltip:0 "Menaphos will be §Gguaranteed§! to assist us in our settling of Al Kharid."
  KDS_settle_al_kharid_title:0 "Settle Al Kharid"
- KDS_settle_al_kharid_desc:0 "Below the cliffs we settle is a large expanse of flat and stable land, capable of supporting a major city. With the support of Misthalin, or failing that, Menaphos or even our own determination, we can create the city of Al Kharid."
- KDS_rusum_pass_title:0 "Rusum Pass"
- KDS_rusum_pass_desc:0 "There are few points of entry between the region of Misthalin and the Kharidian Desert. If we control those passes, we can raise plenty of extra money by implementing a toll gate."
-
- KDS_hets_land_title:0 "Het's Land"
- KDS_hets_land_desc:0 "Het is the most popular of the Menaphire Pantheon in this region. Once a mortal man who held the passes open, he now represents fitness in all its forms. Het's priests speak of land north of the plateau associated with him - if we were closer to Het spirtually, we might understand how to use that land."
- KDS_scimitar_manufacture_title:0 "Scimitar Manufacture"
- KDS_scimitar_manufacture_desc:0 "Up to this point, we have tended to rely on small-scale artisan crafting or imports for our weaponry. By developing our own permanent forges, we can more easily supply our armies with the armanents they need."
+ KDS_settle_al_kharid_desc:0 "Below the cliffs we settle is a large expanse of flat and stable land, capable of supporting a major city. With the support of Misthalin, or failing that, Menaphos or even our own determination, we can create it."
+ KDS_future_of_north_kharid_title:0 "Future of North Kharid"
+ KDS_future_of_north_kharid_desc:0 "As we develop from a small Kharidian tribe to a full-fledged kingdom, we must determine what our ambitions are. Misthalin could offer freedom from the Pharoah of Kharid's rule, yet if we side with the Pharoah we could legitimise conquest in the name of serving the Menaphite Pantheon."
 
  KDS_worthy_army_title:0 "Worthy Army"
  KDS_worthy_army_desc:0 "Our meagre forces cannot hold the Kharidian Passes forever. Let us expand the army to more effectively perform this task."
  KDS_professional_brothers_title:0 "Professional Brothers"
  KDS_professional_brothers_desc:0 "A sense of fraternity shall help tie our forces together, and what better way than to make military service professional rather than conscripted?"
+ KDS_professional_brothers_duel_arena_setup_tooltip:0 "Once the §YArina§! province is owned, the §GDuel Arena§! shall be excavated."
+ KDS_build_the_duel_arena_title:0 "Build the Duel Arena"
+ KDS_build_the_duel_arena_desc:0 "Old ruins poke through the sands. If we had sufficient funds, we may be able to find exactly what is buried down there."
+ KDS_duel_arena_conditional_modifier_tooltip:0 "Enables the conditional modifier for the §YDuel Arena§! monument."
+ KDS_the_power_of_runecrafting_title:0 "The Power of Runecrafting"
+ KDS_the_power_of_runecrafting_desc:0 "The goblins to our west - a constant threat - are overwhelmingly melee combattants. Mages can deal with them with ease, but with a lack of runes or magically trained people, we lack this perhaps perfect defensive option."
+
+ KDS_scimitar_manufacture_title:0 "Scimitar Manufacture"
+ KDS_scimitar_manufacture_desc:0 "Up to this point, we have tended to rely on small-scale artisan crafting or imports for our weaponry. By developing our own permanent forges, we can more easily supply our armies with the armanents they need."
+
+#####################
+# Branching
+ KDS_branching_1_3_title:0 "Branching Mission"
+ KDS_branching_1_3_desc:0 "This is a §YBranching Mission.§!"
+ KDS_branching_1_5_title:0 "Branching Mission"
+ KDS_branching_1_5_desc:0 "This is a §YBranching Mission.§!"
+
+ KDS_branching_2_4_title:0 "Branching Mission"
+ KDS_branching_2_4_desc:0 "This is a §YBranching Mission.§!"
+ KDS_branching_2_6_title:0 "Branching Mission"
+ KDS_branching_2_6_desc:0 "This is a §YBranching Mission.§!"
+ KDS_branching_2_7_title:0 "Branching Mission"
+ KDS_branching_2_7_desc:0 "This is a §YBranching Mission.§!"
+
+ KDS_branching_3_5_title:0 "Branching Mission"
+ KDS_branching_3_5_desc:0 "This is a §YBranching Mission.§!"
+ KDS_this_is_a_branching_mission:0 "This is a §YBranching Mission§!. Complete the mission §YFuture of North Kharid§! to enable a choice of paths to follow."
+ KDS_branching_3_6_title:0 "Branching Mission"
+ KDS_branching_3_6_desc:0 "This is a §YBranching Mission.§!"
+ KDS_branching_3_8_title:0 "Branching Mission"
+ KDS_branching_3_8_desc:0 "This is a §YBranching Mission.§!"
+ 
+ KDS_branching_4_5_title:0 "Branching Mission"
+ KDS_branching_4_5_desc:0 "This is a §YBranching Mission.§!"
+ KDS_branching_4_7_title:0 "Branching Mission"
+ KDS_branching_4_7_desc:0 "This is a §YBranching Mission.§!"
+ 
+ KDS_branching_5_3_title:0 "Branching Mission"
+ KDS_branching_5_3_desc:0 "This is a §YBranching Mission.§!"
+ KDS_branching_5_4_title:0 "Branching Mission"
+ KDS_branching_5_4_desc:0 "This is a §YBranching Mission.§!"
+ KDS_branching_5_6_title:0 "Branching Mission"
+ KDS_branching_5_6_desc:0 "This is a §YBranching Mission.§!"
+ 
+ KDS_al_kharid_missions_branch_flag_tooltip:0 "Preview the §YAl Kharid§! branch.\nThis is the §Ghistorical§! branch where the Emirate of Al Kharid seeks closer ties with nearby nations to counterbalance §YMenaphos§!."
+ KDS_loyalist_missions_branch_flag_tooltip:0 "Preview the §YKharidian Loyalist§! branch.\nThis is an §Oahistorical§! branch where the North Kharidians serve as the arm of the Pharoah to strike into §YMisthalin§! and §YAsgarnia§!."
 
 
+#####################
+# Kharidian Loyalist
+
+ KDS_HET_conquest_of_south_lum_title:0 "Conquest of South Lum"
+ KDS_HET_conquest_of_south_lum_desc:0 "Is it not time for the River Elid to adopt a sibling? Truly, the fertile lands fed by the River Lum would be a great boon to the Kharidian Empire."
+ KDS_HET_quest_for_draynor_title:0 "Quest for Draynor"
+ KDS_HET_quest_for_draynor_desc:0 "In another world, Draynor could have been a danger for us. Between its sheltered harbour and its position behind Lumbridge Swamp and the River Lum, there is no easy angle of attack leaving us vulnerable to ransom attempts. Let us control Draynor for ourselves so we never have to mount such a rescue."
+ KDS_HET_third_age_flank_title:0 "Third Age Flank"
+ KDS_HET_third_age_flank_desc:0 "During the God Wars, Menaphite forces made a daring bid for Port Lina but were unfortunately repelled by the Saradominists. Perhaps we can succeed where our predecessors failed?"
+ KDS_HET_karamjan_intervention_title:0 "Karamjan Intervention"
+ KDS_HET_karamjan_intervention_desc:0 "To control eastern Karamja now would finalise Kharidian control of the entire east half of the Ardent Ocean. Happily, there are some Karamjans rumoured to be interested in the Menaphite Pantheon which may make the challenge of landing in the region easier."
+
+ KDS_HET_command_misthalins_bounty_title:0 "Misthalin's Bounty"
+ KDS_HET_command_misthalins_bounty_desc:0 "Central Misthalin holds a tremendously productive agricultural region for which the Kharidian Empire has no rival. If we are to feed the Empire's people, we must seize this land."
+ KDS_HET_ardent_trade_dominance_title:0 "Ardent Trade Dominance"
+ KDS_HET_ardent_trade_dominance_desc:0 "To control the coastline is a start, but to really serve the Empire we must control the flow of trade in the region as well. As we take the north and west, the Pharoah takes the south and east."
+ KDS_HET_wealth_for_menaphos_title:0 "Wealth for Menaphos"
+ KDS_HET_wealth_for_menaphos_desc:0 "To prove our loyalty to the Empire despite our growing power, we should send trade goods to Menaphos as a show of good faith."
+ 
+ KDS_HET_proof_of_loyalty_title:0 "Proof of Loyalty"
+ KDS_HET_proof_of_loyalty_desc:0 "Our emerging power may alarm our friends and allies if we don't offer them sufficient reassurances."
+ kds_het_become_tributary_by_decision_tooltip:0 "You can become a tributary of the current Pharoah via the §YApply to be the Pharoah's Tributary§! decision."
+ has_recently_used_aid_for_the_pharoah_decision:0 "Have recently used the §YAid for the Pharoah§! decision."
+ KDS_HET_pharoahs_aid_title:0 "Pharoah's Aid"
+ KDS_HET_pharoahs_aid_desc:0 "As we develop our government, we can offer ever-greater amounts of support for our allies."
+ kds_het_enhance_aid_for_the_pharoah_tooltip:0 "Permanently §Ydoubles§! the cost and benefits of the §YAid for the Pharoah§! decision."
+ KDS_HET_reformation_of_hetiyyah_title:0 "Reformation of Hetiyyah"
+ KDS_HET_reformation_of_hetiyyah_desc:0 "The future of our realm depends upon what we learn from the process of reforming it."
+ completed_all_kharidian_emergence_reforms:0 "Must have completed all 15 §YKharidian Emergence§! reforms."
+ KDS_HET_hets_chosen_title:0 "Het's Chosen"
+ KDS_HET_hets_chosen_desc:0 "The fortunes of the Kharidian Empire have been fraught since the Third Age. It takes a champion - Het's champion - to demonstrate our true potential."
+ 
+ KDS_HET_best_the_blue_order_title:0 "Best the Blue Order"
+ KDS_HET_best_the_blue_order_desc:0 "Forces of Saradomin are attempting to develop powerful magical institutions which could pose a thread to the Empire of Kharid. We should overpower them before they overpower us."
+ enables_wizards_tower_as_menaphite_tooltip:0 "Enables use of the §YWizards' Tower§! monument when following a faith in the §YMenaphite§! group."
+ KDS_HET_the_desert_grows_title:0 "The Desert Grows"
+ KDS_HET_the_desert_grows_desc:0 "Once upon a snowy mountain, an Oracle spoke of a desert expanding northward into Varrock. Some see this as a warning against the fires of industry - but what if it was metaphorical for the growth of the Kharidian Empire?"
+ KDS_HET_consolidate_misthalin_title:0 "Consolidate Misthalin"
+ KDS_HET_consolidate_misthalin_desc:0 "The lands of the daughter of Elid, known locally as the River Lum, should be united under a single rule."
+ 
+ KDS_HET_menaphite_proselytisation_title:0 "Menaphite Proselytisation"
+ KDS_HET_menaphite_proselytisation_desc:0 "There is no rule in scripture that only Kharidians can follow the Menaphite Pantheon; indeed, Icthlarin serves the dead of all manner of peoples."
+ KDS_HET_awe_of_the_pantheon_title:0 "Awe of the Pantheon"
+ KDS_HET_awe_of_the_pantheon_desc:0 "Most of the Menaphite Pantheon were never subject to the Edicts of Guthix. Though they may be reluctant to take sides in war, the very threat of their potential presence can be used to frighten our enemies into compliance."
+ chance_for_siege_conversion_tooltip:0 "§YPermanently§! gives a 25% chance to §Gconvert enemy provinces§! on a successful siege."
+ KDS_HET_victory_over_the_empty_lord_title:0 "Victory Over the Empty Lord"
+ KDS_HET_victory_over_the_empty_lord_desc:0 "Legends speak of the Empty Lord, the greatest enemy of the Kharidian Empire. Though long-since departed from Gielinor, his dark presences linger on in and around the Kharidian Desert. For the honour of the Pharoah we must eliminate them."
+
+ 
+
+#####################
+# Al Kharid
+
+ ALK_pollnivneach_trade_title:0 "Pollnivneach Trade"
+ ALK_pollnivneach_trade_desc:0 "Central Kharid has great riches for merchants with the skill to find it. We need to secure a piece of this metaphorical pie."
+ ALK_menaphite_trade_war_title:0 "Menaphite Trade War"
+ ALK_menaphite_trade_war_desc:0 "Menaphos is not the dominant force in the Kharidian Desert it once was, and we have an opportunity to put up real competition in trade the complacent city has not yet seen."
+ ALK_challenge_the_khagan_title:0 "Challenge the Khagan"
+ ALK_challenge_the_khagan_desc:0 "Much of Menaphos' wealth came from trade with the Wushanko Isles, dominated by the Council of Khans. Let us remind their leader, the so-called Khagan, not to take advantage of Kharid's recent upheavals."
+
+ ALK_spies_of_al_kharid_title:0 "Spies of Al Kharid"
+ ALK_spies_of_al_kharid_desc:0 "Investment in espionage would be an excellent way to undermine our foes."
+ ALK_menaphite_turnaround_title:0 "Menaphite Turnaround"
+ ALK_menaphite_turnaround_desc:0 "Despite Al Kharid being a desert land, it is a relatively rich desert land through which we can build a base of power - perhaps one strong enough to threaten the Pharoah of Kharid for regional dominance?"
+ ALK_al_kharid_ascendant_title:0 "Al Kharid Ascendant"
+ ALK_al_kharid_ascendant_desc:0 "The Pharoah of Kharid is failing to serve their people. With our newfound power, it is time to replace them."
+ ALK_new_tributary_system_title:0 "New Tributary System"
+ ALK_new_tributary_system_desc:0 "We must get to work rebuilding the web of subject nations Menaphos once held if we are to justify our position as regional hegemon."
+ new_tributary_system_reward_information_tooltip:0 "Causes all tributary nations in the Kharidian Desert region to gain §Yextra land§! and generates §G10§! Mandate."
+ 
+ ALK_governance_of_al_kharid_title:0 "Governance of Al Kharid"
+ ALK_governance_of_al_kharid_desc:0 "To create not just an emerging, but inspiring, government will encourage immigration from our more war-torn neighbours."
+ tier_3_all_kharidian_emergence:0 "Must have reached at least the third level of all §YKharidian Emergence§! reforms."
+ ALK_a_true_emirate_title:0 "A True Emirate"
+ ALK_a_true_emirate_desc:0 "A true Emirate needs a substantial base for resources beyond that offered by a city and a small hinterland. Let us finally fill out the northern Kharidian region!"
+ ALK_distribute_15_development_randomly_in_north_kharid:0 "Distributes 15 development in the Al Kharid, Upper Kharid and Kharidian Borderlands areas."
+ ALK_kharidian_glory_title:0 "Kharidian Glory"
+ ALK_kharidian_glory_desc:0 "Once, Menaphos was merely a camp, but it grew to be the Golden City of Kharid. The city of Al Kharid has similarly-humble roots and even greater ambitions: to exceed even that of Ullek and become the greatest city Gielinor has ever known."
+ 
+ ALK_banks_of_the_salve_title:0 "Banks of the Salve"
+ ALK_banks_of_the_salve_desc:0 "With our magical capabilities established, we can risk expanding to the dangerous banks of the River Salve."
+ ALK_invasion_of_morytania_title:0 "Invasion of Morytania"
+ ALK_invasion_of_morytania_desc:0 "A new path has opened to the realm of Morytania, where legend states it large numbers of Saradominists are kept prisoner by an evil presence. Our allies should surely appreciate efforts to free them."
+ alk_saradominists_opinion_boost_morytania_tooltip:0 "Gain §G+50§! opinion with every §YSaradominist§! nation."
+ 
+ ALK_religious_tolerance_title:0 "Religious Tolerance"
+ ALK_religious_tolerance_desc:0 "Nearby Misthalin is a huge Saradomist realm in contrast to the predominantly Menaphite desert. For the sake of better relations with our closer neighbours, we should take a tolerant approach to their faith."
+ tolerance_to_menaphite_1_tooltip:0 "Tolerance of the §YMenaphite§! faith must be at least 1."
+ tolerance_to_saradomin_1_tooltip:0 "Tolerance of the §YSaradominist§! faith must be at least 1."
  ALK_saradominist_immigration_title:0 "Saradominist Migration"
  ALK_saradominist_immigration_desc:0 "If we can present ourselves as the model of a stable, tolerant nation, we can encourage immigration from more unstable Saradomist realms."
  ALK_abbey_of_st_elspeth_title:0 "Abbey of St. Elspeth"
  ALK_abbey_of_st_elspeth_desc:0 "The growth of Al Kharid has come at the cost of our highlands, but there may be a means of reversing that loss. Saradomist nuns have been searching for a place to call their own, and by offering them part of the highlands, we can begin to repopulate it."
- ALK_the_power_of_runecrafting_title:0 "The Power of Runecrafting"
- ALK_the_power_of_runecrafting_desc:0 "The goblins to our west - a constant threat - are overwhelmingly melee combattants. Mages can deal with them with ease, but with a lack of runes or magically trained people, we lack this perhaps perfect defensive option."
- ALK_banks_of_the_salve_title:0 "Banks of the Salve"
- ALK_banks_of_the_salve_desc:0 "With our magical capabilities established, we can risk expanding to the dangerous banks of the River Salve."
+ ALK_easier_use_of_citharede_abbey_tooltip:0 "Reduces the requirements for using the modifiers of §YCitharede Abbey§!."
+ ALK_resettle_uzer_title:0 "Resettle Uzer"
+ ALK_resettle_uzer_desc:0 "A shining city of religious tolerance, and not that far from St. Elspeth, Uzer stood as one of Kharid's most powerful cities. Perhaps with the aid of our Saradominist friends it is time to rebuild it, and gain a useful port on Kharid's east coast?"
+ ALK_path_to_daemonheim_title:0 "Path to Daemonheim"
+ ALK_path_to_daemonheim_desc:0 "Travellers from far-off lands call themselves the Fremennik. They seek our assistance in a place they named Daemonheim, on the other side of Morytania to us. Perhaps with the Fremennik's help, we could take Daemonheim for ourselves?"
+ ALK_discovered_sea_route_to_daemonheim_keep:0 "Must have discovered the sea route from Uzer to Daemonheim Keep."
 
+#####################
+# Depreciated
 
- ALK_pollnivneach_trade_title:0 "Pollnivneach Trade"
- ALK_pollnivneach_trade_desc:0 "Central Kharid has great riches for merchants with the skill to find it. We need to secure a piece of this metaphorical pie."
- ALK_traders_of_menaphos_title:0 "Traders of Menaphos"
- ALK_traders_of_menaphos_desc:0 "Menaphos is not the dominant force in the Kharidian Desert it once was, and we have an opportunity to put up real competition in trade the complacent city has not yet seen."
+# ALK_local_metal_source_title:0 "Local Metal Source"
+# ALK_local_metal_source_desc:0 "As we grow stronger and increasingly independent of the powers which surround us, the supply of strategic resources has become more important than ever. We have located an ore-rich chasm far to the north of Al Kharid, but until this point the high numbers of resident scorpions have made mining operations unfeasible. With sufficient military might, we can take the mine for Al Kharid!"
 
+# ALK_expand_the_training_grounds_title:0 "Training Grounds"
+# ALK_expand_the_training_grounds_desc:0 "The lands of Arina are seemingly empty, but that makes them ideal for military training exercises as there is no risk of harming civilians."
 
- ALK_kharidian_port_title:0 "Kharidian Port"
- ALK_kharidian_port_desc:0 "We have secured our trade position on land, but now we need to consider our position on the seas. While we may not yet be able to challenge the might of Port Sarim and Menaphos, we may still be able to share in it."
- ALK_menaphite_relations_title:0 "Menaphite Relations"
- ALK_menaphite_relations_desc:0 "Having established ourselves as the new power in the north of the Kharidian Desert, we need to consider our relations further south. Should we seek to befriend or intimidate Menaphos?"
- ALK_spies_of_al_kharid_title:0 "Spies of Al Kharid"
- ALK_spies_of_al_kharid_desc:0 "Investment in espionage would be an excellent way to undermine our foes."
- ALK_al_kharid_ascendant_title:0 "Al Kharid Ascendant"
- ALK_al_kharid_ascendant_desc:0 "Al Kharid has grown much over the past years - perhaps strong enough to finally take on the might of Menaphos?"
-
- ALK_local_metal_source_title:0 "Local Metal Source"
- ALK_local_metal_source_desc:0 "As we grow stronger and increasingly independent of the powers which surround us, the supply of strategic resources has become more important than ever. We have located an ore-rich chasm far to the north of Al Kharid, but until this point the high numbers of resident scorpions have made mining operations unfeasible. With sufficient military might, we can take the mine for Al Kharid!"
- ALK_terror_of_tempoross_title:0 "Terror of Tempoross"
- ALK_terror_of_tempoross_desc:0 "The depths of the sea holds many terrors we may barely comprehend - yet proving our victory over one would be a huge reassurance to our sailors."
-
- ALK_expand_the_training_grounds_title:0 "Training Grounds"
- ALK_expand_the_training_grounds_desc:0 "The lands of Arina are seemingly empty, but that makes them ideal for military training exercises as there is no risk of harming civilians."
- ALK_duel_arena_mission_title:0 "Build the Duel Arena"
- ALK_duel_arena_mission_desc:0 "Old ruins poke through the sands. If we had sufficient funds, we may be able to find exactly what is buried down there."
-
- 
- 
+ #KDS_misthalanian_relations_title:0 "Misthalanian Relations"
+ #KDS_misthalanian_relations_desc:0 "Misthalin benefits greatly from our position guarding the northern Kharidian Desert from bandits and other risks from further south. We should seek a more formal alliance."
+ #ALK_menaphite_relations_title:0 "Menaphite Relations"
+ #ALK_menaphite_relations_desc:0 "Having established ourselves as the new power in the north of the Kharidian Desert, we need to consider our relations further south. Should we seek to befriend or intimidate Menaphos?"
+ #KDS_rusum_pass_title:0 "Rusum Pass"
+ #KDS_rusum_pass_desc:0 "There are few points of entry between the region of Misthalin and the Kharidian Desert. If we control those passes, we can raise plenty of extra money by implementing a toll gate."
+ #KDS_hets_land_title:0 "Het's Land"
+ #KDS_hets_land_desc:0 "Het is the most popular of the Menaphire Pantheon in this region. Once a mortal man who held the passes open, he now represents fitness in all its forms. Het's priests speak of land north of the plateau associated with him - if we were closer to Het spirtually, we might understand how to use that land."

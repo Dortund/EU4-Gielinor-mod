@@ -1,0 +1,148 @@
+estate_workers = {
+	icon = 28
+
+	# If true, country will get estate
+	trigger = {	
+		OR = {
+			has_reform = menaphite_factions
+			has_reform = frog_collective
+			has_reform = town_council_reform
+		}
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		production_efficiency = 0.2
+		expand_infrastructure_cost_modifier = -0.25
+	}
+	country_modifier_neutral = {
+		production_efficiency = 0.2
+	}	
+	country_modifier_angry = {
+		production_efficiency = -0.2
+	 	global_trade_goods_size_modifier = -0.1
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		workers_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	
+	influence_modifier = {	
+		desc = EST_VAL_GREAT_PROJECT_CONSTRUCTION
+		trigger = {
+			any_owned_province = {
+				has_construction = great_project
+			}
+		}
+		influence = 10
+	}
+	influence_modifier = {	
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_PRODUCTION_INCOME
+		trigger = {
+			NOT = { production_income_percentage = 0.25 }
+		}	
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HIGH_PRODUCTION_INCOME
+		trigger = {
+			production_income_percentage = 0.5
+			NOT = { production_income_percentage = 0.75 }
+		}	
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_HIGH_PRODUCTION_INCOME
+		trigger = {
+			production_income_percentage = 0.75
+		}	
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_workers }
+		}	
+		influence = -40
+	}
+	
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_workers }
+		}
+		loyalty = -20
+	}
+
+	color = { 126 86 25 }
+
+	privileges = {
+		estate_workers_land_rights
+		estate_workers_managerial_state
+		estate_workers_political_representation
+		estate_workers_employment_subsidies
+		estate_workers_social_mobility
+		estate_workers_expanded_holidays
+		estate_workers_guaranteed_commons
+		estate_workers_fibres_monopoly
+		estate_workers_logs_monopoly
+		estate_workers_ore_monopoly
+	}
+
+	agendas = {
+		estate_workers_develop_x
+		estate_workers_increase_autonomy_in_province_x
+		estate_workers_fire_advisor
+		estate_workers_reduce_corruption
+		estate_workers_reduce_war_exhaustion
+		estate_workers_build_production_building_in_y
+		estate_workers_three_privileges
+	}
+
+	influence_from_dev_modifier = 1.0
+}

@@ -96,6 +96,13 @@ elder_god_wars_traitors = {
 
 ###National
 
+#Al-Kharid
+
+alk_freed_morytanian_saradominists = {
+	opinion = 50
+	yearly_decay = 1
+}
+
 #Asgarnian Generic
 
 genasg_friend_of_misthalin = {
@@ -265,6 +272,10 @@ kds_refused_assistance = {
 kds_granted_assistance = {
 	opinion = 100
 	yearly_decay = 2
+}
+kds_broke_from_empire_of_kharid = {
+	opinion = -150
+	yearly_decay = 1
 }
 
 #Kandarin

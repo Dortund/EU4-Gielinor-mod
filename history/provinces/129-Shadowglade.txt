@@ -1,7 +1,4 @@
 #129 - Shadowglade
-owner = ---
-controller = ---
-add_core = ---
 tribal_owner = ---
 culture = meiyer
 religion = saradomin

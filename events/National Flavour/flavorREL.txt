@@ -110,14 +110,18 @@ country_event = {
 
 	trigger = {
 		NOT = { is_year = 2080 }
+		is_year = 2035 #To allow time for regular formation
 		is_at_war = no
 		NOT = {
 			exists = GUN
 		}
+		NOT = {
+			has_global_flag = great_invasion_begins_flag
+		}
 		OR = {
 			AND = {
 				tag = REL
-				owns_core_province = 368
+				owns_core_province = 367
 				calc_true_if = {
 					any_owned_province = {
 						culture = barbarian
@@ -128,7 +132,7 @@ country_event = {
 			}
 			AND = {
 				culture_group = fremennik_group
-				owns_core_province = 368
+				owns_core_province = 367
 				calc_true_if = {
 					any_owned_province = {
 						culture = barbarian
@@ -140,7 +144,7 @@ country_event = {
 			AND = {
 				NOT = { culture_group = fremennik_group }
 				NOT = { exists = REL }
-				owns_core_province = 368
+				owns_core_province = 367
 				calc_true_if = {
 					any_owned_province = {
 						culture = barbarian
@@ -154,6 +158,10 @@ country_event = {
 
 	mean_time_to_happen = {
 		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = great_invasion_begins_flag
 	}
 	
 	option = {
@@ -220,6 +228,9 @@ country_event = {
 			}
 			REL = {
 				add_historical_friend = GUN
+			}
+			fremennik_region = {
+				discover_country = GUN
 			}
 		}
 		switch_tag = GUN

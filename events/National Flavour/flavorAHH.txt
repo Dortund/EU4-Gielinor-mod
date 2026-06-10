@@ -12,7 +12,7 @@ country_event = {
 	picture = NIGHTMARE_OF_ASHIHAMA_eventPicture
 	
 	trigger = {
-		owns_province = 1177
+		owns = 1177
 		NOT = { exists = NAS }
 	}
 	

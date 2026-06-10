@@ -221,7 +221,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = nonintervention_school_events.1.b #Godless - Antitheist
+		name = nonintervention_school_events.1.godless.a #Godless - Antitheist
 		trigger = {
 			religion = godless
 			ai = no
@@ -232,7 +232,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = nonintervention_school_events.1.c #Godless - Humanist
+		name = nonintervention_school_events.1.godless.b #Godless - Humanist
 		trigger = {
 			religion = godless
 			ai = no
@@ -243,7 +243,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = nonintervention_school_events.1.d #Godless - Ambivalence
+		name = nonintervention_school_events.1.godless.c #Godless - Ambivalence
 		trigger = {
 			religion = godless
 			ai = no
@@ -254,7 +254,38 @@ country_event = {
 		}
 	}
 	option = {
-		name = nonintervention_school_events.1.e #Guthix - Cultural
+		name = nonintervention_school_events.1.godless.d #Godless - Evasive
+		trigger = {
+			religion = godless
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = evasive_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.godless.e #Godless - Monstrous
+		trigger = {
+			religion = godless
+			OR = {
+				has_reform = boss_nation
+				have_had_reform = boss_nation
+				has_reform = island_boss_nation
+				have_had_reform = island_boss_nation
+				has_reform = quidamortem_boss_nation
+				have_had_reform = quidamortem_boss_nation
+			}
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = monstrous_school
+		}
+	}
+
+	option = {
+		name = nonintervention_school_events.1.guthix.a #Guthix - Cultural
 		trigger = {
 			religion = guthix
 			OR = {
@@ -295,7 +326,7 @@ country_event = {
 		}	
 	}
 	option = {
-		name = nonintervention_school_events.1.f #Guthix - Druidic
+		name = nonintervention_school_events.1.guthix.b #Guthix - Druidic
 		trigger = {
 			religion = guthix
 			ai = no
@@ -306,7 +337,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = nonintervention_school_events.1.g #Guthix - Guardian
+		name = nonintervention_school_events.1.guthix.c #Guthix - Guardian
 		trigger = {
 			religion = guthix
 			ai = no
@@ -317,7 +348,32 @@ country_event = {
 		}
 	}
 	option = {
-		name = nonintervention_school_events.1.h #V - Defender
+		name = nonintervention_school_events.1.guthix.d #Guthix - Proactive
+		trigger = {
+			religion = guthix
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = proactive_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.guthix.e #Guthix - Exploitative
+		trigger = {
+			OR = {
+				primary_culture = cavegnome
+				total_development = 1000
+			}
+			ai = no
+		}
+		set_religious_school = {
+			group = nonintervention_group
+			school = exploitative_school
+		}
+	}
+	option = {
+		name = nonintervention_school_events.1.v.a #V - Defender
 		trigger = {
 			religion = v
 			ai = no
@@ -328,7 +384,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = nonintervention_school_events.1.i #V - Runecrafter
+		name = nonintervention_school_events.1.v.b #V - Runecrafter
 		trigger = {
 			religion = v
 			ai = no
@@ -339,7 +395,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = nonintervention_school_events.1.j #V - Warrior
+		name = nonintervention_school_events.1.v.c #V - Warrior
 		trigger = {
 			religion = v
 			ai = no

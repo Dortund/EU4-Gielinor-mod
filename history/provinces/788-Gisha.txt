@@ -1,20 +1,24 @@
 #788-Gisha
-
+owner = GSA
+controller = GSA
+add_core = GSA
 tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
 
-trade_goods = basic_ores
+trade_goods = manufactured_goods
 
 discovered_by = kharidtechgroup
 discovered_by = monkeytechgroup
 
 hre = no
 
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 2
+base_production = 3
+base_manpower = 2
 
 native_size = 5
 native_ferocity = 2
 native_hostileness = 2
+
+is_city = yes

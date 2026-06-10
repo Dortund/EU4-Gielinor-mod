@@ -1,5 +1,7 @@
 #96 - Alruwh
-
+owner = MPS
+controller = MPS
+add_core = MPS
 tribal_owner = ---
 culture = menaphiteculture
 religion = menaphite
@@ -12,19 +14,16 @@ discovered_by = wushankotechgroup
 
 hre = no
 
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 2
+base_production = 2
+base_manpower = 2
 
 native_size = 5
 native_ferocity = 2
 native_hostileness = 2
 
 2005.4.26 = {
-	owner = MPS
-	controller = MPS
-	add_core = MPS
-	add_base_tax = 1
-	add_base_production = 1
-	add_base_manpower = 1
+	base_tax = 3
+	base_production = 3
+	base_manpower = 3
 }

@@ -1,0 +1,115 @@
+########################################
+# Northern Pantheon Religion Events
+########################################
+
+namespace = northern_pantheon_events
+
+#Decline of the Northern Pantheon
+country_event = {
+	id = northern_pantheon_events.1 
+	title = northern_pantheon_events.1.t #
+	desc = northern_pantheon_events.1.d #The Fremennik have a complicated mixture of beliefs and legends, but as the Fremennik lands begin to consolidate, so too have the religious practices. Increasingly, faith in the old Northern Pantheon is being supplanted with a faith in the more widespread god Guthix.
+	picture = GUTHIX_BUTTERFLY_eventPicture
+	
+	trigger = {
+	 	has_institution = architecture
+		capital_scope = {
+			OR = {
+				region = fremennik_region
+				region = kandarin_region
+				region = troll_country_region
+			}
+		}
+		any_owned_province = {
+			religion = northern_pantheon
+			OR = {
+				region = fremennik_region
+				region = kandarin_region
+				region = troll_country_region
+			}
+		}
+		NOT = { has_global_flag = northern_pantheon_decline_of_the_old_ways_flag }
+	}
+	goto = guthix_centre_of_reformation
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+		set_global_flag = northern_pantheon_decline_of_the_old_ways_flag
+		random_owned_province = {
+			limit = {
+				OR = {
+					region = fremennik_region
+					region = kandarin_region
+					region = troll_country_region
+				}
+				religion = northern_pantheon
+			}
+			save_event_target_as = guthix_centre_of_reformation
+		}
+	}
+	
+	option = {
+		name = northern_pantheon_events.1.a #Old traditions fall; new traditions arise.
+		event_target:guthix_centre_of_reformation = {
+			change_religion = guthix
+			add_reform_center = guthix
+		}
+	}
+}
+
+#Guthixian Fervour Dies Down
+country_event = {
+	id = northern_pantheon_events.2
+	title = northern_pantheon_events.2.t #
+	desc = northern_pantheon_events.2.d #After a powerful spread of Guthixian influence across the Fremennik lands, the rate of conversions has finally died down.
+	picture = GUTHIX_BUTTERFLY_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			AND = {
+				is_reformation_center = yes
+				religion = guthix
+			}
+		}
+		OR = {
+			NOT = {
+				any_province = {
+					continent = west_runescape
+					religion = northern_pantheon
+				}
+			}
+			had_global_flag = {
+				flag = northern_pantheon_decline_of_the_old_ways_flag
+				days = 9125
+			}
+		}
+	}
+	goto = guthix_centre_of_reformation2
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				is_reformation_center = yes
+				religion = guthix
+			}
+			save_event_target_as = guthix_centre_of_reformation2
+		}
+		set_global_flag = northern_pantheon_decline_of_the_old_ways_end_flag
+	}
+	
+	option = {
+		name = northern_pantheon_events.2.a #At least we know nothing will ever happen to Guthix.
+		event_target:guthix_centre_of_reformation2 = {
+			remove_reform_center = guthix
+		}
+	}
+}

@@ -1,0 +1,78 @@
+﻿l_english:
+ admirals_estate_events.1.t:0 "Advancement of the Navy"
+ admirals_estate_events.1.da:0 "The $ESTATE_ADMIRALS$ typically wield low social influence in other nations and yet in $COUNTRY$ their ascent into state politics has been both rapid and considerable. Determined not to lose status, our $ESTATE_ADMIRALS$ have recently ingratiated themselves into an even larger pool of social gatherings."
+ admirals_estate_events.1.db:0 "Crassians are not reknown for their intelligence, but they are numerous and through these sheer numbers they have gained greater influence over $COUNTRY$."
+ admirals_estate_events.1.a:0 "Ok."
+ EST_VAL_ADMIRALS_ADVANCE:0 "Advancement of the Navy: §Y$VAL$%§!"
+ EST_VAL_ADMIRALS_ADVANCE_20:0 "Advancement of the Navy: §Y$VAL$%§!"
+ 
+ admirals_estate_events.2.t:0 "Decline of the Naval Class"
+ admirals_estate_events.2.da:0 "The pleas of the $ESTATE_ADMIRALS$ to be recognised at court have fallen on deaf ears. It appears for the time being they simply do not have enough political influence as they might expect."
+ admirals_estate_events.2.db:0 "In the end, we are all subject to the whims of Xau-Tak, and the $ESTATE_ADMIRALS$ are merely one arm of their might. Its influence may wax and wane, but Xau-Tak is forever."
+ admirals_estate_events.2.a:0 "Ok."
+ EST_VAL_ADMIRALS_DECLINE:0 "Decline of the Naval Class: §Y$VAL$%§!"
+ 
+ admirals_estate_events.3.t:1 "[growing_city.GetCapitalName] Requests Port Privileges"
+ admirals_estate_events.3.da:1 "The $ESTATE_ADMIRALS$ of [growing_city.GetCapitalName], an increasingly important port, have approached the [Root.Monarch.GetTitle] today asking for looser shipbuilding restrictions. Should we provide them with these means to grow they assure us that the economy of the area would quickly improve, resulting in more wealth for the state."
+ admirals_estate_events.3.db:1 "An echoing cry rings across the sea from $ESTATE_ADMIRALS$ in [growing_city.GetCapitalName]. 'We can deepen its connection to the sea! Just give the order!' the cry sounds."
+ admirals_estate_events.3.a:0 "Accept the Petition."
+ admirals_estate_events.3.b:0 "Reject the Petition."
+ EST_VAL_PORT_PRIVILEGES_DENIED:0 "Denied Port Privileges: §Y$VAL$%§!"
+ 
+ admirals_estate_events.4.t:0 "Who Controls the Imports and Exports?"
+ admirals_estate_events.4.d:0 "Relations between the $ESTATE_BURGHERS$ and $ESTATE_ADMIRALS$ become particularly fraught when the topic of international trade arises.\nRecently, a trade ship was impounded by the $ESTATE_ADMIRALS$ over the objections of the $ESTATE_BURGHERS$ and the jurisdictional boundaries regarding this action are unclear."
+ admirals_estate_events.4.a:0 "Side with the $ESTATE_ADMIRALS$."
+ admirals_estate_events.4.b:0 "Side with the $ESTATE_BURGHERS$."
+ EST_VAL_ADMIRAL_AUTHORITY_ASSERTED:0 "Admirality Authority Asserted: §Y$VAL$%§!"
+ EST_VAL_ADMIRAL_AUTHORITY_QUESTIONED:0 "Admirality Authority Questioned: §Y$VAL$%§!"
+
+ admirals_estate_events.5.t:0 "Protests among the $ESTATE_ADMIRALS$"
+ admirals_estate_events.5.da:0 "Relations between the state and the $ESTATE_ADMIRALS$ has reached a nadir. Concerned that every state initiative is aimed at demoting their status to irrelevance as in many other countries, they call for a show of good faith from the [Root.Monarch.GetTitle]: Increase their autonomy or accept revolts."
+ admirals_estate_events.5.db:0 "The whispers of Xau-Tak ask for so little, and yet in the view of the $ESTATE_ADMIRALS$ we have failed to live up to even that. We have been given an ultimatum: fight to assert our righteousness, or grant them sufficient autonomy to overlook our transgressions."
+ admirals_estate_events.5.a:0 "Then let us fight!"
+ admirals_estate_events.5.b:0 "Concede to their demands."
+
+ admirals_estate_events.6.t:0 "Revolt of the [Root.GetName] $ESTATE_ADMIRALS$"
+ admirals_estate_events.6.da:0 "Appalled at the loss of their privileges the $ESTATE_ADMIRALS$ of the [Root.GetName] province have taken up arms against us!"
+ admirals_estate_events.6.db:0 "The $ESTATE_ADMIRALS$ of the [Root.GetName] province have become restless, seemingly falling out of control of Xau-Tak's grasp and rising up to attack us! Perhaps we treated them too harshly?"
+ admirals_estate_events.6.a:0 "Ok."
+ 
+ admirals_estate_events.7.t:0 "[Root.GetAdmiralsName] Versus [Root.GetNobilityOrFallbackName]"
+ admirals_estate_events.7.da:0 "The [Root.GetNobilityOrFallbackName] have traditional power over our warfare, but often struggle to co-ordinate battle plans with the [Root.GetAdmiralsName]. Questions have arisen in court regarding which side should take precedence in battlefield logistics."
+ admirals_estate_events.7.db:0 "The followers of Xau-Tak are supposed to act with one voice and one direction - and yet the [Root.GetNobilityOrFallbackName] and [Root.GetAdmiralsName] are not in full concordance. The [Root.GetAdmiralsName] frequently get in the way of our elite forces - or is it the other way around? Either way, we require a policy of hierarchy where conflict exists."
+ admirals_estate_events.7.a:0 "Side with the [Root.GetAdmiralsName]."
+ admirals_estate_events.7.b:0 "Side with the [Root.GetNobilityOrFallbackName]."
+ admirals_estate_events.7.c:0 "Am I not leader? Neither should take priority."
+ admirals_estate_events.7.d:0 "There are occasions for the [Root.GetAdmiralsName] to take the first step, and occasions for the [Root.GetNobilityOrFallbackName]."
+ 
+ admirals_estate_events.8.t:0 "Opportunity for Cheap Ships"
+ admirals_estate_events.8.da:0 "The $ESTATE_ADMIRALS$ of $COUNTRY$ have come to the realisation they have too many ships for their personal docks and are offering to sell the excess to us at a discount. Taking this deal, however, may be construed as an endorsement of their political power."
+ admirals_estate_events.8.db:0 "Our $ESTATE_ADMIRALS$ have dragged many ships into the depths, some of which are essentially still in full working order. As they clear their seabed home, they offer to return the ships to the surface without destroying them - at a token cost of shiny, shiny coins."
+ admirals_estate_events.8.a:0 "Make the deal."
+ admirals_estate_events.8.b:0 "We do not require these cheap ships."
+ admirals_estate_events.8.c:0 "A fair trade is not an endorsement of conceding power."
+ admirals_estate_events.8.d:0 "If the $ESTATE_ADMIRALS$ need to get rid of the ships, why are they charging us?"
+ EST_VAL_BOUGHT_CHEAP_SHIPS:0 "Bought Cheap Ships: §Y$VAL$%§!"
+ 
+ admirals_estate_events.9.t:0 "[noble_encroachment.GetName] Slips Under Naval Control"
+ admirals_estate_events.9.da:0 "Our $ESTATE_ADMIRALS$ seem to be attempting to seize land behind [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s back. The port of [noble_encroachment.GetName] is increasingly subject to their bylaws at the central government's expense."
+ admirals_estate_events.9.db:0 "Ever more $ESTATE_ADMIRALS$ are accumulating on the coast of [noble_encroachment.GetName], acting as if they own the province. As we know, it rightfully belongs to [Root.Monarch.GetTitle] [Root.Monarch.GetName], and through Root.Monarch.GetHerHim], Xau-Tak. Decisive action must be taken!"
+ admirals_estate_events.9.a:0 "Allow it."
+ admirals_estate_events.9.b:0 "Take it back."
+ admirals_estate_events.9.c:0 "We all clearly know the limits of the power of $ESTATE_ADMIRALS$!"
+ 
+ admirals_estate_events.10.t:0 "$ESTATE_ADMIRALS$ Neglect Their Ports While Away"
+ admirals_estate_events.10.da:0 "A curious opportunity has arisen. Many of our esteemed $ESTATE_ADMIRALS$ are out at sea gaining experience while their personal territories are left, for a better word, undefended from government seizures. We could use this chance to subtly seize some of the estate's possessions without them being any the wiser."
+ admirals_estate_events.10.db:0 "$ESTATE_ADMIRALS$ live by the sea, not the land, and regularly they leave lands that are nominally theirs neglected. This is an easy opportunity to subtly take their land back for [Root.Monarch.GetTitle] [Root.Monarch.GetName]."
+ admirals_estate_events.10.a:0 "Take their land!"
+ admirals_estate_events.10.b:0 "Make a point of not seizing their land."
+ admirals_estate_events.10.c:0 "We can take more!"
+ admirals_estate_events.10.d:0 "Our restraint is evidence of our fair governance."
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,384 @@
+####################################################
+# Monopoly Events
+####################################################
+
+namespace = giu_monopoly_privileges
+
+########################### 1+2: Admirals
+
+# Extension of Admirals Fish Monopoly
+country_event = {
+	id = giu_monopoly_privileges.1
+	title = giu_monopoly_privileges.1.t
+	desc = giu_monopoly_privileges.1.d
+	picture = ADMIRAL_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_admirals_fish_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.1.a
+		reapply_estate_privilege = { privilege = estate_admirals_fish_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.1.b
+		custom_tooltip = giu_monopoly_privileges.1.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				trade_goods = fishing_spot
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_admirals_fish_monopoly }
+		}
+	}
+}
+
+# Extension of Admirals Naval Goods Monopoly
+country_event = {
+	id = giu_monopoly_privileges.2
+	title = giu_monopoly_privileges.2.t
+	desc = giu_monopoly_privileges.2.d
+	picture = ADMIRAL_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_admirals_naval_goods_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.2.a
+		reapply_estate_privilege = { privilege = estate_admirals_naval_goods_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.2.b
+		custom_tooltip = giu_monopoly_privileges.2.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				trade_goods = naval_goods
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_admirals_naval_goods_monopoly }
+		}
+	}
+}
+
+########################### 3, 4, 5: Workers
+
+country_event = {
+	id = giu_monopoly_privileges.3
+	title = giu_monopoly_privileges.3.t
+	desc = giu_monopoly_privileges.3.d
+	picture = WORKER_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_workers_fibres_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.3.a
+		reapply_estate_privilege = { privilege = estate_workers_fibres_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.3.b
+		custom_tooltip = giu_monopoly_privileges.3.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				trade_goods = flax
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_workers_fibres_monopoly }
+		}
+	}
+}
+
+country_event = {
+	id = giu_monopoly_privileges.4
+	title = giu_monopoly_privileges.4.t
+	desc = giu_monopoly_privileges.4.d
+	picture = WORKER_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_workers_logs_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.4.a
+		reapply_estate_privilege = { privilege = estate_workers_logs_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.4.b
+		custom_tooltip = giu_monopoly_privileges.4.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = logs
+					trade_goods = advanced_logs
+					trade_goods = tropical_logs
+				}
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_workers_logs_monopoly }
+		}
+	}
+}
+
+country_event = {
+	id = giu_monopoly_privileges.5
+	title = giu_monopoly_privileges.5.t
+	desc = giu_monopoly_privileges.5.d
+	picture = WORKER_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_workers_ore_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.5.a
+		reapply_estate_privilege = { privilege = estate_workers_ore_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.5.b
+		custom_tooltip = giu_monopoly_privileges.5.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = basic_ores
+					trade_goods = advanced_ores
+					trade_goods = runite
+				}
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_workers_ore_monopoly }
+		}
+	}
+}
+
+########################### 6, 7, 8: Nobles
+
+country_event = {
+	id = giu_monopoly_privileges.6
+	title = giu_monopoly_privileges.6.t
+	desc = giu_monopoly_privileges.6.d
+	picture = CANNON_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_nobles_gunpowder_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.6.a
+		reapply_estate_privilege = { privilege = estate_nobles_gunpowder_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.6.b
+		custom_tooltip = giu_monopoly_privileges.6.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				trade_goods = gunpowder
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_nobles_gunpowder_monopoly }
+		}
+	}
+}
+
+country_event = {
+	id = giu_monopoly_privileges.7
+	title = giu_monopoly_privileges.7.t
+	desc = giu_monopoly_privileges.7.d
+	picture = HUNTER_CREATURES_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_nobles_hunter_creatures_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.7.a
+		reapply_estate_privilege = { privilege = estate_nobles_hunter_creatures_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.7.b
+		custom_tooltip = giu_monopoly_privileges.7.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				trade_goods = hunter_creatures
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_nobles_hunter_creatures_monopoly }
+		}
+	}
+}
+
+country_event = {
+	id = giu_monopoly_privileges.8
+	title = giu_monopoly_privileges.8.t
+	desc = giu_monopoly_privileges.8.d
+	picture = TREASURE_CHESTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_nobles_monster_loot_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.8.a
+		reapply_estate_privilege = { privilege = estate_nobles_monster_loot_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.8.b
+		custom_tooltip = giu_monopoly_privileges.8.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = lesser_loot
+					trade_goods = rare_loot
+				}
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_nobles_monster_loot_monopoly }
+		}
+	}
+}
+
+########################### 9, 10: Burghers
+
+country_event = {
+	id = giu_monopoly_privileges.9
+	title = giu_monopoly_privileges.9.t
+	desc = giu_monopoly_privileges.9.d
+	picture = MANUFACTURED_GOODS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_burghers_manufactured_goods_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.9.a
+		reapply_estate_privilege = { privilege = estate_burghers_manufactured_goods_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.9.b
+		custom_tooltip = giu_monopoly_privileges.9.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = manufactured_goods
+					trade_goods = refined_products
+					trade_goods = terracotta
+				}
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_burghers_manufactured_goods_monopoly }
+		}
+	}
+}
+
+country_event = {
+	id = giu_monopoly_privileges.10
+	title = giu_monopoly_privileges.10.t
+	desc = giu_monopoly_privileges.10.d
+	picture = EXPLORATION_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_burghers_bamboo_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.10.a
+		reapply_estate_privilege = { privilege = estate_burghers_bamboo_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.10.b
+		custom_tooltip = giu_monopoly_privileges.10.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				trade_goods = bamboo
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_burghers_bamboo_monopoly }
+		}
+	}
+}
+
+########################### 11, 12: Clergy
+
+
+country_event = {
+	id = giu_monopoly_privileges.11
+	title = giu_monopoly_privileges.11.t
+	desc = giu_monopoly_privileges.11.d
+	picture = HERBLORE_SUPPLIES_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_church_ritual_goods_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.11.a
+		reapply_estate_privilege = { privilege = estate_church_ritual_goods_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.11.b
+		custom_tooltip = giu_monopoly_privileges.11.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = bones
+					trade_goods = herblore_supplies
+				}
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_church_ritual_goods_monopoly }
+		}
+	}
+}
+
+country_event = {
+	id = giu_monopoly_privileges.12
+	title = giu_monopoly_privileges.12.t
+	desc = giu_monopoly_privileges.12.d
+	picture = DIVINE_WISPS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_church_divine_energy_monopoly }
+	}
+	
+	option = {
+		name = giu_monopoly_privileges.12.a
+		reapply_estate_privilege = { privilege = estate_church_divine_energy_monopoly }
+	}
+	option = {
+		name = giu_monopoly_privileges.12.b
+		custom_tooltip = giu_monopoly_privileges.12.b.tooltip
+
+		every_owned_province = {
+			limit = {
+				trade_goods = divine_energy
+			}
+			apply_estate_monopoly_modifier = { privilege = estate_church_divine_energy_monopoly }
+		}
+	}
+}

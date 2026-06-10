@@ -198,6 +198,92 @@ religious_center = {
 }
 
 ##########################################
+# Queen of Ashes target provinces
+##########################################
+
+# Gnomish Firelighters
+queenofashes_gnomefirelighters_target = { #272, 286
+	potential = {
+		any_country = {
+			religion = queen_of_ashes
+		}
+	}
+	trigger = {
+		owner = {
+			religion = queen_of_ashes
+			has_church_aspect = queenofashes_gnomish_firelighters_aspect
+		}
+	}
+	loot_amount = 0.25
+}
+
+# Phoenix Feathers
+queenofashes_phoenixfeathers_target = { #78, 779
+	potential = {
+		any_country = {
+			religion = queen_of_ashes
+		}
+	}
+	trigger = {
+		owner = {
+			religion = queen_of_ashes
+			has_church_aspect = queenofashes_phoenix_feathers_aspect
+		}
+	}
+ 	monarch_lifespan = 0.1
+}
+
+# Troll Salts
+
+queenofashes_trollsalts_target = { #359
+	potential = {
+		any_country = {
+			religion = queen_of_ashes
+		}
+	}
+	trigger = {
+		owner = {
+			religion = queen_of_ashes
+			has_church_aspect = queenofashes_troll_salts_aspect
+		}
+	}
+ 	innovativeness_gain = 0.2
+}
+queenofashes_trollsalts_target2 = { #1108 - Hanalan Beach needs a different description to justify itself
+	potential = {
+		any_country = {
+			religion = queen_of_ashes
+		}
+	}
+	trigger = {
+		owner = {
+			religion = queen_of_ashes
+			has_church_aspect = queenofashes_troll_salts_aspect
+		}
+	}
+ 	innovativeness_gain = 0.2
+}
+
+##########################################
+# National Flavour - Al Kharid
+##########################################
+
+ALK_uzeran_integration = {
+	trigger = {
+		owner = {
+			OR = {
+				tag = ALK
+				was_tag = ALK
+			}
+		 	accepted_culture = uzeran
+		}
+		culture = uzeran
+	}
+	num_accepted_cultures = 1
+	local_development_cost = -0.25
+}
+
+##########################################
 # National Flavour - Asgarnia
 ##########################################
 
@@ -205,12 +291,38 @@ ASG_SARA_defence_of_hyu_ji = {
 	trigger = {
 		religion = saradomin
 		culture = sea_orphan
+		owner = {
+			religion = saradomin
+			OR = {
+				tag = ASG
+				was_tag = ASG
+			}
+		}
 	}
 	local_institution_spread = 1
  	num_accepted_cultures = 1
 	papal_influence = 0.5
 }
 
+##########################################
+# National Flavour - Great Conch
+##########################################
+
+GCH_tortugan_spawning_grounds = {
+	trigger = {
+		owner = {
+			OR = {
+				tag = GCH
+				was_tag = GCH
+			}
+			primary_culture = tortugan
+		}
+		controller = {
+			primary_culture = tortugan
+		}
+	}
+	manpower_recovery_speed = 0.1
+}
 
 ##########################################
 # National Flavour - Misthalin

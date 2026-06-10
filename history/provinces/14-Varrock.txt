@@ -27,6 +27,8 @@ is_city = yes
 
 center_of_trade = 2
 
+add_cardinal = yes
+
 2100.1.1 = {
 	base_tax = 12
 	base_production = 10

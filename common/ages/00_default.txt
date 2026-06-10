@@ -5,6 +5,7 @@ age_of_mortals = {
 		always = yes
 	}
 	
+	religious_conflicts = yes
 	papacy = 1.0
 	
 
@@ -210,7 +211,7 @@ age_of_humans = {
 		is_institution_enabled = runecrafting
 	}
 	
-	
+	religious_conflicts = yes
 	papacy = 1.25
 	
 	objectives = {
@@ -424,6 +425,7 @@ age_of_adventurers = {
 		is_institution_enabled = exploration
 	}
 	
+	religious_conflicts = yes
 	papacy = 1.5
 	
 	absolutism = {
@@ -655,6 +657,7 @@ age_of_divination = {
 		has_global_flag = death_of_guthix
 	}
 	
+	religious_conflicts = yes
 	papacy = 2.0
 	absolutism = {
 		harsh_treatment = 1
@@ -676,7 +679,7 @@ age_of_divination = {
 		obj_chaotic_age = {
 			allow = {
 				religion = zamorak
-				}
+			}
 			patriarch_authority = 0.9
 		}
 		obj_victory_over_the_salve = {
@@ -694,7 +697,7 @@ age_of_divination = {
 		obj_strength_of_saradomin = {
 			allow = {
 				religion = saradomin
-				}
+			}
 			OR = {
 				any_country = {
 					tag = ENT
@@ -752,7 +755,7 @@ age_of_divination = {
 		}
 		obj_kharidian_empire = {
 			allow = {
-				religion = menaphite
+				religion_group = menaphite_group
 			}
 			tag = KEM
 		}

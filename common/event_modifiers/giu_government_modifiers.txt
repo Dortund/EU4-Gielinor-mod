@@ -20,6 +20,105 @@ dwarven_colony_reject_hidden_modifier = {
 }
 
 #############
+#Kharidian Emergence
+#############
+
+kharidian_emergence_adm_2_modifier_HET = {
+	governing_capacity = 50
+}
+kharidian_emergence_adm_3_modifier_HET = {
+	governing_capacity = 100
+}
+kharidian_emergence_adm_4_modifier_HET = {
+	governing_capacity = 150
+}
+kharidian_emergence_adm_5_modifier_HET = {
+	governing_capacity = 200
+}
+
+kharidian_emergence_adm_2_modifier_ALK = {
+	development_cost_in_primary_culture = -0.025
+}
+kharidian_emergence_adm_3_modifier_ALK = {
+	development_cost_in_primary_culture = -0.05
+}
+kharidian_emergence_adm_4_modifier_ALK = {
+	development_cost_in_primary_culture = -0.075
+}
+kharidian_emergence_adm_5_modifier_ALK = {
+	development_cost_in_primary_culture = -0.1
+}
+
+
+kharidian_emergence_dip_2_modifier_HET = {
+ 	warscore_cost_vs_other_religion = -0.025
+}
+kharidian_emergence_dip_3_modifier_HET = {
+	warscore_cost_vs_other_religion = -0.05
+}
+kharidian_emergence_dip_4_modifier_HET = {
+	warscore_cost_vs_other_religion = -0.075
+}
+kharidian_emergence_dip_5_modifier_HET = {
+	warscore_cost_vs_other_religion = -0.1
+}
+
+kharidian_emergence_dip_2_modifier_ALK = {
+	relation_with_heathens = 5
+	reverse_relation_with_heathen_religion = 5
+}
+kharidian_emergence_dip_3_modifier_ALK = {
+	relation_with_heathens = 10
+	reverse_relation_with_heathen_religion = 10
+}
+kharidian_emergence_dip_4_modifier_ALK = {
+	relation_with_heathens = 15
+	reverse_relation_with_heathen_religion = 15
+}
+kharidian_emergence_dip_5_modifier_ALK = {
+	relation_with_heathens = 20
+	reverse_relation_with_heathen_religion = 20
+}
+
+
+kharidian_emergence_mil_2_modifier_HET = {
+	army_tradition = 0.1
+}
+kharidian_emergence_mil_3_modifier_HET = {
+	army_tradition = 0.2
+}
+kharidian_emergence_mil_4_modifier_HET = {
+	army_tradition = 0.35
+}
+kharidian_emergence_mil_5_modifier_HET = {
+	army_tradition = 0.5
+}
+
+kharidian_emergence_mil_2_modifier_ALK = {
+	yearly_army_professionalism = 0.05
+}
+kharidian_emergence_mil_3_modifier_ALK = {
+	yearly_army_professionalism = 0.1
+}
+kharidian_emergence_mil_4_modifier_ALK = {
+	yearly_army_professionalism = 0.15
+}
+kharidian_emergence_mil_5_modifier_ALK = {
+	yearly_army_professionalism = 0.25
+}
+
+kharidian_emergence_pharoahs_blessing_modifier = {
+	monthly_kharidian_emergence_adm = 0.1
+	monthly_kharidian_emergence_dip = 0.1
+	monthly_kharidian_emergence_mil = 0.1
+}
+kharidian_emergence_enhanced_pharoahs_blessing_modifier = {
+	monthly_kharidian_emergence_adm = 0.2
+	monthly_kharidian_emergence_dip = 0.2
+	monthly_kharidian_emergence_mil = 0.2
+}
+
+#############
 #Vampyric
 #############
 

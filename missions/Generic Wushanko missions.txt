@@ -313,7 +313,7 @@ genwhk_missions_3_khan = {
 		}
 	}
 	genwhk_ascendant_khagan = {
-		icon = mission_seize_the_dragon_throne
+		icon = mission_khagan
 		required_missions = { genwhk_support_from_electors }
 		position = 5
 		

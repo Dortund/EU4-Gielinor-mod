@@ -230,9 +230,20 @@ menaphite_rebels = {
 			limit = {
 				NOT = { religion = menaphite }
 				dominant_religion = menaphite
+				NOT = { has_government_mechanic = enthrallment_mechanic }
 			}
 			change_religion = menaphite
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				has_government_mechanic = enthrallment_mechanic
+			}
+			add_government_power = {
+				mechanic_type = enthrallment_mechanic
+				power_type = enthrallment_power_1
+				value = -50
+			}
 		}
 		else = { add_stability = -1 } #Should probably never get here
 		if = {

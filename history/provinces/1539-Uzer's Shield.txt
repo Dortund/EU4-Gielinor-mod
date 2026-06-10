@@ -1,0 +1,20 @@
+#1539 - Uzer's Shield
+
+culture = midkharidian
+religion = menaphite
+tribal_owner = ---
+trade_goods = fishing_spot
+
+discovered_by = centraltechgroup
+discovered_by = morytaniantechgroup
+discovered_by = kharidtechgroup
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2

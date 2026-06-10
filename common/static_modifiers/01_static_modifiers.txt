@@ -72,6 +72,7 @@ base_values = {
 	max_flagships = 1
 	num_of_parliament_issues = 10
 	has_marines = yes
+	movement_speed_in_fleet_modifier = 3 # This is used in this mod to account for issues of scaling - movement speeds in the Defines file are also increased by 50%
 }
 
 stability = {
@@ -193,7 +194,8 @@ navy_tradition = {
 	monthly_arabic_trade_influence_power = 0.2
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
-	allowed_geobukseon_fraction = 0.5
+	admirals_loyalty_modifier = 0.05
+	allowed_geobukseon_fraction = 0.4
 	allowed_galleass_fraction = 0.5
 }
 
@@ -238,25 +240,32 @@ autonomy_decreased = {
 }
 
 ########################################
+# Provincial Static Modifiers
+########################################
+
+port = {
+	local_institution_spread = 0.10
+	local_has_voc_indiamen = yes
+}
+
+########################################
 # Karma
 ########################################
 
 karma_just_right =
 {
-	global_missionary_strength = 0.02
-	defensiveness = 0.1
+	land_attrition = -0.15
+	diplomatic_reputation = 2
 }
 
 karma_too_high =
 {
-	land_morale = -0.1
-	global_missionary_strength = 0.02
+	diplomatic_reputation = 1
 }
 
 karma_too_low =
 {
-	global_unrest = 2
-	defensiveness = 0.1
+	land_attrition = -0.075
 }
 
 ########################################
@@ -378,6 +387,14 @@ guardian_scholar_modifier = {
 	leader_land_fire = 1
 }
 
+proactive_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	leader_land_manuever = 1
+}
+
 # V
 
 defender_scholar_modifier = {
@@ -412,12 +429,120 @@ warrior_scholar_modifier = {
 meritocracy = {
 	global_spy_defence = 1.0
 	advisor_cost = -0.5
+	reform_progress_growth = 0.5
 }
 
 # Multiplied by 50 - meritocracy
 low_meritocracy = {
 	yearly_corruption = 0.2 #i.e. 0.1 at 0 Meritocracy
 }
+
+# Scaled, multiplied by current corruption / 100
+corruption = {
+	global_spy_defence = -0.25
+	spy_offence = -0.50
+	all_power_cost = 1.0
+	min_autonomy = 50
+	global_unrest = -20
+	imperial_mandate = -1
+	brahmins_hindu_loyalty_modifier = 0.1
+	brahmins_muslim_loyalty_modifier = 0.1
+	brahmins_other_loyalty_modifier = 0.1
+	church_loyalty_modifier = 0.1
+	maratha_loyalty_modifier = 0.1
+	nobles_loyalty_modifier = 0.1
+	burghers_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
+	cossacks_loyalty_modifier = 0.1
+	nomadic_tribes_loyalty_modifier = 0.1
+	dhimmi_loyalty_modifier = 0.1
+	jains_loyalty_modifier = 0.1
+	rajput_loyalty_modifier = 0.1
+	eunuchs_loyalty_modifier = 0.1
+	janissaries_loyalty_modifier = 0.1
+	qizilbash_loyalty_modifier = 0.1
+	ghulams_loyalty_modifier = 0.1
+	kel_blue_opal_loyalty_modifier = 0.1
+	kel_brown_engine_loyalty_modifier = 0.1
+	kel_green_gemstone_loyalty_modifier = 0.1
+	kel_purple_pewter_loyalty_modifier = 0.1
+	kel_red_axe_loyalty_modifier = 0.1
+	kel_silver_cog_loyalty_modifier = 0.1
+	kel_white_chisel_loyalty_modifier = 0.1
+	kel_yellow_fortune_loyalty_modifier = 0.1
+	
+	tzh_hur_loyalty_modifier = 0.1
+	tzh_ket_loyalty_modifier = 0.1
+	tzh_mej_loyalty_modifier = 0.1
+	tzh_xil_loyalty_modifier = 0.1
+	tzh_gaal_loyalty_modifier = 0.1
+	
+	admirals_loyalty_modifier = 0.1
+	workers_loyalty_modifier = -0.5
+	
+	monthly_heir_claim_increase = 0.025
+	
+	monthly_russian_modernization = -1
+	monthly_ottoman_decadence = 10
+	monthly_arabic_trade_influence_power = -0.5
+	monthly_authority_power = 0.5
+	monthly_enthrallment_power_1 = 10
+}
+
+prestige = {
+	global_trade_power = 0.15			#+15/-15 total bonus from prestige.
+	land_morale = 0.1
+	naval_morale = 0.1
+	global_spy_defence = 0.1				#+10/-10
+	legitimacy = 1.0
+	improve_relation_modifier = 0.5
+	monthly_fervor_increase = 1
+	ae_impact = -0.10
+	embracement_cost = -0.1
+	monthly_heir_claim_increase = 0.05
+
+	monthly_persian_influence = 0.25
+
+	brahmins_hindu_loyalty_modifier = 0.05
+	brahmins_muslim_loyalty_modifier = 0.05
+	brahmins_other_loyalty_modifier = 0.05
+	church_loyalty_modifier = 0.05
+	maratha_loyalty_modifier = 0.05
+	nobles_loyalty_modifier = 0.05
+	burghers_loyalty_modifier = 0.05
+	vaisyas_loyalty_modifier = 0.05
+	cossacks_loyalty_modifier = 0.05
+	nomadic_tribes_loyalty_modifier = 0.05
+	dhimmi_loyalty_modifier = 0.05
+	jains_loyalty_modifier = 0.05
+	rajput_loyalty_modifier = 0.05
+	janissaries_loyalty_modifier = 0.05
+	eunuchs_loyalty_modifier = 0.05
+	qizilbash_loyalty_modifier = 0.05
+	ghulams_loyalty_modifier = 0.05
+	
+	kel_blue_opal_loyalty_modifier = 0.05
+	kel_brown_engine_loyalty_modifier = 0.05
+	kel_green_gemstone_loyalty_modifier = 0.05
+	kel_purple_pewter_loyalty_modifier = 0.05
+	kel_red_axe_loyalty_modifier = 0.05
+	kel_silver_cog_loyalty_modifier = 0.05
+	kel_white_chisel_loyalty_modifier = 0.05
+	kel_yellow_fortune_loyalty_modifier = 0.05
+	
+	tzh_hur_loyalty_modifier = 0.05
+	tzh_ket_loyalty_modifier = 0.05
+	tzh_mej_loyalty_modifier = 0.05
+	tzh_xil_loyalty_modifier = 0.05
+	tzh_gaal_loyalty_modifier = 0.05
+	
+	admirals_loyalty_modifier = 0.05
+	workers_loyalty_modifier = 0.05
+	
+	monthly_divine_authority = 0.1
+	monthly_authority_power = -0.2
+}
+
 
 expand_administation_modifier = {
 	expand_administration_cost = 0.3 #Increased from 0.2 due to smaller number of provinces in the world
@@ -439,12 +564,19 @@ over_governing_capacity_modifier = {
 }
 
 ########################################
-# Vyrewatch Sentinels (replacement for Rajput regiments)
+# Special Units
 ########################################
 
+# Vyrewatch Sentinels (replacement for Rajput regiments)
 rajput_regiment = {
 	shock_damage_received = -0.2
 	morale_damage = 0.1
  	land_maintenance_modifier = 0.1
 }
 
+#Longship (replacement for Geobukseon)
+geobukseon_ship = {
+	can_transport_units = yes
+	naval_attrition = -0.1
+	naval_morale_damage_received = -0.1
+}

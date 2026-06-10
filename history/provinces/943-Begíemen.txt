@@ -10,6 +10,7 @@ discovered_by = centraltechgroup
 discovered_by = dwarventechgroup
 discovered_by = karamjantechgroup
 discovered_by = bandostechgroup
+discovered_by = kharidtechgroup
 
 hre = no
 
@@ -20,6 +21,8 @@ base_manpower = 2
 trade_goods = logs
 
 is_city = yes
+
+add_cardinal = yes
 
 2021.10.30 = {
 	owner = ASG

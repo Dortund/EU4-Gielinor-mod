@@ -3,6 +3,7 @@ country_decisions = {
 		potential = {
 			has_reform = runecrafting_crusader
 			current_age = age_of_humans
+			NOT = { current_age = age_of_humans } #disabling this decision for now as the Crusader Zeal government has a button for it!
 		}
 		provinces_to_highlight = {
 			AND = {

@@ -25,3 +25,5 @@ latent_trade_goods = { runes }
 is_city = yes
 
 add_province_triggered_modifier = religious_center
+
+add_cardinal = yes

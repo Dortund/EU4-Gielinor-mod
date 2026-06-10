@@ -29,7 +29,6 @@ kourend_missions_1 = {
 				AUU = {
 					country_event = {
 						id = flavor_kouhouse.1
-						days = 1
 					}
 				}
 			}
@@ -90,7 +89,6 @@ kourend_missions_2 = {
 				HOS = {
 					country_event = {
 						id = flavor_kouhouse.1
-						days = 1
 					}
 				}
 			tithe_area = {
@@ -169,7 +167,6 @@ kourend_missions_3 = {
 				LOV = {
 					country_event = {
 						id = flavor_kouhouse.1
-						days = 1
 					}
 				}
 			}
@@ -227,7 +224,6 @@ kourend_missions_4 = {
 				PCL = {
 					country_event = {
 						id = flavor_kouhouse.1
-						days = 1
 					}
 				}
 			}
@@ -250,7 +246,6 @@ kourend_missions_4 = {
 			PCL = {
 				country_event = {
 					id = flavor_pcl.1
-					days = 1
 				}
 			}
 		}
@@ -288,7 +283,6 @@ kourend_missions_5 = {
 				SYZ = {
 					country_event = {
 						id = flavor_kouhouse.1
-						days = 1
 					}
 				}
 				necromancer_woods_area = {

@@ -1,4 +1,13 @@
 ﻿l_english:
+
+ justify_tributary_imposition_title:0 "Justify Tributary Imposition"
+ justify_tributary_imposition_tooltip:0 "Justifies the §YCreate Overseas Tributary§! casus belli against the target."
+ justify_tributary_imposition_desc:0 "Justifies the §YCreate Overseas Tributary§! casus belli against the target."
+ 
+ send_amascut_plague_title:0 "Send Corrupted Plague"
+ send_amascut_plague_tooltip:0 "Sends an Amascutite Plague against the target, generating corruption."
+ send_amascut_plague_desc:0 "Sends an Amascutite Plague against the target.\n\nThis gives them §R+1§! corruption immediately and §R+0.1§! corruption for 5 years, but generates the §YCleanse Corruption§! casus belli against us.\n\nThis can be stacked with the Corrupt Officials spy action."
+
  mechanic_can_establish_dwarven_outposts_yes:0 "Can establish §YDwarven Outposts§!"
  establish_dwarven_outpost_title:0 "Establish Dwarven Outpost"
  establish_dwarven_outpost_tooltip:0 "Request one of their ore-yielding provinces to establish a trading colony. This costs §Y100§! gold."
@@ -16,3 +25,6 @@
  dwarven_colony_no_lack_of_appropriate_resources_tooltip:0 "Target must have a non-capital province yielding basic ores, advanced ores, gemstones or runite, which is not in the same trade node as an existing Dwarven Outpost."
  
  RELUCTANT_TO_CEDE_LAND:0 "Reluctant to cede any land"
+ 
+ REQUIRES_14_SPY_NETWORK_TT:0 "§R- We need a spy network of at least the size of §Y14§! in §Y[From.GetName]§!.§!"
+ REQUIRES_17_SPY_NETWORK_TT:0 "§R- We need a spy network of at least the size of §Y17§! in §Y[From.GetName]§!.§!"

@@ -28,6 +28,7 @@ is_city = yes
 center_of_trade = 2
 
 add_province_triggered_modifier = religious_center
+add_province_triggered_modifier = queenofashes_gnomefirelighters_target
 
 1958.7.23 = {
 	owner = GNO

@@ -9,12 +9,12 @@ draynor_missions_1_general = {
 	has_country_shield = yes
 	
 	DYN_religious_consideration = {
-		icon = mission_alliances
+		icon = mission_direction_of_faith
 		required_missions = {  }
 		trigger = {
 			is_subject = no
 			owns_core_province = 8
-			stability = 3
+			stability = 2
 			any_owned_province = {
 				OR = {
 					has_building = temple
@@ -23,14 +23,18 @@ draynor_missions_1_general = {
 			}
 		}
 		effect = {
-			#enable_branching_mission_review = {
-			#	key = DYN
-			#	ai_event_id = flavor_dyn.3
-			#}
-			country_event = {
-				id = flavor_dyn.1
-				days = 1
+			define_advisor = {
+				type = theologian
+				skill = 1
+				cost_multiplier = 0.5
 			}
+			enable_branching_mission_review = {
+				key = DYN
+				ai_event_id = flavor_dyn.3
+			}
+			#country_event = {
+			#	id = flavor_dyn.1
+			#}
 		 	custom_tooltip = dyn_religious_consideration_tooltip
 		}
 	}
@@ -46,9 +50,9 @@ DYN_mission_branching_slot_1 = {
 		tag = DYN
 		NOT = {
 			OR = {
-				has_country_flag = DYN_religious_peace_flag
-				has_country_flag = DYN_saradomin_missions_flag
-				has_country_flag = DYN_chaos_missions_flag
+				has_country_flag = DYN_religious_peace_branch_flag
+				has_country_flag = DYN_saradomin_missions_branch_flag
+				has_country_flag = DYN_chaos_missions_branch_flag
 			}
 		}
 	}
@@ -57,6 +61,13 @@ DYN_mission_branching_slot_1 = {
 		icon = mission_unknown_mission
 		required_missions = { DYN_religious_consideration }
 		position = 2
+		trigger = { custom_trigger_tooltip = { tooltip = DYN_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = DYN_this_is_a_branching_mission }
+	}
+	DYN_branching_1_3 = {
+		icon = mission_unknown_mission
+		required_missions = { DYN_branching_1_2 }
+		position = 3
 		trigger = { custom_trigger_tooltip = { tooltip = DYN_this_is_a_branching_mission always = no } }
 		effect = { custom_tooltip = DYN_this_is_a_branching_mission }
 	}
@@ -69,17 +80,19 @@ draynor_missions_1_saradomin = {
 	ai = yes
 	potential = {
 		tag = DYN
-		has_country_flag = DYN_saradomin_missions_flag
-		NOT = { has_country_flag = DYN_religious_peace_flag }
+		has_country_flag = DYN_saradomin_missions_branch_flag
+		NOT = { has_country_flag = DYN_religious_peace_branch_flag }
+		NOT = { has_country_flag = DYN_chaos_missions_branch_flag }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
 	DYN_SARA_clean_up_the_manor = {
-		icon = mission_alliances
+		icon = mission_subjugate_draynor
 		required_missions = { DYN_religious_consideration }
 		position = 2
 		trigger = {
+			not_in_mission_preview_mode = { key = DYN }
 			8 = {
 				owned_by = ROOT
 				is_core = ROOT
@@ -97,10 +110,11 @@ draynor_missions_1_saradomin = {
 	}
 	
 	DYN_SARA_spread_the_light = {
-		icon = mission_alliances
+		icon = mission_confirm_the_faith
 		required_missions = { DYN_SARA_clean_up_the_manor }
 		position = 3
 		trigger = {
+			not_in_mission_preview_mode = { key = DYN }
 			custom_trigger_tooltip = {
 				tooltip = obj_convert_10_provinces_tooltip
 				check_variable = { which = num_converted_religion value = 10 }
@@ -121,16 +135,19 @@ draynor_missions_1_neutral = {
 	ai = yes
 	potential = {
 		tag = DYN
-		has_country_flag = DYN_religious_peace_flag
+		has_country_flag = DYN_religious_peace_branch_flag
+		NOT = { has_country_flag = DYN_saradomin_missions_branch_flag }
+		NOT = { has_country_flag = DYN_chaos_missions_branch_flag }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
 	DYN_NEUTRAL_friends_in_strange_places = {
-		icon = mission_alliances
+		icon = mission_dwarven_diplomacy
 		required_missions = { DYN_religious_consideration }
 		position = 2
 		trigger = {
+			not_in_mission_preview_mode = { key = DYN }
 			calc_true_if = {
 				all_ally = {
 					has_opinion = {
@@ -140,6 +157,16 @@ draynor_missions_1_neutral = {
 					NOT = { has_matching_religion = ROOT }
 				}
 				amount = 2
+			}
+			OR = {
+				AND = {
+					philosopher = 2
+					is_in_deficit = no
+				}
+				AND = {
+					has_idea_group = humanist_ideas
+					has_idea = ecumenism
+				}
 			}
 		}
 		effect = {
@@ -151,12 +178,19 @@ draynor_missions_1_neutral = {
 	}
 	
 	DYN_NEUTRAL_land_of_tolerance = {
-		icon = mission_alliances
+		icon = mission_three_altars
 		required_missions = { DYN_NEUTRAL_friends_in_strange_places  }
 		position = 3
 		trigger = {
-			zamorak = 1
-			saradomin = 1
+			not_in_mission_preview_mode = { key = DYN }
+			custom_trigger_tooltip = {
+				tooltip = tolerance_of_saradomin_at_least_1
+				saradomin = 1
+			}
+			custom_trigger_tooltip = {
+				tooltip = tolerance_of_zamorak_at_least_1
+				zamorak = 1
+			}			
 		}
 		effect = {
 			add_adm_power = 100
@@ -171,32 +205,37 @@ draynor_missions_1_chaos = {
 	ai = yes
 	potential = {
 		tag = DYN
-		has_country_flag = DYN_chaos_missions_flag
-		NOT = { has_country_flag = DYN_religious_peace_flag }
+		has_country_flag = DYN_chaos_missions_branch_flag
+		NOT = { has_country_flag = DYN_saradomin_missions_branch_flag }
+		NOT = { has_country_flag = DYN_religious_peace_branch_flag }
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
 	DYN_CHAOS_rise_of_chaos = {
-		icon = mission_alliances
+		icon = mission_punish_the_zamorakians
 		required_missions = { DYN_religious_consideration }
 		position = 2
 		trigger = {
+			not_in_mission_preview_mode = { key = DYN }
+			religion_group = chaos_group
 			draynor_area = {
+				type = all
 				owned_by = ROOT
 				is_core = ROOT
 				has_owner_religion = yes
 			}
 		}
 		effect = {
-			add_patriarch_authority = 0.05
+			add_patriarch_authority = 0.1
 		}
 	}	
 	DYN_CHAOS_army_of_darkness = {
-		icon = mission_alliances
+		icon = mission_icon_zamorak
 		required_missions = { DYN_CHAOS_rise_of_chaos }
 		position = 3
 		trigger = {
+			not_in_mission_preview_mode = { key = DYN }
 			army_size = 15
 			OR = {
 				barracks = 3
@@ -212,10 +251,11 @@ draynor_missions_1_chaos = {
 		}
 	}
 	DYN_CHAOS_stand_and_be_counted = {
-		icon = mission_alliances
+		icon = mission_annex_draynor
 		required_missions = { DYN_CHAOS_army_of_darkness }
 		position = 4
 		trigger = {
+			not_in_mission_preview_mode = { key = DYN }
 			is_subject = no
 			is_at_war = no
 			total_development = 100
@@ -225,7 +265,6 @@ draynor_missions_1_chaos = {
 		effect = {
 			country_event = {
 				id = flavor_dyn.2
-				days = 1
 			}
 		}
 	}
@@ -242,7 +281,7 @@ draynor_missions_5 = {
 	has_country_shield = yes
 	
 	DYN_retake_dry_isle = {
-		icon = mission_alliances
+		icon = mission_establish_wizards_tower
 		required_missions = {  }
 		provinces_to_highlight = {
 			province_id = 6
@@ -267,7 +306,7 @@ draynor_missions_5 = {
 		}
 	}
 	DYN_naval_expansion = {
-		icon = mission_alliances
+		icon = mission_night_port
 		required_missions = { DYN_retake_dry_isle }
 		trigger = {
 		 	navy_size_percentage = 0.8
@@ -287,7 +326,7 @@ draynor_missions_5 = {
 		}
 	}
 	DYN_maritime_trade = {
-		icon = mission_alliances
+		icon = mission_grand_ship
 		required_missions = { DYN_naval_expansion }
 		trigger = {
 		 	2 = {

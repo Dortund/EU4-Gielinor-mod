@@ -424,7 +424,6 @@ varlamore_missions_3 = {
 				add_yearly_manpower = -5
 				country_event = {
 					id = flavor_var.4
-					days = 1
 				}
 				custom_tooltip = VAR_aldarin_settlement_tooltip
 			}
@@ -677,7 +676,6 @@ varlamore_missions_4 = {
 				add_yearly_manpower = -5
 				country_event = {
 					id = flavor_var.5
-					days = 1
 				}
 				custom_tooltip = VAR_settlement_of_auburnvale_tooltip
 			}

@@ -100,9 +100,24 @@ historical_rival = MOH
 		dip = 0
 		mil = 1
 	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = greedy_personality
 }
 
 1980.1.1 = { remove_estate_privilege = estate_nobles_KOU_house_cohesion }
+
+2138.6.17 = {
+	heir = {
+		name = "Rose"
+		dynasty = "Kingstown"
+		birth_date = 2138.6.17
+		death_date = 2169.6.17
+		claim = 100
+		adm = 5
+		dip = 4
+		mil = 0
+	}
+}
 
 2149.7.16 = {
 	government = republic

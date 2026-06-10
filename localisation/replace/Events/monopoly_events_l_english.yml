@@ -1,0 +1,78 @@
+﻿l_english:
+ giu_monopoly_privileges.1.t:0 "Extension of the Monopoly on Fish"
+ giu_monopoly_privileges.1.d:0 "The monopoly on fish we granted to the [Root.GetAdmiralsName] has expired, meaning that we are now able to reclaim the income from our fish production. However, the [Root.GetAdmiralsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.1.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.1.b:0 "Not now."
+ giu_monopoly_privileges.1.b.tooltip:0 "We will be able to revoke the §YMonopoly on Fish§! estate privilege."
+ 
+ giu_monopoly_privileges.2.t:0 "Extension of the Monopoly on Naval Goods"
+ giu_monopoly_privileges.2.d:0 "The monopoly on naval goods we granted to the [Root.GetAdmiralsName] has expired, meaning that we are now able to reclaim the income from our naval good production. However, the [Root.GetAdmiralsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.2.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.2.b:0 "Not now."
+ giu_monopoly_privileges.2.b.tooltip:0 "We will be able to revoke the §YMonopoly on Naval Goods§! estate privilege."
+ 
+ 
+ giu_monopoly_privileges.3.t:0 "Extension of the Monopoly on Fibres"
+ giu_monopoly_privileges.3.d:0 "The monopoly on fibres we granted to the [Root.GetWorkersName] has expired, meaning that we are now able to reclaim the income from our fibre production. However, the [Root.GetWorkersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.3.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.3.b:0 "Not now."
+ giu_monopoly_privileges.3.b.tooltip:0 "We will be able to revoke the §YMonopoly on Fibres§! estate privilege."
+ 
+ giu_monopoly_privileges.4.t:0 "Extension of the Monopoly on Logs"
+ giu_monopoly_privileges.4.d:0 "The monopoly on logs we granted to the [Root.GetWorkersName] has expired, meaning that we are now able to reclaim the income from our log production. However, the [Root.GetWorkersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.4.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.4.b:0 "Not now."
+ giu_monopoly_privileges.4.b.tooltip:0 "We will be able to revoke the §YMonopoly on Logs§! estate privilege."
+ 
+ giu_monopoly_privileges.5.t:0 "Extension of the Monopoly on Ore"
+ giu_monopoly_privileges.5.d:0 "The monopoly on ore we granted to the [Root.GetWorkersName] has expired, meaning that we are now able to reclaim the income from our ore production. However, the [Root.GetWorkersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.5.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.5.b:0 "Not now."
+ giu_monopoly_privileges.5.b.tooltip:0 "We will be able to revoke the §YMonopoly on Ore§! estate privilege."
+ 
+ 
+ giu_monopoly_privileges.6.t:0 "Extension of the Monopoly on Gunpowder"
+ giu_monopoly_privileges.6.d:0 "The monopoly on gunpowder we granted to the [Root.GetNoblesName] has expired, meaning that we are now able to reclaim the income from our gunpowder production. However, the [Root.GetNoblesName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.6.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.6.b:0 "Not now."
+ giu_monopoly_privileges.6.b.tooltip:0 "We will be able to revoke the §YMonopoly on Gunpowder§! estate privilege."
+ 
+ giu_monopoly_privileges.7.t:0 "Extension of the Monopoly on Hunter Creatures"
+ giu_monopoly_privileges.7.d:0 "The monopoly on hunter creatures we granted to the [Root.GetNoblesName] has expired, meaning that we are now able to reclaim the income from our hunter creature production. However, the [Root.GetNoblesName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.7.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.7.b:0 "Not now."
+ giu_monopoly_privileges.7.b.tooltip:0 "We will be able to revoke the §YMonopoly on Hunter Creatures§! estate privilege."
+ 
+ giu_monopoly_privileges.8.t:0 "Extension of the Monopoly on Monster Loot"
+ giu_monopoly_privileges.8.d:0 "The monopoly on monster loot we granted to the [Root.GetNoblesName] has expired, meaning that we are now able to reclaim the income from our monster loot production. However, the [Root.GetNoblesName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.8.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.8.b:0 "Not now."
+ giu_monopoly_privileges.8.b.tooltip:0 "We will be able to revoke the §YMonopoly on Monster Lot§! estate privilege."
+ 
+ 
+ giu_monopoly_privileges.9.t:0 "Extension of the Monopoly on Manufactured Goods"
+ giu_monopoly_privileges.9.d:0 "The monopoly on manufactured goods we granted to the [Root.GetBurghersName] has expired, meaning that we are now able to reclaim the income from our manufactured good production. However, the [Root.GetBurghersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.9.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.9.b:0 "Not now."
+ giu_monopoly_privileges.9.b.tooltip:0 "We will be able to revoke the §YMonopoly on Manufactured Goods§! estate privilege."
+
+ giu_monopoly_privileges.10.t:0 "Extension of the Monopoly on Bamboo"
+ giu_monopoly_privileges.10.d:0 "The monopoly on bamboo we granted to the [Root.GetBurghersName] has expired, meaning that we are now able to reclaim the income from our bamboo production. However, the [Root.GetBurghersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.10.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.10.b:0 "Not now."
+ giu_monopoly_privileges.10.b.tooltip:0 "We will be able to revoke the §YMonopoly on Bamboo§! estate privilege."
+ 
+ 
+ giu_monopoly_privileges.11.t:0 "Extension of the Monopoly on Ritual Goods"
+ giu_monopoly_privileges.11.d:0 "The monopoly on ritual goods we granted to the [Root.GetChurchName] has expired, meaning that we are now able to reclaim the income from our ritual good production. However, the [Root.GetChurchName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.11.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.11.b:0 "Not now."
+ giu_monopoly_privileges.11.b.tooltip:0 "We will be able to revoke the §YMonopoly on Ritual Goods§! estate privilege."
+ 
+ giu_monopoly_privileges.12.t:0 "Extension of the Monopoly on Divine Energy"
+ giu_monopoly_privileges.12.d:0 "The monopoly on divine energy we granted to the [Root.GetChurchName] has expired, meaning that we are now able to reclaim the income from our divine energy production. However, the [Root.GetChurchName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ giu_monopoly_privileges.12.a:0 "Let us extend the monopoly."
+ giu_monopoly_privileges.12.b:0 "Not now."
+ giu_monopoly_privileges.12.b.tooltip:0 "We will be able to revoke the §YMonopoly on Divine Energy§! estate privilege."
+ 
+ 

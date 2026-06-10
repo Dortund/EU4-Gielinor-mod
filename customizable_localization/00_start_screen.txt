@@ -102,6 +102,12 @@ defined_text = {
 		}
     }
 	text = {
+        localisation_key = string_start_title_kourend
+        trigger = {
+			tag = KOU
+		}
+    }
+	text = {
         localisation_key = string_start_title_menaphos
         trigger = {
 			tag = MPS
@@ -405,6 +411,12 @@ defined_text = {
         localisation_key = string_start_kharidians
         trigger = {
 			tag = KDS
+        }
+    }
+	text = { # Kourend
+        localisation_key = string_start_kourend
+        trigger = {
+			tag = KOU
         }
     }
 	text = { # Menaphos
@@ -779,7 +791,7 @@ defined_text = {
 	text = {
         localisation_key = string_muslim_school #Has to end with \n
         trigger = {
-			religious_group = nonintervention_group
+			religion_group = nonintervention_group
 			has_dlc = "Cradle of Civilization"
         }
     }

@@ -1,4 +1,75 @@
 ﻿l_english:
- flavor_kds.1.t:0 "Settlement of Al Kharid"
- flavor_kds.1.d:0 "Misthalin has been driving goblins out of the southern Lum region to settle it themselves. However, goblins still prominent in the region and seeking vengeance, some Misthalin settlers have headed towards our lands instead. Combined with our own settlers, we can create a new city of Al Kharid."
- flavor_kds.1.a:0 "Excellent!"
+ flavor_kds.1.t:0 "A suitable capital?"
+ flavor_kds.1.d:0 "The extensive flat land north of Shantay Pass is not quite as barren as it first appeared. Proximity to the sea and the River Lum brings it a level of life we didn't think possible; perhaps this could make a great capital!"
+ flavor_kds.1.a:0 "Make it so."
+ 
+ flavor_kds.2.t:0 "Misthalin or Menaphos?"
+ flavor_kds.2.d:0 "Our role as custodian of the northern Kharidian passes seems to be taken for granted but with powers consolidating around the world, we need more than what we currently have if we are to survive. Misthalin and Menaphos both have the means to support our efforts - which one should we reach out to?"
+ flavor_kds.2.a:0 "I'm sure Misthalin will help us."
+ flavor_kds.2.b:0 "Let's seek out Menaphos' assistance."
+ 
+ flavor_kds.3.t:0 "Misthalin Grants Assistance"
+ flavor_kds.3.d:0 "Misthalin has graciously granted us extra infrastructual support, allowing us to expand our realm further!"
+ flavor_kds.3.a:0 "Wonderful!"
+ 
+ flavor_kds.4.t:0 "Misthalin Refuses to Help!"
+ flavor_kds.4.d:0 "Misthalin has declined to send us the extra support we requested."
+ flavor_kds.4.a:0 "Booooo!"
+ 
+ flavor_kds.5.t:0 "Menaphos Grants Assistance"
+ flavor_kds.5.d:0 "Menaphos has graciously granted us infrastructual support, allowing us to expand our realm further!"
+ flavor_kds.5.a:0 "Wonderful!"
+ 
+ flavor_kds.6.t:0 "Menaphos Refuses to Help!"
+ flavor_kds.6.d:0 "Menaphos has declined to send us the support we requested."
+ flavor_kds.6.a:0 "Booooo!"
+ 
+ flavor_kds.7.t:0 "Future of the North Kharidians"
+ flavor_kds.7.d:0 "It is time to decide our path."
+ flavor_kds.7.a:0 "We are no longer defined by the Empire of Kharid!"
+ flavor_kds.7.b:0 "We are the hand of the Pharoah!"
+ 
+ flavor_kds.8.t:0 "Het's Arena"
+ flavor_kds.8.d:0 "Old scriptures pertaining to Het suggest a connection between him and some kind of great arena for duelling. It appears we have found it buried beneath the desert sands and have now begun excavating it..."
+ flavor_kds.8.a:0 "I bet this will be of great benefit to us!"
+ 
+ flavor_kds.9.t:0 "The North Kharidians Declare Independence!"
+ flavor_kds.9.d:0 "Terrible foreign influences seem to have infiltrated the North Kharidians. They have declared themselves no longer subject to the Kharidian Empire and intend to form a kingdom of their own."
+ flavor_kds.9.a:0 "How dare they?!"
+ 
+ flavor_kds.10.t:0 "An Emirate Emerges"
+ flavor_kds.10.d:0 "Out from under the shadows of kingdoms and empires, the Emirate of Al Kharid arises. As a young kingdom, our goal should be to find strong allies and learn from their long-established methods of governance so that we can grow further."
+ flavor_kds.10.a:0 "For the Emir!"
+ 
+ flavor_kds.11.t:0 "The Realm of Hetiyyah"
+ flavor_kds.11.d:0 "Our future lies with our past; the Empire of Kharid. Utilising our strong bonds with the god Het we may act as the military power of the Empire, and push it beyond borders it ever had before."
+ flavor_kds.11.a:0 "Glory to Het!"
+ KDS_HET_upgrade_national_ideas:0 "§GUpgrades§! Kharidian national ideas."
+ 
+ flavor_kds.12.t:0 "Reform of the Hetiyyan Realm"
+ flavor_kds.12.d:0 "It is evident that our tribal ways are dated in an age of increasingly-sophisticated nations. Now that we understand the complexities of government, we are able to reform into a governance structure that has a tie to our historical strengths while acknowledging Gielinor's emerging needs."
+ flavor_kds.12.a:0 "Arise, the Order of Het!"
+ flavor_kds.12.b:0 "Tie to the past? I stopped following Het a long time ago."
+ 
+ flavor_kds.13.t:0 "Fresh Hetiyyan Conquests"
+ flavor_kds.13.d:0 "The Empire of Kharid continues to expand thanks to the efforts of Hetiyyah!"
+ flavor_kds.13.a:0 "Excellent."
+ 
+ flavor_kds.14.t:0 "Wealth of Hetiyyah"
+ flavor_kds.14.d:0 "Our subject, Hetiyyah, has demonstrated the power of their trade by steering vast amounts towards us!"
+ flavor_kds.14.a:0 "Excellent."
+ 
+ flavor_kds.15.t:0 "Additional Tribute from Hetiyyah"
+ flavor_kds.15.d:0 "Hetiyyah, the Arm of the Pharoah, has delivered to us a great deal of additional tribute. How should we use it?"
+ flavor_kds.15.a:0 "We should take it for our own direct use."
+ flavor_kds.15.b:0 "Expand the Empire's settlements!"
+ kem_settlement_ignore_normal_cooldown:0 "This settlement will §Gnot reset the cooldown§! of the §GEstablish New Kharidian Settlement§! decision."
+ 
+ flavor_kds.16.t:0 "Hetiyyah Applies for Tributary Status"
+ flavor_kds.16.d:0 "For some reason, the Northern Kharidians fell out of the Kharidian Empire, but they are now seeking to repair their historical ties. Should we let them?"
+ flavor_kds.16.a:0 "Accept their offer!"
+ flavor_kds.16.b:0 "Reject their offer."
+ 
+ flavor_kds.17.t:0 "Triumph of Hetiyyah"
+ flavor_kds.17.d:0 "Our trust in the northern Kharidians was well-placed. They have conquered a great swathe of land for the glory of the Kharidian Empire and their riches are pouring into our coffers at rates never seen before."
+ flavor_kds.17.a:0 "Render unto Pharoah that which is Pharoah's."

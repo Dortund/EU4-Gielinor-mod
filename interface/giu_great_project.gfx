@@ -151,6 +151,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_great_project_great_project_fractured_archive"
+		texturefile = "gfx//interface//great_projects//great_project_fractured_archive.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_great_project_great_project_fortis_aqueduct"	
 		texturefile = "gfx//interface//great_projects//great_project_fortis_aqueduct.dds"
 	}

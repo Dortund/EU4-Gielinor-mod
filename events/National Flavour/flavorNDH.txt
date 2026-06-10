@@ -43,6 +43,12 @@ country_event = {
 	option = {
 		name = flavor_ndh.1.b #Let's keep to the old ways.
 		add_prestige = 10
+		random_owned_province = {
+			limit = {
+				religion = menaphite
+			}
+			change_religion = saradomin
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -140,7 +146,7 @@ country_event = {
 	id = flavor_ndh.4
 	title = flavor_ndh.4.t #Spirits of the Elid
 	desc = flavor_ndh.4.d #An adventurer we recruited discovered the truth about the dried up well - by forsaking the ways of Elidinis, the Elid's guardian spirits were angered and dried up our well in response.
-	picture = ALKHARID_CITY_eventPicture
+	picture = MENAPHITE_ELIDINIS_eventPicture
 	
 	is_triggered_only = yes
 	

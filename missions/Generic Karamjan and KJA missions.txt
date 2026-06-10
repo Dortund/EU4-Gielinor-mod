@@ -166,6 +166,9 @@ genkja_missions_3 = {
 				area = kharazi_jungle_area
 			}
 			NOT = {
+				province_id = 1496
+			}
+			NOT = {
 				owned_by = ROOT
 			}
 		}
@@ -175,11 +178,10 @@ genkja_missions_3 = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			eastern_karamja_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+			owns_core_province = 225
+			owns_core_province = 226
+			owns_core_province = 227
+			owns_core_province = 228
 			tai_bwo_wannai_area = {
 				type = all
 				owned_by = ROOT
@@ -290,6 +292,7 @@ genkja_missions_4 = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
+					NOT = { province_id = 1496 }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -310,6 +313,9 @@ genkja_missions_4 = {
 					culture_group = karamjan_group
 				}
 			}
+			NOT = {
+				province_id = 1496
+			}
 		}
 		trigger = {
 			central_karamja_area = {
@@ -318,8 +324,22 @@ genkja_missions_4 = {
 				is_core = ROOT
 				culture_group = karamjan_group
 			}
-			eastern_karamja_area = {
-				type = all
+			225 = {
+				owned_by = ROOT
+				is_core = ROOT
+				culture_group = karamjan_group
+			}
+			226 = {
+				owned_by = ROOT
+				is_core = ROOT
+				culture_group = karamjan_group
+			}
+			227 = {
+				owned_by = ROOT
+				is_core = ROOT
+				culture_group = karamjan_group
+			}
+			228 = {
 				owned_by = ROOT
 				is_core = ROOT
 				culture_group = karamjan_group
@@ -722,7 +742,6 @@ karamja_missions_4 = {
 		effect = {
 			country_event = { 
 				id = flavor_kja.1
-				days = 1
 			}
 		}
 	}

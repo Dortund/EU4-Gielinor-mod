@@ -130,7 +130,6 @@ cashien_missions_5 = {
 				}
 				country_event = { 
 					id = flavor_csn.1
-					days = 1
 				}
 			}
 			else = {
@@ -286,7 +285,6 @@ cashien_missions_5 = {
 				}
 				country_event = { 
 					id = flavor_csn.2 #Whispered Secrets
-					days = 1
 				}
 				custom_tooltip = csn_whispered_secrets_mission_tooltip
 			}		

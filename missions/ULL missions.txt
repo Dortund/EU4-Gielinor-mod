@@ -1,0 +1,66 @@
+ull_missions_1 = {
+	slot = 1
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = ULL
+			AND = {
+				tag = KEM
+				was_tag = NDH
+				NOT = { was_tag = KDS }
+				NOT = { was_tag = ALK }
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ULL_restore_ullek = {
+		icon = mission_development_of_ullek
+		position = 3
+		required_missions = { genkharid_strong_capital }
+		provinces_to_highlight = {
+			province_id = 93
+		}
+		trigger = {
+			93 = {
+				owned_by = ROOT
+				is_core = ROOT
+			 	development = 30
+				num_of_times_expanded_infrastructure = 2
+				num_of_buildings_in_province = 6
+			}
+		}
+		effect = {
+			93 = {
+				add_province_modifier = {
+					name = ULL_second_age_legacy
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					92 = {
+						is_empty = yes
+					}
+				}
+				92 = {
+					add_siberian_construction = 200
+				}
+			}
+			else = {
+				92 = {
+					add_core = ROOT
+				}
+			}
+			ullek_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+#Country Name: Please seefilename.
+
+graphical_culture = asiangfx
+
+color = { 63 119 97 }
+
+historical_idea_groups = {
+	maritime_ideas
+	defensive_ideas
+	plutocracy_ideas
+	religious_ideas
+	naval_ideas
+	exploration_ideas
+	diplomatic_ideas
+	economic_ideas
+}
+
+monarch_names = {
+	"Cochu #0" = 1
+	"Floopa #0" = 1
+	"Griems #0" = 1
+	
+	"Tetra #0" = -1
+}

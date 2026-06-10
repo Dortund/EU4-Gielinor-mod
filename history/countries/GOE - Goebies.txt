@@ -1,0 +1,7 @@
+government = tribal
+add_government_reform = migratory_tribe
+government_rank = 1
+primary_culture = goebie
+religion = menaphite #There's no Goebie religion in the mod so this will just have to be it for now
+technology_group = kharidtechgroup
+capital = 788 #Gisha

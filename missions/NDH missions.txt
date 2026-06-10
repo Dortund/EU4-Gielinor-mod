@@ -1,0 +1,126 @@
+ndh_missions_1 = {
+	slot = 1
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = NDH
+			AND = {
+				tag = KEM
+				was_tag = NDH
+				NOT = { was_tag = KDS }
+				NOT = { was_tag = ALK }
+			}
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	NDH_potion_production = {
+		icon = mission_mixology
+		position = 1
+		required_missions = {  }
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				trade_goods = herblore_supplies
+			}
+		}
+		trigger = {
+			owns_core_province = 86
+			trade_goods_produced_amount = {
+				trade_goods = herblore_supplies
+				amount = 5
+			}
+		}
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 2
+				trigger = {
+					trade_goods = herblore_supplies
+				}
+			}
+			86 = {
+				add_province_modifier = {
+					name = NDH_centre_for_herbalism
+					duration = -1  
+				}
+			}
+		}
+	}
+	NDH_draw_in_adventurers = {
+		icon = mission_adventurer
+		position = 3
+		required_missions = { NDH_potion_production }
+		trigger = {
+			total_development = 60
+			absolutism = 25
+			capital_scope = {
+				num_of_buildings_in_province = 5
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = NDH_genie_lamps
+				duration = 9125
+			}
+		}
+	}
+	NDH_spirits_of_the_elid = {
+		icon = mission_faith_of_the_pantheon
+		position = 4
+		required_missions = { NDH_draw_in_adventurers }
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				NOT = {
+					religion = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					religion = menaphite
+				}
+				custom_trigger_tooltip = {
+					tooltip = NDH_has_spirits_of_the_elid_line_start
+					has_country_flag = NDH_spirits_of_the_elid_start
+				}
+				religious_unity = 1
+			}
+			else = {
+				owns_core_province = 73
+			}
+			OR = {
+			 	any_ally = {
+					religion = ROOT
+					total_development = 100
+				}
+				any_subject_country = {
+					religion = ROOT
+					total_development = 100
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			if = {
+				limit = {
+					religion = menaphite
+				}
+				add_country_modifier = {
+					name = NDH_reaffirmed_faith
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = NDH_conquest_of_the_elid
+					duration = -1
+				}
+			}
+		}
+	}
+}

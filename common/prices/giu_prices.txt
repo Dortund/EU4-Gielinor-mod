@@ -14,11 +14,13 @@ advanced_ores = {
 }
 
 basic_ores = {
-	base_price = 2
+	base_price = 2.5
+	#+20%: Any country owns 16+ provinces of other religions 
 }
 
 bones = {
-	base_price = 2
+	base_price = 2.5
+	#+20%: A country (without Humanist ideas) has 16+ heretic/heathen provinces
 }
 
 cabbage = {
@@ -118,10 +120,12 @@ runite = {
 
 tropical_logs = {
 	base_price = 2.5
+	#+20%: Exploration institution and some Adventurers
 }
 
 bamboo = {
 	base_price = 2.5
+	#+30%: Exploration institution and merchant in Wushanko from a tag which isn't Wushankoan, Southern Isles, Kharidian or Morytanian
 }
 
 gunpowder = {

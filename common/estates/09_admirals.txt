@@ -1,0 +1,159 @@
+estate_admirals = {
+	icon = 29
+
+	# If true, country will get estate
+	trigger = {	
+		OR = {
+			has_reform = menaphite_factions
+			religion = xautak
+		}
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		sailors_recovery_speed = 0.2
+		naval_maintenance_modifier = -0.1
+	}
+	country_modifier_neutral = {
+		sailors_recovery_speed = 0.2
+	}	
+	country_modifier_angry = {
+		sailors_recovery_speed = -0.2
+		naval_maintenance_modifier = 0.1
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		admirals_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	
+	influence_modifier = {
+		desc = EST_VAL_HAS_NO_PORT
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+				}
+			}
+		}
+		influence = -10
+	}
+	
+	influence_modifier = {
+		desc = EST_VAL_HAS_HALF_NAVAL_FORCELIMIT
+		trigger = {
+			navy_size_percentage = 0.5
+			NOT = {
+				navy_size_percentage = 0.75
+			}
+		}
+		influence = 5
+	}
+	
+	influence_modifier = {
+		desc = EST_VAL_HAS_THREE_QUARTERS_NAVAL_FORCELIMIT
+		trigger = {
+			navy_size_percentage = 0.75
+		}
+		influence = 10
+	}
+	
+	influence_modifier = {
+		desc = EST_VAL_HAS_ADMIRAL
+		trigger = {
+			num_of_admirals = 1
+		}	
+		influence = 5
+	}
+	
+	influence_modifier = {
+		desc = EST_VAL_HAS_MARINES
+		trigger = {
+			num_of_marines = 1
+		}	
+		influence = 5
+	}
+	
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_admirals }
+		}	
+		influence = -40
+	}
+	
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_admirals }
+		}
+		loyalty = -20
+	}
+
+	custom_name = {
+		desc = estate_crassians
+		trigger = {
+			religion = xautak
+		}
+	}
+
+	color = { 0 219 236 }
+
+	privileges = {
+		estate_admirals_land_rights
+		estate_admirals_maritime_state
+		estate_admirals_political_representation
+		estate_admirals_colonial_logistics
+		estate_admirals_expand_impressment
+		estate_admirals_promote_admiral_initiative
+		estate_admirals_private_trade_fleets
+		estate_admirals_rum_supplies
+		estate_admirals_fish_monopoly
+		estate_admirals_naval_goods_monopoly
+	}
+
+	agendas = {
+		estate_admirals_develop_x
+		estate_admirals_build_port_building_in_y
+		estate_admirals_access_sea
+		estate_admirals_build_a_fleet
+		estate_admirals_bigger_fleet_than_rival
+	}
+
+	influence_from_dev_modifier = 1.0
+}

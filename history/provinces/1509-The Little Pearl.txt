@@ -1,0 +1,20 @@
+#1509-The Little Pearl
+owner = GCH
+controller = GCH
+add_core = GCH
+tribal_owner = ---
+culture = tortugan
+religion = seiryu
+
+discovered_by = wushankotechgroup
+
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 2
+
+native_size = 5
+native_ferocity = 5
+native_hostileness = 5
+
+add_province_triggered_modifier = GCH_tortugan_spawning_grounds

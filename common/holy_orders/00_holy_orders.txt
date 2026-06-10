@@ -83,3 +83,27 @@ shaika_order = {
     }
     localization = holy_order
 }
+
+order_of_the_blood_moon = {
+    icon = GFX_holy_order_order_of_the_blood_moon
+    trigger = {
+        religion = amascut_religion
+    }
+    cost = 100
+    cost_type = mil_power
+    per_province_effect = {
+        add_base_manpower = 2
+    }
+    per_province_abandon_effect = {
+        add_base_manpower = -2
+    }
+    modifier = {
+		local_hostile_attrition = 1
+		local_missionary_strength = 0.015
+		local_culture_conversion_cost = -0.1
+    }
+    ai_priority = {
+        factor = 5
+    }
+    localization = unholy_order
+}

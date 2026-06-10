@@ -31,3 +31,20 @@
  flavor_alk.6.d:0 "Something suspicious is happening at the Duel Arena. Once a place of honourable combat, increasingly the grounds are overrun by gamblers - and match-fixers. Now known under the derogatory nickname of the Sand Casino, the Duel Arena has brought shame upon [Root.GetName]."
  flavor_alk.6.a:0 "We must step up our efforts to crush this corruption!"
  flavor_alk.6.b:0 "This can continue so long as we get a cut."
+ 
+ flavor_alk.7.t:0 "A Reformer's Work is Never Done"
+ flavor_alk.7.d:0 "Our incredible success in taking the throne of Kharid is undercut somewhat by our incomplete efforts to improve our government. To this end, we have incorporated our reform-minded administrators into the bureaucracy of the Empire of Kharid."
+ flavor_alk.7.a:0 "Try to keep up!"
+ alk_can_carry_on_reform_tooltip:0 "This special government reform can be replaced once all §YKharidian Emergence§! reforms are completed."
+ 
+ flavor_alk.8.t:0 "Completion of Reformers' Research"
+ flavor_alk.8.d:0 "We have finally completed the efforts to learn about administrating a kingdom - and now an empire - from other nations. Such efforts have made our bureaucrats rather effective at problem-solving, so perhaps we should continue a policy of looking for outside ideas?"
+ flavor_alk.8.a:0 "A reformer's work is never done."
+ unlock_open_imperial_administration_reform:0 "Unlock the §YOpen Imperial Administration§! reform."
+ 
+ flavor_alk.9.t:0 "Heirs of Hallowvale"
+ flavor_alk.9.d:0 "The people of Morytania were surprised to say the least at our arrival. What omen could our arrival bring - are we destined to rebuild the Kingdom of Hallowvale?"
+ flavor_alk.9.a:0 "We shall be the torch in the darkness!"
+ alk_hallowvale_route_tooltip:0 "We will gain the ability to form @HVL §Y[HVL.GetName]§! without the usual culture requirements."
+ kem_not_allowed_tooltip:0 "We will no longer be able to form the @KEM §Y[KEM.GetName]§!."
+ flavor_alk.9.b:0 "Hallowvale is not our home."

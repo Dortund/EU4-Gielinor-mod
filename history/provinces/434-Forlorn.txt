@@ -23,3 +23,7 @@ is_city = yes
 	controller = KOU
 	add_core = KOU
 }
+
+2169.1.1 = {
+	add_cardinal = yes
+}

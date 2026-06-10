@@ -1,0 +1,44 @@
+#Admirals
+
+#### REMOVED - this has way too much hardcoded nonsense to work properly
+country_decisions = {	
+	estate_admirals_grant_admiralship = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = GRANT_ADMIRALSHIP_BURGHERS
+			}
+			has_estate = estate_admirals
+			num_of_ports = 1
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_admirals
+				loyalty = 30
+			}	
+			estate_influence = {
+				estate = estate_admirals
+				influence = 40
+			}		
+			estate_action_off_shared_cooldown = {
+				estate_action = ADMIRAL_FROM_ESTATE
+				days = 3650
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = ADMIRAL_FROM_ESTATE
+			}
+			estate_action = {
+				estate_action = GRANT_ADMIRALSHIP_BURGHERS
+			}
+			increase_estate_action_counter = {
+				estate = estate_admirals
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,127 +1,370 @@
-##Gielinor Universalis Patch Notes
+# Beta 1.11.0 Patch Notes (Al Kharid)
 
-# Beta 1.10.0 Patch Notes (Varlamore)
-
-This is really a combination of an unfinished patch I was working on some time ago and some recent fixes, but given the net result mostly involved Varlamore I thought it'd make sense to name the patch after it.
-
-Although there are some map adjustments in line with the book The Gift of Guthix, I haven't implemented the Fremennik clans mentioned in the book yet as I wanted to get the patch out sooner.
-There's also some map adjustments in line with OSRS' Sailing, though islands will come at a later date.
+# Gielinor Universalis' largest-ever update focuses primarily on the Kharidian Desert with a particular focus on the northern Kharidians, who can form Al Kharid or go an entirely new path!
+# There's also improvements to terrain, estates, missionaries, the Runecrafting Crusades, a new Emperor of Kharid mechanic, an Amascutite religion and a whole bunch of extra provinces to play around with.
 
 #######################
 # Map
 #######################
 
-# Renamed >160 sea (and some land) provinces in accordance with upcoming OSRS Sailing
-## Full Sailing changes are held off for the time being as the Sailing maps are not finalised (and have some overlap with Wushanko)
+# Over 50 new provinces, mostly land, representing the OSRS Sailing expansion (RS3's Havenhythe is being left out for the time being)
+## Some of these new provinces fall into existing areas; I've tried to adjust mission trees accordingly but I may have missed some.
 
-# Adjusted Kharidian coast in line with the OSRS map.
-## Tempoross Cove is now considered part of Menaphos trade node instead of South Lum due to its relocation, and has been moved to where it'll be post-Sailing.
-## Menaphos' wider area has the same number of provinces as before, but some are no longer islands.
-## Akthanakos Island shrunk to match the size of the equivalent island for OSRS Sailing
+# Two new types of terrain: Underground and Volcanic.
+## Underground terrain is as defensible as mountains, *and* makes forts cheap to maintain on the tile. It's expensive to develop, as you'd expect.
+## Volcanic terrain has a reasonable forcelimit, but added attrition. About half of the Wilderness counts as it. It's *very* expensive to develop.
+## Underground lava areas (like the TzHaar city) are considered Underground rather than Volcanic.
 
-# Renamed a couple of provinces on Tutorial Island to lessen the meta aspects of the island, and incorporate some very obscure mentions of Jarn
-# Lumbridge Swamp is now renamed by Misthalin dynamically rather than by events
+# Complete rework to sea areas, regions and superregions to be more in line with OSRS Sailing
+## Some previously impassable sea provinces in the southwest portion of the map are now navigable
 
-#######################
-# National Flavour
-#######################
+# New province for Keldagrim: Lavaflow, representing the Lava Flow Mine and connected caves
+# New province for the Troll Stronghold: Troll Camp, representing the exterior of the Troll Stronghold
+# Four additional mainland Kharidian provinces: Shantay Pass, Kalphite Shore, Temple of Isolation and one to represent the old Goebie camp location south of Nardah
 
-# New Boss Nation and Province: Tapoyauik. Found in northeastern Varlamore.
-# New Nation: Twilight Emissaries. Appears on later starts.
-# Try culture-converting in Locus Oasis...
-# Tweaked uses of "global regiment cost", "infantry cost", "cavalry cost" and "artillery cost" in national ideas for balancing reasons
-# Replaced culture-conversion cost for time in national ideas of Hallowvale, Iban, Idol Depths, Morytania, Nightmare, Strangler, Sea Slugs
+# New Nations
+## New nation: Great Conch - found on a large island in the southern seas.
+### Has a unique T2 Republic government reform: Tortugan Travel Culture. Improves stability but limits manpower and goods produced; can only be removed by decision.
+### Also has a special province modifier on the Little Pearl, giving extra manpower recovery as long as the Great Conch stays in control.
+## New nation: Red Reef - appears by event if the holder of Summer Shore has the Quests institution and the Red Rock island is uncolonised
+## New nation: Dominion Tower - Can be created via the Empire of Kharid's desert settlement decisions. Has a unique government.
+## New nation: Gisha - Represents the area just outside Menaphos, named for the area on the player-made map that inspired the current OSRS layout. Starts as a tributary of Menaphos.
+## New nation: Goebies - Can appear after Tuska's death via the Empire of Kharid's desert settlement decisions.
+## New nation: Spirit Anglers - appears by event for Al Kharid or via the Empire of Kharid's desert settlement decisions.
+## New nation: Temple of Isolation - hidden away in central Kharid, led by Scabaras himself!
+## New nation: Ullek - Can be created via the Empire of Kharid's reforms; gets a single unique mission.
+## New nation: Uzer - Can be created via the Empire of Kharid's reforms; has three unique missions.
+## New boss nation: Yama's Domain - found in Kourend.
+## 10 new Fremennik Clan nations based upon new lore about the build-up to the Great Invasion/Runecrafting Crusades
 
-# Four new tribes of Asgarnia described in The Gift of Guthix replace existing noncanonical nations:
-## Caracelli - Replaces Cynling.
-## Kareivis - Replaces Singrene.
-## Massama - Replaces Feorweg.
-## Narvra - Replaces Brerdas.
-# Also adjusted some Asgarnian colours to be more alike each other to give the region more of a sense of coherence
-
-# Great Kourend
-## Added Royal Accord of Twill event which can fire in the aftermath of Varlamore's War of Betrayal disaster
-
-# Varlamore
-## Updated flag
-## New event chain reflecting Imafore's Betrayal. Must be in the Age of Adventurers following Ralos or Ranul, Kourend must exist and be a monarchy.
-## New Disaster: War of Betrayal. Caused via the Imafore's Betrayal event chain *or* by declaring war on a nation of Kourendite or Lovakengj culture.
-### Activating this disaster before the Age of Adventurers makes it take longer and have bigger penalties.
-### Depending on the outcome you are granted access to the Reformed Shining Kingdom or Tarnished Kingdom governments, both variations on the classic Shining Kingdom.
-## New event to spawn the Twilight Emissaries
+# Miscellaneous
+## Added a river to Kami-Shima inspired by the area in Once Upon a Time In Gielinor
+## A number of provinces (including every Wilderness province) have had their terrain overriden so more of the map should feel logical
+## The Isle of Souls is now considered its own region
+## Updated some Varlamorean province names
+## Kharidian nations now start with visibility over half of Karamja
 
 #######################
-# Religions
+# The Empire of Kharid
 #######################
 
-# Guthix - New religious school: Proactive. Used by Kareivis, Narvra and the Void Knights.
+# The vanilla game's Mandate of Heaven mechanic is reworked in this mod as the Empire of Kharid! At the start of the game, Menaphos holds the title of Emperor and has a few tributaries in the Kharidian Desert.
+# Getting Mandate initially is very difficult, reflective of the difficulty Menaphos had in asserting its authority.
+# The Pharoah of Kharid has access to a special covert diplomatic action to create a make-tributary casus belli against any non-boss nation in the Kharidian Desert region.
 
-# V - Vampyric syncretism gives culture-conversion time reduction instead of cost
+# The "Expand Settlements" reform is the easiest to unlock and allows you to expand your subject nations' land and generate extra Mandate every 20 years. Under certain conditions it can also generate new nations!
+# Through the Karamjan and Wushankoan reforms, you can expand the make-tributary diplomatic action to those respective regions, helping you build a huge tributary empire
+# The "Promote the Pantheon" reform lets you propagate Menaphite religions through trade - useful for converting Wushankoan tributaries!
+# The Reconstruction of Ullek and Uzer reforms offer good bonuses in their own right, and also spawn their respective countries if the provinces are empty (or buff the province if it's owned/owned by a subject)
+
+#######################
+# Global Speed Buff
+#######################
+
+# Gielinor Universalis uses a scale that results in large provinces, and consequentially things can feel a bit slower than necessary. As such, I have increased the base speed of the following by approximately 50%:
+## Diplomat movement
+## Merchant movement
+## Infantry speed
+## Cavalry speed
+## Artillery speed
+## Colonist travel time
+# I have also given all nations +3 fleet movement as a base bonus; this is approximately +50% to transports/heavies, +75% to galleys, +30% to light ships.
+# Given developments in RS3's world map, I may have to entirely rescale the world map in a future patch, which will probably result in a restoration of regular movement speed.
 
 #######################
 # Cultures
 #######################
 
-# Cam Torum is now considered its own culture in the Dwarven group, separate from Imcando.
+# New naval doctrines, tied to culture:
+## Al-Kharidian (must complete the Al Kharid mission Kharidian Port or be the Spirit Anglers tag and the Tempoross province must be owned by anyone) - Spirit Anglers: +25% blockade efficiency, -25% naval barrage cost, -10% morale hit from lost ships
+## Crandorian - Crandorian Design: -25% naval attrition, +5% ship durability
+## Fremennik (except Moonclan) - Longship Expansion: +25% longship forcelimit, -1 landing penalty, -50% attrition for transported land units
+## Menaphite (with access to Admirals estate, by default only Menaphos) - Defer to the Admirals: +10% Admiral estate influence and loyalty, -50% admiral cost
+## Moonclan - Ship Curses: +1 combat bonus off owned coast
+## Piscarilius - Piscarilian Black Market: +25% privateering efficiency, +20% naval forcelimit
+## Tortugan - Tortugan Explorers: May explore, +25% colonial and trade range, -10% naval attrition
+## Vampyric - Abandon the Sea: -25% sailors and naval forcelimit, +10% manpower and land forcelimit
+# Requirement to take a naval doctrine dropped from 20 naval forcelimit to 12.
 
-# Rennard is now the primary nation of the Dimnes culture instead of Dark Wizards. Hopefully this should create more logical rebels.
+# There's also a bunch of culture-specific terrain estate privileges - see the Estates section!
+
+# Added more Varlamore names
+# New Dragon culture: Frost Dragon
+# New culture group/culture: Tortugan
+# Merged Fairy and Zygomite groups into Mushroom group (yes, fairies are part-mushroom)
 
 #######################
-# Government
+# Religions
 #######################
 
-# "Quidamortem Boss Nation" renamed to "Quidamortem Government" with fewer restrictions than before, but also fewer bonuses. The subsequent government reforms they may choose have also been adjusted.
-# Boss, Island Boss and Quidamortem governments have nerfed intrinsic bonuses, but now has access to the Boss Endurance mechanic.
-## Boss Endurance ticks up slowly over time making boss nations harder to defeat as time goes on - but they also become richer if you feel like fighting them for cash.
-## War exhaustion causes nations to lose Boss Endurance.
-# Government reforms for Boss Nations have also been reined in power-wise to account for the Boss Endurance mechanic.
+# New religion: Amascutite.
+## The Scabarites of Ullek now start following it, and other Menaphite nations can fall into it via the Corruption of Amascut disaster.
+## Unlocks access to the Order of the Blood Moon local organisation (costs 100 MIL, +2 manpower in area provinces, +1 local hostile attrition, +1.5% missionary strength, -10% culture-conversion cost)
+## Unlocks a special covert action to spread corruption in Menaphite countries, but gives them a casus belli against you.
+## Anyone with the religion is forced into the Thrall of Amascut T2 government reform with a unique Enthrallment mechanic.
+### High Enthrallment allows you to coastal raid, effectively raze provinces, spy with ease and get some nice modifiers - but you'll have a hard time making friends and will generate a *lot* of aggressive expansion.
+### Getting your Enthrallment below 10% is the only way to escape the faith aside from being force-converted through war (religious rebels will only lower your Enthrallment rating and not convert you!)
 
-# Vampyre Kingdom - Blood Power now gives culture conversion time reduction instead of cost reduction
+# General
+## With the exception of the Hedonistic religious group, *all religions* now get access to decisions to boost their missionary strength.
+### Saradomin, Zamorak and Guthix get the most missionary strength, followed by nations featured in Armies of Gielinor or the God Wars Dungeon.
+## Fixed some issues with religious propogation via trade. A nation following Saradomin, Zamorak or Guthix can propogate religion using trade in provinces that follow the Wushanko Guardians.
+## Fixed the Religious Aspects alert to match your current religion
+## More religion-specific modifiers are correctly removed when your religion is changed.
+## Changing religion to Godless, Guthix or V should correctly trigger the event to choose religious school.
 
-# I attempted to implement a new system of Dwarven Colonies but it caused so much trouble I cut it, with some stuff in the code but commented out or inaccessible. I might reimplement the idea in future though.
+# Guthix
+## Base modifiers and Balance adjusted. Basic religion now gives +1 tolerance of the true faith and -0.1 monthly devastation. Balance now gives +2 diplomatic reputation and -15% land attrition by default, and no longer gives penalties at high or low values.
+## Fixed a reference to "karma" on the religion panel
+
+# Menaphite
+## +10% governing capacity modifier replaced with +10% trade efficiency
+## Realms of the Menaphite religion can now create tributaries
+## New disaster: Corruption of Amascut. Having at least 10 corruption (or 5 and the Amascut personal deity) will initiate it, and if you don't immediately side with Amascut, prepare to fight her armies!
+### One of the events gives you a helpful modifier for the rest of the disaster depending on your personal deity.
+
+# Northern Pantheon
+## New event after the Architecture institution spreads to Northern Pantheon provinces (not in Acheron) - spawns a Guthixian Centre of Reformation for 25 years which specifically targets Northern Pantheon provinces
+### Unfortunately the centre of reformation isn't working right now!
+
+# Queen of Ashes
+## Special event chain to unlock the religion - chance of happening if you have at least 12 recently-razed provinces in your lands. Don't try following this event chain while following Amascut; it can't end well.
+## Added Festival mechanic (requires Origins expansion). This is a modified version of the vanilla game's Jewish mechanics but with some notable distinctions.
+### The three categories of religious aspects are Fuel, Treatment and Dance.
+### Fuel aspects determine what you get out of Festivals, and are doubled in power if you have a trading bonus in one of the relevant trade goods
+### Treatment aspects represent additives to fires to make them stronger, inspired by Gnome Firelighters, Phoenixes and Troll Salts. Holding relevant provinces will add extra bonuses.
+### Dance aspects affect your prowess in warfare and allow you to generate extra faith power.
+
+# Saradomin
+## Cardinals now have defined starting provinces so they won't be so randomly distributed at the start of the game.
+
+# Wushanko Guardian Group
+## Can now form personal unions
+### I thought it'd make playing in the region more fun; there isn't a lore reason for this change as such.
+
+# Zamorak
+## Replaced "Judge of Yama" with "Yama, Master of Pacts"; the effects are for now unchanged.
+## Chaos generation from mission modifiers has been lowered in line with other sources of Chaos
 
 #######################
-# Events
+# Units
 #######################
 
-# New set of Wilderness Border events concerning outlaws. The mechanics of these events are a stealth means to bring institution spread into the Wilderness as you can choose to exile the outlaws.
+# Fremennik-culture nations now have access to the unique Longships, a variant of Galleys.
+## Longships can transport troops, take less attrition and less morale damage.
+## Longships can only be recruited in coastal provinces of the Fremennik culture group.
+## By default the amount you can recruit is capped to 20% of force limit. You can get another up to 40% from navy tradition, and 25% from the Longship Expansion naval doctrine. The Fremennik Empire gets another 25% from national ideas.
+
+# Fremennik tech-14 Cavalry renamed to Mammoth Riders to match new Great Invasion lore.
+
+#######################
+# Governments
+#######################
+
+# Governments that used Meritocracy in previous patches no longer do due to certain hardcoded mechanics I have to reserve it for.
+# New generic T1 Republican government: Independent Faction. Represents certain groups like minigame hosts, the Sect of Uhld, etc. Halves governing capacity but grants bonus Adventurer capacity.
+# New generic T1 Republican government: Secluded Island Republic. If your capital is on an island, in Wushanko, in the Southern or Outer Isles, you can take this government.
+# New T1 Tribal government: Fremennik Clan. Uses horde mechanics but is less powerful than a Bandosian horde. Used for the various clans found throughout the Fremennik mainland at the start of the game.
+
+# Runecrafting Crusader Government
+## Now locks you at Empire rank.
+## Years of Separatism penalty raised to 10.
+## End of the Runecrafting Crusades disaster now has a +25% all-power cost penalty
+## Now correctly causes the country to disintegrate if you take the option to concede defeat in the End of the Runecrafting Crusades disaster (the AI always takes this option). Also drops down to Duchy rank.
+## No longer allows the creation of tributaries - you've got more important things to do!
+## Slightly increased base decay rate of Crusader Zeal (from -0.2 to -0.25/month)
+## Now generate extra Crusader Zeal (+0.1/month) when at war with a foe with the Runecrafting institution and a province that has runes (active or latent).
+## Now incorporates the "Crush Altars" decision as a UI element; no mechanical changes.
+## New button: Migrate the Fremennik. Cedes a province in the Fremennik region to an adjacent Fremennik-culture ally but instantly finishes all in-progress coring processes and generates some Crusader Zeal.
+### You can't cede a province you already ceded in the past and re-obtained.
+### Ceded provinces will lose development in the process and, if located in certain areas, adopt the culture of the recipient country. Historical friends are favoured to receive these provinces so releasing Gunnar is worth it!
+
+# Fateful Kingdom government should now correctly enable the Great Holy War casus belli
+# Frog Collective government no longer has the Nobility estate, but instead gets access to the new Workers estate (and is immune to the Workers coup disaster). It also disallows changing primary culture.
+# Goblin Empire government no longer penalises morale and discipline, but gives a lower manpower/forcelimit bonus.
+# Miscellanean Monarchy reform now has +1 stability cost of declaring war. I threw together a couple of stopgap missions so you can reform or replace this government.
+# Obsidian Caste government now disables changing culture
+# Vampyre Kingdom no longer has penalties to sailors/naval forcelimit and bonuses to manpower/land forcelimit as a new naval doctrine takes that role.
+# Various hordes no longer have movement speed bonuses
+
+# Grand Exchange economic reform now only requires EITHER economic or trade ideas, not both.
+
+#######################
+# Estates
+#######################
+
+# New Estate: Admirals. Unlocked by Menaphos' Menaphite Factions reform, and nations that follow Xau-Tak (named there as Crassians).
+## Has a set of random events! With some unique text for realms that follow Xau-Tak.
+
+# New Estate: Workers. Unlocked by Menaphos' Menaphite Factions reform, and the Frog Collective and Town Council governments.
+## Has a set of random events!
+## Notably, unlike other estates the Workers *hate* corruption and it will *lower* their loyalty equilibrium.
+
+# General
+## Modded estates now correctly lose loyalty when you seize land, and may have some other checks correctly implemented now.
+## Modded estates now gain loyalty equilibrium from prestige and corruption like other estates.
+## The classic three estates, plus Admirals and Workers, have access to new Monopoly privileges set up for Gielinor Universalis' trade goods!
+### Admirals: Fish, Naval Goods
+### Burghers: Bamboo, Manufactured Goods/Refined Products/Terracotta
+### Clergy: Bones/Herblore Supplies, Divine Energy
+### Nobles: Gunpowder, Hunter Creatures, Lesser Loot/Rare Loot
+### Workers: Flax, Logs/Advanced Logs/Hardwoods, Basic Ore/Advanced Ore/Runite
+
+# Burghers
+## Can now request you take bamboo or terracotta provinces.
+## Nations that follow Xau-tak no longer have access to this estate and get the Admirals estate instead.
+## Tropical City Planning is now available for all nations in the Karamjan and Wushanko tech groups, as well as those of Talkasti, Goebie, Jadinko or Jogre primary culture.
+## Mountain Expansion is now available for all nations of Dwarven, Mountain Troll, Ice Troll, Undead Troll, Hill Giant and Living Rock primary culture.
+## Forest Expansion is now available for all nations that follow Guthix, or those with the Elven or Mushroom culture groups, or Ent, Moss Giant or Tree Gnome primary culture.
+## Hydraulic Rights are now available for all nations of the Kharidian, Camel and Goebie culture groups.
+## New Privilege: Excavation Rights; eliminates underground terrain's development cost penalties. Requires Arachnid, Dragon or Dwarven culture group, or any of the Ascended, Dorgeshuun, Cave Giant, Kalphite, Living Rock, Nagua or Scabarite primary cultures.
+## New Privilege: Expand Swamp Dwellings; halves marshland's development and movement cost penalties. Requires Amphibian, Lizardman or Ogre culture group.
+## New Privilege: Glacial Expansion; halves glacial land's development and movement cost penalties. Requires Penguin culture group, or any of the Ice Giant, Ice Sprite, Icelord, Ice Troll, Snow Imp or Yeti primary cultures.
+## New Privilege: Volcanic Development; halves volcanic terrain's development cost penalty. Requires Dwarven culture group, or following the Lucien, Queen of Ashes, Zamorak or Zemouregal religions. Having access to Volcanic Attunement replaces this privilege.
+## New Privilege: Volcanic Attunement; eliminates volcanic terrain's development cost penalty and attrition to self. Requires Demon culture group, or any of the Fire Giant, Fire Imp, Reborn Warrior or Phoenix primary cultures.
+## Kharidian Colonies is no longer available to use as new Empire of Kharid functionality - among other changes - has taken its place.
+
+# Clergy
+## Now varies in name depending on your country's religion.
+## Implemented Entranan Emissary privilege, a Saradominist counterpart to the vanilla game's Papal Emissary
+
+# Keldagrim Estates
+## Has access to the Mountain Expansion, Excavation Rights and Volcanic Development privileges. Each of these privileges can only be assigned to a single estate at a time.
+
+# TzHaar Estates
+## New Hur privilege: Builders of Gielinor. Eliminates development cost penalties from hills, highlands, mountains, underground and volcanic terrain, and avoids the self-attrition from owned volcanic provinces.
+
+#######################
+# National Flavour
+#######################
+
+# General
+## Slightly re-organised generic Kharidian missions
+## All missions that trigger events now trigger them immediately
+## The following are now considered end-game tags: Acheron, Ape Atoll, Asgarnia, Aviumia, Baxtoria, Entrana, Feldip Hills, Fremennik Empire, Forinthry, Grand Ourania, Goblin Empire, Cave of Guthix, Gnome Empire, Kandarin, Kharidian Empire, Khaganate, Karamja, Kourend, Misthalin, Marwolaeth, Morytania, New Imcandoria, New Varrock, Tirannwn, Tasabek, United Provinces of Zeah, Varlamore, Wushanko, Xerician Empire, Zarosian Empire
+### Entrana is an end-game tag for the sake of Saradominist mechanics.
+### A nation that used to be Kourend can still take the Reform Kourend decision, unless you went wild and united the Council of Khans in the interim.
+## Localised national ideas of Janger, King Black Dragon, Og, Rogues' Castle, Vet'ion
+## All national ideas offering Legitimacy or its equivalent now offer all equivalents
+
+# Ape Atoll
+## Added new event for a monkey-culture nation that unifies Ape Atoll but lacks the Bo Isles, which allows them to vassalise the latter. The mean time to occur is quite low so this is primarily useful to ensure the AI actually forms Ape Atoll.
+
+# Asgarnia
+## Mission "Wushanko Missions" now lowers the requirement for propagating religion by trade to 40% if you follow the Saradomin/Zamorak/Guthix faiths, or simply enables the mechanic otherwise.
+## Religious missions now use the branch preview system; this mostly just showcases which branches are available.
+## Asgarnia-Miscellaneous Religion mission "Allies in Faith" now just requires one ally of the same faith, with 50 development, as many religions lack more than one decent option
+## Asgarnia-Zamorak Religion mission "Allies of Ourania" now creates a historical friendship for allies, or lowers diplomatic integration cost if you have a Kandaranian subject.
+## Asgarnia-Zamorak Religion mission "Taverley Dungeon" has had its permanent province modifier buffed.
+
+# Barbarian Outpost
+## Now formable by any nation of Barbarian culture (except Gunnar and those not on the mainland) after the Runecrafting Crusades begin
+## Slightly buffed national ideas
+
+# Crandor
+## Due to the addition of the unique Crandorian Design naval doctrine, the national idea is replaced with Shipbuilding Tradition (-20% shipbuilding time)
+
+# Draynor
+## Managed to implement a proper branching path for the religious mission branch. It'll all hopefully be cleaned up and expanded later, but it's nice to have a proof of concept!
+## No longer gets yearly Chaos from national ideas
+
+# Fremennik Empire
+## National idea "Longships" now gives an increase to longship force limit instead of reducing heavy ship costs.
+
+# Gnome Empire
+## Can now be reformed by decision. If you were the Gnome Empire, you are not locked out of this decision despite having been an end-game tag (unless you united the Council of Khans in the mean-time for some reason)
+
+# Great Kourend
+## Added startup text
+
+# Gunnar
+## Can now be formed or released by decision, rather than needing to wait for the event. Barbarian-culture nations can form Gunnar; other Fremennik cultures (except Moonclan) can choose to release Gunnar and create a historic friendship between them.
+### The event to spawn Gunnar now only triggers from 2035 at the earliest to give time for manual formation.
+## No longer receives full cores from missions
+## Multiple changes to Runecrafting Crusader government - see government section
+
+# Kharidian Empire
+## In addition to the usual requirements, can alternatively be formed by the Pharoah of Kharid after passing enough reforms.
+## Reworked national ideas to be considerably stronger
+
+# Kharidians/Al Kharid
+## "Kharidians" nation renamed to North Kharidians for clarity's sake, given the frequent use of the term "Kharid" in a different context. You also don't tend to keep that name for very long.
+## Reworked and greatly expanded mission tree:
+### Now has a branching path between the historical Al Kharid path and the ahistorical Loyalist branch, where you side with the Pharoah over Misthalin.
+### Choosing your path also gives you access to the Kharidian Emergence government mechanic, which is somewhat akin to Egyptian Modernisation from the vanilla game. It also helps you acquire northern Kharidian provinces!
+## Al Kharid can now be formed by any nation of Al Kharidian culture, except for a culture-shifted Menaphos and North Kharidians taking the Loyalist mission branch. Forming it this way automatically unlocks the Al Kharid mission path.
+## Buffed Al Kharid national ideas
+
+# Menaphos
+## Now has a unique T2 government reform: Menaphite Factions. Allows concentrating development without losses, grants tax and reduces subject liberty desire. Also disables the Clergy estate and grants access to the Workers and Admirals estates.
+### Other countries can get this reform if they own Menaphos, are Menaphite primary culture and Menaphite religious group.
+## Updated national ideas
+
+# Miscellania/Etceteria
+## Added two missions allowing the repeal or upgrading of the unique Miscellanean Monarchy reform
+
+# Mountain Tribe
+## Renamed to "Bear Clan" in accordance with lore
+
+# Myths' Guild
+## Renamed to "Sect of Uhld".
+
+# Nardah
+## Added 3 unique missions
+
+# Rellekka
+## National idea "Shipbuilding Tradition" (+10% ship durability) replaced with "Harbour of Rellekka" (-10% ship cost, -10% shipbuilding time) to give other Fremennik nations a fair chance in a naval battle
+
+# Zarosian Empire
+## Now only needs 45 Misthalanian Provinces to form instead of all of them (this means you don't need the Lumbridge Swamp Caves)
+
+#######################
+# Council of Khans
+#######################
+
+# The interface now has dragons on it!
+# The Reorganised Council reform now correctly grants access to the Expand Empire casus belli
+# Starting the Centralisation or Decentralisation tracks now only requires the Khagan Bureaucracy reform, instead of United Front
+# Unifying the Council of Khans correctly forms the Khaganate instead of Wushanko, and gives you a permanent modifier to keep the various bonuses you accumulated as Khagan.
+
+#######################
+# Trade
+#######################
+
+# Trade Node Changes:
+## Kharazi node provinces north of the Kharazi Jungle have been moved to the Musa Point node
+
+# Trade Good Changes:
+## Bones now have 2.5 base value instead of 2. Also added a new event to raise their price further (requires a country with the Clergy estate, without Humanist ideas, to have 16+ provinces not of their main religion.)
+## Lesser Loot now provides +15% tax to its province instead of +10 colony growth
+## "Flax" renamed "Fibres" and accounts for OSRS' hemp and cotton.
+## "Tropical Logs" renamed "Hardwoods" and the description is expanded to incorporate OSRS' new Sailing logs.
+## Added new events after the Exploration institution spreads to increase the value of hardwoods and bamboo.
+## Adjusted the spawn rate for certain resources in colonial provinces. For example, fruit is more common around Aldarin, gunpowder is more common around the Skull region, and lesser loot is more common in the Wilderness.
 
 #######################
 # Institutions
 #######################
 
-# Runecrafting institution now spreads slower by default, but faster than before in provinces with Asgarnian, Fremennik, Kandarin, Kharidian, Kourendite, Misthalanian, Varlamorean, Cam Torum, Imcando or Lovakengj culture.
-## This is intended to reflect the rapid spread of Runecrafting through primarily human realms. The Imcando and Cam Torum dwarves were also rapid adopters, and Lovakengj is included due to being a related population.
-# Runecrafting institution spread for Runes and latent Runes adjusted; latent Runes are still slower to gain the institution than non-latent ones, but the gap is closed. This is to help main-continent human realms.
+# Exploration can now spawn/spread with 60+ naval tradition, and can additionally spread in the capital of nations with 20+ Adventurers. This should hopefully help the institution spread faster.
 
 #######################
 # Monuments
 #######################
 
-# New Monument: Temple of Twilight. Found in northeastern Varlamore, requires the Ranul or Ralos faith. Offers a fixed boost to land forcelimit and bonuses to manpower in true-faith provinces.
+# New monument: The Fractured Archive. Found in in the cave provinces of southern Misthalin. Requires Guthixian religion and grants yearly innovation and maximum adventurers.
 
-# Chambers of Xeric offers less regiment cost reduction until tier 3
-# Forge of Giants no longer offers reduced army maintenance costs, but instead offers extra goods produced for the province
-# Fortis Aqueduct has been adjusted to offer region-wide bonuses
-# Tuai Leit Library now offers direct institution growth in its province instead of just a growth multiplier
+# Updated most of the monument images sourced from OSRS with new, better screenshots via OSRS.world
 
-#######################
-# Bugfixes
-#######################
-
-# Bugfixes thanks to Dortund:
-## Fixed missing gui on government mechanics
-## Fixed alternative unlock route for Sacred Forge
-## Fixed Canifis Fate of Slepe mission using the wrong events
-## Fixed Canifis events for releasing Slepe as a march
-## Fixed Saradomin event that requires a cardinal to trigger so it functions properly
-## Fixed Travelling Runecrafters institution event
-## Fixed the entire mod being considered for an outdated version of the game
-
-# Fixed broken Kourend subjects not being targeted by the "restore House" casus belli
-
-#######################
-# Miscellaneous
-#######################
-
-# Governing capacity has been reduced across the board to account for the smaller game world relative to vanilla EU4. Penalties from certain governments have also been reduced proportionally.
+# Arc: Tuai Leit Library - Now must additionally be a Wushanko religion, or Hanalan/Birman, to use. Technology discount at T3 increased to 10%.
+# Asgarnia: Falador Castle - Manpower recovery harshly nerfed but now gives bonus manpower in its area
+# Karamja: Cairn Isle - Now gives +0.5 tolerance of the true faith at tier 1
+# Karamja: Elder Kiln - Development reduction removed (due to existence of new estate privilege), new bonus of manpower recovery. Global goods produced bonus replaced with province-specific goods bonus.
+# Kandarin: Temple of Ikov - Bonuses now scale more appropriately to each tier instead of giving a completely different bonus each time
+# Kharid: Citharede Abbey - Now grants local tolerance of heretics/heathens, and religious unity, instead of a clergy privilege slot
+# Kharid: Jalkabir - Entirely reworked. Grants Mandate, reduces Mandate cost of converting tributaries, and increases all estate loyalty.
+# Kourend: Doors of Dinh - Lowered land attrition reduction, but monument now gives a little trade goods size bonus in its area
+# Kourend: Tithe Farm - Now only gives regular development cost reduction, and only in the Kourend region
+# Misthalin: Paterdomus - Stats adjusted to emphasise its specific defensive role
+# Shield: Black Stone Fortress - Sailors/defensive bonus nerfed, ability to perform coastal raids removed. However, grants +1 coastal raid range at t3, making it highly valuable to any nation that can intrinsically coastal raid.
+# Varlamore: Fortis Colosseum - Now requires Ralos or Ranul religion

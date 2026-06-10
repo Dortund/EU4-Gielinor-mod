@@ -497,7 +497,6 @@ asgarnian_missions_3 = {
 				}
 				country_event = {
 					id = flavor_asg.17 #Faithful Diplomacy
-					days = 1
 				}
 			}
 			else_if = {
@@ -640,7 +639,6 @@ asgarnian_missions_3 = {
 				}
 				country_event = {
 					id = flavor_asg.21 #Silence of Ice Mountain
-					days = 1
 				}
 			}
 			else_if = {
@@ -711,7 +709,7 @@ asgarnian_missions_3 = {
 					key = asg_wushanko_relations_tooltip
 				}
 			}
-			589 = {
+			1028 = {
 				add_trade_modifier = {
 					who = ROOT
 					duration = 9125
@@ -732,7 +730,6 @@ asgarnian_missions_3 = {
 				is_strongest_trade_power = ROOT
 			}
 			541 = {
-				has_merchant = ROOT
 				is_strongest_trade_power = ROOT
 			}
 			589 = {
@@ -799,8 +796,21 @@ asgarnian_missions_3 = {
 			}
 		}
 		effect = {
-			set_country_flag = can_use_propagate_religion
-			custom_tooltip = ASG_wushanko_missions_reward_tooltip
+			if = {
+				limit = {
+					OR = {
+						religion = saradomin
+						religion = zamorak
+						religion = guthix
+					}
+				}
+				set_country_flag = 40_trade_power_for_propogate_religion
+				custom_tooltip = ASG_wushanko_missions_reward_main_religion_tooltip
+			}
+			else = {
+				set_country_flag = can_use_propagate_religion
+				custom_tooltip = ASG_wushanko_missions_reward_misc_religion_tooltip
+			}
 		}
 	}
 }
@@ -1260,13 +1270,46 @@ asgarnian_religious_missions_3 = {
 				name = ASG_faithful_unification
 				duration = 3650
 			}
-			set_country_flag = asg_define_religious_missions_flag
 			custom_tooltip = ASG_confirm_the_faith_flag
-			country_event = {
-				id = flavor_asg.32 #State Religion of Asgarnia
-				days = 1
+			enable_branching_mission_review = {
+				key = ASG
+				ai_event_id = flavor_asg.32
 			}
 		}
+	}
+}
+
+asgarnian_branching_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = ASG
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
+	}
+	has_country_shield = yes
+	ASG_branching_2_14 = {
+		icon = mission_unknown_mission
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		position = 14
+		trigger = { custom_trigger_tooltip = { tooltip = ASG_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = ASG_this_is_a_branching_mission }
+	}
+	ASG_branching_2_15 = {
+		icon = mission_unknown_mission
+		required_missions = { ASG_branching_2_14 }
+		position = 15
+		trigger = { custom_trigger_tooltip = { tooltip = ASG_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = ASG_this_is_a_branching_mission }
 	}
 }
 
@@ -1277,15 +1320,71 @@ asgarnian_branching_slot_3 = {
 	potential = {
 		NOT = { map_setup = map_setup_random }
 		tag = ASG
-		NOT = { has_country_flag = asg_define_religious_missions_flag }
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	ASG_branching_3_14 = {
 		icon = mission_unknown_mission
 		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
 		position = 14
-		trigger = { custom_trigger_tooltip = { tooltip = DYN_this_is_a_branching_mission always = no } }
-		effect = { custom_tooltip = DYN_this_is_a_branching_mission }
+		trigger = { custom_trigger_tooltip = { tooltip = ASG_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = ASG_this_is_a_branching_mission }
+	}
+	ASG_branching_3_15 = {
+		icon = mission_unknown_mission
+		required_missions = { ASG_branching_3_14 }
+		position = 15
+		trigger = { custom_trigger_tooltip = { tooltip = ASG_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = ASG_this_is_a_branching_mission }
+	}
+	ASG_branching_3_16 = {
+		icon = mission_unknown_mission
+		required_missions = { ASG_branching_2_15 ASG_branching_3_15 ASG_branching_4_15 }
+		position = 16
+		trigger = { custom_trigger_tooltip = { tooltip = ASG_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = ASG_this_is_a_branching_mission }
+	}
+}
+
+asgarnian_branching_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = ASG
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
+	}
+	has_country_shield = yes
+	ASG_branching_4_14 = {
+		icon = mission_unknown_mission
+		required_missions = { ASG_SHAREDRELIGION_confirm_the_faith }
+		position = 14
+		trigger = { custom_trigger_tooltip = { tooltip = ASG_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = ASG_this_is_a_branching_mission }
+	}
+	ASG_branching_4_15 = {
+		icon = mission_unknown_mission
+		required_missions = { ASG_branching_4_14 }
+		position = 15
+		trigger = { custom_trigger_tooltip = { tooltip = ASG_this_is_a_branching_mission always = no } }
+		effect = { custom_tooltip = ASG_this_is_a_branching_mission }
 	}
 }
 
@@ -1298,11 +1397,15 @@ asgarnian_religious_generic_missions_2 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		NOT = { religion = saradomin }
-		NOT = { religion = zamorak }
-		NOT = { religion = guthix }
-		NOT = { religion = brassicaprime }
+		has_country_flag = ASG_miscellaneous_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -1350,7 +1453,6 @@ asgarnian_religious_generic_missions_2 = {
 			else = {
 				country_event = {
 					id = flavor_asg.27 #Knightly Orders of Asgarnia
-					days = 1
 				}
 			}
 			entrana_area = {
@@ -1394,11 +1496,15 @@ asgarnian_religious_generic_missions_3 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		NOT = { religion = saradomin }
-		NOT = { religion = zamorak }
-		NOT = { religion = guthix }
-		NOT = { religion = brassicaprime }
+		has_country_flag = ASG_miscellaneous_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -1423,8 +1529,22 @@ asgarnian_religious_generic_missions_3 = {
 				limit = {
 					capital_scope = {
 						NOT = { has_building = cathedral }
+						has_building = temple
 					}
+				}
+				capital_scope = {
+					remove_building = temple
 					add_building = cathedral
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = {
+						NOT = { has_building = temple }
+					}
+				}
+				capital_scope = {
+					add_building = temple
 				}
 			}
 			else = {
@@ -1442,11 +1562,9 @@ asgarnian_religious_generic_missions_3 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			calc_true_if = {
-				all_ally = {
-					has_matching_religion = ROOT
-				}
-				amount = 2
+			any_ally = {
+				has_matching_religion = ROOT
+				total_development = 50
 			}
 		}
 		effect = {
@@ -1527,11 +1645,15 @@ asgarnian_religious_generic_missions_4 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		NOT = { religion = saradomin }
-		NOT = { religion = zamorak }
-		NOT = { religion = guthix }
-		NOT = { religion = brassicaprime }
+		has_country_flag = ASG_miscellaneous_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -1631,8 +1753,15 @@ asgarnian_SARA_missions_1 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = saradomin
+		has_country_flag = ASG_saradomin_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -1780,8 +1909,15 @@ asgarnian_SARA_missions_2 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = saradomin
+		has_country_flag = ASG_saradomin_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -1896,8 +2032,15 @@ asgarnian_SARA_missions_3 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = saradomin
+		has_country_flag = ASG_saradomin_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -1931,7 +2074,6 @@ asgarnian_SARA_missions_3 = {
 			else = {
 				country_event = {
 					id = flavor_asg.30 #Status of the White Knights
-					days = 1
 				}
 			}
 		}
@@ -2076,8 +2218,15 @@ asgarnian_SARA_missions_4 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = saradomin
+		has_country_flag = ASG_saradomin_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -2107,7 +2256,6 @@ asgarnian_SARA_missions_4 = {
 		effect = {
 			country_event = {
 				id = flavor_asg.35
-				days = 1
 			}
 		}
 	}
@@ -2199,8 +2347,15 @@ asgarnian_SARA_missions_5 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = saradomin
+		has_country_flag = ASG_saradomin_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -2252,7 +2407,6 @@ asgarnian_SARA_missions_5 = {
 				}
 				country_event = {
 					id = flavor_dbs.1 #Guthixian Relations (yes, recycling the Donblassian event)
-					days = 1
 				}
 			}
 			else = {
@@ -2376,8 +2530,16 @@ asgarnian_ZAM_missions_1 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
 		religion = zamorak
+		has_country_flag = ASG_zamorak_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -2490,7 +2652,6 @@ asgarnian_ZAM_missions_1 = {
 				}
 				country_event = {
 					id = flavor_asg.34 #The Son of Zamorak
-					days = 1
 				}
 			}
 			custom_tooltip = ASG_ZAM_children_of_zamorak_underground_pass_tooltip
@@ -2520,8 +2681,15 @@ asgarnian_ZAM_missions_2 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = zamorak
+		has_country_flag = ASG_zamorak_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -2566,7 +2734,6 @@ asgarnian_ZAM_missions_2 = {
 			else = {
 				country_event = {
 					id = flavor_asg.26 #The Black Knights
-					days = 1
 				}
 			}
 			entrana_area = {
@@ -2637,9 +2804,38 @@ asgarnian_ZAM_missions_2 = {
 			}
 		}
 		effect = {
-			add_dip_power = 50
 			kandarin_region = {
 				discover_country = ROOT
+			}
+			if = {
+				limit = {
+					any_subject_country = {
+						capital_scope = {
+							region = kandarin_region
+						}
+						religion = zamorak
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				add_country_modifier = {
+					name = ASG_ZAM_zamorakian_integration
+					duration = 3650
+				}
+			}
+			else = {
+				random_ally = {
+					limit = {
+						capital_scope = {
+							region = kandarin_region
+						}
+						religion = zamorak
+					}
+					add_historical_friend = ROOT
+				}
+				add_dip_power = 50
 			}
 		}
 	}
@@ -2652,8 +2848,15 @@ asgarnian_ZAM_missions_3 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = zamorak
+		has_country_flag = ASG_zamorak_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -2770,8 +2973,15 @@ asgarnian_ZAM_missions_4 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = zamorak
+		has_country_flag = ASG_zamorak_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -2885,8 +3095,15 @@ asgarnian_ZAM_missions_5 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = zamorak
+		has_country_flag = ASG_zamorak_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -2944,8 +3161,15 @@ asgarnian_GUTHIX_missions_1 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = guthix
+		has_country_flag = ASG_guthix_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -3038,8 +3262,15 @@ asgarnian_GUTHIX_missions_2 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = guthix
+		has_country_flag = ASG_guthix_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -3081,7 +3312,6 @@ asgarnian_GUTHIX_missions_2 = {
 		effect = {
 			country_event = {
 				id = flavor_asg.25 #The Capital of Asgarnia
-				days = 1
 			}
 		}
 	}
@@ -3273,8 +3503,15 @@ asgarnian_GUTHIX_missions_3 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = guthix
+		has_country_flag = ASG_guthix_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -3429,8 +3666,15 @@ asgarnian_GUTHIX_missions_4 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = guthix
+		has_country_flag = ASG_guthix_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -3499,8 +3743,7 @@ asgarnian_GUTHIX_missions_4 = {
 					has_global_flag = asg_no_void_knight_return
 				}
 				country_event = {
-					id = flavor_asg.31 #The Void Knights' Second Chance
-					days = 1				
+					id = flavor_asg.31 #The Void Knights' Second Chance			
 				}
 			}
 			else = {
@@ -3586,8 +3829,15 @@ asgarnian_GUTHIX_missions_5 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = guthix
+		has_country_flag = ASG_guthix_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_brassica_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -3630,7 +3880,6 @@ asgarnian_GUTHIX_missions_5 = {
 				}
 				country_event = {
 					id = flavor_asg.36 #The Fist of Guthix
-					days = 1
 				}
 			}
 			else = {
@@ -3703,8 +3952,15 @@ asgarnian_BRASSICA_missions_1 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = brassicaprime
+		has_country_flag = ASG_brassica_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -3770,8 +4026,15 @@ asgarnian_BRASSICA_missions_2 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = brassicaprime
+		has_country_flag = ASG_brassica_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 
@@ -3862,7 +4125,6 @@ asgarnian_BRASSICA_missions_2 = {
 				}
 				country_event = {
 					id = flavor_asg.23 #Away with the Fairies
-					days = 1
 				}
 			}
 			else_if = {
@@ -3879,7 +4141,6 @@ asgarnian_BRASSICA_missions_2 = {
 				}
 				country_event = {
 					id = flavor_asg.24 #Fairies of Gielinor
-					days = 1
 				}
 			}
 			else = {
@@ -3896,8 +4157,15 @@ asgarnian_BRASSICA_missions_3 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = brassicaprime
+		has_country_flag = ASG_brassica_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 	
@@ -3998,8 +4266,15 @@ asgarnian_BRASSICA_missions_4 = {
 	potential = {
 		tag = ASG
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = asg_define_religious_missions_flag
-		religion = brassicaprime
+		has_country_flag = ASG_brassica_missions_branch_flag
+		NOT = {
+			OR = {
+				has_country_flag = ASG_saradomin_missions_branch_flag
+				has_country_flag = ASG_zamorak_missions_branch_flag
+				has_country_flag = ASG_guthix_missions_branch_flag
+				has_country_flag = ASG_miscellaneous_missions_branch_flag
+			}
+		}
 	}
 	has_country_shield = yes
 

@@ -3,6 +3,164 @@
 ##################################################################################################
 
 #############
+# Religion Missionary Boost Decisions
+#############
+
+## Chaos
+
+chaos_group_policy_of_vandalism = {
+	global_missionary_strength = 0.015
+	tolerance_heathen = -1
+}
+
+### Zamorak
+zamorak_open_zmi_branch = {
+	global_missionary_strength = 0.01
+	global_institution_spread = 0.1
+}
+
+## Karamjan
+karamjan_group_widen_potion_rituals = {
+	global_missionary_strength = 0.015
+}
+
+
+## Menaphite
+menaphite_group_support_wandering_scholars = {
+	global_missionary_strength = 0.02
+	global_institution_spread = 0.1
+}
+
+## Nonintervention
+nonintervention_group_religious_history_education = {
+	global_missionary_strength = 0.015
+	
+}
+
+### Guthix
+guthix_widen_druidic_recruitment = {
+	global_missionary_strength = 0.01
+}
+
+
+## Order
+order_group_edict_of_uniformity = {
+	global_missionary_strength = 0.01
+	tolerance_heretic = -1
+}
+
+### Armadyl
+armadyl_promote_armadylean_law = {
+	global_missionary_strength = 0.01
+	yearly_corruption = -0.02
+}
+
+### Saradomin
+saradomin_edict_of_denial = {
+	global_missionary_strength = 0.015
+	tolerance_heretic = -2
+	tolerance_heathen = -2
+}
+saradomin_pragmatic_theology = {
+	tolerance_heretic = 2
+	tolerance_heathen = 2
+	stability_cost_modifier = 0.1
+}
+
+## Transcendent
+transcendent_group_promote_godly_hierarchy = {
+	global_missionary_strength = 0.02
+	tolerance_heathen = -1
+}
+
+### Seren
+seren_promote_serenist_tolerance = {
+	tolerance_heathen = 2
+	diplomatic_reputation = 1
+}
+
+## Elder God
+elder_god_group_open_proselytising = {
+	global_missionary_strength = 0.015
+	global_institution_spread = 0.1
+	global_spy_defence = -0.1
+}
+
+## Autocratic
+autocratic_group_doctrine_of_might = {
+	global_missionary_strength = 0.015
+	tolerance_heretic = -1
+	tolerance_heathen = -1
+}
+
+### Bandos
+bandos_dogma_literacy = {
+	global_missionary_strength = 0.005
+	global_institution_spread = 0.15
+	innovativeness_gain = -0.1
+}
+
+## Hedonistic is skipped because both religions don't need it
+
+## Horror
+horror_group_construct_blackstone_pillars = {
+	global_missionary_strength = 0.015
+	tolerance_heathen = -1
+}
+
+## Celestial
+celestial_group_astrological_charting = {
+	global_heathen_missionary_strength = 0.02
+}
+
+## Wushanko Guardian
+wushanko_group_counter_missionaries = {
+	global_heathen_missionary_strength = 0.02
+	tolerance_heretic = 1
+	tolerance_heathen = -2
+}
+
+#############
+# Amascut
+#############
+
+amascut_religion_friends_against_corruption = {
+	tolerance_own = -2
+	yearly_corruption = -0.05
+	monthly_enthrallment_power_1 = -0.05
+}
+amascut_religion_cleansing_of_maat = {
+	tolerance_own = -2
+	yearly_corruption = -0.05
+	monthly_enthrallment_power_1 = -0.05
+}
+amascut_religion_promote_blood_moon = {
+	establish_order_cost = -0.5
+}
+
+amascut_religion_enhanced_proselytisation = {
+	missionaries = 1
+	missionary_maintenance_cost = -0.25
+	monthly_enthrallment_power_1 = 0.025
+}
+amascut_religion_internalising_corruption = {
+	yearly_corruption = -0.1
+	monthly_enthrallment_power_1 = 0.1
+}
+amascut_religion_slayers_boon = {
+	discipline = 0.05
+}
+
+amascut_religion_escape_modifier = {
+	global_heretic_missionary_strength = 0.1
+	yearly_corruption = -0.1
+}
+amascut_religion_plague_of_amascut = {
+	yearly_corruption = 0.1
+}
+
+
+#############
 # Armadyl
 #############
 
@@ -199,6 +357,20 @@ marimbo_reduced_taxation = {
 }
 
 #############
+#Queen of Ashes
+#############
+
+queen_of_ashes_intro_contemplating_flame = {
+	tolerance_own = 1
+	prestige = -1
+	legitimacy = -1
+	devotion = -1
+	republican_tradition = -0.3
+	horde_unity = -1
+	meritocracy = -1
+}
+
+#############
 #Saradomin
 #############
 
@@ -218,8 +390,6 @@ saradomin_undesired_rites = {
 	local_unrest = 2
 	local_tax_modifier = -0.1
 }
-
-
 
 #############
 #Seren
@@ -522,6 +692,7 @@ zamorak_desecrated_forinthry = {
 #Zemouregal
 #############
 
+#Global
 zemouregal_control_the_altars = {
 	global_missionary_strength = 0.05
 }
@@ -531,23 +702,11 @@ zemouregal_expanded_altar_siphoning = {
 	tolerance_heathen = 1
 	global_missionary_strength = -0.02
 }
-
 zemouregal_forceful_conversions = {
 	tolerance_heretic = -1
 	tolerance_heathen = -1
 	global_missionary_strength = 0.02
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

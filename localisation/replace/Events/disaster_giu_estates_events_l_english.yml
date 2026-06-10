@@ -1,0 +1,18 @@
+﻿l_english:
+ estate_giu_disasters.1.t:0 "The $ESTATE_ADMIRALS$ Seize Power"
+ estate_giu_disasters.1.d:0 "$MONARCH$ has allowed the $ESTATE_ADMIRALS$ of $COUNTRY$ to grow too powerful and now they have made their move. Exercising the wide range of privileges and rights granted to them, they have effectively seized the reins of government and turned the $MONARCHTITLE$ into little more than their puppet."
+ estate_giu_disasters.1.a:0 "They need to take their leave and go!"
+ estate_giu_disasters.1.a.tt:0 "[Root.GetName] will now be controlled by the §YAdmirals§! until the §Y'Curtail the Admirals'§! decision is taken."
+
+ estate_giu_disasters.2.t:0 "The [Root.GetAdmiralsOrFallbackName] Curtailed"
+ estate_giu_disasters.2.d:0 "The [Root.GetAdmiralsOrFallbackName] have sunk back into their intended role as the $MONARCHTITLE$ is agreed as the uncontested leader of the country."
+ estate_giu_disasters.2.a:0 "The $MONARCHTITLE$ is back in control."
+
+ estate_giu_disasters.3.t:0 "The $ESTATE_WORKERS$ Seize Power"
+ estate_giu_disasters.3.d:0 "The $ESTATE_WORKERS$ have become powerful enough to seize the reins of power in $COUNTRY$ leaving the $MONARCHTITLE$ as little more than a puppet."
+ estate_giu_disasters.3.a:0 "We should have seen this coming..."
+ estate_giu_disasters.1.a.tt:0 "[Root.GetName] will now be controlled by the §YWorkers§! until the §Y'Curtail the Workers'§! decision is taken."
+
+ estate_giu_disasters.4.t:0 "The [Root.GetWorkersOrFallbackName] Curtailed"
+ estate_giu_disasters.4.d:0 "The [Root.GetWorkersOrFallbackName] no longer exercise immense control over the country, leaving the $MONARCHTITLE$ relatively free to exercise [Root.Monarch.GetHerHis] will."
+ estate_giu_disasters.4.a:0 "The $MONARCHTITLE$ is back in control."

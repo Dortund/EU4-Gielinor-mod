@@ -1,0 +1,18 @@
+﻿l_english:
+ queen_of_ashes_events.1.t:0 "Embers of [embers_province.GetName]"
+ queen_of_ashes_events.1.d:0 "In the devastated landscape of [embers_province.GetName], [Root.Monarch.GetTitle] [Root.Monarch.GetName] stares into the smouldering embers. The fading crackles almost seem to be saying something..."
+ queen_of_ashes_events.1.a:0 "The fire speaks!"
+ queen_of_ashes_introduction_tooltip:0 "If your ruler does not die within the next 5 years, you may learn more about the §YQueen of Ashes§!..."
+ queen_of_ashes_events.1.b:0 "We should put those embers out."
+ 
+ queen_of_ashes_events.2.t:0 "A Voice from the Flame"
+ queen_of_ashes_events.2.d:0 "In [Root.Monarch.GetHerHis] chambers, a voice speaks to [Root.Monarch.GetTitle] [Root.Monarch.GetName] from a fireplace.\n\n§OYour devotion to the flame has not gone unnoticed.§!\n§OI am an emissary of the Queen of Ashes - a redeemer and life-giver.§!\n§OIf you are willing, I can enlighten you on her teachings.§!"
+ queen_of_ashes_progression_tooltip:0 "As long as you have a ruler following the §YQueen of Ashes§! five years hence, you shall be able to convert your country to the faith."
+ queen_of_ashes_events.2.a:0 "A voice from a fire told me to join their religion? Sign me up!"
+ queen_of_ashes_events.2.b:0 "Ashes are dropped on the floor all the time! They hardly deserve worship."
+ queen_of_ashes_events.2.c:0 "It appears the Devourer accepts no competition."
+ 
+ queen_of_ashes_events.3.t:0 "The Fallen Nihil"
+ queen_of_ashes_events.3.d:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName] has built a great bonfire in [Root.Capital.GetName] for a reason unclear to [Root.Monarch.GetHerHis] subjects. Before long, a strange demon-like being walked out of it. Praising the [Root.Monarch.GetTitle], the demon speaks of bringing Enlightenment to the entire populace."
+ queen_of_ashes_events.3.a:0 "Ashes for all!"
+ queen_of_ashes_events.3.b:0 "Clearly things have got out of hand."

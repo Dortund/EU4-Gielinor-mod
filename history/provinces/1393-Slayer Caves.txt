@@ -1,7 +1,7 @@
 #1393 - Slayer Caves
-owner = RVL
-controller = RVL
-add_core = RVL
+owner = SNC
+controller = SNC
+add_core = SNC
 tribal_owner = ---
 culture = basilisk
 religion = godless
@@ -24,8 +24,16 @@ trade_goods = lesser_loot
 
 is_city = yes
 
-1965.9.27 = {
+2042.5.6 = {
+	owner = GUN
+	controller = GUN
+	add_core = GUN
+}
+
+2047.7.3 = {
 	owner = REL
 	controller = REL
 	add_core = REL
+	remove_core = GUN
+	remove_core = SNC
 }
