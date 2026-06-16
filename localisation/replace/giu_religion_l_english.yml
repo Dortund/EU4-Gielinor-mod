@@ -604,6 +604,7 @@
  amascut_religion_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  amascut_religion_rebels_army:0 "$RELIGION$ Army"
  SUMONA:0 "Sumonan"
+ corruption_of_amascut_disaster_start:0 "Corruption of Amascut disaster has started" #Custom tooltip won't show how long the flag has been active for
  amascut_repentant_flag:0 "Repentance of Amascut" #Represents the ending of Eclipse of the Heart - essentially disables the Amascutite religion
  
  

@@ -391,14 +391,16 @@ country_event = {
 	goto = corrupted_scarab_city
 	
 	immediate = {
-		random_owned_province = {
-			limit = {
-				OR = {
-					religion = menaphite
-					is_capital = yes
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						religion = menaphite
+						is_capital = yes
+					}
 				}
+				save_event_target_as = corrupted_scarab_city
 			}
-			save_event_target_as = corrupted_scarab_city
 		}
 	}
 	
