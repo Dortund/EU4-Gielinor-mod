@@ -834,6 +834,7 @@ kharidian_HET_missions_1 = {
 						area = lumbridge_swamp_area
 						area = south_lum_area
 					}
+					has_owner_religion = no
 				}
 				add_province_modifier = {
 					name = KDS_honourably_defeated
@@ -916,9 +917,7 @@ kharidian_HET_missions_1 = {
 					NOT = {
 						has_province_modifier = KDS_honourably_defeated
 					}
-					NOT = {
-						is_religion = ROOT
-					}
+					has_owner_religion = no
 				}
 				add_province_modifier = {
 					name = KDS_honourably_defeated
@@ -997,9 +996,7 @@ kharidian_HET_missions_1 = {
 					NOT = {
 						has_province_modifier = KDS_honourably_defeated
 					}
-					NOT = {
-						is_religion = ROOT
-					}
+					has_owner_religion = no
 				}
 				add_province_modifier = {
 					name = KDS_honourably_defeated
@@ -1067,9 +1064,7 @@ kharidian_HET_missions_1 = {
 					NOT = {
 						has_province_modifier = KDS_honourably_defeated
 					}
-					NOT = {
-						is_religion = ROOT
-					}
+					has_owner_religion = no
 				}
 				add_province_modifier = {
 					name = KDS_honourably_defeated
@@ -1288,7 +1283,7 @@ kharidian_HET_missions_3 = {
 					}
 				}
 				is_subject_of_type = tributary_state
-				custom_tooltip = kds_het_become_tributary_by_decision_tooltip
+				custom_trigger_tooltip = { tooltip = kds_het_become_tributary_by_decision_tooltip }
 				overlord = {
 					is_emperor_of_china = yes
 					ROOT = {
@@ -1344,7 +1339,7 @@ kharidian_HET_missions_3 = {
 					}
 				}
 				is_subject_of_type = tributary_state
-				custom_tooltip = kds_het_become_tributary_by_decision_tooltip
+				custom_trigger_tooltip = { tooltip = kds_het_become_tributary_by_decision_tooltip }
 				custom_trigger_tooltip = {
 					tooltip = has_recently_used_aid_for_the_pharoah_decision
 					OR = {
@@ -2338,7 +2333,7 @@ alkharidian_missions_3 = {
 			if = {
 				limit = {
 					NOT = { has_government_mechanic = kharidian_emergence_mechanic }
-					NOT = { has_country_flag = has_country_flag = kharidian_emergence_completed }
+					NOT = { has_country_flag = kharidian_emergence_completed }
 				}
 				reform_level = 6
 				has_institution = statehood
@@ -2348,7 +2343,7 @@ alkharidian_missions_3 = {
 			}
 			else_if = {
 				limit = {
-					has_country_flag = has_country_flag = kharidian_emergence_completed
+					has_country_flag = kharidian_emergence_completed
 				}
 				reform_level = 6
 			}
@@ -2709,7 +2704,7 @@ alkharidian_missions_5 = {
 				}
 			}
 			OR = {
-				church = 3
+				temple = 3
 				cathedral = 3
 			}
 		}
@@ -2987,7 +2982,7 @@ alkharidian_missions_5 = {
 				limit = {
 					is_emperor_of_china = yes
 					UZE = {
-						subject_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				UZE = {
