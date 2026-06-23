@@ -479,8 +479,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/privileges/privilege_nobles_gunpowder_monopoly.dds"
 	}
 	spriteType = {
-		name = "privilege_nobles_hunter_creature_monopoly"
-		texturefile = "gfx/interface/privileges/privilege_nobles_hunter_creature_monopoly.dds"
+		name = "privilege_nobles_hunter_creatures_monopoly"
+		texturefile = "gfx/interface/privileges/privilege_nobles_hunter_creatures_monopoly.dds"
 	}
 	spriteType = {
 		name = "privilege_nobles_monster_loot_monopoly"
