@@ -21,7 +21,7 @@ cb_cleanse_corruption = {
 	months = 60
 
 	prerequisites = {
-		has_religion = menaphite
+		religion = menaphite
 		FROM = { religion = amascut_religion }
 	}
 	

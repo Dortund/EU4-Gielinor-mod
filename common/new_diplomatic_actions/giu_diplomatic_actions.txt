@@ -701,14 +701,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 1285 # It doesn't seem to recognise this line, which makes it just miss it and default to D01
+					same_trade_node_as = 1285 # It doesn't seem to recognise this line, which makes it just miss it and default to D01
 				}
 				cede_province = D01
 				add_core = D01
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -742,14 +742,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 885
+					same_trade_node_as = 885
 				}
 				cede_province = D02
 				add_core = D02
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -783,14 +783,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 265
+					same_trade_node_as = 265
 				}
 				cede_province = D03
 				add_core = D03
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -824,14 +824,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 1202
+					same_trade_node_as = 1202
 				}
 				cede_province = D04
 				add_core = D04
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -865,14 +865,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 247
+					same_trade_node_as = 247
 				}
 				cede_province = D05
 				add_core = D05
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -906,14 +906,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 525
+					same_trade_node_as = 525
 				}
 				cede_province = D06
 				add_core = D06
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -947,14 +947,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 1238
+					same_trade_node_as = 1238
 				}
 				cede_province = D07
 				add_core = D07
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -988,14 +988,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 176
+					same_trade_node_as = 176
 				}
 				cede_province = D08
 				add_core = D08
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1029,14 +1029,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 139
+					same_trade_node_as = 139
 				}
 				cede_province = D09
 				add_core = D09
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1070,14 +1070,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 41
+					same_trade_node_as = 41
 				}
 				cede_province = D10
 				add_core = D10
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1111,14 +1111,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 137
+					same_trade_node_as = 137
 				}
 				cede_province = D11
 				add_core = D11
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1152,14 +1152,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 1156
+					same_trade_node_as = 1156
 				}
 				cede_province = D12
 				add_core = D12
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1193,14 +1193,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 620
+					same_trade_node_as = 620
 				}
 				cede_province = D13
 				add_core = D13
 				remove_core = FROM
 				owner  {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1234,14 +1234,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 754
+					same_trade_node_as = 754
 				}
 				cede_province = D14
 				add_core = D14
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1275,14 +1275,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 571
+					same_trade_node_as = 571
 				}
 				cede_province = D15
 				add_core = D15
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1316,14 +1316,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 232
+					same_trade_node_as = 232
 				}
 				cede_province = D16
 				add_core = D16
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1357,14 +1357,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 402
+					same_trade_node_as = 402
 				}
 				cede_province = D17
 				add_core = D17
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1398,14 +1398,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 183
+					same_trade_node_as = 183
 				}
 				cede_province = D18
 				add_core = D18
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1439,14 +1439,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 419
+					same_trade_node_as = 419
 				}
 				cede_province = D19
 				add_core = D19
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1480,14 +1480,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 393
+					same_trade_node_as = 393
 				}
 				cede_province = D20
 				add_core = D20
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1521,14 +1521,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 100
+					same_trade_node_as = 100
 				}
 				cede_province = D21
 				add_core = D21
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1562,14 +1562,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 461
+					same_trade_node_as = 461
 				}
 				cede_province = D22
 				add_core = D22
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1603,14 +1603,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 424
+					same_trade_node_as = 424
 				}
 				cede_province = D23
 				add_core = D23
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1644,14 +1644,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 209
+					same_trade_node_as = 209
 				}
 				cede_province = D24
 				add_core = D24
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1685,14 +1685,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 1188
+					same_trade_node_as = 1188
 				}
 				cede_province = D25
 				add_core = D25
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1726,14 +1726,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 292
+					same_trade_node_as = 292
 				}
 				cede_province = D26
 				add_core = D26
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1767,14 +1767,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 399
+					same_trade_node_as = 399
 				}
 				cede_province = D27
 				add_core = D27
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1808,14 +1808,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 75
+					same_trade_node_as = 75
 				}
 				cede_province = D28
 				add_core = D28
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1849,14 +1849,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 33
+					same_trade_node_as = 33
 				}
 				cede_province = D29
 				add_core = D29
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1890,14 +1890,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 325
+					same_trade_node_as = 325
 				}
 				cede_province = D30
 				add_core = D30
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1931,14 +1931,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 505
+					same_trade_node_as = 505
 				}
 				cede_province = D31
 				add_core = D31
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -1972,14 +1972,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 368
+					same_trade_node_as = 368
 				}
 				cede_province = D32
 				add_core = D32
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -2013,14 +2013,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 2
+					same_trade_node_as = 2
 				}
 				cede_province = D33
 				add_core = D33
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -2054,14 +2054,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 491
+					same_trade_node_as = 491
 				}
 				cede_province = D34
 				add_core = D34
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -2095,14 +2095,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 349
+					same_trade_node_as = 349
 				}
 				cede_province = D35
 				add_core = D35
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -2136,14 +2136,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 79
+					same_trade_node_as = 79
 				}
 				cede_province = D36
 				add_core = D36
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -2177,14 +2177,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 14
+					same_trade_node_as = 14
 				}
 				cede_province = D37
 				add_core = D37
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -2218,14 +2218,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 1101
+					same_trade_node_as = 1101
 				}
 				cede_province = D38
 				add_core = D38
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {
@@ -2259,14 +2259,14 @@ establish_dwarven_outpost = { #ROOT wishes to establish a Dwarven Colony in your
 			else_if = {
 				limit = {
 					has_province_flag = dwarven_colony_target
-					same_trade_node = 964
+					same_trade_node_as = 964
 				}
 				cede_province = D39
 				add_core = D39
 				remove_core = FROM
 				owner = {
 					hidden_effect = {
-						country_event = dwarven_outpost_events.1
+						country_event = { id = dwarven_outpost_events.1 }
 						add_government_reform = dwarven_outpost
 						capital_scope = {
 							build_to_forcelimit = {

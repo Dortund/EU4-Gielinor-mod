@@ -171,7 +171,7 @@ spirit_angler_doctrine = {
 		is_primitive = no
 		primary_culture = alkharidian
 		OR = {
-			has_country_flag = ALK_unlock_spirit_anglers
+			has_country_flag = KDS_unlock_spirit_anglers
 			tag = SAN
 		}
 		1000 = {

@@ -73,16 +73,12 @@ country_decisions = {
 			religion = menaphite
 			is_at_war = no
 			NOT = { has_country_modifier = KDS_HET_refused_by_pharoah }
-			random_country = {
-				limit = {
-					is_emperor_of_china = yes
-				}
+			any_country = {
+				is_emperor_of_china = yes
 				NOT = { truce_with = ROOT }
 				NOT = { is_enemy = ROOT }
 				is_at_war = no
-				ROOT = {
-					trust = { who = PREV value = 50 }
-				}
+				trust = { who = ROOT value = 50 }
 				has_opinion = {
 					who = ROOT
 					value = 100
